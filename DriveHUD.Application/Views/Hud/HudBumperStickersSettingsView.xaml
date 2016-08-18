@@ -9,9 +9,7 @@
              xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
              mc:Ignorable="d" 
              d:DesignHeight="439.726" d:DesignWidth="669.863">
-    <UserControl.DataContext>
-        <local:TestBumperStickersSettingsViewModel />
-    </UserControl.DataContext>
+
     <UserControl.Resources>
 
         <!-- TODO: move those colors to global dict -->
@@ -434,8 +432,8 @@
                 </Border>
 
                 <ListBox 
-                    ItemsSource="{Binding BumperStickersList}" 
-                    SelectedItem="{Binding SelectedPlayerType}"
+                    ItemsSource="{Binding BumperStickers}" 
+                    SelectedItem="{Binding SelectedBumperSticker}"
                     BorderThickness="0" 
                     Margin="0,1,0,0"
                     Padding="0,0,0,5"
@@ -458,13 +456,13 @@
                                     HorizontalAlignment="Left"
                                     Margin="8,0,0,0"
                                     Background="Aquamarine">
-                                    <TextBlock Text="{Binding StickerCaption}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <TextBlock Text="{Binding Label}" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                 </Border>
 
                                 <TextBlock                                    
                                     Grid.Column="1"
                                     VerticalAlignment="Center"
-                                    Text="{Binding Caption}" />
+                                    Text="{Binding Name}" />
                             </Grid>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
@@ -536,7 +534,7 @@
                     Grid.ColumnSpan="3"
                     Grid.Column="0"
                     Grid.Row="0"                    
-                    ItemsSource="{Binding SelectedPlayerType.Stats}"
+                    ItemsSource="{Binding SelectedBumperSticker.Stats}"
                     Style="{StaticResource StatsListViewStyle}"                    
                     ItemTemplate="{StaticResource StatDataTemplate}"
                     Height="228"
@@ -624,7 +622,7 @@
 
                         <TextBox                                                   
                             Style="{StaticResource PlayerNameTextBoxStyle}"  
-                            Text="{Binding SelectedPlayerType.Name, UpdateSourceTrigger=PropertyChanged}"
+                            Text="{Binding SelectedBumperSticker.Name, UpdateSourceTrigger=PropertyChanged}"
                             MaxLength="20"                            
                             />
 
@@ -664,7 +662,7 @@
                     Culture="en-US"         
                     maskedInput:MaskedInputExtensions.Minimum="1"
                     maskedInput:MaskedInputExtensions.Maximum="999"
-                    Value="{Binding SelectedPlayerType.MinSample, Mode=TwoWay}"                            
+                    Value="{Binding SelectedBumperSticker.MinSample, Mode=TwoWay}"                            
                     TextMode="PlainText"
                     />
 
@@ -683,14 +681,14 @@
 
                         <CheckBox
                             Content="{ResX Key=Common_HudPlayerType_EnablePlayerProfile}"
-                            IsChecked="{Binding SelectedPlayerType.EnablePlayerProfile}"
+                            IsChecked="{Binding SelectedBumperSticker.EnablePlayerProfile}"
                             Style="{StaticResource BottomCheckBoxStyle}"
                             />
 
                         <CheckBox
                             Content="{ResX Key=Common_HudPlayerType_DisplayPlayerIcon}"
                             Margin="20,2,2,2"
-                            IsChecked="{Binding SelectedPlayerType.DisplayPlayerIcon}"
+                            IsChecked="{Binding SelectedBumperSticker.DisplayPlayerIcon}"
                             Style="{StaticResource BottomCheckBoxStyle}"
                             />
 

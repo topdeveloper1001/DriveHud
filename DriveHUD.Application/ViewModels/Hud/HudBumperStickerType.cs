@@ -33,7 +33,7 @@ namespace DriveHUD.Application.ViewModels
             EnableBumperSticker = true;
             DisplayBumperSticker = true;
 
-            stats = new ObservableCollection<IHudRangeStat>()
+            stats = new ObservableCollection<BaseHudRangeStat>()
             {
                 new BaseHudRangeStat { Stat = Stat.VPIP },
                 new BaseHudRangeStat { Stat = Stat.PFR },
@@ -63,6 +63,20 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref name, value);
+            }
+        }
+
+        private string label;
+
+        public string Label
+        {
+            get
+            {
+                return label;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref label, value);
             }
         }
 
@@ -108,9 +122,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private ObservableCollection<IHudRangeStat> stats;
+        private ObservableCollection<BaseHudRangeStat> stats;
 
-        public ObservableCollection<IHudRangeStat> Stats
+        public ObservableCollection<BaseHudRangeStat> Stats
         {
             get
             {
@@ -158,7 +172,7 @@ namespace DriveHUD.Application.ViewModels
         public HudBumperStickerType Clone()
         {
             var clone = (HudBumperStickerType)MemberwiseClone();
-            clone.Stats = new ObservableCollection<IHudRangeStat>(clone.Stats.Select(x => x.Clone()));
+            clone.Stats = new ObservableCollection<BaseHudRangeStat>(clone.Stats.Select(x => (BaseHudRangeStat)x.Clone()));
             return clone;
         }
 
