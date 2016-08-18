@@ -28,12 +28,12 @@ using DriveHUD.Common.Log;
 
 namespace DriveHUD.Application.ViewModels
 {
-    public class HudPlayerSettingsViewModel : ViewModelBase
+    public class HudPlayerSettingsViewModel : BaseRangeTypePopupViewModel
     {
         private readonly HudPlayerSettingsViewModelInfo viewModelInfo;
         private readonly IHudLayoutsService hudLayoutService;
 
-        public HudPlayerSettingsViewModel(HudPlayerSettingsViewModelInfo viewModelInfo)
+        public HudPlayerSettingsViewModel(HudPlayerSettingsViewModelInfo viewModelInfo) : base()
         {
             Check.ArgumentNotNull(() => viewModelInfo);
 
@@ -48,33 +48,6 @@ namespace DriveHUD.Application.ViewModels
         {
             playerTypes = new ObservableCollection<HudPlayerType>(viewModelInfo.PlayerTypes);
             selectedPlayerType = playerTypes.FirstOrDefault();
-
-            InitializeCommands();
-        }
-
-        private void InitializeCommands()
-        {
-            var canSave = this.WhenAny(x => x.SelectedPlayerType.Name, y => !string.IsNullOrWhiteSpace(y.Value) && Validate());
-
-            SaveCommand = ReactiveCommand.Create(canSave);
-            SaveCommand.Subscribe(x =>
-            {
-                if (viewModelInfo.Save != null)
-                {
-                    viewModelInfo.Save();
-                }
-            });
-
-            CreateCommand = ReactiveCommand.Create();
-            CreateCommand.Subscribe(x =>
-            {
-                var hudPlayerType = new HudPlayerType(true);
-                PlayerTypes.Add(hudPlayerType);
-                SelectedPlayerType = hudPlayerType;
-            });
-
-            LoadCommand = ReactiveCommand.Create();
-            LoadCommand.Subscribe(x => Load());
         }
 
         #region Properties 
@@ -109,16 +82,6 @@ namespace DriveHUD.Application.ViewModels
 
         #endregion
 
-        #region Commands
-
-        public ReactiveCommand<object> SaveCommand { get; private set; }
-
-        public ReactiveCommand<object> CreateCommand { get; private set; }
-
-        public ReactiveCommand<object> LoadCommand { get; private set; }
-
-        #endregion
-
         #region Validation
 
         private bool Validate()
@@ -137,7 +100,17 @@ namespace DriveHUD.Application.ViewModels
 
         #region Infrastructure
 
-        private void Load()
+        protected override IObservable<bool> CanSave()
+        {
+            return this.WhenAny(x => x.SelectedPlayerType.Name, y => !string.IsNullOrWhiteSpace(y.Value) && Validate());
+        }
+
+        protected override void Save()
+        {
+            viewModelInfo.Save?.Invoke();
+        }
+
+        protected override void Load()
         {
             var initialDirectory = hudLayoutService.GetImageDirectory();
 
@@ -165,6 +138,13 @@ namespace DriveHUD.Application.ViewModels
                     LogProvider.Log.Error(this, e);
                 }
             }
+        }
+
+        protected override void Create()
+        {
+            var hudPlayerType = new HudPlayerType(true);
+            PlayerTypes.Add(hudPlayerType);
+            SelectedPlayerType = hudPlayerType;
         }
 
         #endregion

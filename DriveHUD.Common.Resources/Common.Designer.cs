@@ -169,6 +169,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select Color.
+        /// </summary>
+        internal static string Common_BumperStickers_SelectColor {
+            get {
+                return ResourceManager.GetString("Common_BumperStickers_SelectColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Buy-in.
         /// </summary>
         internal static string Common_BuyIn {

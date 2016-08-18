@@ -359,6 +359,9 @@ namespace DriveHUD.Application.ViewModels
             PlayerTypeStatsCommand = ReactiveCommand.Create();
             PlayerTypeStatsCommand.Subscribe(x => OpenPlayerTypeStats(x as StatInfo));
 
+            BumperStickersCommand = ReactiveCommand.Create();
+            BumperStickersCommand.Subscribe(x => OpenBumperStickers(x as StatInfo));
+
             SelectHudCommand = ReactiveCommand.Create();
             SelectHudCommand.Subscribe(x => HudType = (HudType == HudType.Plain) ? HudType.Default : HudType.Plain);
         }
@@ -760,6 +763,8 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> PlayerTypeStatsCommand { get; private set; }
 
+        public ReactiveCommand<object> BumperStickersCommand { get; private set; }
+
         public ReactiveCommand<object> SelectHudCommand { get; private set; }
 
         #endregion
@@ -1087,6 +1092,29 @@ namespace DriveHUD.Application.ViewModels
         }
 
         /// <summary>
+        /// Open pop-up and initialize bumper stickers
+        /// </summary>
+        /// <param name="selectedStatInfo"></param>
+        private void OpenBumperStickers(StatInfo selectedStatInfo)
+        {
+            if (StatInfoObserveCollection.Count == 0 ||
+               CurrentLayout == null || CurrentLayout.HudPlayerTypes == null)
+            {
+                return;
+            }
+
+            var hudBumperStickersSettingsViewModelInfo = new HudBumperStickersSettingsViewModelInfo
+            {
+                BumperStickers = CurrentLayout.HudBumperStickerTypes.Select(x => x.Clone()),
+                Save = BumperStickerSave
+            };
+
+            var hudBumperStickersViewModel = new HudBumperStickersSettingsViewModel(hudBumperStickersSettingsViewModelInfo);
+
+            OpenPopup(hudBumperStickersViewModel);
+        }
+
+        /// <summary>
         /// Save player type data from pop-up
         /// </summary>
         private void PlayerTypeSave()
@@ -1137,6 +1165,14 @@ namespace DriveHUD.Application.ViewModels
             });
 
             ClosePopup();
+        }
+
+        /// <summary>
+        /// Save bumper sticker data from pop-up
+        /// </summary>
+        private void BumperStickerSave()
+        {
+            //TODO: implement
         }
 
         private int CurrentViewModelHash

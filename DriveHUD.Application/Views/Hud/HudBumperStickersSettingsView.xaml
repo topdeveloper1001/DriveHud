@@ -551,7 +551,7 @@
                     VerticalAlignment="Bottom"
                     >
 
-                    <Border
+                    <!--<Border
                         Margin="15,0,0,0"
                         Width="45"
                         Height="45"
@@ -569,6 +569,24 @@
                             HorizontalAlignment="Center"
                             />
 
+                    </Border>-->
+
+                    <!-- Color -->
+                    <Border 
+                        Grid.Column="2"
+                        Margin="8,0,0,0"
+                        CornerRadius="1"
+                        Width="40"
+                        Height="40"
+                        Background="{StaticResource ButtonBackground}">
+                            <Border
+                                Width="20" 
+                                Height="20"
+                                BorderThickness="2"
+                                BorderBrush="#000000"
+                                Background="{Binding Color, Converter={dh:ColorToSolidBrushConverter}}"
+                                />
+
                     </Border>
 
                     <StackPanel
@@ -577,9 +595,10 @@
                         Orientation="Vertical">
 
                         <Button                         
-                            Content="{ResX Key=Common_HudPlayerType_Load}"                          
+                            Content="{ResX Key=Common_BumperStickers_SelectColor}"                          
                             Margin="5,0,0,5"
-                            Command="{Binding LoadCommand}"
+                            Command="{Binding DataContext.SelectColorCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                            CommandParameter="{Binding}"
                             Style="{StaticResource IconButtonStyle}"
                             />
 

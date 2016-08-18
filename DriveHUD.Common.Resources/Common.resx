@@ -617,4 +617,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="Common_BumperStickers_SelectColor" xml:space="preserve">
+    <value>Select Color</value>
+  </data>
 </root>
