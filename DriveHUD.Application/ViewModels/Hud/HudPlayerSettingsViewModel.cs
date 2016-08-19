@@ -50,6 +50,21 @@ namespace DriveHUD.Application.ViewModels
             selectedPlayerType = playerTypes.FirstOrDefault();
         }
 
+        protected override void InitializeCommands()
+        {
+            base.InitializeCommands();
+
+
+            LoadCommand = ReactiveCommand.Create();
+            LoadCommand.Subscribe(x => Load());
+        }
+
+        #region Commands
+
+        public ReactiveCommand<object> LoadCommand { get; private set; }
+
+        #endregion
+
         #region Properties 
 
         private ObservableCollection<HudPlayerType> playerTypes;
@@ -110,7 +125,7 @@ namespace DriveHUD.Application.ViewModels
             viewModelInfo.Save?.Invoke();
         }
 
-        protected override void Load()
+        private void Load()
         {
             var initialDirectory = hudLayoutService.GetImageDirectory();
 

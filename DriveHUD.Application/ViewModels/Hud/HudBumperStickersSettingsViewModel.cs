@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -32,7 +33,54 @@ namespace DriveHUD.Application.ViewModels
             selectedBumperSticker = bumperStickers.FirstOrDefault();
         }
 
+        protected override void InitializeCommands()
+        {
+            base.InitializeCommands();
+
+            SelectColorCommand = ReactiveCommand.Create();
+            SelectColorCommand.Subscribe(x => SelectColor(x));
+
+            PickerSelectColorCommand = ReactiveCommand.Create();
+            PickerSelectColorCommand.Subscribe(x => IsColorPickerPopupOpened = false);
+        }
+
+        #region Commands
+
+        public ReactiveCommand<object> SelectColorCommand { get; private set; }
+
+        public ReactiveCommand<object> PickerSelectColorCommand { get; private set; }
+
+        #endregion
+
         #region Properties
+
+        private bool isColorPickerPopupOpened;
+
+        public bool IsColorPickerPopupOpened
+        {
+            get
+            {
+                return isColorPickerPopupOpened;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isColorPickerPopupOpened, value);
+            }
+        }
+
+        private Color selectedColor;
+
+        public Color SelectedColor
+        {
+            get
+            {
+                return selectedColor;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref selectedColor, value);
+            }
+        }
 
         private ObservableCollection<HudBumperStickerType> bumperStickers;
 
@@ -94,14 +142,16 @@ namespace DriveHUD.Application.ViewModels
             SelectedBumperSticker = hudBumperStickerType;
         }
 
-        protected override void Load()
-        {
-        }
-
         protected override void Save()
         {
             viewModelInfo.Save?.Invoke();
         }
+
+        private void SelectColor(object statInfoValueRange)
+        {
+            IsColorPickerPopupOpened = true;
+        }
+
         #endregion
     }
 }
