@@ -1172,7 +1172,54 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void BumperStickerSave()
         {
-            //TODO: implement
+            var hudStickersSettingsViewModel = PopupViewModel as HudBumperStickersSettingsViewModel;
+
+            if (hudStickersSettingsViewModel == null)
+            {
+                ClosePopup();
+                return;
+            }
+
+            // merge data to current layout (currently we do not expect new stats or deleted stats)
+            var stickersTypesToMerge = (from stickerType in hudStickersSettingsViewModel.BumperStickers
+                                        join currentStickerType in CurrentLayout.HudBumperStickerTypes on stickerType.Name equals currentStickerType.Name into stgj
+                                        from stgrouped in stgj.DefaultIfEmpty()
+                                        where stgrouped == null
+                                        select new { CurrentStickerType = stickerType, StickerType = stgrouped }).ToArray();
+
+            System.Diagnostics.Debug.WriteLine(stickersTypesToMerge.First().StickerType);
+
+            stickersTypesToMerge.ForEach(st =>
+            {
+                st.CurrentStickerType.MinSample = st.StickerType.MinSample;
+                st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
+                st.CurrentStickerType.DisplayBumperSticker = st.StickerType.DisplayBumperSticker;
+
+                var statsToMerge = (from currentStat in st.CurrentStickerType.Stats
+                                    join stat in st.StickerType.Stats on currentStat.Stat equals stat.Stat into gj
+                                    from grouped in gj.DefaultIfEmpty()
+                                    where grouped != null
+                                    select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
+
+                statsToMerge.ForEach(s =>
+                {
+                    s.CurrentStat.Low = s.Stat.Low;
+                    s.CurrentStat.High = s.Stat.High;
+                });
+            });
+
+            var stickerTypesToAdd = (from stickerType in hudStickersSettingsViewModel.BumperStickers
+                                     join currentStickerType in CurrentLayout.HudBumperStickerTypes on stickerType.Name equals currentStickerType.Name into stgj
+                                     from stgrouped in stgj.DefaultIfEmpty()
+                                     where stgrouped == null
+                                     select new { AddedPlayerType = stickerType }).ToArray();
+
+            stickerTypesToAdd.ForEach(st =>
+            {
+                CurrentLayout.HudBumperStickerTypes.Add(st.AddedPlayerType);
+            });
+
+            ClosePopup();
         }
 
         private int CurrentViewModelHash

@@ -68,20 +68,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private Color selectedColor;
-
-        public Color SelectedColor
-        {
-            get
-            {
-                return selectedColor;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref selectedColor, value);
-            }
-        }
-
         private ObservableCollection<HudBumperStickerType> bumperStickers;
 
         public ObservableCollection<HudBumperStickerType> BumperStickers

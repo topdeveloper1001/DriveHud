@@ -620,4 +620,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_BumperStickers_SelectColor" xml:space="preserve">
     <value>Select Color</value>
   </data>
+  <data name="Common_BumperSticker_StickerName" xml:space="preserve">
+    <value>Sticker Name</value>
+  </data>
 </root>

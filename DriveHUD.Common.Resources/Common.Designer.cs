@@ -169,6 +169,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sticker Name.
+        /// </summary>
+        internal static string Common_BumperSticker_StickerName {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_StickerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Select Color.
         /// </summary>
         internal static string Common_BumperStickers_SelectColor {

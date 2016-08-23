@@ -25,6 +25,7 @@ using DriveHUD.Common.Resources;
 using System.Diagnostics;
 using DriveHUD.Common;
 using Model;
+using System.Windows.Media;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -341,6 +342,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         Name = DefaultHudName,
                         LayoutId = x.LayoutId,
                         HudPlayerTypes = CreateDefaultPlayerTypes(x.HudTable.TableLayout.TableType),
+                        HudBumperStickerTypes = CreateDefaultBumperStickers(),
                         HudPositions = x.HudTable.HudElements.Select(y => new HudSavedPosition
                         {
                             Height = y.Height,
@@ -381,7 +383,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     LayoutId = hudData.LayoutId,
                     Name = hudData.Name,
-                    HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableLayout.TableType)
+                    HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableLayout.TableType),
+                    HudBumperStickerTypes = CreateDefaultBumperStickers(),
                 };
 
                 Layouts.Layouts.Add(layout);
@@ -962,6 +965,112 @@ namespace DriveHUD.Application.ViewModels.Hud
             };
 
             return hudPlayerTypes;
+        }
+
+        private List<HudBumperStickerType> CreateDefaultBumperStickers()
+        {
+            var bumperStickers = new List<HudBumperStickerType>()
+            {
+                new HudBumperStickerType(true)
+                {
+                     Name = "One and Done",
+                     SelectedColor = Colors.OrangeRed,
+                     StatsToMerge =
+                         new ObservableCollection<BaseHudRangeStat>()
+                         {
+                             new BaseHudRangeStat { Stat = Stat.CBet, Low = 55, High = 100 },
+                             new BaseHudRangeStat { Stat = Stat.DoubleBarrel, Low = 0, High = 35 },
+                         }
+                },
+                new HudBumperStickerType(true)
+                {
+                     Name = "Pre-Flop Reg",
+                     SelectedColor = Colors.Orange,
+                     StatsToMerge =
+                         new ObservableCollection<BaseHudRangeStat>()
+                         {
+                             new BaseHudRangeStat { Stat = Stat.VPIP, Low = 19, High = 26 },
+                             new BaseHudRangeStat { Stat = Stat.PFR, Low = 15, High = 23 },
+                             new BaseHudRangeStat { Stat = Stat.S3Bet, Low = 8, High = 100 },
+                             new BaseHudRangeStat { Stat = Stat.WWSF, Low = 0, High = 42 },
+                         }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Barrelling",
+                    SelectedColor = Colors.Yellow,
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 20, High = 30 },
+                            new BaseHudRangeStat { Stat = Stat.PFR, Low = 17, High = 28 },
+                            new BaseHudRangeStat { Stat = Stat.AGG, Low = 40, High = 49 },
+                            new BaseHudRangeStat { Stat = Stat.CBet, Low = 65, High = 80 },
+                            new BaseHudRangeStat { Stat = Stat.WWSF, Low = 44, High = 53 },
+                            new BaseHudRangeStat { Stat = Stat.DoubleBarrel, Low = 46, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "3 For Free",
+                    SelectedColor = Colors.GreenYellow,
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.S3Bet, Low = 8.8m, High = 100 },
+                            new BaseHudRangeStat { Stat = Stat.FoldTo3Bet, Low = 66, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Way Too Early",
+                    SelectedColor = Colors.Green,
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.UO_PFR_EP, Low = 20, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Sticky Fish",
+                    SelectedColor = Colors.ForestGreen,
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 35, High = 100 },
+                            new BaseHudRangeStat { Stat = Stat.FoldToCBet, Low = 0, High = 40 },
+                            new BaseHudRangeStat { Stat = Stat.WTSD, Low = 29, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Sticky Fish",
+                    SelectedColor = Colors.Blue,
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 35, High = 100 },
+                            new BaseHudRangeStat { Stat = Stat.FoldToCBet, Low = 0, High = 40 },
+                            new BaseHudRangeStat { Stat = Stat.WTSD, Low = 29, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Yummy Fish",
+                    SelectedColor = Colors.DarkBlue,
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 40, High = 100 },
+                            new BaseHudRangeStat { Stat = Stat.FoldToCBet, Low = 0, High = 6 },
+                            new BaseHudRangeStat { Stat = Stat.AGG, Low = 0, High = 34 },
+                        }
+                },
+
+            };
+
+            return bumperStickers;
         }
 
         /// <summary>

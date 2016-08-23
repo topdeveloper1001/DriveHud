@@ -7,6 +7,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -17,6 +18,8 @@ namespace DriveHUD.Application.ViewModels
     public class HudBumperStickerType : ReactiveObject
     {
         private const int MinSampleDefault = 15;
+        private readonly Color DefaultColor = Colors.OrangeRed;
+        private readonly string[] StringsToExcludeFromLabels = new string[] { "and", "&" };
 
         public HudBumperStickerType()
         {
@@ -32,21 +35,21 @@ namespace DriveHUD.Application.ViewModels
             MinSample = MinSampleDefault;
             EnableBumperSticker = true;
             DisplayBumperSticker = true;
+            SelectedColor = DefaultColor;
 
             stats = new ObservableCollection<BaseHudRangeStat>()
             {
                 new BaseHudRangeStat { Stat = Stat.VPIP },
                 new BaseHudRangeStat { Stat = Stat.PFR },
-                new BaseHudRangeStat { Stat = Stat.AGG },
                 new BaseHudRangeStat { Stat = Stat.S3Bet },
-                new BaseHudRangeStat { Stat = Stat.AF },
+                new BaseHudRangeStat { Stat = Stat.AGG },
                 new BaseHudRangeStat { Stat = Stat.CBet },
-                new BaseHudRangeStat { Stat = Stat.FoldToCBet },
-                new BaseHudRangeStat { Stat = Stat.FoldTo3Bet },
                 new BaseHudRangeStat { Stat = Stat.WWSF },
                 new BaseHudRangeStat { Stat = Stat.WTSD },
-                new BaseHudRangeStat { Stat = Stat.Steal },
-                new BaseHudRangeStat { Stat = Stat.DonkBet }
+                new BaseHudRangeStat { Stat = Stat.FoldTo3Bet },
+                new BaseHudRangeStat { Stat = Stat.DoubleBarrel },
+                new BaseHudRangeStat { Stat = Stat.CheckRaise },
+                new BaseHudRangeStat { Stat = Stat.UO_PFR_EP },
             };
         }
 
@@ -63,6 +66,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref name, value);
+                Label = GenerateLabel(Name);
             }
         }
 
@@ -122,6 +126,20 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private Color selectedColor;
+
+        public Color SelectedColor
+        {
+            get
+            {
+                return selectedColor;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedColor, value);
+            }
+        }
+
         private ObservableCollection<BaseHudRangeStat> stats;
 
         public ObservableCollection<BaseHudRangeStat> Stats
@@ -164,6 +182,15 @@ namespace DriveHUD.Application.ViewModels
         }
 
         #endregion
+
+        private string GenerateLabel(string name)
+        {
+            var labels = name.Split(new char[] { ' ', '-' })
+                .Where(x => !string.IsNullOrWhiteSpace(x))
+                .Except(StringsToExcludeFromLabels, StringComparer.CurrentCultureIgnoreCase)
+                .Select(x => x.Trim().ToUpper().FirstOrDefault());
+            return string.Join(string.Empty, labels);
+        }
 
         /// <summary>
         /// Clone object

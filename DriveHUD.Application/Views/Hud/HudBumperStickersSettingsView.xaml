@@ -6,6 +6,7 @@
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"    
              xmlns:maskedInput="clr-namespace:Telerik.Windows.Controls.MaskedInput;assembly=Telerik.Windows.Controls.Input"    
              xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
              mc:Ignorable="d" 
              d:DesignHeight="439.726" d:DesignWidth="669.863">
@@ -22,6 +23,19 @@
         <SolidColorBrush x:Key="CreateNewColor" Color="#78a239" />
         <SolidColorBrush x:Key="DarkBackground" Color="#111315" />
         <SolidColorBrush x:Key="StandardBlueColor" Color="#34529b" />
+
+        <sys:Single x:Key="BrightnessAdjustmentParameter">0.4</sys:Single>
+
+        <DrawingBrush x:Key="EyeDropperBrush" Stretch="Uniform">
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M 32.016,18.516L 19.9893,33.5213L 17.5213,32.416L 15.208,35.3013L 14,34.3333C 13.9787,36.74 16.1307,38.3587 16.5627,40.7133C 16.9427,42.792 13.2347,44.104 10.9067,42.8067L 10.4013,42.464L 10.26,42.3387L 9.97334,42.0413L 9.85867,41.9013L 9.53067,41.38L 9.36934,40.9427L 9.33334,40.812L 9.27601,40.4373L 9.26534,40.1507L 9.26534,39.9787C 9.36401,37.5733 11.8227,34.6347 13.1773,33.6827L 11.7707,32.552L 14.14,29.5987L 12.7653,27.1307L 24.4947,12.4893"/>
+                        <GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M 24.7447,11.9143L 21.7233,9.493L 25.3593,4.95033L 28.7967,7.70633L 33.8233,1.43566L 33.958,1.389C 34.042,1.36233 36.0207,0.831665 38.354,2.69566C 40.734,4.60767 40.594,6.617 40.5833,6.70633L 40.5727,6.841L 35.5473,13.117L 38.9793,15.8677L 35.3433,20.409L 32.266,17.941"/>
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
 
         <Style x:Key="TextBlockStyle" TargetType="{x:Type TextBlock}">
             <Setter Property="Foreground" Value="{StaticResource ActiveTextForeground}" />
@@ -450,13 +464,16 @@
 
                                 <Border 
                                     Grid.Column="0"
-                                    Width="25"
-                                    Height="25"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
                                     Margin="8,0,0,0"
-                                    Background="Aquamarine">
-                                    <TextBlock Text="{Binding Label}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    BorderThickness="1"
+                                    BorderBrush="{Binding SelectedColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
+                                    Background="{Binding SelectedColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                    <TextBlock Text="{Binding Label}"
+                                               FontSize="8" Margin="3 1" 
+                                               HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                               Foreground="{Binding SelectedColor, Converter={dh:BackgroundToForegroundColorConverter}}"/>
                                 </Border>
 
                                 <TextBlock                                    
@@ -515,6 +532,15 @@
                 Margin="0,0,0,10"
                 Grid.Column="2"
                 Grid.Row="1">
+                <Grid.Style>
+                    <Style TargetType="Grid">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding SelectedBumperSticker}" Value="{x:Null}">
+                                <Setter Property="Visibility" Value="Hidden"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Grid.Style>
 
                 <Grid.RowDefinitions>
                     <RowDefinition />
@@ -547,60 +573,50 @@
                     Grid.Column="0"
                     Orientation="Horizontal"
                     VerticalAlignment="Bottom"
-                    >
-
-                    <!--<Border
-                        Margin="15,0,0,0"
-                        Width="45"
-                        Height="45"
-                        BorderThickness="1"
-                        BorderBrush="{StaticResource InactiveTextForeground}"
-                        Background="{StaticResource ButtonBackground}"
-                        CornerRadius="2"
-                        >
-
-                        <Image 
-                            Source="{Binding SelectedPlayerType.Image, Converter={dh:StringToImageSourceConverter}}" 
-                            Width="24" 
-                            Height="24"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Center"
-                            />
-
-                    </Border>-->
+                    HorizontalAlignment="Center">
 
                     <!-- Color -->
                     <Border 
-                        Grid.Column="2"
                         Margin="8,0,0,0"
                         CornerRadius="1"
                         Width="40"
                         Height="40"
                         Background="{StaticResource ButtonBackground}">
-                            <Border
+                        <Border
                                 Width="20" 
                                 Height="20"
                                 BorderThickness="2"
                                 BorderBrush="#000000"
-                                Background="{Binding Color, Converter={dh:ColorToSolidBrushConverter}}"
-                                />
+                                Cursor="Hand"
+                                Background="{Binding SelectedBumperSticker.SelectedColor, Converter={dh:ColorToSolidBrushConverter}}"/>
 
                     </Border>
 
-                    <StackPanel
-                        Height="45"
-                        VerticalAlignment="Center"
-                        Orientation="Vertical">
+                    <Border
+                            Margin="8,0,0,0"
+                            CornerRadius="1"
+                            Width="40"
+                            Height="40"
+                            Background="{StaticResource ButtonBackground}">
+                        <Button
+                            Command="{Binding DataContext.SelectColorCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                            CommandParameter="{Binding}"
+                            Background="{StaticResource ButtonBackground}">
+                            <Button.ContentTemplate>
+                                <DataTemplate>
+                                    <Border Width="20" Height="20" Background="{StaticResource EyeDropperBrush}" />
+                                </DataTemplate>
+                            </Button.ContentTemplate>
+                        </Button>
+                    </Border>
 
-                        <Button                         
+                    <!--<Button                         
                             Content="{ResX Key=Common_BumperStickers_SelectColor}"                          
                             Margin="5,0,0,5"
                             Command="{Binding DataContext.SelectColorCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
                             CommandParameter="{Binding}"
                             Style="{StaticResource IconButtonStyle}"
-                            />
-
-                    </StackPanel>
+                            />-->
 
                 </StackPanel>
 
@@ -611,7 +627,7 @@
                     VerticalAlignment="Bottom">
 
                     <TextBlock                        
-                        Text="{ResX Key=Common_HudPlayerType_PlayerName}"  
+                        Text="{ResX Key=Common_BumperSticker_StickerName}"  
                         Margin="0,0,0,2"
                         Style="{StaticResource TextBlockStyle}"                
                         />
@@ -693,10 +709,27 @@
                             />
 
                     </StackPanel>
-
                 </Border>
-
             </Grid>
         </Grid>
+
+        <dh:NonTopmostPopup             
+            IsOpen="{Binding IsColorPickerPopupOpened}" 
+            StaysOpen="False"
+            IsTopmost="True"
+            Placement="Mouse">
+
+            <telerik:RadColorSelector
+                x:Name="ColorSelector"
+                SelectedColor="{Binding SelectedBumperSticker.SelectedColor, Mode=TwoWay}"                     
+                HeaderPalette="Office"
+                AutomaticColor="Gray"
+                Foreground="{StaticResource ActiveTextForeground}"
+                Background="{StaticResource PopupBackground}"
+                Command="{Binding PickerSelectColorCommand}"
+                />
+
+        </dh:NonTopmostPopup>
+
     </Grid>
 </UserControl>
