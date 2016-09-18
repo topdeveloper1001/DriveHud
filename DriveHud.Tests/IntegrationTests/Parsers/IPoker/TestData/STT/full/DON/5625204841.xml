@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5625204841">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>"Turbo" $0.50 NLH Double Up*10, 719890891</tablename>  
+	          <tournamentcurrency>USD</tournamentcurrency>  
+	          <duration>00:28</duration>  
+	          <gamecount>45</gamecount>  
+	          <startdate>2012-05-17 14:17:25</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>WhiteRiderT</nickname>  
+	          <bets>5,160</bets>  
+	          <wins>5,490</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,830</chipsout>
+			  		<ipoints>1.19</ipoints>
+        		<statuspoints>1.19</statuspoints>
+			  		<awardpoints>1.19</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>"Turbo" $0.50 NLH Double Up*10</tournamentname><place>1</place><buyin>$0.50+$0.07</buyin> <totalbuyin>$0.57</totalbuyin> <ipoints>1.19</ipoints> <win>$1.00</win> <statuspoints>1.19</statuspoints> <awardpoints>1.19</awardpoints>  
+	    </general>  
+	    <game gamecode="4128175730">
+		 <general>
+		  <startdate>2012-05-17 14:17:25</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="3" name="WWR137829552" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="1,500" dealer="0" win="3,030" bet="1,500" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="henio0321" chips="1,500" dealer="0" win="0" bet="1,500" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="laurachata" type="1" sum="10" cards="[cards]"/><action no="2" player="WWR137829552" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C9 C3</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="11" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="WWR137829552">X X</cards><action no="12" player="WWR137829552" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="3" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="4" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">SK S10</cards><action no="5" player="lex1239" type="23" sum="1,500" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="6" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="7" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="henio0321">D5 DA</cards><action no="8" player="henio0321" type="7" sum="1,500" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="9" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ SJ D10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards>
+	</round>
+	
+		</game><game gamecode="4128175737">
+		 <general>
+		  <startdate>2012-05-17 14:18:19</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,490" dealer="1" win="0" bet="20" rebuy="0" addon="0"/><player seat="3" name="WWR137829552" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="3,030" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,500" dealer="0" win="157.50" bet="87.50" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WWR137829552" type="1" sum="10" cards="[cards]"/><action no="2" player="Dirol005" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S3 S4</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="9" player="laurachata" type="3" sum="20" cards=""/><cards type="Pocket" player="WWR137829552">X X</cards><action no="10" player="WWR137829552" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="11" player="Dirol005" type="4" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="3" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">X X</cards><action no="4" player="lex1239" type="3" sum="20" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="5" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="6" player="tantan00" type="3" sum="20" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="7" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA D8 S5</cards><action no="15" player="laurachata" type="0" sum="0" cards=""/><action no="12" player="Dirol005" type="4" sum="0" cards=""/><action no="16" player="Dirol005" type="0" sum="0" cards=""/><action no="13" player="lex1239" type="4" sum="0" cards=""/><action no="17" player="lex1239" type="0" sum="0" cards=""/><action no="14" player="tantan00" type="5" sum="67.50" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128175744">
+		 <general>
+		  <startdate>2012-05-17 14:19:12</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,470" dealer="0" win="170" bet="100" rebuy="0" addon="0"/><player seat="3" name="WWR137829552" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="3,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dirol005" type="1" sum="10" cards="[cards]"/><action no="2" player="pelikanu82" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S4 D2</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="8" player="laurachata" type="23" sum="40" cards=""/><cards type="Pocket" player="WWR137829552">X X</cards><action no="9" player="WWR137829552" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="10" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="11" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">X X</cards><action no="3" player="lex1239" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="4" player="giziokk" type="3" sum="20" cards=""/><action no="12" player="giziokk" type="3" sum="20" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="5" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="6" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 SA C5</cards><action no="14" player="laurachata" type="5" sum="60" cards=""/><action no="13" player="giziokk" type="4" sum="0" cards=""/><action no="15" player="giziokk" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128175748">
+		 <general>
+		  <startdate>2012-05-17 14:20:11</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="WWR137829552" chips="1,470" dealer="0" win="10" bet="1,470" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="3,010" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="1,460" dealer="0" win="2,950" bet="1,460" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pelikanu82" type="1" sum="10" cards="[cards]"/><action no="2" player="lex1239" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D8 S3</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="7" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="WWR137829552">S7 CK</cards><action no="8" player="WWR137829552" type="3" sum="70" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="9" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="10" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">X X</cards><action no="11" player="lex1239" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">DK SK</cards><action no="3" player="giziokk" type="23" sum="70" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="4" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="5" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 SJ DQ</cards><action no="13" player="WWR137829552" type="5" sum="85" cards=""/><action no="15" player="WWR137829552" type="3" sum="85" cards=""/><action no="12" player="giziokk" type="4" sum="0" cards=""/><action no="14" player="giziokk" type="23" sum="170" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="17" player="WWR137829552" type="3" sum="382.50" cards=""/><action no="16" player="giziokk" type="5" sum="382.50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards><action no="19" player="WWR137829552" type="7" sum="847.50" cards=""/><action no="18" player="giziokk" type="5" sum="637.50" cards=""/><action no="20" player="giziokk" type="7" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128175755">
+		 <general>
+		  <startdate>2012-05-17 14:21:40</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="1,500" dealer="0" win="110" bet="90" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="WWR137829552" chips="10" dealer="0" win="40" bet="10" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="2,990" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,950" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lex1239" type="1" sum="10" cards="[cards]"/><action no="2" player="giziokk" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DJ DA</cards><action no="5" player="WhiteRiderT" type="23" sum="40" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="6" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="WWR137829552">D5 H5</cards><action no="7" player="WWR137829552" type="7" sum="10" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="8" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="9" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">X X</cards><action no="10" player="lex1239" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="11" player="giziokk" type="3" sum="20" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="3" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="4" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 C5 CA</cards><action no="13" player="WhiteRiderT" type="5" sum="50" cards=""/><action no="12" player="giziokk" type="4" sum="0" cards=""/><action no="14" player="giziokk" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards>
+	</round>
+	
+		</game><game gamecode="4128175761">
+		 <general>
+		  <startdate>2012-05-17 14:22:36</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="WWR137829552" chips="40" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="2,980" dealer="1" win="200" bet="140" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,910" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,570" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="giziokk" type="1" sum="20" cards="[cards]"/><action no="2" player="tantan00" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D4 DJ</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="5" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="WWR137829552">X X</cards><action no="6" player="WWR137829552" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="7" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="8" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">X X</cards><action no="9" player="lex1239" type="23" sum="140" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="10" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="11" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="3" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128175767">
+		 <general>
+		  <startdate>2012-05-17 14:23:30</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="1,520" dealer="0" win="3,140" bet="1,520" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="WWR137829552" chips="40" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="3,040" dealer="0" win="0" bet="1,520" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,890" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,530" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tantan00" type="1" sum="20" cards="[cards]"/><action no="2" player="Trollfacer" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SJ HJ</cards><action no="3" player="WhiteRiderT" type="23" sum="80" cards=""/><action no="12" player="WhiteRiderT" type="23" sum="1,520" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="4" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="WWR137829552">SA S10</cards><action no="5" player="WWR137829552" type="7" sum="40" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="6" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="7" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">HK SK</cards><action no="8" player="lex1239" type="23" sum="340" cards=""/><action no="13" player="lex1239" type="3" sum="1,180" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="9" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="10" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="11" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 D2 H4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards>
+	</round>
+	
+		</game><game gamecode="4128200215">
+		 <general>
+		  <startdate>2012-05-17 14:24:18</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,140" dealer="0" win="60" bet="40" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,510" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="40" cards="[cards]"/><action no="1" player="Trollfacer" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CK HK</cards><cards type="Pocket" player="laurachata">X X</cards><action no="3" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="4" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="5" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">X X</cards><action no="6" player="lex1239" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="7" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="8" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="9" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200218">
+		 <general>
+		  <startdate>2012-05-17 14:24:46</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,540" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="180" bet="120" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="20" cards="[cards]"/><action no="2" player="laurachata" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DK D10</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="10" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="3" player="Dirol005" type="23" sum="120" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="4" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">X X</cards><action no="5" player="lex1239" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="6" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="7" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="8" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200224">
+		 <general>
+		  <startdate>2012-05-17 14:25:39</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,140" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="1,500" dealer="0" win="3,040" bet="1,500" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,530" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="1,520" dealer="0" win="20" bet="1,520" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="laurachata" type="1" sum="20" cards="[cards]"/><action no="2" player="Dirol005" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CA HK</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">H9 C9</cards><action no="9" player="laurachata" type="7" sum="1,480" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="10" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="3" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">S8 SA</cards><action no="4" player="lex1239" type="23" sum="1,520" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="5" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="6" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="7" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ SQ DQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game><game gamecode="4128200229">
+		 <general>
+		  <startdate>2012-05-17 14:26:24</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,140" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,040" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,470" dealer="0" win="40" bet="40" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="20" dealer="0" win="80" bet="20" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,440" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dirol005" type="1" sum="20" cards="[cards]"/><action no="2" player="pelikanu82" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SA D4</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="8" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="9" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">H5 D10</cards><action no="10" player="pelikanu82" type="4" sum="0" cards=""/><cards type="Pocket" player="lex1239">C9 HA</cards><action no="3" player="lex1239" type="7" sum="20" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="4" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="5" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">H8 DA</cards><action no="6" player="Trollfacer" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 S3 C7</cards><action no="11" player="pelikanu82" type="4" sum="0" cards=""/><action no="12" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards><action no="13" player="pelikanu82" type="4" sum="0" cards=""/><action no="14" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards><action no="15" player="pelikanu82" type="4" sum="0" cards=""/><action no="16" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200234">
+		 <general>
+		  <startdate>2012-05-17 14:27:08</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,140" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,040" dealer="0" win="180" bet="80" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,470" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="6" name="lex1239" chips="80" dealer="0" win="0" bet="80" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pelikanu82" type="1" sum="20" cards="[cards]"/><action no="2" player="lex1239" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D6 H10</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">S9 S6</cards><action no="7" player="laurachata" type="23" sum="80" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="8" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="9" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="lex1239">H8 C8</cards><action no="10" player="lex1239" type="7" sum="40" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="3" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="4" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="5" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 C10 D9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards>
+	</round>
+	
+		</game><game gamecode="4128200236">
+		 <general>
+		  <startdate>2012-05-17 14:27:48</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,140" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,140" dealer="0" win="360" bet="180" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,890" dealer="0" win="0" bet="180" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="giziokk" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CQ S2</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">D4 D8</cards><action no="5" player="laurachata" type="3" sum="60" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="6" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="7" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">S8 D3</cards><action no="8" player="giziokk" type="4" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="2" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="3" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 D2 DJ</cards><action no="10" player="laurachata" type="4" sum="0" cards=""/><action no="9" player="giziokk" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="12" player="laurachata" type="5" sum="60" cards=""/><action no="11" player="giziokk" type="4" sum="0" cards=""/><action no="13" player="giziokk" type="3" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards><action no="15" player="laurachata" type="5" sum="60" cards=""/><action no="14" player="giziokk" type="4" sum="0" cards=""/><action no="16" player="giziokk" type="3" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200245">
+		 <general>
+		  <startdate>2012-05-17 14:28:50</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,140" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,710" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,510" dealer="0" win="300" bet="150" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="giziokk" type="1" sum="30" cards="[cards]"/><action no="2" player="tantan00" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DK C3</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="5" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="6" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="7" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">S3 C2</cards><action no="8" player="giziokk" type="3" sum="30" cards=""/><cards type="Pocket" player="tantan00">C8 H5</cards><action no="9" player="tantan00" type="4" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="3" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 D5 C10</cards><action no="10" player="giziokk" type="4" sum="0" cards=""/><action no="11" player="tantan00" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards><action no="12" player="giziokk" type="4" sum="0" cards=""/><action no="13" player="tantan00" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S10</cards><action no="14" player="giziokk" type="4" sum="0" cards=""/><action no="16" player="giziokk" type="3" sum="90" cards=""/><action no="15" player="tantan00" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200251">
+		 <general>
+		  <startdate>2012-05-17 14:29:50</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,140" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,560" dealer="1" win="150" bet="60" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,660" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,400" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tantan00" type="1" sum="30" cards="[cards]"/><action no="2" player="Trollfacer" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D2 C4</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="4" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="5" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="6" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">HA D3</cards><action no="7" player="giziokk" type="3" sum="60" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="8" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">DK C5</cards><action no="9" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 H8 HQ</cards><action no="11" player="giziokk" type="4" sum="0" cards=""/><action no="10" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="13" player="giziokk" type="4" sum="0" cards=""/><action no="12" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards><action no="15" player="giziokk" type="4" sum="0" cards=""/><action no="14" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200256">
+		 <general>
+		  <startdate>2012-05-17 14:30:47</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,140" dealer="0" win="90" bet="60" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,650" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,340" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="60" cards="[cards]"/><action no="1" player="Trollfacer" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S10 DQ</cards><cards type="Pocket" player="laurachata">X X</cards><action no="3" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="4" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="5" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="6" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="7" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="8" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200258">
+		 <general>
+		  <startdate>2012-05-17 14:31:12</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,170" dealer="0" win="240" bet="180" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,320" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,650" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,310" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="30" cards="[cards]"/><action no="2" player="laurachata" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S8 H8</cards><action no="8" player="WhiteRiderT" type="23" sum="180" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="9" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="3" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="4" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="5" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="6" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="7" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200266">
+		 <general>
+		  <startdate>2012-05-17 14:31:47</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,260" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,470" dealer="0" win="1,590" bet="1,470" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,650" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="laurachata" type="1" sum="30" cards="[cards]"/><action no="2" player="Dirol005" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S4 C10</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="8" player="laurachata" type="3" sum="30" cards=""/><action no="11" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="9" player="Dirol005" type="23" sum="1,470" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="3" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="4" player="giziokk" type="3" sum="60" cards=""/><action no="10" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="5" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="6" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200271">
+		 <general>
+		  <startdate>2012-05-17 14:32:42</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,200" dealer="1" win="0" bet="300" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,590" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,450" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,590" dealer="0" win="750" bet="300" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dirol005" type="1" sum="50" cards="[cards]"/><action no="2" player="pelikanu82" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D4 HK</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">SQ CJ</cards><action no="7" player="laurachata" type="23" sum="200" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="8" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="9" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">S7 D7</cards><action no="3" player="giziokk" type="3" sum="100" cards=""/><action no="10" player="giziokk" type="3" sum="100" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="4" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="5" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 C10 DA</cards><action no="12" player="laurachata" type="5" sum="100" cards=""/><action no="11" player="giziokk" type="4" sum="0" cards=""/><action no="13" player="giziokk" type="3" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="15" player="laurachata" type="4" sum="0" cards=""/><action no="14" player="giziokk" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards><action no="17" player="laurachata" type="4" sum="0" cards=""/><action no="16" player="giziokk" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128200274">
+		 <general>
+		  <startdate>2012-05-17 14:33:27</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="2,900" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,540" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,350" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="150" bet="100" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pelikanu82" type="1" sum="50" cards="[cards]"/><action no="2" player="giziokk" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H2 D10</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="6" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="7" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="8" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><cards type="Pocket" player="tantan00">X X</cards><action no="3" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="4" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207854">
+		 <general>
+		  <startdate>2012-05-17 14:34:03</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="2,900" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,300" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,090" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="0" win="150" bet="100" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="giziokk" type="1" sum="50" cards="[cards]"/><action no="2" player="tantan00" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D6 D4</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="5" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="6" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="7" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="8" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><cards type="Pocket" player="Trollfacer">X X</cards><action no="3" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207856">
+		 <general>
+		  <startdate>2012-05-17 14:34:28</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="0" win="350" bet="200" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="2,900" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,680" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,310" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tantan00" type="1" sum="50" cards="[cards]"/><action no="2" player="Trollfacer" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SA SQ</cards><action no="3" player="WhiteRiderT" type="23" sum="200" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="4" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="5" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="6" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="7" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="8" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="9" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207859">
+		 <general>
+		  <startdate>2012-05-17 14:35:05</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,380" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="2,900" dealer="0" win="3,050" bet="2,900" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,210" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/><action no="1" player="Trollfacer" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SK C3</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="3" player="laurachata" type="23" sum="2,900" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="4" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="5" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="6" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="7" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="8" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207863">
+		 <general>
+		  <startdate>2012-05-17 14:35:40</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,280" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,050" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,160" dealer="1" win="1,310" bet="1,160" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/><action no="2" player="laurachata" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SA S2</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="9" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="3" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="4" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="5" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="6" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="7" player="Trollfacer" type="23" sum="1,160" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207868">
+		 <general>
+		  <startdate>2012-05-17 14:36:25</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="2,950" dealer="0" win="300" bet="200" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,540" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="laurachata" type="1" sum="50" cards="[cards]"/><action no="2" player="Dirol005" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S4 D2</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="8" player="laurachata" type="3" sum="50" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="9" player="Dirol005" type="4" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="3" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="4" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="5" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="6" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA D4 C5</cards><action no="10" player="laurachata" type="5" sum="100" cards=""/><action no="11" player="Dirol005" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207874">
+		 <general>
+		  <startdate>2012-05-17 14:37:27</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,050" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,440" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,300" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="1,630" dealer="0" win="320" bet="1,630" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="1,310" dealer="0" win="2,920" bet="1,310" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dirol005" type="1" sum="100" cards="[cards]"/><action no="2" player="pelikanu82" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D5 H5</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="7" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="8" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="9" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="3" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">S10 HA</cards><action no="4" player="tantan00" type="23" sum="1,630" cards=""/><cards type="Pocket" player="Trollfacer">CK CQ</cards><action no="5" player="Trollfacer" type="7" sum="1,310" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK C3 H2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards>
+	</round>
+	
+		</game><game gamecode="4128207880">
+		 <general>
+		  <startdate>2012-05-17 14:38:04</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,100" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="320" dealer="0" win="620" bet="320" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,920" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pelikanu82" type="1" sum="100" cards="[cards]"/><action no="2" player="giziokk" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SK H5</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="6" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="7" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="8" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="9" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="3" player="tantan00" type="7" sum="320" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="4" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207883">
+		 <general>
+		  <startdate>2012-05-17 14:38:24</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,840" dealer="0" win="3,040" bet="2,840" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="620" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,920" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="giziokk" type="1" sum="100" cards="[cards]"/><action no="2" player="tantan00" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DA S5</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="5" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="6" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="7" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="8" player="giziokk" type="23" sum="2,840" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="9" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="3" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207888">
+		 <general>
+		  <startdate>2012-05-17 14:38:52</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,230" dealer="0" win="700" bet="400" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="420" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,920" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tantan00" type="1" sum="100" cards="[cards]"/><action no="2" player="Trollfacer" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CA HA</cards><action no="3" player="WhiteRiderT" type="23" sum="400" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="4" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="5" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="6" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="7" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="8" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="9" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207890">
+		 <general>
+		  <startdate>2012-05-17 14:39:09</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,530" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,340" dealer="0" win="1,640" bet="1,340" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="320" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,720" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/><action no="1" player="Trollfacer" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CJ H7</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="3" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="4" player="Dirol005" type="23" sum="1,340" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="5" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="6" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="7" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="8" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207893">
+		 <general>
+		  <startdate>2012-05-17 14:39:52</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,330" dealer="0" win="800" bet="600" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,050" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,640" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/><action no="2" player="laurachata" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DK CA</cards><action no="8" player="WhiteRiderT" type="23" sum="600" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="9" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="3" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="4" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="5" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="6" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="7" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207895">
+		 <general>
+		  <startdate>2012-05-17 14:40:15</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,530" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="2,850" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,640" dealer="0" win="300" bet="200" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="laurachata" type="1" sum="100" cards="[cards]"/><action no="2" player="Dirol005" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S5 S8</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="8" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><cards type="Pocket" player="pelikanu82">X X</cards><action no="3" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="4" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">X X</cards><action no="5" player="tantan00" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="6" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207897">
+		 <general>
+		  <startdate>2012-05-17 14:40:31</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="2,750" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="1,740" dealer="0" win="840" bet="320" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="1,000" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="tantan00" chips="320" dealer="0" win="0" bet="320" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dirol005" type="1" sum="100" cards="[cards]"/><action no="2" player="pelikanu82" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S2 S10</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="7" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">DQ D7</cards><action no="8" player="Dirol005" type="3" sum="220" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="9" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="3" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="tantan00">DA H6</cards><action no="4" player="tantan00" type="7" sum="320" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="5" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 CJ CQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game><game gamecode="4128207899">
+		 <general>
+		  <startdate>2012-05-17 14:40:59</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="3,530" dealer="0" win="0" bet="600" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="2,750" dealer="0" win="2,100" bet="1,200" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,260" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="800" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="3,040" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pelikanu82" type="1" sum="100" cards="[cards]"/><action no="2" player="giziokk" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CJ H2</cards><action no="4" player="WhiteRiderT" type="23" sum="400" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="5" player="laurachata" type="3" sum="400" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="6" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="7" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="8" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="3" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA DA DK</cards><action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="10" player="laurachata" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="11" player="WhiteRiderT" type="5" sum="200" cards=""/><action no="12" player="laurachata" type="3" sum="200" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards><action no="13" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="15" player="WhiteRiderT" type="0" sum="0" cards=""/><action no="14" player="laurachata" type="5" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207902">
+		 <general>
+		  <startdate>2012-05-17 14:41:49</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,930" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,650" dealer="0" win="700" bet="400" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="700" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,840" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="giziokk" type="1" sum="100" cards="[cards]"/><action no="2" player="Trollfacer" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C7 DQ</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="4" player="laurachata" type="3" sum="200" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="5" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="6" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="7" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="8" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 CK D4</cards><action no="10" player="laurachata" type="5" sum="200" cards=""/><action no="9" player="Trollfacer" type="4" sum="0" cards=""/><action no="11" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207906">
+		 <general>
+		  <startdate>2012-05-17 14:42:23</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,930" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,950" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,420" dealer="0" win="600" bet="400" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/><action no="1" player="Trollfacer" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C2 C7</cards><action no="8" player="WhiteRiderT" type="4" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="3" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="4" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="5" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="6" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">C8 D8</cards><action no="7" player="Trollfacer" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 C10 S4</cards><action no="10" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="9" player="Trollfacer" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><action no="11" player="Trollfacer" type="5" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207907">
+		 <general>
+		  <startdate>2012-05-17 14:42:48</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,730" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,950" dealer="0" win="450" bet="300" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="150" cards="[cards]"/><action no="2" player="laurachata" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">HJ C9</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><cards type="Pocket" player="Dirol005">X X</cards><action no="3" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="4" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="5" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="6" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207908">
+		 <general>
+		  <startdate>2012-05-17 14:43:05</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,580" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="4,100" dealer="0" win="0" bet="300" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,260" dealer="0" win="600" bet="300" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="laurachata" type="1" sum="150" cards="[cards]"/><action no="2" player="Dirol005" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SA DJ</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">D8 DQ</cards><action no="7" player="laurachata" type="3" sum="150" cards=""/><cards type="Pocket" player="Dirol005">H7 H4</cards><action no="8" player="Dirol005" type="4" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="3" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="4" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="5" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 D9 H2</cards><action no="9" player="laurachata" type="4" sum="0" cards=""/><action no="10" player="Dirol005" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards><action no="11" player="laurachata" type="4" sum="0" cards=""/><action no="12" player="Dirol005" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards><action no="13" player="laurachata" type="4" sum="0" cards=""/><action no="14" player="Dirol005" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207911">
+		 <general>
+		  <startdate>2012-05-17 14:43:48</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,580" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,800" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,560" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="700" dealer="0" win="0" bet="300" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="0" win="1,050" bet="600" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dirol005" type="1" sum="150" cards="[cards]"/><action no="2" player="pelikanu82" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C2 D2</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="6" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="7" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="8" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="3" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="4" player="Trollfacer" type="23" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207913">
+		 <general>
+		  <startdate>2012-05-17 14:44:03</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,580" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,800" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,410" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="400" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="0" win="450" bet="300" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="3,070" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pelikanu82" type="1" sum="150" cards="[cards]"/><action no="2" player="giziokk" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H6 DA</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="5" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="6" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="7" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><cards type="Pocket" player="Trollfacer">X X</cards><action no="3" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207914">
+		 <general>
+		  <startdate>2012-05-17 14:44:16</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,580" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,800" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,410" dealer="0" win="1,050" bet="600" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="250" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,890" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="3,070" dealer="0" win="0" bet="300" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="giziokk" type="1" sum="150" cards="[cards]"/><action no="2" player="Trollfacer" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CJ S8</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="4" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="5" player="Dirol005" type="23" sum="600" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="6" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="7" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="8" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207916">
+		 <general>
+		  <startdate>2012-05-17 14:44:38</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,580" dealer="0" win="0" bet="300" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="3,800" dealer="0" win="1,050" bet="600" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,860" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,770" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="300" cards="[cards]"/><action no="1" player="Trollfacer" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D9 S5</cards><action no="8" player="WhiteRiderT" type="4" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="3" player="laurachata" type="3" sum="300" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="4" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="5" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="6" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="7" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 SA H5</cards><action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="10" player="laurachata" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards><action no="11" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="12" player="laurachata" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="13" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="15" player="WhiteRiderT" type="0" sum="0" cards=""/><action no="14" player="laurachata" type="5" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128207920">
+		 <general>
+		  <startdate>2012-05-17 14:45:23</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,280" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="4,250" dealer="0" win="450" bet="300" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,860" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="150" cards="[cards]"/><action no="2" player="laurachata" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D8 HQ</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><cards type="Pocket" player="Dirol005">X X</cards><action no="3" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="4" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="5" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="6" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128216740">
+		 <general>
+		  <startdate>2012-05-17 14:45:43</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,130" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="4,400" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,860" dealer="0" win="0" bet="300" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="2,620" dealer="0" win="1,050" bet="600" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="laurachata" type="1" sum="150" cards="[cards]"/><action no="2" player="Dirol005" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DQ H7</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="laurachata">X X</cards><action no="7" player="laurachata" type="0" sum="0" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="8" player="Dirol005" type="0" sum="0" cards=""/><cards type="Pocket" player="pelikanu82">X X</cards><action no="3" player="pelikanu82" type="0" sum="0" cards=""/><cards type="Pocket" player="giziokk">X X</cards><action no="4" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="5" player="Trollfacer" type="23" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="4128216742">
+		 <general>
+		  <startdate>2012-05-17 14:46:00</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="2,130" dealer="0" win="0" bet="300" rebuy="0" addon="0"/><player seat="2" name="laurachata" chips="4,250" dealer="1" win="1,450" bet="600" rebuy="0" addon="0"/><player seat="4" name="Dirol005" chips="2,560" dealer="0" win="0" bet="300" rebuy="0" addon="0"/><player seat="5" name="pelikanu82" chips="250" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="7" name="giziokk" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Trollfacer" chips="3,070" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dirol005" type="1" sum="150" cards="[cards]"/><action no="2" player="pelikanu82" type="2" sum="250" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C8 D8</cards><action no="5" player="WhiteRiderT" type="3" sum="300" cards=""/><cards type="Pocket" player="laurachata">DJ CA</cards><action no="6" player="laurachata" type="3" sum="300" cards=""/><cards type="Pocket" player="Dirol005">X X</cards><action no="7" player="Dirol005" type="3" sum="150" cards=""/><cards type="Pocket" player="pelikanu82">C3 H4</cards><cards type="Pocket" player="giziokk">X X</cards><action no="3" player="giziokk" type="0" sum="0" cards=""/><cards type="Pocket" player="Trollfacer">X X</cards><action no="4" player="Trollfacer" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ D2 CK</cards><action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><action no="10" player="laurachata" type="5" sum="300" cards=""/><action no="8" player="Dirol005" type="4" sum="0" cards=""/><action no="11" player="Dirol005" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C9</cards>
+	</round>
+	
+		</game>  
+	</session>

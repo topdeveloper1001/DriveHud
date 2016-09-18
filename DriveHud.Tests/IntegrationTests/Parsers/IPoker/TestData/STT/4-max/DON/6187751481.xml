@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187751481">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819027971</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>13</gamecount>  
+	          <startdate>2014-01-25 18:32:28</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>1,755</bets>  
+	          <wins>955</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>4</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5436632042">
+		 <general>
+		  <startdate>2014-01-25 18:32:28</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="800" dealer="0" win="190" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="800" dealer="0" win="190" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PSR87877332" type="1" sum="10" cards="[cards]"/><action no="2" player="go0nzaalo0" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HA D8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">D4 C2</cards><action no="5" player="PSR87877332" type="3" sum="10" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="6" player="go0nzaalo0" type="4" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">D3 D2</cards><action no="3" player="Forsmajoroff" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 SK SA</cards><action no="7" player="PSR87877332" type="4" sum="0" cards=""/><action no="10" player="PSR87877332" type="3" sum="20" cards=""/><action no="8" player="go0nzaalo0" type="4" sum="0" cards=""/><action no="11" player="go0nzaalo0" type="0" sum="0" cards=""/><action no="9" player="Forsmajoroff" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards><action no="12" player="PSR87877332" type="5" sum="20" cards=""/><action no="14" player="PSR87877332" type="3" sum="20" cards=""/><action no="13" player="Forsmajoroff" type="23" sum="40" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards><action no="15" player="PSR87877332" type="5" sum="20" cards=""/><action no="17" player="PSR87877332" type="3" sum="80" cards=""/><action no="16" player="Forsmajoroff" type="23" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436632533">
+		 <general>
+		  <startdate>2014-01-25 18:33:21</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="810" dealer="1" win="815" bet="810" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="810" dealer="0" win="815" bet="810" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="go0nzaalo0" type="1" sum="10" cards="[cards]"/><action no="2" player="Forsmajoroff" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H6 S2</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">SA SK</cards><action no="4" player="PSR87877332" type="23" sum="810" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="5" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">DK HA</cards><action no="6" player="Forsmajoroff" type="7" sum="790" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 S7 CK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards>
+	</round>
+	
+		</game><game gamecode="5436632798">
+		 <general>
+		  <startdate>2014-01-25 18:33:51</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="860" bet="800" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="815" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="815" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="Forsmajoroff" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S8 H8</cards><action no="6" player="WorstCard" type="23" sum="800" cards=""/><cards type="Pocket" player="PSR87877332">X X</cards><action no="3" player="PSR87877332" type="3" sum="20" cards=""/><action no="7" player="PSR87877332" type="0" sum="0" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="4" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="5" player="Forsmajoroff" type="23" sum="40" cards=""/><action no="8" player="Forsmajoroff" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436633069">
+		 <general>
+		  <startdate>2014-01-25 18:34:20</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="860" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="795" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="770" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="775" dealer="1" win="190" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="PSR87877332" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DJ C2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">X X</cards><action no="6" player="PSR87877332" type="0" sum="0" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="3" player="go0nzaalo0" type="23" sum="60" cards=""/><action no="7" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="4" player="Forsmajoroff" type="23" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436633354">
+		 <general>
+		  <startdate>2014-01-25 18:34:48</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="850" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="775" dealer="0" win="1,580" bet="775" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="710" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="865" dealer="0" win="0" bet="775" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PSR87877332" type="1" sum="15" cards="[cards]"/><action no="2" player="go0nzaalo0" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C6 DQ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">HA HQ</cards><action no="5" player="PSR87877332" type="23" sum="775" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="6" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">CQ C3</cards><action no="3" player="Forsmajoroff" type="3" sum="30" cards=""/><action no="7" player="Forsmajoroff" type="3" sum="745" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 H7 SA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game><game gamecode="5436649448">
+		 <general>
+		  <startdate>2014-01-25 18:35:21</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="850" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="1,580" dealer="1" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="680" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="90" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="go0nzaalo0" type="1" sum="15" cards="[cards]"/><action no="2" player="Forsmajoroff" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D5 S8</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">X X</cards><action no="4" player="PSR87877332" type="3" sum="30" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="5" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="6" player="Forsmajoroff" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 DK C10</cards><action no="8" player="PSR87877332" type="4" sum="0" cards=""/><action no="7" player="Forsmajoroff" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="10" player="PSR87877332" type="4" sum="0" cards=""/><action no="9" player="Forsmajoroff" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards><action no="12" player="PSR87877332" type="5" sum="30" cards=""/><action no="11" player="Forsmajoroff" type="4" sum="0" cards=""/><action no="13" player="Forsmajoroff" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436649888">
+		 <general>
+		  <startdate>2014-01-25 18:36:09</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="1,625" dealer="0" win="375" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="665" dealer="1" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="60" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="Forsmajoroff" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D5 DA</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">X X</cards><action no="3" player="PSR87877332" type="3" sum="30" cards=""/><action no="7" player="PSR87877332" type="3" sum="90" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="4" player="go0nzaalo0" type="23" sum="120" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="5" player="Forsmajoroff" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 C8 C5</cards><action no="8" player="PSR87877332" type="5" sum="90" cards=""/><action no="9" player="go0nzaalo0" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436650197">
+		 <general>
+		  <startdate>2014-01-25 18:36:43</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="820" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="1,790" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="545" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="45" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="PSR87877332" type="15" sum="5" cards="[cards]"/><action no="6" player="PSR87877332" type="2" sum="50" cards="[cards]"/><action no="3" player="go0nzaalo0" type="15" sum="5" cards="[cards]"/><action no="4" player="Forsmajoroff" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C5 HK</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">X X</cards><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="7" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="8" player="Forsmajoroff" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436650345">
+		 <general>
+		  <startdate>2014-01-25 18:37:00</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="790" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="1,830" dealer="0" win="0" bet="540" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="540" dealer="0" win="1,090" bet="540" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="40" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="PSR87877332" type="15" sum="5" cards="[cards]"/><action no="5" player="PSR87877332" type="1" sum="25" cards="[cards]"/><action no="2" player="go0nzaalo0" type="15" sum="5" cards="[cards]"/><action no="6" player="go0nzaalo0" type="2" sum="50" cards="[cards]"/><action no="3" player="Forsmajoroff" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H7 S5</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">DK D4</cards><action no="9" player="PSR87877332" type="3" sum="25" cards=""/><action no="11" player="PSR87877332" type="3" sum="485" cards=""/><cards type="Pocket" player="go0nzaalo0">S3 HA</cards><action no="10" player="go0nzaalo0" type="23" sum="535" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="7" player="Forsmajoroff" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA D6 H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H6</cards>
+	</round>
+	
+		</game><game gamecode="5436650604">
+		 <general>
+		  <startdate>2014-01-25 18:37:29</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="785" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="1,290" dealer="1" win="20" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="1,090" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="35" dealer="0" win="105" bet="35" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="PSR87877332" type="15" sum="5" cards="[cards]"/><action no="1" player="go0nzaalo0" type="15" sum="5" cards="[cards]"/><action no="5" player="go0nzaalo0" type="1" sum="25" cards="[cards]"/><action no="2" player="Forsmajoroff" type="15" sum="5" cards="[cards]"/><action no="6" player="Forsmajoroff" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SK C3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">S5 CQ</cards><action no="8" player="PSR87877332" type="3" sum="50" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="9" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">H8 HA</cards>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA C10 D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5436650797">
+		 <general>
+		  <startdate>2014-01-25 18:37:48</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="780" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="1,255" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="1,060" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="105" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="PSR87877332" type="15" sum="5" cards="[cards]"/><action no="4" player="go0nzaalo0" type="15" sum="5" cards="[cards]"/><action no="1" player="Forsmajoroff" type="15" sum="5" cards="[cards]"/><action no="5" player="Forsmajoroff" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S10 S6</cards><cards type="Pocket" player="PSR87877332">X X</cards><action no="7" player="PSR87877332" type="0" sum="0" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="8" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="9" player="Forsmajoroff" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436650965">
+		 <general>
+		  <startdate>2014-01-25 18:38:05</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="820" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="1,250" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="1,055" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="75" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="PSR87877332" type="15" sum="5" cards="[cards]"/><action no="6" player="PSR87877332" type="2" sum="50" cards="[cards]"/><action no="3" player="go0nzaalo0" type="15" sum="5" cards="[cards]"/><action no="4" player="Forsmajoroff" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C6 S7</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR87877332">X X</cards><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="7" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="8" player="Forsmajoroff" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436651172">
+		 <general>
+		  <startdate>2014-01-25 18:38:28</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="790" dealer="1" win="0" bet="790" rebuy="0" addon="0" reg_code="6187751481"/><player seat="4" name="PSR87877332" chips="1,290" dealer="0" win="2,140" bet="1,290" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="go0nzaalo0" chips="1,050" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Forsmajoroff" chips="70" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="PSR87877332" type="15" sum="5" cards="[cards]"/><action no="5" player="PSR87877332" type="1" sum="25" cards="[cards]"/><action no="2" player="go0nzaalo0" type="15" sum="5" cards="[cards]"/><action no="6" player="go0nzaalo0" type="2" sum="50" cards="[cards]"/><action no="3" player="Forsmajoroff" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK D7</cards><action no="8" player="WorstCard" type="23" sum="785" cards=""/><cards type="Pocket" player="PSR87877332">D4 C4</cards><action no="9" player="PSR87877332" type="7" sum="1,260" cards=""/><cards type="Pocket" player="go0nzaalo0">X X</cards><action no="10" player="go0nzaalo0" type="0" sum="0" cards=""/><cards type="Pocket" player="Forsmajoroff">X X</cards><action no="7" player="Forsmajoroff" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 H9 HA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards>
+	</round>
+	
+		</game>  
+	</session>

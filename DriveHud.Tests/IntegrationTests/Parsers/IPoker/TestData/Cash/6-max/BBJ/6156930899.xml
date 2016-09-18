@@ -1,0 +1,1543 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6156930899">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>Rio "Jackpot Sit N Go", 815782545</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:30</duration>  
+	          <gamecount>103</gamecount>  
+	          <startdate>2013-11-30 22:57:55</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>AlphaOmaha</nickname>  
+	          <bets>18,330</bets>  
+	          <wins>17,330</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>542.50</ipoints>
+        		<statuspoints>87.50</statuspoints>
+			  		<awardpoints>542.50</awardpoints>
+	          <tournamentname>Rio "Jackpot Sit N Go"</tournamentname><place>3</place><buyin>$20.00+$3.50</buyin> <totalbuyin>$23.50</totalbuyin> <ipoints>542.50</ipoints> <win>$24.00</win> <statuspoints>87.50</statuspoints> <awardpoints>542.50</awardpoints>  
+	    </general>  
+	    <game gamecode="5292171713">
+		 <general>
+		  <startdate>2013-11-30 22:57:55</startdate>		  
+		  <players>
+		   <player seat="1" name="jimmybbb" chips="1,000" dealer="1" win="0" bet="1,000" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="KOCMOHABT888" chips="1,000" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,000" dealer="0" win="2,030" bet="1,000" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="KOCMOHABT888" type="1" sum="10" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jimmybbb">S9 CA</cards><action no="6" player="jimmybbb" type="3" sum="60" cards=""/><cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="7" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="8" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">D10 S10</cards><action no="3" player="Str8forVictory" type="23" sum="60" cards=""/><cards type="Pocket" player="AlphaOmaha">D2 H10</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 D9 H9</cards><action no="10" player="jimmybbb" type="3" sum="75" cards=""/><action no="9" player="Str8forVictory" type="5" sum="75" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="12" player="jimmybbb" type="3" sum="150" cards=""/><action no="11" player="Str8forVictory" type="5" sum="150" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards><action no="14" player="jimmybbb" type="7" sum="715" cards=""/><action no="13" player="Str8forVictory" type="5" sum="715" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187217">
+		 <general>
+		  <startdate>2013-11-30 22:58:41</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="990" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="980" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,030" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="10" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="5" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="23" sum="60" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S3 HK</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187304">
+		 <general>
+		  <startdate>2013-11-30 22:59:29</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,010" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,000" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="10" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="4" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SJ C6</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187383">
+		 <general>
+		  <startdate>2013-11-30 23:00:05</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,000" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,010" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="10" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="3" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="23" sum="60" cards=""/><cards type="Pocket" player="AlphaOmaha">H3 H9</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="7" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187425">
+		 <general>
+		  <startdate>2013-11-30 23:00:26</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="990" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,030" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="KOCMOHABT888" type="2" sum="20" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="7" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="60" cards=""/><cards type="Pocket" player="AlphaOmaha">S5 CA</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="6" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187463">
+		 <general>
+		  <startdate>2013-11-30 23:00:45</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="970" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,060" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="970" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="KOCMOHABT888" type="1" sum="10" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="6" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="7" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CJ S6</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187547">
+		 <general>
+		  <startdate>2013-11-30 23:01:18</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="960" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,060" dealer="0" win="170" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="10" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="5" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="3" sum="30" cards=""/><cards type="Pocket" player="AlphaOmaha">S8 C8</cards><action no="3" player="AlphaOmaha" type="23" sum="50" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 S9 H2</cards><action no="8" player="Str8forVictory" type="4" sum="0" cards=""/><action no="9" player="AlphaOmaha" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CJ</cards><action no="10" player="Str8forVictory" type="5" sum="60" cards=""/><action no="11" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187659">
+		 <general>
+		  <startdate>2013-11-30 23:02:04</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="960" dealer="0" win="110" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,120" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="950" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="10" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="4" player="KOCMOHABT888" type="23" sum="80" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H7 H5</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187731">
+		 <general>
+		  <startdate>2013-11-30 23:02:41</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="990" dealer="0" win="110" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,110" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="10" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="3" player="KOCMOHABT888" type="23" sum="80" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S5 CK</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="7" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187794">
+		 <general>
+		  <startdate>2013-11-30 23:03:01</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="1,020" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="920" dealer="1" win="80" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="KOCMOHABT888" type="2" sum="20" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="7" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CQ SA</cards><action no="5" player="AlphaOmaha" type="23" sum="50" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="6" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187840">
+		 <general>
+		  <startdate>2013-11-30 23:03:24</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="1,000" dealer="0" win="100" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="970" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="950" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="KOCMOHABT888" type="1" sum="10" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="6" player="KOCMOHABT888" type="23" sum="80" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="7" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C7 SA</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201451">
+		 <general>
+		  <startdate>2013-11-30 23:03:51</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="1,020" dealer="1" win="50" bet="1,020" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="950" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,110" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="950" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="970" dealer="0" win="1,970" bet="970" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="10" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">H9 SA</cards><action no="5" player="KOCMOHABT888" type="23" sum="100" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C8 CK</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">DJ HJ</cards><action no="4" player="assasinno3" type="23" sum="60" cards=""/><action no="8" player="assasinno3" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 D4 SJ</cards><action no="10" player="KOCMOHABT888" type="5" sum="920" cards=""/><action no="9" player="assasinno3" type="4" sum="0" cards=""/><action no="11" player="assasinno3" type="7" sum="870" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards>
+	</round>
+	
+		</game><game gamecode="5292201546">
+		 <general>
+		  <startdate>2013-11-30 23:04:39</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="50" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="940" dealer="1" win="80" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,090" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="950" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="10" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="4" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="23" sum="50" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C6 H9</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201664">
+		 <general>
+		  <startdate>2013-11-30 23:05:27</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="50" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,970" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="3" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D5 C8</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292201691">
+		 <general>
+		  <startdate>2013-11-30 23:05:44</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="50" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,990" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="KOCMOHABT888" type="2" sum="40" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">X X</cards><action no="7" player="KOCMOHABT888" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C4 H5</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="6" player="assasinno3" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201746">
+		 <general>
+		  <startdate>2013-11-30 23:06:06</startdate>		  
+		  <players>
+		   <player seat="3" name="KOCMOHABT888" chips="10" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="haralambie1" chips="970" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,030" dealer="1" win="170" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="KOCMOHABT888" type="1" sum="10" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="KOCMOHABT888">H4 H7</cards><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S6 H9</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">SK D2</cards><action no="5" player="assasinno3" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK C3 S8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game><game gamecode="5292201799">
+		 <general>
+		  <startdate>2013-11-30 23:06:33</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="930" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="20" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">C6 S3</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201837">
+		 <general>
+		  <startdate>2013-11-30 23:06:50</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,100" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="910" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,080" dealer="0" win="2,140" bet="2,080" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D10 C7</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="2,080" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201899">
+		 <general>
+		  <startdate>2013-11-30 23:07:14</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="870" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,140" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CQ D3</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292201941">
+		 <general>
+		  <startdate>2013-11-30 23:07:34</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="910" dealer="0" win="1,030" bet="910" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="850" dealer="1" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,160" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="40" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="23" sum="910" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CA D10</cards><action no="4" player="AlphaOmaha" type="23" sum="100" cards=""/><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202016">
+		 <general>
+		  <startdate>2013-11-30 23:08:12</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,030" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="750" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,140" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="20" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">DJ DQ</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202059">
+		 <general>
+		  <startdate>2013-11-30 23:08:31</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,010" dealer="1" win="150" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,100" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="750" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,140" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="23" sum="90" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D4 C3</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202121">
+		 <general>
+		  <startdate>2013-11-30 23:08:56</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,070" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="710" dealer="0" win="840" bet="710" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,140" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="23" sum="90" cards=""/><action no="7" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C3 D3</cards><action no="5" player="AlphaOmaha" type="23" sum="710" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="6" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202168">
+		 <general>
+		  <startdate>2013-11-30 23:09:19</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="980" dealer="0" win="1,140" bet="980" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,100" dealer="0" win="0" bet="160" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="40" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="23" sum="980" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H9 DJ</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="23" sum="160" cards=""/><action no="7" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215166">
+		 <general>
+		  <startdate>2013-11-30 23:09:46</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,140" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,940" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="20" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">C3 HK</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215192">
+		 <general>
+		  <startdate>2013-11-30 23:09:56</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,120" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,100" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="840" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,940" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H9 D9</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215226">
+		 <general>
+		  <startdate>2013-11-30 23:10:08</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="860" dealer="0" win="140" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,940" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SA HA</cards><action no="5" player="AlphaOmaha" type="23" sum="100" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="6" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215271">
+		 <general>
+		  <startdate>2013-11-30 23:10:29</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,120" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="900" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,900" dealer="0" win="200" bet="160" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="40" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D8 S6</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="23" sum="160" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215307">
+		 <general>
+		  <startdate>2013-11-30 23:10:46</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,080" dealer="0" win="1,120" bet="1,080" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="900" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,940" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="20" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="23" sum="1,080" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C5 C7</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215371">
+		 <general>
+		  <startdate>2013-11-30 23:11:15</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,120" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,040" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="900" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,940" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SA CQ</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215402">
+		 <general>
+		  <startdate>2013-11-30 23:11:30</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,020" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="920" dealer="0" win="140" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,940" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HA CA</cards><action no="5" player="AlphaOmaha" type="23" sum="100" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="6" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215443">
+		 <general>
+		  <startdate>2013-11-30 23:11:49</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,120" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="960" dealer="1" win="160" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,900" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="40" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DQ SA</cards><action no="4" player="AlphaOmaha" type="23" sum="100" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215470">
+		 <general>
+		  <startdate>2013-11-30 23:12:02</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,080" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,020" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,020" dealer="0" win="240" bet="150" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="30" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HJ H10</cards><action no="3" player="AlphaOmaha" type="23" sum="150" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215517">
+		 <general>
+		  <startdate>2013-11-30 23:12:23</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,050" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,960" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,110" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="23" sum="120" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C9 H5</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215579">
+		 <general>
+		  <startdate>2013-11-30 23:12:47</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,140" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,050" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H7 SQ</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292215620">
+		 <general>
+		  <startdate>2013-11-30 23:13:07</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,140" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,930" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,020" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,910" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="60" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="23" sum="120" cards=""/><cards type="Pocket" player="AlphaOmaha">D8 C10</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215650">
+		 <general>
+		  <startdate>2013-11-30 23:13:20</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,080" dealer="0" win="210" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,020" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="30" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="23" sum="150" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S6 D9</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215694">
+		 <general>
+		  <startdate>2013-11-30 23:13:39</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,140" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,960" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,020" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="23" sum="120" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C8 HQ</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215741">
+		 <general>
+		  <startdate>2013-11-30 23:14:02</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="960" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C9 D7</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292215769">
+		 <general>
+		  <startdate>2013-11-30 23:14:19</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,230" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,910" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="60" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SA D2</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215792">
+		 <general>
+		  <startdate>2013-11-30 23:14:32</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,260" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,930" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="30" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">S7 D8</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215818">
+		 <general>
+		  <startdate>2013-11-30 23:14:44</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,230" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,960" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="23" sum="120" cards=""/><cards type="Pocket" player="AlphaOmaha">C3 C10</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215861">
+		 <general>
+		  <startdate>2013-11-30 23:15:05</startdate>		  
+		  <players>
+		   <player seat="5" name="haralambie1" chips="1,230" dealer="0" win="0" bet="1,230" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,020" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,880" dealer="0" win="3,140" bet="1,880" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">S9 CK</cards><action no="3" player="haralambie1" type="23" sum="120" cards=""/><action no="7" player="haralambie1" type="3" sum="120" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C9 DK</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">SA HA</cards><action no="6" player="assasinno3" type="23" sum="240" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 CJ SK</cards><action no="9" player="haralambie1" type="7" sum="990" cards=""/><action no="8" player="assasinno3" type="5" sum="1,640" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards>
+	</round>
+	
+		</game><game gamecode="5292215918">
+		 <general>
+		  <startdate>2013-11-30 23:15:37</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,020" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="840" dealer="1" win="930" bet="840" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,140" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H6 S6</cards><action no="3" player="AlphaOmaha" type="23" sum="840" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215955">
+		 <general>
+		  <startdate>2013-11-30 23:15:56</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,960" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="0" win="1,050" bet="930" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,110" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="120" cards=""/><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SA S10</cards><action no="5" player="AlphaOmaha" type="23" sum="930" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227012">
+		 <general>
+		  <startdate>2013-11-30 23:16:21</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,050" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,110" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S2 SJ</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292227037">
+		 <general>
+		  <startdate>2013-11-30 23:16:36</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,840" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,020" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,140" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">H2 S6</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227055">
+		 <general>
+		  <startdate>2013-11-30 23:16:45</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,020" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,110" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C5 H4</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227084">
+		 <general>
+		  <startdate>2013-11-30 23:16:59</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,840" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="960" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,200" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="23" sum="120" cards=""/><cards type="Pocket" player="AlphaOmaha">D7 CQ</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227104">
+		 <general>
+		  <startdate>2013-11-30 23:17:13</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,930" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,140" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">DK D6</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227117">
+		 <general>
+		  <startdate>2013-11-30 23:17:25</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,960" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,110" dealer="1" win="3,200" bet="3,110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SQ HK</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="3,110" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227150">
+		 <general>
+		  <startdate>2013-11-30 23:17:41</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,200" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C6 H5</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292227170">
+		 <general>
+		  <startdate>2013-11-30 23:17:54</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,930" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="840" dealer="1" win="930" bet="840" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,230" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DJ HA</cards><action no="3" player="AlphaOmaha" type="23" sum="840" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227188">
+		 <general>
+		  <startdate>2013-11-30 23:18:05</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,200" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S5 C5</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227204">
+		 <general>
+		  <startdate>2013-11-30 23:18:15</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="960" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,200" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H6 SJ</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292227218">
+		 <general>
+		  <startdate>2013-11-30 23:18:24</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,840" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,230" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">D8 D6</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227236">
+		 <general>
+		  <startdate>2013-11-30 23:18:36</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="930" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,200" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S2 SA</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227263">
+		 <general>
+		  <startdate>2013-11-30 23:18:50</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,840" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,290" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="23" sum="120" cards=""/><cards type="Pocket" player="AlphaOmaha">D7 D8</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227280">
+		 <general>
+		  <startdate>2013-11-30 23:19:02</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,930" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="840" dealer="1" win="990" bet="840" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,230" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S9 DJ</cards><action no="3" player="AlphaOmaha" type="23" sum="840" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227301">
+		 <general>
+		  <startdate>2013-11-30 23:19:17</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,830" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="990" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,180" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S5 H2</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227313">
+		 <general>
+		  <startdate>2013-11-30 23:19:28</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,040" dealer="0" win="1,140" bet="1,040" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,180" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H8 CA</cards><action no="4" player="AlphaOmaha" type="23" sum="1,040" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227335">
+		 <general>
+		  <startdate>2013-11-30 23:19:40</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,780" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,140" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,080" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">S3 C5</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227354">
+		 <general>
+		  <startdate>2013-11-30 23:19:49</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,830" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,140" dealer="0" win="2,330" bet="1,140" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="3,030" dealer="1" win="1,890" bet="3,030" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SJ CA</cards><action no="5" player="AlphaOmaha" type="7" sum="1,040" cards=""/><cards type="Pocket" player="assasinno3">SA H10</cards><action no="3" player="assasinno3" type="23" sum="3,030" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ C8 S10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5292227377">
+		 <general>
+		  <startdate>2013-11-30 23:20:09</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,780" dealer="1" win="2,430" bet="1,780" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,330" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,890" dealer="0" win="0" bet="600" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="23" sum="200" cards=""/><cards type="Pocket" player="AlphaOmaha">H5 D8</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 D2 CK</cards><action no="7" player="Str8forVictory" type="23" sum="400" cards=""/><action no="6" player="assasinno3" type="5" sum="100" cards=""/><action no="8" player="assasinno3" type="3" sum="300" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="10" player="Str8forVictory" type="5" sum="1,180" cards=""/><action no="9" player="assasinno3" type="4" sum="0" cards=""/><action no="11" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227435">
+		 <general>
+		  <startdate>2013-11-30 23:20:45</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,430" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,280" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,290" dealer="0" win="400" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C8 C7</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227459">
+		 <general>
+		  <startdate>2013-11-30 23:21:01</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,330" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,280" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,390" dealer="1" win="1,540" bet="1,390" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DQ C10</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="1,390" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227492">
+		 <general>
+		  <startdate>2013-11-30 23:21:17</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,280" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,180" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,540" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D7 S3</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292227504">
+		 <general>
+		  <startdate>2013-11-30 23:21:28</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,280" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,130" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,590" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">S4 H10</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227523">
+		 <general>
+		  <startdate>2013-11-30 23:21:36</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,330" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,130" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,540" dealer="1" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CA H7</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227549">
+		 <general>
+		  <startdate>2013-11-30 23:21:52</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,280" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,030" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,690" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S6 S10</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292227567">
+		 <general>
+		  <startdate>2013-11-30 23:22:03</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,280" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,980" dealer="1" win="0" bet="250" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="1,740" dealer="0" win="2,090" bet="1,740" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DJ S10</cards><action no="3" player="AlphaOmaha" type="23" sum="250" cards=""/><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="23" sum="1,740" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227595">
+		 <general>
+		  <startdate>2013-11-30 23:22:19</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,730" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,090" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="200" cards=""/><cards type="Pocket" player="AlphaOmaha">C10 D8</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227616">
+		 <general>
+		  <startdate>2013-11-30 23:22:31</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,280" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,630" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,090" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S5 C4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292227631">
+		 <general>
+		  <startdate>2013-11-30 23:22:40</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,280" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,580" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,140" dealer="0" win="500" bet="400" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C7 HJ</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="23" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227659">
+		 <general>
+		  <startdate>2013-11-30 23:22:56</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,580" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,240" dealer="1" win="2,390" bet="2,240" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C9 CQ</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="2,240" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227690">
+		 <general>
+		  <startdate>2013-11-30 23:23:11</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,130" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,480" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S6 D4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292240697">
+		 <general>
+		  <startdate>2013-11-30 23:23:31</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,130" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,440" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">D4 S6</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240721">
+		 <general>
+		  <startdate>2013-11-30 23:23:40</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="2,280" bet="2,180" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="2,180" cards=""/><cards type="Pocket" player="AlphaOmaha">CQ S7</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240748">
+		 <general>
+		  <startdate>2013-11-30 23:23:55</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,280" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,330" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S10 C5</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292240766">
+		 <general>
+		  <startdate>2013-11-30 23:24:05</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,280" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,280" dealer="1" win="1,430" bet="1,280" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,440" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D7 SA</cards><action no="3" player="AlphaOmaha" type="23" sum="1,280" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240793">
+		 <general>
+		  <startdate>2013-11-30 23:24:19</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SQ S3</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240807">
+		 <general>
+		  <startdate>2013-11-30 23:24:30</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,130" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,480" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D10 D2</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292240839">
+		 <general>
+		  <startdate>2013-11-30 23:24:43</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,130" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,440" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">H7 H9</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240857">
+		 <general>
+		  <startdate>2013-11-30 23:24:54</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DJ D4</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240881">
+		 <general>
+		  <startdate>2013-11-30 23:25:05</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,130" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,480" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CQ H9</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292240903">
+		 <general>
+		  <startdate>2013-11-30 23:25:18</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,130" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,440" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">S9 C2</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240921">
+		 <general>
+		  <startdate>2013-11-30 23:25:27</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S5 C9</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240937">
+		 <general>
+		  <startdate>2013-11-30 23:25:36</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,130" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,480" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S6 S3</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292240961">
+		 <general>
+		  <startdate>2013-11-30 23:25:49</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,130" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,440" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">D2 S7</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240978">
+		 <general>
+		  <startdate>2013-11-30 23:25:59</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S4 C6</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240994">
+		 <general>
+		  <startdate>2013-11-30 23:26:08</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,080" dealer="1" win="2,380" bet="2,080" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,530" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="23" sum="2,080" cards=""/><cards type="Pocket" player="AlphaOmaha">S4 H7</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241012">
+		 <general>
+		  <startdate>2013-11-30 23:26:18</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,380" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="1" win="1,730" bet="1,430" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,190" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="200" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CJ D3</cards><action no="3" player="AlphaOmaha" type="23" sum="1,430" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241029">
+		 <general>
+		  <startdate>2013-11-30 23:26:31</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,730" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,090" dealer="1" win="900" bet="600" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C10 S4</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241047">
+		 <general>
+		  <startdate>2013-11-30 23:26:43</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,530" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SK C4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292241079">
+		 <general>
+		  <startdate>2013-11-30 23:27:02</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,490" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="200" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">H8 SJ</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241093">
+		 <general>
+		  <startdate>2013-11-30 23:27:12</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,180" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,430" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S9 HK</cards><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241106">
+		 <general>
+		  <startdate>2013-11-30 23:27:24</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,530" dealer="0" win="1,730" bet="1,530" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,390" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DJ DA</cards><action no="4" player="AlphaOmaha" type="23" sum="1,530" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241126">
+		 <general>
+		  <startdate>2013-11-30 23:27:36</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="2,080" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,730" dealer="1" win="2,030" bet="1,730" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,190" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="200" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C8 C9</cards><action no="3" player="AlphaOmaha" type="23" sum="1,730" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241148">
+		 <general>
+		  <startdate>2013-11-30 23:27:47</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,880" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,030" dealer="0" win="0" bet="400" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,090" dealer="1" win="1,500" bet="1,000" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CJ D10</cards><action no="5" player="AlphaOmaha" type="3" sum="200" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="23" sum="400" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 D4 C5</cards><action no="6" player="AlphaOmaha" type="4" sum="0" cards=""/><action no="8" player="AlphaOmaha" type="0" sum="0" cards=""/><action no="7" player="assasinno3" type="5" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241172">
+		 <general>
+		  <startdate>2013-11-30 23:28:06</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,630" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,590" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H3 CK</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292241183">
+		 <general>
+		  <startdate>2013-11-30 23:28:15</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="1,780" dealer="0" win="3,560" bet="1,780" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="2,690" dealer="0" win="910" bet="2,690" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Str8forVictory" type="2" sum="200" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">S7 DA</cards><action no="5" player="Str8forVictory" type="7" sum="1,580" cards=""/><cards type="Pocket" player="AlphaOmaha">C4 S8</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">C3 H2</cards><action no="4" player="assasinno3" type="23" sum="2,690" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ S10 HA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5292241212">
+		 <general>
+		  <startdate>2013-11-30 23:28:34</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="3,560" dealer="0" win="3,760" bet="3,560" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,530" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="3,560" cards=""/><cards type="Pocket" player="AlphaOmaha">H5 C6</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292241236">
+		 <general>
+		  <startdate>2013-11-30 23:28:49</startdate>		  
+		  <players>
+		   <player seat="6" name="Str8forVictory" chips="3,760" dealer="1" win="5,290" bet="3,760" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,330" dealer="0" win="0" bet="1,330" rebuy="0" addon="0" reg_code="6156930899"/><player seat="10" name="assasinno3" chips="910" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Str8forVictory">DK S7</cards><action no="3" player="Str8forVictory" type="23" sum="3,760" cards=""/><cards type="Pocket" player="AlphaOmaha">H9 C9</cards><action no="4" player="AlphaOmaha" type="7" sum="1,230" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA HK C4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards>
+	</round>
+	
+		</game>  
+	</session>

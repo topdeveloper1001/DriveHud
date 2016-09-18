@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224100512">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824203125</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:21</duration>  
+	          <gamecount>25</gamecount>  
+	          <startdate>2014-03-25 13:35:20</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>3,455</bets>  
+	          <wins>1,955</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>0</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>4</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>0</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>0</awardpoints>  
+	    </general>  
+	    <game gamecode="5600699321">
+		 <general>
+		  <startdate>2014-03-25 13:35:20</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,500" dealer="0" win="820" bet="660" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,500" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="10" cards="[cards]"/><action no="2" player="moonshoeos72" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="6" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="3" sum="10" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="8" player="moonshoeos72" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 H5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="4" player="Suki21" type="3" sum="20" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="5" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA C10 CA</cards><action no="9" player="VanTr4X" type="4" sum="0" cards=""/><action no="12" player="VanTr4X" type="3" sum="60" cards=""/><action no="10" player="moonshoeos72" type="5" sum="60" cards=""/><action no="11" player="Suki21" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards><action no="13" player="VanTr4X" type="4" sum="0" cards=""/><action no="16" player="VanTr4X" type="0" sum="0" cards=""/><action no="14" player="moonshoeos72" type="5" sum="580" cards=""/><action no="15" player="Suki21" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600699601">
+		 <general>
+		  <startdate>2014-03-25 13:36:57</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,420" dealer="1" win="645" bet="415" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,660" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,420" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonshoeos72" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="5" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="3" sum="100" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="7" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA DQ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="3" player="Suki21" type="23" sum="100" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="4" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA C6 CJ</cards><action no="10" player="VanTr4X" type="3" sum="100" cards=""/><action no="9" player="Suki21" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="12" player="VanTr4X" type="5" sum="215" cards=""/><action no="11" player="Suki21" type="4" sum="0" cards=""/><action no="13" player="Suki21" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600699848">
+		 <general>
+		  <startdate>2014-03-25 13:38:20</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,650" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,220" dealer="0" win="300" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="Suki21" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="4" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="6" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA C5</cards><action no="7" player="moonbaseone" type="23" sum="60" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="8" player="Suki21" type="3" sum="40" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="3" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ HQ D5</cards><action no="9" player="moonbaseone" type="5" sum="60" cards=""/><action no="10" player="Suki21" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards><action no="11" player="moonbaseone" type="4" sum="0" cards=""/><action no="13" player="moonbaseone" type="0" sum="0" cards=""/><action no="12" player="Suki21" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600700037">
+		 <general>
+		  <startdate>2014-03-25 13:39:22</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,360" dealer="1" win="160" bet="100" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,340" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Suki21" type="1" sum="20" cards="[cards]"/><action no="2" player="Diogas" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="3" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="5" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ D10</cards><action no="6" player="moonbaseone" type="23" sum="100" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="7" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="8" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710074">
+		 <general>
+		  <startdate>2014-03-25 13:39:59</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,420" dealer="0" win="380" bet="240" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,320" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,460" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="alex1630" type="2" sum="40" cards="[cards]"/><action no="1" player="Diogas" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="8" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="4" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK CJ</cards><action no="5" player="moonbaseone" type="23" sum="100" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="6" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="7" player="Diogas" type="3" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 H3 SA</cards><action no="10" player="moonbaseone" type="5" sum="140" cards=""/><action no="9" player="Diogas" type="4" sum="0" cards=""/><action no="11" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710230">
+		 <general>
+		  <startdate>2014-03-25 13:40:52</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,650" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,360" dealer="1" win="500" bet="440" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="alex1630" type="1" sum="20" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="7" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="4" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="3" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 CA</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="5" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="6" player="Diogas" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ H3 D4</cards><action no="9" player="VanTr4X" type="4" sum="0" cards=""/><action no="10" player="Diogas" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards><action no="11" player="VanTr4X" type="4" sum="0" cards=""/><action no="12" player="Diogas" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H6</cards><action no="13" player="VanTr4X" type="4" sum="0" cards=""/><action no="15" player="VanTr4X" type="0" sum="0" cards=""/><action no="14" player="Diogas" type="5" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710521">
+		 <general>
+		  <startdate>2014-03-25 13:42:30</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,610" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,650" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,320" dealer="0" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="20" cards="[cards]"/><action no="2" player="moonshoeos72" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="6" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="8" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 C3</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="4" player="Suki21" type="23" sum="80" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="5" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710614">
+		 <general>
+		  <startdate>2014-03-25 13:43:00</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,590" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,610" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,380" dealer="0" win="0" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,420" dealer="0" win="1,000" bet="520" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonshoeos72" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="5" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="7" player="moonshoeos72" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">C5 C2</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="3" player="Suki21" type="3" sum="40" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="4" player="Diogas" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 S2 C9</cards><action no="9" player="moonshoeos72" type="4" sum="0" cards=""/><action no="13" player="moonshoeos72" type="0" sum="0" cards=""/><action no="10" player="moonbaseone" type="4" sum="0" cards=""/><action no="14" player="moonbaseone" type="0" sum="0" cards=""/><action no="11" player="Suki21" type="5" sum="120" cards=""/><action no="12" player="Diogas" type="3" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards><action no="15" player="Suki21" type="5" sum="120" cards=""/><action no="16" player="Diogas" type="3" sum="120" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards><action no="17" player="Suki21" type="5" sum="120" cards=""/><action no="19" player="Suki21" type="0" sum="0" cards=""/><action no="18" player="Diogas" type="23" sum="240" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600719444">
+		 <general>
+		  <startdate>2014-03-25 13:45:12</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,570" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="980" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,900" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="Suki21" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="4" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="6" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C3 D4</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><cards type="Pocket" player="Diogas">X X</cards><action no="3" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600719510">
+		 <general>
+		  <startdate>2014-03-25 13:45:37</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,570" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,010" dealer="0" win="2,140" bet="1,010" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,900" dealer="0" win="0" bet="1,010" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Suki21" type="1" sum="30" cards="[cards]"/><action no="2" player="Diogas" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="3" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="5" player="moonshoeos72" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">C8 S4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">D9 D8</cards><action no="7" player="Suki21" type="3" sum="30" cards=""/><cards type="Pocket" player="Diogas">S3 C6</cards><action no="8" player="Diogas" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ S6 DK</cards><action no="11" player="moonshoeos72" type="3" sum="60" cards=""/><action no="9" player="Suki21" type="5" sum="60" cards=""/><action no="10" player="Diogas" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="14" player="moonshoeos72" type="0" sum="0" cards=""/><action no="12" player="Suki21" type="4" sum="0" cards=""/><action no="15" player="Suki21" type="23" sum="890" cards=""/><action no="13" player="Diogas" type="5" sum="240" cards=""/><action no="16" player="Diogas" type="3" sum="650" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards>
+	</round>
+	
+		</game><game gamecode="5600719899">
+		 <general>
+		  <startdate>2014-03-25 13:47:39</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,440" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,450" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,140" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="890" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="alex1630" type="2" sum="100" cards="[cards]"/><action no="1" player="Diogas" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="8" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="4" player="moonshoeos72" type="23" sum="200" cards=""/><cards type="Pocket" player="moonbaseone">H7 H5</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="6" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="7" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600720013">
+		 <general>
+		  <startdate>2014-03-25 13:48:19</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,340" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,590" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,140" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="alex1630" type="1" sum="50" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="7" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="moonshoeos72">X X</cards><action no="3" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 D7</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="5" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="6" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600720116">
+		 <general>
+		  <startdate>2014-03-25 13:48:47</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,290" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,640" dealer="0" win="1,740" bet="1,640" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,600" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,140" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="moonshoeos72" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="6" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="23" sum="1,640" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="8" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ S5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="4" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="5" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600720199">
+		 <general>
+		  <startdate>2014-03-25 13:49:14</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,290" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,740" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,500" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,140" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="840" dealer="0" win="1,390" bet="840" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonshoeos72" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="5" player="alex1630" type="3" sum="200" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="7" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 H4</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="3" player="Suki21" type="3" sum="100" cards=""/><action no="9" player="Suki21" type="3" sum="100" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="4" player="Diogas" type="23" sum="200" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 D10 S7</cards><action no="12" player="alex1630" type="0" sum="0" cards=""/><action no="10" player="Suki21" type="4" sum="0" cards=""/><action no="13" player="Suki21" type="0" sum="0" cards=""/><action no="11" player="Diogas" type="5" sum="640" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600720421">
+		 <general>
+		  <startdate>2014-03-25 13:50:24</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,090" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,740" dealer="0" win="1,200" bet="650" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,940" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,390" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="Suki21" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="4" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="23" sum="250" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="6" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 S4</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="8" player="Suki21" type="3" sum="150" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="3" player="Diogas" type="3" sum="100" cards=""/><action no="9" player="Diogas" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 SA HK</cards><action no="12" player="VanTr4X" type="5" sum="400" cards=""/><action no="10" player="Suki21" type="4" sum="0" cards=""/><action no="13" player="Suki21" type="0" sum="0" cards=""/><action no="11" player="Diogas" type="4" sum="0" cards=""/><action no="14" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730398">
+		 <general>
+		  <startdate>2014-03-25 13:51:28</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,090" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="2,290" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,690" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,140" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Suki21" type="1" sum="75" cards="[cards]"/><action no="2" player="Diogas" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="3" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="5" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 HJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="7" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600730462">
+		 <general>
+		  <startdate>2014-03-25 13:51:47</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,090" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="2,290" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="1,615" dealer="1" win="1,050" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="1,215" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="alex1630" type="2" sum="150" cards="[cards]"/><action no="1" player="Diogas" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="8" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="4" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ D4</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="6" player="Suki21" type="23" sum="300" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="7" player="Diogas" type="3" sum="225" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 S5 CA</cards><action no="10" player="Suki21" type="5" sum="300" cards=""/><action no="9" player="Diogas" type="4" sum="0" cards=""/><action no="11" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730617">
+		 <general>
+		  <startdate>2014-03-25 13:52:32</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="940" dealer="0" win="1,880" bet="940" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="2,290" dealer="0" win="1,350" bet="2,290" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,065" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="915" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="alex1630" type="1" sum="75" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">D10 CK</cards><action no="7" player="alex1630" type="23" sum="300" cards=""/><action no="9" player="alex1630" type="7" sum="640" cards=""/><cards type="Pocket" player="VanTr4X">HJ DA</cards><action no="8" player="VanTr4X" type="23" sum="2,290" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="3" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 S7</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="5" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="6" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 CJ C5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CQ</cards>
+	</round>
+	
+		</game><game gamecode="5600730734">
+		 <general>
+		  <startdate>2014-03-25 13:53:10</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,350" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,450" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,065" dealer="0" win="675" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="915" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="75" cards="[cards]"/><action no="2" player="moonshoeos72" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="6" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="8" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 D7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="4" player="Suki21" type="23" sum="450" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="5" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730807">
+		 <general>
+		  <startdate>2014-03-25 13:53:32</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,275" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,300" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,340" dealer="0" win="1,415" bet="1,340" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,290" dealer="0" win="2,365" bet="2,290" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="915" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonshoeos72" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="5" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="7" player="moonshoeos72" type="3" sum="75" cards=""/><action no="10" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA C8</cards><action no="8" player="moonbaseone" type="23" sum="1,340" cards=""/><cards type="Pocket" player="Suki21">H9 SA</cards><action no="3" player="Suki21" type="3" sum="150" cards=""/><action no="9" player="Suki21" type="7" sum="2,140" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="4" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ H6 SK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards>
+	</round>
+	
+		</game><game gamecode="5600730927">
+		 <general>
+		  <startdate>2014-03-25 13:54:11</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,275" dealer="0" win="675" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,150" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,415" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,365" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="915" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="Suki21" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="4" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="23" sum="450" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="6" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S7 H10</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="8" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="3" player="Diogas" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600731001">
+		 <general>
+		  <startdate>2014-03-25 13:54:38</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,150" dealer="0" win="2,140" bet="1,150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,215" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Diogas" chips="915" dealer="0" win="0" bet="915" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Suki21" type="1" sum="75" cards="[cards]"/><action no="2" player="Diogas" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="3" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">C8 D8</cards><action no="5" player="moonshoeos72" type="23" sum="1,150" cards=""/><cards type="Pocket" player="moonbaseone">H7 SK</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="7" player="Suki21" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">SA DQ</cards><action no="8" player="Diogas" type="7" sum="765" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA D6 S8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game><game gamecode="5600731092">
+		 <general>
+		  <startdate>2014-03-25 13:55:10</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="1,880" dealer="0" win="900" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="2,140" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,140" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="alex1630" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="6" player="alex1630" type="23" sum="600" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="2" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="3" player="moonshoeos72" type="23" sum="300" cards=""/><action no="7" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 C6</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="5" player="Suki21" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600731179">
+		 <general>
+		  <startdate>2014-03-25 13:55:57</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="2,180" dealer="0" win="1,325" bet="1,025" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,840" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,140" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="alex1630" type="15" sum="25" cards="[cards]"/><action no="6" player="alex1630" type="1" sum="100" cards="[cards]"/><action no="2" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="7" player="VanTr4X" type="2" sum="200" cards="[cards]"/><action no="3" player="moonshoeos72" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="Suki21" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="11" player="alex1630" type="23" sum="1,000" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="12" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="moonshoeos72">X X</cards><action no="8" player="moonshoeos72" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S7 H5</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="10" player="Suki21" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600731240">
+		 <general>
+		  <startdate>2014-03-25 13:56:27</startdate>		  
+		  <players>
+		   <player seat="1" name="alex1630" chips="2,480" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,275" dealer="0" win="0" bet="1,275" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonshoeos72" chips="1,815" dealer="0" win="3,955" bet="1,315" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,315" dealer="0" win="0" bet="1,315" rebuy="0" addon="0" reg_code="6224100512"/><player seat="8" name="Suki21" chips="2,115" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="alex1630" type="15" sum="25" cards="[cards]"/><action no="1" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="6" player="VanTr4X" type="1" sum="100" cards="[cards]"/><action no="2" player="moonshoeos72" type="15" sum="25" cards="[cards]"/><action no="7" player="moonshoeos72" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="Suki21" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alex1630">X X</cards><action no="10" player="alex1630" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">HQ HK</cards><action no="11" player="VanTr4X" type="7" sum="1,150" cards=""/><cards type="Pocket" player="moonshoeos72">D10 C10</cards><action no="12" player="moonshoeos72" type="3" sum="1,090" cards=""/><cards type="Pocket" player="moonbaseone">CK C9</cards><action no="8" player="moonbaseone" type="23" sum="1,290" cards=""/><cards type="Pocket" player="Suki21">X X</cards><action no="9" player="Suki21" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA D4 H6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game>  
+	</session>

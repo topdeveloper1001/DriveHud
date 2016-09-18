@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187537966">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 818998817</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>29</gamecount>  
+	          <startdate>2014-01-25 12:04:34</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>4,549</bets>  
+	          <wins>6,124</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>2,375</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5435670783">
+		 <general>
+		  <startdate>2014-01-25 12:04:34</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="800" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="800" dealer="0" win="289" bet="199" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Araks20" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="4" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S8 D6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="6" player="Araks20" type="3" sum="60" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="3" player="DIfm" type="23" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ CA DJ</cards><action no="7" player="Araks20" type="4" sum="0" cards=""/><action no="9" player="Araks20" type="0" sum="0" cards=""/><action no="8" player="DIfm" type="5" sum="119" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435670939">
+		 <general>
+		  <startdate>2014-01-25 12:04:58</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="720" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="890" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Araks20" type="1" sum="10" cards="[cards]"/><action no="2" player="DIfm" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="3" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 CJ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="5" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435671011">
+		 <general>
+		  <startdate>2014-01-25 12:05:10</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="710" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="900" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="phil112" type="2" sum="20" cards="[cards]"/><action no="1" player="DIfm" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="6" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H9 D9</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="4" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="5" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671103">
+		 <general>
+		  <startdate>2014-01-25 12:05:25</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="780" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="710" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="890" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="phil112" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="5" player="phil112" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">D6 D8</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="3" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="4" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 HA S2</cards><action no="7" player="phil112" type="5" sum="20" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671269">
+		 <general>
+		  <startdate>2014-01-25 12:05:52</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="800" dealer="1" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="710" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Araks20" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="4" player="phil112" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">SA H4</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="6" player="Araks20" type="4" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="3" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK D3 CJ</cards><action no="8" player="phil112" type="5" sum="20" cards=""/><action no="7" player="Araks20" type="4" sum="0" cards=""/><action no="9" player="Araks20" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671424">
+		 <general>
+		  <startdate>2014-01-25 12:06:16</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="690" dealer="0" win="770" bet="690" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="890" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Araks20" type="1" sum="10" cards="[cards]"/><action no="2" player="DIfm" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="3" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK SJ</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="5" player="Araks20" type="23" sum="690" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="6" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671568">
+		 <general>
+		  <startdate>2014-01-25 12:06:39</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="830" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="870" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="phil112" type="2" sum="30" cards="[cards]"/><action no="1" player="DIfm" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="6" player="phil112" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">H2 CA</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="4" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="5" player="DIfm" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 DQ S8</cards><action no="8" player="phil112" type="0" sum="0" cards=""/><action no="7" player="DIfm" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671746">
+		 <general>
+		  <startdate>2014-01-25 12:07:07</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="770" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="730" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="930" dealer="1" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="phil112" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="5" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S5 HK</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="3" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="4" player="DIfm" type="23" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671876">
+		 <general>
+		  <startdate>2014-01-25 12:07:24</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="755" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="770" dealer="0" win="135" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="975" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Araks20" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">H2 D2</cards><action no="4" player="phil112" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">HQ D5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">S4 C10</cards><action no="6" player="Araks20" type="4" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="3" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 S5 D7</cards><action no="8" player="phil112" type="4" sum="0" cards=""/><action no="7" player="Araks20" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards><action no="10" player="phil112" type="5" sum="30" cards=""/><action no="9" player="Araks20" type="4" sum="0" cards=""/><action no="11" player="Araks20" type="3" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards><action no="13" player="phil112" type="4" sum="0" cards=""/><action no="12" player="Araks20" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672049">
+		 <general>
+		  <startdate>2014-01-25 12:07:52</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="695" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="685" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="845" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="975" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Araks20" type="1" sum="15" cards="[cards]"/><action no="2" player="DIfm" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="3" player="phil112" type="3" sum="30" cards=""/><action no="7" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK S4</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="5" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="6" player="DIfm" type="23" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672152">
+		 <general>
+		  <startdate>2014-01-25 12:08:08</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="665" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="685" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="830" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,020" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="phil112" type="2" sum="30" cards="[cards]"/><action no="1" player="DIfm" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><cards type="Pocket" player="WorstCard">SK S2</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="4" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="5" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672256">
+		 <general>
+		  <startdate>2014-01-25 12:08:24</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="680" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="685" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,005" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="phil112" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="5" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ C9</cards><cards type="Pocket" player="Araks20">X X</cards><action no="3" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="4" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672356">
+		 <general>
+		  <startdate>2014-01-25 12:08:38</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="665" dealer="1" win="0" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="830" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,005" dealer="0" win="445" bet="205" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="phil112" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Araks20" type="15" sum="5" cards="[cards]"/><action no="6" player="Araks20" type="2" sum="50" cards="[cards]"/><action no="3" player="DIfm" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="8" player="phil112" type="3" sum="150" cards=""/><cards type="Pocket" player="WorstCard">H6 H8</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="10" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="7" player="DIfm" type="23" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ C7 H9</cards><action no="12" player="phil112" type="4" sum="0" cards=""/><action no="11" player="DIfm" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="14" player="phil112" type="0" sum="0" cards=""/><action no="13" player="DIfm" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672547">
+		 <general>
+		  <startdate>2014-01-25 12:09:06</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="510" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="670" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="775" dealer="0" win="890" bet="775" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,245" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="phil112" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Araks20" type="15" sum="5" cards="[cards]"/><action no="5" player="Araks20" type="1" sum="25" cards="[cards]"/><action no="2" player="DIfm" type="15" sum="5" cards="[cards]"/><action no="6" player="DIfm" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="7" player="phil112" type="3" sum="50" cards=""/><action no="11" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 D8</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="9" player="Araks20" type="23" sum="770" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="10" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435680950">
+		 <general>
+		  <startdate>2014-01-25 12:09:29</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="455" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="665" dealer="0" win="459" bet="294" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="890" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,190" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="phil112" type="15" sum="5" cards="[cards]"/><action no="6" player="phil112" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Araks20" type="15" sum="5" cards="[cards]"/><action no="1" player="DIfm" type="15" sum="5" cards="[cards]"/><action no="5" player="DIfm" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="10" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 DQ</cards><action no="7" player="WorstCard" type="23" sum="100" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="8" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="9" player="DIfm" type="3" sum="75" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 CK CJ</cards><action no="12" player="WorstCard" type="5" sum="189" cards=""/><action no="11" player="DIfm" type="4" sum="0" cards=""/><action no="13" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681113">
+		 <general>
+		  <startdate>2014-01-25 12:09:54</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="400" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="830" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="885" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,085" dealer="1" win="245" bet="155" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="phil112" type="15" sum="5" cards="[cards]"/><action no="5" player="phil112" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Araks20" type="15" sum="5" cards="[cards]"/><action no="4" player="DIfm" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="9" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H6 SA</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="7" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="8" player="DIfm" type="23" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681230">
+		 <general>
+		  <startdate>2014-01-25 12:10:12</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="370" dealer="1" win="510" bet="370" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="775" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="880" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,175" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="phil112" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Araks20" type="15" sum="5" cards="[cards]"/><action no="6" player="Araks20" type="2" sum="50" cards="[cards]"/><action no="3" player="DIfm" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="8" player="phil112" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">H8 S5</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="10" player="Araks20" type="4" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="7" player="DIfm" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ S6 H7</cards><action no="13" player="phil112" type="4" sum="0" cards=""/><action no="11" player="Araks20" type="4" sum="0" cards=""/><action no="12" player="DIfm" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="16" player="phil112" type="5" sum="315" cards=""/><action no="14" player="Araks20" type="4" sum="0" cards=""/><action no="17" player="Araks20" type="0" sum="0" cards=""/><action no="15" player="DIfm" type="4" sum="0" cards=""/><action no="18" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681454">
+		 <general>
+		  <startdate>2014-01-25 12:10:44</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="745" dealer="1" win="390" bet="210" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="825" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,120" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="phil112" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Araks20" type="15" sum="10" cards="[cards]"/><action no="5" player="Araks20" type="1" sum="50" cards="[cards]"/><action no="2" player="DIfm" type="15" sum="10" cards="[cards]"/><action no="6" player="DIfm" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="7" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C9 HQ</cards><action no="8" player="WorstCard" type="23" sum="200" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="9" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="10" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681582">
+		 <general>
+		  <startdate>2014-01-25 12:11:03</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="500" dealer="0" win="190" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="925" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="765" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="1,010" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="phil112" type="15" sum="10" cards="[cards]"/><action no="6" player="phil112" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="Araks20" type="15" sum="10" cards="[cards]"/><action no="1" player="DIfm" type="15" sum="10" cards="[cards]"/><action no="5" player="DIfm" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><cards type="Pocket" player="WorstCard">D6 H5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="8" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">X X</cards><action no="9" player="DIfm" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681672">
+		 <general>
+		  <startdate>2014-01-25 12:11:18</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="580" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="915" dealer="0" win="1,900" bet="915" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="755" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="950" dealer="1" win="0" bet="915" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="phil112" type="15" sum="10" cards="[cards]"/><action no="5" player="phil112" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Araks20" type="15" sum="10" cards="[cards]"/><action no="4" player="DIfm" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="9" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SA CK</cards><action no="10" player="WorstCard" type="23" sum="905" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="7" player="Araks20" type="0" sum="0" cards=""/><cards type="Pocket" player="DIfm">DA D7</cards><action no="8" player="DIfm" type="23" sum="250" cards=""/><action no="11" player="DIfm" type="3" sum="655" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 C8 DK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards>
+	</round>
+	
+		</game><game gamecode="5435681885">
+		 <general>
+		  <startdate>2014-01-25 12:11:53</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="520" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,900" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="745" dealer="0" win="565" bet="410" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="DIfm" chips="35" dealer="0" win="0" bet="35" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="phil112" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Araks20" type="15" sum="10" cards="[cards]"/><action no="6" player="Araks20" type="2" sum="100" cards="[cards]"/><action no="3" player="DIfm" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="8" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S7 CA</cards><action no="9" player="WorstCard" type="3" sum="50" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">SJ HJ</cards><action no="10" player="Araks20" type="23" sum="400" cards=""/><cards type="Pocket" player="DIfm">HA H8</cards><action no="7" player="DIfm" type="7" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 H10 C7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards>
+	</round>
+	
+		</game><game gamecode="5435682070">
+		 <general>
+		  <startdate>2014-01-25 12:12:23</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="510" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,790" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="900" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="phil112" type="15" sum="10" cards="[cards]"/><action no="5" player="phil112" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Araks20" type="15" sum="10" cards="[cards]"/><action no="4" player="Araks20" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><cards type="Pocket" player="WorstCard">H4 C5</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="7" player="Araks20" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435682140">
+		 <general>
+		  <startdate>2014-01-25 12:12:35</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="580" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,780" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="840" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="phil112" type="15" sum="15" cards="[cards]"/><action no="4" player="phil112" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Araks20" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="7" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 C3</cards><cards type="Pocket" player="Araks20">X X</cards><action no="6" player="Araks20" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435682218">
+		 <general>
+		  <startdate>2014-01-25 12:12:47</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="490" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,885" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="825" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="phil112" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Araks20" type="15" sum="15" cards="[cards]"/><action no="5" player="Araks20" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="6" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 H4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435682286">
+		 <general>
+		  <startdate>2014-01-25 12:13:00</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="475" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,795" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="930" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="phil112" type="15" sum="15" cards="[cards]"/><action no="5" player="phil112" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Araks20" type="15" sum="15" cards="[cards]"/><action no="4" player="Araks20" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><cards type="Pocket" player="WorstCard">S8 H7</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="7" player="Araks20" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435682360">
+		 <general>
+		  <startdate>2014-01-25 12:13:11</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="580" dealer="0" win="760" bet="580" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,780" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="840" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="phil112" type="15" sum="15" cards="[cards]"/><action no="4" player="phil112" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Araks20" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="7" player="phil112" type="23" sum="565" cards=""/><cards type="Pocket" player="WorstCard">D7 H10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="6" player="Araks20" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435682457">
+		 <general>
+		  <startdate>2014-01-25 12:13:27</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="760" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,615" dealer="0" win="1,795" bet="1,615" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="825" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="phil112" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Araks20" type="15" sum="15" cards="[cards]"/><action no="5" player="Araks20" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="6" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ H10</cards><action no="7" player="WorstCard" type="23" sum="1,600" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="8" player="Araks20" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435682524">
+		 <general>
+		  <startdate>2014-01-25 12:13:40</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="745" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,795" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="660" dealer="0" win="840" bet="660" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="phil112" type="15" sum="15" cards="[cards]"/><action no="5" player="phil112" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Araks20" type="15" sum="15" cards="[cards]"/><action no="4" player="Araks20" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">X X</cards><action no="8" player="phil112" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S6 H8</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="7" player="Araks20" type="23" sum="645" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435682615">
+		 <general>
+		  <startdate>2014-01-25 12:13:58</startdate>		  
+		  <players>
+		   <player seat="2" name="phil112" chips="580" dealer="0" win="0" bet="580" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,780" dealer="0" win="1,175" bet="580" rebuy="0" addon="0" reg_code="6187537966"/><player seat="7" name="Araks20" chips="840" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="phil112" type="15" sum="15" cards="[cards]"/><action no="4" player="phil112" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Araks20" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="phil112">DK S6</cards><action no="7" player="phil112" type="23" sum="565" cards=""/><cards type="Pocket" player="WorstCard">SA S10</cards><action no="8" player="WorstCard" type="3" sum="415" cards=""/><cards type="Pocket" player="Araks20">X X</cards><action no="6" player="Araks20" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 D10 H5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards>
+	</round>
+	
+		</game>  
+	</session>

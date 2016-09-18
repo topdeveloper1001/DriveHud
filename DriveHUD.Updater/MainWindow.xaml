@@ -1,0 +1,26 @@
+﻿<src:WindowBase x:Class="DriveHUD.Updater.MainWindowWpf"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:src="clr-namespace:DriveHUD.Updater"
+        WindowStartupLocation="CenterScreen"
+        MinimizeButton="Collapsed"
+        MaximizeButton="Collapsed"
+        IsResizable="False"
+        Width="340"
+        Height="50"
+        Style="{DynamicResource MainWindow}"
+        Title="{Binding Caption}">
+    <Window.Resources>
+        <ResourceDictionary Source="WindowStyle.xaml" />
+    </Window.Resources>
+    <Grid Background="#181a1d">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Row="0" Text="{Binding StatusMessage, StringFormat='{}{0}'}" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,10,0,10" />
+        <ProgressBar Grid.Row="1" Value="{Binding CurrentProgress, Mode=OneWay}" Height="20" Width="300" Visibility="{Binding ProgressVisibility}"/>
+        <TextBlock Grid.Row="2" Text="{Binding CurrentFile, StringFormat='{}{0}'}" HorizontalAlignment="Center" Margin="0,5,0,0" />
+    </Grid>
+</src:WindowBase>

@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188347557">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819108266</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:04</duration>  
+	          <gamecount>11</gamecount>  
+	          <startdate>2014-01-26 18:30:33</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,610</bets>  
+	          <wins>3,400</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,590</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>1</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.90</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5439429945">
+		 <general>
+		  <startdate>2014-01-26 18:30:33</startdate>		  
+		  <players>
+		   <player seat="2" name="ignacioo29" chips="800" dealer="1" win="0" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Meriy" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="1,660" bet="800" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Meriy" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ignacioo29">DA S10</cards><action no="4" player="ignacioo29" type="23" sum="60" cards=""/><action no="7" player="ignacioo29" type="23" sum="800" cards=""/><cards type="Pocket" player="Meriy">X X</cards><action no="5" player="Meriy" type="3" sum="50" cards=""/><action no="8" player="Meriy" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SK CK</cards><action no="6" player="WorstCard" type="23" sum="200" cards=""/><action no="9" player="WorstCard" type="7" sum="600" cards=""/><cards type="Pocket" player="timjoe9">X X</cards><action no="3" player="timjoe9" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 DQ D10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards>
+	</round>
+	
+		</game><game gamecode="5439430232">
+		 <general>
+		  <startdate>2014-01-26 18:31:08</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="740" dealer="1" win="210" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,660" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="timjoe9" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">X X</cards><action no="3" player="Meriy" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">C6 C2</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="timjoe9">X X</cards><action no="5" player="timjoe9" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 H3 C8</cards><action no="7" player="Meriy" type="4" sum="0" cards=""/><action no="6" player="timjoe9" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards><action no="9" player="Meriy" type="3" sum="20" cards=""/><action no="8" player="timjoe9" type="5" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="11" player="Meriy" type="23" sum="100" cards=""/><action no="10" player="timjoe9" type="5" sum="20" cards=""/><action no="12" player="timjoe9" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439449409">
+		 <general>
+		  <startdate>2014-01-26 18:31:48</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="810" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,650" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="740" dealer="0" win="800" bet="740" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Meriy" type="2" sum="20" cards="[cards]"/><action no="1" player="timjoe9" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">X X</cards><action no="5" player="Meriy" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DQ DA</cards><action no="3" player="WorstCard" type="23" sum="40" cards=""/><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="timjoe9">X X</cards><action no="4" player="timjoe9" type="23" sum="740" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439449611">
+		 <general>
+		  <startdate>2014-01-26 18:32:12</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="790" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,610" dealer="0" win="1,650" bet="1,610" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="800" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Meriy" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">X X</cards><action no="4" player="Meriy" type="3" sum="10" cards=""/><action no="7" player="Meriy" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S8 H8</cards><action no="5" player="WorstCard" type="23" sum="1,610" cards=""/><cards type="Pocket" player="timjoe9">X X</cards><action no="3" player="timjoe9" type="3" sum="20" cards=""/><action no="6" player="timjoe9" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439449788">
+		 <general>
+		  <startdate>2014-01-26 18:32:35</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="770" dealer="1" win="195" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,650" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="780" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="timjoe9" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">X X</cards><action no="3" player="Meriy" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">D5 SJ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="timjoe9">X X</cards><action no="5" player="timjoe9" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 C3 DA</cards><action no="7" player="Meriy" type="4" sum="0" cards=""/><action no="6" player="timjoe9" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="9" player="Meriy" type="4" sum="0" cards=""/><action no="8" player="timjoe9" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards><action no="11" player="Meriy" type="5" sum="120" cards=""/><action no="10" player="timjoe9" type="4" sum="0" cards=""/><action no="12" player="timjoe9" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450093">
+		 <general>
+		  <startdate>2014-01-26 18:33:12</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="815" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,635" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="750" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Meriy" type="2" sum="30" cards="[cards]"/><action no="1" player="timjoe9" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">X X</cards><cards type="Pocket" player="WorstCard">S5 S3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="timjoe9">X X</cards><action no="4" player="timjoe9" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450252">
+		 <general>
+		  <startdate>2014-01-26 18:33:30</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="830" dealer="0" win="0" bet="735" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,635" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="735" dealer="1" win="1,500" bet="735" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Meriy" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">HJ DK</cards><action no="4" player="Meriy" type="3" sum="720" cards=""/><cards type="Pocket" player="WorstCard">S9 H3</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="timjoe9">D5 H5</cards><action no="3" player="timjoe9" type="23" sum="735" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 D7 C3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards>
+	</round>
+	
+		</game><game gamecode="5439450449">
+		 <general>
+		  <startdate>2014-01-26 18:33:55</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="95" dealer="1" win="205" bet="95" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,605" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="1,500" dealer="0" win="0" bet="95" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="timjoe9" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">C2 DK</cards><action no="3" player="Meriy" type="23" sum="95" cards=""/><cards type="Pocket" player="WorstCard">S2 CJ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="timjoe9">DA C10</cards><action no="5" player="timjoe9" type="3" sum="65" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK C9 D7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5439450642">
+		 <general>
+		  <startdate>2014-01-26 18:34:18</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="205" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,590" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="1,405" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Meriy" type="2" sum="30" cards="[cards]"/><action no="1" player="timjoe9" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">X X</cards><cards type="Pocket" player="WorstCard">C5 H4</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="timjoe9">X X</cards><action no="4" player="timjoe9" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450769">
+		 <general>
+		  <startdate>2014-01-26 18:34:33</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="220" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,590" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Meriy" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">X X</cards><action no="4" player="Meriy" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">DQ H5</cards><action no="5" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="timjoe9">X X</cards><action no="3" player="timjoe9" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 HA SQ</cards><action no="6" player="Meriy" type="4" sum="0" cards=""/><action no="8" player="Meriy" type="0" sum="0" cards=""/><action no="7" player="WorstCard" type="5" sum="30" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450997">
+		 <general>
+		  <startdate>2014-01-26 18:35:01</startdate>		  
+		  <players>
+		   <player seat="4" name="Meriy" chips="190" dealer="1" win="0" bet="190" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,620" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188347557"/><player seat="9" name="timjoe9" chips="1,390" dealer="0" win="410" bet="190" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Meriy" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="timjoe9" type="15" sum="5" cards="[cards]"/><action no="5" player="timjoe9" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Meriy">HK S6</cards><action no="6" player="Meriy" type="23" sum="185" cards=""/><cards type="Pocket" player="WorstCard">S5 HJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="timjoe9">DQ H7</cards><action no="8" player="timjoe9" type="3" sum="135" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 S10 SQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game>  
+	</session>

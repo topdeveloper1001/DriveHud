@@ -1,0 +1,952 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5663191441">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>$1 NLH Double Up *10, 725273171</tablename>  
+	          <tournamentcurrency>USD</tournamentcurrency>  
+	          <duration>00:39</duration>  
+	          <gamecount>53</gamecount>  
+	          <startdate>2012-06-03 10:21:06</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>WhiteRiderT</nickname>  
+	          <bets>5,140</bets>  
+	          <wins>3,640</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>3.40</ipoints>
+        		<statuspoints>3.40</statuspoints>
+			  		<awardpoints>3.40</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>$1 NLH Double Up *10</tournamentname><place>7</place><buyin>$1.00+$0.20</buyin> <totalbuyin>$1.20</totalbuyin> <ipoints>3.40</ipoints> <win>$0.00</win> <statuspoints>3.40</statuspoints> <awardpoints>3.40</awardpoints>  
+	    </general>  
+	    <game gamecode="4149595452">
+		 <general>
+		  <startdate>2012-06-03 10:21:06</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="4" name="eeJoker" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,500" dealer="0" win="110" bet="80" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="qrinya" type="1" sum="10" cards="[cards]"/><action no="2" player="Travnikova" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="10" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="11" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="12" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="eeJoker">X X</cards><action no="3" player="eeJoker" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="4" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="5" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="6" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="7" player="Tobkel" type="23" sum="80" cards=""/><cards type="Pocket" player="WhiteRiderT">S7 S8</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="9" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149595537">
+		 <general>
+		  <startdate>2012-06-03 10:21:45</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="4" name="eeJoker" chips="1,500" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,530" dealer="0" win="892.50" bet="632.50" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Travnikova" type="1" sum="10" cards="[cards]"/><action no="2" player="eeJoker" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="9" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="10" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="11" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="eeJoker">X X</cards><action no="12" player="eeJoker" type="3" sum="60" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="3" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="4" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="5" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="6" player="Tobkel" type="23" sum="80" cards=""/><cards type="Pocket" player="WhiteRiderT">DJ C5</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="8" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 S8 C7</cards><action no="13" player="eeJoker" type="5" sum="85" cards=""/><action no="15" player="eeJoker" type="3" sum="85" cards=""/><action no="14" player="Tobkel" type="23" sum="170" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards><action no="16" player="eeJoker" type="4" sum="0" cards=""/><action no="18" player="eeJoker" type="0" sum="0" cards=""/><action no="17" player="Tobkel" type="5" sum="382.50" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149595667">
+		 <general>
+		  <startdate>2012-06-03 10:22:45</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="eeJoker" chips="1,250" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,790" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="eeJoker" type="1" sum="10" cards="[cards]"/><action no="2" player="Rezidentn" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="8" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="9" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="10" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="eeJoker">X X</cards><action no="11" player="eeJoker" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><cards type="Pocket" player="pustak">X X</cards><action no="3" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="4" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="5" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C8 H4</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="7" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149595723">
+		 <general>
+		  <startdate>2012-06-03 10:23:06</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="eeJoker" chips="1,240" dealer="1" win="0" bet="1,240" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,790" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="1,500" dealer="0" win="2,770" bet="1,500" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rezidentn" type="1" sum="10" cards="[cards]"/><action no="2" player="pustak" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="7" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="8" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="9" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="eeJoker">HA CQ</cards><action no="10" player="eeJoker" type="3" sum="60" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="11" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="12" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="3" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="4" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 H8</cards><action no="5" player="WhiteRiderT" type="23" sum="60" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="6" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 H7 SA</cards><action no="14" player="eeJoker" type="23" sum="337.50" cards=""/><action no="16" player="eeJoker" type="7" sum="842.50" cards=""/><action no="13" player="WhiteRiderT" type="5" sum="100" cards=""/><action no="15" player="WhiteRiderT" type="23" sum="1,440" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards>
+	</round>
+	
+		</game><game gamecode="4149595905">
+		 <general>
+		  <startdate>2012-06-03 10:24:25</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,790" dealer="0" win="110" bet="80" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pustak" type="1" sum="10" cards="[cards]"/><action no="2" player="LifeTimeDS" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="6" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="7" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="8" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="9" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="10" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="11" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="3" player="Tobkel" type="23" sum="80" cards=""/><cards type="Pocket" player="WhiteRiderT">D4 S9</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="5" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149595966">
+		 <general>
+		  <startdate>2012-06-03 10:24:49</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,500" dealer="0" win="0" bet="120" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,480" dealer="0" win="680" bet="440" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,820" dealer="0" win="0" bet="120" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LifeTimeDS" type="1" sum="10" cards="[cards]"/><action no="2" player="Tobkel" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="5" player="Westi3971" type="3" sum="20" cards=""/><action no="12" player="Westi3971" type="3" sum="100" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="6" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="7" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="8" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="9" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="10" player="LifeTimeDS" type="23" sum="120" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="11" player="Tobkel" type="3" sum="100" cards=""/><cards type="Pocket" player="WhiteRiderT">D2 C3</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="4" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 C7 D3</cards><action no="15" player="Westi3971" type="0" sum="0" cards=""/><action no="13" player="LifeTimeDS" type="5" sum="320" cards=""/><action no="14" player="Tobkel" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149596095">
+		 <general>
+		  <startdate>2012-06-03 10:25:44</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,380" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,490" dealer="0" win="225" bet="135" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,720" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,700" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,770" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tobkel" type="1" sum="10" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="4" player="Westi3971" type="3" sum="20" cards=""/><action no="12" player="Westi3971" type="3" sum="40" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="5" player="qrinya" type="23" sum="60" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="6" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="7" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="8" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="9" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="10" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CJ D3</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="3" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 CQ HJ</cards><action no="13" player="Westi3971" type="4" sum="0" cards=""/><action no="15" player="Westi3971" type="0" sum="0" cards=""/><action no="14" player="qrinya" type="5" sum="75" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149596181">
+		 <general>
+		  <startdate>2012-06-03 10:26:16</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,580" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,720" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,690" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,750" dealer="0" win="80" bet="60" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="10" cards="[cards]"/><action no="2" player="SWBerlin65" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="3" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="4" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="5" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="6" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="7" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="8" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="9" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SA D8</cards><action no="10" player="WhiteRiderT" type="23" sum="60" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="11" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149600304">
+		 <general>
+		  <startdate>2012-06-03 10:26:40</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,320" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,580" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,720" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,770" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,480" dealer="0" win="100" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Westi3971" type="2" sum="20" cards="[cards]"/><action no="1" player="SWBerlin65" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">D9 H7</cards><action no="11" player="Westi3971" type="4" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="3" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="4" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="5" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="6" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="7" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="8" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D3 C5</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">SQ H10</cards><action no="10" player="SWBerlin65" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 D7 D10</cards><action no="13" player="Westi3971" type="3" sum="30" cards=""/><action no="12" player="SWBerlin65" type="5" sum="30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="15" player="Westi3971" type="4" sum="0" cards=""/><action no="14" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards><action no="17" player="Westi3971" type="4" sum="0" cards=""/><action no="16" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149600477">
+		 <general>
+		  <startdate>2012-06-03 10:27:52</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,270" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,580" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,470" dealer="0" win="945" bet="600" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,720" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,690" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,770" dealer="0" win="0" bet="195" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Westi3971" type="1" sum="10" cards="[cards]"/><action no="2" player="qrinya" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="10" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="11" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="3" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="4" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="5" player="pustak" type="3" sum="20" cards=""/><action no="12" player="pustak" type="3" sum="40" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="6" player="LifeTimeDS" type="3" sum="20" cards=""/><action no="13" player="LifeTimeDS" type="3" sum="40" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="7" player="Tobkel" type="23" sum="60" cards=""/><cards type="Pocket" player="WhiteRiderT">C9 C8</cards><action no="8" player="WhiteRiderT" type="3" sum="60" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="9" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 D10 D6</cards><action no="14" player="pustak" type="4" sum="0" cards=""/><action no="15" player="LifeTimeDS" type="4" sum="0" cards=""/><action no="16" player="Tobkel" type="4" sum="0" cards=""/><action no="17" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="18" player="pustak" type="5" sum="135" cards=""/><action no="19" player="LifeTimeDS" type="0" sum="0" cards=""/><action no="20" player="Tobkel" type="0" sum="0" cards=""/><action no="21" player="WhiteRiderT" type="3" sum="135" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CQ</cards><action no="22" player="pustak" type="5" sum="405" cards=""/><action no="23" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149600629">
+		 <general>
+		  <startdate>2012-06-03 10:28:56</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,260" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,560" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="60" bet="40" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="qrinya" type="1" sum="20" cards="[cards]"/><action no="2" player="Travnikova" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="9" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="10" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><cards type="Pocket" player="Rezidentn">X X</cards><action no="3" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="4" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="5" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="6" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DQ D4</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="8" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149600702">
+		 <general>
+		  <startdate>2012-06-03 10:29:26</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,490" dealer="0" win="160" bet="120" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Travnikova" type="1" sum="20" cards="[cards]"/><action no="2" player="Rezidentn" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="8" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="9" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="10" player="Travnikova" type="3" sum="20" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="11" player="Rezidentn" type="4" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="3" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="4" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="5" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SQ CJ</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="7" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK C10 S2</cards><action no="12" player="Travnikova" type="4" sum="0" cards=""/><action no="13" player="Rezidentn" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S9</cards><action no="14" player="Travnikova" type="4" sum="0" cards=""/><action no="15" player="Rezidentn" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards><action no="16" player="Travnikova" type="5" sum="80" cards=""/><action no="17" player="Rezidentn" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149600880">
+		 <general>
+		  <startdate>2012-06-03 10:30:40</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,260" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="100" bet="40" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rezidentn" type="1" sum="20" cards="[cards]"/><action no="2" player="pustak" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">S10 SJ</cards><action no="7" player="Westi3971" type="3" sum="40" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="8" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="9" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="10" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">H4 C5</cards><action no="11" player="pustak" type="4" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="3" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="4" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S6 H5</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="6" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 HK D9</cards><action no="13" player="Westi3971" type="4" sum="0" cards=""/><action no="12" player="pustak" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards><action no="15" player="Westi3971" type="4" sum="0" cards=""/><action no="14" player="pustak" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards><action no="17" player="Westi3971" type="4" sum="0" cards=""/><action no="16" player="pustak" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149601023">
+		 <general>
+		  <startdate>2012-06-03 10:31:44</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,530" dealer="0" win="200" bet="140" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,875" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,660" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pustak" type="1" sum="20" cards="[cards]"/><action no="2" player="LifeTimeDS" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="6" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="7" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="8" player="Travnikova" type="3" sum="40" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="9" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="10" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="11" player="LifeTimeDS" type="4" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="3" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D5 H3</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="5" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 SJ SA</cards><action no="13" player="Travnikova" type="4" sum="0" cards=""/><action no="12" player="LifeTimeDS" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards><action no="15" player="Travnikova" type="4" sum="0" cards=""/><action no="14" player="LifeTimeDS" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards><action no="17" player="Travnikova" type="5" sum="100" cards=""/><action no="16" player="LifeTimeDS" type="4" sum="0" cards=""/><action no="18" player="LifeTimeDS" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149603342">
+		 <general>
+		  <startdate>2012-06-03 10:33:18</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,590" dealer="0" win="0" bet="120" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,855" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,620" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,630" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,530" dealer="0" win="450" bet="270" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LifeTimeDS" type="1" sum="20" cards="[cards]"/><action no="2" player="Tobkel" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="5" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="6" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="7" player="Travnikova" type="23" sum="120" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="8" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="9" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="10" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="11" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CQ DK</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="4" player="SWBerlin65" type="23" sum="80" cards=""/><action no="12" player="SWBerlin65" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA S4 H7</cards><action no="14" player="Travnikova" type="0" sum="0" cards=""/><action no="13" player="SWBerlin65" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149603434">
+		 <general>
+		  <startdate>2012-06-03 10:33:57</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,470" dealer="0" win="210" bet="110" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,855" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,600" dealer="1" win="0" bet="40" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,590" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,575" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,710" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tobkel" type="1" sum="20" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="4" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="5" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="6" player="Travnikova" type="3" sum="40" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="7" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="8" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="9" player="LifeTimeDS" type="3" sum="40" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="10" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H10 DJ</cards><action no="11" player="WhiteRiderT" type="4" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="3" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA SK H7</cards><action no="13" player="Travnikova" type="5" sum="70" cards=""/><action no="14" player="LifeTimeDS" type="0" sum="0" cards=""/><action no="12" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="15" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149603560">
+		 <general>
+		  <startdate>2012-06-03 10:34:53</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,570" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,855" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,570" dealer="1" win="260" bet="160" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,535" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,710" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="20" cards="[cards]"/><action no="2" player="SWBerlin65" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="3" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="4" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="5" player="Travnikova" type="3" sum="40" cards=""/><action no="12" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="6" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="7" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="8" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="9" player="Tobkel" type="23" sum="160" cards=""/><cards type="Pocket" player="WhiteRiderT">D8 S3</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="11" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149603667">
+		 <general>
+		  <startdate>2012-06-03 10:35:36</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,220" dealer="0" win="900" bet="420" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,530" dealer="0" win="0" bet="420" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,855" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,515" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,670" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Westi3971" type="2" sum="60" cards="[cards]"/><action no="1" player="SWBerlin65" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">SJ D9</cards><action no="11" player="Westi3971" type="4" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="3" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">D10 SA</cards><action no="4" player="Travnikova" type="3" sum="60" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="5" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="6" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="7" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="8" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H6 CK</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="10" player="SWBerlin65" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 D8 HK</cards><action no="13" player="Westi3971" type="4" sum="0" cards=""/><action no="14" player="Travnikova" type="4" sum="0" cards=""/><action no="12" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards><action no="16" player="Westi3971" type="4" sum="0" cards=""/><action no="19" player="Westi3971" type="3" sum="90" cards=""/><action no="17" player="Travnikova" type="5" sum="90" cards=""/><action no="15" player="SWBerlin65" type="4" sum="0" cards=""/><action no="18" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards><action no="20" player="Westi3971" type="4" sum="0" cards=""/><action no="22" player="Westi3971" type="23" sum="270" cards=""/><action no="21" player="Travnikova" type="5" sum="60" cards=""/><action no="23" player="Travnikova" type="3" sum="210" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149603887">
+		 <general>
+		  <startdate>2012-06-03 10:37:07</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,700" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,855" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,670" dealer="0" win="330" bet="240" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,515" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,610" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Westi3971" type="1" sum="30" cards="[cards]"/><action no="2" player="qrinya" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="10" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="11" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="3" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="4" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="5" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="6" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="7" player="Tobkel" type="23" sum="240" cards=""/><cards type="Pocket" player="WhiteRiderT">S6 C3</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="9" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149603967">
+		 <general>
+		  <startdate>2012-06-03 10:37:38</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,670" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,480" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,855" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,515" dealer="0" win="240" bet="150" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="qrinya" type="1" sum="30" cards="[cards]"/><action no="2" player="Travnikova" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="9" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="10" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="11" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="3" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="4" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="5" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="6" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CQ DA</cards><action no="7" player="WhiteRiderT" type="23" sum="150" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="8" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149604087">
+		 <general>
+		  <startdate>2012-06-03 10:38:24</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,050" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,440" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,855" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="1,560" dealer="0" win="3,210" bet="1,560" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="1,760" dealer="0" win="0" bet="1,560" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,605" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Travnikova" type="1" sum="30" cards="[cards]"/><action no="2" player="Rezidentn" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="8" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="9" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="10" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="11" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="3" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">D9 C9</cards><action no="4" player="LifeTimeDS" type="3" sum="60" cards=""/><action no="12" player="LifeTimeDS" type="23" sum="1,560" cards=""/><cards type="Pocket" player="Tobkel">SA CK</cards><action no="5" player="Tobkel" type="23" sum="240" cards=""/><action no="13" player="Tobkel" type="3" sum="1,320" cards=""/><cards type="Pocket" player="WhiteRiderT">D2 H6</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="7" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ D6 SQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CQ</cards>
+	</round>
+	
+		</game><game gamecode="4149608227">
+		 <general>
+		  <startdate>2012-06-03 10:39:27</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,020" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,380" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,855" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,210" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="200" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,605" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,610" dealer="0" win="270" bet="180" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rezidentn" type="1" sum="30" cards="[cards]"/><action no="2" player="pustak" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="7" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="8" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="9" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="10" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="11" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="3" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="4" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S4 C8</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="6" player="SWBerlin65" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149608282">
+		 <general>
+		  <startdate>2012-06-03 10:39:52</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,450" dealer="0" win="270" bet="180" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,350" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,795" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,210" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="200" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,605" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pustak" type="1" sum="30" cards="[cards]"/><action no="2" player="LifeTimeDS" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="6" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="7" player="qrinya" type="23" sum="180" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="8" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="9" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="10" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="11" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="3" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H8 D2</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="5" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149608362">
+		 <general>
+		  <startdate>2012-06-03 10:40:22</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,020" dealer="0" win="330" bet="240" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,765" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,150" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="200" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,605" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LifeTimeDS" type="1" sum="30" cards="[cards]"/><action no="2" player="Tobkel" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="5" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="qrinya">X X</cards><action no="6" player="qrinya" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="7" player="Travnikova" type="3" sum="60" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="8" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="9" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="10" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="11" player="Tobkel" type="4" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D9 S3</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="4" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 SQ S2</cards><action no="13" player="Travnikova" type="4" sum="0" cards=""/><action no="12" player="Tobkel" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="15" player="Travnikova" type="4" sum="0" cards=""/><action no="14" player="Tobkel" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards><action no="17" player="Travnikova" type="5" sum="180" cards=""/><action no="16" player="Tobkel" type="4" sum="0" cards=""/><action no="18" player="Tobkel" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149608501">
+		 <general>
+		  <startdate>2012-06-03 10:41:15</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="1,670" dealer="0" win="3,300" bet="1,670" rebuy="0" addon="0"/><player seat="2" name="qrinya" chips="1,540" dealer="0" win="0" bet="1,540" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,765" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,120" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="140" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,605" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tobkel" type="1" sum="30" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">CK HA</cards><action no="4" player="Westi3971" type="3" sum="60" cards=""/><action no="12" player="Westi3971" type="3" sum="120" cards=""/><cards type="Pocket" player="qrinya">SA SJ</cards><action no="5" player="qrinya" type="23" sum="180" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="6" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="7" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="8" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="9" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">X X</cards><action no="10" player="Tobkel" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 CJ</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="3" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 DA S6</cards><action no="13" player="Westi3971" type="4" sum="0" cards=""/><action no="14" player="qrinya" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="15" player="Westi3971" type="5" sum="225" cards=""/><action no="17" player="Westi3971" type="23" sum="1,490" cards=""/><action no="16" player="qrinya" type="23" sum="562.50" cards=""/><action no="18" player="qrinya" type="7" sum="797.50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="4149608663">
+		 <general>
+		  <startdate>2012-06-03 10:42:22</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,300" dealer="0" win="0" bet="210" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,765" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,120" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="Tobkel" chips="110" dealer="1" win="0" bet="110" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,545" dealer="0" win="0" bet="110" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,700" dealer="0" win="640" bet="210" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/><action no="2" player="SWBerlin65" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">DA HK</cards><action no="3" player="Westi3971" type="3" sum="100" cards=""/><action no="11" player="Westi3971" type="3" sum="10" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="4" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="5" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="6" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="7" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="Tobkel">HJ CK</cards><action no="8" player="Tobkel" type="7" sum="110" cards=""/><cards type="Pocket" player="WhiteRiderT">S6 C6</cards><action no="9" player="WhiteRiderT" type="3" sum="60" cards=""/><cards type="Pocket" player="SWBerlin65">C4 SA</cards><action no="10" player="SWBerlin65" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 CA D2</cards><action no="14" player="Westi3971" type="4" sum="0" cards=""/><action no="12" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="13" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="17" player="Westi3971" type="3" sum="100" cards=""/><action no="15" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="18" player="WhiteRiderT" type="0" sum="0" cards=""/><action no="16" player="SWBerlin65" type="5" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards><action no="20" player="Westi3971" type="4" sum="0" cards=""/><action no="19" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149608809">
+		 <general>
+		  <startdate>2012-06-03 10:43:30</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,090" dealer="0" win="600" bet="400" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,765" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,120" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,435" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="2,130" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Westi3971" type="2" sum="100" cards="[cards]"/><action no="1" player="SWBerlin65" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="9" player="Westi3971" type="4" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="3" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="4" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="5" player="pustak" type="3" sum="100" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="6" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H6 C3</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="8" player="SWBerlin65" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 H10 C6</cards><action no="11" player="Westi3971" type="4" sum="0" cards=""/><action no="12" player="pustak" type="4" sum="0" cards=""/><action no="10" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="14" player="Westi3971" type="4" sum="0" cards=""/><action no="15" player="pustak" type="4" sum="0" cards=""/><action no="13" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards><action no="17" player="Westi3971" type="5" sum="300" cards=""/><action no="18" player="pustak" type="0" sum="0" cards=""/><action no="16" player="SWBerlin65" type="4" sum="0" cards=""/><action no="19" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612107">
+		 <general>
+		  <startdate>2012-06-03 10:44:45</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,290" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,665" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,120" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,435" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="2,030" dealer="1" win="450" bet="300" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Westi3971" type="1" sum="50" cards="[cards]"/><action no="2" player="Travnikova" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="8" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="9" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="3" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="4" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="5" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S9 HQ</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="7" player="SWBerlin65" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612167">
+		 <general>
+		  <startdate>2012-06-03 10:45:14</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,240" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,010" dealer="0" win="300" bet="200" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,350" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,665" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,120" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,435" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="2,180" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Travnikova" type="1" sum="50" cards="[cards]"/><action no="2" player="Rezidentn" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="7" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="8" player="Travnikova" type="3" sum="50" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="9" player="Rezidentn" type="4" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="3" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="4" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DA D3</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="6" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK C7 S10</cards><action no="10" player="Travnikova" type="5" sum="100" cards=""/><action no="11" player="Rezidentn" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612292">
+		 <general>
+		  <startdate>2012-06-03 10:46:06</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,250" dealer="0" win="1,600" bet="1,250" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,665" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,120" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,435" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="2,180" dealer="0" win="0" bet="250" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rezidentn" type="1" sum="50" cards="[cards]"/><action no="2" player="pustak" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="6" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="7" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="8" player="Rezidentn" type="23" sum="1,250" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="9" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="3" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S7 H3</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="5" player="SWBerlin65" type="23" sum="250" cards=""/><action no="10" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612392">
+		 <general>
+		  <startdate>2012-06-03 10:46:53</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,600" dealer="1" win="450" bet="300" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,565" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,120" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,435" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pustak" type="1" sum="50" cards="[cards]"/><action no="2" player="LifeTimeDS" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="5" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="6" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="7" player="Rezidentn" type="23" sum="300" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="8" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="9" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D3 CJ</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="4" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612466">
+		 <general>
+		  <startdate>2012-06-03 10:47:23</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,750" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,515" dealer="1" win="450" bet="300" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,020" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,435" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LifeTimeDS" type="1" sum="50" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="4" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="5" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="6" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="7" player="pustak" type="23" sum="300" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="8" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HJ SK</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="3" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612509">
+		 <general>
+		  <startdate>2012-06-03 10:47:49</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,750" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,665" dealer="0" win="450" bet="300" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,335" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,930" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/><action no="2" player="SWBerlin65" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="3" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="4" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="5" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="6" player="pustak" type="23" sum="300" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="7" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H10 SK</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="9" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612592">
+		 <general>
+		  <startdate>2012-06-03 10:48:27</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,240" dealer="0" win="200" bet="100" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,750" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,830" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Westi3971" type="2" sum="100" cards="[cards]"/><action no="1" player="SWBerlin65" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">SK D3</cards><action no="9" player="Westi3971" type="4" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="3" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="4" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="5" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="6" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D2 C7</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">H6 HK</cards><action no="8" player="SWBerlin65" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA H3 C9</cards><action no="11" player="Westi3971" type="4" sum="0" cards=""/><action no="10" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="13" player="Westi3971" type="4" sum="0" cards=""/><action no="12" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards><action no="15" player="Westi3971" type="4" sum="0" cards=""/><action no="14" player="SWBerlin65" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612741">
+		 <general>
+		  <startdate>2012-06-03 10:49:26</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,340" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,110" dealer="0" win="225" bet="150" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,750" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Westi3971" type="1" sum="75" cards="[cards]"/><action no="2" player="Travnikova" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="8" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><cards type="Pocket" player="Rezidentn">X X</cards><action no="3" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="4" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="5" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HK H10</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="7" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149612799">
+		 <general>
+		  <startdate>2012-06-03 10:49:47</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,265" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,185" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,750" dealer="0" win="300" bet="150" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Travnikova" type="1" sum="75" cards="[cards]"/><action no="2" player="Rezidentn" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="7" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">H3 DA</cards><action no="8" player="Travnikova" type="3" sum="75" cards=""/><cards type="Pocket" player="Rezidentn">S9 H2</cards><action no="9" player="Rezidentn" type="4" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="3" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="4" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D8 D3</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="6" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ H5 C9</cards><action no="10" player="Travnikova" type="4" sum="0" cards=""/><action no="11" player="Rezidentn" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards><action no="12" player="Travnikova" type="4" sum="0" cards=""/><action no="13" player="Rezidentn" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards><action no="14" player="Travnikova" type="4" sum="0" cards=""/><action no="15" player="Rezidentn" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616027">
+		 <general>
+		  <startdate>2012-06-03 10:50:52</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,265" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,035" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,900" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="225" bet="150" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rezidentn" type="1" sum="75" cards="[cards]"/><action no="2" player="pustak" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="6" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="7" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="8" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="3" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DQ H5</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="5" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616070">
+		 <general>
+		  <startdate>2012-06-03 10:51:13</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,265" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,035" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,825" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,890" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="225" bet="150" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pustak" type="1" sum="75" cards="[cards]"/><action no="2" player="LifeTimeDS" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="5" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="6" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="7" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="8" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><cards type="Pocket" player="WhiteRiderT">DQ D7</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="4" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616171">
+		 <general>
+		  <startdate>2012-06-03 10:51:54</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,265" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,035" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,825" dealer="0" win="2,050" bet="1,825" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,045" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LifeTimeDS" type="1" sum="75" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="4" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="5" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="6" player="Rezidentn" type="23" sum="1,825" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="7" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="8" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S2 DQ</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="3" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616221">
+		 <general>
+		  <startdate>2012-06-03 10:52:16</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,265" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,035" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,135" dealer="0" win="550" bet="400" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/><action no="2" player="SWBerlin65" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="3" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="4" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="5" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="6" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="7" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SJ HK</cards><action no="8" player="WhiteRiderT" type="23" sum="400" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="9" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616313">
+		 <general>
+		  <startdate>2012-06-03 10:52:50</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,265" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,035" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="525" bet="300" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,580" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Westi3971" type="2" sum="150" cards="[cards]"/><action no="1" player="SWBerlin65" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="9" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="3" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="4" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="5" player="pustak" type="23" sum="300" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="6" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D2 DK</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="8" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616403">
+		 <general>
+		  <startdate>2012-06-03 10:53:21</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,115" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,035" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="2,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,505" dealer="1" win="1,730" bet="1,505" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Westi3971" type="1" sum="75" cards="[cards]"/><action no="2" player="Travnikova" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="8" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="9" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="3" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="4" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="5" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H4 S2</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="7" player="SWBerlin65" type="23" sum="1,505" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616452">
+		 <general>
+		  <startdate>2012-06-03 10:53:44</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,040" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="885" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,050" dealer="0" win="225" bet="150" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="2,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Travnikova" type="1" sum="75" cards="[cards]"/><action no="2" player="Rezidentn" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="7" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="8" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><cards type="Pocket" player="pustak">X X</cards><action no="3" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="4" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H9 HK</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="6" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616556">
+		 <general>
+		  <startdate>2012-06-03 10:54:25</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="810" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,125" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="2,040" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="0" win="675" bet="450" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rezidentn" type="1" sum="75" cards="[cards]"/><action no="2" player="pustak" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="6" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="7" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="8" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="9" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="3" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D4 SQ</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="5" player="SWBerlin65" type="23" sum="450" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149616619">
+		 <general>
+		  <startdate>2012-06-03 10:54:51</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="810" dealer="0" win="1,845" bet="810" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,050" dealer="1" win="1,240" bet="2,050" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,890" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,970" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,955" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pustak" type="1" sum="75" cards="[cards]"/><action no="2" player="LifeTimeDS" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="5" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">CA S10</cards><action no="6" player="Travnikova" type="23" sum="810" cards=""/><cards type="Pocket" player="Rezidentn">SK HA</cards><action no="7" player="Rezidentn" type="23" sum="2,050" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="8" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="9" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DQ D5</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="4" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ D9 C4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game><game gamecode="4149616801">
+		 <general>
+		  <startdate>2012-06-03 10:55:59</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,845" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="1,240" dealer="0" win="2,555" bet="1,240" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,820" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="2,285" dealer="0" win="0" bet="1,240" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,955" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LifeTimeDS" type="1" sum="75" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="4" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="5" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">D6 D7</cards><action no="6" player="Rezidentn" type="23" sum="1,240" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="7" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="8" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DA CK</cards><action no="9" player="WhiteRiderT" type="3" sum="1,090" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="3" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H6 H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards>
+	</round>
+	
+		</game><game gamecode="4149620747">
+		 <general>
+		  <startdate>2012-06-03 10:56:39</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,040" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,845" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,555" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,815" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="2,745" dealer="1" win="3,195" bet="2,745" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="1,045" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,955" dealer="0" win="0" bet="225" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Westi3971" type="15" sum="25" cards="[cards]"/><action no="4" player="Travnikova" type="15" sum="25" cards="[cards]"/><action no="5" player="Rezidentn" type="15" sum="25" cards="[cards]"/><action no="6" player="pustak" type="15" sum="25" cards="[cards]"/><action no="7" player="LifeTimeDS" type="15" sum="25" cards="[cards]"/><action no="1" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="8" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/><action no="2" player="SWBerlin65" type="15" sum="25" cards="[cards]"/><action no="9" player="SWBerlin65" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="10" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="11" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="12" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="13" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="14" player="LifeTimeDS" type="23" sum="2,720" cards=""/><cards type="Pocket" player="WhiteRiderT">SQ CK</cards><action no="15" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="16" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149620829">
+		 <general>
+		  <startdate>2012-06-03 10:57:06</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="3,015" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,820" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,530" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,790" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,195" dealer="0" win="3,845" bet="3,195" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="920" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,730" dealer="0" win="0" bet="125" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Westi3971" type="15" sum="25" cards="[cards]"/><action no="9" player="Westi3971" type="2" sum="200" cards="[cards]"/><action no="3" player="Travnikova" type="15" sum="25" cards="[cards]"/><action no="4" player="Rezidentn" type="15" sum="25" cards="[cards]"/><action no="5" player="pustak" type="15" sum="25" cards="[cards]"/><action no="6" player="LifeTimeDS" type="15" sum="25" cards="[cards]"/><action no="7" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="1" player="SWBerlin65" type="15" sum="25" cards="[cards]"/><action no="8" player="SWBerlin65" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="16" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="10" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="11" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="12" player="pustak" type="3" sum="200" cards=""/><action no="17" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="13" player="LifeTimeDS" type="23" sum="3,170" cards=""/><cards type="Pocket" player="WhiteRiderT">SQ HK</cards><action no="14" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="15" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149620933">
+		 <general>
+		  <startdate>2012-06-03 10:57:49</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="2,790" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,795" dealer="0" win="475" bet="225" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,505" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,565" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,845" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="895" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,605" dealer="1" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Westi3971" type="15" sum="25" cards="[cards]"/><action no="8" player="Westi3971" type="1" sum="100" cards="[cards]"/><action no="2" player="Travnikova" type="15" sum="25" cards="[cards]"/><action no="9" player="Travnikova" type="2" sum="200" cards="[cards]"/><action no="3" player="Rezidentn" type="15" sum="25" cards="[cards]"/><action no="4" player="pustak" type="15" sum="25" cards="[cards]"/><action no="5" player="LifeTimeDS" type="15" sum="25" cards="[cards]"/><action no="6" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="7" player="SWBerlin65" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="15" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><cards type="Pocket" player="Rezidentn">X X</cards><action no="10" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="11" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="12" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S9 D7</cards><action no="13" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="14" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149621022">
+		 <general>
+		  <startdate>2012-06-03 10:58:23</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="2,665" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="2,045" dealer="0" win="0" bet="1,025" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,480" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="1,540" dealer="0" win="2,375" bet="1,025" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,820" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="870" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,580" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="7" player="Westi3971" type="15" sum="25" cards="[cards]"/><action no="1" player="Travnikova" type="15" sum="25" cards="[cards]"/><action no="8" player="Travnikova" type="1" sum="100" cards="[cards]"/><action no="2" player="Rezidentn" type="15" sum="25" cards="[cards]"/><action no="9" player="Rezidentn" type="2" sum="200" cards="[cards]"/><action no="3" player="pustak" type="15" sum="25" cards="[cards]"/><action no="4" player="LifeTimeDS" type="15" sum="25" cards="[cards]"/><action no="5" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="6" player="SWBerlin65" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="14" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">DQ DA</cards><action no="15" player="Travnikova" type="3" sum="300" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="16" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">CQ HQ</cards><action no="10" player="pustak" type="23" sum="400" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="11" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DJ D9</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="13" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 C2 DK</cards><action no="17" player="Travnikova" type="5" sum="200" cards=""/><action no="18" player="pustak" type="3" sum="200" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="19" player="Travnikova" type="5" sum="200" cards=""/><action no="20" player="pustak" type="3" sum="200" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards><action no="21" player="Travnikova" type="5" sum="200" cards=""/><action no="22" player="pustak" type="3" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149621175">
+		 <general>
+		  <startdate>2012-06-03 10:59:17</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="2,640" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="1,020" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,255" dealer="0" win="2,605" bet="2,255" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="2,890" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,795" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="845" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,555" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="Westi3971" type="15" sum="25" cards="[cards]"/><action no="7" player="Travnikova" type="15" sum="25" cards="[cards]"/><action no="1" player="Rezidentn" type="15" sum="25" cards="[cards]"/><action no="8" player="Rezidentn" type="1" sum="100" cards="[cards]"/><action no="2" player="pustak" type="15" sum="25" cards="[cards]"/><action no="9" player="pustak" type="2" sum="200" cards="[cards]"/><action no="3" player="LifeTimeDS" type="15" sum="25" cards="[cards]"/><action no="4" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="5" player="SWBerlin65" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="13" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="14" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="15" player="Rezidentn" type="23" sum="2,230" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="16" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="10" player="LifeTimeDS" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D2 D10</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="12" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149621325">
+		 <general>
+		  <startdate>2012-06-03 11:00:10</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="2,615" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="995" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,605" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="2,665" dealer="0" win="775" bet="425" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,770" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="820" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,530" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="Westi3971" type="15" sum="25" cards="[cards]"/><action no="6" player="Travnikova" type="15" sum="25" cards="[cards]"/><action no="7" player="Rezidentn" type="15" sum="25" cards="[cards]"/><action no="1" player="pustak" type="15" sum="25" cards="[cards]"/><action no="8" player="pustak" type="1" sum="100" cards="[cards]"/><action no="2" player="LifeTimeDS" type="15" sum="25" cards="[cards]"/><action no="9" player="LifeTimeDS" type="2" sum="200" cards="[cards]"/><action no="3" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="4" player="SWBerlin65" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="12" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="13" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="14" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="15" player="pustak" type="3" sum="100" cards=""/><cards type="Pocket" player="LifeTimeDS">X X</cards><action no="16" player="LifeTimeDS" type="4" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DQ C6</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="11" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA H5 D2</cards><action no="17" player="pustak" type="5" sum="200" cards=""/><action no="18" player="LifeTimeDS" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4149621416">
+		 <general>
+		  <startdate>2012-06-03 11:00:43</startdate>		  
+		  <players>
+		   <player seat="1" name="Westi3971" chips="2,590" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="3" name="Travnikova" chips="970" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="Rezidentn" chips="2,580" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="pustak" chips="3,015" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="7" name="LifeTimeDS" chips="3,545" dealer="0" win="1,720" bet="800" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="795" dealer="0" win="0" bet="795" rebuy="0" addon="0"/><player seat="10" name="SWBerlin65" chips="1,505" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Westi3971" type="15" sum="25" cards="[cards]"/><action no="5" player="Travnikova" type="15" sum="25" cards="[cards]"/><action no="6" player="Rezidentn" type="15" sum="25" cards="[cards]"/><action no="7" player="pustak" type="15" sum="25" cards="[cards]"/><action no="1" player="LifeTimeDS" type="15" sum="25" cards="[cards]"/><action no="8" player="LifeTimeDS" type="1" sum="100" cards="[cards]"/><action no="2" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="9" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/><action no="3" player="SWBerlin65" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Westi3971">X X</cards><action no="11" player="Westi3971" type="0" sum="0" cards=""/><cards type="Pocket" player="Travnikova">X X</cards><action no="12" player="Travnikova" type="0" sum="0" cards=""/><cards type="Pocket" player="Rezidentn">X X</cards><action no="13" player="Rezidentn" type="0" sum="0" cards=""/><cards type="Pocket" player="pustak">X X</cards><action no="14" player="pustak" type="0" sum="0" cards=""/><cards type="Pocket" player="LifeTimeDS">C5 DK</cards><action no="15" player="LifeTimeDS" type="23" sum="775" cards=""/><cards type="Pocket" player="WhiteRiderT">DA H10</cards><action no="16" player="WhiteRiderT" type="7" sum="570" cards=""/><cards type="Pocket" player="SWBerlin65">X X</cards><action no="10" player="SWBerlin65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 DJ D6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game>  
+	</session>

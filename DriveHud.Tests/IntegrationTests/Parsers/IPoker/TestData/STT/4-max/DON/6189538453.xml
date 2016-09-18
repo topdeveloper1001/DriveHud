@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189538453">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819276420</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:08</duration>  
+	          <gamecount>16</gamecount>  
+	          <startdate>2014-01-28 17:02:30</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>1,480</bets>  
+	          <wins>1,180</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>500</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5449333763">
+		 <general>
+		  <startdate>2014-01-28 17:02:30</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="800" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="atis65" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">X X</cards><action no="4" player="DBHEIST" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="5" player="atis65" type="23" sum="40" cards=""/><cards type="Pocket" player="WorstCard">H2 CJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="3" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449333958">
+		 <general>
+		  <startdate>2014-01-28 17:02:52</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="800" dealer="0" win="190" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="820" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="kolber11" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">S5 S4</cards><action no="3" player="DBHEIST" type="3" sum="20" cards=""/><action no="7" player="DBHEIST" type="3" sum="20" cards=""/><cards type="Pocket" player="atis65">CQ HK</cards><action no="4" player="atis65" type="23" sum="40" cards=""/><cards type="Pocket" player="WorstCard">CJ SQ</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">H8 CK</cards><action no="6" player="kolber11" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 H3 C6</cards><action no="9" player="DBHEIST" type="4" sum="0" cards=""/><action no="10" player="atis65" type="4" sum="0" cards=""/><action no="8" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="12" player="DBHEIST" type="5" sum="20" cards=""/><action no="13" player="atis65" type="3" sum="20" cards=""/><action no="11" player="kolber11" type="4" sum="0" cards=""/><action no="14" player="kolber11" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards><action no="16" player="DBHEIST" type="4" sum="0" cards=""/><action no="17" player="atis65" type="4" sum="0" cards=""/><action no="15" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449334346">
+		 <general>
+		  <startdate>2014-01-28 17:03:34</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="930" dealer="0" win="300" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="760" dealer="0" win="0" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="740" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DBHEIST" type="2" sum="20" cards="[cards]"/><action no="1" player="kolber11" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">CA DJ</cards><action no="6" player="DBHEIST" type="4" sum="0" cards=""/><cards type="Pocket" player="atis65">S8 SQ</cards><action no="3" player="atis65" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">HQ D5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="5" player="kolber11" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ H3 CQ</cards><action no="8" player="DBHEIST" type="4" sum="0" cards=""/><action no="11" player="DBHEIST" type="3" sum="80" cards=""/><action no="9" player="atis65" type="5" sum="80" cards=""/><action no="7" player="kolber11" type="4" sum="0" cards=""/><action no="10" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards><action no="12" player="DBHEIST" type="5" sum="20" cards=""/><action no="13" player="atis65" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards><action no="14" player="DBHEIST" type="5" sum="20" cards=""/><action no="15" player="atis65" type="3" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449334754">
+		 <general>
+		  <startdate>2014-01-28 17:04:17</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,090" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="620" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="720" dealer="1" win="100" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DBHEIST" type="1" sum="10" cards="[cards]"/><action no="2" player="atis65" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">X X</cards><action no="5" player="DBHEIST" type="3" sum="10" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="6" player="atis65" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 D9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="4" player="kolber11" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ D7 DJ</cards><action no="7" player="DBHEIST" type="4" sum="0" cards=""/><action no="10" player="DBHEIST" type="0" sum="0" cards=""/><action no="8" player="atis65" type="4" sum="0" cards=""/><action no="11" player="atis65" type="0" sum="0" cards=""/><action no="9" player="kolber11" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449335109">
+		 <general>
+		  <startdate>2014-01-28 17:04:56</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,070" dealer="1" win="435" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="600" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="atis65" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">DQ CQ</cards><action no="4" player="DBHEIST" type="3" sum="30" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="5" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ H2</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="3" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 CJ C4</cards><action no="8" player="DBHEIST" type="3" sum="38" cards=""/><action no="7" player="WorstCard" type="5" sum="38" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards><action no="10" player="DBHEIST" type="3" sum="60" cards=""/><action no="9" player="WorstCard" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards><action no="12" player="DBHEIST" type="3" sum="82" cards=""/><action no="11" player="WorstCard" type="5" sum="82" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449335576">
+		 <general>
+		  <startdate>2014-01-28 17:05:39</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,295" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="585" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="560" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="760" dealer="0" win="135" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="kolber11" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">S7 D6</cards><action no="3" player="DBHEIST" type="3" sum="30" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="4" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK S9</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">S8 SJ</cards><action no="6" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 D5 H6</cards><action no="8" player="DBHEIST" type="4" sum="0" cards=""/><action no="7" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards><action no="10" player="DBHEIST" type="5" sum="30" cards=""/><action no="9" player="kolber11" type="4" sum="0" cards=""/><action no="11" player="kolber11" type="3" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="13" player="DBHEIST" type="4" sum="0" cards=""/><action no="12" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449359280">
+		 <general>
+		  <startdate>2014-01-28 17:06:15</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,235" dealer="0" win="1,445" bet="1,235" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="585" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="545" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="835" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DBHEIST" type="2" sum="30" cards="[cards]"/><action no="1" player="kolber11" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">X X</cards><action no="6" player="DBHEIST" type="4" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="3" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H7 HQ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="5" player="kolber11" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 CK D3</cards><action no="8" player="DBHEIST" type="4" sum="0" cards=""/><action no="7" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="10" player="DBHEIST" type="23" sum="60" cards=""/><action no="9" player="kolber11" type="5" sum="30" cards=""/><action no="11" player="kolber11" type="3" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="13" player="DBHEIST" type="23" sum="1,145" cards=""/><action no="12" player="kolber11" type="5" sum="120" cards=""/><action no="14" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449359670">
+		 <general>
+		  <startdate>2014-01-28 17:07:02</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,445" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="585" dealer="0" win="0" bet="545" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="545" dealer="0" win="1,125" bet="545" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="625" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DBHEIST" type="15" sum="5" cards="[cards]"/><action no="5" player="DBHEIST" type="1" sum="25" cards="[cards]"/><action no="2" player="atis65" type="15" sum="5" cards="[cards]"/><action no="6" player="atis65" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="kolber11" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">X X</cards><action no="9" player="DBHEIST" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">S6 S4</cards><action no="10" player="atis65" type="3" sum="490" cards=""/><cards type="Pocket" player="WorstCard">CA D9</cards><action no="7" player="WorstCard" type="23" sum="540" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="8" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 C8 C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5449359960">
+		 <general>
+		  <startdate>2014-01-28 17:07:36</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,415" dealer="1" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="atis65" chips="40" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,125" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="620" dealer="0" win="770" bet="620" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="DBHEIST" type="15" sum="5" cards="[cards]"/><action no="1" player="atis65" type="15" sum="5" cards="[cards]"/><action no="5" player="atis65" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="kolber11" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">X X</cards><action no="8" player="DBHEIST" type="3" sum="50" cards=""/><cards type="Pocket" player="atis65">D10 C6</cards><action no="9" player="atis65" type="7" sum="10" cards=""/><cards type="Pocket" player="WorstCard">H6 S9</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="kolber11">SJ D9</cards><action no="7" player="kolber11" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ H2 D5</cards><action no="13" player="DBHEIST" type="0" sum="0" cards=""/><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="0" sum="0" cards=""/><action no="12" player="kolber11" type="5" sum="565" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards>
+	</round>
+	
+		</game><game gamecode="5449360347">
+		 <general>
+		  <startdate>2014-01-28 17:08:20</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,360" dealer="0" win="340" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,070" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="770" dealer="0" win="0" bet="155" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="DBHEIST" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="kolber11" type="15" sum="5" cards="[cards]"/><action no="5" player="kolber11" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">DJ DA</cards><action no="6" player="DBHEIST" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">CK H4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">SK D5</cards><action no="8" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 S5 H7</cards><action no="10" player="DBHEIST" type="5" sum="50" cards=""/><action no="9" player="kolber11" type="4" sum="0" cards=""/><action no="11" player="kolber11" type="3" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="13" player="DBHEIST" type="4" sum="0" cards=""/><action no="12" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards><action no="15" player="DBHEIST" type="5" sum="50" cards=""/><action no="14" player="kolber11" type="4" sum="0" cards=""/><action no="16" player="kolber11" type="3" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449360607">
+		 <general>
+		  <startdate>2014-01-28 17:08:52</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,545" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,040" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="615" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DBHEIST" type="15" sum="10" cards="[cards]"/><action no="5" player="DBHEIST" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="kolber11" type="15" sum="10" cards="[cards]"/><action no="4" player="kolber11" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">X X</cards><action no="8" player="DBHEIST" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D10 H6</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="7" player="kolber11" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ CK S3</cards><action no="10" player="DBHEIST" type="0" sum="0" cards=""/><action no="9" player="kolber11" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449360758">
+		 <general>
+		  <startdate>2014-01-28 17:09:11</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,435" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,030" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="735" dealer="1" win="955" bet="735" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DBHEIST" type="15" sum="10" cards="[cards]"/><action no="4" player="DBHEIST" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="kolber11" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">X X</cards><action no="7" player="DBHEIST" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">H7 H3</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="6" player="kolber11" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ C4 D10</cards><action no="9" player="DBHEIST" type="4" sum="0" cards=""/><action no="12" player="DBHEIST" type="0" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="WorstCard" type="0" sum="0" cards=""/><action no="11" player="kolber11" type="5" sum="625" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449360990">
+		 <general>
+		  <startdate>2014-01-28 17:09:39</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="1,325" dealer="1" win="0" bet="955" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="920" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="955" dealer="0" win="1,970" bet="955" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="DBHEIST" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="kolber11" type="15" sum="10" cards="[cards]"/><action no="5" player="kolber11" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">D5 D10</cards><action no="6" player="DBHEIST" type="3" sum="100" cards=""/><cards type="Pocket" player="WorstCard">SK H4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">C3 C8</cards><action no="8" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK C5 CQ</cards><action no="10" player="DBHEIST" type="4" sum="0" cards=""/><action no="9" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="12" player="DBHEIST" type="4" sum="0" cards=""/><action no="11" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards><action no="14" player="DBHEIST" type="3" sum="845" cards=""/><action no="13" player="kolber11" type="5" sum="845" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449361299">
+		 <general>
+		  <startdate>2014-01-28 17:10:14</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="370" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="860" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="1,970" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DBHEIST" type="15" sum="10" cards="[cards]"/><action no="5" player="DBHEIST" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="kolber11" type="15" sum="10" cards="[cards]"/><action no="4" player="kolber11" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">X X</cards><action no="8" player="DBHEIST" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H3 S9</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="7" player="kolber11" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 SA H6</cards><action no="10" player="DBHEIST" type="0" sum="0" cards=""/><action no="9" player="kolber11" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449361506">
+		 <general>
+		  <startdate>2014-01-28 17:10:38</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="260" dealer="0" win="535" bet="260" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="850" dealer="0" win="55" bet="315" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="2,090" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DBHEIST" type="15" sum="15" cards="[cards]"/><action no="4" player="DBHEIST" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="kolber11" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">C2 S7</cards><action no="7" player="DBHEIST" type="3" sum="75" cards=""/><action no="9" player="DBHEIST" type="7" sum="95" cards=""/><cards type="Pocket" player="WorstCard">DJ D3</cards><action no="8" player="WorstCard" type="23" sum="300" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="6" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA D10 S10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards>
+	</round>
+	
+		</game><game gamecode="5449361771">
+		 <general>
+		  <startdate>2014-01-28 17:11:07</startdate>		  
+		  <players>
+		   <player seat="2" name="DBHEIST" chips="535" dealer="1" win="0" bet="535" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="590" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6189538453"/><player seat="9" name="kolber11" chips="2,075" dealer="0" win="1,160" bet="535" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="DBHEIST" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="kolber11" type="15" sum="15" cards="[cards]"/><action no="5" player="kolber11" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DBHEIST">C8 DA</cards><action no="6" player="DBHEIST" type="3" sum="150" cards=""/><cards type="Pocket" player="WorstCard">S7 H9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">HJ CK</cards><action no="8" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 S2 HA</cards><action no="10" player="DBHEIST" type="5" sum="150" cards=""/><action no="9" player="kolber11" type="4" sum="0" cards=""/><action no="11" player="kolber11" type="3" sum="150" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards><action no="13" player="DBHEIST" type="5" sum="220" cards=""/><action no="12" player="kolber11" type="4" sum="0" cards=""/><action no="14" player="kolber11" type="3" sum="220" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards>
+	</round>
+	
+		</game>  
+	</session>

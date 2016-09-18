@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188325225">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819106072</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>17</gamecount>  
+	          <startdate>2014-01-26 18:01:35</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,050</bets>  
+	          <wins>1,250</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>3</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5439344417">
+		 <general>
+		  <startdate>2014-01-26 18:01:35</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188325225"/><player seat="7" name="Sirdigasss" chips="800" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="facciadavilla" chips="800" dealer="0" win="351" bet="241" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Sirdigasss" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="4" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H8 H6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">X X</cards><action no="6" player="Sirdigasss" type="3" sum="40" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="3" player="facciadavilla" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 D10 H9</cards><action no="7" player="Sirdigasss" type="5" sum="20" cards=""/><action no="8" player="facciadavilla" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="9" player="Sirdigasss" type="5" sum="20" cards=""/><action no="11" player="Sirdigasss" type="0" sum="0" cards=""/><action no="10" player="facciadavilla" type="23" sum="161" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439346905">
+		 <general>
+		  <startdate>2014-01-26 18:02:19</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="6188325225"/><player seat="7" name="Sirdigasss" chips="700" dealer="0" win="0" bet="700" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="facciadavilla" chips="910" dealer="0" win="1,450" bet="700" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Sirdigasss" type="1" sum="10" cards="[cards]"/><action no="2" player="facciadavilla" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="3" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 H3</cards><action no="4" player="WorstCard" type="23" sum="50" cards=""/><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">DA HQ</cards><action no="5" player="Sirdigasss" type="23" sum="80" cards=""/><action no="8" player="Sirdigasss" type="7" sum="620" cards=""/><cards type="Pocket" player="facciadavilla">HA SA</cards><action no="6" player="facciadavilla" type="23" sum="580" cards=""/><action no="9" player="facciadavilla" type="3" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 CK D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game><game gamecode="5439349928">
+		 <general>
+		  <startdate>2014-01-26 18:03:12</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="800" dealer="0" win="320" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="740" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,660" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="SUPREMETALENT" type="2" sum="20" cards="[cards]"/><action no="1" player="facciadavilla" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="5" player="SUPREMETALENT" type="23" sum="220" cards=""/><cards type="Pocket" player="WorstCard">D8 DK</cards><action no="3" player="WorstCard" type="23" sum="40" cards=""/><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="4" player="facciadavilla" type="23" sum="60" cards=""/><action no="7" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439351176">
+		 <general>
+		  <startdate>2014-01-26 18:03:54</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="900" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,600" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="SUPREMETALENT" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="4" player="SUPREMETALENT" type="23" sum="90" cards=""/><cards type="Pocket" player="WorstCard">H5 S3</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="3" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439351590">
+		 <general>
+		  <startdate>2014-01-26 18:04:10</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="670" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,600" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="facciadavilla" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="3" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 DJ</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="5" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439351923">
+		 <general>
+		  <startdate>2014-01-26 18:04:28</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="930" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="1" win="105" bet="60" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,570" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="SUPREMETALENT" type="2" sum="30" cards="[cards]"/><action no="1" player="facciadavilla" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="5" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK CQ</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="4" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439352271">
+		 <general>
+		  <startdate>2014-01-26 18:04:46</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="900" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="745" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,555" dealer="1" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="SUPREMETALENT" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="4" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 S4</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="3" player="facciadavilla" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439352708">
+		 <general>
+		  <startdate>2014-01-26 18:05:06</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="885" dealer="1" win="0" bet="174" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="715" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,600" dealer="0" win="363" bet="174" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="facciadavilla" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">D7 S6</cards><action no="3" player="SUPREMETALENT" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">D4 C5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">D8 SQ</cards><action no="5" player="facciadavilla" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA S9 S7</cards><action no="7" player="SUPREMETALENT" type="4" sum="0" cards=""/><action no="6" player="facciadavilla" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="9" player="SUPREMETALENT" type="5" sum="53" cards=""/><action no="8" player="facciadavilla" type="4" sum="0" cards=""/><action no="10" player="facciadavilla" type="3" sum="53" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards><action no="12" player="SUPREMETALENT" type="3" sum="91" cards=""/><action no="11" player="facciadavilla" type="5" sum="91" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439353670">
+		 <general>
+		  <startdate>2014-01-26 18:05:51</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="711" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,789" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="SUPREMETALENT" type="15" sum="5" cards="[cards]"/><action no="5" player="SUPREMETALENT" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="facciadavilla" type="15" sum="5" cards="[cards]"/><action no="4" player="facciadavilla" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><cards type="Pocket" player="WorstCard">D4 SJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="7" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439354094">
+		 <general>
+		  <startdate>2014-01-26 18:06:08</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="746" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="695" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,759" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="SUPREMETALENT" type="15" sum="5" cards="[cards]"/><action no="4" player="SUPREMETALENT" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="facciadavilla" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="7" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ H4</cards><cards type="Pocket" player="facciadavilla">X X</cards><action no="6" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439354589">
+		 <general>
+		  <startdate>2014-01-26 18:06:38</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="716" dealer="1" win="1,001" bet="716" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="730" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,754" dealer="0" win="0" bet="255" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="SUPREMETALENT" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="facciadavilla" type="15" sum="5" cards="[cards]"/><action no="5" player="facciadavilla" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="6" player="SUPREMETALENT" type="23" sum="150" cards=""/><action no="9" player="SUPREMETALENT" type="23" sum="711" cards=""/><cards type="Pocket" player="WorstCard">H5 S4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="8" player="facciadavilla" type="23" sum="250" cards=""/><action no="10" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439355227">
+		 <general>
+		  <startdate>2014-01-26 18:07:06</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="1,001" dealer="0" win="360" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="1" win="0" bet="105" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,499" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="SUPREMETALENT" type="15" sum="5" cards="[cards]"/><action no="5" player="SUPREMETALENT" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="facciadavilla" type="15" sum="5" cards="[cards]"/><action no="4" player="facciadavilla" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="8" player="SUPREMETALENT" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">D9 DQ</cards><action no="6" player="WorstCard" type="23" sum="100" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="7" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ D6 S6</cards><action no="9" player="SUPREMETALENT" type="5" sum="120" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439355833">
+		 <general>
+		  <startdate>2014-01-26 18:07:40</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="1,136" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="595" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,469" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="SUPREMETALENT" type="15" sum="10" cards="[cards]"/><action no="4" player="SUPREMETALENT" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="facciadavilla" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="7" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C8 DA</cards><cards type="Pocket" player="facciadavilla">X X</cards><action no="6" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439356127">
+		 <general>
+		  <startdate>2014-01-26 18:07:54</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="1,076" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="665" dealer="0" win="785" bet="665" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,459" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="SUPREMETALENT" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="facciadavilla" type="15" sum="10" cards="[cards]"/><action no="5" player="facciadavilla" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="6" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SA D7</cards><action no="7" player="WorstCard" type="23" sum="655" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="8" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439371625">
+		 <general>
+		  <startdate>2014-01-26 18:08:24</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="1,066" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="785" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,349" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="SUPREMETALENT" type="15" sum="10" cards="[cards]"/><action no="5" player="SUPREMETALENT" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="facciadavilla" type="15" sum="10" cards="[cards]"/><action no="4" player="facciadavilla" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><cards type="Pocket" player="WorstCard">CQ D4</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="7" player="facciadavilla" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439371714">
+		 <general>
+		  <startdate>2014-01-26 18:08:37</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="1,136" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="775" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,289" dealer="1" win="380" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="SUPREMETALENT" type="15" sum="10" cards="[cards]"/><action no="4" player="SUPREMETALENT" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="facciadavilla" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="7" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 DJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">X X</cards><action no="6" player="facciadavilla" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439371837">
+		 <general>
+		  <startdate>2014-01-26 18:08:55</startdate>		  
+		  <players>
+		   <player seat="2" name="SUPREMETALENT" chips="1,076" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="665" dealer="0" win="0" bet="665" rebuy="0" addon="0" reg_code="6188325225"/><player seat="9" name="facciadavilla" chips="1,459" dealer="0" win="1,340" bet="665" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="SUPREMETALENT" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="facciadavilla" type="15" sum="10" cards="[cards]"/><action no="5" player="facciadavilla" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SUPREMETALENT">X X</cards><action no="6" player="SUPREMETALENT" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SQ C2</cards><action no="7" player="WorstCard" type="23" sum="655" cards=""/><cards type="Pocket" player="facciadavilla">SK SJ</cards><action no="8" player="facciadavilla" type="3" sum="555" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 S4 S5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards>
+	</round>
+	
+		</game>  
+	</session>

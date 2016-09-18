@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6166687981">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>"SUPER TURBO" $30 Double Up*4, 816761081</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>24</gamecount>  
+	          <startdate>2013-12-19 10:57:18</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>chinarock</nickname>  
+	          <bets>2,461</bets>  
+	          <wins>1,661</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>225</ipoints>
+        		<statuspoints>45</statuspoints>
+			  		<awardpoints>225</awardpoints>
+	          <tournamentname>"SUPER TURBO" $30 Double Up*4</tournamentname><place>4</place><buyin>$30.00+$1.80</buyin> <totalbuyin>$31.80</totalbuyin> <ipoints>225</ipoints> <win>$0.00</win> <statuspoints>45</statuspoints> <awardpoints>225</awardpoints>  
+	    </general>  
+	    <game gamecode="5337391706">
+		 <general>
+		  <startdate>2013-12-19 10:57:18</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="800" dealer="1" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tedtoby" type="1" sum="10" cards="[cards]"/><action no="2" player="chinarock" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="4" player="bf184888" type="23" sum="40" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="5" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">H8 H6</cards><action no="6" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="3" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337391767">
+		 <general>
+		  <startdate>2013-12-19 10:57:45</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="830" dealer="0" win="0" bet="103" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="800" dealer="0" win="216" bet="103" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="chinarock" type="1" sum="10" cards="[cards]"/><action no="2" player="Pataka1212" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">DA C9</cards><action no="3" player="bf184888" type="23" sum="40" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="4" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">S2 D8</cards><action no="5" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">S9 C10</cards><action no="6" player="Pataka1212" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 C2 H6</cards><action no="8" player="bf184888" type="5" sum="63" cards=""/><action no="7" player="Pataka1212" type="4" sum="0" cards=""/><action no="9" player="Pataka1212" type="3" sum="63" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="11" player="bf184888" type="4" sum="0" cards=""/><action no="10" player="Pataka1212" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards><action no="13" player="bf184888" type="4" sum="0" cards=""/><action no="12" player="Pataka1212" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337391833">
+		 <general>
+		  <startdate>2013-12-19 10:58:14</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="727" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="770" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="913" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bf184888" type="2" sum="20" cards="[cards]"/><action no="1" player="Pataka1212" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="6" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="3" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">DK CJ</cards><action no="4" player="chinarock" type="23" sum="60" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="5" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337391882">
+		 <general>
+		  <startdate>2013-12-19 10:58:34</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="707" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="790" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="903" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bf184888" type="1" sum="10" cards="[cards]"/><action no="2" player="tedtoby" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="5" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><cards type="Pocket" player="chinarock">HQ D8</cards><action no="3" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="4" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337391930">
+		 <general>
+		  <startdate>2013-12-19 10:58:55</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="697" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="903" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tedtoby" type="1" sum="10" cards="[cards]"/><action no="2" player="chinarock" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="4" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="5" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">H8 CK</cards><action no="6" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="3" player="Pataka1212" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337391971">
+		 <general>
+		  <startdate>2013-12-19 10:59:13</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="697" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="933" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="chinarock" type="1" sum="10" cards="[cards]"/><action no="2" player="Pataka1212" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="3" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="4" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">C6 H8</cards><action no="5" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards>
+	</round>
+	
+		</game><game gamecode="5337392005">
+		 <general>
+		  <startdate>2013-12-19 10:59:25</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="697" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="790" dealer="0" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="943" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bf184888" type="2" sum="30" cards="[cards]"/><action no="1" player="Pataka1212" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="6" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="3" player="tedtoby" type="23" sum="60" cards=""/><cards type="Pocket" player="chinarock">H10 DQ</cards><action no="4" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="5" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337392081">
+		 <general>
+		  <startdate>2013-12-19 10:59:58</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="667" dealer="0" win="60" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="835" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="928" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bf184888" type="1" sum="15" cards="[cards]"/><action no="2" player="tedtoby" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">S10 D6</cards><action no="5" player="bf184888" type="3" sum="15" cards=""/><cards type="Pocket" player="tedtoby">H9 C7</cards><action no="6" player="tedtoby" type="4" sum="0" cards=""/><cards type="Pocket" player="chinarock">D4 S8</cards><action no="3" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="4" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA CJ H4</cards><action no="7" player="bf184888" type="4" sum="0" cards=""/><action no="8" player="tedtoby" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="9" player="bf184888" type="4" sum="0" cards=""/><action no="10" player="tedtoby" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="11" player="bf184888" type="4" sum="0" cards=""/><action no="12" player="tedtoby" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337392193">
+		 <general>
+		  <startdate>2013-12-19 11:00:53</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="697" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="805" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="928" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tedtoby" type="1" sum="15" cards="[cards]"/><action no="2" player="chinarock" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="4" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="5" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">H10 DK</cards><action no="6" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="3" player="Pataka1212" type="23" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337392234">
+		 <general>
+		  <startdate>2013-12-19 11:01:14</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="697" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="790" dealer="1" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="740" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="973" dealer="0" win="1,168" bet="973" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="chinarock" type="1" sum="15" cards="[cards]"/><action no="2" player="Pataka1212" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="3" player="bf184888" type="23" sum="90" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="4" player="tedtoby" type="3" sum="90" cards=""/><cards type="Pocket" player="chinarock">C9 S7</cards><action no="5" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="6" player="Pataka1212" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 H10 HJ</cards><action no="8" player="bf184888" type="0" sum="0" cards=""/><action no="9" player="tedtoby" type="0" sum="0" cards=""/><action no="7" player="Pataka1212" type="5" sum="883" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337392333">
+		 <general>
+		  <startdate>2013-12-19 11:01:56</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="607" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="700" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="725" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,168" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bf184888" type="15" sum="5" cards="[cards]"/><action no="6" player="bf184888" type="2" sum="50" cards="[cards]"/><action no="3" player="tedtoby" type="15" sum="5" cards="[cards]"/><action no="4" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="1" player="Pataka1212" type="15" sum="5" cards="[cards]"/><action no="5" player="Pataka1212" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><cards type="Pocket" player="tedtoby">X X</cards><action no="7" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">H9 C2</cards><action no="8" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="9" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402370">
+		 <general>
+		  <startdate>2013-12-19 11:02:12</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="647" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="695" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="720" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,138" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bf184888" type="15" sum="5" cards="[cards]"/><action no="5" player="bf184888" type="1" sum="25" cards="[cards]"/><action no="2" player="tedtoby" type="15" sum="5" cards="[cards]"/><action no="6" player="tedtoby" type="2" sum="50" cards="[cards]"/><action no="3" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="4" player="Pataka1212" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="9" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><cards type="Pocket" player="chinarock">D3 CK</cards><action no="7" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="8" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402420">
+		 <general>
+		  <startdate>2013-12-19 11:02:31</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="617" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="735" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="715" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,133" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="bf184888" type="15" sum="5" cards="[cards]"/><action no="1" player="tedtoby" type="15" sum="5" cards="[cards]"/><action no="5" player="tedtoby" type="1" sum="25" cards="[cards]"/><action no="2" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="6" player="chinarock" type="2" sum="50" cards="[cards]"/><action no="3" player="Pataka1212" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="8" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="9" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">S10 C3</cards><cards type="Pocket" player="Pataka1212">X X</cards><action no="7" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402458">
+		 <general>
+		  <startdate>2013-12-19 11:02:46</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="612" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="705" dealer="1" win="245" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="755" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,128" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bf184888" type="15" sum="5" cards="[cards]"/><action no="4" player="tedtoby" type="15" sum="5" cards="[cards]"/><action no="1" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="5" player="chinarock" type="1" sum="25" cards="[cards]"/><action no="2" player="Pataka1212" type="15" sum="5" cards="[cards]"/><action no="6" player="Pataka1212" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="7" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="8" player="tedtoby" type="23" sum="150" cards=""/><cards type="Pocket" player="chinarock">H6 D5</cards><action no="9" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="10" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402518">
+		 <general>
+		  <startdate>2013-12-19 11:03:12</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="607" dealer="0" win="120" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="795" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="725" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,073" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bf184888" type="15" sum="5" cards="[cards]"/><action no="6" player="bf184888" type="2" sum="50" cards="[cards]"/><action no="3" player="tedtoby" type="15" sum="5" cards="[cards]"/><action no="4" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="1" player="Pataka1212" type="15" sum="5" cards="[cards]"/><action no="5" player="Pataka1212" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">S2 D2</cards><action no="10" player="bf184888" type="4" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="7" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">D9 SQ</cards><action no="8" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">H5 SK</cards><action no="9" player="Pataka1212" type="3" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 C6 CQ</cards><action no="12" player="bf184888" type="4" sum="0" cards=""/><action no="11" player="Pataka1212" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="14" player="bf184888" type="4" sum="0" cards=""/><action no="13" player="Pataka1212" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="16" player="bf184888" type="4" sum="0" cards=""/><action no="15" player="Pataka1212" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402609">
+		 <general>
+		  <startdate>2013-12-19 11:03:55</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="672" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="790" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="720" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,018" dealer="1" win="1,198" bet="1,018" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bf184888" type="15" sum="10" cards="[cards]"/><action no="5" player="bf184888" type="1" sum="50" cards="[cards]"/><action no="2" player="tedtoby" type="15" sum="10" cards="[cards]"/><action no="6" player="tedtoby" type="2" sum="100" cards="[cards]"/><action no="3" player="chinarock" type="15" sum="10" cards="[cards]"/><action no="4" player="Pataka1212" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="9" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="10" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">D3 C5</cards><action no="7" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="8" player="Pataka1212" type="23" sum="1,008" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402667">
+		 <general>
+		  <startdate>2013-12-19 11:04:17</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="612" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="680" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="710" dealer="0" win="190" bet="110" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,198" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="bf184888" type="15" sum="10" cards="[cards]"/><action no="1" player="tedtoby" type="15" sum="10" cards="[cards]"/><action no="5" player="tedtoby" type="1" sum="50" cards="[cards]"/><action no="2" player="chinarock" type="15" sum="10" cards="[cards]"/><action no="6" player="chinarock" type="2" sum="100" cards="[cards]"/><action no="3" player="Pataka1212" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="8" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="9" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">S8 HJ</cards><cards type="Pocket" player="Pataka1212">X X</cards><action no="7" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402702">
+		 <general>
+		  <startdate>2013-12-19 11:04:36</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="602" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="620" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="790" dealer="0" win="920" bet="790" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,188" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bf184888" type="15" sum="10" cards="[cards]"/><action no="4" player="tedtoby" type="15" sum="10" cards="[cards]"/><action no="1" player="chinarock" type="15" sum="10" cards="[cards]"/><action no="5" player="chinarock" type="1" sum="50" cards="[cards]"/><action no="2" player="Pataka1212" type="15" sum="10" cards="[cards]"/><action no="6" player="Pataka1212" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="7" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="8" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">C2 H5</cards><action no="9" player="chinarock" type="23" sum="780" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="10" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402748">
+		 <general>
+		  <startdate>2013-12-19 11:04:56</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="592" dealer="0" win="190" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="610" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="920" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,078" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bf184888" type="15" sum="10" cards="[cards]"/><action no="6" player="bf184888" type="2" sum="100" cards="[cards]"/><action no="3" player="tedtoby" type="15" sum="10" cards="[cards]"/><action no="4" player="chinarock" type="15" sum="10" cards="[cards]"/><action no="1" player="Pataka1212" type="15" sum="10" cards="[cards]"/><action no="5" player="Pataka1212" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><cards type="Pocket" player="tedtoby">X X</cards><action no="7" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">S3 C7</cards><action no="8" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="9" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402813">
+		 <general>
+		  <startdate>2013-12-19 11:05:19</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="672" dealer="0" win="612" bet="417" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="600" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="910" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,018" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bf184888" type="15" sum="15" cards="[cards]"/><action no="5" player="bf184888" type="1" sum="75" cards="[cards]"/><action no="2" player="tedtoby" type="15" sum="15" cards="[cards]"/><action no="6" player="tedtoby" type="2" sum="150" cards="[cards]"/><action no="3" player="chinarock" type="15" sum="15" cards="[cards]"/><action no="4" player="Pataka1212" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="9" player="bf184888" type="3" sum="75" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="10" player="tedtoby" type="4" sum="0" cards=""/><cards type="Pocket" player="chinarock">C5 D9</cards><action no="7" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="8" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 DK C7</cards><action no="11" player="bf184888" type="5" sum="252" cards=""/><action no="12" player="tedtoby" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402921">
+		 <general>
+		  <startdate>2013-12-19 11:05:58</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="867" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="435" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="895" dealer="0" win="285" bet="165" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,003" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="bf184888" type="15" sum="15" cards="[cards]"/><action no="1" player="tedtoby" type="15" sum="15" cards="[cards]"/><action no="5" player="tedtoby" type="1" sum="75" cards="[cards]"/><action no="2" player="chinarock" type="15" sum="15" cards="[cards]"/><action no="6" player="chinarock" type="2" sum="150" cards="[cards]"/><action no="3" player="Pataka1212" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="8" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="9" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">C7 C8</cards><cards type="Pocket" player="Pataka1212">X X</cards><action no="7" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5337402984">
+		 <general>
+		  <startdate>2013-12-19 11:06:21</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="852" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="345" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="1,015" dealer="0" win="27" bet="1,015" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="988" dealer="0" win="2,006" bet="988" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bf184888" type="15" sum="15" cards="[cards]"/><action no="4" player="tedtoby" type="15" sum="15" cards="[cards]"/><action no="1" player="chinarock" type="15" sum="15" cards="[cards]"/><action no="5" player="chinarock" type="1" sum="75" cards="[cards]"/><action no="2" player="Pataka1212" type="15" sum="15" cards="[cards]"/><action no="6" player="Pataka1212" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="7" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">X X</cards><action no="8" player="tedtoby" type="0" sum="0" cards=""/><cards type="Pocket" player="chinarock">C8 H8</cards><action no="9" player="chinarock" type="23" sum="1,000" cards=""/><cards type="Pocket" player="Pataka1212">CK DK</cards><action no="10" player="Pataka1212" type="7" sum="823" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA C3 H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5337403039">
+		 <general>
+		  <startdate>2013-12-19 11:06:44</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="837" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="330" dealer="0" win="558" bet="330" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="27" dealer="1" win="54" bet="27" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="2,006" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bf184888" type="15" sum="15" cards="[cards]"/><action no="6" player="bf184888" type="2" sum="150" cards="[cards]"/><action no="3" player="tedtoby" type="15" sum="15" cards="[cards]"/><action no="4" player="chinarock" type="15" sum="15" cards="[cards]"/><action no="1" player="Pataka1212" type="15" sum="15" cards="[cards]"/><action no="5" player="Pataka1212" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="10" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">DJ D10</cards><action no="7" player="tedtoby" type="23" sum="315" cards=""/><cards type="Pocket" player="chinarock">D5 CJ</cards><action no="8" player="chinarock" type="7" sum="12" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="9" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ SQ CA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards>
+	</round>
+	
+		</game><game gamecode="5337407631">
+		 <general>
+		  <startdate>2013-12-19 11:07:15</startdate>		  
+		  <players>
+		   <player seat="2" name="bf184888" chips="672" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="tedtoby" chips="558" dealer="0" win="324" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="chinarock" chips="54" dealer="0" win="0" bet="54" rebuy="0" addon="0" reg_code="6166687981"/><player seat="9" name="Pataka1212" chips="1,916" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bf184888" type="15" sum="15" cards="[cards]"/><action no="5" player="bf184888" type="1" sum="75" cards="[cards]"/><action no="2" player="tedtoby" type="15" sum="15" cards="[cards]"/><action no="6" player="tedtoby" type="2" sum="150" cards="[cards]"/><action no="3" player="chinarock" type="15" sum="15" cards="[cards]"/><action no="4" player="Pataka1212" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bf184888">X X</cards><action no="9" player="bf184888" type="0" sum="0" cards=""/><cards type="Pocket" player="tedtoby">CA C7</cards><cards type="Pocket" player="chinarock">H7 S8</cards><action no="7" player="chinarock" type="7" sum="39" cards=""/><cards type="Pocket" player="Pataka1212">X X</cards><action no="8" player="Pataka1212" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ CQ H10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards>
+	</round>
+	
+		</game>  
+	</session>

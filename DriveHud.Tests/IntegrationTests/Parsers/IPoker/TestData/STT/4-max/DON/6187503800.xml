@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187503800">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 818994173</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:10</duration>  
+	          <gamecount>29</gamecount>  
+	          <startdate>2014-01-25 10:36:58</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>5,820</bets>  
+	          <wins>5,020</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>3</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5435509387">
+		 <general>
+		  <startdate>2014-01-25 10:36:58</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">X X</cards><action no="4" player="anastasiya666" type="0" sum="0" cards=""/><cards type="Pocket" player="bryanrand">X X</cards><action no="5" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H8 D5</cards><cards type="Pocket" player="Pyros333">X X</cards><action no="3" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435509530">
+		 <general>
+		  <startdate>2014-01-25 10:37:27</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="800" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="810" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Pyros333" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">X X</cards><action no="3" player="anastasiya666" type="23" sum="60" cards=""/><cards type="Pocket" player="bryanrand">X X</cards><action no="4" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C3 D5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="6" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435509593">
+		 <general>
+		  <startdate>2014-01-25 10:37:42</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="830" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="anastasiya666" type="2" sum="20" cards="[cards]"/><action no="1" player="Pyros333" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">X X</cards><cards type="Pocket" player="bryanrand">X X</cards><action no="3" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 H8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="5" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435509652">
+		 <general>
+		  <startdate>2014-01-25 10:37:52</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="840" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="790" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="anastasiya666" type="1" sum="10" cards="[cards]"/><action no="2" player="bryanrand" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">X X</cards><action no="5" player="anastasiya666" type="3" sum="10" cards=""/><cards type="Pocket" player="bryanrand">X X</cards><action no="6" player="bryanrand" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 SK</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="4" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 D6 HK</cards><action no="7" player="anastasiya666" type="5" sum="40" cards=""/><action no="8" player="bryanrand" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435509781">
+		 <general>
+		  <startdate>2014-01-25 10:38:17</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="860" dealer="1" win="110" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="770" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="770" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">HA D4</cards><action no="4" player="anastasiya666" type="3" sum="40" cards=""/><cards type="Pocket" player="bryanrand">X X</cards><action no="5" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 S3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">HQ C8</cards><action no="3" player="Pyros333" type="23" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ C3 H5</cards><action no="8" player="anastasiya666" type="4" sum="0" cards=""/><action no="7" player="Pyros333" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="10" player="anastasiya666" type="4" sum="0" cards=""/><action no="9" player="Pyros333" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H6</cards><action no="12" player="anastasiya666" type="4" sum="0" cards=""/><action no="11" player="Pyros333" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516693">
+		 <general>
+		  <startdate>2014-01-25 10:38:47</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="760" dealer="1" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="730" dealer="0" win="170" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Pyros333" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">X X</cards><action no="3" player="anastasiya666" type="0" sum="0" cards=""/><cards type="Pocket" player="bryanrand">CQ DK</cards><action no="4" player="bryanrand" type="23" sum="40" cards=""/><cards type="Pocket" player="WorstCard">S6 DQ</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">CK SA</cards><action no="6" player="Pyros333" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 DJ C6</cards><action no="8" player="bryanrand" type="5" sum="20" cards=""/><action no="7" player="Pyros333" type="4" sum="0" cards=""/><action no="9" player="Pyros333" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="11" player="bryanrand" type="5" sum="20" cards=""/><action no="10" player="Pyros333" type="4" sum="0" cards=""/><action no="12" player="Pyros333" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards><action no="14" player="bryanrand" type="4" sum="0" cards=""/><action no="13" player="Pyros333" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516882">
+		 <general>
+		  <startdate>2014-01-25 10:39:26</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="930" dealer="0" win="110" bet="930" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="820" dealer="0" win="1,640" bet="820" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="anastasiya666" type="2" sum="30" cards="[cards]"/><action no="1" player="Pyros333" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">H10 S10</cards><action no="6" player="anastasiya666" type="23" sum="120" cards=""/><cards type="Pocket" player="bryanrand">X X</cards><action no="3" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SJ H5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">HJ CJ</cards><action no="5" player="Pyros333" type="3" sum="15" cards=""/><action no="7" player="Pyros333" type="3" sum="90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 S8 H9</cards><action no="9" player="anastasiya666" type="23" sum="810" cards=""/><action no="8" player="Pyros333" type="5" sum="30" cards=""/><action no="10" player="Pyros333" type="7" sum="670" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game><game gamecode="5435517052">
+		 <general>
+		  <startdate>2014-01-25 10:39:59</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="110" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="680" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,640" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="anastasiya666" type="1" sum="15" cards="[cards]"/><action no="2" player="bryanrand" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">X X</cards><action no="5" player="anastasiya666" type="0" sum="0" cards=""/><cards type="Pocket" player="bryanrand">X X</cards><cards type="Pocket" player="WorstCard">S2 DA</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="4" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517103">
+		 <general>
+		  <startdate>2014-01-25 10:40:09</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="95" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="695" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,640" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">X X</cards><action no="4" player="anastasiya666" type="0" sum="0" cards=""/><cards type="Pocket" player="bryanrand">X X</cards><action no="5" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S7 D6</cards><cards type="Pocket" player="Pyros333">X X</cards><action no="3" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517180">
+		 <general>
+		  <startdate>2014-01-25 10:40:21</startdate>		  
+		  <players>
+		   <player seat="2" name="anastasiya666" chips="95" dealer="0" win="0" bet="95" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="bryanrand" chips="680" dealer="1" win="300" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="785" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,640" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Pyros333" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="anastasiya666">DQ DJ</cards><action no="3" player="anastasiya666" type="23" sum="95" cards=""/><cards type="Pocket" player="bryanrand">CJ SA</cards><action no="4" player="bryanrand" type="23" sum="160" cards=""/><cards type="Pocket" player="WorstCard">HK D10</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="6" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 H7 D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards>
+	</round>
+	
+		</game><game gamecode="5435517299">
+		 <general>
+		  <startdate>2014-01-25 10:40:48</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="820" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,610" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bryanrand" type="2" sum="30" cards="[cards]"/><action no="1" player="Pyros333" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="5" player="bryanrand" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HK S7</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="4" player="Pyros333" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 H4 C4</cards><action no="7" player="bryanrand" type="5" sum="30" cards=""/><action no="6" player="Pyros333" type="4" sum="0" cards=""/><action no="8" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517437">
+		 <general>
+		  <startdate>2014-01-25 10:41:12</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,580" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="15" sum="5" cards="[cards]"/><action no="4" player="bryanrand" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Pyros333" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="7" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D4 S4</cards><cards type="Pocket" player="Pyros333">X X</cards><action no="6" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517488">
+		 <general>
+		  <startdate>2014-01-25 10:41:24</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="820" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="805" dealer="0" win="865" bet="805" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,575" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bryanrand" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Pyros333" type="15" sum="5" cards="[cards]"/><action no="5" player="Pyros333" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="6" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA C8</cards><action no="7" player="WorstCard" type="23" sum="800" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="8" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517603">
+		 <general>
+		  <startdate>2014-01-25 10:41:45</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="815" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="865" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,520" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bryanrand" type="15" sum="5" cards="[cards]"/><action no="5" player="bryanrand" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Pyros333" type="15" sum="5" cards="[cards]"/><action no="4" player="Pyros333" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><cards type="Pocket" player="WorstCard">D7 S3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="7" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517678">
+		 <general>
+		  <startdate>2014-01-25 10:42:00</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="860" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,490" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="15" sum="5" cards="[cards]"/><action no="4" player="bryanrand" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Pyros333" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="7" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S8 D9</cards><cards type="Pocket" player="Pyros333">X X</cards><action no="6" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517735">
+		 <general>
+		  <startdate>2014-01-25 10:42:13</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="820" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="895" dealer="0" win="955" bet="895" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,485" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bryanrand" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Pyros333" type="15" sum="5" cards="[cards]"/><action no="5" player="Pyros333" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="6" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ HK</cards><action no="7" player="WorstCard" type="23" sum="890" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="8" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517861">
+		 <general>
+		  <startdate>2014-01-25 10:42:37</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="815" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="955" dealer="1" win="1,040" bet="955" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,430" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bryanrand" type="15" sum="5" cards="[cards]"/><action no="5" player="bryanrand" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Pyros333" type="15" sum="5" cards="[cards]"/><action no="4" player="Pyros333" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="8" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 C6</cards><action no="6" player="WorstCard" type="23" sum="950" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="7" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517945">
+		 <general>
+		  <startdate>2014-01-25 10:42:53</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,040" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,400" dealer="1" win="190" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="15" sum="5" cards="[cards]"/><action no="4" player="bryanrand" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Pyros333" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="7" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C10 D4</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="6" player="Pyros333" type="23" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435518019">
+		 <general>
+		  <startdate>2014-01-25 10:43:09</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="730" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="985" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,485" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bryanrand" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Pyros333" type="15" sum="10" cards="[cards]"/><action no="5" player="Pyros333" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="6" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 C3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435518105">
+		 <general>
+		  <startdate>2014-01-25 10:43:26</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="720" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="925" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,555" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bryanrand" type="15" sum="10" cards="[cards]"/><action no="5" player="bryanrand" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Pyros333" type="15" sum="10" cards="[cards]"/><action no="4" player="Pyros333" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="8" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 HQ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="7" player="Pyros333" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435518221">
+		 <general>
+		  <startdate>2014-01-25 10:43:47</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="610" dealer="0" win="0" bet="410" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="915" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,675" dealer="1" win="930" bet="410" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="15" sum="10" cards="[cards]"/><action no="4" player="bryanrand" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Pyros333" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">H7 HA</cards><action no="7" player="bryanrand" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">H9 CJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">HK CA</cards><action no="6" player="Pyros333" type="3" sum="100" cards=""/><action no="9" player="Pyros333" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 S5 DJ</cards><action no="10" player="bryanrand" type="4" sum="0" cards=""/><action no="11" player="Pyros333" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards><action no="12" player="bryanrand" type="5" sum="100" cards=""/><action no="13" player="Pyros333" type="3" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards><action no="14" player="bryanrand" type="5" sum="100" cards=""/><action no="15" player="Pyros333" type="3" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435524864">
+		 <general>
+		  <startdate>2014-01-25 10:44:25</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="200" dealer="1" win="510" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="805" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="2,195" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bryanrand" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Pyros333" type="15" sum="10" cards="[cards]"/><action no="5" player="Pyros333" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">HJ SJ</cards><action no="6" player="bryanrand" type="7" sum="190" cards=""/><cards type="Pocket" player="WorstCard">H4 S4</cards><action no="7" player="WorstCard" type="3" sum="140" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="8" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 H5 D8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards>
+	</round>
+	
+		</game><game gamecode="5435524983">
+		 <general>
+		  <startdate>2014-01-25 10:44:47</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="510" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="605" dealer="1" win="775" bet="605" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="2,085" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bryanrand" type="15" sum="10" cards="[cards]"/><action no="5" player="bryanrand" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Pyros333" type="15" sum="10" cards="[cards]"/><action no="4" player="Pyros333" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="8" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C8 C7</cards><action no="6" player="WorstCard" type="23" sum="595" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="7" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525069">
+		 <general>
+		  <startdate>2014-01-25 10:45:04</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="400" dealer="0" win="495" bet="315" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="775" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="2,025" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="15" sum="15" cards="[cards]"/><action no="4" player="bryanrand" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Pyros333" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="7" player="bryanrand" type="23" sum="300" cards=""/><cards type="Pocket" player="WorstCard">S8 H4</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="6" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525170">
+		 <general>
+		  <startdate>2014-01-25 10:45:25</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="580" dealer="1" win="1,250" bet="580" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="610" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="2,010" dealer="0" win="0" bet="580" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bryanrand" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Pyros333" type="15" sum="15" cards="[cards]"/><action no="5" player="Pyros333" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">C10 HJ</cards><action no="6" player="bryanrand" type="23" sum="565" cards=""/><cards type="Pocket" player="WorstCard">H5 H9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">H8 S8</cards><action no="8" player="Pyros333" type="3" sum="415" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 DJ S7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards>
+	</round>
+	
+		</game><game gamecode="5435525317">
+		 <general>
+		  <startdate>2014-01-25 10:45:57</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="1,250" dealer="0" win="0" bet="520" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="520" dealer="1" win="1,130" bet="520" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,430" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bryanrand" type="15" sum="15" cards="[cards]"/><action no="5" player="bryanrand" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Pyros333" type="15" sum="15" cards="[cards]"/><action no="4" player="Pyros333" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">CJ S10</cards><action no="8" player="bryanrand" type="3" sum="355" cards=""/><cards type="Pocket" player="WorstCard">S8 HK</cards><action no="6" player="WorstCard" type="23" sum="505" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="7" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK D5 D7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game><game gamecode="5435525494">
+		 <general>
+		  <startdate>2014-01-25 10:46:32</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="730" dealer="0" win="495" bet="315" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,130" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,340" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bryanrand" type="15" sum="15" cards="[cards]"/><action no="4" player="bryanrand" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Pyros333" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="7" player="bryanrand" type="23" sum="300" cards=""/><cards type="Pocket" player="WorstCard">D6 SJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="6" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525573">
+		 <general>
+		  <startdate>2014-01-25 10:46:51</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="910" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="965" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,325" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bryanrand" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Pyros333" type="15" sum="15" cards="[cards]"/><action no="5" player="Pyros333" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">X X</cards><action no="6" player="bryanrand" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D3 H7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pyros333">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435525641">
+		 <general>
+		  <startdate>2014-01-25 10:47:06</startdate>		  
+		  <players>
+		   <player seat="4" name="bryanrand" chips="895" dealer="0" win="1,870" bet="875" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="875" dealer="1" win="0" bet="875" rebuy="0" addon="0" reg_code="6187503800"/><player seat="9" name="Pyros333" chips="1,430" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bryanrand" type="15" sum="20" cards="[cards]"/><action no="5" player="bryanrand" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="Pyros333" type="15" sum="20" cards="[cards]"/><action no="4" player="Pyros333" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bryanrand">DJ C10</cards><action no="8" player="bryanrand" type="3" sum="655" cards=""/><cards type="Pocket" player="WorstCard">H4 CA</cards><action no="6" player="WorstCard" type="23" sum="855" cards=""/><cards type="Pocket" player="Pyros333">X X</cards><action no="7" player="Pyros333" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK H8 C4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards>
+	</round>
+	
+		</game>  
+	</session>

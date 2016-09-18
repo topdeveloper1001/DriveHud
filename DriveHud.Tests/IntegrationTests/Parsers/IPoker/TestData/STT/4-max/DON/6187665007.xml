@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187665007">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819017154</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>15</gamecount>  
+	          <startdate>2014-01-25 16:20:11</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,325</bets>  
+	          <wins>3,795</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>2,270</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5436255049">
+		 <general>
+		  <startdate>2014-01-25 16:20:11</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6187665007"/><player seat="9" name="kokkinis" chips="800" dealer="0" win="770" bet="740" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="klazman" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="4" player="PalMal4411" type="0" sum="0" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="5" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SK S7</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kokkinis">X X</cards><action no="3" player="kokkinis" type="23" sum="740" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436255398">
+		 <general>
+		  <startdate>2014-01-25 16:20:51</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="1,560" bet="780" rebuy="0" addon="0" reg_code="6187665007"/><player seat="9" name="kokkinis" chips="830" dealer="0" win="50" bet="830" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="kokkinis" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="3" player="PalMal4411" type="0" sum="0" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="4" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ SA</cards><action no="5" player="WorstCard" type="23" sum="60" cards=""/><action no="7" player="WorstCard" type="7" sum="720" cards=""/><cards type="Pocket" player="kokkinis">H4 S4</cards><action no="6" player="kokkinis" type="23" sum="830" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 H10 CQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards>
+	</round>
+	
+		</game><game gamecode="5436255732">
+		 <general>
+		  <startdate>2014-01-25 16:21:30</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="800" dealer="0" win="0" bet="130" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="790" dealer="0" win="235" bet="130" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187665007"/><player seat="9" name="kokkinis" chips="50" dealer="0" win="75" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PalMal4411" type="2" sum="20" cards="[cards]"/><action no="1" player="kokkinis" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">HJ HA</cards><action no="6" player="PalMal4411" type="3" sum="30" cards=""/><cards type="Pocket" player="klazman">C3 CA</cards><action no="3" player="klazman" type="3" sum="20" cards=""/><action no="7" player="klazman" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">H4 CK</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kokkinis">D3 SA</cards><action no="5" player="kokkinis" type="23" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 S7 C5</cards><action no="8" player="PalMal4411" type="4" sum="0" cards=""/><action no="9" player="klazman" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards><action no="10" player="PalMal4411" type="5" sum="80" cards=""/><action no="11" player="klazman" type="3" sum="80" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards><action no="12" player="PalMal4411" type="4" sum="0" cards=""/><action no="13" player="klazman" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436256162">
+		 <general>
+		  <startdate>2014-01-25 16:22:19</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="670" dealer="0" win="345" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="895" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187665007"/><player seat="9" name="kokkinis" chips="75" dealer="1" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PalMal4411" type="1" sum="15" cards="[cards]"/><action no="2" player="klazman" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">H6 HK</cards><action no="5" player="PalMal4411" type="3" sum="60" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="6" player="klazman" type="3" sum="45" cards=""/><cards type="Pocket" player="WorstCard">S2 S9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kokkinis">H3 C3</cards><action no="4" player="kokkinis" type="23" sum="75" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 CQ C7</cards><action no="7" player="PalMal4411" type="4" sum="0" cards=""/><action no="8" player="klazman" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="9" player="PalMal4411" type="5" sum="30" cards=""/><action no="10" player="klazman" type="3" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards><action no="11" player="PalMal4411" type="5" sum="60" cards=""/><action no="12" player="klazman" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436256504">
+		 <general>
+		  <startdate>2014-01-25 16:22:58</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="850" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="790" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,560" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="klazman" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="3" player="PalMal4411" type="0" sum="0" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="4" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DQ DJ</cards>
+	</round>
+	
+		</game><game gamecode="5436256634">
+		 <general>
+		  <startdate>2014-01-25 16:23:13</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="775" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,575" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PalMal4411" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="5" player="PalMal4411" type="0" sum="0" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="3" player="klazman" type="3" sum="30" cards=""/><action no="6" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CA DQ</cards><action no="4" player="WorstCard" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436256910">
+		 <general>
+		  <startdate>2014-01-25 16:23:43</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="820" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="745" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,635" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PalMal4411" type="1" sum="15" cards="[cards]"/><action no="2" player="klazman" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="4" player="PalMal4411" type="23" sum="60" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="5" player="klazman" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">CQ D5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA SJ H2</cards><action no="6" player="PalMal4411" type="4" sum="0" cards=""/><action no="7" player="klazman" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards><action no="8" player="PalMal4411" type="5" sum="60" cards=""/><action no="9" player="klazman" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436257252">
+		 <general>
+		  <startdate>2014-01-25 16:24:23</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="880" dealer="1" win="290" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="685" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,635" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PalMal4411" type="15" sum="5" cards="[cards]"/><action no="1" player="klazman" type="15" sum="5" cards="[cards]"/><action no="4" player="klazman" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="6" player="PalMal4411" type="23" sum="100" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="7" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D5 D4</cards><action no="8" player="WorstCard" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 SJ C3</cards><action no="10" player="PalMal4411" type="5" sum="50" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436257538">
+		 <general>
+		  <startdate>2014-01-25 16:24:56</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="1,015" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="655" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,530" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PalMal4411" type="15" sum="5" cards="[cards]"/><action no="5" player="PalMal4411" type="2" sum="50" cards="[cards]"/><action no="3" player="klazman" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><cards type="Pocket" player="klazman">X X</cards><action no="6" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D9 H7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436257721">
+		 <general>
+		  <startdate>2014-01-25 16:25:16</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="1,050" dealer="0" win="0" bet="355" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="650" dealer="0" win="965" bet="505" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,500" dealer="1" win="0" bet="105" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PalMal4411" type="15" sum="5" cards="[cards]"/><action no="4" player="PalMal4411" type="1" sum="25" cards="[cards]"/><action no="2" player="klazman" type="15" sum="5" cards="[cards]"/><action no="5" player="klazman" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="7" player="PalMal4411" type="3" sum="75" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="8" player="klazman" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">DK S8</cards><action no="6" player="WorstCard" type="23" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 H7 C6</cards><action no="9" player="PalMal4411" type="5" sum="100" cards=""/><action no="10" player="klazman" type="3" sum="100" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards><action no="12" player="PalMal4411" type="5" sum="150" cards=""/><action no="13" player="klazman" type="3" sum="150" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards><action no="14" player="PalMal4411" type="4" sum="0" cards=""/><action no="16" player="PalMal4411" type="0" sum="0" cards=""/><action no="15" player="klazman" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436274995">
+		 <general>
+		  <startdate>2014-01-25 16:26:10</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="695" dealer="1" win="190" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="1,110" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,395" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PalMal4411" type="15" sum="5" cards="[cards]"/><action no="1" player="klazman" type="15" sum="5" cards="[cards]"/><action no="4" player="klazman" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="6" player="PalMal4411" type="23" sum="100" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="7" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H5 H3</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436275152">
+		 <general>
+		  <startdate>2014-01-25 16:26:28</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="780" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="1,080" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,340" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PalMal4411" type="15" sum="10" cards="[cards]"/><action no="5" player="PalMal4411" type="2" sum="100" cards="[cards]"/><action no="3" player="klazman" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><cards type="Pocket" player="klazman">X X</cards><action no="6" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D2 H7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436275281">
+		 <general>
+		  <startdate>2014-01-25 16:26:43</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="850" dealer="0" win="970" bet="850" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="1,070" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,280" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PalMal4411" type="15" sum="10" cards="[cards]"/><action no="4" player="PalMal4411" type="1" sum="50" cards="[cards]"/><action no="2" player="klazman" type="15" sum="10" cards="[cards]"/><action no="5" player="klazman" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="7" player="PalMal4411" type="23" sum="840" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="8" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 C4</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436275486">
+		 <general>
+		  <startdate>2014-01-25 16:27:07</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="970" dealer="1" win="1,140" bet="970" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="960" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,270" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PalMal4411" type="15" sum="10" cards="[cards]"/><action no="1" player="klazman" type="15" sum="10" cards="[cards]"/><action no="4" player="klazman" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="6" player="PalMal4411" type="23" sum="960" cards=""/><cards type="Pocket" player="klazman">X X</cards><action no="7" player="klazman" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S6 D2</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436275682">
+		 <general>
+		  <startdate>2014-01-25 16:27:32</startdate>		  
+		  <players>
+		   <player seat="2" name="PalMal4411" chips="1,140" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="klazman" chips="900" dealer="1" win="0" bet="900" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,160" dealer="0" win="2,010" bet="900" rebuy="0" addon="0" reg_code="6187665007"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PalMal4411" type="15" sum="10" cards="[cards]"/><action no="5" player="PalMal4411" type="2" sum="100" cards="[cards]"/><action no="3" player="klazman" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PalMal4411">X X</cards><action no="8" player="PalMal4411" type="4" sum="0" cards=""/><cards type="Pocket" player="klazman">DA D4</cards><action no="6" player="klazman" type="3" sum="100" cards=""/><cards type="Pocket" player="WorstCard">H4 S4</cards><action no="7" player="WorstCard" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA C4 D8</cards><action no="10" player="PalMal4411" type="5" sum="100" cards=""/><action no="13" player="PalMal4411" type="0" sum="0" cards=""/><action no="11" player="klazman" type="23" sum="200" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="3" sum="200" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="15" player="klazman" type="7" sum="590" cards=""/><action no="14" player="WorstCard" type="5" sum="415" cards=""/><action no="16" player="WorstCard" type="3" sum="175" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards>
+	</round>
+	
+		</game>  
+	</session>

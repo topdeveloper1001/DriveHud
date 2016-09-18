@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6190222999">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819372328</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:10</duration>  
+	          <gamecount>24</gamecount>  
+	          <startdate>2014-01-29 16:08:44</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>3,695</bets>  
+	          <wins>2,895</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>3</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.00</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5452281056">
+		 <general>
+		  <startdate>2014-01-29 16:08:44</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="liamsheenagh" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="4" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 SA</cards><action no="5" player="WorstCard" type="23" sum="40" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="6" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="3" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452281178">
+		 <general>
+		  <startdate>2014-01-29 16:08:59</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="780" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liamsheenagh" type="1" sum="10" cards="[cards]"/><action no="2" player="ceres0511" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="3" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 D7</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="5" player="liamsheenagh" type="3" sum="10" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="6" player="ceres0511" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 DA D9</cards><action no="7" player="liamsheenagh" type="5" sum="40" cards=""/><action no="8" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452281410">
+		 <general>
+		  <startdate>2014-01-29 16:09:30</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="800" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jorunea" type="2" sum="20" cards="[cards]"/><action no="1" player="ceres0511" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="6" player="jorunea" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C6 S2</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="4" player="liamsheenagh" type="3" sum="20" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="5" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 CA S9</cards><action no="7" player="jorunea" type="4" sum="0" cards=""/><action no="9" player="jorunea" type="0" sum="0" cards=""/><action no="8" player="liamsheenagh" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452281768">
+		 <general>
+		  <startdate>2014-01-29 16:10:14</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="830" dealer="0" win="80" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jorunea" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="5" player="jorunea" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">DQ D8</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="3" player="liamsheenagh" type="3" sum="20" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="4" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK HK C4</cards><action no="7" player="jorunea" type="4" sum="0" cards=""/><action no="10" player="jorunea" type="0" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="9" player="liamsheenagh" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452282136">
+		 <general>
+		  <startdate>2014-01-29 16:11:01</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="760" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="860" bet="800" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="liamsheenagh" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="4" player="jorunea" type="3" sum="30" cards=""/><action no="7" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H10 S10</cards><action no="5" player="WorstCard" type="23" sum="800" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="6" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="3" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452295130">
+		 <general>
+		  <startdate>2014-01-29 16:11:23</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="860" dealer="1" win="105" bet="60" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="840" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liamsheenagh" type="1" sum="15" cards="[cards]"/><action no="2" player="ceres0511" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="3" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK SJ</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="5" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="6" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452295665">
+		 <general>
+		  <startdate>2014-01-29 16:11:59</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="730" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="905" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="825" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="740" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jorunea" type="2" sum="30" cards="[cards]"/><action no="1" player="ceres0511" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><cards type="Pocket" player="WorstCard">S6 S4</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="4" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="5" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452295876">
+		 <general>
+		  <startdate>2014-01-29 16:12:13</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="745" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="905" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="825" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="725" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jorunea" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="5" player="jorunea" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">C5 D7</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="3" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="4" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 D3 C2</cards><action no="7" player="jorunea" type="5" sum="60" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452296202">
+		 <general>
+		  <startdate>2014-01-29 16:12:35</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="775" dealer="1" win="345" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="875" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="825" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="725" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="liamsheenagh" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="4" player="jorunea" type="3" sum="60" cards=""/><cards type="Pocket" player="WorstCard">H8 H6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="6" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="3" player="ceres0511" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 DQ D2</cards><action no="8" player="jorunea" type="5" sum="180" cards=""/><action no="7" player="ceres0511" type="4" sum="0" cards=""/><action no="9" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452296611">
+		 <general>
+		  <startdate>2014-01-29 16:13:05</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="880" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="860" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="795" dealer="0" win="170" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="665" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jorunea" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="liamsheenagh" type="15" sum="5" cards="[cards]"/><action no="5" player="liamsheenagh" type="1" sum="25" cards="[cards]"/><action no="2" player="ceres0511" type="15" sum="5" cards="[cards]"/><action no="6" player="ceres0511" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="7" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C9 D7</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="9" player="liamsheenagh" type="3" sum="25" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="10" player="ceres0511" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 S6 CA</cards><action no="11" player="liamsheenagh" type="4" sum="0" cards=""/><action no="12" player="ceres0511" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards><action no="13" player="liamsheenagh" type="5" sum="50" cards=""/><action no="14" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452297046">
+		 <general>
+		  <startdate>2014-01-29 16:13:43</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="875" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="855" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="860" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="610" dealer="0" win="170" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jorunea" type="15" sum="5" cards="[cards]"/><action no="6" player="jorunea" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="liamsheenagh" type="15" sum="5" cards="[cards]"/><action no="1" player="ceres0511" type="15" sum="5" cards="[cards]"/><action no="5" player="ceres0511" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="10" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H8 D5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="8" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="9" player="ceres0511" type="23" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452297310">
+		 <general>
+		  <startdate>2014-01-29 16:14:14</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="820" dealer="0" win="240" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="850" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="855" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="675" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jorunea" type="15" sum="5" cards="[cards]"/><action no="5" player="jorunea" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="liamsheenagh" type="15" sum="5" cards="[cards]"/><action no="4" player="ceres0511" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="9" player="jorunea" type="3" sum="25" cards=""/><cards type="Pocket" player="WorstCard">C2 H2</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="7" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="8" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 C5 SK</cards><action no="11" player="jorunea" type="5" sum="120" cards=""/><action no="12" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452297602">
+		 <general>
+		  <startdate>2014-01-29 16:14:54</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="885" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="795" dealer="0" win="925" bet="795" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="850" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="670" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="jorunea" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="liamsheenagh" type="15" sum="10" cards="[cards]"/><action no="6" player="liamsheenagh" type="2" sum="100" cards="[cards]"/><action no="3" player="ceres0511" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="8" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CJ H7</cards><action no="9" player="WorstCard" type="23" sum="785" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="10" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="7" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452297822">
+		 <general>
+		  <startdate>2014-01-29 16:15:24</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="875" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="925" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="740" dealer="0" win="0" bet="660" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="660" dealer="0" win="1,440" bet="660" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jorunea" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="liamsheenagh" type="15" sum="10" cards="[cards]"/><action no="5" player="liamsheenagh" type="1" sum="50" cards="[cards]"/><action no="2" player="ceres0511" type="15" sum="10" cards="[cards]"/><action no="6" player="ceres0511" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="7" player="jorunea" type="3" sum="100" cards=""/><action no="11" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S7 SK</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">DJ HQ</cards><action no="9" player="liamsheenagh" type="3" sum="50" cards=""/><action no="12" player="liamsheenagh" type="3" sum="550" cards=""/><cards type="Pocket" player="ceres0511">C6 DQ</cards><action no="10" player="ceres0511" type="23" sum="650" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 SA D6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards>
+	</round>
+	
+		</game><game gamecode="5452298132">
+		 <general>
+		  <startdate>2014-01-29 16:16:06</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="765" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="915" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="80" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="1,440" dealer="0" win="1,570" bet="1,440" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jorunea" type="15" sum="10" cards="[cards]"/><action no="6" player="jorunea" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="liamsheenagh" type="15" sum="10" cards="[cards]"/><action no="1" player="ceres0511" type="15" sum="10" cards="[cards]"/><action no="5" player="ceres0511" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="10" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D4 D8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="8" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="9" player="ceres0511" type="23" sum="1,430" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452298282">
+		 <general>
+		  <startdate>2014-01-29 16:16:27</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="655" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="905" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="70" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="1,570" dealer="1" win="1,750" bet="1,570" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jorunea" type="15" sum="10" cards="[cards]"/><action no="5" player="jorunea" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="liamsheenagh" type="15" sum="10" cards="[cards]"/><action no="4" player="ceres0511" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="9" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H3 D2</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">X X</cards><action no="7" player="liamsheenagh" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="8" player="ceres0511" type="23" sum="1,560" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452298447">
+		 <general>
+		  <startdate>2014-01-29 16:16:50</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="595" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="795" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6190222999"/><player seat="7" name="liamsheenagh" chips="60" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ceres0511" chips="1,750" dealer="0" win="1,915" bet="1,750" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="jorunea" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="liamsheenagh" type="15" sum="15" cards="[cards]"/><action no="6" player="liamsheenagh" type="2" sum="45" cards="[cards]"/><action no="3" player="ceres0511" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="8" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK C5</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="liamsheenagh">H8 DA</cards><cards type="Pocket" player="ceres0511">SA H7</cards><action no="7" player="ceres0511" type="23" sum="1,735" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 D7 C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="5452313263">
+		 <general>
+		  <startdate>2014-01-29 16:17:19</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="580" dealer="0" win="760" bet="580" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="705" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6190222999"/><player seat="9" name="ceres0511" chips="1,915" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jorunea" type="15" sum="15" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="ceres0511" type="15" sum="15" cards="[cards]"/><action no="4" player="ceres0511" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="5" player="jorunea" type="23" sum="565" cards=""/><cards type="Pocket" player="WorstCard">H5 C3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="7" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452313414">
+		 <general>
+		  <startdate>2014-01-29 16:17:40</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="760" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="690" dealer="0" win="945" bet="690" rebuy="0" addon="0" reg_code="6190222999"/><player seat="9" name="ceres0511" chips="1,750" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jorunea" type="15" sum="15" cards="[cards]"/><action no="5" player="jorunea" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="ceres0511" type="15" sum="15" cards="[cards]"/><action no="4" player="ceres0511" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="8" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 SA</cards><action no="6" player="WorstCard" type="23" sum="675" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="7" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452313534">
+		 <general>
+		  <startdate>2014-01-29 16:17:55</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="595" dealer="0" win="1,355" bet="595" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="945" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6190222999"/><player seat="9" name="ceres0511" chips="1,660" dealer="1" win="1,065" bet="1,660" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jorunea" type="15" sum="15" cards="[cards]"/><action no="4" player="jorunea" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="ceres0511" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">HA H7</cards><action no="7" player="jorunea" type="7" sum="505" cards=""/><cards type="Pocket" player="WorstCard">D2 C10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">DQ D8</cards><action no="6" player="ceres0511" type="23" sum="1,645" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK S6 H10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards>
+	</round>
+	
+		</game><game gamecode="5452313685">
+		 <general>
+		  <startdate>2014-01-29 16:18:16</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="1,355" dealer="1" win="870" bet="615" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="780" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6190222999"/><player seat="9" name="ceres0511" chips="1,065" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jorunea" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="ceres0511" type="15" sum="15" cards="[cards]"/><action no="5" player="ceres0511" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="6" player="jorunea" type="23" sum="600" cards=""/><cards type="Pocket" player="WorstCard">H3 H7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="8" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452313805">
+		 <general>
+		  <startdate>2014-01-29 16:18:31</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="1,610" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="690" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6190222999"/><player seat="9" name="ceres0511" chips="900" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jorunea" type="15" sum="15" cards="[cards]"/><action no="5" player="jorunea" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="ceres0511" type="15" sum="15" cards="[cards]"/><action no="4" player="ceres0511" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><cards type="Pocket" player="WorstCard">D5 CJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="7" player="ceres0511" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452313961">
+		 <general>
+		  <startdate>2014-01-29 16:18:52</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="1,715" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="675" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="6190222999"/><player seat="9" name="ceres0511" chips="810" dealer="1" win="1,150" bet="810" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jorunea" type="15" sum="20" cards="[cards]"/><action no="4" player="jorunea" type="1" sum="100" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="200" cards="[cards]"/><action no="3" player="ceres0511" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="7" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CQ S6</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="6" player="ceres0511" type="23" sum="790" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452314134">
+		 <general>
+		  <startdate>2014-01-29 16:19:16</startdate>		  
+		  <players>
+		   <player seat="2" name="jorunea" chips="1,595" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="455" dealer="0" win="0" bet="455" rebuy="0" addon="0" reg_code="6190222999"/><player seat="9" name="ceres0511" chips="1,150" dealer="0" win="930" bet="455" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jorunea" type="15" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/><action no="2" player="ceres0511" type="15" sum="20" cards="[cards]"/><action no="5" player="ceres0511" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jorunea">X X</cards><action no="6" player="jorunea" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK S6</cards><action no="7" player="WorstCard" type="23" sum="435" cards=""/><cards type="Pocket" player="ceres0511">CA H6</cards><action no="8" player="ceres0511" type="3" sum="235" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 SA S3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards>
+	</round>
+	
+		</game>  
+	</session>

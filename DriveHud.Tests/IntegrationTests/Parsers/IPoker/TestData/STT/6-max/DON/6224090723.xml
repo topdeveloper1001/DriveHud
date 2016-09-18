@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224090723">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824201296</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:15</duration>  
+	          <gamecount>35</gamecount>  
+	          <startdate>2014-03-25 13:12:40</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>11,720</bets>  
+	          <wins>13,050</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>2,740</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5600647035">
+		 <general>
+		  <startdate>2014-03-25 13:12:40</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,810" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,350" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="1,520" dealer="0" win="240" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Diogas" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <action no="5" player="juicybacon" type="0" sum="0" cards=""/><action no="6" player="cowsgom000" type="0" sum="0" cards=""/><action no="7" player="Diogas" type="0" sum="0" cards=""/><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><action no="3" player="silverbelarus" type="23" sum="150" cards=""/><action no="4" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656464">
+		 <general>
+		  <startdate>2014-03-25 13:12:54</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,810" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,350" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="1,610" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="4" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="5" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="6" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 C10</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="4" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK H6 C9</cards><action no="9" player="silverbelarus" type="4" sum="0" cards=""/><action no="11" player="silverbelarus" type="0" sum="0" cards=""/><action no="10" player="PistolStar17" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656537">
+		 <general>
+		  <startdate>2014-03-25 13:13:22</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,810" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,320" dealer="1" win="0" bet="490" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="1,550" dealer="0" win="2,160" bet="1,550" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="30" cards="[cards]"/><action no="2" player="PistolStar17" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="3" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="4" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="5" player="Diogas" type="3" sum="60" cards=""/><action no="9" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA S6</cards><action no="6" player="moonbaseone" type="23" sum="200" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="3" sum="170" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ D2 D4</cards><action no="11" player="moonbaseone" type="5" sum="290" cards=""/><action no="13" player="moonbaseone" type="0" sum="0" cards=""/><action no="10" player="silverbelarus" type="4" sum="0" cards=""/><action no="12" player="silverbelarus" type="23" sum="1,350" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656668">
+		 <general>
+		  <startdate>2014-03-25 13:14:08</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,460" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,750" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,160" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,440" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="juicybacon" type="2" sum="60" cards="[cards]"/><action no="1" player="PistolStar17" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><cards type="Pocket" player="cowsgom000">X X</cards><action no="3" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="4" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 D8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656736">
+		 <general>
+		  <startdate>2014-03-25 13:14:32</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,490" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,360" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,750" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="830" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="juicybacon" type="1" sum="30" cards="[cards]"/><action no="2" player="cowsgom000" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="7" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="8" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="3" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK HA</cards><action no="4" player="moonbaseone" type="23" sum="180" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656783">
+		 <general>
+		  <startdate>2014-03-25 13:14:52</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,460" dealer="1" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,300" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,750" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cowsgom000" type="1" sum="30" cards="[cards]"/><action no="2" player="Diogas" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="6" player="juicybacon" type="23" sum="180" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="8" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 H5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656845">
+		 <general>
+		  <startdate>2014-03-25 13:15:14</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,550" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,270" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,690" dealer="0" win="480" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="920" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Diogas" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="5" player="juicybacon" type="23" sum="180" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="6" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="7" player="Diogas" type="3" sum="150" cards=""/><cards type="Pocket" player="moonbaseone">S8 C6</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 HQ H4</cards><action no="10" player="juicybacon" type="4" sum="0" cards=""/><action no="9" player="Diogas" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="12" player="juicybacon" type="0" sum="0" cards=""/><action no="11" player="Diogas" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656971">
+		 <general>
+		  <startdate>2014-03-25 13:16:02</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="860" dealer="0" win="960" bet="860" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,160" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="4" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="5" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="6" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 D10</cards><action no="7" player="moonbaseone" type="23" sum="860" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600657061">
+		 <general>
+		  <startdate>2014-03-25 13:16:39</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="960" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,060" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="50" cards="[cards]"/><action no="2" player="PistolStar17" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="3" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="4" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="5" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 DQ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600657102">
+		 <general>
+		  <startdate>2014-03-25 13:16:56</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,370" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,930" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="960" dealer="0" win="1,210" bet="960" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,010" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,460" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="juicybacon" type="2" sum="100" cards="[cards]"/><action no="1" player="PistolStar17" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="8" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="3" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="4" player="Diogas" type="3" sum="100" cards=""/><action no="9" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA H9</cards><action no="5" player="moonbaseone" type="23" sum="960" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600657169">
+		 <general>
+		  <startdate>2014-03-25 13:17:18</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,270" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,270" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,830" dealer="0" win="400" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,010" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="juicybacon" type="1" sum="50" cards="[cards]"/><action no="2" player="cowsgom000" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="7" player="juicybacon" type="3" sum="50" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="8" player="cowsgom000" type="4" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="3" player="Diogas" type="3" sum="100" cards=""/><cards type="Pocket" player="moonbaseone">C10 C8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA HA D2</cards><action no="9" player="juicybacon" type="4" sum="0" cards=""/><action no="10" player="cowsgom000" type="4" sum="0" cards=""/><action no="11" player="Diogas" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="12" player="juicybacon" type="4" sum="0" cards=""/><action no="15" player="juicybacon" type="0" sum="0" cards=""/><action no="13" player="cowsgom000" type="4" sum="0" cards=""/><action no="16" player="cowsgom000" type="0" sum="0" cards=""/><action no="14" player="Diogas" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600657307">
+		 <general>
+		  <startdate>2014-03-25 13:18:06</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,170" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,170" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="2,030" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,010" dealer="0" win="400" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cowsgom000" type="1" sum="50" cards="[cards]"/><action no="2" player="Diogas" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="6" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="8" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 SK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="23" sum="250" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666602">
+		 <general>
+		  <startdate>2014-03-25 13:18:25</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,930" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,210" dealer="0" win="1,310" bet="1,210" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Diogas" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="5" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="6" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="7" player="Diogas" type="3" sum="50" cards=""/><action no="9" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 SA</cards><action no="8" player="moonbaseone" type="23" sum="1,210" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666705">
+		 <general>
+		  <startdate>2014-03-25 13:18:59</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,830" dealer="1" win="3,710" bet="1,830" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,310" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="2,160" dealer="0" win="330" bet="2,160" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="4" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="5" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">HK HA</cards><action no="6" player="Diogas" type="3" sum="100" cards=""/><action no="9" player="Diogas" type="7" sum="1,730" cards=""/><cards type="Pocket" player="moonbaseone">H10 S5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">DQ CA</cards><action no="8" player="silverbelarus" type="23" sum="2,160" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 C5 SK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S9</cards>
+	</round>
+	
+		</game><game gamecode="5600666814">
+		 <general>
+		  <startdate>2014-03-25 13:19:33</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,710" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,260" dealer="1" win="350" bet="200" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="330" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="50" cards="[cards]"/><action no="2" player="PistolStar17" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="3" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="4" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="5" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ CA</cards><action no="6" player="moonbaseone" type="23" sum="200" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666866">
+		 <general>
+		  <startdate>2014-03-25 13:19:54</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,170" dealer="0" win="0" bet="280" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,710" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="280" dealer="1" win="635" bet="280" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,310" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="juicybacon" type="2" sum="150" cards="[cards]"/><action no="1" player="PistolStar17" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">H10 DJ</cards><action no="8" player="juicybacon" type="3" sum="130" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="3" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="4" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ H8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">DA SQ</cards><action no="6" player="silverbelarus" type="7" sum="280" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA D3 S10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards>
+	</round>
+	
+		</game><game gamecode="5600666979">
+		 <general>
+		  <startdate>2014-03-25 13:20:35</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="890" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,710" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,410" dealer="0" win="1,635" bet="1,410" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="635" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,235" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="juicybacon" type="1" sum="75" cards="[cards]"/><action no="2" player="cowsgom000" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="7" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="8" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="3" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA C10</cards><action no="4" player="moonbaseone" type="23" sum="1,410" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667054">
+		 <general>
+		  <startdate>2014-03-25 13:20:57</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="815" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="970" dealer="0" win="1,120" bet="970" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,710" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,635" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="635" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,235" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cowsgom000" type="1" sum="75" cards="[cards]"/><action no="2" player="Diogas" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="6" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="23" sum="970" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="8" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ D8</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667123">
+		 <general>
+		  <startdate>2014-03-25 13:21:17</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="815" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,560" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,635" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="635" dealer="0" win="860" bet="635" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,235" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Diogas" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="5" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="6" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="7" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 HJ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="23" sum="635" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667165">
+		 <general>
+		  <startdate>2014-03-25 13:21:35</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="815" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,485" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,485" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="860" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,235" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="4" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="5" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="6" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 H10</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667214">
+		 <general>
+		  <startdate>2014-03-25 13:21:51</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="815" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="935" dealer="0" win="1,085" bet="935" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,235" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="75" cards="[cards]"/><action no="2" player="PistolStar17" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="3" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="4" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="5" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 C9</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="23" sum="935" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667316">
+		 <general>
+		  <startdate>2014-03-25 13:22:23</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="815" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,410" dealer="0" win="1,635" bet="1,410" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="1,085" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,085" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="juicybacon" type="2" sum="150" cards="[cards]"/><action no="1" player="PistolStar17" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="8" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="3" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="4" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 CA</cards><action no="5" player="moonbaseone" type="23" sum="1,410" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667381">
+		 <general>
+		  <startdate>2014-03-25 13:22:47</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="665" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,635" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="1,085" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,010" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="juicybacon" type="1" sum="75" cards="[cards]"/><action no="2" player="cowsgom000" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="7" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><cards type="Pocket" player="Diogas">X X</cards><action no="3" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA H9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667445">
+		 <general>
+		  <startdate>2014-03-25 13:23:09</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="590" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,195" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,485" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,635" dealer="0" win="1,860" bet="1,635" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="1,085" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cowsgom000" type="1" sum="75" cards="[cards]"/><action no="2" player="Diogas" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="6" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="8" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ DA</cards><action no="3" player="moonbaseone" type="23" sum="1,635" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667516">
+		 <general>
+		  <startdate>2014-03-25 13:23:31</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,120" dealer="1" win="1,345" bet="1,120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,335" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,860" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="1,085" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Diogas" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="5" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="6" player="cowsgom000" type="23" sum="1,120" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="7" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 H8</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600678849">
+		 <general>
+		  <startdate>2014-03-25 13:23:55</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="590" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,345" dealer="0" win="850" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,260" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,710" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="1,085" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,010" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="5" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="6" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="8" player="silverbelarus" type="2" sum="200" cards="[cards]"/><action no="3" player="PistolStar17" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="10" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="11" player="cowsgom000" type="23" sum="400" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="12" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ D7</cards><action no="13" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="14" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="9" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600678917">
+		 <general>
+		  <startdate>2014-03-25 13:24:17</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="565" dealer="0" win="1,430" bet="565" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,770" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,235" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,585" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="860" dealer="0" win="295" bet="860" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="985" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="4" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="5" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="7" player="silverbelarus" type="1" sum="100" cards="[cards]"/><action no="2" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="8" player="PistolStar17" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">DA S3</cards><action no="9" player="juicybacon" type="23" sum="540" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="10" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="11" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 C2</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">H8 C8</cards><action no="13" player="silverbelarus" type="7" sum="735" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="14" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 C6 S10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards>
+	</round>
+	
+		</game><game gamecode="5600679008">
+		 <general>
+		  <startdate>2014-03-25 13:24:47</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,430" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,745" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="3,210" dealer="0" win="0" bet="760" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="295" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="760" dealer="0" win="1,820" bet="760" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="8" player="juicybacon" type="2" sum="200" cards="[cards]"/><action no="3" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="4" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="7" player="PistolStar17" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="14" player="juicybacon" type="4" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="9" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">CA HJ</cards><action no="10" player="Diogas" type="3" sum="200" cards=""/><cards type="Pocket" player="moonbaseone">H6 S2</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="12" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">S10 DK</cards><action no="13" player="PistolStar17" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 D8 SK</cards><action no="16" player="juicybacon" type="0" sum="0" cards=""/><action no="17" player="Diogas" type="3" sum="535" cards=""/><action no="15" player="PistolStar17" type="5" sum="535" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards>
+	</round>
+	
+		</game><game gamecode="5600679112">
+		 <general>
+		  <startdate>2014-03-25 13:25:20</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,205" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,720" dealer="0" win="985" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="2,450" dealer="0" win="0" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,535" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090723"/><player seat="8" name="silverbelarus" chips="270" dealer="0" win="0" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="PistolStar17" chips="1,820" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="7" player="juicybacon" type="1" sum="100" cards="[cards]"/><action no="2" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="8" player="cowsgom000" type="2" sum="200" cards="[cards]"/><action no="3" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="6" player="PistolStar17" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="13" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">CJ C9</cards><action no="14" player="cowsgom000" type="3" sum="45" cards=""/><cards type="Pocket" player="Diogas">CK CQ</cards><action no="9" player="Diogas" type="3" sum="200" cards=""/><action no="15" player="Diogas" type="3" sum="45" cards=""/><cards type="Pocket" player="moonbaseone">S7 S5</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">CA HJ</cards><action no="11" player="silverbelarus" type="7" sum="245" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="12" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 D9 D10</cards><action no="16" player="cowsgom000" type="4" sum="0" cards=""/><action no="17" player="Diogas" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="18" player="cowsgom000" type="4" sum="0" cards=""/><action no="19" player="Diogas" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards><action no="20" player="cowsgom000" type="4" sum="0" cards=""/><action no="21" player="Diogas" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679230">
+		 <general>
+		  <startdate>2014-03-25 13:25:58</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,080" dealer="1" win="1,480" bet="1,080" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="2,435" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="2,180" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090723"/><player seat="10" name="PistolStar17" chips="1,795" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="1" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="6" player="cowsgom000" type="1" sum="100" cards="[cards]"/><action no="2" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="7" player="Diogas" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="PistolStar17" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="10" player="juicybacon" type="23" sum="1,055" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="11" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="12" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 S2</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="9" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679325">
+		 <general>
+		  <startdate>2014-03-25 13:26:30</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,480" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="2,310" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,955" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,485" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224090723"/><player seat="10" name="PistolStar17" chips="1,770" dealer="0" win="825" bet="425" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="5" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="1" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="6" player="Diogas" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="PistolStar17" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="9" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="10" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="11" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C8 H2</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="23" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679402">
+		 <general>
+		  <startdate>2014-03-25 13:26:55</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,455" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="2,285" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,830" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,260" dealer="0" win="1,560" bet="1,260" rebuy="0" addon="0" reg_code="6224090723"/><player seat="10" name="PistolStar17" chips="2,170" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="4" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="5" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="7" player="PistolStar17" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="8" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="9" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="10" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 D2</cards><action no="11" player="moonbaseone" type="23" sum="1,235" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="12" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679473">
+		 <general>
+		  <startdate>2014-03-25 13:27:20</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,430" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="2,260" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,805" dealer="0" win="0" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,560" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090723"/><player seat="10" name="PistolStar17" chips="1,945" dealer="0" win="2,645" bet="1,945" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="7" player="juicybacon" type="2" sum="200" cards="[cards]"/><action no="3" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="4" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="6" player="PistolStar17" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="12" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="8" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">X X</cards><action no="9" player="Diogas" type="23" sum="400" cards=""/><action no="13" player="Diogas" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ C9</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="11" player="PistolStar17" type="23" sum="1,920" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679613">
+		 <general>
+		  <startdate>2014-03-25 13:28:01</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,205" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="2,235" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Diogas" chips="1,380" dealer="0" win="0" bet="1,380" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,535" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090723"/><player seat="10" name="PistolStar17" chips="2,645" dealer="1" win="3,285" bet="1,380" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="6" player="juicybacon" type="1" sum="150" cards="[cards]"/><action no="2" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="7" player="cowsgom000" type="2" sum="300" cards="[cards]"/><action no="3" player="Diogas" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="PistolStar17" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">X X</cards><action no="11" player="juicybacon" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="12" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="Diogas">CA D3</cards><action no="8" player="Diogas" type="23" sum="1,355" cards=""/><cards type="Pocket" player="moonbaseone">D2 SA</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="PistolStar17">SK HA</cards><action no="10" player="PistolStar17" type="3" sum="1,355" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK C10 HK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards>
+	</round>
+	
+		</game><game gamecode="5600679731">
+		 <general>
+		  <startdate>2014-03-25 13:28:38</startdate>		  
+		  <players>
+		   <player seat="1" name="juicybacon" chips="1,030" dealer="1" win="0" bet="1,030" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="cowsgom000" chips="1,910" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,510" dealer="0" win="2,260" bet="1,030" rebuy="0" addon="0" reg_code="6224090723"/><player seat="10" name="PistolStar17" chips="4,550" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="juicybacon" type="15" sum="25" cards="[cards]"/><action no="1" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="5" player="cowsgom000" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="PistolStar17" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="juicybacon">S4 D3</cards><action no="8" player="juicybacon" type="23" sum="1,005" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="9" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ DA</cards><action no="10" player="moonbaseone" type="3" sum="705" cards=""/><cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 S9 HQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,801 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5988981210">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL £0.10/£0.20</gametype>  
+	          <tablename>Corpach, 799110929</tablename>
+	          <tablecurrency>GBP</tablecurrency>  
+	          <duration>00:37</duration>  
+	          <gamecount>45</gamecount>  
+	          <startdate>2013-01-30 00:26:33</startdate>  
+	          <currency>SEK</currency>  
+	          <nickname>yournextmate</nickname>  
+	          <bets>£62.52</bets>  
+	          <wins>£77.12</wins>  
+	          <chipsin>£25.20</chipsin>
+			  		<chipsout>£39.80</chipsout>
+			  		<ipoints>213.01</ipoints>
+        		<statuspoints>56.06</statuspoints>
+			  		<awardpoints>213.01</awardpoints>
+			  		<is_asian>0</is_asian>
+	            
+	    </general>  
+	    <game gamecode="4510956872">
+		 <general>
+		  <startdate>2013-01-30 00:26:33</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="Nickydavidbolton" chips="£6.87" dealer="0" win="£0" bet="£5.15" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£24.91" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="IOlqpxx" chips="£21.10" dealer="0" win="£9.98" bet="£5.15" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Nickydavidbolton" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="4" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="Nickydavidbolton">H9 C7</cards><action no="5" player="Nickydavidbolton" type="3" sum="£0.50" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="6" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="IOlqpxx">DJ SA</cards><action no="3" player="IOlqpxx" type="23" sum="£0.60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 CJ H8</cards><action no="7" player="Nickydavidbolton" type="4" sum="£0" cards=""/><action no="9" player="Nickydavidbolton" type="3" sum="£1.05" cards=""/><action no="8" player="IOlqpxx" type="5" sum="£1.05" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards><action no="10" player="Nickydavidbolton" type="4" sum="£0" cards=""/><action no="11" player="IOlqpxx" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="12" player="Nickydavidbolton" type="5" sum="£3.50" cards=""/><action no="13" player="IOlqpxx" type="3" sum="£3.50" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510958026">
+		 <general>
+		  <startdate>2013-01-30 00:27:15</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="3" name="Nickydavidbolton" chips="£1.72" dealer="1" win="£0" bet="£1.72" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£24.71" dealer="0" win="£5.31" bet="£3" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="IOlqpxx" chips="£25.93" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="3" player="4betdonk" type="23" sum="£0.60" cards=""/><action no="7" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="Nickydavidbolton">DA DJ</cards><action no="4" player="Nickydavidbolton" type="23" sum="£1.72" cards=""/><cards type="Pocket" player="zzzaazzaz">DQ CA</cards><action no="5" player="zzzaazzaz" type="23" sum="£3" cards=""/><cards type="Pocket" player="yournextmate">C4 C7</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 HK HQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="4510960798">
+		 <general>
+		  <startdate>2013-01-30 00:28:06</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20" dealer="0" win="£0.30" bet="£0.20" rebuy="0" addon="0"/><player seat="3" name="Nickydavidbolton" chips="£0" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£27.02" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="IOlqpxx" chips="£25.93" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="4betdonk" type="2" sum="£0.20" cards="[cards]"/><action no="1" player="yournextmate" type="1" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="3" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S3 S6</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510961054">
+		 <general>
+		  <startdate>2013-01-30 00:28:21</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20.10" dealer="0" win="£1.02" bet="£0.55" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£27.02" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.80" dealer="0" win="£0" bet="£0.30" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="4betdonk" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/><action no="3" player="Taktol" type="2" sum="£0.30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="6" player="4betdonk" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="7" player="zzzaazzaz" type="4" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="4" player="Taktol" type="4" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H6 D2</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK C5 S8</cards><action no="8" player="4betdonk" type="4" sum="£0" cards=""/><action no="9" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="10" player="Taktol" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="11" player="4betdonk" type="5" sum="£0.35" cards=""/><action no="12" player="zzzaazzaz" type="0" sum="£0" cards=""/><action no="13" player="Taktol" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510963458">
+		 <general>
+		  <startdate>2013-01-30 00:29:30</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20.57" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£26.82" dealer="0" win="£0.80" bet="£0.60" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.50" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="Taktol" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="4" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="5" player="zzzaazzaz" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S3 H8</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510964481">
+		 <general>
+		  <startdate>2013-01-30 00:29:53</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20.57" dealer="0" win="£0.90" bet="£0.60" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£27.02" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.30" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Taktol" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="VG48" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="4" player="4betdonk" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="5" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="7" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SJ D8</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510966062">
+		 <general>
+		  <startdate>2013-01-30 00:30:44</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20.87" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£27.02" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.20" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£9.80" dealer="0" win="£7.60" bet="£4" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£4" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VG48" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="3" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="4" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="5" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">S2 S5</cards><action no="6" player="VG48" type="3" sum="£0.10" cards=""/><action no="8" player="VG48" type="3" sum="£0.60" cards=""/><cards type="Pocket" player="yournextmate">D3 D4</cards><action no="7" player="yournextmate" type="23" sum="£0.80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 S9 D2</cards><action no="9" player="VG48" type="4" sum="£0" cards=""/><action no="11" player="VG48" type="3" sum="£0.80" cards=""/><action no="10" player="yournextmate" type="5" sum="£0.80" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards><action no="12" player="VG48" type="4" sum="£0" cards=""/><action no="13" player="yournextmate" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="14" player="VG48" type="4" sum="£0" cards=""/><action no="16" player="VG48" type="3" sum="£2.40" cards=""/><action no="15" player="yournextmate" type="5" sum="£2.40" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510967961">
+		 <general>
+		  <startdate>2013-01-30 00:31:36</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20.87" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£27.02" dealer="0" win="£12.03" bet="£8.82" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£13.40" dealer="1" win="£0" bet="£2.82" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="4betdonk" type="2" sum="£0.20" cards="[cards]"/><action no="1" player="yournextmate" type="1" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="7" player="4betdonk" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="3" player="zzzaazzaz" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="4" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="5" player="VG48" type="3" sum="£0.60" cards=""/><cards type="Pocket" player="yournextmate">D10 C8</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 C5 S2</cards><action no="8" player="4betdonk" type="4" sum="£0" cards=""/><action no="11" player="4betdonk" type="0" sum="£0" cards=""/><action no="9" player="zzzaazzaz" type="5" sum="£1.42" cards=""/><action no="10" player="VG48" type="3" sum="£1.42" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="12" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="14" player="zzzaazzaz" type="23" sum="£6.80" cards=""/><action no="13" player="VG48" type="5" sum="£0.80" cards=""/><action no="15" player="VG48" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510969856">
+		 <general>
+		  <startdate>2013-01-30 00:32:31</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20.27" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£10" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.23" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.58" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="1" win="£0.90" bet="£0.60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="4betdonk" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="ippomel" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="7" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="8" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="3" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="4" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="5" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">C6 C4</cards><action no="6" player="yournextmate" type="23" sum="£0.60" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510970337">
+		 <general>
+		  <startdate>2013-01-30 00:32:59</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20.17" dealer="1" win="£0" bet="£0.40" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£9.80" dealer="0" win="£0" bet="£0.40" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.23" dealer="0" win="£2.40" bet="£1.60" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.58" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20.30" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ippomel" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="6" player="4betdonk" type="23" sum="£0.40" cards=""/><action no="9" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="7" player="ippomel" type="3" sum="£0.30" cards=""/><action no="10" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="8" player="zzzaazzaz" type="23" sum="£1.60" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="3" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S9 S5</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510975446">
+		 <general>
+		  <startdate>2013-01-30 00:34:10</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£9.40" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£31.03" dealer="0" win="£5.60" bet="£3.80" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£27.20" dealer="0" win="£0" bet="£1.80" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.58" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20.30" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="Taktol" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="5" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="6" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="7" player="zzzaazzaz" type="23" sum="£0.60" cards=""/><action no="9" player="zzzaazzaz" type="23" sum="£3.80" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="8" player="Taktol" type="23" sum="£1.80" cards=""/><action no="10" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="3" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D3 SA</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510976529">
+		 <general>
+		  <startdate>2013-01-30 00:35:16</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£9.40" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£32.83" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.40" dealer="0" win="£3.20" bet="£2.20" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.58" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20.30" dealer="0" win="£0" bet="£0.80" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Taktol" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="VG48" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="4" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="5" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="6" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="7" player="Taktol" type="23" sum="£2.20" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="8" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S4 D4</cards><action no="3" player="yournextmate" type="23" sum="£0.80" cards=""/><action no="9" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510977177">
+		 <general>
+		  <startdate>2013-01-30 00:35:51</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£9.40" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£32.83" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£26.40" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.38" dealer="0" win="£0.78" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VG48" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="3" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="4" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="5" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="7" player="VG48" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="yournextmate">H7 SJ</cards><action no="8" player="yournextmate" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA C10 C7</cards><action no="9" player="VG48" type="5" sum="£0.40" cards=""/><action no="10" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510978684">
+		 <general>
+		  <startdate>2013-01-30 00:36:46</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£9.40" dealer="0" win="£0" bet="£2.20" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£32.83" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£26.40" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.56" dealer="1" win="£5.04" bet="£2.20" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="4betdonk" type="2" sum="£0.20" cards="[cards]"/><action no="1" player="yournextmate" type="1" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="8" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">S4 HA</cards><action no="3" player="ippomel" type="3" sum="£0.20" cards=""/><action no="9" player="ippomel" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="4" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="5" player="Taktol" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="VG48">C2 DA</cards><action no="6" player="VG48" type="3" sum="£0.60" cards=""/><cards type="Pocket" player="yournextmate">H8 S10</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ DK H2</cards><action no="10" player="ippomel" type="4" sum="£0" cards=""/><action no="11" player="Taktol" type="4" sum="£0" cards=""/><action no="12" player="VG48" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="13" player="ippomel" type="4" sum="£0" cards=""/><action no="16" player="ippomel" type="3" sum="£1" cards=""/><action no="14" player="Taktol" type="4" sum="£0" cards=""/><action no="17" player="Taktol" type="0" sum="£0" cards=""/><action no="15" player="VG48" type="5" sum="£1" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards><action no="18" player="ippomel" type="4" sum="£0" cards=""/><action no="20" player="ippomel" type="3" sum="£0.60" cards=""/><action no="19" player="VG48" type="5" sum="£0.60" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510981996">
+		 <general>
+		  <startdate>2013-01-30 00:38:22</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.80" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£7.20" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£32.83" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£13.40" dealer="0" win="£1.08" bet="£0.80" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="4betdonk" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="ippomel" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="7" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="8" player="ippomel" type="4" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="3" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="4" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="5" player="VG48" type="3" sum="£0.20" cards=""/><cards type="Pocket" player="yournextmate">S8 HA</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 H8 SA</cards><action no="9" player="ippomel" type="4" sum="£0" cards=""/><action no="11" player="ippomel" type="0" sum="£0" cards=""/><action no="10" player="VG48" type="5" sum="£0.60" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510983036">
+		 <general>
+		  <startdate>2013-01-30 00:39:22</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.70" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£7" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£32.83" dealer="0" win="£0" bet="£1.82" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£13.68" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£20" dealer="0" win="£5.43" bet="£3.69" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ippomel" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="6" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="7" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="8" player="zzzaazzaz" type="3" sum="£0.50" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="3" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S7 S6</cards><action no="5" player="yournextmate" type="23" sum="£0.70" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 S10 H6</cards><action no="9" player="zzzaazzaz" type="5" sum="£1.12" cards=""/><action no="10" player="yournextmate" type="3" sum="£1.12" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards><action no="11" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="13" player="zzzaazzaz" type="0" sum="£0" cards=""/><action no="12" player="yournextmate" type="5" sum="£1.87" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510985785">
+		 <general>
+		  <startdate>2013-01-30 00:40:31</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.70" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£6.90" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£31.01" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.80" dealer="0" win="£0.30" bet="£0.20" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£13.68" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£21.74" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="Taktol" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="5" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="6" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="7" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><cards type="Pocket" player="VG48">X X</cards><action no="3" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">C4 CQ</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510987271">
+		 <general>
+		  <startdate>2013-01-30 00:40:53</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.70" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£6.90" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.91" dealer="1" win="£0" bet="£0.40" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.90" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£13.68" dealer="0" win="£1.66" bet="£1.20" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£21.74" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Taktol" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="VG48" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="4" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="5" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="6" player="zzzaazzaz" type="23" sum="£0.40" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="7" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="8" player="VG48" type="3" sum="£0.20" cards=""/><cards type="Pocket" player="yournextmate">C3 SK</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 D8 S8</cards><action no="10" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="9" player="VG48" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="12" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="11" player="VG48" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S9</cards><action no="14" player="zzzaazzaz" type="0" sum="£0" cards=""/><action no="13" player="VG48" type="5" sum="£0.80" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510990511">
+		 <general>
+		  <startdate>2013-01-30 00:42:21</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.70" dealer="0" win="£0.90" bet="£0.60" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£6.90" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.51" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.80" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£14.14" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£21.74" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VG48" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="3" player="4betdonk" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="4" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="5" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="7" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SA H10</cards><action no="8" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510991917">
+		 <general>
+		  <startdate>2013-01-30 00:42:41</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£20" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£6.90" dealer="0" win="£0.90" bet="£0.60" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.51" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£14.04" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£21.54" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="4betdonk" type="2" sum="£0.20" cards="[cards]"/><action no="1" player="yournextmate" type="1" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="8" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="3" player="ippomel" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="4" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="5" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="6" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">HK D5</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510992850">
+		 <general>
+		  <startdate>2013-01-30 00:43:36</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£7.20" dealer="0" win="£0.60" bet="£0.40" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.51" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£14.04" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£21.44" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ippomel" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ippomel">X X</cards><action no="6" player="ippomel" type="23" sum="£0.40" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="7" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="3" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H3 HJ</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510993302">
+		 <general>
+		  <startdate>2013-01-30 00:44:02</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.80" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£7.40" dealer="1" win="£0.80" bet="£0.40" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.31" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.80" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£14.04" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£21.44" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="4betdonk" type="1" sum="£0.10" cards="[cards]"/><action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="Taktol" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="6" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="7" player="ippomel" type="23" sum="£0.40" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="8" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="9" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D8 S6</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510995641">
+		 <general>
+		  <startdate>2013-01-30 00:45:06</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.70" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£7.80" dealer="0" win="£2.21" bet="£1.57" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.21" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.60" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£14.04" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£21.44" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Taktol" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="VG48" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="4" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="5" player="ippomel" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="6" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="7" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="8" player="VG48" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="yournextmate">H7 D5</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 C2 DJ</cards><action no="10" player="ippomel" type="5" sum="£0.97" cards=""/><action no="9" player="VG48" type="4" sum="£0" cards=""/><action no="11" player="VG48" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510996508">
+		 <general>
+		  <startdate>2013-01-30 00:45:45</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.70" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.44" dealer="0" win="£0" bet="£0.40" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.21" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.50" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£13.44" dealer="0" win="£0" bet="£0.40" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£21.44" dealer="0" win="£22.24" bet="£21.44" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VG48" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="3" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="4" player="ippomel" type="23" sum="£0.40" cards=""/><action no="9" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="5" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="7" player="VG48" type="3" sum="£0.30" cards=""/><action no="10" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">DA HA</cards><action no="8" player="yournextmate" type="23" sum="£21.44" cards=""/>
+	</round>
+	
+		</game><game gamecode="4510997305">
+		 <general>
+		  <startdate>2013-01-30 00:46:30</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£19.70" dealer="0" win="£0" bet="£19.70" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.04" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.21" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.50" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£13.04" dealer="1" win="£0" bet="£1" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£22.24" dealer="0" win="£40.92" bet="£22.24" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="4betdonk" type="2" sum="£0.20" cards="[cards]"/><action no="1" player="yournextmate" type="1" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">CK SK</cards><action no="8" player="4betdonk" type="23" sum="£1" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="3" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="4" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="5" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="6" player="VG48" type="3" sum="£0.20" cards=""/><action no="9" player="VG48" type="3" sum="£0.80" cards=""/><cards type="Pocket" player="yournextmate">S7 D7</cards><action no="7" player="yournextmate" type="3" sum="£0.10" cards=""/><action no="10" player="yournextmate" type="3" sum="£0.80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 HQ S6</cards><action no="12" player="4betdonk" type="5" sum="£2.40" cards=""/><action no="13" player="VG48" type="0" sum="£0" cards=""/><action no="11" player="yournextmate" type="4" sum="£0" cards=""/><action no="14" player="yournextmate" type="3" sum="£2.40" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards><action no="16" player="4betdonk" type="5" sum="£6" cards=""/><action no="18" player="4betdonk" type="7" sum="£10.30" cards=""/><action no="15" player="yournextmate" type="4" sum="£0" cards=""/><action no="17" player="yournextmate" type="23" sum="£18.84" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game><game gamecode="4511001937">
+		 <general>
+		  <startdate>2013-01-30 00:47:37</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£0" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.04" dealer="0" win="£2.38" bet="£1.65" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.21" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.50" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£12.04" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.92" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ippomel" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ippomel">X X</cards><action no="6" player="ippomel" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="7" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="3" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="3" sum="£0.20" cards=""/><action no="8" player="VG48" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="yournextmate">C4 D10</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 S4 S8</cards><action no="9" player="ippomel" type="5" sum="£1.05" cards=""/><action no="10" player="VG48" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511003207">
+		 <general>
+		  <startdate>2013-01-30 00:48:21</startdate>		  
+		  <players>
+		   <player seat="1" name="4betdonk" chips="£10" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.77" dealer="1" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.01" dealer="0" win="£14.10" bet="£13.20" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.50" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£11.44" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.92" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="4betdonk" type="1" sum="£0.10" cards="[cards]"/><action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="Taktol" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="4betdonk">X X</cards><action no="6" player="4betdonk" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="7" player="ippomel" type="3" sum="£0.20" cards=""/><action no="12" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="8" player="zzzaazzaz" type="23" sum="£13.20" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="9" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="3" sum="£0.20" cards=""/><action no="10" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SJ H10</cards><action no="5" player="yournextmate" type="3" sum="£0.20" cards=""/><action no="11" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511004728">
+		 <general>
+		  <startdate>2013-01-30 00:49:12</startdate>		  
+		  <players>
+		   <player seat="1" name="atataka" chips="£0" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.57" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.91" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.30" dealer="0" win="£2.34" bet="£1.80" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£11.24" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.72" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Taktol" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="VG48" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ippomel">X X</cards><action no="4" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="5" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="7" player="VG48" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="yournextmate">SQ DJ</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 H7 SJ</cards><action no="8" player="Taktol" type="5" sum="£1.20" cards=""/><action no="9" player="VG48" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511005338">
+		 <general>
+		  <startdate>2013-01-30 00:49:49</startdate>		  
+		  <players>
+		   <player seat="1" name="atataka" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.57" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.91" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.84" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.64" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.72" dealer="0" win="£1.50" bet="£1.20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VG48" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ippomel">X X</cards><action no="3" player="ippomel" type="3" sum="£0.20" cards=""/><action no="8" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="4" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="5" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="6" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SK DA</cards><action no="7" player="yournextmate" type="23" sum="£1.20" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511006065">
+		 <general>
+		  <startdate>2013-01-30 00:50:24</startdate>		  
+		  <players>
+		   <player seat="1" name="atataka" chips="£20" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.37" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.91" dealer="0" win="£2.43" bet="£1.60" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.84" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.54" dealer="1" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£41.02" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="atataka" type="2" sum="£0.20" cards="[cards]"/><action no="1" player="yournextmate" type="1" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="atataka">X X</cards><action no="8" player="atataka" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="3" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="4" player="zzzaazzaz" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="5" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="6" player="VG48" type="3" sum="£0.60" cards=""/><cards type="Pocket" player="yournextmate">DK H3</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK H6 S5</cards><action no="9" player="zzzaazzaz" type="5" sum="£1" cards=""/><action no="10" player="VG48" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511006746">
+		 <general>
+		  <startdate>2013-01-30 00:51:05</startdate>		  
+		  <players>
+		   <player seat="1" name="atataka" chips="£20" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.37" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£31.74" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.84" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£9.94" dealer="0" win="£0.90" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.92" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="atataka" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="ippomel" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="atataka">X X</cards><action no="7" player="atataka" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="8" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="3" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="4" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="5" player="VG48" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="yournextmate">H10 D4</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511007655">
+		 <general>
+		  <startdate>2013-01-30 00:51:33</startdate>		  
+		  <players>
+		   <player seat="1" name="atataka" chips="£20" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.17" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£31.74" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.84" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.24" dealer="0" win="£0.88" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.92" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ippomel" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="atataka">X X</cards><action no="6" player="atataka" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="7" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="8" player="zzzaazzaz" type="4" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="3" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="3" sum="£0.20" cards=""/><cards type="Pocket" player="yournextmate">S4 S6</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 S3 C8</cards><action no="9" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="11" player="zzzaazzaz" type="0" sum="£0" cards=""/><action no="10" player="VG48" type="5" sum="£0.40" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511010331">
+		 <general>
+		  <startdate>2013-01-30 00:52:34</startdate>		  
+		  <players>
+		   <player seat="1" name="atataka" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.07" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£31.54" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.84" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.52" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.92" dealer="0" win="£1" bet="£0.70" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="Taktol" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="atataka">X X</cards><action no="5" player="atataka" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="6" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="7" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="8" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="3" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">HK CA</cards><action no="4" player="yournextmate" type="23" sum="£0.70" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511012363">
+		 <general>
+		  <startdate>2013-01-30 00:53:40</startdate>		  
+		  <players>
+		   <player seat="3" name="ippomel" chips="£8.07" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£31.44" dealer="1" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.64" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£10.52" dealer="0" win="£1.84" bet="£1.20" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£41.22" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Taktol" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="VG48" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ippomel">X X</cards><action no="4" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="5" player="zzzaazzaz" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="7" player="VG48" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="yournextmate">D9 D3</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 H5 H2</cards><action no="9" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="8" player="VG48" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S9</cards><action no="11" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="10" player="VG48" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards><action no="13" player="zzzaazzaz" type="0" sum="£0" cards=""/><action no="12" player="VG48" type="5" sum="£0.60" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511015429">
+		 <general>
+		  <startdate>2013-01-30 00:54:44</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35.60" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.07" dealer="0" win="£2.55" bet="£1.72" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.84" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.54" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£11.16" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£41.22" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VG48" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ippomel">X X</cards><action no="3" player="ippomel" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="4" player="zzzaazzaz" type="3" sum="£0.60" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="5" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="6" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">DJ SK</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ CA D5</cards><action no="8" player="ippomel" type="4" sum="£0" cards=""/><action no="9" player="zzzaazzaz" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards><action no="10" player="ippomel" type="5" sum="£1.12" cards=""/><action no="11" player="zzzaazzaz" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511018537">
+		 <general>
+		  <startdate>2013-01-30 00:55:28</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35.60" dealer="0" win="£0.30" bet="£0.20" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.90" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.24" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.54" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£11.06" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£41.02" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MisterMinusEV" type="2" sum="£0.20" cards="[cards]"/><action no="1" player="yournextmate" type="1" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><cards type="Pocket" player="ippomel">X X</cards><action no="3" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="4" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="5" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="6" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D9 S4</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511018861">
+		 <general>
+		  <startdate>2013-01-30 00:55:47</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35.70" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.90" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.24" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.54" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£11.06" dealer="0" win="£4.10" bet="£3" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.92" dealer="1" win="£0" bet="£0.90" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MisterMinusEV" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="ippomel" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="7" player="MisterMinusEV" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="8" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="3" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="4" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="5" player="VG48" type="3" sum="£0.20" cards=""/><action no="9" player="VG48" type="3" sum="£0.70" cards=""/><cards type="Pocket" player="yournextmate">HQ H8</cards><action no="6" player="yournextmate" type="23" sum="£0.90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 C3 H2</cards><action no="10" player="VG48" type="5" sum="£2.10" cards=""/><action no="11" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511019487">
+		 <general>
+		  <startdate>2013-01-30 00:56:26</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35.60" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.70" dealer="0" win="£0.80" bet="£0.60" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.24" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.54" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£12.16" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.02" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ippomel" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="6" player="MisterMinusEV" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="7" player="ippomel" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="8" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="3" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D7 CJ</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511021087">
+		 <general>
+		  <startdate>2013-01-30 00:56:57</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35.60" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.90" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.04" dealer="0" win="£3.20" bet="£2.30" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.54" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£12.16" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£40.02" dealer="0" win="£0" bet="£0.70" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="Taktol" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="5" player="MisterMinusEV" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="6" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="7" player="zzzaazzaz" type="23" sum="£2.30" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="8" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="3" player="VG48" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SQ CK</cards><action no="4" player="yournextmate" type="23" sum="£0.70" cards=""/><action no="9" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511021902">
+		 <general>
+		  <startdate>2013-01-30 00:57:47</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35.60" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.90" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.94" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.34" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£12.16" dealer="0" win="£0.30" bet="£0.20" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£39.32" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Taktol" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="VG48" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="4" player="MisterMinusEV" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">X X</cards><action no="5" player="ippomel" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="6" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="7" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><cards type="Pocket" player="yournextmate">H4 SJ</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511022993">
+		 <general>
+		  <startdate>2013-01-30 00:58:27</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35.60" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£8.90" dealer="0" win="£0" bet="£8.90" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£30.94" dealer="0" win="£17.67" bet="£8.90" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.24" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£12.26" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£39.32" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VG48" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="3" player="MisterMinusEV" type="0" sum="£0" cards=""/><cards type="Pocket" player="ippomel">HK SK</cards><action no="4" player="ippomel" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="zzzaazzaz">D9 C9</cards><action no="5" player="zzzaazzaz" type="3" sum="£0.60" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="7" player="VG48" type="3" sum="£0.50" cards=""/><cards type="Pocket" player="yournextmate">D5 CQ</cards><action no="8" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 S9 H2</cards><action no="10" player="ippomel" type="4" sum="£0" cards=""/><action no="13" player="ippomel" type="3" sum="£1.50" cards=""/><action no="11" player="zzzaazzaz" type="5" sum="£1.50" cards=""/><action no="9" player="VG48" type="4" sum="£0" cards=""/><action no="12" player="VG48" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards><action no="14" player="ippomel" type="4" sum="£0" cards=""/><action no="16" player="ippomel" type="7" sum="£6.80" cards=""/><action no="15" player="zzzaazzaz" type="5" sum="£3.80" cards=""/><action no="17" player="zzzaazzaz" type="3" sum="£3" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards>
+	</round>
+	
+		</game><game gamecode="4511024434">
+		 <general>
+		  <startdate>2013-01-30 00:59:23</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35.60" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="3" name="ippomel" chips="£0" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£39.71" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£25.24" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£11.66" dealer="1" win="£3.71" bet="£2.50" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£39.12" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MisterMinusEV" type="2" sum="£0.20" cards="[cards]"/><action no="1" player="yournextmate" type="1" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="7" player="MisterMinusEV" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="3" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="4" player="Taktol" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="5" player="VG48" type="3" sum="£0.60" cards=""/><cards type="Pocket" player="yournextmate">D10 S7</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 H7 C4</cards><action no="8" player="MisterMinusEV" type="4" sum="£0" cards=""/><action no="9" player="Taktol" type="4" sum="£0" cards=""/><action no="10" player="VG48" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards><action no="11" player="MisterMinusEV" type="4" sum="£0" cards=""/><action no="14" player="MisterMinusEV" type="0" sum="£0" cards=""/><action no="12" player="Taktol" type="4" sum="£0" cards=""/><action no="15" player="Taktol" type="0" sum="£0" cards=""/><action no="13" player="VG48" type="5" sum="£1.90" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511026227">
+		 <general>
+		  <startdate>2013-01-30 01:00:35</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£35" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£39.71" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£24.64" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£12.87" dealer="0" win="£0" bet="£0.55" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£39.02" dealer="1" win="£5.13" bet="£4.35" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MisterMinusEV" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="zzzaazzaz" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="6" player="MisterMinusEV" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="7" player="zzzaazzaz" type="4" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="3" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="4" player="VG48" type="3" sum="£0.20" cards=""/><cards type="Pocket" player="yournextmate">D2 S2</cards><action no="5" player="yournextmate" type="3" sum="£0.20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK DQ SQ</cards><action no="8" player="zzzaazzaz" type="4" sum="£0" cards=""/><action no="11" player="zzzaazzaz" type="0" sum="£0" cards=""/><action no="9" player="VG48" type="4" sum="£0" cards=""/><action no="12" player="VG48" type="3" sum="£0.35" cards=""/><action no="10" player="yournextmate" type="5" sum="£0.35" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="13" player="VG48" type="4" sum="£0" cards=""/><action no="14" player="yournextmate" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards><action no="15" player="VG48" type="4" sum="£0" cards=""/><action no="17" player="VG48" type="0" sum="£0" cards=""/><action no="16" player="yournextmate" type="5" sum="£3.80" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511030661">
+		 <general>
+		  <startdate>2013-01-30 01:01:49</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£34.90" dealer="1" win="£0" bet="£0.80" rebuy="0" addon="0"/><player seat="3" name="k1nderman" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£39.51" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£24.64" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£12.32" dealer="0" win="£2.81" bet="£1.80" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£39.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="zzzaazzaz" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="Taktol" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="5" player="MisterMinusEV" type="3" sum="£0.80" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="6" player="zzzaazzaz" type="0" sum="£0" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="7" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="3" player="VG48" type="23" sum="£0.80" cards=""/><cards type="Pocket" player="yournextmate">HJ C7</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 S6 SQ</cards><action no="9" player="MisterMinusEV" type="0" sum="£0" cards=""/><action no="8" player="VG48" type="5" sum="£1" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511031235">
+		 <general>
+		  <startdate>2013-01-30 01:02:26</startdate>		  
+		  <players>
+		   <player seat="1" name="MisterMinusEV" chips="£34.10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="k1nderman" chips="£20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="zzzaazzaz" chips="£39.41" dealer="1" win="£0" bet="£2.40" rebuy="0" addon="0"/><player seat="6" name="Taktol" chips="£24.44" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="VG48" chips="£13.33" dealer="0" win="£5.46" bet="£3.20" rebuy="0" addon="0"/><player seat="10" name="yournextmate" chips="£39.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Taktol" type="1" sum="£0.10" cards="[cards]"/><action no="2" player="VG48" type="2" sum="£0.20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MisterMinusEV">X X</cards><action no="4" player="MisterMinusEV" type="0" sum="£0" cards=""/><cards type="Pocket" player="zzzaazzaz">X X</cards><action no="5" player="zzzaazzaz" type="23" sum="£0.80" cards=""/><cards type="Pocket" player="Taktol">X X</cards><action no="6" player="Taktol" type="0" sum="£0" cards=""/><cards type="Pocket" player="VG48">X X</cards><action no="7" player="VG48" type="3" sum="£0.60" cards=""/><cards type="Pocket" player="yournextmate">DQ H5</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 D6 H3</cards><action no="9" player="zzzaazzaz" type="3" sum="£0.80" cards=""/><action no="8" player="VG48" type="5" sum="£0.80" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards><action no="11" player="zzzaazzaz" type="3" sum="£0.80" cards=""/><action no="10" player="VG48" type="5" sum="£0.80" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards><action no="13" player="zzzaazzaz" type="0" sum="£0" cards=""/><action no="12" player="VG48" type="5" sum="£0.80" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,1095 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5989002365">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL £0.05/£0.10</gametype>  
+	          <tablename>Rien, 782656101</tablename>
+	          <tablecurrency>GBP</tablecurrency>  
+	          <duration>00:47</duration>  
+	          <gamecount>60</gamecount>  
+	          <startdate>2013-01-30 01:32:37</startdate>  
+	          <currency>SEK</currency>  
+	          <nickname>yournextmate</nickname>  
+	          <bets>£24.46</bets>  
+	          <wins>£13.78</wins>  
+	          <chipsin>£27.09</chipsin>
+			  		<chipsout>£16.41</chipsout>
+			  		<ipoints>204.65</ipoints>
+        		<statuspoints>53.84</statuspoints>
+			  		<awardpoints>204.65</awardpoints>
+			  		<is_asian>0</is_asian>
+	            
+	    </general>  
+	    <game gamecode="4511081644">
+		 <general>
+		  <startdate>2013-01-30 01:32:37</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.66" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="IlyaProrok" chips="£10.25" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£27.09" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.21" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£8.05" dealer="1" win="£0.34" bet="£0.20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="wEarEallfr" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="6" player="wEarEallfr" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="7" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><cards type="Pocket" player="IlyaProrok">X X</cards><action no="3" player="IlyaProrok" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="5" player="Ashblue11" type="3" sum="£0.10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 D6 H10</cards><action no="8" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="9" player="Ashblue11" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards><action no="10" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="11" player="Ashblue11" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards><action no="12" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="14" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><action no="13" player="Ashblue11" type="5" sum="£0.10" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511084873">
+		 <general>
+		  <startdate>2013-01-30 01:33:55</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.61" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="IlyaProrok" chips="£10.25" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£27.09" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.21" dealer="0" win="£0.50" bet="£0.35" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£8.19" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="5" player="wEarEallfr" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">C10 S4</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="4" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511085189">
+		 <general>
+		  <startdate>2013-01-30 01:34:19</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.61" dealer="0" win="£0.35" bet="£0.20" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="IlyaProrok" chips="£10.25" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.99" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.36" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£8.19" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="4" player="wEarEallfr" type="23" sum="£0.20" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="5" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">DQ H5</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="3" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511085682">
+		 <general>
+		  <startdate>2013-01-30 01:34:56</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.76" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.94" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.26" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£8.19" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="Ashblue11" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="3" player="wEarEallfr" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H4 H8</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards>
+	</round>
+	
+		</game><game gamecode="4511086619">
+		 <general>
+		  <startdate>2013-01-30 01:35:25</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.76" dealer="0" win="£0.34" bet="£0.25" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.94" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.21" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£8.24" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="wEarEallfr" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="Ashblue11" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="7" player="wEarEallfr" type="4" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">CK C2</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="6" player="Ashblue11" type="3" sum="£0.05" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 HQ HJ</cards><action no="9" player="wEarEallfr" type="4" sum="£0" cards=""/><action no="8" player="Ashblue11" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="11" player="wEarEallfr" type="5" sum="£0.15" cards=""/><action no="10" player="Ashblue11" type="4" sum="£0" cards=""/><action no="12" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511087674">
+		 <general>
+		  <startdate>2013-01-30 01:36:16</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.85" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="0" win="£1.60" bet="£1.20" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.94" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.21" dealer="0" win="£0" bet="£0.35" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£8.14" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="wEarEallfr" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="6" player="wEarEallfr" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="7" player="GrinderOnSpeed" type="23" sum="£1.20" cards=""/><cards type="Pocket" player="yournextmate">C4 C2</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="23" sum="£0.35" cards=""/><action no="8" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="5" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511088634">
+		 <general>
+		  <startdate>2013-01-30 01:36:45</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.80" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.40" dealer="0" win="£0" bet="£5.90" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£0" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.94" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.86" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£8.14" dealer="0" win="£11.11" bet="£5.90" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="5" player="wEarEallfr" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">HQ CJ</cards><action no="6" player="GrinderOnSpeed" type="23" sum="£0.50" cards=""/><cards type="Pocket" player="yournextmate">HJ C8</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">DA S7</cards><action no="4" player="Ashblue11" type="3" sum="£0.10" cards=""/><action no="8" player="Ashblue11" type="3" sum="£0.40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 D2 S2</cards><action no="9" player="GrinderOnSpeed" type="5" sum="£0.70" cards=""/><action no="10" player="Ashblue11" type="3" sum="£0.70" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards><action no="11" player="GrinderOnSpeed" type="5" sum="£1.70" cards=""/><action no="12" player="Ashblue11" type="3" sum="£1.70" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards><action no="13" player="GrinderOnSpeed" type="5" sum="£3" cards=""/><action no="14" player="Ashblue11" type="3" sum="£3" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511090945">
+		 <general>
+		  <startdate>2013-01-30 01:38:09</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.84" dealer="0" win="£0.50" bet="£0.40" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.86" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.35" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="4" player="wEarEallfr" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="5" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">DK HJ</cards><action no="6" player="yournextmate" type="23" sum="£0.40" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="3" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511092601">
+		 <general>
+		  <startdate>2013-01-30 01:38:45</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.94" dealer="1" win="£0" bet="£0.65" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.76" dealer="0" win="£2.36" bet="£1.70" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.35" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="Ashblue11" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="wEarEallfr">X X</cards><action no="3" player="wEarEallfr" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H10 C9</cards><action no="5" player="yournextmate" type="23" sum="£0.30" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="3" sum="£0.25" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="7" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 C5 H8</cards><action no="9" player="yournextmate" type="5" sum="£0.35" cards=""/><action no="8" player="liviusx999" type="4" sum="£0" cards=""/><action no="10" player="liviusx999" type="3" sum="£0.35" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="12" player="yournextmate" type="4" sum="£0" cards=""/><action no="11" player="liviusx999" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards><action no="14" player="yournextmate" type="0" sum="£0" cards=""/><action no="13" player="liviusx999" type="5" sum="£1.05" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511094105">
+		 <general>
+		  <startdate>2013-01-30 01:40:03</startdate>		  
+		  <players>
+		   <player seat="1" name="wEarEallfr" chips="£10.80" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10" dealer="0" win="£6.37" bet="£4.50" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.29" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.42" dealer="1" win="£0" bet="£2.10" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.25" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="Ashblue11" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="23" sum="£1.10" cards=""/><cards type="Pocket" player="yournextmate">D3 H2</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="23" sum="£0.35" cards=""/><action no="7" player="liviusx999" type="3" sum="£0.75" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="5" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA CQ DA</cards><action no="8" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="10" player="GrinderOnSpeed" type="3" sum="£1" cards=""/><action no="9" player="liviusx999" type="5" sum="£1" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="11" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="12" player="liviusx999" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="13" player="GrinderOnSpeed" type="5" sum="£2.40" cards=""/><action no="14" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511095174">
+		 <general>
+		  <startdate>2013-01-30 01:41:08</startdate>		  
+		  <players>
+		   <player seat="3" name="GrinderOnSpeed" chips="£11.87" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.29" dealer="0" win="£0.55" bet="£0.40" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.20" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="7" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">CJ CK</cards><action no="3" player="yournextmate" type="23" sum="£0.40" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="5" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511095510">
+		 <general>
+		  <startdate>2013-01-30 01:41:35</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£11.82" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£4.90" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.44" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10" dealer="0" win="£0.50" bet="£0.35" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="5" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="6" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">DK HJ</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="4" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511096381">
+		 <general>
+		  <startdate>2013-01-30 01:41:55</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£11.82" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£4.85" dealer="1" win="£0" bet="£0.35" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.34" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.15" dealer="0" win="£1.26" bet="£0.91" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="3" sum="£0.10" cards=""/><action no="8" player="aaronaaron12" type="3" sum="£0.25" cards=""/><cards type="Pocket" player="yournextmate">D9 HK</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="3" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK D6 H7</cards><action no="10" player="aaronaaron12" type="0" sum="£0" cards=""/><action no="9" player="liviusx999" type="5" sum="£0.56" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511097840">
+		 <general>
+		  <startdate>2013-01-30 01:42:49</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£11.82" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£4.50" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.29" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.50" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.20" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="Ashblue11" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="4" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D3 C8</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards>
+	</round>
+	
+		</game><game gamecode="4511098929">
+		 <general>
+		  <startdate>2013-01-30 01:43:09</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£10" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£11.82" dealer="0" win="£0" bet="£1.34" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£4.50" dealer="0" win="£2.65" bet="£1.34" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.29" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.45" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.25" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="HotRodney" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="Ashblue11" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HotRodney">X X</cards><action no="8" player="HotRodney" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">H10 D10</cards><action no="3" player="GrinderOnSpeed" type="23" sum="£0.40" cards=""/><cards type="Pocket" player="aaronaaron12">HA DA</cards><action no="4" player="aaronaaron12" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="yournextmate">C3 HJ</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="7" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 SA CJ</cards><action no="9" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="10" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="11" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="12" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards><action no="13" player="GrinderOnSpeed" type="5" sum="£0.47" cards=""/><action no="15" player="GrinderOnSpeed" type="3" sum="£0.47" cards=""/><action no="14" player="aaronaaron12" type="23" sum="£0.94" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511100032">
+		 <general>
+		  <startdate>2013-01-30 01:44:06</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£9.90" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.48" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.81" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.29" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.45" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.20" dealer="1" win="£0.44" bet="£0.30" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="HotRodney" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HotRodney">X X</cards><action no="6" player="HotRodney" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="7" player="aaronaaron12" type="4" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S4 SQ</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="5" player="Ashblue11" type="3" sum="£0.10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 S3 C3</cards><action no="8" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="9" player="Ashblue11" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards><action no="10" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="11" player="Ashblue11" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards><action no="12" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="14" player="aaronaaron12" type="0" sum="£0" cards=""/><action no="13" player="Ashblue11" type="5" sum="£0.20" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511101427">
+		 <general>
+		  <startdate>2013-01-30 01:44:53</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£9.85" dealer="1" win="£0" bet="£2.20" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.48" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.71" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£26.29" dealer="0" win="£4.16" bet="£2.20" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.45" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.34" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HotRodney">HQ HJ</cards><action no="5" player="HotRodney" type="23" sum="£0.30" cards=""/><action no="8" player="HotRodney" type="3" sum="£0.65" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="6" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">HA SK</cards><action no="7" player="yournextmate" type="23" sum="£0.95" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="4" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 SA CQ</cards><action no="10" player="HotRodney" type="5" sum="£1.25" cards=""/><action no="9" player="yournextmate" type="4" sum="£0" cards=""/><action no="11" player="yournextmate" type="3" sum="£1.25" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="13" player="HotRodney" type="4" sum="£0" cards=""/><action no="12" player="yournextmate" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards><action no="15" player="HotRodney" type="4" sum="£0" cards=""/><action no="14" player="yournextmate" type="4" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511102542">
+		 <general>
+		  <startdate>2013-01-30 01:45:42</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.48" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.66" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£28.25" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.45" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.34" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HotRodney">X X</cards><action no="4" player="HotRodney" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">C2 C8</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><cards type="Pocket" player="Ashblue11">X X</cards><action no="3" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511102698">
+		 <general>
+		  <startdate>2013-01-30 01:45:55</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.48" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.66" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£28.20" dealer="1" win="£4.11" bet="£2.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.50" dealer="0" win="£0" bet="£2.10" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.34" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="Ashblue11" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HotRodney">X X</cards><action no="3" player="HotRodney" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="4" player="aaronaaron12" type="3" sum="£0.10" cards=""/><action no="8" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H9 DA</cards><action no="5" player="yournextmate" type="23" sum="£0.45" cards=""/><cards type="Pocket" player="liviusx999">S8 SA</cards><action no="6" player="liviusx999" type="3" sum="£0.40" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="7" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ CA S3</cards><action no="10" player="yournextmate" type="4" sum="£0" cards=""/><action no="9" player="liviusx999" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="12" player="yournextmate" type="3" sum="£0.55" cards=""/><action no="11" player="liviusx999" type="5" sum="£0.55" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards><action no="14" player="yournextmate" type="3" sum="£1.10" cards=""/><action no="13" player="liviusx999" type="5" sum="£1.10" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511103761">
+		 <general>
+		  <startdate>2013-01-30 01:46:42</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.48" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.56" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.21" dealer="0" win="£0.50" bet="£0.35" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.24" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="Ashblue11" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="7" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="3" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S3 C3</cards><action no="4" player="yournextmate" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="6" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511104996">
+		 <general>
+		  <startdate>2013-01-30 01:47:19</startdate>		  
+		  <players>
+		   <player seat="1" name="HotRodney" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.38" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.56" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.36" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.19" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><cards type="Pocket" player="yournextmate">D4 SQ</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="5" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511105348">
+		 <general>
+		  <startdate>2013-01-30 01:47:43</startdate>		  
+		  <players>
+		   <player seat="3" name="GrinderOnSpeed" chips="£10.33" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.61" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.36" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10" dealer="0" win="£4.40" bet="£2.28" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£13.19" dealer="0" win="£0" bet="£2.28" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="5" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="6" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H2 D6</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">HK DJ</cards><action no="3" player="liviusx999" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="Ashblue11">H10 DA</cards><action no="4" player="Ashblue11" type="3" sum="£0.35" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ S5 S10</cards><action no="8" player="liviusx999" type="5" sum="£0.63" cards=""/><action no="9" player="Ashblue11" type="3" sum="£0.63" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards><action no="10" player="liviusx999" type="5" sum="£1.30" cards=""/><action no="11" player="Ashblue11" type="3" sum="£1.30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards><action no="12" player="liviusx999" type="4" sum="£0" cards=""/><action no="13" player="Ashblue11" type="4" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511106261">
+		 <general>
+		  <startdate>2013-01-30 01:48:28</startdate>		  
+		  <players>
+		   <player seat="3" name="GrinderOnSpeed" chips="£10.33" dealer="0" win="£0.45" bet="£0.30" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.56" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.26" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.12" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£10.91" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="23" sum="£0.30" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">C10 S2</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="Ashblue11">X X</cards><action no="3" player="Ashblue11" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511106570">
+		 <general>
+		  <startdate>2013-01-30 01:48:52</startdate>		  
+		  <players>
+		   <player seat="3" name="GrinderOnSpeed" chips="£10.48" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.56" dealer="0" win="£2.28" bet="£1.40" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.21" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.02" dealer="0" win="£0" bet="£0.90" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£10.91" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="3" player="aaronaaron12" type="3" sum="£0.10" cards=""/><action no="7" player="aaronaaron12" type="3" sum="£0.30" cards=""/><cards type="Pocket" player="yournextmate">S2 H3</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="23" sum="£0.40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ H10 S9</cards><action no="9" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="8" player="liviusx999" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="11" player="aaronaaron12" type="23" sum="£1" cards=""/><action no="10" player="liviusx999" type="5" sum="£0.50" cards=""/><action no="12" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511108001">
+		 <general>
+		  <startdate>2013-01-30 01:49:57</startdate>		  
+		  <players>
+		   <player seat="3" name="GrinderOnSpeed" chips="£10.38" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£6.44" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.21" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.12" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£10.91" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="5" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><cards type="Pocket" player="yournextmate">H8 S10</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511108198">
+		 <general>
+		  <startdate>2013-01-30 01:50:14</startdate>		  
+		  <players>
+		   <player seat="3" name="GrinderOnSpeed" chips="£10.33" dealer="1" win="£1.89" bet="£1.40" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£6.49" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.21" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.12" dealer="0" win="£0" bet="£0.40" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£10.91" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="23" sum="£0.40" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D4 C6</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="3" sum="£0.10" cards=""/><action no="7" player="liviusx999" type="3" sum="£0.30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ DJ C4</cards><action no="9" player="GrinderOnSpeed" type="5" sum="£1" cards=""/><action no="8" player="liviusx999" type="4" sum="£0" cards=""/><action no="10" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511109562">
+		 <general>
+		  <startdate>2013-01-30 01:51:03</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£10" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.82" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£6.44" dealer="1" win="£0" bet="£0.73" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.11" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£10.72" dealer="0" win="£1.41" bet="£0.73" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£10.91" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">HA HK</cards><action no="4" player="aaronaaron12" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="yournextmate">S9 H3</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">D4 HQ</cards><action no="6" player="liviusx999" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 S7 SQ</cards><action no="8" player="aaronaaron12" type="3" sum="£0.18" cards=""/><action no="7" player="liviusx999" type="5" sum="£0.18" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="10" player="aaronaaron12" type="3" sum="£0.45" cards=""/><action no="9" player="liviusx999" type="5" sum="£0.45" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C9</cards><action no="12" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="11" player="liviusx999" type="4" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511111599">
+		 <general>
+		  <startdate>2013-01-30 01:51:40</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£10" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.82" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.71" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.06" dealer="1" win="£0.75" bet="£0.50" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.40" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="10" name="Ashblue11" chips="£10.91" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="rizzla007" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="7" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="4" player="aaronaaron12" type="3" sum="£0.10" cards=""/><action no="8" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">C7 C5</cards><action no="5" player="yournextmate" type="23" sum="£0.50" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511112518">
+		 <general>
+		  <startdate>2013-01-30 01:52:16</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.90" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.82" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.61" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.31" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.35" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.27" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="rizzla007" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="6" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><cards type="Pocket" player="aaronaaron12">X X</cards><action no="3" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">C7 S8</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511112754">
+		 <general>
+		  <startdate>2013-01-30 01:52:34</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.85" dealer="1" win="£0.24" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.87" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.61" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.31" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.35" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.27" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">CA D10</cards><action no="5" player="rizzla007" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">C7 D8</cards><action no="7" player="aaronaaron12" type="4" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H10 HQ</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK S6 C6</cards><action no="9" player="rizzla007" type="4" sum="£0" cards=""/><action no="8" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="11" player="rizzla007" type="4" sum="£0" cards=""/><action no="10" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="13" player="rizzla007" type="4" sum="£0" cards=""/><action no="12" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511113287">
+		 <general>
+		  <startdate>2013-01-30 01:53:20</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.99" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£10.82" dealer="1" win="£20.25" bet="£10.82" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.51" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£30.31" dealer="0" win="£0" bet="£10.82" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.35" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.27" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="4" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">C10 CQ</cards><action no="5" player="GrinderOnSpeed" type="23" sum="£0.40" cards=""/><action no="8" player="GrinderOnSpeed" type="23" sum="£2.60" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="6" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SQ DK</cards><action no="7" player="yournextmate" type="23" sum="£1.25" cards=""/><action no="9" player="yournextmate" type="3" sum="£1.35" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ S10 C8</cards><action no="11" player="GrinderOnSpeed" type="5" sum="£2.62" cards=""/><action no="10" player="yournextmate" type="4" sum="£0" cards=""/><action no="12" player="yournextmate" type="3" sum="£2.62" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards><action no="14" player="GrinderOnSpeed" type="5" sum="£5.60" cards=""/><action no="13" player="yournextmate" type="4" sum="£0" cards=""/><action no="15" player="yournextmate" type="3" sum="£5.60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game><game gamecode="4511114689">
+		 <general>
+		  <startdate>2013-01-30 01:54:34</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.99" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£20.25" dealer="0" win="£0" bet="£1.98" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.46" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£19.49" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.35" dealer="0" win="£3.75" bet="£1.98" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.27" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="3" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">DQ CK</cards><action no="4" player="GrinderOnSpeed" type="23" sum="£0.30" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S4 H2</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">H7 C6</cards><action no="7" player="liviusx999" type="3" sum="£0.20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 S3 H6</cards><action no="9" player="GrinderOnSpeed" type="5" sum="£0.48" cards=""/><action no="8" player="liviusx999" type="4" sum="£0" cards=""/><action no="10" player="liviusx999" type="3" sum="£0.48" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="12" player="GrinderOnSpeed" type="5" sum="£1.20" cards=""/><action no="11" player="liviusx999" type="4" sum="£0" cards=""/><action no="13" player="liviusx999" type="3" sum="£1.20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards><action no="15" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="14" player="liviusx999" type="4" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511118029">
+		 <general>
+		  <startdate>2013-01-30 01:55:43</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.99" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.27" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.46" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£19.44" dealer="1" win="£2.71" bet="£2" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£13.12" dealer="0" win="£0" bet="£0.60" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.27" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="amiwoncio" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="3" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="3" sum="£0.10" cards=""/><action no="9" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SJ S7</cards><action no="6" player="yournextmate" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="3" sum="£0.55" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="8" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 D3 D7</cards><action no="11" player="yournextmate" type="5" sum="£1.40" cards=""/><action no="10" player="liviusx999" type="4" sum="£0" cards=""/><action no="12" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511118619">
+		 <general>
+		  <startdate>2013-01-30 01:56:30</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.99" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.27" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.36" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.15" dealer="0" win="£0.50" bet="£0.35" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.52" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.17" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="rizzla007" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="amiwoncio" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="8" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="4" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">HK DK</cards><action no="5" player="yournextmate" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="7" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511118934">
+		 <general>
+		  <startdate>2013-01-30 01:56:57</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.89" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.27" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.36" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.30" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.52" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="rizzla007" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="7" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><cards type="Pocket" player="aaronaaron12">X X</cards><action no="3" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S2 H9</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="6" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511119985">
+		 <general>
+		  <startdate>2013-01-30 01:57:24</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.84" dealer="1" win="£1.50" bet="£1.08" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.32" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.36" dealer="0" win="£0" bet="£0.42" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.30" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.52" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="6" player="rizzla007" type="23" sum="£0.20" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="7" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="8" player="aaronaaron12" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="yournextmate">H4 C2</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="5" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK DQ SQ</cards><action no="10" player="rizzla007" type="4" sum="£0" cards=""/><action no="9" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="12" player="rizzla007" type="3" sum="£0.22" cards=""/><action no="11" player="aaronaaron12" type="5" sum="£0.22" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards><action no="14" player="rizzla007" type="5" sum="£0.66" cards=""/><action no="13" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="15" player="aaronaaron12" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511121181">
+		 <general>
+		  <startdate>2013-01-30 01:58:26</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£10.26" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.27" dealer="1" win="£0" bet="£0.57" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£4.94" dealer="0" win="£1.78" bet="£1.19" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.30" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.52" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="5" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="23" sum="£0.20" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="7" player="aaronaaron12" type="3" sum="£0.15" cards=""/><cards type="Pocket" player="yournextmate">S4 S10</cards><action no="8" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="4" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 C5 S2</cards><action no="10" player="GrinderOnSpeed" type="5" sum="£0.37" cards=""/><action no="9" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="11" player="aaronaaron12" type="3" sum="£0.37" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="13" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="12" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="15" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><action no="14" player="aaronaaron12" type="5" sum="£0.62" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511123325">
+		 <general>
+		  <startdate>2013-01-30 01:59:32</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£10.26" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£17.70" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.53" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.20" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.52" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="0" win="£0.45" bet="£0.30" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="4" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="5" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="6" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H4 HA</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="8" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="3" player="amiwoncio" type="23" sum="£0.30" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511123695">
+		 <general>
+		  <startdate>2013-01-30 02:00:04</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£10.26" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£17.70" dealer="0" win="£4.24" bet="£3" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.53" dealer="0" win="£0" bet="£0.30" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.15" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.42" dealer="0" win="£0" bet="£1" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.27" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="amiwoncio" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="3" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="23" sum="£0.30" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="3" sum="£0.30" cards=""/><cards type="Pocket" player="yournextmate">S8 S3</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="3" sum="£0.25" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="8" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 HA C2</cards><action no="10" player="GrinderOnSpeed" type="5" sum="£0.70" cards=""/><action no="11" player="aaronaaron12" type="0" sum="£0" cards=""/><action no="9" player="liviusx999" type="4" sum="£0" cards=""/><action no="12" player="liviusx999" type="3" sum="£0.70" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards><action no="14" player="GrinderOnSpeed" type="5" sum="£2" cards=""/><action no="13" player="liviusx999" type="4" sum="£0" cards=""/><action no="15" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511125502">
+		 <general>
+		  <startdate>2013-01-30 02:01:31</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£10.26" dealer="0" win="£0" bet="£0.45" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.94" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.23" dealer="0" win="£0" bet="£0.45" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.15" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.42" dealer="1" win="£2.21" bet="£1.35" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.17" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="rizzla007" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="amiwoncio" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="8" player="rizzla007" type="3" sum="£0.35" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="4" player="aaronaaron12" type="3" sum="£0.10" cards=""/><action no="9" player="aaronaaron12" type="3" sum="£0.35" cards=""/><cards type="Pocket" player="yournextmate">C3 D9</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="23" sum="£0.45" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="7" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 H10 C4</cards><action no="10" player="rizzla007" type="4" sum="£0" cards=""/><action no="13" player="rizzla007" type="0" sum="£0" cards=""/><action no="11" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="14" player="aaronaaron12" type="0" sum="£0" cards=""/><action no="12" player="liviusx999" type="5" sum="£0.90" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511127158">
+		 <general>
+		  <startdate>2013-01-30 02:02:38</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.81" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.94" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£4.78" dealer="0" win="£0.49" bet="£0.35" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.15" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.28" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="rizzla007" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="7" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="8" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="3" player="aaronaaron12" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="yournextmate">S4 H5</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="6" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 D2 HK</cards><action no="9" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="10" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards><action no="11" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="12" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards><action no="13" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="15" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><action no="14" player="aaronaaron12" type="5" sum="£0.25" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511129458">
+		 <general>
+		  <startdate>2013-01-30 02:03:52</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.76" dealer="1" win="£0" bet="£0.35" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.84" dealer="0" win="£2.30" bet="£1.50" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£4.92" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.15" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.28" dealer="0" win="£0" bet="£0.35" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="6" player="rizzla007" type="3" sum="£0.35" cards=""/><action no="10" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="7" player="GrinderOnSpeed" type="23" sum="£1.50" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="8" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D9 C4</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="23" sum="£0.35" cards=""/><action no="9" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="5" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511130180">
+		 <general>
+		  <startdate>2013-01-30 02:04:36</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.41" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.64" dealer="1" win="£0" bet="£0.50" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£4.82" dealer="0" win="£2.13" bet="£1.60" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.15" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.93" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="5" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="23" sum="£0.20" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="7" player="aaronaaron12" type="3" sum="£0.15" cards=""/><cards type="Pocket" player="yournextmate">H2 DQ</cards><action no="8" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="4" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 C4 C5</cards><action no="10" player="GrinderOnSpeed" type="5" sum="£0.30" cards=""/><action no="9" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="11" player="aaronaaron12" type="3" sum="£0.30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="13" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="12" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards><action no="15" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><action no="14" player="aaronaaron12" type="5" sum="£1.10" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511132721">
+		 <general>
+		  <startdate>2013-01-30 02:06:02</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.41" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.14" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.35" dealer="1" win="£0.34" bet="£0.20" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20.05" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.93" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="4" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="5" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="6" player="aaronaaron12" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="yournextmate">H4 SA</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="8" player="liviusx999" type="4" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="3" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 HJ HQ</cards><action no="10" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="9" player="liviusx999" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards><action no="12" player="aaronaaron12" type="5" sum="£0.10" cards=""/><action no="11" player="liviusx999" type="4" sum="£0" cards=""/><action no="13" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511133628">
+		 <general>
+		  <startdate>2013-01-30 02:06:52</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.41" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.14" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£5.49" dealer="0" win="£8.49" bet="£5.49" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£20" dealer="1" win="£0" bet="£3.29" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.83" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.12" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="amiwoncio" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="3" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="3" sum="£0.10" cards=""/><action no="9" player="aaronaaron12" type="3" sum="£0.50" cards=""/><cards type="Pocket" player="yournextmate">DK S10</cards><action no="6" player="yournextmate" type="23" sum="£0.60" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="8" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ CA D7</cards><action no="10" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="12" player="aaronaaron12" type="3" sum="£1.01" cards=""/><action no="11" player="yournextmate" type="5" sum="£1.01" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards><action no="13" player="aaronaaron12" type="5" sum="£1.68" cards=""/><action no="14" player="yournextmate" type="3" sum="£1.68" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards><action no="15" player="aaronaaron12" type="5" sum="£2.20" cards=""/><action no="16" player="yournextmate" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511134358">
+		 <general>
+		  <startdate>2013-01-30 02:07:56</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.41" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.14" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.49" dealer="0" win="£0.58" bet="£0.40" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.71" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.78" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£12.02" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="rizzla007" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="amiwoncio" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="8" player="rizzla007" type="4" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="4" player="aaronaaron12" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="yournextmate">H4 C8</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="7" player="amiwoncio" type="3" sum="£0.05" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA SJ C6</cards><action no="10" player="rizzla007" type="4" sum="£0" cards=""/><action no="11" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="9" player="amiwoncio" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards><action no="13" player="rizzla007" type="4" sum="£0" cards=""/><action no="16" player="rizzla007" type="0" sum="£0" cards=""/><action no="14" player="aaronaaron12" type="5" sum="£0.30" cards=""/><action no="12" player="amiwoncio" type="4" sum="£0" cards=""/><action no="15" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511136920">
+		 <general>
+		  <startdate>2013-01-30 02:09:15</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.31" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.14" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.67" dealer="0" win="£0.49" bet="£0.35" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.71" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.78" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.92" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="rizzla007" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="7" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="8" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="3" player="aaronaaron12" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="yournextmate">SK C5</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="6" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ S3 D10</cards><action no="9" player="GrinderOnSpeed" type="4" sum="£0" cards=""/><action no="11" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><action no="10" player="aaronaaron12" type="5" sum="£0.25" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511137783">
+		 <general>
+		  <startdate>2013-01-30 02:10:16</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.26" dealer="1" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.04" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.81" dealer="0" win="£0.49" bet="£0.35" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.71" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.78" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.92" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="6" player="rizzla007" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="7" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="8" player="aaronaaron12" type="4" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">C4 S10</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="5" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 D9 C5</cards><action no="10" player="rizzla007" type="0" sum="£0" cards=""/><action no="9" player="aaronaaron12" type="5" sum="£0.25" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511139067">
+		 <general>
+		  <startdate>2013-01-30 02:11:03</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.16" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.99" dealer="1" win="£1.26" bet="£0.86" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.95" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.71" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.78" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.92" dealer="0" win="£0" bet="£0.30" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="5" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="3" sum="£0.30" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="7" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">DJ H2</cards><action no="8" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="4" player="amiwoncio" type="23" sum="£0.30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK H4 C7</cards><action no="10" player="GrinderOnSpeed" type="5" sum="£0.56" cards=""/><action no="9" player="amiwoncio" type="4" sum="£0" cards=""/><action no="11" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511140356">
+		 <general>
+		  <startdate>2013-01-30 02:11:40</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.16" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.39" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.90" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.61" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.78" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.62" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="3" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D8 S6</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards>
+	</round>
+	
+		</game><game gamecode="4511141332">
+		 <general>
+		  <startdate>2013-01-30 02:11:59</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.16" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.39" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.90" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.56" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.83" dealer="0" win="£0.39" bet="£0.30" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.62" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="amiwoncio" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="3" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SA H4</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="3" sum="£0.05" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="8" player="amiwoncio" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 CJ S9</cards><action no="9" player="liviusx999" type="4" sum="£0" cards=""/><action no="10" player="amiwoncio" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="11" player="liviusx999" type="5" sum="£0.20" cards=""/><action no="12" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511141836">
+		 <general>
+		  <startdate>2013-01-30 02:12:42</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.16" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.39" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.90" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.56" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£11.92" dealer="1" win="£0.50" bet="£0.35" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.52" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="rizzla007" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="amiwoncio" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="8" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="4" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">S4 H3</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="7" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511142548">
+		 <general>
+		  <startdate>2013-01-30 02:13:19</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.06" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.39" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.90" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.56" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.07" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.47" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="rizzla007" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="7" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><cards type="Pocket" player="aaronaaron12">X X</cards><action no="3" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H9 H7</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="6" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511142829">
+		 <general>
+		  <startdate>2013-01-30 02:13:43</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.01" dealer="1" win="£0" bet="£0.35" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.44" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.90" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.56" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.07" dealer="0" win="£1.43" bet="£0.98" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.47" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="6" player="rizzla007" type="3" sum="£0.35" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="7" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="8" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">SJ H2</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="5" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 CQ D3</cards><action no="10" player="rizzla007" type="0" sum="£0" cards=""/><action no="9" player="liviusx999" type="5" sum="£0.63" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511143752">
+		 <general>
+		  <startdate>2013-01-30 02:14:28</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£8.66" dealer="0" win="£1.90" bet="£1.35" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£19.39" dealer="1" win="£0" bet="£0.40" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.80" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.56" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.52" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.47" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aaronaaron12" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="yournextmate" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="5" player="rizzla007" type="3" sum="£0.10" cards=""/><action no="9" player="rizzla007" type="23" sum="£1.35" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="6" player="GrinderOnSpeed" type="23" sum="£0.40" cards=""/><action no="10" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="7" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D9 CK</cards><action no="8" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="3" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="4" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511145523">
+		 <general>
+		  <startdate>2013-01-30 02:15:36</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.21" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.99" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.75" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.46" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.52" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.47" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yournextmate" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="liviusx999" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="4" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="5" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="6" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">H5 S9</cards><action no="7" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><cards type="Pocket" player="amiwoncio">X X</cards><action no="3" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511146959">
+		 <general>
+		  <startdate>2013-01-30 02:16:15</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.21" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.99" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£8.75" dealer="0" win="£1.36" bet="£1" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.41" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.57" dealer="0" win="£0" bet="£0.30" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.47" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="liviusx999" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="amiwoncio" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="3" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="4" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="5" player="aaronaaron12" type="3" sum="£0.10" cards=""/><action no="9" player="aaronaaron12" type="3" sum="£0.20" cards=""/><cards type="Pocket" player="yournextmate">S6 C3</cards><action no="6" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="7" player="liviusx999" type="23" sum="£0.30" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="8" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 HQ H7</cards><action no="11" player="aaronaaron12" type="5" sum="£0.70" cards=""/><action no="10" player="liviusx999" type="4" sum="£0" cards=""/><action no="12" player="liviusx999" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511148146">
+		 <general>
+		  <startdate>2013-01-30 02:17:10</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.21" dealer="0" win="£0.15" bet="£0.10" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.99" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£9.11" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.41" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.27" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.37" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="rizzla007" type="2" sum="£0.10" cards="[cards]"/><action no="1" player="amiwoncio" type="1" sum="£0.05" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="3" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="4" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">CJ H6</cards><action no="5" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="6" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="7" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511149154">
+		 <general>
+		  <startdate>2013-01-30 02:17:37</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.26" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.99" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£9.11" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.41" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.27" dealer="0" win="£0.50" bet="£0.35" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.32" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="rizzla007" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="GrinderOnSpeed" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="7" player="rizzla007" type="0" sum="£0" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="8" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="3" player="aaronaaron12" type="0" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D8 D10</cards><action no="4" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="5" player="liviusx999" type="23" sum="£0.35" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="6" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4511149462">
+		 <general>
+		  <startdate>2013-01-30 02:18:04</startdate>		  
+		  <players>
+		   <player seat="1" name="rizzla007" chips="£9.21" dealer="1" win="£0.54" bet="£0.40" rebuy="0" addon="0"/><player seat="3" name="GrinderOnSpeed" chips="£18.89" dealer="0" win="£0" bet="£0.05" rebuy="0" addon="0"/><player seat="5" name="aaronaaron12" chips="£9.11" dealer="0" win="£0" bet="£0.10" rebuy="0" addon="0"/><player seat="6" name="yournextmate" chips="£16.41" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="8" name="liviusx999" chips="£12.42" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="10" name="amiwoncio" chips="£11.32" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GrinderOnSpeed" type="1" sum="£0.05" cards="[cards]"/><action no="2" player="aaronaaron12" type="2" sum="£0.10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="rizzla007">X X</cards><action no="6" player="rizzla007" type="3" sum="£0.10" cards=""/><cards type="Pocket" player="GrinderOnSpeed">X X</cards><action no="7" player="GrinderOnSpeed" type="0" sum="£0" cards=""/><cards type="Pocket" player="aaronaaron12">X X</cards><action no="8" player="aaronaaron12" type="4" sum="£0" cards=""/><cards type="Pocket" player="yournextmate">D6 S10</cards><action no="3" player="yournextmate" type="0" sum="£0" cards=""/><cards type="Pocket" player="liviusx999">X X</cards><action no="4" player="liviusx999" type="0" sum="£0" cards=""/><cards type="Pocket" player="amiwoncio">X X</cards><action no="5" player="amiwoncio" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 C4 HJ</cards><action no="10" player="rizzla007" type="4" sum="£0" cards=""/><action no="9" player="aaronaaron12" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="12" player="rizzla007" type="5" sum="£0.30" cards=""/><action no="11" player="aaronaaron12" type="4" sum="£0" cards=""/><action no="13" player="aaronaaron12" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

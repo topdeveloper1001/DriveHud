@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="DriveHUD.Application.Views.Settings.SettingsBonusesAddEditView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             xmlns:local="clr-namespace:DriveHUD.Application.Views.Settings"
+             mc:Ignorable="d" 
+             Height="300"
+             Width="450"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+  
+        <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Margin" Value="15 5"/>
+            <Setter Property="VerticalAlignment" Value="Top"/>
+        </Style>
+
+        <Style TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Margin" Value="10 0"/>
+            <Setter Property="Height" Value="30"/>
+            <Setter Property="Width" Value="80"/>
+        </Style>
+    </UserControl.Resources>
+
+    <Border BorderBrush="{StaticResource BackgroundBrush3}" Padding="15" BorderThickness="1" Background="{StaticResource PopupBackground}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Text="{ResX Key=Settings_RakeBackNameOfBonus}" VerticalAlignment="Center" />
+            <TextBox Grid.Row="0" Grid.Column="1" 
+                     x:Name="BonusName"
+                     Text="{Binding BonusName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Text="{ResX Key=Settings_RakeBackPlayer}" VerticalAlignment="Center" />
+            <dh:ComboBoxEx Grid.Row="1" Grid.Column="1" 
+                           x:Name="BonusPlayer"
+                           Margin="15 5"
+                           MinWidth="0"
+                           VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                           ToggleButtonTemplate="{StaticResource ComboBoxToggleButton}"
+                           ItemContainerStyle="{StaticResource ComboboxItemContainerBlueStyle}"
+                           ItemsBackgroundColor="{StaticResource BackgroundBrush2}"
+                           SelectedItem="{Binding Player, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true}"
+                           ItemsSource="{Binding Path=StorageModel.PlayerCollection}">
+            </dh:ComboBoxEx>
+            
+            <TextBlock Grid.Row="2" Grid.Column="0" Text="{ResX Key=Settings_RakeBackAmount}" VerticalAlignment="Center" />
+            <TextBox Grid.Row="2" Grid.Column="1" 
+                     x:Name="Amount"
+                     Text="{Binding Amount, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=true, NotifyOnValidationError=true}"/>
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Text="{ResX Key=Settings_RakeBackDate}" VerticalAlignment="Center" />
+            <telerik:RadDateTimePicker Grid.Row="3" Grid.Column="1" 
+                                       Margin="15 5"
+                                       x:Name="BonusDate"
+                                       InputMode="DatePicker" Loaded="RadDateTimePicker_Loaded"
+                                       TodayButtonVisibility="Visible" TodayButtonContent="Select Today" SelectedValue="{Binding Date, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged, ValidatesOnExceptions=true, NotifyOnValidationError=true}" VerticalAlignment="Top"/>
+
+            <StackPanel Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button Command="{Binding OKCommand}" Content="{ResX Key=Common_OK}">
+                    <Button.Style>
+                        <Style  TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+                            <Style.Triggers>
+                                <MultiDataTrigger>
+                                    <MultiDataTrigger.Conditions>
+                                        <Condition Binding="{Binding ElementName=BonusName, Path=(Validation.HasError)}" Value="False" />
+                                        <Condition Binding="{Binding ElementName=BonusPlayer, Path=(Validation.HasError)}" Value="False" />
+                                        <Condition Binding="{Binding ElementName=Amount, Path=(Validation.HasError)}" Value="False" />
+                                        <Condition Binding="{Binding ElementName=BonusDate, Path=(Validation.HasError)}" Value="False" />
+                                    </MultiDataTrigger.Conditions>
+                                    <Setter Property="IsEnabled" Value="True"/>
+                                </MultiDataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=BonusName, Path=Text}" Value="">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=BonusPlayer, Path=Text}" Value="">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                            <Setter Property="IsEnabled" Value="False"/>
+                        </Style>
+                    </Button.Style>
+                </Button>
+                <Button Command="{Binding CancelCommand}" Content="{ResX Key=Common_Cancel}"/>
+            </StackPanel>
+
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,552 @@
+#Game No : 436314946
+***** 888poker Hand History for Game 436314946 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:06:09
+Table Kharkiv 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,000 )
+Seat 4: GrossWinsss ( $1,000 )
+Seat 7: Jao15 ( $1,000 )
+Seat 9: Knight1306 ( $1,000 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Knight1306 raises [$1,000]
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+** Summary **
+Knight1306 collected [ $500 ]
+
+
+#Game No : 436314961
+***** 888poker Hand History for Game 436314961 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:06:29
+Table Kharkiv 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,000 )
+Seat 4: GrossWinsss ( $900 )
+Seat 7: Jao15 ( $800 )
+Seat 9: Knight1306 ( $1,300 )
+Jao15 posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss folds
+Jao15 raises [$700]
+Knight1306 folds
+** Summary **
+Jao15 collected [ $400 ]
+
+
+#Game No : 436314967
+***** 888poker Hand History for Game 436314967 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:06:40
+Table Kharkiv 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,000 )
+Seat 4: GrossWinsss ( $900 )
+Seat 7: Jao15 ( $1,000 )
+Seat 9: Knight1306 ( $1,100 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss raises [$900]
+Jao15 folds
+Knight1306 folds
+LOST_FAN calls [$700]
+** Dealing flop ** [ 6s, 9h, 9d ]
+** Dealing turn ** [ Qc ]
+** Dealing river ** [ 3h ]
+** Summary **
+LOST_FAN shows [ 6h, 6d ]
+GrossWinsss shows [ Kh, 9s ]
+LOST_FAN collected [ $1,895 ]
+
+
+#Game No : 436314989
+***** 888poker Hand History for Game 436314989 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:07:10
+Table Kharkiv 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,995 )
+Seat 4: GrossWinsss ( $1,000 )
+Seat 7: Jao15 ( $1,000 )
+Seat 9: Knight1306 ( $1,000 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 raises [$1,000]
+Knight1306 calls [$1,000]
+LOST_FAN folds
+GrossWinsss folds
+** Dealing flop ** [ 8h, 5c, 9c ]
+** Dealing turn ** [ 4d ]
+** Dealing river ** [ Kh ]
+** Summary **
+Jao15 shows [ Ad, 8s ]
+Knight1306 shows [ Qs, Js ]
+Jao15 collected [ $2,295 ]
+
+
+#Game No : 436315015
+***** 888poker Hand History for Game 436315015 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:07:51
+Table Kharkiv 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: LOST_FAN ( $1,895 )
+Seat 4: GrossWinsss ( $800 )
+Seat 7: Jao15 ( $2,295 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss raises [$700]
+Jao15 calls [$600]
+** Dealing flop ** [ 4s, 2s, 9c ]
+** Dealing turn ** [ Js ]
+** Dealing river ** [ Tc ]
+** Summary **
+GrossWinsss shows [ 8d, Qh ]
+Jao15 shows [ Qc, Ah ]
+GrossWinsss collected [ $1,595 ]
+
+
+#Game No : 436315055
+***** 888poker Hand History for Game 436315055 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:08:50
+Table Kharkiv 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: LOST_FAN ( $1,895 )
+Seat 4: GrossWinsss ( $1,595 )
+Seat 7: Jao15 ( $1,495 )
+Jao15 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss raises [$1,595]
+Jao15 folds
+LOST_FAN folds
+** Summary **
+GrossWinsss collected [ $1,895 ]
+
+
+#Game No : 436315074
+***** 888poker Hand History for Game 436315074 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:09:11
+Table Kharkiv 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,695 )
+Seat 2: _Dharma_ ( $1,000 )
+Seat 4: GrossWinsss ( $1,895 )
+Seat 7: Jao15 ( $1,395 )
+LOST_FAN posts small blind [$100]
+_Dharma_ posts big blind [$200]
+** Dealing down cards **
+GrossWinsss folds
+Jao15 raises [$1,395]
+LOST_FAN folds
+_Dharma_ folds
+** Summary **
+Jao15 collected [ $500 ]
+
+
+#Game No : 436315084
+***** 888poker Hand History for Game 436315084 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:09:26
+Table Kharkiv 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,595 )
+Seat 2: _Dharma_ ( $800 )
+Seat 4: GrossWinsss ( $1,895 )
+Seat 7: Jao15 ( $1,695 )
+_Dharma_ posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+LOST_FAN folds
+_Dharma_ raises [$700]
+GrossWinsss calls [$600]
+** Dealing flop ** [ 8h, Ad, 6h ]
+** Dealing turn ** [ 9c ]
+** Dealing river ** [ 2d ]
+** Summary **
+_Dharma_ shows [ Qs, Tc ]
+GrossWinsss shows [ Ks, Kd ]
+GrossWinsss collected [ $1,595 ]
+
+
+#Game No : 436315108
+***** 888poker Hand History for Game 436315108 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:09:56
+Table Kharkiv 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,595 )
+Seat 2: _Dharma_ ( $1,000 )
+Seat 4: GrossWinsss ( $2,690 )
+Seat 6: 888Dominik ( $1,000 )
+Seat 7: Jao15 ( $1,695 )
+GrossWinsss posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+LOST_FAN folds
+_Dharma_ folds
+GrossWinsss raises [$2,590]
+888Dominik calls [$800]
+** Dealing flop ** [ Th, Qh, Td ]
+** Dealing turn ** [ 2s ]
+** Dealing river ** [ 9h ]
+** Summary **
+GrossWinsss shows [ Qs, 3d ]
+888Dominik shows [ 3s, Kh ]
+GrossWinsss collected [ $1,995 ]
+
+
+#Game No : 436315127
+***** 888poker Hand History for Game 436315127 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:10:19
+Table Kharkiv 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,595 )
+Seat 2: _Dharma_ ( $1,000 )
+Seat 4: GrossWinsss ( $3,685 )
+Seat 6: 888Dominik ( $1,000 )
+Seat 7: Jao15 ( $1,695 )
+Seat 9: Knight1306 ( $1,000 )
+888Dominik posts small blind [$100]
+Jao15 folds
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+_Dharma_ folds
+GrossWinsss folds
+888Dominik raises [$900]
+Knight1306 folds
+** Summary **
+888Dominik did not show his hand
+888Dominik collected [ $1,200 ]
+
+
+#Game No : 436315141
+***** 888poker Hand History for Game 436315141 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:10:43
+Table Kharkiv 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,595 )
+Seat 2: _Dharma_ ( $1,000 )
+Seat 4: GrossWinsss ( $3,685 )
+Seat 6: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $800 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+_Dharma_ folds
+GrossWinsss folds
+888Dominik folds
+Knight1306 folds
+** Summary **
+LOST_FAN collected [ $300 ]
+
+
+#Game No : 436315154
+***** 888poker Hand History for Game 436315154 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:11:01
+Table Kharkiv 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,695 )
+Seat 2: _Dharma_ ( $1,000 )
+Seat 4: GrossWinsss ( $3,685 )
+Seat 6: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $700 )
+LOST_FAN posts small blind [$100]
+_Dharma_ folds
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 raises [$700]
+LOST_FAN folds
+GrossWinsss calls [$500]
+** Dealing flop ** [ 8c, Qh, 2s ]
+** Dealing turn ** [ 9c ]
+** Dealing river ** [ 9d ]
+** Summary **
+GrossWinsss shows [ 7c, 7h ]
+Knight1306 shows [ 8s, Kc ]
+Knight1306 collected [ $1,495 ]
+
+
+#Game No : 436315180
+***** 888poker Hand History for Game 436315180 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:11:29
+Table Kharkiv 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,595 )
+Seat 4: GrossWinsss ( $2,985 )
+Seat 6: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $1,495 )
+GrossWinsss posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 raises [$1,495]
+LOST_FAN folds
+GrossWinsss folds
+888Dominik calls [$1,000]
+** Dealing flop ** [ 9c, 6d, Td ]
+** Dealing turn ** [ Tc ]
+** Dealing river ** [ 3s ]
+** Summary **
+888Dominik shows [ As, Qh ]
+Knight1306 shows [ Ad, 5h ]
+888Dominik collected [ $2,495 ]
+
+
+#Game No : 436315198
+***** 888poker Hand History for Game 436315198 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:11:58
+Table Kharkiv 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,595 )
+Seat 4: GrossWinsss ( $2,885 )
+Seat 6: 888Dominik ( $2,495 )
+Seat 7: Jao15 ( $1,695 )
+Seat 9: Knight1306 ( $295 )
+888Dominik posts small blind [$100]
+Jao15 folds
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss raises [$2,885]
+888Dominik folds
+Knight1306 calls [$95]
+** Dealing flop ** [ 3h, 3c, Tc ]
+** Dealing turn ** [ Th ]
+** Dealing river ** [ Qh ]
+** Summary **
+GrossWinsss shows [ Ac, 2h ]
+Knight1306 shows [ Js, Jc ]
+Knight1306 collected [ $685 ]
+GrossWinsss collected [ $2,590 ]
+
+
+#Game No : 436315229
+***** 888poker Hand History for Game 436315229 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:12:32
+Table Kharkiv 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,595 )
+Seat 2: _Dharma_ ( $1,000 )
+Seat 4: GrossWinsss ( $2,590 )
+Seat 6: 888Dominik ( $2,395 )
+Seat 9: Knight1306 ( $685 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+_Dharma_ folds
+GrossWinsss raises [$2,590]
+888Dominik folds
+Knight1306 calls [$585]
+LOST_FAN folds
+** Dealing flop ** [ 8h, Kh, 6d ]
+** Dealing turn ** [ 4d ]
+** Dealing river ** [ 5s ]
+** Summary **
+GrossWinsss shows [ 2d, Ad ]
+Knight1306 shows [ Qd, Js ]
+GrossWinsss collected [ $1,565 ]
+
+
+#Game No : 436315252
+***** 888poker Hand History for Game 436315252 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:13:04
+Table Kharkiv 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,395 )
+Seat 4: GrossWinsss ( $3,470 )
+Seat 6: 888Dominik ( $2,395 )
+Seat 7: Jao15 ( $1,695 )
+GrossWinsss posts small blind [$100]
+888Dominik folds
+Jao15 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss raises [$3,370]
+Jao15 folds
+** Summary **
+GrossWinsss collected [ $3,670 ]
+
+
+#Game No : 436317579
+***** 888poker Hand History for Game 436317579 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:58:18
+Table Kharkiv 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,395 )
+Seat 2: OrioNeMaster ( $1,000 )
+Seat 6: Knight1306 ( $1,000 )
+Seat 7: Kikakukka ( $1,000 )
+Seat 9: _Dharma_ ( $1,000 )
+LOST_FAN posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+Kikakukka folds
+_Dharma_ raises [$1,000]
+LOST_FAN folds
+OrioNeMaster calls [$800]
+** Dealing flop ** [ Jh, Qd, 8h ]
+** Dealing turn ** [ 6s ]
+** Dealing river ** [ 2c ]
+** Summary **
+OrioNeMaster shows [ 9s, 9d ]
+_Dharma_ shows [ Td, Jd ]
+_Dharma_ collected [ $2,095 ]
+
+
+#Game No : 436317615
+***** 888poker Hand History for Game 436317615 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:58:52
+Table Kharkiv 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,295 )
+Seat 2: OrioNeMaster ( $1,000 )
+Seat 6: Knight1306 ( $1,000 )
+Seat 7: Kikakukka ( $1,000 )
+Seat 9: _Dharma_ ( $2,095 )
+OrioNeMaster posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+_Dharma_ raises [$2,095]
+LOST_FAN folds
+OrioNeMaster folds
+Knight1306 calls [$800]
+** Dealing flop ** [ Ad, 8c, 7c ]
+** Dealing turn ** [ 5c ]
+** Dealing river ** [ Qs ]
+** Summary **
+Knight1306 shows [ 4s, 4h ]
+_Dharma_ shows [ 3c, 3h ]
+Knight1306 collected [ $2,095 ]
+
+
+#Game No : 436317667
+***** 888poker Hand History for Game 436317667 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:59:36
+Table Kharkiv 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,295 )
+Seat 2: OrioNeMaster ( $1,000 )
+Seat 6: Knight1306 ( $2,095 )
+Seat 7: Kikakukka ( $1,000 )
+Seat 9: _Dharma_ ( $1,095 )
+Knight1306 posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+_Dharma_ folds
+LOST_FAN folds
+OrioNeMaster folds
+Knight1306 folds
+** Summary **
+Kikakukka collected [ $300 ]
+
+
+#Game No : 436317731
+***** 888poker Hand History for Game 436317731 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 08:00:39
+Table Kharkiv 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,295 )
+Seat 2: OrioNeMaster ( $1,000 )
+Seat 6: Knight1306 ( $1,995 )
+Seat 7: Kikakukka ( $3,190 )
+Seat 9: _Dharma_ ( $1,000 )
+_Dharma_ posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster raises [$1,000]
+Knight1306 folds
+Kikakukka folds
+_Dharma_ folds
+LOST_FAN folds
+** Summary **
+OrioNeMaster collected [ $500 ]
+
+
+#Game No : 436317749
+***** 888poker Hand History for Game 436317749 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 08:00:55
+Table Kharkiv 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,095 )
+Seat 2: OrioNeMaster ( $1,300 )
+Seat 6: Knight1306 ( $1,995 )
+Seat 7: Kikakukka ( $3,190 )
+Seat 9: _Dharma_ ( $900 )
+LOST_FAN posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+Kikakukka folds
+_Dharma_ raises [$900]
+LOST_FAN folds
+OrioNeMaster calls [$700]
+** Dealing flop ** [ Ks, 3s, 7c ]
+** Dealing turn ** [ Jd ]
+** Dealing river ** [ 6s ]
+** Summary **
+OrioNeMaster shows [ 7h, Jh ]
+_Dharma_ shows [ Qd, Ah ]
+OrioNeMaster collected [ $1,895 ]
+
+
+#Game No : 436317870
+***** 888poker Hand History for Game 436317870 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 08:02:41
+Table Kharkiv 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,795 )
+Seat 2: OrioNeMaster ( $2,195 )
+Seat 4: Jao15 ( $700 )
+Seat 6: Knight1306 ( $795 )
+Seat 7: Kikakukka ( $2,990 )
+Seat 9: _Dharma_ ( $1,000 )
+Kikakukka posts small blind [$100]
+_Dharma_ folds
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster folds
+Jao15 raises [$700]
+Knight1306 folds
+Kikakukka raises [$2,890]
+LOST_FAN folds
+** Dealing flop ** [ Kh, 3s, 9c ]
+** Dealing turn ** [ Js ]
+** Dealing river ** [ 7s ]
+** Summary **
+Jao15 shows [ Jc, Ts ]
+Kikakukka shows [ 7h, Ac ]
+Jao15 collected [ $1,595 ]
+Kikakukka collected [ $2,290 ]
+
+

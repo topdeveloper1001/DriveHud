@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187503861">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 818994177</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>14</gamecount>  
+	          <startdate>2014-01-25 10:37:08</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,077</bets>  
+	          <wins>1,277</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>4</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.00</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5435509423">
+		 <general>
+		  <startdate>2014-01-25 10:37:08</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="800" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Sun100ka" type="1" sum="10" cards="[cards]"/><action no="2" player="vis007" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H5 S7</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="5" player="Sun100ka" type="3" sum="10" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="6" player="vis007" type="4" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="3" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK DQ CQ</cards><action no="7" player="Sun100ka" type="5" sum="20" cards=""/><action no="8" player="vis007" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435509554">
+		 <general>
+		  <startdate>2014-01-25 10:37:34</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="820" dealer="1" win="110" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="vis007" type="1" sum="10" cards="[cards]"/><action no="2" player="marklama" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C2 H4</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="4" player="Sun100ka" type="23" sum="80" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="5" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="6" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435509687">
+		 <general>
+		  <startdate>2014-01-25 10:37:57</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="850" dealer="0" win="470" bet="260" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="770" dealer="1" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="marklama" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK S10</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="3" player="Sun100ka" type="23" sum="100" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="4" player="vis007" type="3" sum="100" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="5" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 C2 C5</cards><action no="7" player="Sun100ka" type="5" sum="40" cards=""/><action no="9" player="Sun100ka" type="3" sum="40" cards=""/><action no="8" player="vis007" type="23" sum="80" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="10" player="Sun100ka" type="5" sum="80" cards=""/><action no="11" player="vis007" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516654">
+		 <general>
+		  <startdate>2014-01-25 10:38:39</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,060" dealer="0" win="580" bet="285" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="770" dealer="1" win="0" bet="285" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Sun100ka" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H3 D2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">H9 S10</cards><action no="6" player="Sun100ka" type="23" sum="80" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="3" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">DA HK</cards><action no="4" player="marklama" type="23" sum="50" cards=""/><action no="7" player="marklama" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 S4 H2</cards><action no="8" player="Sun100ka" type="5" sum="60" cards=""/><action no="9" player="marklama" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="10" player="Sun100ka" type="4" sum="0" cards=""/><action no="12" player="Sun100ka" type="3" sum="125" cards=""/><action no="11" player="marklama" type="5" sum="125" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards><action no="13" player="Sun100ka" type="5" sum="20" cards=""/><action no="14" player="marklama" type="3" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516902">
+		 <general>
+		  <startdate>2014-01-25 10:39:30</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,355" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="590" dealer="0" win="680" bet="590" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Sun100ka" type="1" sum="15" cards="[cards]"/><action no="2" player="vis007" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S6 D3</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="5" player="Sun100ka" type="23" sum="60" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="6" player="vis007" type="3" sum="30" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="3" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 SA C5</cards><action no="7" player="Sun100ka" type="5" sum="30" cards=""/><action no="9" player="Sun100ka" type="0" sum="0" cards=""/><action no="8" player="vis007" type="23" sum="530" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517068">
+		 <general>
+		  <startdate>2014-01-25 10:40:02</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="770" dealer="0" win="0" bet="375" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,265" dealer="1" win="1,680" bet="1,215" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="680" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="485" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="vis007" type="1" sum="15" cards="[cards]"/><action no="2" player="marklama" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK CK</cards><action no="3" player="WorstCard" type="23" sum="75" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="4" player="Sun100ka" type="3" sum="75" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="5" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="6" player="marklama" type="3" sum="45" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ CJ H10</cards><action no="8" player="WorstCard" type="5" sum="120" cards=""/><action no="11" player="WorstCard" type="3" sum="120" cards=""/><action no="9" player="Sun100ka" type="23" sum="240" cards=""/><action no="7" player="marklama" type="4" sum="0" cards=""/><action no="10" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="3" sum="60" cards=""/><action no="13" player="Sun100ka" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards><action no="15" player="WorstCard" type="4" sum="0" cards=""/><action no="17" player="WorstCard" type="0" sum="0" cards=""/><action no="16" player="Sun100ka" type="5" sum="840" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517409">
+		 <general>
+		  <startdate>2014-01-25 10:41:09</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="395" dealer="0" win="247" bet="157" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,730" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="665" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="410" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Sun100ka" type="15" sum="5" cards="[cards]"/><action no="4" player="vis007" type="15" sum="5" cards="[cards]"/><action no="1" player="marklama" type="15" sum="5" cards="[cards]"/><action no="5" player="marklama" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DQ S2</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="7" player="Sun100ka" type="3" sum="50" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="8" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="9" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ D8 S4</cards><action no="11" player="WorstCard" type="5" sum="102" cards=""/><action no="12" player="Sun100ka" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517575">
+		 <general>
+		  <startdate>2014-01-25 10:41:40</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="485" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,675" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="660" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="380" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Sun100ka" type="15" sum="5" cards="[cards]"/><action no="6" player="Sun100ka" type="2" sum="50" cards="[cards]"/><action no="3" player="vis007" type="15" sum="5" cards="[cards]"/><action no="4" player="marklama" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HK H2</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><cards type="Pocket" player="vis007">X X</cards><action no="7" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="8" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517722">
+		 <general>
+		  <startdate>2014-01-25 10:42:09</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="455" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,715" dealer="0" win="0" bet="375" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="655" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="375" dealer="0" win="810" bet="375" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Sun100ka" type="15" sum="5" cards="[cards]"/><action no="5" player="Sun100ka" type="1" sum="25" cards="[cards]"/><action no="2" player="vis007" type="15" sum="5" cards="[cards]"/><action no="6" player="vis007" type="2" sum="50" cards="[cards]"/><action no="3" player="marklama" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H4 S4</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">SK DK</cards><action no="9" player="Sun100ka" type="3" sum="345" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="10" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">HA C6</cards><action no="7" player="marklama" type="23" sum="370" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 SA S6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards>
+	</round>
+	
+		</game><game gamecode="5435517880">
+		 <general>
+		  <startdate>2014-01-25 10:42:41</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="450" dealer="0" win="540" bet="450" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,340" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="600" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="810" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Sun100ka" type="15" sum="5" cards="[cards]"/><action no="1" player="vis007" type="15" sum="5" cards="[cards]"/><action no="5" player="vis007" type="1" sum="25" cards="[cards]"/><action no="2" player="marklama" type="15" sum="5" cards="[cards]"/><action no="6" player="marklama" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H8 DA</cards><action no="7" player="WorstCard" type="23" sum="445" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="8" player="Sun100ka" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="9" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="10" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435518008">
+		 <general>
+		  <startdate>2014-01-25 10:43:06</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="540" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,335" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="570" dealer="1" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="755" dealer="0" win="970" bet="755" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Sun100ka" type="15" sum="5" cards="[cards]"/><action no="4" player="vis007" type="15" sum="5" cards="[cards]"/><action no="1" player="marklama" type="15" sum="5" cards="[cards]"/><action no="5" player="marklama" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK S2</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="7" player="Sun100ka" type="3" sum="50" cards=""/><action no="11" player="Sun100ka" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="8" player="vis007" type="23" sum="100" cards=""/><action no="12" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="9" player="marklama" type="23" sum="750" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435518195">
+		 <general>
+		  <startdate>2014-01-25 10:43:43</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="485" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="1,280" dealer="0" win="0" bet="465" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="465" dealer="0" win="1,000" bet="465" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="970" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Sun100ka" type="15" sum="10" cards="[cards]"/><action no="6" player="Sun100ka" type="2" sum="100" cards="[cards]"/><action no="3" player="vis007" type="15" sum="10" cards="[cards]"/><action no="4" player="marklama" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D10 D3</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Sun100ka">HJ S4</cards><action no="10" player="Sun100ka" type="3" sum="355" cards=""/><cards type="Pocket" player="vis007">HK H10</cards><action no="7" player="vis007" type="23" sum="455" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="8" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 DQ H5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5435524790">
+		 <general>
+		  <startdate>2014-01-25 10:44:11</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="425" dealer="1" win="490" bet="310" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="815" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="1,000" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="960" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Sun100ka" type="15" sum="10" cards="[cards]"/><action no="5" player="Sun100ka" type="1" sum="50" cards="[cards]"/><action no="2" player="vis007" type="15" sum="10" cards="[cards]"/><action no="6" player="vis007" type="2" sum="100" cards="[cards]"/><action no="3" player="marklama" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H6 HQ</cards><action no="8" player="WorstCard" type="23" sum="300" cards=""/><cards type="Pocket" player="Sun100ka">X X</cards><action no="9" player="Sun100ka" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="10" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="7" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435524950">
+		 <general>
+		  <startdate>2014-01-25 10:44:42</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="605" dealer="0" win="0" bet="605" rebuy="0" addon="0" reg_code="6187503861"/><player seat="4" name="Sun100ka" chips="755" dealer="1" win="1,380" bet="605" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="890" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="marklama" chips="950" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="Sun100ka" type="15" sum="10" cards="[cards]"/><action no="1" player="vis007" type="15" sum="10" cards="[cards]"/><action no="5" player="vis007" type="1" sum="50" cards="[cards]"/><action no="2" player="marklama" type="15" sum="10" cards="[cards]"/><action no="6" player="marklama" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK HQ</cards><action no="7" player="WorstCard" type="23" sum="595" cards=""/><cards type="Pocket" player="Sun100ka">C5 CA</cards><action no="8" player="Sun100ka" type="3" sum="595" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="9" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="marklama">X X</cards><action no="10" player="marklama" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 S9 SA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game>  
+	</session>

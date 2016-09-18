@@ -1,0 +1,2449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="5944035303">  
+	<general>  
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>  
+		<tablename>Jakarta, 768873591</tablename>
+		<tournamentcurrency/>  
+		<duration>00:38</duration>  
+		<gamecount>70</gamecount>  
+		<startdate>2012-10-17 16:51:27</startdate>  
+		<currency>USD</currency>  
+		<nickname>WhiteRiderT</nickname>  
+		<bets>35,875</bets>  
+		<wins>43,375</wins>  
+		<chipsin>0</chipsin>
+		<chipsout>9,000</chipsout>
+		<ipoints>0.34</ipoints>
+		<statuspoints>0.34</statuspoints>
+		<awardpoints>0.34</awardpoints>
+		<is_asian>0</is_asian>
+		<tournamentname>Jakarta</tournamentname>
+		<place>1</place>
+		<buyin>$0.10+$0.02</buyin>
+		<totalbuyin>$0.12</totalbuyin>
+		<ipoints>0.34</ipoints>
+		<win>$0.42</win>
+		<statuspoints>0.34</statuspoints>
+		<awardpoints>0.34</awardpoints>  
+	</general>  
+	<game gamecode="4329780448">
+		<general>
+			<startdate>2012-10-17 16:51:27</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="FotisTheGreek" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,500" dealer="0" win="210" bet="130" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="FotisTheGreek" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="penny4mysoul" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="6" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FotisTheGreek">X X</cards>
+			<action no="7" player="FotisTheGreek" type="3" sum="50" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="8" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H5 C5</cards>
+			<action no="3" player="WhiteRiderT" type="23" sum="60" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CQ C2 CA</cards>
+			<action no="9" player="FotisTheGreek" type="4" sum="0" cards=""/>
+			<action no="11" player="FotisTheGreek" type="0" sum="0" cards=""/>
+			<action no="10" player="WhiteRiderT" type="5" sum="70" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329786884">
+		<general>
+			<startdate>2012-10-17 16:52:30</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="FotisTheGreek" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,580" dealer="0" win="450" bet="320" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,500" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="penny4mysoul" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FotisTheGreek">X X</cards>
+			<action no="6" player="FotisTheGreek" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="7" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HJ H10</cards>
+			<action no="8" player="WhiteRiderT" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="23" sum="40" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C7 DJ SJ</cards>
+			<action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="11" player="WhiteRiderT" type="23" sum="80" cards=""/>
+			<action no="10" player="BOLL1X" type="5" sum="20" cards=""/>
+			<action no="12" player="BOLL1X" type="3" sum="60" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D6</cards>
+			<action no="13" player="WhiteRiderT" type="5" sum="200" cards=""/>
+			<action no="14" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329787010">
+		<general>
+			<startdate>2012-10-17 16:53:15</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="FotisTheGreek" chips="1,440" dealer="0" win="270" bet="180" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,710" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="1,500" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FotisTheGreek">X X</cards>
+			<action no="5" player="FotisTheGreek" type="23" sum="80" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="6" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HK S6</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="8" player="Martinoq" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H8 DK D5</cards>
+			<action no="10" player="FotisTheGreek" type="4" sum="0" cards=""/>
+			<action no="9" player="Martinoq" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">HA</cards>
+			<action no="12" player="FotisTheGreek" type="5" sum="100" cards=""/>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="13" player="Martinoq" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329787117">
+		<general>
+			<startdate>2012-10-17 16:53:55</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="FotisTheGreek" chips="1,530" dealer="0" win="170" bet="80" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,700" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="1,420" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,380" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FotisTheGreek">H5 H7</cards>
+			<action no="4" player="FotisTheGreek" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="5" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C10 H2</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="7" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">S6 D5</cards>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D7 SQ D2</cards>
+			<action no="10" player="FotisTheGreek" type="5" sum="60" cards=""/>
+			<action no="9" player="BOLL1X" type="4" sum="0" cards=""/>
+			<action no="11" player="BOLL1X" type="3" sum="60" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H6</cards>
+			<action no="13" player="FotisTheGreek" type="4" sum="0" cards=""/>
+			<action no="12" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D9</cards>
+			<action no="15" player="FotisTheGreek" type="4" sum="0" cards=""/>
+			<action no="14" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329787238">
+		<general>
+			<startdate>2012-10-17 16:54:38</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="3" name="FotisTheGreek" chips="1,620" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,300" dealer="0" win="120" bet="80" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="20" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="10" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="8" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FotisTheGreek">X X</cards>
+			<action no="3" player="FotisTheGreek" type="3" sum="20" cards=""/>
+			<action no="9" player="FotisTheGreek" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="4" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S3 S4</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="6" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="7" player="BOLL1X" type="23" sum="80" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329787309">
+		<general>
+			<startdate>2012-10-17 16:55:05</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="3" name="FotisTheGreek" chips="1,600" dealer="0" win="190" bet="1,600" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="1,410" dealer="0" win="2,830" bet="1,410" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="FotisTheGreek" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="7" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FotisTheGreek">DA CA</cards>
+			<action no="8" player="FotisTheGreek" type="23" sum="140" cards=""/>
+			<action no="10" player="FotisTheGreek" type="23" sum="1,600" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="3" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D2 SQ</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">SK HK</cards>
+			<action no="5" player="Martinoq" type="23" sum="80" cards=""/>
+			<action no="9" player="Martinoq" type="23" sum="430" cards=""/>
+			<action no="11" player="Martinoq" type="7" sum="980" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C7 S6 H9</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">HJ</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DK</cards>
+		</round>
+
+	</game>
+	<game gamecode="4329787445">
+		<general>
+			<startdate>2012-10-17 16:55:59</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="FotisTheGreek" chips="190" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,470" dealer="0" win="510" bet="335" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,830" dealer="0" win="0" bet="165" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="FotisTheGreek" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="penny4mysoul" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="6" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FotisTheGreek">X X</cards>
+			<action no="7" player="FotisTheGreek" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="8" player="penny4mysoul" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H10 C7</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="23" sum="80" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H5 S3 D10</cards>
+			<action no="9" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="11" player="penny4mysoul" type="3" sum="85" cards=""/>
+			<action no="10" player="Martinoq" type="5" sum="85" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D2</cards>
+			<action no="12" player="penny4mysoul" type="5" sum="170" cards=""/>
+			<action no="13" player="Martinoq" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329787625">
+		<general>
+			<startdate>2012-10-17 16:57:07</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,470" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="3" name="FotisTheGreek" chips="180" dealer="1" win="0" bet="180" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,645" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,700" dealer="0" win="630" bet="380" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,665" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="penny4mysoul" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="23" sum="60" cards=""/>
+			<action no="9" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FotisTheGreek">DQ CJ</cards>
+			<action no="6" player="FotisTheGreek" type="23" sum="180" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="7" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CA HA</cards>
+			<action no="8" player="WhiteRiderT" type="23" sum="380" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C6 H6 S9</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D6</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DA</cards>
+		</round>
+
+	</game>
+	<game gamecode="4329794807">
+		<general>
+			<startdate>2012-10-17 16:57:54</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,635" dealer="1" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,950" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,665" dealer="0" win="100" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">HA D4</cards>
+			<action no="5" player="penny4mysoul" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H4 C4</cards>
+			<action no="6" player="WhiteRiderT" type="3" sum="10" cards=""/>
+			<cards type="Pocket" player="Martinoq">H10 D3</cards>
+			<action no="7" player="Martinoq" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S7 HK D5</cards>
+			<action no="10" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="8" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="9" player="Martinoq" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CK</cards>
+			<action no="13" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="11" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="12" player="Martinoq" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C10</cards>
+			<action no="16" player="penny4mysoul" type="3" sum="20" cards=""/>
+			<action no="14" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="17" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<action no="15" player="Martinoq" type="5" sum="20" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329794930">
+		<general>
+			<startdate>2012-10-17 16:58:38</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,595" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,930" dealer="1" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,725" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,340" dealer="0" win="540" bet="300" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="4" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D8 D6</cards>
+			<action no="5" player="WhiteRiderT" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="6" player="Martinoq" type="3" sum="100" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="7" player="BOLL1X" type="3" sum="80" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HQ C4 HK</cards>
+			<action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<action no="8" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="11" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="9" player="BOLL1X" type="5" sum="180" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329795023">
+		<general>
+			<startdate>2012-10-17 16:59:13</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,410" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,595" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,810" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,605" dealer="1" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,580" dealer="0" win="160" bet="80" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="40" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="7" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="3" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D7 H8</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S7 D9 S3</cards>
+			<action no="9" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="10" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C3</cards>
+			<action no="12" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<action no="11" player="BOLL1X" type="5" sum="40" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329795129">
+		<general>
+			<startdate>2012-10-17 16:59:53</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,370" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,595" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,810" dealer="0" win="140" bet="40" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,565" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,660" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="penny4mysoul" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="6" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">C2 DK</cards>
+			<action no="7" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H8 C8</cards>
+			<action no="3" player="WhiteRiderT" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="Martinoq">SJ C9</cards>
+			<action no="4" player="Martinoq" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C6 S3 SA</cards>
+			<action no="8" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="10" player="Martinoq" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S4</cards>
+			<action no="11" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="12" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="13" player="Martinoq" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">CA</cards>
+			<action no="14" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="15" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="16" player="Martinoq" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329795285">
+		<general>
+			<startdate>2012-10-17 17:00:48</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,350" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,555" dealer="0" win="200" bet="80" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,910" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,525" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,660" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="penny4mysoul" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="6" player="penny4mysoul" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H2 H10</cards>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="3" sum="40" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CJ DK S4</cards>
+			<action no="8" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="10" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="11" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S2</cards>
+			<action no="12" player="penny4mysoul" type="5" sum="40" cards=""/>
+			<action no="13" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<action no="14" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="15" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329795449">
+		<general>
+			<startdate>2012-10-17 17:01:44</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,675" dealer="1" win="1,080" bet="710" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,870" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,485" dealer="0" win="0" bet="350" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="5" player="penny4mysoul" type="23" sum="80" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C10 D9</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="7" player="Martinoq" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C9 S6 SJ</cards>
+			<action no="9" player="penny4mysoul" type="3" sum="90" cards=""/>
+			<action no="8" player="Martinoq" type="5" sum="90" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C6</cards>
+			<action no="11" player="penny4mysoul" type="3" sum="180" cards=""/>
+			<action no="10" player="Martinoq" type="5" sum="180" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S7</cards>
+			<action no="13" player="penny4mysoul" type="5" sum="360" cards=""/>
+			<action no="12" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="14" player="Martinoq" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329795614">
+		<general>
+			<startdate>2012-10-17 17:02:44</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="2,045" dealer="0" win="0" bet="160" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,850" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,135" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,620" dealer="0" win="360" bet="160" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">D5 SQ</cards>
+			<action no="4" player="penny4mysoul" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S3 C4</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="6" player="Martinoq" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="BOLL1X">HJ D9</cards>
+			<action no="7" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H8 C5 DJ</cards>
+			<action no="10" player="penny4mysoul" type="3" sum="40" cards=""/>
+			<action no="8" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="11" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="9" player="BOLL1X" type="5" sum="40" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C9</cards>
+			<action no="13" player="penny4mysoul" type="3" sum="40" cards=""/>
+			<action no="12" player="BOLL1X" type="5" sum="40" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H2</cards>
+			<action no="15" player="penny4mysoul" type="3" sum="40" cards=""/>
+			<action no="14" player="BOLL1X" type="5" sum="40" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329795747">
+		<general>
+			<startdate>2012-10-17 17:03:31</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,350" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,850" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,095" dealer="1" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,820" dealer="0" win="120" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="40" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">S5 D10</cards>
+			<action no="7" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="3" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H5 S4</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">SQ S9</cards>
+			<action no="5" player="Martinoq" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="BOLL1X">CA H3</cards>
+			<action no="6" player="BOLL1X" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C2 H8 D4</cards>
+			<action no="9" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="10" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SK</cards>
+			<action no="12" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="13" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="11" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DJ</cards>
+			<action no="15" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="16" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="14" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329803625">
+		<general>
+			<startdate>2012-10-17 17:04:11</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,310" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,885" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,850" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,055" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,900" dealer="1" win="140" bet="80" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="penny4mysoul" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="6" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="7" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D7 D5</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="3" sum="40" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C5 HQ S3</cards>
+			<action no="8" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="9" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S5</cards>
+			<action no="10" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="11" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D3</cards>
+			<action no="12" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="14" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<action no="13" player="BOLL1X" type="5" sum="40" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329803751">
+		<general>
+			<startdate>2012-10-17 17:04:54</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,290" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,845" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,850" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,055" dealer="0" win="480" bet="280" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,960" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="penny4mysoul" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="6" player="penny4mysoul" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DQ C5</cards>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="3" sum="40" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SQ C7 H3</cards>
+			<action no="8" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="12" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="13" player="WhiteRiderT" type="3" sum="80" cards=""/>
+			<action no="10" player="Martinoq" type="5" sum="80" cards=""/>
+			<action no="11" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C8</cards>
+			<action no="14" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="16" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<action no="15" player="Martinoq" type="5" sum="160" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329803882">
+		<general>
+			<startdate>2012-10-17 17:05:43</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,805" dealer="1" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,730" dealer="0" win="480" bet="420" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,255" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,920" dealer="0" win="480" bet="420" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="5" player="penny4mysoul" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SA S10</cards>
+			<action no="6" player="WhiteRiderT" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="7" player="Martinoq" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">CQ C10</cards>
+			<action no="3" player="BOLL1X" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H8 CJ HQ</cards>
+			<action no="11" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<action no="8" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="12" player="WhiteRiderT" type="3" sum="120" cards=""/>
+			<action no="9" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="13" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="10" player="BOLL1X" type="5" sum="120" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H5</cards>
+			<action no="14" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="15" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S9</cards>
+			<action no="16" player="WhiteRiderT" type="5" sum="240" cards=""/>
+			<action no="17" player="BOLL1X" type="3" sum="240" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329804033">
+		<general>
+			<startdate>2012-10-17 17:06:35</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,745" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,790" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,195" dealer="0" win="480" bet="240" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,980" dealer="0" win="0" bet="240" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="4" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CJ S2</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">H7 C5</cards>
+			<action no="6" player="Martinoq" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="BOLL1X">SJ HK</cards>
+			<action no="7" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S7 S3 C4</cards>
+			<action no="8" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="9" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DJ</cards>
+			<action no="10" player="Martinoq" type="5" sum="60" cards=""/>
+			<action no="11" player="BOLL1X" type="3" sum="60" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D6</cards>
+			<action no="12" player="Martinoq" type="5" sum="120" cards=""/>
+			<action no="13" player="BOLL1X" type="3" sum="120" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329804132">
+		<general>
+			<startdate>2012-10-17 17:07:24</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,290" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,745" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,790" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,435" dealer="1" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,740" dealer="0" win="300" bet="120" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="60" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="7" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="3" player="penny4mysoul" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S7 C6</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="3" sum="30" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S4 C3 SJ</cards>
+			<action no="9" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="10" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C4</cards>
+			<action no="13" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="14" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="15" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="12" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">CA</cards>
+			<action no="17" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<action no="18" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<action no="19" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="16" player="BOLL1X" type="5" sum="60" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329804278">
+		<general>
+			<startdate>2012-10-17 17:08:15</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,230" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,685" dealer="0" win="90" bet="60" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,790" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,375" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,920" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="penny4mysoul" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="6" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">S7 CJ</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329804321">
+		<general>
+			<startdate>2012-10-17 17:08:27</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,200" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,715" dealer="0" win="0" bet="240" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,790" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,375" dealer="0" win="0" bet="180" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,920" dealer="0" win="720" bet="240" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="penny4mysoul" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">S5 CK</cards>
+			<action no="6" player="penny4mysoul" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S7 DQ</cards>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="BOLL1X">HK D7</cards>
+			<action no="4" player="BOLL1X" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C6 HQ DK</cards>
+			<action no="8" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="12" player="penny4mysoul" type="3" sum="60" cards=""/>
+			<action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="13" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<action no="10" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="14" player="Martinoq" type="3" sum="60" cards=""/>
+			<action no="11" player="BOLL1X" type="5" sum="60" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H8</cards>
+			<action no="15" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="18" player="penny4mysoul" type="3" sum="60" cards=""/>
+			<action no="16" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="19" player="Martinoq" type="3" sum="60" cards=""/>
+			<action no="17" player="BOLL1X" type="5" sum="60" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S2</cards>
+			<action no="20" player="penny4mysoul" type="5" sum="60" cards=""/>
+			<action no="21" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="22" player="BOLL1X" type="3" sum="60" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329812250">
+		<general>
+			<startdate>2012-10-17 17:09:34</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,475" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,730" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,195" dealer="0" win="0" bet="180" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,400" dealer="0" win="390" bet="180" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="5" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C4 CJ</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">DA SJ</cards>
+			<action no="7" player="Martinoq" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">SQ HQ</cards>
+			<action no="3" player="BOLL1X" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D3 H6 C5</cards>
+			<action no="8" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="10" player="Martinoq" type="3" sum="60" cards=""/>
+			<action no="9" player="BOLL1X" type="5" sum="60" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C2</cards>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="13" player="Martinoq" type="3" sum="60" cards=""/>
+			<action no="12" player="BOLL1X" type="5" sum="60" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DJ</cards>
+			<action no="14" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="15" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329812376">
+		<general>
+			<startdate>2012-10-17 17:10:23</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,475" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="1,700" dealer="1" win="1,350" bet="450" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,015" dealer="0" win="0" bet="450" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,610" dealer="0" win="0" bet="450" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="4" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DQ D10</cards>
+			<action no="5" player="WhiteRiderT" type="23" sum="180" cards=""/>
+			<cards type="Pocket" player="Martinoq">D4 DA</cards>
+			<action no="6" player="Martinoq" type="3" sum="150" cards=""/>
+			<cards type="Pocket" player="BOLL1X">CQ SA</cards>
+			<action no="7" player="BOLL1X" type="3" sum="120" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DJ C2 D7</cards>
+			<action no="10" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="8" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="9" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S10</cards>
+			<action no="13" player="WhiteRiderT" type="5" sum="270" cards=""/>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="14" player="Martinoq" type="3" sum="270" cards=""/>
+			<action no="12" player="BOLL1X" type="4" sum="0" cards=""/>
+			<action no="15" player="BOLL1X" type="3" sum="270" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">HJ</cards>
+			<action no="18" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="16" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="17" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329812519">
+		<general>
+			<startdate>2012-10-17 17:11:23</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,200" dealer="0" win="300" bet="180" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,475" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="1,565" dealer="1" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,160" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="60" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="7" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">X X</cards>
+			<action no="3" player="penny4mysoul" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H8 DK</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="3" sum="30" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D10 CK S10</cards>
+			<action no="9" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="10" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C10</cards>
+			<action no="12" player="AntoniAG9" type="5" sum="120" cards=""/>
+			<action no="13" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="11" player="BOLL1X" type="4" sum="0" cards=""/>
+			<action no="14" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329812620">
+		<general>
+			<startdate>2012-10-17 17:12:03</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,320" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="5" name="penny4mysoul" chips="1,475" dealer="0" win="0" bet="1,475" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="1,505" dealer="0" win="3,325" bet="1,505" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,100" dealer="1" win="0" bet="315" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="penny4mysoul" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="6" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="penny4mysoul">HQ H10</cards>
+			<action no="7" player="penny4mysoul" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D2 S5</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">C8 H8</cards>
+			<action no="4" player="Martinoq" type="3" sum="60" cards=""/>
+			<action no="8" player="Martinoq" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="3" sum="60" cards=""/>
+			<action no="9" player="BOLL1X" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S8 D10 H3</cards>
+			<action no="10" player="penny4mysoul" type="5" sum="195" cards=""/>
+			<action no="11" player="Martinoq" type="3" sum="195" cards=""/>
+			<action no="12" player="BOLL1X" type="3" sum="195" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D7</cards>
+			<action no="13" player="penny4mysoul" type="4" sum="0" cards=""/>
+			<action no="16" player="penny4mysoul" type="7" sum="1,160" cards=""/>
+			<action no="14" player="Martinoq" type="5" sum="1,190" cards=""/>
+			<action no="15" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">HJ</cards>
+		</round>
+
+	</game>
+	<game gamecode="4329812794">
+		<general>
+			<startdate>2012-10-17 17:13:06</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,290" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,600" dealer="0" win="100" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,325" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,785" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H5 CJ</cards>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="2" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329812845">
+		<general>
+			<startdate>2012-10-17 17:13:24</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,600" dealer="0" win="900" bet="600" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,325" dealer="0" win="0" bet="300" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,785" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HJ HK</cards>
+			<action no="5" player="WhiteRiderT" type="23" sum="300" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="6" player="Martinoq" type="3" sum="200" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D9 H10 C10</cards>
+			<action no="7" player="WhiteRiderT" type="5" sum="300" cards=""/>
+			<action no="8" player="Martinoq" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329812943">
+		<general>
+			<startdate>2012-10-17 17:14:03</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,900" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,025" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,785" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SJ C9</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="3" sum="50" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H7 S2 H3</cards>
+			<action no="7" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S10</cards>
+			<action no="9" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="11" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="10" player="BOLL1X" type="5" sum="100" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329813052">
+		<general>
+			<startdate>2012-10-17 17:14:46</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,290" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,900" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,925" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,885" dealer="0" win="200" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="100" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="50" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">S5 C4</cards>
+			<action no="6" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SQ D5</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">H4 S6</cards>
+			<action no="5" player="BOLL1X" type="3" sum="50" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SK D7 H2</cards>
+			<action no="8" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="7" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D6</cards>
+			<action no="10" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="9" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">SA</cards>
+			<action no="12" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<action no="11" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329813132">
+		<general>
+			<startdate>2012-10-17 17:15:15</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,190" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,900" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,925" dealer="0" win="350" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,985" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H8 H5</cards>
+			<action no="6" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">S8 SJ</cards>
+			<action no="3" player="Martinoq" type="3" sum="100" cards=""/>
+			<cards type="Pocket" player="BOLL1X">DQ DK</cards>
+			<action no="4" player="BOLL1X" type="3" sum="100" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D5 H6 D10</cards>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="8" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="9" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H4</cards>
+			<action no="10" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="12" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">CJ</cards>
+			<action no="13" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="14" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="15" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329821998">
+		<general>
+			<startdate>2012-10-17 17:15:59</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,140" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,800" dealer="0" win="400" bet="300" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,175" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C6 C7</cards>
+			<action no="5" player="WhiteRiderT" type="23" sum="300" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="6" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822064">
+		<general>
+			<startdate>2012-10-17 17:16:19</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,140" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,900" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,075" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,885" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S10 S7</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="3" sum="50" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H10 H3 SK</cards>
+			<action no="7" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="9" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="5" sum="100" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822163">
+		<general>
+			<startdate>2012-10-17 17:16:49</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,140" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,900" dealer="0" win="450" bet="300" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,975" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,985" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="100" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="50" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="6" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CK DK</cards>
+			<action no="3" player="WhiteRiderT" type="23" sum="300" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822237">
+		<general>
+			<startdate>2012-10-17 17:17:15</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,040" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,050" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,975" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,935" dealer="1" win="250" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C7 S3</cards>
+			<action no="6" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">DA S7</cards>
+			<action no="4" player="BOLL1X" type="3" sum="100" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H8 D2 C2</cards>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D4</cards>
+			<action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="10" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H10</cards>
+			<action no="11" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="12" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822334">
+		<general>
+			<startdate>2012-10-17 17:17:45</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="990" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,950" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,975" dealer="0" win="150" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,085" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HJ C8</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822476">
+		<general>
+			<startdate>2012-10-17 17:18:26</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,900" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,025" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,085" dealer="0" win="150" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C6 C10</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+		</round>
+
+	</game>
+	<game gamecode="4329822527">
+		<general>
+			<startdate>2012-10-17 17:18:42</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="990" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,900" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,975" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,135" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="100" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="50" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="6" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C8 H5</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="23" sum="200" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822570">
+		<general>
+			<startdate>2012-10-17 17:18:56</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="890" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,900" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,975" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,235" dealer="1" win="450" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DQ C8</cards>
+			<action no="6" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="3" sum="100" cards=""/>
+			<cards type="Pocket" player="BOLL1X">SQ S3</cards>
+			<action no="4" player="BOLL1X" type="3" sum="100" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CK S5 S10</cards>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="8" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="9" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D3</cards>
+			<action no="10" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="12" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S9</cards>
+			<action no="13" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="16" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<action no="14" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="17" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="15" player="BOLL1X" type="5" sum="100" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822752">
+		<general>
+			<startdate>2012-10-17 17:19:47</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,800" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,875" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,485" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S3 SK</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822813">
+		<general>
+			<startdate>2012-10-17 17:20:05</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,725" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,950" dealer="0" win="600" bet="450" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,485" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C6 D5</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="23" sum="450" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822870">
+		<general>
+			<startdate>2012-10-17 17:20:24</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="840" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,725" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,100" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,335" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="150" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="75" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">S3 S2</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329822922">
+		<general>
+			<startdate>2012-10-17 17:20:38</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="915" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="2,725" dealer="0" win="3,100" bet="2,725" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,100" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,260" dealer="1" win="0" bet="300" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S4 H4</cards>
+			<action no="6" player="WhiteRiderT" type="23" sum="2,725" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="23" sum="300" cards=""/>
+			<action no="7" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830014">
+		<general>
+			<startdate>2012-10-17 17:21:14</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,100" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="3,100" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,960" dealer="0" win="525" bet="300" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H4 D9</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="6" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="23" sum="300" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830137">
+		<general>
+			<startdate>2012-10-17 17:21:47</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,025" dealer="1" win="675" bet="450" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,950" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,185" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D6 H6</cards>
+			<action no="4" player="WhiteRiderT" type="23" sum="450" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830208">
+		<general>
+			<startdate>2012-10-17 17:22:08</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="840" dealer="0" win="1,830" bet="840" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,875" dealer="1" win="0" bet="840" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="2,035" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="150" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="75" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">S8 DQ</cards>
+			<action no="6" player="AntoniAG9" type="23" sum="840" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SK H6</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">SQ DK</cards>
+			<action no="4" player="Martinoq" type="3" sum="150" cards=""/>
+			<action no="7" player="Martinoq" type="3" sum="690" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="3" sum="75" cards=""/>
+			<action no="8" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H5 D6 CJ</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C8</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">CA</cards>
+		</round>
+
+	</game>
+	<game gamecode="4329830364">
+		<general>
+			<startdate>2012-10-17 17:22:52</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,830" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,250" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,035" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,885" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D4 H4</cards>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830410">
+		<general>
+			<startdate>2012-10-17 17:23:03</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,755" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,325" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,035" dealer="0" win="375" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,885" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H9 C5</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">C7 HA</cards>
+			<action no="6" player="Martinoq" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">CQ DJ</cards>
+			<action no="3" player="BOLL1X" type="3" sum="150" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SQ S4 SA</cards>
+			<action no="7" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S9</cards>
+			<action no="9" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="10" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D9</cards>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="12" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830552">
+		<general>
+			<startdate>2012-10-17 17:23:42</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,755" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,250" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,260" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,735" dealer="0" win="450" bet="300" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S4 C9</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="5" player="Martinoq" type="3" sum="75" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D7 S10 CQ</cards>
+			<action no="7" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DJ</cards>
+			<action no="9" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="10" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H7</cards>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="13" player="Martinoq" type="0" sum="0" cards=""/>
+			<action no="12" player="BOLL1X" type="5" sum="150" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830691">
+		<general>
+			<startdate>2012-10-17 17:24:24</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,755" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,110" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,885" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="150" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="75" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">C5 SA</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="4" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830746">
+		<general>
+			<startdate>2012-10-17 17:24:40</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,830" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,250" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,110" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,810" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C6 D8</cards>
+			<cards type="Pocket" player="Martinoq">X X</cards>
+			<action no="3" player="Martinoq" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830805">
+		<general>
+			<startdate>2012-10-17 17:24:57</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,755" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,325" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,110" dealer="0" win="375" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,810" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="Martinoq" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D5 H8</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Martinoq">S2 S6</cards>
+			<action no="6" player="Martinoq" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">CA D7</cards>
+			<action no="3" player="BOLL1X" type="3" sum="150" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D10 D9 C9</cards>
+			<action no="7" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="8" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C2</cards>
+			<action no="9" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="10" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H5</cards>
+			<action no="11" player="Martinoq" type="4" sum="0" cards=""/>
+			<action no="12" player="BOLL1X" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329830972">
+		<general>
+			<startdate>2012-10-17 17:25:47</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,755" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="3,250" dealer="1" win="5,735" bet="3,250" rebuy="0" addon="0"/>
+				<player seat="8" name="Martinoq" chips="2,335" dealer="0" win="0" bet="2,335" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,660" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Martinoq" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H7 D7</cards>
+			<action no="4" player="WhiteRiderT" type="23" sum="450" cards=""/>
+			<cards type="Pocket" player="Martinoq">SA S10</cards>
+			<action no="5" player="Martinoq" type="3" sum="375" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="6" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H6 C7 C10</cards>
+			<action no="8" player="WhiteRiderT" type="23" sum="2,800" cards=""/>
+			<action no="7" player="Martinoq" type="5" sum="525" cards=""/>
+			<action no="9" player="Martinoq" type="7" sum="1,360" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C8</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">SQ</cards>
+		</round>
+
+	</game>
+	<game gamecode="4329835053">
+		<general>
+			<startdate>2012-10-17 17:26:30</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,755" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="5,735" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,510" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">CJ H8</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835111">
+		<general>
+			<startdate>2012-10-17 17:26:48</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,855" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="5,735" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,410" dealer="1" win="700" bet="400" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SA S2</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="23" sum="400" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835165">
+		<general>
+			<startdate>2012-10-17 17:27:06</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,755" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="5,535" dealer="0" win="5,735" bet="5,535" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,710" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C4 SA</cards>
+			<action no="4" player="WhiteRiderT" type="23" sum="5,535" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835219">
+		<general>
+			<startdate>2012-10-17 17:27:23</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,755" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="5,735" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,510" dealer="0" win="800" bet="600" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H9 D8</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="23" sum="600" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835277">
+		<general>
+			<startdate>2012-10-17 17:27:36</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,555" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="5,735" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,710" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C9 DK</cards>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835298">
+		<general>
+			<startdate>2012-10-17 17:27:47</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,455" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="5,835" dealer="0" win="6,035" bet="5,835" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,710" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S10 DK</cards>
+			<action no="4" player="WhiteRiderT" type="23" sum="5,835" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835350">
+		<general>
+			<startdate>2012-10-17 17:28:01</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,455" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,035" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,510" dealer="0" win="600" bet="400" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SJ C2</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="3" sum="100" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H6 SA CK</cards>
+			<action no="7" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<action no="6" player="BOLL1X" type="5" sum="200" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835395">
+		<general>
+			<startdate>2012-10-17 17:28:19</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,255" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,035" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,710" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HJ S10</cards>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835425">
+		<general>
+			<startdate>2012-10-17 17:28:31</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,155" dealer="1" win="1,455" bet="1,155" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,135" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,710" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="23" sum="1,155" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C5 SK</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835484">
+		<general>
+			<startdate>2012-10-17 17:28:50</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,455" dealer="0" win="1,655" bet="1,455" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,035" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,510" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="23" sum="1,455" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H2 C9</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="3" sum="100" cards=""/>
+			<action no="6" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835556">
+		<general>
+			<startdate>2012-10-17 17:29:10</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,655" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,035" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,310" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C7 DQ</cards>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835600">
+		<general>
+			<startdate>2012-10-17 17:29:20</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,555" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,135" dealer="0" win="6,335" bet="6,135" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,310" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DQ C9</cards>
+			<action no="4" player="WhiteRiderT" type="23" sum="6,135" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835635">
+		<general>
+			<startdate>2012-10-17 17:29:36</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,555" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,335" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,110" dealer="0" win="600" bet="400" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="5" player="AntoniAG9" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H10 H2</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="4" player="BOLL1X" type="3" sum="100" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SJ D7 S9</cards>
+			<action no="7" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<action no="6" player="BOLL1X" type="5" sum="200" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835715">
+		<general>
+			<startdate>2012-10-17 17:30:05</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,355" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,335" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,310" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AntoniAG9" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="4" player="AntoniAG9" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SQ C9</cards>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="3" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835749">
+		<general>
+			<startdate>2012-10-17 17:30:14</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,255" dealer="1" win="1,555" bet="1,255" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,435" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,310" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="BOLL1X" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">X X</cards>
+			<action no="3" player="AntoniAG9" type="23" sum="1,255" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DQ H10</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BOLL1X">X X</cards>
+			<action no="5" player="BOLL1X" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4329835774">
+		<general>
+			<startdate>2012-10-17 17:30:25</startdate>		  
+			<players>
+				<player seat="1" name="AntoniAG9" chips="1,555" dealer="0" win="0" bet="1,555" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="6,335" dealer="1" win="9,000" bet="6,335" rebuy="0" addon="0"/>
+				<player seat="10" name="BOLL1X" chips="1,110" dealer="0" win="0" bet="1,110" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="AntoniAG9" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="BOLL1X" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="AntoniAG9">DK SK</cards>
+			<action no="5" player="AntoniAG9" type="7" sum="1,355" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CA D4</cards>
+			<action no="3" player="WhiteRiderT" type="23" sum="6,335" cards=""/>
+			<cards type="Pocket" player="BOLL1X">HJ SJ</cards>
+			<action no="4" player="BOLL1X" type="7" sum="1,010" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CJ C10 C8</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CK</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S5</cards>
+		</round>
+
+	</game>  
+</session>

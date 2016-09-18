@@ -1,0 +1,738 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224212074">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824219794</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:25</duration>  
+	          <gamecount>47</gamecount>  
+	          <startdate>2014-03-25 17:15:11</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>9,145</bets>  
+	          <wins>11,715</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>4,070</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601192986">
+		 <general>
+		  <startdate>2014-03-25 17:15:11</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="6" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ SJ</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="5" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601193136">
+		 <general>
+		  <startdate>2014-03-25 17:15:40</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,500" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="5" player="fagpub" type="23" sum="60" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA C2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="4" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601193303">
+		 <general>
+		  <startdate>2014-03-25 17:16:14</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="4" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 C5</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="GreatD1991">X X</cards><action no="3" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601205969">
+		 <general>
+		  <startdate>2014-03-25 17:16:48</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,470" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,500" dealer="0" win="195" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/><action no="2" player="GreatD1991" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="3" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA S7</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="8" player="GreatD1991" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 CJ C4</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="9" player="GreatD1991" type="5" sum="65" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206224">
+		 <general>
+		  <startdate>2014-03-25 17:17:38</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,530" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,570" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="fagpub" type="2" sum="20" cards="[cards]"/><action no="1" player="GreatD1991" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 S2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="7" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206392">
+		 <general>
+		  <startdate>2014-03-25 17:18:11</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,540" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="fagpub" type="1" sum="10" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="7" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C3 H5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="40" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="6" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206476">
+		 <general>
+		  <startdate>2014-03-25 17:18:31</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,470" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,560" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="6" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 S6</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="5" player="GreatD1991" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206631">
+		 <general>
+		  <startdate>2014-03-25 17:19:05</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,410" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,590" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="5" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 HJ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="4" player="GreatD1991" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206814">
+		 <general>
+		  <startdate>2014-03-25 17:19:45</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,460" dealer="0" win="160" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,390" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,530" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="4" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="23" sum="100" cards=""/><cards type="Pocket" player="moonbaseone">CK HQ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="3" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601207030">
+		 <general>
+		  <startdate>2014-03-25 17:20:26</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,370" dealer="1" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,620" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="20" cards="[cards]"/><action no="2" player="GreatD1991" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="3" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H7 HJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="80" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="8" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601207299">
+		 <general>
+		  <startdate>2014-03-25 17:21:19</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,530" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,430" dealer="0" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,580" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="fagpub" type="2" sum="40" cards="[cards]"/><action no="1" player="GreatD1991" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="8" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 CQ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="80" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="7" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219109">
+		 <general>
+		  <startdate>2014-03-25 17:21:52</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,520" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,470" dealer="0" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="fagpub" type="1" sum="20" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="7" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 H3</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="80" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="6" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219263">
+		 <general>
+		  <startdate>2014-03-25 17:22:26</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,560" dealer="0" win="160" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="6" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 H7</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="5" player="GreatD1991" type="23" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219394">
+		 <general>
+		  <startdate>2014-03-25 17:22:52</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,430" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,490" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,530" dealer="0" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="5" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 DQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="23" sum="80" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="4" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219611">
+		 <general>
+		  <startdate>2014-03-25 17:23:36</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,450" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,590" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="4" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK H8</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="GreatD1991">X X</cards><action no="3" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219740">
+		 <general>
+		  <startdate>2014-03-25 17:24:04</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,620" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,620" dealer="0" win="390" bet="270" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/><action no="2" player="GreatD1991" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="3" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ D2</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="23" sum="120" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="8" player="GreatD1991" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 DQ S2</cards><action no="9" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="11" player="Strik3rPo4ition" type="0" sum="0" cards=""/><action no="10" player="GreatD1991" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219918">
+		 <general>
+		  <startdate>2014-03-25 17:24:41</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,470" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,740" dealer="0" win="205" bet="145" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="fagpub" type="2" sum="60" cards="[cards]"/><action no="1" player="GreatD1991" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="8" player="fagpub" type="4" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 D10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="7" player="GreatD1991" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 H2 H10</cards><action no="10" player="fagpub" type="0" sum="0" cards=""/><action no="9" player="GreatD1991" type="5" sum="85" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220157">
+		 <general>
+		  <startdate>2014-03-25 17:25:32</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,410" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,460" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="fagpub" type="1" sum="30" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="7" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D3 C6</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="120" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="6" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220332">
+		 <general>
+		  <startdate>2014-03-25 17:26:04</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,400" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,410" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,590" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="6" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 H3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="23" sum="120" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="5" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220439">
+		 <general>
+		  <startdate>2014-03-25 17:26:25</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,370" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,350" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,420" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,680" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="5" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 C3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="23" sum="120" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="4" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220565">
+		 <general>
+		  <startdate>2014-03-25 17:26:50</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,320" dealer="1" win="405" bet="255" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,360" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,770" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="4" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 CJ</cards><action no="6" player="moonbaseone" type="23" sum="120" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="3" sum="60" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="3" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA C2 S4</cards><action no="10" player="moonbaseone" type="5" sum="135" cards=""/><action no="9" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="11" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235321">
+		 <general>
+		  <startdate>2014-03-25 17:27:49</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,650" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,800" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/><action no="2" player="GreatD1991" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="3" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 D8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601235510">
+		 <general>
+		  <startdate>2014-03-25 17:28:28</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,370" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,850" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="fagpub" type="2" sum="100" cards="[cards]"/><action no="1" player="GreatD1991" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="8" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="23" sum="200" cards=""/><cards type="Pocket" player="moonbaseone">D4 C8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="7" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235615">
+		 <general>
+		  <startdate>2014-03-25 17:28:48</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,280" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,520" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="fagpub" type="1" sum="50" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="7" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><cards type="Pocket" player="moonbaseone">H4 SA</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="6" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235711">
+		 <general>
+		  <startdate>2014-03-25 17:29:10</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,230" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,570" dealer="0" win="1,920" bet="1,570" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,800" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="6" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="23" sum="1,570" cards=""/><cards type="Pocket" player="moonbaseone">SK H7</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="5" player="GreatD1991" type="23" sum="250" cards=""/><action no="9" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235839">
+		 <general>
+		  <startdate>2014-03-25 17:29:34</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,920" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,370" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,330" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="5" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK D10</cards><action no="7" player="moonbaseone" type="23" sum="200" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="4" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236029">
+		 <general>
+		  <startdate>2014-03-25 17:30:10</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,230" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,550" dealer="0" win="400" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="4" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK C7</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="3" player="GreatD1991" type="23" sum="250" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236265">
+		 <general>
+		  <startdate>2014-03-25 17:31:01</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,180" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,700" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/><action no="2" player="GreatD1991" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="3" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 HQ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="23" sum="200" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="8" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236411">
+		 <general>
+		  <startdate>2014-03-25 17:31:32</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,230" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,180" dealer="0" win="1,405" bet="1,180" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,600" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="fagpub" type="2" sum="150" cards="[cards]"/><action no="1" player="GreatD1991" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="8" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 C8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="1,180" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="7" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236597">
+		 <general>
+		  <startdate>2014-03-25 17:32:08</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,080" dealer="0" win="1,380" bet="1,080" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,920" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,405" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,525" dealer="1" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="fagpub" type="1" sum="75" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="7" player="fagpub" type="23" sum="1,080" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK C9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="6" player="GreatD1991" type="3" sum="150" cards=""/><action no="9" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236729">
+		 <general>
+		  <startdate>2014-03-25 17:32:33</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,770" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,405" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,375" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="6" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK H4</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="5" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236865">
+		 <general>
+		  <startdate>2014-03-25 17:33:05</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,695" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,545" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,405" dealer="0" win="1,780" bet="1,405" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,375" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="5" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ HQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="23" sum="1,405" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="23" sum="300" cards=""/><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="4" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248153">
+		 <general>
+		  <startdate>2014-03-25 17:33:35</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,780" dealer="0" win="1,930" bet="1,780" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,300" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,375" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="4" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 S2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="23" sum="1,780" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="3" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248389">
+		 <general>
+		  <startdate>2014-03-25 17:34:01</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="0" win="1,605" bet="1,380" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,150" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,375" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/><action no="2" player="GreatD1991" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="3" player="fagpub" type="23" sum="1,380" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 H7</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="8" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248594">
+		 <general>
+		  <startdate>2014-03-25 17:34:23</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,605" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,075" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,225" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="fagpub" type="2" sum="150" cards="[cards]"/><action no="1" player="GreatD1991" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="8" player="fagpub" type="4" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA H5</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="7" player="GreatD1991" type="3" sum="75" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA H6 D2</cards><action no="10" player="fagpub" type="4" sum="0" cards=""/><action no="9" player="GreatD1991" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards><action no="12" player="fagpub" type="4" sum="0" cards=""/><action no="11" player="GreatD1991" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards><action no="14" player="fagpub" type="0" sum="0" cards=""/><action no="13" player="GreatD1991" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249066">
+		 <general>
+		  <startdate>2014-03-25 17:35:11</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,455" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,695" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,075" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,375" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="fagpub" type="1" sum="75" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="7" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><cards type="Pocket" player="moonbaseone">CA C9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="6" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249400">
+		 <general>
+		  <startdate>2014-03-25 17:35:47</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,380" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,770" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,930" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,075" dealer="0" win="1,500" bet="1,075" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,375" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="1" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="7" player="Onyiiiii" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="8" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="GreatD1991" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="12" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="13" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 H9</cards><action no="14" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="23" sum="1,050" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="11" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249655">
+		 <general>
+		  <startdate>2014-03-25 17:36:10</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,355" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,645" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,245" dealer="0" win="2,590" bet="1,245" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="1,905" dealer="0" win="0" bet="1,245" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,350" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="6" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="8" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="GreatD1991" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="11" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="12" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK D4</cards><action no="13" player="moonbaseone" type="23" sum="1,220" cards=""/><cards type="Pocket" player="DONCorleoneXX">HA H10</cards><action no="14" player="DONCorleoneXX" type="3" sum="1,020" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="10" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 C10 SK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game><game gamecode="5601249972">
+		 <general>
+		  <startdate>2014-03-25 17:36:45</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,330" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,620" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,590" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="660" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,475" dealer="0" win="450" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,325" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="5" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="7" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="8" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/><action no="3" player="GreatD1991" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="10" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="11" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ H8</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="13" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="GreatD1991">X X</cards><action no="9" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250185">
+		 <general>
+		  <startdate>2014-03-25 17:37:06</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,305" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="1,595" dealer="0" win="295" bet="1,595" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,565" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="535" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,700" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="1,300" dealer="0" win="2,800" bet="1,300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="4" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/><action no="2" player="GreatD1991" type="15" sum="25" cards="[cards]"/><action no="8" player="GreatD1991" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="9" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">CQ DK</cards><action no="10" player="Onyiiiii" type="23" sum="1,570" cards=""/><cards type="Pocket" player="moonbaseone">C5 HK</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="13" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">D8 DA</cards><action no="14" player="GreatD1991" type="7" sum="1,075" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA DJ S9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards>
+	</round>
+	
+		</game><game gamecode="5601250421">
+		 <general>
+		  <startdate>2014-03-25 17:37:31</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,280" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="295" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,540" dealer="0" win="2,965" bet="2,540" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="510" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,575" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="2,800" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="8" player="fagpub" type="2" sum="200" cards="[cards]"/><action no="3" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="GreatD1991" type="15" sum="25" cards="[cards]"/><action no="7" player="GreatD1991" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="14" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="9" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA S10</cards><action no="10" player="moonbaseone" type="23" sum="2,515" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="12" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="13" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250686">
+		 <general>
+		  <startdate>2014-03-25 17:38:02</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,055" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Onyiiiii" chips="270" dealer="0" win="0" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,965" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224212074"/><player seat="6" name="DONCorleoneXX" chips="485" dealer="0" win="0" bet="485" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,550" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="2,675" dealer="1" win="3,605" bet="2,675" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="7" player="fagpub" type="1" sum="100" cards="[cards]"/><action no="2" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="8" player="Onyiiiii" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="GreatD1991" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="13" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">S5 H7</cards><action no="14" player="Onyiiiii" type="7" sum="45" cards=""/><cards type="Pocket" player="moonbaseone">C10 CQ</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">C2 S2</cards><action no="10" player="DONCorleoneXX" type="23" sum="460" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="11" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">SJ CJ</cards><action no="12" player="GreatD1991" type="23" sum="2,650" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ S8 CA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards>
+	</round>
+	
+		</game><game gamecode="5601251048">
+		 <general>
+		  <startdate>2014-03-25 17:38:42</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="930" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,940" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224212074"/><player seat="8" name="Strik3rPo4ition" chips="1,525" dealer="0" win="700" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="3,605" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="3" player="GreatD1991" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="8" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 C5</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="400" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="7" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264364">
+		 <general>
+		  <startdate>2014-03-25 17:39:08</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="905" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,715" dealer="0" win="2,990" bet="2,715" rebuy="0" addon="0" reg_code="6224212074"/><player seat="8" name="Strik3rPo4ition" chips="1,800" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="3,580" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/><action no="3" player="GreatD1991" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="8" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA H6</cards><action no="9" player="moonbaseone" type="23" sum="2,690" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="7" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264480">
+		 <general>
+		  <startdate>2014-03-25 17:39:32</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="880" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,990" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224212074"/><player seat="8" name="Strik3rPo4ition" chips="1,575" dealer="0" win="1,950" bet="1,575" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="3,555" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="150" cards="[cards]"/><action no="2" player="GreatD1991" type="15" sum="25" cards="[cards]"/><action no="6" player="GreatD1991" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><action no="7" player="fagpub" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 C3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="23" sum="1,550" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="10" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264652">
+		 <general>
+		  <startdate>2014-03-25 17:40:09</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="855" dealer="0" win="550" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,965" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224212074"/><player seat="8" name="Strik3rPo4ition" chips="1,950" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="3,230" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="6" player="fagpub" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="GreatD1991" type="15" sum="25" cards="[cards]"/><action no="5" player="GreatD1991" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">X X</cards><cards type="Pocket" player="moonbaseone">H9 DJ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="9" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264756">
+		 <general>
+		  <startdate>2014-03-25 17:40:29</startdate>		  
+		  <players>
+		   <player seat="1" name="fagpub" chips="1,080" dealer="0" win="0" bet="1,080" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,940" dealer="0" win="2,210" bet="1,080" rebuy="0" addon="0" reg_code="6224212074"/><player seat="8" name="Strik3rPo4ition" chips="1,925" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="GreatD1991" chips="3,055" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="fagpub" type="15" sum="25" cards="[cards]"/><action no="5" player="fagpub" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="GreatD1991" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="fagpub">DK D3</cards><action no="9" player="fagpub" type="23" sum="1,055" cards=""/><cards type="Pocket" player="moonbaseone">CK C7</cards><action no="10" player="moonbaseone" type="3" sum="755" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="GreatD1991">X X</cards><action no="8" player="GreatD1991" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 C5 SK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game>  
+	</session>

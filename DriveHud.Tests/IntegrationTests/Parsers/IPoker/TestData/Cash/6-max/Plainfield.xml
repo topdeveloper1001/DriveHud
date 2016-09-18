@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="5966310">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.02/$0.05</gametype>
+    <tablename>Plainfield</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2016-02-03 23:12:46</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>$0+$0</buyin>
+    <totalbuyin>$0</totalbuyin>
+    <win>0</win>
+  </general>
+<game gamecode="3224183538">
+  <general>
+    <startdate>2016-02-03 23:14:44</startdate>
+    <players>
+      <player seat="1" name="P1_544384RL" chips="2.43" dealer="0" win="0.48" bet="0.32" rebuy="0" addon="0" />
+      <player seat="5" name="P3_665486MU" chips="5.18" dealer="1" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="6" name="P4_981179WM" chips="2.19" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+      <player seat="8" name="P5_621996TU" chips="11.57" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+      <player seat="10" name="P6_615882BH" chips="15.02" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P4_981179WM" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P5_621996TU" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_615882BH">X X</cards>
+    <action no="3" player="P6_615882BH" type="0" sum="0" cards="" />
+    <action no="4" player="P1_544384RL" type="3" sum="0.05" cards="" />
+    <action no="5" player="P3_665486MU" type="3" sum="0.05" cards="" />
+    <action no="6" player="P4_981179WM" type="0" sum="0" cards="" />
+    <action no="7" player="P5_621996TU" type="4" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">C4 H5 S9</cards>
+    <action no="8" player="P5_621996TU" type="4" sum="0" cards="" />
+    <action no="9" player="P1_544384RL" type="4" sum="0" cards="" />
+    <action no="10" player="P3_665486MU" type="4" sum="0" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">S4</cards>
+    <action no="11" player="P5_621996TU" type="5" sum="0.05" cards="" />
+    <action no="12" player="P1_544384RL" type="3" sum="0.05" cards="" />
+    <action no="13" player="P3_665486MU" type="0" sum="0" cards="" />
+  </round>
+  <round no="4">
+    <cards type="River" player="">D6</cards>
+    <action no="14" player="P5_621996TU" type="4" sum="0" cards="" />
+    <action no="15" player="P1_544384RL" type="5" sum="0.22" cards="" />
+    <action no="16" player="P5_621996TU" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224184800">
+  <general>
+    <startdate>2016-02-03 23:16:26</startdate>
+    <players>
+      <player seat="1" name="P1_544384RL" chips="2.59" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="5" name="P3_665486MU" chips="4.93" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="6" name="P4_981179WM" chips="2.17" dealer="0" win="0.29" bet="0.15" rebuy="0" addon="0" />
+      <player seat="8" name="P5_621996TU" chips="11.42" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="10" name="P6_615882BH" chips="15.25" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P6_615882BH" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P1_544384RL" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_615882BH">X X</cards>
+    <action no="3" player="P3_665486MU" type="3" sum="0.05" cards="" />
+    <action no="4" player="P4_981179WM" type="3" sum="0.05" cards="" />
+    <action no="5" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="6" player="P6_615882BH" type="3" sum="0.03" cards="" />
+    <action no="7" player="P1_544384RL" type="4" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">C8 D2 CK</cards>
+    <action no="8" player="P6_615882BH" type="4" sum="0" cards="" />
+    <action no="9" player="P1_544384RL" type="4" sum="0" cards="" />
+    <action no="10" player="P3_665486MU" type="4" sum="0" cards="" />
+    <action no="11" player="P4_981179WM" type="5" sum="0.1" cards="" />
+    <action no="12" player="P6_615882BH" type="0" sum="0" cards="" />
+    <action no="13" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="14" player="P3_665486MU" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224185535">
+  <general>
+    <startdate>2016-02-03 23:17:47</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.52" dealer="1" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.02" dealer="0" win="1.09" bet="0.77" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="4.88" dealer="0" win="0" bet="0.3" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.31" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.42" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="1" name="P6_615882BH" chips="15.2" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="Hero" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P3_665486MU" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">CQ HQ</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_615882BH">X X</cards>
+    <action no="3" player="P4_981179WM" type="0" sum="0" cards="" />
+    <action no="4" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="5" player="P6_615882BH" type="0" sum="0" cards="" />
+    <action no="6" player="P1_544384RL" type="3" sum="0.05" cards="" />
+    <action no="7" player="Hero" type="23" sum="0.3" cards="" />
+    <action no="8" player="P3_665486MU" type="3" sum="0.25" cards="" />
+    <action no="9" player="P1_544384RL" type="0" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">C5 H4 C8</cards>
+    <action no="10" player="Hero" type="5" sum="0.47" cards="" />
+    <action no="11" player="P3_665486MU" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224186368">
+  <general>
+    <startdate>2016-02-03 23:19:11</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.47" dealer="0" win="0" bet="0.15" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.34" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="4.56" dealer="1" win="0" bet="0.15" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.26" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.42" dealer="0" win="0" bet="0.15" rebuy="0" addon="0" />
+      <player seat="1" name="P6_615882BH" chips="15.27" dealer="0" win="0.99" bet="0.55" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P4_981179WM" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P5_621996TU" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">D8 SQ</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_615882BH">X X</cards>
+    <action no="3" player="P6_615882BH" type="23" sum="0.15" cards="" />
+    <action no="4" player="P1_544384RL" type="3" sum="0.15" cards="" />
+    <action no="5" player="Hero" type="0" sum="0" cards="" />
+    <action no="6" player="P3_665486MU" type="3" sum="0.15" cards="" />
+    <action no="7" player="P4_981179WM" type="0" sum="0" cards="" />
+    <action no="8" player="P5_621996TU" type="3" sum="0.1" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">S2 S5 D7</cards>
+    <action no="9" player="P5_621996TU" type="4" sum="0" cards="" />
+    <action no="10" player="P6_615882BH" type="5" sum="0.4" cards="" />
+    <action no="11" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="12" player="P3_665486MU" type="0" sum="0" cards="" />
+    <action no="13" player="P5_621996TU" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224186819">
+  <general>
+    <startdate>2016-02-03 23:20:23</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.32" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.34" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="4.41" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.24" dealer="1" win="0.34" bet="0.15" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.27" dealer="0" win="0" bet="0.15" rebuy="0" addon="0" />
+      <player seat="1" name="P6_615882BH" chips="15.71" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P5_621996TU" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P6_615882BH" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">C5 C2</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">SQ S2</cards>
+    <cards type="Pocket" player="P5_621996TU">H9 HA</cards>
+    <cards type="Pocket" player="P6_615882BH">X X</cards>
+    <action no="3" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="4" player="Hero" type="0" sum="0" cards="" />
+    <action no="5" player="P3_665486MU" type="0" sum="0" cards="" />
+    <action no="6" player="P4_981179WM" type="3" sum="0.05" cards="" />
+    <action no="7" player="P5_621996TU" type="3" sum="0.03" cards="" />
+    <action no="8" player="P6_615882BH" type="4" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">DJ H6 HQ</cards>
+    <action no="9" player="P5_621996TU" type="4" sum="0" cards="" />
+    <action no="10" player="P6_615882BH" type="4" sum="0" cards="" />
+    <action no="11" player="P4_981179WM" type="5" sum="0.1" cards="" />
+    <action no="12" player="P5_621996TU" type="3" sum="0.1" cards="" />
+    <action no="13" player="P6_615882BH" type="0" sum="0" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">C7</cards>
+    <action no="14" player="P5_621996TU" type="4" sum="0" cards="" />
+    <action no="15" player="P4_981179WM" type="4" sum="0" cards="" />
+  </round>
+  <round no="4">
+    <cards type="River" player="">D5</cards>
+    <action no="16" player="P5_621996TU" type="4" sum="0" cards="" />
+    <action no="17" player="P4_981179WM" type="4" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224187487">
+  <general>
+    <startdate>2016-02-03 23:21:05</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.32" dealer="0" win="0.15" bet="0.05" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.34" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="4.41" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.43" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.12" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="1" name="P6_615882BH" chips="15.66" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P6_615882BH" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P1_544384RL" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">HJ D6</cards>
+    <cards type="Pocket" player="Hero">SJ DQ</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_615882BH">CQ C2</cards>
+    <action no="3" player="Hero" type="0" sum="0" cards="" />
+    <action no="4" player="P3_665486MU" type="3" sum="0.05" cards="" />
+    <action no="5" player="P4_981179WM" type="0" sum="0" cards="" />
+    <action no="6" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="7" player="P6_615882BH" type="3" sum="0.03" cards="" />
+    <action no="8" player="P1_544384RL" type="4" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">H7 C6 HK</cards>
+    <action no="9" player="P6_615882BH" type="4" sum="0" cards="" />
+    <action no="10" player="P1_544384RL" type="4" sum="0" cards="" />
+    <action no="11" player="P3_665486MU" type="4" sum="0" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">D4</cards>
+    <action no="12" player="P6_615882BH" type="4" sum="0" cards="" />
+    <action no="13" player="P1_544384RL" type="4" sum="0" cards="" />
+    <action no="14" player="P3_665486MU" type="4" sum="0" cards="" />
+  </round>
+  <round no="4">
+    <cards type="River" player="">C7</cards>
+    <action no="15" player="P6_615882BH" type="4" sum="0" cards="" />
+    <action no="16" player="P1_544384RL" type="4" sum="0" cards="" />
+    <action no="17" player="P3_665486MU" type="4" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224188380">
+  <general>
+    <startdate>2016-02-03 23:23:30</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.37" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.29" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="4.31" dealer="0" win="0" bet="1.2" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.43" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.12" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="1" name="P6_615882BH" chips="15.75" dealer="0" win="2.3" bet="1.2" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="Hero" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P3_665486MU" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">H8 C5</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_615882BH">DA CA</cards>
+    <action no="3" player="P4_981179WM" type="0" sum="0" cards="" />
+    <action no="4" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="5" player="P6_615882BH" type="23" sum="0.1" cards="" />
+    <action no="6" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="7" player="Hero" type="0" sum="0" cards="" />
+    <action no="8" player="P3_665486MU" type="3" sum="0.05" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">SK H4 DJ</cards>
+    <action no="9" player="P3_665486MU" type="4" sum="0" cards="" />
+    <action no="10" player="P6_615882BH" type="5" sum="0.05" cards="" />
+    <action no="11" player="P3_665486MU" type="3" sum="0.05" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">C3</cards>
+    <action no="12" player="P3_665486MU" type="5" sum="0.11" cards="" />
+    <action no="13" player="P6_615882BH" type="23" sum="0.42" cards="" />
+    <action no="14" player="P3_665486MU" type="3" sum="0.31" cards="" />
+  </round>
+  <round no="4">
+    <cards type="River" player="">C10</cards>
+    <action no="15" player="P3_665486MU" type="4" sum="0" cards="" />
+    <action no="16" player="P6_615882BH" type="5" sum="0.63" cards="" />
+    <action no="17" player="P3_665486MU" type="3" sum="0.63" cards="" />
+  </round>
+</game><game gamecode="3224189611">
+  <general>
+    <startdate>2016-02-03 23:25:33</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.32" dealer="0" win="0" bet="0.1" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.46" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="3.06" dealer="1" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.38" dealer="0" win="0.49" bet="0.3" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.12" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="1" name="P6_615882BH" chips="16.8" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P4_981179WM" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P5_621996TU" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">HJ D8</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_615882BH">X X</cards>
+    <action no="3" player="P6_615882BH" type="0" sum="0" cards="" />
+    <action no="4" player="P1_544384RL" type="3" sum="0.05" cards="" />
+    <action no="5" player="Hero" type="0" sum="0" cards="" />
+    <action no="6" player="P3_665486MU" type="3" sum="0.05" cards="" />
+    <action no="7" player="P4_981179WM" type="3" sum="0.03" cards="" />
+    <action no="8" player="P5_621996TU" type="4" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">C8 SK H10</cards>
+    <action no="9" player="P4_981179WM" type="4" sum="0" cards="" />
+    <action no="10" player="P5_621996TU" type="4" sum="0" cards="" />
+    <action no="11" player="P1_544384RL" type="4" sum="0" cards="" />
+    <action no="12" player="P3_665486MU" type="4" sum="0" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">D9</cards>
+    <action no="13" player="P4_981179WM" type="5" sum="0.05" cards="" />
+    <action no="14" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="15" player="P1_544384RL" type="3" sum="0.05" cards="" />
+    <action no="16" player="P3_665486MU" type="0" sum="0" cards="" />
+  </round>
+  <round no="4">
+    <cards type="River" player="">D3</cards>
+    <action no="17" player="P4_981179WM" type="5" sum="0.2" cards="" />
+    <action no="18" player="P1_544384RL" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224190689">
+  <general>
+    <startdate>2016-02-03 23:26:45</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.17" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.46" dealer="0" win="0.68" bet="0.43" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="2.79" dealer="0" win="0" bet="0.2" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.57" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.02" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="1" name="P6_167868YE" chips="3.3" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P6_167868YE" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P1_544384RL" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">H8 H7</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_167868YE">X X</cards>
+    <action no="3" player="Hero" type="23" sum="0.2" cards="" />
+    <action no="4" player="P3_665486MU" type="3" sum="0.2" cards="" />
+    <action no="5" player="P4_981179WM" type="0" sum="0" cards="" />
+    <action no="6" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="7" player="P6_167868YE" type="0" sum="0" cards="" />
+    <action no="8" player="P1_544384RL" type="0" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">D9 D2 CJ</cards>
+    <action no="9" player="Hero" type="5" sum="0.23" cards="" />
+    <action no="10" player="P3_665486MU" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224190916">
+  <general>
+    <startdate>2016-02-03 23:27:57</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.12" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.71" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="2.59" dealer="0" win="0.17" bet="0.05" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.57" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.02" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="1" name="P6_167868YE" chips="3.28" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P1_544384RL" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="Hero" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">H4 H5</cards>
+    <cards type="Pocket" player="P3_665486MU">DA C5</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_167868YE">X X</cards>
+    <action no="3" player="P3_665486MU" type="3" sum="0.05" cards="" />
+    <action no="4" player="P4_981179WM" type="3" sum="0.05" cards="" />
+    <action no="5" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="6" player="P6_167868YE" type="0" sum="0" cards="" />
+    <action no="7" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="8" player="Hero" type="4" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">D8 S3 D9</cards>
+    <action no="9" player="Hero" type="4" sum="0" cards="" />
+    <action no="10" player="P3_665486MU" type="4" sum="0" cards="" />
+    <action no="11" player="P4_981179WM" type="4" sum="0" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">D7</cards>
+    <action no="12" player="Hero" type="4" sum="0" cards="" />
+    <action no="13" player="P3_665486MU" type="4" sum="0" cards="" />
+    <action no="14" player="P4_981179WM" type="4" sum="0" cards="" />
+  </round>
+  <round no="4">
+    <cards type="River" player="">CQ</cards>
+    <action no="15" player="Hero" type="4" sum="0" cards="" />
+    <action no="16" player="P3_665486MU" type="4" sum="0" cards="" />
+    <action no="17" player="P4_981179WM" type="4" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224191726">
+  <general>
+    <startdate>2016-02-03 23:29:36</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.1" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="5.64" dealer="1" win="2.66" bet="1.2" rebuy="0" addon="0" />
+      <player seat="6" name="P3_665486MU" chips="2.66" dealer="0" win="0" bet="0.2" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.52" dealer="0" win="0" bet="0.2" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.09" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="1" name="P6_167868YE" chips="3.28" dealer="0" win="0" bet="1.2" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P3_665486MU" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P4_981179WM" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">S7 H7</cards>
+    <cards type="Pocket" player="P3_665486MU">X X</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_167868YE">D6 H6</cards>
+    <action no="3" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="4" player="P6_167868YE" type="23" sum="0.2" cards="" />
+    <action no="5" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="6" player="Hero" type="3" sum="0.2" cards="" />
+    <action no="7" player="P3_665486MU" type="3" sum="0.18" cards="" />
+    <action no="8" player="P4_981179WM" type="3" sum="0.15" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">D5 D4 C6</cards>
+    <action no="9" player="P3_665486MU" type="4" sum="0" cards="" />
+    <action no="10" player="P4_981179WM" type="4" sum="0" cards="" />
+    <action no="11" player="P6_167868YE" type="5" sum="0.2" cards="" />
+    <action no="12" player="Hero" type="3" sum="0.2" cards="" />
+    <action no="13" player="P3_665486MU" type="0" sum="0" cards="" />
+    <action no="14" player="P4_981179WM" type="0" sum="0" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">D8</cards>
+    <action no="15" player="P6_167868YE" type="5" sum="0.3" cards="" />
+    <action no="16" player="Hero" type="3" sum="0.3" cards="" />
+  </round>
+  <round no="4">
+    <cards type="River" player="">HJ</cards>
+    <action no="17" player="P6_167868YE" type="5" sum="0.5" cards="" />
+    <action no="18" player="Hero" type="3" sum="0.5" cards="" />
+  </round>
+</game><game gamecode="3224192936">
+  <general>
+    <startdate>2016-02-03 23:31:21</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.1" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="7.1" dealer="0" win="0" bet="0.25" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.02" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.36" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+      <player seat="1" name="P6_167868YE" chips="2.08" dealer="0" win="0.63" bet="0.38" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P5_621996TU" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P6_167868YE" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">D7 H7</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_167868YE">X X</cards>
+    <action no="3" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="4" player="Hero" type="23" sum="0.12" cards="" />
+    <action no="5" player="P4_981179WM" type="0" sum="0" cards="" />
+    <action no="6" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="7" player="P6_167868YE" type="3" sum="0.07" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">S2 CJ DQ</cards>
+    <action no="8" player="P6_167868YE" type="4" sum="0" cards="" />
+    <action no="9" player="Hero" type="5" sum="0.13" cards="" />
+    <action no="10" player="P6_167868YE" type="23" sum="0.26" cards="" />
+    <action no="11" player="Hero" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224193305">
+  <general>
+    <startdate>2016-02-03 23:32:27</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.1" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="6.85" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.02" dealer="0" win="0.2" bet="0.1" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.34" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="1" name="P6_167868YE" chips="2.33" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P6_167868YE" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P1_544384RL" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">H5 D3</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_167868YE">X X</cards>
+    <action no="3" player="Hero" type="0" sum="0" cards="" />
+    <action no="4" player="P4_981179WM" type="3" sum="0.05" cards="" />
+    <action no="5" player="P5_621996TU" type="0" sum="0" cards="" />
+    <action no="6" player="P6_167868YE" type="3" sum="0.03" cards="" />
+    <action no="7" player="P1_544384RL" type="4" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">HQ DA C8</cards>
+    <action no="8" player="P6_167868YE" type="4" sum="0" cards="" />
+    <action no="9" player="P1_544384RL" type="4" sum="0" cards="" />
+    <action no="10" player="P4_981179WM" type="4" sum="0" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">D9</cards>
+    <action no="11" player="P6_167868YE" type="4" sum="0" cards="" />
+    <action no="12" player="P1_544384RL" type="4" sum="0" cards="" />
+    <action no="13" player="P4_981179WM" type="5" sum="0.05" cards="" />
+    <action no="14" player="P6_167868YE" type="0" sum="0" cards="" />
+    <action no="15" player="P1_544384RL" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224193864">
+  <general>
+    <startdate>2016-02-03 23:33:12</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.05" dealer="0" win="0" bet="0.02" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="6.85" dealer="0" win="0" bet="0.05" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.12" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.34" dealer="0" win="0" bet="0.2" rebuy="0" addon="0" />
+      <player seat="1" name="P6_167868YE" chips="2.28" dealer="1" win="0.7" bet="0.45" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P1_544384RL" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="Hero" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">H4 S4</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_167868YE">X X</cards>
+    <action no="3" player="P4_981179WM" type="0" sum="0" cards="" />
+    <action no="4" player="P5_621996TU" type="3" sum="0.05" cards="" />
+    <action no="5" player="P6_167868YE" type="23" sum="0.2" cards="" />
+    <action no="6" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="7" player="Hero" type="0" sum="0" cards="" />
+    <action no="8" player="P5_621996TU" type="3" sum="0.15" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">S6 SJ H7</cards>
+    <action no="9" player="P5_621996TU" type="4" sum="0" cards="" />
+    <action no="10" player="P6_167868YE" type="5" sum="0.25" cards="" />
+    <action no="11" player="P5_621996TU" type="0" sum="0" cards="" />
+  </round>
+</game><game gamecode="3224194733">
+  <general>
+    <startdate>2016-02-03 23:35:12</startdate>
+    <players>
+      <player seat="3" name="P1_544384RL" chips="2.52" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="5" name="Hero" chips="6.78" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      <player seat="8" name="P4_981179WM" chips="2.07" dealer="0" win="1.06" bet="0.65" rebuy="0" addon="0" />
+      <player seat="10" name="P5_621996TU" chips="11.14" dealer="0" win="0" bet="0.45" rebuy="0" addon="0" />
+      <player seat="1" name="P6_167868YE" chips="2.07" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+    </players>
+  </general>
+  <round no="0">
+    <action no="1" player="P4_981179WM" type="1" sum="0.02" cards="[cards]" />
+    <action no="2" player="P5_621996TU" type="2" sum="0.05" cards="[cards]" />
+  </round>
+  <round no="1">
+    <cards type="Pocket" player="P1_544384RL">X X</cards>
+    <cards type="Pocket" player="Hero">CJ D2</cards>
+    <cards type="Pocket" player="P4_981179WM">X X</cards>
+    <cards type="Pocket" player="P5_621996TU">X X</cards>
+    <cards type="Pocket" player="P6_167868YE">X X</cards>
+    <action no="3" player="P6_167868YE" type="0" sum="0" cards="" />
+    <action no="4" player="P1_544384RL" type="0" sum="0" cards="" />
+    <action no="5" player="Hero" type="0" sum="0" cards="" />
+    <action no="6" player="P4_981179WM" type="3" sum="0.03" cards="" />
+    <action no="7" player="P5_621996TU" type="4" sum="0" cards="" />
+  </round>
+  <round no="2">
+    <cards type="Flop" player="">D9 H9 C3</cards>
+    <action no="8" player="P4_981179WM" type="4" sum="0" cards="" />
+    <action no="9" player="P5_621996TU" type="4" sum="0" cards="" />
+  </round>
+  <round no="3">
+    <cards type="Turn" player="">D3</cards>
+    <action no="10" player="P4_981179WM" type="5" sum="0.1" cards="" />
+    <action no="11" player="P5_621996TU" type="3" sum="0.1" cards="" />
+  </round>
+  <round no="4">
+    <cards type="River" player="">H5</cards>
+    <action no="12" player="P4_981179WM" type="5" sum="0.1" cards="" />
+    <action no="13" player="P5_621996TU" type="23" sum="0.3" cards="" />
+    <action no="14" player="P4_981179WM" type="23" sum="0.5" cards="" />
+    <action no="15" player="P5_621996TU" type="0" sum="0" cards="" />
+  </round>
+</game></session>

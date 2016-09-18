@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224179060">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824214543</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:28</duration>  
+	          <gamecount>42</gamecount>  
+	          <startdate>2014-03-25 16:12:20</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>7,075</bets>  
+	          <wins>9,985</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>4,410</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601027717">
+		 <general>
+		  <startdate>2014-03-25 16:12:20</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="smalldouge12" type="1" sum="10" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="7" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 H10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601027829">
+		 <general>
+		  <startdate>2014-03-25 16:12:47</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,490" dealer="1" win="180" bet="130" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="10" cards="[cards]"/><action no="2" player="theDL" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="6" player="smalldouge12" type="23" sum="40" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">SJ SQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 H4 D10</cards><action no="10" player="smalldouge12" type="4" sum="0" cards=""/><action no="9" player="theDL" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards><action no="12" player="smalldouge12" type="4" sum="0" cards=""/><action no="11" player="theDL" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards><action no="14" player="smalldouge12" type="5" sum="90" cards=""/><action no="13" player="theDL" type="4" sum="0" cards=""/><action no="15" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601028195">
+		 <general>
+		  <startdate>2014-03-25 16:14:12</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,460" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="5" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 D2</cards><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601028394">
+		 <general>
+		  <startdate>2014-03-25 16:14:54</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="4" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 SJ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601028507">
+		 <general>
+		  <startdate>2014-03-25 16:15:24</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/><action no="1" player="VanTr4X" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="smalldouge12">X X</cards><action no="3" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 DJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601028595">
+		 <general>
+		  <startdate>2014-03-25 16:15:45</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,510" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,540" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/><action no="2" player="smalldouge12" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="23" sum="40" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="8" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 D9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601042974">
+		 <general>
+		  <startdate>2014-03-25 16:16:22</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,520" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="smalldouge12" type="1" sum="20" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="7" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="8" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="23" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">SJ CA</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601043121">
+		 <general>
+		  <startdate>2014-03-25 16:16:53</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,530" dealer="0" win="1,120" bet="760" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,460" dealer="0" win="0" bet="320" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,510" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="20" cards="[cards]"/><action no="2" player="theDL" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">SA CK</cards><action no="5" player="Strik3rPo4ition" type="23" sum="120" cards=""/><action no="9" player="Strik3rPo4ition" type="3" sum="200" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="6" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="23" sum="320" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 S4</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 S5 HA</cards><action no="11" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="10" player="DONJohn90" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="13" player="Strik3rPo4ition" type="5" sum="440" cards=""/><action no="12" player="DONJohn90" type="4" sum="0" cards=""/><action no="14" player="DONJohn90" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601043427">
+		 <general>
+		  <startdate>2014-03-25 16:18:02</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,140" dealer="1" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,470" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="5" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="23" sum="80" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D5 D4</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601043544">
+		 <general>
+		  <startdate>2014-03-25 16:18:29</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,460" dealer="0" win="160" bet="120" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="4" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA SK</cards><action no="7" player="moonbaseone" type="23" sum="120" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601043782">
+		 <general>
+		  <startdate>2014-03-25 16:19:19</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,890" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="0" win="280" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,460" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="40" cards="[cards]"/><action no="1" player="VanTr4X" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="3" player="smalldouge12" type="23" sum="80" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C8 HJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 DQ D5</cards><action no="10" player="smalldouge12" type="5" sum="80" cards=""/><action no="9" player="VanTr4X" type="4" sum="0" cards=""/><action no="11" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601044082">
+		 <general>
+		  <startdate>2014-03-25 16:20:23</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,850" dealer="0" win="360" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,620" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/><action no="2" player="smalldouge12" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">HA DJ</cards><action no="7" player="Strik3rPo4ition" type="23" sum="120" cards=""/><cards type="Pocket" player="smalldouge12">D2 C2</cards><action no="8" player="smalldouge12" type="3" sum="60" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 DA</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 SK CQ</cards><action no="9" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="10" player="smalldouge12" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards><action no="11" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="13" player="Strik3rPo4ition" type="3" sum="60" cards=""/><action no="12" player="smalldouge12" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards><action no="14" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="15" player="smalldouge12" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060077">
+		 <general>
+		  <startdate>2014-03-25 16:21:42</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,030" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,440" dealer="0" win="120" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="smalldouge12" type="1" sum="30" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">C7 HA</cards><action no="7" player="smalldouge12" type="3" sum="30" cards=""/><cards type="Pocket" player="DONJohn90">D8 CK</cards><action no="8" player="DONJohn90" type="4" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ H3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ H6 C5</cards><action no="9" player="smalldouge12" type="4" sum="0" cards=""/><action no="10" player="DONJohn90" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="11" player="smalldouge12" type="4" sum="0" cards=""/><action no="12" player="DONJohn90" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S4</cards><action no="13" player="smalldouge12" type="4" sum="0" cards=""/><action no="14" player="DONJohn90" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060449">
+		 <general>
+		  <startdate>2014-03-25 16:23:10</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,030" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,140" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,450" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="30" cards="[cards]"/><action no="2" player="theDL" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="6" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="23" sum="120" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ C9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060592">
+		 <general>
+		  <startdate>2014-03-25 16:23:44</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,030" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,390" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="5" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 H7</cards><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060743">
+		 <general>
+		  <startdate>2014-03-25 16:24:17</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,030" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,530" dealer="0" win="210" bet="150" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="4" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ DJ</cards><action no="7" player="moonbaseone" type="23" sum="150" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060872">
+		 <general>
+		  <startdate>2014-03-25 16:24:46</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,030" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,590" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,320" dealer="0" win="350" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/><action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="3" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ C2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="23" sum="250" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601061102">
+		 <general>
+		  <startdate>2014-03-25 16:25:36</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,930" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,500" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/><action no="2" player="smalldouge12" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 D9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601061237">
+		 <general>
+		  <startdate>2014-03-25 16:26:01</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,550" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="200" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="smalldouge12" type="1" sum="50" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">H10 DJ</cards><action no="7" player="smalldouge12" type="3" sum="50" cards=""/><cards type="Pocket" player="DONJohn90">DK H8</cards><action no="8" player="DONJohn90" type="4" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 C10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 S6 D2</cards><action no="9" player="smalldouge12" type="4" sum="0" cards=""/><action no="10" player="DONJohn90" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="11" player="smalldouge12" type="4" sum="0" cards=""/><action no="12" player="DONJohn90" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards><action no="13" player="smalldouge12" type="4" sum="0" cards=""/><action no="14" player="DONJohn90" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601073874">
+		 <general>
+		  <startdate>2014-03-25 16:27:26</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,450" dealer="1" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,300" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,360" dealer="0" win="1,610" bet="1,360" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="50" cards="[cards]"/><action no="2" player="theDL" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="6" player="smalldouge12" type="23" sum="200" cards=""/><action no="9" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="23" sum="1,360" cards=""/><cards type="Pocket" player="moonbaseone">SA C6</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074122">
+		 <general>
+		  <startdate>2014-03-25 16:28:23</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,250" dealer="0" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,250" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,610" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="5" player="smalldouge12" type="23" sum="300" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 C10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074288">
+		 <general>
+		  <startdate>2014-03-25 16:29:02</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,880" dealer="0" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,475" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,535" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,420" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="23" sum="300" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="4" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ S3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074427">
+		 <general>
+		  <startdate>2014-03-25 16:29:31</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,105" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,475" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,535" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,365" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,270" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/><action no="1" player="VanTr4X" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="smalldouge12">X X</cards><action no="3" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ H2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074514">
+		 <general>
+		  <startdate>2014-03-25 16:29:52</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,180" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,475" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,250" dealer="0" win="1,475" bet="1,250" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,535" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,195" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/><action no="2" player="smalldouge12" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="8" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="23" sum="1,250" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 CQ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074709">
+		 <general>
+		  <startdate>2014-03-25 16:30:35</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,105" dealer="1" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,325" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,475" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,535" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,195" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="smalldouge12" type="1" sum="75" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="300" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="7" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="8" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C6 D2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074853">
+		 <general>
+		  <startdate>2014-03-25 16:31:09</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,250" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,325" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,535" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,365" dealer="0" win="525" bet="300" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,195" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="75" cards="[cards]"/><action no="2" player="theDL" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="6" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ SQ</cards><action no="3" player="moonbaseone" type="23" sum="300" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088086">
+		 <general>
+		  <startdate>2014-03-25 16:31:57</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,250" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,385" dealer="0" win="1,535" bet="1,385" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,195" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="5" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="23" sum="1,385" cards=""/><cards type="Pocket" player="moonbaseone">D3 D9</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088194">
+		 <general>
+		  <startdate>2014-03-25 16:32:25</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,330" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,250" dealer="0" win="850" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,535" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,195" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="5" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="8" player="VanTr4X" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="10" player="smalldouge12" type="23" sum="400" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="11" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="12" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 DA</cards><action no="13" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="14" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088420">
+		 <general>
+		  <startdate>2014-03-25 16:33:14</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,305" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,675" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,225" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,510" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,315" dealer="1" win="1,740" bet="1,315" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="970" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="8" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/><action no="3" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="4" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="7" player="VanTr4X" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="14" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="9" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="10" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="11" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA C2</cards><action no="12" player="moonbaseone" type="23" sum="1,290" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="13" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088595">
+		 <general>
+		  <startdate>2014-03-25 16:33:55</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,080" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,650" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONJohn90" chips="1,200" dealer="0" win="0" bet="1,200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,485" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,740" dealer="0" win="3,340" bet="1,740" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="845" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/><action no="2" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="8" player="smalldouge12" type="2" sum="200" cards="[cards]"/><action no="3" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="4" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="VanTr4X" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="13" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="14" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">HK SJ</cards><action no="9" player="DONJohn90" type="23" sum="1,175" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="10" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK DA</cards><action no="11" player="moonbaseone" type="7" sum="1,715" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="12" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 S5 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5601088711">
+		 <general>
+		  <startdate>2014-03-25 16:34:23</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,955" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,425" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,460" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="3,340" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="820" dealer="0" win="1,220" bet="820" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="6" player="smalldouge12" type="1" sum="100" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="7" player="theDL" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="VanTr4X" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="11" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="12" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 SQ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="9" player="VanTr4X" type="23" sum="795" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088836">
+		 <general>
+		  <startdate>2014-03-25 16:34:53</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,930" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,300" dealer="1" win="825" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,235" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="3,315" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,220" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="VanTr4X" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="10" player="smalldouge12" type="23" sum="400" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="11" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 S10</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088945">
+		 <general>
+		  <startdate>2014-03-25 16:35:18</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,905" dealer="0" win="864" bet="464" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,700" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,110" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="3,090" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,195" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="7" player="VanTr4X" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="23" sum="439" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="9" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="10" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 C3</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="12" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089117">
+		 <general>
+		  <startdate>2014-03-25 16:36:00</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,305" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,675" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,085" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,965" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="970" dealer="0" win="1,270" bet="970" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/><action no="3" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="4" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="6" player="VanTr4X" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="12" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="8" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ C7</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="11" player="VanTr4X" type="23" sum="945" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089279">
+		 <general>
+		  <startdate>2014-03-25 16:36:37</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,080" dealer="0" win="0" bet="1,060" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,650" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,060" dealer="0" win="2,495" bet="1,060" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,940" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,270" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="1" sum="150" cards="[cards]"/><action no="2" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="7" player="smalldouge12" type="2" sum="300" cards="[cards]"/><action no="3" player="theDL" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="VanTr4X" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">HJ CJ</cards><action no="11" player="Strik3rPo4ition" type="3" sum="885" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="12" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">D4 DQ</cards><action no="8" player="theDL" type="23" sum="1,035" cards=""/><cards type="Pocket" player="moonbaseone">DJ SQ</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="10" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 S10 S5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game><game gamecode="5601089392">
+		 <general>
+		  <startdate>2014-03-25 16:37:05</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,020" dealer="1" win="1,175" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,325" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="2,495" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,915" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,245" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="6" player="smalldouge12" type="1" sum="150" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="7" player="theDL" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="VanTr4X" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="23" sum="600" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="11" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="12" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C9 SK</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="9" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102016">
+		 <general>
+		  <startdate>2014-03-25 16:37:51</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,570" dealer="0" win="2,120" bet="1,570" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,150" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="2,170" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,890" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,220" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="VanTr4X" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="23" sum="1,545" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="10" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="11" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK DQ</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102127">
+		 <general>
+		  <startdate>2014-03-25 16:38:19</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,120" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,125" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,995" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,565" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,195" dealer="0" win="575" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="7" player="VanTr4X" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="9" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="10" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 D6</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601102245">
+		 <general>
+		  <startdate>2014-03-25 16:38:49</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="2,095" dealer="0" win="0" bet="1,100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="1,100" dealer="0" win="2,425" bet="1,100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,970" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,390" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,445" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="2" sum="300" cards="[cards]"/><action no="3" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="4" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="6" player="VanTr4X" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">S2 H2</cards><action no="12" player="Strik3rPo4ition" type="3" sum="775" cards=""/><cards type="Pocket" player="smalldouge12">DQ SA</cards><action no="8" player="smalldouge12" type="23" sum="1,075" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 C5</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="11" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 S10 D7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards>
+	</round>
+	
+		</game><game gamecode="5601102441">
+		 <general>
+		  <startdate>2014-03-25 16:39:35</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="995" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="2,425" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,945" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,365" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,270" dealer="1" win="1,820" bet="1,270" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="1" sum="150" cards="[cards]"/><action no="2" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="7" player="smalldouge12" type="2" sum="300" cards="[cards]"/><action no="3" player="theDL" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="VanTr4X" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="11" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="12" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C3 S5</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">HK HA</cards><action no="10" player="VanTr4X" type="23" sum="1,245" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102608">
+		 <general>
+		  <startdate>2014-03-25 16:40:08</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="820" dealer="1" win="0" bet="820" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="smalldouge12" chips="2,100" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="1,920" dealer="0" win="1,865" bet="820" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,340" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,820" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="smalldouge12" type="15" sum="25" cards="[cards]"/><action no="6" player="smalldouge12" type="1" sum="150" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="7" player="theDL" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="VanTr4X" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">CQ DA</cards><action no="10" player="Strik3rPo4ition" type="23" sum="795" cards=""/><cards type="Pocket" player="smalldouge12">X X</cards><action no="11" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">HJ DJ</cards><action no="12" player="theDL" type="3" sum="495" cards=""/><cards type="Pocket" player="moonbaseone">H8 D4</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="9" player="VanTr4X" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 C7 C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards>
+	</round>
+	
+		</game><game gamecode="5601102737">
+		 <general>
+		  <startdate>2014-03-25 16:40:38</startdate>		  
+		  <players>
+		   <player seat="3" name="smalldouge12" chips="1,925" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="theDL" chips="2,965" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,315" dealer="0" win="3,890" bet="1,795" rebuy="0" addon="0" reg_code="6224179060"/><player seat="10" name="VanTr4X" chips="1,795" dealer="0" win="0" bet="1,795" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="smalldouge12" type="15" sum="50" cards="[cards]"/><action no="1" player="theDL" type="15" sum="50" cards="[cards]"/><action no="5" player="theDL" type="1" sum="200" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="400" cards="[cards]"/><action no="3" player="VanTr4X" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="smalldouge12">X X</cards><action no="8" player="smalldouge12" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 C8</cards><action no="10" player="moonbaseone" type="3" sum="1,345" cards=""/><cards type="Pocket" player="VanTr4X">D3 C3</cards><action no="7" player="VanTr4X" type="23" sum="1,745" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 C9 D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards>
+	</round>
+	
+		</game>  
+	</session>

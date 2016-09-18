@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189546905">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819277560</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>15</gamecount>  
+	          <startdate>2014-01-28 17:12:55</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,410</bets>  
+	          <wins>1,610</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>3</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.00</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5449375355">
+		 <general>
+		  <startdate>2014-01-28 17:12:55</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="vis007" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="4" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C2 C8</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><cards type="Pocket" player="Gavrylo">X X</cards><action no="3" player="Gavrylo" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449375678">
+		 <general>
+		  <startdate>2014-01-28 17:13:29</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="810" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="vis007" type="1" sum="10" cards="[cards]"/><action no="2" player="Gavrylo" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="3" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C6 C8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="5" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="Gavrylo">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449375846">
+		 <general>
+		  <startdate>2014-01-28 17:13:50</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="800" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="810" dealer="0" win="890" bet="810" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kocha011" type="2" sum="20" cards="[cards]"/><action no="1" player="Gavrylo" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="6" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 S5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="4" player="vis007" type="23" sum="60" cards=""/><action no="7" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="Gavrylo">X X</cards><action no="5" player="Gavrylo" type="23" sum="810" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449376116">
+		 <general>
+		  <startdate>2014-01-28 17:14:18</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="740" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="890" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kocha011" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="5" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ DA</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">SQ SA</cards><action no="3" player="vis007" type="23" sum="60" cards=""/><cards type="Pocket" player="Gavrylo">X X</cards><action no="4" player="Gavrylo" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449376285">
+		 <general>
+		  <startdate>2014-01-28 17:14:40</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="770" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="770" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="vis007" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="4" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ H5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><cards type="Pocket" player="Gavrylo">X X</cards><action no="3" player="Gavrylo" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449376462">
+		 <general>
+		  <startdate>2014-01-28 17:14:57</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="780" dealer="0" win="1,560" bet="780" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="890" dealer="0" win="110" bet="890" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="vis007" type="1" sum="15" cards="[cards]"/><action no="2" player="Gavrylo" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="3" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H10 D4</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">SA D5</cards><action no="5" player="vis007" type="23" sum="60" cards=""/><cards type="Pocket" player="Gavrylo">SK C7</cards><action no="6" player="Gavrylo" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ S4 S2</cards><action no="7" player="vis007" type="5" sum="60" cards=""/><action no="8" player="Gavrylo" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="9" player="vis007" type="5" sum="60" cards=""/><action no="11" player="vis007" type="7" sum="600" cards=""/><action no="10" player="Gavrylo" type="23" sum="770" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards>
+	</round>
+	
+		</game><game gamecode="5449376782">
+		 <general>
+		  <startdate>2014-01-28 17:15:37</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="110" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kocha011" type="2" sum="30" cards="[cards]"/><action no="1" player="Gavrylo" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="6" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HK S9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="4" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="Gavrylo">X X</cards><action no="5" player="Gavrylo" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449377010">
+		 <general>
+		  <startdate>2014-01-28 17:16:02</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="740" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="140" dealer="1" win="185" bet="140" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kocha011" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="5" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D3 S10</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="3" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="Gavrylo">X X</cards><action no="4" player="Gavrylo" type="23" sum="140" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449377195">
+		 <general>
+		  <startdate>2014-01-28 17:16:23</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="725" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="730" dealer="0" win="760" bet="730" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,560" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="185" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="vis007" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="4" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CA HK</cards><action no="5" player="WorstCard" type="23" sum="730" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="6" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="Gavrylo">X X</cards><action no="3" player="Gavrylo" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449377390">
+		 <general>
+		  <startdate>2014-01-28 17:16:46</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="725" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,530" dealer="0" win="0" bet="185" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="185" dealer="0" win="370" bet="185" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="vis007" type="1" sum="15" cards="[cards]"/><action no="2" player="Gavrylo" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="3" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H3 H6</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">H4 H10</cards><action no="5" player="vis007" type="3" sum="15" cards=""/><cards type="Pocket" player="Gavrylo">DJ S9</cards><action no="6" player="Gavrylo" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 D10 D6</cards><action no="7" player="vis007" type="5" sum="60" cards=""/><action no="8" player="Gavrylo" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards><action no="9" player="vis007" type="5" sum="60" cards=""/><action no="11" player="vis007" type="3" sum="35" cards=""/><action no="10" player="Gavrylo" type="7" sum="95" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5449377797">
+		 <general>
+		  <startdate>2014-01-28 17:17:36</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="725" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="0" win="850" bet="760" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,345" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="370" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kocha011" type="15" sum="5" cards="[cards]"/><action no="6" player="kocha011" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="vis007" type="15" sum="5" cards="[cards]"/><action no="1" player="Gavrylo" type="15" sum="5" cards="[cards]"/><action no="5" player="Gavrylo" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="10" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S7 C7</cards><action no="7" player="WorstCard" type="23" sum="755" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="8" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="Gavrylo">X X</cards><action no="9" player="Gavrylo" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449378069">
+		 <general>
+		  <startdate>2014-01-28 17:18:05</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="670" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="850" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,340" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="340" dealer="1" win="480" bet="340" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kocha011" type="15" sum="5" cards="[cards]"/><action no="5" player="kocha011" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="vis007" type="15" sum="5" cards="[cards]"/><action no="4" player="Gavrylo" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="9" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H5 S7</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="7" player="vis007" type="3" sum="50" cards=""/><action no="11" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="Gavrylo">X X</cards><action no="8" player="Gavrylo" type="23" sum="335" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449393831">
+		 <general>
+		  <startdate>2014-01-28 17:18:43</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="640" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="795" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,285" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="480" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="kocha011" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="vis007" type="15" sum="5" cards="[cards]"/><action no="6" player="vis007" type="2" sum="50" cards="[cards]"/><action no="3" player="Gavrylo" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">X X</cards><action no="8" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D9 D4</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><cards type="Pocket" player="Gavrylo">X X</cards><action no="7" player="Gavrylo" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449394003">
+		 <general>
+		  <startdate>2014-01-28 17:19:02</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="635" dealer="0" win="1,020" bet="475" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="765" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,325" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gavrylo" chips="475" dealer="0" win="0" bet="475" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="kocha011" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="vis007" type="15" sum="10" cards="[cards]"/><action no="5" player="vis007" type="1" sum="50" cards="[cards]"/><action no="2" player="Gavrylo" type="15" sum="10" cards="[cards]"/><action no="6" player="Gavrylo" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">DQ DJ</cards><action no="7" player="kocha011" type="3" sum="100" cards=""/><cards type="Pocket" player="WorstCard">C8 D6</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="9" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="Gavrylo">C5 C6</cards><action no="10" player="Gavrylo" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 SA D7</cards><action no="12" player="kocha011" type="5" sum="100" cards=""/><action no="14" player="kocha011" type="3" sum="265" cards=""/><action no="11" player="Gavrylo" type="4" sum="0" cards=""/><action no="13" player="Gavrylo" type="23" sum="365" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards>
+	</round>
+	
+		</game><game gamecode="5449394443">
+		 <general>
+		  <startdate>2014-01-28 17:19:53</startdate>		  
+		  <players>
+		   <player seat="2" name="kocha011" chips="1,180" dealer="0" win="1,520" bet="755" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="755" dealer="0" win="0" bet="755" rebuy="0" addon="0" reg_code="6189546905"/><player seat="7" name="vis007" chips="1,265" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kocha011" type="15" sum="10" cards="[cards]"/><action no="4" player="kocha011" type="2" sum="100" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="3" player="vis007" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kocha011">D10 C10</cards><action no="7" player="kocha011" type="3" sum="645" cards=""/><cards type="Pocket" player="WorstCard">HQ CA</cards><action no="5" player="WorstCard" type="23" sum="745" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="6" player="vis007" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 H4 D5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards>
+	</round>
+	
+		</game>  
+	</session>

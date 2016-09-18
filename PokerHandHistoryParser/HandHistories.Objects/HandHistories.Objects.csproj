@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D5C61A3A-2725-47D9-A828-F5CE4EC19A4A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HandHistories.Objects</RootNamespace>
+    <AssemblyName>HandHistories.Objects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>HandHistories.Objects.Key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\AllInAction.cs" />
+    <Compile Include="Actions\HandAction.cs" />
+    <Compile Include="Actions\HandActionType.cs" />
+    <Compile Include="Actions\StreetAction.cs" />
+    <Compile Include="Actions\WinningsAction.cs" />
+    <Compile Include="Cards\BoardCards.cs" />
+    <Compile Include="Cards\Card.cs" />
+    <Compile Include="Cards\Card.Enums.cs" />
+    <Compile Include="Cards\CardGroup.cs" />
+    <Compile Include="GameDescription\Buyin.cs" />
+    <Compile Include="GameDescription\Currency.cs" />
+    <Compile Include="GameDescription\GameDescriptor.cs" />
+    <Compile Include="GameDescription\GameTypeUtils.cs" />
+    <Compile Include="GameDescription\GameTypes.cs" />
+    <Compile Include="GameDescription\LimitClassEnum.cs" />
+    <Compile Include="GameDescription\LimitEnum.cs" />
+    <Compile Include="GameDescription\LimitGameTypePair.cs" />
+    <Compile Include="GameDescription\PokerFormatUtils.cs" />
+    <Compile Include="GameDescription\TableTypeDescription.cs" />
+    <Compile Include="GameDescription\TournamentDescriptor.cs" />
+    <Compile Include="GameDescription\TournamentSpeed.cs" />
+    <Compile Include="Hand\HandParseError.cs" />
+    <Compile Include="Hand\HandHistory.cs" />
+    <Compile Include="Hand\HandHistorySummary.cs" />
+    <Compile Include="Cards\HoleCards.cs" />
+    <Compile Include="ITimeStamped.cs" />
+    <Compile Include="GameDescription\Limit.cs" />
+    <Compile Include="GameDescription\PokerFormat.cs" />
+    <Compile Include="Players\Player.cs" />
+    <Compile Include="Players\PlayerList.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GameDescription\SeatType.cs" />
+    <Compile Include="Cards\Street.cs" />
+    <Compile Include="GameDescription\TableType.cs" />
+    <Compile Include="Utils\HandAction.StreetExtension.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HandHistories.Objects.Key.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
+      <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
+      <Name>DriveHUD.Common.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DriveHUD.Common\DriveHUD.Common.csproj">
+      <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
+      <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties BuildVersion_UseGlobalSettings="True" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)\tools\SubWCRev\subwcrev.exe" "$(SolutionDir)." "$(ProjectDir)Properties\AssemblyInfo.template.cs" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

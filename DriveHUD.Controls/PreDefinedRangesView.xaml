@@ -1,0 +1,158 @@
+﻿<UserControl x:Class="DriveHUD.Controls.PreDefinedRangesView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DriveHUD.Controls"
+             xmlns:vm="clr-namespace:DriveHUD.ViewModels;assembly=DriveHUD.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    
+    <UserControl.DataContext>
+        <vm:PreDefinedRangesViewModel />
+    </UserControl.DataContext>
+
+    <UserControl.Resources>
+
+        <ItemsPanelTemplate x:Key="ItemsPanelTemplate1">
+            <StackPanel />
+        </ItemsPanelTemplate>
+
+        <DataTemplate x:Key="DataTemplate1">
+            <DockPanel LastChildFill="True" Margin="0 5">
+                <DockPanel.InputBindings>
+                    <MouseBinding Gesture="LeftClick"
+                                                  Command="{Binding RelativeSource={RelativeSource AncestorType=ItemsControl},
+                                                                Path=DataContext.SelectRangeCommand}"
+                                                   CommandParameter="{Binding}"/>
+                </DockPanel.InputBindings>
+                <Border DockPanel.Dock="Left" Width="120">
+                    <TextBlock HorizontalAlignment="Center" Text="{Binding Path=Key}"/>
+                </Border>
+                <ItemsControl ItemsSource="{Binding Path=Value.Value}" >
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal">
+
+                            </StackPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="2" Text="{Binding}" Style="{StaticResource TextBlockStyle}">
+                            </TextBlock>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
+            </DockPanel>
+        </DataTemplate>
+
+
+    </UserControl.Resources>
+
+    <ScrollViewer HorizontalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Grid.Row="0" HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Top">
+
+                <RadioButton Name="OpenRaiseTab" Content="{ResX Common_OpenRaise}" GroupName="RadioGroupTab"
+                             Width="180" Height="63" FontSize="15"
+                             Style="{StaticResource RadioButtonLeft}"
+                             IsChecked="True"/>
+
+                <RadioButton Name="CallingRangeTab" Content="{ResX Common_CallingRange}" GroupName="RadioGroupTab"
+                             Width="180" Height="63" FontSize="15"
+                             Style="{StaticResource RadioButtonMiddle}"/>
+
+                <RadioButton Name="Bet34Tab" GroupName="RadioGroupTab"
+                             Content="{ResX Common_3Bet4Bet}"
+                             Width="180" Height="63" FontSize="15"
+                             Style="{StaticResource RadioButtonMiddle}"/>
+
+                <RadioButton Name="LimpedPotTab" Content="{ResX Common_LimpedPot}"
+                             GroupName="RadioGroupTab"
+                             Width="180" Height="63" FontSize="15"
+                             Style="{StaticResource RadioButtonRight}"/>
+            </StackPanel>
+
+
+
+
+            <!-- FIRST TAB -->
+
+            <StackPanel Margin="20 5" Grid.Row="1" Orientation="Horizontal"
+                              Visibility="{Binding ElementName=OpenRaiseTab, 
+                                            Path=IsChecked, 
+                                            Converter={StaticResource BoolToVisibilityConverter}}" >
+                <ItemsControl ItemsSource="{Binding OpenRanges.Ranges}" 
+                              ItemTemplate="{StaticResource DataTemplate1}" 
+                              ItemsPanel="{StaticResource ItemsPanelTemplate1}" />
+            </StackPanel>
+
+            <!-- First tab end -->
+
+
+            <!-- SECOND TAB -->
+
+            <StackPanel Margin="20 5" Grid.Row="1" Orientation="Horizontal"
+                              Visibility="{Binding ElementName=CallingRangeTab, 
+                                            Path=IsChecked, 
+                                            Converter={StaticResource BoolToVisibilityConverter}}" >
+
+                <StackPanel>
+                    <TextBlock Text="{ResX Common_CallingRange_Blinds}" Style="{StaticResource Title_H1}" />
+                    <ItemsControl ItemsSource="{Binding CallingRangeOpen.Ranges}" 
+                              ItemTemplate="{StaticResource DataTemplate1}" 
+                              ItemsPanel="{StaticResource ItemsPanelTemplate1}" />
+
+                    <TextBlock Margin="0 20 0 0" Text="{ResX Common_CallingRange_NotBlinds}" Style="{StaticResource Title_H1}"/>
+                    <ItemsControl ItemsSource="{Binding CallingRangeClose.Ranges}" 
+                              ItemTemplate="{StaticResource DataTemplate1}" 
+                              ItemsPanel="{StaticResource ItemsPanelTemplate1}" />
+                </StackPanel>
+
+            </StackPanel>
+
+            <!-- Second tab end -->
+
+
+            <!-- THIRD TAB -->
+
+            <StackPanel Margin="20 5" Grid.Row="1" Orientation="Horizontal"
+                              Visibility="{Binding ElementName=Bet34Tab, 
+                                            Path=IsChecked, 
+                                            Converter={StaticResource BoolToVisibilityConverter}}" >
+
+                <StackPanel>
+                    <ItemsControl ItemsSource="{Binding Bet3Ranges.Ranges}" 
+                              ItemTemplate="{StaticResource DataTemplate1}" 
+                              ItemsPanel="{StaticResource ItemsPanelTemplate1}" />
+
+                    <ItemsControl Margin="0 20 0 0" ItemsSource="{Binding Bet4Ranges.Ranges}" 
+                              ItemTemplate="{StaticResource DataTemplate1}" 
+                              ItemsPanel="{StaticResource ItemsPanelTemplate1}" />
+                </StackPanel>
+            </StackPanel>
+
+            <!-- Third tab end -->
+
+            <!-- FOURTH TAB -->
+
+            <StackPanel Margin="20 5" Grid.Row="1" Orientation="Horizontal"
+                              Visibility="{Binding ElementName=LimpedPotTab, 
+                                            Path=IsChecked, 
+                                            Converter={StaticResource BoolToVisibilityConverter}}" >
+                <ItemsControl ItemsSource="{Binding LimpedPotRanges.Ranges}" 
+                              ItemTemplate="{StaticResource DataTemplate1}" 
+                              ItemsPanel="{StaticResource ItemsPanelTemplate1}" />
+            </StackPanel>
+
+            <!-- End fourth tab -->
+        </Grid>
+    </ScrollViewer>
+</UserControl>

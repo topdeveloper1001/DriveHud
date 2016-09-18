@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="CardImageBinder.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <ItemsPanelTemplate x:Key="CardsItemsPanelTemplate">
+        <StackPanel Orientation="Horizontal"/>
+    </ItemsPanelTemplate>
+    <DataTemplate x:Key="CardsDataTemplate">
+        <Border Height="60">
+            <Border.Style>
+                <Style TargetType="Border">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding IsChecked}" Value="True" >
+                            <Setter Property="Background" Value="#CBE2FF"/>
+                            <Setter Property="CornerRadius" Value="2" />
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Border.Style>
+            <control:CardImageControl 
+                        Command="{Binding DataContext.SelectionChangedCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}" 
+                        CommandParameter="{Binding}"
+                        Margin="5"
+                        RankValue="{Binding Rank}" 
+                        SuitValue="{Binding Suit}" 
+                        Style="{StaticResource CardImageBinder}"/>
+        </Border>
+    </DataTemplate>
+</ResourceDictionary>

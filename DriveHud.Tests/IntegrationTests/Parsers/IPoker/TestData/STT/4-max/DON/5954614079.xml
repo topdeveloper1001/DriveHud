@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5954614079">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>"SUPER TURBO" $5 Double up*4, 778059701</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:08</duration>  
+	          <gamecount>21</gamecount>  
+	          <startdate>2012-11-12 22:47:22</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>Raxxla</nickname>  
+	          <bets>14,640</bets>  
+	          <wins>17,250</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>4,110</chipsout>
+			  		<ipoints>4.50</ipoints>
+        		<statuspoints>4.50</statuspoints>
+			  		<awardpoints>4.50</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>"SUPER TURBO" $5 Double up*4</tournamentname><place>1</place><buyin>$5.00+$0.30</buyin> <totalbuyin>$5.30</totalbuyin> <ipoints>4.50</ipoints> <win>$10.00</win> <statuspoints>4.50</statuspoints> <awardpoints>4.50</awardpoints>  
+	    </general>  
+	    <game gamecode="4368048455">
+		 <general>
+		  <startdate>2012-11-12 22:47:22</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,500" dealer="0" win="110" bet="80" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="10" cards="[cards]"/><action no="2" player="Hulablo" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">C5 D4</cards><action no="4" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><action no="6" player="Hulablo" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="3" player="MPC03" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048496">
+		 <general>
+		  <startdate>2012-11-12 22:47:42</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,490" dealer="1" win="110" bet="80" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,530" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Hulablo" type="1" sum="10" cards="[cards]"/><action no="2" player="MPC03" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">H9 D5</cards><action no="3" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="80" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><action no="5" player="Hulablo" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="6" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048525">
+		 <general>
+		  <startdate>2012-11-12 22:48:00</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,520" dealer="0" win="1,190" bet="800" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,470" dealer="1" win="0" bet="290" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,510" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Raxxla" type="2" sum="20" cards="[cards]"/><action no="1" player="MPC03" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">CK SQ</cards><action no="6" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="23" sum="80" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><action no="4" player="Hulablo" type="3" sum="80" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="5" player="MPC03" type="3" sum="70" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA S10 CJ</cards><action no="8" player="Str8forVictory" type="5" sum="210" cards=""/><action no="9" player="Hulablo" type="3" sum="210" cards=""/><action no="7" player="MPC03" type="4" sum="0" cards=""/><action no="10" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="11" player="Str8forVictory" type="5" sum="510" cards=""/><action no="12" player="Hulablo" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048617">
+		 <general>
+		  <startdate>2012-11-12 22:48:48</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,910" dealer="0" win="250" bet="115" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,180" dealer="0" win="0" bet="115" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Raxxla" type="1" sum="20" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">C9 D2</cards><action no="5" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">C3 D3</cards><action no="6" player="Str8forVictory" type="4" sum="0" cards=""/><cards type="Pocket" player="Hulablo">H10 CK</cards><action no="3" player="Hulablo" type="3" sum="40" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="4" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 H8 CA</cards><action no="7" player="Str8forVictory" type="4" sum="0" cards=""/><action no="8" player="Hulablo" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards><action no="9" player="Str8forVictory" type="4" sum="0" cards=""/><action no="10" player="Hulablo" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="11" player="Str8forVictory" type="5" sum="75" cards=""/><action no="12" player="Hulablo" type="3" sum="75" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048690">
+		 <general>
+		  <startdate>2012-11-12 22:49:28</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,045" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,065" dealer="0" win="90" bet="60" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="Hulablo" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">H5 DA</cards><action no="4" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><cards type="Pocket" player="MPC03">X X</cards><action no="3" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048719">
+		 <general>
+		  <startdate>2012-11-12 22:49:43</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,015" dealer="1" win="240" bet="150" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,095" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,430" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Hulablo" type="1" sum="30" cards="[cards]"/><action no="2" player="MPC03" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">D7 HQ</cards><action no="3" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="150" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><action no="5" player="Hulablo" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="6" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048753">
+		 <general>
+		  <startdate>2012-11-12 22:50:01</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,460" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,105" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,065" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,370" dealer="0" win="180" bet="120" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Raxxla" type="2" sum="60" cards="[cards]"/><action no="1" player="MPC03" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">H10 CA</cards><action no="6" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><action no="4" player="Hulablo" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="5" player="MPC03" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048795">
+		 <general>
+		  <startdate>2012-11-12 22:50:21</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,400" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,105" dealer="0" win="265" bet="175" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,065" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Raxxla" type="1" sum="30" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">C4 H7</cards><action no="5" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="4" sum="0" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><action no="3" player="Hulablo" type="3" sum="60" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="4" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA HJ D3</cards><action no="7" player="Str8forVictory" type="5" sum="115" cards=""/><action no="8" player="Hulablo" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048855">
+		 <general>
+		  <startdate>2012-11-12 22:50:55</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,370" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,195" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,005" dealer="0" win="150" bet="100" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="Hulablo" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">SJ S7</cards><action no="4" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><cards type="Pocket" player="MPC03">X X</cards><action no="3" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048901">
+		 <general>
+		  <startdate>2012-11-12 22:51:15</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,145" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,055" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,430" dealer="0" win="150" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Hulablo" type="1" sum="50" cards="[cards]"/><action no="2" player="MPC03" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">DK C10</cards><action no="3" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><action no="5" player="Hulablo" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards>
+	</round>
+	
+		</game><game gamecode="4368048936">
+		 <general>
+		  <startdate>2012-11-12 22:51:36</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,370" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,145" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,005" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,480" dealer="0" win="450" bet="300" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Raxxla" type="2" sum="150" cards="[cards]"/><action no="1" player="MPC03" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">S7 S2</cards><action no="6" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="Hulablo">X X</cards><action no="4" player="Hulablo" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="5" player="MPC03" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368048974">
+		 <general>
+		  <startdate>2012-11-12 22:51:55</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,220" dealer="0" win="2,375" bet="1,220" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,145" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="7" name="Hulablo" chips="1,005" dealer="0" win="0" bet="1,005" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,630" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Raxxla" type="1" sum="75" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">SK DK</cards><action no="5" player="Raxxla" type="7" sum="1,145" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="Hulablo">HA D6</cards><action no="3" player="Hulablo" type="23" sum="1,005" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="4" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 D2 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="4368058348">
+		 <general>
+		  <startdate>2012-11-12 22:52:29</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="2,375" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,995" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,630" dealer="0" win="375" bet="225" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Raxxla" type="15" sum="25" cards="[cards]"/><action no="1" player="Str8forVictory" type="15" sum="25" cards="[cards]"/><action no="4" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="MPC03" type="15" sum="25" cards="[cards]"/><action no="5" player="MPC03" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">SA C3</cards><action no="6" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards>
+	</round>
+	
+		</game><game gamecode="4368058390">
+		 <general>
+		  <startdate>2012-11-12 22:52:49</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="2,350" dealer="0" win="2,800" bet="2,350" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,870" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,780" dealer="0" win="0" bet="425" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Raxxla" type="15" sum="25" cards="[cards]"/><action no="5" player="Raxxla" type="2" sum="200" cards="[cards]"/><action no="3" player="Str8forVictory" type="15" sum="25" cards="[cards]"/><action no="1" player="MPC03" type="15" sum="25" cards="[cards]"/><action no="4" player="MPC03" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">HA D2</cards><action no="8" player="Raxxla" type="23" sum="2,325" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="7" player="MPC03" type="23" sum="400" cards=""/><action no="9" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368058440">
+		 <general>
+		  <startdate>2012-11-12 22:53:18</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="2,800" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,845" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,355" dealer="1" win="1,705" bet="1,355" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Raxxla" type="15" sum="25" cards="[cards]"/><action no="4" player="Raxxla" type="1" sum="100" cards="[cards]"/><action no="2" player="Str8forVictory" type="15" sum="25" cards="[cards]"/><action no="5" player="Str8forVictory" type="2" sum="200" cards="[cards]"/><action no="3" player="MPC03" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">C8 D4</cards><action no="7" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="8" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="6" player="MPC03" type="23" sum="1,330" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368058487">
+		 <general>
+		  <startdate>2012-11-12 22:53:38</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="2,675" dealer="1" win="3,175" bet="2,675" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,620" dealer="0" win="0" bet="175" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,705" dealer="0" win="0" bet="325" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Raxxla" type="15" sum="25" cards="[cards]"/><action no="1" player="Str8forVictory" type="15" sum="25" cards="[cards]"/><action no="4" player="Str8forVictory" type="1" sum="150" cards="[cards]"/><action no="2" player="MPC03" type="15" sum="25" cards="[cards]"/><action no="5" player="MPC03" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">C4 DQ</cards><action no="6" player="Raxxla" type="23" sum="2,650" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="8" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368058505">
+		 <general>
+		  <startdate>2012-11-12 22:53:53</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="3,175" dealer="0" win="0" bet="325" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,445" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,380" dealer="0" win="1,730" bet="1,380" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Raxxla" type="15" sum="25" cards="[cards]"/><action no="5" player="Raxxla" type="2" sum="300" cards="[cards]"/><action no="3" player="Str8forVictory" type="15" sum="25" cards="[cards]"/><action no="1" player="MPC03" type="15" sum="25" cards="[cards]"/><action no="4" player="MPC03" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">HK H6</cards><action no="8" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="7" player="MPC03" type="23" sum="1,355" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368058545">
+		 <general>
+		  <startdate>2012-11-12 22:54:11</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="2,850" dealer="0" win="0" bet="175" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,420" dealer="0" win="0" bet="325" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,730" dealer="1" win="2,230" bet="1,730" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Raxxla" type="15" sum="25" cards="[cards]"/><action no="4" player="Raxxla" type="1" sum="150" cards="[cards]"/><action no="2" player="Str8forVictory" type="15" sum="25" cards="[cards]"/><action no="5" player="Str8forVictory" type="2" sum="300" cards="[cards]"/><action no="3" player="MPC03" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">C10 H5</cards><action no="7" player="Raxxla" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="8" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="6" player="MPC03" type="23" sum="1,705" cards=""/>
+	</round>
+	
+		</game><game gamecode="4368058577">
+		 <general>
+		  <startdate>2012-11-12 22:54:30</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="2,675" dealer="1" win="1,580" bet="2,675" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="1,095" dealer="0" win="2,640" bet="1,095" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="2,230" dealer="0" win="0" bet="450" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Raxxla" type="15" sum="50" cards="[cards]"/><action no="1" player="Str8forVictory" type="15" sum="50" cards="[cards]"/><action no="4" player="Str8forVictory" type="1" sum="200" cards="[cards]"/><action no="2" player="MPC03" type="15" sum="50" cards="[cards]"/><action no="5" player="MPC03" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">D8 CK</cards><action no="6" player="Raxxla" type="23" sum="2,625" cards=""/><cards type="Pocket" player="Str8forVictory">S10 DA</cards><action no="7" player="Str8forVictory" type="7" sum="845" cards=""/><cards type="Pocket" player="MPC03">X X</cards><action no="8" player="MPC03" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 SJ D5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards>
+	</round>
+	
+		</game><game gamecode="4368058635">
+		 <general>
+		  <startdate>2012-11-12 22:55:01</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="1,580" dealer="0" win="3,210" bet="1,580" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,640" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="1,780" dealer="0" win="200" bet="1,780" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Raxxla" type="15" sum="50" cards="[cards]"/><action no="5" player="Raxxla" type="2" sum="400" cards="[cards]"/><action no="3" player="Str8forVictory" type="15" sum="50" cards="[cards]"/><action no="1" player="MPC03" type="15" sum="50" cards="[cards]"/><action no="4" player="MPC03" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">CA H2</cards><action no="8" player="Raxxla" type="7" sum="1,130" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">S6 S3</cards><action no="7" player="MPC03" type="23" sum="1,730" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 H8 H6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game><game gamecode="4368058692">
+		 <general>
+		  <startdate>2012-11-12 22:55:31</startdate>		  
+		  <players>
+		   <player seat="2" name="Raxxla" chips="3,210" dealer="0" win="4,110" bet="3,210" rebuy="0" addon="0"/><player seat="4" name="Str8forVictory" chips="2,590" dealer="0" win="0" bet="700" rebuy="0" addon="0"/><player seat="9" name="MPC03" chips="200" dealer="1" win="0" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Raxxla" type="15" sum="100" cards="[cards]"/><action no="4" player="Raxxla" type="1" sum="300" cards="[cards]"/><action no="2" player="Str8forVictory" type="15" sum="100" cards="[cards]"/><action no="5" player="Str8forVictory" type="2" sum="600" cards="[cards]"/><action no="3" player="MPC03" type="15" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Raxxla">CK HJ</cards><action no="7" player="Raxxla" type="23" sum="3,110" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="8" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MPC03">H8 CQ</cards><action no="6" player="MPC03" type="7" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 DJ DA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards>
+	</round>
+	
+		</game>  
+	</session>

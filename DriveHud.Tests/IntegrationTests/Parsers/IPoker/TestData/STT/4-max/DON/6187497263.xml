@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187497263">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 818993446</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>13</gamecount>  
+	          <startdate>2014-01-25 10:18:16</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,605</bets>  
+	          <wins>1,805</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>4</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5435486235">
+		 <general>
+		  <startdate>2014-01-25 10:18:16</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="800" dealer="1" win="160" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Desi0011" type="1" sum="10" cards="[cards]"/><action no="2" player="valtys" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="4" player="princippitoo" type="23" sum="40" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="5" player="Desi0011" type="3" sum="30" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="6" player="valtys" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 S9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 CJ H7</cards><action no="8" player="princippitoo" type="5" sum="20" cards=""/><action no="7" player="Desi0011" type="4" sum="0" cards=""/><action no="9" player="Desi0011" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="11" player="princippitoo" type="5" sum="20" cards=""/><action no="10" player="Desi0011" type="4" sum="0" cards=""/><action no="12" player="Desi0011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435486438">
+		 <general>
+		  <startdate>2014-01-25 10:18:55</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="880" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="740" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="valtys" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="3" player="princippitoo" type="3" sum="20" cards=""/><action no="7" player="princippitoo" type="3" sum="80" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="4" player="Desi0011" type="3" sum="20" cards=""/><action no="8" player="Desi0011" type="0" sum="0" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="5" player="valtys" type="3" sum="10" cards=""/><action no="9" player="valtys" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CQ HA</cards><action no="6" player="WorstCard" type="23" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ C2 SQ</cards><action no="11" player="princippitoo" type="0" sum="0" cards=""/><action no="10" player="WorstCard" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435486616">
+		 <general>
+		  <startdate>2014-01-25 10:19:30</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="780" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="720" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="940" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="princippitoo" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><cards type="Pocket" player="Desi0011">X X</cards><action no="3" player="Desi0011" type="0" sum="0" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="4" player="valtys" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D9 C4</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435486685">
+		 <general>
+		  <startdate>2014-01-25 10:19:44</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="790" dealer="0" win="300" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="720" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="princippitoo" type="1" sum="10" cards="[cards]"/><action no="2" player="Desi0011" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="5" player="princippitoo" type="3" sum="10" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="6" player="Desi0011" type="4" sum="0" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="3" player="valtys" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SJ D4</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 C3 H5</cards><action no="7" player="princippitoo" type="5" sum="60" cards=""/><action no="8" player="Desi0011" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="9" player="princippitoo" type="5" sum="40" cards=""/><action no="10" player="Desi0011" type="3" sum="40" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards><action no="11" player="princippitoo" type="5" sum="60" cards=""/><action no="12" player="Desi0011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435492737">
+		 <general>
+		  <startdate>2014-01-25 10:20:27</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="600" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="760" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Desi0011" type="1" sum="15" cards="[cards]"/><action no="2" player="valtys" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="4" player="princippitoo" type="0" sum="0" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="5" player="Desi0011" type="0" sum="0" cards=""/><cards type="Pocket" player="valtys">X X</cards><cards type="Pocket" player="WorstCard">S9 H5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435492789">
+		 <general>
+		  <startdate>2014-01-25 10:20:39</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="910" dealer="0" win="135" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="585" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="775" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="930" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="valtys" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="3" player="princippitoo" type="3" sum="30" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="4" player="Desi0011" type="3" sum="30" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="5" player="valtys" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 H8</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D7 DJ</cards><action no="8" player="princippitoo" type="5" sum="30" cards=""/><action no="9" player="Desi0011" type="0" sum="0" cards=""/><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435492923">
+		 <general>
+		  <startdate>2014-01-25 10:21:06</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="985" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="555" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="760" dealer="1" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="900" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="princippitoo" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="6" player="princippitoo" type="4" sum="0" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="3" player="Desi0011" type="0" sum="0" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="4" player="valtys" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">HQ D7</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 H7 SQ</cards><action no="7" player="princippitoo" type="4" sum="0" cards=""/><action no="9" player="princippitoo" type="0" sum="0" cards=""/><action no="8" player="valtys" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435493110">
+		 <general>
+		  <startdate>2014-01-25 10:21:44</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="955" dealer="0" win="390" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="555" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="805" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="885" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="princippitoo" type="1" sum="15" cards="[cards]"/><action no="2" player="Desi0011" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="5" player="princippitoo" type="23" sum="60" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="6" player="Desi0011" type="3" sum="30" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="3" player="valtys" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C4 S9</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA C6 DJ</cards><action no="7" player="princippitoo" type="5" sum="30" cards=""/><action no="8" player="Desi0011" type="3" sum="30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="9" player="princippitoo" type="5" sum="60" cards=""/><action no="10" player="Desi0011" type="3" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards><action no="11" player="princippitoo" type="5" sum="90" cards=""/><action no="12" player="Desi0011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435493327">
+		 <general>
+		  <startdate>2014-01-25 10:22:25</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="1,105" dealer="1" win="320" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="405" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="805" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="885" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="princippitoo" type="15" sum="5" cards="[cards]"/><action no="1" player="Desi0011" type="15" sum="5" cards="[cards]"/><action no="5" player="Desi0011" type="1" sum="25" cards="[cards]"/><action no="2" player="valtys" type="15" sum="5" cards="[cards]"/><action no="6" player="valtys" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="8" player="princippitoo" type="3" sum="50" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="9" player="Desi0011" type="3" sum="25" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="10" player="valtys" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S4 DA</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 S3 S2</cards><action no="13" player="princippitoo" type="5" sum="50" cards=""/><action no="11" player="Desi0011" type="4" sum="0" cards=""/><action no="14" player="Desi0011" type="0" sum="0" cards=""/><action no="12" player="valtys" type="4" sum="0" cards=""/><action no="15" player="valtys" type="3" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="17" player="princippitoo" type="5" sum="50" cards=""/><action no="16" player="valtys" type="4" sum="0" cards=""/><action no="18" player="valtys" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435493547">
+		 <general>
+		  <startdate>2014-01-25 10:23:09</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="1,270" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="350" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="700" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="880" dealer="0" win="945" bet="880" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="princippitoo" type="15" sum="5" cards="[cards]"/><action no="4" player="Desi0011" type="15" sum="5" cards="[cards]"/><action no="1" player="valtys" type="15" sum="5" cards="[cards]"/><action no="5" player="valtys" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="7" player="princippitoo" type="0" sum="0" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="8" player="Desi0011" type="0" sum="0" cards=""/><cards type="Pocket" player="valtys">X X</cards><action no="9" player="valtys" type="3" sum="25" cards=""/><action no="11" player="valtys" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H5 HK</cards><action no="10" player="WorstCard" type="23" sum="875" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435493663">
+		 <general>
+		  <startdate>2014-01-25 10:23:34</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="1,265" dealer="0" win="570" bet="255" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="345" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="645" dealer="1" win="0" bet="255" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="945" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="princippitoo" type="15" sum="5" cards="[cards]"/><action no="6" player="princippitoo" type="2" sum="50" cards="[cards]"/><action no="3" player="Desi0011" type="15" sum="5" cards="[cards]"/><action no="4" player="valtys" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">D3 S8</cards><action no="10" player="princippitoo" type="4" sum="0" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="7" player="Desi0011" type="0" sum="0" cards=""/><cards type="Pocket" player="valtys">CQ SA</cards><action no="8" player="valtys" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">D7 DQ</cards><action no="9" player="WorstCard" type="3" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 D6 C6</cards><action no="12" player="princippitoo" type="4" sum="0" cards=""/><action no="13" player="valtys" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="15" player="princippitoo" type="5" sum="100" cards=""/><action no="16" player="valtys" type="3" sum="100" cards=""/><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="17" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards><action no="18" player="princippitoo" type="5" sum="100" cards=""/><action no="19" player="valtys" type="3" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435493923">
+		 <general>
+		  <startdate>2014-01-25 10:24:28</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="1,580" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="340" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="390" dealer="0" win="950" bet="390" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="890" dealer="1" win="500" bet="890" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="princippitoo" type="15" sum="10" cards="[cards]"/><action no="5" player="princippitoo" type="1" sum="50" cards="[cards]"/><action no="2" player="Desi0011" type="15" sum="10" cards="[cards]"/><action no="6" player="Desi0011" type="2" sum="100" cards="[cards]"/><action no="3" player="valtys" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="9" player="princippitoo" type="0" sum="0" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="10" player="Desi0011" type="0" sum="0" cards=""/><cards type="Pocket" player="valtys">SA D10</cards><action no="7" player="valtys" type="23" sum="380" cards=""/><cards type="Pocket" player="WorstCard">HA H8</cards><action no="8" player="WorstCard" type="23" sum="880" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 D5 DK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game><game gamecode="5435494060">
+		 <general>
+		  <startdate>2014-01-25 10:24:52</startdate>		  
+		  <players>
+		   <player seat="2" name="princippitoo" chips="1,520" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Desi0011" chips="230" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="valtys" chips="950" dealer="0" win="1,070" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="500" dealer="0" win="0" bet="500" rebuy="0" addon="0" reg_code="6187497263"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="princippitoo" type="15" sum="10" cards="[cards]"/><action no="1" player="Desi0011" type="15" sum="10" cards="[cards]"/><action no="5" player="Desi0011" type="1" sum="50" cards="[cards]"/><action no="2" player="valtys" type="15" sum="10" cards="[cards]"/><action no="6" player="valtys" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="princippitoo">X X</cards><action no="8" player="princippitoo" type="0" sum="0" cards=""/><cards type="Pocket" player="Desi0011">X X</cards><action no="9" player="Desi0011" type="0" sum="0" cards=""/><cards type="Pocket" player="valtys">SJ CJ</cards><action no="10" player="valtys" type="3" sum="390" cards=""/><cards type="Pocket" player="WorstCard">D10 D8</cards><action no="7" player="WorstCard" type="23" sum="490" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA H9 C7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game>  
+	</session>

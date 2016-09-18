@@ -1,0 +1,58 @@
+﻿<#@ template debug="true" hostspecific="false" language="C#"  #>
+<#@ assembly name="System" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="System.Xml.Linq" #>
+<#@ assembly name="System.Data" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ assembly name="System.Configuration.dll" #>
+<#@ assembly name="Microsoft.CSharp.dll" #>
+<#@ assembly name="System.ComponentModel.DataAnnotations.dll" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Reflection" #>
+
+
+<#@ assembly name="$(SolutionDir)\Model\bin\Debug\NLog.dll" #>
+<#@ assembly name="$(SolutionDir)\Model\bin\Debug\NHibernate.dll" #>
+<#@ assembly name="$(SolutionDir)\Model\bin\Debug\FluentNHibernate.dll" #>
+<#@ assembly name="$(SolutionDir)\Model\bin\Debug\HandHistories.Objects.dll" #>
+<#@ assembly name="$(SolutionDir)\Model\bin\Debug\Iesi.Collections.dll" #>
+<#@ assembly name="$(SolutionDir)\Model\bin\Debug\Mono.Security.dll" #>
+<#@ assembly name="$(SolutionDir)\Model\bin\Debug\Model.dll" #>
+
+<#@ import namespace="Model.Domain" #>
+<#@ output extension=".txt" #>
+
+        public bool IsEqualStat(string name, params object[] objects)
+        {
+            var stat = TempStat.Statistic.FirstOrDefault(x => x.PlayerName == name && x.Numberofplayers == (int)objects[23]);
+            if (stat == null)
+                return false;
+
+			bool result = true;
+
+<# 
+   var properties = typeof(Playerstatistic).GetProperties().ToList(); 
+   var exculdedProperties = new List<string>(){"CompiledplayerresultsId","PlayerId", "BbgroupId", "GametypeId","PlayerName"};
+   int i = 0;
+   string columns = string.Empty;
+   foreach(PropertyInfo p in properties) 
+   {
+       if(exculdedProperties.Contains(p.Name)) continue;
+   #>
+            if (stat.<#=p.Name#> != (int)objects[<#=i#>])
+            {
+                Debug.WriteLine("Player {0} / {1} - {2} : {3} -> {4}", name, (int)objects[23], "<#=p.Name#>", stat.<#=p.Name#>, (int)objects[<#=i#>]);
+                result = false;
+            }
+   <#
+       i++;
+	   columns += p.Name + ",";
+   }
+		#>
+
+		   return result;
+		}
+
+// columns = <#=columns#>

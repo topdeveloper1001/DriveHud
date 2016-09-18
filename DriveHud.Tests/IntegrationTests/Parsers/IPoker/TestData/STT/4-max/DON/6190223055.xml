@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6190223055">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819372332</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:10</duration>  
+	          <gamecount>19</gamecount>  
+	          <startdate>2014-01-29 16:08:48</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,885</bets>  
+	          <wins>3,810</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,725</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5452281095">
+		 <general>
+		  <startdate>2014-01-29 16:08:48</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="800" dealer="1" win="130" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kuklo" type="1" sum="10" cards="[cards]"/><action no="2" player="hdkrush" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">CA C3</cards><action no="4" player="DEMON1122" type="3" sum="20" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="5" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="hdkrush">SQ H2</cards><action no="6" player="hdkrush" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ H9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK S9 CJ</cards><action no="8" player="DEMON1122" type="5" sum="20" cards=""/><action no="7" player="hdkrush" type="4" sum="0" cards=""/><action no="9" player="hdkrush" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards><action no="11" player="DEMON1122" type="5" sum="20" cards=""/><action no="10" player="hdkrush" type="4" sum="0" cards=""/><action no="12" player="hdkrush" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards><action no="14" player="DEMON1122" type="4" sum="0" cards=""/><action no="13" player="hdkrush" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452281423">
+		 <general>
+		  <startdate>2014-01-29 16:09:30</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="870" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="790" dealer="1" win="390" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="740" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hdkrush" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="3" player="DEMON1122" type="3" sum="20" cards=""/><action no="7" player="DEMON1122" type="3" sum="60" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="4" player="kuklo" type="23" sum="80" cards=""/><cards type="Pocket" player="hdkrush">X X</cards><action no="5" player="hdkrush" type="3" sum="70" cards=""/><cards type="Pocket" player="WorstCard">C7 C8</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ D2 C3</cards><action no="9" player="DEMON1122" type="4" sum="0" cards=""/><action no="12" player="DEMON1122" type="0" sum="0" cards=""/><action no="10" player="kuklo" type="5" sum="130" cards=""/><action no="8" player="hdkrush" type="4" sum="0" cards=""/><action no="11" player="hdkrush" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452281797">
+		 <general>
+		  <startdate>2014-01-29 16:10:17</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="790" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="660" dealer="1" win="290" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DEMON1122" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="6" player="DEMON1122" type="3" sum="20" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="3" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="hdkrush">X X</cards><action no="4" player="hdkrush" type="23" sum="40" cards=""/><cards type="Pocket" player="WorstCard">C6 SK</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 C5 S6</cards><action no="7" player="DEMON1122" type="4" sum="0" cards=""/><action no="9" player="DEMON1122" type="3" sum="20" cards=""/><action no="8" player="hdkrush" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="10" player="DEMON1122" type="4" sum="0" cards=""/><action no="12" player="DEMON1122" type="3" sum="20" cards=""/><action no="11" player="hdkrush" type="5" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards><action no="13" player="DEMON1122" type="4" sum="0" cards=""/><action no="15" player="DEMON1122" type="0" sum="0" cards=""/><action no="14" player="hdkrush" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452294990">
+		 <general>
+		  <startdate>2014-01-29 16:11:14</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="710" dealer="0" win="240" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="970" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="750" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DEMON1122" type="1" sum="15" cards="[cards]"/><action no="2" player="kuklo" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="5" player="DEMON1122" type="3" sum="15" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="6" player="kuklo" type="4" sum="0" cards=""/><cards type="Pocket" player="hdkrush">X X</cards><action no="3" player="hdkrush" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">H2 S2</cards><action no="4" player="WorstCard" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 D5 C6</cards><action no="7" player="DEMON1122" type="4" sum="0" cards=""/><action no="8" player="kuklo" type="4" sum="0" cards=""/><action no="9" player="hdkrush" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards><action no="11" player="DEMON1122" type="5" sum="120" cards=""/><action no="12" player="kuklo" type="0" sum="0" cards=""/><action no="13" player="hdkrush" type="0" sum="0" cards=""/><action no="14" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452295728">
+		 <general>
+		  <startdate>2014-01-29 16:12:02</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="940" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="720" dealer="0" win="900" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="740" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kuklo" type="1" sum="15" cards="[cards]"/><action no="2" player="hdkrush" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="4" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">C6 C8</cards><action no="5" player="kuklo" type="23" sum="60" cards=""/><cards type="Pocket" player="hdkrush">CJ C5</cards><action no="6" player="hdkrush" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">H5 S9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 H3 S6</cards><action no="7" player="kuklo" type="5" sum="60" cards=""/><action no="8" player="hdkrush" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards><action no="9" player="kuklo" type="5" sum="60" cards=""/><action no="11" player="kuklo" type="3" sum="60" cards=""/><action no="10" player="hdkrush" type="23" sum="120" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="12" player="kuklo" type="4" sum="0" cards=""/><action no="14" player="kuklo" type="3" sum="210" cards=""/><action no="13" player="hdkrush" type="5" sum="210" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452296304">
+		 <general>
+		  <startdate>2014-01-29 16:12:44</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="1,170" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="740" dealer="0" win="120" bet="60" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hdkrush" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="3" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="4" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="hdkrush">H9 C10</cards><action no="5" player="hdkrush" type="3" sum="15" cards=""/><action no="7" player="hdkrush" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">CQ HK</cards><action no="6" player="WorstCard" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 C4 D3</cards><action no="8" player="hdkrush" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="10" player="hdkrush" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="12" player="hdkrush" type="4" sum="0" cards=""/><action no="13" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452296890">
+		 <general>
+		  <startdate>2014-01-29 16:13:23</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="800" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="490" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="1,110" dealer="1" win="195" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DEMON1122" type="15" sum="5" cards="[cards]"/><action no="6" player="DEMON1122" type="2" sum="50" cards="[cards]"/><action no="3" player="kuklo" type="15" sum="5" cards="[cards]"/><action no="4" player="hdkrush" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="10" player="DEMON1122" type="4" sum="0" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="7" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="hdkrush">X X</cards><action no="8" player="hdkrush" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">S7 CK</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ H4 H6</cards><action no="11" player="DEMON1122" type="4" sum="0" cards=""/><action no="13" player="DEMON1122" type="0" sum="0" cards=""/><action no="12" player="hdkrush" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452297113">
+		 <general>
+		  <startdate>2014-01-29 16:13:51</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="745" dealer="0" win="0" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="485" dealer="0" win="470" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="1,200" dealer="0" win="0" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DEMON1122" type="15" sum="5" cards="[cards]"/><action no="5" player="DEMON1122" type="1" sum="25" cards="[cards]"/><action no="2" player="kuklo" type="15" sum="5" cards="[cards]"/><action no="6" player="kuklo" type="2" sum="50" cards="[cards]"/><action no="3" player="hdkrush" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">C7 D10</cards><action no="9" player="DEMON1122" type="3" sum="25" cards=""/><cards type="Pocket" player="kuklo">DQ D7</cards><action no="10" player="kuklo" type="4" sum="0" cards=""/><cards type="Pocket" player="hdkrush">C8 C9</cards><action no="7" player="hdkrush" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">S8 D9</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ H7 H4</cards><action no="11" player="DEMON1122" type="4" sum="0" cards=""/><action no="14" player="DEMON1122" type="3" sum="100" cards=""/><action no="12" player="kuklo" type="5" sum="100" cards=""/><action no="13" player="hdkrush" type="3" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="15" player="DEMON1122" type="4" sum="0" cards=""/><action no="16" player="kuklo" type="4" sum="0" cards=""/><action no="17" player="hdkrush" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="18" player="DEMON1122" type="4" sum="0" cards=""/><action no="19" player="kuklo" type="4" sum="0" cards=""/><action no="20" player="hdkrush" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452297465">
+		 <general>
+		  <startdate>2014-01-29 16:14:36</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="590" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="1,045" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="765" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="DEMON1122" type="15" sum="5" cards="[cards]"/><action no="1" player="kuklo" type="15" sum="5" cards="[cards]"/><action no="5" player="kuklo" type="1" sum="25" cards="[cards]"/><action no="2" player="hdkrush" type="15" sum="5" cards="[cards]"/><action no="6" player="hdkrush" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="8" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="9" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="hdkrush">X X</cards><cards type="Pocket" player="WorstCard">SQ D3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452297584">
+		 <general>
+		  <startdate>2014-01-29 16:14:51</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="585" dealer="0" win="1,015" bet="585" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="770" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="1,085" dealer="0" win="0" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="760" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="DEMON1122" type="15" sum="10" cards="[cards]"/><action no="4" player="kuklo" type="15" sum="10" cards="[cards]"/><action no="1" player="hdkrush" type="15" sum="10" cards="[cards]"/><action no="5" player="hdkrush" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="7" player="DEMON1122" type="3" sum="100" cards=""/><action no="11" player="DEMON1122" type="3" sum="100" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="8" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="hdkrush">X X</cards><action no="9" player="hdkrush" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">SA SQ</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 H8 S2</cards><action no="13" player="DEMON1122" type="23" sum="375" cards=""/><action no="12" player="hdkrush" type="5" sum="100" cards=""/><action no="14" player="hdkrush" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452297882">
+		 <general>
+		  <startdate>2014-01-29 16:15:33</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="1,015" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="760" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="775" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="650" dealer="0" win="780" bet="650" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DEMON1122" type="15" sum="10" cards="[cards]"/><action no="6" player="DEMON1122" type="2" sum="100" cards="[cards]"/><action no="3" player="kuklo" type="15" sum="10" cards="[cards]"/><action no="4" player="hdkrush" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="10" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="7" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="hdkrush">X X</cards><action no="8" player="hdkrush" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ HA</cards><action no="9" player="WorstCard" type="23" sum="640" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452298131">
+		 <general>
+		  <startdate>2014-01-29 16:16:06</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="905" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="750" dealer="0" win="1,035" bet="655" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="765" dealer="0" win="0" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="780" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DEMON1122" type="15" sum="10" cards="[cards]"/><action no="5" player="DEMON1122" type="1" sum="50" cards="[cards]"/><action no="2" player="kuklo" type="15" sum="10" cards="[cards]"/><action no="6" player="kuklo" type="2" sum="100" cards="[cards]"/><action no="3" player="hdkrush" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="9" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="10" player="kuklo" type="23" sum="300" cards=""/><cards type="Pocket" player="hdkrush">X X</cards><action no="7" player="hdkrush" type="3" sum="100" cards=""/><action no="11" player="hdkrush" type="3" sum="200" cards=""/><cards type="Pocket" player="WorstCard">C3 H5</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK S8 S4</cards><action no="12" player="kuklo" type="5" sum="345" cards=""/><action no="13" player="hdkrush" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452298354">
+		 <general>
+		  <startdate>2014-01-29 16:16:36</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="845" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="1,130" dealer="0" win="930" bet="455" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="hdkrush" chips="455" dealer="0" win="0" bet="455" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="DEMON1122" type="15" sum="10" cards="[cards]"/><action no="1" player="kuklo" type="15" sum="10" cards="[cards]"/><action no="5" player="kuklo" type="1" sum="50" cards="[cards]"/><action no="2" player="hdkrush" type="15" sum="10" cards="[cards]"/><action no="6" player="hdkrush" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="8" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">CA CK</cards><action no="9" player="kuklo" type="23" sum="300" cards=""/><action no="11" player="kuklo" type="3" sum="145" cards=""/><cards type="Pocket" player="hdkrush">D10 HA</cards><action no="10" player="hdkrush" type="7" sum="345" cards=""/><cards type="Pocket" player="WorstCard">C7 D3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 D2 DJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards>
+	</round>
+	
+		</game><game gamecode="5452313141">
+		 <general>
+		  <startdate>2014-01-29 16:17:00</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="835" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="1,605" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="760" dealer="0" win="195" bet="165" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DEMON1122" type="15" sum="15" cards="[cards]"/><action no="3" player="kuklo" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="5" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="6" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 SQ</cards>
+	</round>
+	
+		</game><game gamecode="5452313229">
+		 <general>
+		  <startdate>2014-01-29 16:17:15</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="820" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="1,590" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="790" dealer="0" win="970" bet="790" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DEMON1122" type="15" sum="15" cards="[cards]"/><action no="5" player="DEMON1122" type="2" sum="150" cards="[cards]"/><action no="3" player="kuklo" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="8" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="6" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 S2</cards><action no="7" player="WorstCard" type="23" sum="775" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452313463">
+		 <general>
+		  <startdate>2014-01-29 16:17:46</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="655" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="1,575" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="970" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DEMON1122" type="15" sum="15" cards="[cards]"/><action no="4" player="DEMON1122" type="1" sum="75" cards="[cards]"/><action no="2" player="kuklo" type="15" sum="15" cards="[cards]"/><action no="5" player="kuklo" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="7" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">X X</cards><cards type="Pocket" player="WorstCard">H10 H7</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452313605">
+		 <general>
+		  <startdate>2014-01-29 16:18:05</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="565" dealer="1" win="820" bet="565" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="1,680" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="955" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="DEMON1122" type="15" sum="15" cards="[cards]"/><action no="1" player="kuklo" type="15" sum="15" cards="[cards]"/><action no="4" player="kuklo" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="6" player="DEMON1122" type="23" sum="550" cards=""/><cards type="Pocket" player="kuklo">X X</cards><action no="7" player="kuklo" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK H8</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452313757">
+		 <general>
+		  <startdate>2014-01-29 16:18:24</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="820" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="1,590" dealer="1" win="0" bet="790" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="790" dealer="0" win="1,745" bet="790" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DEMON1122" type="15" sum="15" cards="[cards]"/><action no="5" player="DEMON1122" type="2" sum="150" cards="[cards]"/><action no="3" player="kuklo" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">X X</cards><action no="8" player="DEMON1122" type="0" sum="0" cards=""/><cards type="Pocket" player="kuklo">SJ D9</cards><action no="6" player="kuklo" type="23" sum="300" cards=""/><action no="9" player="kuklo" type="3" sum="475" cards=""/><cards type="Pocket" player="WorstCard">D7 C7</cards><action no="7" player="WorstCard" type="23" sum="775" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 SA HA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C9</cards>
+	</round>
+	
+		</game><game gamecode="5452313998">
+		 <general>
+		  <startdate>2014-01-29 16:18:57</startdate>		  
+		  <players>
+		   <player seat="2" name="DEMON1122" chips="655" dealer="0" win="0" bet="655" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kuklo" chips="800" dealer="0" win="1,330" bet="655" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,745" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="6190223055"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DEMON1122" type="15" sum="20" cards="[cards]"/><action no="4" player="DEMON1122" type="1" sum="100" cards="[cards]"/><action no="2" player="kuklo" type="15" sum="20" cards="[cards]"/><action no="5" player="kuklo" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DEMON1122">CA DJ</cards><action no="7" player="DEMON1122" type="23" sum="635" cards=""/><cards type="Pocket" player="kuklo">C8 HQ</cards><action no="8" player="kuklo" type="3" sum="435" cards=""/><cards type="Pocket" player="WorstCard">C10 SJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK S8 D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards>
+	</round>
+	
+		</game>  
+	</session>

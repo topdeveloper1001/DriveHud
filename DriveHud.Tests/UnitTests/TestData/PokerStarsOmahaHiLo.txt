@@ -1,0 +1,59 @@
+﻿PokerStars Hand #157676417397:  Omaha Hi/Lo Limit ($0.02/$0.04 USD) - 2016/08/24 9:42:57 ET
+Table 'Annagerman' 10-max Seat #9 is the button
+Seat 2: Peon347 ($1.60 in chips) 
+Seat 3: algol66 ($1.72 in chips) 
+Seat 4: pemdave ($1.16 in chips) 
+Seat 5: RCT Thunder ($1.52 in chips) 
+Seat 6: WP1970 ($0.43 in chips) 
+Seat 7: PeterHolt ($0.32 in chips) 
+Seat 8: Serg Spam ($0.41 in chips) 
+Seat 9: JS091 ($0.37 in chips) 
+Seat 10: set-up-set ($4.19 in chips) 
+set-up-set: posts small blind $0.01
+u.pressure leaves the table
+Peon347: posts big blind $0.02
+*** HOLE CARDS ***
+Dealt to Peon347 [2c Kc 4c Jc]
+algol66: calls $0.02
+pemdave: folds 
+RCT Thunder: folds 
+WP1970: folds 
+PeterHolt: calls $0.02
+Serg Spam: folds 
+JS091: raises $0.02 to $0.04
+set-up-set: folds 
+Peon347: folds 
+algol66: calls $0.02
+PeterHolt: calls $0.02
+*** FLOP *** [4s 3d Th]
+algol66: checks 
+PeterHolt: bets $0.02
+JS091: calls $0.02
+algol66: calls $0.02
+*** TURN *** [4s 3d Th] [4h]
+algol66: checks 
+PeterHolt: bets $0.04
+JS091: calls $0.04
+algol66: calls $0.04
+*** RIVER *** [4s 3d Th 4h] [5c]
+algol66: bets $0.04
+PeterHolt: raises $0.04 to $0.08
+JS091: folds 
+algol66: calls $0.04
+*** SHOW DOWN ***
+PeterHolt: shows [3h Ac 3c Tc] (HI: a full house, Threes full of Fours)
+algol66: shows [2d 2s 6h As] (HI: a straight, Deuce to Six; LO: 5,4,3,2,A)
+PeterHolt collected $0.24 from pot
+algol66 collected $0.24 from pot
+*** SUMMARY ***
+Total pot $0.49 | Rake $0.01 
+Board [4s 3d Th 4h 5c]
+Seat 2: Peon347 (big blind) folded before Flop
+Seat 3: algol66 showed [2d 2s 6h As] and won ($0.24) with HI: a straight, Deuce to Six; LO: 5,4,3,2,A
+Seat 4: pemdave folded before Flop (didn't bet)
+Seat 5: RCT Thunder folded before Flop (didn't bet)
+Seat 6: WP1970 folded before Flop (didn't bet)
+Seat 7: PeterHolt showed [3h Ac 3c Tc] and won ($0.24) with HI: a full house, Threes full of Fours
+Seat 8: Serg Spam folded before Flop (didn't bet)
+Seat 9: JS091 (button) folded on the River
+Seat 10: set-up-set (small blind) folded before Flop

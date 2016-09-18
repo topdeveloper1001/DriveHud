@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="7777777">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL</gametype>
+    <tablename>Table #1, 8 Player Sit n Go 1-Up #405</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2016-08-01 14:59:59</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <tournamentname>8 Player Sit n Go 1-Up #405</tournamentname>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="4858076">
+    <general>
+      <startdate>2016-08-01 14:59:59</startdate>
+      <players>
+        <player seat="1" name="BJIM" chips="1120" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="2" name="pumpturnir" chips="1400" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="3" name="whit" chips="1695" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="5" name="dboy3535" chips="1716" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="pkadubld" chips="1300" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="7" name="rbguy1" chips="1235" dealer="1" win="0" bet="180" rebuy="0" addon="0" />
+        <player seat="8" name="TOMCRUIZIN" chips="3534" dealer="0" win="420" bet="180" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="TOMCRUIZIN" type="1" sum="15" cards="" />
+      <action no="2" player="BJIM" type="2" sum="30" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="BJIM">X X</cards>
+      <cards type="Pocket" player="pumpturnir">X X</cards>
+      <cards type="Pocket" player="whit">X X</cards>
+      <cards type="Pocket" player="dboy3535">X X</cards>
+      <cards type="Pocket" player="pkadubld">X X</cards>
+      <cards type="Pocket" player="rbguy1">HA D8</cards>
+      <cards type="Pocket" player="TOMCRUIZIN">CA HJ</cards>
+      <action no="3" player="pumpturnir" type="0" sum="0" cards="" />
+      <action no="4" player="whit" type="0" sum="0" cards="" />
+      <action no="5" player="dboy3535" type="0" sum="0" cards="" />
+      <action no="6" player="pkadubld" type="0" sum="0" cards="" />
+      <action no="7" player="rbguy1" type="3" sum="30" cards="" />
+      <action no="8" player="TOMCRUIZIN" type="3" sum="15" cards="" />
+      <action no="9" player="BJIM" type="4" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">DA H4 H2</cards>
+      <action no="10" player="TOMCRUIZIN" type="4" sum="0" cards="" />
+      <action no="11" player="BJIM" type="4" sum="0" cards="" />
+      <action no="12" player="rbguy1" type="5" sum="30" cards="" />
+      <action no="13" player="TOMCRUIZIN" type="3" sum="30" cards="" />
+      <action no="14" player="BJIM" type="3" sum="30" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">C9</cards>
+      <action no="15" player="TOMCRUIZIN" type="5" sum="30" cards="" />
+      <action no="16" player="BJIM" type="0" sum="0" cards="" />
+      <action no="17" player="rbguy1" type="23" sum="60" cards="" />
+      <action no="18" player="TOMCRUIZIN" type="3" sum="30" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">SQ</cards>
+      <action no="19" player="TOMCRUIZIN" type="4" sum="0" cards="" />
+      <action no="20" player="rbguy1" type="5" sum="60" cards="" />
+      <action no="21" player="TOMCRUIZIN" type="3" sum="60" cards="" />
+    </round>
+  </game>
+</session>

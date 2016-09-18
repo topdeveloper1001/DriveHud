@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188245364">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819097023</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:02</duration>  
+	          <gamecount>6</gamecount>  
+	          <startdate>2014-01-26 16:10:47</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>880</bets>  
+	          <wins>80</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>4</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.00</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5439002073">
+		 <general>
+		  <startdate>2014-01-26 16:10:47</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188245364"/><player seat="7" name="Elenr1958" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="stephanwalsh27" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Elenr1958" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="4" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 D2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Elenr1958">X X</cards><cards type="Pocket" player="stephanwalsh27">X X</cards><action no="3" player="stephanwalsh27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439002270">
+		 <general>
+		  <startdate>2014-01-26 16:11:12</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="80" bet="50" rebuy="0" addon="0" reg_code="6188245364"/><player seat="7" name="Elenr1958" chips="810" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="stephanwalsh27" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Elenr1958" type="1" sum="10" cards="[cards]"/><action no="2" player="stephanwalsh27" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="3" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK D8</cards><action no="4" player="WorstCard" type="23" sum="50" cards=""/><cards type="Pocket" player="Elenr1958">X X</cards><action no="5" player="Elenr1958" type="0" sum="0" cards=""/><cards type="Pocket" player="stephanwalsh27">X X</cards><action no="6" player="stephanwalsh27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439014675">
+		 <general>
+		  <startdate>2014-01-26 16:11:40</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="800" dealer="0" win="0" bet="540" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188245364"/><player seat="7" name="Elenr1958" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="stephanwalsh27" chips="780" dealer="0" win="1,080" bet="540" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MeXxXyyy" type="2" sum="20" cards="[cards]"/><action no="1" player="stephanwalsh27" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">C3 H3</cards><action no="6" player="MeXxXyyy" type="23" sum="80" cards=""/><cards type="Pocket" player="WorstCard">C8 C7</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Elenr1958">X X</cards><action no="4" player="Elenr1958" type="0" sum="0" cards=""/><cards type="Pocket" player="stephanwalsh27">S7 HQ</cards><action no="5" player="stephanwalsh27" type="3" sum="10" cards=""/><action no="7" player="stephanwalsh27" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK DQ DK</cards><action no="9" player="MeXxXyyy" type="3" sum="60" cards=""/><action no="8" player="stephanwalsh27" type="5" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="11" player="MeXxXyyy" type="3" sum="80" cards=""/><action no="10" player="stephanwalsh27" type="5" sum="80" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="13" player="MeXxXyyy" type="3" sum="320" cards=""/><action no="12" player="stephanwalsh27" type="5" sum="320" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439015015">
+		 <general>
+		  <startdate>2014-01-26 16:12:24</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="260" dealer="0" win="520" bet="260" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="260" rebuy="0" addon="0" reg_code="6188245364"/><player seat="7" name="Elenr1958" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="stephanwalsh27" chips="1,320" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">H4 SQ</cards><action no="5" player="MeXxXyyy" type="23" sum="260" cards=""/><cards type="Pocket" player="WorstCard">D9 D10</cards><action no="6" player="WorstCard" type="3" sum="240" cards=""/><cards type="Pocket" player="Elenr1958">X X</cards><action no="3" player="Elenr1958" type="0" sum="0" cards=""/><cards type="Pocket" player="stephanwalsh27">X X</cards><action no="4" player="stephanwalsh27" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA SJ CA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5439015297">
+		 <general>
+		  <startdate>2014-01-26 16:12:59</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="560" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188245364"/><player seat="7" name="Elenr1958" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="stephanwalsh27" chips="1,320" dealer="0" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Elenr1958" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="4" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H3 C7</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Elenr1958">X X</cards><action no="6" player="Elenr1958" type="4" sum="0" cards=""/><cards type="Pocket" player="stephanwalsh27">X X</cards><action no="3" player="stephanwalsh27" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA CA C6</cards><action no="7" player="Elenr1958" type="4" sum="0" cards=""/><action no="9" player="Elenr1958" type="0" sum="0" cards=""/><action no="8" player="stephanwalsh27" type="5" sum="30" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439015575">
+		 <general>
+		  <startdate>2014-01-26 16:13:33</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="545" dealer="1" win="0" bet="545" rebuy="0" addon="0" reg_code="6188245364"/><player seat="7" name="Elenr1958" chips="770" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="stephanwalsh27" chips="1,365" dealer="0" win="1,105" bet="545" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Elenr1958" type="1" sum="15" cards="[cards]"/><action no="2" player="stephanwalsh27" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="3" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 SA</cards><action no="4" player="WorstCard" type="23" sum="545" cards=""/><cards type="Pocket" player="Elenr1958">X X</cards><action no="5" player="Elenr1958" type="0" sum="0" cards=""/><cards type="Pocket" player="stephanwalsh27">D4 C4</cards><action no="6" player="stephanwalsh27" type="3" sum="515" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 H9 C8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,1426 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6156925595">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>Fort Knox "Jackpot Sit N Go", 815782056</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:37</duration>  
+	          <gamecount>91</gamecount>  
+	          <startdate>2013-11-30 22:48:19</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>AlphaOmaha</nickname>  
+	          <bets>26,740</bets>  
+	          <wins>31,740</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>6,000</chipsout>
+			  		<ipoints>1,395</ipoints>
+        		<statuspoints>225</statuspoints>
+			  		<awardpoints>1,395</awardpoints>
+	          <tournamentname>Fort Knox "Jackpot Sit N Go"</tournamentname><place>1</place><buyin>$50.00+$9.00</buyin> <totalbuyin>$59.00</totalbuyin> <ipoints>1,395</ipoints> <win>$150.00</win> <statuspoints>225</statuspoints> <awardpoints>1,395</awardpoints>  
+	    </general>  
+	    <game gamecode="5292155942">
+		 <general>
+		  <startdate>2013-11-30 22:48:19</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="1,000" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,000" dealer="0" win="80" bet="50" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="komartchi" type="1" sum="10" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="7" player="komartchi" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="8" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SA S7</cards><action no="3" player="AlphaOmaha" type="23" sum="50" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292155969">
+		 <general>
+		  <startdate>2013-11-30 22:48:39</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="990" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,030" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,000" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="10" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="6" player="komartchi" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C3 S7</cards><action no="8" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292156006">
+		 <general>
+		  <startdate>2013-11-30 22:48:56</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="990" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,010" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,030" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="10" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="5" player="komartchi" type="23" sum="60" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S10 C2</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="8" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292156038">
+		 <general>
+		  <startdate>2013-11-30 22:49:17</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="1,020" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,030" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="10" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="4" player="komartchi" type="23" sum="60" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C2 S8</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="8" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292156115">
+		 <general>
+		  <startdate>2013-11-30 22:49:57</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,000" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,010" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="20" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><cards type="Pocket" player="komartchi">X X</cards><action no="3" player="komartchi" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S9 C4</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292156154">
+		 <general>
+		  <startdate>2013-11-30 22:50:18</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,010" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="1,050" dealer="0" win="153" bet="103" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="10" cards="[cards]"/><action no="2" player="komartchi" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="8" player="komartchi" type="3" sum="20" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D8 HA</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="23" sum="40" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 C2 D10</cards><action no="9" player="komartchi" type="4" sum="0" cards=""/><action no="10" player="Anna95" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards><action no="11" player="komartchi" type="5" sum="63" cards=""/><action no="12" player="Anna95" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292156247">
+		 <general>
+		  <startdate>2013-11-30 22:51:04</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,000" dealer="1" win="320" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="1,100" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="komartchi" type="1" sum="10" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="23" sum="60" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="7" player="komartchi" type="3" sum="50" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="8" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D3 H2</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA C10 SA</cards><action no="10" player="boateeeng" type="5" sum="60" cards=""/><action no="9" player="komartchi" type="4" sum="0" cards=""/><action no="11" player="komartchi" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards><action no="13" player="boateeeng" type="5" sum="60" cards=""/><action no="12" player="komartchi" type="4" sum="0" cards=""/><action no="14" player="komartchi" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171004">
+		 <general>
+		  <startdate>2013-11-30 22:51:51</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,140" dealer="0" win="170" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="980" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="950" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="930" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="10" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="3" sum="40" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="6" player="komartchi" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H5 D10</cards><action no="8" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="23" sum="40" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ D3 HJ</cards><action no="10" player="boateeeng" type="5" sum="60" cards=""/><action no="9" player="Anna95" type="4" sum="0" cards=""/><action no="11" player="Anna95" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171069">
+		 <general>
+		  <startdate>2013-11-30 22:52:25</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="980" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="940" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="890" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="10" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="5" player="komartchi" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H5 D4</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171100">
+		 <general>
+		  <startdate>2013-11-30 22:52:43</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="980" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="940" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="900" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="10" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="4" player="komartchi" type="3" sum="20" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D2 DQ</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="3" sum="10" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="8" player="carter1963" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK C3 DA</cards><action no="11" player="komartchi" type="4" sum="0" cards=""/><action no="9" player="Anna95" type="4" sum="0" cards=""/><action no="10" player="carter1963" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards><action no="14" player="komartchi" type="3" sum="30" cards=""/><action no="12" player="Anna95" type="5" sum="30" cards=""/><action no="13" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards><action no="16" player="komartchi" type="0" sum="0" cards=""/><action no="15" player="Anna95" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171261">
+		 <general>
+		  <startdate>2013-11-30 22:54:06</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,210" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="930" dealer="0" win="110" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="940" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="20" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="8" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="3" player="komartchi" type="23" sum="80" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D6 HJ</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171318">
+		 <general>
+		  <startdate>2013-11-30 22:54:36</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,190" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="960" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="940" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="10" cards="[cards]"/><action no="2" player="komartchi" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C7 CJ</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171367">
+		 <general>
+		  <startdate>2013-11-30 22:55:00</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,180" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="970" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="940" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="970" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="970" dealer="0" win="240" bet="160" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="komartchi" type="1" sum="10" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="komartchi">X X</cards><action no="7" player="komartchi" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="8" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C8 H8</cards><action no="3" player="AlphaOmaha" type="23" sum="50" cards=""/><action no="9" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="23" sum="160" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171443">
+		 <general>
+		  <startdate>2013-11-30 22:55:39</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,180" dealer="0" win="2,000" bet="980" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="komartchi" chips="960" dealer="1" win="0" bet="960" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="920" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="920" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">C5 S5</cards><action no="5" player="boateeeng" type="23" sum="120" cards=""/><cards type="Pocket" player="komartchi">DJ H9</cards><action no="6" player="komartchi" type="3" sum="120" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H7 SJ</cards><action no="8" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ H5 D10</cards><action no="9" player="boateeeng" type="5" sum="120" cards=""/><action no="10" player="komartchi" type="3" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="11" player="boateeeng" type="4" sum="0" cards=""/><action no="13" player="boateeeng" type="3" sum="540" cards=""/><action no="12" player="komartchi" type="5" sum="540" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards><action no="14" player="boateeeng" type="5" sum="200" cards=""/><action no="15" player="komartchi" type="7" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171572">
+		 <general>
+		  <startdate>2013-11-30 22:56:43</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="900" dealer="1" win="160" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="880" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="23" sum="100" cards=""/><cards type="Pocket" player="AlphaOmaha">D9 S7</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171632">
+		 <general>
+		  <startdate>2013-11-30 22:57:13</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="860" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="930" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,050" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="20" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DQ S7</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="23" sum="80" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171687">
+		 <general>
+		  <startdate>2013-11-30 22:57:42</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,200" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="1" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,010" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="40" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D8 S10</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="23" sum="80" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187124">
+		 <general>
+		  <startdate>2013-11-30 22:58:06</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,160" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="960" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,030" dealer="0" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="990" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="20" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H7 CJ</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="23" sum="80" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187182">
+		 <general>
+		  <startdate>2013-11-30 22:58:30</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,140" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="920" dealer="0" win="320" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="860" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,090" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="23" sum="200" cards=""/><cards type="Pocket" player="AlphaOmaha">C9 S7</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="23" sum="80" cards=""/><action no="8" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187272">
+		 <general>
+		  <startdate>2013-11-30 22:59:11</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,140" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,040" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="980" bet="820" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,010" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="23" sum="120" cards=""/><action no="8" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DA SA</cards><action no="6" player="AlphaOmaha" type="23" sum="820" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187331">
+		 <general>
+		  <startdate>2013-11-30 22:59:42</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,020" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,040" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="980" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="970" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="990" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="20" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="23" sum="120" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D6 S10</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187361">
+		 <general>
+		  <startdate>2013-11-30 22:59:56</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,080" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,040" dealer="0" win="160" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="980" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="950" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="950" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="40" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="23" sum="100" cards=""/><cards type="Pocket" player="AlphaOmaha">CJ S2</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187405">
+		 <general>
+		  <startdate>2013-11-30 23:00:13</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,040" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,100" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="980" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="950" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="20" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="3" sum="80" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S10 HA</cards><action no="3" player="AlphaOmaha" type="23" sum="100" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK H10 C9</cards><action no="8" player="boateeeng" type="5" sum="120" cards=""/><action no="9" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187479">
+		 <general>
+		  <startdate>2013-11-30 23:00:48</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,180" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,060" dealer="0" win="320" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="880" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="950" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="23" sum="200" cards=""/><cards type="Pocket" player="AlphaOmaha">S10 C6</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="23" sum="80" cards=""/><action no="8" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187553">
+		 <general>
+		  <startdate>2013-11-30 23:01:21</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,180" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,180" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="840" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="870" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="23" sum="80" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CJ S2</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="3" sum="40" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 S9 H8</cards><action no="9" player="boateeeng" type="5" sum="120" cards=""/><action no="8" player="Anna95" type="4" sum="0" cards=""/><action no="10" player="Anna95" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187624">
+		 <general>
+		  <startdate>2013-11-30 23:01:50</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,280" dealer="0" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="790" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="930" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="20" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="23" sum="80" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H7 D6</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187666">
+		 <general>
+		  <startdate>2013-11-30 23:02:08</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,340" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="890" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="40" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D9 C4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187707">
+		 <general>
+		  <startdate>2013-11-30 23:02:31</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,360" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,180" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="870" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="30" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="23" sum="120" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S10 C5</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187793">
+		 <general>
+		  <startdate>2013-11-30 23:03:00</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,120" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="860" bet="770" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H3 D2</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="23" sum="770" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187831">
+		 <general>
+		  <startdate>2013-11-30 23:03:20</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,090" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="860" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="23" sum="120" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S9 CQ</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187890">
+		 <general>
+		  <startdate>2013-11-30 23:03:44</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,090" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="730" dealer="1" win="820" bet="730" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="870" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="30" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S6 CA</cards><action no="5" player="AlphaOmaha" type="23" sum="730" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201491">
+		 <general>
+		  <startdate>2013-11-30 23:04:11</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,510" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,090" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="810" dealer="0" win="240" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="60" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S8 S6</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201535">
+		 <general>
+		  <startdate>2013-11-30 23:04:34</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,450" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,090" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="870" dealer="1" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="30" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D10 CA</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201591">
+		 <general>
+		  <startdate>2013-11-30 23:05:01</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,030" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C6 D3</cards><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201638">
+		 <general>
+		  <startdate>2013-11-30 23:05:21</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="960" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HK D7</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201703">
+		 <general>
+		  <startdate>2013-11-30 23:05:47</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="710" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,050" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="30" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S7 S4</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292201754">
+		 <general>
+		  <startdate>2013-11-30 23:06:11</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="680" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,080" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="60" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S2 S5</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201778">
+		 <general>
+		  <startdate>2013-11-30 23:06:23</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,450" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,000" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="680" dealer="0" win="770" bet="680" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,050" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="30" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S6 DJ</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="23" sum="680" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201842">
+		 <general>
+		  <startdate>2013-11-30 23:06:52</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="940" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="820" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,050" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D4 H5</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201889">
+		 <general>
+		  <startdate>2013-11-30 23:07:08</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,140" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H6 H9</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201937">
+		 <general>
+		  <startdate>2013-11-30 23:07:32</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,420" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="710" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,230" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="30" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="23" sum="120" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HQ D4</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201999">
+		 <general>
+		  <startdate>2013-11-30 23:08:04</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,510" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="680" dealer="1" win="770" bet="680" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,170" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="60" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S6 HK</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="23" sum="680" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202074">
+		 <general>
+		  <startdate>2013-11-30 23:08:36</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,450" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="910" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,140" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="30" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="23" sum="120" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H2 C4</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202116">
+		 <general>
+		  <startdate>2013-11-30 23:08:54</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,510" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="730" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,140" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="23" sum="120" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C7 H4</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202146">
+		 <general>
+		  <startdate>2013-11-30 23:09:10</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="2,600" dealer="0" win="30" bet="1,170" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="670" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="770" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,140" dealer="0" win="2,370" bet="1,140" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">D2 H2</cards><action no="4" player="boateeeng" type="3" sum="180" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D5 D6</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">DJ DA</cards><action no="3" player="carter1963" type="23" sum="180" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ CQ CJ</cards><action no="9" player="boateeeng" type="23" sum="450" cards=""/><action no="8" player="carter1963" type="5" sum="225" cards=""/><action no="10" player="carter1963" type="3" sum="225" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="12" player="boateeeng" type="5" sum="540" cards=""/><action no="11" player="carter1963" type="4" sum="0" cards=""/><action no="13" player="carter1963" type="7" sum="510" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="5292215227">
+		 <general>
+		  <startdate>2013-11-30 23:10:08</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="640" dealer="1" win="790" bet="640" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="710" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,370" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="50" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CQ H6</cards><action no="5" player="AlphaOmaha" type="23" sum="640" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215268">
+		 <general>
+		  <startdate>2013-11-30 23:10:26</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,460" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="820" dealer="0" win="970" bet="820" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="660" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,270" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="100" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="23" sum="820" cards=""/><cards type="Pocket" player="AlphaOmaha">S10 H4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215297">
+		 <general>
+		  <startdate>2013-11-30 23:10:42</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,360" dealer="0" win="400" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="660" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,220" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="50" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="23" sum="300" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S3 SA</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215376">
+		 <general>
+		  <startdate>2013-11-30 23:11:18</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,460" dealer="1" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="870" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="790" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="660" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="23" sum="300" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D2 H8</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215420">
+		 <general>
+		  <startdate>2013-11-30 23:11:37</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,610" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="690" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="660" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="23" sum="300" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C6 C5</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215487">
+		 <general>
+		  <startdate>2013-11-30 23:12:09</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="820" dealer="0" win="970" bet="820" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="640" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="560" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,220" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="50" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="23" sum="820" cards=""/><cards type="Pocket" player="AlphaOmaha">H2 C9</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215523">
+		 <general>
+		  <startdate>2013-11-30 23:12:25</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,760" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="1,120" bet="970" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="640" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="510" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,120" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="100" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="23" sum="970" cards=""/><cards type="Pocket" player="AlphaOmaha">DJ H8</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215597">
+		 <general>
+		  <startdate>2013-11-30 23:12:58</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,660" dealer="0" win="0" bet="640" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,120" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="640" dealer="0" win="1,380" bet="640" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,070" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="50" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">CQ CJ</cards><action no="6" player="boateeeng" type="3" sum="590" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C10 C6</cards><action no="3" player="AlphaOmaha" type="23" sum="640" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 D7 S9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards>
+	</round>
+	
+		</game><game gamecode="5292215653">
+		 <general>
+		  <startdate>2013-11-30 23:13:21</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,020" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,020" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,380" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="510" dealer="0" win="660" bet="510" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,070" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HQ D5</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="23" sum="510" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215706">
+		 <general>
+		  <startdate>2013-11-30 23:13:45</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,020" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="1" win="1,420" bet="970" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,280" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="660" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,070" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="23" sum="300" cards=""/><action no="8" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="23" sum="970" cards=""/><cards type="Pocket" player="AlphaOmaha">DQ S6</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215763">
+		 <general>
+		  <startdate>2013-11-30 23:14:15</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="720" dealer="0" win="870" bet="720" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,230" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="560" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="2,070" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="50" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="23" sum="720" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D8 C9</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215820">
+		 <general>
+		  <startdate>2013-11-30 23:14:46</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="870" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="510" dealer="1" win="660" bet="510" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,970" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="100" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D8 C6</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="23" sum="510" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215864">
+		 <general>
+		  <startdate>2013-11-30 23:15:07</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="770" dealer="0" win="870" bet="770" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,420" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="660" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,920" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="50" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="23" sum="770" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C3 DA</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215930">
+		 <general>
+		  <startdate>2013-11-30 23:15:41</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="870" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,320" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,230" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="660" dealer="0" win="810" bet="660" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C6 H7</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="23" sum="660" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215970">
+		 <general>
+		  <startdate>2013-11-30 23:16:06</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,270" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,130" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="810" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S9 HJ</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227013">
+		 <general>
+		  <startdate>2013-11-30 23:16:22</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="870" dealer="0" win="1,170" bet="870" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="860" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,920" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="100" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="23" sum="870" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D3 S6</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227073">
+		 <general>
+		  <startdate>2013-11-30 23:16:53</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,170" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,720" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="200" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DK D4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227099">
+		 <general>
+		  <startdate>2013-11-30 23:17:11</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,270" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,270" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,080" dealer="0" win="1,380" bet="1,080" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,620" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="100" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DA H5</cards><action no="3" player="AlphaOmaha" type="23" sum="1,080" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227120">
+		 <general>
+		  <startdate>2013-11-30 23:17:25</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,170" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,070" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,380" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="5" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S4 S5</cards><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227141">
+		 <general>
+		  <startdate>2013-11-30 23:17:35</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,480" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="760" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,620" dealer="0" win="700" bet="400" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H9 C3</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="7" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="23" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227173">
+		 <general>
+		  <startdate>2013-11-30 23:17:55</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,170" dealer="0" win="1,470" bet="1,170" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="560" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,920" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="100" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="3" player="boateeeng" type="23" sum="1,170" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C8 C10</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227208">
+		 <general>
+		  <startdate>2013-11-30 23:18:17</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,470" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,380" dealer="0" win="1,680" bet="1,380" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,720" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="boateeeng" type="2" sum="200" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="7" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SK DA</cards><action no="4" player="AlphaOmaha" type="23" sum="1,380" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227232">
+		 <general>
+		  <startdate>2013-11-30 23:18:33</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,270" dealer="0" win="1,470" bet="1,270" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="970" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,620" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boateeeng" type="1" sum="100" cards="[cards]"/><action no="2" player="PXR69343793" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="6" player="boateeeng" type="23" sum="1,270" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="7" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D7 S6</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227264">
+		 <general>
+		  <startdate>2013-11-30 23:18:52</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="1,470" dealer="1" win="700" bet="1,470" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="770" dealer="0" win="1,740" bet="770" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,680" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">HK H8</cards><action no="5" player="boateeeng" type="23" sum="1,470" cards=""/><cards type="Pocket" player="PXR69343793">C7 DA</cards><action no="6" player="PXR69343793" type="7" sum="670" cards=""/><cards type="Pocket" player="AlphaOmaha">SQ S5</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ S7 D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game><game gamecode="5292227310">
+		 <general>
+		  <startdate>2013-11-30 23:19:21</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="700" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,740" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,480" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="460" dealer="0" win="1,020" bet="460" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,620" dealer="0" win="0" bet="460" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">X X</cards><action no="4" player="boateeeng" type="0" sum="0" cards=""/><cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D9 C6</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">SA SJ</cards><action no="7" player="Anna95" type="7" sum="260" cards=""/><cards type="Pocket" player="carter1963">S5 C5</cards><action no="3" player="carter1963" type="23" sum="400" cards=""/><action no="8" player="carter1963" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 H4 H3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards>
+	</round>
+	
+		</game><game gamecode="5292227349">
+		 <general>
+		  <startdate>2013-11-30 23:19:48</startdate>		  
+		  <players>
+		   <player seat="1" name="boateeeng" chips="700" dealer="0" win="0" bet="700" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="PXR69343793" chips="1,740" dealer="0" win="2,740" bet="1,740" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,020" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="1,160" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="100" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="boateeeng">D8 C4</cards><action no="3" player="boateeeng" type="23" sum="700" cards=""/><cards type="Pocket" player="PXR69343793">DJ HJ</cards><action no="4" player="PXR69343793" type="23" sum="1,740" cards=""/><cards type="Pocket" player="AlphaOmaha">C10 DA</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="6" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="7" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ DQ C3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards>
+	</round>
+	
+		</game><game gamecode="5292227384">
+		 <general>
+		  <startdate>2013-11-30 23:20:12</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="2,740" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,380" dealer="0" win="1,680" bet="1,380" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="920" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="960" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PXR69343793" type="2" sum="200" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CK C8</cards><action no="3" player="AlphaOmaha" type="23" sum="1,380" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227401">
+		 <general>
+		  <startdate>2013-11-30 23:20:25</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="2,540" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,680" dealer="0" win="0" bet="920" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="920" dealer="0" win="1,940" bet="920" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="860" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D9 DA</cards><action no="6" player="AlphaOmaha" type="3" sum="720" cards=""/><cards type="Pocket" player="Anna95">S9 H9</cards><action no="3" player="Anna95" type="23" sum="920" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 S7 SJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards>
+	</round>
+	
+		</game><game gamecode="5292227434">
+		 <general>
+		  <startdate>2013-11-30 23:20:44</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="2,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="760" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,940" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C4 D6</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><cards type="Pocket" player="carter1963">X X</cards><action no="3" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227457">
+		 <general>
+		  <startdate>2013-11-30 23:20:59</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="2,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="660" dealer="1" win="960" bet="660" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="2,040" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="860" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Anna95" type="1" sum="100" cards="[cards]"/><action no="2" player="carter1963" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H6 HQ</cards><action no="4" player="AlphaOmaha" type="23" sum="660" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="5" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="6" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227482">
+		 <general>
+		  <startdate>2013-11-30 23:21:13</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="2,440" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="960" dealer="0" win="1,260" bet="960" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,940" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="660" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PXR69343793" type="2" sum="200" cards="[cards]"/><action no="1" player="carter1963" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="6" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HQ C7</cards><action no="3" player="AlphaOmaha" type="23" sum="960" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="5" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227507">
+		 <general>
+		  <startdate>2013-11-30 23:21:31</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="2,240" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,260" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,940" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D8 SK</cards><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/><cards type="Pocket" player="carter1963">X X</cards><action no="4" player="carter1963" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227530">
+		 <general>
+		  <startdate>2013-11-30 23:21:43</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="2,140" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,360" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,940" dealer="0" win="1,220" bet="560" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="carter1963" chips="560" dealer="0" win="0" bet="560" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C2 D9</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">S9 D8</cards><action no="6" player="Anna95" type="3" sum="360" cards=""/><cards type="Pocket" player="carter1963">SK SJ</cards><action no="3" player="carter1963" type="23" sum="560" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA C7 D5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards>
+	</round>
+	
+		</game><game gamecode="5292227589">
+		 <general>
+		  <startdate>2013-11-30 23:22:16</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="2,140" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,260" dealer="1" win="1,560" bet="1,260" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="2,600" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PXR69343793" type="2" sum="200" cards="[cards]"/><action no="1" player="Anna95" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SQ S7</cards><action no="3" player="AlphaOmaha" type="23" sum="1,260" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227620">
+		 <general>
+		  <startdate>2013-11-30 23:22:33</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="1,940" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,560" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="2,500" dealer="1" win="2,800" bet="2,500" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H10 HJ</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="23" sum="2,500" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292227673">
+		 <general>
+		  <startdate>2013-11-30 23:23:03</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="1,840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,360" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="2,800" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C2 DK</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292227698">
+		 <general>
+		  <startdate>2013-11-30 23:23:15</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="1,840" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,260" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="2,900" dealer="0" win="3,100" bet="2,900" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PXR69343793" type="2" sum="200" cards="[cards]"/><action no="1" player="Anna95" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C10 S7</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="23" sum="2,900" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240716">
+		 <general>
+		  <startdate>2013-11-30 23:23:38</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="1,640" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="1,260" dealer="0" win="2,670" bet="1,260" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="3,100" dealer="1" win="1,840" bet="3,100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="150" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="4" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SQ DQ</cards><action no="5" player="AlphaOmaha" type="7" sum="960" cards=""/><cards type="Pocket" player="Anna95">D9 C9</cards><action no="3" player="Anna95" type="23" sum="3,100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 S4 DJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game><game gamecode="5292240758">
+		 <general>
+		  <startdate>2013-11-30 23:24:01</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="2,670" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,840" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="150" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="3" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C2 D10</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292240783">
+		 <general>
+		  <startdate>2013-11-30 23:24:12</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="1,490" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="2,520" dealer="1" win="2,970" bet="2,520" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,990" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PXR69343793" type="2" sum="300" cards="[cards]"/><action no="1" player="Anna95" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">X X</cards><action no="5" player="PXR69343793" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HK CQ</cards><action no="3" player="AlphaOmaha" type="23" sum="2,520" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240800">
+		 <general>
+		  <startdate>2013-11-30 23:24:27</startdate>		  
+		  <players>
+		   <player seat="5" name="PXR69343793" chips="1,190" dealer="0" win="0" bet="1,190" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="AlphaOmaha" chips="2,970" dealer="0" win="2,380" bet="1,190" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PXR69343793" type="1" sum="150" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PXR69343793">S7 CK</cards><action no="4" player="PXR69343793" type="23" sum="1,190" cards=""/><cards type="Pocket" player="AlphaOmaha">DK S3</cards><action no="5" player="AlphaOmaha" type="3" sum="890" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 H2 CJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C9</cards>
+	</round>
+	
+		</game><game gamecode="5292240846">
+		 <general>
+		  <startdate>2013-11-30 23:24:47</startdate>		  
+		  <players>
+		   <player seat="6" name="AlphaOmaha" chips="4,160" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,840" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="150" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">H4 H6</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292240864">
+		 <general>
+		  <startdate>2013-11-30 23:24:58</startdate>		  
+		  <players>
+		   <player seat="6" name="AlphaOmaha" chips="4,010" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,990" dealer="1" win="2,290" bet="1,990" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="AlphaOmaha" type="2" sum="300" cards="[cards]"/><action no="1" player="Anna95" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">S3 S4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="23" sum="1,990" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240892">
+		 <general>
+		  <startdate>2013-11-30 23:25:12</startdate>		  
+		  <players>
+		   <player seat="6" name="AlphaOmaha" chips="3,710" dealer="1" win="4,010" bet="3,710" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="2,290" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="150" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">HJ CJ</cards><action no="3" player="AlphaOmaha" type="23" sum="3,710" cards=""/><cards type="Pocket" player="Anna95">X X</cards><action no="4" player="Anna95" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240911">
+		 <general>
+		  <startdate>2013-11-30 23:25:24</startdate>		  
+		  <players>
+		   <player seat="6" name="AlphaOmaha" chips="4,010" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,990" dealer="1" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="AlphaOmaha" type="2" sum="300" cards="[cards]"/><action no="1" player="Anna95" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">D9 HJ</cards><cards type="Pocket" player="Anna95">X X</cards><action no="3" player="Anna95" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292240934">
+		 <general>
+		  <startdate>2013-11-30 23:25:34</startdate>		  
+		  <players>
+		   <player seat="6" name="AlphaOmaha" chips="4,160" dealer="1" win="6,000" bet="4,160" rebuy="0" addon="0" reg_code="6156925595"/><player seat="8" name="Anna95" chips="1,840" dealer="0" win="0" bet="1,840" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="150" cards="[cards]"/><action no="2" player="Anna95" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">D7 DK</cards><action no="3" player="AlphaOmaha" type="23" sum="4,160" cards=""/><cards type="Pocket" player="Anna95">H5 CK</cards><action no="4" player="Anna95" type="7" sum="1,540" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 C3 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards>
+	</round>
+	
+		</game>  
+	</session>

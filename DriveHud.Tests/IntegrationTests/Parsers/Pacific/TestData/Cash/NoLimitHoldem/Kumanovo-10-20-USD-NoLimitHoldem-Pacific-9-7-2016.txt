@@ -1,0 +1,1695 @@
+#Game No : 436619038
+***** 888poker Hand History for Game 436619038 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:44:13
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: Twikko ( $2,000 )
+Seat 4: BlowJOBama ( $1,000 )
+Seat 6: IWontBluffU ( $800 )
+Seat 7: rudy0014 ( $1,010 )
+BlowJOBama posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+rudy0014 folds
+Twikko folds
+BlowJOBama calls [$10]
+IWontBluffU raises [$64]
+BlowJOBama calls [$64]
+** Dealing flop ** [ 6h, 9s, Ts ]
+BlowJOBama checks
+IWontBluffU checks
+** Dealing turn ** [ 7c ]
+BlowJOBama checks
+IWontBluffU checks
+** Dealing river ** [ Kh ]
+BlowJOBama checks
+IWontBluffU bets [$67]
+BlowJOBama calls [$67]
+** Summary **
+IWontBluffU shows [ Qs, 5d ]
+BlowJOBama shows [ Ac, Td ]
+BlowJOBama collected [ $298 ]
+
+
+#Game No : 436619063
+***** 888poker Hand History for Game 436619063 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:45:02
+Table Kumanovo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,000 )
+Seat 4: BlowJOBama ( $1,147 )
+Seat 6: IWontBluffU ( $1,980 )
+Seat 7: rudy0014 ( $1,010 )
+Seat 9: GreenHullK ( $2,000 )
+IWontBluffU posts small blind [$10]
+rudy0014 posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+Twikko folds
+BlowJOBama folds
+IWontBluffU raises [$90]
+rudy0014 calls [$80]
+** Dealing flop ** [ 5d, 3c, 6c ]
+IWontBluffU checks
+rudy0014 checks
+** Dealing turn ** [ 2h ]
+IWontBluffU checks
+rudy0014 checks
+** Dealing river ** [ 7d ]
+IWontBluffU checks
+rudy0014 checks
+** Summary **
+IWontBluffU shows [ Ah, Qc ]
+rudy0014 mucks [ Ad, 9c ]
+IWontBluffU collected [ $196 ]
+
+
+#Game No : 436619083
+***** 888poker Hand History for Game 436619083 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:45:33
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,000 )
+Seat 4: BlowJOBama ( $1,147 )
+Seat 6: IWontBluffU ( $2,076 )
+Seat 7: rudy0014 ( $910 )
+Seat 9: GreenHullK ( $2,000 )
+rudy0014 posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+Twikko folds
+BlowJOBama raises [$45]
+IWontBluffU folds
+rudy0014 folds
+GreenHullK calls [$25]
+** Dealing flop ** [ 9s, 7c, 5h ]
+GreenHullK checks
+BlowJOBama checks
+** Dealing turn ** [ 2s ]
+GreenHullK bets [$75]
+BlowJOBama raises [$310]
+GreenHullK folds
+** Summary **
+BlowJOBama collected [ $246 ]
+
+
+#Game No : 436619112
+***** 888poker Hand History for Game 436619112 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:46:24
+Table Kumanovo 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,000 )
+Seat 4: BlowJOBama ( $1,273 )
+Seat 6: IWontBluffU ( $2,076 )
+Seat 7: rudy0014 ( $900 )
+Seat 9: GreenHullK ( $2,000 )
+GreenHullK posts small blind [$10]
+Twikko posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+IWontBluffU folds
+rudy0014 calls [$20]
+GreenHullK folds
+Twikko raises [$100]
+rudy0014 calls [$100]
+** Dealing flop ** [ Ah, 8d, 7s ]
+Twikko bets [$110]
+rudy0014 calls [$110]
+** Dealing turn ** [ 6c ]
+Twikko checks
+rudy0014 checks
+** Dealing river ** [ 2s ]
+Twikko bets [$1,770]
+rudy0014 folds
+** Summary **
+Twikko collected [ $466 ]
+
+
+#Game No : 436619158
+***** 888poker Hand History for Game 436619158 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:47:37
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,236 )
+Seat 2: nonameeeee ( $2,047.50 )
+Seat 4: BlowJOBama ( $1,273 )
+Seat 6: IWontBluffU ( $2,076 )
+Seat 7: rudy0014 ( $670 )
+Seat 9: GreenHullK ( $2,000 )
+Twikko posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+IWontBluffU folds
+rudy0014 calls [$20]
+GreenHullK folds
+Twikko folds
+nonameeeee checks
+** Dealing flop ** [ 7d, 9s, Td ]
+nonameeeee checks
+rudy0014 checks
+** Dealing turn ** [ Kd ]
+nonameeeee checks
+rudy0014 checks
+** Dealing river ** [ Js ]
+nonameeeee bets [$25]
+rudy0014 calls [$25]
+** Summary **
+nonameeeee shows [ 6d, Qs ]
+rudy0014 mucks [ 9c, 6s ]
+nonameeeee collected [ $96 ]
+
+
+#Game No : 436619192
+***** 888poker Hand History for Game 436619192 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:48:24
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,226 )
+Seat 2: nonameeeee ( $2,098.50 )
+Seat 4: BlowJOBama ( $1,273 )
+Seat 6: IWontBluffU ( $2,076 )
+Seat 7: rudy0014 ( $625 )
+Seat 9: GreenHullK ( $2,000 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+IWontBluffU raises [$50]
+rudy0014 folds
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+BlowJOBama folds
+** Summary **
+IWontBluffU did not show his hand
+IWontBluffU collected [ $50 ]
+
+
+#Game No : 436619205
+***** 888poker Hand History for Game 436619205 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:48:42
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,226 )
+Seat 2: nonameeeee ( $2,088.50 )
+Seat 4: BlowJOBama ( $1,253 )
+Seat 6: IWontBluffU ( $2,106 )
+Seat 7: rudy0014 ( $625 )
+Seat 9: GreenHullK ( $2,000 )
+BlowJOBama posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+rudy0014 calls [$20]
+GreenHullK folds
+Twikko raises [$90]
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU folds
+rudy0014 calls [$70]
+** Dealing flop ** [ 4c, 5s, Kd ]
+rudy0014 checks
+Twikko bets [$55]
+rudy0014 calls [$55]
+** Dealing turn ** [ 9d ]
+rudy0014 checks
+Twikko checks
+** Dealing river ** [ 8h ]
+rudy0014 checks
+Twikko checks
+** Summary **
+rudy0014 shows [ Ks, 2c ]
+Twikko mucks [ Qc, Ad ]
+rudy0014 collected [ $316 ]
+
+
+#Game No : 436619260
+***** 888poker Hand History for Game 436619260 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:49:42
+Table Kumanovo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,081 )
+Seat 2: nonameeeee ( $2,088.50 )
+Seat 4: BlowJOBama ( $1,243 )
+Seat 6: IWontBluffU ( $2,086 )
+Seat 7: rudy0014 ( $796 )
+Seat 9: GreenHullK ( $2,000 )
+IWontBluffU posts small blind [$10]
+rudy0014 posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+BlowJOBama raises [$46]
+IWontBluffU folds
+rudy0014 calls [$26]
+** Dealing flop ** [ 8s, 3h, 7c ]
+rudy0014 bets [$20]
+BlowJOBama raises [$90]
+rudy0014 calls [$70]
+** Dealing turn ** [ Qc ]
+rudy0014 checks
+BlowJOBama bets [$180]
+rudy0014 folds
+** Summary **
+BlowJOBama did not show his hand
+BlowJOBama collected [ $278 ]
+
+
+#Game No : 436619297
+***** 888poker Hand History for Game 436619297 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:50:30
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,081 )
+Seat 2: nonameeeee ( $2,088.50 )
+Seat 4: BlowJOBama ( $1,385 )
+Seat 6: IWontBluffU ( $2,076 )
+Seat 7: rudy0014 ( $660 )
+Seat 9: GreenHullK ( $2,000 )
+rudy0014 posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+Twikko folds
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU raises [$60]
+rudy0014 calls [$50]
+GreenHullK folds
+** Dealing flop ** [ 2d, 3d, Ts ]
+rudy0014 checks
+IWontBluffU bets [$150]
+rudy0014 calls [$150]
+** Dealing turn ** [ Qc ]
+rudy0014 checks
+IWontBluffU bets [$450]
+rudy0014 folds
+** Summary **
+IWontBluffU did not show his hand
+IWontBluffU collected [ $436 ]
+
+
+#Game No : 436619319
+***** 888poker Hand History for Game 436619319 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:51:06
+Table Kumanovo 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,081 )
+Seat 2: nonameeeee ( $2,088.50 )
+Seat 4: BlowJOBama ( $1,385 )
+Seat 6: IWontBluffU ( $2,302 )
+Seat 7: rudy0014 ( $450 )
+Seat 9: GreenHullK ( $2,000 )
+GreenHullK posts small blind [$10]
+Twikko posts big blind [$20]
+** Dealing down cards **
+nonameeeee raises [$60]
+BlowJOBama folds
+IWontBluffU raises [$166]
+rudy0014 raises [$450]
+GreenHullK folds
+Twikko raises [$2,061]
+nonameeeee folds
+IWontBluffU folds
+** Dealing flop ** [ 7h, Qd, 2h ]
+** Dealing turn ** [ 3s ]
+** Dealing river ** [ 6c ]
+** Summary **
+Twikko shows [ Ah, Qc ]
+rudy0014 shows [ 4s, 6s ]
+Twikko collected [ $1,132 ]
+
+
+#Game No : 436619366
+***** 888poker Hand History for Game 436619366 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:52:13
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,763 )
+Seat 2: nonameeeee ( $2,028.50 )
+Seat 4: BlowJOBama ( $1,385 )
+Seat 6: IWontBluffU ( $2,136 )
+Seat 9: GreenHullK ( $2,000 )
+Twikko posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+IWontBluffU raises [$50]
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+** Summary **
+IWontBluffU collected [ $50 ]
+
+
+#Game No : 436619389
+***** 888poker Hand History for Game 436619389 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:52:44
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,753 )
+Seat 2: nonameeeee ( $2,008.50 )
+Seat 4: BlowJOBama ( $1,385 )
+Seat 6: IWontBluffU ( $2,166 )
+Seat 9: GreenHullK ( $2,000 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+GreenHullK raises [$60]
+Twikko folds
+nonameeeee folds
+BlowJOBama calls [$40]
+** Dealing flop ** [ 6c, 3h, 5d ]
+BlowJOBama checks
+GreenHullK checks
+** Dealing turn ** [ Td ]
+BlowJOBama bets [$97.50]
+GreenHullK calls [$97.50]
+** Dealing river ** [ 5s ]
+BlowJOBama bets [$325]
+GreenHullK calls [$325]
+** Summary **
+BlowJOBama shows [ Js, Qs ]
+GreenHullK shows [ Ac, Ts ]
+GreenHullK collected [ $971 ]
+
+
+#Game No : 436619446
+***** 888poker Hand History for Game 436619446 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:54:00
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,753 )
+Seat 2: nonameeeee ( $1,998.50 )
+Seat 4: BlowJOBama ( $1,000 )
+Seat 6: IWontBluffU ( $2,166 )
+Seat 7: rudy0014 ( $1,000 )
+Seat 9: GreenHullK ( $2,488.50 )
+BlowJOBama posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+rudy0014 folds
+GreenHullK folds
+Twikko folds
+nonameeeee raises [$50]
+BlowJOBama folds
+IWontBluffU folds
+** Summary **
+nonameeeee did not show his hand
+nonameeeee collected [ $50 ]
+
+
+#Game No : 436619466
+***** 888poker Hand History for Game 436619466 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:54:31
+Table Kumanovo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,753 )
+Seat 2: nonameeeee ( $2,028.50 )
+Seat 4: BlowJOBama ( $1,000 )
+Seat 6: IWontBluffU ( $2,146 )
+Seat 7: rudy0014 ( $1,000 )
+Seat 9: GreenHullK ( $2,488.50 )
+IWontBluffU posts small blind [$10]
+rudy0014 posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+BlowJOBama raises [$40]
+IWontBluffU calls [$30]
+rudy0014 calls [$20]
+** Dealing flop ** [ Th, 5h, Kd ]
+IWontBluffU bets [$90]
+rudy0014 folds
+BlowJOBama folds
+** Summary **
+IWontBluffU did not show his hand
+IWontBluffU collected [ $116 ]
+
+
+#Game No : 436619494
+***** 888poker Hand History for Game 436619494 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:55:01
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,753 )
+Seat 2: nonameeeee ( $2,028.50 )
+Seat 4: BlowJOBama ( $1,000 )
+Seat 6: IWontBluffU ( $2,222 )
+Seat 7: rudy0014 ( $960 )
+Seat 9: GreenHullK ( $2,488.50 )
+rudy0014 posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+Twikko folds
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU folds
+rudy0014 calls [$10]
+GreenHullK checks
+** Dealing flop ** [ 2s, As, Qc ]
+rudy0014 checks
+GreenHullK checks
+** Dealing turn ** [ 3s ]
+rudy0014 checks
+GreenHullK checks
+** Dealing river ** [ 4d ]
+rudy0014 checks
+GreenHullK bets [$30]
+rudy0014 calls [$30]
+** Summary **
+GreenHullK shows [ 5d, 2d ]
+rudy0014 mucks [ Kd, Kc ]
+GreenHullK collected [ $96 ]
+
+
+#Game No : 436619539
+***** 888poker Hand History for Game 436619539 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:56:06
+Table Kumanovo 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,753 )
+Seat 2: nonameeeee ( $2,028.50 )
+Seat 4: BlowJOBama ( $1,000 )
+Seat 6: IWontBluffU ( $2,222 )
+Seat 7: rudy0014 ( $910 )
+Seat 9: GreenHullK ( $2,534.50 )
+GreenHullK posts small blind [$10]
+Twikko posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU folds
+rudy0014 calls [$20]
+GreenHullK calls [$10]
+Twikko checks
+** Dealing flop ** [ Qh, Tc, 9c ]
+GreenHullK checks
+Twikko checks
+rudy0014 bets [$20]
+GreenHullK folds
+Twikko raises [$95]
+rudy0014 calls [$75]
+** Dealing turn ** [ 7h ]
+Twikko bets [$187.50]
+rudy0014 calls [$187.50]
+** Dealing river ** [ Jd ]
+Twikko checks
+rudy0014 checks
+** Summary **
+Twikko shows [ 3d, Qc ]
+rudy0014 shows [ 6h, Qd ]
+Twikko collected [ $310.50 ]
+rudy0014 collected [ $310.50 ]
+
+
+#Game No : 436619608
+***** 888poker Hand History for Game 436619608 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:57:51
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,761 )
+Seat 2: nonameeeee ( $2,028.50 )
+Seat 4: BlowJOBama ( $1,000 )
+Seat 6: IWontBluffU ( $2,222 )
+Seat 7: rudy0014 ( $918 )
+Seat 9: GreenHullK ( $2,514.50 )
+Twikko posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+IWontBluffU folds
+rudy0014 calls [$20]
+GreenHullK raises [$90]
+Twikko folds
+nonameeeee folds
+rudy0014 calls [$70]
+** Dealing flop ** [ 9c, 9h, Js ]
+rudy0014 checks
+GreenHullK checks
+** Dealing turn ** [ 4d ]
+rudy0014 checks
+GreenHullK checks
+** Dealing river ** [ 3h ]
+rudy0014 checks
+GreenHullK checks
+** Summary **
+rudy0014 shows [ Ad, Jd ]
+GreenHullK mucks [ Kd, Qh ]
+rudy0014 collected [ $206 ]
+
+
+#Game No : 436619672
+***** 888poker Hand History for Game 436619672 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 01:59:10
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,751 )
+Seat 2: nonameeeee ( $2,008.50 )
+Seat 4: BlowJOBama ( $1,000 )
+Seat 6: IWontBluffU ( $2,222 )
+Seat 7: rudy0014 ( $1,034 )
+Seat 9: GreenHullK ( $2,424.50 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+rudy0014 calls [$20]
+GreenHullK calls [$20]
+Twikko calls [$20]
+nonameeeee calls [$10]
+BlowJOBama checks
+** Dealing flop ** [ 4c, Ac, 2s ]
+nonameeeee checks
+BlowJOBama checks
+rudy0014 checks
+GreenHullK checks
+Twikko checks
+** Dealing turn ** [ 6h ]
+nonameeeee checks
+BlowJOBama bets [$100]
+rudy0014 folds
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+** Summary **
+BlowJOBama did not show his hand
+BlowJOBama collected [ $96 ]
+
+
+#Game No : 436619745
+***** 888poker Hand History for Game 436619745 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:00:45
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,731 )
+Seat 2: nonameeeee ( $1,988.50 )
+Seat 4: BlowJOBama ( $1,076 )
+Seat 6: IWontBluffU ( $2,222 )
+Seat 7: rudy0014 ( $1,014 )
+Seat 9: GreenHullK ( $2,404.50 )
+BlowJOBama posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+rudy0014 calls [$20]
+GreenHullK folds
+Twikko folds
+nonameeeee raises [$80]
+BlowJOBama raises [$270]
+IWontBluffU folds
+rudy0014 folds
+nonameeeee folds
+** Summary **
+BlowJOBama did not show his hand
+BlowJOBama collected [ $200 ]
+
+
+#Game No : 436619771
+***** 888poker Hand History for Game 436619771 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:01:20
+Table Kumanovo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,731 )
+Seat 2: nonameeeee ( $1,908.50 )
+Seat 4: BlowJOBama ( $1,196 )
+Seat 6: IWontBluffU ( $2,202 )
+Seat 7: rudy0014 ( $994 )
+Seat 9: GreenHullK ( $2,404.50 )
+IWontBluffU posts small blind [$10]
+rudy0014 posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+Twikko raises [$45]
+nonameeeee folds
+BlowJOBama calls [$45]
+IWontBluffU folds
+rudy0014 calls [$25]
+** Dealing flop ** [ Ts, 7d, 2s ]
+rudy0014 bets [$20]
+Twikko raises [$158.75]
+BlowJOBama calls [$158.75]
+rudy0014 folds
+** Dealing turn ** [ 6d ]
+Twikko checks
+BlowJOBama bets [$244]
+Twikko calls [$244]
+** Dealing river ** [ 5h ]
+Twikko checks
+BlowJOBama checks
+** Summary **
+Twikko shows [ As, 3s ]
+BlowJOBama shows [ 9h, 9c ]
+BlowJOBama collected [ $966.50 ]
+
+
+#Game No : 436619848
+***** 888poker Hand History for Game 436619848 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:02:46
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,283.25 )
+Seat 2: nonameeeee ( $1,908.50 )
+Seat 4: BlowJOBama ( $1,714.75 )
+Seat 6: IWontBluffU ( $2,192 )
+Seat 7: rudy0014 ( $929 )
+Seat 9: GreenHullK ( $2,404.50 )
+rudy0014 posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+Twikko folds
+nonameeeee folds
+BlowJOBama raises [$45]
+IWontBluffU folds
+rudy0014 calls [$35]
+GreenHullK folds
+** Dealing flop ** [ Qs, 3h, 6h ]
+rudy0014 bets [$20]
+BlowJOBama raises [$90]
+rudy0014 calls [$70]
+** Dealing turn ** [ Tc ]
+rudy0014 checks
+BlowJOBama checks
+** Dealing river ** [ Qc ]
+rudy0014 checks
+BlowJOBama bets [$190]
+rudy0014 calls [$190]
+** Summary **
+BlowJOBama shows [ Th, 9d ]
+rudy0014 mucks [ 8d, 3c ]
+BlowJOBama collected [ $666 ]
+
+
+#Game No : 436619883
+***** 888poker Hand History for Game 436619883 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:03:48
+Table Kumanovo 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,283.25 )
+Seat 2: nonameeeee ( $1,908.50 )
+Seat 4: BlowJOBama ( $2,055.75 )
+Seat 6: IWontBluffU ( $2,192 )
+Seat 7: rudy0014 ( $604 )
+Seat 9: GreenHullK ( $2,384.50 )
+GreenHullK posts small blind [$10]
+Twikko posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU folds
+rudy0014 calls [$20]
+GreenHullK folds
+Twikko checks
+** Dealing flop ** [ 2c, 8s, Kh ]
+Twikko checks
+rudy0014 checks
+** Dealing turn ** [ 9c ]
+Twikko checks
+rudy0014 checks
+** Dealing river ** [ Kd ]
+Twikko checks
+rudy0014 checks
+** Summary **
+Twikko shows [ Ad, 3h ]
+rudy0014 shows [ 9h, Qc ]
+rudy0014 collected [ $47.50 ]
+
+
+#Game No : 436619917
+***** 888poker Hand History for Game 436619917 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:04:40
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,263.25 )
+Seat 2: nonameeeee ( $1,908.50 )
+Seat 4: BlowJOBama ( $2,055.75 )
+Seat 6: IWontBluffU ( $2,192 )
+Seat 7: rudy0014 ( $631.50 )
+Seat 9: GreenHullK ( $2,374.50 )
+Twikko posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama raises [$54]
+IWontBluffU folds
+rudy0014 folds
+GreenHullK folds
+Twikko folds
+nonameeeee calls [$34]
+** Dealing flop ** [ 8s, Qd, 9s ]
+nonameeeee checks
+BlowJOBama checks
+** Dealing turn ** [ Qc ]
+nonameeeee checks
+BlowJOBama checks
+** Dealing river ** [ 4d ]
+nonameeeee bets [$80]
+BlowJOBama calls [$80]
+** Summary **
+nonameeeee shows [ 8d, 8h ]
+BlowJOBama mucks [ 9d, Jd ]
+nonameeeee collected [ $274 ]
+
+
+#Game No : 436619941
+***** 888poker Hand History for Game 436619941 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:05:25
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,253.25 )
+Seat 2: nonameeeee ( $2,048.50 )
+Seat 4: BlowJOBama ( $1,921.75 )
+Seat 6: IWontBluffU ( $2,192 )
+Seat 7: rudy0014 ( $631.50 )
+Seat 9: GreenHullK ( $2,374.50 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+rudy0014 calls [$20]
+GreenHullK folds
+Twikko folds
+nonameeeee raises [$70]
+BlowJOBama folds
+rudy0014 calls [$60]
+** Dealing flop ** [ Ac, 5s, Qd ]
+nonameeeee checks
+rudy0014 checks
+** Dealing turn ** [ Th ]
+nonameeeee checks
+rudy0014 checks
+** Dealing river ** [ 9s ]
+nonameeeee checks
+rudy0014 checks
+** Summary **
+nonameeeee shows [ Js, Qs ]
+rudy0014 mucks [ 3d, 3c ]
+nonameeeee collected [ $176 ]
+
+
+#Game No : 436619970
+***** 888poker Hand History for Game 436619970 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:06:04
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,253.25 )
+Seat 2: nonameeeee ( $2,144.50 )
+Seat 4: BlowJOBama ( $1,901.75 )
+Seat 6: IWontBluffU ( $2,192 )
+Seat 7: rudy0014 ( $551.50 )
+Seat 9: GreenHullK ( $2,374.50 )
+BlowJOBama posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+rudy0014 raises [$40]
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+BlowJOBama raises [$140]
+IWontBluffU folds
+rudy0014 raises [$511.50]
+BlowJOBama calls [$401.50]
+** Dealing flop ** [ 6d, 4h, 7c ]
+** Dealing turn ** [ 3s ]
+** Dealing river ** [ Ts ]
+** Summary **
+BlowJOBama shows [ Ac, 5c ]
+rudy0014 shows [ Kc, Ad ]
+BlowJOBama collected [ $1,119 ]
+
+
+#Game No : 436620007
+***** 888poker Hand History for Game 436620007 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:06:53
+Table Kumanovo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,253.25 )
+Seat 2: nonameeeee ( $2,144.50 )
+Seat 4: BlowJOBama ( $2,469.25 )
+Seat 6: IWontBluffU ( $2,172 )
+Seat 9: GreenHullK ( $2,374.50 )
+IWontBluffU posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+Twikko folds
+nonameeeee raises [$60]
+BlowJOBama folds
+IWontBluffU raises [$212]
+GreenHullK folds
+nonameeeee folds
+** Summary **
+IWontBluffU collected [ $140 ]
+
+
+#Game No : 436620049
+***** 888poker Hand History for Game 436620049 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:07:49
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,253.25 )
+Seat 2: nonameeeee ( $2,084.50 )
+Seat 4: BlowJOBama ( $2,469.25 )
+Seat 6: IWontBluffU ( $2,252 )
+Seat 9: GreenHullK ( $2,354.50 )
+GreenHullK posts small blind [$10]
+Twikko posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU raises [$50]
+GreenHullK folds
+Twikko calls [$30]
+** Dealing flop ** [ 4d, 8c, 8h ]
+Twikko checks
+IWontBluffU bets [$37]
+Twikko calls [$37]
+** Dealing turn ** [ Ah ]
+Twikko checks
+IWontBluffU bets [$138]
+Twikko folds
+** Summary **
+IWontBluffU collected [ $180 ]
+
+
+#Game No : 436620076
+***** 888poker Hand History for Game 436620076 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:08:37
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,166.25 )
+Seat 2: nonameeeee ( $2,084.50 )
+Seat 4: BlowJOBama ( $2,469.25 )
+Seat 6: IWontBluffU ( $2,345 )
+Seat 9: GreenHullK ( $2,344.50 )
+Twikko posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+IWontBluffU folds
+GreenHullK raises [$50]
+Twikko raises [$180]
+nonameeeee folds
+GreenHullK calls [$140]
+** Dealing flop ** [ 3s, As, 8d ]
+Twikko checks
+GreenHullK checks
+** Dealing turn ** [ Ad ]
+Twikko bets [$180]
+GreenHullK folds
+** Summary **
+Twikko collected [ $396 ]
+
+
+#Game No : 436620126
+***** 888poker Hand History for Game 436620126 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:09:57
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,372.25 )
+Seat 2: nonameeeee ( $2,064.50 )
+Seat 4: BlowJOBama ( $2,469.25 )
+Seat 6: IWontBluffU ( $2,345 )
+Seat 9: GreenHullK ( $2,154.50 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+GreenHullK raises [$60]
+Twikko folds
+nonameeeee folds
+BlowJOBama calls [$40]
+** Dealing flop ** [ 7d, 3s, Ts ]
+BlowJOBama checks
+GreenHullK bets [$65]
+BlowJOBama folds
+** Summary **
+GreenHullK collected [ $126 ]
+
+
+#Game No : 436620157
+***** 888poker Hand History for Game 436620157 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:10:39
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,372.25 )
+Seat 2: nonameeeee ( $2,054.50 )
+Seat 4: BlowJOBama ( $2,409.25 )
+Seat 6: IWontBluffU ( $2,345 )
+Seat 7: rudy0014 ( $1,000 )
+Seat 9: GreenHullK ( $2,220.50 )
+BlowJOBama posts small blind [$10]
+IWontBluffU posts big blind [$20]
+rudy0014 posts dead blind [$10 + $20]
+** Dealing down cards **
+rudy0014 checks
+GreenHullK folds
+Twikko raises [$100]
+nonameeeee calls [$100]
+BlowJOBama folds
+IWontBluffU calls [$80]
+rudy0014 folds
+** Dealing flop ** [ 6s, 9s, Qh ]
+IWontBluffU checks
+Twikko checks
+nonameeeee checks
+** Dealing turn ** [ 9d ]
+IWontBluffU checks
+Twikko checks
+nonameeeee bets [$176]
+IWontBluffU calls [$176]
+Twikko folds
+** Dealing river ** [ 8d ]
+IWontBluffU checks
+nonameeeee bets [$525]
+IWontBluffU folds
+** Summary **
+nonameeeee did not show his hand
+nonameeeee collected [ $688 ]
+
+
+#Game No : 436620209
+***** 888poker Hand History for Game 436620209 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:12:01
+Table Kumanovo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,272.25 )
+Seat 2: nonameeeee ( $2,466.50 )
+Seat 4: BlowJOBama ( $2,399.25 )
+Seat 6: IWontBluffU ( $2,069 )
+Seat 7: rudy0014 ( $970 )
+Seat 9: GreenHullK ( $2,220.50 )
+IWontBluffU posts small blind [$10]
+rudy0014 posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+Twikko raises [$45]
+nonameeeee folds
+BlowJOBama calls [$45]
+IWontBluffU folds
+rudy0014 folds
+** Dealing flop ** [ 7c, 5s, Kh ]
+Twikko bets [$40]
+BlowJOBama calls [$40]
+** Dealing turn ** [ 2s ]
+Twikko checks
+BlowJOBama bets [$142]
+Twikko calls [$142]
+** Dealing river ** [ Kc ]
+Twikko checks
+BlowJOBama checks
+** Summary **
+Twikko shows [ Th, Td ]
+BlowJOBama mucks [ 5h, 6h ]
+Twikko collected [ $480 ]
+
+
+#Game No : 436620273
+***** 888poker Hand History for Game 436620273 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:13:32
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,525.25 )
+Seat 2: nonameeeee ( $2,466.50 )
+Seat 4: BlowJOBama ( $2,172.25 )
+Seat 6: IWontBluffU ( $2,059 )
+Seat 7: rudy0014 ( $950 )
+Seat 9: GreenHullK ( $2,220.50 )
+rudy0014 posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+Twikko folds
+nonameeeee folds
+BlowJOBama raises [$45]
+IWontBluffU folds
+rudy0014 calls [$35]
+GreenHullK calls [$25]
+** Dealing flop ** [ 7s, 8c, 3c ]
+rudy0014 checks
+GreenHullK checks
+BlowJOBama checks
+** Dealing turn ** [ 4c ]
+rudy0014 checks
+GreenHullK checks
+BlowJOBama bets [$60]
+rudy0014 calls [$60]
+GreenHullK folds
+** Dealing river ** [ 5c ]
+rudy0014 bets [$127.50]
+BlowJOBama folds
+** Summary **
+rudy0014 did not show his hand
+rudy0014 collected [ $251 ]
+
+
+#Game No : 436620315
+***** 888poker Hand History for Game 436620315 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:14:46
+Table Kumanovo 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,525.25 )
+Seat 2: nonameeeee ( $2,466.50 )
+Seat 4: BlowJOBama ( $2,067.25 )
+Seat 6: IWontBluffU ( $2,059 )
+Seat 7: rudy0014 ( $1,096 )
+Seat 9: GreenHullK ( $2,175.50 )
+GreenHullK posts small blind [$10]
+Twikko posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+BlowJOBama raises [$54]
+IWontBluffU folds
+rudy0014 calls [$54]
+GreenHullK folds
+Twikko folds
+** Dealing flop ** [ Kc, 3d, Js ]
+BlowJOBama bets [$45]
+rudy0014 calls [$45]
+** Dealing turn ** [ 5s ]
+BlowJOBama bets [$65]
+rudy0014 calls [$65]
+** Dealing river ** [ Qh ]
+BlowJOBama bets [$780]
+rudy0014 calls [$780]
+** Summary **
+BlowJOBama shows [ Td, As ]
+rudy0014 mucks [ 9h, Th ]
+BlowJOBama collected [ $1,914 ]
+
+
+#Game No : 436620350
+***** 888poker Hand History for Game 436620350 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:15:38
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,505.25 )
+Seat 2: nonameeeee ( $2,466.50 )
+Seat 4: BlowJOBama ( $3,037.25 )
+Seat 6: IWontBluffU ( $2,059 )
+Seat 7: rudy0014 ( $152 )
+Seat 9: GreenHullK ( $2,165.50 )
+Twikko posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+IWontBluffU raises [$50]
+rudy0014 folds
+GreenHullK folds
+Twikko folds
+nonameeeee calls [$30]
+** Dealing flop ** [ 6s, Td, 9d ]
+nonameeeee checks
+IWontBluffU checks
+** Dealing turn ** [ Qd ]
+nonameeeee checks
+IWontBluffU checks
+** Dealing river ** [ 4d ]
+nonameeeee checks
+IWontBluffU bets [$92.50]
+nonameeeee calls [$92.50]
+** Summary **
+IWontBluffU shows [ Ah, Ks ]
+nonameeeee shows [ Jc, Qc ]
+nonameeeee collected [ $291 ]
+
+
+#Game No : 436620387
+***** 888poker Hand History for Game 436620387 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:16:30
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,495.25 )
+Seat 2: nonameeeee ( $2,615 )
+Seat 4: BlowJOBama ( $3,037.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 7: rudy0014 ( $152 )
+Seat 9: GreenHullK ( $2,165.50 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+rudy0014 folds
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+** Summary **
+BlowJOBama did not show his hand
+BlowJOBama collected [ $30 ]
+
+
+#Game No : 436620399
+***** 888poker Hand History for Game 436620399 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:16:45
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,495.25 )
+Seat 2: nonameeeee ( $2,605 )
+Seat 4: BlowJOBama ( $3,047.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 7: rudy0014 ( $152 )
+Seat 9: GreenHullK ( $2,165.50 )
+BlowJOBama posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+rudy0014 folds
+GreenHullK raises [$60]
+Twikko folds
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU folds
+** Summary **
+GreenHullK did not show his hand
+GreenHullK collected [ $50 ]
+
+
+#Game No : 436620424
+***** 888poker Hand History for Game 436620424 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:17:17
+Table Kumanovo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Twikko ( $2,495.25 )
+Seat 2: nonameeeee ( $2,605 )
+Seat 4: BlowJOBama ( $3,037.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 7: rudy0014 ( $152 )
+Seat 9: GreenHullK ( $2,195.50 )
+IWontBluffU posts small blind [$10]
+rudy0014 posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+Twikko raises [$45]
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU folds
+rudy0014 raises [$132]
+Twikko calls [$107]
+** Dealing flop ** [ 7h, 9h, Kc ]
+** Dealing turn ** [ Qs ]
+** Dealing river ** [ 3s ]
+** Summary **
+Twikko shows [ 9d, 7d ]
+rudy0014 shows [ Ad, 8d ]
+Twikko collected [ $310 ]
+
+
+#Game No : 436620440
+***** 888poker Hand History for Game 436620440 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:17:47
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,653.25 )
+Seat 2: nonameeeee ( $2,605 )
+Seat 4: BlowJOBama ( $3,037.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,195.50 )
+GreenHullK posts small blind [$10]
+Twikko posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU folds
+GreenHullK raises [$50]
+Twikko folds
+** Summary **
+GreenHullK collected [ $40 ]
+
+
+#Game No : 436620453
+***** 888poker Hand History for Game 436620453 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:18:12
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,633.25 )
+Seat 2: nonameeeee ( $2,605 )
+Seat 4: BlowJOBama ( $3,037.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,215.50 )
+Twikko posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama raises [$54]
+IWontBluffU folds
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+** Summary **
+BlowJOBama collected [ $50 ]
+
+
+#Game No : 436620476
+***** 888poker Hand History for Game 436620476 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:18:41
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,623.25 )
+Seat 2: nonameeeee ( $2,585 )
+Seat 4: BlowJOBama ( $3,067.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,215.50 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+GreenHullK raises [$60]
+Twikko folds
+nonameeeee folds
+BlowJOBama folds
+** Summary **
+GreenHullK collected [ $50 ]
+
+
+#Game No : 436620499
+***** 888poker Hand History for Game 436620499 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:19:08
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,623.25 )
+Seat 2: nonameeeee ( $2,575 )
+Seat 4: BlowJOBama ( $3,047.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,245.50 )
+BlowJOBama posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+Twikko folds
+nonameeeee folds
+BlowJOBama calls [$10]
+IWontBluffU raises [$74]
+BlowJOBama calls [$74]
+** Dealing flop ** [ Jd, 5s, 4c ]
+BlowJOBama checks
+IWontBluffU bets [$141]
+BlowJOBama calls [$141]
+** Dealing turn ** [ Ks ]
+BlowJOBama checks
+IWontBluffU bets [$352.50]
+BlowJOBama calls [$352.50]
+** Dealing river ** [ Kd ]
+BlowJOBama checks
+IWontBluffU bets [$587.50]
+BlowJOBama calls [$587.50]
+** Summary **
+IWontBluffU shows [ 8s, 2s ]
+BlowJOBama shows [ Js, Qs ]
+BlowJOBama collected [ $2,346 ]
+
+
+#Game No : 436620565
+***** 888poker Hand History for Game 436620565 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:20:45
+Table Kumanovo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,623.25 )
+Seat 2: nonameeeee ( $2,575 )
+Seat 4: BlowJOBama ( $4,218.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,245.50 )
+IWontBluffU posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+Twikko folds
+nonameeeee raises [$40]
+BlowJOBama calls [$40]
+IWontBluffU folds
+GreenHullK calls [$20]
+** Dealing flop ** [ Qh, 5h, 7s ]
+GreenHullK checks
+nonameeeee checks
+BlowJOBama checks
+** Dealing turn ** [ 5s ]
+GreenHullK bets [$117.50]
+nonameeeee calls [$117.50]
+BlowJOBama folds
+** Dealing river ** [ Tc ]
+GreenHullK checks
+nonameeeee checks
+** Summary **
+GreenHullK shows [ 9s, 8d ]
+nonameeeee shows [ Jh, Qd ]
+nonameeeee collected [ $361 ]
+
+
+#Game No : 436620614
+***** 888poker Hand History for Game 436620614 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:21:55
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,623.25 )
+Seat 2: nonameeeee ( $2,778.50 )
+Seat 4: BlowJOBama ( $4,178.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,088 )
+GreenHullK posts small blind [$10]
+Twikko posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+BlowJOBama folds
+IWontBluffU raises [$60]
+GreenHullK raises [$210]
+Twikko folds
+IWontBluffU folds
+** Summary **
+GreenHullK collected [ $140 ]
+
+
+#Game No : 436620637
+***** 888poker Hand History for Game 436620637 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:22:34
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,603.25 )
+Seat 2: nonameeeee ( $2,778.50 )
+Seat 4: BlowJOBama ( $4,178.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,168 )
+Twikko posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+IWontBluffU folds
+GreenHullK raises [$50]
+Twikko folds
+nonameeeee folds
+** Summary **
+GreenHullK collected [ $50 ]
+
+
+#Game No : 436620653
+***** 888poker Hand History for Game 436620653 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:22:56
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: Twikko ( $2,593.25 )
+Seat 2: nonameeeee ( $2,758.50 )
+Seat 4: BlowJOBama ( $4,178.25 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,198 )
+nonameeeee posts small blind [$10]
+BlowJOBama folds
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+Twikko folds
+nonameeeee raises [$50]
+IWontBluffU calls [$40]
+** Dealing flop ** [ 8c, 8h, 6h ]
+nonameeeee bets [$40]
+IWontBluffU calls [$40]
+** Dealing turn ** [ 5d ]
+nonameeeee bets [$140]
+IWontBluffU folds
+** Summary **
+nonameeeee collected [ $196 ]
+
+
+#Game No : 436620683
+***** 888poker Hand History for Game 436620683 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:23:41
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: Twikko ( $2,593.25 )
+Seat 2: nonameeeee ( $2,854.50 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,198 )
+IWontBluffU posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+Twikko raises [$45]
+nonameeeee calls [$45]
+IWontBluffU folds
+GreenHullK folds
+** Dealing flop ** [ Qc, Th, 7c ]
+Twikko bets [$60]
+nonameeeee calls [$60]
+** Dealing turn ** [ 8h ]
+Twikko bets [$240]
+nonameeeee folds
+** Summary **
+Twikko collected [ $236 ]
+
+
+#Game No : 436620717
+***** 888poker Hand History for Game 436620717 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:24:25
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 1: Twikko ( $2,724.25 )
+Seat 2: nonameeeee ( $2,749.50 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,178 )
+GreenHullK posts small blind [$10]
+Twikko folds
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+GreenHullK folds
+** Summary **
+nonameeeee collected [ $30 ]
+
+
+#Game No : 436620723
+***** 888poker Hand History for Game 436620723 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:24:39
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: nonameeeee ( $2,759.50 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,168 )
+nonameeeee posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+GreenHullK raises [$50]
+nonameeeee folds
+IWontBluffU folds
+** Summary **
+GreenHullK collected [ $50 ]
+
+
+#Game No : 436620738
+***** 888poker Hand History for Game 436620738 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:25:00
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: morermaks ( $2,000 )
+Seat 2: nonameeeee ( $2,749.50 )
+Seat 6: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,198 )
+IWontBluffU posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+morermaks folds
+nonameeeee folds
+IWontBluffU calls [$10]
+GreenHullK checks
+** Dealing flop ** [ 9s, Jc, 9d ]
+IWontBluffU bets [$20]
+GreenHullK folds
+** Summary **
+IWontBluffU collected [ $38 ]
+
+
+#Game No : 436620759
+***** 888poker Hand History for Game 436620759 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:25:22
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: nonameeeee ( $2,749.50 )
+Seat 6: IWontBluffU ( $2,018 )
+Seat 9: GreenHullK ( $2,178 )
+GreenHullK posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+IWontBluffU raises [$60]
+GreenHullK folds
+nonameeeee folds
+** Summary **
+IWontBluffU collected [ $50 ]
+
+
+#Game No : 436620762
+***** 888poker Hand History for Game 436620762 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:25:30
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: nonameeeee ( $2,729.50 )
+Seat 6: IWontBluffU ( $2,048 )
+Seat 9: GreenHullK ( $2,168 )
+nonameeeee posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+nonameeeee raises [$50]
+IWontBluffU calls [$40]
+** Dealing flop ** [ 5h, Td, 7c ]
+nonameeeee bets [$60]
+IWontBluffU calls [$60]
+** Dealing turn ** [ 8h ]
+nonameeeee bets [$176]
+IWontBluffU raises [$630]
+nonameeeee calls [$454]
+** Dealing river ** [ 2s ]
+nonameeeee checks
+IWontBluffU checks
+** Summary **
+nonameeeee shows [ Kh, Jh ]
+IWontBluffU shows [ 9c, 7d ]
+IWontBluffU collected [ $1,497.50 ]
+
+
+#Game No : 436620797
+***** 888poker Hand History for Game 436620797 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:26:23
+Table Kumanovo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: nonameeeee ( $1,979.50 )
+Seat 6: IWontBluffU ( $2,795.50 )
+Seat 9: GreenHullK ( $2,168 )
+IWontBluffU posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+IWontBluffU calls [$10]
+GreenHullK checks
+** Dealing flop ** [ 7c, Qd, Jc ]
+IWontBluffU checks
+GreenHullK checks
+** Dealing turn ** [ 9c ]
+IWontBluffU checks
+GreenHullK checks
+** Dealing river ** [ Ah ]
+IWontBluffU checks
+GreenHullK checks
+** Summary **
+IWontBluffU shows [ 7s, 8h ]
+GreenHullK shows [ 9d, 2s ]
+GreenHullK collected [ $38 ]
+
+
+#Game No : 436620828
+***** 888poker Hand History for Game 436620828 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:27:00
+Table Kumanovo 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 1: ShipDaMoneys ( $2,000 )
+Seat 2: nonameeeee ( $1,979.50 )
+Seat 6: IWontBluffU ( $2,775.50 )
+Seat 9: GreenHullK ( $2,186 )
+GreenHullK posts small blind [$10]
+ShipDaMoneys posts big blind [$20]
+** Dealing down cards **
+nonameeeee raises [$60]
+IWontBluffU raises [$166]
+GreenHullK folds
+ShipDaMoneys folds
+nonameeeee calls [$106]
+** Dealing flop ** [ Jc, 8c, Jh ]
+nonameeeee checks
+IWontBluffU bets [$115]
+nonameeeee calls [$115]
+** Dealing turn ** [ 9c ]
+nonameeeee checks
+IWontBluffU bets [$444]
+nonameeeee folds
+** Summary **
+IWontBluffU did not show his hand
+IWontBluffU collected [ $588 ]
+
+
+#Game No : 436620844
+***** 888poker Hand History for Game 436620844 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:27:40
+Table Kumanovo 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 1: ShipDaMoneys ( $2,000 )
+Seat 2: nonameeeee ( $1,698.50 )
+Seat 6: IWontBluffU ( $3,082.50 )
+Seat 9: GreenHullK ( $2,176 )
+ShipDaMoneys posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+IWontBluffU raises [$50]
+GreenHullK folds
+ShipDaMoneys folds
+nonameeeee calls [$30]
+** Dealing flop ** [ 2d, 8c, 2h ]
+nonameeeee checks
+IWontBluffU bets [$37]
+nonameeeee folds
+** Summary **
+IWontBluffU did not show his hand
+IWontBluffU collected [ $106 ]
+
+
+#Game No : 436620864
+***** 888poker Hand History for Game 436620864 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:28:09
+Table Kumanovo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: ShipDaMoneys ( $2,000 )
+Seat 2: nonameeeee ( $1,648.50 )
+Seat 6: IWontBluffU ( $3,138.50 )
+Seat 9: GreenHullK ( $2,176 )
+nonameeeee posts small blind [$10]
+** Dealing down cards **
+IWontBluffU folds
+GreenHullK folds
+ShipDaMoneys folds
+** Summary **
+nonameeeee did not show his hand
+nonameeeee collected [ $10 ]
+
+

@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188339785">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819107352</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>23</gamecount>  
+	          <startdate>2014-01-26 18:18:58</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>4,373</bets>  
+	          <wins>3,573</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>3</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5439389583">
+		 <general>
+		  <startdate>2014-01-26 18:18:58</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dariela" chips="800" dealer="0" win="40" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dariela" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="4" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="Dariela">H3 SA</cards><action no="5" player="Dariela" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">HJ H4</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="3" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ D9 CK</cards><action no="7" player="Dariela" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="9" player="Dariela" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="11" player="Dariela" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439389812">
+		 <general>
+		  <startdate>2014-01-26 18:19:25</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="800" dealer="0" win="0" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dariela" chips="820" dealer="1" win="0" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="800" dealer="0" win="1,930" bet="800" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="PSR80698112" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="3" player="ramilhiki" type="3" sum="20" cards=""/><action no="7" player="ramilhiki" type="3" sum="100" cards=""/><cards type="Pocket" player="Dariela">SJ S9</cards><action no="4" player="Dariela" type="3" sum="20" cards=""/><action no="8" player="Dariela" type="3" sum="100" cards=""/><cards type="Pocket" player="WorstCard">H6 H4</cards><action no="5" player="WorstCard" type="3" sum="10" cards=""/><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">CQ HA</cards><action no="6" player="PSR80698112" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 HK CJ</cards><action no="11" player="ramilhiki" type="4" sum="0" cards=""/><action no="12" player="Dariela" type="4" sum="0" cards=""/><action no="10" player="PSR80698112" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="14" player="ramilhiki" type="3" sum="190" cards=""/><action no="15" player="Dariela" type="3" sum="190" cards=""/><action no="13" player="PSR80698112" type="5" sum="190" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="17" player="ramilhiki" type="0" sum="0" cards=""/><action no="18" player="Dariela" type="3" sum="490" cards=""/><action no="16" player="PSR80698112" type="5" sum="490" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439406609">
+		 <general>
+		  <startdate>2014-01-26 18:20:33</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="490" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dariela" chips="20" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,930" dealer="0" win="80" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ramilhiki" type="2" sum="20" cards="[cards]"/><action no="1" player="PSR80698112" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="6" player="ramilhiki" type="4" sum="0" cards=""/><cards type="Pocket" player="Dariela">DA C3</cards><action no="3" player="Dariela" type="7" sum="20" cards=""/><cards type="Pocket" player="WorstCard">S7 HA</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">SA H8</cards><action no="5" player="PSR80698112" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 S10 HK</cards><action no="8" player="ramilhiki" type="4" sum="0" cards=""/><action no="7" player="PSR80698112" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="10" player="ramilhiki" type="0" sum="0" cards=""/><action no="9" player="PSR80698112" type="5" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game><game gamecode="5439406970">
+		 <general>
+		  <startdate>2014-01-26 18:21:20</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="470" dealer="0" win="650" bet="470" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,970" dealer="1" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ramilhiki" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="4" player="ramilhiki" type="3" sum="45" cards=""/><cards type="Pocket" player="WorstCard">C4 SQ</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="3" player="PSR80698112" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 S9 D5</cards><action no="6" player="ramilhiki" type="5" sum="90" cards=""/><action no="7" player="PSR80698112" type="3" sum="90" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards><action no="8" player="ramilhiki" type="5" sum="320" cards=""/><action no="9" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439407279">
+		 <general>
+		  <startdate>2014-01-26 18:22:00</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="650" dealer="1" win="150" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="730" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,820" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="PSR80698112" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="3" player="ramilhiki" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">C4 H9</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="5" player="PSR80698112" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 C5 SK</cards><action no="7" player="ramilhiki" type="4" sum="0" cards=""/><action no="6" player="PSR80698112" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards><action no="9" player="ramilhiki" type="5" sum="75" cards=""/><action no="8" player="PSR80698112" type="4" sum="0" cards=""/><action no="10" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439407521">
+		 <general>
+		  <startdate>2014-01-26 18:22:29</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="695" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="715" dealer="1" win="760" bet="715" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,790" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ramilhiki" type="2" sum="30" cards="[cards]"/><action no="1" player="PSR80698112" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="5" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DA CQ</cards><action no="3" player="WorstCard" type="23" sum="715" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="4" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439407621">
+		 <general>
+		  <startdate>2014-01-26 18:22:41</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="665" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,775" dealer="1" win="165" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ramilhiki" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="4" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 D6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="3" player="PSR80698112" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439407703">
+		 <general>
+		  <startdate>2014-01-26 18:22:53</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="650" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="730" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,820" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="PSR80698112" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="3" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H3 CQ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards>
+	</round>
+	
+		</game><game gamecode="5439407812">
+		 <general>
+		  <startdate>2014-01-26 18:23:06</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="650" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="715" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,835" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ramilhiki" type="15" sum="5" cards="[cards]"/><action no="5" player="ramilhiki" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="PSR80698112" type="15" sum="5" cards="[cards]"/><action no="4" player="PSR80698112" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><cards type="Pocket" player="WorstCard">C5 C3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="7" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439407934">
+		 <general>
+		  <startdate>2014-01-26 18:23:23</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="685" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="710" dealer="0" win="265" bet="205" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,805" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ramilhiki" type="15" sum="5" cards="[cards]"/><action no="4" player="ramilhiki" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="PSR80698112" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="7" player="ramilhiki" type="3" sum="25" cards=""/><action no="9" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK CK</cards><action no="8" player="WorstCard" type="23" sum="200" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="6" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439408207">
+		 <general>
+		  <startdate>2014-01-26 18:23:56</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="630" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,800" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="ramilhiki" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="PSR80698112" type="15" sum="5" cards="[cards]"/><action no="5" player="PSR80698112" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="6" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ D2</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards>
+	</round>
+	
+		</game><game gamecode="5439408315">
+		 <general>
+		  <startdate>2014-01-26 18:24:08</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="625" dealer="0" win="0" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="740" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,835" dealer="0" win="415" bet="205" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ramilhiki" type="15" sum="5" cards="[cards]"/><action no="5" player="ramilhiki" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="PSR80698112" type="15" sum="5" cards="[cards]"/><action no="4" player="PSR80698112" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">C4 H9</cards><action no="8" player="ramilhiki" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 H6</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">DK S10</cards><action no="7" player="PSR80698112" type="3" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D6 C8</cards><action no="10" player="ramilhiki" type="3" sum="50" cards=""/><action no="9" player="PSR80698112" type="5" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="12" player="ramilhiki" type="4" sum="0" cards=""/><action no="11" player="PSR80698112" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C9</cards><action no="14" player="ramilhiki" type="3" sum="100" cards=""/><action no="13" player="PSR80698112" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439408590">
+		 <general>
+		  <startdate>2014-01-26 18:24:44</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="420" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="735" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="2,045" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ramilhiki" type="15" sum="5" cards="[cards]"/><action no="4" player="ramilhiki" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="PSR80698112" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="7" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 H5</cards><cards type="Pocket" player="PSR80698112">X X</cards><action no="6" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439408695">
+		 <general>
+		  <startdate>2014-01-26 18:24:58</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="390" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="2,040" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="ramilhiki" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="PSR80698112" type="15" sum="5" cards="[cards]"/><action no="5" player="PSR80698112" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="6" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D2 HQ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards>
+	</round>
+	
+		</game><game gamecode="5439408941">
+		 <general>
+		  <startdate>2014-01-26 18:25:26</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="385" dealer="0" win="780" bet="385" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="740" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="2,075" dealer="0" win="0" bet="385" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ramilhiki" type="15" sum="10" cards="[cards]"/><action no="5" player="ramilhiki" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="PSR80698112" type="15" sum="10" cards="[cards]"/><action no="4" player="PSR80698112" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">CQ C6</cards><action no="8" player="ramilhiki" type="23" sum="375" cards=""/><cards type="Pocket" player="WorstCard">S8 C5</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">S6 S7</cards><action no="7" player="PSR80698112" type="23" sum="200" cards=""/><action no="9" player="PSR80698112" type="3" sum="175" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 SJ H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards>
+	</round>
+	
+		</game><game gamecode="5439427712">
+		 <general>
+		  <startdate>2014-01-26 18:25:52</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="780" dealer="0" win="430" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="730" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,690" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ramilhiki" type="15" sum="10" cards="[cards]"/><action no="4" player="ramilhiki" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="PSR80698112" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="7" player="ramilhiki" type="23" sum="300" cards=""/><cards type="Pocket" player="WorstCard">HA C9</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="6" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439427864">
+		 <general>
+		  <startdate>2014-01-26 18:26:12</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="900" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="620" dealer="0" win="740" bet="620" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,680" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="ramilhiki" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="PSR80698112" type="15" sum="10" cards="[cards]"/><action no="5" player="PSR80698112" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="6" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 DK</cards><action no="7" player="WorstCard" type="23" sum="610" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="8" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439427980">
+		 <general>
+		  <startdate>2014-01-26 18:26:27</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="890" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="740" dealer="1" win="910" bet="740" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,570" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ramilhiki" type="15" sum="10" cards="[cards]"/><action no="5" player="ramilhiki" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="PSR80698112" type="15" sum="10" cards="[cards]"/><action no="4" player="PSR80698112" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="8" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SQ S9</cards><action no="6" player="WorstCard" type="23" sum="730" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="7" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428095">
+		 <general>
+		  <startdate>2014-01-26 18:26:43</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="780" dealer="0" win="630" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="910" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,510" dealer="1" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ramilhiki" type="15" sum="10" cards="[cards]"/><action no="4" player="ramilhiki" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="PSR80698112" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="7" player="ramilhiki" type="3" sum="150" cards=""/><cards type="Pocket" player="WorstCard">HK C9</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="6" player="PSR80698112" type="23" sum="200" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ S2 C4</cards><action no="9" player="ramilhiki" type="4" sum="0" cards=""/><action no="10" player="PSR80698112" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="11" player="ramilhiki" type="4" sum="0" cards=""/><action no="12" player="PSR80698112" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards><action no="13" player="ramilhiki" type="5" sum="100" cards=""/><action no="14" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428373">
+		 <general>
+		  <startdate>2014-01-26 18:27:17</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="1,100" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="808" bet="800" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,300" dealer="0" win="807" bet="800" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="ramilhiki" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="PSR80698112" type="15" sum="15" cards="[cards]"/><action no="5" player="PSR80698112" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="6" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 HA</cards><action no="7" player="WorstCard" type="23" sum="785" cards=""/><cards type="Pocket" player="PSR80698112">D9 H7</cards><action no="8" player="PSR80698112" type="3" sum="635" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 C7 CQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards>
+	</round>
+	
+		</game><game gamecode="5439428568">
+		 <general>
+		  <startdate>2014-01-26 18:27:41</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="1,085" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="808" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,307" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ramilhiki" type="15" sum="15" cards="[cards]"/><action no="5" player="ramilhiki" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="PSR80698112" type="15" sum="15" cards="[cards]"/><action no="4" player="PSR80698112" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><cards type="Pocket" player="WorstCard">C9 D3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="7" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428690">
+		 <general>
+		  <startdate>2014-01-26 18:27:56</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="1,190" dealer="0" win="795" bet="615" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="793" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,217" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ramilhiki" type="15" sum="15" cards="[cards]"/><action no="4" player="ramilhiki" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="PSR80698112" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="7" player="ramilhiki" type="23" sum="600" cards=""/><cards type="Pocket" player="WorstCard">H2 DJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="PSR80698112">X X</cards><action no="6" player="PSR80698112" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428818">
+		 <general>
+		  <startdate>2014-01-26 18:28:13</startdate>		  
+		  <players>
+		   <player seat="2" name="ramilhiki" chips="1,370" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="628" dealer="0" win="0" bet="628" rebuy="0" addon="0" reg_code="6188339785"/><player seat="9" name="PSR80698112" chips="1,202" dealer="0" win="1,271" bet="628" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="ramilhiki" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="PSR80698112" type="15" sum="15" cards="[cards]"/><action no="5" player="PSR80698112" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ramilhiki">X X</cards><action no="6" player="ramilhiki" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA H5</cards><action no="7" player="WorstCard" type="23" sum="613" cards=""/><cards type="Pocket" player="PSR80698112">SK CQ</cards><action no="8" player="PSR80698112" type="3" sum="463" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK D8 H2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189514205">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819272651</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>25</gamecount>  
+	          <startdate>2014-01-28 16:27:02</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>3,970</bets>  
+	          <wins>5,160</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,990</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5449229462">
+		 <general>
+		  <startdate>2014-01-28 16:27:02</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="800" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kim100ch777" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="4" player="metinnn" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="5" player="kim100ch777" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">H2 H8</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="3" player="Donaldo2011" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 CJ D7</cards><action no="7" player="kim100ch777" type="4" sum="0" cards=""/><action no="10" player="kim100ch777" type="0" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="9" player="Donaldo2011" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449229747">
+		 <general>
+		  <startdate>2014-01-28 16:27:34</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="800" dealer="0" win="83" bet="53" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="840" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Donaldo2011" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="3" player="metinnn" type="23" sum="53" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="4" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H9 CQ</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="6" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449229952">
+		 <general>
+		  <startdate>2014-01-28 16:27:57</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="830" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="780" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="290" bet="180" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="820" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="metinnn" type="2" sum="20" cards="[cards]"/><action no="1" player="Donaldo2011" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="6" player="metinnn" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="3" player="kim100ch777" type="3" sum="20" cards=""/><action no="7" player="kim100ch777" type="3" sum="40" cards=""/><cards type="Pocket" player="WorstCard">S10 HQ</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="5" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 H8 H4</cards><action no="8" player="kim100ch777" type="5" sum="20" cards=""/><action no="9" player="WorstCard" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="10" player="kim100ch777" type="4" sum="0" cards=""/><action no="12" player="kim100ch777" type="0" sum="0" cards=""/><action no="11" player="WorstCard" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449230256">
+		 <general>
+		  <startdate>2014-01-28 16:28:32</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="810" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="700" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="810" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="metinnn" type="1" sum="10" cards="[cards]"/><action no="2" player="kim100ch777" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="5" player="metinnn" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><cards type="Pocket" player="WorstCard">H3 S3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="4" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449230351">
+		 <general>
+		  <startdate>2014-01-28 16:28:42</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="710" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="880" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="810" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kim100ch777" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="4" player="metinnn" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="5" player="kim100ch777" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">DJ H5</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="3" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ SA DK</cards><action no="7" player="kim100ch777" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="9" player="kim100ch777" type="5" sum="20" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449230629">
+		 <general>
+		  <startdate>2014-01-28 16:29:13</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="730" dealer="1" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="860" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="810" dealer="0" win="338" bet="218" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Donaldo2011" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="3" player="metinnn" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="4" player="kim100ch777" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">DJ D3</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="6" player="Donaldo2011" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 S4 HJ</cards><action no="8" player="kim100ch777" type="4" sum="0" cards=""/><action no="7" player="Donaldo2011" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards><action no="10" player="kim100ch777" type="3" sum="75" cards=""/><action no="9" player="Donaldo2011" type="5" sum="75" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="12" player="kim100ch777" type="0" sum="0" cards=""/><action no="11" player="Donaldo2011" type="5" sum="113" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449230879">
+		 <general>
+		  <startdate>2014-01-28 16:29:44</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="800" dealer="0" win="180" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="625" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="845" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="930" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="metinnn" type="2" sum="30" cards="[cards]"/><action no="1" player="Donaldo2011" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="6" player="metinnn" type="4" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="3" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H9 S5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="5" player="Donaldo2011" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK CA CQ</cards><action no="8" player="metinnn" type="5" sum="120" cards=""/><action no="7" player="Donaldo2011" type="4" sum="0" cards=""/><action no="9" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449245347">
+		 <general>
+		  <startdate>2014-01-28 16:30:11</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="830" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="625" dealer="0" win="450" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="845" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="900" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="metinnn" type="1" sum="15" cards="[cards]"/><action no="2" player="kim100ch777" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="5" player="metinnn" type="3" sum="15" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="6" player="kim100ch777" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D9 C5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="4" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 D8 C6</cards><action no="7" player="metinnn" type="4" sum="0" cards=""/><action no="9" player="metinnn" type="3" sum="60" cards=""/><action no="8" player="kim100ch777" type="5" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="10" player="metinnn" type="5" sum="90" cards=""/><action no="12" player="metinnn" type="0" sum="0" cards=""/><action no="11" player="kim100ch777" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449245604">
+		 <general>
+		  <startdate>2014-01-28 16:30:41</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="650" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="805" dealer="0" win="60" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="845" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="900" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kim100ch777" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="4" player="metinnn" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">HJ C6</cards><action no="5" player="kim100ch777" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">SA H8</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="3" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 H10 S5</cards><action no="7" player="kim100ch777" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="9" player="kim100ch777" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards><action no="11" player="kim100ch777" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449245855">
+		 <general>
+		  <startdate>2014-01-28 16:31:08</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="650" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="835" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="815" dealer="0" win="880" bet="815" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="900" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="metinnn" type="15" sum="5" cards="[cards]"/><action no="4" player="kim100ch777" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Donaldo2011" type="15" sum="5" cards="[cards]"/><action no="6" player="Donaldo2011" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="7" player="metinnn" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="8" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CA H6</cards><action no="9" player="WorstCard" type="23" sum="810" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="10" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449246037">
+		 <general>
+		  <startdate>2014-01-28 16:31:31</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="645" dealer="0" win="1,300" bet="645" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="830" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="880" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="845" dealer="0" win="0" bet="645" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="metinnn" type="15" sum="5" cards="[cards]"/><action no="6" player="metinnn" type="2" sum="50" cards="[cards]"/><action no="3" player="kim100ch777" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Donaldo2011" type="15" sum="5" cards="[cards]"/><action no="5" player="Donaldo2011" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">H9 D6</cards><action no="10" player="metinnn" type="23" sum="640" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="7" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK H2</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">D3 DA</cards><action no="9" player="Donaldo2011" type="23" sum="200" cards=""/><action no="11" player="Donaldo2011" type="3" sum="440" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 C9 D4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards>
+	</round>
+	
+		</game><game gamecode="5449246377">
+		 <general>
+		  <startdate>2014-01-28 16:32:10</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="1,300" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="825" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="875" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="200" dealer="1" win="290" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="metinnn" type="15" sum="5" cards="[cards]"/><action no="5" player="metinnn" type="1" sum="25" cards="[cards]"/><action no="2" player="kim100ch777" type="15" sum="5" cards="[cards]"/><action no="6" player="kim100ch777" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Donaldo2011" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="9" player="metinnn" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="10" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK H2</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="8" player="Donaldo2011" type="23" sum="195" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449246530">
+		 <general>
+		  <startdate>2014-01-28 16:32:26</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="1,270" dealer="1" win="0" bet="290" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="870" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="290" dealer="0" win="665" bet="290" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="metinnn" type="15" sum="5" cards="[cards]"/><action no="1" player="kim100ch777" type="15" sum="5" cards="[cards]"/><action no="5" player="kim100ch777" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Donaldo2011" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">HA S7</cards><action no="8" player="metinnn" type="3" sum="250" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="9" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 CJ</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">CK SQ</cards><action no="7" player="Donaldo2011" type="23" sum="250" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 D6 DK</cards><action no="12" player="metinnn" type="3" sum="35" cards=""/><action no="11" player="Donaldo2011" type="7" sum="35" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards>
+	</round>
+	
+		</game><game gamecode="5449246764">
+		 <general>
+		  <startdate>2014-01-28 16:32:57</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="980" dealer="0" win="245" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="740" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="815" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="665" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="metinnn" type="15" sum="5" cards="[cards]"/><action no="4" player="kim100ch777" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Donaldo2011" type="15" sum="5" cards="[cards]"/><action no="6" player="Donaldo2011" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">X X</cards><action no="7" player="metinnn" type="23" sum="150" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="8" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 S5</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="10" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449246899">
+		 <general>
+		  <startdate>2014-01-28 16:33:12</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="1,070" dealer="0" win="0" bet="610" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="735" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="785" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="610" dealer="0" win="1,240" bet="610" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="metinnn" type="15" sum="10" cards="[cards]"/><action no="6" player="metinnn" type="2" sum="100" cards="[cards]"/><action no="3" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Donaldo2011" type="15" sum="10" cards="[cards]"/><action no="5" player="Donaldo2011" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">C4 S4</cards><action no="10" player="metinnn" type="3" sum="500" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="7" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 H3</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">H9 H8</cards><action no="9" player="Donaldo2011" type="23" sum="600" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ D9 C5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5449247117">
+		 <general>
+		  <startdate>2014-01-28 16:33:36</startdate>		  
+		  <players>
+		   <player seat="2" name="metinnn" chips="460" dealer="0" win="0" bet="460" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="725" dealer="0" win="940" bet="460" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="775" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="1,240" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="metinnn" type="15" sum="10" cards="[cards]"/><action no="5" player="metinnn" type="1" sum="50" cards="[cards]"/><action no="2" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="6" player="kim100ch777" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="Donaldo2011" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="metinnn">HJ S7</cards><action no="9" player="metinnn" type="23" sum="400" cards=""/><cards type="Pocket" player="kim100ch777">H4 DA</cards><action no="10" player="kim100ch777" type="3" sum="300" cards=""/><cards type="Pocket" player="WorstCard">H6 H8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="8" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 S5 C4</cards><action no="11" player="metinnn" type="7" sum="50" cards=""/><action no="12" player="kim100ch777" type="3" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5449247406">
+		 <general>
+		  <startdate>2014-01-28 16:34:09</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,205" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="765" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="1,230" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="4" player="kim100ch777" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Donaldo2011" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">X X</cards><action no="7" player="kim100ch777" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">D9 D5</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="6" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 S6 CK</cards><action no="9" player="kim100ch777" type="4" sum="0" cards=""/><action no="11" player="kim100ch777" type="0" sum="0" cards=""/><action no="10" player="WorstCard" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449247616">
+		 <general>
+		  <startdate>2014-01-28 16:34:34</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,095" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="885" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="1,220" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Donaldo2011" type="15" sum="10" cards="[cards]"/><action no="5" player="Donaldo2011" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">X X</cards><action no="6" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 S8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449247746">
+		 <general>
+		  <startdate>2014-01-28 16:34:49</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,085" dealer="0" win="1,030" bet="510" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="825" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="1,290" dealer="0" win="0" bet="510" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="5" player="kim100ch777" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Donaldo2011" type="15" sum="10" cards="[cards]"/><action no="4" player="Donaldo2011" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">SJ SK</cards><action no="8" player="kim100ch777" type="3" sum="100" cards=""/><cards type="Pocket" player="WorstCard">S7 HJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">HQ H8</cards><action no="7" player="Donaldo2011" type="23" sum="200" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 CQ DK</cards><action no="10" player="kim100ch777" type="23" sum="200" cards=""/><action no="9" player="Donaldo2011" type="5" sum="100" cards=""/><action no="11" player="Donaldo2011" type="3" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="13" player="kim100ch777" type="4" sum="0" cards=""/><action no="12" player="Donaldo2011" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards><action no="15" player="kim100ch777" type="5" sum="100" cards=""/><action no="14" player="Donaldo2011" type="4" sum="0" cards=""/><action no="16" player="Donaldo2011" type="3" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449248004">
+		 <general>
+		  <startdate>2014-01-28 16:35:18</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,605" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="815" dealer="0" win="495" bet="315" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="780" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kim100ch777" type="15" sum="15" cards="[cards]"/><action no="4" player="kim100ch777" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Donaldo2011" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">X X</cards><action no="7" player="kim100ch777" type="3" sum="75" cards=""/><cards type="Pocket" player="WorstCard">D8 D7</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="6" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ DJ SJ</cards><action no="9" player="kim100ch777" type="4" sum="0" cards=""/><action no="11" player="kim100ch777" type="0" sum="0" cards=""/><action no="10" player="WorstCard" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449261477">
+		 <general>
+		  <startdate>2014-01-28 16:35:41</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,440" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="995" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="765" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="kim100ch777" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Donaldo2011" type="15" sum="15" cards="[cards]"/><action no="5" player="Donaldo2011" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">X X</cards><action no="6" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C9 D5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449261632">
+		 <general>
+		  <startdate>2014-01-28 16:35:59</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,425" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="905" dealer="1" win="1,160" bet="905" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="870" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kim100ch777" type="15" sum="15" cards="[cards]"/><action no="5" player="kim100ch777" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Donaldo2011" type="15" sum="15" cards="[cards]"/><action no="4" player="Donaldo2011" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">X X</cards><action no="8" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CA SJ</cards><action no="6" player="WorstCard" type="23" sum="890" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="7" player="Donaldo2011" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449261745">
+		 <general>
+		  <startdate>2014-01-28 16:36:12</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,260" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,160" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="780" dealer="1" win="570" bet="315" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kim100ch777" type="15" sum="15" cards="[cards]"/><action no="4" player="kim100ch777" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Donaldo2011" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">X X</cards><action no="7" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 SA</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">X X</cards><action no="6" player="Donaldo2011" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449261876">
+		 <general>
+		  <startdate>2014-01-28 16:36:28</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,170" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="995" dealer="0" win="2,005" bet="995" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="1,035" dealer="0" win="0" bet="995" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="kim100ch777" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Donaldo2011" type="15" sum="15" cards="[cards]"/><action no="5" player="Donaldo2011" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">X X</cards><action no="6" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C5 S5</cards><action no="7" player="WorstCard" type="23" sum="980" cards=""/><cards type="Pocket" player="Donaldo2011">DA C8</cards><action no="8" player="Donaldo2011" type="3" sum="830" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 H9 H10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards>
+	</round>
+	
+		</game><game gamecode="5449262096">
+		 <general>
+		  <startdate>2014-01-28 16:36:55</startdate>		  
+		  <players>
+		   <player seat="4" name="kim100ch777" chips="1,155" dealer="0" win="220" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="2,005" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6189514205"/><player seat="9" name="Donaldo2011" chips="40" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kim100ch777" type="15" sum="15" cards="[cards]"/><action no="5" player="kim100ch777" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Donaldo2011" type="15" sum="15" cards="[cards]"/><action no="4" player="Donaldo2011" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kim100ch777">D10 S3</cards><cards type="Pocket" player="WorstCard">H10 D9</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Donaldo2011">S2 S7</cards>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 C9 H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game>  
+	</session>

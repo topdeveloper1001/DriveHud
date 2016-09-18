@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="3885002871">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL £0.01/£0.02</gametype>  
+	          <tablename>Ross, 718748781</tablename>
+	          <tablecurrency>GBP</tablecurrency>  
+	          <duration>00:05</duration>  
+	          <gamecount>10</gamecount>  
+	          <startdate>2012-07-16 10:53:36</startdate>  
+	          <currency>GBP</currency>  
+	          <nickname>WhiteRiderT</nickname>  
+	          <bets>£0.13</bets>  
+	          <wins>£0</wins>  
+	          <chipsin>£2</chipsin>
+			  		<chipsout>£1.87</chipsout>
+			  		<ipoints>0.09</ipoints>
+        		<statuspoints>0.09</statuspoints>
+			  		<awardpoints>0.09</awardpoints>
+			  		<is_asian>0</is_asian>
+	            
+	    </general>  
+	    <game gamecode="3360211705">
+		 <general>
+		  <startdate>2012-07-16 10:53:36</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.65" dealer="1" win="£0.40" bet="£0.20" rebuy="0" addon="0"/><player seat="4" name="GoodBatiatus" chips="£0.76" dealer="0" win="£0" bet="£0.20" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.84" dealer="0" win="£0" bet="£0.02" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£2" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GoodBatiatus" type="1" sum="£0.01" cards="[cards]"/><action no="2" player="1artmen" type="2" sum="£0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">H9 H10</cards><action no="3" player="katiep121" type="3" sum="£0.02" cards=""/><cards type="Pocket" player="GoodBatiatus">D3 SQ</cards><action no="4" player="GoodBatiatus" type="3" sum="£0.01" cards=""/><cards type="Pocket" player="1artmen">X X</cards><action no="5" player="1artmen" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 H3 HQ</cards><action no="8" player="katiep121" type="3" sum="£0.06" cards=""/><action no="6" player="GoodBatiatus" type="5" sum="£0.06" cards=""/><action no="7" player="1artmen" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards><action no="10" player="katiep121" type="3" sum="£0.06" cards=""/><action no="9" player="GoodBatiatus" type="5" sum="£0.06" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards><action no="12" player="katiep121" type="3" sum="£0.06" cards=""/><action no="11" player="GoodBatiatus" type="5" sum="£0.06" cards=""/>
+	</round>
+	
+		</game><game gamecode="3360211977">
+		 <general>
+		  <startdate>2012-07-16 10:54:04</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.85" dealer="0" win="£0" bet="£0.02" rebuy="0" addon="0"/><player seat="4" name="GoodBatiatus" chips="£0.56" dealer="1" win="£0.61" bet="£0.56" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.82" dealer="0" win="£0" bet="£0.01" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£2" dealer="0" win="£0" bet="£0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="1artmen" type="1" sum="£0.01" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="£0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">X X</cards><action no="3" player="katiep121" type="3" sum="£0.02" cards=""/><action no="7" player="katiep121" type="0" sum="£0" cards=""/><cards type="Pocket" player="GoodBatiatus">X X</cards><action no="4" player="GoodBatiatus" type="23" sum="£0.56" cards=""/><cards type="Pocket" player="1artmen">X X</cards><action no="5" player="1artmen" type="0" sum="£0" cards=""/><cards type="Pocket" player="WhiteRiderT">HK D3</cards><action no="6" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3360212178">
+		 <general>
+		  <startdate>2012-07-16 10:54:23</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.83" dealer="0" win="£0" bet="£0.02" rebuy="0" addon="0"/><player seat="4" name="GoodBatiatus" chips="£0.61" dealer="0" win="£1.17" bet="£0.61" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.81" dealer="1" win="£0" bet="£0.61" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£1.98" dealer="0" win="£0" bet="£0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="katiep121" type="2" sum="£0.02" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="£0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">X X</cards><action no="6" player="katiep121" type="0" sum="£0" cards=""/><cards type="Pocket" player="GoodBatiatus">HK CJ</cards><action no="3" player="GoodBatiatus" type="23" sum="£0.61" cards=""/><cards type="Pocket" player="1artmen">DA S10</cards><action no="4" player="1artmen" type="3" sum="£0.61" cards=""/><cards type="Pocket" player="WhiteRiderT">C6 HA</cards><action no="5" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 DK SQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="3360212560">
+		 <general>
+		  <startdate>2012-07-16 10:55:00</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.81" dealer="0" win="£0.20" bet="£0.14" rebuy="0" addon="0"/><player seat="4" name="GoodBatiatus" chips="£1.17" dealer="0" win="£0" bet="£0.06" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.20" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£1.97" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="katiep121" type="1" sum="£0.01" cards="[cards]"/><action no="2" player="GoodBatiatus" type="2" sum="£0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">X X</cards><action no="5" player="katiep121" type="3" sum="£0.01" cards=""/><action no="7" player="katiep121" type="3" sum="£0.04" cards=""/><cards type="Pocket" player="GoodBatiatus">X X</cards><action no="6" player="GoodBatiatus" type="23" sum="£0.06" cards=""/><cards type="Pocket" player="1artmen">X X</cards><action no="3" player="1artmen" type="0" sum="£0" cards=""/><cards type="Pocket" player="WhiteRiderT">S7 D10</cards><action no="4" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 S10 H8</cards><action no="8" player="katiep121" type="4" sum="£0" cards=""/><action no="9" player="GoodBatiatus" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards><action no="10" player="katiep121" type="5" sum="£0.08" cards=""/><action no="11" player="GoodBatiatus" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3360213113">
+		 <general>
+		  <startdate>2012-07-16 10:55:55</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.87" dealer="1" win="£0" bet="£0.02" rebuy="0" addon="0"/><player seat="4" name="GoodBatiatus" chips="£1.11" dealer="0" win="£0" bet="£0.02" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.20" dealer="0" win="£0.08" bet="£0.04" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£1.97" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="GoodBatiatus" type="1" sum="£0.01" cards="[cards]"/><action no="2" player="1artmen" type="2" sum="£0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">X X</cards><action no="4" player="katiep121" type="3" sum="£0.02" cards=""/><cards type="Pocket" player="GoodBatiatus">X X</cards><action no="5" player="GoodBatiatus" type="3" sum="£0.01" cards=""/><cards type="Pocket" player="1artmen">X X</cards><action no="6" player="1artmen" type="4" sum="£0" cards=""/><cards type="Pocket" player="WhiteRiderT">C4 H10</cards><action no="3" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 H7 H6</cards><action no="9" player="katiep121" type="0" sum="£0" cards=""/><action no="7" player="GoodBatiatus" type="4" sum="£0" cards=""/><action no="10" player="GoodBatiatus" type="0" sum="£0" cards=""/><action no="8" player="1artmen" type="5" sum="£0.02" cards=""/>
+	</round>
+	
+		</game><game gamecode="3360213517">
+		 <general>
+		  <startdate>2012-07-16 10:56:33</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.85" dealer="0" win="£0.03" bet="£0.02" rebuy="0" addon="0"/><player seat="4" name="GoodBatiatus" chips="£1.09" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.24" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£1.97" dealer="0" win="£0" bet="£0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="katiep121" type="2" sum="£0.02" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="£0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">X X</cards><cards type="Pocket" player="1artmen">X X</cards><action no="3" player="1artmen" type="0" sum="£0" cards=""/><cards type="Pocket" player="WhiteRiderT">S5 S2</cards><action no="4" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3360213653">
+		 <general>
+		  <startdate>2012-07-16 10:56:46</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.86" dealer="0" win="£0" bet="£0.34" rebuy="0" addon="0"/><player seat="4" name="GoodBatiatus" chips="£1.09" dealer="0" win="£0.70" bet="£0.34" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.24" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£1.96" dealer="1" win="£0" bet="£0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="katiep121" type="1" sum="£0.01" cards="[cards]"/><action no="2" player="GoodBatiatus" type="2" sum="£0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">SA CJ</cards><action no="5" player="katiep121" type="3" sum="£0.05" cards=""/><cards type="Pocket" player="GoodBatiatus">D4 H3</cards><action no="6" player="GoodBatiatus" type="3" sum="£0.04" cards=""/><cards type="Pocket" player="1artmen">X X</cards><action no="3" player="1artmen" type="0" sum="£0" cards=""/><cards type="Pocket" player="WhiteRiderT">D7 D6</cards><action no="4" player="WhiteRiderT" type="23" sum="£0.06" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA S3 C4</cards><action no="7" player="katiep121" type="5" sum="£0.02" cards=""/><action no="10" player="katiep121" type="3" sum="£0.06" cards=""/><action no="8" player="GoodBatiatus" type="23" sum="£0.08" cards=""/><action no="9" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="11" player="katiep121" type="5" sum="£0.02" cards=""/><action no="13" player="katiep121" type="3" sum="£0.08" cards=""/><action no="12" player="GoodBatiatus" type="23" sum="£0.10" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards><action no="14" player="katiep121" type="5" sum="£0.10" cards=""/><action no="15" player="GoodBatiatus" type="3" sum="£0.10" cards=""/>
+	</round>
+	
+		</game><game gamecode="3360214164">
+		 <general>
+		  <startdate>2012-07-16 10:57:36</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.52" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="4" name="GoodBatiatus" chips="£1.45" dealer="0" win="£0" bet="£0" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.24" dealer="0" win="£0.06" bet="£0.04" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£1.90" dealer="0" win="£0" bet="£0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="1artmen" type="1" sum="£0.01" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="£0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">X X</cards><action no="3" player="katiep121" type="0" sum="£0" cards=""/><cards type="Pocket" player="1artmen">X X</cards><action no="4" player="1artmen" type="3" sum="£0.01" cards=""/><cards type="Pocket" player="WhiteRiderT">C7 SQ</cards><action no="5" player="WhiteRiderT" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 HJ D10</cards><action no="6" player="1artmen" type="4" sum="£0" cards=""/><action no="7" player="WhiteRiderT" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="8" player="1artmen" type="4" sum="£0" cards=""/><action no="9" player="WhiteRiderT" type="4" sum="£0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards><action no="10" player="1artmen" type="5" sum="£0.02" cards=""/><action no="11" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3360214411">
+		 <general>
+		  <startdate>2012-07-16 10:58:01</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.52" dealer="0" win="£0" bet="£0.26" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.26" dealer="1" win="£0.50" bet="£0.26" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£1.88" dealer="0" win="£0" bet="£0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="katiep121" type="2" sum="£0.02" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="£0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">DK H9</cards><action no="5" player="katiep121" type="3" sum="£0.02" cards=""/><cards type="Pocket" player="1artmen">DJ SJ</cards><action no="3" player="1artmen" type="23" sum="£0.04" cards=""/><cards type="Pocket" player="WhiteRiderT">S4 D5</cards><action no="4" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 S6 D9</cards><action no="6" player="katiep121" type="5" sum="£0.02" cards=""/><action no="8" player="katiep121" type="3" sum="£0.13" cards=""/><action no="7" player="1artmen" type="23" sum="£0.15" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards><action no="9" player="katiep121" type="4" sum="£0" cards=""/><action no="11" player="katiep121" type="3" sum="£0.07" cards=""/><action no="10" player="1artmen" type="5" sum="£0.07" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game><game gamecode="3360214792">
+		 <general>
+		  <startdate>2012-07-16 10:58:37</startdate>		  
+		  <players>
+		   <player seat="2" name="katiep121" chips="£1.26" dealer="0" win="£0" bet="£0.01" rebuy="0" addon="0"/><player seat="7" name="1artmen" chips="£0.50" dealer="0" win="£0.03" bet="£0.02" rebuy="0" addon="0"/><player seat="9" name="WhiteRiderT" chips="£1.87" dealer="1" win="£0" bet="£0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="katiep121" type="1" sum="£0.01" cards="[cards]"/><action no="2" player="1artmen" type="2" sum="£0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="katiep121">X X</cards><action no="4" player="katiep121" type="0" sum="£0" cards=""/><cards type="Pocket" player="1artmen">X X</cards><cards type="Pocket" player="WhiteRiderT">H9 D8</cards><action no="3" player="WhiteRiderT" type="0" sum="£0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

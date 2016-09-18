@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5956960385">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>"SUPER TURBO" Heads Up $1, 779940411</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:01</duration>  
+	          <gamecount>7</gamecount>  
+	          <startdate>2012-11-18 12:25:25</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>Gacrus</nickname>  
+	          <bets>1,560</bets>  
+	          <wins>60</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>1.25</ipoints>
+        		<statuspoints>1.25</statuspoints>
+			  		<awardpoints>1.25</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>"SUPER TURBO" Heads Up $1</tournamentname><place>2</place><buyin>$1.00+$0.05</buyin> <totalbuyin>$1.05</totalbuyin> <ipoints>1.25</ipoints> <win>$0.00</win> <statuspoints>1.25</statuspoints> <awardpoints>1.25</awardpoints>  
+	    </general>  
+	    <game gamecode="4375681732">
+		 <general>
+		  <startdate>2012-11-18 12:25:25</startdate>		  
+		  <players>
+		   <player seat="3" name="steanta" chips="1,500" dealer="1" win="80" bet="60" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="steanta" type="1" sum="10" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="steanta">X X</cards><action no="3" player="steanta" type="23" sum="60" cards=""/><cards type="Pocket" player="Gacrus">S8 H5</cards><action no="4" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375681758">
+		 <general>
+		  <startdate>2012-11-18 12:25:42</startdate>		  
+		  <players>
+		   <player seat="3" name="steanta" chips="1,520" dealer="0" win="30" bet="20" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,480" dealer="1" win="0" bet="10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="steanta" type="2" sum="20" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="steanta">X X</cards><cards type="Pocket" player="Gacrus">S3 H4</cards><action no="3" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375681770">
+		 <general>
+		  <startdate>2012-11-18 12:25:51</startdate>		  
+		  <players>
+		   <player seat="3" name="steanta" chips="1,530" dealer="1" win="720" bet="480" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,470" dealer="0" win="0" bet="240" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="steanta" type="1" sum="10" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="steanta">X X</cards><action no="3" player="steanta" type="23" sum="40" cards=""/><action no="5" player="steanta" type="3" sum="80" cards=""/><cards type="Pocket" player="Gacrus">SQ HA</cards><action no="4" player="Gacrus" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 H6 D7</cards><action no="7" player="steanta" type="3" sum="120" cards=""/><action no="6" player="Gacrus" type="5" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="9" player="steanta" type="5" sum="240" cards=""/><action no="8" player="Gacrus" type="4" sum="0" cards=""/><action no="10" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375681820">
+		 <general>
+		  <startdate>2012-11-18 12:26:29</startdate>		  
+		  <players>
+		   <player seat="3" name="steanta" chips="1,770" dealer="0" win="1,850" bet="1,770" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,230" dealer="1" win="0" bet="80" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="steanta" type="2" sum="40" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="steanta">X X</cards><action no="4" player="steanta" type="23" sum="1,770" cards=""/><cards type="Pocket" player="Gacrus">H10 SJ</cards><action no="3" player="Gacrus" type="23" sum="80" cards=""/><action no="5" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375681846">
+		 <general>
+		  <startdate>2012-11-18 12:26:45</startdate>		  
+		  <players>
+		   <player seat="3" name="steanta" chips="1,850" dealer="1" win="0" bet="20" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,150" dealer="0" win="60" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="steanta" type="1" sum="20" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="steanta">X X</cards><action no="3" player="steanta" type="0" sum="0" cards=""/><cards type="Pocket" player="Gacrus">S6 H7</cards>
+	</round>
+	
+		</game><game gamecode="4375681863">
+		 <general>
+		  <startdate>2012-11-18 12:26:54</startdate>		  
+		  <players>
+		   <player seat="3" name="steanta" chips="1,830" dealer="0" win="60" bet="40" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,170" dealer="1" win="0" bet="20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="steanta" type="2" sum="40" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="steanta">X X</cards><cards type="Pocket" player="Gacrus">D2 H5</cards><action no="3" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375681880">
+		 <general>
+		  <startdate>2012-11-18 12:27:02</startdate>		  
+		  <players>
+		   <player seat="3" name="steanta" chips="1,850" dealer="1" win="2,300" bet="1,150" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,150" dealer="0" win="0" bet="1,150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="steanta" type="1" sum="20" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="steanta">H10 SA</cards><action no="3" player="steanta" type="23" sum="80" cards=""/><action no="5" player="steanta" type="3" sum="1,070" cards=""/><cards type="Pocket" player="Gacrus">C5 S5</cards><action no="4" player="Gacrus" type="23" sum="1,150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 HQ H6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards>
+	</round>
+	
+		</game>  
+	</session>

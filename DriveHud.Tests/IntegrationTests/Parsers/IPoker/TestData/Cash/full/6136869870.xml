@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6136869870">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem L $0.02/$0.04</gametype>  
+	          <tablename>North Liberty, 51078291</tablename>
+	          <tablecurrency>USD</tablecurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>7</gamecount>  
+	          <startdate>2013-10-24 11:16:09</startdate>  
+	          <currency>GBP</currency>  
+	          <nickname>WhiteRiderT</nickname>  
+	          <bets>$0.03</bets>  
+	          <wins>$0</wins>  
+	          <chipsin>$1</chipsin>
+			  		<chipsout>$0.97</chipsout>
+			  		<ipoints>0.01</ipoints>
+        		<statuspoints>0.01</statuspoints>
+			  		<awardpoints>0.01</awardpoints>
+	            
+	    </general>  
+	    <game gamecode="5198034871">
+		 <general>
+		  <startdate>2013-10-24 11:16:09</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="$1" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0" reg_code="-"/><player seat="2" name="FeelDaPower" chips="$0.43" dealer="0" win="$0" bet="$0.04" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Woyager567" chips="$0.92" dealer="0" win="$0.53" bet="$0.20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Axekievpoker" chips="$1.48" dealer="0" win="$0" bet="$0.08" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Leull1" chips="$2.83" dealer="0" win="$0" bet="$0.20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="bicaru" chips="$1.10" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Sergeykin" chips="$0.42" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="redline1231" chips="$3.39" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="dodger311" chips="$1.01" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="redline1231" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H5 D2</cards><action no="10" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="FeelDaPower">X X</cards><action no="3" player="FeelDaPower" type="3" sum="$0.02" cards=""/><action no="11" player="FeelDaPower" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="Woyager567">CJ SJ</cards><action no="4" player="Woyager567" type="3" sum="$0.02" cards=""/><action no="12" player="Woyager567" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="Axekievpoker">X X</cards><action no="5" player="Axekievpoker" type="3" sum="$0.02" cards=""/><action no="13" player="Axekievpoker" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="Leull1">HJ CA</cards><action no="6" player="Leull1" type="23" sum="$0.04" cards=""/><cards type="Pocket" player="bicaru">X X</cards><action no="7" player="bicaru" type="0" sum="$0" cards=""/><cards type="Pocket" player="Sergeykin">X X</cards><action no="8" player="Sergeykin" type="0" sum="$0" cards=""/><cards type="Pocket" player="redline1231">X X</cards><action no="9" player="redline1231" type="0" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 DJ C2</cards><action no="14" player="FeelDaPower" type="4" sum="$0" cards=""/><action no="18" player="FeelDaPower" type="0" sum="$0" cards=""/><action no="15" player="Woyager567" type="4" sum="$0" cards=""/><action no="19" player="Woyager567" type="3" sum="$0.04" cards=""/><action no="16" player="Axekievpoker" type="5" sum="$0.02" cards=""/><action no="20" player="Axekievpoker" type="3" sum="$0.02" cards=""/><action no="17" player="Leull1" type="23" sum="$0.04" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards><action no="21" player="Woyager567" type="4" sum="$0" cards=""/><action no="24" player="Woyager567" type="23" sum="$0.08" cards=""/><action no="22" player="Axekievpoker" type="4" sum="$0" cards=""/><action no="25" player="Axekievpoker" type="0" sum="$0" cards=""/><action no="23" player="Leull1" type="5" sum="$0.04" cards=""/><action no="26" player="Leull1" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards><action no="27" player="Woyager567" type="5" sum="$0.04" cards=""/><action no="28" player="Leull1" type="3" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="5198036093">
+		 <general>
+		  <startdate>2013-10-24 11:17:33</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="$0.98" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0" reg_code="-"/><player seat="2" name="FeelDaPower" chips="$0.39" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Woyager567" chips="$1.25" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Axekievpoker" chips="$1.40" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Leull1" chips="$2.63" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="bicaru" chips="$1.10" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Sergeykin" chips="$0.42" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="redline1231" chips="$3.38" dealer="1" win="$0.07" bet="$0.04" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="dodger311" chips="$1.01" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="FeelDaPower" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S9 C3</cards><action no="9" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="FeelDaPower">X X</cards><action no="10" player="FeelDaPower" type="4" sum="$0" cards=""/><cards type="Pocket" player="Woyager567">X X</cards><action no="3" player="Woyager567" type="0" sum="$0" cards=""/><cards type="Pocket" player="Axekievpoker">X X</cards><action no="4" player="Axekievpoker" type="0" sum="$0" cards=""/><cards type="Pocket" player="Leull1">X X</cards><action no="5" player="Leull1" type="0" sum="$0" cards=""/><cards type="Pocket" player="bicaru">X X</cards><action no="6" player="bicaru" type="0" sum="$0" cards=""/><cards type="Pocket" player="Sergeykin">X X</cards><action no="7" player="Sergeykin" type="0" sum="$0" cards=""/><cards type="Pocket" player="redline1231">X X</cards><action no="8" player="redline1231" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D6 D4</cards><action no="11" player="FeelDaPower" type="4" sum="$0" cards=""/><action no="13" player="FeelDaPower" type="0" sum="$0" cards=""/><action no="12" player="redline1231" type="5" sum="$0.02" cards=""/>
+	</round>
+	
+		</game><game gamecode="5198038380">
+		 <general>
+		  <startdate>2013-10-24 11:18:46</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="$0.97" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="2" name="FeelDaPower" chips="$0.37" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Woyager567" chips="$1.25" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Axekievpoker" chips="$1.40" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Leull1" chips="$2.63" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="bicaru" chips="$1.10" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Sergeykin" chips="$0.42" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="redline1231" chips="$3.41" dealer="0" win="$0.07" bet="$0.04" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="dodger311" chips="$1.01" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="FeelDaPower" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="Axekievpoker" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C6 H7</cards><action no="7" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="FeelDaPower">X X</cards><action no="8" player="FeelDaPower" type="0" sum="$0" cards=""/><cards type="Pocket" player="Axekievpoker">X X</cards><action no="9" player="Axekievpoker" type="4" sum="$0" cards=""/><cards type="Pocket" player="Leull1">X X</cards><action no="3" player="Leull1" type="0" sum="$0" cards=""/><cards type="Pocket" player="bicaru">X X</cards><action no="4" player="bicaru" type="0" sum="$0" cards=""/><cards type="Pocket" player="Sergeykin">X X</cards><action no="5" player="Sergeykin" type="0" sum="$0" cards=""/><cards type="Pocket" player="redline1231">X X</cards><action no="6" player="redline1231" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA HJ H9</cards><action no="10" player="Axekievpoker" type="4" sum="$0" cards=""/><action no="12" player="Axekievpoker" type="0" sum="$0" cards=""/><action no="11" player="redline1231" type="5" sum="$0.02" cards=""/>
+	</round>
+	
+		</game><game gamecode="5198042483">
+		 <general>
+		  <startdate>2013-10-24 11:19:59</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="2" name="FeelDaPower" chips="$0.36" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Woyager567" chips="$1.25" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Axekievpoker" chips="$1.38" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Leull1" chips="$2.63" dealer="0" win="$0.51" bet="$0.24" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="bicaru" chips="$1.10" dealer="0" win="$0" bet="$0.04" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Sergeykin" chips="$0.42" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="redline1231" chips="$3.44" dealer="0" win="$0" bet="$0.24" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="dodger311" chips="$1.01" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Axekievpoker" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="Leull1" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C9 D8</cards><action no="6" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="FeelDaPower">X X</cards><action no="7" player="FeelDaPower" type="0" sum="$0" cards=""/><cards type="Pocket" player="Axekievpoker">X X</cards><action no="8" player="Axekievpoker" type="0" sum="$0" cards=""/><cards type="Pocket" player="Leull1">DQ S9</cards><action no="9" player="Leull1" type="3" sum="$0.04" cards=""/><cards type="Pocket" player="bicaru">X X</cards><action no="3" player="bicaru" type="23" sum="$0.04" cards=""/><action no="10" player="bicaru" type="0" sum="$0" cards=""/><cards type="Pocket" player="Sergeykin">X X</cards><action no="4" player="Sergeykin" type="0" sum="$0" cards=""/><cards type="Pocket" player="redline1231">HK CK</cards><action no="5" player="redline1231" type="23" sum="$0.06" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ S10 S2</cards><action no="11" player="Leull1" type="4" sum="$0" cards=""/><action no="13" player="Leull1" type="3" sum="$0.02" cards=""/><action no="12" player="redline1231" type="5" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards><action no="14" player="Leull1" type="5" sum="$0.04" cards=""/><action no="15" player="redline1231" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards><action no="16" player="Leull1" type="5" sum="$0.04" cards=""/><action no="18" player="Leull1" type="23" sum="$0.12" cards=""/><action no="17" player="redline1231" type="23" sum="$0.08" cards=""/><action no="19" player="redline1231" type="3" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="5198044681">
+		 <general>
+		  <startdate>2013-10-24 11:21:22</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="2" name="FeelDaPower" chips="$0.36" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Woyager567" chips="$1.25" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Axekievpoker" chips="$1.37" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Leull1" chips="$2.90" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="bicaru" chips="$1.06" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Sergeykin" chips="$0.42" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="redline1231" chips="$3.20" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="dodger311" chips="$1.01" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Leull1" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="bicaru" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S8 C9</cards><action no="5" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="FeelDaPower">X X</cards><action no="6" player="FeelDaPower" type="0" sum="$0" cards=""/><cards type="Pocket" player="Axekievpoker">X X</cards><action no="7" player="Axekievpoker" type="0" sum="$0" cards=""/><cards type="Pocket" player="Leull1">X X</cards><action no="8" player="Leull1" type="0" sum="$0" cards=""/><cards type="Pocket" player="bicaru">X X</cards><cards type="Pocket" player="Sergeykin">X X</cards><action no="3" player="Sergeykin" type="0" sum="$0" cards=""/><cards type="Pocket" player="redline1231">X X</cards><action no="4" player="redline1231" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5198044965">
+		 <general>
+		  <startdate>2013-10-24 11:21:42</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="2" name="FeelDaPower" chips="$0.36" dealer="0" win="$0" bet="$0.22" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Woyager567" chips="$1.25" dealer="0" win="$0.46" bet="$0.22" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Axekievpoker" chips="$1.37" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Leull1" chips="$2.89" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="bicaru" chips="$1.07" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Sergeykin" chips="$0.42" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="dodger311" chips="$1.01" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Woyager567" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="bicaru" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="Sergeykin" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D8 H7</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="FeelDaPower">S10 S8</cards><action no="5" player="FeelDaPower" type="23" sum="$0.04" cards=""/><cards type="Pocket" player="Woyager567">CJ CQ</cards><action no="6" player="Woyager567" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="Axekievpoker">X X</cards><action no="7" player="Axekievpoker" type="0" sum="$0" cards=""/><cards type="Pocket" player="Leull1">X X</cards><action no="8" player="Leull1" type="0" sum="$0" cards=""/><cards type="Pocket" player="bicaru">X X</cards><action no="9" player="bicaru" type="0" sum="$0" cards=""/><cards type="Pocket" player="Sergeykin">X X</cards><action no="10" player="Sergeykin" type="0" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 DJ C4</cards><action no="11" player="FeelDaPower" type="5" sum="$0.02" cards=""/><action no="12" player="Woyager567" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="13" player="FeelDaPower" type="5" sum="$0.04" cards=""/><action no="15" player="FeelDaPower" type="23" sum="$0.12" cards=""/><action no="14" player="Woyager567" type="23" sum="$0.08" cards=""/><action no="16" player="Woyager567" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards><action no="17" player="FeelDaPower" type="5" sum="$0.04" cards=""/><action no="18" player="Woyager567" type="3" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="5198047471">
+		 <general>
+		  <startdate>2013-10-24 11:23:19</startdate>		  
+		  <players>
+		   <player seat="1" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="2" name="FeelDaPower" chips="$0.14" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Woyager567" chips="$1.49" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Axekievpoker" chips="$1.37" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Leull1" chips="$2.89" dealer="0" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="bicaru" chips="$1.06" dealer="1" win="$0" bet="$0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Sergeykin" chips="$0.40" dealer="0" win="$0.20" bet="$0.12" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Netti0731" chips="$1.50" dealer="0" win="$0" bet="$0.08" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Sergeykin" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="Netti0731" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S2 H5</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="FeelDaPower">X X</cards><action no="4" player="FeelDaPower" type="0" sum="$0" cards=""/><cards type="Pocket" player="Woyager567">X X</cards><action no="5" player="Woyager567" type="0" sum="$0" cards=""/><cards type="Pocket" player="Axekievpoker">X X</cards><action no="6" player="Axekievpoker" type="0" sum="$0" cards=""/><cards type="Pocket" player="Leull1">X X</cards><action no="7" player="Leull1" type="0" sum="$0" cards=""/><cards type="Pocket" player="bicaru">X X</cards><action no="8" player="bicaru" type="0" sum="$0" cards=""/><cards type="Pocket" player="Sergeykin">X X</cards><action no="9" player="Sergeykin" type="3" sum="$0.01" cards=""/><cards type="Pocket" player="Netti0731">X X</cards><action no="10" player="Netti0731" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 HK H9</cards><action no="11" player="Sergeykin" type="5" sum="$0.02" cards=""/><action no="12" player="Netti0731" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="13" player="Sergeykin" type="5" sum="$0.04" cards=""/><action no="14" player="Netti0731" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards><action no="15" player="Sergeykin" type="5" sum="$0.04" cards=""/><action no="16" player="Netti0731" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

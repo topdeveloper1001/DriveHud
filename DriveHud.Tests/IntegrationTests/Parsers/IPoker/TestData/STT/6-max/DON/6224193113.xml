@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224193113">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824216163</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:28</duration>  
+	          <gamecount>53</gamecount>  
+	          <startdate>2014-03-25 16:32:34</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>19,610</bets>  
+	          <wins>18,110</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>0</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>4</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>0</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>0</awardpoints>  
+	    </general>  
+	    <game gamecode="5601088238">
+		 <general>
+		  <startdate>2014-03-25 16:32:34</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,500" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="10" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H2 S6</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="5" player="LOG8" type="23" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088440">
+		 <general>
+		  <startdate>2014-03-25 16:33:20</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="140" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,530" dealer="0" win="290" bet="140" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ SK</cards><action no="8" player="moonbaseone" type="3" sum="20" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">HA H2</cards><action no="4" player="LOG8" type="23" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 DJ SA</cards><action no="9" player="moonbaseone" type="4" sum="0" cards=""/><action no="11" player="moonbaseone" type="3" sum="20" cards=""/><action no="10" player="LOG8" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards><action no="12" player="moonbaseone" type="4" sum="0" cards=""/><action no="14" player="moonbaseone" type="3" sum="20" cards=""/><action no="13" player="LOG8" type="5" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards><action no="15" player="moonbaseone" type="4" sum="0" cards=""/><action no="17" player="moonbaseone" type="3" sum="60" cards=""/><action no="16" player="LOG8" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088767">
+		 <general>
+		  <startdate>2014-03-25 16:34:37</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,360" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,680" dealer="0" win="130" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="theDL" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 HA</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">HQ D5</cards><action no="8" player="theDL" type="4" sum="0" cards=""/><cards type="Pocket" player="LOG8">SK H7</cards><action no="3" player="LOG8" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ D10 D9</cards><action no="9" player="theDL" type="4" sum="0" cards=""/><action no="11" player="theDL" type="3" sum="20" cards=""/><action no="10" player="LOG8" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="12" player="theDL" type="4" sum="0" cards=""/><action no="14" player="theDL" type="3" sum="20" cards=""/><action no="13" player="LOG8" type="5" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards><action no="15" player="theDL" type="4" sum="0" cards=""/><action no="16" player="LOG8" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089012">
+		 <general>
+		  <startdate>2014-03-25 16:35:34</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,350" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,440" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,750" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="10" cards="[cards]"/><action no="2" player="LOG8" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 CK</cards><action no="6" player="moonbaseone" type="23" sum="60" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="8" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089186">
+		 <general>
+		  <startdate>2014-03-25 16:36:14</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,490" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,730" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="20" cards="[cards]"/><action no="1" player="LOG8" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="23" sum="40" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 H2</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="7" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089383">
+		 <general>
+		  <startdate>2014-03-25 16:37:03</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,520" dealer="0" win="816" bet="398" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,720" dealer="1" win="0" bet="398" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="20" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">D6 H3</cards><action no="8" player="jampackstam" type="4" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S9 CJ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">DJ CQ</cards><action no="6" player="LOG8" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 DQ S6</cards><action no="9" player="jampackstam" type="5" sum="40" cards=""/><action no="10" player="LOG8" type="3" sum="40" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards><action no="11" player="jampackstam" type="5" sum="80" cards=""/><action no="12" player="LOG8" type="3" sum="80" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="13" player="jampackstam" type="5" sum="238" cards=""/><action no="14" player="LOG8" type="3" sum="238" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102157">
+		 <general>
+		  <startdate>2014-03-25 16:38:24</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,938" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,470" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,322" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="20" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA SK</cards><action no="3" player="moonbaseone" type="23" sum="120" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="5" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102319">
+		 <general>
+		  <startdate>2014-03-25 16:39:05</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,918" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,430" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,430" dealer="0" win="340" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,322" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 D3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="23" sum="120" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="4" player="LOG8" type="3" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ CJ DA</cards><action no="9" player="theDL" type="5" sum="40" cards=""/><action no="10" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102544">
+		 <general>
+		  <startdate>2014-03-25 16:39:54</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,918" dealer="0" win="600" bet="420" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,400" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,610" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,202" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="theDL" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="3" sum="80" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 S10</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="3" player="LOG8" type="23" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 C4 D10</cards><action no="10" player="jampackstam" type="5" sum="40" cards=""/><action no="9" player="LOG8" type="4" sum="0" cards=""/><action no="11" player="LOG8" type="3" sum="40" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S9</cards><action no="13" player="jampackstam" type="4" sum="0" cards=""/><action no="12" player="LOG8" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="15" player="jampackstam" type="5" sum="300" cards=""/><action no="14" player="LOG8" type="4" sum="0" cards=""/><action no="16" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102957">
+		 <general>
+		  <startdate>2014-03-25 16:41:28</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,098" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,570" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,082" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="30" cards="[cards]"/><action no="2" player="LOG8" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 DQ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601103130">
+		 <general>
+		  <startdate>2014-03-25 16:42:05</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,460" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,098" dealer="0" win="867" bet="597" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,540" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,112" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="60" cards="[cards]"/><action no="1" player="LOG8" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="3" sum="180" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="23" sum="240" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 C8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="7" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 H2 CK</cards><action no="9" player="VanTr4X" type="4" sum="0" cards=""/><action no="10" player="jampackstam" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="11" player="VanTr4X" type="4" sum="0" cards=""/><action no="13" player="VanTr4X" type="0" sum="0" cards=""/><action no="12" player="jampackstam" type="5" sum="357" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601116927">
+		 <general>
+		  <startdate>2014-03-25 16:43:21</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,220" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,368" dealer="0" win="1,770" bet="960" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="1,082" dealer="1" win="0" bet="780" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="30" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="3" sum="60" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 C5</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="6" player="LOG8" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 D6 S9</cards><action no="9" player="jampackstam" type="4" sum="0" cards=""/><action no="10" player="LOG8" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards><action no="11" player="jampackstam" type="5" sum="60" cards=""/><action no="13" player="jampackstam" type="23" sum="660" cards=""/><action no="12" player="LOG8" type="23" sum="360" cards=""/><action no="14" player="LOG8" type="3" sum="300" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards><action no="15" player="jampackstam" type="5" sum="180" cards=""/><action no="16" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117311">
+		 <general>
+		  <startdate>2014-03-25 16:44:51</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,190" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="3,178" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,410" dealer="0" win="1,710" bet="1,410" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="302" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="50" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="23" sum="300" cards=""/><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="23" sum="1,410" cards=""/><cards type="Pocket" player="moonbaseone">H10 H7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="5" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117476">
+		 <general>
+		  <startdate>2014-03-25 16:45:32</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,878" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,710" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="302" dealer="0" win="452" bet="302" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 C2</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="4" player="LOG8" type="23" sum="302" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117669">
+		 <general>
+		  <startdate>2014-03-25 16:46:20</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,878" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,660" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,280" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,540" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="452" dealer="0" win="602" bet="452" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="theDL" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H7 SA</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="3" player="LOG8" type="23" sum="452" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117845">
+		 <general>
+		  <startdate>2014-03-25 16:46:55</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,878" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,230" dealer="1" win="1,380" bet="1,230" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,440" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="602" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="50" cards="[cards]"/><action no="2" player="LOG8" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 H8</cards><action no="6" player="moonbaseone" type="23" sum="1,230" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="8" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117988">
+		 <general>
+		  <startdate>2014-03-25 16:47:31</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,190" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,878" dealer="0" win="550" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="502" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/><action no="1" player="LOG8" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="23" sum="400" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 C2</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="7" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601118094">
+		 <general>
+		  <startdate>2014-03-25 16:47:59</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,090" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="3,028" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="452" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 H10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="6" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601118187">
+		 <general>
+		  <startdate>2014-03-25 16:48:20</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,040" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="3,078" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,660" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="452" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="50" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><cards type="Pocket" player="moonbaseone">D4 DK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">X X</cards><action no="5" player="LOG8" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601118253">
+		 <general>
+		  <startdate>2014-03-25 16:48:38</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,040" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="3,028" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,710" dealer="0" win="2,312" bet="1,710" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="LOG8" chips="452" dealer="0" win="0" bet="452" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">S9 SA</cards><action no="7" player="silverbelarus" type="23" sum="1,710" cards=""/><cards type="Pocket" player="moonbaseone">D4 D5</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="LOG8">SJ S8</cards><action no="4" player="LOG8" type="23" sum="452" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 DA S4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards>
+	</round>
+	
+		</game><game gamecode="5601131089">
+		 <general>
+		  <startdate>2014-03-25 16:49:16</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,040" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="3,028" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,312" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,230" dealer="0" win="1,380" bet="1,230" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="theDL" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 HA</cards><action no="6" player="moonbaseone" type="23" sum="1,230" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131226">
+		 <general>
+		  <startdate>2014-03-25 16:49:48</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,040" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="3,028" dealer="0" win="825" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,312" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,240" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="150" cards="[cards]"/><action no="1" player="theDL" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="23" sum="600" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK D3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131335">
+		 <general>
+		  <startdate>2014-03-25 16:50:14</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="890" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="3,253" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,312" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,165" dealer="1" win="1,390" bet="1,165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="75" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ S10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="23" sum="1,165" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131453">
+		 <general>
+		  <startdate>2014-03-25 16:50:43</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="815" dealer="1" win="0" bet="815" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="3,103" dealer="0" win="1,780" bet="815" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,312" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="75" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">H3 CK</cards><action no="5" player="VanTr4X" type="23" sum="815" cards=""/><cards type="Pocket" player="jampackstam">S7 SA</cards><action no="6" player="jampackstam" type="3" sum="740" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK D4</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ CJ S2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards>
+	</round>
+	
+		</game><game gamecode="5601131571">
+		 <general>
+		  <startdate>2014-03-25 16:51:11</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="4,068" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,162" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,380" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK D7</cards><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131616">
+		 <general>
+		  <startdate>2014-03-25 16:51:23</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="4,068" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,087" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,455" dealer="0" win="1,905" bet="1,455" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="theDL" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="23" sum="300" cards=""/><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 C8</cards><action no="5" player="moonbaseone" type="23" sum="1,455" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131756">
+		 <general>
+		  <startdate>2014-03-25 16:51:56</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="3,768" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,087" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,905" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,240" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jampackstam" type="2" sum="150" cards="[cards]"/><action no="1" player="theDL" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 D10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131837">
+		 <general>
+		  <startdate>2014-03-25 16:52:16</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="3,618" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,087" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,905" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="75" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><cards type="Pocket" player="moonbaseone">D6 DJ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131890">
+		 <general>
+		  <startdate>2014-03-25 16:52:28</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="3,543" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,162" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,905" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA C2</cards><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131961">
+		 <general>
+		  <startdate>2014-03-25 16:52:44</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="3,543" dealer="0" win="0" bet="1,390" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,087" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,980" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="1,390" dealer="0" win="2,930" bet="1,390" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">D6 DQ</cards><action no="7" player="jampackstam" type="23" sum="800" cards=""/><action no="11" player="jampackstam" type="3" sum="565" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D3 S6</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">HJ CJ</cards><action no="10" player="theDL" type="7" sum="1,165" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 SK D7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards>
+	</round>
+	
+		</game><game gamecode="5601132069">
+		 <general>
+		  <startdate>2014-03-25 16:53:11</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,153" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,062" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,855" dealer="1" win="2,230" bet="1,855" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,930" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="6" player="jampackstam" type="2" sum="200" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="10" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 DA</cards><action no="8" player="moonbaseone" type="23" sum="1,830" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601132180">
+		 <general>
+		  <startdate>2014-03-25 16:53:36</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="1,928" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,037" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,230" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,805" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="5" player="jampackstam" type="1" sum="100" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><cards type="Pocket" player="moonbaseone">CA C2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601132277">
+		 <general>
+		  <startdate>2014-03-25 16:53:56</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="1,803" dealer="1" win="2,178" bet="1,803" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,212" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,205" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,780" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="23" sum="1,778" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK D8</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601132357">
+		 <general>
+		  <startdate>2014-03-25 16:54:17</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,178" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,087" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,980" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,755" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ S2</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601132429">
+		 <general>
+		  <startdate>2014-03-25 16:54:34</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,153" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,062" dealer="0" win="2,437" bet="2,062" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,855" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,930" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="6" player="jampackstam" type="2" sum="200" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="10" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="23" sum="2,037" cards=""/><cards type="Pocket" player="moonbaseone">D8 C10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601146947">
+		 <general>
+		  <startdate>2014-03-25 16:54:53</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="1,928" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,437" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,830" dealer="0" win="2,205" bet="1,830" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,805" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="5" player="jampackstam" type="1" sum="100" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA HK</cards><action no="7" player="moonbaseone" type="23" sum="1,805" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147031">
+		 <general>
+		  <startdate>2014-03-25 16:55:16</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="1,803" dealer="1" win="2,178" bet="1,803" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,212" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,205" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,780" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="23" sum="1,778" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D5 DJ</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147098">
+		 <general>
+		  <startdate>2014-03-25 16:55:35</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,178" dealer="0" win="2,553" bet="2,178" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,087" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,980" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,755" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="23" sum="2,153" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DQ D2</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="10" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147143">
+		 <general>
+		  <startdate>2014-03-25 16:55:49</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,553" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,062" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,855" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,530" dealer="0" win="2,805" bet="2,530" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="6" player="jampackstam" type="2" sum="200" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="10" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C6 D8</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="23" sum="2,505" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147205">
+		 <general>
+		  <startdate>2014-03-25 16:56:08</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,328" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,037" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,830" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,805" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="5" player="jampackstam" type="1" sum="100" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><cards type="Pocket" player="moonbaseone">S5 S10</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147256">
+		 <general>
+		  <startdate>2014-03-25 16:56:23</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,203" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,212" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,805" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,780" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 S7</cards><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147312">
+		 <general>
+		  <startdate>2014-03-25 16:56:41</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,178" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,087" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,980" dealer="0" win="2,355" bet="1,980" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,755" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 S10</cards><action no="9" player="moonbaseone" type="23" sum="1,955" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="10" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147410">
+		 <general>
+		  <startdate>2014-03-25 16:57:07</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,153" dealer="0" win="0" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,062" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,355" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,430" dealer="0" win="3,105" bet="2,430" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="6" player="jampackstam" type="2" sum="300" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="10" player="jampackstam" type="3" sum="300" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ H2</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="23" sum="600" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 DA C4</cards><action no="12" player="jampackstam" type="0" sum="0" cards=""/><action no="11" player="theDL" type="5" sum="1,805" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147523">
+		 <general>
+		  <startdate>2014-03-25 16:57:39</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="1,528" dealer="0" win="1,903" bet="1,528" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,037" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,330" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="3,105" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="5" player="jampackstam" type="1" sum="150" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="9" player="jampackstam" type="23" sum="1,503" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 H9</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147652">
+		 <general>
+		  <startdate>2014-03-25 16:58:16</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="1,903" dealer="1" win="1,150" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,712" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,305" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="3,080" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="23" sum="600" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S9 D6</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147726">
+		 <general>
+		  <startdate>2014-03-25 16:58:37</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,428" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,537" dealer="1" win="2,062" bet="1,537" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,980" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="3,055" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="23" sum="1,512" cards=""/><cards type="Pocket" player="moonbaseone">SQ H8</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="10" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147787">
+		 <general>
+		  <startdate>2014-03-25 16:58:55</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,403" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,062" dealer="0" win="2,587" bet="2,062" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,805" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,730" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="6" player="jampackstam" type="2" sum="300" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="10" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="23" sum="2,037" cards=""/><cards type="Pocket" player="moonbaseone">SQ S3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147855">
+		 <general>
+		  <startdate>2014-03-25 16:59:15</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,078" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,587" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,780" dealer="0" win="2,305" bet="1,780" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,555" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="5" player="jampackstam" type="1" sum="150" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 HK</cards><action no="7" player="moonbaseone" type="23" sum="1,755" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147925">
+		 <general>
+		  <startdate>2014-03-25 16:59:35</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="1,903" dealer="1" win="2,428" bet="1,903" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,262" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,305" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,530" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="theDL" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="23" sum="1,878" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 D5</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147997">
+		 <general>
+		  <startdate>2014-03-25 16:59:55</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,428" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,087" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,980" dealer="0" win="2,355" bet="1,980" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,505" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 D5</cards><action no="9" player="moonbaseone" type="23" sum="1,955" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="10" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601148074">
+		 <general>
+		  <startdate>2014-03-25 17:00:14</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,403" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,062" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,355" dealer="1" win="175" bet="2,355" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="2,180" dealer="0" win="4,710" bet="2,180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="6" player="jampackstam" type="2" sum="300" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="10" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ C10</cards><action no="8" player="moonbaseone" type="23" sum="2,330" cards=""/><cards type="Pocket" player="theDL">HK DK</cards><action no="9" player="theDL" type="7" sum="2,005" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 D3 C9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards>
+	</round>
+	
+		</game><game gamecode="5601148173">
+		 <general>
+		  <startdate>2014-03-25 17:00:39</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="2,078" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="2,037" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="175" dealer="0" win="700" bet="175" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="4,710" dealer="1" win="1,025" bet="850" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="15" sum="50" cards="[cards]"/><action no="5" player="jampackstam" type="1" sum="200" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="50" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="400" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="4" player="theDL" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 D8</cards><action no="7" player="moonbaseone" type="7" sum="125" cards=""/><cards type="Pocket" player="theDL">S6 S10</cards><action no="8" player="theDL" type="3" sum="400" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 D2 C10</cards><action no="11" player="silverbelarus" type="4" sum="0" cards=""/><action no="13" player="silverbelarus" type="0" sum="0" cards=""/><action no="12" player="theDL" type="5" sum="400" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5601159693">
+		 <general>
+		  <startdate>2014-03-25 17:01:04</startdate>		  
+		  <players>
+		   <player seat="3" name="jampackstam" chips="1,828" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="silverbelarus" chips="1,587" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="700" dealer="0" win="0" bet="700" rebuy="0" addon="0" reg_code="6224193113"/><player seat="8" name="theDL" chips="4,885" dealer="0" win="5,885" bet="4,885" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="jampackstam" type="15" sum="50" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="50" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="200" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="400" cards="[cards]"/><action no="3" player="theDL" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 S8</cards><action no="10" player="moonbaseone" type="7" sum="250" cards=""/><cards type="Pocket" player="theDL">CK SQ</cards><action no="7" player="theDL" type="23" sum="4,835" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 C8 D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards>
+	</round>
+	
+		</game>  
+	</session>

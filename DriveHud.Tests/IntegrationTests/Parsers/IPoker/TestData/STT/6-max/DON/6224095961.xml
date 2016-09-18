@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224095961">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824202006</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:13</duration>  
+	          <gamecount>17</gamecount>  
+	          <startdate>2014-03-25 13:16:37</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>1,960</bets>  
+	          <wins>460</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>0</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>6</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>0</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>0</awardpoints>  
+	    </general>  
+	    <game gamecode="5600657058">
+		 <general>
+		  <startdate>2014-03-25 13:16:37</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,500" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mentasprite" type="1" sum="10" cards="[cards]"/><action no="2" player="claudiaoana" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="7" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="8" player="claudiaoana" type="4" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="4" player="treetree1" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">H7 HJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 DJ D2</cards><action no="9" player="claudiaoana" type="4" sum="0" cards=""/><action no="11" player="claudiaoana" type="0" sum="0" cards=""/><action no="10" player="treetree1" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600657197">
+		 <general>
+		  <startdate>2014-03-25 13:17:28</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,480" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="claudiaoana" type="1" sum="10" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="6" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="7" player="claudiaoana" type="3" sum="10" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="8" player="Traianks" type="4" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="3" player="treetree1" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 H4</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 C5 S5</cards><action no="9" player="claudiaoana" type="4" sum="0" cards=""/><action no="10" player="Traianks" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards><action no="11" player="claudiaoana" type="5" sum="20" cards=""/><action no="12" player="Traianks" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666608">
+		 <general>
+		  <startdate>2014-03-25 13:18:27</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,480" dealer="0" win="0" bet="176" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,530" dealer="0" win="492" bet="316" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="10" cards="[cards]"/><action no="2" player="treetree1" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="5" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="6" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="23" sum="80" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="8" player="treetree1" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">D4 DJ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 D5 S7</cards><action no="9" player="Traianks" type="5" sum="96" cards=""/><action no="10" player="treetree1" type="3" sum="96" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="11" player="Traianks" type="4" sum="0" cards=""/><action no="13" player="Traianks" type="0" sum="0" cards=""/><action no="12" player="treetree1" type="5" sum="140" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666767">
+		 <general>
+		  <startdate>2014-03-25 13:19:19</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,304" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,706" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="160" bet="80" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="treetree1" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="4" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="5" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">HQ S5</cards><action no="7" player="treetree1" type="3" sum="10" cards=""/><cards type="Pocket" player="moonbaseone">C3 H5</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 DA CA</cards><action no="9" player="treetree1" type="5" sum="20" cards=""/><action no="10" player="moonbaseone" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards><action no="11" player="treetree1" type="5" sum="20" cards=""/><action no="12" player="moonbaseone" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards><action no="13" player="treetree1" type="4" sum="0" cards=""/><action no="15" player="treetree1" type="3" sum="20" cards=""/><action no="14" player="moonbaseone" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666899">
+		 <general>
+		  <startdate>2014-03-25 13:20:05</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,304" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,626" dealer="1" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,580" dealer="0" win="300" bet="120" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="silverbelarus" type="2" sum="20" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="4" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="3" player="mentasprite" type="3" sum="20" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="4" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="3" sum="20" cards=""/><cards type="Pocket" player="treetree1">H6 S9</cards><action no="6" player="treetree1" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">SK H10</cards><action no="7" player="moonbaseone" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 DQ H2</cards><action no="10" player="silverbelarus" type="4" sum="0" cards=""/><action no="11" player="mentasprite" type="4" sum="0" cards=""/><action no="12" player="Traianks" type="4" sum="0" cards=""/><action no="13" player="treetree1" type="4" sum="0" cards=""/><action no="9" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="15" player="silverbelarus" type="4" sum="0" cards=""/><action no="16" player="mentasprite" type="4" sum="0" cards=""/><action no="17" player="Traianks" type="4" sum="0" cards=""/><action no="18" player="treetree1" type="4" sum="0" cards=""/><action no="14" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards><action no="20" player="silverbelarus" type="4" sum="0" cards=""/><action no="25" player="silverbelarus" type="0" sum="0" cards=""/><action no="21" player="mentasprite" type="4" sum="0" cards=""/><action no="26" player="mentasprite" type="0" sum="0" cards=""/><action no="22" player="Traianks" type="4" sum="0" cards=""/><action no="27" player="Traianks" type="0" sum="0" cards=""/><action no="23" player="treetree1" type="5" sum="100" cards=""/><action no="19" player="moonbaseone" type="4" sum="0" cards=""/><action no="24" player="moonbaseone" type="3" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667213">
+		 <general>
+		  <startdate>2014-03-25 13:21:50</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,470" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,284" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,506" dealer="0" win="220" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="20" cards="[cards]"/><action no="2" player="mentasprite" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="8" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="3" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="5" player="treetree1" type="23" sum="160" cards=""/><cards type="Pocket" player="moonbaseone">D10 HA</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667293">
+		 <general>
+		  <startdate>2014-03-25 13:22:16</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,430" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,500" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,284" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,566" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mentasprite" type="1" sum="20" cards="[cards]"/><action no="2" player="claudiaoana" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="7" player="mentasprite" type="3" sum="20" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="8" player="claudiaoana" type="4" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="4" player="treetree1" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ C4</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 C7 CA</cards><action no="9" player="mentasprite" type="4" sum="0" cards=""/><action no="11" player="mentasprite" type="0" sum="0" cards=""/><action no="10" player="claudiaoana" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667384">
+		 <general>
+		  <startdate>2014-03-25 13:22:48</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,460" dealer="0" win="740" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,540" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,284" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,566" dealer="0" win="0" bet="280" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="claudiaoana" type="1" sum="20" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="3" sum="120" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="6" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="7" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="8" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="3" player="treetree1" type="23" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">SA H8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA HA D3</cards><action no="10" player="silverbelarus" type="23" sum="160" cards=""/><action no="9" player="treetree1" type="5" sum="80" cards=""/><action no="11" player="treetree1" type="3" sum="80" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards><action no="13" player="silverbelarus" type="5" sum="120" cards=""/><action no="12" player="treetree1" type="4" sum="0" cards=""/><action no="14" player="treetree1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600678842">
+		 <general>
+		  <startdate>2014-03-25 13:23:52</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,244" dealer="0" win="140" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,286" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="20" cards="[cards]"/><action no="2" player="treetree1" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="5" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="6" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="23" sum="100" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="8" player="treetree1" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 C10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600678915">
+		 <general>
+		  <startdate>2014-03-25 13:24:16</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,284" dealer="1" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,246" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,760" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="treetree1" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="4" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="5" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="23" sum="120" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="7" player="treetree1" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C3 C2</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679025">
+		 <general>
+		  <startdate>2014-03-25 13:24:53</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,800" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,344" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,226" dealer="1" win="540" bet="390" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,720" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="silverbelarus" type="2" sum="60" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="4" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="3" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="4" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="6" player="treetree1" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">D10 S6</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA S8 HQ</cards><action no="9" player="silverbelarus" type="4" sum="0" cards=""/><action no="11" player="silverbelarus" type="3" sum="60" cards=""/><action no="10" player="treetree1" type="5" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards><action no="12" player="silverbelarus" type="4" sum="0" cards=""/><action no="13" player="treetree1" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards><action no="14" player="silverbelarus" type="4" sum="0" cards=""/><action no="16" player="silverbelarus" type="0" sum="0" cards=""/><action no="15" player="treetree1" type="5" sum="270" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679206">
+		 <general>
+		  <startdate>2014-03-25 13:25:52</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,680" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,390" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,344" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,376" dealer="0" win="150" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,690" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="30" cards="[cards]"/><action no="2" player="mentasprite" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">HJ S10</cards><action no="8" player="mentasprite" type="4" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="3" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">SQ H8</cards><action no="5" player="treetree1" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">H9 D3</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 C2 CK</cards><action no="9" player="mentasprite" type="4" sum="0" cards=""/><action no="10" player="treetree1" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S9</cards><action no="11" player="mentasprite" type="4" sum="0" cards=""/><action no="12" player="treetree1" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="13" player="mentasprite" type="4" sum="0" cards=""/><action no="14" player="treetree1" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679382">
+		 <general>
+		  <startdate>2014-03-25 13:26:48</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,650" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,330" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,520" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,344" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,466" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mentasprite" type="1" sum="30" cards="[cards]"/><action no="2" player="claudiaoana" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="23" sum="120" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="7" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="8" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="4" player="treetree1" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA C7</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679490">
+		 <general>
+		  <startdate>2014-03-25 13:27:26</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,740" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,300" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,460" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,344" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,466" dealer="0" win="270" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="claudiaoana" type="1" sum="30" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="6" player="mentasprite" type="3" sum="60" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="7" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="8" player="Traianks" type="4" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="3" player="treetree1" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">S4 C10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 H4 HK</cards><action no="11" player="mentasprite" type="0" sum="0" cards=""/><action no="9" player="Traianks" type="4" sum="0" cards=""/><action no="12" player="Traianks" type="0" sum="0" cards=""/><action no="10" player="treetree1" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600679682">
+		 <general>
+		  <startdate>2014-03-25 13:28:23</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,740" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,240" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,430" dealer="1" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,284" dealer="0" win="1,524" bet="1,284" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,616" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="30" cards="[cards]"/><action no="2" player="treetree1" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="5" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="6" player="claudiaoana" type="23" sum="180" cards=""/><action no="9" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="23" sum="1,284" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="8" player="treetree1" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D3 HA</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600689322">
+		 <general>
+		  <startdate>2014-03-25 13:28:53</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,740" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,240" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,524" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,556" dealer="0" win="700" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,690" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="treetree1" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="4" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="5" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">X X</cards><action no="7" player="treetree1" type="3" sum="50" cards=""/><cards type="Pocket" player="moonbaseone">S2 HA</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 SA D7</cards><action no="9" player="treetree1" type="4" sum="0" cards=""/><action no="10" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards><action no="11" player="treetree1" type="5" sum="100" cards=""/><action no="12" player="moonbaseone" type="3" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="13" player="treetree1" type="5" sum="300" cards=""/><action no="14" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600689488">
+		 <general>
+		  <startdate>2014-03-25 13:29:40</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,740" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="mentasprite" chips="1,240" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="claudiaoana" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Traianks" chips="1,524" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="treetree1" chips="1,756" dealer="1" win="3,080" bet="1,490" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="1,490" rebuy="0" addon="0" reg_code="6224095961"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="silverbelarus" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="mentasprite">X X</cards><action no="3" player="mentasprite" type="0" sum="0" cards=""/><cards type="Pocket" player="claudiaoana">X X</cards><action no="4" player="claudiaoana" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="treetree1">CQ SQ</cards><action no="6" player="treetree1" type="23" sum="300" cards=""/><action no="9" player="treetree1" type="3" sum="1,190" cards=""/><cards type="Pocket" player="moonbaseone">HA SK</cards><action no="7" player="moonbaseone" type="23" sum="1,490" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 S2 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards>
+	</round>
+	
+		</game>  
+	</session>

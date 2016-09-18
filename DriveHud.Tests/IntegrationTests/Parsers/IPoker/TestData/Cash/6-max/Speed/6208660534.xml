@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6208660534">  
+	<general>  
+		<mode>real</mode>
+		<gametype>Holdem NL €0.02/€0.05</gametype>  
+		<tablename>Speed Hold'em 1, 6208660534</tablename>
+		<tablecurrency>EUR</tablecurrency>  
+		<duration>N/A</duration>  
+		<gamecount>N/A</gamecount>  
+		<startdate>2014-02-27 21:12:13</startdate>  
+		<currency>GBP</currency>  
+		<nickname>WhiteRiderT</nickname>  
+		<bets>N/A</bets>  
+		<wins>N/A</wins>  
+		<chipsin>N/A</chipsin>
+		<chipsout>N/A</chipsout>
+		<ipoints>N/A</ipoints>
+		<statuspoints>N/A</statuspoints>
+		<awardpoints>N/A</awardpoints>
+	</general>  
+	<game gamecode="5536176757">
+		<general>
+			<startdate>2014-02-27 21:12:13</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€2" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="Ducky999" chips="€5.68" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="rolandoss" chips="€4.76" dealer="0" win="€0.22" bet="€0.15" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="micha465" chips="€2.70" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="Wildfishappears" chips="€6.73" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="00Petruca00" chips="€8.76" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="WhiteRiderT" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="00Petruca00" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">DA C6</cards>
+			<action no="8" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="Ducky999">X X</cards>
+			<action no="3" player="Ducky999" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="rolandoss">X X</cards>
+			<action no="4" player="rolandoss" type="23" sum="€0.15" cards=""/>
+			<cards type="Pocket" player="micha465">X X</cards>
+			<action no="5" player="micha465" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="Wildfishappears">X X</cards>
+			<action no="6" player="Wildfishappears" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="00Petruca00">X X</cards>
+			<action no="7" player="00Petruca00" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>  
+	<game gamecode="5536177090">
+		<general>
+			<startdate>2014-02-27 21:12:28</startdate>		  
+			<players>
+				<player seat="1" name="artofgrind" chips="€8.72" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="jodiendode69" chips="€5.78" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="WhiteRiderT" chips="€1.95" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="2plus2equals" chips="€4.08" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="tomaxxxx" chips="€2" dealer="1" win="€0.94" bet="€0.66" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="NaNathar" chips="€2.15" dealer="0" win="€0" bet="€0.26" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="artofgrind" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="NaNathar" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="artofgrind">X X</cards>
+			<action no="8" player="artofgrind" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="jodiendode69">X X</cards>
+			<action no="3" player="jodiendode69" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H6 H10</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="2plus2equals">X X</cards>
+			<action no="5" player="2plus2equals" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="tomaxxxx">X X</cards>
+			<action no="6" player="tomaxxxx" type="23" sum="€0.12" cards=""/>
+			<cards type="Pocket" player="NaNathar">X X</cards>
+			<action no="7" player="NaNathar" type="3" sum="€0.10" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D10 C9 D7</cards>
+			<action no="10" player="tomaxxxx" type="5" sum="€0.14" cards=""/>
+			<action no="9" player="NaNathar" type="4" sum="€0" cards=""/>
+			<action no="11" player="NaNathar" type="3" sum="€0.14" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D2</cards>
+			<action no="13" player="tomaxxxx" type="5" sum="€0.40" cards=""/>
+			<action no="12" player="NaNathar" type="4" sum="€0" cards=""/>
+			<action no="14" player="NaNathar" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5536177243">
+		<general>
+			<startdate>2014-02-27 21:12:35</startdate>		  
+			<players>
+				<player seat="1" name="Ducky999" chips="€5.25" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="UmbertoStyle" chips="€3.76" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="berbolt958" chips="€14.02" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="WhiteRiderT" chips="€1.95" dealer="0" win="€0.53" bet="€0.33" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="Donasss" chips="€1.90" dealer="1" win="€0" bet="€0.15" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="DHira15" chips="€2.29" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="Ducky999" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="DHira15" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Ducky999">X X</cards>
+			<action no="8" player="Ducky999" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="UmbertoStyle">X X</cards>
+			<action no="3" player="UmbertoStyle" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="berbolt958">X X</cards>
+			<action no="4" player="berbolt958" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D7 DA</cards>
+			<action no="5" player="WhiteRiderT" type="23" sum="€0.15" cards=""/>
+			<cards type="Pocket" player="Donasss">X X</cards>
+			<action no="6" player="Donasss" type="3" sum="€0.15" cards=""/>
+			<cards type="Pocket" player="DHira15">X X</cards>
+			<action no="7" player="DHira15" type="0" sum="€0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S5 DQ C7</cards>
+			<action no="9" player="WhiteRiderT" type="5" sum="€0.18" cards=""/>
+			<action no="10" player="Donasss" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5536179986">
+		<general>
+			<startdate>2014-02-27 21:13:45</startdate>		  
+			<players>
+				<player seat="1" name="triumek" chips="€5.03" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="Maniu1609" chips="€4.74" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="SpiritDrink" chips="€5.16" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="Livetowin2" chips="€7.41" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="WhiteRiderT" chips="€2.15" dealer="1" win="€0.22" bet="€0.15" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="Methusalem999" chips="€5.46" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="triumek" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="Methusalem999" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="triumek">X X</cards>
+			<action no="8" player="triumek" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="Maniu1609">X X</cards>
+			<action no="3" player="Maniu1609" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="SpiritDrink">X X</cards>
+			<action no="4" player="SpiritDrink" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="Livetowin2">X X</cards>
+			<action no="5" player="Livetowin2" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HQ CK</cards>
+			<action no="6" player="WhiteRiderT" type="23" sum="€0.15" cards=""/>
+			<cards type="Pocket" player="Methusalem999">X X</cards>
+			<action no="7" player="Methusalem999" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5536183750">
+		<general>
+			<startdate>2014-02-27 21:14:12</startdate>		  
+			<players>
+				<player seat="1" name="unodostres44" chips="€2.50" dealer="0" win="€0.07" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="WhiteRiderT" chips="€2.22" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="PkrFrks" chips="€1.64" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="electronovo" chips="€1.85" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="qwoe09" chips="€5" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="7geez" chips="€5.05" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="unodostres44" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="7geez" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="unodostres44">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">C3 H9</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="PkrFrks">X X</cards>
+			<action no="4" player="PkrFrks" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="electronovo">X X</cards>
+			<action no="5" player="electronovo" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="qwoe09">X X</cards>
+			<action no="6" player="qwoe09" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="7geez">X X</cards>
+			<action no="7" player="7geez" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5536184416">
+		<general>
+			<startdate>2014-02-27 21:14:16</startdate>		  
+			<players>
+				<player seat="1" name="Alex1Stub" chips="€2" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="Ducky999" chips="€5.28" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="DerEXECUTIONER" chips="€2.85" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="coolapricot" chips="€12.01" dealer="0" win="€0.22" bet="€0.15" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="WerbastenMRK" chips="€7.41" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="WhiteRiderT" chips="€2.22" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="Alex1Stub" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Alex1Stub">X X</cards>
+			<action no="8" player="Alex1Stub" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="Ducky999">X X</cards>
+			<action no="3" player="Ducky999" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="DerEXECUTIONER">X X</cards>
+			<action no="4" player="DerEXECUTIONER" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="coolapricot">X X</cards>
+			<action no="5" player="coolapricot" type="23" sum="€0.15" cards=""/>
+			<cards type="Pocket" player="WerbastenMRK">X X</cards>
+			<action no="6" player="WerbastenMRK" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D10 D9</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5536185969">
+		<general>
+			<startdate>2014-02-27 21:14:46</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€2.18" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="datoobiii" chips="€8.78" dealer="0" win="€0" bet="€0.15" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="NaNathar" chips="€2.06" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="vikulya9" chips="€2" dealer="0" win="€0.62" bet="€0.40" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="nikolaykogomel" chips="€3.52" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="BrokenJack" chips="€8.79" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="WhiteRiderT" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="BrokenJack" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">S9 S8</cards>
+			<action no="8" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="datoobiii">X X</cards>
+			<action no="3" player="datoobiii" type="23" sum="€0.15" cards=""/>
+			<action no="9" player="datoobiii" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="NaNathar">X X</cards>
+			<action no="4" player="NaNathar" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="vikulya9">X X</cards>
+			<action no="5" player="vikulya9" type="23" sum="€0.40" cards=""/>
+			<cards type="Pocket" player="nikolaykogomel">X X</cards>
+			<action no="6" player="nikolaykogomel" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="BrokenJack">X X</cards>
+			<action no="7" player="BrokenJack" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5536186134">
+		<general>
+			<startdate>2014-02-27 21:14:54</startdate>		  
+			<players>
+				<player seat="1" name="Lsgnik" chips="€5.31" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="Alex1Stub" chips="€1.95" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="WhiteRiderT" chips="€2.13" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="pcworld77pa" chips="€1.71" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="stoleyourchips" chips="€3.74" dealer="1" win="€0.22" bet="€0.15" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="Cardi94" chips="€1.97" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="Lsgnik" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="Cardi94" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="Lsgnik">X X</cards>
+			<action no="8" player="Lsgnik" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="Alex1Stub">X X</cards>
+			<action no="3" player="Alex1Stub" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H10 CK</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="pcworld77pa">X X</cards>
+			<action no="5" player="pcworld77pa" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="stoleyourchips">X X</cards>
+			<action no="6" player="stoleyourchips" type="23" sum="€0.15" cards=""/>
+			<cards type="Pocket" player="Cardi94">X X</cards>
+			<action no="7" player="Cardi94" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5536187018">
+		<general>
+			<startdate>2014-02-27 21:14:57</startdate>		  
+			<players>
+				<player seat="1" name="electronovo" chips="€1.81" dealer="0" win="€0" bet="€1.81" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="WhiteRiderT" chips="€2.13" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="Flyer87163" chips="€5.59" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="artofgrind" chips="€8.53" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="g0l3mx" chips="€3.95" dealer="1" win="€5.40" bet="€3.81" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="Vib3Tr1b3" chips="€2.14" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="electronovo" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="Vib3Tr1b3" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="electronovo">C9 H9</cards>
+			<action no="8" player="electronovo" type="23" sum="€0.20" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H2 H7</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="Flyer87163">X X</cards>
+			<action no="4" player="Flyer87163" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="artofgrind">X X</cards>
+			<action no="5" player="artofgrind" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="g0l3mx">C8 D8</cards>
+			<action no="6" player="g0l3mx" type="23" sum="€0.10" cards=""/>
+			<action no="9" player="g0l3mx" type="3" sum="€0.10" cards=""/>
+			<cards type="Pocket" player="Vib3Tr1b3">X X</cards>
+			<action no="7" player="Vib3Tr1b3" type="0" sum="€0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S8 CJ D2</cards>
+			<action no="10" player="electronovo" type="5" sum="€0.42" cards=""/>
+			<action no="11" player="g0l3mx" type="3" sum="€0.42" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C6</cards>
+			<action no="12" player="electronovo" type="5" sum="€1.10" cards=""/>
+			<action no="14" player="electronovo" type="7" sum="€0.09" cards=""/>
+			<action no="13" player="g0l3mx" type="23" sum="€3.19" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DJ</cards>
+		</round>
+
+	</game>
+	<game gamecode="5536185691">
+		<general>
+			<startdate>2014-02-27 21:14:35</startdate>		  
+			<players>
+				<player seat="1" name="jamalamalam" chips="€6.34" dealer="0" win="€0" bet="€0.05" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="duleekpaddy" chips="€2.81" dealer="0" win="€0" bet="€0.45" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="1stacksup1" chips="€1.95" dealer="0" win="€1.54" bet="€0.75" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="Wildfishappears" chips="€4.95" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="fiordimaggio" chips="€2.26" dealer="1" win="€0" bet="€0.35" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="WhiteRiderT" chips="€2.20" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="jamalamalam" type="2" sum="€0.05" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="jamalamalam">X X</cards>
+			<action no="8" player="jamalamalam" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="duleekpaddy">X X</cards>
+			<action no="3" player="duleekpaddy" type="23" sum="€0.10" cards=""/>
+			<cards type="Pocket" player="1stacksup1">X X</cards>
+			<action no="4" player="1stacksup1" type="3" sum="€0.10" cards=""/>
+			<cards type="Pocket" player="Wildfishappears">X X</cards>
+			<action no="5" player="Wildfishappears" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="fiordimaggio">X X</cards>
+			<action no="6" player="fiordimaggio" type="3" sum="€0.10" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HA H5</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CQ C9 C6</cards>
+			<action no="9" player="duleekpaddy" type="4" sum="€0" cards=""/>
+			<action no="12" player="duleekpaddy" type="3" sum="€0.25" cards=""/>
+			<action no="10" player="1stacksup1" type="5" sum="€0.25" cards=""/>
+			<action no="11" player="fiordimaggio" type="3" sum="€0.25" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CJ</cards>
+			<action no="13" player="duleekpaddy" type="4" sum="€0" cards=""/>
+			<action no="14" player="1stacksup1" type="4" sum="€0" cards=""/>
+			<action no="15" player="fiordimaggio" type="4" sum="€0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S9</cards>
+			<action no="16" player="duleekpaddy" type="5" sum="€0.10" cards=""/>
+			<action no="19" player="duleekpaddy" type="0" sum="€0" cards=""/>
+			<action no="17" player="1stacksup1" type="23" sum="€0.40" cards=""/>
+			<action no="18" player="fiordimaggio" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+</session>

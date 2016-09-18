@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188344588">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819107913</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>13</gamecount>  
+	          <startdate>2014-01-26 18:25:43</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>758</bets>  
+	          <wins>1,111</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,153</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5439409056">
+		 <general>
+		  <startdate>2014-01-26 18:25:43</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="800" dealer="1" win="279" bet="166" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="800" dealer="0" win="0" bet="103" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="7803" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><action no="4" player="dyajohn" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">D2 HJ</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="7803">X X</cards><action no="6" player="7803" type="4" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="3" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK C5 H2</cards><action no="8" player="dyajohn" type="5" sum="20" cards=""/><action no="7" player="7803" type="4" sum="0" cards=""/><action no="9" player="7803" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="11" player="dyajohn" type="23" sum="126" cards=""/><action no="10" player="7803" type="5" sum="63" cards=""/><action no="12" player="7803" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439427995">
+		 <general>
+		  <startdate>2014-01-26 18:26:29</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="913" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="697" dealer="0" win="240" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="7803" type="1" sum="10" cards="[cards]"/><action no="2" player="lacko19820503" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><action no="3" player="dyajohn" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">C10 C3</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="7803">X X</cards><action no="5" player="7803" type="3" sum="10" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="6" player="lacko19820503" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 D6 DJ</cards><action no="9" player="dyajohn" type="3" sum="20" cards=""/><action no="7" player="7803" type="5" sum="20" cards=""/><action no="8" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards><action no="11" player="dyajohn" type="3" sum="40" cards=""/><action no="10" player="7803" type="5" sum="40" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards><action no="13" player="dyajohn" type="0" sum="0" cards=""/><action no="12" player="7803" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428429">
+		 <general>
+		  <startdate>2014-01-26 18:27:25</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="833" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="797" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="dyajohn" type="2" sum="20" cards="[cards]"/><action no="1" player="lacko19820503" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><action no="6" player="dyajohn" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK SK</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="7803">X X</cards><action no="4" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="5" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428657">
+		 <general>
+		  <startdate>2014-01-26 18:27:52</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="813" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="60" bet="30" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="797" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="dyajohn" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">H2 CQ</cards><action no="5" player="dyajohn" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">SK S4</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="7803">X X</cards><action no="3" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="4" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA C5 H4</cards><action no="7" player="dyajohn" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="9" player="dyajohn" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D10</cards><action no="11" player="dyajohn" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439429007">
+		 <general>
+		  <startdate>2014-01-26 18:28:36</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="783" dealer="1" win="465" bet="360" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="850" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="797" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="7803" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><action no="4" player="dyajohn" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">C9 C5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="7803">X X</cards><action no="6" player="7803" type="4" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="3" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 DK C6</cards><action no="8" player="dyajohn" type="5" sum="30" cards=""/><action no="7" player="7803" type="4" sum="0" cards=""/><action no="9" player="7803" type="3" sum="30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards><action no="11" player="dyajohn" type="5" sum="30" cards=""/><action no="10" player="7803" type="4" sum="0" cards=""/><action no="12" player="7803" type="3" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards><action no="14" player="dyajohn" type="5" sum="270" cards=""/><action no="13" player="7803" type="4" sum="0" cards=""/><action no="15" player="7803" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439429794">
+		 <general>
+		  <startdate>2014-01-26 18:30:11</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="888" dealer="0" win="145" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="835" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="707" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="770" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="dyajohn" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="7803" type="15" sum="5" cards="[cards]"/><action no="5" player="7803" type="1" sum="25" cards="[cards]"/><action no="2" player="lacko19820503" type="15" sum="5" cards="[cards]"/><action no="6" player="lacko19820503" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">H5 SQ</cards><action no="7" player="dyajohn" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">S2 C5</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="7803">X X</cards><action no="9" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">D10 H6</cards><action no="10" player="lacko19820503" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 DA SA</cards><action no="12" player="dyajohn" type="4" sum="0" cards=""/><action no="11" player="lacko19820503" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards><action no="14" player="dyajohn" type="4" sum="0" cards=""/><action no="13" player="lacko19820503" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards><action no="16" player="dyajohn" type="4" sum="0" cards=""/><action no="15" player="lacko19820503" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439430560">
+		 <general>
+		  <startdate>2014-01-26 18:31:46</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="978" dealer="0" win="190" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="830" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="677" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="715" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="dyajohn" type="15" sum="10" cards="[cards]"/><action no="6" player="dyajohn" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="7803" type="15" sum="10" cards="[cards]"/><action no="1" player="lacko19820503" type="15" sum="10" cards="[cards]"/><action no="5" player="lacko19820503" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><cards type="Pocket" player="WorstCard">D9 D6</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="7803">X X</cards><action no="8" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="9" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439449623">
+		 <general>
+		  <startdate>2014-01-26 18:32:15</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="1,058" dealer="0" win="640" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="667" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="655" dealer="1" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="dyajohn" type="15" sum="10" cards="[cards]"/><action no="5" player="dyajohn" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="7803" type="15" sum="10" cards="[cards]"/><action no="4" player="lacko19820503" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><action no="9" player="dyajohn" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">SQ H5</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="7803">X X</cards><action no="7" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="8" player="lacko19820503" type="3" sum="100" cards=""/><action no="11" player="lacko19820503" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 DA D6</cards><action no="12" player="dyajohn" type="5" sum="100" cards=""/><action no="13" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450108">
+		 <general>
+		  <startdate>2014-01-26 18:33:14</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="1,388" dealer="1" win="1,384" bet="657" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="710" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6188344588"/><player seat="7" name="7803" chips="657" dealer="0" win="0" bet="657" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lacko19820503" chips="445" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="dyajohn" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="7803" type="15" sum="10" cards="[cards]"/><action no="6" player="7803" type="2" sum="100" cards="[cards]"/><action no="3" player="lacko19820503" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">S10 D10</cards><action no="8" player="dyajohn" type="23" sum="200" cards=""/><action no="11" player="dyajohn" type="3" sum="447" cards=""/><cards type="Pocket" player="WorstCard">SK S7</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="7803">SQ DJ</cards><action no="10" player="7803" type="23" sum="647" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="7" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK S6 D5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards>
+	</round>
+	
+		</game><game gamecode="5439450530">
+		 <general>
+		  <startdate>2014-01-26 18:34:05</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="2,115" dealer="0" win="495" bet="315" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="650" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6188344588"/><player seat="9" name="lacko19820503" chips="435" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="dyajohn" type="15" sum="15" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="lacko19820503" type="15" sum="15" cards="[cards]"/><action no="4" player="lacko19820503" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><action no="5" player="dyajohn" type="23" sum="300" cards=""/><cards type="Pocket" player="WorstCard">C6 S4</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">X X</cards><action no="7" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450730">
+		 <general>
+		  <startdate>2014-01-26 18:34:28</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="2,295" dealer="0" win="277" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="635" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188344588"/><player seat="9" name="lacko19820503" chips="270" dealer="0" win="278" bet="270" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="dyajohn" type="15" sum="15" cards="[cards]"/><action no="5" player="dyajohn" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="lacko19820503" type="15" sum="15" cards="[cards]"/><action no="4" player="lacko19820503" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">H5 H8</cards><action no="8" player="dyajohn" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 HJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lacko19820503">D8 S3</cards><action no="7" player="lacko19820503" type="3" sum="75" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK HA H9</cards><action no="10" player="dyajohn" type="4" sum="0" cards=""/><action no="9" player="lacko19820503" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="12" player="dyajohn" type="3" sum="105" cards=""/><action no="11" player="lacko19820503" type="7" sum="105" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game><game gamecode="5439451114">
+		 <general>
+		  <startdate>2014-01-26 18:35:15</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="2,302" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="620" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="6188344588"/><player seat="9" name="lacko19820503" chips="278" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="dyajohn" type="15" sum="15" cards="[cards]"/><action no="4" player="dyajohn" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="lacko19820503" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><action no="7" player="dyajohn" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 D2</cards><cards type="Pocket" player="lacko19820503">X X</cards><action no="6" player="lacko19820503" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439451354">
+		 <general>
+		  <startdate>2014-01-26 18:35:41</startdate>		  
+		  <players>
+		   <player seat="2" name="dyajohn" chips="2,212" dealer="1" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="725" dealer="0" win="691" bet="263" rebuy="0" addon="0" reg_code="6188344588"/><player seat="9" name="lacko19820503" chips="263" dealer="0" win="0" bet="263" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="dyajohn" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="lacko19820503" type="15" sum="15" cards="[cards]"/><action no="5" player="lacko19820503" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="dyajohn">X X</cards><action no="6" player="dyajohn" type="3" sum="150" cards=""/><cards type="Pocket" player="WorstCard">SJ HA</cards><action no="7" player="WorstCard" type="3" sum="75" cards=""/><cards type="Pocket" player="lacko19820503">H5 C9</cards><action no="8" player="lacko19820503" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 C5 CA</cards><action no="11" player="dyajohn" type="0" sum="0" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="3" sum="98" cards=""/><action no="10" player="lacko19820503" type="7" sum="98" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189531464">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819275063</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>19</gamecount>  
+	          <startdate>2014-01-28 16:52:25</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>1,430</bets>  
+	          <wins>630</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>3</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.00</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5449304880">
+		 <general>
+		  <startdate>2014-01-28 16:52:25</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="800" dealer="1" win="50" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="xuekss" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">C2 HA</cards><action no="4" player="Scorpionchik1971" type="3" sum="20" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="5" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H7 S9</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="3" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 D6 CK</cards><action no="8" player="Scorpionchik1971" type="4" sum="0" cards=""/><action no="7" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards><action no="10" player="Scorpionchik1971" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards><action no="12" player="Scorpionchik1971" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449305327">
+		 <general>
+		  <startdate>2014-01-28 16:53:15</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Eropga" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="3" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="4" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S6 D5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449305449">
+		 <general>
+		  <startdate>2014-01-28 16:53:28</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="830" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="810" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Scorpionchik1971" type="2" sum="20" cards="[cards]"/><action no="1" player="Eropga" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="6" player="Scorpionchik1971" type="4" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="3" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 S5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="5" player="Eropga" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 S8 H3</cards><action no="8" player="Scorpionchik1971" type="5" sum="40" cards=""/><action no="7" player="Eropga" type="4" sum="0" cards=""/><action no="9" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449319362">
+		 <general>
+		  <startdate>2014-01-28 16:53:53</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="850" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="790" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="790" dealer="1" win="90" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Scorpionchik1971" type="1" sum="10" cards="[cards]"/><action no="2" player="xuekss" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="5" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">H8 C6</cards><action no="6" player="xuekss" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C7 S2</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">D7 DK</cards><action no="4" player="Eropga" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 S5 H9</cards><action no="7" player="xuekss" type="4" sum="0" cards=""/><action no="9" player="xuekss" type="3" sum="20" cards=""/><action no="8" player="Eropga" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="10" player="xuekss" type="4" sum="0" cards=""/><action no="11" player="Eropga" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards><action no="12" player="xuekss" type="4" sum="0" cards=""/><action no="13" player="Eropga" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320220">
+		 <general>
+		  <startdate>2014-01-28 16:55:29</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="750" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="840" dealer="0" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="xuekss" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="4" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="5" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 H10</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="3" player="Eropga" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 DQ H5</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="8" player="Eropga" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="10" player="Eropga" type="5" sum="30" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320537">
+		 <general>
+		  <startdate>2014-01-28 16:56:11</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="840" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="735" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="740" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="885" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Eropga" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="3" player="Scorpionchik1971" type="23" sum="90" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="4" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C3 S6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="6" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320666">
+		 <general>
+		  <startdate>2014-01-28 16:56:28</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="885" dealer="0" win="270" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="735" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="725" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="855" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="6" player="Scorpionchik1971" type="2" sum="50" cards="[cards]"/><action no="3" player="xuekss" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Eropga" type="15" sum="5" cards="[cards]"/><action no="5" player="Eropga" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="10" player="Scorpionchik1971" type="4" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="7" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C6 H8</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="9" player="Eropga" type="3" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 D5 D8</cards><action no="12" player="Scorpionchik1971" type="23" sum="100" cards=""/><action no="11" player="Eropga" type="5" sum="50" cards=""/><action no="13" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320940">
+		 <general>
+		  <startdate>2014-01-28 16:57:03</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="1,000" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="730" dealer="0" win="795" bet="730" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="720" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="750" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="5" player="Scorpionchik1971" type="1" sum="25" cards="[cards]"/><action no="2" player="xuekss" type="15" sum="5" cards="[cards]"/><action no="6" player="xuekss" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Eropga" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="9" player="Scorpionchik1971" type="3" sum="25" cards=""/><action no="11" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="10" player="xuekss" type="23" sum="725" cards=""/><cards type="Pocket" player="WorstCard">S8 H3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="8" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321084">
+		 <general>
+		  <startdate>2014-01-28 16:57:22</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="945" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="795" dealer="0" win="860" bet="795" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="715" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="745" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="1" player="xuekss" type="15" sum="5" cards="[cards]"/><action no="5" player="xuekss" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Eropga" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="8" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="9" player="xuekss" type="23" sum="790" cards=""/><cards type="Pocket" player="WorstCard">DA H4</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="7" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321220">
+		 <general>
+		  <startdate>2014-01-28 16:57:40</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="940" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="860" dealer="1" win="195" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="660" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="740" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="4" player="xuekss" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Eropga" type="15" sum="5" cards="[cards]"/><action no="6" player="Eropga" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="7" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="8" player="xuekss" type="23" sum="100" cards=""/><cards type="Pocket" player="WorstCard">H4 H8</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="10" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321348">
+		 <general>
+		  <startdate>2014-01-28 16:57:56</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="935" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="950" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="630" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="685" dealer="0" win="750" bet="685" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="6" player="Scorpionchik1971" type="2" sum="50" cards="[cards]"/><action no="3" player="xuekss" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Eropga" type="15" sum="5" cards="[cards]"/><action no="5" player="Eropga" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="10" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="7" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 C2</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="9" player="Eropga" type="23" sum="680" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321466">
+		 <general>
+		  <startdate>2014-01-28 16:58:13</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="880" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="945" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="625" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="750" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="5" player="Scorpionchik1971" type="1" sum="25" cards="[cards]"/><action no="2" player="xuekss" type="15" sum="5" cards="[cards]"/><action no="6" player="xuekss" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Eropga" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="9" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><cards type="Pocket" player="WorstCard">CJ H5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="8" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321588">
+		 <general>
+		  <startdate>2014-01-28 16:58:28</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="850" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="985" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="620" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="745" dealer="0" win="925" bet="745" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="1" player="xuekss" type="15" sum="10" cards="[cards]"/><action no="5" player="xuekss" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Eropga" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="8" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="9" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S4 C3</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="7" player="Eropga" type="23" sum="735" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321720">
+		 <general>
+		  <startdate>2014-01-28 16:58:44</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="840" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="925" dealer="1" win="390" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="510" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="925" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="4" player="xuekss" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Eropga" type="15" sum="10" cards="[cards]"/><action no="6" player="Eropga" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="7" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="8" player="xuekss" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">D2 D8</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="10" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321838">
+		 <general>
+		  <startdate>2014-01-28 16:58:58</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="830" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="1,105" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="450" dealer="1" win="630" bet="450" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="815" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="6" player="Scorpionchik1971" type="2" sum="100" cards="[cards]"/><action no="3" player="xuekss" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Eropga" type="15" sum="10" cards="[cards]"/><action no="5" player="Eropga" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="10" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="7" player="xuekss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ D10</cards><action no="8" player="WorstCard" type="23" sum="440" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="9" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321990">
+		 <general>
+		  <startdate>2014-01-28 16:59:18</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="720" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="1,095" dealer="0" win="1,580" bet="755" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="630" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189531464"/><player seat="9" name="Eropga" chips="755" dealer="1" win="0" bet="755" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="5" player="Scorpionchik1971" type="1" sum="50" cards="[cards]"/><action no="2" player="xuekss" type="15" sum="10" cards="[cards]"/><action no="6" player="xuekss" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="Eropga" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="9" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">CQ SQ</cards><action no="10" player="xuekss" type="3" sum="645" cards=""/><cards type="Pocket" player="WorstCard">DK C7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">DQ SK</cards><action no="8" player="Eropga" type="23" sum="745" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 C10 HA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5449322172">
+		 <general>
+		  <startdate>2014-01-28 16:59:42</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="660" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="1,920" dealer="0" win="2,040" bet="1,920" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="620" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189531464"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="1" player="xuekss" type="15" sum="10" cards="[cards]"/><action no="4" player="xuekss" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="6" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="7" player="xuekss" type="23" sum="1,910" cards=""/><cards type="Pocket" player="WorstCard">S2 S6</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449322275">
+		 <general>
+		  <startdate>2014-01-28 16:59:56</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="650" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="2,040" dealer="1" win="2,210" bet="2,040" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="510" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189531464"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="5" player="Scorpionchik1971" type="2" sum="100" cards="[cards]"/><action no="3" player="xuekss" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="8" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">X X</cards><action no="6" player="xuekss" type="23" sum="2,030" cards=""/><cards type="Pocket" player="WorstCard">H3 SJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449332589">
+		 <general>
+		  <startdate>2014-01-28 17:00:12</startdate>		  
+		  <players>
+		   <player seat="2" name="Scorpionchik1971" chips="540" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="xuekss" chips="2,210" dealer="0" win="960" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="450" dealer="1" win="0" bet="450" rebuy="0" addon="0" reg_code="6189531464"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="4" player="Scorpionchik1971" type="1" sum="50" cards="[cards]"/><action no="2" player="xuekss" type="15" sum="10" cards="[cards]"/><action no="5" player="xuekss" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="7" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="xuekss">S5 H5</cards><action no="8" player="xuekss" type="3" sum="340" cards=""/><cards type="Pocket" player="WorstCard">DQ H8</cards><action no="6" player="WorstCard" type="23" sum="440" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK D4 HJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards>
+	</round>
+	
+		</game>  
+	</session>

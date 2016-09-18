@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189491481">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819269139</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>13</gamecount>  
+	          <startdate>2014-01-28 15:52:41</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,770</bets>  
+	          <wins>1,970</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>4</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5449130546">
+		 <general>
+		  <startdate>2014-01-28 15:52:41</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="800" dealer="1" win="80" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="JIeGaJIaZ" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="4" player="Rukos2012" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">S8 S9</cards><action no="5" player="WorstCard" type="3" sum="10" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="6" player="JIeGaJIaZ" type="4" sum="0" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="3" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 S3 H3</cards><action no="9" player="Rukos2012" type="5" sum="20" cards=""/><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/><action no="8" player="JIeGaJIaZ" type="4" sum="0" cards=""/><action no="11" player="JIeGaJIaZ" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449141756">
+		 <general>
+		  <startdate>2014-01-28 15:53:12</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="780" dealer="0" win="200" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="800" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="JIeGaJIaZ" type="1" sum="10" cards="[cards]"/><action no="2" player="martina1966" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="3" player="Rukos2012" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C5 CJ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="5" player="JIeGaJIaZ" type="3" sum="10" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="6" player="martina1966" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ DA HK</cards><action no="7" player="JIeGaJIaZ" type="5" sum="20" cards=""/><action no="8" player="martina1966" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="9" player="JIeGaJIaZ" type="5" sum="120" cards=""/><action no="10" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142012">
+		 <general>
+		  <startdate>2014-01-28 15:53:45</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="840" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="780" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="760" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rukos2012" type="2" sum="20" cards="[cards]"/><action no="1" player="martina1966" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="6" player="Rukos2012" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H5 HA</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="4" player="JIeGaJIaZ" type="0" sum="0" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="5" player="martina1966" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ S3 H2</cards><action no="8" player="Rukos2012" type="5" sum="20" cards=""/><action no="7" player="martina1966" type="4" sum="0" cards=""/><action no="9" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142200">
+		 <general>
+		  <startdate>2014-01-28 15:54:11</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="860" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="820" dealer="0" win="180" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="740" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rukos2012" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="5" player="Rukos2012" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">D6 S9</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="3" player="JIeGaJIaZ" type="3" sum="20" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="4" player="martina1966" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ H10 H3</cards><action no="7" player="Rukos2012" type="4" sum="0" cards=""/><action no="11" player="Rukos2012" type="0" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="0" sum="0" cards=""/><action no="9" player="JIeGaJIaZ" type="5" sum="20" cards=""/><action no="10" player="martina1966" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards><action no="13" player="JIeGaJIaZ" type="5" sum="20" cards=""/><action no="14" player="martina1966" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H6</cards><action no="15" player="JIeGaJIaZ" type="5" sum="20" cards=""/><action no="16" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142544">
+		 <general>
+		  <startdate>2014-01-28 15:54:58</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="840" dealer="1" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="920" dealer="0" win="345" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="JIeGaJIaZ" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="4" player="Rukos2012" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">D10 H2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="6" player="JIeGaJIaZ" type="4" sum="0" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="3" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 H6 H9</cards><action no="8" player="Rukos2012" type="3" sum="30" cards=""/><action no="7" player="JIeGaJIaZ" type="5" sum="30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards><action no="10" player="Rukos2012" type="3" sum="30" cards=""/><action no="9" player="JIeGaJIaZ" type="5" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards><action no="12" player="Rukos2012" type="0" sum="0" cards=""/><action no="11" player="JIeGaJIaZ" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142766">
+		 <general>
+		  <startdate>2014-01-28 15:55:29</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="750" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="745" dealer="1" win="820" bet="745" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="1,025" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="680" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="JIeGaJIaZ" type="1" sum="15" cards="[cards]"/><action no="2" player="martina1966" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="3" player="Rukos2012" type="3" sum="30" cards=""/><action no="7" player="Rukos2012" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA H10</cards><action no="4" player="WorstCard" type="23" sum="745" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="5" player="JIeGaJIaZ" type="0" sum="0" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="6" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142949">
+		 <general>
+		  <startdate>2014-01-28 15:55:57</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="720" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="1,010" dealer="1" win="765" bet="510" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="650" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rukos2012" type="2" sum="30" cards="[cards]"/><action no="1" player="martina1966" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="6" player="Rukos2012" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S8 CQ</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="4" player="JIeGaJIaZ" type="3" sum="30" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="5" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 D7 D8</cards><action no="7" player="Rukos2012" type="5" sum="30" cards=""/><action no="8" player="JIeGaJIaZ" type="3" sum="30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards><action no="9" player="Rukos2012" type="5" sum="30" cards=""/><action no="11" player="Rukos2012" type="3" sum="150" cards=""/><action no="10" player="JIeGaJIaZ" type="23" sum="180" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="12" player="Rukos2012" type="4" sum="0" cards=""/><action no="14" player="Rukos2012" type="0" sum="0" cards=""/><action no="13" player="JIeGaJIaZ" type="5" sum="270" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449143240">
+		 <general>
+		  <startdate>2014-01-28 15:56:39</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="480" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="180" bet="90" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="1,265" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="635" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rukos2012" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="5" player="Rukos2012" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">SA C8</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="3" player="JIeGaJIaZ" type="3" sum="30" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="4" player="martina1966" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA S3 H6</cards><action no="7" player="Rukos2012" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="JIeGaJIaZ" type="4" sum="0" cards=""/><action no="10" player="martina1966" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="11" player="Rukos2012" type="4" sum="0" cards=""/><action no="15" player="Rukos2012" type="0" sum="0" cards=""/><action no="12" player="WorstCard" type="5" sum="60" cards=""/><action no="13" player="JIeGaJIaZ" type="0" sum="0" cards=""/><action no="14" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449143627">
+		 <general>
+		  <startdate>2014-01-28 15:57:35</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="450" dealer="1" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="910" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="1,235" dealer="0" win="395" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="605" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Rukos2012" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="JIeGaJIaZ" type="15" sum="5" cards="[cards]"/><action no="6" player="JIeGaJIaZ" type="2" sum="50" cards="[cards]"/><action no="3" player="martina1966" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="8" player="Rukos2012" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">S3 CK</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="10" player="JIeGaJIaZ" type="4" sum="0" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="7" player="martina1966" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 H9 D7</cards><action no="13" player="Rukos2012" type="0" sum="0" cards=""/><action no="11" player="JIeGaJIaZ" type="5" sum="50" cards=""/><action no="12" player="martina1966" type="3" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards><action no="14" player="JIeGaJIaZ" type="5" sum="100" cards=""/><action no="15" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449143954">
+		 <general>
+		  <startdate>2014-01-28 15:58:24</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="395" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="880" dealer="1" win="970" bet="880" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="1,425" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="500" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Rukos2012" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="JIeGaJIaZ" type="15" sum="5" cards="[cards]"/><action no="5" player="JIeGaJIaZ" type="1" sum="25" cards="[cards]"/><action no="2" player="martina1966" type="15" sum="5" cards="[cards]"/><action no="6" player="martina1966" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="7" player="Rukos2012" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D2 DK</cards><action no="8" player="WorstCard" type="23" sum="875" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="9" player="JIeGaJIaZ" type="0" sum="0" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="10" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449144097">
+		 <general>
+		  <startdate>2014-01-28 15:58:43</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="390" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="970" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="1,395" dealer="1" win="390" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="445" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rukos2012" type="15" sum="10" cards="[cards]"/><action no="6" player="Rukos2012" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="JIeGaJIaZ" type="15" sum="10" cards="[cards]"/><action no="1" player="martina1966" type="15" sum="10" cards="[cards]"/><action no="5" player="martina1966" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="10" player="Rukos2012" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 C3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="8" player="JIeGaJIaZ" type="3" sum="100" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="9" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 SJ D8</cards><action no="11" player="Rukos2012" type="4" sum="0" cards=""/><action no="13" player="Rukos2012" type="0" sum="0" cards=""/><action no="12" player="JIeGaJIaZ" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449144223">
+		 <general>
+		  <startdate>2014-01-28 15:59:00</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="280" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="960" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="1,575" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="385" dealer="1" win="665" bet="385" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rukos2012" type="15" sum="10" cards="[cards]"/><action no="5" player="Rukos2012" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="JIeGaJIaZ" type="15" sum="10" cards="[cards]"/><action no="4" player="martina1966" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="9" player="Rukos2012" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CQ D2</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="JIeGaJIaZ">X X</cards><action no="7" player="JIeGaJIaZ" type="3" sum="100" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="8" player="martina1966" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 H5 S3</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="0" sum="0" cards=""/><action no="12" player="JIeGaJIaZ" type="4" sum="0" cards=""/><action no="15" player="JIeGaJIaZ" type="0" sum="0" cards=""/><action no="13" player="martina1966" type="7" sum="275" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449144379">
+		 <general>
+		  <startdate>2014-01-28 15:59:27</startdate>		  
+		  <players>
+		   <player seat="2" name="Rukos2012" chips="220" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="850" dealer="0" win="0" bet="850" rebuy="0" addon="0" reg_code="6189491481"/><player seat="7" name="JIeGaJIaZ" chips="1,465" dealer="0" win="1,820" bet="850" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="665" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Rukos2012" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="JIeGaJIaZ" type="15" sum="10" cards="[cards]"/><action no="6" player="JIeGaJIaZ" type="2" sum="100" cards="[cards]"/><action no="3" player="martina1966" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rukos2012">X X</cards><action no="8" player="Rukos2012" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SK CJ</cards><action no="9" player="WorstCard" type="23" sum="840" cards=""/><cards type="Pocket" player="JIeGaJIaZ">HK HQ</cards><action no="10" player="JIeGaJIaZ" type="3" sum="740" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="7" player="martina1966" type="3" sum="100" cards=""/><action no="11" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 HA C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards>
+	</round>
+	
+		</game>  
+	</session>

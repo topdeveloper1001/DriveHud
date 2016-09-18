@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188344530">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819107909</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:13</duration>  
+	          <gamecount>21</gamecount>  
+	          <startdate>2014-01-26 18:25:39</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>3,370</bets>  
+	          <wins>3,855</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,285</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5439409033">
+		 <general>
+		  <startdate>2014-01-26 18:25:39</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="800" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Allin0baby" type="1" sum="10" cards="[cards]"/><action no="2" player="ZeniusGenius" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S10 S4</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="5" player="Allin0baby" type="3" sum="10" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="6" player="ZeniusGenius" type="4" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="3" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 CA S3</cards><action no="7" player="Allin0baby" type="4" sum="0" cards=""/><action no="8" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="9" player="Allin0baby" type="4" sum="0" cards=""/><action no="10" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards><action no="11" player="Allin0baby" type="5" sum="40" cards=""/><action no="12" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428003">
+		 <general>
+		  <startdate>2014-01-26 18:26:30</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="780" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ZeniusGenius" type="1" sum="10" cards="[cards]"/><action no="2" player="x69x69x69x" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S6 H9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="4" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="5" player="ZeniusGenius" type="3" sum="10" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="6" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK D9 S9</cards><action no="7" player="ZeniusGenius" type="4" sum="0" cards=""/><action no="8" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="9" player="ZeniusGenius" type="5" sum="20" cards=""/><action no="10" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428271">
+		 <general>
+		  <startdate>2014-01-26 18:27:06</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="x69x69x69x" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D4 C3</cards><cards type="Pocket" player="Allin0baby">X X</cards><action no="3" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="4" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="5" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428487">
+		 <general>
+		  <startdate>2014-01-26 18:27:33</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="810" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="820" dealer="0" win="200" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Allin0baby" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D5 D8</cards><action no="5" player="WorstCard" type="3" sum="10" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="6" player="Allin0baby" type="23" sum="60" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="3" player="ZeniusGenius" type="3" sum="20" cards=""/><action no="7" player="ZeniusGenius" type="3" sum="40" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="4" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 DJ D2</cards><action no="9" player="Allin0baby" type="4" sum="0" cards=""/><action no="10" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="11" player="Allin0baby" type="4" sum="0" cards=""/><action no="12" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards><action no="13" player="Allin0baby" type="5" sum="60" cards=""/><action no="14" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439428999">
+		 <general>
+		  <startdate>2014-01-26 18:28:35</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="790" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="900" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="740" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="770" dealer="0" win="360" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Allin0baby" type="1" sum="15" cards="[cards]"/><action no="2" player="ZeniusGenius" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HK H9</cards><action no="4" player="WorstCard" type="3" sum="30" cards=""/><cards type="Pocket" player="Allin0baby">C6 SK</cards><action no="5" player="Allin0baby" type="3" sum="15" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="6" player="ZeniusGenius" type="4" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">S10 SJ</cards><action no="3" player="x69x69x69x" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ CJ C3</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><action no="7" player="Allin0baby" type="4" sum="0" cards=""/><action no="11" player="Allin0baby" type="3" sum="120" cards=""/><action no="8" player="ZeniusGenius" type="4" sum="0" cards=""/><action no="12" player="ZeniusGenius" type="0" sum="0" cards=""/><action no="9" player="x69x69x69x" type="5" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards><action no="13" player="Allin0baby" type="4" sum="0" cards=""/><action no="14" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards><action no="15" player="Allin0baby" type="4" sum="0" cards=""/><action no="16" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439429618">
+		 <general>
+		  <startdate>2014-01-26 18:29:48</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="760" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="750" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="710" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="980" dealer="0" win="240" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Allin0baby" type="15" sum="5" cards="[cards]"/><action no="1" player="ZeniusGenius" type="15" sum="5" cards="[cards]"/><action no="5" player="ZeniusGenius" type="1" sum="25" cards="[cards]"/><action no="2" player="x69x69x69x" type="15" sum="5" cards="[cards]"/><action no="6" player="x69x69x69x" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C3 D4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="8" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="9" player="ZeniusGenius" type="3" sum="25" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="10" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ D6 S7</cards><action no="11" player="ZeniusGenius" type="4" sum="0" cards=""/><action no="12" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="13" player="ZeniusGenius" type="4" sum="0" cards=""/><action no="15" player="ZeniusGenius" type="0" sum="0" cards=""/><action no="14" player="x69x69x69x" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439429929">
+		 <general>
+		  <startdate>2014-01-26 18:30:31</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="755" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="745" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="655" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="1,045" dealer="0" win="220" bet="155" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Allin0baby" type="15" sum="5" cards="[cards]"/><action no="4" player="ZeniusGenius" type="15" sum="5" cards="[cards]"/><action no="1" player="x69x69x69x" type="15" sum="5" cards="[cards]"/><action no="5" player="x69x69x69x" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CJ H5</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="7" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="8" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="9" player="x69x69x69x" type="23" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439430187">
+		 <general>
+		  <startdate>2014-01-26 18:31:01</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="700" dealer="0" win="170" bet="105" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="740" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="650" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="1,110" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Allin0baby" type="15" sum="5" cards="[cards]"/><action no="6" player="Allin0baby" type="2" sum="50" cards="[cards]"/><action no="3" player="ZeniusGenius" type="15" sum="5" cards="[cards]"/><action no="4" player="x69x69x69x" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HK DK</cards><action no="9" player="WorstCard" type="23" sum="100" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="10" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="7" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="8" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439430442">
+		 <general>
+		  <startdate>2014-01-26 18:31:33</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="765" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="685" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="645" dealer="0" win="170" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="1,105" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Allin0baby" type="15" sum="5" cards="[cards]"/><action no="5" player="Allin0baby" type="1" sum="25" cards="[cards]"/><action no="2" player="ZeniusGenius" type="15" sum="5" cards="[cards]"/><action no="6" player="ZeniusGenius" type="2" sum="50" cards="[cards]"/><action no="3" player="x69x69x69x" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S6 CQ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="9" player="Allin0baby" type="3" sum="25" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="10" player="ZeniusGenius" type="4" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="7" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 SQ DQ</cards><action no="11" player="Allin0baby" type="4" sum="0" cards=""/><action no="13" player="Allin0baby" type="0" sum="0" cards=""/><action no="12" player="ZeniusGenius" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439449806">
+		 <general>
+		  <startdate>2014-01-26 18:32:37</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="760" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="630" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="710" dealer="0" win="340" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="1,100" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="Allin0baby" type="15" sum="10" cards="[cards]"/><action no="1" player="ZeniusGenius" type="15" sum="10" cards="[cards]"/><action no="5" player="ZeniusGenius" type="1" sum="50" cards="[cards]"/><action no="2" player="x69x69x69x" type="15" sum="10" cards="[cards]"/><action no="6" player="x69x69x69x" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C5 S10</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="8" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="9" player="ZeniusGenius" type="3" sum="50" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="10" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ SK D5</cards><action no="11" player="ZeniusGenius" type="5" sum="100" cards=""/><action no="12" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450180">
+		 <general>
+		  <startdate>2014-01-26 18:33:22</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="750" dealer="0" win="190" bet="110" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="620" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="840" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="990" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Allin0baby" type="15" sum="10" cards="[cards]"/><action no="4" player="ZeniusGenius" type="15" sum="10" cards="[cards]"/><action no="1" player="x69x69x69x" type="15" sum="10" cards="[cards]"/><action no="5" player="x69x69x69x" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C8 S5</cards><cards type="Pocket" player="Allin0baby">X X</cards><action no="7" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="8" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="9" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450360">
+		 <general>
+		  <startdate>2014-01-26 18:33:44</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="830" dealer="0" win="1,025" bet="830" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="610" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="830" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="930" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Allin0baby" type="15" sum="15" cards="[cards]"/><action no="6" player="Allin0baby" type="2" sum="150" cards="[cards]"/><action no="3" player="ZeniusGenius" type="15" sum="15" cards="[cards]"/><action no="4" player="x69x69x69x" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H7 D10</cards><action no="9" player="WorstCard" type="23" sum="815" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="10" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="7" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="8" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439450633">
+		 <general>
+		  <startdate>2014-01-26 18:34:17</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,025" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="445" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="815" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="915" dealer="0" win="653" bet="383" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Allin0baby" type="15" sum="15" cards="[cards]"/><action no="5" player="Allin0baby" type="1" sum="75" cards="[cards]"/><action no="2" player="ZeniusGenius" type="15" sum="15" cards="[cards]"/><action no="6" player="ZeniusGenius" type="2" sum="150" cards="[cards]"/><action no="3" player="x69x69x69x" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H4 HA</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="9" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="10" player="ZeniusGenius" type="4" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="7" player="x69x69x69x" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 H2 D2</cards><action no="11" player="ZeniusGenius" type="4" sum="0" cards=""/><action no="12" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="13" player="ZeniusGenius" type="4" sum="0" cards=""/><action no="15" player="ZeniusGenius" type="0" sum="0" cards=""/><action no="14" player="x69x69x69x" type="5" sum="218" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439451220">
+		 <general>
+		  <startdate>2014-01-26 18:35:28</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,010" dealer="0" win="1,280" bet="1,010" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="355" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="650" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="1,185" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="Allin0baby" type="15" sum="15" cards="[cards]"/><action no="1" player="ZeniusGenius" type="15" sum="15" cards="[cards]"/><action no="5" player="ZeniusGenius" type="1" sum="75" cards="[cards]"/><action no="2" player="x69x69x69x" type="15" sum="15" cards="[cards]"/><action no="6" player="x69x69x69x" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CA DJ</cards><action no="7" player="WorstCard" type="23" sum="995" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="8" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="9" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="10" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439451472">
+		 <general>
+		  <startdate>2014-01-26 18:35:57</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,280" dealer="0" win="480" bet="220" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="340" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="560" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="1,020" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="200" cards="[cards]"/><action no="3" player="Allin0baby" type="15" sum="20" cards="[cards]"/><action no="4" player="ZeniusGenius" type="15" sum="20" cards="[cards]"/><action no="1" player="x69x69x69x" type="15" sum="20" cards="[cards]"/><action no="5" player="x69x69x69x" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D5 C3</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="7" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="8" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">S8 D10</cards><action no="9" player="x69x69x69x" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ CK HK</cards><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards><action no="16" player="WorstCard" type="4" sum="0" cards=""/><action no="15" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439451922">
+		 <general>
+		  <startdate>2014-01-26 18:36:46</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,540" dealer="0" win="680" bet="420" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="320" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="540" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="800" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="100" cards="[cards]"/><action no="2" player="Allin0baby" type="15" sum="20" cards="[cards]"/><action no="6" player="Allin0baby" type="2" sum="200" cards="[cards]"/><action no="3" player="ZeniusGenius" type="15" sum="20" cards="[cards]"/><action no="4" player="x69x69x69x" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK C8</cards><action no="9" player="WorstCard" type="23" sum="400" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="10" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="7" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards><action no="8" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439452107">
+		 <general>
+		  <startdate>2014-01-26 18:37:07</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,800" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="100" dealer="0" win="240" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="520" dealer="0" win="120" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="Allin0baby" type="15" sum="20" cards="[cards]"/><action no="5" player="Allin0baby" type="1" sum="80" cards="[cards]"/><action no="2" player="ZeniusGenius" type="15" sum="20" cards="[cards]"/><action no="6" player="ZeniusGenius" type="2" sum="200" cards="[cards]"/><action no="3" player="x69x69x69x" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H6 H7</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">H8 D9</cards><cards type="Pocket" player="ZeniusGenius">H10 SJ</cards><cards type="Pocket" player="x69x69x69x">X X</cards><action no="7" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 C4 D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards>
+	</round>
+	
+		</game><game gamecode="5439468353">
+		 <general>
+		  <startdate>2014-01-26 18:37:31</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="240" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="420" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="760" dealer="0" win="380" bet="220" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="Allin0baby" type="15" sum="20" cards="[cards]"/><action no="1" player="ZeniusGenius" type="15" sum="20" cards="[cards]"/><action no="5" player="ZeniusGenius" type="1" sum="100" cards="[cards]"/><action no="2" player="x69x69x69x" type="15" sum="20" cards="[cards]"/><action no="6" player="x69x69x69x" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C3 H4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Allin0baby">X X</cards><action no="8" player="Allin0baby" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="9" player="ZeniusGenius" type="0" sum="0" cards=""/><cards type="Pocket" player="x69x69x69x">X X</cards>
+	</round>
+	
+		</game><game gamecode="5439468704">
+		 <general>
+		  <startdate>2014-01-26 18:37:51</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,760" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="6188344530"/><player seat="4" name="Allin0baby" chips="220" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ZeniusGenius" chips="300" dealer="1" win="1,120" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="920" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="250" cards="[cards]"/><action no="3" player="Allin0baby" type="15" sum="25" cards="[cards]"/><action no="4" player="ZeniusGenius" type="15" sum="25" cards="[cards]"/><action no="1" player="x69x69x69x" type="15" sum="25" cards="[cards]"/><action no="5" player="x69x69x69x" type="1" sum="125" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SQ C3</cards><action no="10" player="WorstCard" type="3" sum="25" cards=""/><cards type="Pocket" player="Allin0baby">D7 H7</cards><action no="7" player="Allin0baby" type="7" sum="195" cards=""/><cards type="Pocket" player="ZeniusGenius">DJ CJ</cards><action no="8" player="ZeniusGenius" type="7" sum="275" cards=""/><cards type="Pocket" player="x69x69x69x">HK H2</cards><action no="9" player="x69x69x69x" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA HA C5</cards><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="16" player="WorstCard" type="4" sum="0" cards=""/><action no="15" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439469457">
+		 <general>
+		  <startdate>2014-01-26 18:38:33</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,460" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6188344530"/><player seat="7" name="ZeniusGenius" chips="1,120" dealer="0" win="450" bet="275" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="620" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="125" cards="[cards]"/><action no="2" player="ZeniusGenius" type="15" sum="25" cards="[cards]"/><action no="5" player="ZeniusGenius" type="2" sum="250" cards="[cards]"/><action no="3" player="x69x69x69x" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D5 DJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><cards type="Pocket" player="x69x69x69x">X X</cards><action no="6" player="x69x69x69x" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439469753">
+		 <general>
+		  <startdate>2014-01-26 18:38:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,310" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6188344530"/><player seat="7" name="ZeniusGenius" chips="1,295" dealer="0" win="1,915" bet="1,295" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="x69x69x69x" chips="595" dealer="0" win="0" bet="595" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="1" player="ZeniusGenius" type="15" sum="25" cards="[cards]"/><action no="4" player="ZeniusGenius" type="1" sum="125" cards="[cards]"/><action no="2" player="x69x69x69x" type="15" sum="25" cards="[cards]"/><action no="5" player="x69x69x69x" type="2" sum="250" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D10 H7</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">S3 S6</cards><action no="7" player="ZeniusGenius" type="3" sum="125" cards=""/><cards type="Pocket" player="x69x69x69x">DQ H10</cards><action no="8" player="x69x69x69x" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 S7 S10</cards><action no="9" player="ZeniusGenius" type="5" sum="1,020" cards=""/><action no="10" player="x69x69x69x" type="7" sum="320" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,506 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Enum_EnumGameType_CashHoldem" xml:space="preserve">
+    <value>Cash - Holdem</value>
+  </data>
+  <data name="Enum_EnumGameType_CashOmaha" xml:space="preserve">
+    <value>Cash - Omaha</value>
+  </data>
+  <data name="Enum_EnumGameType_MTTHoldem" xml:space="preserve">
+    <value>MTT - Holdem</value>
+  </data>
+  <data name="Enum_EnumGameType_MTTOmaha" xml:space="preserve">
+    <value>MTT - Omaha</value>
+  </data>
+  <data name="Enum_EnumGameType_SNGHoldem" xml:space="preserve">
+    <value>SNG - Holdem</value>
+  </data>
+  <data name="Enum_EnumGameType_SNGOmaha" xml:space="preserve">
+    <value>SNG - Omaha</value>
+  </data>
+  <data name="Enum_EnumPokerSites_BetOnline" xml:space="preserve">
+    <value>BetOnline</value>
+  </data>
+  <data name="Enum_EnumPokerSites_Bodog" xml:space="preserve">
+    <value>Bodog</value>
+  </data>
+  <data name="Enum_EnumPokerSites_Bovada" xml:space="preserve">
+    <value>Bovada/Ignition</value>
+  </data>
+  <data name="Enum_EnumPokerSites_Ignition" xml:space="preserve">
+    <value>Ignition</value>
+  </data>
+  <data name="Enum_EnumPokerSites_IPoker" xml:space="preserve">
+    <value>IPoker</value>
+  </data>
+  <data name="Enum_EnumPokerSites_Poker888" xml:space="preserve">
+    <value>888</value>
+  </data>
+  <data name="Enum_EnumPokerSites_SportsBettingAg" xml:space="preserve">
+    <value>SportsBettingAg</value>
+  </data>
+  <data name="Enum_EnumStatInfoValueRangeType_LessThan" xml:space="preserve">
+    <value>Less Than</value>
+  </data>
+  <data name="Enum_EnumStatInfoValueRangeType_MoreThan" xml:space="preserve">
+    <value>More Than</value>
+  </data>
+  <data name="Enum_EnumTableType_Eight" xml:space="preserve">
+    <value>8-max</value>
+  </data>
+  <data name="Enum_EnumTableType_Four" xml:space="preserve">
+    <value>4-max</value>
+  </data>
+  <data name="Enum_EnumTableType_HU" xml:space="preserve">
+    <value>2-max</value>
+  </data>
+  <data name="Enum_EnumTableType_Nine" xml:space="preserve">
+    <value>9-max</value>
+  </data>
+  <data name="Enum_EnumTableType_Six" xml:space="preserve">
+    <value>6-max</value>
+  </data>
+  <data name="Enum_EnumTableType_Ten" xml:space="preserve">
+    <value>10-max</value>
+  </data>
+  <data name="Enum_EnumTableType_Three" xml:space="preserve">
+    <value>3-max</value>
+  </data>
+  <data name="Enum_HandExport_CardsChat" xml:space="preserve">
+    <value>Cardschat</value>
+  </data>
+  <data name="Enum_HandExport_PokerStrategy" xml:space="preserve">
+    <value>Pokerstrategy</value>
+  </data>
+  <data name="Enum_HandExport_TwoPlusTwo" xml:space="preserve">
+    <value>2+2</value>
+  </data>
+  <data name="Enum_HandTag_BigFold" xml:space="preserve">
+    <value>Big Fold</value>
+  </data>
+  <data name="Enum_HandTag_Bluff" xml:space="preserve">
+    <value>Bluff</value>
+  </data>
+  <data name="Enum_HandTag_ForReview" xml:space="preserve">
+    <value>For Review</value>
+  </data>
+  <data name="Enum_HandTag_HeroCall" xml:space="preserve">
+    <value>Hero Call</value>
+  </data>
+  <data name="Enum_HandTag_None" xml:space="preserve">
+    <value>Remove Tag</value>
+  </data>
+  <data name="Enum_HudViewType_Horizontal" xml:space="preserve">
+    <value>DriveHUD HORZ</value>
+  </data>
+  <data name="Enum_HudViewType_Vertical" xml:space="preserve">
+    <value>DriveHUD VERT</value>
+  </data>
+  <data name="Enum_Likelihood_Custom" xml:space="preserve">
+    <value>Custom</value>
+    <comment>Equity calculator preflop popup likelihood</comment>
+  </data>
+  <data name="Enum_Likelihood_Definitely" xml:space="preserve">
+    <value>Definitely - 100%</value>
+    <comment>Equity calculator preflop popup likelihood</comment>
+  </data>
+  <data name="Enum_Likelihood_Likely" xml:space="preserve">
+    <value>Likely - 75%</value>
+    <comment>Equity calculator preflop popup likelihood</comment>
+  </data>
+  <data name="Enum_Likelihood_NotVeryLikely" xml:space="preserve">
+    <value>Not Very Likely - 40%</value>
+    <comment>Equity calculator preflop popup likelihood</comment>
+  </data>
+  <data name="Enum_Likelihood_Rarely" xml:space="preserve">
+    <value>Rarely - 10%</value>
+    <comment>Equity calculator preflop popup likelihood</comment>
+  </data>
+  <data name="Enum_PredefinedRange_BTN" xml:space="preserve">
+    <value>BTN</value>
+  </data>
+  <data name="Enum_PredefinedRange_CO" xml:space="preserve">
+    <value>CO</value>
+  </data>
+  <data name="Enum_PredefinedRange_MP" xml:space="preserve">
+    <value>MP</value>
+  </data>
+  <data name="Enum_PredefinedRange_SB" xml:space="preserve">
+    <value>SB</value>
+  </data>
+  <data name="Enum_PredefinedRange_UTG" xml:space="preserve">
+    <value>UTG</value>
+  </data>
+  <data name="Enum_Stat_AF" xml:space="preserve">
+    <value>AF</value>
+  </data>
+  <data name="Enum_Stat_AGG" xml:space="preserve">
+    <value>AGG%</value>
+  </data>
+  <data name="Enum_Stat_BBs" xml:space="preserve">
+    <value>BBs</value>
+  </data>
+  <data name="Enum_Stat_CBet" xml:space="preserve">
+    <value>C-Bet%</value>
+  </data>
+  <data name="Enum_Stat_CBetIP" xml:space="preserve">
+    <value>C-Bet IP%</value>
+  </data>
+  <data name="Enum_Stat_CBetOOP" xml:space="preserve">
+    <value>C-Bet OOP%</value>
+  </data>
+  <data name="Enum_Stat_CheckRaise" xml:space="preserve">
+    <value>Check-Raise%</value>
+  </data>
+  <data name="Enum_Stat_CheckRiverOnBXLine" xml:space="preserve">
+    <value>Check River on BX Line</value>
+  </data>
+  <data name="Enum_Stat_ColdCall" xml:space="preserve">
+    <value>Cold Call%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallBB" xml:space="preserve">
+    <value>Cold Call BB%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallBTN" xml:space="preserve">
+    <value>Cold Call BTN%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallCO" xml:space="preserve">
+    <value>Cold Call CO%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallMP" xml:space="preserve">
+    <value>Cold Call MP%</value>
+  </data>
+  <data name="Enum_Stat_ColdCallSB" xml:space="preserve">
+    <value>Cold Call SB%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall_BB" xml:space="preserve">
+    <value>BB Cold Call%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall_BN" xml:space="preserve">
+    <value>BN Cold Call%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall_CO" xml:space="preserve">
+    <value>CO Cold Call%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall_EP" xml:space="preserve">
+    <value>EP Cold Call%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall_MP" xml:space="preserve">
+    <value>MP Cold Call%</value>
+  </data>
+  <data name="Enum_Stat_ColdCall_SB" xml:space="preserve">
+    <value>SB Cold Call%</value>
+  </data>
+  <data name="Enum_Stat_DelayedTurnCBet" xml:space="preserve">
+    <value>Delayed Turn C-bet%</value>
+  </data>
+  <data name="Enum_Stat_DonkBet" xml:space="preserve">
+    <value>Donk Bet%</value>
+  </data>
+  <data name="Enum_Stat_DoubleBarrel" xml:space="preserve">
+    <value>Double Barrel%</value>
+  </data>
+  <data name="Enum_Stat_FloatFlop" xml:space="preserve">
+    <value>Float Flop%</value>
+  </data>
+  <data name="Enum_Stat_FlopAGG" xml:space="preserve">
+    <value>Flop AGG%</value>
+  </data>
+  <data name="Enum_Stat_FlopCheckRaise" xml:space="preserve">
+    <value>Flop Check-Raise%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo3Bet" xml:space="preserve">
+    <value>Fold to 3-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldTo4Bet" xml:space="preserve">
+    <value>Fold to 4-bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCBet" xml:space="preserve">
+    <value>Fold to C-Bet%</value>
+  </data>
+  <data name="Enum_Stat_FoldToSteal" xml:space="preserve">
+    <value>Fold to Steal%</value>
+  </data>
+  <data name="Enum_Stat_Limp" xml:space="preserve">
+    <value>Limp%</value>
+  </data>
+  <data name="Enum_Stat_LimpCall" xml:space="preserve">
+    <value>Limp Call%</value>
+  </data>
+  <data name="Enum_Stat_LimpFold" xml:space="preserve">
+    <value>Limp Fold%</value>
+  </data>
+  <data name="Enum_Stat_LimpReraise" xml:space="preserve">
+    <value>Limp Reraise%</value>
+  </data>
+  <data name="Enum_Stat_MRatio" xml:space="preserve">
+    <value>M-Ratio</value>
+  </data>
+  <data name="Enum_Stat_PFR" xml:space="preserve">
+    <value>PFR%</value>
+  </data>
+  <data name="Enum_Stat_RaiseFlop" xml:space="preserve">
+    <value>Raise Flop%</value>
+  </data>
+  <data name="Enum_Stat_RaiseFrequencyFactor" xml:space="preserve">
+    <value>Raise Frequency Factor</value>
+  </data>
+  <data name="Enum_Stat_RaiseRiver" xml:space="preserve">
+    <value>Raise River%</value>
+  </data>
+  <data name="Enum_Stat_RaiseTurn" xml:space="preserve">
+    <value>Raise Turn%</value>
+  </data>
+  <data name="Enum_Stat_RiverAGG" xml:space="preserve">
+    <value>River AGG%</value>
+  </data>
+  <data name="Enum_Stat_RiverCheckRaise" xml:space="preserve">
+    <value>River Check-Raise%</value>
+  </data>
+  <data name="Enum_Stat_RiverSeen" xml:space="preserve">
+    <value>Seen River%</value>
+  </data>
+  <data name="Enum_Stat_S3Bet" xml:space="preserve">
+    <value>3-bet%</value>
+  </data>
+  <data name="Enum_Stat_S3BetBB" xml:space="preserve">
+    <value>3-Bet BB%</value>
+  </data>
+  <data name="Enum_Stat_S3BetBTN" xml:space="preserve">
+    <value>3-Bet BTN%</value>
+  </data>
+  <data name="Enum_Stat_S3BetCO" xml:space="preserve">
+    <value>3-Bet CO%</value>
+  </data>
+  <data name="Enum_Stat_S3BetIP" xml:space="preserve">
+    <value>3-Bet IP%</value>
+  </data>
+  <data name="Enum_Stat_S3BetMP" xml:space="preserve">
+    <value>3-Bet MP%</value>
+  </data>
+  <data name="Enum_Stat_S3BetOOP" xml:space="preserve">
+    <value>3-Bet OOP%</value>
+  </data>
+  <data name="Enum_Stat_S3BetSB" xml:space="preserve">
+    <value>3-Bet SB%</value>
+  </data>
+  <data name="Enum_Stat_S4Bet" xml:space="preserve">
+    <value>4-bet%</value>
+  </data>
+  <data name="Enum_Stat_S4BetBB" xml:space="preserve">
+    <value>4-Bet BB%</value>
+  </data>
+  <data name="Enum_Stat_S4BetBTN" xml:space="preserve">
+    <value>4-Bet BTN%</value>
+  </data>
+  <data name="Enum_Stat_S4BetCO" xml:space="preserve">
+    <value>4-Bet CO%</value>
+  </data>
+  <data name="Enum_Stat_S4BetMP" xml:space="preserve">
+    <value>4-Bet MP%</value>
+  </data>
+  <data name="Enum_Stat_S4BetSB" xml:space="preserve">
+    <value>4-Bet SB%</value>
+  </data>
+  <data name="Enum_Stat_Squeeze" xml:space="preserve">
+    <value>Squeeze%</value>
+  </data>
+  <data name="Enum_Stat_Steal" xml:space="preserve">
+    <value>Steal%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBetVsSteal" xml:space="preserve">
+    <value>3-Bet vs. Steal</value>
+  </data>
+  <data name="Enum_Stat_TotalHands" xml:space="preserve">
+    <value>Total Hands</value>
+  </data>
+  <data name="Enum_Stat_TrueAggression" xml:space="preserve">
+    <value>True Aggression % (TAP)</value>
+  </data>
+  <data name="Enum_Stat_TurnAGG" xml:space="preserve">
+    <value>Turn AGG%</value>
+  </data>
+  <data name="Enum_Stat_TurnCheckRaise" xml:space="preserve">
+    <value>Turn Check-Raise%</value>
+  </data>
+  <data name="Enum_Stat_TurnSeen" xml:space="preserve">
+    <value>Seen Turn%</value>
+  </data>
+  <data name="Enum_Stat_UO_PFR_BB" xml:space="preserve">
+    <value>UO-PFR BB</value>
+  </data>
+  <data name="Enum_Stat_UO_PFR_BN" xml:space="preserve">
+    <value>UO-PFR BN</value>
+  </data>
+  <data name="Enum_Stat_UO_PFR_CO" xml:space="preserve">
+    <value>UO-PFR CO</value>
+  </data>
+  <data name="Enum_Stat_UO_PFR_EP" xml:space="preserve">
+    <value>UO-PFR EP</value>
+  </data>
+  <data name="Enum_Stat_UO_PFR_MP" xml:space="preserve">
+    <value>UO-PFR MP</value>
+  </data>
+  <data name="Enum_Stat_UO_PFR_SB" xml:space="preserve">
+    <value>UO-PFR SB</value>
+  </data>
+  <data name="Enum_Stat_VPIP" xml:space="preserve">
+    <value>VPIP%</value>
+  </data>
+  <data name="Enum_Stat_VPIP_BB" xml:space="preserve">
+    <value>BB VPIP%</value>
+  </data>
+  <data name="Enum_Stat_VPIP_BN" xml:space="preserve">
+    <value>BN VPIP%</value>
+  </data>
+  <data name="Enum_Stat_VPIP_CO" xml:space="preserve">
+    <value>CO VPIP%</value>
+  </data>
+  <data name="Enum_Stat_VPIP_EP" xml:space="preserve">
+    <value>EP VPIP%</value>
+  </data>
+  <data name="Enum_Stat_VPIP_MP" xml:space="preserve">
+    <value>MP VPIP%</value>
+  </data>
+  <data name="Enum_Stat_VPIP_SB" xml:space="preserve">
+    <value>SB VPIP%</value>
+  </data>
+  <data name="Enum_Stat_WSSD" xml:space="preserve">
+    <value>W$SD</value>
+  </data>
+  <data name="Enum_Stat_WTSD" xml:space="preserve">
+    <value>WTSD</value>
+  </data>
+  <data name="Enum_Stat_WWSF" xml:space="preserve">
+    <value>WWSF</value>
+  </data>
+  <data name="Enum_Stat__VPIP_MP" xml:space="preserve">
+    <value>MP VPIP%</value>
+  </data>
+  <data name="Enum_EnumPokerSites_PokerStars" xml:space="preserve">
+    <value>PokerStars</value>
+  </data>
+  <data name="Enum_EnumPokerSites_SportsBetting" xml:space="preserve">
+    <value>SportsBetting</value>
+  </data>
+  <data name="Enum_EnumPokerSites_TigerGaming" xml:space="preserve">
+    <value>TigerGaming</value>
+  </data>
+</root>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6190244848">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819375098</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:01</duration>  
+	          <gamecount>6</gamecount>  
+	          <startdate>2014-01-29 16:39:19</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>60</bets>  
+	          <wins>0</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>740</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5452371758">
+		 <general>
+		  <startdate>2014-01-29 16:39:19</startdate>		  
+		  <players>
+		   <player seat="2" name="RussianDuck" chips="800" dealer="1" win="870" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="aleksei89" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6190244848"/><player seat="9" name="atis65" chips="800" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aleksei89" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RussianDuck">X X</cards><action no="4" player="RussianDuck" type="23" sum="800" cards=""/><cards type="Pocket" player="aleksei89">X X</cards><action no="5" player="aleksei89" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 S2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="3" player="atis65" type="23" sum="40" cards=""/><action no="7" player="atis65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452371978">
+		 <general>
+		  <startdate>2014-01-29 16:39:47</startdate>		  
+		  <players>
+		   <player seat="2" name="RussianDuck" chips="870" dealer="0" win="900" bet="870" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="aleksei89" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6190244848"/><player seat="9" name="atis65" chips="760" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="atis65" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RussianDuck">C2 C5</cards><action no="3" player="RussianDuck" type="23" sum="870" cards=""/><cards type="Pocket" player="aleksei89">X X</cards><action no="4" player="aleksei89" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 D9</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="6" player="atis65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452372148">
+		 <general>
+		  <startdate>2014-01-29 16:40:09</startdate>		  
+		  <players>
+		   <player seat="2" name="RussianDuck" chips="900" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="aleksei89" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6190244848"/><player seat="9" name="atis65" chips="740" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RussianDuck" type="2" sum="20" cards="[cards]"/><action no="1" player="atis65" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RussianDuck">X X</cards><cards type="Pocket" player="aleksei89">X X</cards><action no="3" player="aleksei89" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 C3</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="5" player="atis65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452372292">
+		 <general>
+		  <startdate>2014-01-29 16:40:26</startdate>		  
+		  <players>
+		   <player seat="2" name="RussianDuck" chips="910" dealer="0" win="1,700" bet="910" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="aleksei89" chips="790" dealer="0" win="0" bet="790" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6190244848"/><player seat="9" name="atis65" chips="730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RussianDuck" type="1" sum="10" cards="[cards]"/><action no="2" player="aleksei89" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RussianDuck">S3 S2</cards><action no="5" player="RussianDuck" type="23" sum="910" cards=""/><cards type="Pocket" player="aleksei89">CQ DQ</cards><action no="6" player="aleksei89" type="7" sum="770" cards=""/><cards type="Pocket" player="WorstCard">C2 D10</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="4" player="atis65" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 C5 D9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5452372469">
+		 <general>
+		  <startdate>2014-01-29 16:40:48</startdate>		  
+		  <players>
+		   <player seat="2" name="RussianDuck" chips="1,700" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6190244848"/><player seat="9" name="atis65" chips="730" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RussianDuck">X X</cards><action no="3" player="RussianDuck" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D4 D7</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="2" player="atis65" type="23" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452386984">
+		 <general>
+		  <startdate>2014-01-29 16:41:08</startdate>		  
+		  <players>
+		   <player seat="2" name="RussianDuck" chips="1,700" dealer="0" win="2,460" bet="1,700" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="750" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6190244848"/><player seat="9" name="atis65" chips="750" dealer="0" win="0" bet="750" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="atis65" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RussianDuck">S7 H7</cards><action no="3" player="RussianDuck" type="23" sum="1,700" cards=""/><cards type="Pocket" player="WorstCard">C9 S8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">C4 HA</cards><action no="5" player="atis65" type="7" sum="730" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ D5 C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game>  
+	</session>

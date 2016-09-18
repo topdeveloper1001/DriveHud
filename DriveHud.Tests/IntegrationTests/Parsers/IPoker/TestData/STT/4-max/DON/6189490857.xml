@@ -1,0 +1,957 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189490857">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819269042</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:19</duration>  
+	          <gamecount>53</gamecount>  
+	          <startdate>2014-01-28 15:51:40</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>15,325</bets>  
+	          <wins>15,405</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>880</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5449130110">
+		 <general>
+		  <startdate>2014-01-28 15:51:40</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="800" dealer="0" win="870" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="severserver" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="4" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ D4</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="23" sum="800" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="3" player="Gecike27" type="23" sum="60" cards=""/><action no="7" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449130308">
+		 <general>
+		  <startdate>2014-01-28 15:52:09</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="870" dealer="0" win="140" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="740" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="severserver" type="1" sum="10" cards="[cards]"/><action no="2" player="Gecike27" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="3" player="orkadi" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">H6 D9</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="5" player="severserver" type="3" sum="10" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="6" player="Gecike27" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 H10 H3</cards><action no="9" player="orkadi" type="0" sum="0" cards=""/><action no="7" player="severserver" type="5" sum="80" cards=""/><action no="8" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449130465">
+		 <general>
+		  <startdate>2014-01-28 15:52:31</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="780" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="720" dealer="0" win="480" bet="240" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="2" sum="20" cards="[cards]"/><action no="1" player="Gecike27" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">D9 D3</cards><action no="6" player="orkadi" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S4 DK</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="4" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">H7 C5</cards><action no="5" player="Gecike27" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 C4 D2</cards><action no="8" player="orkadi" type="23" sum="40" cards=""/><action no="7" player="Gecike27" type="5" sum="20" cards=""/><action no="9" player="Gecike27" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards><action no="11" player="orkadi" type="3" sum="60" cards=""/><action no="10" player="Gecike27" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards><action no="13" player="orkadi" type="3" sum="120" cards=""/><action no="12" player="Gecike27" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449141721">
+		 <general>
+		  <startdate>2014-01-28 15:53:05</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="540" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="960" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="5" player="orkadi" type="23" sum="40" cards=""/><cards type="Pocket" player="WorstCard">H8 S7</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="3" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="4" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449141827">
+		 <general>
+		  <startdate>2014-01-28 15:53:21</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="560" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="770" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="910" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="severserver" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="4" player="orkadi" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">D5 C8</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="4" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="3" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 D4 S6</cards><action no="8" player="orkadi" type="5" sum="40" cards=""/><action no="7" player="severserver" type="4" sum="0" cards=""/><action no="9" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142047">
+		 <general>
+		  <startdate>2014-01-28 15:53:50</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="890" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="960" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="severserver" type="1" sum="15" cards="[cards]"/><action no="2" player="Gecike27" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="3" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK H6</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="5" player="severserver" type="23" sum="90" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="6" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142232">
+		 <general>
+		  <startdate>2014-01-28 15:54:16</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="590" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="920" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="930" dealer="0" win="450" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="2" sum="30" cards="[cards]"/><action no="1" player="Gecike27" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ DQ</cards><action no="3" player="WorstCard" type="23" sum="90" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="4" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">SA HJ</cards><action no="5" player="Gecike27" type="3" sum="75" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 H9 C6</cards><action no="8" player="WorstCard" type="5" sum="120" cards=""/><action no="7" player="Gecike27" type="4" sum="0" cards=""/><action no="9" player="Gecike27" type="3" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="Gecike27" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="Gecike27" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142492">
+		 <general>
+		  <startdate>2014-01-28 15:54:50</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="560" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="550" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,170" dealer="1" win="315" bet="195" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="5" player="orkadi" type="3" sum="75" cards=""/><cards type="Pocket" player="WorstCard">HK S10</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="3" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="4" player="Gecike27" type="23" sum="90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 C4 C3</cards><action no="7" player="orkadi" type="4" sum="0" cards=""/><action no="8" player="Gecike27" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="9" player="orkadi" type="4" sum="0" cards=""/><action no="11" player="orkadi" type="0" sum="0" cards=""/><action no="10" player="Gecike27" type="5" sum="105" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142742">
+		 <general>
+		  <startdate>2014-01-28 15:55:26</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="520" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="920" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="severserver" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="4" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H3 D2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><cards type="Pocket" player="Gecike27">X X</cards><action no="3" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142812">
+		 <general>
+		  <startdate>2014-01-28 15:55:35</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="470" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="505" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="935" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,290" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="severserver" type="1" sum="15" cards="[cards]"/><action no="2" player="Gecike27" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="3" player="orkadi" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">H9 C8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="5" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="6" player="Gecike27" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 C10 CQ</cards><action no="8" player="orkadi" type="5" sum="60" cards=""/><action no="7" player="Gecike27" type="4" sum="0" cards=""/><action no="9" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449142959">
+		 <general>
+		  <startdate>2014-01-28 15:55:58</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="515" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="505" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="920" dealer="1" win="345" bet="255" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,260" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="5" cards="[cards]"/><action no="6" player="orkadi" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="severserver" type="15" sum="5" cards="[cards]"/><action no="1" player="Gecike27" type="15" sum="5" cards="[cards]"/><action no="5" player="Gecike27" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="10" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SJ H9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="8" player="severserver" type="23" sum="250" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="9" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449143152">
+		 <general>
+		  <startdate>2014-01-28 15:56:27</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="460" dealer="0" win="220" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="500" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,010" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,230" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="5" cards="[cards]"/><action no="5" player="orkadi" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="severserver" type="15" sum="5" cards="[cards]"/><action no="4" player="Gecike27" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="9" player="orkadi" type="23" sum="150" cards=""/><cards type="Pocket" player="WorstCard">S9 H5</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="8" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449143279">
+		 <general>
+		  <startdate>2014-01-28 15:56:45</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="525" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="445" dealer="0" win="510" bet="445" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,005" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,225" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="orkadi" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="severserver" type="15" sum="5" cards="[cards]"/><action no="6" player="severserver" type="2" sum="50" cards="[cards]"/><action no="3" player="Gecike27" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="8" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D9 S9</cards><action no="9" player="WorstCard" type="23" sum="440" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="10" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="7" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449143449">
+		 <general>
+		  <startdate>2014-01-28 15:57:12</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="520" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="510" dealer="1" win="600" bet="510" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="950" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,220" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="severserver" type="15" sum="5" cards="[cards]"/><action no="5" player="severserver" type="1" sum="25" cards="[cards]"/><action no="2" player="Gecike27" type="15" sum="5" cards="[cards]"/><action no="6" player="Gecike27" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D2 H2</cards><action no="8" player="WorstCard" type="23" sum="505" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="9" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="10" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449143625">
+		 <general>
+		  <startdate>2014-01-28 15:57:35</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="515" dealer="0" win="1,065" bet="515" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="600" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="920" dealer="1" win="0" bet="515" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,165" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="5" cards="[cards]"/><action no="6" player="orkadi" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="severserver" type="15" sum="5" cards="[cards]"/><action no="1" player="Gecike27" type="15" sum="5" cards="[cards]"/><action no="5" player="Gecike27" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">SA CK</cards><action no="10" player="orkadi" type="23" sum="510" cards=""/><cards type="Pocket" player="WorstCard">SQ D10</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">H4 D4</cards><action no="8" player="severserver" type="23" sum="150" cards=""/><action no="11" player="severserver" type="3" sum="360" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="9" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 DA D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5449143871">
+		 <general>
+		  <startdate>2014-01-28 15:58:10</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,065" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="595" dealer="0" win="340" bet="210" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="405" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,135" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="10" cards="[cards]"/><action no="5" player="orkadi" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="severserver" type="15" sum="10" cards="[cards]"/><action no="4" player="Gecike27" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="9" player="orkadi" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">CK C5</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="8" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 CA H2</cards><action no="11" player="orkadi" type="4" sum="0" cards=""/><action no="13" player="orkadi" type="0" sum="0" cards=""/><action no="12" player="WorstCard" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449144062">
+		 <general>
+		  <startdate>2014-01-28 15:58:38</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="955" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="725" dealer="0" win="735" bet="725" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="395" dealer="0" win="405" bet="395" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,125" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="orkadi" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="severserver" type="15" sum="10" cards="[cards]"/><action no="6" player="severserver" type="2" sum="100" cards="[cards]"/><action no="3" player="Gecike27" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="8" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D4 SK</cards><action no="9" player="WorstCard" type="23" sum="715" cards=""/><cards type="Pocket" player="severserver">DK S4</cards><action no="10" player="severserver" type="7" sum="285" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="7" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 D6 C8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CQ</cards>
+	</round>
+	
+		</game><game gamecode="5449144220">
+		 <general>
+		  <startdate>2014-01-28 15:59:00</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="945" dealer="0" win="390" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="735" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="405" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,115" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="severserver" type="15" sum="10" cards="[cards]"/><action no="5" player="severserver" type="1" sum="50" cards="[cards]"/><action no="2" player="Gecike27" type="15" sum="10" cards="[cards]"/><action no="6" player="Gecike27" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="3" sum="100" cards=""/><cards type="Pocket" player="WorstCard">C6 C7</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="9" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="10" player="Gecike27" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 D5 CQ</cards><action no="12" player="orkadi" type="5" sum="100" cards=""/><action no="11" player="Gecike27" type="4" sum="0" cards=""/><action no="13" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449144363">
+		 <general>
+		  <startdate>2014-01-28 15:59:25</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,125" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="725" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="345" dealer="1" win="810" bet="345" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="1,005" dealer="0" win="0" bet="345" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="10" cards="[cards]"/><action no="6" player="orkadi" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="severserver" type="15" sum="10" cards="[cards]"/><action no="1" player="Gecike27" type="15" sum="10" cards="[cards]"/><action no="5" player="Gecike27" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="10" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 DK</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">C8 H6</cards><action no="8" player="severserver" type="23" sum="335" cards=""/><cards type="Pocket" player="Gecike27">HA C10</cards><action no="9" player="Gecike27" type="3" sum="285" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ SQ S8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game><game gamecode="5449158138">
+		 <general>
+		  <startdate>2014-01-28 15:59:50</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,015" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="715" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="810" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="660" dealer="1" win="930" bet="660" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="15" cards="[cards]"/><action no="5" player="orkadi" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="severserver" type="15" sum="15" cards="[cards]"/><action no="4" player="Gecike27" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="9" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C5 DK</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="8" player="Gecike27" type="23" sum="645" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449158292">
+		 <general>
+		  <startdate>2014-01-28 16:00:12</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="925" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="550" dealer="0" win="745" bet="550" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="795" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="930" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="orkadi" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="severserver" type="15" sum="15" cards="[cards]"/><action no="6" player="severserver" type="2" sum="150" cards="[cards]"/><action no="3" player="Gecike27" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="8" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK C4</cards><action no="9" player="WorstCard" type="23" sum="535" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="10" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">X X</cards><action no="7" player="Gecike27" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449158449">
+		 <general>
+		  <startdate>2014-01-28 16:00:33</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="910" dealer="0" win="1,925" bet="910" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="745" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="630" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="915" dealer="0" win="5" bet="915" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="severserver" type="15" sum="15" cards="[cards]"/><action no="5" player="severserver" type="1" sum="75" cards="[cards]"/><action no="2" player="Gecike27" type="15" sum="15" cards="[cards]"/><action no="6" player="Gecike27" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">SA SQ</cards><action no="7" player="orkadi" type="23" sum="300" cards=""/><cards type="Pocket" player="WorstCard">H3 CA</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="9" player="severserver" type="0" sum="0" cards=""/><cards type="Pocket" player="Gecike27">C9 C7</cards><action no="10" player="Gecike27" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 DJ D7</cards><action no="12" player="orkadi" type="5" sum="300" cards=""/><action no="14" player="orkadi" type="7" sum="295" cards=""/><action no="11" player="Gecike27" type="4" sum="0" cards=""/><action no="13" player="Gecike27" type="7" sum="600" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game><game gamecode="5449158704">
+		 <general>
+		  <startdate>2014-01-28 16:01:09</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,925" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="730" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="540" dealer="1" win="725" bet="540" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gecike27" chips="5" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="15" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="severserver" type="15" sum="15" cards="[cards]"/><action no="1" player="Gecike27" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="8" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D5 C8</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">SQ SA</cards><action no="7" player="severserver" type="23" sum="525" cards=""/><cards type="Pocket" player="Gecike27">HJ C6</cards>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 CQ C7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game><game gamecode="5449158896">
+		 <general>
+		  <startdate>2014-01-28 16:01:33</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,760" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="715" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="725" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="15" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="severserver" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C8 CA</cards><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449159017">
+		 <general>
+		  <startdate>2014-01-28 16:01:47</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,670" dealer="1" win="0" bet="710" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="710" dealer="0" win="1,540" bet="710" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/><action no="2" player="severserver" type="15" sum="20" cards="[cards]"/><action no="5" player="severserver" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">SA SK</cards><action no="6" player="orkadi" type="23" sum="400" cards=""/><action no="9" player="orkadi" type="3" sum="290" cards=""/><cards type="Pocket" player="WorstCard">H6 CA</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">S10 C10</cards><action no="8" player="severserver" type="23" sum="690" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ C8 H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards>
+	</round>
+	
+		</game><game gamecode="5449159227">
+		 <general>
+		  <startdate>2014-01-28 16:02:13</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="960" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="1" win="1,040" bet="700" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,540" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="20" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="severserver" type="15" sum="20" cards="[cards]"/><action no="4" player="severserver" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="8" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S7 CA</cards><action no="6" player="WorstCard" type="23" sum="680" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449159348">
+		 <general>
+		  <startdate>2014-01-28 16:02:27</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="740" dealer="0" win="660" bet="420" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,040" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,420" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="20" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="100" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="200" cards="[cards]"/><action no="3" player="severserver" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="23" sum="400" cards=""/><cards type="Pocket" player="WorstCard">S5 S3</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449159464">
+		 <general>
+		  <startdate>2014-01-28 16:02:46</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="980" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="1,060" bet="820" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,400" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/><action no="2" player="severserver" type="15" sum="20" cards="[cards]"/><action no="5" player="severserver" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SQ D2</cards><action no="7" player="WorstCard" type="23" sum="800" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="8" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449159617">
+		 <general>
+		  <startdate>2014-01-28 16:03:12</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="960" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,060" dealer="1" win="1,400" bet="1,060" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,180" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="20" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="severserver" type="15" sum="20" cards="[cards]"/><action no="4" player="severserver" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="8" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 C7</cards><action no="6" player="WorstCard" type="23" sum="1,040" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449159767">
+		 <general>
+		  <startdate>2014-01-28 16:03:29</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="740" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,400" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,060" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="20" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="100" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="200" cards="[cards]"/><action no="3" player="severserver" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK S10</cards><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449159974">
+		 <general>
+		  <startdate>2014-01-28 16:03:54</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="620" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,540" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,040" dealer="0" win="450" bet="275" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="25" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="125" cards="[cards]"/><action no="2" player="severserver" type="15" sum="25" cards="[cards]"/><action no="5" player="severserver" type="2" sum="250" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S7 D6</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449160104">
+		 <general>
+		  <startdate>2014-01-28 16:04:10</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="595" dealer="0" win="0" bet="275" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,390" dealer="1" win="1,815" bet="1,390" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,215" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="25" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="250" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="1" player="severserver" type="15" sum="25" cards="[cards]"/><action no="4" player="severserver" type="1" sum="125" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="8" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK CA</cards><action no="6" player="WorstCard" type="23" sum="1,365" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449160217">
+		 <general>
+		  <startdate>2014-01-28 16:04:26</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="320" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,815" dealer="0" win="700" bet="275" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,065" dealer="1" win="0" bet="275" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="25" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="125" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="250" cards="[cards]"/><action no="3" player="severserver" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ C7</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="severserver">S5 SJ</cards><action no="6" player="severserver" type="3" sum="250" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 D3 D7</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="severserver" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="severserver" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="14" player="severserver" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449160472">
+		 <general>
+		  <startdate>2014-01-28 16:04:54</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="170" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="2,240" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="790" dealer="0" win="450" bet="275" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="25" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="125" cards="[cards]"/><action no="2" player="severserver" type="15" sum="25" cards="[cards]"/><action no="5" player="severserver" type="2" sum="250" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA D10</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449160606">
+		 <general>
+		  <startdate>2014-01-28 16:05:13</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="145" dealer="0" win="315" bet="145" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="2,090" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="965" dealer="0" win="5" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="25" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="120" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="1" player="severserver" type="15" sum="25" cards="[cards]"/><action no="4" player="severserver" type="1" sum="125" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">HJ D6</cards><cards type="Pocket" player="WorstCard">D8 D4</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">D9 C9</cards>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ HA S3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards>
+	</round>
+	
+		</game><game gamecode="5449160769">
+		 <general>
+		  <startdate>2014-01-28 16:05:34</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="315" dealer="0" win="655" bet="315" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="2,065" dealer="0" win="0" bet="315" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="820" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="25" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="125" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="250" cards="[cards]"/><action no="3" player="severserver" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">SQ HK</cards><action no="7" player="orkadi" type="7" sum="165" cards=""/><cards type="Pocket" player="WorstCard">S7 HJ</cards><action no="8" player="WorstCard" type="3" sum="40" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 DK S10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards>
+	</round>
+	
+		</game><game gamecode="5449177723">
+		 <general>
+		  <startdate>2014-01-28 16:06:04</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="655" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,750" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="795" dealer="0" win="540" bet="330" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="150" cards="[cards]"/><action no="2" player="severserver" type="15" sum="30" cards="[cards]"/><action no="5" player="severserver" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 S2</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449177826">
+		 <general>
+		  <startdate>2014-01-28 16:06:17</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="625" dealer="0" win="1,280" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,570" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,005" dealer="0" win="5" bet="630" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="30" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="300" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="1" player="severserver" type="15" sum="30" cards="[cards]"/><action no="4" player="severserver" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">CA SA</cards><action no="8" player="orkadi" type="7" sum="295" cards=""/><cards type="Pocket" player="WorstCard">C6 DQ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">H5 H10</cards><action no="7" player="severserver" type="23" sum="600" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ C8 D4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="5449177989">
+		 <general>
+		  <startdate>2014-01-28 16:06:38</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,280" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,540" dealer="0" win="540" bet="330" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="380" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="30" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="150" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="300" cards="[cards]"/><action no="3" player="severserver" type="15" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 D4</cards><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449178100">
+		 <general>
+		  <startdate>2014-01-28 16:07:02</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,100" dealer="1" win="280" bet="630" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,750" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="350" dealer="0" win="880" bet="350" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="150" cards="[cards]"/><action no="2" player="severserver" type="15" sum="30" cards="[cards]"/><action no="5" player="severserver" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">CJ SJ</cards><action no="6" player="orkadi" type="23" sum="600" cards=""/><cards type="Pocket" player="WorstCard">CQ C10</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">D2 C8</cards><action no="8" player="severserver" type="7" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 H6 C9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards>
+	</round>
+	
+		</game><game gamecode="5449178289">
+		 <general>
+		  <startdate>2014-01-28 16:07:27</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="750" dealer="0" win="540" bet="330" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,570" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="880" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="30" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="300" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="1" player="severserver" type="15" sum="30" cards="[cards]"/><action no="4" player="severserver" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><cards type="Pocket" player="WorstCard">C9 D8</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449178403">
+		 <general>
+		  <startdate>2014-01-28 16:07:39</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="960" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,540" dealer="0" win="540" bet="330" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="700" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="30" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="150" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="300" cards="[cards]"/><action no="3" player="severserver" type="15" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S6 CJ</cards><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449178496">
+		 <general>
+		  <startdate>2014-01-28 16:07:51</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="780" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,750" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="670" dealer="0" win="720" bet="440" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="40" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="40" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="200" cards="[cards]"/><action no="2" player="severserver" type="15" sum="40" cards="[cards]"/><action no="5" player="severserver" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 C4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449178605">
+		 <general>
+		  <startdate>2014-01-28 16:08:04</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="740" dealer="0" win="720" bet="440" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,510" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="950" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="40" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="400" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="40" cards="[cards]"/><action no="1" player="severserver" type="15" sum="40" cards="[cards]"/><action no="4" player="severserver" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><cards type="Pocket" player="WorstCard">SJ S4</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449178764">
+		 <general>
+		  <startdate>2014-01-28 16:08:26</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,020" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,470" dealer="0" win="720" bet="440" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="710" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="40" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="200" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="40" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="400" cards="[cards]"/><action no="3" player="severserver" type="15" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CJ HA</cards><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449178941">
+		 <general>
+		  <startdate>2014-01-28 16:08:49</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="780" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,750" dealer="0" win="1,080" bet="1,750" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="670" dealer="0" win="1,380" bet="670" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="40" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="40" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="200" cards="[cards]"/><action no="2" player="severserver" type="15" sum="40" cards="[cards]"/><action no="5" player="severserver" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C7 DA</cards><action no="7" player="WorstCard" type="23" sum="1,710" cards=""/><cards type="Pocket" player="severserver">H8 HQ</cards><action no="8" player="severserver" type="7" sum="230" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 S8 D9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5449179179">
+		 <general>
+		  <startdate>2014-01-28 16:09:10</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="740" dealer="0" win="1,520" bet="740" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,080" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,380" dealer="0" win="640" bet="1,380" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="40" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="400" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="40" cards="[cards]"/><action no="1" player="severserver" type="15" sum="40" cards="[cards]"/><action no="4" player="severserver" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">H8 S2</cards><action no="8" player="orkadi" type="7" sum="300" cards=""/><cards type="Pocket" player="WorstCard">H2 D10</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">CA S5</cards><action no="7" player="severserver" type="23" sum="1,340" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H7 H5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards>
+	</round>
+	
+		</game><game gamecode="5449179476">
+		 <general>
+		  <startdate>2014-01-28 16:09:33</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,520" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,040" dealer="0" win="720" bet="440" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="640" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="40" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="200" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="40" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="400" cards="[cards]"/><action no="3" player="severserver" type="15" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="7" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA D10</cards><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449179689">
+		 <general>
+		  <startdate>2014-01-28 16:09:45</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,280" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,320" dealer="0" win="450" bet="1,050" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="600" dealer="0" win="1,250" bet="600" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="50" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="50" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="250" cards="[cards]"/><action no="2" player="severserver" type="15" sum="50" cards="[cards]"/><action no="5" player="severserver" type="2" sum="500" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA SJ</cards><action no="7" player="WorstCard" type="23" sum="1,000" cards=""/><cards type="Pocket" player="severserver">S8 SK</cards><action no="8" player="severserver" type="7" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ S10 S7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards>
+	</round>
+	
+		</game><game gamecode="5449179978">
+		 <general>
+		  <startdate>2014-01-28 16:10:05</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,230" dealer="0" win="0" bet="720" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="720" dealer="1" win="1,740" bet="720" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="1,250" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="50" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="500" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="50" cards="[cards]"/><action no="1" player="severserver" type="15" sum="50" cards="[cards]"/><action no="4" player="severserver" type="1" sum="250" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">S9 C9</cards><action no="8" player="orkadi" type="3" sum="170" cards=""/><cards type="Pocket" player="WorstCard">DA D3</cards><action no="6" player="WorstCard" type="7" sum="670" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="7" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 C5 SJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards>
+	</round>
+	
+		</game><game gamecode="5449180301">
+		 <general>
+		  <startdate>2014-01-28 16:10:26</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="510" dealer="0" win="1,070" bet="510" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,740" dealer="0" win="40" bet="550" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="950" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="orkadi" type="15" sum="50" cards="[cards]"/><action no="4" player="orkadi" type="1" sum="250" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="50" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="500" cards="[cards]"/><action no="3" player="severserver" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">C10 C2</cards><action no="7" player="orkadi" type="7" sum="210" cards=""/><cards type="Pocket" player="WorstCard">HK S6</cards><cards type="Pocket" player="severserver">X X</cards><action no="6" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 SQ H10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5449180495">
+		 <general>
+		  <startdate>2014-01-28 16:10:44</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,070" dealer="1" win="1,900" bet="1,050" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,230" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="900" dealer="0" win="0" bet="550" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="orkadi" type="15" sum="50" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="50" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="250" cards="[cards]"/><action no="2" player="severserver" type="15" sum="50" cards="[cards]"/><action no="5" player="severserver" type="2" sum="500" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">X X</cards><action no="6" player="orkadi" type="23" sum="1,000" cards=""/><cards type="Pocket" player="WorstCard">S6 HK</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">X X</cards><action no="8" player="severserver" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449180715">
+		 <general>
+		  <startdate>2014-01-28 16:11:12</startdate>		  
+		  <players>
+		   <player seat="2" name="orkadi" chips="1,920" dealer="0" win="950" bet="550" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="930" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="6189490857"/><player seat="7" name="severserver" chips="350" dealer="0" win="0" bet="350" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="orkadi" type="15" sum="50" cards="[cards]"/><action no="5" player="orkadi" type="2" sum="500" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="50" cards="[cards]"/><action no="1" player="severserver" type="15" sum="50" cards="[cards]"/><action no="4" player="severserver" type="1" sum="250" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="orkadi">CQ D8</cards><cards type="Pocket" player="WorstCard">S8 D4</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="severserver">H6 C2</cards><action no="7" player="severserver" type="7" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 HJ C5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game>  
+	</session>

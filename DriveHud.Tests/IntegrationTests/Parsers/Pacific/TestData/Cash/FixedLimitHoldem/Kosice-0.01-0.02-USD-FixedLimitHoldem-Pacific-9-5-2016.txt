@@ -1,0 +1,3396 @@
+#Game No : 933284857
+***** 888poker Hand History for Game 933284857 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:45:12
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.49 )
+Seat 7: calumetvich ( $2.23 )
+Seat 9: Dragiza ( $1 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+calumetvich calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ 8h, 2h, Qd ]
+calumetvich bets [$0.02]
+Dragiza folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.04 ]
+
+
+#Game No : 933285052
+***** 888poker Hand History for Game 933285052 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:45:37
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.49 )
+Seat 7: calumetvich ( $2.25 )
+Seat 9: Dragiza ( $0.98 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich calls [$0.02]
+Dragiza folds
+thegrind14 checks
+** Dealing flop ** [ 2c, 8s, Ad ]
+thegrind14 checks
+calumetvich bets [$0.02]
+thegrind14 folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.05 ]
+
+
+#Game No : 933285193
+***** 888poker Hand History for Game 933285193 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:45:53
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.47 )
+Seat 7: calumetvich ( $2.28 )
+Seat 9: Dragiza ( $0.97 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.03 ]
+
+
+#Game No : 933285257
+***** 888poker Hand History for Game 933285257 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:46:01
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.46 )
+Seat 7: calumetvich ( $2.29 )
+Seat 9: Dragiza ( $0.97 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+calumetvich calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ 8s, Qh, Ts ]
+calumetvich checks
+Dragiza bets [$0.02]
+calumetvich calls [$0.02]
+** Dealing turn ** [ 9c ]
+calumetvich checks
+Dragiza checks
+** Dealing river ** [ Kd ]
+calumetvich checks
+Dragiza checks
+** Summary **
+calumetvich shows [ 5d, Qd ]
+Dragiza mucks [ Tc, 7d ]
+calumetvich collected [ $0.08 ]
+
+
+#Game No : 933285554
+***** 888poker Hand History for Game 933285554 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:46:40
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.46 )
+Seat 7: calumetvich ( $2.33 )
+Seat 9: Dragiza ( $0.93 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich calls [$0.02]
+Dragiza raises [$0.03]
+thegrind14 calls [$0.02]
+calumetvich calls [$0.02]
+** Dealing flop ** [ 3s, 7c, Jd ]
+Dragiza checks
+thegrind14 checks
+calumetvich checks
+** Dealing turn ** [ 9h ]
+Dragiza checks
+thegrind14 bets [$0.04]
+calumetvich folds
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.12 ]
+
+
+#Game No : 933285786
+***** 888poker Hand History for Game 933285786 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:47:10
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.54 )
+Seat 7: calumetvich ( $2.29 )
+Seat 9: Dragiza ( $0.89 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+calumetvich checks
+** Dealing flop ** [ 8d, Qh, 7h ]
+thegrind14 bets [$0.02]
+calumetvich calls [$0.02]
+** Dealing turn ** [ 3s ]
+thegrind14 checks
+calumetvich checks
+** Dealing river ** [ 7c ]
+thegrind14 checks
+calumetvich checks
+** Summary **
+thegrind14 shows [ 4h, 6s ]
+calumetvich shows [ 4c, 6c ]
+thegrind14 collected [ $0.04 ]
+calumetvich collected [ $0.04 ]
+
+
+#Game No : 933286027
+***** 888poker Hand History for Game 933286027 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:47:39
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.54 )
+Seat 7: calumetvich ( $2.29 )
+Seat 9: Dragiza ( $0.89 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+calumetvich calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ 7s, Ah, Ad ]
+calumetvich checks
+Dragiza checks
+** Dealing turn ** [ 7d ]
+calumetvich checks
+Dragiza checks
+** Dealing river ** [ 8h ]
+calumetvich checks
+Dragiza bets [$0.04]
+calumetvich calls [$0.04]
+** Summary **
+Dragiza shows [ 8d, Jd ]
+calumetvich mucks [ 5c, 8s ]
+Dragiza collected [ $0.12 ]
+
+
+#Game No : 933286261
+***** 888poker Hand History for Game 933286261 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:48:07
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.54 )
+Seat 7: calumetvich ( $2.23 )
+Seat 9: Dragiza ( $0.95 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich folds
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.03 ]
+
+
+#Game No : 933286362
+***** 888poker Hand History for Game 933286362 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:48:19
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.55 )
+Seat 7: calumetvich ( $2.23 )
+Seat 9: Dragiza ( $0.94 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+calumetvich checks
+** Dealing flop ** [ Qh, Th, 4d ]
+thegrind14 bets [$0.02]
+calumetvich folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.04 ]
+
+
+#Game No : 933286492
+***** 888poker Hand History for Game 933286492 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:48:35
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.57 )
+Seat 7: calumetvich ( $2.21 )
+Seat 9: Dragiza ( $0.94 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+calumetvich calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ 5c, Ad, 8h ]
+calumetvich checks
+thegrind14 bets [$0.02]
+calumetvich calls [$0.02]
+** Dealing turn ** [ 7h ]
+calumetvich checks
+thegrind14 checks
+** Dealing river ** [ 2s ]
+calumetvich checks
+thegrind14 bets [$0.04]
+calumetvich folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.14 ]
+
+
+#Game No : 933286763
+***** 888poker Hand History for Game 933286763 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:49:09
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.65 )
+Seat 7: calumetvich ( $2.15 )
+Seat 9: Dragiza ( $0.92 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich folds
+Dragiza calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ Kh, 5s, 7d ]
+Dragiza checks
+thegrind14 checks
+** Dealing turn ** [ 9d ]
+Dragiza checks
+thegrind14 checks
+** Dealing river ** [ Kd ]
+Dragiza checks
+thegrind14 checks
+** Summary **
+Dragiza shows [ Th, 4h ]
+thegrind14 shows [ Jh, 9c ]
+thegrind14 collected [ $0.04 ]
+
+
+#Game No : 933287012
+***** 888poker Hand History for Game 933287012 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:49:41
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.67 )
+Seat 7: calumetvich ( $2.15 )
+Seat 9: Dragiza ( $0.90 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.03 ]
+
+
+#Game No : 933287079
+***** 888poker Hand History for Game 933287079 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:49:48
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.66 )
+Seat 7: calumetvich ( $2.16 )
+Seat 9: Dragiza ( $0.90 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+calumetvich calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ Th, Qs, Qh ]
+calumetvich checks
+thegrind14 checks
+** Dealing turn ** [ Td ]
+calumetvich bets [$0.04]
+thegrind14 folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.10 ]
+
+
+#Game No : 933287259
+***** 888poker Hand History for Game 933287259 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:50:12
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.62 )
+Seat 7: calumetvich ( $2.22 )
+Seat 9: Dragiza ( $0.88 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich calls [$0.02]
+Dragiza calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ Kc, 2c, Jc ]
+Dragiza checks
+thegrind14 checks
+calumetvich checks
+** Dealing turn ** [ Qd ]
+Dragiza checks
+thegrind14 checks
+calumetvich bets [$0.04]
+Dragiza folds
+thegrind14 folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.06 ]
+
+
+#Game No : 933287512
+***** 888poker Hand History for Game 933287512 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:50:45
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.60 )
+Seat 7: calumetvich ( $2.26 )
+Seat 9: Dragiza ( $0.86 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 raises [$0.03]
+calumetvich calls [$0.02]
+** Dealing flop ** [ Jh, 6h, 9d ]
+thegrind14 checks
+calumetvich checks
+** Dealing turn ** [ 6c ]
+thegrind14 checks
+calumetvich checks
+** Dealing river ** [ Qh ]
+thegrind14 checks
+calumetvich checks
+** Summary **
+thegrind14 shows [ 3c, Ac ]
+calumetvich mucks [ 4h, Kd ]
+thegrind14 collected [ $0.08 ]
+
+
+#Game No : 933287733
+***** 888poker Hand History for Game 933287733 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:51:12
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.64 )
+Seat 7: calumetvich ( $2.22 )
+Seat 9: Dragiza ( $0.86 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+calumetvich folds
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.05 ]
+
+
+#Game No : 933287826
+***** 888poker Hand History for Game 933287826 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:51:25
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.67 )
+Seat 7: calumetvich ( $2.21 )
+Seat 9: Dragiza ( $0.84 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich folds
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.03 ]
+
+
+#Game No : 933287911
+***** 888poker Hand History for Game 933287911 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:51:36
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.68 )
+Seat 7: calumetvich ( $2.21 )
+Seat 9: Dragiza ( $0.83 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza raises [$0.04]
+thegrind14 folds
+calumetvich calls [$0.02]
+** Dealing flop ** [ Jc, 4d, 4h ]
+calumetvich checks
+Dragiza bets [$0.02]
+calumetvich calls [$0.02]
+** Dealing turn ** [ 2d ]
+calumetvich checks
+Dragiza checks
+** Dealing river ** [ 6d ]
+calumetvich checks
+Dragiza checks
+** Summary **
+calumetvich shows [ 5h, Jh ]
+Dragiza mucks [ 7c, 7d ]
+calumetvich collected [ $0.13 ]
+
+
+#Game No : 933288144
+***** 888poker Hand History for Game 933288144 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:52:06
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.67 )
+Seat 7: calumetvich ( $2.28 )
+Seat 9: Dragiza ( $0.77 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+calumetvich folds
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.05 ]
+
+
+#Game No : 933288213
+***** 888poker Hand History for Game 933288213 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:52:13
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.70 )
+Seat 7: calumetvich ( $2.27 )
+Seat 9: Dragiza ( $0.75 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich calls [$0.02]
+Dragiza calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ 8c, 9s, 5d ]
+Dragiza checks
+thegrind14 checks
+calumetvich checks
+** Dealing turn ** [ Jh ]
+Dragiza bets [$0.04]
+thegrind14 folds
+calumetvich folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.06 ]
+
+
+#Game No : 933288503
+***** 888poker Hand History for Game 933288503 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:52:49
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.68 )
+Seat 7: calumetvich ( $2.25 )
+Seat 9: Dragiza ( $0.79 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+calumetvich checks
+** Dealing flop ** [ 3d, 6h, Qc ]
+thegrind14 bets [$0.02]
+calumetvich raises [$0.04]
+thegrind14 folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.08 ]
+
+
+#Game No : 933288609
+***** 888poker Hand History for Game 933288609 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:53:03
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.64 )
+Seat 7: calumetvich ( $2.29 )
+Seat 9: Dragiza ( $0.79 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+calumetvich calls [$0.01]
+Dragiza raises [$0.02]
+calumetvich calls [$0.02]
+** Dealing flop ** [ Kh, Kd, 2s ]
+calumetvich checks
+Dragiza bets [$0.02]
+calumetvich calls [$0.02]
+** Dealing turn ** [ 9h ]
+calumetvich checks
+Dragiza bets [$0.04]
+calumetvich calls [$0.04]
+** Dealing river ** [ 4s ]
+calumetvich checks
+Dragiza checks
+** Summary **
+calumetvich shows [ 5h, Ks ]
+Dragiza mucks [ 8d, Ad ]
+calumetvich collected [ $0.19 ]
+
+
+#Game No : 933289061
+***** 888poker Hand History for Game 933289061 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:53:59
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.64 )
+Seat 7: calumetvich ( $2.38 )
+Seat 9: Dragiza ( $0.69 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich folds
+Dragiza raises [$0.03]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 5h, Jd, 6d ]
+Dragiza checks
+thegrind14 checks
+** Dealing turn ** [ 4d ]
+Dragiza checks
+thegrind14 bets [$0.04]
+Dragiza calls [$0.04]
+** Dealing river ** [ 3h ]
+Dragiza checks
+thegrind14 bets [$0.04]
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.16 ]
+
+
+#Game No : 933289335
+***** 888poker Hand History for Game 933289335 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:54:35
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.72 )
+Seat 7: calumetvich ( $2.38 )
+Seat 9: Dragiza ( $0.61 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+calumetvich checks
+** Dealing flop ** [ Ts, Jd, Kh ]
+thegrind14 checks
+calumetvich checks
+** Dealing turn ** [ 9s ]
+thegrind14 checks
+calumetvich bets [$0.04]
+thegrind14 folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.04 ]
+
+
+#Game No : 933289544
+***** 888poker Hand History for Game 933289544 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:55:02
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.70 )
+Seat 7: calumetvich ( $2.40 )
+Seat 9: Dragiza ( $0.61 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+calumetvich calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ 3d, Td, 2d ]
+calumetvich checks
+thegrind14 bets [$0.02]
+calumetvich calls [$0.02]
+** Dealing turn ** [ Kd ]
+calumetvich checks
+thegrind14 checks
+** Dealing river ** [ Ah ]
+calumetvich bets [$0.04]
+thegrind14 folds
+** Summary **
+calumetvich did not show his hand
+calumetvich collected [ $0.14 ]
+
+
+#Game No : 933289764
+***** 888poker Hand History for Game 933289764 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:55:30
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.64 )
+Seat 7: calumetvich ( $2.48 )
+Seat 9: Dragiza ( $0.59 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+calumetvich calls [$0.02]
+Dragiza calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ Js, Tc, Qs ]
+Dragiza bets [$0.02]
+thegrind14 folds
+calumetvich calls [$0.02]
+** Dealing turn ** [ 7d ]
+Dragiza bets [$0.04]
+calumetvich calls [$0.04]
+** Dealing river ** [ Th ]
+Dragiza bets [$0.04]
+calumetvich calls [$0.04]
+** Summary **
+Dragiza shows [ Kh, Ad ]
+calumetvich mucks [ Ah, Jd ]
+Dragiza collected [ $0.25 ]
+
+
+#Game No : 933290029
+***** 888poker Hand History for Game 933290029 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:56:05
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.62 )
+Seat 7: calumetvich ( $2.36 )
+Seat 9: Dragiza ( $0.72 )
+thegrind14 posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+calumetvich raises [$0.02]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Jc, Js, 8c ]
+thegrind14 checks
+calumetvich checks
+** Dealing turn ** [ 9h ]
+thegrind14 bets [$0.04]
+calumetvich raises [$0.08]
+thegrind14 calls [$0.04]
+** Dealing river ** [ Th ]
+thegrind14 checks
+calumetvich checks
+** Summary **
+thegrind14 shows [ 5c, Jh ]
+calumetvich mucks [ 2c, 2s ]
+thegrind14 collected [ $0.23 ]
+
+
+#Game No : 933290261
+***** 888poker Hand History for Game 933290261 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:56:35
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.73 )
+Seat 7: calumetvich ( $2.24 )
+Seat 9: Dragiza ( $0.72 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+calumetvich folds
+Dragiza folds
+** Summary **
+thegrind14 collected [ $0.05 ]
+
+
+#Game No : 933290338
+***** 888poker Hand History for Game 933290338 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:56:45
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 2: thegrind14 ( $0.76 )
+Seat 4: maczzy ( $0.20 )
+Seat 7: calumetvich ( $2.23 )
+Seat 9: Dragiza ( $0.70 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+maczzy posts big blind [$0.02]
+** Dealing down cards **
+maczzy checks
+calumetvich calls [$0.02]
+Dragiza folds
+thegrind14 checks
+** Dealing flop ** [ Qd, 9c, As ]
+thegrind14 bets [$0.02]
+maczzy folds
+calumetvich calls [$0.02]
+** Dealing turn ** [ 4d ]
+thegrind14 bets [$0.04]
+calumetvich calls [$0.04]
+** Dealing river ** [ 7d ]
+thegrind14 checks
+calumetvich checks
+** Summary **
+thegrind14 shows [ 7s, Ac ]
+calumetvich mucks [ Jd, Tc ]
+thegrind14 collected [ $0.19 ]
+
+
+#Game No : 933290746
+***** 888poker Hand History for Game 933290746 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:57:36
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: thegrind14 ( $0.87 )
+Seat 4: maczzy ( $0.18 )
+Seat 7: calumetvich ( $2.15 )
+Seat 9: Dragiza ( $0.69 )
+thegrind14 posts small blind [$0.01]
+maczzy posts big blind [$0.02]
+** Dealing down cards **
+calumetvich folds
+Dragiza folds
+thegrind14 calls [$0.01]
+maczzy raises [$0.02]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Td, 5s, Ac ]
+thegrind14 checks
+maczzy bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 6s ]
+thegrind14 checks
+maczzy checks
+** Dealing river ** [ 3c ]
+thegrind14 checks
+maczzy checks
+** Summary **
+thegrind14 shows [ 5h, 8h ]
+maczzy shows [ 9s, 9h ]
+maczzy collected [ $0.12 ]
+
+
+#Game No : 933291639
+***** 888poker Hand History for Game 933291639 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:50:09
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 2: thegrind14 ( $0.94 )
+Seat 4: maczzy ( $0.20 )
+Seat 7: calumetvich ( $1.98 )
+Seat 9: Dragiza ( $0.76 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+maczzy folds
+calumetvich raises [$0.04]
+Dragiza folds
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Th, Qs, Ac ]
+thegrind14 checks
+calumetvich checks
+** Dealing turn ** [ Jh ]
+thegrind14 checks
+calumetvich bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ Qd ]
+thegrind14 checks
+calumetvich bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+calumetvich shows [ Qh, Kh ]
+thegrind14 mucks [ Ah, Tc ]
+calumetvich collected [ $0.24 ]
+
+
+#Game No : 933291928
+***** 888poker Hand History for Game 933291928 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:50:18
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 2: thegrind14 ( $0.82 )
+Seat 4: maczzy ( $0.20 )
+Seat 6: Rehemm ( $0.20 )
+Seat 7: calumetvich ( $2.10 )
+Seat 9: Dragiza ( $0.75 )
+thegrind14 posts small blind [$0.01]
+maczzy posts big blind [$0.02]
+Rehemm posts big blind [$0.02]
+** Dealing down cards **
+Rehemm checks
+calumetvich folds
+Dragiza folds
+thegrind14 calls [$0.01]
+maczzy checks
+** Dealing flop ** [ 6h, Td, Kh ]
+thegrind14 checks
+maczzy checks
+Rehemm checks
+** Dealing turn ** [ Ks ]
+thegrind14 checks
+maczzy checks
+Rehemm checks
+** Dealing river ** [ 8c ]
+thegrind14 checks
+maczzy bets [$0.04]
+Rehemm folds
+thegrind14 folds
+** Summary **
+maczzy collected [ $0.06 ]
+
+
+#Game No : 933292148
+***** 888poker Hand History for Game 933292148 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:50:46
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: thegrind14 ( $0.80 )
+Seat 4: maczzy ( $0.24 )
+Seat 6: Rehemm ( $0.18 )
+Seat 7: calumetvich ( $2.10 )
+Seat 9: Dragiza ( $0.75 )
+maczzy posts small blind [$0.01]
+Rehemm posts big blind [$0.02]
+** Dealing down cards **
+calumetvich folds
+Dragiza folds
+thegrind14 folds
+maczzy calls [$0.01]
+Rehemm checks
+** Dealing flop ** [ 3s, 3c, 8s ]
+maczzy checks
+Rehemm checks
+** Dealing turn ** [ Jc ]
+maczzy checks
+Rehemm checks
+** Dealing river ** [ Qs ]
+maczzy checks
+Rehemm bets [$0.04]
+maczzy folds
+** Summary **
+Rehemm collected [ $0.04 ]
+
+
+#Game No : 933292356
+***** 888poker Hand History for Game 933292356 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:51:14
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: thegrind14 ( $0.80 )
+Seat 4: maczzy ( $0.22 )
+Seat 6: Rehemm ( $0.20 )
+Seat 7: calumetvich ( $2.10 )
+Seat 9: Dragiza ( $0.75 )
+Rehemm posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 folds
+maczzy calls [$0.02]
+Rehemm calls [$0.01]
+calumetvich checks
+** Dealing flop ** [ Qh, 2s, Ts ]
+Rehemm checks
+calumetvich checks
+maczzy checks
+** Dealing turn ** [ 8s ]
+Rehemm checks
+calumetvich checks
+maczzy checks
+** Dealing river ** [ Kh ]
+Rehemm checks
+calumetvich checks
+maczzy checks
+** Summary **
+Rehemm shows [ 6c, Ah ]
+calumetvich shows [ 9s, Td ]
+maczzy mucks [ 7s, Jd ]
+calumetvich collected [ $0.06 ]
+
+
+#Game No : 933292843
+***** 888poker Hand History for Game 933292843 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:52:16
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: thegrind14 ( $0.80 )
+Seat 4: maczzy ( $0.20 )
+Seat 6: Rehemm ( $0.18 )
+Seat 7: calumetvich ( $2.14 )
+Seat 9: Dragiza ( $0.75 )
+calumetvich posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+maczzy calls [$0.02]
+Rehemm calls [$0.02]
+calumetvich folds
+Dragiza checks
+** Dealing flop ** [ As, 4h, Jh ]
+Dragiza bets [$0.02]
+maczzy calls [$0.02]
+Rehemm calls [$0.02]
+** Dealing turn ** [ Td ]
+Dragiza bets [$0.04]
+maczzy calls [$0.04]
+Rehemm folds
+** Dealing river ** [ Ac ]
+Dragiza bets [$0.04]
+maczzy folds
+** Summary **
+Dragiza collected [ $0.20 ]
+
+
+#Game No : 933293180
+***** 888poker Hand History for Game 933293180 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:53:00
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: PublicD4nger ( $0.20 )
+Seat 2: thegrind14 ( $0.80 )
+Seat 4: maczzy ( $0.12 )
+Seat 6: Rehemm ( $0.14 )
+Seat 7: calumetvich ( $2.13 )
+Seat 9: Dragiza ( $0.87 )
+Dragiza posts small blind [$0.01]
+PublicD4nger posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+maczzy folds
+Rehemm folds
+calumetvich raises [$0.04]
+Dragiza folds
+PublicD4nger calls [$0.02]
+** Dealing flop ** [ Tc, 7d, 9c ]
+PublicD4nger checks
+calumetvich checks
+** Dealing turn ** [ 6s ]
+PublicD4nger checks
+calumetvich checks
+** Dealing river ** [ 2d ]
+PublicD4nger bets [$0.04]
+calumetvich calls [$0.04]
+** Summary **
+PublicD4nger shows [ 5c, 3h ]
+calumetvich shows [ Ad, 6h ]
+calumetvich collected [ $0.17 ]
+
+
+#Game No : 933293640
+***** 888poker Hand History for Game 933293640 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:54:00
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: PublicD4nger ( $0.12 )
+Seat 2: thegrind14 ( $0.80 )
+Seat 4: maczzy ( $0.12 )
+Seat 6: Rehemm ( $0.14 )
+Seat 7: calumetvich ( $2.22 )
+Seat 9: Dragiza ( $0.86 )
+PublicD4nger posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+maczzy folds
+Rehemm folds
+calumetvich folds
+Dragiza calls [$0.02]
+PublicD4nger raises [$0.03]
+thegrind14 calls [$0.02]
+Dragiza calls [$0.02]
+** Dealing flop ** [ 5s, Js, Th ]
+PublicD4nger bets [$0.02]
+thegrind14 calls [$0.02]
+Dragiza folds
+** Dealing turn ** [ 6s ]
+PublicD4nger bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 7d ]
+PublicD4nger bets [$0.02]
+thegrind14 calls [$0.02]
+** Summary **
+PublicD4nger shows [ Jh, Ad ]
+thegrind14 shows [ Jd, Ah ]
+thegrind14 collected [ $0.13 ]
+PublicD4nger collected [ $0.14 ]
+
+
+#Game No : 933293908
+***** 888poker Hand History for Game 933293908 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:54:35
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: PublicD4nger ( $0.14 )
+Seat 2: thegrind14 ( $0.81 )
+Seat 4: maczzy ( $0.12 )
+Seat 6: Rehemm ( $0.14 )
+Seat 7: calumetvich ( $2.22 )
+Seat 9: Dragiza ( $0.82 )
+thegrind14 posts small blind [$0.01]
+maczzy posts big blind [$0.02]
+** Dealing down cards **
+Rehemm calls [$0.02]
+calumetvich calls [$0.02]
+Dragiza raises [$0.04]
+PublicD4nger folds
+thegrind14 calls [$0.03]
+maczzy calls [$0.02]
+Rehemm calls [$0.02]
+calumetvich calls [$0.02]
+** Dealing flop ** [ Jc, 6h, 5s ]
+thegrind14 bets [$0.02]
+maczzy calls [$0.02]
+Rehemm calls [$0.02]
+calumetvich calls [$0.02]
+Dragiza folds
+** Dealing turn ** [ 3d ]
+thegrind14 checks
+maczzy checks
+Rehemm checks
+calumetvich bets [$0.04]
+thegrind14 calls [$0.04]
+maczzy folds
+Rehemm calls [$0.04]
+** Dealing river ** [ Kh ]
+thegrind14 checks
+Rehemm checks
+calumetvich checks
+** Summary **
+thegrind14 shows [ 8s, Jh ]
+Rehemm mucks [ 4c, 5c ]
+calumetvich shows [ Th, Js ]
+calumetvich collected [ $0.38 ]
+
+
+#Game No : 933294381
+***** 888poker Hand History for Game 933294381 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:55:37
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: PublicD4nger ( $0.14 )
+Seat 2: thegrind14 ( $0.71 )
+Seat 4: maczzy ( $0.06 )
+Seat 6: Rehemm ( $0.04 )
+Seat 7: calumetvich ( $2.50 )
+maczzy posts small blind [$0.01]
+Rehemm posts big blind [$0.02]
+** Dealing down cards **
+calumetvich calls [$0.02]
+PublicD4nger folds
+thegrind14 folds
+maczzy calls [$0.01]
+Rehemm checks
+** Dealing flop ** [ As, Qs, 6s ]
+maczzy checks
+Rehemm checks
+calumetvich checks
+** Dealing turn ** [ 6c ]
+maczzy bets [$0.04]
+Rehemm folds
+calumetvich folds
+** Summary **
+maczzy collected [ $0.06 ]
+
+
+#Game No : 933294910
+***** 888poker Hand History for Game 933294910 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:56:50
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: PublicD4nger ( $0.14 )
+Seat 4: maczzy ( $0.10 )
+Seat 7: calumetvich ( $2.48 )
+calumetvich posts small blind [$0.01]
+PublicD4nger posts big blind [$0.02]
+** Dealing down cards **
+maczzy folds
+calumetvich folds
+** Summary **
+PublicD4nger collected [ $0.03 ]
+
+
+#Game No : 933295027
+***** 888poker Hand History for Game 933295027 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:57:06
+Table Kosice 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: PublicD4nger ( $0.15 )
+Seat 4: maczzy ( $0.10 )
+Seat 7: calumetvich ( $2.47 )
+PublicD4nger posts small blind [$0.01]
+maczzy posts big blind [$0.02]
+** Dealing down cards **
+calumetvich folds
+PublicD4nger raises [$0.03]
+maczzy calls [$0.02]
+** Dealing flop ** [ Qs, 4h, 4c ]
+PublicD4nger bets [$0.02]
+maczzy calls [$0.02]
+** Dealing turn ** [ 4s ]
+PublicD4nger bets [$0.04]
+maczzy calls [$0.04]
+** Dealing river ** [ 9d ]
+** Summary **
+PublicD4nger shows [ 6c, Ks ]
+maczzy shows [ Qh, 9s ]
+maczzy collected [ $0.19 ]
+
+
+#Game No : 933295226
+***** 888poker Hand History for Game 933295226 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:57:31
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: PublicD4nger ( $0.05 )
+Seat 4: maczzy ( $0.19 )
+Seat 7: calumetvich ( $2.47 )
+maczzy posts small blind [$0.01]
+calumetvich folds
+PublicD4nger posts big blind [$0.02]
+** Dealing down cards **
+maczzy raises [$0.03]
+PublicD4nger raises [$0.03]
+maczzy calls [$0.01]
+** Dealing flop ** [ 4d, Jd, As ]
+** Dealing turn ** [ 6h ]
+** Dealing river ** [ Qc ]
+** Summary **
+PublicD4nger shows [ 4s, 6s ]
+maczzy shows [ 9s, 9d ]
+PublicD4nger collected [ $0.10 ]
+
+
+#Game No : 933295433
+***** 888poker Hand History for Game 933295433 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:58:00
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: PublicD4nger ( $0.10 )
+Seat 2: thegrind14 ( $0.71 )
+Seat 4: maczzy ( $0.14 )
+PublicD4nger posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+maczzy folds
+PublicD4nger raises [$0.03]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 9c, 9h, 6d ]
+PublicD4nger checks
+thegrind14 checks
+** Dealing turn ** [ Jd ]
+PublicD4nger bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 3h ]
+PublicD4nger bets [$0.02]
+thegrind14 calls [$0.02]
+** Summary **
+PublicD4nger shows [ 9s, 2h ]
+thegrind14 shows [ As, 4h ]
+PublicD4nger collected [ $0.19 ]
+
+
+#Game No : 933295606
+***** 888poker Hand History for Game 933295606 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:58:24
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: PublicD4nger ( $0.19 )
+Seat 2: thegrind14 ( $0.61 )
+Seat 4: maczzy ( $0.14 )
+thegrind14 posts small blind [$0.01]
+maczzy posts big blind [$0.02]
+** Dealing down cards **
+PublicD4nger raises [$0.04]
+thegrind14 folds
+maczzy folds
+** Summary **
+PublicD4nger collected [ $0.05 ]
+
+
+#Game No : 933295684
+***** 888poker Hand History for Game 933295684 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 21:58:37
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: PublicD4nger ( $0.22 )
+Seat 2: thegrind14 ( $0.60 )
+Seat 4: maczzy ( $0.12 )
+maczzy posts small blind [$0.01]
+PublicD4nger posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+maczzy raises [$0.03]
+PublicD4nger raises [$0.04]
+maczzy calls [$0.02]
+** Dealing flop ** [ Ts, 2s, 4s ]
+maczzy checks
+PublicD4nger checks
+** Dealing turn ** [ Qs ]
+maczzy bets [$0.04]
+PublicD4nger raises [$0.08]
+maczzy calls [$0.02]
+** Dealing river ** [ Kd ]
+** Summary **
+PublicD4nger shows [ 7s, Js ]
+maczzy shows [ 8s, 8d ]
+PublicD4nger collected [ $0.23 ]
+
+
+#Game No : 933296616
+***** 888poker Hand History for Game 933296616 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:00:44
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: PublicD4nger ( $0.15 )
+Seat 2: pobeditel000 ( $0.54 )
+Seat 9: Dragiza ( $0.78 )
+pobeditel000 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+PublicD4nger raises [$0.04]
+pobeditel000 calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ Jc, Qs, 6h ]
+pobeditel000 checks
+PublicD4nger bets [$0.02]
+pobeditel000 calls [$0.02]
+** Dealing turn ** [ 3d ]
+pobeditel000 checks
+PublicD4nger bets [$0.04]
+pobeditel000 calls [$0.04]
+** Dealing river ** [ 8d ]
+pobeditel000 checks
+PublicD4nger bets [$0.04]
+pobeditel000 calls [$0.04]
+** Summary **
+PublicD4nger shows [ Kh, 5h ]
+pobeditel000 shows [ 7c, 7h ]
+pobeditel000 collected [ $0.29 ]
+
+
+#Game No : 933300015
+***** 888poker Hand History for Game 933300015 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:08:26
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.60 )
+Seat 2: pobeditel000 ( $0.32 )
+Seat 9: Dragiza ( $1.09 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+pobeditel000 folds
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.03 ]
+
+
+#Game No : 933300155
+***** 888poker Hand History for Game 933300155 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:08:45
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.61 )
+Seat 2: pobeditel000 ( $0.32 )
+Seat 9: Dragiza ( $1.08 )
+thegrind14 posts small blind [$0.01]
+pobeditel000 posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 raises [$0.03]
+pobeditel000 calls [$0.02]
+** Dealing flop ** [ Th, 2s, 4s ]
+thegrind14 checks
+pobeditel000 bets [$0.02]
+thegrind14 raises [$0.04]
+pobeditel000 calls [$0.02]
+** Dealing turn ** [ Jh ]
+thegrind14 bets [$0.04]
+pobeditel000 calls [$0.04]
+** Dealing river ** [ Td ]
+thegrind14 bets [$0.04]
+pobeditel000 raises [$0.08]
+thegrind14 raises [$0.08]
+pobeditel000 raises [$0.08]
+thegrind14 calls [$0.04]
+** Summary **
+pobeditel000 shows [ Kh, Ts ]
+thegrind14 shows [ 4h, 4c ]
+thegrind14 collected [ $0.54 ]
+
+
+#Game No : 933300397
+***** 888poker Hand History for Game 933300397 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:09:21
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.87 )
+Seat 2: pobeditel000 ( $0.04 )
+Seat 9: Dragiza ( $1.08 )
+pobeditel000 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+pobeditel000 calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ Jd, 3c, 8d ]
+** Dealing turn ** [ 2d ]
+** Dealing river ** [ Ad ]
+** Summary **
+thegrind14 shows [ Jh, Kc ]
+pobeditel000 shows [ Js, Kh ]
+pobeditel000 collected [ $0.05 ]
+thegrind14 collected [ $0.05 ]
+
+
+#Game No : 933300554
+***** 888poker Hand History for Game 933300554 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:09:43
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.88 )
+Seat 2: pobeditel000 ( $0.05 )
+Seat 9: Dragiza ( $1.06 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+pobeditel000 folds
+Dragiza calls [$0.01]
+thegrind14 raises [$0.02]
+Dragiza calls [$0.02]
+** Dealing flop ** [ 2h, 4c, 4s ]
+Dragiza checks
+thegrind14 bets [$0.02]
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.08 ]
+
+
+#Game No : 933300664
+***** 888poker Hand History for Game 933300664 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:09:58
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.92 )
+Seat 2: pobeditel000 ( $0.05 )
+Seat 9: Dragiza ( $1.02 )
+thegrind14 posts small blind [$0.01]
+pobeditel000 posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 raises [$0.03]
+pobeditel000 raises [$0.03]
+thegrind14 calls [$0.01]
+** Dealing flop ** [ 7h, 4s, Ts ]
+** Dealing turn ** [ 9h ]
+** Dealing river ** [ 6c ]
+** Summary **
+thegrind14 shows [ Kc, Qh ]
+pobeditel000 shows [ 8h, Kd ]
+pobeditel000 collected [ $0.10 ]
+
+
+#Game No : 933300853
+***** 888poker Hand History for Game 933300853 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:10:24
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.87 )
+Seat 2: pobeditel000 ( $0.10 )
+Seat 9: Dragiza ( $1.02 )
+pobeditel000 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+pobeditel000 calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ 9c, 4c, Ad ]
+pobeditel000 checks
+Dragiza checks
+** Dealing turn ** [ Kh ]
+pobeditel000 checks
+Dragiza checks
+** Dealing river ** [ Qh ]
+pobeditel000 checks
+Dragiza bets [$0.04]
+pobeditel000 folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.04 ]
+
+
+#Game No : 933301054
+***** 888poker Hand History for Game 933301054 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:10:52
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.87 )
+Seat 2: pobeditel000 ( $0.08 )
+Seat 9: Dragiza ( $1.04 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+pobeditel000 raises [$0.04]
+Dragiza calls [$0.03]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 4s, 5s, 2h ]
+Dragiza checks
+thegrind14 bets [$0.02]
+pobeditel000 calls [$0.02]
+Dragiza folds
+** Dealing turn ** [ Js ]
+thegrind14 bets [$0.04]
+pobeditel000 calls [$0.02]
+** Dealing river ** [ Ts ]
+** Summary **
+thegrind14 shows [ 5h, Th ]
+pobeditel000 shows [ 6c, Qc ]
+thegrind14 collected [ $0.19 ]
+
+
+#Game No : 933301657
+***** 888poker Hand History for Game 933301657 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:12:15
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.03 )
+Seat 4: rafaem ( $1 )
+Seat 9: Dragiza ( $0.95 )
+thegrind14 posts small blind [$0.01]
+rafaem posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+rafaem raises [$0.02]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Kc, 7d, 4c ]
+thegrind14 checks
+rafaem bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ Qh ]
+thegrind14 checks
+rafaem bets [$0.04]
+thegrind14 folds
+** Summary **
+rafaem did not show his hand
+rafaem collected [ $0.12 ]
+
+
+#Game No : 933301808
+***** 888poker Hand History for Game 933301808 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:12:36
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.97 )
+Seat 4: rafaem ( $1.06 )
+Seat 9: Dragiza ( $0.95 )
+rafaem posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+rafaem calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ 7d, 8h, Kd ]
+rafaem checks
+thegrind14 bets [$0.02]
+rafaem calls [$0.02]
+** Dealing turn ** [ Qs ]
+rafaem checks
+thegrind14 checks
+** Dealing river ** [ 7h ]
+rafaem bets [$0.04]
+thegrind14 folds
+** Summary **
+rafaem did not show his hand
+rafaem collected [ $0.14 ]
+
+
+#Game No : 933302061
+***** 888poker Hand History for Game 933302061 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:13:14
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.91 )
+Seat 4: rafaem ( $1.14 )
+Seat 9: Dragiza ( $0.93 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+rafaem calls [$0.02]
+Dragiza folds
+thegrind14 checks
+** Dealing flop ** [ Qs, Qc, 5c ]
+thegrind14 checks
+rafaem checks
+** Dealing turn ** [ 9d ]
+thegrind14 checks
+rafaem checks
+** Dealing river ** [ Qd ]
+thegrind14 checks
+rafaem bets [$0.04]
+thegrind14 folds
+** Summary **
+rafaem did not show his hand
+rafaem collected [ $0.05 ]
+
+
+#Game No : 933302269
+***** 888poker Hand History for Game 933302269 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:13:42
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.89 )
+Seat 4: rafaem ( $1.17 )
+Seat 9: Dragiza ( $0.92 )
+thegrind14 posts small blind [$0.01]
+rafaem posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+rafaem checks
+** Dealing flop ** [ 6s, Qc, 4s ]
+thegrind14 bets [$0.02]
+rafaem folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.04 ]
+
+
+#Game No : 933302344
+***** 888poker Hand History for Game 933302344 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:13:53
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $0.91 )
+Seat 4: rafaem ( $1.15 )
+Seat 9: Dragiza ( $0.92 )
+rafaem posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+rafaem calls [$0.03]
+Dragiza calls [$0.02]
+** Dealing flop ** [ 2d, Kd, Ts ]
+rafaem bets [$0.02]
+Dragiza calls [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 8c ]
+rafaem bets [$0.04]
+Dragiza folds
+thegrind14 calls [$0.04]
+** Dealing river ** [ Qd ]
+rafaem bets [$0.04]
+thegrind14 raises [$0.08]
+rafaem raises [$0.08]
+thegrind14 calls [$0.04]
+** Summary **
+rafaem shows [ 5s, Kc ]
+thegrind14 shows [ 9d, 8d ]
+thegrind14 collected [ $0.48 ]
+
+
+#Game No : 933302612
+***** 888poker Hand History for Game 933302612 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:14:32
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.17 )
+Seat 4: rafaem ( $0.93 )
+Seat 9: Dragiza ( $0.86 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+rafaem calls [$0.02]
+Dragiza folds
+thegrind14 checks
+** Dealing flop ** [ Ks, Ac, 8h ]
+thegrind14 checks
+rafaem bets [$0.02]
+thegrind14 folds
+** Summary **
+rafaem did not show his hand
+rafaem collected [ $0.05 ]
+
+
+#Game No : 933302711
+***** 888poker Hand History for Game 933302711 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:14:46
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.15 )
+Seat 4: rafaem ( $0.96 )
+Seat 9: Dragiza ( $0.85 )
+thegrind14 posts small blind [$0.01]
+rafaem posts big blind [$0.02]
+** Dealing down cards **
+Dragiza raises [$0.04]
+thegrind14 calls [$0.03]
+rafaem raises [$0.04]
+Dragiza calls [$0.02]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Kh, Td, 8h ]
+thegrind14 checks
+rafaem bets [$0.02]
+Dragiza folds
+thegrind14 folds
+** Summary **
+rafaem did not show his hand
+rafaem collected [ $0.18 ]
+
+
+#Game No : 933302849
+***** 888poker Hand History for Game 933302849 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:15:06
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.09 )
+Seat 4: rafaem ( $1.08 )
+Seat 9: Dragiza ( $0.79 )
+rafaem posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 calls [$0.02]
+rafaem raises [$0.03]
+Dragiza folds
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 2h, 3d, 5s ]
+rafaem bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ As ]
+rafaem bets [$0.04]
+thegrind14 folds
+** Summary **
+rafaem did not show his hand
+rafaem collected [ $0.14 ]
+
+
+#Game No : 933303012
+***** 888poker Hand History for Game 933303012 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:15:32
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.03 )
+Seat 4: rafaem ( $1.16 )
+Seat 9: Dragiza ( $0.77 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+rafaem calls [$0.02]
+Dragiza folds
+thegrind14 checks
+** Dealing flop ** [ 8h, 5s, Qs ]
+thegrind14 checks
+rafaem checks
+** Dealing turn ** [ Kd ]
+thegrind14 checks
+rafaem bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 7c ]
+thegrind14 checks
+rafaem checks
+** Summary **
+thegrind14 shows [ Jd, Ks ]
+rafaem mucks [ Jh, 9c ]
+thegrind14 collected [ $0.13 ]
+
+
+#Game No : 933303172
+***** 888poker Hand History for Game 933303172 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:15:54
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.10 )
+Seat 4: rafaem ( $1.10 )
+Seat 9: Dragiza ( $0.76 )
+thegrind14 posts small blind [$0.01]
+rafaem posts big blind [$0.02]
+** Dealing down cards **
+Dragiza raises [$0.04]
+thegrind14 calls [$0.03]
+rafaem folds
+** Dealing flop ** [ Th, 5d, Qh ]
+thegrind14 checks
+Dragiza bets [$0.02]
+thegrind14 folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.10 ]
+
+
+#Game No : 933303340
+***** 888poker Hand History for Game 933303340 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:16:15
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.06 )
+Seat 4: rafaem ( $1.08 )
+Seat 9: Dragiza ( $0.82 )
+rafaem posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+rafaem calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ Ah, Qs, 7c ]
+rafaem checks
+Dragiza bets [$0.02]
+rafaem calls [$0.02]
+** Dealing turn ** [ Jh ]
+rafaem checks
+Dragiza checks
+** Dealing river ** [ 4c ]
+rafaem bets [$0.04]
+Dragiza folds
+** Summary **
+rafaem did not show his hand
+rafaem collected [ $0.08 ]
+
+
+#Game No : 933303586
+***** 888poker Hand History for Game 933303586 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:16:48
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.06 )
+Seat 4: rafaem ( $1.12 )
+Seat 9: Dragiza ( $0.78 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+rafaem folds
+Dragiza calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ 3s, As, 9s ]
+Dragiza checks
+thegrind14 checks
+** Dealing turn ** [ Td ]
+Dragiza checks
+thegrind14 checks
+** Dealing river ** [ Jh ]
+Dragiza bets [$0.04]
+thegrind14 folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.04 ]
+
+
+#Game No : 933303784
+***** 888poker Hand History for Game 933303784 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:17:14
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.04 )
+Seat 4: rafaem ( $1.12 )
+Seat 9: Dragiza ( $0.80 )
+thegrind14 posts small blind [$0.01]
+rafaem posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+rafaem checks
+** Dealing flop ** [ 3h, 3s, Qh ]
+thegrind14 checks
+rafaem checks
+** Dealing turn ** [ Th ]
+thegrind14 checks
+rafaem checks
+** Dealing river ** [ 7h ]
+thegrind14 checks
+rafaem checks
+** Summary **
+thegrind14 shows [ 6s, 2s ]
+rafaem shows [ 2c, Jh ]
+rafaem collected [ $0.04 ]
+
+
+#Game No : 933303940
+***** 888poker Hand History for Game 933303940 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:17:35
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.02 )
+Seat 4: rafaem ( $1.14 )
+Seat 9: Dragiza ( $0.80 )
+rafaem posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 calls [$0.02]
+rafaem calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ 2c, Js, Ks ]
+rafaem bets [$0.02]
+Dragiza folds
+thegrind14 folds
+** Summary **
+rafaem did not show his hand
+rafaem collected [ $0.06 ]
+
+
+#Game No : 933304075
+***** 888poker Hand History for Game 933304075 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:17:52
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1 )
+Seat 4: rafaem ( $1.18 )
+Seat 9: Dragiza ( $0.78 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+rafaem raises [$0.04]
+Dragiza folds
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Td, 3h, Js ]
+thegrind14 checks
+rafaem checks
+** Dealing turn ** [ Qd ]
+thegrind14 checks
+rafaem checks
+** Dealing river ** [ 6s ]
+thegrind14 checks
+rafaem checks
+** Summary **
+thegrind14 shows [ 8d, 6d ]
+rafaem mucks [ Ac, 7c ]
+thegrind14 collected [ $0.09 ]
+
+
+#Game No : 933304243
+***** 888poker Hand History for Game 933304243 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:18:14
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.05 )
+Seat 4: rafaem ( $1.14 )
+Seat 9: Dragiza ( $0.77 )
+thegrind14 posts small blind [$0.01]
+rafaem posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+rafaem raises [$0.02]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 3d, 2h, Tc ]
+thegrind14 checks
+rafaem bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ Jd ]
+thegrind14 checks
+rafaem bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 8h ]
+thegrind14 checks
+rafaem bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+rafaem shows [ 7c, 7d ]
+thegrind14 shows [ 2c, 8c ]
+thegrind14 collected [ $0.27 ]
+
+
+#Game No : 933304407
+***** 888poker Hand History for Game 933304407 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:18:37
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: thegrind14 ( $1.18 )
+Seat 4: rafaem ( $1 )
+Seat 6: ASTIdd ( $0.90 )
+Seat 9: Dragiza ( $0.77 )
+rafaem posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 folds
+rafaem calls [$0.01]
+ASTIdd checks
+** Dealing flop ** [ 7d, 7h, Jh ]
+rafaem checks
+ASTIdd bets [$0.02]
+rafaem folds
+** Summary **
+ASTIdd did not show his hand
+ASTIdd collected [ $0.04 ]
+
+
+#Game No : 933304513
+***** 888poker Hand History for Game 933304513 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:18:53
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.18 )
+Seat 6: ASTIdd ( $0.92 )
+Seat 9: Dragiza ( $0.77 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd raises [$0.04]
+Dragiza folds
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 3s, 6h, Th ]
+thegrind14 checks
+ASTIdd bets [$0.02]
+thegrind14 folds
+** Summary **
+ASTIdd did not show his hand
+ASTIdd collected [ $0.09 ]
+
+
+#Game No : 933304649
+***** 888poker Hand History for Game 933304649 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:19:10
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.14 )
+Seat 6: ASTIdd ( $0.97 )
+Seat 9: Dragiza ( $0.76 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza raises [$0.04]
+thegrind14 folds
+ASTIdd raises [$0.04]
+Dragiza calls [$0.02]
+** Dealing flop ** [ 4c, Ad, 8s ]
+ASTIdd checks
+Dragiza bets [$0.02]
+ASTIdd calls [$0.02]
+** Dealing turn ** [ 4s ]
+ASTIdd checks
+Dragiza bets [$0.04]
+ASTIdd calls [$0.04]
+** Dealing river ** [ 6c ]
+ASTIdd checks
+Dragiza bets [$0.04]
+ASTIdd calls [$0.04]
+** Summary **
+Dragiza shows [ Jh, As ]
+ASTIdd mucks [ Ts, Tc ]
+Dragiza collected [ $0.32 ]
+
+
+#Game No : 933304908
+***** 888poker Hand History for Game 933304908 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:19:43
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.13 )
+Seat 6: ASTIdd ( $0.81 )
+Seat 9: Dragiza ( $0.92 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+ASTIdd raises [$0.03]
+Dragiza calls [$0.02]
+** Dealing flop ** [ 7c, 4c, 3h ]
+ASTIdd checks
+Dragiza checks
+** Dealing turn ** [ 3d ]
+ASTIdd checks
+Dragiza checks
+** Dealing river ** [ Tc ]
+ASTIdd checks
+Dragiza bets [$0.04]
+ASTIdd folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.08 ]
+
+
+#Game No : 933305086
+***** 888poker Hand History for Game 933305086 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:20:08
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.13 )
+Seat 6: ASTIdd ( $0.77 )
+Seat 9: Dragiza ( $0.96 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd folds
+Dragiza raises [$0.03]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Jh, As, Qh ]
+Dragiza bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ Td ]
+Dragiza bets [$0.04]
+thegrind14 raises [$0.08]
+Dragiza raises [$0.08]
+thegrind14 calls [$0.04]
+** Dealing river ** [ Qs ]
+Dragiza bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+Dragiza shows [ Kd, Kc ]
+thegrind14 shows [ Kh, 9d ]
+Dragiza collected [ $0.21 ]
+thegrind14 collected [ $0.21 ]
+
+
+#Game No : 933305317
+***** 888poker Hand History for Game 933305317 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:20:40
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.12 )
+Seat 6: ASTIdd ( $0.77 )
+Seat 9: Dragiza ( $0.95 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza calls [$0.02]
+thegrind14 calls [$0.01]
+ASTIdd checks
+** Dealing flop ** [ Jc, Ts, Ac ]
+thegrind14 bets [$0.02]
+ASTIdd folds
+Dragiza calls [$0.02]
+** Dealing turn ** [ 8c ]
+thegrind14 checks
+Dragiza checks
+** Dealing river ** [ 7c ]
+thegrind14 checks
+Dragiza bets [$0.04]
+thegrind14 folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.10 ]
+
+
+#Game No : 933305571
+***** 888poker Hand History for Game 933305571 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:21:16
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.08 )
+Seat 6: ASTIdd ( $0.75 )
+Seat 9: Dragiza ( $1.01 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+ASTIdd calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ Ks, Ah, 4d ]
+ASTIdd checks
+thegrind14 bets [$0.02]
+ASTIdd folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.10 ]
+
+
+#Game No : 933305688
+***** 888poker Hand History for Game 933305688 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:21:32
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.14 )
+Seat 6: ASTIdd ( $0.71 )
+Seat 9: Dragiza ( $0.99 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd raises [$0.04]
+Dragiza calls [$0.03]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 7d, Ks, 8d ]
+Dragiza checks
+thegrind14 checks
+ASTIdd bets [$0.02]
+Dragiza folds
+thegrind14 folds
+** Summary **
+ASTIdd did not show his hand
+ASTIdd collected [ $0.12 ]
+
+
+#Game No : 933305814
+***** 888poker Hand History for Game 933305814 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:21:50
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.10 )
+Seat 6: ASTIdd ( $0.79 )
+Seat 9: Dragiza ( $0.95 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza raises [$0.04]
+thegrind14 folds
+ASTIdd calls [$0.02]
+** Dealing flop ** [ 5d, Th, 3d ]
+ASTIdd checks
+Dragiza checks
+** Dealing turn ** [ 7s ]
+ASTIdd checks
+Dragiza checks
+** Dealing river ** [ 8h ]
+ASTIdd bets [$0.04]
+Dragiza folds
+** Summary **
+ASTIdd did not show his hand
+ASTIdd collected [ $0.09 ]
+
+
+#Game No : 933305969
+***** 888poker Hand History for Game 933305969 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:22:12
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.09 )
+Seat 6: ASTIdd ( $0.84 )
+Seat 9: Dragiza ( $0.91 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+ASTIdd calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ 6h, 7s, Qs ]
+ASTIdd checks
+thegrind14 bets [$0.02]
+ASTIdd calls [$0.02]
+** Dealing turn ** [ 8c ]
+ASTIdd checks
+thegrind14 checks
+** Dealing river ** [ 7c ]
+ASTIdd checks
+thegrind14 bets [$0.04]
+ASTIdd folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.14 ]
+
+
+#Game No : 933306120
+***** 888poker Hand History for Game 933306120 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:22:33
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.17 )
+Seat 6: ASTIdd ( $0.78 )
+Seat 9: Dragiza ( $0.89 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd raises [$0.04]
+Dragiza folds
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 9d, 4d, Kd ]
+thegrind14 checks
+ASTIdd bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 4s ]
+thegrind14 checks
+ASTIdd bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 3s ]
+thegrind14 checks
+ASTIdd bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+ASTIdd shows [ 7d, 7c ]
+thegrind14 shows [ 9c, Jh ]
+thegrind14 collected [ $0.28 ]
+
+
+#Game No : 933306266
+***** 888poker Hand History for Game 933306266 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:22:54
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.31 )
+Seat 6: ASTIdd ( $0.64 )
+Seat 9: Dragiza ( $0.88 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza raises [$0.04]
+thegrind14 calls [$0.03]
+ASTIdd calls [$0.02]
+** Dealing flop ** [ 5h, 7h, 5d ]
+thegrind14 checks
+ASTIdd bets [$0.02]
+Dragiza calls [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ Ks ]
+thegrind14 checks
+ASTIdd bets [$0.04]
+Dragiza calls [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 3s ]
+thegrind14 checks
+ASTIdd bets [$0.04]
+Dragiza calls [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+ASTIdd shows [ 7s, 4h ]
+Dragiza shows [ As, Kc ]
+thegrind14 mucks [ Kh, Td ]
+Dragiza collected [ $0.40 ]
+
+
+#Game No : 933306489
+***** 888poker Hand History for Game 933306489 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:23:23
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.17 )
+Seat 6: ASTIdd ( $0.50 )
+Seat 9: Dragiza ( $1.14 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+ASTIdd folds
+Dragiza calls [$0.02]
+** Dealing flop ** [ 6c, Ac, Ks ]
+Dragiza checks
+thegrind14 bets [$0.02]
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.09 ]
+
+
+#Game No : 933306630
+***** 888poker Hand History for Game 933306630 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:23:44
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.22 )
+Seat 6: ASTIdd ( $0.49 )
+Seat 9: Dragiza ( $1.10 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd raises [$0.04]
+Dragiza folds
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Jc, 3d, 9c ]
+thegrind14 checks
+ASTIdd bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 4c ]
+thegrind14 checks
+ASTIdd bets [$0.04]
+thegrind14 raises [$0.08]
+ASTIdd raises [$0.08]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 2h ]
+thegrind14 bets [$0.04]
+ASTIdd calls [$0.04]
+** Summary **
+thegrind14 shows [ 5c, Qc ]
+ASTIdd mucks [ Ac, Js ]
+thegrind14 collected [ $0.43 ]
+
+
+#Game No : 933306825
+***** 888poker Hand History for Game 933306825 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:24:11
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.43 )
+Seat 6: ASTIdd ( $0.27 )
+Seat 9: Dragiza ( $1.09 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 folds
+** Summary **
+ASTIdd did not show his hand
+ASTIdd collected [ $0.03 ]
+
+
+#Game No : 933306871
+***** 888poker Hand History for Game 933306871 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:24:19
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.42 )
+Seat 6: ASTIdd ( $0.28 )
+Seat 9: Dragiza ( $1.09 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+ASTIdd folds
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.05 ]
+
+
+#Game No : 933306959
+***** 888poker Hand History for Game 933306959 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:24:30
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.45 )
+Seat 6: ASTIdd ( $0.27 )
+Seat 9: Dragiza ( $1.07 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd raises [$0.04]
+Dragiza folds
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 7c, Jh, 6c ]
+thegrind14 checks
+ASTIdd bets [$0.02]
+thegrind14 folds
+** Summary **
+ASTIdd did not show his hand
+ASTIdd collected [ $0.09 ]
+
+
+#Game No : 933307134
+***** 888poker Hand History for Game 933307134 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:24:56
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.41 )
+Seat 6: ASTIdd ( $0.32 )
+Seat 9: Dragiza ( $1.06 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 folds
+** Summary **
+ASTIdd did not show his hand
+ASTIdd collected [ $0.03 ]
+
+
+#Game No : 933307180
+***** 888poker Hand History for Game 933307180 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:25:02
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.40 )
+Seat 6: ASTIdd ( $0.33 )
+Seat 9: Dragiza ( $1.06 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+ASTIdd folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.03 ]
+
+
+#Game No : 933307228
+***** 888poker Hand History for Game 933307228 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:25:09
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.40 )
+Seat 6: ASTIdd ( $0.32 )
+Seat 9: Dragiza ( $1.07 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd folds
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.03 ]
+
+
+#Game No : 933307296
+***** 888poker Hand History for Game 933307296 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:25:18
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.41 )
+Seat 6: ASTIdd ( $0.32 )
+Seat 9: Dragiza ( $1.06 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+ASTIdd checks
+** Dealing flop ** [ Tc, 6d, 2s ]
+thegrind14 checks
+ASTIdd bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 6h ]
+thegrind14 checks
+ASTIdd checks
+** Dealing river ** [ Jd ]
+thegrind14 checks
+ASTIdd bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+ASTIdd shows [ Td, 8h ]
+thegrind14 mucks [ 8d, Kc ]
+ASTIdd collected [ $0.16 ]
+
+
+#Game No : 933307489
+***** 888poker Hand History for Game 933307489 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:25:46
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.33 )
+Seat 6: ASTIdd ( $0.40 )
+Seat 9: Dragiza ( $1.06 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+ASTIdd raises [$0.05]
+Dragiza folds
+thegrind14 raises [$0.04]
+ASTIdd calls [$0.02]
+** Dealing flop ** [ 8c, Tc, Ah ]
+ASTIdd checks
+thegrind14 bets [$0.02]
+ASTIdd calls [$0.02]
+** Dealing turn ** [ Qh ]
+ASTIdd checks
+thegrind14 bets [$0.04]
+ASTIdd calls [$0.04]
+** Dealing river ** [ 8h ]
+ASTIdd checks
+thegrind14 bets [$0.04]
+ASTIdd calls [$0.04]
+** Summary **
+thegrind14 shows [ Ac, As ]
+ASTIdd mucks [ Qs, Kd ]
+thegrind14 collected [ $0.37 ]
+
+
+#Game No : 933307686
+***** 888poker Hand History for Game 933307686 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:26:15
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.52 )
+Seat 6: ASTIdd ( $0.22 )
+Seat 9: Dragiza ( $1.04 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd folds
+Dragiza raises [$0.03]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 3s, Kh, 3h ]
+Dragiza bets [$0.02]
+thegrind14 raises [$0.04]
+Dragiza folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.12 ]
+
+
+#Game No : 933307838
+***** 888poker Hand History for Game 933307838 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:26:36
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.58 )
+Seat 6: ASTIdd ( $0.22 )
+Seat 9: Dragiza ( $0.98 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza calls [$0.02]
+thegrind14 calls [$0.01]
+ASTIdd checks
+** Dealing flop ** [ As, Qd, 5h ]
+thegrind14 checks
+ASTIdd checks
+Dragiza bets [$0.02]
+thegrind14 calls [$0.02]
+ASTIdd calls [$0.02]
+** Dealing turn ** [ Qs ]
+thegrind14 checks
+ASTIdd checks
+Dragiza checks
+** Dealing river ** [ 2c ]
+thegrind14 bets [$0.04]
+ASTIdd calls [$0.04]
+Dragiza calls [$0.04]
+** Summary **
+thegrind14 shows [ Kd, Qh ]
+ASTIdd mucks [ 5d, Tc ]
+Dragiza mucks [ 4d, Ah ]
+thegrind14 collected [ $0.23 ]
+
+
+#Game No : 933308089
+***** 888poker Hand History for Game 933308089 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:27:11
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.73 )
+Seat 6: ASTIdd ( $0.14 )
+Seat 9: Dragiza ( $0.90 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+ASTIdd raises [$0.03]
+Dragiza calls [$0.02]
+** Dealing flop ** [ Ts, Qc, 5d ]
+ASTIdd bets [$0.02]
+Dragiza folds
+** Summary **
+ASTIdd did not show his hand
+ASTIdd collected [ $0.08 ]
+
+
+#Game No : 933308192
+***** 888poker Hand History for Game 933308192 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:27:27
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.73 )
+Seat 6: ASTIdd ( $0.18 )
+Seat 9: Dragiza ( $0.86 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+ASTIdd folds
+Dragiza calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ 8c, 9d, Kc ]
+Dragiza bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 5c ]
+Dragiza bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 6c ]
+Dragiza bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+Dragiza shows [ Kd, 6h ]
+thegrind14 shows [ 9c, Qh ]
+thegrind14 collected [ $0.23 ]
+
+
+#Game No : 933308349
+***** 888poker Hand History for Game 933308349 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:27:50
+Table Kosice 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.84 )
+Seat 6: ASTIdd ( $0.18 )
+Seat 9: Dragiza ( $0.74 )
+thegrind14 posts small blind [$0.01]
+ASTIdd posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+ASTIdd checks
+** Dealing flop ** [ 5s, 9d, 9c ]
+thegrind14 checks
+ASTIdd bets [$0.02]
+thegrind14 raises [$0.04]
+ASTIdd calls [$0.02]
+** Dealing turn ** [ 4d ]
+thegrind14 checks
+ASTIdd checks
+** Dealing river ** [ 8h ]
+thegrind14 bets [$0.04]
+ASTIdd calls [$0.04]
+** Summary **
+thegrind14 shows [ 9s, Jd ]
+ASTIdd mucks [ 6d, 5h ]
+thegrind14 collected [ $0.19 ]
+
+
+#Game No : 933308490
+***** 888poker Hand History for Game 933308490 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 22:28:10
+Table Kosice 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: thegrind14 ( $1.93 )
+Seat 6: ASTIdd ( $0.08 )
+Seat 9: Dragiza ( $0.74 )
+ASTIdd posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+ASTIdd raises [$0.03]
+Dragiza calls [$0.02]
+** Dealing flop ** [ 2c, 5s, 7c ]
+ASTIdd bets [$0.02]
+Dragiza raises [$0.04]
+ASTIdd calls [$0.02]
+** Dealing turn ** [ 9d ]
+** Dealing river ** [ 8c ]
+** Summary **
+ASTIdd shows [ 3h, Kc ]
+Dragiza shows [ 7h, 6h ]
+Dragiza collected [ $0.16 ]
+
+
+#Game No : 933342551
+***** 888poker Hand History for Game 933342551 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:09:33
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.20 )
+Seat 4: pokermon9 ( $0.22 )
+Seat 6: Dragiza ( $0.57 )
+thegrind14 posts small blind [$0.01]
+pokermon9 posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 raises [$0.03]
+pokermon9 calls [$0.02]
+** Dealing flop ** [ 5h, 6d, Jd ]
+thegrind14 bets [$0.02]
+pokermon9 calls [$0.02]
+** Dealing turn ** [ Qs ]
+thegrind14 checks
+pokermon9 checks
+** Dealing river ** [ 7d ]
+thegrind14 checks
+pokermon9 bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+pokermon9 shows [ 4h, 3h ]
+thegrind14 mucks [ 5s, Ah ]
+pokermon9 collected [ $0.19 ]
+
+
+#Game No : 933342693
+***** 888poker Hand History for Game 933342693 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:10:00
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.10 )
+Seat 4: pokermon9 ( $0.31 )
+Seat 6: Dragiza ( $0.57 )
+pokermon9 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+pokermon9 calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ 4s, 9d, 7c ]
+pokermon9 bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 4h ]
+pokermon9 bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ Qs ]
+** Summary **
+thegrind14 shows [ As, Jd ]
+pokermon9 shows [ 7h, Kc ]
+pokermon9 collected [ $0.21 ]
+
+
+#Game No : 933342833
+***** 888poker Hand History for Game 933342833 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:10:30
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.20 )
+Seat 4: pokermon9 ( $0.42 )
+Seat 6: Dragiza ( $0.55 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+pokermon9 calls [$0.02]
+Dragiza folds
+thegrind14 checks
+** Dealing flop ** [ 8c, 2d, 6d ]
+thegrind14 checks
+pokermon9 checks
+** Dealing turn ** [ 4h ]
+thegrind14 bets [$0.04]
+pokermon9 raises [$0.08]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 7c ]
+thegrind14 checks
+pokermon9 bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+pokermon9 shows [ 9s, 4s ]
+thegrind14 shows [ 7d, Td ]
+thegrind14 collected [ $0.28 ]
+
+
+#Game No : 933343064
+***** 888poker Hand History for Game 933343064 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:11:17
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.34 )
+Seat 4: pokermon9 ( $0.28 )
+Seat 6: Dragiza ( $0.54 )
+thegrind14 posts small blind [$0.01]
+pokermon9 posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+pokermon9 checks
+** Dealing flop ** [ 2c, Ah, 7h ]
+thegrind14 bets [$0.02]
+pokermon9 calls [$0.02]
+** Dealing turn ** [ 8s ]
+thegrind14 checks
+pokermon9 checks
+** Dealing river ** [ Qs ]
+thegrind14 checks
+pokermon9 bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+pokermon9 shows [ 2s, 3c ]
+thegrind14 shows [ Qc, 5h ]
+thegrind14 collected [ $0.16 ]
+
+
+#Game No : 933343183
+***** 888poker Hand History for Game 933343183 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:11:42
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.42 )
+Seat 4: pokermon9 ( $0.20 )
+Seat 6: Dragiza ( $0.54 )
+pokermon9 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+pokermon9 raises [$0.05]
+Dragiza raises [$0.06]
+thegrind14 calls [$0.04]
+pokermon9 calls [$0.02]
+** Dealing flop ** [ Jc, 4d, 3h ]
+pokermon9 bets [$0.02]
+Dragiza raises [$0.04]
+thegrind14 folds
+pokermon9 raises [$0.04]
+Dragiza raises [$0.04]
+pokermon9 calls [$0.02]
+** Dealing turn ** [ 6h ]
+pokermon9 bets [$0.04]
+Dragiza calls [$0.04]
+** Dealing river ** [ Ad ]
+** Summary **
+pokermon9 shows [ Jh, Qh ]
+Dragiza shows [ Kc, Kd ]
+Dragiza collected [ $0.46 ]
+
+
+#Game No : 933343565
+***** 888poker Hand History for Game 933343565 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:13:00
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.34 )
+Seat 4: piskajulik ( $0.80 )
+Seat 6: Dragiza ( $0.80 )
+thegrind14 posts small blind [$0.01]
+piskajulik posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+thegrind14 calls [$0.01]
+piskajulik checks
+** Dealing flop ** [ Ts, 3d, Kh ]
+thegrind14 bets [$0.02]
+piskajulik folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.04 ]
+
+
+#Game No : 933343668
+***** 888poker Hand History for Game 933343668 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:13:22
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.36 )
+Seat 4: piskajulik ( $0.78 )
+Seat 6: Dragiza ( $0.80 )
+piskajulik posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+piskajulik calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ 2s, 5d, 2c ]
+piskajulik checks
+thegrind14 checks
+** Dealing turn ** [ Jc ]
+piskajulik checks
+thegrind14 checks
+** Dealing river ** [ Th ]
+piskajulik checks
+thegrind14 bets [$0.04]
+piskajulik folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.10 ]
+
+
+#Game No : 933343843
+***** 888poker Hand History for Game 933343843 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:14:02
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.42 )
+Seat 4: piskajulik ( $0.74 )
+Seat 6: Dragiza ( $0.78 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+piskajulik folds
+Dragiza calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ Td, 4c, Ts ]
+Dragiza checks
+thegrind14 checks
+** Dealing turn ** [ Ah ]
+Dragiza checks
+thegrind14 checks
+** Dealing river ** [ 5h ]
+Dragiza checks
+thegrind14 checks
+** Summary **
+Dragiza shows [ Kh, 2s ]
+thegrind14 shows [ 8h, Kd ]
+thegrind14 collected [ $0.04 ]
+
+
+#Game No : 933344009
+***** 888poker Hand History for Game 933344009 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:14:37
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.44 )
+Seat 4: piskajulik ( $0.74 )
+Seat 6: Dragiza ( $0.76 )
+thegrind14 posts small blind [$0.01]
+piskajulik posts big blind [$0.02]
+** Dealing down cards **
+Dragiza calls [$0.02]
+thegrind14 folds
+piskajulik checks
+** Dealing flop ** [ Kh, Kc, 7h ]
+piskajulik checks
+Dragiza checks
+** Dealing turn ** [ 3d ]
+piskajulik bets [$0.04]
+Dragiza folds
+** Summary **
+piskajulik did not show his hand
+piskajulik collected [ $0.05 ]
+
+
+#Game No : 933344102
+***** 888poker Hand History for Game 933344102 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:15:00
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.43 )
+Seat 4: piskajulik ( $0.77 )
+Seat 6: Dragiza ( $0.74 )
+piskajulik posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+piskajulik calls [$0.03]
+Dragiza folds
+** Dealing flop ** [ 9h, Jh, Jd ]
+piskajulik checks
+thegrind14 bets [$0.02]
+piskajulik folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.10 ]
+
+
+#Game No : 933344242
+***** 888poker Hand History for Game 933344242 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:15:30
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.49 )
+Seat 4: piskajulik ( $0.73 )
+Seat 6: Dragiza ( $0.72 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+piskajulik calls [$0.02]
+Dragiza calls [$0.01]
+thegrind14 raises [$0.02]
+piskajulik calls [$0.02]
+Dragiza folds
+** Dealing flop ** [ 6s, 7d, Qc ]
+thegrind14 checks
+piskajulik checks
+** Dealing turn ** [ 2d ]
+thegrind14 checks
+piskajulik checks
+** Dealing river ** [ 7c ]
+thegrind14 checks
+piskajulik checks
+** Summary **
+thegrind14 shows [ Ah, Kh ]
+piskajulik mucks [ Jh, 9s ]
+thegrind14 collected [ $0.10 ]
+
+
+#Game No : 933344462
+***** 888poker Hand History for Game 933344462 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:16:16
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.55 )
+Seat 4: piskajulik ( $0.69 )
+Seat 6: Dragiza ( $0.70 )
+thegrind14 posts small blind [$0.01]
+piskajulik posts big blind [$0.02]
+** Dealing down cards **
+Dragiza raises [$0.04]
+thegrind14 folds
+piskajulik calls [$0.02]
+** Dealing flop ** [ 9h, 7c, 8h ]
+piskajulik checks
+Dragiza checks
+** Dealing turn ** [ Kh ]
+piskajulik checks
+Dragiza checks
+** Dealing river ** [ Jh ]
+piskajulik checks
+Dragiza checks
+** Summary **
+piskajulik shows [ 3s, 3c ]
+Dragiza shows [ Js, Ac ]
+Dragiza collected [ $0.09 ]
+
+
+#Game No : 933344635
+***** 888poker Hand History for Game 933344635 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:16:53
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.54 )
+Seat 4: piskajulik ( $0.65 )
+Seat 6: Dragiza ( $0.75 )
+piskajulik posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+piskajulik folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.03 ]
+
+
+#Game No : 933344675
+***** 888poker Hand History for Game 933344675 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:17:02
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.54 )
+Seat 4: piskajulik ( $0.64 )
+Seat 6: Dragiza ( $0.76 )
+Dragiza posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+piskajulik calls [$0.02]
+Dragiza calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ Jh, 7c, Qd ]
+Dragiza checks
+thegrind14 checks
+piskajulik bets [$0.02]
+Dragiza folds
+thegrind14 folds
+** Summary **
+piskajulik did not show his hand
+piskajulik collected [ $0.06 ]
+
+
+#Game No : 933344788
+***** 888poker Hand History for Game 933344788 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:17:24
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.52 )
+Seat 4: piskajulik ( $0.68 )
+Seat 6: Dragiza ( $0.74 )
+thegrind14 posts small blind [$0.01]
+piskajulik posts big blind [$0.02]
+** Dealing down cards **
+Dragiza calls [$0.02]
+thegrind14 calls [$0.01]
+piskajulik checks
+** Dealing flop ** [ 3c, 2c, 2d ]
+thegrind14 checks
+piskajulik checks
+Dragiza bets [$0.02]
+thegrind14 calls [$0.02]
+piskajulik folds
+** Dealing turn ** [ 7s ]
+thegrind14 checks
+Dragiza bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 5c ]
+thegrind14 checks
+Dragiza bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+Dragiza shows [ 2h, Ac ]
+thegrind14 mucks [ Ah, 5h ]
+Dragiza collected [ $0.25 ]
+
+
+#Game No : 933345010
+***** 888poker Hand History for Game 933345010 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:18:11
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.40 )
+Seat 4: piskajulik ( $0.66 )
+Seat 6: Dragiza ( $0.87 )
+piskajulik posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+piskajulik calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ Js, 9c, Kc ]
+piskajulik checks
+Dragiza bets [$0.02]
+piskajulik calls [$0.02]
+** Dealing turn ** [ Qd ]
+piskajulik bets [$0.04]
+Dragiza folds
+** Summary **
+piskajulik did not show his hand
+piskajulik collected [ $0.08 ]
+
+
+#Game No : 933345513
+***** 888poker Hand History for Game 933345513 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:19:51
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.35 )
+Seat 4: piskajulik ( $0.75 )
+Seat 6: lelik3333 ( $0.40 )
+piskajulik posts small blind [$0.01]
+lelik3333 posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+piskajulik raises [$0.03]
+lelik3333 calls [$0.02]
+** Dealing flop ** [ Qs, 2s, 5h ]
+piskajulik checks
+lelik3333 checks
+** Dealing turn ** [ 6c ]
+piskajulik checks
+lelik3333 checks
+** Dealing river ** [ 7h ]
+piskajulik checks
+lelik3333 checks
+** Summary **
+piskajulik shows [ Ah, 4c ]
+lelik3333 mucks [ Td, 3d ]
+piskajulik collected [ $0.08 ]
+
+
+#Game No : 933345647
+***** 888poker Hand History for Game 933345647 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:20:18
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.35 )
+Seat 4: piskajulik ( $0.79 )
+Seat 6: lelik3333 ( $0.36 )
+lelik3333 posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+piskajulik raises [$0.04]
+lelik3333 calls [$0.03]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ Kh, 4c, Qh ]
+lelik3333 bets [$0.02]
+thegrind14 calls [$0.02]
+piskajulik folds
+** Dealing turn ** [ 5c ]
+lelik3333 bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ Js ]
+lelik3333 bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+lelik3333 shows [ Tc, Kc ]
+thegrind14 shows [ Jd, Kd ]
+thegrind14 collected [ $0.31 ]
+
+
+#Game No : 933345794
+***** 888poker Hand History for Game 933345794 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:20:51
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.52 )
+Seat 4: piskajulik ( $0.75 )
+Seat 6: lelik3333 ( $0.22 )
+thegrind14 posts small blind [$0.01]
+piskajulik posts big blind [$0.02]
+** Dealing down cards **
+lelik3333 raises [$0.04]
+thegrind14 calls [$0.03]
+piskajulik folds
+** Dealing flop ** [ 8c, Th, 2h ]
+thegrind14 checks
+lelik3333 checks
+** Dealing turn ** [ 7d ]
+thegrind14 checks
+lelik3333 checks
+** Dealing river ** [ 4h ]
+thegrind14 checks
+lelik3333 bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+lelik3333 shows [ 4c, Jh ]
+thegrind14 mucks [ 5c, Kc ]
+lelik3333 collected [ $0.18 ]
+
+
+#Game No : 933345949
+***** 888poker Hand History for Game 933345949 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:21:24
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.44 )
+Seat 4: piskajulik ( $0.73 )
+Seat 6: lelik3333 ( $0.32 )
+piskajulik posts small blind [$0.01]
+lelik3333 posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+piskajulik folds
+lelik3333 calls [$0.02]
+** Dealing flop ** [ 6h, Qc, Jd ]
+lelik3333 checks
+thegrind14 checks
+** Dealing turn ** [ 8s ]
+lelik3333 bets [$0.04]
+thegrind14 folds
+** Summary **
+lelik3333 did not show his hand
+lelik3333 collected [ $0.09 ]
+
+
+#Game No : 933346193
+***** 888poker Hand History for Game 933346193 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:22:15
+Table Kosice 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.40 )
+Seat 4: piskajulik ( $0.72 )
+Seat 6: lelik3333 ( $0.37 )
+lelik3333 posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+piskajulik folds
+lelik3333 calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ Ac, Qs, 2d ]
+lelik3333 checks
+thegrind14 bets [$0.02]
+lelik3333 calls [$0.02]
+** Dealing turn ** [ Jd ]
+lelik3333 checks
+thegrind14 checks
+** Dealing river ** [ Th ]
+lelik3333 bets [$0.04]
+thegrind14 raises [$0.08]
+lelik3333 calls [$0.04]
+** Summary **
+thegrind14 shows [ Ks, 6c ]
+lelik3333 shows [ Kh, 8h ]
+thegrind14 collected [ $0.11 ]
+lelik3333 collected [ $0.12 ]
+
+
+#Game No : 933346342
+***** 888poker Hand History for Game 933346342 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:22:43
+Table Kosice 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.39 )
+Seat 4: piskajulik ( $0.72 )
+Seat 6: lelik3333 ( $0.37 )
+thegrind14 posts small blind [$0.01]
+piskajulik posts big blind [$0.02]
+** Dealing down cards **
+lelik3333 raises [$0.04]
+thegrind14 folds
+piskajulik folds
+** Summary **
+lelik3333 did not show his hand
+lelik3333 collected [ $0.05 ]
+
+
+#Game No : 933346399
+***** 888poker Hand History for Game 933346399 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:22:53
+Table Kosice 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.38 )
+Seat 4: piskajulik ( $0.70 )
+Seat 6: lelik3333 ( $0.40 )
+piskajulik posts small blind [$0.01]
+lelik3333 posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+piskajulik calls [$0.01]
+lelik3333 checks
+** Dealing flop ** [ 4d, Js, 5s ]
+piskajulik bets [$0.02]
+lelik3333 raises [$0.04]
+piskajulik folds
+** Summary **
+lelik3333 did not show his hand
+lelik3333 collected [ $0.08 ]
+
+

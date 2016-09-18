@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6156870830">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>Rio "Jackpot Sit N Go", 815775353</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:12</duration>  
+	          <gamecount>39</gamecount>  
+	          <startdate>2013-11-30 21:08:57</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>AlphaOmaha</nickname>  
+	          <bets>15,002</bets>  
+	          <wins>14,242</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>542.50</ipoints>
+        		<statuspoints>87.50</statuspoints>
+			  		<awardpoints>542.50</awardpoints>
+	          <tournamentname>Rio "Jackpot Sit N Go"</tournamentname><place>3</place><buyin>$20.00+$3.50</buyin> <totalbuyin>$23.50</totalbuyin> <ipoints>542.50</ipoints> <win>$24.00</win> <statuspoints>87.50</statuspoints> <awardpoints>542.50</awardpoints>  
+	    </general>  
+	    <game gamecode="5291890561">
+		 <general>
+		  <startdate>2013-11-30 21:08:57</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,902" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="ebonypearl" chips="1,288" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="30" cards="[cards]"/><action no="2" player="ebonypearl" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291890631">
+		 <general>
+		  <startdate>2013-11-30 21:09:06</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,902" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="ebonypearl" chips="1,378" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="960" dealer="0" win="480" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ebonypearl" type="1" sum="30" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="ebonypearl">C8 D7</cards><action no="5" player="ebonypearl" type="3" sum="30" cards=""/><cards type="Pocket" player="Str8forVictory">H8 CQ</cards><action no="6" player="Str8forVictory" type="4" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C5 H3</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 DJ D8</cards><action no="7" player="ebonypearl" type="5" sum="60" cards=""/><action no="8" player="Str8forVictory" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="9" player="ebonypearl" type="4" sum="0" cards=""/><action no="11" player="ebonypearl" type="3" sum="120" cards=""/><action no="10" player="Str8forVictory" type="5" sum="120" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards><action no="12" player="ebonypearl" type="4" sum="0" cards=""/><action no="13" player="Str8forVictory" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904012">
+		 <general>
+		  <startdate>2013-11-30 21:09:57</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,902" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="ebonypearl" chips="1,138" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,200" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="760" dealer="0" win="850" bet="760" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="3" sum="60" cards=""/><action no="7" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="ebonypearl">X X</cards><action no="4" player="ebonypearl" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SA CK</cards><action no="6" player="AlphaOmaha" type="23" sum="760" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904102">
+		 <general>
+		  <startdate>2013-11-30 21:10:42</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,842" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="ebonypearl" chips="1,138" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,170" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="850" dealer="0" win="910" bet="850" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="60" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="6" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="ebonypearl">X X</cards><action no="3" player="ebonypearl" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SJ SA</cards><action no="5" player="AlphaOmaha" type="23" sum="850" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904179">
+		 <general>
+		  <startdate>2013-11-30 21:11:16</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,782" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="ebonypearl" chips="1,138" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="910" dealer="1" win="270" bet="180" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="30" cards="[cards]"/><action no="2" player="ebonypearl" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="ebonypearl">X X</cards><action no="6" player="ebonypearl" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C9 CQ</cards><action no="4" player="AlphaOmaha" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904245">
+		 <general>
+		  <startdate>2013-11-30 21:11:45</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,752" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="ebonypearl" chips="1,078" dealer="0" win="0" bet="1,000" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,170" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,000" dealer="0" win="2,100" bet="1,000" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ebonypearl" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="ebonypearl">DK HA</cards><action no="5" player="ebonypearl" type="3" sum="950" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SK S8</cards><action no="3" player="AlphaOmaha" type="23" sum="1,000" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 SQ SJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards>
+	</round>
+	
+		</game><game gamecode="5291904288">
+		 <general>
+		  <startdate>2013-11-30 21:12:07</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,752" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="ebonypearl" chips="78" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,070" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,100" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="ebonypearl">X X</cards><action no="4" player="ebonypearl" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C7 HA</cards>
+	</round>
+	
+		</game><game gamecode="5291904317">
+		 <general>
+		  <startdate>2013-11-30 21:12:20</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,752" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="ebonypearl" chips="78" dealer="0" win="0" bet="78" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,020" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,150" dealer="0" win="378" bet="200" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="100" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="6" player="RaunchySteakPie" type="4" sum="0" cards=""/><cards type="Pocket" player="ebonypearl">S7 D8</cards><action no="3" player="ebonypearl" type="7" sum="78" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D5 S3</cards><action no="5" player="AlphaOmaha" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 DQ S5</cards><action no="8" player="RaunchySteakPie" type="0" sum="0" cards=""/><action no="7" player="AlphaOmaha" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game><game gamecode="5291904388">
+		 <general>
+		  <startdate>2013-11-30 21:12:51</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,652" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,020" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,328" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">S7 D9</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904413">
+		 <general>
+		  <startdate>2013-11-30 21:13:02</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,602" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,070" dealer="0" win="1,170" bet="1,070" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,328" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="1,070" cards=""/><cards type="Pocket" player="AlphaOmaha">D10 S8</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904442">
+		 <general>
+		  <startdate>2013-11-30 21:13:16</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,602" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,170" dealer="1" win="1,320" bet="1,170" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,228" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="100" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="23" sum="1,170" cards=""/><cards type="Pocket" player="AlphaOmaha">H3 H8</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904463">
+		 <general>
+		  <startdate>2013-11-30 21:13:28</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,502" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,320" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,178" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">D7 DJ</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904493">
+		 <general>
+		  <startdate>2013-11-30 21:13:40</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,452" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,370" dealer="0" win="1,470" bet="1,370" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,178" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="1,370" cards=""/><cards type="Pocket" player="AlphaOmaha">D9 SK</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904528">
+		 <general>
+		  <startdate>2013-11-30 21:13:53</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,452" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,078" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="100" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H2 C2</cards><action no="4" player="AlphaOmaha" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904557">
+		 <general>
+		  <startdate>2013-11-30 21:14:04</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,352" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,470" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,178" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">DJ H4</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904575">
+		 <general>
+		  <startdate>2013-11-30 21:14:12</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,302" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,520" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,178" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HK S2</cards>
+	</round>
+	
+		</game><game gamecode="5291904602">
+		 <general>
+		  <startdate>2013-11-30 21:14:21</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,302" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,228" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="100" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H5 S3</cards><action no="4" player="AlphaOmaha" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904632">
+		 <general>
+		  <startdate>2013-11-30 21:14:32</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,202" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,470" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,328" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">H5 D3</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904644">
+		 <general>
+		  <startdate>2013-11-30 21:14:40</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,152" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,520" dealer="0" win="600" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,328" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="200" cards=""/><cards type="Pocket" player="AlphaOmaha">C6 HA</cards><action no="5" player="AlphaOmaha" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 S3 C5</cards><action no="6" player="Str8forVictory" type="4" sum="0" cards=""/><action no="7" player="AlphaOmaha" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="8" player="Str8forVictory" type="5" sum="200" cards=""/><action no="9" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904700">
+		 <general>
+		  <startdate>2013-11-30 21:15:03</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,152" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,720" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,128" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="100" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SQ H6</cards><action no="4" player="AlphaOmaha" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904727">
+		 <general>
+		  <startdate>2013-11-30 21:15:15</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,052" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,720" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,228" dealer="1" win="765" bet="515" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="3" sum="100" cards=""/><cards type="Pocket" player="AlphaOmaha">CA C6</cards><action no="3" player="AlphaOmaha" type="23" sum="200" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 C3 HQ</cards><action no="6" player="Str8forVictory" type="4" sum="0" cards=""/><action no="8" player="Str8forVictory" type="0" sum="0" cards=""/><action no="7" player="AlphaOmaha" type="5" sum="315" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904785">
+		 <general>
+		  <startdate>2013-11-30 21:15:37</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,002" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,520" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,478" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="200" cards=""/><cards type="Pocket" player="AlphaOmaha">HQ S7</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291904811">
+		 <general>
+		  <startdate>2013-11-30 21:15:47</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="2,002" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,620" dealer="1" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,378" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="100" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="23" sum="200" cards=""/><cards type="Pocket" player="AlphaOmaha">HK S6</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291922814">
+		 <general>
+		  <startdate>2013-11-30 21:16:00</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,902" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,770" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,328" dealer="1" win="675" bet="425" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="3" sum="100" cards=""/><cards type="Pocket" player="AlphaOmaha">SQ S10</cards><action no="3" player="AlphaOmaha" type="23" sum="200" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK S6 CK</cards><action no="6" player="Str8forVictory" type="4" sum="0" cards=""/><action no="8" player="Str8forVictory" type="0" sum="0" cards=""/><action no="7" player="AlphaOmaha" type="5" sum="225" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291922878">
+		 <general>
+		  <startdate>2013-11-30 21:16:25</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,852" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,570" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,578" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C6 S6</cards>
+	</round>
+	
+		</game><game gamecode="5291922954">
+		 <general>
+		  <startdate>2013-11-30 21:16:54</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,852" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,628" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="100" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DJ DQ</cards><action no="4" player="AlphaOmaha" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923008">
+		 <general>
+		  <startdate>2013-11-30 21:17:18</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,752" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,520" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,728" dealer="1" win="2,878" bet="2,728" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D9 CA</cards><action no="3" player="AlphaOmaha" type="23" sum="2,728" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923057">
+		 <general>
+		  <startdate>2013-11-30 21:17:38</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,702" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,420" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,878" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HQ H5</cards>
+	</round>
+	
+		</game><game gamecode="5291923103">
+		 <general>
+		  <startdate>2013-11-30 21:17:58</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,702" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,370" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,928" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="100" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D5 D8</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923136">
+		 <general>
+		  <startdate>2013-11-30 21:18:10</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,752" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,370" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,878" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">S2 C2</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923213">
+		 <general>
+		  <startdate>2013-11-30 21:18:43</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,702" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="1,420" dealer="0" win="2,840" bet="1,420" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="2,878" dealer="0" win="0" bet="1,420" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">H7 CQ</cards><action no="4" player="Str8forVictory" type="23" sum="1,420" cards=""/><cards type="Pocket" player="AlphaOmaha">CK SQ</cards><action no="5" player="AlphaOmaha" type="3" sum="1,220" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 S3 D5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5291923249">
+		 <general>
+		  <startdate>2013-11-30 21:19:01</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,702" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,458" dealer="0" win="1,658" bet="1,458" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="200" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="5" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HK SA</cards><action no="4" player="AlphaOmaha" type="23" sum="1,458" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923314">
+		 <general>
+		  <startdate>2013-11-30 21:19:25</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,502" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,840" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,658" dealer="1" win="1,958" bet="1,658" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="100" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SK D8</cards><action no="3" player="AlphaOmaha" type="23" sum="1,658" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923384">
+		 <general>
+		  <startdate>2013-11-30 21:19:56</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,402" dealer="1" win="700" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,640" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,958" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="23" sum="400" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HA D3</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923449">
+		 <general>
+		  <startdate>2013-11-30 21:20:21</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,702" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,540" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,758" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="200" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H3 CQ</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923482">
+		 <general>
+		  <startdate>2013-11-30 21:20:35</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,802" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,540" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,658" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="100" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="4" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="AlphaOmaha">D6 H10</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923525">
+		 <general>
+		  <startdate>2013-11-30 21:20:54</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,702" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,640" dealer="0" win="2,840" bet="2,640" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,658" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="100" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><action no="3" player="RaunchySteakPie" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="2,640" cards=""/><cards type="Pocket" player="AlphaOmaha">D10 S3</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923561">
+		 <general>
+		  <startdate>2013-11-30 21:21:08</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,702" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,458" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="RaunchySteakPie" type="2" sum="200" cards="[cards]"/><action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">X X</cards><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H8 C4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291923600">
+		 <general>
+		  <startdate>2013-11-30 21:21:24</startdate>		  
+		  <players>
+		   <player seat="1" name="RaunchySteakPie" chips="1,802" dealer="0" win="3,360" bet="1,802" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Str8forVictory" chips="2,840" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="1,358" dealer="1" win="0" bet="1,358" rebuy="0" addon="0" reg_code="6156870830"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="RaunchySteakPie" type="1" sum="100" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="RaunchySteakPie">HQ H10</cards><action no="4" player="RaunchySteakPie" type="7" sum="1,702" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S3 SQ</cards><action no="3" player="AlphaOmaha" type="23" sum="1,358" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ SK D6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards>
+	</round>
+	
+		</game>  
+	</session>

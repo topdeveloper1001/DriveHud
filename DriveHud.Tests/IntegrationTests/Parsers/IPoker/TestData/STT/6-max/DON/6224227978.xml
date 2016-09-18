@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224227978">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824221129</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:28</duration>  
+	          <gamecount>53</gamecount>  
+	          <startdate>2014-03-25 17:30:21</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>13,375</bets>  
+	          <wins>15,695</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>3,820</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601236087">
+		 <general>
+		  <startdate>2014-03-25 17:30:21</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/><action no="2" player="westham9999" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="6" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><cards type="Pocket" player="moonbaseone">C9 D3</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236247">
+		 <general>
+		  <startdate>2014-03-25 17:30:57</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,490" dealer="1" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="westham9999" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="5" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="40" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA C4</cards><action no="8" player="moonbaseone" type="3" sum="20" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 HQ S9</cards><action no="10" player="Strik3rPo4ition" type="5" sum="60" cards=""/><action no="9" player="moonbaseone" type="4" sum="0" cards=""/><action no="11" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236439">
+		 <general>
+		  <startdate>2014-03-25 17:31:37</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,500" dealer="1" win="90" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,460" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="4" player="YorbloKe" type="3" sum="20" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="6" player="westham9999" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">C7 S4</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 D5 S10</cards><action no="10" player="YorbloKe" type="4" sum="0" cards=""/><action no="13" player="YorbloKe" type="0" sum="0" cards=""/><action no="11" player="westham9999" type="5" sum="20" cards=""/><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236733">
+		 <general>
+		  <startdate>2014-03-25 17:32:34</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,480" dealer="0" win="130" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,550" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="theDL" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="3" player="YorbloKe" type="3" sum="20" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="5" player="westham9999" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">DK D7</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 CK SJ</cards><action no="10" player="YorbloKe" type="5" sum="20" cards=""/><action no="11" player="westham9999" type="3" sum="20" cards=""/><action no="9" player="theDL" type="4" sum="0" cards=""/><action no="12" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="13" player="YorbloKe" type="5" sum="20" cards=""/><action no="14" player="westham9999" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248093">
+		 <general>
+		  <startdate>2014-03-25 17:33:29</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,550" dealer="0" win="220" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,470" dealer="1" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="YorbloKe" type="2" sum="20" cards="[cards]"/><action no="1" player="theDL" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">S9 S3</cards><action no="8" player="YorbloKe" type="3" sum="20" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="4" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 DQ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">H4 S4</cards><action no="6" player="DONCorleoneXX" type="23" sum="40" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 SA D9</cards><action no="9" player="YorbloKe" type="4" sum="0" cards=""/><action no="11" player="YorbloKe" type="3" sum="45" cards=""/><action no="10" player="DONCorleoneXX" type="5" sum="45" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CJ</cards><action no="12" player="YorbloKe" type="4" sum="0" cards=""/><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards><action no="14" player="YorbloKe" type="5" sum="20" cards=""/><action no="15" player="DONCorleoneXX" type="3" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248746">
+		 <general>
+		  <startdate>2014-03-25 17:34:38</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,665" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,540" dealer="0" win="200" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="YorbloKe" type="1" sum="20" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="7" player="YorbloKe" type="3" sum="20" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="4" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="3" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ H8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 H9 D8</cards><action no="9" player="YorbloKe" type="5" sum="40" cards=""/><action no="10" player="Strik3rPo4ition" type="3" sum="40" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards><action no="11" player="YorbloKe" type="4" sum="0" cards=""/><action no="13" player="YorbloKe" type="0" sum="0" cards=""/><action no="12" player="Strik3rPo4ition" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249183">
+		 <general>
+		  <startdate>2014-03-25 17:35:25</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,585" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,620" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,510" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="20" cards="[cards]"/><action no="2" player="westham9999" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="6" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><cards type="Pocket" player="moonbaseone">D7 SJ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249473">
+		 <general>
+		  <startdate>2014-03-25 17:35:53</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,585" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,600" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,530" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="westham9999" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="5" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ D7</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249764">
+		 <general>
+		  <startdate>2014-03-25 17:36:21</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,585" dealer="0" win="225" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,510" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="4" player="YorbloKe" type="23" sum="80" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="6" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S9 C3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="3" sum="40" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ CJ S8</cards><action no="10" player="YorbloKe" type="5" sum="45" cards=""/><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250201">
+		 <general>
+		  <startdate>2014-03-25 17:37:07</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,685" dealer="0" win="0" bet="360" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,510" dealer="0" win="1,560" bet="1,140" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,285" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,470" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="theDL" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="3" player="YorbloKe" type="3" sum="40" cards=""/><action no="9" player="YorbloKe" type="3" sum="80" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="5" player="westham9999" type="23" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">HK D4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 D8 C3</cards><action no="10" player="YorbloKe" type="4" sum="0" cards=""/><action no="12" player="YorbloKe" type="23" sum="240" cards=""/><action no="14" player="YorbloKe" type="0" sum="0" cards=""/><action no="11" player="westham9999" type="5" sum="120" cards=""/><action no="13" player="westham9999" type="23" sum="1,020" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250789">
+		 <general>
+		  <startdate>2014-03-25 17:38:12</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,325" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,930" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,265" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,430" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="YorbloKe" type="2" sum="40" cards="[cards]"/><action no="1" player="theDL" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="8" player="YorbloKe" type="4" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="4" player="westham9999" type="3" sum="40" cards=""/><cards type="Pocket" player="moonbaseone">H3 S10</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 D2 C6</cards><action no="9" player="YorbloKe" type="4" sum="0" cards=""/><action no="10" player="westham9999" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards><action no="11" player="YorbloKe" type="4" sum="0" cards=""/><action no="13" player="YorbloKe" type="0" sum="0" cards=""/><action no="12" player="westham9999" type="5" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264293">
+		 <general>
+		  <startdate>2014-03-25 17:38:55</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,285" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,600" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,265" dealer="0" win="450" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="YorbloKe" type="1" sum="30" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="7" player="YorbloKe" type="3" sum="90" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="3" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D5 DK</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 DQ SA</cards><action no="9" player="YorbloKe" type="4" sum="0" cards=""/><action no="11" player="YorbloKe" type="0" sum="0" cards=""/><action no="10" player="DONCorleoneXX" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264553">
+		 <general>
+		  <startdate>2014-03-25 17:39:47</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="1,165" dealer="1" win="0" bet="480" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="1,540" dealer="0" win="1,734" bet="1,194" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,990" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,445" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/><action no="2" player="westham9999" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="6" player="YorbloKe" type="23" sum="120" cards=""/><action no="9" player="YorbloKe" type="3" sum="120" cards=""/><cards type="Pocket" player="Strik3rPo4ition">DA DK</cards><action no="7" player="Strik3rPo4ition" type="23" sum="240" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="8" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 S10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK H4 D7</cards><action no="11" player="YorbloKe" type="3" sum="240" cards=""/><action no="10" player="Strik3rPo4ition" type="5" sum="240" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards><action no="13" player="YorbloKe" type="0" sum="0" cards=""/><action no="12" player="Strik3rPo4ition" type="5" sum="714" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264782">
+		 <general>
+		  <startdate>2014-03-25 17:40:34</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="685" dealer="0" win="775" bet="685" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,930" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,445" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="westham9999" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="5" player="YorbloKe" type="23" sum="685" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 D3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264942">
+		 <general>
+		  <startdate>2014-03-25 17:41:03</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="775" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,900" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,445" dealer="0" win="180" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">DJ D6</cards><action no="4" player="YorbloKe" type="3" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="6" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 DQ</cards><action no="7" player="moonbaseone" type="3" sum="30" cards=""/><cards type="Pocket" player="DONCorleoneXX">SJ CQ</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H8 S7</cards><action no="11" player="YorbloKe" type="4" sum="0" cards=""/><action no="9" player="moonbaseone" type="4" sum="0" cards=""/><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards><action no="14" player="YorbloKe" type="4" sum="0" cards=""/><action no="12" player="moonbaseone" type="4" sum="0" cards=""/><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards><action no="17" player="YorbloKe" type="4" sum="0" cards=""/><action no="15" player="moonbaseone" type="4" sum="0" cards=""/><action no="16" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265453">
+		 <general>
+		  <startdate>2014-03-25 17:42:27</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="715" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,900" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,565" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,410" dealer="0" win="1,660" bet="1,410" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="theDL" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="3" player="YorbloKe" type="23" sum="200" cards=""/><action no="9" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="5" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 D3</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="23" sum="1,410" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265717">
+		 <general>
+		  <startdate>2014-03-25 17:43:15</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="515" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,900" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,515" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,660" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="YorbloKe" type="2" sum="100" cards="[cards]"/><action no="1" player="theDL" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="4" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 H3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265891">
+		 <general>
+		  <startdate>2014-03-25 17:43:48</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="565" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,080" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,900" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,515" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,610" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="YorbloKe" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="7" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="westham9999">X X</cards><action no="3" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 S6</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277631">
+		 <general>
+		  <startdate>2014-03-25 17:44:11</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="515" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,130" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,900" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,515" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/><action no="2" player="westham9999" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="6" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><cards type="Pocket" player="moonbaseone">C10 CK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277781">
+		 <general>
+		  <startdate>2014-03-25 17:44:41</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="515" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,080" dealer="1" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,950" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,515" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="westham9999" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="5" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="200" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 SK</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278022">
+		 <general>
+		  <startdate>2014-03-25 17:45:31</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="515" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,900" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,230" dealer="0" win="1,330" bet="1,230" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,515" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">X X</cards><action no="4" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="6" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 DA</cards><action no="7" player="moonbaseone" type="23" sum="1,230" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278227">
+		 <general>
+		  <startdate>2014-03-25 17:46:10</startdate>		  
+		  <players>
+		   <player seat="1" name="YorbloKe" chips="515" dealer="0" win="0" bet="515" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Strik3rPo4ition" chips="2,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,900" dealer="0" win="1,180" bet="515" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,415" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,610" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="theDL" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="YorbloKe">D8 D7</cards><action no="3" player="YorbloKe" type="23" sum="515" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">CA SA</cards><action no="5" player="westham9999" type="3" sum="515" cards=""/><cards type="Pocket" player="moonbaseone">H2 C9</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 DA HA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards>
+	</round>
+	
+		</game><game gamecode="5601278359">
+		 <general>
+		  <startdate>2014-03-25 17:46:38</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,230" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,565" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="1,555" bet="1,330" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,510" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/><action no="1" player="theDL" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="3" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK SA</cards><action no="4" player="moonbaseone" type="23" sum="1,330" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278532">
+		 <general>
+		  <startdate>2014-03-25 17:47:08</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,080" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,565" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,555" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,435" dealer="1" win="1,660" bet="1,435" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/><action no="2" player="westham9999" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 S2</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="23" sum="1,435" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278646">
+		 <general>
+		  <startdate>2014-03-25 17:47:27</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,005" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,415" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,555" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="westham9999" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="6" player="westham9999" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">HA C6</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278762">
+		 <general>
+		  <startdate>2014-03-25 17:47:48</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,005" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,565" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,405" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,660" dealer="0" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="5" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ C4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278887">
+		 <general>
+		  <startdate>2014-03-25 17:48:12</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,005" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,565" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,215" dealer="0" win="1,365" bet="1,215" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,885" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="theDL" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="4" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H2 SJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="1,215" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279076">
+		 <general>
+		  <startdate>2014-03-25 17:48:43</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,005" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,565" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,735" dealer="0" win="1,885" bet="1,735" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/><action no="1" player="theDL" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="3" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 C6</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="23" sum="1,735" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279179">
+		 <general>
+		  <startdate>2014-03-25 17:49:01</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="1,855" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,565" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,885" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/><action no="2" player="westham9999" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><cards type="Pocket" player="moonbaseone">C4 S3</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279255">
+		 <general>
+		  <startdate>2014-03-25 17:49:14</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="1,780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,640" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="westham9999" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="6" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ D3</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292330">
+		 <general>
+		  <startdate>2014-03-25 17:49:32</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="1,780" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,565" dealer="1" win="675" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,405" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="5" player="westham9999" type="23" sum="450" cards=""/><cards type="Pocket" player="moonbaseone">SK C6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292452">
+		 <general>
+		  <startdate>2014-03-25 17:49:54</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="1,780" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,215" dealer="0" win="2,430" bet="1,215" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="1,885" dealer="0" win="0" bet="1,215" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="theDL" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="4" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ H5</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">D9 HA</cards><action no="6" player="DONCorleoneXX" type="23" sum="1,215" cards=""/><cards type="Pocket" player="theDL">CA D2</cards><action no="7" player="theDL" type="3" sum="1,065" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 C9 C7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game><game gamecode="5601292649">
+		 <general>
+		  <startdate>2014-03-25 17:50:29</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="1,780" dealer="0" win="1,415" bet="670" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,790" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,430" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="theDL" chips="670" dealer="0" win="0" bet="670" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/><action no="3" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">DK CA</cards><action no="12" player="Strik3rPo4ition" type="3" sum="445" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="8" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 SJ</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">S4 HQ</cards><action no="11" player="theDL" type="23" sum="645" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 H8 H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="5601292804">
+		 <general>
+		  <startdate>2014-03-25 17:50:58</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,525" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,765" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,305" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,405" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/><action no="2" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="6" player="westham9999" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><cards type="Pocket" player="moonbaseone">S7 S4</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292901">
+		 <general>
+		  <startdate>2014-03-25 17:51:15</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,400" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,940" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,280" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,380" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="5" player="westham9999" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="9" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 S10</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293001">
+		 <general>
+		  <startdate>2014-03-25 17:51:35</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,375" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,815" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,455" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,355" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="8" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 HJ</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601293168">
+		 <general>
+		  <startdate>2014-03-25 17:52:07</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,350" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,790" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="1" win="1,705" bet="1,330" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,530" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/><action no="3" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ HK</cards><action no="8" player="moonbaseone" type="23" sum="1,305" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293350">
+		 <general>
+		  <startdate>2014-03-25 17:52:42</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,125" dealer="0" win="700" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,765" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,705" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,405" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/><action no="2" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="6" player="westham9999" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="23" sum="400" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="10" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 C2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293468">
+		 <general>
+		  <startdate>2014-03-25 17:53:02</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,400" dealer="1" win="2,775" bet="2,400" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,540" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,680" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,380" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="5" player="westham9999" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="23" sum="2,375" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="9" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H2 C10</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293648">
+		 <general>
+		  <startdate>2014-03-25 17:53:38</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,775" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,415" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,455" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,355" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="8" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 S8</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601293783">
+		 <general>
+		  <startdate>2014-03-25 17:54:03</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,750" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,390" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,330" dealer="1" win="1,705" bet="1,330" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,530" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/><action no="3" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA H4</cards><action no="8" player="moonbaseone" type="23" sum="1,305" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293859">
+		 <general>
+		  <startdate>2014-03-25 17:54:19</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,525" dealer="0" win="2,800" bet="2,525" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,365" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,705" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,405" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/><action no="2" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="6" player="westham9999" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">SJ DJ</cards><action no="9" player="Strik3rPo4ition" type="23" sum="2,500" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="10" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 CQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601305637">
+		 <general>
+		  <startdate>2014-03-25 17:54:42</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,800" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,140" dealer="0" win="1,300" bet="925" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,680" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,380" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="5" player="westham9999" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="9" player="westham9999" type="23" sum="900" cards=""/><cards type="Pocket" player="moonbaseone">SA H4</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601305729">
+		 <general>
+		  <startdate>2014-03-25 17:55:03</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,775" dealer="0" win="1,150" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,515" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,355" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,355" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="23" sum="600" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="8" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 C10</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601305822">
+		 <general>
+		  <startdate>2014-03-25 17:55:26</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="3,300" dealer="0" win="45" bet="1,225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,490" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,180" dealer="1" win="2,560" bet="1,180" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,030" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="300" cards="[cards]"/><action no="3" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">H5 D5</cards><action no="10" player="Strik3rPo4ition" type="23" sum="1,200" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA CA</cards><action no="8" player="moonbaseone" type="23" sum="600" cards=""/><action no="11" player="moonbaseone" type="7" sum="555" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK D4 CQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5601305917">
+		 <general>
+		  <startdate>2014-03-25 17:55:51</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,120" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="2,465" dealer="0" win="610" bet="2,465" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,560" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="1,855" dealer="1" win="3,910" bet="1,855" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="150" cards="[cards]"/><action no="2" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="6" player="westham9999" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">DJ SJ</cards><action no="10" player="westham9999" type="7" sum="2,140" cards=""/><cards type="Pocket" player="moonbaseone">H6 S2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">DQ D9</cards><action no="8" player="DONCorleoneXX" type="23" sum="1,800" cards=""/><action no="11" player="DONCorleoneXX" type="7" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 S7 D4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5601306030">
+		 <general>
+		  <startdate>2014-03-25 17:56:21</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="1,945" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="610" dealer="0" win="1,855" bet="610" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,535" dealer="0" win="0" bet="625" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="3,910" dealer="0" win="30" bet="625" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="5" player="westham9999" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">H2 D2</cards><action no="9" player="westham9999" type="7" sum="435" cards=""/><cards type="Pocket" player="moonbaseone">S5 HJ</cards><action no="10" player="moonbaseone" type="3" sum="300" cards=""/><cards type="Pocket" player="DONCorleoneXX">SA CQ</cards><action no="7" player="DONCorleoneXX" type="23" sum="600" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D8 C10</cards><action no="11" player="moonbaseone" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="13" player="moonbaseone" type="4" sum="0" cards=""/><action no="14" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards><action no="15" player="moonbaseone" type="4" sum="0" cards=""/><action no="16" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306143">
+		 <general>
+		  <startdate>2014-03-25 17:56:49</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="1,920" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,855" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,910" dealer="0" win="2,285" bet="1,910" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="3,315" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="8" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 SK</cards><action no="9" player="moonbaseone" type="23" sum="1,885" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306213">
+		 <general>
+		  <startdate>2014-03-25 17:57:08</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="1,895" dealer="0" win="550" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,830" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,285" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,990" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="300" cards="[cards]"/><action no="3" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 DK</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306294">
+		 <general>
+		  <startdate>2014-03-25 17:57:27</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,120" dealer="0" win="2,495" bet="2,120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,805" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,260" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,815" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="150" cards="[cards]"/><action no="2" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="6" player="westham9999" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="23" sum="2,095" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="10" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 H8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306383">
+		 <general>
+		  <startdate>2014-03-25 17:57:48</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,495" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,480" dealer="0" win="1,600" bet="1,225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,235" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,790" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="5" player="westham9999" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="9" player="westham9999" type="23" sum="1,200" cards=""/><cards type="Pocket" player="moonbaseone">CA H3</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306493">
+		 <general>
+		  <startdate>2014-03-25 17:58:14</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,470" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,855" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,910" dealer="0" win="3,870" bet="1,910" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="2,765" dealer="0" win="0" bet="1,910" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="westham9999" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="8" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 DA</cards><action no="9" player="moonbaseone" type="23" sum="1,885" cards=""/><cards type="Pocket" player="DONCorleoneXX">C3 HA</cards><action no="10" player="DONCorleoneXX" type="3" sum="1,585" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 D8 C2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards>
+	</round>
+	
+		</game><game gamecode="5601306612">
+		 <general>
+		  <startdate>2014-03-25 17:58:49</startdate>		  
+		  <players>
+		   <player seat="3" name="Strik3rPo4ition" chips="2,445" dealer="0" win="1,810" bet="855" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="westham9999" chips="1,830" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="3,870" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="6224227978"/><player seat="8" name="DONCorleoneXX" chips="855" dealer="0" win="0" bet="855" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="50" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="400" cards="[cards]"/><action no="3" player="westham9999" type="15" sum="50" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="50" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">SQ H3</cards><action no="10" player="Strik3rPo4ition" type="3" sum="405" cards=""/><cards type="Pocket" player="westham9999">X X</cards><action no="7" player="westham9999" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 H10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">S5 DA</cards><action no="9" player="DONCorleoneXX" type="23" sum="805" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 CJ C7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D10</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189538377">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819276431</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:11</duration>  
+	          <gamecount>27</gamecount>  
+	          <startdate>2014-01-28 17:02:34</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>7,790</bets>  
+	          <wins>9,310</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>2,320</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>1</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.90</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5449333799">
+		 <general>
+		  <startdate>2014-01-28 17:02:34</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="800" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="800" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="800" dealer="0" win="200" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dimmon82500" type="1" sum="10" cards="[cards]"/><action no="2" player="Scorpionchik1971" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="4" player="kopasz555555" type="23" sum="40" cards=""/><cards type="Pocket" player="Dimmon82500">D2 DA</cards><action no="5" player="Dimmon82500" type="3" sum="30" cards=""/><cards type="Pocket" player="Scorpionchik1971">CJ S8</cards><action no="6" player="Scorpionchik1971" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">DK C4</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 D9 S2</cards><action no="9" player="kopasz555555" type="0" sum="0" cards=""/><action no="7" player="Dimmon82500" type="4" sum="0" cards=""/><action no="10" player="Dimmon82500" type="3" sum="20" cards=""/><action no="8" player="Scorpionchik1971" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="11" player="Dimmon82500" type="4" sum="0" cards=""/><action no="13" player="Dimmon82500" type="3" sum="20" cards=""/><action no="12" player="Scorpionchik1971" type="5" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards><action no="14" player="Dimmon82500" type="4" sum="0" cards=""/><action no="15" player="Scorpionchik1971" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449334312">
+		 <general>
+		  <startdate>2014-01-28 17:03:30</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="720" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="920" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Scorpionchik1971" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="3" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="4" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="5" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 S8</cards>
+	</round>
+	
+		</game><game gamecode="5449334463">
+		 <general>
+		  <startdate>2014-01-28 17:03:46</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="760" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="720" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="810" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kopasz555555" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="6" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="3" player="Dimmon82500" type="3" sum="20" cards=""/><action no="7" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="4" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DA CA</cards><action no="5" player="WorstCard" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449334669">
+		 <general>
+		  <startdate>2014-01-28 17:04:08</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="740" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="700" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="850" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kopasz555555" type="1" sum="10" cards="[cards]"/><action no="2" player="Dimmon82500" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="5" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="3" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S7 H2</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449334810">
+		 <general>
+		  <startdate>2014-01-28 17:04:23</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="730" dealer="1" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="710" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="910" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="850" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dimmon82500" type="1" sum="10" cards="[cards]"/><action no="2" player="Scorpionchik1971" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="4" player="kopasz555555" type="23" sum="40" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="5" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="6" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S6 D10</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449335034">
+		 <general>
+		  <startdate>2014-01-28 17:04:47</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="700" dealer="1" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="890" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Scorpionchik1971" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="3" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="4" player="Dimmon82500" type="23" sum="90" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="5" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 S5</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449335212">
+		 <general>
+		  <startdate>2014-01-28 17:05:07</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="760" dealer="0" win="805" bet="760" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="745" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="875" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="820" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kopasz555555" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="6" player="kopasz555555" type="23" sum="760" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="3" player="Dimmon82500" type="3" sum="30" cards=""/><action no="7" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="4" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C4 D8</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449335524">
+		 <general>
+		  <startdate>2014-01-28 17:05:35</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="805" dealer="0" win="865" bet="805" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="715" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="875" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="805" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kopasz555555" type="1" sum="15" cards="[cards]"/><action no="2" player="Dimmon82500" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="5" player="kopasz555555" type="23" sum="60" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="6" player="Dimmon82500" type="3" sum="30" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="3" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C5 H6</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ C7 CA</cards><action no="7" player="kopasz555555" type="5" sum="745" cards=""/><action no="8" player="Dimmon82500" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449359214">
+		 <general>
+		  <startdate>2014-01-28 17:06:07</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="865" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="655" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="875" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="805" dealer="0" win="850" bet="805" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dimmon82500" type="1" sum="15" cards="[cards]"/><action no="2" player="Scorpionchik1971" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="4" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="5" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="6" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C9 H9</cards><action no="3" player="WorstCard" type="23" sum="805" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449359377">
+		 <general>
+		  <startdate>2014-01-28 17:06:26</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="865" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="640" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="845" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Scorpionchik1971" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="3" player="kopasz555555" type="3" sum="30" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="4" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="5" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C2 D2</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 SA DK</cards><action no="8" player="kopasz555555" type="5" sum="60" cards=""/><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449359607">
+		 <general>
+		  <startdate>2014-01-28 17:06:54</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="910" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="640" dealer="0" win="345" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="830" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="820" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kopasz555555" type="15" sum="5" cards="[cards]"/><action no="6" player="kopasz555555" type="2" sum="50" cards="[cards]"/><action no="3" player="Dimmon82500" type="15" sum="5" cards="[cards]"/><action no="4" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="10" player="kopasz555555" type="3" sum="50" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="7" player="Dimmon82500" type="23" sum="100" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="8" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CJ CA</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ CK SK</cards><action no="11" player="kopasz555555" type="4" sum="0" cards=""/><action no="13" player="kopasz555555" type="0" sum="0" cards=""/><action no="12" player="Dimmon82500" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449359958">
+		 <general>
+		  <startdate>2014-01-28 17:07:35</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="805" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="780" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="825" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="790" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kopasz555555" type="15" sum="5" cards="[cards]"/><action no="5" player="kopasz555555" type="1" sum="25" cards="[cards]"/><action no="2" player="Dimmon82500" type="15" sum="5" cards="[cards]"/><action no="6" player="Dimmon82500" type="2" sum="50" cards="[cards]"/><action no="3" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="9" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="7" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H9 S4</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449360124">
+		 <general>
+		  <startdate>2014-01-28 17:07:53</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="775" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="820" dealer="0" win="220" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="820" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="785" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="kopasz555555" type="15" sum="5" cards="[cards]"/><action no="1" player="Dimmon82500" type="15" sum="5" cards="[cards]"/><action no="5" player="Dimmon82500" type="1" sum="25" cards="[cards]"/><action no="2" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="6" player="Scorpionchik1971" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="8" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="9" player="Dimmon82500" type="23" sum="150" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="10" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C8 S5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449360340">
+		 <general>
+		  <startdate>2014-01-28 17:08:19</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="770" dealer="0" win="860" bet="770" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="885" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="765" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="780" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="kopasz555555" type="15" sum="5" cards="[cards]"/><action no="4" player="Dimmon82500" type="15" sum="5" cards="[cards]"/><action no="1" player="Scorpionchik1971" type="15" sum="5" cards="[cards]"/><action no="5" player="Scorpionchik1971" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="7" player="kopasz555555" type="23" sum="765" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="8" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="9" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CA D9</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449360526">
+		 <general>
+		  <startdate>2014-01-28 17:08:43</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="860" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="880" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="735" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="725" dealer="0" win="955" bet="725" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kopasz555555" type="15" sum="10" cards="[cards]"/><action no="6" player="kopasz555555" type="2" sum="100" cards="[cards]"/><action no="3" player="Dimmon82500" type="15" sum="10" cards="[cards]"/><action no="4" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="10" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="7" player="Dimmon82500" type="3" sum="100" cards=""/><action no="11" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="8" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ HK</cards><action no="9" player="WorstCard" type="23" sum="715" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449360780">
+		 <general>
+		  <startdate>2014-01-28 17:09:14</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="750" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="770" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="725" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="955" dealer="1" win="1,135" bet="955" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kopasz555555" type="15" sum="10" cards="[cards]"/><action no="5" player="kopasz555555" type="1" sum="50" cards="[cards]"/><action no="2" player="Dimmon82500" type="15" sum="10" cards="[cards]"/><action no="6" player="Dimmon82500" type="2" sum="100" cards="[cards]"/><action no="3" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="9" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="10" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="7" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ H9</cards><action no="8" player="WorstCard" type="23" sum="945" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449360953">
+		 <general>
+		  <startdate>2014-01-28 17:09:35</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="690" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="660" dealer="0" win="0" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="715" dealer="0" win="1,045" bet="715" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,135" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="kopasz555555" type="15" sum="10" cards="[cards]"/><action no="1" player="Dimmon82500" type="15" sum="10" cards="[cards]"/><action no="5" player="Dimmon82500" type="1" sum="50" cards="[cards]"/><action no="2" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="6" player="Scorpionchik1971" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="8" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="9" player="Dimmon82500" type="23" sum="200" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="10" player="Scorpionchik1971" type="3" sum="100" cards=""/><cards type="Pocket" player="WorstCard">S3 H7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 S10 C5</cards><action no="11" player="Dimmon82500" type="5" sum="100" cards=""/><action no="13" player="Dimmon82500" type="0" sum="0" cards=""/><action no="12" player="Scorpionchik1971" type="23" sum="505" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449361440">
+		 <general>
+		  <startdate>2014-01-28 17:10:29</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="680" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="350" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="1,045" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,125" dealer="0" win="340" bet="210" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="kopasz555555" type="15" sum="10" cards="[cards]"/><action no="4" player="Dimmon82500" type="15" sum="10" cards="[cards]"/><action no="1" player="Scorpionchik1971" type="15" sum="10" cards="[cards]"/><action no="5" player="Scorpionchik1971" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="7" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="8" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="9" player="Scorpionchik1971" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">D4 H7</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 S2 CK</cards><action no="11" player="Scorpionchik1971" type="4" sum="0" cards=""/><action no="13" player="Scorpionchik1971" type="0" sum="0" cards=""/><action no="12" player="WorstCard" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449361667">
+		 <general>
+		  <startdate>2014-01-28 17:10:55</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="670" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="340" dealer="0" win="610" bet="340" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="935" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,255" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kopasz555555" type="15" sum="15" cards="[cards]"/><action no="6" player="kopasz555555" type="2" sum="150" cards="[cards]"/><action no="3" player="Dimmon82500" type="15" sum="15" cards="[cards]"/><action no="4" player="Scorpionchik1971" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="10" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="7" player="Dimmon82500" type="23" sum="325" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="8" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D4 H9</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449361918">
+		 <general>
+		  <startdate>2014-01-28 17:11:23</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="505" dealer="0" win="700" bet="505" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="610" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="920" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,165" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kopasz555555" type="15" sum="15" cards="[cards]"/><action no="5" player="kopasz555555" type="1" sum="75" cards="[cards]"/><action no="2" player="Dimmon82500" type="15" sum="15" cards="[cards]"/><action no="6" player="Dimmon82500" type="2" sum="150" cards="[cards]"/><action no="3" player="Scorpionchik1971" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="9" player="kopasz555555" type="23" sum="490" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="10" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">X X</cards><action no="7" player="Scorpionchik1971" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 HQ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449362242">
+		 <general>
+		  <startdate>2014-01-28 17:11:58</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="700" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="445" dealer="0" win="920" bet="445" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="905" dealer="0" win="0" bet="445" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,150" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="kopasz555555" type="15" sum="15" cards="[cards]"/><action no="1" player="Dimmon82500" type="15" sum="15" cards="[cards]"/><action no="5" player="Dimmon82500" type="1" sum="75" cards="[cards]"/><action no="2" player="Scorpionchik1971" type="15" sum="15" cards="[cards]"/><action no="6" player="Scorpionchik1971" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="8" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">D6 DK</cards><action no="9" player="Dimmon82500" type="23" sum="430" cards=""/><cards type="Pocket" player="Scorpionchik1971">H6 HQ</cards><action no="10" player="Scorpionchik1971" type="3" sum="280" cards=""/><cards type="Pocket" player="WorstCard">S10 DJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 H3 SJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game><game gamecode="5449375116">
+		 <general>
+		  <startdate>2014-01-28 17:12:28</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="685" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="920" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="Scorpionchik1971" chips="460" dealer="0" win="0" bet="460" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,135" dealer="0" win="950" bet="460" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="kopasz555555" type="15" sum="15" cards="[cards]"/><action no="4" player="Dimmon82500" type="15" sum="15" cards="[cards]"/><action no="1" player="Scorpionchik1971" type="15" sum="15" cards="[cards]"/><action no="5" player="Scorpionchik1971" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="7" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="8" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Scorpionchik1971">C5 S6</cards><action no="9" player="Scorpionchik1971" type="23" sum="445" cards=""/><cards type="Pocket" player="WorstCard">DQ SQ</cards><action no="10" player="WorstCard" type="3" sum="295" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 S8 S5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game><game gamecode="5449375363">
+		 <general>
+		  <startdate>2014-01-28 17:12:55</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="670" dealer="0" win="1,360" bet="670" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="905" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,625" dealer="0" win="955" bet="1,625" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kopasz555555" type="15" sum="20" cards="[cards]"/><action no="5" player="kopasz555555" type="2" sum="200" cards="[cards]"/><action no="3" player="Dimmon82500" type="15" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">HA H6</cards><action no="8" player="kopasz555555" type="7" sum="450" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="6" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C4 SA</cards><action no="7" player="WorstCard" type="23" sum="1,605" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK HJ DQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game><game gamecode="5449375638">
+		 <general>
+		  <startdate>2014-01-28 17:13:26</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="1,360" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="885" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="955" dealer="1" win="1,295" bet="955" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kopasz555555" type="15" sum="20" cards="[cards]"/><action no="4" player="kopasz555555" type="1" sum="100" cards="[cards]"/><action no="2" player="Dimmon82500" type="15" sum="20" cards="[cards]"/><action no="5" player="Dimmon82500" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="7" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="8" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK H8</cards><action no="6" player="WorstCard" type="23" sum="935" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449375786">
+		 <general>
+		  <startdate>2014-01-28 17:13:43</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="1,240" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="665" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,295" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="kopasz555555" type="15" sum="20" cards="[cards]"/><action no="1" player="Dimmon82500" type="15" sum="20" cards="[cards]"/><action no="4" player="Dimmon82500" type="1" sum="100" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="6" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="7" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C3 C10</cards>
+	</round>
+	
+		</game><game gamecode="5449375931">
+		 <general>
+		  <startdate>2014-01-28 17:13:59</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="1,220" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="545" dealer="1" win="885" bet="545" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,435" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="kopasz555555" type="15" sum="20" cards="[cards]"/><action no="5" player="kopasz555555" type="2" sum="200" cards="[cards]"/><action no="3" player="Dimmon82500" type="15" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="8" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="6" player="Dimmon82500" type="23" sum="525" cards=""/><cards type="Pocket" player="WorstCard">S8 C8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449376153">
+		 <general>
+		  <startdate>2014-01-28 17:14:22</startdate>		  
+		  <players>
+		   <player seat="2" name="kopasz555555" chips="1,000" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Dimmon82500" chips="885" dealer="0" win="0" bet="885" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,315" dealer="1" win="2,320" bet="1,315" rebuy="0" addon="0" reg_code="6189538377"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kopasz555555" type="15" sum="20" cards="[cards]"/><action no="4" player="kopasz555555" type="1" sum="100" cards="[cards]"/><action no="2" player="Dimmon82500" type="15" sum="20" cards="[cards]"/><action no="5" player="Dimmon82500" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="kopasz555555">X X</cards><action no="7" player="kopasz555555" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">HA H8</cards><action no="8" player="Dimmon82500" type="7" sum="665" cards=""/><cards type="Pocket" player="WorstCard">DA HQ</cards><action no="6" player="WorstCard" type="23" sum="1,295" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 C10 CK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game>  
+	</session>

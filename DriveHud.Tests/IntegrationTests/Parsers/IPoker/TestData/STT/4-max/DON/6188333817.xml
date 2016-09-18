@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188333817">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819106776</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>14</gamecount>  
+	          <startdate>2014-01-26 18:10:58</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>995</bets>  
+	          <wins>195</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>4</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5439372687">
+		 <general>
+		  <startdate>2014-01-26 18:10:58</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="800" dealer="1" win="170" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="MUMUSMAN" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="4" player="julianopereirada" type="23" sum="140" cards=""/><cards type="Pocket" player="WorstCard">CQ D6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="6" player="MUMUSMAN" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="3" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439372933">
+		 <general>
+		  <startdate>2014-01-26 18:11:31</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="780" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MUMUSMAN" type="1" sum="10" cards="[cards]"/><action no="2" player="ZeniusGenius" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="3" player="julianopereirada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 D9</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="5" player="MUMUSMAN" type="3" sum="10" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="6" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ SJ C5</cards><action no="7" player="MUMUSMAN" type="5" sum="20" cards=""/><action no="8" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373106">
+		 <general>
+		  <startdate>2014-01-26 18:11:53</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="830" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="julianopereirada" type="2" sum="20" cards="[cards]"/><action no="1" player="ZeniusGenius" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><cards type="Pocket" player="WorstCard">D6 CK</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="4" player="MUMUSMAN" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="5" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373219">
+		 <general>
+		  <startdate>2014-01-26 18:12:08</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="840" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="julianopereirada" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="5" player="julianopereirada" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">D7 HK</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="3" player="MUMUSMAN" type="3" sum="20" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="4" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ C10 S2</cards><action no="7" player="julianopereirada" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="MUMUSMAN" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="10" player="julianopereirada" type="5" sum="60" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="12" player="MUMUSMAN" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373513">
+		 <general>
+		  <startdate>2014-01-26 18:12:47</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="770" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="780" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="MUMUSMAN" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="4" player="julianopereirada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C10 D4</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="3" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373615">
+		 <general>
+		  <startdate>2014-01-26 18:13:02</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="790" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="770" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MUMUSMAN" type="1" sum="15" cards="[cards]"/><action no="2" player="ZeniusGenius" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="3" player="julianopereirada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D10 C7</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="5" player="MUMUSMAN" type="3" sum="15" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="6" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA H9 D5</cards><action no="7" player="MUMUSMAN" type="4" sum="0" cards=""/><action no="9" player="MUMUSMAN" type="0" sum="0" cards=""/><action no="8" player="ZeniusGenius" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373866">
+		 <general>
+		  <startdate>2014-01-26 18:13:34</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="880" dealer="0" win="480" bet="360" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="800" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="julianopereirada" type="2" sum="30" cards="[cards]"/><action no="1" player="ZeniusGenius" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="6" player="julianopereirada" type="23" sum="120" cards=""/><cards type="Pocket" player="WorstCard">SQ H10</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="4" player="MUMUSMAN" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="5" player="ZeniusGenius" type="3" sum="15" cards=""/><action no="7" player="ZeniusGenius" type="3" sum="90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ H5 C8</cards><action no="9" player="julianopereirada" type="5" sum="240" cards=""/><action no="8" player="ZeniusGenius" type="4" sum="0" cards=""/><action no="10" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439374170">
+		 <general>
+		  <startdate>2014-01-26 18:14:10</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="1,000" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="680" dealer="1" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="julianopereirada" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="5" player="julianopereirada" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">DQ S8</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="3" player="MUMUSMAN" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="4" player="ZeniusGenius" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA H6 S3</cards><action no="7" player="julianopereirada" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="10" player="julianopereirada" type="4" sum="0" cards=""/><action no="13" player="julianopereirada" type="0" sum="0" cards=""/><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="0" sum="0" cards=""/><action no="12" player="ZeniusGenius" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439387868">
+		 <general>
+		  <startdate>2014-01-26 18:15:08</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="970" dealer="1" win="245" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="730" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="760" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="740" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="julianopereirada" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="MUMUSMAN" type="15" sum="5" cards="[cards]"/><action no="6" player="MUMUSMAN" type="2" sum="50" cards="[cards]"/><action no="3" player="ZeniusGenius" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="8" player="julianopereirada" type="23" sum="150" cards=""/><cards type="Pocket" player="WorstCard">HK S7</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="10" player="MUMUSMAN" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="7" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439388022">
+		 <general>
+		  <startdate>2014-01-26 18:15:29</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="1,060" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="705" dealer="0" win="0" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="735" dealer="0" win="420" bet="205" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="julianopereirada" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="MUMUSMAN" type="15" sum="5" cards="[cards]"/><action no="5" player="MUMUSMAN" type="1" sum="25" cards="[cards]"/><action no="2" player="ZeniusGenius" type="15" sum="5" cards="[cards]"/><action no="6" player="ZeniusGenius" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="7" player="julianopereirada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S8 S2</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">C9 H9</cards><action no="9" player="MUMUSMAN" type="3" sum="25" cards=""/><cards type="Pocket" player="ZeniusGenius">H6 D10</cards><action no="10" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK C10 SQ</cards><action no="11" player="MUMUSMAN" type="4" sum="0" cards=""/><action no="12" player="ZeniusGenius" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="13" player="MUMUSMAN" type="5" sum="50" cards=""/><action no="14" player="ZeniusGenius" type="3" sum="50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards><action no="15" player="MUMUSMAN" type="4" sum="0" cards=""/><action no="17" player="MUMUSMAN" type="3" sum="100" cards=""/><action no="16" player="ZeniusGenius" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439388368">
+		 <general>
+		  <startdate>2014-01-26 18:16:16</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="1,055" dealer="0" win="340" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="695" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="500" dealer="1" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="950" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="julianopereirada" type="15" sum="5" cards="[cards]"/><action no="6" player="julianopereirada" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="MUMUSMAN" type="15" sum="5" cards="[cards]"/><action no="1" player="ZeniusGenius" type="15" sum="5" cards="[cards]"/><action no="5" player="ZeniusGenius" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="10" player="julianopereirada" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D10 H8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="8" player="MUMUSMAN" type="3" sum="50" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="9" player="ZeniusGenius" type="3" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ S3 D5</cards><action no="12" player="julianopereirada" type="5" sum="170" cards=""/><action no="13" player="MUMUSMAN" type="0" sum="0" cards=""/><action no="11" player="ZeniusGenius" type="4" sum="0" cards=""/><action no="14" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439388647">
+		 <general>
+		  <startdate>2014-01-26 18:16:52</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="1,170" dealer="0" win="220" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="690" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="445" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="895" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="julianopereirada" type="15" sum="5" cards="[cards]"/><action no="5" player="julianopereirada" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="MUMUSMAN" type="15" sum="5" cards="[cards]"/><action no="4" player="ZeniusGenius" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="9" player="julianopereirada" type="23" sum="150" cards=""/><cards type="Pocket" player="WorstCard">H10 D3</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="7" player="MUMUSMAN" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="8" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439388795">
+		 <general>
+		  <startdate>2014-01-26 18:17:11</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="1,235" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="635" dealer="0" win="195" bet="635" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="440" dealer="0" win="900" bet="440" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="890" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="julianopereirada" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="MUMUSMAN" type="15" sum="10" cards="[cards]"/><action no="6" player="MUMUSMAN" type="2" sum="100" cards="[cards]"/><action no="3" player="ZeniusGenius" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="8" player="julianopereirada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CA SQ</cards><action no="9" player="WorstCard" type="23" sum="625" cards=""/><cards type="Pocket" player="MUMUSMAN">SJ C9</cards><action no="10" player="MUMUSMAN" type="7" sum="330" cards=""/><cards type="Pocket" player="ZeniusGenius">X X</cards><action no="7" player="ZeniusGenius" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 C5 H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game><game gamecode="5439389010">
+		 <general>
+		  <startdate>2014-01-26 18:17:40</startdate>		  
+		  <players>
+		   <player seat="2" name="julianopereirada" chips="1,225" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="195" dealer="1" win="0" bet="195" rebuy="0" addon="0" reg_code="6188333817"/><player seat="7" name="MUMUSMAN" chips="900" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ZeniusGenius" chips="880" dealer="0" win="460" bet="195" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="julianopereirada" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="MUMUSMAN" type="15" sum="10" cards="[cards]"/><action no="5" player="MUMUSMAN" type="1" sum="50" cards="[cards]"/><action no="2" player="ZeniusGenius" type="15" sum="10" cards="[cards]"/><action no="6" player="ZeniusGenius" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="julianopereirada">X X</cards><action no="7" player="julianopereirada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D5 HJ</cards><action no="8" player="WorstCard" type="7" sum="185" cards=""/><cards type="Pocket" player="MUMUSMAN">X X</cards><action no="9" player="MUMUSMAN" type="0" sum="0" cards=""/><cards type="Pocket" player="ZeniusGenius">D10 D7</cards><action no="10" player="ZeniusGenius" type="3" sum="85" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 S9 SA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224090687">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824201139</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:11</duration>  
+	          <gamecount>28</gamecount>  
+	          <startdate>2014-03-25 13:12:40</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>3,538</bets>  
+	          <wins>4,238</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>2,870</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5600646979">
+		 <general>
+		  <startdate>2014-03-25 13:12:40</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,195" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="865" dealer="1" win="630" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="1,310" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,330" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,740" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="30" cards="[cards]"/><action no="2" player="tomast7575" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">S7 DQ</cards><action no="6" player="vanhuligan" type="3" sum="60" cards=""/><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">CK C3</cards><action no="8" player="tomast7575" type="4" sum="0" cards=""/><action no="3" player="cowsgom000" type="0" sum="0" cards=""/><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 H5 C7</cards><action no="10" player="vanhuligan" type="4" sum="0" cards=""/><action no="9" player="tomast7575" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="12" player="vanhuligan" type="23" sum="120" cards=""/><action no="11" player="tomast7575" type="5" sum="60" cards=""/><action no="13" player="tomast7575" type="3" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards><action no="15" player="vanhuligan" type="5" sum="120" cards=""/><action no="14" player="tomast7575" type="4" sum="0" cards=""/><action no="16" player="tomast7575" type="3" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656469">
+		 <general>
+		  <startdate>2014-03-25 13:12:58</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,195" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="1,375" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="1,310" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,210" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,740" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,170" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tomast7575" type="1" sum="50" cards="[cards]"/><action no="2" player="cowsgom000" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">X X</cards><action no="5" player="vanhuligan" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="7" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="8" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ HQ</cards><action no="3" player="moonbaseone" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656532">
+		 <general>
+		  <startdate>2014-03-25 13:13:21</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,195" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="1,375" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,160" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,640" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,320" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cowsgom000" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">X X</cards><action no="4" player="vanhuligan" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="6" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA C4</cards>
+	</round>
+	
+		</game><game gamecode="5600656593">
+		 <general>
+		  <startdate>2014-03-25 13:13:41</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,195" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="1,375" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,590" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,370" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="silverbelarus" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">X X</cards><action no="3" player="vanhuligan" type="23" sum="200" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="5" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="6" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 C9</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656678">
+		 <general>
+		  <startdate>2014-03-25 13:14:12</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,095" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="1,525" dealer="0" win="0" bet="1,160" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,160" dealer="0" win="2,370" bet="1,160" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,320" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="50" cards="[cards]"/><action no="2" player="vanhuligan" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">CJ H3</cards><action no="8" player="vanhuligan" type="3" sum="100" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">CA SA</cards><action no="4" player="tomast7575" type="23" sum="200" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="5" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 D3</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ D2 S4</cards><action no="9" player="vanhuligan" type="5" sum="300" cards=""/><action no="10" player="tomast7575" type="3" sum="300" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards><action no="11" player="vanhuligan" type="5" sum="500" cards=""/><action no="13" player="vanhuligan" type="3" sum="160" cards=""/><action no="12" player="tomast7575" type="7" sum="660" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards>
+	</round>
+	
+		</game><game gamecode="5600656806">
+		 <general>
+		  <startdate>2014-03-25 13:14:59</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,045" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="365" dealer="0" win="730" bet="365" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="1,310" dealer="0" win="135" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="vanhuligan" type="1" sum="50" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">H8 HK</cards><action no="7" player="vanhuligan" type="23" sum="300" cards=""/><action no="9" player="vanhuligan" type="7" sum="65" cards=""/><cards type="Pocket" player="Traianks">D5 C5</cards><action no="8" player="Traianks" type="23" sum="500" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="3" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="4" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S7 H6</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 D8 C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards>
+	</round>
+	
+		</game><game gamecode="5600656891">
+		 <general>
+		  <startdate>2014-03-25 13:15:31</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,045" dealer="0" win="1,195" bet="1,045" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="945" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,370" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="50" cards="[cards]"/><action no="2" player="tomast7575" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="23" sum="1,045" cards=""/><cards type="Pocket" player="vanhuligan">X X</cards><action no="6" player="vanhuligan" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="8" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="3" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D5 DJ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600656961">
+		 <general>
+		  <startdate>2014-03-25 13:15:58</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,195" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="730" dealer="0" win="880" bet="730" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="895" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,270" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,590" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tomast7575" type="1" sum="50" cards="[cards]"/><action no="2" player="cowsgom000" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">X X</cards><action no="5" player="vanhuligan" type="23" sum="730" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="7" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="8" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 H10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600657029">
+		 <general>
+		  <startdate>2014-03-25 13:16:25</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,195" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="895" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,220" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,490" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,320" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cowsgom000" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">X X</cards><action no="4" player="vanhuligan" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="6" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 S9</cards>
+	</round>
+	
+		</game><game gamecode="5600657090">
+		 <general>
+		  <startdate>2014-03-25 13:16:49</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,195" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="895" dealer="0" win="1,120" bet="895" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,370" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="silverbelarus" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">X X</cards><action no="3" player="vanhuligan" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="23" sum="895" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="5" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="6" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 D8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600657166">
+		 <general>
+		  <startdate>2014-03-25 13:17:18</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="1,045" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="vanhuligan" chips="880" dealer="0" win="0" bet="880" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="1,440" dealer="0" win="1,835" bet="880" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,295" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="75" cards="[cards]"/><action no="2" player="vanhuligan" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="vanhuligan">D10 HK</cards><action no="8" player="vanhuligan" type="3" sum="190" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="4" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">S9 D9</cards><action no="5" player="cowsgom000" type="23" sum="340" cards=""/><cards type="Pocket" player="moonbaseone">H6 DA</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ S2 S10</cards><action no="9" player="vanhuligan" type="5" sum="540" cards=""/><action no="10" player="cowsgom000" type="3" sum="540" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards>
+	</round>
+	
+		</game><game gamecode="5600657262">
+		 <general>
+		  <startdate>2014-03-25 13:17:50</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="1,120" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="2,395" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,295" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="2" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="3" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA HJ</cards><action no="4" player="moonbaseone" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600657320">
+		 <general>
+		  <startdate>2014-03-25 13:18:10</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="970" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,220" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="2,395" dealer="0" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,445" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="75" cards="[cards]"/><action no="2" player="tomast7575" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="7" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="3" player="cowsgom000" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">H9 H8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666624">
+		 <general>
+		  <startdate>2014-03-25 13:18:31</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="895" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="2,070" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="2,620" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,445" dealer="0" win="525" bet="300" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tomast7575" type="1" sum="75" cards="[cards]"/><action no="2" player="cowsgom000" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="6" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DQ CA</cards><action no="3" player="moonbaseone" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666688">
+		 <general>
+		  <startdate>2014-03-25 13:18:52</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="970" dealer="0" win="0" bet="970" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Traianks" chips="895" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,995" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="2,470" dealer="0" win="2,090" bet="970" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,670" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cowsgom000" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">C5 HA</cards><action no="3" player="silverbelarus" type="23" sum="970" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="5" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">DJ SJ</cards><action no="6" player="cowsgom000" type="3" sum="895" cards=""/><cards type="Pocket" player="moonbaseone">H6 D4</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 H4 D8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game><game gamecode="5600666769">
+		 <general>
+		  <startdate>2014-03-25 13:19:20</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="895" dealer="0" win="1,865" bet="895" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,995" dealer="0" win="5" bet="900" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,590" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,520" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Traianks" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">C9 DA</cards><action no="6" player="Traianks" type="4" sum="0" cards=""/><cards type="Pocket" player="tomast7575">S9 D9</cards><action no="3" player="tomast7575" type="3" sum="150" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="4" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK S8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 SA D4</cards><action no="7" player="Traianks" type="4" sum="0" cards=""/><action no="9" player="Traianks" type="7" sum="745" cards=""/><action no="8" player="tomast7575" type="5" sum="750" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards>
+	</round>
+	
+		</game><game gamecode="5600666867">
+		 <general>
+		  <startdate>2014-03-25 13:19:55</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,865" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,100" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,445" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="75" cards="[cards]"/><action no="2" player="tomast7575" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><cards type="Pocket" player="cowsgom000">X X</cards><action no="3" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA C2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600666956">
+		 <general>
+		  <startdate>2014-03-25 13:20:27</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,175" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,590" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,445" dealer="0" win="1,013" bet="638" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tomast7575" type="1" sum="75" cards="[cards]"/><action no="2" player="cowsgom000" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="5" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="6" player="cowsgom000" type="3" sum="150" cards=""/><cards type="Pocket" player="moonbaseone">SK HK</cards><action no="3" player="moonbaseone" type="23" sum="300" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 DQ C3</cards><action no="7" player="cowsgom000" type="4" sum="0" cards=""/><action no="9" player="cowsgom000" type="0" sum="0" cards=""/><action no="8" player="moonbaseone" type="5" sum="338" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667031">
+		 <general>
+		  <startdate>2014-03-25 13:20:48</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,790" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,100" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,290" dealer="0" win="3,565" bet="3,290" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,820" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="4" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="1" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="5" player="cowsgom000" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="8" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="9" player="cowsgom000" type="23" sum="3,265" cards=""/><cards type="Pocket" player="moonbaseone">H6 CK</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667076">
+		 <general>
+		  <startdate>2014-03-25 13:21:03</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,765" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,075" dealer="0" win="1,450" bet="1,075" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,565" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,595" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="6" player="Traianks" type="2" sum="200" cards="[cards]"/><action no="3" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="4" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="10" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="7" player="tomast7575" type="23" sum="1,050" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="8" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK H3</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667138">
+		 <general>
+		  <startdate>2014-03-25 13:21:24</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,540" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,450" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,540" dealer="0" win="800" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,470" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="5" player="Traianks" type="1" sum="100" cards="[cards]"/><action no="2" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="6" player="tomast7575" type="2" sum="200" cards="[cards]"/><action no="3" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="9" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="10" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="23" sum="400" cards=""/><cards type="Pocket" player="moonbaseone">D6 C10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667191">
+		 <general>
+		  <startdate>2014-03-25 13:21:45</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,415" dealer="1" win="1,400" bet="1,025" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,225" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,915" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,445" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="1" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="5" player="tomast7575" type="1" sum="100" cards="[cards]"/><action no="2" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="6" player="cowsgom000" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="8" player="Traianks" type="23" sum="1,000" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="9" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="10" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ H9</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667258">
+		 <general>
+		  <startdate>2014-03-25 13:22:04</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,790" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,100" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,690" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,420" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="4" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="1" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="5" player="cowsgom000" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="8" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="9" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 C9</cards>
+	</round>
+	
+		</game><game gamecode="5600667297">
+		 <general>
+		  <startdate>2014-03-25 13:22:17</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,765" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,075" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,565" dealer="1" win="840" bet="465" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,595" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="6" player="Traianks" type="2" sum="200" cards="[cards]"/><action no="3" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="4" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="10" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="7" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="8" player="cowsgom000" type="23" sum="440" cards=""/><cards type="Pocket" player="moonbaseone">S6 D2</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667363">
+		 <general>
+		  <startdate>2014-03-25 13:22:40</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,540" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="1,050" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,940" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,470" dealer="1" win="800" bet="425" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="5" player="Traianks" type="1" sum="100" cards="[cards]"/><action no="2" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="6" player="tomast7575" type="2" sum="200" cards="[cards]"/><action no="3" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="9" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="10" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="7" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA C10</cards><action no="8" player="moonbaseone" type="23" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667412">
+		 <general>
+		  <startdate>2014-03-25 13:23:00</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,415" dealer="1" win="1,400" bet="1,025" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="825" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,915" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,845" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="1" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="5" player="tomast7575" type="1" sum="100" cards="[cards]"/><action no="2" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="6" player="cowsgom000" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="8" player="Traianks" type="23" sum="1,000" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="9" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="10" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 S5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600667511">
+		 <general>
+		  <startdate>2014-03-25 13:23:30</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,790" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="700" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,690" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,820" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="4" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="1" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="5" player="cowsgom000" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="tomast7575">X X</cards><action no="8" player="tomast7575" type="0" sum="0" cards=""/><cards type="Pocket" player="cowsgom000">X X</cards><action no="9" player="cowsgom000" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 SA</cards>
+	</round>
+	
+		</game><game gamecode="5600678814">
+		 <general>
+		  <startdate>2014-03-25 13:23:43</startdate>		  
+		  <players>
+		   <player seat="5" name="Traianks" chips="1,765" dealer="0" win="2,150" bet="675" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="tomast7575" chips="675" dealer="0" win="0" bet="675" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="cowsgom000" chips="3,565" dealer="1" win="0" bet="675" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="2,995" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224090687"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Traianks" type="15" sum="25" cards="[cards]"/><action no="6" player="Traianks" type="2" sum="200" cards="[cards]"/><action no="3" player="tomast7575" type="15" sum="25" cards="[cards]"/><action no="4" player="cowsgom000" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Traianks">S6 D7</cards><action no="10" player="Traianks" type="3" sum="450" cards=""/><cards type="Pocket" player="tomast7575">D8 SA</cards><action no="7" player="tomast7575" type="23" sum="650" cards=""/><cards type="Pocket" player="cowsgom000">H8 HA</cards><action no="8" player="cowsgom000" type="3" sum="650" cards=""/><cards type="Pocket" player="moonbaseone">D9 D4</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 S7 S2</cards><action no="11" player="Traianks" type="4" sum="0" cards=""/><action no="12" player="cowsgom000" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="13" player="Traianks" type="4" sum="0" cards=""/><action no="14" player="cowsgom000" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards><action no="15" player="Traianks" type="4" sum="0" cards=""/><action no="16" player="cowsgom000" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

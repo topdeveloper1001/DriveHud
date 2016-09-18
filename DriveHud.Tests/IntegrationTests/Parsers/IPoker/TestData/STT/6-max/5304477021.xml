@@ -1,0 +1,2410 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="5304477021">  
+	<general>  
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>  
+		<tablename>Jakarta, 677313351, 677313351</tablename>  
+		<duration>N/A</duration>  
+		<gamecount>75</gamecount>  
+		<startdate>2012-01-23 15:08:49</startdate>  
+		<currency>USD</currency>  
+		<nickname>WhiteRiderT</nickname>  
+		<bets>31,310</bets>  
+		<wins>38,810</wins>  
+		<chipsin>0</chipsin>
+		<chipsout>9,000</chipsout>
+		<ipoints>0.34</ipoints>
+		<statuspoints>0.34</statuspoints>
+		<awardpoints>0.34</awardpoints>
+		<tournamentname>Jakarta</tournamentname>
+		<place>1</place>
+		<buyin>$0.10+$0.02</buyin>
+		<totalbuyin>$0.12</totalbuyin>
+		<ipoints>0.34</ipoints>
+		<win>$0.42</win>
+		<statuspoints>0.34</statuspoints>
+		<awardpoints>0.34</awardpoints>}  
+	</general>  
+	<game gamecode="3953547899">
+		<general>
+			<startdate>2012-01-23 15:08:49</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,500" dealer="1" win="1,685" bet="1,500" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="6" name="tintin1991" chips="1,500" dealer="0" win="0" bet="155" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="3" sum="70" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="7" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S4 D2</cards>
+			<action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="tintin1991">X X</cards>
+			<action no="3" player="tintin1991" type="23" sum="70" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C10 DQ D10</cards>
+			<action no="10" player="rurik2d" type="23" sum="1,430" cards=""/>
+			<action no="9" player="tintin1991" type="5" sum="85" cards=""/>
+			<action no="11" player="tintin1991" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953548094">
+		<general>
+			<startdate>2012-01-23 15:09:36</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,685" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="6" name="tintin1991" chips="1,345" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,500" dealer="0" win="330" bet="205" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,500" dealer="0" win="0" bet="95" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="tintin1991" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C7 HQ</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="tintin1991">X X</cards>
+			<action no="8" player="tintin1991" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="23" sum="40" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="3" sum="40" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DJ C3 CQ</cards>
+			<action no="9" player="NLfrihet" type="5" sum="55" cards=""/>
+			<action no="10" player="ezhik185" type="3" sum="55" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H6</cards>
+			<action no="11" player="NLfrihet" type="5" sum="110" cards=""/>
+			<action no="12" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953548401">
+		<general>
+			<startdate>2012-01-23 15:10:48</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,685" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="tintin1991" chips="1,325" dealer="0" win="270" bet="150" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,625" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,405" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="tintin1991" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CJ D5</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="tintin1991">X X</cards>
+			<action no="7" player="tintin1991" type="23" sum="60" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="8" player="NLfrihet" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="3" sum="20" cards=""/>
+			<action no="9" player="ezhik185" type="3" sum="40" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C3 D4 SQ</cards>
+			<action no="10" player="tintin1991" type="5" sum="90" cards=""/>
+			<action no="11" player="NLfrihet" type="0" sum="0" cards=""/>
+			<action no="12" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953548684">
+		<general>
+			<startdate>2012-01-23 15:11:52</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,685" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="tintin1991" chips="1,445" dealer="1" win="0" bet="1,345" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,565" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,345" dealer="0" win="2,700" bet="1,345" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CQ D9</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="tintin1991">C7 HK</cards>
+			<action no="6" player="tintin1991" type="23" sum="60" cards=""/>
+			<action no="9" player="tintin1991" type="3" sum="120" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="7" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">SK HA</cards>
+			<action no="8" player="ezhik185" type="23" sum="180" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DJ S2 S8</cards>
+			<action no="11" player="tintin1991" type="3" sum="277.50" cards=""/>
+			<action no="10" player="ezhik185" type="5" sum="277.50" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D2</cards>
+			<action no="13" player="tintin1991" type="3" sum="887.50" cards=""/>
+			<action no="12" player="ezhik185" type="5" sum="887.50" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C2</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953548991">
+		<general>
+			<startdate>2012-01-23 15:12:58</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,685" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="tintin1991" chips="100" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,555" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,700" dealer="0" win="220" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="20" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="10" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="8" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H5 CJ</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="tintin1991">D8 S9</cards>
+			<action no="5" player="tintin1991" type="23" sum="100" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">CA H7</cards>
+			<action no="7" player="ezhik185" type="3" sum="90" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H6 HQ S4</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H3</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DK</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953549166">
+		<general>
+			<startdate>2012-01-23 15:13:35</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,665" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,490" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,555" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,820" dealer="1" win="210" bet="80" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="7" player="jujubeads" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CJ H7</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="3" sum="20" cards=""/>
+			<action no="8" player="NLfrihet" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="23" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H10 H2 HJ</cards>
+			<action no="9" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="10" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="11" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DK</cards>
+			<action no="12" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="15" player="jujubeads" type="0" sum="0" cards=""/>
+			<action no="13" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="16" player="NLfrihet" type="0" sum="0" cards=""/>
+			<action no="14" player="ezhik185" type="5" sum="20" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953549507">
+		<general>
+			<startdate>2012-01-23 15:14:51</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,655" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,470" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,495" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,950" dealer="0" win="350" bet="210" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="3" sum="50" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HK S9</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="23" sum="60" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DJ C3 S10</cards>
+			<action no="8" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="11" player="jujubeads" type="0" sum="0" cards=""/>
+			<action no="9" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="12" player="NLfrihet" type="0" sum="0" cards=""/>
+			<action no="10" player="ezhik185" type="5" sum="150" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953554308">
+		<general>
+			<startdate>2012-01-23 15:15:46</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,655" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,370" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,435" dealer="0" win="50" bet="20" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="3,090" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S9 D5</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">H2 CA</cards>
+			<action no="7" player="NLfrihet" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">C2 CQ</cards>
+			<action no="3" player="ezhik185" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C10 C9 S8</cards>
+			<action no="8" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="9" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S4</cards>
+			<action no="10" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="11" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D3</cards>
+			<action no="12" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="13" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953554658">
+		<general>
+			<startdate>2012-01-23 15:17:04</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,655" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,465" dealer="0" win="320" bet="160" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="3,070" dealer="0" win="0" bet="160" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DK S5</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">SQ CK</cards>
+			<action no="6" player="NLfrihet" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="ezhik185">H8 HQ</cards>
+			<action no="7" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H10 CA H5</cards>
+			<action no="8" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="10" player="NLfrihet" type="3" sum="40" cards=""/>
+			<action no="9" player="ezhik185" type="5" sum="40" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DQ</cards>
+			<action no="11" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="13" player="NLfrihet" type="3" sum="40" cards=""/>
+			<action no="12" player="ezhik185" type="5" sum="40" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C7</cards>
+			<action no="14" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="16" player="NLfrihet" type="3" sum="40" cards=""/>
+			<action no="15" player="ezhik185" type="5" sum="40" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953554926">
+		<general>
+			<startdate>2012-01-23 15:17:57</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,655" dealer="0" win="0" bet="280" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,625" dealer="1" win="600" bet="280" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,910" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="40" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">CA H9</cards>
+			<action no="7" player="rurik2d" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C10 H6</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">HQ DA</cards>
+			<action no="5" player="NLfrihet" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HJ D2 S2</cards>
+			<action no="9" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="10" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="8" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SA</cards>
+			<action no="12" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="13" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="11" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DQ</cards>
+			<action no="15" player="rurik2d" type="5" sum="40" cards=""/>
+			<action no="18" player="rurik2d" type="3" sum="200" cards=""/>
+			<action no="16" player="NLfrihet" type="23" sum="240" cards=""/>
+			<action no="14" player="ezhik185" type="4" sum="0" cards=""/>
+			<action no="17" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953555293">
+		<general>
+			<startdate>2012-01-23 15:19:15</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,375" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,370" dealer="0" win="280" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,945" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,870" dealer="1" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="3" sum="20" cards=""/>
+			<action no="9" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="7" player="jujubeads" type="23" sum="200" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C5 HJ</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="3" sum="40" cards=""/>
+			<action no="8" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953555445">
+		<general>
+			<startdate>2012-01-23 15:19:50</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,335" dealer="1" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,450" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,440" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,945" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,830" dealer="0" win="570" bet="310" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="3" sum="80" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SJ H2</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="3" sum="40" cards=""/>
+			<action no="8" player="NLfrihet" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="23" sum="80" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D2 D5 C5</cards>
+			<action no="11" player="rurik2d" type="3" sum="40" cards=""/>
+			<action no="9" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="12" player="NLfrihet" type="0" sum="0" cards=""/>
+			<action no="10" player="ezhik185" type="5" sum="40" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">CQ</cards>
+			<action no="14" player="rurik2d" type="0" sum="0" cards=""/>
+			<action no="13" player="ezhik185" type="5" sum="190" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953562188">
+		<general>
+			<startdate>2012-01-23 15:20:52</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,215" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,400" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,865" dealer="0" win="60" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="3,090" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S3 HK</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953562271">
+		<general>
+			<startdate>2012-01-23 15:21:11</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,215" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,380" dealer="1" win="440" bet="300" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,885" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="3,090" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DQ DA</cards>
+			<action no="5" player="WhiteRiderT" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="7" player="ezhik185" type="3" sum="80" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SA D2 H6</cards>
+			<action no="9" player="WhiteRiderT" type="5" sum="180" cards=""/>
+			<action no="8" player="ezhik185" type="4" sum="0" cards=""/>
+			<action no="10" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953562470">
+		<general>
+			<startdate>2012-01-23 15:21:55</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,215" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,520" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,865" dealer="1" win="160" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,970" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="40" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">D10 C2</cards>
+			<action no="7" player="rurik2d" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C3 D3</cards>
+			<action no="4" player="WhiteRiderT" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="NLfrihet">H7 HQ</cards>
+			<action no="5" player="NLfrihet" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="ezhik185">H3 DJ</cards>
+			<action no="6" player="ezhik185" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DA S7 DK</cards>
+			<action no="9" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="10" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="11" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="8" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D4</cards>
+			<action no="13" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="14" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="15" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="12" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H9</cards>
+			<action no="17" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="18" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="19" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="16" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953562895">
+		<general>
+			<startdate>2012-01-23 15:23:31</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,175" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,480" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,985" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,930" dealer="1" win="240" bet="120" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="7" player="jujubeads" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D9 H8</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C4 D5 CJ</cards>
+			<action no="8" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="9" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="10" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SQ</cards>
+			<action no="11" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="14" player="rurik2d" type="0" sum="0" cards=""/>
+			<action no="12" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="15" player="jujubeads" type="0" sum="0" cards=""/>
+			<action no="13" player="ezhik185" type="5" sum="60" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953563155">
+		<general>
+			<startdate>2012-01-23 15:24:32</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,115" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,370" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,480" dealer="0" win="225" bet="135" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,985" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="3,050" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D3 DA</cards>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HA C10 C8</cards>
+			<action no="8" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="9" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S2</cards>
+			<action no="10" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="11" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C5</cards>
+			<action no="12" player="WhiteRiderT" type="5" sum="75" cards=""/>
+			<action no="13" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953563340">
+		<general>
+			<startdate>2012-01-23 15:25:13</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,115" dealer="0" win="210" bet="120" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,570" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,985" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,990" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S2 SQ</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="7" player="NLfrihet" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DQ SK D10</cards>
+			<action no="9" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="8" player="NLfrihet" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S3</cards>
+			<action no="11" player="rurik2d" type="5" sum="60" cards=""/>
+			<action no="10" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="12" player="NLfrihet" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953563518">
+		<general>
+			<startdate>2012-01-23 15:25:50</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="1,205" dealer="0" win="2,530" bet="1,205" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,540" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,925" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="2,990" dealer="0" win="0" bet="1,205" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">H7 S7</cards>
+			<action no="3" player="rurik2d" type="3" sum="60" cards=""/>
+			<action no="8" player="rurik2d" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H8 DQ</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="3" sum="30" cards=""/>
+			<action no="9" player="NLfrihet" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="ezhik185">S3 H3</cards>
+			<action no="7" player="ezhik185" type="23" sum="120" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D7 SJ C10</cards>
+			<action no="12" player="rurik2d" type="3" sum="180" cards=""/>
+			<action no="10" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="13" player="NLfrihet" type="0" sum="0" cards=""/>
+			<action no="11" player="ezhik185" type="5" sum="180" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C5</cards>
+			<action no="15" player="rurik2d" type="7" sum="905" cards=""/>
+			<action no="14" player="ezhik185" type="5" sum="540" cards=""/>
+			<action no="16" player="ezhik185" type="3" sum="365" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S2</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953563830">
+		<general>
+			<startdate>2012-01-23 15:27:00</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,530" dealer="0" win="90" bet="60" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,805" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,785" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="60" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D8 C6</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953569525">
+		<general>
+			<startdate>2012-01-23 15:27:21</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,560" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,340" dealer="0" win="270" bet="150" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,805" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,755" dealer="1" win="0" bet="60" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="7" player="jujubeads" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SQ D4</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HQ S5 SA</cards>
+			<action no="8" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="9" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="10" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S2</cards>
+			<action no="11" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="12" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="13" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S8</cards>
+			<action no="14" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="17" player="rurik2d" type="0" sum="0" cards=""/>
+			<action no="15" player="jujubeads" type="5" sum="90" cards=""/>
+			<action no="16" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953569887">
+		<general>
+			<startdate>2012-01-23 15:28:34</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,460" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,540" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,805" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,695" dealer="0" win="315" bet="165" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S2 H10</cards>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H2 DJ D5</cards>
+			<action no="8" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="9" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="10" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C7</cards>
+			<action no="11" player="WhiteRiderT" type="4" sum="0" cards=""/>
+			<action no="14" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<action no="12" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="15" player="NLfrihet" type="0" sum="0" cards=""/>
+			<action no="13" player="ezhik185" type="5" sum="105" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953570260">
+		<general>
+			<startdate>2012-01-23 15:29:47</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,500" dealer="0" win="210" bet="120" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,480" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,745" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,845" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H2 D9</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="7" player="NLfrihet" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C2 SK H9</cards>
+			<action no="9" player="rurik2d" type="5" sum="60" cards=""/>
+			<action no="8" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="10" player="NLfrihet" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953570511">
+		<general>
+			<startdate>2012-01-23 15:30:37</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,590" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,685" dealer="0" win="400" bet="300" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,845" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S3 C4</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="23" sum="300" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="7" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953570649">
+		<general>
+			<startdate>2012-01-23 15:31:07</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,590" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="0" win="1,600" bet="1,450" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,785" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,745" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="100" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="50" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="7" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SA SQ</cards>
+			<action no="4" player="WhiteRiderT" type="23" sum="1,450" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953570801">
+		<general>
+			<startdate>2012-01-23 15:31:36</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,490" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,785" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,695" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="3" sum="50" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="7" player="jujubeads" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H8 HA</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H2 DQ S3</cards>
+			<action no="8" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="9" player="jujubeads" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DJ</cards>
+			<action no="10" player="rurik2d" type="5" sum="100" cards=""/>
+			<action no="11" player="jujubeads" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953570989">
+		<general>
+			<startdate>2012-01-23 15:32:16</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,590" dealer="1" win="500" bet="350" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,330" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,600" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,785" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="23" sum="350" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H4 CQ</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953578117">
+		<general>
+			<startdate>2012-01-23 15:32:40</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,280" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,785" dealer="0" win="150" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D6 HJ</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953578190">
+		<general>
+			<startdate>2012-01-23 15:32:56</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,280" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,835" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,695" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C2 DJ</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="23" sum="200" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="7" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953578293">
+		<general>
+			<startdate>2012-01-23 15:33:18</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,740" dealer="0" win="150" bet="100" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,280" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,935" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,595" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="100" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="50" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D4 SJ</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953578488">
+		<general>
+			<startdate>2012-01-23 15:33:58</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,790" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,280" dealer="0" win="250" bet="100" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,935" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,545" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">H5 C9</cards>
+			<action no="7" player="jujubeads" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CJ CK</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">C7 C5</cards>
+			<action no="4" player="NLfrihet" type="3" sum="100" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C10 SJ HJ</cards>
+			<action no="8" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="9" player="NLfrihet" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S6</cards>
+			<action no="10" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="11" player="NLfrihet" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D10</cards>
+			<action no="12" player="jujubeads" type="4" sum="0" cards=""/>
+			<action no="13" player="NLfrihet" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953578772">
+		<general>
+			<startdate>2012-01-23 15:35:00</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,740" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,835" dealer="0" win="450" bet="300" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,545" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DQ SJ</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="23" sum="300" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953578878">
+		<general>
+			<startdate>2012-01-23 15:35:24</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,350" dealer="0" win="1,450" bet="1,350" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,985" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,545" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D9 HQ</cards>
+			<action no="6" player="WhiteRiderT" type="23" sum="1,350" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="7" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953578973">
+		<general>
+			<startdate>2012-01-23 15:35:41</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,740" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,885" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,545" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C4 DA</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="23" sum="200" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="7" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953579042">
+		<general>
+			<startdate>2012-01-23 15:35:59</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,740" dealer="0" win="150" bet="100" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,985" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,445" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="100" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="50" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DK S8</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953579236">
+		<general>
+			<startdate>2012-01-23 15:36:39</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,790" dealer="0" win="400" bet="300" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,380" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,985" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,395" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">S9 D9</cards>
+			<action no="6" player="rurik2d" type="23" sum="300" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="7" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SQ D8</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953579361">
+		<general>
+			<startdate>2012-01-23 15:37:05</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,890" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,280" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,985" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,395" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H7 CJ</cards>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953579452">
+		<general>
+			<startdate>2012-01-23 15:37:27</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,205" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,525" dealer="0" win="1,675" bet="1,525" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,985" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,395" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H7 H6</cards>
+			<action no="6" player="WhiteRiderT" type="23" sum="1,525" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="7" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953579565">
+		<general>
+			<startdate>2012-01-23 15:37:46</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,205" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,675" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,835" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,395" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CJ C5</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953579707">
+		<general>
+			<startdate>2012-01-23 15:38:04</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,890" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,205" dealer="0" win="1,430" bet="1,205" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,675" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,760" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,470" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="150" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="75" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="7" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="23" sum="1,205" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H3 S3</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953579891">
+		<general>
+			<startdate>2012-01-23 15:38:25</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,740" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,430" dealer="0" win="1,580" bet="1,430" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,675" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,395" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="3" sum="75" cards=""/>
+			<action no="8" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="7" player="jujubeads" type="23" sum="1,430" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H8 CA</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953585954">
+		<general>
+			<startdate>2012-01-23 15:39:00</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,590" dealer="1" win="525" bet="300" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,580" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,675" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,395" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="23" sum="300" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HJ S4</cards>
+			<action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953586053">
+		<general>
+			<startdate>2012-01-23 15:39:22</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,815" dealer="0" win="3,040" bet="2,815" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,505" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,525" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,760" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,395" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">HK CA</cards>
+			<action no="4" player="rurik2d" type="23" sum="2,815" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C3 H9</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="7" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953586146">
+		<general>
+			<startdate>2012-01-23 15:39:43</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,505" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,450" dealer="1" win="1,675" bet="1,450" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,610" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,395" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D7 DJ</cards>
+			<action no="5" player="WhiteRiderT" type="23" sum="1,450" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="7" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953586230">
+		<general>
+			<startdate>2012-01-23 15:40:02</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,040" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,505" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,675" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,535" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,245" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="150" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="75" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="3" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H9 D5</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953586411">
+		<general>
+			<startdate>2012-01-23 15:40:39</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,115" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,505" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,675" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,535" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,170" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="jujubeads" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">C4 DJ</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953586567">
+		<general>
+			<startdate>2012-01-23 15:41:09</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,040" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,580" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,675" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,535" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="jujubeads" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="6" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SJ HK</cards>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953586632">
+		<general>
+			<startdate>2012-01-23 15:41:23</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,505" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,750" dealer="0" win="1,900" bet="1,750" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,535" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="5" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D10 D9</cards>
+			<action no="6" player="WhiteRiderT" type="23" sum="1,750" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="7" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953586707">
+		<general>
+			<startdate>2012-01-23 15:41:36</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,040" dealer="0" win="750" bet="525" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,505" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,900" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,385" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,170" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="23" sum="525" cards=""/>
+			<cards type="Pocket" player="jujubeads">X X</cards>
+			<action no="4" player="jujubeads" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S9 D8</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="7" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953586826">
+		<general>
+			<startdate>2012-01-23 15:42:00</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,265" dealer="0" win="3,085" bet="1,505" rebuy="0" addon="0"/>
+				<player seat="3" name="jujubeads" chips="1,505" dealer="0" win="0" bet="1,505" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,900" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,310" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,020" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="150" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="75" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">DQ CA</cards>
+			<action no="7" player="rurik2d" type="3" sum="1,355" cards=""/>
+			<cards type="Pocket" player="jujubeads">H10 S9</cards>
+			<action no="3" player="jujubeads" type="23" sum="1,505" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H4 D6</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H6 S5 C4</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">HA</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D2</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953586980">
+		<general>
+			<startdate>2012-01-23 15:42:33</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="4,845" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,900" dealer="0" win="2,050" bet="1,900" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="945" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="5" player="rurik2d" type="3" sum="75" cards=""/>
+			<action no="7" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">CK DQ</cards>
+			<action no="6" player="WhiteRiderT" type="23" sum="1,900" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953587073">
+		<general>
+			<startdate>2012-01-23 15:42:50</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="4,695" dealer="1" win="525" bet="300" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="2,050" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,310" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="945" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="3" sum="150" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H4 C10</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D7 D3 H7</cards>
+			<action no="8" player="rurik2d" type="5" sum="150" cards=""/>
+			<action no="7" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="9" player="NLfrihet" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953587172">
+		<general>
+			<startdate>2012-01-23 15:43:10</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="4,920" dealer="0" win="600" bet="300" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,975" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,160" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="945" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="75" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="150" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="3" sum="150" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S8 HA</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="3" sum="75" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="6" player="ezhik185" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S7 C8 C5</cards>
+			<action no="9" player="rurik2d" type="5" sum="150" cards=""/>
+			<action no="7" player="NLfrihet" type="4" sum="0" cards=""/>
+			<action no="10" player="NLfrihet" type="0" sum="0" cards=""/>
+			<action no="8" player="ezhik185" type="4" sum="0" cards=""/>
+			<action no="11" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953587350">
+		<general>
+			<startdate>2012-01-23 15:43:53</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="5,220" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,975" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,010" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="795" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">H9 S9</cards>
+			<cards type="Pocket" player="WhiteRiderT">D4 SQ</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="4" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="5" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953587450">
+		<general>
+			<startdate>2012-01-23 15:44:12</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="5,320" dealer="0" win="0" bet="1,975" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="1,975" dealer="0" win="3,950" bet="1,975" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="695" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">CQ H10</cards>
+			<action no="5" player="rurik2d" type="3" sum="100" cards=""/>
+			<action no="7" player="rurik2d" type="3" sum="1,775" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SA D10</cards>
+			<action no="6" player="WhiteRiderT" type="23" sum="1,975" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="3" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="4" player="ezhik185" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C8 C10 D7</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S2</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">HJ</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953592711">
+		<general>
+			<startdate>2012-01-23 15:44:46</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,345" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="3,950" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="1,010" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="695" dealer="0" win="995" bet="695" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="NLfrihet" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SA C3</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="6" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+			<action no="3" player="ezhik185" type="23" sum="695" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953592809">
+		<general>
+			<startdate>2012-01-23 15:45:09</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,345" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="3,850" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="810" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="995" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NLfrihet" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="ezhik185" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S5 CK</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">X X</cards>
+			<action no="5" player="NLfrihet" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ezhik185">X X</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953592973">
+		<general>
+			<startdate>2012-01-23 15:45:43</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,345" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="3,850" dealer="0" win="770" bet="1,095" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="710" dealer="1" win="2,330" bet="710" rebuy="0" addon="0"/>
+				<player seat="10" name="ezhik185" chips="1,095" dealer="0" win="0" bet="1,095" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="ezhik185" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="6" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DK CA</cards>
+			<action no="3" player="WhiteRiderT" type="23" sum="600" cards=""/>
+			<action no="7" player="WhiteRiderT" type="3" sum="495" cards=""/>
+			<cards type="Pocket" player="NLfrihet">SJ HJ</cards>
+			<action no="4" player="NLfrihet" type="7" sum="710" cards=""/>
+			<cards type="Pocket" player="ezhik185">S9 DA</cards>
+			<action no="5" player="ezhik185" type="7" sum="995" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C6 DQ HQ</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D10</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C3</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953593140">
+		<general>
+			<startdate>2012-01-23 15:46:19</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,145" dealer="0" win="5,675" bet="3,145" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="3,525" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="8" name="NLfrihet" chips="2,330" dealer="0" win="0" bet="2,330" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">HQ DQ</cards>
+			<action no="4" player="rurik2d" type="7" sum="3,045" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D5 H2</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NLfrihet">HA CJ</cards>
+			<action no="3" player="NLfrihet" type="23" sum="2,330" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HK SQ S2</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C4</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S6</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953593299">
+		<general>
+			<startdate>2012-01-23 15:46:52</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="5,675" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="3,325" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">S2 CQ</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953593351">
+		<general>
+			<startdate>2012-01-23 15:47:03</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="5,775" dealer="1" win="400" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="3,225" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">CK D7</cards>
+			<action no="3" player="rurik2d" type="3" sum="100" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D10 H7</cards>
+			<action no="4" player="WhiteRiderT" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C4 CJ DA</cards>
+			<action no="6" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="5" player="WhiteRiderT" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D3</cards>
+			<action no="8" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">CA</cards>
+			<action no="10" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953593508">
+		<general>
+			<startdate>2012-01-23 15:47:39</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="5,975" dealer="0" win="600" bet="400" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="3,025" dealer="1" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SJ C8</cards>
+			<action no="3" player="WhiteRiderT" type="3" sum="100" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H4 HK C7</cards>
+			<action no="5" player="rurik2d" type="5" sum="200" cards=""/>
+			<action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953593600">
+		<general>
+			<startdate>2012-01-23 15:47:59</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="6,175" dealer="1" win="6,375" bet="6,175" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="2,825" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="23" sum="6,175" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H9 C4</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953593658">
+		<general>
+			<startdate>2012-01-23 15:48:13</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="6,375" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="2,625" dealer="1" win="2,825" bet="2,625" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S10 HQ</cards>
+			<action no="3" player="WhiteRiderT" type="23" sum="2,625" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953593727">
+		<general>
+			<startdate>2012-01-23 15:48:28</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="6,175" dealer="1" win="3,350" bet="6,175" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="2,825" dealer="0" win="5,650" bet="2,825" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">CK CJ</cards>
+			<action no="3" player="rurik2d" type="23" sum="6,175" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H8 HA</cards>
+			<action no="4" player="WhiteRiderT" type="7" sum="2,625" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D8 S10 C8</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S9</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S8</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953593848">
+		<general>
+			<startdate>2012-01-23 15:48:52</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,350" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="5,650" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">H3 C4</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953593901">
+		<general>
+			<startdate>2012-01-23 15:49:03</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,450" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="5,550" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S4 D6</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953593936">
+		<general>
+			<startdate>2012-01-23 15:49:11</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,350" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="5,650" dealer="1" win="800" bet="600" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">HJ H10</cards>
+			<action no="3" player="WhiteRiderT" type="23" sum="600" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953593996">
+		<general>
+			<startdate>2012-01-23 15:49:24</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,150" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="5,850" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">D4 C4</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953594032">
+		<general>
+			<startdate>2012-01-23 15:49:32</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,050" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="5,950" dealer="1" win="600" bet="400" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C5 C6</cards>
+			<action no="3" player="WhiteRiderT" type="3" sum="100" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CJ H6 D3</cards>
+			<action no="5" player="rurik2d" type="4" sum="0" cards=""/>
+			<action no="7" player="rurik2d" type="0" sum="0" cards=""/>
+			<action no="6" player="WhiteRiderT" type="5" sum="200" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953594127">
+		<general>
+			<startdate>2012-01-23 15:49:51</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,850" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="6,150" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H2 S4</cards>
+		</round>
+
+	</game>
+	<game gamecode="3953594164">
+		<general>
+			<startdate>2012-01-23 15:49:59</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,750" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="6,250" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">S6 C9</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953594218">
+		<general>
+			<startdate>2012-01-23 15:50:10</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,850" dealer="1" win="3,050" bet="2,850" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="6,150" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="3" player="rurik2d" type="23" sum="2,850" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">C2 CJ</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953594307">
+		<general>
+			<startdate>2012-01-23 15:50:26</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="3,050" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="5,950" dealer="1" win="6,150" bet="5,950" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="rurik2d" type="2" sum="200" cards="[cards]"/>
+			<action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">X X</cards>
+			<action no="4" player="rurik2d" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">S5 D5</cards>
+			<action no="3" player="WhiteRiderT" type="23" sum="5,950" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3953600441">
+		<general>
+			<startdate>2012-01-23 15:50:38</startdate>		  
+			<players>
+				<player seat="1" name="rurik2d" chips="2,850" dealer="1" win="0" bet="2,850" rebuy="0" addon="0"/>
+				<player seat="5" name="WhiteRiderT" chips="6,150" dealer="0" win="5,700" bet="2,850" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="rurik2d" type="1" sum="100" cards="[cards]"/>
+			<action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="rurik2d">S4 HA</cards>
+			<action no="3" player="rurik2d" type="23" sum="2,850" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">DA SK</cards>
+			<action no="4" player="WhiteRiderT" type="3" sum="2,650" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DK HJ C9</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D2</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D9</cards>
+		</round>
+
+	</game>  
+</session>

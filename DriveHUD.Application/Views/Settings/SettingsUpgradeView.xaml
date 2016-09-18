@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="DriveHUD.Application.Views.Settings.SettingsUpgradeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DriveHUD.Application.Views.Settings"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="550">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" 
+                       Margin="15 5"
+                       Style="{StaticResource Title_H2}" Foreground="{StaticResource ForegroundBrush}" 
+                       Text="{ResX Key=Settings_CurrentVersion}" />
+            <TextBlock Grid.Row="0" Grid.Column="1" 
+                       Margin="15 5" HorizontalAlignment="Right"
+                       Style="{StaticResource Title_H2}" Foreground="White" 
+                       Text="{Binding CurrentVersion}" />
+
+            <TextBlock Grid.Row="1" Grid.Column="0" 
+                       Margin="15 5"
+                       Style="{StaticResource Title_H2}" Foreground="{StaticResource ForegroundBrush}" 
+                       Text="{ResX Key=Settings_LatestVersion}"/>
+            <TextBlock Grid.Row="1" Grid.Column="1" 
+                       Margin="15 5" HorizontalAlignment="Right"
+                       Style="{StaticResource Title_H2}" Foreground="White" 
+                       Text="{Binding AvailableVersion}" />
+        </Grid>
+
+        <StackPanel Grid.Row="1" Orientation="Vertical">
+            <Separator />
+            <StackPanel Orientation="Horizontal"  HorizontalAlignment="Center">
+                <Button Grid.Row="1"  Width="150"  Height="30"  Margin="15" 
+                    Content="{ResX Key=Settings_AddActivation}"
+                    Command="{Binding AddActivationCommand}"/>
+                <Button Grid.Row="2" Width="150"  Height="30"  Margin="15" 
+                    Content="{ResX Key=Settings_RenewLicense}"
+                    Command="{Binding RenewLicenseCommand}"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</UserControl>

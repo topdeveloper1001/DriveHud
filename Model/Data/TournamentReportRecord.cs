@@ -1,0 +1,154 @@
+﻿using DriveHUD.Entities;
+using HandHistories.Objects.GameDescription;
+using System;
+
+namespace Model.Data
+{
+    public class TournamentReportRecord : Indicators
+    {
+        public virtual string PlayerName { get; set; }
+        public virtual string TournamentId { get; set; }
+
+        public virtual int TournamentsPlayed { get; set; }
+        public virtual int TournamentsInPrizes { get; set; }
+
+        /// <summary>
+        /// Holds the BuyIn value for tournament
+        /// </summary>
+        public virtual decimal BuyIn { get; set; }
+        /// <summary>
+        /// Holds the total amount spent on BuyIns
+        /// </summary>
+        public virtual decimal TotalBuyIn { get; set; }
+        public virtual decimal Rake { get; set; }
+        public virtual string TableType { get; set; }
+        public virtual string TournamentSpeed { get; set; }
+        public virtual string TournamentLength { get; set; }
+        public virtual int FinishPosition { get; set; }
+        public virtual int FinalTables { get; set; }
+        public virtual decimal Rebuy { get; set; }
+        public virtual decimal Won { get; set; }
+        public virtual int TableSize { get; set; }
+
+        public virtual DateTime Started { get; set; }
+
+        public virtual string StartedString
+        {
+            get
+            {
+                return StringFormatter.GetDateTimeString(Started);
+            }
+        }
+
+        public virtual decimal ROI
+        {
+            get
+            {
+                return GetPercentage(NetWon, TotalExpenses);
+            }
+        }
+
+        public virtual decimal ITM
+        {
+            get
+            {
+                return GetPercentage(TournamentsInPrizes, TournamentsPlayed);
+            }
+        }
+
+        public virtual decimal TotalExpenses
+        {
+            get
+            {
+                return Rake + TotalBuyIn + Rebuy;
+            }
+        }
+
+
+        public virtual decimal NetWon
+        {
+            get
+            {
+                return Won - TotalExpenses;
+            }
+        }
+
+        public void SetBuyIn(int buyinInCents)
+        {
+            this.BuyIn = buyinInCents / 100m;
+        }
+
+        public void SetTotalBuyIn(int buyinInCents)
+        {
+            this.TotalBuyIn = buyinInCents / 100m;
+        }
+
+        public void SetTableType(string tournamentTag)
+        {
+            this.TableType = string.Empty;
+            TournamentsTags tag;
+            if (Enum.TryParse(tournamentTag, out tag))
+            {
+                switch (tag)
+                {
+                    case TournamentsTags.MTT:
+                        this.TableType = "MTT";
+                        break;
+                    case TournamentsTags.STT:
+                        this.TableType = "S&G";
+                        break;
+                }
+            }
+        }
+
+        internal void SetRebuy(int rebuyamountincents)
+        {
+            this.Rebuy = rebuyamountincents / 100m;
+        }
+
+        internal void SetWinning(int winningsincents)
+        {
+            this.Won = winningsincents / 100m;
+        }
+
+        internal void SetRake(int rakeincents)
+        {
+            this.Rake = rakeincents / 100m;
+        }
+
+        public void SetSpeed(int speedTypeId)
+        {
+            this.TournamentSpeed = string.Empty;
+            TournamentSpeed speed;
+            if (Enum.TryParse(speedTypeId.ToString(), out speed))
+            {
+                this.TournamentSpeed = speed.ToString();
+            }
+        }
+
+        public void SetGameType(int pokergametypeId)
+        {
+            this.GameType = string.Empty;
+            GameType gametype;
+            if(Enum.TryParse(pokergametypeId.ToString(), out gametype))
+            {
+                this.GameType = gametype.ToString();
+            }
+        }
+
+        public void SetTournamentLength(DateTime firstHandTimeStamp, DateTime lastHandTimeStamp)
+        {
+            var length = lastHandTimeStamp - firstHandTimeStamp;
+            this.TournamentLength = String.Format("{0}m", Math.Round(length.TotalMinutes));
+        }
+
+        /* Do not inherit this method from the Indicators because TotalHands might be 0 for this container */
+        private decimal GetPercentage(decimal actual, decimal possible)
+        {
+            if (possible == 0)
+                return 0;
+
+            return (actual / possible) * 100;
+        }
+    }
+}

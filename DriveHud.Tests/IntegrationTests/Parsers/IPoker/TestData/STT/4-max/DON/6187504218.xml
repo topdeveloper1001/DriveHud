@@ -1,0 +1,755 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187504218">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ €1 Double Up*4, 818994244</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:15</duration>  
+	          <gamecount>45</gamecount>  
+	          <startdate>2014-01-25 10:38:45</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>15,380</bets>  
+	          <wins>15,880</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,300</chipsout>
+			  		<ipoints>2.30</ipoints>
+        		<statuspoints>2.30</statuspoints>
+			  		<awardpoints>2.30</awardpoints>
+	          <tournamentname>‘Super Turbo’ €1 Double Up*4</tournamentname><place>1</place><buyin>€0.90+€0.10</buyin> <totalbuyin>€1.00</totalbuyin> <ipoints>2.30</ipoints> <win>€1.80</win> <statuspoints>2.30</statuspoints> <awardpoints>2.30</awardpoints>  
+	    </general>  
+	    <game gamecode="5435516685">
+		 <general>
+		  <startdate>2014-01-25 10:38:45</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="70" bet="50" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="tylkothuanh" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="4" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA C9</cards><action no="5" player="WorstCard" type="23" sum="50" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="6" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="3" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516755">
+		 <general>
+		  <startdate>2014-01-25 10:39:00</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tylkothuanh" type="1" sum="10" cards="[cards]"/><action no="2" player="lionchik" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="3" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C4 D9</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="5" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435516820">
+		 <general>
+		  <startdate>2014-01-25 10:39:14</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="800" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="810" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Nyuszika1621" type="2" sum="20" cards="[cards]"/><action no="1" player="lionchik" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="6" player="Nyuszika1621" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 C8</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="4" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="5" player="lionchik" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 S4 H3</cards><action no="8" player="Nyuszika1621" type="3" sum="20" cards=""/><action no="7" player="lionchik" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards><action no="10" player="Nyuszika1621" type="5" sum="40" cards=""/><action no="9" player="lionchik" type="4" sum="0" cards=""/><action no="11" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516966">
+		 <general>
+		  <startdate>2014-01-25 10:39:42</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="840" dealer="0" win="200" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Nyuszika1621" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="5" player="Nyuszika1621" type="23" sum="40" cards=""/><cards type="Pocket" player="WorstCard">CK HJ</cards><action no="6" player="WorstCard" type="3" sum="20" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="3" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="4" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 C9 C3</cards><action no="7" player="Nyuszika1621" type="5" sum="40" cards=""/><action no="8" player="WorstCard" type="3" sum="40" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards><action no="9" player="Nyuszika1621" type="5" sum="40" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517155">
+		 <general>
+		  <startdate>2014-01-25 10:40:17</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="920" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="740" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="770" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="770" dealer="0" win="140" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="tylkothuanh" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="4" player="Nyuszika1621" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">D2 CQ</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="6" player="tylkothuanh" type="4" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="3" player="lionchik" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 C4 H9</cards><action no="9" player="Nyuszika1621" type="0" sum="0" cards=""/><action no="7" player="tylkothuanh" type="4" sum="0" cards=""/><action no="10" player="tylkothuanh" type="0" sum="0" cards=""/><action no="8" player="lionchik" type="5" sum="70" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517339">
+		 <general>
+		  <startdate>2014-01-25 10:40:54</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="900" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="750" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="820" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tylkothuanh" type="1" sum="15" cards="[cards]"/><action no="2" player="lionchik" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="3" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 S2</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="5" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435517395">
+		 <general>
+		  <startdate>2014-01-25 10:41:05</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="900" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="730" dealer="0" win="105" bet="60" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="735" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="835" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Nyuszika1621" type="2" sum="30" cards="[cards]"/><action no="1" player="lionchik" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="6" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D10 CK</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="4" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="5" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517462">
+		 <general>
+		  <startdate>2014-01-25 10:41:18</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="775" dealer="0" win="805" bet="775" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="735" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Nyuszika1621" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="5" player="Nyuszika1621" type="3" sum="15" cards=""/><action no="7" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SA S7</cards><action no="6" player="WorstCard" type="23" sum="775" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="3" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="4" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517608">
+		 <general>
+		  <startdate>2014-01-25 10:41:47</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="840" dealer="1" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="805" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="735" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="tylkothuanh" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="4" player="Nyuszika1621" type="23" sum="60" cards=""/><cards type="Pocket" player="WorstCard">C5 D4</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="6" player="tylkothuanh" type="3" sum="30" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="3" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 D2 SA</cards><action no="8" player="Nyuszika1621" type="5" sum="90" cards=""/><action no="7" player="tylkothuanh" type="4" sum="0" cards=""/><action no="9" player="tylkothuanh" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517736">
+		 <general>
+		  <startdate>2014-01-25 10:42:13</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="915" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="865" bet="790" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="675" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="820" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="tylkothuanh" type="1" sum="15" cards="[cards]"/><action no="2" player="lionchik" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="3" player="Nyuszika1621" type="3" sum="30" cards=""/><action no="7" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA DQ</cards><action no="4" player="WorstCard" type="23" sum="790" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="5" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="6" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517874">
+		 <general>
+		  <startdate>2014-01-25 10:42:40</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="885" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="865" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="660" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="790" dealer="0" win="330" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Nyuszika1621" type="2" sum="30" cards="[cards]"/><action no="1" player="lionchik" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="6" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S6 SK</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="4" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="5" player="lionchik" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517990">
+		 <general>
+		  <startdate>2014-01-25 10:43:03</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="855" dealer="0" win="0" bet="215" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="865" dealer="0" win="440" bet="215" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="660" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="820" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Nyuszika1621" type="15" sum="5" cards="[cards]"/><action no="5" player="Nyuszika1621" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="5" cards="[cards]"/><action no="4" player="lionchik" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">DK S8</cards><action no="9" player="Nyuszika1621" type="3" sum="25" cards=""/><cards type="Pocket" player="WorstCard">D10 H3</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="7" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="8" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 CK C10</cards><action no="11" player="Nyuszika1621" type="4" sum="0" cards=""/><action no="13" player="Nyuszika1621" type="3" sum="50" cards=""/><action no="12" player="WorstCard" type="5" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="14" player="Nyuszika1621" type="4" sum="0" cards=""/><action no="16" player="Nyuszika1621" type="3" sum="110" cards=""/><action no="15" player="WorstCard" type="5" sum="110" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards><action no="17" player="Nyuszika1621" type="4" sum="0" cards=""/><action no="18" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435524701">
+		 <general>
+		  <startdate>2014-01-25 10:43:53</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="640" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,090" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="655" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="815" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Nyuszika1621" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="5" cards="[cards]"/><action no="6" player="tylkothuanh" type="2" sum="50" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="8" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ D4</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><cards type="Pocket" player="lionchik">X X</cards><action no="7" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435524844">
+		 <general>
+		  <startdate>2014-01-25 10:44:22</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="635" dealer="0" win="324" bet="294" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,060" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="695" dealer="0" win="324" bet="294" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="810" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Nyuszika1621" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="5" cards="[cards]"/><action no="5" player="tylkothuanh" type="1" sum="25" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="5" cards="[cards]"/><action no="6" player="lionchik" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">CK CA</cards><action no="7" player="Nyuszika1621" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">HJ H5</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">C3 DA</cards><action no="9" player="tylkothuanh" type="3" sum="25" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="10" player="lionchik" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 S5 D10</cards><action no="13" player="Nyuszika1621" type="5" sum="50" cards=""/><action no="11" player="tylkothuanh" type="4" sum="0" cards=""/><action no="14" player="tylkothuanh" type="3" sum="50" cards=""/><action no="12" player="lionchik" type="4" sum="0" cards=""/><action no="15" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="17" player="Nyuszika1621" type="4" sum="0" cards=""/><action no="16" player="tylkothuanh" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S4</cards><action no="19" player="Nyuszika1621" type="3" sum="189" cards=""/><action no="18" player="tylkothuanh" type="5" sum="189" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525080">
+		 <general>
+		  <startdate>2014-01-25 10:45:05</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="665" dealer="0" win="190" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,055" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="725" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="755" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Nyuszika1621" type="15" sum="10" cards="[cards]"/><action no="6" player="Nyuszika1621" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="tylkothuanh" type="15" sum="10" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="10" cards="[cards]"/><action no="5" player="lionchik" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><cards type="Pocket" player="WorstCard">S3 C4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="9" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525146">
+		 <general>
+		  <startdate>2014-01-25 10:45:20</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="745" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,045" dealer="0" win="1,175" bet="1,045" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="715" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="695" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Nyuszika1621" type="15" sum="10" cards="[cards]"/><action no="5" player="Nyuszika1621" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="10" cards="[cards]"/><action no="4" player="lionchik" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="9" player="Nyuszika1621" type="3" sum="50" cards=""/><action no="11" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DQ C10</cards><action no="10" player="WorstCard" type="23" sum="1,035" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="7" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="8" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525299">
+		 <general>
+		  <startdate>2014-01-25 10:45:53</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="635" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,175" dealer="0" win="1,305" bet="1,175" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="705" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="685" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Nyuszika1621" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="10" cards="[cards]"/><action no="6" player="tylkothuanh" type="2" sum="100" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="8" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D4 CK</cards><action no="9" player="WorstCard" type="23" sum="1,165" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="10" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="7" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525394">
+		 <general>
+		  <startdate>2014-01-25 10:46:10</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="625" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,305" dealer="1" win="1,485" bet="1,305" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="595" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="675" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Nyuszika1621" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="10" cards="[cards]"/><action no="5" player="tylkothuanh" type="1" sum="50" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="10" cards="[cards]"/><action no="6" player="lionchik" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="7" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DA D2</cards><action no="8" player="WorstCard" type="23" sum="1,295" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="9" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="10" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525486">
+		 <general>
+		  <startdate>2014-01-25 10:46:31</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="615" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,485" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="535" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="565" dealer="0" win="695" bet="565" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Nyuszika1621" type="15" sum="10" cards="[cards]"/><action no="6" player="Nyuszika1621" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="tylkothuanh" type="15" sum="10" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="10" cards="[cards]"/><action no="5" player="lionchik" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="10" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C9 H7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="9" player="lionchik" type="23" sum="555" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525582">
+		 <general>
+		  <startdate>2014-01-25 10:46:54</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="505" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,475" dealer="0" win="285" bet="165" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="525" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="695" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Nyuszika1621" type="15" sum="15" cards="[cards]"/><action no="5" player="Nyuszika1621" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="15" cards="[cards]"/><action no="4" player="lionchik" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="9" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DQ SJ</cards><cards type="Pocket" player="tylkothuanh">X X</cards><action no="7" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="8" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525660">
+		 <general>
+		  <startdate>2014-01-25 10:47:09</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="415" dealer="1" win="685" bet="415" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,595" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="510" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="680" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Nyuszika1621" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="15" cards="[cards]"/><action no="6" player="tylkothuanh" type="2" sum="150" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="8" player="Nyuszika1621" type="23" sum="400" cards=""/><cards type="Pocket" player="WorstCard">S9 H6</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="10" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="7" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525753">
+		 <general>
+		  <startdate>2014-01-25 10:47:28</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="685" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,505" dealer="1" win="840" bet="1,505" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="345" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="665" dealer="0" win="1,435" bet="665" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Nyuszika1621" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="15" cards="[cards]"/><action no="5" player="tylkothuanh" type="1" sum="75" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="15" cards="[cards]"/><action no="6" player="lionchik" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="7" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DA C7</cards><action no="8" player="WorstCard" type="23" sum="1,490" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="9" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">HJ CJ</cards><action no="10" player="lionchik" type="7" sum="500" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 D8 C2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="5435525850">
+		 <general>
+		  <startdate>2014-01-25 10:47:49</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="670" dealer="0" win="285" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="840" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="255" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,435" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Nyuszika1621" type="15" sum="15" cards="[cards]"/><action no="6" player="Nyuszika1621" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="tylkothuanh" type="15" sum="15" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="15" cards="[cards]"/><action no="5" player="lionchik" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><cards type="Pocket" player="WorstCard">D6 S9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="9" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525935">
+		 <general>
+		  <startdate>2014-01-25 10:48:04</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="790" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="825" dealer="0" win="1,020" bet="825" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="240" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,345" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Nyuszika1621" type="15" sum="15" cards="[cards]"/><action no="5" player="Nyuszika1621" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="15" cards="[cards]"/><action no="4" player="lionchik" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="9" player="Nyuszika1621" type="3" sum="75" cards=""/><action no="11" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H10 S10</cards><action no="10" player="WorstCard" type="23" sum="810" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="7" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="8" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435526077">
+		 <general>
+		  <startdate>2014-01-25 10:48:34</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="625" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,020" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="225" dealer="0" win="555" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,330" dealer="0" win="1,105" bet="1,330" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Nyuszika1621" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="15" cards="[cards]"/><action no="6" player="tylkothuanh" type="2" sum="150" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="8" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK S8</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">D9 CJ</cards><action no="10" player="tylkothuanh" type="7" sum="60" cards=""/><cards type="Pocket" player="lionchik">SJ DK</cards><action no="7" player="lionchik" type="23" sum="1,315" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 C4 CA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5435526231">
+		 <general>
+		  <startdate>2014-01-25 10:49:05</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="610" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="930" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="555" dealer="0" win="815" bet="555" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,105" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Nyuszika1621" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="20" cards="[cards]"/><action no="5" player="tylkothuanh" type="1" sum="100" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="20" cards="[cards]"/><action no="6" player="lionchik" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">X X</cards><action no="7" player="Nyuszika1621" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 C4</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="9" player="tylkothuanh" type="23" sum="535" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="10" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435526324">
+		 <general>
+		  <startdate>2014-01-25 10:49:25</startdate>		  
+		  <players>
+		   <player seat="2" name="Nyuszika1621" chips="590" dealer="0" win="0" bet="590" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="910" dealer="0" win="1,640" bet="910" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="815" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="885" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Nyuszika1621" type="15" sum="20" cards="[cards]"/><action no="6" player="Nyuszika1621" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="tylkothuanh" type="15" sum="20" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="20" cards="[cards]"/><action no="5" player="lionchik" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Nyuszika1621">S2 SJ</cards><action no="10" player="Nyuszika1621" type="7" sum="370" cards=""/><cards type="Pocket" player="WorstCard">SA C8</cards><action no="7" player="WorstCard" type="23" sum="890" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="9" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK C6 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S4</cards>
+	</round>
+	
+		</game><game gamecode="5435526442">
+		 <general>
+		  <startdate>2014-01-25 10:49:48</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,640" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="795" dealer="0" win="1,035" bet="795" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="765" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="2" sum="200" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="20" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C9 C4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="5" player="tylkothuanh" type="23" sum="775" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="6" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435526511">
+		 <general>
+		  <startdate>2014-01-25 10:50:04</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,420" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="1,035" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="745" dealer="0" win="1,085" bet="745" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="20" cards="[cards]"/><action no="5" player="tylkothuanh" type="2" sum="200" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DA D10</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="6" player="lionchik" type="23" sum="725" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435533164">
+		 <general>
+		  <startdate>2014-01-25 10:50:19</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,300" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="815" dealer="0" win="825" bet="815" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,085" dealer="0" win="825" bet="815" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="20" cards="[cards]"/><action no="4" player="tylkothuanh" type="1" sum="100" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="20" cards="[cards]"/><action no="5" player="lionchik" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H8 H2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">HK CQ</cards><action no="7" player="tylkothuanh" type="23" sum="795" cards=""/><cards type="Pocket" player="lionchik">HQ CK</cards><action no="8" player="lionchik" type="3" sum="595" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 C4 D6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game><game gamecode="5435533256">
+		 <general>
+		  <startdate>2014-01-25 10:50:40</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,280" dealer="0" win="0" bet="825" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="825" dealer="1" win="1,770" bet="825" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,095" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="200" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="20" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="20" cards="[cards]"/><action no="4" player="lionchik" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HA H6</cards><action no="8" player="WorstCard" type="3" sum="605" cards=""/><cards type="Pocket" player="tylkothuanh">SQ D9</cards><action no="6" player="tylkothuanh" type="23" sum="805" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="7" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 D4 CJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards>
+	</round>
+	
+		</game><game gamecode="5435533367">
+		 <general>
+		  <startdate>2014-01-25 10:51:02</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="455" dealer="0" win="755" bet="455" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="1,770" dealer="0" win="0" bet="275" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="975" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="125" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="25" cards="[cards]"/><action no="5" player="tylkothuanh" type="2" sum="250" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HQ CK</cards><action no="7" player="WorstCard" type="7" sum="305" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="6" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435533426">
+		 <general>
+		  <startdate>2014-01-25 10:51:14</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="755" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="1,495" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="950" dealer="0" win="450" bet="275" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="25" cards="[cards]"/><action no="4" player="tylkothuanh" type="1" sum="125" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="25" cards="[cards]"/><action no="5" player="lionchik" type="2" sum="250" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S3 H2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="7" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435533491">
+		 <general>
+		  <startdate>2014-01-25 10:51:25</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="730" dealer="0" win="450" bet="275" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="1,345" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,125" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="250" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="25" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="25" cards="[cards]"/><action no="4" player="lionchik" type="1" sum="125" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK H2</cards><cards type="Pocket" player="tylkothuanh">X X</cards><action no="6" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="7" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435533547">
+		 <general>
+		  <startdate>2014-01-25 10:51:38</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="905" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="1,320" dealer="0" win="0" bet="275" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="975" dealer="1" win="1,400" bet="975" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="125" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="25" cards="[cards]"/><action no="5" player="tylkothuanh" type="2" sum="250" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C3 DQ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="6" player="lionchik" type="23" sum="950" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435533616">
+		 <general>
+		  <startdate>2014-01-25 10:51:52</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="755" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="1,045" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,400" dealer="0" win="450" bet="275" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="25" cards="[cards]"/><action no="4" player="tylkothuanh" type="1" sum="125" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="25" cards="[cards]"/><action no="5" player="lionchik" type="2" sum="250" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H7 CQ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="7" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435533739">
+		 <general>
+		  <startdate>2014-01-25 10:52:15</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="730" dealer="0" win="450" bet="275" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="895" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,575" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="250" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="25" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="25" cards="[cards]"/><action no="4" player="lionchik" type="1" sum="125" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SJ D8</cards><cards type="Pocket" player="tylkothuanh">X X</cards><action no="6" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="7" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435533811">
+		 <general>
+		  <startdate>2014-01-25 10:52:30</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="905" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="870" dealer="0" win="0" bet="275" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,425" dealer="1" win="1,700" bet="1,275" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="25" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="125" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="25" cards="[cards]"/><action no="5" player="tylkothuanh" type="2" sum="250" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D10 H8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="4" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="6" player="lionchik" type="3" sum="250" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 D9 S5</cards><action no="9" player="tylkothuanh" type="4" sum="0" cards=""/><action no="11" player="tylkothuanh" type="0" sum="0" cards=""/><action no="10" player="lionchik" type="5" sum="1,000" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435533926">
+		 <general>
+		  <startdate>2014-01-25 10:52:53</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="755" dealer="1" win="1,265" bet="755" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="595" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,850" dealer="0" win="0" bet="330" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="30" cards="[cards]"/><action no="4" player="tylkothuanh" type="1" sum="150" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="30" cards="[cards]"/><action no="5" player="lionchik" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DA D10</cards><action no="6" player="WorstCard" type="23" sum="725" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="7" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="8" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435533998">
+		 <general>
+		  <startdate>2014-01-25 10:53:09</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,265" dealer="0" win="540" bet="330" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="415" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,520" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="300" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="30" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="30" cards="[cards]"/><action no="4" player="lionchik" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H4 D8</cards><cards type="Pocket" player="tylkothuanh">X X</cards><action no="6" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="7" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435534089">
+		 <general>
+		  <startdate>2014-01-25 10:53:23</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,475" dealer="0" win="245" bet="630" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="385" dealer="0" win="800" bet="385" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,340" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="150" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="30" cards="[cards]"/><action no="5" player="tylkothuanh" type="2" sum="300" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CA C4</cards><action no="7" player="WorstCard" type="23" sum="600" cards=""/><cards type="Pocket" player="tylkothuanh">D9 DK</cards><action no="8" player="tylkothuanh" type="7" sum="55" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="6" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ HK DA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards>
+	</round>
+	
+		</game><game gamecode="5435534194">
+		 <general>
+		  <startdate>2014-01-25 10:53:43</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,090" dealer="1" win="1,600" bet="1,090" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="800" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,310" dealer="0" win="0" bet="330" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="30" cards="[cards]"/><action no="4" player="tylkothuanh" type="1" sum="150" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="30" cards="[cards]"/><action no="5" player="lionchik" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DQ HK</cards><action no="6" player="WorstCard" type="23" sum="1,060" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="7" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="8" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435534267">
+		 <general>
+		  <startdate>2014-01-25 10:53:59</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,600" dealer="0" win="540" bet="330" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="620" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="980" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="300" cards="[cards]"/><action no="3" player="tylkothuanh" type="15" sum="30" cards="[cards]"/><action no="1" player="lionchik" type="15" sum="30" cards="[cards]"/><action no="4" player="lionchik" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H5 C5</cards><cards type="Pocket" player="tylkothuanh">X X</cards><action no="6" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="7" player="lionchik" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435534333">
+		 <general>
+		  <startdate>2014-01-25 10:54:12</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,810" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="590" dealer="0" win="0" bet="330" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="800" dealer="1" win="1,140" bet="630" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="150" cards="[cards]"/><action no="2" player="tylkothuanh" type="15" sum="30" cards="[cards]"/><action no="5" player="tylkothuanh" type="2" sum="300" cards="[cards]"/><action no="3" player="lionchik" type="15" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D3 C10</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="tylkothuanh">X X</cards><action no="8" player="tylkothuanh" type="0" sum="0" cards=""/><cards type="Pocket" player="lionchik">X X</cards><action no="6" player="lionchik" type="23" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435534398">
+		 <general>
+		  <startdate>2014-01-25 10:54:26</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,630" dealer="1" win="0" bet="330" rebuy="0" addon="0" reg_code="6187504218"/><player seat="7" name="tylkothuanh" chips="260" dealer="0" win="0" bet="260" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lionchik" chips="1,310" dealer="0" win="920" bet="330" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="30" cards="[cards]"/><action no="1" player="tylkothuanh" type="15" sum="30" cards="[cards]"/><action no="4" player="tylkothuanh" type="1" sum="150" cards="[cards]"/><action no="2" player="lionchik" type="15" sum="30" cards="[cards]"/><action no="5" player="lionchik" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HQ HJ</cards><action no="6" player="WorstCard" type="3" sum="300" cards=""/><cards type="Pocket" player="tylkothuanh">HA D4</cards><action no="7" player="tylkothuanh" type="7" sum="80" cards=""/><cards type="Pocket" player="lionchik">D5 H5</cards><action no="8" player="lionchik" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 C4 H2</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="lionchik" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="lionchik" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="lionchik" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

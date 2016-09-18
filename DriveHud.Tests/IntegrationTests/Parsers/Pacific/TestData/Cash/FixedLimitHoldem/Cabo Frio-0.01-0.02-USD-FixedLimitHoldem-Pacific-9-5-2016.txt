@@ -1,0 +1,2670 @@
+#Game No : 933130107
+***** 888poker Hand History for Game 933130107 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:32:45
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 5: fraaancuz77 ( $0.89 )
+Seat 6: Winder0x ( $1.24 )
+Seat 8: daj.tabletku ( $0.20 )
+Winder0x posts small blind [$0.01]
+daj.tabletku posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.01]
+daj.tabletku checks
+** Dealing flop ** [ 9d, Qd, 8d ]
+Winder0x checks
+daj.tabletku checks
+fraaancuz77 checks
+** Dealing turn ** [ 8h ]
+Winder0x checks
+daj.tabletku bets [$0.04]
+fraaancuz77 folds
+Winder0x calls [$0.04]
+** Dealing river ** [ Jc ]
+Winder0x bets [$0.04]
+daj.tabletku folds
+** Summary **
+Winder0x did not show his hand
+Winder0x collected [ $0.14 ]
+
+
+#Game No : 933130273
+***** 888poker Hand History for Game 933130273 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:33:15
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 5: fraaancuz77 ( $0.87 )
+Seat 6: Winder0x ( $1.32 )
+Seat 8: daj.tabletku ( $0.14 )
+daj.tabletku posts small blind [$0.01]
+fraaancuz77 posts big blind [$0.02]
+** Dealing down cards **
+Winder0x folds
+daj.tabletku folds
+** Summary **
+fraaancuz77 did not show his hand
+fraaancuz77 collected [ $0.03 ]
+
+
+#Game No : 933130311
+***** 888poker Hand History for Game 933130311 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:33:22
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 5: fraaancuz77 ( $0.88 )
+Seat 6: Winder0x ( $1.32 )
+Seat 8: daj.tabletku ( $0.13 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+daj.tabletku folds
+fraaancuz77 calls [$0.01]
+Winder0x checks
+** Dealing flop ** [ Jh, 2c, 3d ]
+fraaancuz77 checks
+Winder0x checks
+** Dealing turn ** [ 8c ]
+fraaancuz77 bets [$0.04]
+Winder0x calls [$0.04]
+** Dealing river ** [ Qs ]
+fraaancuz77 bets [$0.04]
+Winder0x folds
+** Summary **
+fraaancuz77 collected [ $0.12 ]
+
+
+#Game No : 933130445
+***** 888poker Hand History for Game 933130445 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:33:46
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 5: fraaancuz77 ( $0.94 )
+Seat 6: Winder0x ( $1.26 )
+Seat 7: not_the_hulk ( $0.20 )
+Seat 8: daj.tabletku ( $0.13 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+** Dealing down cards **
+daj.tabletku folds
+fraaancuz77 calls [$0.02]
+Winder0x raises [$0.03]
+not_the_hulk folds
+fraaancuz77 calls [$0.02]
+** Dealing flop ** [ Jh, 6h, Td ]
+Winder0x bets [$0.02]
+fraaancuz77 calls [$0.02]
+** Dealing turn ** [ Qc ]
+Winder0x bets [$0.04]
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ 2s ]
+Winder0x checks
+fraaancuz77 bets [$0.04]
+Winder0x calls [$0.04]
+** Summary **
+fraaancuz77 shows [ Qs, 4h ]
+Winder0x mucks [ Jc, 7c ]
+fraaancuz77 collected [ $0.29 ]
+
+
+#Game No : 933130624
+***** 888poker Hand History for Game 933130624 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:34:18
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 5: fraaancuz77 ( $1.09 )
+Seat 6: Winder0x ( $1.12 )
+Seat 7: not_the_hulk ( $0.18 )
+Seat 8: daj.tabletku ( $0.13 )
+not_the_hulk posts small blind [$0.01]
+daj.tabletku posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 folds
+Winder0x calls [$0.02]
+not_the_hulk raises [$0.03]
+daj.tabletku raises [$0.04]
+Winder0x calls [$0.04]
+not_the_hulk raises [$0.04]
+daj.tabletku calls [$0.02]
+Winder0x calls [$0.02]
+** Dealing flop ** [ As, Ks, 2d ]
+not_the_hulk checks
+daj.tabletku bets [$0.02]
+Winder0x calls [$0.02]
+not_the_hulk calls [$0.02]
+** Dealing turn ** [ 2h ]
+not_the_hulk checks
+daj.tabletku bets [$0.03]
+Winder0x calls [$0.03]
+not_the_hulk raises [$0.07]
+Winder0x calls [$0.04]
+** Dealing river ** [ Kh ]
+not_the_hulk bets [$0.01]
+Winder0x calls [$0.01]
+** Summary **
+Winder0x shows [ 4d, Kd ]
+not_the_hulk shows [ Qd, Qh ]
+daj.tabletku shows [ Ah, Jc ]
+Winder0x collected [ $0.38 ]
+Winder0x collected [ $0.09 ]
+
+
+#Game No : 933131014
+***** 888poker Hand History for Game 933131014 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:35:31
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 5: fraaancuz77 ( $1.08 )
+Seat 6: Winder0x ( $1.42 )
+Seat 8: daj.tabletku ( $0.20 )
+Winder0x posts small blind [$0.01]
+daj.tabletku posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 calls [$0.02]
+Winder0x raises [$0.03]
+daj.tabletku calls [$0.02]
+fraaancuz77 calls [$0.02]
+** Dealing flop ** [ 9c, Qs, 7s ]
+Winder0x checks
+daj.tabletku checks
+fraaancuz77 checks
+** Dealing turn ** [ Jh ]
+Winder0x checks
+daj.tabletku checks
+fraaancuz77 bets [$0.04]
+Winder0x calls [$0.04]
+daj.tabletku folds
+** Dealing river ** [ 4c ]
+Winder0x bets [$0.04]
+fraaancuz77 raises [$0.08]
+Winder0x raises [$0.08]
+fraaancuz77 raises [$0.08]
+Winder0x calls [$0.04]
+** Summary **
+fraaancuz77 shows [ Kh, Th ]
+Winder0x mucks [ Qd, Qh ]
+fraaancuz77 collected [ $0.50 ]
+
+
+#Game No : 933131302
+***** 888poker Hand History for Game 933131302 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:36:23
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 5: fraaancuz77 ( $1.34 )
+Seat 6: Winder0x ( $1.18 )
+Seat 8: daj.tabletku ( $0.16 )
+daj.tabletku posts small blind [$0.01]
+fraaancuz77 posts big blind [$0.02]
+** Dealing down cards **
+Winder0x raises [$0.04]
+daj.tabletku folds
+fraaancuz77 raises [$0.04]
+Winder0x calls [$0.02]
+** Dealing flop ** [ Qc, 8h, As ]
+fraaancuz77 checks
+Winder0x bets [$0.02]
+fraaancuz77 calls [$0.02]
+** Dealing turn ** [ Js ]
+fraaancuz77 checks
+Winder0x checks
+** Dealing river ** [ 6d ]
+fraaancuz77 checks
+Winder0x bets [$0.04]
+fraaancuz77 calls [$0.04]
+** Summary **
+Winder0x shows [ 7c, Ac ]
+fraaancuz77 mucks [ 9h, 9c ]
+Winder0x collected [ $0.24 ]
+
+
+#Game No : 933131515
+***** 888poker Hand History for Game 933131515 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:37:03
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 5: fraaancuz77 ( $1.22 )
+Seat 6: Winder0x ( $1.30 )
+Seat 8: daj.tabletku ( $0.15 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+daj.tabletku raises [$0.04]
+fraaancuz77 raises [$0.05]
+Winder0x folds
+daj.tabletku raises [$0.04]
+fraaancuz77 calls [$0.02]
+** Dealing flop ** [ Jc, Ks, 4d ]
+fraaancuz77 bets [$0.02]
+daj.tabletku raises [$0.04]
+fraaancuz77 raises [$0.04]
+daj.tabletku raises [$0.03]
+fraaancuz77 calls [$0.01]
+** Dealing turn ** [ 6d ]
+** Dealing river ** [ As ]
+** Summary **
+fraaancuz77 shows [ Kc, Kd ]
+daj.tabletku shows [ Tc, 9s ]
+fraaancuz77 collected [ $0.31 ]
+
+
+#Game No : 933131749
+***** 888poker Hand History for Game 933131749 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:37:45
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 1: pikasiki ( $0.80 )
+Seat 5: fraaancuz77 ( $1.38 )
+Seat 6: Winder0x ( $1.28 )
+Seat 7: not_the_hulk ( $0.80 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+pikasiki checks
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.01]
+not_the_hulk checks
+** Dealing flop ** [ 2d, Js, 6s ]
+Winder0x checks
+not_the_hulk bets [$0.02]
+pikasiki calls [$0.02]
+fraaancuz77 folds
+Winder0x folds
+** Dealing turn ** [ Td ]
+not_the_hulk bets [$0.04]
+pikasiki folds
+** Summary **
+not_the_hulk did not show his hand
+not_the_hulk collected [ $0.12 ]
+
+
+#Game No : 933131906
+***** 888poker Hand History for Game 933131906 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:38:13
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 1: pikasiki ( $0.76 )
+Seat 5: fraaancuz77 ( $1.36 )
+Seat 6: Winder0x ( $1.26 )
+Seat 7: not_the_hulk ( $0.88 )
+not_the_hulk posts small blind [$0.01]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 folds
+Winder0x calls [$0.02]
+not_the_hulk calls [$0.01]
+pikasiki checks
+** Dealing flop ** [ 6s, Kh, Th ]
+not_the_hulk bets [$0.02]
+pikasiki folds
+Winder0x folds
+** Summary **
+not_the_hulk did not show his hand
+not_the_hulk collected [ $0.06 ]
+
+
+#Game No : 933132210
+***** 888poker Hand History for Game 933132210 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:39:11
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: pikasiki ( $0.74 )
+Seat 5: fraaancuz77 ( $1.36 )
+Seat 6: Winder0x ( $1.24 )
+Seat 7: not_the_hulk ( $0.92 )
+pikasiki posts small blind [$0.01]
+fraaancuz77 posts big blind [$0.02]
+** Dealing down cards **
+Winder0x raises [$0.04]
+not_the_hulk folds
+pikasiki calls [$0.03]
+fraaancuz77 calls [$0.02]
+** Dealing flop ** [ 2c, Js, Qs ]
+pikasiki checks
+fraaancuz77 checks
+Winder0x bets [$0.02]
+pikasiki calls [$0.02]
+fraaancuz77 calls [$0.02]
+** Dealing turn ** [ Qc ]
+pikasiki checks
+fraaancuz77 checks
+Winder0x checks
+** Dealing river ** [ 9s ]
+pikasiki checks
+fraaancuz77 checks
+Winder0x checks
+** Summary **
+pikasiki shows [ Kc, 5d ]
+fraaancuz77 shows [ 7h, 7s ]
+Winder0x shows [ Td, Tc ]
+Winder0x collected [ $0.18 ]
+
+
+#Game No : 933132389
+***** 888poker Hand History for Game 933132389 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:39:40
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: pikasiki ( $0.68 )
+Seat 5: fraaancuz77 ( $1.30 )
+Seat 6: Winder0x ( $1.36 )
+Seat 7: not_the_hulk ( $0.92 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+not_the_hulk raises [$0.04]
+pikasiki calls [$0.04]
+fraaancuz77 calls [$0.03]
+Winder0x folds
+** Dealing flop ** [ 2c, 5c, 3s ]
+fraaancuz77 bets [$0.02]
+not_the_hulk raises [$0.04]
+pikasiki calls [$0.04]
+fraaancuz77 calls [$0.02]
+** Dealing turn ** [ 6c ]
+fraaancuz77 checks
+not_the_hulk bets [$0.04]
+pikasiki folds
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ 9c ]
+fraaancuz77 bets [$0.04]
+not_the_hulk calls [$0.04]
+** Summary **
+fraaancuz77 shows [ 2d, Th ]
+not_the_hulk shows [ 4h, 4d ]
+not_the_hulk collected [ $0.40 ]
+
+
+#Game No : 933132610
+***** 888poker Hand History for Game 933132610 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:40:23
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.60 )
+Seat 3: thegrind14 ( $0.20 )
+Seat 5: fraaancuz77 ( $1.14 )
+Seat 6: Winder0x ( $1.34 )
+Seat 7: not_the_hulk ( $1.16 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+pikasiki folds
+thegrind14 checks
+fraaancuz77 folds
+Winder0x calls [$0.01]
+not_the_hulk checks
+** Dealing flop ** [ 8s, 3s, As ]
+Winder0x bets [$0.02]
+not_the_hulk folds
+thegrind14 calls [$0.02]
+** Dealing turn ** [ Ts ]
+Winder0x bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 7c ]
+Winder0x bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+Winder0x shows [ 7s, Qd ]
+thegrind14 mucks [ 4s, Jh ]
+Winder0x collected [ $0.25 ]
+
+
+#Game No : 933132789
+***** 888poker Hand History for Game 933132789 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:40:55
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.60 )
+Seat 3: thegrind14 ( $0.08 )
+Seat 5: fraaancuz77 ( $1.14 )
+Seat 6: Winder0x ( $1.47 )
+Seat 7: not_the_hulk ( $1.14 )
+not_the_hulk posts small blind [$0.01]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.02]
+not_the_hulk calls [$0.01]
+pikasiki checks
+** Dealing flop ** [ 6s, Ad, 3h ]
+not_the_hulk checks
+pikasiki checks
+fraaancuz77 checks
+Winder0x bets [$0.02]
+not_the_hulk folds
+pikasiki folds
+fraaancuz77 folds
+** Summary **
+Winder0x did not show his hand
+Winder0x collected [ $0.08 ]
+
+
+#Game No : 933132965
+***** 888poker Hand History for Game 933132965 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:41:29
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.58 )
+Seat 3: thegrind14 ( $0.08 )
+Seat 5: fraaancuz77 ( $1.12 )
+Seat 6: Winder0x ( $1.53 )
+Seat 7: not_the_hulk ( $1.12 )
+pikasiki posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.02]
+not_the_hulk calls [$0.02]
+pikasiki calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ Kd, Th, Kh ]
+pikasiki bets [$0.02]
+thegrind14 folds
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.02]
+not_the_hulk folds
+** Dealing turn ** [ 5s ]
+pikasiki checks
+fraaancuz77 checks
+Winder0x checks
+** Dealing river ** [ 3d ]
+pikasiki bets [$0.04]
+fraaancuz77 folds
+Winder0x folds
+** Summary **
+pikasiki did not show his hand
+pikasiki collected [ $0.16 ]
+
+
+#Game No : 933133242
+***** 888poker Hand History for Game 933133242 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:42:23
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.70 )
+Seat 3: thegrind14 ( $0.06 )
+Seat 5: fraaancuz77 ( $1.08 )
+Seat 6: Winder0x ( $1.49 )
+Seat 7: not_the_hulk ( $1.10 )
+thegrind14 posts small blind [$0.01]
+fraaancuz77 posts big blind [$0.02]
+** Dealing down cards **
+Winder0x folds
+not_the_hulk raises [$0.04]
+pikasiki folds
+thegrind14 folds
+fraaancuz77 calls [$0.02]
+** Dealing flop ** [ Kc, 5c, 2s ]
+fraaancuz77 checks
+not_the_hulk bets [$0.02]
+fraaancuz77 calls [$0.02]
+** Dealing turn ** [ Qc ]
+fraaancuz77 checks
+not_the_hulk bets [$0.04]
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ 7c ]
+fraaancuz77 checks
+not_the_hulk checks
+** Summary **
+fraaancuz77 shows [ 4h, Ks ]
+not_the_hulk shows [ Jd, Kh ]
+not_the_hulk collected [ $0.20 ]
+
+
+#Game No : 933133504
+***** 888poker Hand History for Game 933133504 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:43:10
+Table Cabo Frio 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.70 )
+Seat 3: thegrind14 ( $0.05 )
+Seat 5: fraaancuz77 ( $0.98 )
+Seat 6: Winder0x ( $1.49 )
+Seat 7: not_the_hulk ( $1.20 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+not_the_hulk raises [$0.04]
+pikasiki folds
+thegrind14 raises [$0.05]
+fraaancuz77 calls [$0.04]
+Winder0x calls [$0.03]
+not_the_hulk calls [$0.01]
+** Dealing flop ** [ 5s, 3h, 6h ]
+fraaancuz77 checks
+Winder0x checks
+not_the_hulk bets [$0.02]
+fraaancuz77 raises [$0.04]
+Winder0x calls [$0.04]
+not_the_hulk raises [$0.04]
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.02]
+** Dealing turn ** [ 2h ]
+fraaancuz77 bets [$0.04]
+Winder0x folds
+not_the_hulk folds
+** Dealing river ** [ Qh ]
+** Summary **
+thegrind14 shows [ Ac, Ah ]
+fraaancuz77 shows [ 6s, Qs ]
+thegrind14 collected [ $0.19 ]
+fraaancuz77 collected [ $0.18 ]
+
+
+#Game No : 933133769
+***** 888poker Hand History for Game 933133769 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:43:59
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.70 )
+Seat 3: thegrind14 ( $0.19 )
+Seat 5: fraaancuz77 ( $1.05 )
+Seat 6: Winder0x ( $1.38 )
+Seat 7: not_the_hulk ( $1.09 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+** Dealing down cards **
+pikasiki raises [$0.04]
+thegrind14 folds
+fraaancuz77 calls [$0.04]
+Winder0x folds
+not_the_hulk calls [$0.02]
+** Dealing flop ** [ Js, Ad, 4h ]
+not_the_hulk checks
+pikasiki bets [$0.02]
+fraaancuz77 calls [$0.02]
+not_the_hulk folds
+** Dealing turn ** [ 8d ]
+pikasiki bets [$0.04]
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ Jc ]
+pikasiki bets [$0.04]
+fraaancuz77 raises [$0.08]
+pikasiki calls [$0.04]
+** Summary **
+fraaancuz77 shows [ Jh, Kc ]
+pikasiki mucks [ Qh, Ac ]
+fraaancuz77 collected [ $0.39 ]
+
+
+#Game No : 933134028
+***** 888poker Hand History for Game 933134028 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:44:48
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.52 )
+Seat 3: thegrind14 ( $0.19 )
+Seat 5: fraaancuz77 ( $1.26 )
+Seat 6: Winder0x ( $1.37 )
+Seat 7: not_the_hulk ( $1.05 )
+not_the_hulk posts small blind [$0.01]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+fraaancuz77 folds
+Winder0x folds
+not_the_hulk raises [$0.03]
+pikasiki calls [$0.02]
+** Dealing flop ** [ 6s, 7h, 3s ]
+not_the_hulk bets [$0.02]
+pikasiki calls [$0.02]
+** Dealing turn ** [ Tc ]
+not_the_hulk bets [$0.04]
+pikasiki folds
+** Summary **
+not_the_hulk did not show his hand
+not_the_hulk collected [ $0.12 ]
+
+
+#Game No : 933134157
+***** 888poker Hand History for Game 933134157 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:45:11
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.46 )
+Seat 3: thegrind14 ( $0.19 )
+Seat 5: fraaancuz77 ( $1.26 )
+Seat 6: Winder0x ( $1.37 )
+Seat 7: not_the_hulk ( $1.11 )
+pikasiki posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 calls [$0.02]
+Winder0x raises [$0.04]
+not_the_hulk raises [$0.06]
+pikasiki folds
+thegrind14 calls [$0.04]
+fraaancuz77 calls [$0.04]
+Winder0x calls [$0.02]
+** Dealing flop ** [ 2c, 3d, 4h ]
+thegrind14 checks
+fraaancuz77 checks
+Winder0x bets [$0.02]
+not_the_hulk calls [$0.02]
+thegrind14 calls [$0.02]
+fraaancuz77 calls [$0.02]
+** Dealing turn ** [ 5s ]
+thegrind14 checks
+fraaancuz77 checks
+Winder0x bets [$0.04]
+not_the_hulk calls [$0.04]
+thegrind14 folds
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ 8s ]
+fraaancuz77 checks
+Winder0x bets [$0.04]
+not_the_hulk calls [$0.04]
+fraaancuz77 raises [$0.08]
+Winder0x calls [$0.04]
+not_the_hulk calls [$0.04]
+** Summary **
+fraaancuz77 shows [ As, 6h ]
+Winder0x mucks [ 3c, Ac ]
+not_the_hulk mucks [ Ad, Th ]
+fraaancuz77 collected [ $0.66 ]
+
+
+#Game No : 933134486
+***** 888poker Hand History for Game 933134486 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:46:09
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.45 )
+Seat 3: thegrind14 ( $0.11 )
+Seat 5: fraaancuz77 ( $1.72 )
+Seat 6: Winder0x ( $1.17 )
+Seat 7: not_the_hulk ( $0.91 )
+thegrind14 posts small blind [$0.01]
+fraaancuz77 posts big blind [$0.02]
+** Dealing down cards **
+Winder0x raises [$0.04]
+not_the_hulk folds
+pikasiki folds
+thegrind14 calls [$0.03]
+fraaancuz77 calls [$0.02]
+** Dealing flop ** [ Qh, 3d, Ah ]
+thegrind14 checks
+fraaancuz77 checks
+Winder0x bets [$0.02]
+thegrind14 calls [$0.02]
+fraaancuz77 folds
+** Dealing turn ** [ Ad ]
+thegrind14 checks
+Winder0x bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ Jd ]
+thegrind14 checks
+Winder0x bets [$0.04]
+thegrind14 calls [$0.01]
+** Summary **
+thegrind14 shows [ 6d, As ]
+Winder0x shows [ Ts, Qs ]
+thegrind14 collected [ $0.25 ]
+
+
+#Game No : 933134711
+***** 888poker Hand History for Game 933134711 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:46:47
+Table Cabo Frio 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.45 )
+Seat 3: thegrind14 ( $0.25 )
+Seat 5: fraaancuz77 ( $1.68 )
+Seat 6: Winder0x ( $1.06 )
+Seat 7: not_the_hulk ( $0.91 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+not_the_hulk raises [$0.04]
+pikasiki calls [$0.04]
+thegrind14 calls [$0.04]
+fraaancuz77 calls [$0.03]
+Winder0x calls [$0.02]
+** Dealing flop ** [ Qd, 6s, 2d ]
+fraaancuz77 checks
+Winder0x checks
+not_the_hulk bets [$0.02]
+pikasiki calls [$0.02]
+thegrind14 folds
+fraaancuz77 calls [$0.02]
+Winder0x folds
+** Dealing turn ** [ Kd ]
+fraaancuz77 checks
+not_the_hulk bets [$0.04]
+pikasiki calls [$0.04]
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ Qc ]
+fraaancuz77 checks
+not_the_hulk checks
+pikasiki checks
+** Summary **
+fraaancuz77 shows [ 3h, Qh ]
+not_the_hulk mucks [ 7c, 6c ]
+pikasiki mucks [ Jh, Ks ]
+fraaancuz77 collected [ $0.37 ]
+
+
+#Game No : 933135041
+***** 888poker Hand History for Game 933135041 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:47:46
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.35 )
+Seat 3: thegrind14 ( $0.21 )
+Seat 5: fraaancuz77 ( $1.95 )
+Seat 6: Winder0x ( $1.02 )
+Seat 7: not_the_hulk ( $0.81 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+** Dealing down cards **
+pikasiki raises [$0.04]
+thegrind14 folds
+fraaancuz77 folds
+Winder0x raises [$0.05]
+not_the_hulk raises [$0.06]
+pikasiki calls [$0.04]
+Winder0x calls [$0.02]
+** Dealing flop ** [ 4h, Th, 7d ]
+Winder0x checks
+not_the_hulk checks
+pikasiki bets [$0.02]
+Winder0x calls [$0.02]
+not_the_hulk calls [$0.02]
+** Dealing turn ** [ Js ]
+Winder0x bets [$0.04]
+not_the_hulk folds
+pikasiki calls [$0.04]
+** Dealing river ** [ Kh ]
+Winder0x bets [$0.04]
+pikasiki calls [$0.04]
+** Summary **
+Winder0x shows [ 8c, Kc ]
+pikasiki mucks [ Jc, Ac ]
+Winder0x collected [ $0.44 ]
+
+
+#Game No : 933135228
+***** 888poker Hand History for Game 933135228 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:48:22
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.17 )
+Seat 3: thegrind14 ( $0.21 )
+Seat 5: fraaancuz77 ( $1.95 )
+Seat 6: Winder0x ( $1.28 )
+Seat 7: not_the_hulk ( $0.71 )
+not_the_hulk posts small blind [$0.01]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.02]
+not_the_hulk calls [$0.01]
+pikasiki checks
+** Dealing flop ** [ Jc, 9h, 5c ]
+not_the_hulk checks
+pikasiki checks
+fraaancuz77 checks
+Winder0x checks
+** Dealing turn ** [ 2d ]
+not_the_hulk checks
+pikasiki bets [$0.04]
+fraaancuz77 calls [$0.04]
+Winder0x folds
+not_the_hulk folds
+** Dealing river ** [ Td ]
+pikasiki checks
+fraaancuz77 checks
+** Summary **
+pikasiki shows [ 9s, 6s ]
+fraaancuz77 mucks [ 5h, Qc ]
+pikasiki collected [ $0.16 ]
+
+
+#Game No : 933135481
+***** 888poker Hand History for Game 933135481 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:49:06
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.27 )
+Seat 3: thegrind14 ( $0.21 )
+Seat 5: fraaancuz77 ( $1.89 )
+Seat 6: Winder0x ( $1.26 )
+Seat 7: not_the_hulk ( $0.69 )
+pikasiki posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.02]
+not_the_hulk folds
+pikasiki calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ 2d, 6c, Td ]
+pikasiki checks
+thegrind14 checks
+fraaancuz77 checks
+Winder0x checks
+** Dealing turn ** [ 2h ]
+pikasiki checks
+thegrind14 bets [$0.04]
+fraaancuz77 folds
+Winder0x folds
+pikasiki folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.08 ]
+
+
+#Game No : 933135769
+***** 888poker Hand History for Game 933135769 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:49:57
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.25 )
+Seat 3: thegrind14 ( $0.27 )
+Seat 5: fraaancuz77 ( $1.87 )
+Seat 6: Winder0x ( $1.24 )
+Seat 7: not_the_hulk ( $0.69 )
+thegrind14 posts small blind [$0.01]
+fraaancuz77 posts big blind [$0.02]
+** Dealing down cards **
+Winder0x folds
+not_the_hulk folds
+pikasiki raises [$0.04]
+thegrind14 calls [$0.03]
+fraaancuz77 calls [$0.02]
+** Dealing flop ** [ Tc, 8s, 9h ]
+thegrind14 bets [$0.02]
+fraaancuz77 folds
+pikasiki calls [$0.02]
+** Dealing turn ** [ Td ]
+thegrind14 checks
+pikasiki checks
+** Dealing river ** [ 4c ]
+thegrind14 bets [$0.04]
+pikasiki calls [$0.04]
+** Summary **
+thegrind14 shows [ Ts, Qs ]
+pikasiki mucks [ Ah, Jd ]
+thegrind14 collected [ $0.23 ]
+
+
+#Game No : 933136053
+***** 888poker Hand History for Game 933136053 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:50:48
+Table Cabo Frio 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.15 )
+Seat 3: thegrind14 ( $0.40 )
+Seat 5: fraaancuz77 ( $1.83 )
+Seat 6: Winder0x ( $1.24 )
+Seat 7: not_the_hulk ( $0.69 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+not_the_hulk raises [$0.04]
+pikasiki folds
+thegrind14 calls [$0.04]
+fraaancuz77 calls [$0.03]
+Winder0x calls [$0.02]
+** Dealing flop ** [ 2s, 8s, 9d ]
+fraaancuz77 checks
+Winder0x checks
+not_the_hulk checks
+thegrind14 checks
+** Dealing turn ** [ Js ]
+fraaancuz77 checks
+Winder0x bets [$0.04]
+not_the_hulk raises [$0.08]
+thegrind14 folds
+fraaancuz77 calls [$0.08]
+Winder0x raises [$0.08]
+not_the_hulk calls [$0.04]
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ Ah ]
+fraaancuz77 checks
+Winder0x bets [$0.04]
+not_the_hulk calls [$0.04]
+fraaancuz77 calls [$0.04]
+** Summary **
+Winder0x shows [ 5s, Ks ]
+not_the_hulk mucks [ Kc, 9h ]
+fraaancuz77 mucks [ Jh, As ]
+Winder0x collected [ $0.61 ]
+
+
+#Game No : 933136329
+***** 888poker Hand History for Game 933136329 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:51:38
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.15 )
+Seat 3: thegrind14 ( $0.36 )
+Seat 5: fraaancuz77 ( $1.63 )
+Seat 6: Winder0x ( $1.65 )
+Seat 7: not_the_hulk ( $0.49 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+** Dealing down cards **
+pikasiki calls [$0.02]
+thegrind14 folds
+fraaancuz77 calls [$0.02]
+Winder0x raises [$0.03]
+not_the_hulk calls [$0.02]
+pikasiki calls [$0.02]
+fraaancuz77 calls [$0.02]
+** Dealing flop ** [ 2s, Qh, Jc ]
+Winder0x checks
+not_the_hulk checks
+pikasiki checks
+fraaancuz77 checks
+** Dealing turn ** [ 4c ]
+Winder0x checks
+not_the_hulk bets [$0.04]
+pikasiki folds
+fraaancuz77 folds
+Winder0x folds
+** Summary **
+not_the_hulk did not show his hand
+not_the_hulk collected [ $0.16 ]
+
+
+#Game No : 933136565
+***** 888poker Hand History for Game 933136565 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:52:22
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.11 )
+Seat 3: thegrind14 ( $0.36 )
+Seat 5: fraaancuz77 ( $1.59 )
+Seat 6: Winder0x ( $1.61 )
+Seat 7: not_the_hulk ( $0.61 )
+not_the_hulk posts small blind [$0.01]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+fraaancuz77 folds
+Winder0x folds
+not_the_hulk calls [$0.03]
+pikasiki calls [$0.02]
+** Dealing flop ** [ 5d, Kc, Ks ]
+not_the_hulk checks
+pikasiki checks
+thegrind14 bets [$0.02]
+not_the_hulk calls [$0.02]
+pikasiki folds
+** Dealing turn ** [ Jd ]
+not_the_hulk checks
+thegrind14 checks
+** Dealing river ** [ 9s ]
+not_the_hulk bets [$0.04]
+thegrind14 folds
+** Summary **
+not_the_hulk collected [ $0.16 ]
+
+
+#Game No : 933136803
+***** 888poker Hand History for Game 933136803 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:53:07
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $0.07 )
+Seat 3: thegrind14 ( $0.30 )
+Seat 5: fraaancuz77 ( $1.59 )
+Seat 6: Winder0x ( $1.61 )
+Seat 7: not_the_hulk ( $0.71 )
+pikasiki posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.02]
+not_the_hulk folds
+pikasiki calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ 9h, 8s, 5s ]
+pikasiki checks
+thegrind14 bets [$0.02]
+fraaancuz77 folds
+Winder0x calls [$0.02]
+pikasiki calls [$0.02]
+** Dealing turn ** [ Td ]
+pikasiki bets [$0.03]
+thegrind14 raises [$0.07]
+Winder0x folds
+** Dealing river ** [ 3d ]
+** Summary **
+pikasiki shows [ Kd, 7h ]
+thegrind14 shows [ Jd, 7c ]
+thegrind14 collected [ $0.19 ]
+
+
+#Game No : 933137082
+***** 888poker Hand History for Game 933137082 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:53:55
+Table Cabo Frio 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 3: thegrind14 ( $0.42 )
+Seat 5: fraaancuz77 ( $1.57 )
+Seat 6: Winder0x ( $1.57 )
+Seat 7: not_the_hulk ( $0.71 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+not_the_hulk raises [$0.04]
+thegrind14 calls [$0.04]
+fraaancuz77 folds
+Winder0x folds
+** Dealing flop ** [ 4s, 4c, 2d ]
+not_the_hulk checks
+thegrind14 checks
+** Dealing turn ** [ Ah ]
+not_the_hulk bets [$0.04]
+thegrind14 folds
+** Summary **
+not_the_hulk collected [ $0.11 ]
+
+
+#Game No : 933137244
+***** 888poker Hand History for Game 933137244 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:54:24
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 3: thegrind14 ( $0.38 )
+Seat 5: fraaancuz77 ( $1.56 )
+Seat 6: Winder0x ( $1.55 )
+Seat 7: not_the_hulk ( $0.78 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+fraaancuz77 raises [$0.06]
+Winder0x folds
+not_the_hulk folds
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 5c, 6s, 6d ]
+thegrind14 checks
+fraaancuz77 bets [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 6c ]
+thegrind14 checks
+fraaancuz77 bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ 5d ]
+thegrind14 checks
+fraaancuz77 bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+fraaancuz77 shows [ Kh, Ks ]
+thegrind14 mucks [ Ad, 9d ]
+fraaancuz77 collected [ $0.34 ]
+
+
+#Game No : 933137461
+***** 888poker Hand History for Game 933137461 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:55:02
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 3: thegrind14 ( $0.22 )
+Seat 5: fraaancuz77 ( $1.74 )
+Seat 6: Winder0x ( $1.54 )
+Seat 7: not_the_hulk ( $0.76 )
+Seat 8: fad86 ( $0.80 )
+not_the_hulk posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+fraaancuz77 folds
+Winder0x folds
+not_the_hulk raises [$0.03]
+fad86 calls [$0.02]
+** Dealing flop ** [ Qd, Qc, Ac ]
+not_the_hulk bets [$0.02]
+fad86 raises [$0.04]
+not_the_hulk calls [$0.02]
+** Dealing turn ** [ 8h ]
+not_the_hulk bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ Qh ]
+not_the_hulk bets [$0.04]
+fad86 raises [$0.08]
+not_the_hulk raises [$0.08]
+fad86 calls [$0.04]
+** Summary **
+not_the_hulk shows [ Jd, Ad ]
+fad86 shows [ 5d, As ]
+not_the_hulk collected [ $0.23 ]
+fad86 collected [ $0.23 ]
+
+
+#Game No : 933137737
+***** 888poker Hand History for Game 933137737 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:55:50
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $0.80 )
+Seat 3: thegrind14 ( $0.22 )
+Seat 5: fraaancuz77 ( $1.74 )
+Seat 6: Winder0x ( $1.54 )
+Seat 7: not_the_hulk ( $0.75 )
+Seat 8: fad86 ( $0.79 )
+fad86 posts small blind [$0.01]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+fraaancuz77 folds
+Winder0x folds
+not_the_hulk folds
+fad86 calls [$0.01]
+pikasiki checks
+** Dealing flop ** [ Tc, Ad, As ]
+fad86 checks
+pikasiki checks
+** Dealing turn ** [ Ah ]
+fad86 checks
+pikasiki bets [$0.04]
+fad86 folds
+** Summary **
+pikasiki did not show his hand
+pikasiki collected [ $0.04 ]
+
+
+#Game No : 933138181
+***** 888poker Hand History for Game 933138181 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:57:07
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $0.82 )
+Seat 3: thegrind14 ( $0.22 )
+Seat 5: fraaancuz77 ( $1.74 )
+Seat 6: Winder0x ( $1.54 )
+Seat 7: not_the_hulk ( $0.75 )
+Seat 8: fad86 ( $0.77 )
+pikasiki posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 folds
+Winder0x calls [$0.02]
+not_the_hulk folds
+fad86 folds
+pikasiki calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ 9c, Jh, Jd ]
+pikasiki checks
+thegrind14 checks
+Winder0x bets [$0.02]
+pikasiki folds
+thegrind14 folds
+** Summary **
+Winder0x did not show his hand
+Winder0x collected [ $0.06 ]
+
+
+#Game No : 933138461
+***** 888poker Hand History for Game 933138461 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:57:53
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $0.80 )
+Seat 3: thegrind14 ( $0.20 )
+Seat 5: fraaancuz77 ( $1.74 )
+Seat 6: Winder0x ( $1.58 )
+Seat 7: not_the_hulk ( $0.75 )
+Seat 8: fad86 ( $0.77 )
+thegrind14 posts small blind [$0.01]
+fraaancuz77 posts big blind [$0.02]
+** Dealing down cards **
+Winder0x folds
+not_the_hulk folds
+fad86 folds
+pikasiki calls [$0.02]
+thegrind14 calls [$0.01]
+fraaancuz77 checks
+** Dealing flop ** [ Ks, 4c, As ]
+thegrind14 checks
+fraaancuz77 checks
+pikasiki checks
+** Dealing turn ** [ 3h ]
+thegrind14 bets [$0.04]
+fraaancuz77 folds
+pikasiki folds
+** Summary **
+thegrind14 did not show his hand
+thegrind14 collected [ $0.06 ]
+
+
+#Game No : 933138701
+***** 888poker Hand History for Game 933138701 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:58:32
+Table Cabo Frio 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $0.78 )
+Seat 3: thegrind14 ( $0.24 )
+Seat 5: fraaancuz77 ( $1.72 )
+Seat 6: Winder0x ( $1.58 )
+Seat 7: not_the_hulk ( $0.75 )
+Seat 8: fad86 ( $0.77 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+not_the_hulk raises [$0.04]
+fad86 folds
+pikasiki folds
+thegrind14 folds
+fraaancuz77 calls [$0.03]
+Winder0x calls [$0.02]
+** Dealing flop ** [ Ac, 8h, 6c ]
+fraaancuz77 checks
+Winder0x checks
+not_the_hulk bets [$0.02]
+fraaancuz77 calls [$0.02]
+Winder0x folds
+** Dealing turn ** [ 3c ]
+fraaancuz77 checks
+not_the_hulk bets [$0.04]
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ 3s ]
+fraaancuz77 checks
+not_the_hulk bets [$0.04]
+fraaancuz77 calls [$0.04]
+** Summary **
+not_the_hulk shows [ Qc, Th ]
+fraaancuz77 shows [ Ah, Js ]
+fraaancuz77 collected [ $0.31 ]
+
+
+#Game No : 933139014
+***** 888poker Hand History for Game 933139014 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:59:27
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $0.78 )
+Seat 3: thegrind14 ( $0.24 )
+Seat 5: fraaancuz77 ( $1.89 )
+Seat 6: Winder0x ( $1.54 )
+Seat 7: not_the_hulk ( $0.61 )
+Seat 8: fad86 ( $0.77 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+pikasiki folds
+thegrind14 raises [$0.04]
+fraaancuz77 folds
+Winder0x folds
+not_the_hulk calls [$0.02]
+** Dealing flop ** [ Qs, Td, Ad ]
+not_the_hulk checks
+thegrind14 bets [$0.02]
+not_the_hulk calls [$0.02]
+** Dealing turn ** [ 3h ]
+not_the_hulk checks
+thegrind14 checks
+** Dealing river ** [ Js ]
+not_the_hulk bets [$0.04]
+thegrind14 folds
+** Summary **
+not_the_hulk did not show his hand
+not_the_hulk collected [ $0.13 ]
+
+
+#Game No : 933139311
+***** 888poker Hand History for Game 933139311 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:00:20
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $0.78 )
+Seat 3: thegrind14 ( $0.18 )
+Seat 5: fraaancuz77 ( $1.89 )
+Seat 6: Winder0x ( $1.53 )
+Seat 7: not_the_hulk ( $0.68 )
+Seat 8: fad86 ( $0.77 )
+not_the_hulk posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+pikasiki folds
+thegrind14 raises [$0.04]
+fraaancuz77 folds
+Winder0x folds
+not_the_hulk calls [$0.03]
+fad86 calls [$0.02]
+** Dealing flop ** [ 5c, 2h, Ah ]
+not_the_hulk checks
+fad86 bets [$0.02]
+thegrind14 folds
+not_the_hulk folds
+** Summary **
+fad86 did not show his hand
+fad86 collected [ $0.12 ]
+
+
+#Game No : 933139537
+***** 888poker Hand History for Game 933139537 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:01:00
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $0.78 )
+Seat 3: thegrind14 ( $0.14 )
+Seat 5: fraaancuz77 ( $1.89 )
+Seat 6: Winder0x ( $1.53 )
+Seat 7: not_the_hulk ( $0.64 )
+Seat 8: fad86 ( $0.85 )
+fad86 posts small blind [$0.01]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+fraaancuz77 calls [$0.04]
+Winder0x folds
+not_the_hulk calls [$0.04]
+fad86 folds
+pikasiki calls [$0.02]
+** Dealing flop ** [ Qd, Td, Ac ]
+pikasiki checks
+thegrind14 bets [$0.02]
+fraaancuz77 calls [$0.02]
+not_the_hulk calls [$0.02]
+pikasiki calls [$0.02]
+** Dealing turn ** [ 2c ]
+pikasiki checks
+thegrind14 bets [$0.04]
+fraaancuz77 calls [$0.04]
+not_the_hulk folds
+pikasiki calls [$0.04]
+** Dealing river ** [ 6c ]
+pikasiki bets [$0.04]
+thegrind14 calls [$0.04]
+fraaancuz77 folds
+** Summary **
+pikasiki shows [ 6d, As ]
+thegrind14 shows [ Qs, Ts ]
+pikasiki collected [ $0.43 ]
+
+
+#Game No : 933139858
+***** 888poker Hand History for Game 933139858 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:01:57
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $1.07 )
+Seat 5: fraaancuz77 ( $1.79 )
+Seat 6: Winder0x ( $1.53 )
+Seat 7: not_the_hulk ( $0.58 )
+Seat 8: fad86 ( $0.84 )
+pikasiki posts small blind [$0.01]
+fraaancuz77 posts big blind [$0.02]
+** Dealing down cards **
+Winder0x calls [$0.02]
+not_the_hulk folds
+fad86 folds
+pikasiki calls [$0.01]
+fraaancuz77 checks
+** Dealing flop ** [ Qd, 6d, Kc ]
+pikasiki bets [$0.02]
+fraaancuz77 calls [$0.02]
+Winder0x calls [$0.02]
+** Dealing turn ** [ Kh ]
+pikasiki checks
+fraaancuz77 bets [$0.04]
+Winder0x calls [$0.04]
+pikasiki calls [$0.04]
+** Dealing river ** [ Qc ]
+pikasiki checks
+fraaancuz77 checks
+Winder0x checks
+** Summary **
+pikasiki shows [ 3c, Qs ]
+fraaancuz77 mucks [ Td, Ad ]
+Winder0x mucks [ Tc, 9h ]
+pikasiki collected [ $0.23 ]
+
+
+#Game No : 933140249
+***** 888poker Hand History for Game 933140249 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:03:08
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $1.22 )
+Seat 5: fraaancuz77 ( $1.71 )
+Seat 6: Winder0x ( $1.45 )
+Seat 7: not_the_hulk ( $0.58 )
+Seat 8: fad86 ( $0.84 )
+fraaancuz77 posts small blind [$0.01]
+Winder0x posts big blind [$0.02]
+** Dealing down cards **
+not_the_hulk raises [$0.04]
+fad86 folds
+pikasiki calls [$0.04]
+fraaancuz77 calls [$0.03]
+Winder0x folds
+** Dealing flop ** [ Ts, Jd, Kd ]
+fraaancuz77 checks
+not_the_hulk bets [$0.02]
+pikasiki folds
+fraaancuz77 calls [$0.02]
+** Dealing turn ** [ 8s ]
+fraaancuz77 checks
+not_the_hulk bets [$0.04]
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ 4s ]
+fraaancuz77 checks
+not_the_hulk bets [$0.04]
+fraaancuz77 folds
+** Summary **
+not_the_hulk collected [ $0.25 ]
+
+
+#Game No : 933140534
+***** 888poker Hand History for Game 933140534 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:04:00
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $1.18 )
+Seat 5: fraaancuz77 ( $1.61 )
+Seat 6: Winder0x ( $1.43 )
+Seat 7: not_the_hulk ( $0.73 )
+Seat 8: fad86 ( $0.84 )
+Winder0x posts small blind [$0.01]
+not_the_hulk posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+pikasiki calls [$0.02]
+fraaancuz77 folds
+Winder0x raises [$0.03]
+not_the_hulk calls [$0.02]
+pikasiki calls [$0.02]
+** Dealing flop ** [ 9h, Ts, 4h ]
+Winder0x bets [$0.02]
+not_the_hulk calls [$0.02]
+pikasiki calls [$0.02]
+** Dealing turn ** [ Ad ]
+Winder0x bets [$0.04]
+not_the_hulk calls [$0.04]
+pikasiki folds
+** Dealing river ** [ 5d ]
+Winder0x bets [$0.04]
+not_the_hulk calls [$0.04]
+** Summary **
+Winder0x shows [ Qs, 4s ]
+not_the_hulk shows [ As, 3s ]
+not_the_hulk collected [ $0.33 ]
+
+
+#Game No : 933140781
+***** 888poker Hand History for Game 933140781 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:04:42
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: pikasiki ( $1.12 )
+Seat 5: fraaancuz77 ( $1.61 )
+Seat 6: Winder0x ( $1.29 )
+Seat 7: not_the_hulk ( $0.92 )
+Seat 8: fad86 ( $0.84 )
+not_the_hulk posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+pikasiki calls [$0.02]
+fraaancuz77 calls [$0.02]
+Winder0x folds
+not_the_hulk calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 7c, 8c, Kh ]
+not_the_hulk checks
+fad86 bets [$0.02]
+pikasiki calls [$0.02]
+fraaancuz77 calls [$0.02]
+not_the_hulk calls [$0.02]
+** Dealing turn ** [ Tc ]
+not_the_hulk checks
+fad86 checks
+pikasiki checks
+fraaancuz77 checks
+** Dealing river ** [ 7h ]
+not_the_hulk checks
+fad86 checks
+pikasiki checks
+fraaancuz77 checks
+** Summary **
+not_the_hulk shows [ 5s, 5d ]
+fad86 shows [ 9c, 8h ]
+pikasiki mucks [ Ad, 9d ]
+fraaancuz77 shows [ 2d, 8d ]
+fraaancuz77 collected [ $0.08 ]
+fad86 collected [ $0.08 ]
+
+
+#Game No : 933141093
+***** 888poker Hand History for Game 933141093 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:05:37
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $1.08 )
+Seat 5: fraaancuz77 ( $1.65 )
+Seat 6: Winder0x ( $1.29 )
+Seat 7: not_the_hulk ( $0.88 )
+Seat 8: fad86 ( $0.88 )
+Seat 9: fenixx210 ( $2 )
+fad86 posts small blind [$0.01]
+fenixx210 posts big blind [$0.02]
+** Dealing down cards **
+pikasiki folds
+fraaancuz77 calls [$0.02]
+Winder0x folds
+not_the_hulk folds
+fad86 calls [$0.01]
+fenixx210 checks
+** Dealing flop ** [ 7c, 4c, Kh ]
+fad86 checks
+fenixx210 checks
+fraaancuz77 checks
+** Dealing turn ** [ 5s ]
+fad86 bets [$0.04]
+fenixx210 folds
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ Qd ]
+fad86 bets [$0.04]
+fraaancuz77 calls [$0.04]
+** Summary **
+fad86 shows [ 9h, 7s ]
+fraaancuz77 shows [ Qc, 6h ]
+fraaancuz77 collected [ $0.21 ]
+
+
+#Game No : 933141424
+***** 888poker Hand History for Game 933141424 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:06:36
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $1.08 )
+Seat 5: fraaancuz77 ( $1.76 )
+Seat 6: Winder0x ( $1.29 )
+Seat 7: not_the_hulk ( $0.88 )
+Seat 8: fad86 ( $0.78 )
+Seat 9: fenixx210 ( $1.98 )
+fenixx210 posts small blind [$0.01]
+pikasiki posts big blind [$0.02]
+** Dealing down cards **
+fraaancuz77 folds
+Winder0x calls [$0.02]
+not_the_hulk folds
+fad86 calls [$0.02]
+fenixx210 raises [$0.03]
+pikasiki calls [$0.02]
+Winder0x calls [$0.02]
+fad86 calls [$0.02]
+** Dealing flop ** [ 4d, Ts, Qh ]
+fenixx210 bets [$0.02]
+pikasiki calls [$0.02]
+Winder0x calls [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ Jh ]
+fenixx210 checks
+pikasiki bets [$0.04]
+Winder0x calls [$0.04]
+fad86 calls [$0.04]
+fenixx210 folds
+** Dealing river ** [ 7d ]
+pikasiki bets [$0.04]
+Winder0x folds
+fad86 calls [$0.04]
+** Summary **
+pikasiki shows [ 8c, 9c ]
+fad86 mucks [ Qs, 6s ]
+pikasiki collected [ $0.42 ]
+
+
+#Game No : 933144752
+***** 888poker Hand History for Game 933144752 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:16:04
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: pikasiki ( $1.23 )
+Seat 4: 19760820 ( $2.35 )
+Seat 5: fraaancuz77 ( $1.69 )
+Seat 7: not_the_hulk ( $0.70 )
+Seat 8: fad86 ( $0.60 )
+Seat 9: fenixx210 ( $1.92 )
+fad86 posts small blind [$0.01]
+fenixx210 posts big blind [$0.02]
+** Dealing down cards **
+pikasiki calls [$0.02]
+19760820 calls [$0.02]
+fraaancuz77 calls [$0.02]
+not_the_hulk calls [$0.02]
+fad86 calls [$0.01]
+fenixx210 checks
+** Dealing flop ** [ 4s, 2d, 7s ]
+fad86 checks
+fenixx210 bets [$0.02]
+pikasiki folds
+19760820 calls [$0.02]
+fraaancuz77 calls [$0.02]
+not_the_hulk raises [$0.04]
+fad86 calls [$0.04]
+fenixx210 calls [$0.02]
+19760820 calls [$0.02]
+fraaancuz77 calls [$0.02]
+** Dealing turn ** [ Qd ]
+fad86 checks
+fenixx210 checks
+19760820 checks
+fraaancuz77 checks
+not_the_hulk bets [$0.04]
+fad86 folds
+fenixx210 folds
+19760820 folds
+fraaancuz77 calls [$0.04]
+** Dealing river ** [ As ]
+fraaancuz77 checks
+not_the_hulk checks
+** Summary **
+fraaancuz77 shows [ 4h, 4d ]
+not_the_hulk mucks [ 9s, 7h ]
+fraaancuz77 collected [ $0.38 ]
+
+
+#Game No : 933195662
+***** 888poker Hand History for Game 933195662 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 18:23:40
+Table Cabo Frio 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: sexxigurl ( $1.33 )
+Seat 5: BRULLIK14 ( $0.68 )
+Seat 6: Omnious_KGB ( $0.68 )
+Seat 7: skvizi13 ( $0.68 )
+Seat 8: fad86 ( $2.37 )
+Seat 9: fenixx210 ( $2.12 )
+BRULLIK14 posts small blind [$0.01]
+Omnious_KGB posts big blind [$0.02]
+** Dealing down cards **
+skvizi13 folds
+fad86 folds
+fenixx210 raises [$0.04]
+sexxigurl calls [$0.04]
+BRULLIK14 folds
+Omnious_KGB folds
+** Dealing flop ** [ Ts, Kd, Jd ]
+fenixx210 bets [$0.02]
+sexxigurl calls [$0.02]
+** Dealing turn ** [ Tc ]
+fenixx210 bets [$0.04]
+sexxigurl raises [$0.08]
+fenixx210 calls [$0.04]
+** Dealing river ** [ 2s ]
+fenixx210 checks
+sexxigurl bets [$0.04]
+fenixx210 calls [$0.04]
+** Summary **
+sexxigurl shows [ Qh, 9h ]
+fenixx210 mucks [ Ah, 7d ]
+sexxigurl collected [ $0.38 ]
+
+
+#Game No : 933234154
+***** 888poker Hand History for Game 933234154 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 19:52:00
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Drlima2015 ( $0.52 )
+Seat 2: 77531917 ( $0.13 )
+Seat 3: skvizi13 ( $0.58 )
+Seat 8: fad86 ( $3.82 )
+Seat 9: fenixx210 ( $1.35 )
+Seat 10: AkibulAkib ( $1.02 )
+77531917 posts small blind [$0.01]
+skvizi13 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+fenixx210 folds
+AkibulAkib raises [$0.04]
+Drlima2015 folds
+77531917 folds
+skvizi13 calls [$0.02]
+fad86 raises [$0.04]
+AkibulAkib raises [$0.04]
+skvizi13 calls [$0.04]
+fad86 calls [$0.02]
+** Dealing flop ** [ 7d, 6c, 9h ]
+skvizi13 checks
+fad86 bets [$0.02]
+AkibulAkib raises [$0.04]
+skvizi13 folds
+fad86 raises [$0.04]
+AkibulAkib raises [$0.04]
+fad86 calls [$0.02]
+** Dealing turn ** [ Kd ]
+fad86 checks
+AkibulAkib checks
+** Dealing river ** [ 8s ]
+fad86 bets [$0.04]
+AkibulAkib calls [$0.04]
+** Summary **
+fad86 shows [ Ks, Ac ]
+AkibulAkib mucks [ 9d, 2c ]
+fad86 collected [ $0.47 ]
+
+
+#Game No : 933243611
+***** 888poker Hand History for Game 933243611 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:13:13
+Table Cabo Frio 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: JimmyMann ( $0.79 )
+Seat 3: slartgotaces ( $7.94 )
+Seat 4: Alex24007 ( $0.26 )
+Seat 5: dirtydenKell ( $7.58 )
+Seat 8: fad86 ( $4.49 )
+Seat 9: fenixx210 ( $1.51 )
+JimmyMann posts small blind [$0.01]
+slartgotaces posts big blind [$0.02]
+** Dealing down cards **
+Alex24007 folds
+dirtydenKell folds
+fad86 calls [$0.02]
+fenixx210 folds
+JimmyMann calls [$0.01]
+slartgotaces checks
+** Dealing flop ** [ Qs, 4c, 6d ]
+JimmyMann bets [$0.02]
+slartgotaces folds
+fad86 calls [$0.02]
+** Dealing turn ** [ Td ]
+JimmyMann bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ 5h ]
+JimmyMann bets [$0.04]
+fad86 folds
+** Summary **
+JimmyMann collected [ $0.18 ]
+
+
+#Game No : 933244038
+***** 888poker Hand History for Game 933244038 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:14:10
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: JimmyMann ( $0.89 )
+Seat 4: Alex24007 ( $0.26 )
+Seat 5: dirtydenKell ( $7.58 )
+Seat 8: fad86 ( $4.41 )
+Seat 9: fenixx210 ( $1.51 )
+Alex24007 posts small blind [$0.01]
+dirtydenKell posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+fenixx210 folds
+JimmyMann calls [$0.02]
+Alex24007 calls [$0.01]
+dirtydenKell checks
+** Dealing flop ** [ Ac, Qs, Kd ]
+Alex24007 checks
+dirtydenKell checks
+fad86 bets [$0.02]
+JimmyMann calls [$0.02]
+Alex24007 calls [$0.02]
+dirtydenKell folds
+** Dealing turn ** [ 3d ]
+Alex24007 checks
+fad86 bets [$0.04]
+JimmyMann calls [$0.04]
+Alex24007 raises [$0.08]
+fad86 raises [$0.08]
+JimmyMann folds
+Alex24007 calls [$0.04]
+** Dealing river ** [ Td ]
+Alex24007 checks
+fad86 bets [$0.04]
+Alex24007 calls [$0.04]
+** Summary **
+fad86 shows [ Kc, Kh ]
+Alex24007 mucks [ As, 6s ]
+fad86 collected [ $0.48 ]
+
+
+#Game No : 933244537
+***** 888poker Hand History for Game 933244537 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:15:18
+Table Cabo Frio 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: JimmyMann ( $0.81 )
+Seat 4: Alex24007 ( $0.06 )
+Seat 5: dirtydenKell ( $7.56 )
+Seat 8: fad86 ( $4.69 )
+Seat 9: fenixx210 ( $1.51 )
+dirtydenKell posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+fenixx210 folds
+JimmyMann folds
+Alex24007 folds
+dirtydenKell folds
+** Summary **
+fad86 collected [ $0.03 ]
+
+
+#Game No : 933244643
+***** 888poker Hand History for Game 933244643 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:15:31
+Table Cabo Frio 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: JimmyMann ( $0.81 )
+Seat 4: Alex24007 ( $0.06 )
+Seat 5: dirtydenKell ( $7.55 )
+Seat 8: fad86 ( $4.70 )
+Seat 9: fenixx210 ( $1.51 )
+fad86 posts small blind [$0.01]
+fenixx210 posts big blind [$0.02]
+** Dealing down cards **
+JimmyMann calls [$0.02]
+Alex24007 folds
+dirtydenKell folds
+fad86 calls [$0.01]
+fenixx210 checks
+** Dealing flop ** [ 9h, 3s, 3c ]
+fad86 bets [$0.02]
+fenixx210 raises [$0.04]
+JimmyMann calls [$0.04]
+fad86 calls [$0.02]
+** Dealing turn ** [ 3d ]
+fad86 checks
+fenixx210 bets [$0.04]
+JimmyMann calls [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ As ]
+fad86 checks
+fenixx210 checks
+JimmyMann checks
+** Summary **
+fad86 shows [ 7s, 7d ]
+fenixx210 shows [ 4d, 9s ]
+JimmyMann shows [ Qh, 9d ]
+fenixx210 collected [ $0.15 ]
+JimmyMann collected [ $0.14 ]
+
+
+#Game No : 933245003
+***** 888poker Hand History for Game 933245003 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:16:20
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: JimmyMann ( $0.85 )
+Seat 4: Alex24007 ( $0.06 )
+Seat 5: dirtydenKell ( $7.55 )
+Seat 8: fad86 ( $4.60 )
+Seat 9: fenixx210 ( $1.56 )
+Seat 10: AkibulAkib ( $0.74 )
+fenixx210 posts small blind [$0.01]
+AkibulAkib posts big blind [$0.02]
+** Dealing down cards **
+JimmyMann folds
+Alex24007 folds
+dirtydenKell folds
+fad86 folds
+fenixx210 raises [$0.03]
+AkibulAkib calls [$0.02]
+** Dealing flop ** [ 9s, 3s, 7h ]
+fenixx210 bets [$0.02]
+AkibulAkib raises [$0.04]
+fenixx210 calls [$0.02]
+** Dealing turn ** [ Jh ]
+fenixx210 checks
+AkibulAkib bets [$0.04]
+fenixx210 calls [$0.04]
+** Dealing river ** [ Tc ]
+fenixx210 checks
+AkibulAkib bets [$0.04]
+fenixx210 calls [$0.04]
+** Summary **
+AkibulAkib shows [ 8s, 5c ]
+fenixx210 mucks [ Ah, Qd ]
+AkibulAkib collected [ $0.31 ]
+
+
+#Game No : 933305358
+***** 888poker Hand History for Game 933305358 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:30:40
+Table Cabo Frio 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: wologor ( $1.18 )
+Seat 3: Stolpaj ( $0.80 )
+Seat 4: TwoDabs ( $0.29 )
+Seat 7: shkoldv ( $1.91 )
+Seat 8: fad86 ( $4.50 )
+Seat 10: candy744 ( $1.34 )
+shkoldv posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+Stolpaj posts big blind [$0.02]
+** Dealing down cards **
+candy744 calls [$0.02]
+wologor folds
+Stolpaj checks
+TwoDabs calls [$0.02]
+shkoldv folds
+fad86 checks
+** Dealing flop ** [ Kh, Qs, 6h ]
+fad86 checks
+candy744 checks
+Stolpaj bets [$0.02]
+TwoDabs calls [$0.02]
+fad86 folds
+candy744 folds
+** Dealing turn ** [ 2h ]
+Stolpaj checks
+TwoDabs bets [$0.04]
+Stolpaj calls [$0.04]
+** Dealing river ** [ Ts ]
+Stolpaj checks
+TwoDabs bets [$0.04]
+Stolpaj calls [$0.04]
+** Summary **
+TwoDabs shows [ Kd, Jh ]
+Stolpaj shows [ Kc, Qc ]
+Stolpaj collected [ $0.28 ]
+
+
+#Game No : 933305914
+***** 888poker Hand History for Game 933305914 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:31:58
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 2: sergijcm ( $0.20 )
+Seat 3: Stolpaj ( $0.96 )
+Seat 4: TwoDabs ( $0.17 )
+Seat 7: shkoldv ( $1.90 )
+Seat 8: fad86 ( $4.48 )
+Seat 10: candy744 ( $1.32 )
+fad86 posts small blind [$0.01]
+candy744 posts big blind [$0.02]
+** Dealing down cards **
+sergijcm folds
+Stolpaj folds
+TwoDabs folds
+shkoldv folds
+fad86 calls [$0.01]
+candy744 checks
+** Dealing flop ** [ Jc, 3d, Ts ]
+fad86 bets [$0.02]
+candy744 folds
+** Summary **
+fad86 collected [ $0.04 ]
+
+
+#Game No : 933306105
+***** 888poker Hand History for Game 933306105 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:32:25
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 2: sergijcm ( $0.20 )
+Seat 3: Stolpaj ( $0.96 )
+Seat 4: TwoDabs ( $0.17 )
+Seat 7: shkoldv ( $1.90 )
+Seat 8: fad86 ( $4.50 )
+Seat 10: candy744 ( $1.30 )
+candy744 posts small blind [$0.01]
+sergijcm posts big blind [$0.02]
+** Dealing down cards **
+Stolpaj raises [$0.04]
+TwoDabs raises [$0.06]
+shkoldv folds
+fad86 folds
+candy744 calls [$0.05]
+sergijcm calls [$0.04]
+Stolpaj raises [$0.04]
+TwoDabs calls [$0.02]
+candy744 calls [$0.02]
+sergijcm calls [$0.02]
+** Dealing flop ** [ Tc, 8d, 7d ]
+candy744 checks
+sergijcm checks
+Stolpaj bets [$0.02]
+TwoDabs calls [$0.02]
+candy744 calls [$0.02]
+sergijcm calls [$0.02]
+** Dealing turn ** [ 2d ]
+candy744 checks
+sergijcm checks
+Stolpaj bets [$0.04]
+TwoDabs calls [$0.04]
+candy744 folds
+sergijcm folds
+** Dealing river ** [ 4s ]
+Stolpaj bets [$0.04]
+TwoDabs calls [$0.03]
+** Summary **
+Stolpaj shows [ Ah, Ac ]
+TwoDabs shows [ 3d, 3c ]
+Stolpaj collected [ $0.52 ]
+
+
+#Game No : 933306613
+***** 888poker Hand History for Game 933306613 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:33:35
+Table Cabo Frio 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 2: sergijcm ( $0.10 )
+Seat 3: Stolpaj ( $1.31 )
+Seat 7: shkoldv ( $1.90 )
+Seat 8: fad86 ( $4.50 )
+Seat 10: candy744 ( $1.20 )
+sergijcm posts small blind [$0.01]
+Stolpaj posts big blind [$0.02]
+** Dealing down cards **
+shkoldv folds
+fad86 calls [$0.02]
+candy744 calls [$0.02]
+sergijcm calls [$0.01]
+Stolpaj checks
+** Dealing flop ** [ Qh, Ks, 6s ]
+sergijcm checks
+Stolpaj checks
+fad86 checks
+candy744 checks
+** Dealing turn ** [ 3s ]
+sergijcm checks
+Stolpaj checks
+fad86 checks
+candy744 checks
+** Dealing river ** [ Qc ]
+sergijcm bets [$0.04]
+Stolpaj folds
+fad86 calls [$0.04]
+candy744 folds
+** Summary **
+sergijcm shows [ 3d, 5h ]
+fad86 shows [ 3h, 4s ]
+fad86 collected [ $0.08 ]
+sergijcm collected [ $0.08 ]
+
+
+#Game No : 933307007
+***** 888poker Hand History for Game 933307007 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:34:30
+Table Cabo Frio 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: sergijcm ( $0.12 )
+Seat 3: Stolpaj ( $1.29 )
+Seat 6: apxap ( $1.27 )
+Seat 8: fad86 ( $4.52 )
+Seat 10: candy744 ( $1.18 )
+Stolpaj posts small blind [$0.01]
+apxap posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+candy744 folds
+sergijcm folds
+Stolpaj calls [$0.01]
+apxap checks
+** Dealing flop ** [ 7h, Qs, 7d ]
+Stolpaj checks
+apxap checks
+** Dealing turn ** [ Qc ]
+Stolpaj checks
+apxap checks
+** Dealing river ** [ 9c ]
+Stolpaj checks
+apxap checks
+** Summary **
+Stolpaj shows [ As, 5h ]
+apxap mucks [ 6s, 3h ]
+Stolpaj collected [ $0.04 ]
+
+
+#Game No : 933307278
+***** 888poker Hand History for Game 933307278 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:35:08
+Table Cabo Frio 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 3: Stolpaj ( $1.31 )
+Seat 6: apxap ( $1.25 )
+Seat 8: fad86 ( $4.52 )
+Seat 10: candy744 ( $1.18 )
+apxap posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+candy744 calls [$0.02]
+Stolpaj folds
+apxap calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 9c, Jd, 7h ]
+apxap bets [$0.02]
+fad86 folds
+candy744 folds
+** Summary **
+apxap collected [ $0.06 ]
+
+
+#Game No : 933307391
+***** 888poker Hand History for Game 933307391 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:35:26
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 3: Stolpaj ( $1.31 )
+Seat 6: apxap ( $1.29 )
+Seat 8: fad86 ( $4.50 )
+Seat 10: candy744 ( $1.16 )
+fad86 posts small blind [$0.01]
+candy744 posts big blind [$0.02]
+** Dealing down cards **
+Stolpaj folds
+apxap raises [$0.04]
+fad86 calls [$0.03]
+candy744 calls [$0.02]
+** Dealing flop ** [ 4c, 4h, 3s ]
+fad86 checks
+candy744 bets [$0.02]
+apxap raises [$0.04]
+fad86 calls [$0.04]
+candy744 raises [$0.04]
+apxap calls [$0.02]
+fad86 folds
+** Dealing turn ** [ 8d ]
+candy744 bets [$0.04]
+apxap calls [$0.04]
+** Dealing river ** [ 6c ]
+candy744 bets [$0.04]
+apxap calls [$0.04]
+** Summary **
+candy744 shows [ 4d, Ah ]
+apxap mucks [ Qs, Qc ]
+candy744 collected [ $0.42 ]
+
+
+#Game No : 933307658
+***** 888poker Hand History for Game 933307658 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:36:04
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 3: Stolpaj ( $1.31 )
+Seat 6: apxap ( $1.11 )
+Seat 7: necronomycus ( $0.90 )
+Seat 8: fad86 ( $4.42 )
+Seat 10: candy744 ( $1.40 )
+candy744 posts small blind [$0.01]
+Stolpaj posts big blind [$0.02]
+necronomycus posts big blind [$0.02]
+** Dealing down cards **
+apxap folds
+necronomycus checks
+fad86 calls [$0.02]
+candy744 calls [$0.01]
+Stolpaj checks
+** Dealing flop ** [ Qh, Kd, Qs ]
+candy744 bets [$0.02]
+Stolpaj folds
+necronomycus folds
+fad86 calls [$0.02]
+** Dealing turn ** [ Th ]
+candy744 bets [$0.04]
+fad86 raises [$0.08]
+candy744 raises [$0.08]
+fad86 raises [$0.08]
+candy744 calls [$0.04]
+** Dealing river ** [ 2d ]
+candy744 checks
+fad86 bets [$0.04]
+candy744 calls [$0.04]
+** Summary **
+fad86 shows [ Tc, Ts ]
+candy744 mucks [ 9c, Js ]
+fad86 collected [ $0.50 ]
+
+
+#Game No : 933307939
+***** 888poker Hand History for Game 933307939 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:36:43
+Table Cabo Frio 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 3: Stolpaj ( $1.29 )
+Seat 5: 123charly321 ( $0.24 )
+Seat 6: apxap ( $1.11 )
+Seat 7: necronomycus ( $0.88 )
+Seat 8: fad86 ( $4.68 )
+Seat 10: candy744 ( $1.16 )
+Stolpaj posts small blind [$0.01]
+123charly321 posts big blind [$0.02]
+** Dealing down cards **
+apxap calls [$0.02]
+necronomycus raises [$0.04]
+fad86 folds
+candy744 calls [$0.04]
+Stolpaj calls [$0.03]
+123charly321 calls [$0.02]
+apxap calls [$0.02]
+** Dealing flop ** [ 3h, 8d, 6s ]
+Stolpaj checks
+123charly321 bets [$0.02]
+apxap folds
+necronomycus raises [$0.04]
+candy744 calls [$0.04]
+Stolpaj folds
+123charly321 calls [$0.02]
+** Dealing turn ** [ Qc ]
+123charly321 checks
+necronomycus bets [$0.04]
+candy744 calls [$0.04]
+123charly321 calls [$0.04]
+** Dealing river ** [ 8c ]
+123charly321 checks
+necronomycus checks
+candy744 checks
+** Summary **
+123charly321 shows [ 7d, 6c ]
+necronomycus mucks [ 4h, Ah ]
+candy744 mucks [ Ks, Ac ]
+123charly321 collected [ $0.42 ]
+
+
+#Game No : 933308529
+***** 888poker Hand History for Game 933308529 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:38:10
+Table Cabo Frio 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: BRULLIK14 ( $0.76 )
+Seat 3: Stolpaj ( $1.25 )
+Seat 6: apxap ( $1.05 )
+Seat 7: necronomycus ( $0.76 )
+Seat 8: fad86 ( $4.68 )
+Seat 10: candy744 ( $1.11 )
+necronomycus posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+candy744 folds
+BRULLIK14 calls [$0.02]
+Stolpaj folds
+apxap folds
+necronomycus folds
+fad86 checks
+** Dealing flop ** [ 6h, 6s, 7h ]
+fad86 bets [$0.02]
+BRULLIK14 folds
+** Summary **
+fad86 collected [ $0.05 ]
+
+
+#Game No : 933308723
+***** 888poker Hand History for Game 933308723 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:38:39
+Table Cabo Frio 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: BRULLIK14 ( $0.74 )
+Seat 3: Stolpaj ( $1.25 )
+Seat 6: apxap ( $1.05 )
+Seat 7: necronomycus ( $0.75 )
+Seat 8: fad86 ( $4.71 )
+Seat 10: candy744 ( $1.11 )
+fad86 posts small blind [$0.01]
+candy744 posts big blind [$0.02]
+** Dealing down cards **
+BRULLIK14 folds
+Stolpaj calls [$0.02]
+apxap folds
+necronomycus folds
+fad86 calls [$0.01]
+candy744 checks
+** Dealing flop ** [ Th, 5d, 7s ]
+fad86 checks
+candy744 checks
+Stolpaj bets [$0.02]
+fad86 raises [$0.04]
+candy744 folds
+Stolpaj folds
+** Summary **
+fad86 collected [ $0.10 ]
+
+
+#Game No : 933308982
+***** 888poker Hand History for Game 933308982 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:39:19
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 1: BRULLIK14 ( $0.74 )
+Seat 3: Stolpaj ( $1.21 )
+Seat 6: apxap ( $1.05 )
+Seat 8: fad86 ( $4.77 )
+Seat 10: candy744 ( $1.09 )
+candy744 posts small blind [$0.01]
+BRULLIK14 posts big blind [$0.02]
+** Dealing down cards **
+Stolpaj folds
+apxap folds
+fad86 calls [$0.02]
+candy744 calls [$0.01]
+BRULLIK14 checks
+** Dealing flop ** [ 8d, Ts, As ]
+candy744 bets [$0.02]
+BRULLIK14 calls [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 6h ]
+candy744 bets [$0.04]
+BRULLIK14 calls [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ Qd ]
+candy744 checks
+BRULLIK14 checks
+fad86 checks
+** Summary **
+candy744 shows [ 7s, 5s ]
+BRULLIK14 shows [ Th, Jd ]
+fad86 shows [ 9d, Qh ]
+fad86 collected [ $0.23 ]
+
+
+#Game No : 933309309
+***** 888poker Hand History for Game 933309309 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:40:04
+Table Cabo Frio 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 1: BRULLIK14 ( $0.66 )
+Seat 3: Stolpaj ( $1.21 )
+Seat 6: apxap ( $1.05 )
+Seat 8: fad86 ( $4.92 )
+Seat 10: candy744 ( $1.01 )
+BRULLIK14 posts small blind [$0.01]
+Stolpaj posts big blind [$0.02]
+** Dealing down cards **
+apxap folds
+fad86 folds
+candy744 calls [$0.02]
+BRULLIK14 calls [$0.01]
+Stolpaj checks
+** Dealing flop ** [ 4s, 6h, 5c ]
+BRULLIK14 checks
+Stolpaj checks
+candy744 checks
+** Dealing turn ** [ Ts ]
+BRULLIK14 checks
+Stolpaj checks
+candy744 checks
+** Dealing river ** [ 5h ]
+BRULLIK14 checks
+Stolpaj checks
+candy744 checks
+** Summary **
+BRULLIK14 shows [ Jh, Qd ]
+Stolpaj mucks [ Qh, 3d ]
+candy744 shows [ Ad, 3s ]
+candy744 collected [ $0.06 ]
+
+
+#Game No : 933309578
+***** 888poker Hand History for Game 933309578 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:40:42
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: BRULLIK14 ( $0.64 )
+Seat 3: Stolpaj ( $1.19 )
+Seat 6: apxap ( $1.05 )
+Seat 8: fad86 ( $4.92 )
+Seat 10: candy744 ( $1.05 )
+Stolpaj posts small blind [$0.01]
+apxap posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+candy744 calls [$0.02]
+BRULLIK14 folds
+Stolpaj folds
+apxap checks
+** Dealing flop ** [ Td, 3d, 2d ]
+apxap checks
+candy744 checks
+** Dealing turn ** [ 6h ]
+apxap checks
+candy744 checks
+** Dealing river ** [ As ]
+apxap checks
+candy744 checks
+** Summary **
+apxap shows [ 9c, 8h ]
+candy744 mucks [ 8s, 7h ]
+apxap collected [ $0.05 ]
+
+
+#Game No : 933309791
+***** 888poker Hand History for Game 933309791 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:41:13
+Table Cabo Frio 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 1: BRULLIK14 ( $0.64 )
+Seat 3: Stolpaj ( $1.18 )
+Seat 6: apxap ( $1.08 )
+Seat 8: fad86 ( $4.92 )
+Seat 10: candy744 ( $1.03 )
+apxap posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+candy744 calls [$0.02]
+BRULLIK14 calls [$0.02]
+Stolpaj calls [$0.02]
+apxap folds
+fad86 checks
+** Dealing flop ** [ 4s, 4d, Ac ]
+fad86 checks
+candy744 checks
+BRULLIK14 bets [$0.02]
+Stolpaj folds
+fad86 folds
+candy744 calls [$0.02]
+** Dealing turn ** [ Jh ]
+candy744 checks
+BRULLIK14 bets [$0.04]
+candy744 calls [$0.04]
+** Dealing river ** [ 6h ]
+candy744 checks
+BRULLIK14 checks
+** Summary **
+candy744 shows [ Kc, 4c ]
+BRULLIK14 mucks [ 3s, Ah ]
+candy744 collected [ $0.20 ]
+
+
+#Game No : 933310055
+***** 888poker Hand History for Game 933310055 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:41:52
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 4
+Seat 1: BRULLIK14 ( $0.56 )
+Seat 3: Stolpaj ( $1.16 )
+Seat 8: fad86 ( $4.90 )
+Seat 10: candy744 ( $1.15 )
+candy744 posts small blind [$0.01]
+BRULLIK14 posts big blind [$0.02]
+** Dealing down cards **
+Stolpaj folds
+fad86 folds
+candy744 calls [$0.01]
+BRULLIK14 checks
+** Dealing flop ** [ 4h, Ts, 3c ]
+candy744 bets [$0.02]
+BRULLIK14 calls [$0.02]
+** Dealing turn ** [ 9s ]
+candy744 bets [$0.04]
+BRULLIK14 calls [$0.04]
+** Dealing river ** [ 8h ]
+candy744 bets [$0.04]
+BRULLIK14 calls [$0.04]
+** Summary **
+candy744 shows [ Tc, 8c ]
+BRULLIK14 mucks [ Th, Kd ]
+candy744 collected [ $0.23 ]
+
+
+#Game No : 933310290
+***** 888poker Hand History for Game 933310290 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:42:25
+Table Cabo Frio 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 4
+Seat 1: BRULLIK14 ( $0.44 )
+Seat 3: Stolpaj ( $1.16 )
+Seat 8: fad86 ( $4.90 )
+Seat 10: candy744 ( $1.26 )
+BRULLIK14 posts small blind [$0.01]
+Stolpaj posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+candy744 calls [$0.02]
+BRULLIK14 folds
+Stolpaj checks
+** Dealing flop ** [ Jd, 8h, Qc ]
+Stolpaj checks
+candy744 bets [$0.02]
+Stolpaj folds
+** Summary **
+candy744 collected [ $0.05 ]
+
+
+#Game No : 933310442
+***** 888poker Hand History for Game 933310442 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:42:44
+Table Cabo Frio 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: BRULLIK14 ( $0.43 )
+Seat 3: Stolpaj ( $1.14 )
+Seat 8: fad86 ( $4.90 )
+Seat 10: candy744 ( $1.29 )
+Stolpaj posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+candy744 calls [$0.02]
+BRULLIK14 raises [$0.04]
+Stolpaj folds
+fad86 calls [$0.02]
+candy744 calls [$0.02]
+** Dealing flop ** [ 9c, 3h, 9d ]
+fad86 checks
+candy744 checks
+BRULLIK14 bets [$0.02]
+fad86 calls [$0.02]
+candy744 calls [$0.02]
+** Dealing turn ** [ Kd ]
+fad86 checks
+candy744 checks
+BRULLIK14 checks
+** Dealing river ** [ Ad ]
+fad86 bets [$0.04]
+candy744 folds
+BRULLIK14 folds
+** Summary **
+fad86 collected [ $0.19 ]
+
+
+#Game No : 933310721
+***** 888poker Hand History for Game 933310721 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:43:26
+Table Cabo Frio 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 1: BRULLIK14 ( $0.37 )
+Seat 3: Stolpaj ( $1.13 )
+Seat 8: fad86 ( $5.03 )
+Seat 10: candy744 ( $1.23 )
+fad86 posts small blind [$0.01]
+candy744 posts big blind [$0.02]
+** Dealing down cards **
+BRULLIK14 folds
+Stolpaj calls [$0.02]
+fad86 calls [$0.01]
+candy744 checks
+** Dealing flop ** [ 4d, Td, 4s ]
+fad86 checks
+candy744 bets [$0.02]
+Stolpaj folds
+fad86 folds
+** Summary **
+candy744 collected [ $0.06 ]
+
+
+#Game No : 933310954
+***** 888poker Hand History for Game 933310954 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:43:59
+Table Cabo Frio 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 3: Stolpaj ( $1.11 )
+Seat 8: fad86 ( $5.01 )
+Seat 10: candy744 ( $1.27 )
+candy744 posts small blind [$0.01]
+Stolpaj folds
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+candy744 calls [$0.01]
+fad86 checks
+** Dealing flop ** [ Jh, 6d, 8d ]
+candy744 bets [$0.02]
+fad86 folds
+** Summary **
+candy744 collected [ $0.04 ]
+
+

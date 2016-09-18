@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{67EE116C-C86B-46AA-964A-F80CAE372A8B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DriveHUD.Importers</RootNamespace>
+    <AssemblyName>DriveHUD.Importers</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Composition, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Interactivity, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Interactivity.5.0.0\lib\NET45\Microsoft.Practices.Prism.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.Mvvm.Desktop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.Mvvm.Desktop.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.PubSubEvents, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.PubSubEvents.1.0.0\lib\portable-sl4+wp7+windows8+net40\Microsoft.Practices.Prism.PubSubEvents.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Prism.SharedInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Mvvm.1.0.0\lib\net45\Microsoft.Practices.Prism.SharedInterfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseImporter.cs" />
+    <Compile Include="BetOnline\BetOnlineBaseDataManager.cs" />
+    <Compile Include="BetOnline\BetOnlineCatcher.cs" />
+    <Compile Include="BetOnline\BetOnlineDataManager.cs" />
+    <Compile Include="BetOnline\BetOnlineImporter.cs" />
+    <Compile Include="BetOnline\BetOnlineTournamentImporter.cs" />
+    <Compile Include="BetOnline\BetOnlineTournamentLogger.cs" />
+    <Compile Include="BetOnline\BetOnlineTournamentManager.cs" />
+    <Compile Include="BetOnline\BetOnlineXmlToIPokerXmlConverter.cs" />
+    <Compile Include="BetOnline\ConvertedResult.cs" />
+    <Compile Include="BetOnline\IBetOnlineCatcher.cs" />
+    <Compile Include="BetOnline\IBetOnlineDataManager.cs" />
+    <Compile Include="BetOnline\IBetOnlineImporter.cs" />
+    <Compile Include="BetOnline\IBetOnlineTournamentImporter.cs" />
+    <Compile Include="BetOnline\IBetOnlineTournamentManager.cs" />
+    <Compile Include="BetOnline\IBetOnlineXmlConverter.cs" />
+    <Compile Include="BetOnline\IBetOnlineTableService.cs" />
+    <Compile Include="BetOnline\ITournamentsCacheService.cs" />
+    <Compile Include="BetOnline\BetOnlineTableService.cs" />
+    <Compile Include="BetOnline\TournamentsCacheService.cs" />
+    <Compile Include="Bovada\BovadaCatcher.cs" />
+    <Compile Include="Bovada\BovadaConverters.cs" />
+    <Compile Include="Bovada\BovadaTable.cs" />
+    <Compile Include="Bovada\DataObjects\BovadaCatcherDataObject.cs" />
+    <Compile Include="Bovada\DataObjects\BovadaCommandDataObject.cs" />
+    <Compile Include="Bovada\BovadaDataManager.cs" />
+    <Compile Include="Bovada\BovadaImporter.cs" />
+    <Compile Include="Bovada\DataObjects\BovadaPlayerActionType.cs" />
+    <Compile Include="Bovada\DataObjects\BovadaPlayerState.cs" />
+    <Compile Include="Bovada\DataObjects\BovadaTableState.cs" />
+    <Compile Include="Bovada\DataObjects\GameLimit.cs" />
+    <Compile Include="Bovada\DataObjects\GameType.cs" />
+    <Compile Include="Bovada\IBovadaCatcher.cs" />
+    <Compile Include="Bovada\IBovadaDataManager.cs" />
+    <Compile Include="Bovada\IBovadaImporter.cs" />
+    <Compile Include="Bovada\Model\CardShown.cs" />
+    <Compile Include="Bovada\Model\CashOrTournament.cs" />
+    <Compile Include="Bovada\Model\Command.cs" />
+    <Compile Include="Bovada\Model\CommandCodeEnum.cs" />
+    <Compile Include="Bovada\Model\CommandExtenstions.cs" />
+    <Compile Include="Bovada\Model\CommunityCard.cs" />
+    <Compile Include="Bovada\Model\DealerSeat.cs" />
+    <Compile Include="Bovada\Model\HandModel2.cs" />
+    <Compile Include="Bovada\Model\HandNumberTableName.cs" />
+    <Compile Include="Bovada\Model\HandPhaseEnum.cs" />
+    <Compile Include="Bovada\Model\HandPhaseV2.cs" />
+    <Compile Include="Bovada\Model\PlayerAction.cs" />
+    <Compile Include="Bovada\Model\PlayerActionEnum.cs" />
+    <Compile Include="Bovada\Model\PlayerAdded.cs" />
+    <Compile Include="Bovada\Model\PlayerLastActionAndStack.cs" />
+    <Compile Include="Bovada\Model\PlayerRemoved.cs" />
+    <Compile Include="Bovada\Model\PocketCards.cs" />
+    <Compile Include="Bovada\Model\Stack.cs" />
+    <Compile Include="Bovada\Model\TourneyPlayerFinished.cs" />
+    <Compile Include="Builders\iPoker\Hand.cs" />
+    <Compile Include="Builders\iPoker\HandCombo.cs" />
+    <Compile Include="Builders\iPoker\HiCardsComparer.cs" />
+    <Compile Include="Builders\iPoker\HoldemEvaluator.cs" />
+    <Compile Include="Builders\iPoker\ICardsConverter.cs" />
+    <Compile Include="Builders\iPoker\IHandHistoryBuilder.cs" />
+    <Compile Include="Builders\iPoker\IPokerEvaluator.cs" />
+    <Compile Include="Builders\iPoker\Model\Action.cs" />
+    <Compile Include="Builders\iPoker\Card.cs" />
+    <Compile Include="Builders\iPoker\Model\ActionType.cs" />
+    <Compile Include="Builders\iPoker\Model\Cards.cs" />
+    <Compile Include="Builders\iPoker\Model\CardsType.cs" />
+    <Compile Include="Builders\iPoker\Model\Currency.cs" />
+    <Compile Include="Builders\iPoker\Model\Game.cs" />
+    <Compile Include="Builders\iPoker\Model\GameGeneral.cs" />
+    <Compile Include="Builders\iPoker\Model\General.cs" />
+    <Compile Include="Builders\iPoker\Model\HandHistory.cs" />
+    <Compile Include="Builders\iPoker\Model\Player.cs" />
+    <Compile Include="Builders\iPoker\Model\Round.cs" />
+    <Compile Include="Builders\iPoker\OmahaEvaluator.cs" />
+    <Compile Include="Builders\iPoker\PokerBuilder.cs" />
+    <Compile Include="Builders\iPoker\PokerCardsConverter.cs" />
+    <Compile Include="Builders\iPoker\PokerConfiguration.cs" />
+    <Compile Include="Builders\iPoker\PokerEvaluator.cs" />
+    <Compile Include="Builders\iPoker\PokerStarsBuilder.cs" />
+    <Compile Include="Builders\iPoker\StringExtensions.cs" />
+    <Compile Include="DataImportedEvent.cs" />
+    <Compile Include="DataImportedEventArgs.cs" />
+    <Compile Include="FileImporter.cs" />
+    <Compile Include="GameInfo.cs" />
+    <Compile Include="GameMatchInfo.cs" />
+    <Compile Include="Helpers\BovadaHelper.cs" />
+    <Compile Include="Helpers\GeneralHelpers.cs" />
+    <Compile Include="IAutoImporter.cs" />
+    <Compile Include="IBackgroundProcess.cs" />
+    <Compile Include="IImporterService.cs" />
+    <Compile Include="IFileImporter.cs" />
+    <Compile Include="IImporterSessionCacheService.cs" />
+    <Compile Include="ImporterService.cs" />
+    <Compile Include="ImporterSessionCacheService.cs" />
+    <Compile Include="IPokerCatcher.cs" />
+    <Compile Include="IPokerClientDataManager.cs" />
+    <Compile Include="IPokerClientEncryptedLogger.cs" />
+    <Compile Include="IPokerTable.cs" />
+    <Compile Include="ISessionService.cs" />
+    <Compile Include="IUserSession.cs" />
+    <Compile Include="Loggers\FileImporterLogger.cs" />
+    <Compile Include="Loggers\IFileImporterLogger.cs" />
+    <Compile Include="Loggers\LogServices.cs" />
+    <Compile Include="Loggers\PokerClientLogger.cs" />
+    <Compile Include="PokerCatcher.cs" />
+    <Compile Include="PokerClientDataManagerInfo.cs" />
+    <Compile Include="PokerClientLoggerConfiguration.cs" />
+    <Compile Include="PokerClientImporter.cs" />
+    <Compile Include="PokerClientTableClosedEvent.cs" />
+    <Compile Include="PokerClientTableClosedEventArgs.cs" />
+    <Compile Include="PokerStars\IPokerStarsImporter.cs" />
+    <Compile Include="PokerStars\PokerStarsImporter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionCacheData.cs" />
+    <Compile Include="TournamentSettings.cs" />
+    <Compile Include="TournamentsResolver.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
+      <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
+      <Name>DriveHUD.Common.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
+      <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
+      <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{92f8b855-af92-4969-8882-ce8fd3797cf0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Objects\HandHistories.Objects.csproj">
+      <Project>{d5c61a3a-2725-47d9-a828-f5ce4ec19a4a}</Project>
+      <Name>HandHistories.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Parser\HandHistories.Parser.csproj">
+      <Project>{0f131db6-4891-4a24-a529-87f4816b9923}</Project>
+      <Name>HandHistories.Parser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)\tools\SubWCRev\subwcrev.exe" "$(SolutionDir)." "$(ProjectDir)Properties\AssemblyInfo.template.cs" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

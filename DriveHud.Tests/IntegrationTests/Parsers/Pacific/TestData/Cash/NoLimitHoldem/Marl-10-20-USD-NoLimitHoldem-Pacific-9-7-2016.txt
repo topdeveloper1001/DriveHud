@@ -1,0 +1,578 @@
+#Game No : 436684429
+***** 888poker Hand History for Game 436684429 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:48:59
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: MikeHatesYou ( $100 )
+Seat 2: Teranozavr ( $100 )
+Seat 6: surik_vaio ( $100 )
+MikeHatesYou folds
+Teranozavr posts small blind [$10]
+** Dealing down cards **
+surik_vaio folds
+** Summary **
+Teranozavr did not show his hand
+Teranozavr collected [ $10 ]
+
+
+#Game No : 436684486
+***** 888poker Hand History for Game 436684486 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:49:27
+Table Marl 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: MikeHatesYou ( $100 )
+Seat 2: Teranozavr ( $100 )
+Seat 6: surik_vaio ( $100 )
+Teranozavr posts small blind [$10]
+** Dealing down cards **
+surik_vaio folds
+MikeHatesYou folds
+** Summary **
+Teranozavr did not show his hand
+Teranozavr collected [ $10 ]
+
+
+#Game No : 436692030
+***** 888poker Hand History for Game 436692030 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 19:54:12
+Table Marl 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: surik_vaio ( $100 )
+Seat 2: MikeHatesYou ( $100 )
+Seat 4: Goga7718 ( $100 )
+Seat 6: vaavere ( $100 )
+Goga7718 folds
+vaavere posts small blind [$10]
+** Dealing down cards **
+surik_vaio folds
+MikeHatesYou folds
+** Summary **
+vaavere collected [ $10 ]
+
+
+#Game No : 436692105
+***** 888poker Hand History for Game 436692105 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 19:54:47
+Table Marl 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: surik_vaio ( $100 )
+Seat 4: Goga7718 ( $199 )
+Seat 6: vaavere ( $100 )
+vaavere posts small blind [$10]
+surik_vaio folds
+Goga7718 posts big blind [$20]
+** Dealing down cards **
+vaavere folds
+** Summary **
+Goga7718 did not show his hand
+Goga7718 collected [ $30 ]
+
+
+#Game No : 436693139
+***** 888poker Hand History for Game 436693139 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:03:23
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $100 )
+Seat 6: vaavere ( $818 )
+Seat 9: gipsyxxl ( $100 )
+gipsyxxl posts small blind [$10]
+WlkRambo posts big blind [$20]
+** Dealing down cards **
+vaavere raises [$818]
+gipsyxxl folds
+WlkRambo folds
+** Summary **
+vaavere collected [ $50 ]
+
+
+#Game No : 436693168
+***** 888poker Hand History for Game 436693168 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:03:37
+Table Marl 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $100 )
+Seat 6: vaavere ( $848 )
+Seat 9: gipsyxxl ( $90 )
+WlkRambo posts small blind [$10]
+vaavere posts big blind [$20]
+** Dealing down cards **
+gipsyxxl folds
+WlkRambo raises [$90]
+vaavere folds
+** Summary **
+WlkRambo did not show his hand
+WlkRambo collected [ $40 ]
+
+
+#Game No : 436693192
+***** 888poker Hand History for Game 436693192 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:03:48
+Table Marl 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $120 )
+Seat 6: vaavere ( $828 )
+Seat 9: gipsyxxl ( $90 )
+vaavere posts small blind [$10]
+gipsyxxl posts big blind [$20]
+** Dealing down cards **
+WlkRambo raises [$40]
+vaavere raises [$818]
+gipsyxxl folds
+WlkRambo calls [$80]
+** Dealing flop ** [ Ah, Kd, 8h ]
+** Dealing turn ** [ 9s ]
+** Dealing river ** [ 9d ]
+** Summary **
+WlkRambo shows [ 5c, 5s ]
+vaavere shows [ Qd, Jc ]
+WlkRambo collected [ $257.50 ]
+
+
+#Game No : 436693298
+***** 888poker Hand History for Game 436693298 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:04:37
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $257.50 )
+Seat 6: vaavere ( $708 )
+Seat 9: gipsyxxl ( $70 )
+gipsyxxl posts small blind [$10]
+WlkRambo posts big blind [$20]
+** Dealing down cards **
+vaavere raises [$40]
+gipsyxxl raises [$60]
+WlkRambo folds
+vaavere calls [$30]
+** Dealing flop ** [ 4d, 7s, 4h ]
+** Dealing turn ** [ 3c ]
+** Dealing river ** [ 3h ]
+** Summary **
+vaavere shows [ Ad, Jd ]
+gipsyxxl shows [ Qh, 5c ]
+vaavere collected [ $157.50 ]
+
+
+#Game No : 436693357
+***** 888poker Hand History for Game 436693357 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:05:03
+Table Marl 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $237.50 )
+Seat 6: vaavere ( $795.50 )
+Seat 9: gipsyxxl ( $100 )
+WlkRambo posts small blind [$10]
+vaavere posts big blind [$20]
+** Dealing down cards **
+gipsyxxl folds
+WlkRambo folds
+** Summary **
+vaavere did not show his hand
+vaavere collected [ $30 ]
+
+
+#Game No : 436693378
+***** 888poker Hand History for Game 436693378 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:05:12
+Table Marl 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $227.50 )
+Seat 6: vaavere ( $805.50 )
+Seat 9: gipsyxxl ( $100 )
+vaavere posts small blind [$10]
+gipsyxxl posts big blind [$20]
+** Dealing down cards **
+WlkRambo raises [$40]
+vaavere folds
+gipsyxxl calls [$20]
+** Dealing flop ** [ 9c, 5c, Qc ]
+gipsyxxl checks
+WlkRambo bets [$90]
+gipsyxxl folds
+** Summary **
+WlkRambo did not show his hand
+WlkRambo collected [ $87.50 ]
+
+
+#Game No : 436693427
+***** 888poker Hand History for Game 436693427 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:05:38
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $275 )
+Seat 6: vaavere ( $795.50 )
+Seat 9: gipsyxxl ( $100 )
+gipsyxxl posts small blind [$10]
+WlkRambo posts big blind [$20]
+** Dealing down cards **
+vaavere raises [$795.50]
+gipsyxxl calls [$90]
+WlkRambo folds
+** Dealing flop ** [ 9s, 7d, 9h ]
+** Dealing turn ** [ 4d ]
+** Dealing river ** [ 2h ]
+** Summary **
+vaavere shows [ As, 5h ]
+gipsyxxl shows [ Qh, 8s ]
+vaavere collected [ $217.50 ]
+
+
+#Game No : 436693485
+***** 888poker Hand History for Game 436693485 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:06:01
+Table Marl 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $255 )
+Seat 6: vaavere ( $913 )
+Seat 9: gipsyxxl ( $100 )
+WlkRambo posts small blind [$10]
+vaavere posts big blind [$20]
+** Dealing down cards **
+gipsyxxl folds
+WlkRambo folds
+** Summary **
+vaavere did not show his hand
+vaavere collected [ $30 ]
+
+
+#Game No : 436693506
+***** 888poker Hand History for Game 436693506 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:06:11
+Table Marl 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $245 )
+Seat 6: vaavere ( $923 )
+Seat 9: gipsyxxl ( $100 )
+vaavere posts small blind [$10]
+gipsyxxl posts big blind [$20]
+** Dealing down cards **
+WlkRambo folds
+vaavere raises [$913]
+gipsyxxl calls [$80]
+** Dealing flop ** [ Ah, Jh, 9h ]
+** Dealing turn ** [ 8c ]
+** Dealing river ** [ 2h ]
+** Summary **
+vaavere shows [ 9c, Qc ]
+gipsyxxl shows [ 6c, Ks ]
+vaavere collected [ $197.50 ]
+
+
+#Game No : 436693554
+***** 888poker Hand History for Game 436693554 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:06:32
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $245 )
+Seat 6: vaavere ( $1,020.50 )
+Seat 9: gipsyxxl ( $100 )
+gipsyxxl posts small blind [$10]
+WlkRambo posts big blind [$20]
+** Dealing down cards **
+vaavere raises [$1,020.50]
+gipsyxxl folds
+WlkRambo calls [$225]
+** Dealing flop ** [ 8s, 3s, 6c ]
+** Dealing turn ** [ 8c ]
+** Dealing river ** [ 7d ]
+** Summary **
+WlkRambo shows [ Ah, Th ]
+vaavere shows [ Ac, 3h ]
+vaavere collected [ $497.50 ]
+
+
+#Game No : 436693612
+***** 888poker Hand History for Game 436693612 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:06:58
+Table Marl 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $100 )
+Seat 6: vaavere ( $1,273 )
+Seat 9: gipsyxxl ( $90 )
+WlkRambo posts small blind [$10]
+vaavere posts big blind [$20]
+** Dealing down cards **
+gipsyxxl folds
+WlkRambo raises [$90]
+vaavere folds
+** Summary **
+WlkRambo did not show his hand
+WlkRambo collected [ $40 ]
+
+
+#Game No : 436693654
+***** 888poker Hand History for Game 436693654 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:07:15
+Table Marl 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $120 )
+Seat 6: vaavere ( $1,253 )
+Seat 9: gipsyxxl ( $90 )
+vaavere posts small blind [$10]
+gipsyxxl posts big blind [$20]
+** Dealing down cards **
+WlkRambo raises [$120]
+vaavere folds
+gipsyxxl folds
+** Summary **
+WlkRambo did not show his hand
+WlkRambo collected [ $50 ]
+
+
+#Game No : 436693682
+***** 888poker Hand History for Game 436693682 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:07:27
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $150 )
+Seat 6: vaavere ( $1,243 )
+Seat 9: gipsyxxl ( $70 )
+gipsyxxl posts small blind [$10]
+WlkRambo posts big blind [$20]
+** Dealing down cards **
+vaavere raises [$1,243]
+gipsyxxl folds
+WlkRambo calls [$130]
+** Dealing flop ** [ 9h, 7h, Tc ]
+** Dealing turn ** [ Th ]
+** Dealing river ** [ 7s ]
+** Summary **
+WlkRambo shows [ 9d, 9c ]
+vaavere shows [ Kh, 7c ]
+WlkRambo collected [ $307.50 ]
+
+
+#Game No : 436693733
+***** 888poker Hand History for Game 436693733 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:07:49
+Table Marl 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $307.50 )
+Seat 6: vaavere ( $1,093 )
+Seat 9: gipsyxxl ( $60 )
+WlkRambo posts small blind [$10]
+vaavere posts big blind [$20]
+** Dealing down cards **
+gipsyxxl raises [$60]
+WlkRambo raises [$297.50]
+vaavere folds
+** Dealing flop ** [ Qc, Tc, Ah ]
+** Dealing turn ** [ 7h ]
+** Dealing river ** [ 6d ]
+** Summary **
+WlkRambo shows [ Ad, 8s ]
+gipsyxxl shows [ Js, Td ]
+WlkRambo collected [ $137.50 ]
+
+
+#Game No : 436693779
+***** 888poker Hand History for Game 436693779 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:08:13
+Table Marl 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $385 )
+Seat 6: vaavere ( $1,073 )
+Seat 9: gipsyxxl ( $100 )
+vaavere posts small blind [$10]
+gipsyxxl posts big blind [$20]
+** Dealing down cards **
+WlkRambo folds
+vaavere raises [$1,063]
+gipsyxxl calls [$80]
+** Dealing flop ** [ 5h, Kh, Ks ]
+** Dealing turn ** [ 7h ]
+** Dealing river ** [ 2h ]
+** Summary **
+vaavere shows [ 9h, Ah ]
+gipsyxxl shows [ Jd, 7c ]
+vaavere collected [ $197.50 ]
+
+
+#Game No : 436693831
+***** 888poker Hand History for Game 436693831 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:08:37
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $385 )
+Seat 6: vaavere ( $1,170.50 )
+Seat 9: gipsyxxl ( $100 )
+gipsyxxl posts small blind [$10]
+WlkRambo posts big blind [$20]
+** Dealing down cards **
+vaavere folds
+gipsyxxl raises [$90]
+WlkRambo folds
+** Summary **
+gipsyxxl did not show his hand
+gipsyxxl collected [ $40 ]
+
+
+#Game No : 436693851
+***** 888poker Hand History for Game 436693851 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:08:50
+Table Marl 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $365 )
+Seat 6: vaavere ( $1,170.50 )
+Seat 9: gipsyxxl ( $120 )
+WlkRambo posts small blind [$10]
+vaavere posts big blind [$20]
+** Dealing down cards **
+gipsyxxl folds
+WlkRambo folds
+** Summary **
+vaavere did not show his hand
+vaavere collected [ $30 ]
+
+
+#Game No : 436693866
+***** 888poker Hand History for Game 436693866 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:08:58
+Table Marl 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $355 )
+Seat 6: vaavere ( $1,180.50 )
+Seat 9: gipsyxxl ( $120 )
+vaavere posts small blind [$10]
+gipsyxxl posts big blind [$20]
+** Dealing down cards **
+WlkRambo folds
+vaavere folds
+** Summary **
+gipsyxxl did not show his hand
+gipsyxxl collected [ $30 ]
+
+
+#Game No : 436693881
+***** 888poker Hand History for Game 436693881 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:09:05
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $355 )
+Seat 6: vaavere ( $1,170.50 )
+Seat 9: gipsyxxl ( $130 )
+gipsyxxl posts small blind [$10]
+WlkRambo posts big blind [$20]
+** Dealing down cards **
+vaavere raises [$40]
+gipsyxxl folds
+WlkRambo folds
+** Summary **
+vaavere did not show his hand
+vaavere collected [ $50 ]
+
+
+#Game No : 436693920
+***** 888poker Hand History for Game 436693920 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:09:21
+Table Marl 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $335 )
+Seat 6: vaavere ( $1,200.50 )
+Seat 9: gipsyxxl ( $120 )
+WlkRambo posts small blind [$10]
+vaavere posts big blind [$20]
+** Dealing down cards **
+gipsyxxl raises [$120]
+WlkRambo folds
+vaavere folds
+** Summary **
+gipsyxxl did not show his hand
+gipsyxxl collected [ $50 ]
+
+
+#Game No : 436693946
+***** 888poker Hand History for Game 436693946 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:09:33
+Table Marl 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $325 )
+Seat 6: vaavere ( $1,180.50 )
+Seat 9: gipsyxxl ( $150 )
+vaavere posts small blind [$10]
+gipsyxxl posts big blind [$20]
+** Dealing down cards **
+WlkRambo raises [$40]
+vaavere folds
+gipsyxxl calls [$20]
+** Dealing flop ** [ 4d, 9h, Ad ]
+gipsyxxl checks
+WlkRambo checks
+** Dealing turn ** [ Jh ]
+gipsyxxl checks
+WlkRambo bets [$30]
+gipsyxxl folds
+** Summary **
+WlkRambo did not show his hand
+WlkRambo collected [ $87.50 ]
+
+
+#Game No : 436694013
+***** 888poker Hand History for Game 436694013 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:10:02
+Table Marl 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $372.50 )
+Seat 6: vaavere ( $1,170.50 )
+Seat 9: gipsyxxl ( $110 )
+gipsyxxl posts small blind [$10]
+WlkRambo posts big blind [$20]
+** Dealing down cards **
+vaavere folds
+gipsyxxl raises [$100]
+WlkRambo folds
+** Summary **
+gipsyxxl did not show his hand
+gipsyxxl collected [ $40 ]
+
+
+#Game No : 436694060
+***** 888poker Hand History for Game 436694060 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 20:10:25
+Table Marl 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: WlkRambo ( $352.50 )
+Seat 6: vaavere ( $1,170.50 )
+Seat 9: gipsyxxl ( $130 )
+WlkRambo posts small blind [$10]
+vaavere posts big blind [$20]
+** Dealing down cards **
+gipsyxxl raises [$130]
+WlkRambo folds
+vaavere calls [$110]
+** Dealing flop ** [ 2c, Ah, Jc ]
+** Dealing turn ** [ As ]
+** Dealing river ** [ 6c ]
+** Summary **
+vaavere shows [ Jd, 8d ]
+gipsyxxl shows [ 9s, Ks ]
+vaavere collected [ $267.50 ]
+
+

@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="6186373012">  
+	<general>  
+		<mode>real</mode>
+		<gametype>Holdem NL €0.01/€0.02</gametype>  
+		<tablename>Biebern, 817747678</tablename>
+		<tablecurrency>EUR</tablecurrency>  
+		<duration>00:10</duration>  
+		<gamecount>17</gamecount>  
+		<startdate>2014-01-23 12:45:33</startdate>  
+		<currency>GBP</currency>  
+		<nickname>WhiteRiderT</nickname>  
+		<bets>€0.20</bets>  
+		<wins>€0.20</wins>  
+		<chipsin>€2</chipsin>
+		<chipsout>€2</chipsout>
+		<ipoints>0.04</ipoints>
+		<statuspoints>0.04</statuspoints>
+		<awardpoints>0.04</awardpoints>
+
+	</general>  
+	<game gamecode="5430059669">
+		<general>
+			<startdate>2014-01-23 12:45:33</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€2" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€3.92" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.96" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="magus1618" chips="€1.99" dealer="0" win="€0.11" bet="€0.08" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€2.85" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="WhiteRiderT" type="2" sum="€0.02" cards="[cards]"/>
+			<action no="1" player="kolacarrrr" type="1" sum="€0.01" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">C8 SJ</cards>
+			<action no="8" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="3" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="4" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="magus1618">X X</cards>
+			<action no="5" player="magus1618" type="23" sum="€0.08" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="6" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="7" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430060069">
+		<general>
+			<startdate>2014-01-23 12:46:00</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.98" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€3.92" dealer="0" win="€0" bet="€0.19" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.96" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="magus1618" chips="€2.02" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€2.84" dealer="1" win="€0.68" bet="€0.48" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="mlodyy85" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">			
+			<cards type="Pocket" player="magus1618">X X</cards>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<cards type="Pocket" player="WhiteRiderT">D6 C2</cards>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>	
+			<action no="3" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<action no="4" player="magus1618" type="0" sum="€0" cards=""/>				
+			<action no="5" player="kanzascity26" type="0" sum="€0" cards=""/>				
+			<action no="6" player="kolacarrrr" type="23" sum="€0.05" cards=""/>			
+			<action no="7" player="WhiteRiderT" type="0" sum="€0" cards=""/>			
+			<action no="8" player="mlodyy85" type="23" sum="€0.19" cards=""/>						
+			<action no="9" player="kolacarrrr" type="23" sum="€0.48" cards=""/>
+			<action no="10" player="mlodyy85" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430060678">
+		<general>
+			<startdate>2014-01-23 12:46:42</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€3.73" dealer="0" win="€0.73" bet="€0.52" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.96" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="magus1618" chips="€2.02" dealer="0" win="€0" bet="€0.22" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€3.04" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="mlodyy85" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="gniKdivaD" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">D5 H6</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="7" player="mlodyy85" type="3" sum="€0.07" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="8" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="magus1618">X X</cards>
+			<action no="3" player="magus1618" type="23" sum="€0.08" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="4" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="5" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H7 D8 HA</cards>
+			<action no="9" player="mlodyy85" type="5" sum="€0.14" cards=""/>
+			<action no="10" player="magus1618" type="3" sum="€0.14" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H3</cards>
+			<action no="11" player="mlodyy85" type="5" sum="€0.30" cards=""/>
+			<action no="12" player="magus1618" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430062957">
+		<general>
+			<startdate>2014-01-23 12:47:52</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€3.94" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.94" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="magus1618" chips="€1.80" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="0" win="€0.03" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€3.04" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="gniKdivaD" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="kanzascity26" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">DJ H10</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="5" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="6" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="3" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430063467">
+		<general>
+			<startdate>2014-01-23 12:48:17</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€3.94" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.93" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.70" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€3.04" dealer="0" win="€0.03" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="kanzascity26" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="kolacarrrr" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">H10 HK</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="4" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="5" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="6" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+		</round>
+
+	</game>
+	<game gamecode="5430064097">
+		<general>
+			<startdate>2014-01-23 12:48:39</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="0" win="€0.03" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€3.94" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.93" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€3.05" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="WhiteRiderT" type="2" sum="€0.02" cards="[cards]"/>
+			<action no="1" player="kolacarrrr" type="1" sum="€0.01" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">S4 DK</cards>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="3" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="4" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="5" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="6" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430064720">
+		<general>
+			<startdate>2014-01-23 12:48:59</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.98" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€3.94" dealer="0" win="€0" bet="€3.04" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.93" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€3.04" dealer="1" win="€5.69" bet="€3.04" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="mlodyy85" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">D9 C10</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">CK HK</cards>
+			<action no="7" player="mlodyy85" type="3" sum="€0.03" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="3" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="4" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">CQ HJ</cards>
+			<action no="5" player="kolacarrrr" type="23" sum="€0.05" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HA H7 DK</cards>
+			<action no="8" player="mlodyy85" type="5" sum="€0.09" cards=""/>
+			<action no="9" player="kolacarrrr" type="3" sum="€0.09" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S10</cards>
+			<action no="10" player="mlodyy85" type="5" sum="€0.29" cards=""/>
+			<action no="11" player="kolacarrrr" type="23" sum="€0.84" cards=""/>
+			<action no="12" player="mlodyy85" type="23" sum="€2.26" cards=""/>
+			<action no="13" player="kolacarrrr" type="7" sum="€2.06" cards=""/>
+			<action no="14" player="mlodyy85" type="3" sum="€0.64" cards=""/>				
+		</round>
+		<round no="4">
+			<cards type="River" player="">C8</cards>
+		</round>
+
+	</game>
+	<game gamecode="5430069046">
+		<general>
+			<startdate>2014-01-23 12:50:11</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.93" dealer="0" win="€0.03" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.80" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.69" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="mlodyy85" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="gniKdivaD" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">D8 S4</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="6" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="3" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="4" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430069344">
+		<general>
+			<startdate>2014-01-23 12:50:31</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2" dealer="1" win="€0.09" bet="€0.06" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.94" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.80" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.69" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="gniKdivaD" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="theczar1" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">C2 CJ</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="6" player="mlodyy85" type="23" sum="€0.06" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="7" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="8" player="theczar1" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="3" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="4" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430070149">
+		<general>
+			<startdate>2014-01-23 12:51:02</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2.03" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.93" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.78" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="0" win="€0.03" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.69" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="theczar1" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="kanzascity26" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">C7 S10</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="5" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="6" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="7" player="theczar1" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="3" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430070518">
+		<general>
+			<startdate>2014-01-23 12:51:26</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2.03" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.93" dealer="0" win="€0.09" bet="€0.06" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.77" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.70" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.69" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="kanzascity26" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="kolacarrrr" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">DA H2</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="4" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="5" player="gniKdivaD" type="23" sum="€0.06" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="6" player="theczar1" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="7" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="8" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430071254">
+		<general>
+			<startdate>2014-01-23 12:51:57</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2.03" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.96" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.77" dealer="0" win="€0.29" bet="€0.21" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.69" dealer="1" win="€0" bet="€0.06" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.67" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="WhiteRiderT" type="2" sum="€0.02" cards="[cards]"/>
+			<action no="1" player="kolacarrrr" type="1" sum="€0.01" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">S9 CK</cards>
+			<action no="8" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="3" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="4" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="5" player="theczar1" type="23" sum="€0.06" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="6" player="kanzascity26" type="3" sum="€0.06" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="7" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C10 H5 CA</cards>
+			<action no="9" player="theczar1" type="5" sum="€0.15" cards=""/>
+			<action no="10" player="kanzascity26" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430073072">
+		<general>
+			<startdate>2014-01-23 12:52:49</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.95" dealer="0" win="€0.08" bet="€0.06" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2.03" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.96" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.85" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.63" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.66" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="WhiteRiderT" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="mlodyy85" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">DK D6</cards>
+			<action no="7" player="WhiteRiderT" type="23" sum="€0.06" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="8" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="3" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="4" player="theczar1" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="5" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="6" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430073496">
+		<general>
+			<startdate>2014-01-23 12:53:18</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2.01" dealer="0" win="€0.58" bet="€0.41" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.96" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.85" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.63" dealer="0" win="€0" bet="€0.17" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.66" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="mlodyy85" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="gniKdivaD" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">S3 H4</cards>
+			<action no="6" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="7" player="mlodyy85" type="3" sum="€0.05" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="8" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="3" player="theczar1" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="4" player="kanzascity26" type="23" sum="€0.06" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="5" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CA D7 C9</cards>
+			<action no="9" player="mlodyy85" type="5" sum="€0.11" cards=""/>
+			<action no="10" player="kanzascity26" type="3" sum="€0.11" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S4</cards>
+			<action no="11" player="mlodyy85" type="5" sum="€0.24" cards=""/>
+			<action no="12" player="kanzascity26" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430074863">
+		<general>
+			<startdate>2014-01-23 12:54:09</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€1.97" dealer="0" win="€0.09" bet="€0.06" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2.18" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.94" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.85" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.46" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.66" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="gniKdivaD" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="theczar1" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">HQ SA</cards>
+			<action no="5" player="WhiteRiderT" type="23" sum="€0.06" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="6" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="7" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="8" player="theczar1" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="3" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="4" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430075322">
+		<general>
+			<startdate>2014-01-23 12:54:39</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€2" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2.18" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.93" dealer="1" win="€0.09" bet="€0.06" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.83" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.46" dealer="0" win="€0" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.66" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="theczar1" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="kanzascity26" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">H6 CA</cards>
+			<action no="4" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="5" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="6" player="gniKdivaD" type="23" sum="€0.06" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="7" player="theczar1" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="8" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+			<action no="3" player="kolacarrrr" type="0" sum="€0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="5430080988">
+		<general>
+			<startdate>2014-01-23 12:55:05</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="€2" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="3" name="mlodyy85" chips="€2.18" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="5" name="gniKdivaD" chips="€1.96" dealer="0" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="6" name="theczar1" chips="€0.82" dealer="1" win="€0" bet="€0" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="8" name="kanzascity26" chips="€2.44" dealer="0" win="€0" bet="€0.01" rebuy="0" addon="0" reg_code="-"/>
+				<player seat="10" name="kolacarrrr" chips="€5.66" dealer="0" win="€0.03" bet="€0.02" rebuy="0" addon="0" reg_code="-"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="kanzascity26" type="1" sum="€0.01" cards="[cards]"/>
+			<action no="2" player="kolacarrrr" type="2" sum="€0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">CK S2</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="mlodyy85">X X</cards>
+			<action no="4" player="mlodyy85" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="gniKdivaD">X X</cards>
+			<action no="5" player="gniKdivaD" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="theczar1">X X</cards>
+			<action no="6" player="theczar1" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kanzascity26">X X</cards>
+			<action no="7" player="kanzascity26" type="0" sum="€0" cards=""/>
+			<cards type="Pocket" player="kolacarrrr">X X</cards>
+		</round>
+
+	</game>  
+</session>

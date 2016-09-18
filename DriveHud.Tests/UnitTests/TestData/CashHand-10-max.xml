@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HandHistory>
+  <GameState hand="3697638" serverTime="1469804334279" mucked="0">
+    <Seats number="10" dealer="5" winners="false">
+      <Seat id="0">
+        <PlayerInfo nickname="Jomoq" avatar="1-260" level="0" uuid="9071b84a-8d52-4865-8485-f6b2f6cf62f3" rank="165.97">
+          <Location city="Merrimack" countryId="840" network="bol" />
+          <Chips stack-size="3.57" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="1">
+        <PlayerInfo nickname="Boo239" level="0" uuid="b67e1eed-d315-4624-9076-1e9dd3a138ce" rank="7.19">
+          <Location city="Oro Valley" countryId="840" network="bol" />
+          <Chips stack-size="1.07" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="2">
+        <PlayerInfo nickname="dirtdauber" avatar="1-269" level="0" uuid="1627288c-cd3b-4277-a807-ba44be70bc5b" rank="185.61">
+          <Location city="Columbus " countryId="840" network="bol" />
+          <Chips stack-size="3.8" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="3">
+        <PlayerInfo nickname="ImmaBOSS" level="0" uuid="00fe45a4-a446-4348-8347-65ac476eb6d8" rank="45.41">
+          <Location city="Lewisburg" countryId="840" network="bol" />
+          <Chips stack-size="6.31" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="4">
+        <PlayerInfo nickname="parchetti" level="0" uuid="c3e08186-f718-401d-840d-847c41b50a1c" rank="143.95">
+          <Location city="clusane" countryId="380" network="bol" />
+          <Chips stack-size="4.04" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="5">
+        <PlayerInfo nickname="WhinyLbstr" uuid="70373d07-7820-45d0-863b-cbbcc66a60dd" rank="16.34">
+          <Location city="Maitland" countryId="840" network="bol" />
+          <Chips stack-size="0.42" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="6">
+        <PlayerInfo nickname="mjlovesyou" avatar="14-3748ff" level="0" uuid="6f2834ed-5634-4f4c-be6f-06a93478e1cf" rank="214.24">
+          <Location city="brooklyn" countryId="840" network="bol" />
+          <Chips stack-size="6.35" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="7">
+        <PlayerInfo nickname="UltraBully" avatar="1-26f" level="0" uuid="14e552f6-0c3f-4abb-8ef7-cdc492998efc" rank="108.54">
+          <Location city="Oeiras" countryId="620" network="tg" />
+          <Chips stack-size="4" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="8">
+        <PlayerInfo nickname="Slugy" level="0" uuid="33494681-a472-4091-b1a8-866d93d448a9" rank="166">
+          <Location city="Newburgh" countryId="840" network="bol" />
+          <Chips stack-size="2.63" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="9">
+        <PlayerInfo nickname="&lt;&lt;&lt;&gt;&gt;&gt;" avatar="1-267" level="0" uuid="7b9f20bd-ecb2-4974-8edb-baf16201a545" rank="29.61">
+          <Location city="Lincolnshire" countryId="840" network="bol" />
+          <Chips stack-size="0.42" />
+        </PlayerInfo>
+      </Seat>
+    </Seats>
+  </GameState>
+  <Changes>
+    <NewHand dealer="5" number="3697638" startTime="1469804335024" change_time="1469804334" />
+    <ActiveSeats change_time="1469804334">
+      <Seat id="0" />
+      <Seat id="1" />
+      <Seat id="2" />
+      <Seat id="3" />
+      <Seat id="4" />
+      <Seat id="5" />
+      <Seat id="6" />
+      <Seat id="7" />
+      <Seat id="8" />
+      <Seat id="9" />
+    </ActiveSeats>
+    <PlayerAction seat="6" change_time="1469804334">
+      <PostSmallBlind amount="0.02" />
+    </PlayerAction>
+    <PlayerAction seat="7" change_time="1469804334">
+      <PostBigBlind amount="0.04" />
+    </PlayerAction>
+    <DealingCards change_time="1469804334">
+      <Seat id="6">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="7">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="8">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="9">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="0">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="1">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="2">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="3">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="4">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="5">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+    </DealingCards>
+    <ActiveChange timeBank="90000" seat="8" elapsed="0" time="30000" startTime="1469804335025" change_time="1469804334" />
+    <ChatMessage seat="3" sender="ImmaBOSS" network="bol" level="PLAYER" change_time="1469804336">sexified</ChatMessage>
+    <PlayerAction seat="8" change_time="1469804339">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="130000" seat="9" elapsed="0" time="30000" startTime="1469804339501" change_time="1469804339" />
+    <PlayerAction seat="9" change_time="1469804340">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="130000" seat="0" elapsed="0" time="30000" startTime="1469804340219" change_time="1469804340" />
+    <ChatMessage seat="0" sender="Jomoq" network="bol" level="PLAYER" change_time="1469804348">and everything she stands for is antithetical to the American Ideal</ChatMessage>
+    <PlayerAction seat="0" change_time="1469804353">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" seat="1" elapsed="0" time="30000" startTime="1469804353537" change_time="1469804353" />
+    <PlayerAction seat="1" change_time="1469804353">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" seat="2" elapsed="0" time="30000" startTime="1469804353951" change_time="1469804353" />
+    <PlayerAction seat="2" change_time="1469804354">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="130000" seat="3" elapsed="0" time="30000" startTime="1469804354559" change_time="1469804354" />
+    <ChatMessage seat="0" sender="Jomoq" network="bol" level="PLAYER" change_time="1469804356">Period</ChatMessage>
+    <ChatMessage seat="3" sender="ImmaBOSS" network="bol" level="PLAYER" change_time="1469804356">lol</ChatMessage>
+    <PlayerAction seat="3" change_time="1469804360">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="70000" seat="4" elapsed="0" time="30000" startTime="1469804360805" change_time="1469804360" />
+    <PlayerAction seat="4" change_time="1469804362">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="67893" seat="5" elapsed="0" time="30000" startTime="1469804362698" change_time="1469804362" />
+    <PlayerAction seat="5" change_time="1469804364">
+      <Fold />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" autoTimeBank="true" seat="6" elapsed="0" time="30000" startTime="1469804365276" change_time="1469804364" />
+    <PlayerAction seat="6" change_time="1469804365">
+      <Call amount="0.02" />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" autoTimeBank="true" seat="7" elapsed="0" time="30000" startTime="1469804366053" change_time="1469804365" />
+    <ChatMessage seat="3" sender="ImmaBOSS" network="bol" level="PLAYER" change_time="1469804367">oh he said period, you guys</ChatMessage>
+    <PlayerAction seat="7" change_time="1469804368">
+      <Check />
+    </PlayerAction>
+    <PotsChange change_time="1469804368">
+      <Pot pot="0" seat="6" change="0.04" />
+      <Pot pot="0" seat="7" change="0.04" />
+    </PotsChange>
+    <DealingFlop change_time="1469804369">
+      <Cards>
+        <Card id="0">Tc</Card>
+        <Card id="1">4c</Card>
+        <Card id="2">6s</Card>
+      </Cards>
+    </DealingFlop>
+    <ActiveChange timeBank="90000" autoTimeBank="true" seat="6" elapsed="0" time="30000" startTime="1469804369351" change_time="1469804369" />
+    <ChatMessage seat="5" sender="WhinyLbstr" network="bol" level="PLAYER" change_time="1469804369">hey jo...</ChatMessage>
+    <ChatMessage seat="5" sender="WhinyLbstr" network="bol" level="PLAYER" change_time="1469804372">without looking it up</ChatMessage>
+    <ChatMessage seat="3" sender="ImmaBOSS" network="bol" level="PLAYER" change_time="1469804374">that means it&apos;s true</ChatMessage>
+    <PlayerAction seat="6" change_time="1469804374">
+      <Check />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" autoTimeBank="true" seat="7" elapsed="0" time="30000" startTime="1469804374398" change_time="1469804374" />
+    <ChatMessage seat="5" sender="WhinyLbstr" network="bol" level="PLAYER" change_time="1469804379">what does the 10th amendment say?</ChatMessage>
+    <PlayerAction seat="7" change_time="1469804379">
+      <Check />
+    </PlayerAction>
+    <DealingTurn change_time="1469804380">
+      <Cards>
+        <Card id="3">9d</Card>
+      </Cards>
+    </DealingTurn>
+    <ActiveChange timeBank="90000" autoTimeBank="true" seat="6" elapsed="0" time="30000" startTime="1469804380825" change_time="1469804380" />
+    <ChatMessage seat="3" sender="ImmaBOSS" network="bol" level="PLAYER" change_time="1469804383">Substantiate your claims</ChatMessage>
+    <PlayerAction seat="6" change_time="1469804383">
+      <Check />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" autoTimeBank="true" seat="7" elapsed="0" time="30000" startTime="1469804383859" change_time="1469804383" />
+    <ChatMessage seat="0" sender="Jomoq" network="bol" level="PLAYER" change_time="1469804384">states rigts bnozo</ChatMessage>
+    <ChatMessage seat="8" sender="Slugy" network="bol" level="PLAYER" change_time="1469804386">yes period is another flaw of hilary</ChatMessage>
+    <ChatMessage seat="3" sender="ImmaBOSS" network="bol" level="PLAYER" change_time="1469804388">LOL</ChatMessage>
+    <PlayerAction seat="7" change_time="1469804389">
+      <Check />
+    </PlayerAction>
+    <DealingRiver change_time="1469804390">
+      <Cards>
+        <Card id="4">9s</Card>
+      </Cards>
+    </DealingRiver>
+    <ActiveChange timeBank="90000" autoTimeBank="true" seat="6" elapsed="0" time="30000" startTime="1469804390830" change_time="1469804390" />
+    <ChatMessage seat="3" sender="ImmaBOSS" network="bol" level="PLAYER" change_time="1469804390">states rights</ChatMessage>
+    <ChatMessage seat="5" sender="WhinyLbstr" network="bol" level="PLAYER" change_time="1469804391">haha fair enough</ChatMessage>
+    <ChatMessage seat="3" sender="ImmaBOSS" network="bol" level="PLAYER" change_time="1469804395">You are a CLOWN</ChatMessage>
+    <PlayerAction seat="6" change_time="1469804397">
+      <Check />
+    </PlayerAction>
+    <ActiveChange timeBank="90000" autoTimeBank="true" seat="7" elapsed="0" time="30000" startTime="1469804398364" change_time="1469804397" />
+    <ChatMessage seat="0" sender="Jomoq" network="bol" level="PLAYER" change_time="1469804400">Not under hillarty</ChatMessage>
+    <PlayerAction seat="7" change_time="1469804404">
+      <Check />
+    </PlayerAction>
+    <ChatMessage seat="5" sender="WhinyLbstr" network="bol" level="PLAYER" change_time="1469804404">it.... it is states rights.</ChatMessage>
+    <PlayerAction seat="6" change_time="1469804405">
+      <Show combination="a pair of, Nines">
+        <Cards>
+          <Card id="0">Qs</Card>
+          <Card id="1">Ks</Card>
+        </Cards>
+      </Show>
+    </PlayerAction>
+    <CombinationChange seat="6" strength="a pair of, Nines" change_time="1469804405" />
+    <PlayerAction seat="7" change_time="1469804405">
+      <Show combination="two pairs, Nines and Sixes">
+        <Cards>
+          <Card id="0">6c</Card>
+          <Card id="1">8d</Card>
+        </Cards>
+      </Show>
+    </PlayerAction>
+    <CombinationChange seat="7" strength="two pairs, Nines and Sixes" change_time="1469804405" />
+    <Winners change_time="1469804405">
+      <Winner pot="0" seat="7" combination="two pairs, Nines and Sixes" amount="0.08">
+        <Cards>
+          <Card id="0">9d</Card>
+          <Card id="1">9s</Card>
+          <Card id="2">6c</Card>
+          <Card id="3">6s</Card>
+          <Card id="4">Tc</Card>
+        </Cards>
+      </Winner>
+    </Winners>
+    <EndHand change_time="1469804408" />
+  </Changes>
+  <TableDetails id="17-1b48b4e" name="Clash of Empires #242" type="SINGLE_TABLE" share-type="LOCAL">
+    <SingleTable game="TEXAS_HOLDEM" limit="NO_LIMIT" mode="USD">
+      <Parameters stakes-low="0.02" stakes-high="0.04" />
+      <Seats number="10" />
+    </SingleTable>
+    <PROTOCOL_FEATURES>
+      <PROTOCOL_FEATURE name="buy_in_preferences" />
+      <PROTOCOL_FEATURE name="contest_jackpots" />
+      <PROTOCOL_FEATURE name="contests" />
+      <PROTOCOL_FEATURE name="cp_exchange" />
+      <PROTOCOL_FEATURE name="currency_exchange_rates" />
+      <PROTOCOL_FEATURE name="fast_blinds" />
+      <PROTOCOL_FEATURE name="locked_bonuses" />
+      <PROTOCOL_FEATURE name="may_wait_for_bb" />
+      <PROTOCOL_FEATURE name="multi_bbj" />
+    </PROTOCOL_FEATURES>
+  </TableDetails>
+</HandHistory>

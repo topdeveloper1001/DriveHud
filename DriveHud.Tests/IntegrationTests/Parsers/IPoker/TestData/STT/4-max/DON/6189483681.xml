@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189483681">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819267962</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:08</duration>  
+	          <gamecount>19</gamecount>  
+	          <startdate>2014-01-28 15:40:05</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,145</bets>  
+	          <wins>2,060</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>715</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5449100464">
+		 <general>
+		  <startdate>2014-01-28 15:40:05</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="800" dealer="1" win="500" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="800" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="innakat90" type="1" sum="10" cards="[cards]"/><action no="2" player="grigbrig" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">C10 SA</cards><action no="4" player="Eigiaivi" type="3" sum="20" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="5" player="innakat90" type="3" sum="10" cards=""/><cards type="Pocket" player="grigbrig">H8 CQ</cards><action no="6" player="grigbrig" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CJ S3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ C6 DA</cards><action no="9" player="Eigiaivi" type="23" sum="180" cards=""/><action no="7" player="innakat90" type="4" sum="0" cards=""/><action no="10" player="innakat90" type="0" sum="0" cards=""/><action no="8" player="grigbrig" type="5" sum="40" cards=""/><action no="11" player="grigbrig" type="3" sum="140" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards><action no="13" player="Eigiaivi" type="4" sum="0" cards=""/><action no="12" player="grigbrig" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards><action no="15" player="Eigiaivi" type="3" sum="40" cards=""/><action no="14" player="grigbrig" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449112458">
+		 <general>
+		  <startdate>2014-01-28 15:41:05</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="1,060" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="780" dealer="1" win="250" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="560" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="grigbrig" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="3" player="Eigiaivi" type="3" sum="20" cards=""/><action no="7" player="Eigiaivi" type="3" sum="60" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="4" player="innakat90" type="23" sum="80" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="5" player="grigbrig" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C6 D2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 H8 D9</cards><action no="8" player="Eigiaivi" type="4" sum="0" cards=""/><action no="10" player="Eigiaivi" type="0" sum="0" cards=""/><action no="9" player="innakat90" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449112925">
+		 <general>
+		  <startdate>2014-01-28 15:41:35</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="980" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="550" dealer="1" win="130" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Eigiaivi" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="6" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="3" player="innakat90" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="4" player="grigbrig" type="23" sum="100" cards=""/><cards type="Pocket" player="WorstCard">C8 H6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449113227">
+		 <general>
+		  <startdate>2014-01-28 15:41:58</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="960" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="890" dealer="0" win="0" bet="580" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="580" dealer="0" win="1,170" bet="580" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Eigiaivi" type="1" sum="10" cards="[cards]"/><action no="2" player="innakat90" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="5" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">DQ SK</cards><action no="6" player="innakat90" type="23" sum="160" cards=""/><action no="8" player="innakat90" type="3" sum="420" cards=""/><cards type="Pocket" player="grigbrig">HJ HA</cards><action no="3" player="grigbrig" type="23" sum="80" cards=""/><action no="7" player="grigbrig" type="23" sum="580" cards=""/><cards type="Pocket" player="WorstCard">S6 S5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 CA H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards>
+	</round>
+	
+		</game><game gamecode="5449113641">
+		 <general>
+		  <startdate>2014-01-28 15:42:25</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="950" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="310" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,170" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="innakat90" type="1" sum="15" cards="[cards]"/><action no="2" player="grigbrig" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="4" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="5" player="innakat90" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="6" player="grigbrig" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">CQ HA</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H7 C9</cards><action no="7" player="grigbrig" type="5" sum="90" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449113994">
+		 <general>
+		  <startdate>2014-01-28 15:42:46</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="950" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="295" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,245" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="710" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="grigbrig" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="3" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="4" player="innakat90" type="3" sum="30" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="5" player="grigbrig" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">H4 C5</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ C10 HA</cards><action no="9" player="innakat90" type="3" sum="30" cards=""/><action no="7" player="grigbrig" type="5" sum="30" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards><action no="11" player="innakat90" type="4" sum="0" cards=""/><action no="10" player="grigbrig" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C9</cards><action no="13" player="innakat90" type="5" sum="60" cards=""/><action no="12" player="grigbrig" type="4" sum="0" cards=""/><action no="14" player="grigbrig" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449114327">
+		 <general>
+		  <startdate>2014-01-28 15:43:31</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="950" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="385" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,185" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="680" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Eigiaivi" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="6" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="3" player="innakat90" type="23" sum="90" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="4" player="grigbrig" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SK S9</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449114431">
+		 <general>
+		  <startdate>2014-01-28 15:43:44</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="920" dealer="0" win="150" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="430" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,185" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="665" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Eigiaivi" type="1" sum="15" cards="[cards]"/><action no="2" player="innakat90" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="5" player="Eigiaivi" type="23" sum="120" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="6" player="innakat90" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="3" player="grigbrig" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 CQ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449114561">
+		 <general>
+		  <startdate>2014-01-28 15:44:01</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="950" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="400" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,185" dealer="0" win="60" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="665" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="innakat90" type="1" sum="15" cards="[cards]"/><action no="2" player="grigbrig" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="4" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">S9 CQ</cards><action no="5" player="innakat90" type="3" sum="15" cards=""/><cards type="Pocket" player="grigbrig">H5 DJ</cards><action no="6" player="grigbrig" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DQ D5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA DK H7</cards><action no="7" player="innakat90" type="4" sum="0" cards=""/><action no="8" player="grigbrig" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="9" player="innakat90" type="4" sum="0" cards=""/><action no="10" player="grigbrig" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards><action no="11" player="innakat90" type="4" sum="0" cards=""/><action no="12" player="grigbrig" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449114820">
+		 <general>
+		  <startdate>2014-01-28 15:44:36</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="950" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="370" dealer="1" win="170" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,215" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="665" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Eigiaivi" type="15" sum="5" cards="[cards]"/><action no="4" player="innakat90" type="15" sum="5" cards="[cards]"/><action no="1" player="grigbrig" type="15" sum="5" cards="[cards]"/><action no="5" player="grigbrig" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="7" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">DA C8</cards><action no="8" player="innakat90" type="3" sum="50" cards=""/><cards type="Pocket" player="grigbrig">C10 H4</cards><action no="9" player="grigbrig" type="3" sum="25" cards=""/><cards type="Pocket" player="WorstCard">H6 H8</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 CK HQ</cards><action no="13" player="innakat90" type="4" sum="0" cards=""/><action no="11" player="grigbrig" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards><action no="16" player="innakat90" type="4" sum="0" cards=""/><action no="14" player="grigbrig" type="4" sum="0" cards=""/><action no="15" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards><action no="19" player="innakat90" type="4" sum="0" cards=""/><action no="17" player="grigbrig" type="4" sum="0" cards=""/><action no="18" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449115141">
+		 <general>
+		  <startdate>2014-01-28 15:45:20</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="945" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="485" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,160" dealer="1" win="195" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="610" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Eigiaivi" type="15" sum="5" cards="[cards]"/><action no="6" player="Eigiaivi" type="2" sum="50" cards="[cards]"/><action no="3" player="innakat90" type="15" sum="5" cards="[cards]"/><action no="4" player="grigbrig" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="10" player="Eigiaivi" type="4" sum="0" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="7" player="innakat90" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="8" player="grigbrig" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">H4 CJ</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA HK SJ</cards><action no="11" player="Eigiaivi" type="4" sum="0" cards=""/><action no="13" player="Eigiaivi" type="0" sum="0" cards=""/><action no="12" player="grigbrig" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449115456">
+		 <general>
+		  <startdate>2014-01-28 15:46:00</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="890" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="480" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,250" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="580" dealer="1" win="670" bet="580" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Eigiaivi" type="15" sum="5" cards="[cards]"/><action no="5" player="Eigiaivi" type="1" sum="25" cards="[cards]"/><action no="2" player="innakat90" type="15" sum="5" cards="[cards]"/><action no="6" player="innakat90" type="2" sum="50" cards="[cards]"/><action no="3" player="grigbrig" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="9" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">X X</cards><action no="10" player="innakat90" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="7" player="grigbrig" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C6 D6</cards><action no="8" player="WorstCard" type="23" sum="575" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449115624">
+		 <general>
+		  <startdate>2014-01-28 15:46:21</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="860" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="innakat90" chips="425" dealer="0" win="0" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,245" dealer="0" win="870" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="670" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Eigiaivi" type="15" sum="10" cards="[cards]"/><action no="1" player="innakat90" type="15" sum="10" cards="[cards]"/><action no="5" player="innakat90" type="1" sum="50" cards="[cards]"/><action no="2" player="grigbrig" type="15" sum="10" cards="[cards]"/><action no="6" player="grigbrig" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="8" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="innakat90">HQ CK</cards><action no="9" player="innakat90" type="23" sum="415" cards=""/><cards type="Pocket" player="grigbrig">SQ S8</cards><action no="10" player="grigbrig" type="3" sum="315" cards=""/><cards type="Pocket" player="WorstCard">HK C5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 D4 H5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards>
+	</round>
+	
+		</game><game gamecode="5449127892">
+		 <general>
+		  <startdate>2014-01-28 15:46:52</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="850" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,690" dealer="0" win="530" bet="410" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="660" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Eigiaivi" type="15" sum="10" cards="[cards]"/><action no="1" player="grigbrig" type="15" sum="10" cards="[cards]"/><action no="4" player="grigbrig" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="6" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="7" player="grigbrig" type="23" sum="400" cards=""/><cards type="Pocket" player="WorstCard">C3 S6</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449128031">
+		 <general>
+		  <startdate>2014-01-28 15:47:12</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="840" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,810" dealer="1" win="380" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="550" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Eigiaivi" type="15" sum="10" cards="[cards]"/><action no="5" player="Eigiaivi" type="2" sum="100" cards="[cards]"/><action no="3" player="grigbrig" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="8" player="Eigiaivi" type="4" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="6" player="grigbrig" type="3" sum="100" cards=""/><cards type="Pocket" player="WorstCard">SK D3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 S6 D10</cards><action no="9" player="Eigiaivi" type="4" sum="0" cards=""/><action no="11" player="Eigiaivi" type="0" sum="0" cards=""/><action no="10" player="grigbrig" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449128249">
+		 <general>
+		  <startdate>2014-01-28 15:47:39</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="730" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,980" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="490" dealer="1" win="660" bet="490" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Eigiaivi" type="15" sum="10" cards="[cards]"/><action no="4" player="Eigiaivi" type="1" sum="50" cards="[cards]"/><action no="2" player="grigbrig" type="15" sum="10" cards="[cards]"/><action no="5" player="grigbrig" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="7" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="8" player="grigbrig" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ C9</cards><action no="6" player="WorstCard" type="23" sum="480" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449128417">
+		 <general>
+		  <startdate>2014-01-28 15:48:00</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="670" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,870" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="660" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Eigiaivi" type="15" sum="10" cards="[cards]"/><action no="1" player="grigbrig" type="15" sum="10" cards="[cards]"/><action no="4" player="grigbrig" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="6" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="7" player="grigbrig" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">C3 C5</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 S7 C2</cards><action no="9" player="grigbrig" type="5" sum="100" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449128617">
+		 <general>
+		  <startdate>2014-01-28 15:48:26</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="660" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,990" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="550" dealer="0" win="730" bet="550" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Eigiaivi" type="15" sum="15" cards="[cards]"/><action no="5" player="Eigiaivi" type="2" sum="150" cards="[cards]"/><action no="3" player="grigbrig" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">X X</cards><action no="8" player="Eigiaivi" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">X X</cards><action no="6" player="grigbrig" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 HJ</cards><action no="7" player="WorstCard" type="23" sum="535" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449128768">
+		 <general>
+		  <startdate>2014-01-28 15:48:46</startdate>		  
+		  <players>
+		   <player seat="2" name="Eigiaivi" chips="495" dealer="0" win="0" bet="495" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="grigbrig" chips="1,975" dealer="0" win="1,005" bet="495" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="730" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6189483681"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Eigiaivi" type="15" sum="15" cards="[cards]"/><action no="4" player="Eigiaivi" type="1" sum="75" cards="[cards]"/><action no="2" player="grigbrig" type="15" sum="15" cards="[cards]"/><action no="5" player="grigbrig" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Eigiaivi">S7 SK</cards><action no="7" player="Eigiaivi" type="23" sum="480" cards=""/><cards type="Pocket" player="grigbrig">CJ CK</cards><action no="8" player="grigbrig" type="3" sum="330" cards=""/><cards type="Pocket" player="WorstCard">C2 H4</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 DQ HQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards>
+	</round>
+	
+		</game>  
+	</session>

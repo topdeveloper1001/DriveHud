@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceReferences>
+  <ResourceReference AssemblyName="DriveHUD.Common.Resources" ResourceRegistratorName="DriveHUD.Common.Resources.ResourceRegistrator" ResourceRegistratorMethodName="Initialization">   
+    <EmbeddedResource Include="..\..\..\DriveHUD\DriveHUD.Common.Resources\Common.resx"/>  
+  </ResourceReference>
+</ResourceReferences>

@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188327809">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819106293</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:11</duration>  
+	          <gamecount>25</gamecount>  
+	          <startdate>2014-01-26 18:04:26</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>6,185</bets>  
+	          <wins>7,340</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,955</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5439351902">
+		 <general>
+		  <startdate>2014-01-26 18:04:26</startdate>		  
+		  <players>
+		   <player seat="2" name="HAMMER1956" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Rayman555" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="800" dealer="0" win="40" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="1" sum="10" cards="[cards]"/><action no="2" player="EffendyXIV" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HAMMER1956">X X</cards><action no="4" player="HAMMER1956" type="0" sum="0" cards=""/><cards type="Pocket" player="Rayman555">C2 S5</cards><action no="5" player="Rayman555" type="3" sum="10" cards=""/><cards type="Pocket" player="EffendyXIV">S3 SA</cards><action no="6" player="EffendyXIV" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 CJ</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ C9 H8</cards><action no="7" player="Rayman555" type="4" sum="0" cards=""/><action no="8" player="EffendyXIV" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards><action no="9" player="Rayman555" type="4" sum="0" cards=""/><action no="10" player="EffendyXIV" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards><action no="11" player="Rayman555" type="4" sum="0" cards=""/><action no="12" player="EffendyXIV" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439352885">
+		 <general>
+		  <startdate>2014-01-26 18:05:14</startdate>		  
+		  <players>
+		   <player seat="2" name="HAMMER1956" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Rayman555" chips="780" dealer="1" win="570" bet="520" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="820" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="EffendyXIV" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HAMMER1956">X X</cards><action no="3" player="HAMMER1956" type="3" sum="20" cards=""/><action no="7" player="HAMMER1956" type="0" sum="0" cards=""/><cards type="Pocket" player="Rayman555">X X</cards><action no="4" player="Rayman555" type="23" sum="520" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="5" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S5 H6</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439353720">
+		 <general>
+		  <startdate>2014-01-26 18:05:53</startdate>		  
+		  <players>
+		   <player seat="2" name="HAMMER1956" chips="780" dealer="0" win="0" bet="780" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Rayman555" chips="830" dealer="0" win="1,570" bet="780" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="810" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="HAMMER1956" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HAMMER1956">S9 S6</cards><action no="6" player="HAMMER1956" type="23" sum="260" cards=""/><cards type="Pocket" player="Rayman555">SK C10</cards><action no="3" player="Rayman555" type="23" sum="60" cards=""/><action no="7" player="Rayman555" type="3" sum="200" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="4" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H7 CQ</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 H2 DK</cards><action no="8" player="HAMMER1956" type="5" sum="200" cards=""/><action no="9" player="Rayman555" type="3" sum="200" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="10" player="HAMMER1956" type="5" sum="320" cards=""/><action no="11" player="Rayman555" type="3" sum="320" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards>
+	</round>
+	
+		</game><game gamecode="5439354952">
+		 <general>
+		  <startdate>2014-01-26 18:06:54</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,620" dealer="0" win="30" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="810" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><cards type="Pocket" player="EffendyXIV">X X</cards><action no="2" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S5 C3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439355231">
+		 <general>
+		  <startdate>2014-01-26 18:07:06</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,620" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="810" dealer="0" win="360" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="1" sum="15" cards="[cards]"/><action no="2" player="EffendyXIV" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="4" player="Rayman555" type="3" sum="15" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="5" player="EffendyXIV" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C7 C3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK S3 SK</cards><action no="6" player="Rayman555" type="5" sum="60" cards=""/><action no="7" player="EffendyXIV" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="8" player="Rayman555" type="4" sum="0" cards=""/><action no="10" player="Rayman555" type="0" sum="0" cards=""/><action no="9" player="EffendyXIV" type="5" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439355632">
+		 <general>
+		  <startdate>2014-01-26 18:07:31</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,530" dealer="1" win="255" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="900" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="EffendyXIV" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="3" player="Rayman555" type="23" sum="90" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="4" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HK SJ</cards><action no="5" player="WorstCard" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 C2 C4</cards><action no="7" player="Rayman555" type="4" sum="0" cards=""/><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards><action no="9" player="Rayman555" type="5" sum="60" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439371581">
+		 <general>
+		  <startdate>2014-01-26 18:08:11</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,635" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="885" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="680" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rayman555" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><cards type="Pocket" player="EffendyXIV">X X</cards><action no="3" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D9 S3</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439371626">
+		 <general>
+		  <startdate>2014-01-26 18:08:24</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,650" dealer="0" win="1,680" bet="1,650" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="885" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="665" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="1" sum="15" cards="[cards]"/><action no="2" player="EffendyXIV" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="4" player="Rayman555" type="23" sum="1,650" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="5" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H6 H4</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439371795">
+		 <general>
+		  <startdate>2014-01-26 18:08:47</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,680" dealer="1" win="215" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="855" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="665" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Rayman555" type="15" sum="5" cards="[cards]"/><action no="1" player="EffendyXIV" type="15" sum="5" cards="[cards]"/><action no="4" player="EffendyXIV" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="6" player="Rayman555" type="3" sum="50" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="7" player="EffendyXIV" type="3" sum="25" cards=""/><cards type="Pocket" player="WorstCard">C9 S6</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA DQ D7</cards><action no="11" player="Rayman555" type="5" sum="50" cards=""/><action no="9" player="EffendyXIV" type="4" sum="0" cards=""/><action no="12" player="EffendyXIV" type="0" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439371982">
+		 <general>
+		  <startdate>2014-01-26 18:09:18</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,790" dealer="0" win="0" bet="610" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="800" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="610" dealer="0" win="1,225" bet="610" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rayman555" type="15" sum="5" cards="[cards]"/><action no="5" player="Rayman555" type="2" sum="50" cards="[cards]"/><action no="3" player="EffendyXIV" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">C7 C3</cards><action no="8" player="Rayman555" type="3" sum="555" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="6" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ C10</cards><action no="7" player="WorstCard" type="23" sum="605" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 CJ D7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards>
+	</round>
+	
+		</game><game gamecode="5439372220">
+		 <general>
+		  <startdate>2014-01-26 18:09:54</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,180" dealer="0" win="715" bet="655" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="795" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,225" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="15" sum="5" cards="[cards]"/><action no="4" player="Rayman555" type="1" sum="25" cards="[cards]"/><action no="2" player="EffendyXIV" type="15" sum="5" cards="[cards]"/><action no="5" player="EffendyXIV" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="7" player="Rayman555" type="3" sum="25" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="8" player="EffendyXIV" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C10 H2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 H6 S6</cards><action no="9" player="Rayman555" type="5" sum="600" cards=""/><action no="10" player="EffendyXIV" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439372484">
+		 <general>
+		  <startdate>2014-01-26 18:10:32</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="1,240" dealer="1" win="0" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="740" dealer="0" win="0" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,220" dealer="0" win="930" bet="310" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Rayman555" type="15" sum="10" cards="[cards]"/><action no="1" player="EffendyXIV" type="15" sum="10" cards="[cards]"/><action no="4" player="EffendyXIV" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">HJ C3</cards><action no="6" player="Rayman555" type="3" sum="100" cards=""/><cards type="Pocket" player="EffendyXIV">CJ SK</cards><action no="7" player="EffendyXIV" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">HQ D4</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ SQ C5</cards><action no="11" player="Rayman555" type="3" sum="100" cards=""/><action no="9" player="EffendyXIV" type="5" sum="100" cards=""/><action no="10" player="WorstCard" type="3" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards><action no="14" player="Rayman555" type="3" sum="100" cards=""/><action no="12" player="EffendyXIV" type="5" sum="100" cards=""/><action no="13" player="WorstCard" type="3" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards><action no="17" player="Rayman555" type="4" sum="0" cards=""/><action no="15" player="EffendyXIV" type="4" sum="0" cards=""/><action no="16" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439372794">
+		 <general>
+		  <startdate>2014-01-26 18:11:12</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="930" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="430" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,840" dealer="0" win="430" bet="210" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rayman555" type="15" sum="10" cards="[cards]"/><action no="5" player="Rayman555" type="2" sum="100" cards="[cards]"/><action no="3" player="EffendyXIV" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">HA S3</cards><action no="8" player="Rayman555" type="4" sum="0" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="6" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C7 C8</cards><action no="7" player="WorstCard" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 HJ C5</cards><action no="10" player="Rayman555" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="12" player="Rayman555" type="3" sum="100" cards=""/><action no="11" player="WorstCard" type="5" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards><action no="14" player="Rayman555" type="4" sum="0" cards=""/><action no="13" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373050">
+		 <general>
+		  <startdate>2014-01-26 18:11:45</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="720" dealer="0" win="0" bet="420" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="420" dealer="0" win="850" bet="420" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="2,060" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="15" sum="10" cards="[cards]"/><action no="4" player="Rayman555" type="1" sum="50" cards="[cards]"/><action no="2" player="EffendyXIV" type="15" sum="10" cards="[cards]"/><action no="5" player="EffendyXIV" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">CQ S8</cards><action no="7" player="Rayman555" type="3" sum="50" cards=""/><cards type="Pocket" player="EffendyXIV">DJ HQ</cards><action no="8" player="EffendyXIV" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C5 C6</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 S7 D10</cards><action no="9" player="Rayman555" type="5" sum="100" cards=""/><action no="11" player="Rayman555" type="3" sum="210" cards=""/><action no="10" player="EffendyXIV" type="23" sum="310" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S4</cards>
+	</round>
+	
+		</game><game gamecode="5439373301">
+		 <general>
+		  <startdate>2014-01-26 18:12:20</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="300" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="850" dealer="0" win="430" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="2,050" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Rayman555" type="15" sum="10" cards="[cards]"/><action no="1" player="EffendyXIV" type="15" sum="10" cards="[cards]"/><action no="4" player="EffendyXIV" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="6" player="Rayman555" type="0" sum="0" cards=""/><cards type="Pocket" player="EffendyXIV">C9 S9</cards><action no="7" player="EffendyXIV" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">H5 DK</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ HQ D3</cards><action no="9" player="EffendyXIV" type="4" sum="0" cards=""/><action no="11" player="EffendyXIV" type="3" sum="100" cards=""/><action no="10" player="WorstCard" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards><action no="12" player="EffendyXIV" type="4" sum="0" cards=""/><action no="13" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards><action no="14" player="EffendyXIV" type="4" sum="0" cards=""/><action no="15" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373532">
+		 <general>
+		  <startdate>2014-01-26 18:12:50</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="290" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="1,070" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,840" dealer="0" win="2,020" bet="1,840" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rayman555" type="15" sum="15" cards="[cards]"/><action no="5" player="Rayman555" type="2" sum="150" cards="[cards]"/><action no="3" player="EffendyXIV" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="8" player="Rayman555" type="0" sum="0" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="6" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA H4</cards><action no="7" player="WorstCard" type="23" sum="1,825" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373687">
+		 <general>
+		  <startdate>2014-01-26 18:13:12</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="125" dealer="0" win="375" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="1,055" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="2,020" dealer="1" win="80" bet="165" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="15" sum="15" cards="[cards]"/><action no="4" player="Rayman555" type="1" sum="75" cards="[cards]"/><action no="2" player="EffendyXIV" type="15" sum="15" cards="[cards]"/><action no="5" player="EffendyXIV" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">D2 D10</cards><action no="7" player="Rayman555" type="7" sum="35" cards=""/><cards type="Pocket" player="EffendyXIV">HQ H6</cards><action no="8" player="EffendyXIV" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SA H7</cards><action no="6" player="WorstCard" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 C9 D9</cards><action no="9" player="EffendyXIV" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="11" player="EffendyXIV" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards><action no="13" player="EffendyXIV" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439373956">
+		 <general>
+		  <startdate>2014-01-26 18:13:44</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="375" dealer="1" win="630" bet="375" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="890" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,935" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Rayman555" type="15" sum="15" cards="[cards]"/><action no="1" player="EffendyXIV" type="15" sum="15" cards="[cards]"/><action no="4" player="EffendyXIV" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="6" player="Rayman555" type="23" sum="360" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="7" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D3 S10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439374096">
+		 <general>
+		  <startdate>2014-01-26 18:14:01</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="630" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="800" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,770" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rayman555" type="15" sum="15" cards="[cards]"/><action no="5" player="Rayman555" type="2" sum="150" cards="[cards]"/><action no="3" player="EffendyXIV" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><cards type="Pocket" player="EffendyXIV">X X</cards><action no="6" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H9 CQ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439374248">
+		 <general>
+		  <startdate>2014-01-26 18:14:21</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="735" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="785" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,680" dealer="1" win="1,935" bet="1,680" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="15" sum="15" cards="[cards]"/><action no="4" player="Rayman555" type="1" sum="75" cards="[cards]"/><action no="2" player="EffendyXIV" type="15" sum="15" cards="[cards]"/><action no="5" player="EffendyXIV" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="7" player="Rayman555" type="0" sum="0" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="8" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H8 SA</cards><action no="6" player="WorstCard" type="23" sum="1,665" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439387665">
+		 <general>
+		  <startdate>2014-01-26 18:14:39</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="645" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="620" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,935" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Rayman555" type="15" sum="20" cards="[cards]"/><action no="1" player="EffendyXIV" type="15" sum="20" cards="[cards]"/><action no="4" player="EffendyXIV" type="1" sum="100" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="6" player="Rayman555" type="0" sum="0" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="7" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 H6</cards>
+	</round>
+	
+		</game><game gamecode="5439387801">
+		 <general>
+		  <startdate>2014-01-26 18:15:00</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="625" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="500" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="2,075" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rayman555" type="15" sum="20" cards="[cards]"/><action no="5" player="Rayman555" type="2" sum="200" cards="[cards]"/><action no="3" player="EffendyXIV" type="15" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><cards type="Pocket" player="EffendyXIV">X X</cards><action no="6" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 C8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439387920">
+		 <general>
+		  <startdate>2014-01-26 18:15:15</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="765" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="480" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,955" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rayman555" type="15" sum="20" cards="[cards]"/><action no="4" player="Rayman555" type="1" sum="100" cards="[cards]"/><action no="2" player="EffendyXIV" type="15" sum="20" cards="[cards]"/><action no="5" player="EffendyXIV" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="7" player="Rayman555" type="0" sum="0" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><cards type="Pocket" player="WorstCard">C4 CK</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439388033">
+		 <general>
+		  <startdate>2014-01-26 18:15:31</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="645" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="620" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,935" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Rayman555" type="15" sum="20" cards="[cards]"/><action no="1" player="EffendyXIV" type="15" sum="20" cards="[cards]"/><action no="4" player="EffendyXIV" type="1" sum="100" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">X X</cards><action no="6" player="Rayman555" type="0" sum="0" cards=""/><cards type="Pocket" player="EffendyXIV">X X</cards><action no="7" player="EffendyXIV" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SK H8</cards>
+	</round>
+	
+		</game><game gamecode="5439388153">
+		 <general>
+		  <startdate>2014-01-26 18:15:46</startdate>		  
+		  <players>
+		   <player seat="4" name="Rayman555" chips="625" dealer="0" win="1,120" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="EffendyXIV" chips="500" dealer="1" win="0" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="2,075" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6188327809"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Rayman555" type="15" sum="20" cards="[cards]"/><action no="5" player="Rayman555" type="2" sum="200" cards="[cards]"/><action no="3" player="EffendyXIV" type="15" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Rayman555">D7 S7</cards><action no="8" player="Rayman555" type="3" sum="280" cards=""/><cards type="Pocket" player="EffendyXIV">H8 DA</cards><action no="6" player="EffendyXIV" type="23" sum="480" cards=""/><cards type="Pocket" player="WorstCard">H10 H9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 SJ S6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards>
+	</round>
+	
+		</game>  
+	</session>

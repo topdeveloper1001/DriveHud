@@ -1,0 +1,194 @@
+﻿<UserControl x:Class="DriveHUD.Application.Controls.HudPlayerToolTip"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DriveHUD.Application.Controls"
+             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+             xmlns:app="clr-namespace:DriveHUD.Application"
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="250" d:DesignWidth="300">
+
+    <UserControl.Resources>
+        <Style x:Key="LabelStyle" TargetType="Label">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontWeight" Value="Normal" />
+            <Setter Property="Background" Value="{StaticResource BackgroundBrush}" />
+            <Setter Property="Padding" Value="5 2" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Label">
+                        <Border BorderBrush="Transparent" BorderThickness="0" Background="{TemplateBinding Background}" CornerRadius="1">
+                            <ContentPresenter />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="TickStyle" TargetType="Rectangle">
+            <Setter Property="Visibility" Value="Collapsed" />
+        </Style>
+
+        <VisualBrush 
+            x:Key="DotFillBrush" 
+            TileMode="Tile" 
+            Viewport="0,0,5,5" 
+            ViewportUnits="Absolute" 
+            Viewbox="0,0,5,5"
+            ViewboxUnits="Absolute">
+            <VisualBrush.Visual>
+                <Ellipse 
+                    Fill="{StaticResource ForegroundBrush}" 
+                    Width="1" Height="1" />
+            </VisualBrush.Visual>
+        </VisualBrush>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250" />
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" Background="{StaticResource BackgroundBrush1}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <!-- PlayerType + HeroName -->
+            <Grid Margin="5 0" Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image Grid.Column="0"  Width="22" Height="22">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}">
+                            <Setter Property="ToolTip" Value="{Binding PlayerIconToolTip}" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsDefaultImage}" Value="true">
+                                    <Setter Property="Source">
+                                        <Setter.Value>
+                                            <DrawingImage>
+                                                <DrawingImage.Drawing>
+                                                    <DrawingGroup>
+                                                        <DrawingGroup.Children>
+                                                            <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 190.197,-0.395996C 85.3227,-0.395996 0,84.9267 0,189.801C 0,294.677 85.3227,380 190.197,380C 295.073,380 380.396,294.677 380.396,189.801C 380.396,84.9267 295.073,-0.395996 190.197,-0.395996 Z M 190.197,348C 102.969,348 32,277.031 32,189.801C 32,102.573 102.969,31.604 190.197,31.604C 277.427,31.604 348.396,102.573 348.396,189.801C 348.396,277.031 277.427,348 190.197,348 Z "/>
+                                                            <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 190.197,71.016C 152.245,71.016 121.369,101.896 121.369,139.844C 121.369,148.683 128.531,155.844 137.369,155.844C 146.203,155.844 153.369,148.683 153.369,139.844C 153.369,119.536 169.891,103.016 190.197,103.016C 210.505,103.016 227.027,119.536 227.027,139.844C 227.027,160.151 210.505,176.672 190.197,176.672C 181.36,176.672 174.197,183.839 174.197,192.672L 174.197,228.849C 174.197,237.688 181.36,244.849 190.197,244.849C 199.031,244.849 206.197,237.688 206.197,228.849L 206.197,206.797C 236.459,199.568 259.027,172.292 259.027,139.844C 259.027,101.896 228.151,71.016 190.197,71.016 Z "/>
+                                                            <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 212.593,283.229C 212.593,295.599 202.568,305.631 190.197,305.631C 177.828,305.631 167.797,295.599 167.797,283.229C 167.797,270.859 177.828,260.833 190.197,260.833C 202.568,260.833 212.593,270.859 212.593,283.229 Z "/>
+                                                        </DrawingGroup.Children>
+                                                    </DrawingGroup>
+                                                </DrawingImage.Drawing>
+                                            </DrawingImage>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsDefaultImage}" Value="false">
+                                    <Setter Property="Source" Value="{Binding PlayerIcon, Converter={dh:StringToImageSourceConverter}}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+
+                <TextBlock Grid.Column="1" Style="{StaticResource Title_H1}"  FontWeight="Normal" Foreground="White" Text="{Binding PlayerName}" Margin="5" />
+            </Grid>
+
+            <!-- Money won + total hands  -->
+            <Grid Margin="5 0" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Margin="0 5 1 5" Grid.Column="0" Style="{StaticResource LabelStyle}">
+                    <Label.Content>
+                        <Grid>
+                            <Image HorizontalAlignment="Left" Stretch="Uniform" Width="10" Margin="5 0" Source="/DriveHUD.Common.Resources;Component/images/hud/dollar_sign.png"  />
+                            <TextBlock HorizontalAlignment="Center" Foreground="White">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock" BasedOn="{StaticResource Title_H2}">
+                                        <Setter Property="Text" Value="{Binding SessionMoneyWon, StringFormat={}{0:0.00}}" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding SessionMoneyWon}" Value="{x:Null}">
+                                                <Setter Property="Text" Value="Money Won" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </Grid>
+                    </Label.Content>
+                </Label>
+
+                <Label Margin="1 5 0 5" Grid.Column="1" Style="{StaticResource LabelStyle}" Foreground="White">
+                    <Label.Content>
+                        <Grid>
+                            <Image  HorizontalAlignment="Left" Stretch="Uniform" Width="10" Margin="5 0" Source="/DriveHUD.Common.Resources;Component/images/hud/cards_hand.png"  />
+                            <TextBlock  HorizontalAlignment="Center" Foreground="White">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock" BasedOn="{StaticResource Title_H2}">
+                                        <Setter Property="Text" Value="{Binding SessionHands, StringFormat={}{0:0.00}}" />
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding SessionHands}" Value="{x:Null}">
+                                                <Setter Property="Text" Value="Total Hands" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                        </Grid>
+                    </Label.Content>
+                </Label>
+
+            </Grid>
+
+            <!-- Graph -->
+            <telerik:RadCartesianChart Grid.Row="2" HorizontalAlignment="Stretch" 
+                                       VerticalAlignment="Stretch"
+                                       MinHeight="65"
+                                       Background="{StaticResource DotFillBrush}">
+                <telerik:RadCartesianChart.HorizontalAxis>
+                    <telerik:CategoricalAxis ShowLabels="False" MajorTickStyle="{StaticResource TickStyle}"  LineStroke="Transparent"/>
+                </telerik:RadCartesianChart.HorizontalAxis>
+                <telerik:RadCartesianChart.VerticalAxis>
+                    <telerik:LinearAxis  ShowLabels="False"  MajorTickStyle="{StaticResource TickStyle}"  LineStroke="Transparent"/>
+                </telerik:RadCartesianChart.VerticalAxis>
+
+                <telerik:RadCartesianChart.Series>
+                    <telerik:LineSeries x:Name="LineSerie" ShowLabels="False" Stroke="#AD2F32" ItemsSource="{Binding SessionMoneyWonCollection}" >
+                    </telerik:LineSeries>
+                </telerik:RadCartesianChart.Series>
+            </telerik:RadCartesianChart>
+
+
+            <TextBlock Margin="5 0 5 5" Padding="1" Grid.Row="3" Text="Current Session" FontWeight="Normal" Style="{StaticResource Title_H1}" />
+
+        </Grid>
+
+        <!-- cards -->
+
+        <ItemsControl  Grid.Column="2" ItemsSource="{Binding CardsCollection}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Top" IsItemsHost="True"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Border Padding="2" Background="{StaticResource BackgroundBrush1}" BorderBrush="{StaticResource ForegroundBrush}" BorderThickness="1 0 0 0">
+                        <app:CardUC Cards="{Binding}" TextBlock.Foreground="White" TextBlock.FontWeight="Normal" HorizontalAlignment="Left"/>
+                    </Border>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+
+    </Grid>
+
+</UserControl>

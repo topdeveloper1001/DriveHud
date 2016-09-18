@@ -1,0 +1,1179 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="3828790211">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL $0.01/$0.02</gametype>  
+	          <tablename>Sironj (Heads Up), 123578391</tablename>  
+	          <tablecurrency>USD</tablecurrency>  
+	          <duration>00:20</duration>  
+	          <gamecount>76</gamecount>  
+	          <startdate>2012-06-06 16:58:10</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>WhiteRiderT</nickname>  
+	          <bets>$3.51</bets>  
+	          <wins>$3.08</wins>  
+	          <chipsin>$2</chipsin>
+			  		<chipsout>$1.57</chipsout>
+			  		<ipoints>0.84</ipoints>
+        		<statuspoints>0.84</statuspoints>
+			  		<awardpoints>0.84</awardpoints>
+			  		<is_asian>0</is_asian>
+	            
+	    </general>  
+	    <game gamecode="3313195659">
+		 <general>
+		  <startdate>2012-06-06 16:58:10</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$2" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H2 C10</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313195982">
+		 <general>
+		  <startdate>2012-06-06 16:58:25</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.99" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.01" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C9 H3</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313196293">
+		 <general>
+		  <startdate>2012-06-06 16:58:39</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$2" dealer="1" win="$0" bet="$0.16" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2" dealer="0" win="$0.42" bet="$0.28" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H10 C8</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.04" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 C7 S6</cards><action no="6" player="WhiteRiderT" type="3" sum="$0.04" cards=""/><action no="5" player="eternityby" type="5" sum="$0.04" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards><action no="8" player="WhiteRiderT" type="5" sum="$0.08" cards=""/><action no="7" player="eternityby" type="4" sum="$0" cards=""/><action no="9" player="eternityby" type="3" sum="$0.08" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards><action no="11" player="WhiteRiderT" type="0" sum="$0" cards=""/><action no="10" player="eternityby" type="5" sum="$0.12" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313196925">
+		 <general>
+		  <startdate>2012-06-06 16:59:09</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.84" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.14" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C4 D3</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313197122">
+		 <general>
+		  <startdate>2012-06-06 16:59:19</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.85" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.13" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CQ H9</cards><action no="3" player="WhiteRiderT" type="3" sum="$0.01" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 C9 C4</cards><action no="6" player="WhiteRiderT" type="5" sum="$0.04" cards=""/><action no="5" player="eternityby" type="4" sum="$0" cards=""/><action no="7" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313197737">
+		 <general>
+		  <startdate>2012-06-06 16:59:48</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.87" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.11" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C6 S2</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313198090">
+		 <general>
+		  <startdate>2012-06-06 17:00:06</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.88" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.10" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H6 HQ</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313198880">
+		 <general>
+		  <startdate>2012-06-06 17:00:43</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.90" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.08" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H6 CJ</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.06" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313199225">
+		 <general>
+		  <startdate>2012-06-06 17:00:59</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.88" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.10" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D9 H3</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313199392">
+		 <general>
+		  <startdate>2012-06-06 17:01:06</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.87" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.11" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H2 S9</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313200040">
+		 <general>
+		  <startdate>2012-06-06 17:01:35</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.88" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.10" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C9 C4</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313200226">
+		 <general>
+		  <startdate>2012-06-06 17:01:44</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.87" dealer="0" win="$0" bet="$0.38" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.11" dealer="1" win="$0.71" bet="$0.38" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S8 H8</cards><action no="4" player="WhiteRiderT" type="3" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">C10 HK</cards><action no="3" player="eternityby" type="23" sum="$0.08" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 DK D3</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="7" player="WhiteRiderT" type="23" sum="$0.30" cards=""/><action no="6" player="eternityby" type="5" sum="$0.12" cards=""/><action no="8" player="eternityby" type="3" sum="$0.18" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards><action no="9" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="10" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards><action no="11" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="12" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313201808">
+		 <general>
+		  <startdate>2012-06-06 17:02:57</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.49" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.44" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S6 DJ</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313201963">
+		 <general>
+		  <startdate>2012-06-06 17:03:06</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.48" dealer="0" win="$0" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.45" dealer="1" win="$0.16" bet="$0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CA C2</cards><action no="4" player="WhiteRiderT" type="3" sum="$0.04" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.06" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 D9 HQ</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="7" player="WhiteRiderT" type="0" sum="$0" cards=""/><action no="6" player="eternityby" type="5" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313202361">
+		 <general>
+		  <startdate>2012-06-06 17:03:25</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.42" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.51" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H8 D4</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313202614">
+		 <general>
+		  <startdate>2012-06-06 17:03:36</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.41" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.52" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D3 DK</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313202846">
+		 <general>
+		  <startdate>2012-06-06 17:03:47</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.42" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.51" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C8 H4</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313203018">
+		 <general>
+		  <startdate>2012-06-06 17:03:55</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.41" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.52" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H6 D10</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313203203">
+		 <general>
+		  <startdate>2012-06-06 17:04:04</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.42" dealer="1" win="$0.07" bet="$0.05" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.51" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H9 H4</cards><action no="3" player="WhiteRiderT" type="3" sum="$0.01" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK HJ C8</cards><action no="6" player="WhiteRiderT" type="5" sum="$0.03" cards=""/><action no="5" player="eternityby" type="4" sum="$0" cards=""/><action no="7" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313203880">
+		 <general>
+		  <startdate>2012-06-06 17:04:35</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.44" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.49" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SJ D3</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.06" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313204135">
+		 <general>
+		  <startdate>2012-06-06 17:04:45</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.42" dealer="1" win="$0.20" bet="$0.14" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.51" dealer="0" win="$0" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C6 DK</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 H10 CQ</cards><action no="6" player="WhiteRiderT" type="5" sum="$0.08" cards=""/><action no="5" player="eternityby" type="4" sum="$0" cards=""/><action no="7" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313204592">
+		 <general>
+		  <startdate>2012-06-06 17:05:07</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.48" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.45" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SA H7</cards><action no="4" player="WhiteRiderT" type="4" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="3" sum="$0.01" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 D8 C4</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="6" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards><action no="7" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="9" player="WhiteRiderT" type="0" sum="$0" cards=""/><action no="8" player="eternityby" type="5" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313205414">
+		 <general>
+		  <startdate>2012-06-06 17:05:44</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.46" dealer="1" win="$0.18" bet="$0.12" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.47" dealer="0" win="$0" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CA C3</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ SA D4</cards><action no="6" player="WhiteRiderT" type="5" sum="$0.06" cards=""/><action no="5" player="eternityby" type="4" sum="$0" cards=""/><action no="7" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313205757">
+		 <general>
+		  <startdate>2012-06-06 17:06:01</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.52" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.41" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S5 D9</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313205902">
+		 <general>
+		  <startdate>2012-06-06 17:06:09</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.53" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.40" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CK D5</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313206134">
+		 <general>
+		  <startdate>2012-06-06 17:06:20</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.55" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.38" dealer="1" win="$0.10" bet="$0.08" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">HJ H4</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.08" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313206684">
+		 <general>
+		  <startdate>2012-06-06 17:06:45</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.53" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.40" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DJ S8</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313207036">
+		 <general>
+		  <startdate>2012-06-06 17:07:01</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.55" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.38" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D6 DQ</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313207350">
+		 <general>
+		  <startdate>2012-06-06 17:07:14</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.56" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.37" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">HQ C3</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313207608">
+		 <general>
+		  <startdate>2012-06-06 17:07:26</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.58" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.35" dealer="1" win="$0.10" bet="$0.08" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C10 C5</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.08" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313207959">
+		 <general>
+		  <startdate>2012-06-06 17:07:42</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.56" dealer="1" win="$0" bet="$0.10" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.37" dealer="0" win="$0.25" bet="$0.16" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DK CJ</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 C6 C10</cards><action no="6" player="WhiteRiderT" type="3" sum="$0.04" cards=""/><action no="5" player="eternityby" type="5" sum="$0.04" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="8" player="WhiteRiderT" type="0" sum="$0" cards=""/><action no="7" player="eternityby" type="5" sum="$0.06" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313208491">
+		 <general>
+		  <startdate>2012-06-06 17:08:08</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.46" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.46" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H8 C2</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313208656">
+		 <general>
+		  <startdate>2012-06-06 17:08:16</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.47" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.45" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H3 C2</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313208836">
+		 <general>
+		  <startdate>2012-06-06 17:08:24</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.46" dealer="0" win="$0.04" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.46" dealer="1" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CJ S8</cards><action no="4" player="WhiteRiderT" type="4" sum="$0" cards=""/><cards type="Pocket" player="eternityby">D6 HJ</cards><action no="3" player="eternityby" type="3" sum="$0.01" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 CA D10</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="6" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards><action no="7" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="8" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards><action no="9" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="10" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313209346">
+		 <general>
+		  <startdate>2012-06-06 17:08:49</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.48" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.44" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H2 C3</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313209528">
+		 <general>
+		  <startdate>2012-06-06 17:08:57</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.47" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.45" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C6 SJ</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313209722">
+		 <general>
+		  <startdate>2012-06-06 17:09:05</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.48" dealer="1" win="$0" bet="$0.12" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.44" dealer="0" win="$0.23" bet="$0.12" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C5 CK</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">D6 D5</cards><action no="4" player="eternityby" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA S2 C6</cards><action no="6" player="WhiteRiderT" type="5" sum="$0.06" cards=""/><action no="5" player="eternityby" type="4" sum="$0" cards=""/><action no="7" player="eternityby" type="3" sum="$0.06" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards><action no="9" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="8" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards><action no="11" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="10" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313210414">
+		 <general>
+		  <startdate>2012-06-06 17:09:36</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.36" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.55" dealer="1" win="$0.10" bet="$0.08" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S7 CJ</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.08" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313210694">
+		 <general>
+		  <startdate>2012-06-06 17:09:48</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.34" dealer="1" win="$0.18" bet="$0.12" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.57" dealer="0" win="$0" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">HQ H3</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 H7 C4</cards><action no="6" player="WhiteRiderT" type="5" sum="$0.06" cards=""/><action no="5" player="eternityby" type="4" sum="$0" cards=""/><action no="7" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313211044">
+		 <general>
+		  <startdate>2012-06-06 17:10:05</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.40" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.51" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DA S10</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313211230">
+		 <general>
+		  <startdate>2012-06-06 17:10:13</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.41" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.50" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SA C4</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313211456">
+		 <general>
+		  <startdate>2012-06-06 17:10:24</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.43" dealer="0" win="$0.02" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.48" dealer="1" win="$0.02" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DJ H6</cards><action no="4" player="WhiteRiderT" type="4" sum="$0" cards=""/><cards type="Pocket" player="eternityby">H10 CJ</cards><action no="3" player="eternityby" type="3" sum="$0.01" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK CK S9</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="6" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="7" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="8" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C9</cards><action no="9" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="10" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313211907">
+		 <general>
+		  <startdate>2012-06-06 17:10:44</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.43" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.48" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H2 C5</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313212082">
+		 <general>
+		  <startdate>2012-06-06 17:10:52</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.42" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.49" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C3 H2</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.06" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313212310">
+		 <general>
+		  <startdate>2012-06-06 17:11:03</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.40" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.51" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C5 H10</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313212515">
+		 <general>
+		  <startdate>2012-06-06 17:11:14</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.39" dealer="0" win="$0.50" bet="$0.36" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.52" dealer="1" win="$0" bet="$0.16" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D10 C9</cards><action no="4" player="WhiteRiderT" type="3" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.08" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ S10 CK</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="7" player="WhiteRiderT" type="3" sum="$0.08" cards=""/><action no="6" player="eternityby" type="5" sum="$0.08" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards><action no="8" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="9" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards><action no="10" player="WhiteRiderT" type="5" sum="$0.20" cards=""/><action no="11" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313213460">
+		 <general>
+		  <startdate>2012-06-06 17:11:58</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.53" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.36" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CJ CA</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313213691">
+		 <general>
+		  <startdate>2012-06-06 17:12:09</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.55" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.34" dealer="1" win="$0.06" bet="$0.04" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SK D6</cards><action no="4" player="WhiteRiderT" type="4" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="3" sum="$0.01" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 D5 H8</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="7" player="WhiteRiderT" type="0" sum="$0" cards=""/><action no="6" player="eternityby" type="5" sum="$0.02" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313214007">
+		 <general>
+		  <startdate>2012-06-06 17:12:24</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.53" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.36" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S6 H3</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313214178">
+		 <general>
+		  <startdate>2012-06-06 17:12:31</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.52" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.37" dealer="1" win="$0.04" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H6 S5</cards><action no="4" player="WhiteRiderT" type="4" sum="$0" cards=""/><cards type="Pocket" player="eternityby">HQ D10</cards><action no="3" player="eternityby" type="3" sum="$0.01" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA S9 HK</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="6" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="7" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="8" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards><action no="9" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="10" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313214570">
+		 <general>
+		  <startdate>2012-06-06 17:12:49</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.50" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.39" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D6 C5</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313214788">
+		 <general>
+		  <startdate>2012-06-06 17:12:59</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.52" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.37" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C2 HK</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313214964">
+		 <general>
+		  <startdate>2012-06-06 17:13:08</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.53" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.36" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SJ CA</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313215217">
+		 <general>
+		  <startdate>2012-06-06 17:13:19</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.55" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.34" dealer="1" win="$0.12" bet="$0.10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S9 C8</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.10" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313215503">
+		 <general>
+		  <startdate>2012-06-06 17:13:32</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.53" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.36" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S7 C10</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313215691">
+		 <general>
+		  <startdate>2012-06-06 17:13:41</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.52" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.37" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C8 H10</cards><action no="4" player="WhiteRiderT" type="4" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="3" sum="$0.01" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 C3 D2</cards><action no="5" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="6" player="eternityby" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="7" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="9" player="WhiteRiderT" type="0" sum="$0" cards=""/><action no="8" player="eternityby" type="5" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313216124">
+		 <general>
+		  <startdate>2012-06-06 17:14:01</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.50" dealer="1" win="$0.18" bet="$0.12" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.39" dealer="0" win="$0" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H10 SQ</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 SA SK</cards><action no="6" player="WhiteRiderT" type="5" sum="$0.06" cards=""/><action no="5" player="eternityby" type="4" sum="$0" cards=""/><action no="7" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313216558">
+		 <general>
+		  <startdate>2012-06-06 17:14:21</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.56" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.33" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">CK H7</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313216704">
+		 <general>
+		  <startdate>2012-06-06 17:14:29</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.57" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.32" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S5 S2</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313216906">
+		 <general>
+		  <startdate>2012-06-06 17:14:37</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.56" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.33" dealer="1" win="$0.10" bet="$0.08" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D6 H7</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.08" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313217118">
+		 <general>
+		  <startdate>2012-06-06 17:14:47</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.54" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.35" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">H5 SA</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313217348">
+		 <general>
+		  <startdate>2012-06-06 17:14:57</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.56" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.33" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S5 CK</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313217593">
+		 <general>
+		  <startdate>2012-06-06 17:15:07</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.57" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.32" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C2 S2</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313217810">
+		 <general>
+		  <startdate>2012-06-06 17:15:17</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.59" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.30" dealer="1" win="$0.10" bet="$0.08" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">DK H5</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.08" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313218089">
+		 <general>
+		  <startdate>2012-06-06 17:15:29</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.57" dealer="1" win="$0" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.32" dealer="0" win="$0.24" bet="$0.18" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D7 C6</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><action no="5" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="23" sum="$0.18" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313218410">
+		 <general>
+		  <startdate>2012-06-06 17:15:43</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.51" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.38" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C5 C6</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313218599">
+		 <general>
+		  <startdate>2012-06-06 17:15:52</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.52" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.37" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C10 HJ</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313218808">
+		 <general>
+		  <startdate>2012-06-06 17:16:01</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.54" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.35" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">C4 HJ</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313218950">
+		 <general>
+		  <startdate>2012-06-06 17:16:09</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.55" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.34" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D9 DJ</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313219174">
+		 <general>
+		  <startdate>2012-06-06 17:16:20</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.57" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.32" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D5 S7</cards><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313219357">
+		 <general>
+		  <startdate>2012-06-06 17:16:28</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.58" dealer="1" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.31" dealer="0" win="$0.03" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S7 S4</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards>
+	</round>
+	
+		</game><game gamecode="3313219532">
+		 <general>
+		  <startdate>2012-06-06 17:16:36</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.57" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.32" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D7 C4</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.06" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313219788">
+		 <general>
+		  <startdate>2012-06-06 17:16:46</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.55" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.34" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">SA C9</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313220023">
+		 <general>
+		  <startdate>2012-06-06 17:16:57</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.57" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.32" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="eternityby" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">D5 S2</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="3" player="eternityby" type="23" sum="$0.06" cards=""/>
+	</round>
+	
+		</game><game gamecode="3313220270">
+		 <general>
+		  <startdate>2012-06-06 17:17:08</startdate>		  
+		  <players>
+		   <player seat="3" name="WhiteRiderT" chips="$1.55" dealer="1" win="$0.08" bet="$0.06" rebuy="0" addon="0"/><player seat="8" name="eternityby" chips="$2.34" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="eternityby" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WhiteRiderT">S9 SA</cards><action no="3" player="WhiteRiderT" type="23" sum="$0.06" cards=""/><cards type="Pocket" player="eternityby">X X</cards><action no="4" player="eternityby" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game>
+	</session>

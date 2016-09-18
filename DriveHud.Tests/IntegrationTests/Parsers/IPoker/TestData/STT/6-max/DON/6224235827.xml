@@ -1,0 +1,775 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224235827">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824221794</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:20</duration>  
+	          <gamecount>43</gamecount>  
+	          <startdate>2014-03-25 17:37:56</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>3,350</bets>  
+	          <wins>1,850</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>0</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>4</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>0</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>0</awardpoints>  
+	    </general>  
+	    <game gamecode="5601250632">
+		 <general>
+		  <startdate>2014-03-25 17:37:56</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="0" win="225" bet="135" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yoyoyo29989" type="1" sum="10" cards="[cards]"/><action no="2" player="veggie154" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="7" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="8" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="23" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">S10 C10</cards><action no="4" player="moonbaseone" type="3" sum="60" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="5" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 DK C6</cards><action no="9" player="DONCorleoneXX" type="5" sum="75" cards=""/><action no="10" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264296">
+		 <general>
+		  <startdate>2014-03-25 17:38:55</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,590" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,500" dealer="0" win="100" bet="70" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="veggie154" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="6" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="7" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 C8</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="4" player="riggsby11" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ C10 S3</cards><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="10" player="riggsby11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards><action no="11" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="riggsby11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="15" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="14" player="riggsby11" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264522">
+		 <general>
+		  <startdate>2014-03-25 17:39:40</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,490" dealer="0" win="0" bet="70" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,570" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,440" dealer="0" win="160" bet="70" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">DA S6</cards><action no="5" player="yoyoyo29989" type="3" sum="20" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="6" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="3" sum="10" cards=""/><cards type="Pocket" player="moonbaseone">CK C4</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="3" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 C10 S2</cards><action no="11" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="10" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="14" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="13" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards><action no="17" player="yoyoyo29989" type="3" sum="50" cards=""/><action no="15" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="18" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="16" player="moonbaseone" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264790">
+		 <general>
+		  <startdate>2014-03-25 17:40:36</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,530" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,530" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="riggsby11" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="4" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="5" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK C6</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601264906">
+		 <general>
+		  <startdate>2014-03-25 17:40:57</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,540" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="20" cards="[cards]"/><action no="1" player="riggsby11" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="4" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="3" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="4" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 H9</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="7" player="riggsby11" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 SA S4</cards><action no="10" player="theDL" type="0" sum="0" cards=""/><action no="9" player="riggsby11" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265003">
+		 <general>
+		  <startdate>2014-03-25 17:41:13</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,480" dealer="0" win="0" bet="244" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,420" dealer="0" win="488" bet="244" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="10" cards="[cards]"/><action no="2" player="yoyoyo29989" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">C9 HA</cards><action no="7" player="theDL" type="23" sum="60" cards=""/><cards type="Pocket" player="yoyoyo29989">D2 C5</cards><action no="8" player="yoyoyo29989" type="3" sum="40" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="3" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 H9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="6" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 C8 C2</cards><action no="9" player="theDL" type="5" sum="84" cards=""/><action no="10" player="yoyoyo29989" type="3" sum="84" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards><action no="11" player="theDL" type="4" sum="0" cards=""/><action no="12" player="yoyoyo29989" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards><action no="13" player="theDL" type="4" sum="0" cards=""/><action no="15" player="theDL" type="3" sum="100" cards=""/><action no="14" player="yoyoyo29989" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265214">
+		 <general>
+		  <startdate>2014-03-25 17:41:47</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,236" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,664" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,470" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,520" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yoyoyo29989" type="1" sum="10" cards="[cards]"/><action no="2" player="veggie154" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="7" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="8" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ CA</cards><action no="4" player="moonbaseone" type="23" sum="60" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="5" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265360">
+		 <general>
+		  <startdate>2014-03-25 17:42:11</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,236" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,654" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,450" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,550" dealer="0" win="240" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,560" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="veggie154" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="6" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="7" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">SK S5</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 DJ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">D2 DK</cards><action no="4" player="riggsby11" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 S3 S2</cards><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="11" player="DONCorleoneXX" type="3" sum="70" cards=""/><action no="10" player="riggsby11" type="5" sum="70" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="13" player="riggsby11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards><action no="14" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="15" player="riggsby11" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265575">
+		 <general>
+		  <startdate>2014-03-25 17:42:49</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,236" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,654" dealer="0" win="200" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,680" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,550" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="5" player="yoyoyo29989" type="3" sum="40" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="6" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">DJ H4</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="3" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ S2 C3</cards><action no="11" player="yoyoyo29989" type="5" sum="80" cards=""/><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="10" player="moonbaseone" type="4" sum="0" cards=""/><action no="13" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265740">
+		 <general>
+		  <startdate>2014-03-25 17:43:19</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,236" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,734" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,640" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,450" dealer="0" win="408" bet="288" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="riggsby11" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="4" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="5" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA CK</cards><action no="7" player="moonbaseone" type="23" sum="120" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="8" player="riggsby11" type="3" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 S4 SQ</cards><action no="9" player="moonbaseone" type="4" sum="0" cards=""/><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><action no="10" player="riggsby11" type="5" sum="168" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277591">
+		 <general>
+		  <startdate>2014-03-25 17:44:05</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,236" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,734" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,640" dealer="0" win="270" bet="170" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,570" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="40" cards="[cards]"/><action no="1" player="riggsby11" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="3" sum="40" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="3" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="4" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="80" cards=""/><cards type="Pocket" player="moonbaseone">C8 C6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="7" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA C4 DJ</cards><action no="9" player="theDL" type="4" sum="0" cards=""/><action no="11" player="theDL" type="0" sum="0" cards=""/><action no="10" player="DONCorleoneXX" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277856">
+		 <general>
+		  <startdate>2014-03-25 17:44:54</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,156" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,734" dealer="0" win="400" bet="280" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,740" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="20" cards="[cards]"/><action no="2" player="yoyoyo29989" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="23" sum="120" cards=""/><cards type="Pocket" player="yoyoyo29989">C10 C9</cards><action no="8" player="yoyoyo29989" type="3" sum="80" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="3" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA D7</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="6" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 H9 S4</cards><action no="9" player="theDL" type="4" sum="0" cards=""/><action no="11" player="theDL" type="0" sum="0" cards=""/><action no="10" player="yoyoyo29989" type="5" sum="160" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277995">
+		 <general>
+		  <startdate>2014-03-25 17:45:27</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,036" dealer="1" win="1,496" bet="1,036" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,854" dealer="0" win="0" bet="420" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,430" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,740" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yoyoyo29989" type="1" sum="20" cards="[cards]"/><action no="2" player="veggie154" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="23" sum="120" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="7" player="yoyoyo29989" type="3" sum="100" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="8" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 D2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="5" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 HQ C4</cards><action no="10" player="theDL" type="5" sum="140" cards=""/><action no="9" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="11" player="yoyoyo29989" type="3" sum="140" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards><action no="13" player="theDL" type="5" sum="160" cards=""/><action no="12" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="14" player="yoyoyo29989" type="3" sum="160" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="16" player="theDL" type="5" sum="616" cards=""/><action no="15" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="17" player="yoyoyo29989" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278238">
+		 <general>
+		  <startdate>2014-03-25 17:46:13</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,496" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,434" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,390" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,740" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="veggie154" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="6" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="7" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="moonbaseone">DQ S9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="4" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278295">
+		 <general>
+		  <startdate>2014-03-25 17:46:25</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,496" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,434" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="23" sum="180" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="5" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="6" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 H9</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="3" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278404">
+		 <general>
+		  <startdate>2014-03-25 17:46:45</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,586" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,434" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,740" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,550" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="riggsby11" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="4" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="5" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 CA</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601278506">
+		 <general>
+		  <startdate>2014-03-25 17:47:03</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,586" dealer="0" win="270" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,434" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,740" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,300" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,580" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="60" cards="[cards]"/><action no="1" player="riggsby11" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">S10 SK</cards><action no="8" player="theDL" type="3" sum="60" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="3" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="4" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">HJ H9</cards><action no="5" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">DK C2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="7" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA D4 CQ</cards><action no="9" player="theDL" type="4" sum="0" cards=""/><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="11" player="theDL" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards><action no="13" player="theDL" type="4" sum="0" cards=""/><action no="14" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278798">
+		 <general>
+		  <startdate>2014-03-25 17:47:55</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,736" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,434" dealer="0" win="0" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,300" dealer="0" win="1,600" bet="1,300" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="30" cards="[cards]"/><action no="2" player="yoyoyo29989" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="8" player="yoyoyo29989" type="3" sum="90" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="3" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ HA</cards><action no="5" player="moonbaseone" type="23" sum="150" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="6" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 HQ H7</cards><action no="9" player="yoyoyo29989" type="5" sum="120" cards=""/><action no="11" player="yoyoyo29989" type="0" sum="0" cards=""/><action no="10" player="moonbaseone" type="23" sum="1,150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279059">
+		 <general>
+		  <startdate>2014-03-25 17:48:41</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,164" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,360" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,550" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yoyoyo29989" type="1" sum="30" cards="[cards]"/><action no="2" player="veggie154" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="7" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="8" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK H7</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="5" player="riggsby11" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279160">
+		 <general>
+		  <startdate>2014-03-25 17:48:58</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,134" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,300" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,620" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,640" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="veggie154" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="6" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="7" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="moonbaseone">H4 D9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="4" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279246">
+		 <general>
+		  <startdate>2014-03-25 17:49:13</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,134" dealer="0" win="360" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,270" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,650" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,600" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,640" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="5" player="yoyoyo29989" type="3" sum="60" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="6" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="3" sum="30" cards=""/><cards type="Pocket" player="moonbaseone">D5 DQ</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="3" player="riggsby11" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 D10 H10</cards><action no="12" player="yoyoyo29989" type="5" sum="120" cards=""/><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="13" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="10" player="moonbaseone" type="4" sum="0" cards=""/><action no="14" player="moonbaseone" type="0" sum="0" cards=""/><action no="11" player="riggsby11" type="4" sum="0" cards=""/><action no="15" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292469">
+		 <general>
+		  <startdate>2014-03-25 17:49:55</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,314" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,590" dealer="1" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,540" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,580" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="riggsby11" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="4" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="5" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="200" cards=""/><cards type="Pocket" player="moonbaseone">D4 H10</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="8" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292597">
+		 <general>
+		  <startdate>2014-03-25 17:50:19</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,314" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,740" dealer="0" win="1,125" bet="675" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,480" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="100" cards="[cards]"/><action no="1" player="riggsby11" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="3" player="yoyoyo29989" type="3" sum="100" cards=""/><action no="9" player="yoyoyo29989" type="3" sum="200" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="4" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">C7 S4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="7" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 C3 S2</cards><action no="10" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="12" player="yoyoyo29989" type="0" sum="0" cards=""/><action no="11" player="DONCorleoneXX" type="5" sum="375" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292759">
+		 <general>
+		  <startdate>2014-03-25 17:50:52</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,606" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,014" dealer="0" win="2,078" bet="1,014" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,190" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="1,430" dealer="1" win="0" bet="1,014" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="50" cards="[cards]"/><action no="2" player="yoyoyo29989" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">S10 HA</cards><action no="8" player="yoyoyo29989" type="23" sum="1,014" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="3" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 C3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">SA C8</cards><action no="6" player="riggsby11" type="23" sum="300" cards=""/><action no="9" player="riggsby11" type="3" sum="714" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA C4 D9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards>
+	</round>
+	
+		</game><game gamecode="5601292924">
+		 <general>
+		  <startdate>2014-03-25 17:51:21</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,556" dealer="1" win="1,706" bet="1,556" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="2,078" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,270" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,190" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="416" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yoyoyo29989" type="1" sum="50" cards="[cards]"/><action no="2" player="veggie154" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="23" sum="1,556" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="7" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="8" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA C3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="5" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293021">
+		 <general>
+		  <startdate>2014-03-25 17:51:40</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="2,028" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,170" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,190" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="416" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="veggie154" type="1" sum="50" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="6" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="7" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="moonbaseone">C9 H3</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="4" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293096">
+		 <general>
+		  <startdate>2014-03-25 17:51:52</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="2,028" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,120" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,240" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="416" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="5" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="6" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="23" sum="200" cards=""/><cards type="Pocket" player="moonbaseone">H5 CQ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="3" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293178">
+		 <general>
+		  <startdate>2014-03-25 17:52:08</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="2,028" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,340" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="416" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="riggsby11" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">CQ C4</cards><action no="4" player="yoyoyo29989" type="3" sum="100" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="5" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 D8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="8" player="riggsby11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK S6 C10</cards><action no="10" player="yoyoyo29989" type="5" sum="100" cards=""/><action no="9" player="riggsby11" type="4" sum="0" cards=""/><action no="11" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293380">
+		 <general>
+		  <startdate>2014-03-25 17:52:48</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="2,178" dealer="0" win="575" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,340" dealer="0" win="575" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="316" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="100" cards="[cards]"/><action no="1" player="riggsby11" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">CA SQ</cards><action no="3" player="yoyoyo29989" type="23" sum="200" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="4" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">SA DQ</cards><action no="5" player="DONCorleoneXX" type="3" sum="200" cards=""/><cards type="Pocket" player="moonbaseone">C5 S9</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="7" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ D4 H8</cards><action no="9" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="11" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards><action no="13" player="yoyoyo29989" type="5" sum="300" cards=""/><action no="14" player="DONCorleoneXX" type="3" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293562">
+		 <general>
+		  <startdate>2014-03-25 17:53:21</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,606" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="2,253" dealer="0" win="0" bet="266" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="266" dealer="1" win="582" bet="266" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="50" cards="[cards]"/><action no="2" player="yoyoyo29989" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">C8 S2</cards><action no="8" player="yoyoyo29989" type="3" sum="166" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="3" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 D8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">C2 HA</cards><action no="6" player="riggsby11" type="23" sum="266" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 HK H4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game><game gamecode="5601293694">
+		 <general>
+		  <startdate>2014-03-25 17:53:48</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,556" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,987" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,120" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="582" dealer="0" win="732" bet="582" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yoyoyo29989" type="1" sum="50" cards="[cards]"/><action no="2" player="veggie154" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="7" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="8" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 H7</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="5" player="riggsby11" type="23" sum="582" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293828">
+		 <general>
+		  <startdate>2014-03-25 17:54:13</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,556" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,937" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,020" dealer="0" win="600" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="732" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="veggie154" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="6" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="7" player="veggie154" type="3" sum="75" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H7 DK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="4" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 D9 SQ</cards><action no="9" player="veggie154" type="4" sum="0" cards=""/><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards><action no="11" player="veggie154" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards><action no="13" player="veggie154" type="5" sum="300" cards=""/><action no="14" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601305741">
+		 <general>
+		  <startdate>2014-03-25 17:55:07</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,556" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,937" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,170" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,265" dealer="0" win="2,415" bet="2,265" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,340" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="732" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="5" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="6" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="23" sum="2,265" cards=""/><cards type="Pocket" player="moonbaseone">D4 SJ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="3" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601305817">
+		 <general>
+		  <startdate>2014-03-25 17:55:25</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,556" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,937" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,190" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="732" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="riggsby11" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="4" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="5" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 S5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601305898">
+		 <general>
+		  <startdate>2014-03-25 17:55:45</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,556" dealer="0" win="1,706" bet="1,556" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,937" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,115" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="807" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="150" cards="[cards]"/><action no="1" player="riggsby11" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="23" sum="1,556" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="3" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="4" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ H8</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">X X</cards><action no="7" player="riggsby11" type="3" sum="75" cards=""/><action no="9" player="riggsby11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601305998">
+		 <general>
+		  <startdate>2014-03-25 17:56:10</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,706" dealer="0" win="2,513" bet="1,706" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,937" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,115" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/><player seat="10" name="riggsby11" chips="657" dealer="1" win="0" bet="657" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="75" cards="[cards]"/><action no="2" player="yoyoyo29989" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">CJ SJ</cards><action no="7" player="theDL" type="23" sum="1,706" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="8" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">X X</cards><action no="3" player="veggie154" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 H9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="riggsby11">CK C6</cards><action no="6" player="riggsby11" type="3" sum="150" cards=""/><action no="9" player="riggsby11" type="7" sum="507" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ S7 HJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game><game gamecode="5601306110">
+		 <general>
+		  <startdate>2014-03-25 17:56:41</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="2,513" dealer="1" win="2,415" bet="1,170" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,787" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="veggie154" chips="1,170" dealer="0" win="0" bet="1,170" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,115" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="yoyoyo29989" type="1" sum="75" cards="[cards]"/><action no="2" player="veggie154" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">C8 C9</cards><action no="5" player="theDL" type="23" sum="300" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="6" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="veggie154">S6 S3</cards><action no="7" player="veggie154" type="3" sum="150" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H2 CA</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK CJ D7</cards><action no="9" player="theDL" type="3" sum="870" cards=""/><action no="8" player="veggie154" type="5" sum="870" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5601306261">
+		 <general>
+		  <startdate>2014-03-25 17:57:18</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="3,758" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,712" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="0" win="150" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,115" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224235827"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="4" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="moonbaseone">S9 H5</cards><action no="2" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306299">
+		 <general>
+		  <startdate>2014-03-25 17:57:29</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="3,758" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,712" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,415" dealer="0" win="2,565" bet="2,415" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,115" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224235827"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="4" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="2,415" cards=""/><cards type="Pocket" player="moonbaseone">H5 C6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306355">
+		 <general>
+		  <startdate>2014-03-25 17:57:42</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="3,758" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,712" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,565" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="965" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224235827"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="3" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 H3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306442">
+		 <general>
+		  <startdate>2014-03-25 17:58:04</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="3,833" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,712" dealer="0" win="0" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,565" dealer="0" win="2,400" bet="1,825" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="890" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224235827"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="100" cards="[cards]"/><action no="2" player="yoyoyo29989" type="15" sum="25" cards="[cards]"/><action no="6" player="yoyoyo29989" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="10" player="yoyoyo29989" type="3" sum="200" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="23" sum="400" cards=""/><cards type="Pocket" player="moonbaseone">D3 HJ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA H3 D6</cards><action no="11" player="yoyoyo29989" type="4" sum="0" cards=""/><action no="13" player="yoyoyo29989" type="0" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="5" sum="1,400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306556">
+		 <general>
+		  <startdate>2014-03-25 17:58:32</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="3,708" dealer="1" win="800" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,287" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="3,140" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="865" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224235827"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="theDL" type="15" sum="25" cards="[cards]"/><action no="1" player="yoyoyo29989" type="15" sum="25" cards="[cards]"/><action no="5" player="yoyoyo29989" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="23" sum="400" cards=""/><cards type="Pocket" player="yoyoyo29989">X X</cards><action no="9" player="yoyoyo29989" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 S8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306630">
+		 <general>
+		  <startdate>2014-03-25 17:58:52</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="4,083" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="yoyoyo29989" chips="1,162" dealer="1" win="2,152" bet="1,162" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,915" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="840" dealer="0" win="0" bet="840" rebuy="0" addon="0" reg_code="6224235827"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="theDL" type="15" sum="25" cards="[cards]"/><action no="4" player="yoyoyo29989" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="yoyoyo29989">CA H9</cards><action no="8" player="yoyoyo29989" type="23" sum="1,137" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ DA</cards><action no="10" player="moonbaseone" type="7" sum="615" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 C3 H3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D10</cards>
+	</round>
+	
+		</game>  
+	</session>

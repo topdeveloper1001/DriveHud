@@ -1,0 +1,2099 @@
+#Game No : 933033953
+***** 888poker Hand History for Game 933033953 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:17:52
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 1: viiits ( $0.57 )
+Seat 2: Natewilson89 ( $2.14 )
+Seat 3: PKolos ( $0.77 )
+Seat 8: svssta ( $0.90 )
+Seat 10: Dhawal1989 ( $1.45 )
+Dhawal1989 posts small blind [$0.01]
+viiits posts big blind [$0.02]
+** Dealing down cards **
+Natewilson89 folds
+PKolos calls [$0.02]
+svssta raises [$0.04]
+Dhawal1989 calls [$0.03]
+viiits calls [$0.02]
+PKolos calls [$0.02]
+** Dealing flop ** [ 5c, Ts, As ]
+Dhawal1989 checks
+viiits checks
+PKolos checks
+svssta bets [$0.02]
+Dhawal1989 calls [$0.02]
+viiits folds
+PKolos calls [$0.02]
+** Dealing turn ** [ Th ]
+Dhawal1989 checks
+PKolos checks
+svssta bets [$0.04]
+Dhawal1989 calls [$0.04]
+PKolos calls [$0.04]
+** Dealing river ** [ 7s ]
+Dhawal1989 checks
+PKolos checks
+svssta bets [$0.04]
+Dhawal1989 folds
+PKolos calls [$0.04]
+** Summary **
+svssta shows [ 8d, 9d ]
+PKolos shows [ 4c, Ah ]
+PKolos collected [ $0.40 ]
+
+
+#Game No : 933034175
+***** 888poker Hand History for Game 933034175 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:18:47
+Table Neuss 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 1: viiits ( $0.53 )
+Seat 2: Natewilson89 ( $2.14 )
+Seat 3: PKolos ( $1.03 )
+Seat 8: svssta ( $0.76 )
+Seat 10: Dhawal1989 ( $1.35 )
+viiits posts small blind [$0.01]
+Natewilson89 posts big blind [$0.02]
+** Dealing down cards **
+PKolos calls [$0.02]
+svssta folds
+Dhawal1989 raises [$0.04]
+viiits calls [$0.03]
+Natewilson89 raises [$0.04]
+PKolos calls [$0.04]
+Dhawal1989 calls [$0.02]
+viiits calls [$0.02]
+** Dealing flop ** [ 2c, 4c, Js ]
+viiits bets [$0.02]
+Natewilson89 raises [$0.04]
+PKolos calls [$0.04]
+Dhawal1989 folds
+viiits calls [$0.02]
+** Dealing turn ** [ Tc ]
+viiits checks
+Natewilson89 bets [$0.04]
+PKolos calls [$0.04]
+viiits raises [$0.08]
+Natewilson89 calls [$0.04]
+PKolos calls [$0.04]
+** Dealing river ** [ Ks ]
+viiits bets [$0.04]
+Natewilson89 calls [$0.04]
+PKolos calls [$0.04]
+** Summary **
+viiits shows [ Jh, Td ]
+Natewilson89 shows [ Jd, Kd ]
+PKolos mucks [ 6s, 6c ]
+Natewilson89 collected [ $0.69 ]
+
+
+#Game No : 933034354
+***** 888poker Hand History for Game 933034354 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:19:36
+Table Neuss 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: viiits ( $0.31 )
+Seat 2: Natewilson89 ( $2.61 )
+Seat 3: PKolos ( $0.81 )
+Seat 8: svssta ( $0.76 )
+Seat 10: Dhawal1989 ( $1.29 )
+Natewilson89 posts small blind [$0.01]
+PKolos posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+Dhawal1989 folds
+viiits folds
+Natewilson89 calls [$0.01]
+PKolos raises [$0.02]
+Natewilson89 calls [$0.02]
+** Dealing flop ** [ 4c, 2d, 9d ]
+Natewilson89 bets [$0.02]
+PKolos raises [$0.04]
+Natewilson89 calls [$0.02]
+** Dealing turn ** [ 2h ]
+Natewilson89 checks
+PKolos checks
+** Dealing river ** [ 6c ]
+Natewilson89 bets [$0.04]
+PKolos folds
+** Summary **
+Natewilson89 collected [ $0.16 ]
+
+
+#Game No : 933035385
+***** 888poker Hand History for Game 933035385 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:24:12
+Table Neuss 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $2.68 )
+Seat 3: PKolos ( $0.42 )
+Seat 4: Mr.Tyrrell ( $0.16 )
+Seat 5: GenaTokan ( $0.48 )
+Seat 8: svssta ( $0.42 )
+Seat 10: Dhawal1989 ( $1.28 )
+Natewilson89 posts small blind [$0.01]
+PKolos posts big blind [$0.02]
+** Dealing down cards **
+Mr.Tyrrell folds
+GenaTokan folds
+svssta folds
+Dhawal1989 raises [$0.04]
+Natewilson89 folds
+PKolos calls [$0.02]
+** Dealing flop ** [ Th, Tc, 3s ]
+PKolos checks
+Dhawal1989 bets [$0.02]
+PKolos raises [$0.04]
+Dhawal1989 calls [$0.02]
+** Dealing turn ** [ 8h ]
+PKolos bets [$0.04]
+Dhawal1989 raises [$0.08]
+PKolos calls [$0.04]
+** Dealing river ** [ Qc ]
+PKolos checks
+Dhawal1989 bets [$0.04]
+PKolos calls [$0.04]
+** Summary **
+Dhawal1989 shows [ Ts, Kc ]
+PKolos mucks [ 7s, 3d ]
+Dhawal1989 collected [ $0.39 ]
+
+
+#Game No : 933035498
+***** 888poker Hand History for Game 933035498 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:24:45
+Table Neuss 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $2.67 )
+Seat 3: PKolos ( $0.22 )
+Seat 4: Mr.Tyrrell ( $0.16 )
+Seat 5: GenaTokan ( $0.48 )
+Seat 8: svssta ( $0.42 )
+Seat 10: Dhawal1989 ( $1.47 )
+PKolos posts small blind [$0.01]
+Mr.Tyrrell posts big blind [$0.02]
+** Dealing down cards **
+GenaTokan folds
+svssta folds
+Dhawal1989 raises [$0.04]
+Natewilson89 calls [$0.04]
+PKolos calls [$0.03]
+Mr.Tyrrell folds
+** Dealing flop ** [ 4c, Ts, 2h ]
+PKolos checks
+Dhawal1989 bets [$0.02]
+Natewilson89 calls [$0.02]
+PKolos calls [$0.02]
+** Dealing turn ** [ 9d ]
+PKolos checks
+Dhawal1989 bets [$0.04]
+Natewilson89 raises [$0.08]
+PKolos folds
+Dhawal1989 folds
+** Summary **
+Natewilson89 collected [ $0.27 ]
+
+
+#Game No : 933039124
+***** 888poker Hand History for Game 933039124 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:40:31
+Table Neuss 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: INDIGR ( $0.73 )
+Seat 6: Sergant36 ( $0.45 )
+Seat 7: nl.jackelson ( $1.25 )
+Seat 8: svssta ( $0.79 )
+Seat 10: Dhawal1989 ( $1.20 )
+Sergant36 posts small blind [$0.01]
+nl.jackelson posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+Dhawal1989 raises [$0.04]
+INDIGR folds
+Sergant36 calls [$0.03]
+nl.jackelson calls [$0.02]
+** Dealing flop ** [ 7c, 6s, 4s ]
+Sergant36 checks
+nl.jackelson checks
+Dhawal1989 bets [$0.02]
+Sergant36 calls [$0.02]
+nl.jackelson calls [$0.02]
+** Dealing turn ** [ Ts ]
+Sergant36 checks
+nl.jackelson checks
+Dhawal1989 checks
+** Dealing river ** [ 8s ]
+Sergant36 checks
+nl.jackelson checks
+Dhawal1989 bets [$0.04]
+Sergant36 folds
+nl.jackelson calls [$0.04]
+** Summary **
+Dhawal1989 shows [ 9c, Ah ]
+nl.jackelson shows [ 2s, 2h ]
+nl.jackelson collected [ $0.25 ]
+
+
+#Game No : 933039313
+***** 888poker Hand History for Game 933039313 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:41:22
+Table Neuss 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: INDIGR ( $0.73 )
+Seat 4: serenityt ( $1.76 )
+Seat 6: Sergant36 ( $0.39 )
+Seat 7: nl.jackelson ( $1.40 )
+Seat 8: svssta ( $0.79 )
+Seat 10: Dhawal1989 ( $1.10 )
+nl.jackelson posts small blind [$0.01]
+svssta posts big blind [$0.02]
+serenityt posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 raises [$0.04]
+INDIGR folds
+serenityt calls [$0.02]
+Sergant36 calls [$0.04]
+nl.jackelson folds
+svssta calls [$0.02]
+** Dealing flop ** [ 4h, 2h, Qs ]
+svssta checks
+Dhawal1989 bets [$0.02]
+serenityt calls [$0.02]
+Sergant36 calls [$0.02]
+svssta calls [$0.02]
+** Dealing turn ** [ 8c ]
+svssta checks
+Dhawal1989 bets [$0.04]
+serenityt calls [$0.04]
+Sergant36 folds
+svssta calls [$0.04]
+** Dealing river ** [ Tc ]
+svssta checks
+Dhawal1989 checks
+serenityt checks
+** Summary **
+svssta shows [ 6c, 5c ]
+Dhawal1989 shows [ 7c, 7d ]
+serenityt mucks [ 4d, Ac ]
+Dhawal1989 collected [ $0.36 ]
+
+
+#Game No : 933039507
+***** 888poker Hand History for Game 933039507 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:42:14
+Table Neuss 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: INDIGR ( $0.73 )
+Seat 4: serenityt ( $1.66 )
+Seat 6: Sergant36 ( $0.33 )
+Seat 7: nl.jackelson ( $1.39 )
+Seat 8: svssta ( $0.69 )
+Seat 10: Dhawal1989 ( $1.36 )
+svssta posts small blind [$0.01]
+Dhawal1989 folds
+INDIGR posts big blind [$0.02]
+** Dealing down cards **
+serenityt calls [$0.02]
+Sergant36 folds
+nl.jackelson folds
+svssta calls [$0.01]
+INDIGR checks
+** Dealing flop ** [ 5c, Qh, 9h ]
+svssta bets [$0.02]
+INDIGR folds
+serenityt calls [$0.02]
+** Dealing turn ** [ Jd ]
+svssta bets [$0.04]
+serenityt calls [$0.04]
+** Dealing river ** [ 2s ]
+svssta bets [$0.04]
+serenityt calls [$0.04]
+** Summary **
+svssta shows [ 9d, Th ]
+serenityt shows [ Qd, Tc ]
+serenityt collected [ $0.25 ]
+
+
+#Game No : 933039650
+***** 888poker Hand History for Game 933039650 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:42:55
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 1: INDIGR ( $0.71 )
+Seat 4: serenityt ( $1.79 )
+Seat 6: Sergant36 ( $0.33 )
+Seat 7: nl.jackelson ( $1.39 )
+Seat 8: svssta ( $0.57 )
+INDIGR posts small blind [$0.01]
+serenityt posts big blind [$0.02]
+** Dealing down cards **
+Sergant36 calls [$0.02]
+nl.jackelson calls [$0.02]
+svssta raises [$0.04]
+INDIGR folds
+serenityt folds
+Sergant36 calls [$0.02]
+nl.jackelson calls [$0.02]
+** Dealing flop ** [ 3d, Qc, 8d ]
+Sergant36 checks
+nl.jackelson checks
+svssta bets [$0.02]
+Sergant36 folds
+nl.jackelson folds
+** Summary **
+svssta collected [ $0.15 ]
+
+
+#Game No : 933039783
+***** 888poker Hand History for Game 933039783 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:43:30
+Table Neuss 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: INDIGR ( $0.70 )
+Seat 4: serenityt ( $1.77 )
+Seat 6: Sergant36 ( $0.29 )
+Seat 7: nl.jackelson ( $1.35 )
+Seat 8: svssta ( $0.68 )
+Seat 9: floppy5050 ( $1.42 )
+serenityt posts small blind [$0.01]
+Sergant36 posts big blind [$0.02]
+floppy5050 posts dead blind [$0.01 + $0.02]
+** Dealing down cards **
+nl.jackelson raises [$0.04]
+svssta folds
+floppy5050 calls [$0.02]
+INDIGR folds
+serenityt folds
+Sergant36 calls [$0.02]
+** Dealing flop ** [ Jd, 6d, 7d ]
+Sergant36 checks
+nl.jackelson checks
+floppy5050 checks
+** Dealing turn ** [ Jc ]
+Sergant36 checks
+nl.jackelson bets [$0.04]
+floppy5050 folds
+Sergant36 folds
+** Summary **
+nl.jackelson collected [ $0.14 ]
+
+
+#Game No : 933041572
+***** 888poker Hand History for Game 933041572 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:51:00
+Table Neuss 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 1: INDIGR ( $0.54 )
+Seat 4: serenityt ( $1.62 )
+Seat 6: Sergant36 ( $0.23 )
+Seat 7: nl.jackelson ( $1.78 )
+Seat 8: svssta ( $0.91 )
+Seat 10: BeingBored ( $1.88 )
+INDIGR posts small blind [$0.01]
+serenityt posts big blind [$0.02]
+** Dealing down cards **
+Sergant36 calls [$0.02]
+nl.jackelson folds
+svssta calls [$0.02]
+BeingBored calls [$0.02]
+INDIGR folds
+serenityt checks
+** Dealing flop ** [ Jd, 6s, 5h ]
+serenityt checks
+Sergant36 checks
+svssta bets [$0.02]
+BeingBored folds
+serenityt folds
+Sergant36 calls [$0.02]
+** Dealing turn ** [ 9d ]
+Sergant36 checks
+svssta bets [$0.04]
+Sergant36 folds
+** Summary **
+svssta collected [ $0.13 ]
+
+
+#Game No : 933041776
+***** 888poker Hand History for Game 933041776 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:51:50
+Table Neuss 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: INDIGR ( $0.53 )
+Seat 4: serenityt ( $1.60 )
+Seat 6: Sergant36 ( $0.19 )
+Seat 7: nl.jackelson ( $1.78 )
+Seat 8: svssta ( $1 )
+Seat 10: BeingBored ( $1.86 )
+serenityt posts small blind [$0.01]
+Sergant36 posts big blind [$0.02]
+** Dealing down cards **
+nl.jackelson folds
+svssta folds
+BeingBored folds
+INDIGR folds
+serenityt calls [$0.01]
+Sergant36 checks
+** Dealing flop ** [ 5h, 7d, 9d ]
+serenityt bets [$0.02]
+Sergant36 calls [$0.02]
+** Dealing turn ** [ 4s ]
+serenityt bets [$0.04]
+Sergant36 calls [$0.04]
+** Dealing river ** [ 3c ]
+serenityt bets [$0.04]
+Sergant36 calls [$0.04]
+** Summary **
+serenityt shows [ 7c, 7h ]
+Sergant36 mucks [ 3s, 5d ]
+serenityt collected [ $0.23 ]
+
+
+#Game No : 933046958
+***** 888poker Hand History for Game 933046958 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:12:43
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: INDIGR ( $0.28 )
+Seat 2: Natewilson89 ( $3.12 )
+Seat 4: serenityt ( $1.79 )
+Seat 5: Sanja24r ( $1.06 )
+Seat 7: sallylincoln ( $1 )
+Seat 8: svssta ( $0.80 )
+INDIGR folds
+Natewilson89 posts small blind [$0.01]
+serenityt posts big blind [$0.02]
+sallylincoln posts big blind [$0.02]
+** Dealing down cards **
+Sanja24r folds
+sallylincoln checks
+svssta raises [$0.04]
+Natewilson89 folds
+serenityt calls [$0.02]
+sallylincoln calls [$0.02]
+** Dealing flop ** [ 2c, Jh, 3h ]
+serenityt checks
+sallylincoln checks
+svssta bets [$0.02]
+serenityt calls [$0.02]
+sallylincoln calls [$0.02]
+** Dealing turn ** [ 4h ]
+serenityt checks
+sallylincoln checks
+svssta bets [$0.04]
+serenityt folds
+sallylincoln calls [$0.04]
+** Dealing river ** [ Tc ]
+sallylincoln checks
+svssta checks
+** Summary **
+sallylincoln shows [ 7s, Kh ]
+svssta shows [ Ah, 4c ]
+svssta collected [ $0.26 ]
+
+
+#Game No : 933047161
+***** 888poker Hand History for Game 933047161 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:13:29
+Table Neuss 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $3.11 )
+Seat 4: serenityt ( $1.73 )
+Seat 5: Sanja24r ( $1.06 )
+Seat 7: sallylincoln ( $0.90 )
+Seat 8: svssta ( $0.96 )
+Seat 10: 7and2offsuit ( $3 )
+serenityt posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+7and2offsuit posts big blind [$0.02]
+** Dealing down cards **
+sallylincoln calls [$0.02]
+svssta raises [$0.04]
+7and2offsuit calls [$0.02]
+Natewilson89 folds
+serenityt calls [$0.03]
+Sanja24r folds
+sallylincoln calls [$0.02]
+** Dealing flop ** [ 6d, 3s, 3c ]
+serenityt checks
+sallylincoln checks
+svssta checks
+7and2offsuit checks
+** Dealing turn ** [ Kh ]
+serenityt checks
+sallylincoln checks
+svssta bets [$0.04]
+7and2offsuit calls [$0.04]
+serenityt folds
+sallylincoln calls [$0.04]
+** Dealing river ** [ Jh ]
+sallylincoln checks
+svssta bets [$0.04]
+7and2offsuit raises [$0.08]
+sallylincoln calls [$0.08]
+svssta calls [$0.04]
+** Summary **
+7and2offsuit shows [ 3d, 5d ]
+sallylincoln mucks [ Qd, Kc ]
+svssta mucks [ Tc, Kd ]
+7and2offsuit collected [ $0.52 ]
+
+
+#Game No : 933047462
+***** 888poker Hand History for Game 933047462 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:14:37
+Table Neuss 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $3.11 )
+Seat 4: serenityt ( $1.69 )
+Seat 5: Sanja24r ( $1.04 )
+Seat 7: sallylincoln ( $0.74 )
+Seat 8: svssta ( $0.80 )
+Seat 10: 7and2offsuit ( $3.36 )
+Sanja24r posts small blind [$0.01]
+sallylincoln posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+7and2offsuit folds
+Natewilson89 raises [$0.04]
+serenityt folds
+Sanja24r calls [$0.03]
+sallylincoln calls [$0.02]
+** Dealing flop ** [ 2s, Jc, 8s ]
+Sanja24r bets [$0.02]
+sallylincoln calls [$0.02]
+Natewilson89 raises [$0.04]
+Sanja24r calls [$0.02]
+sallylincoln calls [$0.02]
+** Dealing turn ** [ 9d ]
+Sanja24r checks
+sallylincoln bets [$0.04]
+Natewilson89 raises [$0.08]
+Sanja24r raises [$0.12]
+sallylincoln calls [$0.08]
+Natewilson89 calls [$0.04]
+** Dealing river ** [ 7c ]
+Sanja24r bets [$0.04]
+sallylincoln calls [$0.04]
+Natewilson89 raises [$0.08]
+Sanja24r raises [$0.08]
+sallylincoln folds
+Natewilson89 calls [$0.04]
+** Summary **
+Sanja24r shows [ Tc, Qc ]
+Natewilson89 mucks [ Js, As ]
+Sanja24r collected [ $0.84 ]
+
+
+#Game No : 933054755
+***** 888poker Hand History for Game 933054755 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:40:00
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: AAlex777 ( $1.13 )
+Seat 2: Natewilson89 ( $3.09 )
+Seat 5: Sanja24r ( $0.90 )
+Seat 8: svssta ( $0.48 )
+Seat 9: badshotboy ( $0.97 )
+Seat 10: rags ( $1.75 )
+badshotboy folds
+rags posts small blind [$0.01]
+AAlex777 posts big blind [$0.02]
+** Dealing down cards **
+Natewilson89 folds
+Sanja24r folds
+svssta raises [$0.04]
+rags folds
+AAlex777 calls [$0.02]
+** Dealing flop ** [ 2h, 9s, 7c ]
+AAlex777 bets [$0.02]
+svssta raises [$0.04]
+AAlex777 calls [$0.02]
+** Dealing turn ** [ Tc ]
+AAlex777 checks
+svssta bets [$0.04]
+AAlex777 calls [$0.04]
+** Dealing river ** [ 4s ]
+AAlex777 checks
+svssta bets [$0.04]
+AAlex777 calls [$0.04]
+** Summary **
+svssta shows [ Ad, 9d ]
+AAlex777 mucks [ Ah, 7h ]
+svssta collected [ $0.32 ]
+
+
+#Game No : 933054913
+***** 888poker Hand History for Game 933054913 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:40:34
+Table Neuss 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 1: AAlex777 ( $0.97 )
+Seat 2: Natewilson89 ( $3.09 )
+Seat 5: Sanja24r ( $0.90 )
+Seat 8: svssta ( $0.64 )
+Seat 9: badshotboy ( $0.97 )
+Seat 10: rags ( $1.74 )
+AAlex777 posts small blind [$0.01]
+Natewilson89 posts big blind [$0.02]
+** Dealing down cards **
+Sanja24r folds
+svssta calls [$0.02]
+badshotboy folds
+rags calls [$0.02]
+AAlex777 calls [$0.01]
+Natewilson89 checks
+** Dealing flop ** [ 5c, Ad, 6s ]
+AAlex777 bets [$0.02]
+Natewilson89 calls [$0.02]
+svssta calls [$0.02]
+rags folds
+** Dealing turn ** [ 9d ]
+AAlex777 checks
+Natewilson89 checks
+svssta bets [$0.04]
+AAlex777 calls [$0.04]
+Natewilson89 calls [$0.04]
+** Dealing river ** [ 8h ]
+AAlex777 checks
+Natewilson89 bets [$0.04]
+svssta calls [$0.04]
+AAlex777 folds
+** Summary **
+Natewilson89 shows [ 4c, 7d ]
+svssta mucks [ Qs, Qd ]
+Natewilson89 collected [ $0.33 ]
+
+
+#Game No : 933055309
+***** 888poker Hand History for Game 933055309 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:41:54
+Table Neuss 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: AAlex777 ( $0.89 )
+Seat 2: Natewilson89 ( $3.30 )
+Seat 5: Sanja24r ( $0.90 )
+Seat 8: svssta ( $0.52 )
+Seat 9: badshotboy ( $0.97 )
+Seat 10: rags ( $1.72 )
+Natewilson89 posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+badshotboy calls [$0.02]
+rags folds
+AAlex777 calls [$0.02]
+Natewilson89 folds
+Sanja24r checks
+** Dealing flop ** [ 5d, 4h, 4c ]
+Sanja24r bets [$0.02]
+badshotboy calls [$0.02]
+AAlex777 calls [$0.02]
+** Dealing turn ** [ 7d ]
+Sanja24r checks
+badshotboy checks
+AAlex777 checks
+** Dealing river ** [ 5s ]
+Sanja24r bets [$0.04]
+badshotboy folds
+AAlex777 calls [$0.04]
+** Summary **
+Sanja24r shows [ Kc, Jd ]
+AAlex777 shows [ 6s, Ah ]
+AAlex777 collected [ $0.20 ]
+
+
+#Game No : 933055616
+***** 888poker Hand History for Game 933055616 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:42:57
+Table Neuss 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: AAlex777 ( $1.01 )
+Seat 2: Natewilson89 ( $3.29 )
+Seat 5: Sanja24r ( $0.88 )
+Seat 8: svssta ( $0.52 )
+Seat 9: badshotboy ( $0.93 )
+Seat 10: rags ( $1.72 )
+Sanja24r posts small blind [$0.01]
+svssta posts big blind [$0.02]
+** Dealing down cards **
+badshotboy folds
+rags calls [$0.02]
+AAlex777 raises [$0.04]
+Natewilson89 calls [$0.04]
+Sanja24r folds
+svssta calls [$0.02]
+rags calls [$0.02]
+** Dealing flop ** [ Qh, Jh, 8d ]
+svssta checks
+rags checks
+AAlex777 bets [$0.02]
+Natewilson89 raises [$0.04]
+svssta folds
+rags calls [$0.04]
+AAlex777 calls [$0.02]
+** Dealing turn ** [ 7h ]
+rags bets [$0.04]
+AAlex777 calls [$0.04]
+Natewilson89 calls [$0.04]
+** Dealing river ** [ Js ]
+rags bets [$0.04]
+AAlex777 folds
+Natewilson89 calls [$0.04]
+** Summary **
+rags shows [ Kh, Th ]
+Natewilson89 mucks [ 8s, Ah ]
+rags collected [ $0.47 ]
+
+
+#Game No : 933055881
+***** 888poker Hand History for Game 933055881 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:43:48
+Table Neuss 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: AAlex777 ( $0.89 )
+Seat 2: Natewilson89 ( $3.13 )
+Seat 5: Sanja24r ( $0.88 )
+Seat 8: svssta ( $0.48 )
+Seat 9: badshotboy ( $0.93 )
+svssta posts small blind [$0.01]
+badshotboy posts big blind [$0.02]
+** Dealing down cards **
+AAlex777 folds
+Natewilson89 folds
+Sanja24r folds
+svssta raises [$0.03]
+badshotboy calls [$0.02]
+** Dealing flop ** [ 7d, 4h, Jh ]
+svssta checks
+badshotboy bets [$0.02]
+svssta calls [$0.02]
+** Dealing turn ** [ 6c ]
+svssta checks
+badshotboy bets [$0.04]
+svssta calls [$0.04]
+** Dealing river ** [ 5c ]
+svssta checks
+badshotboy checks
+** Summary **
+svssta shows [ 6d, Ac ]
+badshotboy shows [ Jd, Th ]
+badshotboy collected [ $0.19 ]
+
+
+#Game No : 933056099
+***** 888poker Hand History for Game 933056099 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:44:31
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 1: AAlex777 ( $0.89 )
+Seat 2: Natewilson89 ( $3.13 )
+Seat 5: Sanja24r ( $0.88 )
+Seat 8: svssta ( $0.38 )
+Seat 9: badshotboy ( $1.02 )
+badshotboy posts small blind [$0.01]
+AAlex777 posts big blind [$0.02]
+** Dealing down cards **
+Natewilson89 calls [$0.02]
+Sanja24r folds
+svssta folds
+badshotboy calls [$0.01]
+AAlex777 checks
+** Dealing flop ** [ 5h, Ac, Ad ]
+badshotboy checks
+AAlex777 checks
+Natewilson89 checks
+** Dealing turn ** [ 4d ]
+badshotboy checks
+AAlex777 checks
+Natewilson89 checks
+** Dealing river ** [ 8c ]
+badshotboy checks
+AAlex777 checks
+Natewilson89 checks
+** Summary **
+badshotboy shows [ 9d, 6d ]
+AAlex777 shows [ 7s, Jc ]
+Natewilson89 shows [ Tc, Qc ]
+Natewilson89 collected [ $0.06 ]
+
+
+#Game No : 933056797
+***** 888poker Hand History for Game 933056797 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:46:46
+Table Neuss 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: AAlex777 ( $0.97 )
+Seat 2: Natewilson89 ( $3.11 )
+Seat 5: Sanja24r ( $0.96 )
+Seat 6: marchelo05 ( $0.43 )
+Seat 8: svssta ( $0.38 )
+Seat 9: badshotboy ( $0.98 )
+Sanja24r folds
+marchelo05 posts small blind [$0.01]
+svssta posts big blind [$0.02]
+** Dealing down cards **
+badshotboy raises [$0.04]
+AAlex777 folds
+Natewilson89 calls [$0.04]
+marchelo05 calls [$0.03]
+svssta calls [$0.02]
+** Dealing flop ** [ 9c, 5c, Jh ]
+marchelo05 bets [$0.02]
+svssta calls [$0.02]
+badshotboy calls [$0.02]
+Natewilson89 folds
+** Dealing turn ** [ Ad ]
+marchelo05 checks
+svssta bets [$0.04]
+badshotboy raises [$0.08]
+marchelo05 folds
+svssta raises [$0.08]
+badshotboy calls [$0.04]
+** Dealing river ** [ 4d ]
+svssta bets [$0.04]
+badshotboy calls [$0.04]
+** Summary **
+svssta shows [ 9s, Ac ]
+badshotboy mucks [ Qd, As ]
+svssta collected [ $0.52 ]
+
+
+#Game No : 933057115
+***** 888poker Hand History for Game 933057115 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:47:50
+Table Neuss 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: AAlex777 ( $0.97 )
+Seat 2: Natewilson89 ( $3.07 )
+Seat 6: marchelo05 ( $0.37 )
+Seat 8: svssta ( $0.68 )
+Seat 9: badshotboy ( $0.76 )
+svssta posts small blind [$0.01]
+badshotboy posts big blind [$0.02]
+** Dealing down cards **
+AAlex777 folds
+Natewilson89 folds
+marchelo05 calls [$0.02]
+svssta raises [$0.03]
+badshotboy calls [$0.02]
+marchelo05 folds
+** Dealing flop ** [ 8s, Qh, 3h ]
+svssta checks
+badshotboy bets [$0.02]
+svssta calls [$0.02]
+** Dealing turn ** [ 8d ]
+svssta checks
+badshotboy bets [$0.04]
+svssta raises [$0.08]
+badshotboy calls [$0.04]
+** Dealing river ** [ Ad ]
+svssta bets [$0.04]
+badshotboy calls [$0.04]
+** Summary **
+svssta shows [ Ac, Qs ]
+badshotboy mucks [ Kd, 3c ]
+svssta collected [ $0.37 ]
+
+
+#Game No : 933057313
+***** 888poker Hand History for Game 933057313 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:48:32
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: AAlex777 ( $0.97 )
+Seat 2: Natewilson89 ( $3.07 )
+Seat 6: marchelo05 ( $0.35 )
+Seat 7: Daiver18 ( $1.50 )
+Seat 8: svssta ( $0.87 )
+Seat 9: badshotboy ( $0.58 )
+badshotboy posts small blind [$0.01]
+AAlex777 posts big blind [$0.02]
+Daiver18 posts big blind [$0.02]
+** Dealing down cards **
+Natewilson89 calls [$0.02]
+marchelo05 calls [$0.02]
+Daiver18 raises [$0.02]
+svssta folds
+badshotboy raises [$0.05]
+AAlex777 calls [$0.04]
+Natewilson89 calls [$0.04]
+marchelo05 calls [$0.04]
+Daiver18 calls [$0.02]
+** Dealing flop ** [ 3h, 2d, 5h ]
+badshotboy bets [$0.02]
+AAlex777 calls [$0.02]
+Natewilson89 calls [$0.02]
+marchelo05 raises [$0.04]
+Daiver18 calls [$0.04]
+badshotboy raises [$0.04]
+AAlex777 calls [$0.04]
+Natewilson89 calls [$0.04]
+marchelo05 calls [$0.02]
+Daiver18 calls [$0.02]
+** Dealing turn ** [ 8c ]
+badshotboy bets [$0.04]
+AAlex777 calls [$0.04]
+Natewilson89 calls [$0.04]
+marchelo05 calls [$0.04]
+Daiver18 calls [$0.04]
+** Dealing river ** [ Kd ]
+badshotboy checks
+AAlex777 checks
+Natewilson89 checks
+marchelo05 checks
+Daiver18 checks
+** Summary **
+badshotboy shows [ Qs, Qd ]
+AAlex777 mucks [ 6h, Ac ]
+Natewilson89 mucks [ 6s, Ad ]
+marchelo05 mucks [ 5d, Td ]
+Daiver18 mucks [ Tc, 7c ]
+badshotboy collected [ $0.76 ]
+
+
+#Game No : 933057667
+***** 888poker Hand History for Game 933057667 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:49:41
+Table Neuss 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: AAlex777 ( $0.81 )
+Seat 2: Natewilson89 ( $2.91 )
+Seat 6: marchelo05 ( $0.19 )
+Seat 7: Daiver18 ( $1.34 )
+Seat 8: svssta ( $0.87 )
+Seat 9: badshotboy ( $1.18 )
+AAlex777 posts small blind [$0.01]
+Natewilson89 posts big blind [$0.02]
+** Dealing down cards **
+marchelo05 folds
+Daiver18 calls [$0.02]
+svssta calls [$0.02]
+badshotboy calls [$0.02]
+AAlex777 calls [$0.01]
+Natewilson89 checks
+** Dealing flop ** [ Jc, 5s, Tc ]
+AAlex777 checks
+Natewilson89 checks
+Daiver18 checks
+svssta checks
+badshotboy checks
+** Dealing turn ** [ 5d ]
+AAlex777 bets [$0.04]
+Natewilson89 folds
+Daiver18 folds
+svssta folds
+badshotboy folds
+** Summary **
+AAlex777 collected [ $0.10 ]
+
+
+#Game No : 933058212
+***** 888poker Hand History for Game 933058212 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:51:25
+Table Neuss 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: AAlex777 ( $0.70 )
+Seat 2: Natewilson89 ( $2.88 )
+Seat 6: marchelo05 ( $0.49 )
+Seat 7: Daiver18 ( $1.28 )
+Seat 8: svssta ( $0.85 )
+Seat 9: badshotboy ( $1.16 )
+marchelo05 posts small blind [$0.01]
+Daiver18 posts big blind [$0.02]
+** Dealing down cards **
+svssta calls [$0.02]
+badshotboy folds
+AAlex777 folds
+Natewilson89 raises [$0.04]
+marchelo05 folds
+Daiver18 calls [$0.02]
+svssta calls [$0.02]
+** Dealing flop ** [ 8h, 9d, 4h ]
+Daiver18 bets [$0.02]
+svssta calls [$0.02]
+Natewilson89 folds
+** Dealing turn ** [ 8d ]
+Daiver18 bets [$0.04]
+svssta raises [$0.08]
+Daiver18 raises [$0.08]
+svssta calls [$0.04]
+** Dealing river ** [ Ks ]
+Daiver18 bets [$0.04]
+svssta folds
+** Summary **
+Daiver18 collected [ $0.39 ]
+
+
+#Game No : 933058443
+***** 888poker Hand History for Game 933058443 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:52:09
+Table Neuss 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $2.84 )
+Seat 3: BRULLIK14 ( $0.78 )
+Seat 6: marchelo05 ( $0.48 )
+Seat 7: Daiver18 ( $1.49 )
+Seat 8: svssta ( $0.67 )
+Seat 9: badshotboy ( $1.16 )
+Daiver18 posts small blind [$0.01]
+svssta posts big blind [$0.02]
+BRULLIK14 posts dead blind [$0.01 + $0.02]
+** Dealing down cards **
+badshotboy folds
+Natewilson89 calls [$0.02]
+BRULLIK14 checks
+marchelo05 folds
+Daiver18 calls [$0.01]
+svssta raises [$0.02]
+Natewilson89 calls [$0.02]
+BRULLIK14 calls [$0.02]
+Daiver18 calls [$0.02]
+** Dealing flop ** [ Ks, Qh, Qc ]
+Daiver18 bets [$0.02]
+svssta calls [$0.02]
+Natewilson89 folds
+BRULLIK14 folds
+** Dealing turn ** [ Td ]
+Daiver18 bets [$0.04]
+svssta calls [$0.04]
+** Dealing river ** [ 6d ]
+Daiver18 checks
+svssta checks
+** Summary **
+Daiver18 shows [ 3c, Jc ]
+svssta shows [ Ts, 9c ]
+svssta collected [ $0.28 ]
+
+
+#Game No : 933058729
+***** 888poker Hand History for Game 933058729 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 11:53:05
+Table Neuss 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $2.80 )
+Seat 3: BRULLIK14 ( $0.73 )
+Seat 6: marchelo05 ( $0.48 )
+Seat 7: Daiver18 ( $1.39 )
+Seat 8: svssta ( $0.85 )
+Seat 9: badshotboy ( $1.16 )
+svssta posts small blind [$0.01]
+badshotboy posts big blind [$0.02]
+** Dealing down cards **
+Natewilson89 calls [$0.02]
+BRULLIK14 calls [$0.02]
+marchelo05 calls [$0.02]
+Daiver18 calls [$0.02]
+svssta calls [$0.01]
+badshotboy checks
+** Dealing flop ** [ 4h, Qc, 2c ]
+svssta checks
+badshotboy checks
+Natewilson89 checks
+BRULLIK14 checks
+marchelo05 checks
+Daiver18 bets [$0.02]
+svssta folds
+badshotboy calls [$0.02]
+Natewilson89 calls [$0.02]
+BRULLIK14 calls [$0.02]
+marchelo05 folds
+** Dealing turn ** [ 7d ]
+badshotboy checks
+Natewilson89 checks
+BRULLIK14 checks
+Daiver18 bets [$0.04]
+badshotboy folds
+Natewilson89 folds
+BRULLIK14 folds
+** Summary **
+Daiver18 collected [ $0.19 ]
+
+
+#Game No : 933075890
+***** 888poker Hand History for Game 933075890 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 12:48:54
+Table Neuss 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $2.34 )
+Seat 4: Lavsun1 ( $0.92 )
+Seat 5: me_ian ( $1.02 )
+Seat 6: marchelo05 ( $0.37 )
+Seat 8: svssta ( $1.65 )
+Seat 10: Red_Rum50 ( $0.17 )
+Natewilson89 posts small blind [$0.01]
+Lavsun1 posts big blind [$0.02]
+** Dealing down cards **
+me_ian folds
+marchelo05 folds
+svssta folds
+Red_Rum50 folds
+Natewilson89 folds
+** Summary **
+Lavsun1 did not show his hand
+Lavsun1 collected [ $0.03 ]
+
+
+#Game No : 933076025
+***** 888poker Hand History for Game 933076025 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 12:49:22
+Table Neuss 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $2.33 )
+Seat 4: Lavsun1 ( $0.93 )
+Seat 5: me_ian ( $1.02 )
+Seat 6: marchelo05 ( $0.37 )
+Seat 8: svssta ( $1.65 )
+Seat 10: Red_Rum50 ( $0.17 )
+Lavsun1 posts small blind [$0.01]
+me_ian posts big blind [$0.02]
+** Dealing down cards **
+marchelo05 calls [$0.02]
+svssta folds
+Red_Rum50 calls [$0.02]
+Natewilson89 raises [$0.04]
+Lavsun1 calls [$0.03]
+me_ian folds
+marchelo05 calls [$0.02]
+Red_Rum50 calls [$0.02]
+** Dealing flop ** [ 9h, Jh, Qd ]
+Lavsun1 checks
+marchelo05 checks
+Red_Rum50 bets [$0.02]
+Natewilson89 raises [$0.04]
+Lavsun1 folds
+marchelo05 folds
+Red_Rum50 calls [$0.02]
+** Dealing turn ** [ 8h ]
+Red_Rum50 checks
+Natewilson89 bets [$0.04]
+Red_Rum50 calls [$0.04]
+** Dealing river ** [ 5s ]
+Red_Rum50 checks
+Natewilson89 checks
+** Summary **
+Red_Rum50 shows [ 9c, Qs ]
+Natewilson89 mucks [ Ad, Jd ]
+Red_Rum50 collected [ $0.33 ]
+
+
+#Game No : 933076361
+***** 888poker Hand History for Game 933076361 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 12:50:30
+Table Neuss 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 2: Natewilson89 ( $2.21 )
+Seat 4: Lavsun1 ( $0.89 )
+Seat 5: me_ian ( $1 )
+Seat 6: marchelo05 ( $0.33 )
+Seat 8: svssta ( $1.65 )
+Seat 10: Red_Rum50 ( $0.38 )
+me_ian posts small blind [$0.01]
+marchelo05 posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+Red_Rum50 folds
+Natewilson89 calls [$0.02]
+Lavsun1 folds
+me_ian folds
+marchelo05 checks
+** Dealing flop ** [ 5h, 2c, 8s ]
+marchelo05 bets [$0.02]
+Natewilson89 calls [$0.02]
+** Dealing turn ** [ 4h ]
+marchelo05 bets [$0.04]
+Natewilson89 calls [$0.04]
+** Dealing river ** [ Kc ]
+marchelo05 checks
+Natewilson89 checks
+** Summary **
+marchelo05 shows [ 6s, 5s ]
+Natewilson89 mucks [ 7s, 9s ]
+marchelo05 collected [ $0.17 ]
+
+
+#Game No : 933113998
+***** 888poker Hand History for Game 933113998 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 14:43:41
+Table Neuss 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 3: scquad ( $0.72 )
+Seat 6: poker_jameso ( $0.88 )
+Seat 7: VulekHector ( $1.77 )
+Seat 8: prima759 ( $0.17 )
+Seat 9: wologor ( $0.42 )
+Seat 10: Dhawal1989 ( $0.92 )
+poker_jameso posts small blind [$0.01]
+VulekHector posts big blind [$0.02]
+Dhawal1989 posts dead blind [$0.01 + $0.02]
+** Dealing down cards **
+prima759 folds
+wologor folds
+Dhawal1989 checks
+scquad raises [$0.04]
+poker_jameso calls [$0.03]
+VulekHector folds
+Dhawal1989 raises [$0.04]
+scquad calls [$0.02]
+poker_jameso calls [$0.02]
+** Dealing flop ** [ Js, Tc, Qs ]
+poker_jameso checks
+Dhawal1989 checks
+scquad bets [$0.02]
+poker_jameso calls [$0.02]
+Dhawal1989 folds
+** Dealing turn ** [ 9d ]
+poker_jameso bets [$0.04]
+scquad calls [$0.04]
+** Dealing river ** [ 5c ]
+poker_jameso checks
+scquad checks
+** Summary **
+poker_jameso shows [ As, 8c ]
+scquad mucks [ Ac, Td ]
+poker_jameso collected [ $0.32 ]
+
+
+#Game No : 933117211
+***** 888poker Hand History for Game 933117211 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 14:53:08
+Table Neuss 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 2: iBilbo ( $0.99 )
+Seat 3: scquad ( $0.50 )
+Seat 6: poker_jameso ( $1.37 )
+Seat 7: VulekHector ( $1.74 )
+Seat 8: prima759 ( $0.40 )
+Seat 9: wologor ( $0.62 )
+poker_jameso posts small blind [$0.01]
+VulekHector posts big blind [$0.02]
+** Dealing down cards **
+prima759 folds
+wologor folds
+iBilbo folds
+scquad raises [$0.04]
+poker_jameso calls [$0.03]
+VulekHector calls [$0.02]
+** Dealing flop ** [ Qs, Jh, 6s ]
+poker_jameso checks
+VulekHector checks
+scquad checks
+** Dealing turn ** [ Th ]
+poker_jameso checks
+VulekHector checks
+scquad checks
+** Dealing river ** [ As ]
+poker_jameso checks
+VulekHector checks
+scquad checks
+** Summary **
+poker_jameso shows [ 7s, 8c ]
+VulekHector shows [ 6d, 9d ]
+scquad shows [ 2d, Ad ]
+scquad collected [ $0.12 ]
+
+
+#Game No : 933117609
+***** 888poker Hand History for Game 933117609 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 14:54:21
+Table Neuss 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: iBilbo ( $0.99 )
+Seat 3: scquad ( $0.58 )
+Seat 6: poker_jameso ( $1.33 )
+Seat 7: VulekHector ( $1.70 )
+Seat 9: wologor ( $0.62 )
+VulekHector posts small blind [$0.01]
+wologor posts big blind [$0.02]
+** Dealing down cards **
+iBilbo folds
+scquad folds
+poker_jameso calls [$0.02]
+VulekHector calls [$0.01]
+wologor checks
+** Dealing flop ** [ 5s, 9d, Ad ]
+VulekHector checks
+wologor checks
+poker_jameso checks
+** Dealing turn ** [ 8h ]
+VulekHector bets [$0.04]
+wologor folds
+poker_jameso folds
+** Summary **
+VulekHector collected [ $0.06 ]
+
+
+#Game No : 933117763
+***** 888poker Hand History for Game 933117763 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 14:54:48
+Table Neuss 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 3: scquad ( $0.58 )
+Seat 6: poker_jameso ( $1.31 )
+Seat 7: VulekHector ( $1.74 )
+Seat 9: wologor ( $0.60 )
+wologor posts small blind [$0.01]
+scquad posts big blind [$0.02]
+** Dealing down cards **
+poker_jameso calls [$0.02]
+VulekHector folds
+wologor calls [$0.01]
+scquad checks
+** Dealing flop ** [ Kd, Ah, Ks ]
+wologor bets [$0.02]
+scquad calls [$0.02]
+poker_jameso calls [$0.02]
+** Dealing turn ** [ 5d ]
+wologor bets [$0.04]
+scquad calls [$0.04]
+poker_jameso folds
+** Dealing river ** [ 4h ]
+wologor bets [$0.04]
+scquad calls [$0.04]
+** Summary **
+wologor shows [ 9c, Kh ]
+scquad mucks [ 8d, As ]
+wologor collected [ $0.27 ]
+
+
+#Game No : 933117952
+***** 888poker Hand History for Game 933117952 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 14:55:24
+Table Neuss 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 3: scquad ( $0.46 )
+Seat 4: moremore45 ( $0.68 )
+Seat 6: poker_jameso ( $1.27 )
+Seat 7: VulekHector ( $1.74 )
+Seat 9: wologor ( $0.75 )
+scquad posts small blind [$0.01]
+moremore45 posts big blind [$0.02]
+** Dealing down cards **
+poker_jameso calls [$0.02]
+VulekHector folds
+wologor folds
+scquad raises [$0.03]
+moremore45 calls [$0.02]
+poker_jameso calls [$0.02]
+** Dealing flop ** [ Ac, 5d, Qc ]
+scquad bets [$0.02]
+moremore45 folds
+poker_jameso calls [$0.02]
+** Dealing turn ** [ Jh ]
+scquad bets [$0.04]
+poker_jameso calls [$0.04]
+** Dealing river ** [ 7d ]
+scquad checks
+poker_jameso checks
+** Summary **
+scquad shows [ Kd, Qd ]
+poker_jameso mucks [ 9c, Jc ]
+scquad collected [ $0.23 ]
+
+
+#Game No : 933119933
+***** 888poker Hand History for Game 933119933 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:01:20
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 4: moremore45 ( $0.27 )
+Seat 5: Sanja24r ( $0.95 )
+Seat 6: kuajus ( $0.18 )
+Seat 7: VulekHector ( $1.73 )
+Seat 10: BRULLIK14 ( $0.74 )
+BRULLIK14 posts small blind [$0.01]
+skvizi13 posts big blind [$0.02]
+** Dealing down cards **
+moremore45 raises [$0.04]
+Sanja24r folds
+kuajus calls [$0.04]
+VulekHector folds
+BRULLIK14 folds
+skvizi13 folds
+** Dealing flop ** [ Kc, 3c, 3h ]
+moremore45 bets [$0.02]
+kuajus calls [$0.02]
+** Dealing turn ** [ 4s ]
+moremore45 bets [$0.04]
+kuajus calls [$0.04]
+** Dealing river ** [ Qc ]
+moremore45 bets [$0.04]
+kuajus calls [$0.04]
+** Summary **
+moremore45 shows [ 5c, Ks ]
+kuajus mucks [ Ah, 6h ]
+moremore45 collected [ $0.30 ]
+
+
+#Game No : 933120171
+***** 888poker Hand History for Game 933120171 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:02:01
+Table Neuss 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 4: moremore45 ( $0.43 )
+Seat 5: Sanja24r ( $0.95 )
+Seat 6: kuajus ( $0.04 )
+Seat 7: VulekHector ( $1.73 )
+Seat 10: BRULLIK14 ( $0.73 )
+skvizi13 posts small blind [$0.01]
+moremore45 posts big blind [$0.02]
+** Dealing down cards **
+Sanja24r raises [$0.04]
+kuajus folds
+VulekHector folds
+BRULLIK14 calls [$0.04]
+skvizi13 folds
+moremore45 folds
+** Dealing flop ** [ 4s, Qh, 4h ]
+Sanja24r bets [$0.02]
+BRULLIK14 folds
+** Summary **
+Sanja24r collected [ $0.11 ]
+
+
+#Game No : 933120301
+***** 888poker Hand History for Game 933120301 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:02:26
+Table Neuss 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 4: moremore45 ( $0.41 )
+Seat 5: Sanja24r ( $1.02 )
+Seat 6: kuajus ( $0.04 )
+Seat 7: VulekHector ( $1.73 )
+Seat 10: BRULLIK14 ( $0.69 )
+moremore45 posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+kuajus raises [$0.04]
+VulekHector calls [$0.04]
+BRULLIK14 calls [$0.04]
+skvizi13 folds
+moremore45 calls [$0.03]
+Sanja24r calls [$0.02]
+** Dealing flop ** [ As, Th, Qs ]
+moremore45 checks
+Sanja24r bets [$0.02]
+VulekHector calls [$0.02]
+BRULLIK14 folds
+moremore45 folds
+** Dealing turn ** [ 2s ]
+Sanja24r bets [$0.04]
+VulekHector calls [$0.04]
+** Dealing river ** [ Jc ]
+Sanja24r checks
+VulekHector checks
+** Summary **
+Sanja24r shows [ 7h, Ac ]
+kuajus shows [ Ts, Kc ]
+VulekHector mucks [ 9d, Ad ]
+kuajus collected [ $0.19 ]
+VulekHector collected [ $0.06 ]
+Sanja24r collected [ $0.06 ]
+
+
+#Game No : 933120511
+***** 888poker Hand History for Game 933120511 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:03:04
+Table Neuss 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 4: moremore45 ( $0.37 )
+Seat 5: Sanja24r ( $0.98 )
+Seat 6: kuajus ( $0.19 )
+Seat 7: VulekHector ( $1.69 )
+Seat 10: BRULLIK14 ( $0.65 )
+Sanja24r posts small blind [$0.01]
+kuajus posts big blind [$0.02]
+** Dealing down cards **
+VulekHector calls [$0.02]
+BRULLIK14 calls [$0.02]
+skvizi13 folds
+moremore45 raises [$0.04]
+Sanja24r folds
+kuajus folds
+VulekHector calls [$0.02]
+BRULLIK14 calls [$0.02]
+** Dealing flop ** [ Js, Ah, 9h ]
+VulekHector checks
+BRULLIK14 checks
+moremore45 bets [$0.02]
+VulekHector calls [$0.02]
+BRULLIK14 calls [$0.02]
+** Dealing turn ** [ 4s ]
+VulekHector checks
+BRULLIK14 checks
+moremore45 bets [$0.04]
+VulekHector folds
+BRULLIK14 folds
+** Summary **
+moremore45 collected [ $0.20 ]
+
+
+#Game No : 933125085
+***** 888poker Hand History for Game 933125085 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:16:53
+Table Neuss 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 3: rcarleton ( $1.24 )
+Seat 5: Sanja24r ( $0.72 )
+Seat 7: VulekHector ( $1.90 )
+Seat 8: prokop66 ( $0.76 )
+Seat 10: PKolos ( $1.10 )
+VulekHector posts small blind [$0.01]
+prokop66 posts big blind [$0.02]
+** Dealing down cards **
+PKolos folds
+skvizi13 folds
+rcarleton calls [$0.02]
+Sanja24r folds
+VulekHector folds
+prokop66 checks
+** Dealing flop ** [ Td, Jc, 6h ]
+prokop66 checks
+rcarleton checks
+** Dealing turn ** [ As ]
+prokop66 checks
+rcarleton checks
+** Dealing river ** [ Th ]
+prokop66 bets [$0.04]
+rcarleton calls [$0.04]
+** Summary **
+prokop66 shows [ 7c, Ks ]
+rcarleton shows [ Kd, 9h ]
+rcarleton collected [ $0.06 ]
+prokop66 collected [ $0.07 ]
+
+
+#Game No : 933125229
+***** 888poker Hand History for Game 933125229 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:17:24
+Table Neuss 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 3: rcarleton ( $1.24 )
+Seat 5: Sanja24r ( $0.72 )
+Seat 7: VulekHector ( $1.89 )
+Seat 8: prokop66 ( $0.77 )
+Seat 10: PKolos ( $1.10 )
+prokop66 posts small blind [$0.01]
+PKolos posts big blind [$0.02]
+** Dealing down cards **
+skvizi13 folds
+rcarleton folds
+Sanja24r raises [$0.04]
+VulekHector folds
+prokop66 calls [$0.03]
+PKolos calls [$0.02]
+** Dealing flop ** [ Kd, Jh, 6s ]
+prokop66 checks
+PKolos bets [$0.02]
+Sanja24r raises [$0.04]
+prokop66 calls [$0.04]
+PKolos calls [$0.02]
+** Dealing turn ** [ 3s ]
+prokop66 checks
+PKolos checks
+Sanja24r checks
+** Dealing river ** [ Td ]
+prokop66 checks
+PKolos checks
+Sanja24r checks
+** Summary **
+prokop66 shows [ Kh, 5d ]
+PKolos shows [ 8d, Ks ]
+Sanja24r mucks [ Ah, Jd ]
+PKolos collected [ $0.23 ]
+
+
+#Game No : 933125487
+***** 888poker Hand History for Game 933125487 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:18:15
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 3: rcarleton ( $1.24 )
+Seat 5: Sanja24r ( $0.64 )
+Seat 7: VulekHector ( $1.89 )
+Seat 8: prokop66 ( $0.69 )
+Seat 10: PKolos ( $1.25 )
+PKolos posts small blind [$0.01]
+skvizi13 posts big blind [$0.02]
+** Dealing down cards **
+rcarleton calls [$0.02]
+Sanja24r folds
+VulekHector folds
+prokop66 calls [$0.02]
+PKolos calls [$0.01]
+skvizi13 checks
+** Dealing flop ** [ 6c, 7c, 2c ]
+PKolos checks
+skvizi13 checks
+rcarleton checks
+prokop66 checks
+** Dealing turn ** [ 4h ]
+PKolos checks
+skvizi13 checks
+rcarleton bets [$0.04]
+prokop66 calls [$0.04]
+PKolos folds
+skvizi13 folds
+** Dealing river ** [ 9d ]
+rcarleton bets [$0.04]
+prokop66 folds
+** Summary **
+rcarleton collected [ $0.16 ]
+
+
+#Game No : 933125817
+***** 888poker Hand History for Game 933125817 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:19:15
+Table Neuss 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 3: rcarleton ( $1.34 )
+Seat 5: Sanja24r ( $0.64 )
+Seat 7: VulekHector ( $1.89 )
+Seat 8: prokop66 ( $0.63 )
+Seat 10: PKolos ( $1.23 )
+skvizi13 posts small blind [$0.01]
+rcarleton posts big blind [$0.02]
+** Dealing down cards **
+Sanja24r raises [$0.04]
+VulekHector folds
+prokop66 calls [$0.04]
+PKolos folds
+skvizi13 folds
+rcarleton calls [$0.02]
+** Dealing flop ** [ 8s, 9c, Qc ]
+rcarleton checks
+Sanja24r bets [$0.02]
+prokop66 calls [$0.02]
+rcarleton calls [$0.02]
+** Dealing turn ** [ 7d ]
+rcarleton checks
+Sanja24r checks
+prokop66 checks
+** Dealing river ** [ Td ]
+rcarleton bets [$0.04]
+Sanja24r raises [$0.08]
+prokop66 calls [$0.08]
+rcarleton raises [$0.08]
+Sanja24r raises [$0.08]
+prokop66 calls [$0.08]
+rcarleton calls [$0.04]
+** Summary **
+Sanja24r shows [ Ac, Jh ]
+prokop66 mucks [ 6d, 7h ]
+rcarleton shows [ Qd, Jd ]
+Sanja24r collected [ $0.32 ]
+rcarleton collected [ $0.32 ]
+
+
+#Game No : 933126133
+***** 888poker Hand History for Game 933126133 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:20:13
+Table Neuss 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 3: rcarleton ( $1.44 )
+Seat 5: Sanja24r ( $0.74 )
+Seat 7: VulekHector ( $1.89 )
+Seat 8: prokop66 ( $0.41 )
+Seat 10: PKolos ( $1.23 )
+rcarleton posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+VulekHector calls [$0.02]
+prokop66 folds
+PKolos folds
+skvizi13 folds
+rcarleton folds
+Sanja24r checks
+** Dealing flop ** [ 9c, 3h, 2d ]
+Sanja24r checks
+VulekHector bets [$0.02]
+Sanja24r folds
+** Summary **
+VulekHector collected [ $0.05 ]
+
+
+#Game No : 933127514
+***** 888poker Hand History for Game 933127514 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:24:26
+Table Neuss 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: skvizi13 ( $0.48 )
+Seat 3: rcarleton ( $1.27 )
+Seat 4: zorzik ( $0.46 )
+Seat 5: Sanja24r ( $0.63 )
+Seat 7: VulekHector ( $1.86 )
+Seat 8: prokop66 ( $0.62 )
+skvizi13 posts small blind [$0.01]
+rcarleton posts big blind [$0.02]
+** Dealing down cards **
+zorzik calls [$0.02]
+Sanja24r folds
+VulekHector calls [$0.02]
+prokop66 calls [$0.02]
+skvizi13 calls [$0.01]
+rcarleton checks
+** Dealing flop ** [ Ks, 5h, 6s ]
+skvizi13 checks
+rcarleton checks
+zorzik checks
+VulekHector checks
+prokop66 checks
+** Dealing turn ** [ 5d ]
+skvizi13 checks
+rcarleton checks
+zorzik checks
+VulekHector checks
+prokop66 bets [$0.04]
+skvizi13 folds
+rcarleton calls [$0.04]
+zorzik folds
+VulekHector folds
+** Dealing river ** [ Jh ]
+rcarleton checks
+prokop66 checks
+** Summary **
+rcarleton shows [ 8h, 9h ]
+prokop66 shows [ 6c, Qd ]
+prokop66 collected [ $0.18 ]
+
+
+#Game No : 933137207
+***** 888poker Hand History for Game 933137207 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:54:16
+Table Neuss 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 3: pikasiki ( $0.71 )
+Seat 4: YevgenLT ( $1.81 )
+Seat 5: fluffybull14 ( $0.58 )
+Seat 6: fenixx210 ( $1.54 )
+Seat 7: VulekHector ( $1.70 )
+Seat 9: Pallos9 ( $1.51 )
+pikasiki posts small blind [$0.01]
+YevgenLT posts big blind [$0.02]
+** Dealing down cards **
+fluffybull14 folds
+fenixx210 folds
+VulekHector folds
+Pallos9 raises [$0.04]
+pikasiki calls [$0.03]
+YevgenLT folds
+** Dealing flop ** [ 2c, Jc, 8d ]
+pikasiki bets [$0.02]
+Pallos9 raises [$0.04]
+pikasiki raises [$0.04]
+Pallos9 raises [$0.04]
+pikasiki calls [$0.02]
+** Dealing turn ** [ 5d ]
+pikasiki checks
+Pallos9 bets [$0.04]
+pikasiki calls [$0.04]
+** Dealing river ** [ 4c ]
+pikasiki checks
+Pallos9 bets [$0.04]
+pikasiki calls [$0.04]
+** Summary **
+Pallos9 shows [ Js, 8c ]
+pikasiki shows [ Jd, 8s ]
+Pallos9 collected [ $0.20 ]
+pikasiki collected [ $0.20 ]
+
+
+#Game No : 933216064
+***** 888poker Hand History for Game 933216064 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 19:10:30
+Table Neuss 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 2: Vinardos ( $1.97 )
+Seat 3: INDIGR ( $0.77 )
+Seat 5: Omnious_KGB ( $0.53 )
+Seat 6: fenixx210 ( $3.37 )
+Seat 8: AkibulAkib ( $0.99 )
+Seat 10: fad86 ( $1.32 )
+AkibulAkib posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Vinardos calls [$0.02]
+INDIGR folds
+Omnious_KGB folds
+fenixx210 raises [$0.04]
+AkibulAkib calls [$0.03]
+fad86 calls [$0.02]
+Vinardos calls [$0.02]
+** Dealing flop ** [ Ad, 9s, 4s ]
+AkibulAkib checks
+fad86 checks
+Vinardos checks
+fenixx210 bets [$0.02]
+AkibulAkib calls [$0.02]
+fad86 calls [$0.02]
+Vinardos calls [$0.02]
+** Dealing turn ** [ 5h ]
+AkibulAkib checks
+fad86 checks
+Vinardos checks
+fenixx210 checks
+** Dealing river ** [ 3c ]
+AkibulAkib checks
+fad86 bets [$0.04]
+Vinardos folds
+fenixx210 folds
+AkibulAkib folds
+** Summary **
+fad86 collected [ $0.23 ]
+
+
+#Game No : 933261919
+***** 888poker Hand History for Game 933261919 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:54:15
+Table Neuss 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 4: BRULLIK14 ( $0.48 )
+Seat 5: Omnious_KGB ( $0.51 )
+Seat 6: fenixx210 ( $2.84 )
+Seat 7: motser ( $2.28 )
+Seat 9: mastry ( $0.37 )
+Seat 10: fad86 ( $2.52 )
+Omnious_KGB posts small blind [$0.01]
+fenixx210 posts big blind [$0.02]
+** Dealing down cards **
+motser folds
+mastry folds
+fad86 folds
+BRULLIK14 folds
+Omnious_KGB raises [$0.03]
+fenixx210 folds
+** Summary **
+Omnious_KGB collected [ $0.04 ]
+
+
+#Game No : 933262079
+***** 888poker Hand History for Game 933262079 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:54:37
+Table Neuss 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 4: BRULLIK14 ( $0.48 )
+Seat 5: Omnious_KGB ( $0.53 )
+Seat 6: fenixx210 ( $2.82 )
+Seat 9: mastry ( $0.37 )
+Seat 10: fad86 ( $2.52 )
+fenixx210 posts small blind [$0.01]
+mastry posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+BRULLIK14 calls [$0.02]
+Omnious_KGB folds
+fenixx210 folds
+mastry checks
+** Dealing flop ** [ Th, Qh, 6s ]
+mastry checks
+BRULLIK14 bets [$0.02]
+mastry folds
+** Summary **
+BRULLIK14 collected [ $0.05 ]
+
+
+#Game No : 933262263
+***** 888poker Hand History for Game 933262263 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:55:00
+Table Neuss 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 4: BRULLIK14 ( $0.51 )
+Seat 5: Omnious_KGB ( $0.53 )
+Seat 6: fenixx210 ( $2.81 )
+Seat 9: mastry ( $0.35 )
+Seat 10: fad86 ( $2.52 )
+mastry posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+BRULLIK14 folds
+Omnious_KGB raises [$0.04]
+fenixx210 folds
+mastry folds
+fad86 calls [$0.02]
+** Dealing flop ** [ Ks, 5d, Jh ]
+fad86 checks
+Omnious_KGB bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ Kh ]
+fad86 checks
+Omnious_KGB checks
+** Dealing river ** [ 2c ]
+fad86 bets [$0.04]
+Omnious_KGB raises [$0.08]
+fad86 folds
+** Summary **
+Omnious_KGB did not show his hand
+Omnious_KGB collected [ $0.20 ]
+
+
+#Game No : 933262605
+***** 888poker Hand History for Game 933262605 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:55:43
+Table Neuss 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 4: BRULLIK14 ( $0.51 )
+Seat 5: Omnious_KGB ( $0.63 )
+Seat 6: fenixx210 ( $2.81 )
+Seat 9: mastry ( $0.34 )
+Seat 10: fad86 ( $2.42 )
+fad86 posts small blind [$0.01]
+BRULLIK14 posts big blind [$0.02]
+** Dealing down cards **
+Omnious_KGB folds
+fenixx210 folds
+mastry folds
+fad86 calls [$0.01]
+BRULLIK14 checks
+** Dealing flop ** [ 8d, 9s, Ah ]
+fad86 checks
+BRULLIK14 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 4h ]
+fad86 checks
+BRULLIK14 bets [$0.04]
+fad86 raises [$0.08]
+BRULLIK14 calls [$0.04]
+** Dealing river ** [ Kd ]
+fad86 bets [$0.04]
+BRULLIK14 calls [$0.04]
+** Summary **
+fad86 shows [ 2s, As ]
+BRULLIK14 shows [ 9h, 4d ]
+BRULLIK14 collected [ $0.31 ]
+
+
+#Game No : 933262860
+***** 888poker Hand History for Game 933262860 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:56:18
+Table Neuss 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 4: BRULLIK14 ( $0.66 )
+Seat 5: Omnious_KGB ( $0.63 )
+Seat 6: fenixx210 ( $2.81 )
+Seat 9: mastry ( $0.34 )
+Seat 10: fad86 ( $2.26 )
+BRULLIK14 posts small blind [$0.01]
+Omnious_KGB folds
+fenixx210 posts big blind [$0.02]
+** Dealing down cards **
+mastry calls [$0.02]
+fad86 calls [$0.02]
+BRULLIK14 calls [$0.01]
+fenixx210 checks
+** Dealing flop ** [ 4s, Ah, 7c ]
+BRULLIK14 checks
+fenixx210 checks
+mastry checks
+fad86 checks
+** Dealing turn ** [ 7s ]
+BRULLIK14 checks
+fenixx210 checks
+mastry checks
+fad86 checks
+** Dealing river ** [ 2d ]
+BRULLIK14 checks
+fenixx210 checks
+mastry checks
+fad86 checks
+** Summary **
+BRULLIK14 shows [ 6s, 5c ]
+fenixx210 shows [ 5s, 4h ]
+mastry mucks [ Kc, 3c ]
+fad86 mucks [ 9c, Th ]
+fenixx210 collected [ $0.08 ]
+
+
+#Game No : 933263211
+***** 888poker Hand History for Game 933263211 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:57:07
+Table Neuss 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 4: BRULLIK14 ( $0.64 )
+Seat 6: fenixx210 ( $2.87 )
+Seat 10: fad86 ( $2.24 )
+fenixx210 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+BRULLIK14 calls [$0.02]
+fenixx210 folds
+fad86 raises [$0.02]
+BRULLIK14 calls [$0.02]
+** Dealing flop ** [ 3d, 5s, Ah ]
+fad86 bets [$0.02]
+BRULLIK14 calls [$0.02]
+** Dealing turn ** [ 9h ]
+fad86 bets [$0.04]
+BRULLIK14 calls [$0.04]
+** Dealing river ** [ 4s ]
+fad86 bets [$0.04]
+BRULLIK14 raises [$0.08]
+fad86 calls [$0.04]
+** Summary **
+BRULLIK14 shows [ Ad, 2c ]
+fad86 mucks [ 7c, 9s ]
+BRULLIK14 collected [ $0.36 ]
+
+

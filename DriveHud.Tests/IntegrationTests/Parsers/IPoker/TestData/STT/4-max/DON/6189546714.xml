@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189546714">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819277586</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>14</gamecount>  
+	          <startdate>2014-01-28 17:13:06</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>1,120</bets>  
+	          <wins>1,170</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>850</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>1</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.90</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5449375465">
+		 <general>
+		  <startdate>2014-01-28 17:13:06</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="800" dealer="1" win="0" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="800" dealer="0" win="560" bet="360" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kjojan7" type="1" sum="10" cards="[cards]"/><action no="2" player="vis007" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">X X</cards><action no="4" player="annebheag" type="23" sum="40" cards=""/><cards type="Pocket" player="Kjojan7">X X</cards><action no="5" player="Kjojan7" type="3" sum="30" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="6" player="vis007" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">CK D7</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 SA D5</cards><action no="9" player="annebheag" type="23" sum="40" cards=""/><action no="12" player="annebheag" type="3" sum="60" cards=""/><action no="7" player="Kjojan7" type="4" sum="0" cards=""/><action no="10" player="Kjojan7" type="23" sum="100" cards=""/><action no="8" player="vis007" type="5" sum="20" cards=""/><action no="11" player="vis007" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards><action no="14" player="annebheag" type="4" sum="0" cards=""/><action no="13" player="Kjojan7" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards><action no="16" player="annebheag" type="0" sum="0" cards=""/><action no="15" player="Kjojan7" type="5" sum="220" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449376009">
+		 <general>
+		  <startdate>2014-01-28 17:14:07</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="660" dealer="0" win="240" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="1,000" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="740" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="vis007" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">X X</cards><action no="3" player="annebheag" type="3" sum="20" cards=""/><cards type="Pocket" player="Kjojan7">X X</cards><action no="4" player="Kjojan7" type="3" sum="20" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="5" player="vis007" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">SA D10</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ CK C9</cards><action no="9" player="annebheag" type="4" sum="0" cards=""/><action no="10" player="Kjojan7" type="4" sum="0" cards=""/><action no="7" player="vis007" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="13" player="annebheag" type="5" sum="40" cards=""/><action no="14" player="Kjojan7" type="3" sum="40" cards=""/><action no="11" player="vis007" type="4" sum="0" cards=""/><action no="15" player="vis007" type="0" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="16" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards><action no="17" player="annebheag" type="5" sum="80" cards=""/><action no="18" player="Kjojan7" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449376666">
+		 <general>
+		  <startdate>2014-01-28 17:15:23</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="760" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="940" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="720" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="780" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="annebheag" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">X X</cards><cards type="Pocket" player="Kjojan7">X X</cards><action no="3" player="Kjojan7" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="4" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 C2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449376895">
+		 <general>
+		  <startdate>2014-01-28 17:15:48</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="775" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="940" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="720" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="765" dealer="1" win="105" bet="60" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="annebheag" type="1" sum="15" cards="[cards]"/><action no="2" player="Kjojan7" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">X X</cards><action no="5" player="annebheag" type="0" sum="0" cards=""/><cards type="Pocket" player="Kjojan7">X X</cards><action no="6" player="Kjojan7" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="3" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA H6</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449377092">
+		 <general>
+		  <startdate>2014-01-28 17:16:12</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="910" dealer="0" win="60" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="720" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="810" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kjojan7" type="1" sum="15" cards="[cards]"/><action no="2" player="vis007" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">X X</cards><action no="4" player="annebheag" type="0" sum="0" cards=""/><cards type="Pocket" player="Kjojan7">C4 CA</cards><action no="5" player="Kjojan7" type="3" sum="15" cards=""/><cards type="Pocket" player="vis007">C3 D5</cards><action no="6" player="vis007" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ H9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 C2 C7</cards><action no="7" player="Kjojan7" type="4" sum="0" cards=""/><action no="8" player="vis007" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards><action no="9" player="Kjojan7" type="4" sum="0" cards=""/><action no="10" player="vis007" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards><action no="11" player="Kjojan7" type="4" sum="0" cards=""/><action no="12" player="vis007" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449377505">
+		 <general>
+		  <startdate>2014-01-28 17:17:01</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="940" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="690" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="810" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="vis007" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">X X</cards><action no="3" player="annebheag" type="0" sum="0" cards=""/><cards type="Pocket" player="Kjojan7">X X</cards><action no="4" player="Kjojan7" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="5" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA S9</cards>
+	</round>
+	
+		</game><game gamecode="5449377668">
+		 <general>
+		  <startdate>2014-01-28 17:17:21</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="760" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="940" dealer="0" win="0" bet="675" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="675" dealer="1" win="1,435" bet="675" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="825" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="annebheag" type="15" sum="5" cards="[cards]"/><action no="6" player="annebheag" type="2" sum="50" cards="[cards]"/><action no="3" player="Kjojan7" type="15" sum="5" cards="[cards]"/><action no="4" player="vis007" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">X X</cards><action no="10" player="annebheag" type="0" sum="0" cards=""/><cards type="Pocket" player="Kjojan7">S5 C5</cards><action no="7" player="Kjojan7" type="23" sum="200" cards=""/><action no="11" player="Kjojan7" type="3" sum="470" cards=""/><cards type="Pocket" player="vis007">SA HA</cards><action no="8" player="vis007" type="23" sum="670" cards=""/><cards type="Pocket" player="WorstCard">S10 D10</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 C3 HK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S4</cards>
+	</round>
+	
+		</game><game gamecode="5449377943">
+		 <general>
+		  <startdate>2014-01-28 17:17:52</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="705" dealer="0" win="0" bet="265" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="265" dealer="0" win="540" bet="265" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="1,435" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="795" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="annebheag" type="15" sum="5" cards="[cards]"/><action no="5" player="annebheag" type="1" sum="25" cards="[cards]"/><action no="2" player="Kjojan7" type="15" sum="5" cards="[cards]"/><action no="6" player="Kjojan7" type="2" sum="50" cards="[cards]"/><action no="3" player="vis007" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">D8 HQ</cards><action no="9" player="annebheag" type="23" sum="200" cards=""/><action no="11" player="annebheag" type="3" sum="60" cards=""/><cards type="Pocket" player="Kjojan7">S6 HJ</cards><action no="10" player="Kjojan7" type="7" sum="210" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="7" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 D5</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 H5 HA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game><game gamecode="5449393744">
+		 <general>
+		  <startdate>2014-01-28 17:18:31</startdate>		  
+		  <players>
+		   <player seat="2" name="annebheag" chips="440" dealer="1" win="0" bet="440" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Kjojan7" chips="540" dealer="0" win="1,040" bet="540" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="1,430" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="790" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="annebheag" type="15" sum="5" cards="[cards]"/><action no="1" player="Kjojan7" type="15" sum="5" cards="[cards]"/><action no="5" player="Kjojan7" type="1" sum="25" cards="[cards]"/><action no="2" player="vis007" type="15" sum="5" cards="[cards]"/><action no="6" player="vis007" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="annebheag">C3 HK</cards><action no="8" player="annebheag" type="23" sum="435" cards=""/><cards type="Pocket" player="Kjojan7">CQ SK</cards><action no="9" player="Kjojan7" type="7" sum="510" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="10" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H7 H6</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA H2 D9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards>
+	</round>
+	
+		</game><game gamecode="5449394036">
+		 <general>
+		  <startdate>2014-01-28 17:19:05</startdate>		  
+		  <players>
+		   <player seat="4" name="Kjojan7" chips="1,040" dealer="1" win="1,065" bet="705" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="1,375" dealer="0" win="0" bet="305" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="785" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Kjojan7" type="15" sum="5" cards="[cards]"/><action no="1" player="vis007" type="15" sum="5" cards="[cards]"/><action no="4" player="vis007" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Kjojan7">X X</cards><action no="6" player="Kjojan7" type="3" sum="50" cards=""/><action no="9" player="Kjojan7" type="3" sum="100" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="7" player="vis007" type="23" sum="150" cards=""/><cards type="Pocket" player="WorstCard">HA H10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 H9 S2</cards><action no="11" player="Kjojan7" type="3" sum="100" cards=""/><action no="10" player="vis007" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="13" player="Kjojan7" type="23" sum="450" cards=""/><action no="12" player="vis007" type="5" sum="50" cards=""/><action no="14" player="vis007" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449394491">
+		 <general>
+		  <startdate>2014-01-28 17:19:59</startdate>		  
+		  <players>
+		   <player seat="4" name="Kjojan7" chips="1,400" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="1,070" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="730" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Kjojan7" type="15" sum="10" cards="[cards]"/><action no="5" player="Kjojan7" type="2" sum="100" cards="[cards]"/><action no="3" player="vis007" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Kjojan7">X X</cards><cards type="Pocket" player="vis007">X X</cards><action no="6" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H7 S5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449394687">
+		 <general>
+		  <startdate>2014-01-28 17:20:20</startdate>		  
+		  <players>
+		   <player seat="4" name="Kjojan7" chips="1,470" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="1,060" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="670" dealer="1" win="840" bet="670" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kjojan7" type="15" sum="10" cards="[cards]"/><action no="4" player="Kjojan7" type="1" sum="50" cards="[cards]"/><action no="2" player="vis007" type="15" sum="10" cards="[cards]"/><action no="5" player="vis007" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Kjojan7">X X</cards><action no="7" player="Kjojan7" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="8" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 HJ</cards><action no="6" player="WorstCard" type="23" sum="660" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449394835">
+		 <general>
+		  <startdate>2014-01-28 17:20:39</startdate>		  
+		  <players>
+		   <player seat="4" name="Kjojan7" chips="1,410" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="950" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="840" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Kjojan7" type="15" sum="10" cards="[cards]"/><action no="1" player="vis007" type="15" sum="10" cards="[cards]"/><action no="4" player="vis007" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Kjojan7">X X</cards><action no="6" player="Kjojan7" type="0" sum="0" cards=""/><cards type="Pocket" player="vis007">X X</cards><action no="7" player="vis007" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H7 SK</cards>
+	</round>
+	
+		</game><game gamecode="5449394986">
+		 <general>
+		  <startdate>2014-01-28 17:20:56</startdate>		  
+		  <players>
+		   <player seat="4" name="Kjojan7" chips="1,400" dealer="0" win="1,840" bet="890" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="vis007" chips="890" dealer="1" win="0" bet="890" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="910" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189546714"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Kjojan7" type="15" sum="10" cards="[cards]"/><action no="5" player="Kjojan7" type="2" sum="100" cards="[cards]"/><action no="3" player="vis007" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Kjojan7">HJ HA</cards><action no="8" player="Kjojan7" type="3" sum="780" cards=""/><cards type="Pocket" player="vis007">S4 CA</cards><action no="6" player="vis007" type="23" sum="880" cards=""/><cards type="Pocket" player="WorstCard">SA D2</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 H6 H5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game>  
+	</session>

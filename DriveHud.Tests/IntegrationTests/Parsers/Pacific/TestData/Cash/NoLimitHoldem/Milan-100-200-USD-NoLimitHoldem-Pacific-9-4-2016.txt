@@ -1,0 +1,1698 @@
+#Game No : 406680229
+***** 888poker Hand History for Game 406680229 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:32:59
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,000 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $1,000 )
+Seat 6: DoGood1313 ( $1,000 )
+Seat 9: Knight1306 ( $1,000 )
+GrossWinsss posts small blind [$100]
+Jao15 folds
+DoGood1313 folds
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN raises [$1,000]
+GrossWinsss calls [$900]
+Knight1306 calls [$800]
+** Dealing flop ** [ 4c, 8h, Tc ]
+** Dealing turn ** [ Js ]
+** Dealing river ** [ 5s ]
+** Summary **
+LOST_FAN shows [ Kc, 6c ]
+GrossWinsss shows [ Ad, 7s ]
+Knight1306 shows [ 9s, Qs ]
+Knight1306 collected [ $2,995 ]
+
+
+#Game No : 406680247
+***** 888poker Hand History for Game 406680247 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:33:41
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: LOST_FAN ( $1,000 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 9: Knight1306 ( $2,995 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss raises [$1,000]
+Knight1306 calls [$900]
+LOST_FAN folds
+** Dealing flop ** [ Qd, Jc, 5d ]
+** Dealing turn ** [ 4h ]
+** Dealing river ** [ 2h ]
+** Summary **
+GrossWinsss shows [ Kc, Qc ]
+Knight1306 shows [ Td, Ac ]
+GrossWinsss collected [ $2,195 ]
+
+
+#Game No : 406680256
+***** 888poker Hand History for Game 406680256 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:34:07
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: LOST_FAN ( $1,000 )
+Seat 2: GrossWinsss ( $2,195 )
+Seat 9: Knight1306 ( $1,995 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Knight1306 raises [$1,995]
+LOST_FAN folds
+GrossWinsss folds
+** Summary **
+Knight1306 collected [ $500 ]
+
+
+#Game No : 406680268
+***** 888poker Hand History for Game 406680268 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:34:28
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: LOST_FAN ( $1,000 )
+Seat 2: GrossWinsss ( $1,995 )
+Seat 4: Jao15 ( $1,000 )
+Seat 9: Knight1306 ( $2,295 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN raises [$1,000]
+GrossWinsss folds
+Jao15 folds
+** Summary **
+LOST_FAN collected [ $500 ]
+
+
+#Game No : 406680274
+***** 888poker Hand History for Game 406680274 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:34:50
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,300 )
+Seat 2: GrossWinsss ( $1,895 )
+Seat 4: Jao15 ( $800 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $2,295 )
+Jao15 posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 raises [$2,295]
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+888Dominik calls [$800]
+** Dealing flop ** [ Ah, Js, Qc ]
+** Dealing turn ** [ 5s ]
+** Dealing river ** [ 9h ]
+** Summary **
+888Dominik shows [ 9d, Kc ]
+Knight1306 shows [ Qd, Td ]
+Knight1306 collected [ $2,095 ]
+Knight1306 collected [ $1,295 ]
+
+
+#Game No : 406680296
+***** 888poker Hand History for Game 406680296 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:35:44
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,300 )
+Seat 2: GrossWinsss ( $1,895 )
+Seat 4: Jao15 ( $700 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $3,390 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+888Dominik raises [$900]
+Knight1306 folds
+** Summary **
+888Dominik collected [ $400 ]
+
+
+#Game No : 406680299
+***** 888poker Hand History for Game 406680299 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:36:00
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,300 )
+Seat 2: GrossWinsss ( $1,895 )
+Seat 4: Jao15 ( $700 )
+Seat 7: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $3,190 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss raises [$1,895]
+Jao15 folds
+888Dominik folds
+Knight1306 folds
+LOST_FAN calls [$1,100]
+** Dealing flop ** [ 7c, Ad, 7s ]
+** Dealing turn ** [ Kd ]
+** Dealing river ** [ Jc ]
+** Summary **
+LOST_FAN shows [ Ac, 9c ]
+GrossWinsss shows [ Td, As ]
+LOST_FAN collected [ $1,347.50 ]
+GrossWinsss collected [ $1,347.50 ]
+
+
+#Game No : 406680317
+***** 888poker Hand History for Game 406680317 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:36:32
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,347.50 )
+Seat 2: GrossWinsss ( $1,942.50 )
+Seat 4: Jao15 ( $700 )
+Seat 7: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $3,090 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 raises [$700]
+888Dominik folds
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss calls [$500]
+** Dealing flop ** [ 6h, 3h, Ad ]
+** Dealing turn ** [ 5s ]
+** Dealing river ** [ 6d ]
+** Summary **
+GrossWinsss shows [ 8s, 6s ]
+Jao15 shows [ 4d, 4s ]
+GrossWinsss collected [ $1,495 ]
+
+
+#Game No : 406680337
+***** 888poker Hand History for Game 406680337 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:37:15
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $1,247.50 )
+Seat 2: GrossWinsss ( $2,737.50 )
+Seat 4: Jao15 ( $1,000 )
+Seat 7: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $3,090 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 calls [$200]
+LOST_FAN raises [$1,247.50]
+GrossWinsss folds
+Jao15 folds
+Knight1306 calls [$1,047.50]
+** Dealing flop ** [ 6h, Td, Ad ]
+** Dealing turn ** [ Ah ]
+** Dealing river ** [ 4c ]
+** Summary **
+LOST_FAN shows [ Ac, 9s ]
+Knight1306 shows [ Ks, Kd ]
+LOST_FAN collected [ $2,790 ]
+
+
+#Game No : 406680351
+***** 888poker Hand History for Game 406680351 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:37:49
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,790 )
+Seat 2: GrossWinsss ( $2,637.50 )
+Seat 4: Jao15 ( $800 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $1,842.50 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss raises [$2,637.50]
+Jao15 folds
+Lohtamo folds
+** Summary **
+GrossWinsss did not show his hand
+GrossWinsss collected [ $500 ]
+
+
+#Game No : 406680363
+***** 888poker Hand History for Game 406680363 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:38:15
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,790 )
+Seat 2: GrossWinsss ( $2,937.50 )
+Seat 4: Jao15 ( $700 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $1,842.50 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss raises [$2,937.50]
+Jao15 calls [$700]
+Lohtamo folds
+888Dominik calls [$1,000]
+** Dealing flop ** [ Jd, 7h, Kd ]
+** Dealing turn ** [ 6c ]
+** Dealing river ** [ 7s ]
+** Summary **
+GrossWinsss shows [ 3d, 3h ]
+Jao15 shows [ Ah, 9s ]
+888Dominik shows [ 5h, As ]
+GrossWinsss collected [ $2,195 ]
+GrossWinsss collected [ $1,000 ]
+
+
+#Game No : 406680377
+***** 888poker Hand History for Game 406680377 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:38:48
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,790 )
+Seat 2: GrossWinsss ( $4,932.50 )
+Seat 4: Jao15 ( $1,000 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $1,842.50 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN raises [$400]
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $500 ]
+
+
+#Game No : 406680382
+***** 888poker Hand History for Game 406680382 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:38:58
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $4,932.50 )
+Seat 4: Jao15 ( $1,000 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $1,642.50 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss raises [$400]
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 raises [$1,542.50]
+LOST_FAN folds
+GrossWinsss calls [$1,242.50]
+** Dealing flop ** [ Ts, 9c, 2s ]
+** Dealing turn ** [ 3d ]
+** Dealing river ** [ 7d ]
+** Summary **
+GrossWinsss shows [ Kh, Qh ]
+Knight1306 shows [ 6h, 6s ]
+Knight1306 collected [ $3,480 ]
+
+
+#Game No : 406680396
+***** 888poker Hand History for Game 406680396 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:39:27
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,890 )
+Seat 2: GrossWinsss ( $3,290 )
+Seat 4: Jao15 ( $1,000 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $3,480 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+LOST_FAN raises [$360]
+GrossWinsss folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $400 ]
+
+
+#Game No : 406680404
+***** 888poker Hand History for Game 406680404 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:39:45
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $3,090 )
+Seat 4: Jao15 ( $1,000 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $3,480 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Lohtamo raises [$1,000]
+888Dominik folds
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 calls [$800]
+** Dealing flop ** [ Tc, 2d, Ah ]
+** Dealing turn ** [ 6d ]
+** Dealing river ** [ 8s ]
+** Summary **
+Jao15 shows [ Qh, Ac ]
+Lohtamo shows [ As, Kh ]
+Lohtamo collected [ $2,095 ]
+
+
+#Game No : 406680420
+***** 888poker Hand History for Game 406680420 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:40:12
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $2,990 )
+Seat 4: Jao15 ( $1,000 )
+Seat 6: Lohtamo ( $2,095 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $3,480 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 raises [$900]
+Lohtamo folds
+** Summary **
+Jao15 did not show his hand
+Jao15 collected [ $400 ]
+
+
+#Game No : 406680425
+***** 888poker Hand History for Game 406680425 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:40:32
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $2,990 )
+Seat 4: Jao15 ( $1,200 )
+Seat 6: Lohtamo ( $1,895 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $3,480 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 raises [$1,200]
+Lohtamo calls [$1,100]
+888Dominik folds
+** Dealing flop ** [ 7h, Jh, 6h ]
+** Dealing turn ** [ 5c ]
+** Dealing river ** [ 8d ]
+** Summary **
+Jao15 shows [ Ac, Ts ]
+Lohtamo shows [ Qs, Kd ]
+Jao15 collected [ $2,595 ]
+
+
+#Game No : 406680438
+***** 888poker Hand History for Game 406680438 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:40:58
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $2,990 )
+Seat 4: Jao15 ( $2,595 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,000 )
+Seat 9: Knight1306 ( $3,480 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik raises [$900]
+Knight1306 folds
+** Summary **
+888Dominik did not show his hand
+888Dominik collected [ $400 ]
+
+
+#Game No : 406680443
+***** 888poker Hand History for Game 406680443 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:41:14
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $2,990 )
+Seat 4: Jao15 ( $2,595 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $3,280 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 calls [$100]
+LOST_FAN raises [$300]
+Knight1306 calls [$300]
+** Dealing flop ** [ 2h, Ah, 6c ]
+Knight1306 bets [$400]
+LOST_FAN raises [$1,100]
+Knight1306 folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $1,795 ]
+
+
+#Game No : 406680461
+***** 888poker Hand History for Game 406680461 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:42:04
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,985 )
+Seat 2: GrossWinsss ( $2,990 )
+Seat 4: Jao15 ( $2,595 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $2,380 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+Lohtamo raises [$1,000]
+888Dominik folds
+Knight1306 raises [$2,380]
+LOST_FAN calls [$2,280]
+GrossWinsss folds
+** Dealing flop ** [ Jc, 8s, 5d ]
+** Dealing turn ** [ 2c ]
+** Dealing river ** [ 9d ]
+** Summary **
+LOST_FAN shows [ Tc, Ac ]
+Lohtamo shows [ 7c, 7s ]
+Knight1306 shows [ As, 8c ]
+Knight1306 collected [ $3,195 ]
+Knight1306 collected [ $2,760 ]
+
+
+#Game No : 406680481
+***** 888poker Hand History for Game 406680481 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:42:49
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,605 )
+Seat 2: GrossWinsss ( $2,790 )
+Seat 4: Jao15 ( $2,595 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $1,200 )
+Seat 9: Knight1306 ( $5,955 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+888Dominik raises [$1,200]
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 calls [$1,000]
+** Dealing flop ** [ Jc, As, Js ]
+** Dealing turn ** [ 8c ]
+** Dealing river ** [ 4d ]
+** Summary **
+Jao15 shows [ Ts, Qs ]
+888Dominik shows [ 8d, Ac ]
+888Dominik collected [ $2,495 ]
+
+
+#Game No : 406680496
+***** 888poker Hand History for Game 406680496 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:43:14
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,605 )
+Seat 2: GrossWinsss ( $2,690 )
+Seat 4: Jao15 ( $1,395 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $2,495 )
+Seat 9: Knight1306 ( $5,955 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 calls [$200]
+LOST_FAN folds
+GrossWinsss folds
+Jao15 raises [$1,295]
+Lohtamo calls [$800]
+Knight1306 folds
+** Dealing flop ** [ 9c, Td, 5s ]
+** Dealing turn ** [ 6s ]
+** Dealing river ** [ 7c ]
+** Summary **
+Jao15 shows [ 7d, Ah ]
+Lohtamo shows [ Tc, 8c ]
+Lohtamo collected [ $2,195 ]
+
+
+#Game No : 406680511
+***** 888poker Hand History for Game 406680511 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:43:51
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,605 )
+Seat 2: GrossWinsss ( $2,690 )
+Seat 4: Jao15 ( $395 )
+Seat 6: Lohtamo ( $2,195 )
+Seat 7: 888Dominik ( $2,495 )
+Seat 9: Knight1306 ( $5,755 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss raises [$2,690]
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+** Summary **
+GrossWinsss did not show his hand
+GrossWinsss collected [ $500 ]
+
+
+#Game No : 406680519
+***** 888poker Hand History for Game 406680519 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:44:11
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,605 )
+Seat 2: GrossWinsss ( $2,990 )
+Seat 4: Jao15 ( $395 )
+Seat 6: Lohtamo ( $2,095 )
+Seat 7: 888Dominik ( $2,295 )
+Seat 9: Knight1306 ( $5,755 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN raises [$1,605]
+GrossWinsss folds
+Jao15 calls [$395]
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+** Dealing flop ** [ 3s, 3c, Ks ]
+** Dealing turn ** [ Kd ]
+** Dealing river ** [ 3d ]
+** Summary **
+LOST_FAN shows [ Jd, As ]
+Jao15 shows [ Js, Qd ]
+LOST_FAN collected [ $542.50 ]
+Jao15 collected [ $542.50 ]
+
+
+#Game No : 406680533
+***** 888poker Hand History for Game 406680533 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:44:41
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,752.50 )
+Seat 2: GrossWinsss ( $2,990 )
+Seat 4: Jao15 ( $542.50 )
+Seat 6: Lohtamo ( $2,095 )
+Seat 7: 888Dominik ( $2,195 )
+Seat 9: Knight1306 ( $5,555 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $300 ]
+
+
+#Game No : 406680538
+***** 888poker Hand History for Game 406680538 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:44:53
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,852.50 )
+Seat 2: GrossWinsss ( $2,990 )
+Seat 4: Jao15 ( $542.50 )
+Seat 6: Lohtamo ( $2,095 )
+Seat 7: 888Dominik ( $2,195 )
+Seat 9: Knight1306 ( $5,455 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 raises [$542.50]
+Lohtamo folds
+888Dominik folds
+Knight1306 calls [$542.50]
+LOST_FAN folds
+GrossWinsss calls [$342.50]
+** Dealing flop ** [ 2s, 9s, Jh ]
+GrossWinsss checks
+Knight1306 bets [$400]
+GrossWinsss folds
+** Dealing turn ** [ Qc ]
+** Dealing river ** [ 5c ]
+** Summary **
+Jao15 shows [ 8s, 8h ]
+Knight1306 shows [ 9h, Kc ]
+Knight1306 collected [ $1,722.50 ]
+
+
+#Game No : 406680570
+***** 888poker Hand History for Game 406680570 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:46:10
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,752.50 )
+Seat 2: GrossWinsss ( $2,447.50 )
+Seat 4: Jao15 ( $1,000 )
+Seat 6: Lohtamo ( $2,095 )
+Seat 7: 888Dominik ( $2,195 )
+Seat 9: Knight1306 ( $6,635 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+888Dominik raises [$2,195]
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+** Summary **
+888Dominik did not show his hand
+888Dominik collected [ $500 ]
+
+
+#Game No : 406680579
+***** 888poker Hand History for Game 406680579 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:46:31
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,752.50 )
+Seat 2: GrossWinsss ( $2,347.50 )
+Seat 4: Jao15 ( $800 )
+Seat 6: Lohtamo ( $2,095 )
+Seat 7: 888Dominik ( $2,495 )
+Seat 9: Knight1306 ( $6,635 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 raises [$700]
+Lohtamo calls [$600]
+** Dealing flop ** [ 2h, 9h, 2c ]
+** Dealing turn ** [ 5c ]
+** Dealing river ** [ 5d ]
+** Summary **
+Jao15 shows [ Td, Th ]
+Lohtamo shows [ Ks, 8h ]
+Jao15 collected [ $1,595 ]
+
+
+#Game No : 406680595
+***** 888poker Hand History for Game 406680595 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:47:05
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,752.50 )
+Seat 2: GrossWinsss ( $2,347.50 )
+Seat 4: Jao15 ( $1,595 )
+Seat 6: Lohtamo ( $1,295 )
+Seat 7: 888Dominik ( $2,495 )
+Seat 9: Knight1306 ( $6,635 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 raises [$1,595]
+Lohtamo folds
+888Dominik folds
+** Summary **
+Jao15 did not show his hand
+Jao15 collected [ $500 ]
+
+
+#Game No : 406680607
+***** 888poker Hand History for Game 406680607 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:47:33
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,752.50 )
+Seat 2: GrossWinsss ( $2,347.50 )
+Seat 4: Jao15 ( $1,895 )
+Seat 6: Lohtamo ( $1,195 )
+Seat 7: 888Dominik ( $2,295 )
+Seat 9: Knight1306 ( $6,635 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+Lohtamo raises [$1,195]
+888Dominik raises [$2,195]
+Knight1306 folds
+** Dealing flop ** [ 8h, Ac, 4h ]
+** Dealing turn ** [ Js ]
+** Dealing river ** [ 6s ]
+** Summary **
+Lohtamo shows [ 2d, 2c ]
+888Dominik shows [ Td, Kd ]
+Lohtamo collected [ $2,585 ]
+
+
+#Game No : 406680628
+***** 888poker Hand History for Game 406680628 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:48:09
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,752.50 )
+Seat 2: GrossWinsss ( $2,347.50 )
+Seat 4: Jao15 ( $1,895 )
+Seat 6: Lohtamo ( $2,585 )
+Seat 7: 888Dominik ( $1,100 )
+Seat 9: Knight1306 ( $6,435 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik raises [$1,100]
+Knight1306 folds
+LOST_FAN calls [$900]
+** Dealing flop ** [ Jh, 6h, 8h ]
+** Dealing turn ** [ Kc ]
+** Dealing river ** [ 3h ]
+** Summary **
+LOST_FAN shows [ Td, 9d ]
+888Dominik shows [ Ad, Ks ]
+888Dominik collected [ $2,295 ]
+
+
+#Game No : 406680638
+***** 888poker Hand History for Game 406680638 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:48:34
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,000 )
+Seat 2: GrossWinsss ( $2,347.50 )
+Seat 4: Jao15 ( $1,895 )
+Seat 6: Lohtamo ( $2,585 )
+Seat 7: 888Dominik ( $2,295 )
+Seat 9: Knight1306 ( $6,335 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 calls [$200]
+LOST_FAN folds
+GrossWinsss checks
+** Dealing flop ** [ 6h, Jh, 6s ]
+GrossWinsss checks
+Knight1306 checks
+** Dealing turn ** [ Qc ]
+GrossWinsss bets [$200]
+Knight1306 calls [$200]
+** Dealing river ** [ 3c ]
+GrossWinsss bets [$639.49]
+Knight1306 calls [$639.49]
+** Summary **
+GrossWinsss shows [ 5d, 4s ]
+Knight1306 shows [ Tc, Qs ]
+Knight1306 collected [ $2,173.98 ]
+
+
+#Game No : 406680680
+***** 888poker Hand History for Game 406680680 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:50:22
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,000 )
+Seat 2: GrossWinsss ( $1,308.01 )
+Seat 4: Jao15 ( $1,895 )
+Seat 6: Lohtamo ( $2,585 )
+Seat 7: 888Dominik ( $2,295 )
+Seat 9: Knight1306 ( $7,469.49 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+888Dominik folds
+Knight1306 calls [$200]
+LOST_FAN folds
+GrossWinsss raises [$1,208.01]
+Jao15 folds
+Knight1306 calls [$1,108.01]
+** Dealing flop ** [ 9s, Jd, 4d ]
+** Dealing turn ** [ Tc ]
+** Dealing river ** [ 7s ]
+** Summary **
+GrossWinsss shows [ Qc, Qd ]
+Knight1306 shows [ Ts, Qs ]
+GrossWinsss collected [ $2,811.02 ]
+
+
+#Game No : 406680704
+***** 888poker Hand History for Game 406680704 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:51:10
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,000 )
+Seat 2: GrossWinsss ( $2,811.02 )
+Seat 4: Jao15 ( $1,695 )
+Seat 6: Lohtamo ( $2,585 )
+Seat 7: 888Dominik ( $2,295 )
+Seat 9: Knight1306 ( $6,161.48 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 calls [$200]
+LOST_FAN raises [$1,000]
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+Knight1306 calls [$800]
+** Dealing flop ** [ Tc, 3d, Js ]
+** Dealing turn ** [ Qc ]
+** Dealing river ** [ 4d ]
+** Summary **
+LOST_FAN shows [ Kh, Qs ]
+Knight1306 shows [ 6d, Ad ]
+LOST_FAN collected [ $2,295 ]
+
+
+#Game No : 406680715
+***** 888poker Hand History for Game 406680715 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:51:46
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $2,811.02 )
+Seat 4: Jao15 ( $1,595 )
+Seat 6: Lohtamo ( $2,385 )
+Seat 7: 888Dominik ( $2,295 )
+Seat 9: Knight1306 ( $5,161.48 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss raises [$2,811.02]
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+** Summary **
+GrossWinsss did not show his hand
+GrossWinsss collected [ $500 ]
+
+
+#Game No : 406680726
+***** 888poker Hand History for Game 406680726 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:52:06
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $3,111.02 )
+Seat 4: Jao15 ( $1,595 )
+Seat 6: Lohtamo ( $2,285 )
+Seat 7: 888Dominik ( $2,095 )
+Seat 9: Knight1306 ( $5,161.48 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik calls [$100]
+Knight1306 checks
+** Dealing flop ** [ 4c, 7c, Ts ]
+888Dominik checks
+Knight1306 bets [$200]
+888Dominik calls [$200]
+** Dealing turn ** [ Qs ]
+888Dominik checks
+Knight1306 checks
+** Dealing river ** [ Ks ]
+888Dominik checks
+Knight1306 checks
+** Summary **
+888Dominik shows [ 6h, 4h ]
+Knight1306 shows [ 2h, Tc ]
+Knight1306 collected [ $795 ]
+
+
+#Game No : 406680740
+***** 888poker Hand History for Game 406680740 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:52:43
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $3,111.02 )
+Seat 4: Jao15 ( $1,595 )
+Seat 6: Lohtamo ( $2,285 )
+Seat 7: 888Dominik ( $1,695 )
+Seat 9: Knight1306 ( $5,556.48 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik raises [$1,695]
+Knight1306 folds
+LOST_FAN folds
+** Summary **
+888Dominik did not show his hand
+888Dominik collected [ $500 ]
+
+
+#Game No : 406680749
+***** 888poker Hand History for Game 406680749 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:53:03
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,095 )
+Seat 2: GrossWinsss ( $3,111.02 )
+Seat 4: Jao15 ( $1,595 )
+Seat 6: Lohtamo ( $2,285 )
+Seat 7: 888Dominik ( $1,995 )
+Seat 9: Knight1306 ( $5,456.48 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+LOST_FAN raises [$1,995]
+GrossWinsss folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $400 ]
+
+
+#Game No : 406680757
+***** 888poker Hand History for Game 406680757 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:53:22
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $2,911.02 )
+Seat 4: Jao15 ( $1,595 )
+Seat 6: Lohtamo ( $2,285 )
+Seat 7: 888Dominik ( $1,995 )
+Seat 9: Knight1306 ( $5,456.48 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+LOST_FAN raises [$400]
+GrossWinsss folds
+Jao15 folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $500 ]
+
+
+#Game No : 406680776
+***** 888poker Hand History for Game 406680776 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:53:53
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,595 )
+Seat 2: GrossWinsss ( $2,811.02 )
+Seat 4: Jao15 ( $1,395 )
+Seat 6: Lohtamo ( $2,285 )
+Seat 7: 888Dominik ( $1,995 )
+Seat 9: Knight1306 ( $5,456.48 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik raises [$400]
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss raises [$2,811.02]
+Jao15 folds
+Lohtamo folds
+888Dominik calls [$1,595]
+** Dealing flop ** [ 6h, 6c, 4h ]
+** Dealing turn ** [ Kc ]
+** Dealing river ** [ 5h ]
+** Summary **
+GrossWinsss shows [ 7c, 7s ]
+888Dominik shows [ Kd, Kh ]
+888Dominik collected [ $4,285 ]
+
+
+#Game No : 406680785
+***** 888poker Hand History for Game 406680785 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:54:24
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,595 )
+Seat 2: GrossWinsss ( $816.02 )
+Seat 4: Jao15 ( $1,295 )
+Seat 6: Lohtamo ( $2,085 )
+Seat 7: 888Dominik ( $4,285 )
+Seat 9: Knight1306 ( $5,456.48 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 raises [$400]
+LOST_FAN folds
+GrossWinsss raises [$816.02]
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 calls [$416.02]
+** Dealing flop ** [ 9h, 5c, 3s ]
+** Dealing turn ** [ 2d ]
+** Dealing river ** [ Qc ]
+** Summary **
+GrossWinsss shows [ 6d, 6h ]
+Knight1306 shows [ Qh, Js ]
+Knight1306 collected [ $1,927.04 ]
+
+
+#Game No : 406680809
+***** 888poker Hand History for Game 406680809 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:55:20
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,595 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $1,295 )
+Seat 6: Lohtamo ( $1,985 )
+Seat 7: 888Dominik ( $4,085 )
+Seat 9: Knight1306 ( $6,567.50 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss folds
+Jao15 raises [$1,295]
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+** Summary **
+Jao15 did not show his hand
+Jao15 collected [ $500 ]
+
+
+#Game No : 406680827
+***** 888poker Hand History for Game 406680827 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:55:57
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,595 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $1,595 )
+Seat 6: Lohtamo ( $1,985 )
+Seat 7: 888Dominik ( $3,985 )
+Seat 9: Knight1306 ( $6,367.50 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss folds
+Jao15 raises [$1,595]
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+LOST_FAN folds
+** Summary **
+Jao15 did not show his hand
+Jao15 collected [ $500 ]
+
+
+#Game No : 406680840
+***** 888poker Hand History for Game 406680840 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:56:37
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,395 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $1,895 )
+Seat 6: Lohtamo ( $1,985 )
+Seat 7: 888Dominik ( $3,985 )
+Seat 9: Knight1306 ( $6,267.50 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+Lohtamo folds
+888Dominik raises [$400]
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+** Summary **
+888Dominik did not show his hand
+888Dominik collected [ $500 ]
+
+
+#Game No : 406680847
+***** 888poker Hand History for Game 406680847 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:56:53
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $800 )
+Seat 4: Jao15 ( $1,895 )
+Seat 6: Lohtamo ( $1,985 )
+Seat 7: 888Dominik ( $4,285 )
+Seat 9: Knight1306 ( $6,267.50 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Lohtamo raises [$1,985]
+888Dominik folds
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 calls [$1,695]
+** Dealing flop ** [ 3c, Qs, 9d ]
+** Dealing turn ** [ 9s ]
+** Dealing river ** [ Tc ]
+** Summary **
+Jao15 shows [ Kd, Ad ]
+Lohtamo shows [ Ah, 8h ]
+Jao15 collected [ $3,885 ]
+
+
+#Game No : 406680864
+***** 888poker Hand History for Game 406680864 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:57:32
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $700 )
+Seat 4: Jao15 ( $3,885 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,285 )
+Seat 9: Knight1306 ( $6,267.50 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 raises [$400]
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+** Summary **
+Knight1306 did not show his hand
+Knight1306 collected [ $500 ]
+
+
+#Game No : 406680869
+***** 888poker Hand History for Game 406680869 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:57:53
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $700 )
+Seat 4: Jao15 ( $3,785 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,285 )
+Seat 9: Knight1306 ( $6,567.50 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss raises [$700]
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+** Summary **
+GrossWinsss did not show his hand
+GrossWinsss collected [ $500 ]
+
+
+#Game No : 406680881
+***** 888poker Hand History for Game 406680881 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:58:19
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $3,785 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,085 )
+Seat 9: Knight1306 ( $6,567.50 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik calls [$100]
+Knight1306 checks
+** Dealing flop ** [ Ac, Jc, 3s ]
+888Dominik bets [$200]
+Knight1306 calls [$200]
+** Dealing turn ** [ 3d ]
+888Dominik checks
+Knight1306 bets [$400]
+888Dominik folds
+** Summary **
+Knight1306 did not show his hand
+Knight1306 collected [ $795 ]
+
+
+#Game No : 406680897
+***** 888poker Hand History for Game 406680897 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:58:59
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $2,295 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $3,785 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $3,685 )
+Seat 9: Knight1306 ( $6,962.50 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik raises [$400]
+Knight1306 folds
+LOST_FAN calls [$200]
+** Dealing flop ** [ 4c, Ks, 7h ]
+LOST_FAN checks
+888Dominik bets [$300]
+LOST_FAN folds
+** Summary **
+888Dominik did not show his hand
+888Dominik collected [ $895 ]
+
+
+#Game No : 406680910
+***** 888poker Hand History for Game 406680910 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 06:59:32
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $1,895 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $3,785 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,180 )
+Seat 9: Knight1306 ( $6,862.50 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+Lohtamo raises [$1,000]
+888Dominik folds
+Knight1306 folds
+LOST_FAN raises [$1,795]
+GrossWinsss folds
+** Dealing flop ** [ 6d, Kh, Kd ]
+** Dealing turn ** [ 2h ]
+** Dealing river ** [ 7h ]
+** Summary **
+LOST_FAN shows [ Jh, Ah ]
+Lohtamo shows [ Ad, 9s ]
+LOST_FAN collected [ $2,195 ]
+
+
+#Game No : 406680926
+***** 888poker Hand History for Game 406680926 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:00:12
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $800 )
+Seat 4: Jao15 ( $3,785 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,180 )
+Seat 9: Knight1306 ( $6,862.50 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+888Dominik raises [$400]
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+** Summary **
+888Dominik did not show his hand
+888Dominik collected [ $500 ]
+
+
+#Game No : 406680949
+***** 888poker Hand History for Game 406680949 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:00:56
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $700 )
+Seat 4: Jao15 ( $3,585 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,480 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+LOST_FAN folds
+GrossWinsss folds
+Jao15 folds
+** Summary **
+Lohtamo collected [ $300 ]
+
+
+#Game No : 406680956
+***** 888poker Hand History for Game 406680956 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:01:16
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $700 )
+Seat 4: Jao15 ( $3,485 )
+Seat 6: Lohtamo ( $1,100 )
+Seat 7: 888Dominik ( $4,480 )
+Seat 9: Knight1306 ( $6,862.50 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss raises [$700]
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+** Summary **
+GrossWinsss did not show his hand
+GrossWinsss collected [ $500 ]
+
+
+#Game No : 406680967
+***** 888poker Hand History for Game 406680967 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:01:36
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,090 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $3,485 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,280 )
+Seat 9: Knight1306 ( $6,862.50 )
+888Dominik posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+LOST_FAN raises [$400]
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $500 ]
+
+
+#Game No : 406680972
+***** 888poker Hand History for Game 406680972 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:01:52
+Table Milan 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $3,390 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 4: Jao15 ( $3,485 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,180 )
+Seat 9: Knight1306 ( $6,662.50 )
+Knight1306 posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+GrossWinsss folds
+Jao15 raises [$400]
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+LOST_FAN calls [$200]
+** Dealing flop ** [ 7s, Jh, 3d ]
+LOST_FAN checks
+Jao15 bets [$355]
+LOST_FAN calls [$355]
+** Dealing turn ** [ 4d ]
+LOST_FAN checks
+Jao15 bets [$800]
+LOST_FAN calls [$800]
+** Dealing river ** [ Qc ]
+LOST_FAN checks
+Jao15 bets [$1,930]
+LOST_FAN calls [$1,835]
+** Summary **
+LOST_FAN shows [ 5s, 6d ]
+Jao15 shows [ Ac, 5c ]
+LOST_FAN collected [ $6,875 ]
+
+
+#Game No : 406681026
+***** 888poker Hand History for Game 406681026 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:03:38
+Table Milan 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $6,875 )
+Seat 2: GrossWinsss ( $1,000 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,180 )
+Seat 9: Knight1306 ( $6,562.50 )
+LOST_FAN posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+888Dominik folds
+Knight1306 raises [$400]
+LOST_FAN folds
+GrossWinsss calls [$200]
+** Dealing flop ** [ Ts, Js, 4h ]
+GrossWinsss checks
+Knight1306 checks
+** Dealing turn ** [ 7d ]
+GrossWinsss checks
+Knight1306 checks
+** Dealing river ** [ 5d ]
+GrossWinsss bets [$600]
+Knight1306 folds
+** Summary **
+GrossWinsss collected [ $895 ]
+
+
+#Game No : 406681058
+***** 888poker Hand History for Game 406681058 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:04:36
+Table Milan 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $6,775 )
+Seat 2: GrossWinsss ( $1,495 )
+Seat 4: Jao15 ( $1,000 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,180 )
+Seat 9: Knight1306 ( $6,162.50 )
+GrossWinsss posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+888Dominik folds
+Knight1306 folds
+LOST_FAN raises [$6,775]
+GrossWinsss calls [$1,395]
+Jao15 folds
+** Dealing flop ** [ 4h, 7c, As ]
+** Dealing turn ** [ 4c ]
+** Dealing river ** [ 8s ]
+** Summary **
+LOST_FAN shows [ Ks, Jh ]
+GrossWinsss shows [ 7s, Ah ]
+GrossWinsss collected [ $3,185 ]
+
+
+#Game No : 406681071
+***** 888poker Hand History for Game 406681071 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:05:09
+Table Milan 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $5,280 )
+Seat 2: GrossWinsss ( $3,185 )
+Seat 4: Jao15 ( $800 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,180 )
+Seat 9: Knight1306 ( $6,162.50 )
+Jao15 posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+888Dominik folds
+Knight1306 folds
+LOST_FAN folds
+GrossWinsss raises [$3,185]
+Jao15 folds
+Lohtamo calls [$800]
+** Dealing flop ** [ 6d, 7c, Ts ]
+** Dealing turn ** [ Ah ]
+** Dealing river ** [ Th ]
+** Summary **
+GrossWinsss shows [ Ks, 9c ]
+Lohtamo shows [ Js, Qh ]
+GrossWinsss collected [ $2,095 ]
+
+
+#Game No : 406681083
+***** 888poker Hand History for Game 406681083 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:05:40
+Table Milan 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: LOST_FAN ( $5,280 )
+Seat 2: GrossWinsss ( $4,280 )
+Seat 4: Jao15 ( $700 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $4,180 )
+Seat 9: Knight1306 ( $6,162.50 )
+Lohtamo posts small blind [$100]
+888Dominik posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+LOST_FAN raises [$400]
+GrossWinsss folds
+Jao15 folds
+Lohtamo folds
+888Dominik folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $500 ]
+
+
+#Game No : 406681092
+***** 888poker Hand History for Game 406681092 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 07:05:56
+Table Milan 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: LOST_FAN ( $5,580 )
+Seat 2: GrossWinsss ( $4,280 )
+Seat 4: Jao15 ( $700 )
+Seat 6: Lohtamo ( $1,000 )
+Seat 7: 888Dominik ( $3,980 )
+888Dominik folds
+LOST_FAN folds
+GrossWinsss posts small blind [$100]
+** Dealing down cards **
+Jao15 folds
+Lohtamo folds
+** Summary **
+GrossWinsss did not show his hand
+GrossWinsss collected [ $100 ]
+
+

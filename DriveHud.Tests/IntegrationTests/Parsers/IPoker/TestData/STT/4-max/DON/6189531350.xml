@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189531350">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819274998</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>18</gamecount>  
+	          <startdate>2014-01-28 16:51:47</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>1,640</bets>  
+	          <wins>840</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>4</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.00</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5449304537">
+		 <general>
+		  <startdate>2014-01-28 16:51:47</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="800" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="800" dealer="0" win="170" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boootib" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="4" player="grillion" type="3" sum="20" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="5" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C2 D10</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="3" player="kolber11" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ C3 DQ</cards><action no="9" player="grillion" type="3" sum="20" cards=""/><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/><action no="8" player="kolber11" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="12" player="grillion" type="0" sum="0" cards=""/><action no="11" player="kolber11" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449305029">
+		 <general>
+		  <startdate>2014-01-28 16:52:40</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="870" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="kolber11" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="3" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="4" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S5 S9</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449305111">
+		 <general>
+		  <startdate>2014-01-28 16:52:50</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="760" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="880" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="grillion" type="2" sum="20" cards="[cards]"/><action no="1" player="kolber11" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="6" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="3" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SK HA</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="5" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449305320">
+		 <general>
+		  <startdate>2014-01-28 16:53:14</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="740" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="790" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="870" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="grillion" type="1" sum="10" cards="[cards]"/><action no="2" player="boootib" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="5" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><cards type="Pocket" player="WorstCard">CJ D8</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="4" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449305425">
+		 <general>
+		  <startdate>2014-01-28 16:53:26</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="800" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boootib" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="4" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="5" player="boootib" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">C8 HK</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="3" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 H10 DJ</cards><action no="7" player="boootib" type="5" sum="20" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449319345">
+		 <general>
+		  <startdate>2014-01-28 16:53:52</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="730" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="870" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="kolber11" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="3" player="grillion" type="23" sum="60" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="4" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK S6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="6" player="kolber11" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 D5 SQ</cards><action no="8" player="grillion" type="4" sum="0" cards=""/><action no="7" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S9</cards><action no="10" player="grillion" type="0" sum="0" cards=""/><action no="9" player="kolber11" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449319644">
+		 <general>
+		  <startdate>2014-01-28 16:54:23</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="670" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="765" dealer="1" win="0" bet="75" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="945" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="grillion" type="2" sum="30" cards="[cards]"/><action no="1" player="kolber11" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="6" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="3" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SJ DA</cards><action no="4" player="WorstCard" type="23" sum="75" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="5" player="kolber11" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 H2 D9</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="7" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><action no="9" player="kolber11" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320014">
+		 <general>
+		  <startdate>2014-01-28 16:55:01</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="640" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="820" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="690" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,050" dealer="1" win="165" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="grillion" type="1" sum="15" cards="[cards]"/><action no="2" player="boootib" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="5" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="6" player="boootib" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HK C5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="4" player="kolber11" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 D7 S2</cards><action no="7" player="boootib" type="4" sum="0" cards=""/><action no="9" player="boootib" type="0" sum="0" cards=""/><action no="8" player="kolber11" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320198">
+		 <general>
+		  <startdate>2014-01-28 16:55:25</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="625" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="790" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="690" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,095" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="boootib" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="4" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="5" player="boootib" type="23" sum="60" cards=""/><cards type="Pocket" player="WorstCard">SJ C3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="3" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320326">
+		 <general>
+		  <startdate>2014-01-28 16:55:41</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="625" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="660" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,095" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="kolber11" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="3" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="4" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C4 DA</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449320463">
+		 <general>
+		  <startdate>2014-01-28 16:56:00</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="625" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="820" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="645" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,110" dealer="0" win="320" bet="255" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="grillion" type="15" sum="5" cards="[cards]"/><action no="6" player="grillion" type="2" sum="50" cards="[cards]"/><action no="3" player="boootib" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="kolber11" type="15" sum="5" cards="[cards]"/><action no="5" player="kolber11" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="10" player="grillion" type="4" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="7" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H8 DQ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="9" player="kolber11" type="3" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ C6 H2</cards><action no="12" player="grillion" type="4" sum="0" cards=""/><action no="11" player="kolber11" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards><action no="14" player="grillion" type="0" sum="0" cards=""/><action no="13" player="kolber11" type="5" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320702">
+		 <general>
+		  <startdate>2014-01-28 16:56:32</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="570" dealer="0" win="170" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="815" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="640" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,175" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="grillion" type="15" sum="5" cards="[cards]"/><action no="5" player="grillion" type="1" sum="25" cards="[cards]"/><action no="2" player="boootib" type="15" sum="5" cards="[cards]"/><action no="6" player="boootib" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="kolber11" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="9" player="grillion" type="23" sum="100" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="10" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ D3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="8" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320849">
+		 <general>
+		  <startdate>2014-01-28 16:56:51</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="635" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="760" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="635" dealer="0" win="750" bet="635" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,170" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="grillion" type="15" sum="5" cards="[cards]"/><action no="1" player="boootib" type="15" sum="5" cards="[cards]"/><action no="5" player="boootib" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="kolber11" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="8" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="9" player="boootib" type="3" sum="25" cards=""/><action no="12" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 S4</cards><action no="10" player="WorstCard" type="23" sum="630" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="7" player="kolber11" type="3" sum="50" cards=""/><action no="11" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321051">
+		 <general>
+		  <startdate>2014-01-28 16:57:18</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="630" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="705" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="750" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,115" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="grillion" type="15" sum="5" cards="[cards]"/><action no="4" player="boootib" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="kolber11" type="15" sum="5" cards="[cards]"/><action no="6" player="kolber11" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="7" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="8" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK C6</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449321189">
+		 <general>
+		  <startdate>2014-01-28 16:57:34</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="625" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="700" dealer="0" win="790" bet="700" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="720" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,155" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="grillion" type="15" sum="5" cards="[cards]"/><action no="6" player="grillion" type="2" sum="50" cards="[cards]"/><action no="3" player="boootib" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="kolber11" type="15" sum="5" cards="[cards]"/><action no="5" player="kolber11" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="10" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="7" player="boootib" type="23" sum="695" cards=""/><cards type="Pocket" player="WorstCard">S7 S4</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="9" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321319">
+		 <general>
+		  <startdate>2014-01-28 16:57:52</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="570" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="790" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="715" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,125" dealer="1" win="390" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="grillion" type="15" sum="10" cards="[cards]"/><action no="5" player="grillion" type="1" sum="50" cards="[cards]"/><action no="2" player="boootib" type="15" sum="10" cards="[cards]"/><action no="6" player="boootib" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="kolber11" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="9" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="10" player="boootib" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ C4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="8" player="kolber11" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 S10 CJ</cards><action no="11" player="boootib" type="4" sum="0" cards=""/><action no="13" player="boootib" type="0" sum="0" cards=""/><action no="12" player="kolber11" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321487">
+		 <general>
+		  <startdate>2014-01-28 16:58:15</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="510" dealer="1" win="390" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="680" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="705" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,305" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="grillion" type="15" sum="10" cards="[cards]"/><action no="1" player="boootib" type="15" sum="10" cards="[cards]"/><action no="5" player="boootib" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="kolber11" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="8" player="grillion" type="23" sum="200" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="9" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CA C2</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kolber11">X X</cards><action no="7" player="kolber11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449321662">
+		 <general>
+		  <startdate>2014-01-28 16:58:36</startdate>		  
+		  <players>
+		   <player seat="2" name="grillion" chips="690" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="boootib" chips="620" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="595" dealer="0" win="0" bet="595" rebuy="0" addon="0" reg_code="6189531350"/><player seat="9" name="kolber11" chips="1,295" dealer="0" win="1,210" bet="595" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="grillion" type="15" sum="10" cards="[cards]"/><action no="4" player="boootib" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="kolber11" type="15" sum="10" cards="[cards]"/><action no="6" player="kolber11" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="grillion">X X</cards><action no="7" player="grillion" type="0" sum="0" cards=""/><cards type="Pocket" player="boootib">X X</cards><action no="8" player="boootib" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 DA</cards><action no="9" player="WorstCard" type="23" sum="585" cards=""/><cards type="Pocket" player="kolber11">DK D4</cards><action no="10" player="kolber11" type="3" sum="485" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 SK H2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards>
+	</round>
+	
+		</game>  
+	</session>

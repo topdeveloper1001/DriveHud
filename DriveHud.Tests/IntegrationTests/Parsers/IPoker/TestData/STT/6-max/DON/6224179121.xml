@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224179121">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824214783</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:24</duration>  
+	          <gamecount>40</gamecount>  
+	          <startdate>2014-03-25 16:15:28</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>6,880</bets>  
+	          <wins>9,380</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>4,000</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601028519">
+		 <general>
+		  <startdate>2014-03-25 16:15:28</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,500" dealer="0" win="390" bet="190" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,500" dealer="0" win="0" bet="190" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="10" cards="[cards]"/><action no="2" player="keane16isgod" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">D9 DJ</cards><action no="8" player="keane16isgod" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">S6 CK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">D4 H4</cards><action no="4" player="Hellotie2" type="23" sum="40" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ CJ S10</cards><action no="9" player="keane16isgod" type="4" sum="0" cards=""/><action no="11" player="keane16isgod" type="3" sum="20" cards=""/><action no="10" player="Hellotie2" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards><action no="12" player="keane16isgod" type="4" sum="0" cards=""/><action no="13" player="Hellotie2" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="14" player="keane16isgod" type="5" sum="130" cards=""/><action no="15" player="Hellotie2" type="3" sum="130" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601043167">
+		 <general>
+		  <startdate>2014-03-25 16:17:03</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,700" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="keane16isgod" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="7" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 D9</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="3" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="23" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601043279">
+		 <general>
+		  <startdate>2014-03-25 16:17:30</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,690" dealer="1" win="300" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,310" dealer="0" win="0" bet="70" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="Hellotie2" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="6" player="keane16isgod" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">S9 C8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="8" player="Hellotie2" type="4" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 DJ S5</cards><action no="10" player="keane16isgod" type="5" sum="50" cards=""/><action no="9" player="Hellotie2" type="4" sum="0" cards=""/><action no="11" player="Hellotie2" type="3" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards><action no="13" player="keane16isgod" type="5" sum="150" cards=""/><action no="12" player="Hellotie2" type="4" sum="0" cards=""/><action no="14" player="Hellotie2" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601043605">
+		 <general>
+		  <startdate>2014-03-25 16:18:41</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,470" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,240" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,530" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Hellotie2" type="1" sum="10" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="5" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ S9</cards><action no="6" player="moonbaseone" type="23" sum="60" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="7" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601043776">
+		 <general>
+		  <startdate>2014-03-25 16:19:18</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,770" dealer="0" win="190" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,230" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="20" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="4" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="4" player="keane16isgod" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">S5 S9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="6" player="Hellotie2" type="3" sum="20" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 DQ C9</cards><action no="9" player="theDL" type="4" sum="0" cards=""/><action no="10" player="keane16isgod" type="4" sum="0" cards=""/><action no="11" player="Hellotie2" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards><action no="12" player="theDL" type="4" sum="0" cards=""/><action no="13" player="keane16isgod" type="4" sum="0" cards=""/><action no="14" player="Hellotie2" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards><action no="15" player="theDL" type="4" sum="0" cards=""/><action no="18" player="theDL" type="0" sum="0" cards=""/><action no="16" player="keane16isgod" type="5" sum="120" cards=""/><action no="17" player="Hellotie2" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601044168">
+		 <general>
+		  <startdate>2014-03-25 16:20:42</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,490" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="20" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="keane16isgod">X X</cards><action no="3" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 D5</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="5" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601044323">
+		 <general>
+		  <startdate>2014-03-25 16:21:18</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,510" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="20" cards="[cards]"/><action no="2" player="keane16isgod" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><cards type="Pocket" player="moonbaseone">DJ DK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="4" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060078">
+		 <general>
+		  <startdate>2014-03-25 16:21:42</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,490" dealer="1" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,840" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="keane16isgod" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="23" sum="80" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="7" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 D6</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="3" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060218">
+		 <general>
+		  <startdate>2014-03-25 16:22:17</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,210" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="Hellotie2" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="6" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 HA</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060430">
+		 <general>
+		  <startdate>2014-03-25 16:23:05</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="0" win="200" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,230" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Hellotie2" type="1" sum="20" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">HQ DJ</cards><action no="5" player="keane16isgod" type="3" sum="40" cards=""/><cards type="Pocket" player="moonbaseone">H9 H4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="7" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 C7 D6</cards><action no="10" player="keane16isgod" type="4" sum="0" cards=""/><action no="9" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards><action no="12" player="keane16isgod" type="5" sum="100" cards=""/><action no="11" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="13" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060757">
+		 <general>
+		  <startdate>2014-03-25 16:24:20</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,460" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,880" dealer="0" win="255" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,210" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,460" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="60" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="4" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="4" player="keane16isgod" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">S4 S8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="6" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 D3 D2</cards><action no="9" player="theDL" type="4" sum="0" cards=""/><action no="10" player="keane16isgod" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="11" player="theDL" type="4" sum="0" cards=""/><action no="13" player="theDL" type="0" sum="0" cards=""/><action no="12" player="keane16isgod" type="5" sum="105" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601060990">
+		 <general>
+		  <startdate>2014-03-25 16:25:12</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,400" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,550" dealer="0" win="405" bet="255" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,210" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="30" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="3" sum="60" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="3" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ D10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="5" player="Hellotie2" type="23" sum="120" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 SJ DA</cards><action no="9" player="VanTr4X" type="5" sum="135" cards=""/><action no="10" player="Hellotie2" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601061230">
+		 <general>
+		  <startdate>2014-03-25 16:26:00</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,370" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,700" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,970" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,090" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,430" dealer="0" win="390" bet="240" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="30" cards="[cards]"/><action no="2" player="keane16isgod" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="8" player="keane16isgod" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">D9 CJ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><action no="4" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 SA H3</cards><action no="9" player="keane16isgod" type="4" sum="0" cards=""/><action no="11" player="keane16isgod" type="0" sum="0" cards=""/><action no="10" player="Strik3rPo4ition" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601061389">
+		 <general>
+		  <startdate>2014-03-25 16:26:34</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,670" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,090" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="keane16isgod" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="7" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H2 H5</cards><cards type="Pocket" player="Hellotie2">X X</cards><action no="3" player="Hellotie2" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601073789">
+		 <general>
+		  <startdate>2014-03-25 16:27:08</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,090" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="Hellotie2" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="6" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D5 C8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601073910">
+		 <general>
+		  <startdate>2014-03-25 16:27:34</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="8" name="Hellotie2" chips="1,120" dealer="0" win="0" bet="1,120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,580" dealer="0" win="2,700" bet="1,580" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Hellotie2" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="5" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 H5</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Hellotie2">HJ H10</cards><action no="7" player="Hellotie2" type="23" sum="200" cards=""/><action no="9" player="Hellotie2" type="7" sum="920" cards=""/><cards type="Pocket" player="Strik3rPo4ition">CK DA</cards><action no="8" player="Strik3rPo4ition" type="23" sum="1,580" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 DQ D5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards>
+	</round>
+	
+		</game><game gamecode="5601074114">
+		 <general>
+		  <startdate>2014-03-25 16:28:20</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,370" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,700" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="100" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="4" player="keane16isgod" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">C2 DJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074279">
+		 <general>
+		  <startdate>2014-03-25 16:28:59</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,270" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,670" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,650" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="50" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="keane16isgod">X X</cards><action no="3" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C9 H2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074489">
+		 <general>
+		  <startdate>2014-03-25 16:29:46</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,220" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,720" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,970" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,650" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="keane16isgod" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="7" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA D4</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601074621">
+		 <general>
+		  <startdate>2014-03-25 16:30:19</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="1,670" dealer="1" win="0" bet="1,440" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,870" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,440" dealer="0" win="2,930" bet="1,440" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="keane16isgod" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">CA H3</cards><action no="5" player="VanTr4X" type="23" sum="200" cards=""/><action no="8" player="VanTr4X" type="3" sum="1,240" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="6" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ DQ</cards><action no="7" player="moonbaseone" type="23" sum="1,440" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 S10 C6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game><game gamecode="5601074845">
+		 <general>
+		  <startdate>2014-03-25 16:31:07</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="VanTr4X" chips="230" dealer="0" win="0" bet="230" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,930" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,800" dealer="0" win="510" bet="230" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">SQ HQ</cards><action no="4" player="VanTr4X" type="23" sum="230" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="5" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 S6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">D5 CA</cards><action no="7" player="Strik3rPo4ition" type="3" sum="130" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 H9 C3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards>
+	</round>
+	
+		</game><game gamecode="5601075010">
+		 <general>
+		  <startdate>2014-03-25 16:31:46</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,220" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,080" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="150" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><cards type="Pocket" player="keane16isgod">X X</cards><action no="3" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 H9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088138">
+		 <general>
+		  <startdate>2014-03-25 16:32:10</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,295" dealer="0" win="1,445" bet="1,295" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,005" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="75" cards="[cards]"/><action no="2" player="keane16isgod" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="23" sum="1,295" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="6" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK C7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088275">
+		 <general>
+		  <startdate>2014-03-25 16:32:42</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,445" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,670" dealer="0" win="600" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,880" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,005" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="keane16isgod" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="5" player="keane16isgod" type="3" sum="75" cards=""/><cards type="Pocket" player="moonbaseone">S3 H5</cards><action no="6" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 D5 S9</cards><action no="7" player="keane16isgod" type="4" sum="0" cards=""/><action no="8" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="9" player="keane16isgod" type="5" sum="300" cards=""/><action no="10" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088419">
+		 <general>
+		  <startdate>2014-03-25 16:33:14</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,445" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="1" win="675" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,730" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,005" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="4" player="keane16isgod" type="23" sum="450" cards=""/><cards type="Pocket" player="moonbaseone">HQ C9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088507">
+		 <general>
+		  <startdate>2014-03-25 16:33:37</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,445" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="2,045" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,655" dealer="1" win="525" bet="300" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,855" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="150" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="3" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DQ D10</cards><action no="4" player="moonbaseone" type="23" sum="300" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088643">
+		 <general>
+		  <startdate>2014-03-25 16:34:08</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,295" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="2,045" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,780" dealer="1" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="75" cards="[cards]"/><action no="2" player="keane16isgod" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="6" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK D7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088800">
+		 <general>
+		  <startdate>2014-03-25 16:34:45</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,220" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,895" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,880" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,005" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="keane16isgod" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="5" player="keane16isgod" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">D7 S4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088893">
+		 <general>
+		  <startdate>2014-03-25 16:35:06</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="2,045" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,730" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,005" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="4" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 CQ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601088959">
+		 <general>
+		  <startdate>2014-03-25 16:35:22</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,220" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="2,045" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,655" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,080" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="2" sum="150" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><cards type="Pocket" player="keane16isgod">X X</cards><action no="3" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 S3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089038">
+		 <general>
+		  <startdate>2014-03-25 16:35:40</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,295" dealer="0" win="1,570" bet="1,295" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="2,045" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,655" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,005" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="100" cards="[cards]"/><action no="2" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="6" player="keane16isgod" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="23" sum="1,270" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="10" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 HJ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089209">
+		 <general>
+		  <startdate>2014-03-25 16:36:20</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,570" dealer="1" win="1,945" bet="1,570" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,820" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,630" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,980" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="theDL" type="15" sum="25" cards="[cards]"/><action no="1" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="5" player="keane16isgod" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="23" sum="1,545" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="9" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 DQ</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089295">
+		 <general>
+		  <startdate>2014-03-25 16:36:41</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,945" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,695" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,405" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,955" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="theDL" type="15" sum="25" cards="[cards]"/><action no="4" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="8" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA C7</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601089405">
+		 <general>
+		  <startdate>2014-03-25 16:37:08</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,920" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,670" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,280" dealer="1" win="2,655" bet="2,280" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,130" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="2" sum="200" cards="[cards]"/><action no="3" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="10" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="7" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 C4</cards><action no="8" player="moonbaseone" type="23" sum="2,255" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102017">
+		 <general>
+		  <startdate>2014-03-25 16:37:52</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,695" dealer="0" win="700" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,645" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,655" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,005" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="100" cards="[cards]"/><action no="2" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="6" player="keane16isgod" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="23" sum="400" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="10" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ C5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102163">
+		 <general>
+		  <startdate>2014-03-25 16:38:26</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,970" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,420" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,630" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,980" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="theDL" type="15" sum="25" cards="[cards]"/><action no="1" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="5" player="keane16isgod" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="9" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA H2</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102254">
+		 <general>
+		  <startdate>2014-03-25 16:38:51</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,945" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,295" dealer="1" win="1,670" bet="1,295" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,805" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,955" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="theDL" type="15" sum="25" cards="[cards]"/><action no="4" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="8" player="keane16isgod" type="23" sum="1,270" cards=""/><cards type="Pocket" player="moonbaseone">DQ C9</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102380">
+		 <general>
+		  <startdate>2014-03-25 16:39:20</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,920" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,670" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,680" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,730" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="theDL" type="15" sum="25" cards="[cards]"/><action no="6" player="theDL" type="2" sum="200" cards="[cards]"/><action no="3" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><cards type="Pocket" player="keane16isgod">X X</cards><action no="7" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 SQ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102511">
+		 <general>
+		  <startdate>2014-03-25 16:39:49</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="2,095" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,645" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,655" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="2,605" dealer="1" win="3,130" bet="2,605" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="15" sum="25" cards="[cards]"/><action no="5" player="theDL" type="1" sum="150" cards="[cards]"/><action no="2" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="6" player="keane16isgod" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="9" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">X X</cards><action no="10" player="keane16isgod" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 CQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="23" sum="2,580" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102623">
+		 <general>
+		  <startdate>2014-03-25 16:40:13</startdate>		  
+		  <players>
+		   <player seat="1" name="theDL" chips="1,920" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="keane16isgod" chips="1,320" dealer="0" win="0" bet="1,320" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,630" dealer="0" win="2,690" bet="1,320" rebuy="0" addon="0" reg_code="6224179121"/><player seat="10" name="Strik3rPo4ition" chips="3,130" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="theDL" type="15" sum="25" cards="[cards]"/><action no="1" player="keane16isgod" type="15" sum="25" cards="[cards]"/><action no="5" player="keane16isgod" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="keane16isgod">H7 S6</cards><action no="9" player="keane16isgod" type="23" sum="1,295" cards=""/><cards type="Pocket" player="moonbaseone">D8 D10</cards><action no="10" player="moonbaseone" type="3" sum="995" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ CK S8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game>  
+	</session>

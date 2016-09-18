@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EFA4CFD3-8E01-494B-A274-F2092C922EF7}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DriveHUD.EquityCalculator</RootNamespace>
+    <AssemblyName>DriveHUD.EquityCalculator</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism">
+      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf">
+      <HintPath>..\packages\Prism.Wpf.6.1.0\lib\net45\Prism.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Analyzer\Action.cs" />
+    <Compile Include="Analyzer\Card.cs" />
+    <Compile Include="Analyzer\Combination.cs" />
+    <Compile Include="Analyzer\FastEvaluator.cs" />
+    <Compile Include="Analyzer\GameRules.cs" />
+    <Compile Include="Analyzer\HandAnalyzer.cs" />
+    <Compile Include="Analyzer\HandHistory.cs" />
+    <Compile Include="Analyzer\HandStreetResult.cs" />
+    <Compile Include="Analyzer\Jacob.cs" />
+    <Compile Include="Analyzer\MainAnalyzer.cs" />
+    <Compile Include="Analyzer\Player.cs" />
+    <Compile Include="Analyzer\Settings.cs" />
+    <Compile Include="Analyzer\Stats.cs" />
+    <Compile Include="Analyzer\TempConfig.cs" />
+    <Compile Include="Calculations\EquityCalculatorMain.cs" />
+    <Compile Include="Calculations\Evalz.cs" />
+    <Compile Include="Calculations\Player.cs" />
+    <Compile Include="Calculations\VSTable.cs" />
+    <Compile Include="Calculations\Weight.cs" />
+    <Compile Include="Calculations\WeightTable.cs" />
+    <Compile Include="Models\CheckableCardModel.cs" />
+    <Compile Include="Models\ICardCollectionContainer.cs" />
+    <Compile Include="ViewModels\PopupContainers\Notifications\ExportNotification.cs" />
+    <Compile Include="ViewModels\PopupContainers\ExportViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\CustomLikelihoodViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\CalculateBluffViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\Notifications\CalculateBluffNotification.cs" />
+    <Compile Include="ViewModels\PopupContainers\PreflopSelectorViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\SelectorMainContainerViewModel.cs" />
+    <Compile Include="Views\PopupContainers\ExportView.xaml.cs">
+      <DependentUpon>ExportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\CustomLikelihoodView.xaml.cs">
+      <DependentUpon>CustomLikelihoodView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PartialViews\EquityCalculatorPlayerPartialView.xaml.cs">
+      <DependentUpon>EquityCalculatorPlayerPartialView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BoardModel.cs" />
+    <Compile Include="Models\CardModel.cs" />
+    <Compile Include="Models\CardCollectionContainer.cs" />
+    <Compile Include="Models\PlayerModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\CardSelectorViewModel.cs" />
+    <Compile Include="ViewModels\EquityCalculatorViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\Notifications\CardSelectorNotification.cs" />
+    <Compile Include="Views\PopupContainers\CalculateBluffView.xaml.cs">
+      <DependentUpon>CalculateBluffView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\CardsSelectorView.xaml.cs">
+      <DependentUpon>CardsSelectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Views\EquityCalculatorView.xaml.cs">
+      <DependentUpon>EquityCalculatorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\SelectorMainContainerView.xaml.cs">
+      <DependentUpon>SelectorMainContainerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\PreflopSelectorView.xaml.cs">
+      <DependentUpon>PreflopSelectorView.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Views\PopupContainers\ExportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupContainers\CustomLikelihoodView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PartialViews\EquityCalculatorPlayerPartialView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PopupContainers\CalculateBluffView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupContainers\CardsSelectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EquityCalculatorView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PopupContainers\SelectorMainContainerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupContainers\PreflopSelectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.Common.Infrastructure\DriveHUD.Common.Infrastructure.csproj">
+      <Project>{b7bb6a80-de1e-463d-8a4a-ec010262e567}</Project>
+      <Name>DriveHUD.Common.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
+      <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
+      <Name>DriveHUD.Common.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Wpf\DriveHUD.Common.Wpf.csproj">
+      <Project>{ab1a2f50-a5c0-4ccd-bf93-26c2a1d5f0e4}</Project>
+      <Name>DriveHUD.Common.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
+      <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
+      <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.ViewModels\DriveHUD.ViewModels.csproj">
+      <Project>{c6a64d15-132d-46a6-8c95-42d8934ff6b4}</Project>
+      <Name>DriveHUD.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Controls\DriveHUD.Controls.csproj">
+      <Project>{86ac9d11-047a-49c6-805c-d76bf68ada7a}</Project>
+      <Name>DriveHUD.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{92f8b855-af92-4969-8882-ce8fd3797cf0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Objects\HandHistories.Objects.csproj">
+      <Project>{D5C61A3A-2725-47D9-A828-F5CE4EC19A4A}</Project>
+      <Name>HandHistories.Objects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)\tools\SubWCRev\subwcrev.exe" "$(SolutionDir)." "$(ProjectDir)Properties\AssemblyInfo.template.cs" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

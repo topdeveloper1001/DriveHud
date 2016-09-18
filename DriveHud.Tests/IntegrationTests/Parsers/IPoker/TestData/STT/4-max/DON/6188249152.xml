@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188249152">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819097471</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>13</gamecount>  
+	          <startdate>2014-01-26 16:17:00</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,760</bets>  
+	          <wins>4,473</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>2,513</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>1</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.90</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5439017426">
+		 <general>
+		  <startdate>2014-01-26 16:17:00</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="800" dealer="0" win="110" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="800" dealer="0" win="110" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gladiador1010" type="1" sum="10" cards="[cards]"/><action no="2" player="MeXxXyyy" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HK S8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="gladiador1010">S9 SK</cards><action no="5" player="gladiador1010" type="3" sum="10" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="6" player="MeXxXyyy" type="4" sum="0" cards=""/><cards type="Pocket" player="lostboy14">H2 H9</cards><action no="3" player="lostboy14" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 D7 C9</cards><action no="7" player="gladiador1010" type="4" sum="0" cards=""/><action no="10" player="gladiador1010" type="3" sum="80" cards=""/><action no="8" player="MeXxXyyy" type="4" sum="0" cards=""/><action no="11" player="MeXxXyyy" type="0" sum="0" cards=""/><action no="9" player="lostboy14" type="5" sum="80" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards><action no="12" player="gladiador1010" type="4" sum="0" cards=""/><action no="13" player="lostboy14" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards><action no="14" player="gladiador1010" type="4" sum="0" cards=""/><action no="15" player="lostboy14" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032076">
+		 <general>
+		  <startdate>2014-01-26 16:18:00</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="810" dealer="1" win="0" bet="62" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="780" dealer="0" win="317" bet="193" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="810" dealer="0" win="0" bet="62" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="1" sum="10" cards="[cards]"/><action no="2" player="lostboy14" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C7 H9</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="gladiador1010">X X</cards><action no="4" player="gladiador1010" type="3" sum="20" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="5" player="MeXxXyyy" type="3" sum="10" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="6" player="lostboy14" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA H10 HJ</cards><action no="9" player="gladiador1010" type="4" sum="0" cards=""/><action no="7" player="MeXxXyyy" type="4" sum="0" cards=""/><action no="8" player="lostboy14" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="12" player="gladiador1010" type="3" sum="42" cards=""/><action no="10" player="MeXxXyyy" type="5" sum="42" cards=""/><action no="11" player="lostboy14" type="3" sum="42" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards><action no="15" player="gladiador1010" type="0" sum="0" cards=""/><action no="13" player="MeXxXyyy" type="5" sum="131" cards=""/><action no="14" player="lostboy14" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032509">
+		 <general>
+		  <startdate>2014-01-26 16:18:45</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="140" bet="100" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="748" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="904" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="748" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="lostboy14" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HQ CJ</cards><action no="6" player="WorstCard" type="23" sum="40" cards=""/><cards type="Pocket" player="gladiador1010">X X</cards><action no="3" player="gladiador1010" type="0" sum="0" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="4" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="5" player="lostboy14" type="3" sum="10" cards=""/><action no="7" player="lostboy14" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 SJ S9</cards><action no="9" player="WorstCard" type="5" sum="60" cards=""/><action no="8" player="lostboy14" type="4" sum="0" cards=""/><action no="10" player="lostboy14" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032777">
+		 <general>
+		  <startdate>2014-01-26 16:19:15</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="840" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="748" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="904" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="708" dealer="1" win="165" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="gladiador1010" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H4 C9</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="gladiador1010">X X</cards><action no="6" player="gladiador1010" type="4" sum="0" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="3" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="4" player="lostboy14" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 DJ H9</cards><action no="7" player="gladiador1010" type="4" sum="0" cards=""/><action no="9" player="gladiador1010" type="0" sum="0" cards=""/><action no="8" player="lostboy14" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439033043">
+		 <general>
+		  <startdate>2014-01-26 16:19:44</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="825" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="718" dealer="0" win="180" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="904" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="753" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gladiador1010" type="1" sum="15" cards="[cards]"/><action no="2" player="MeXxXyyy" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DA H8</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="gladiador1010">S9 D9</cards><action no="5" player="gladiador1010" type="3" sum="45" cards=""/><cards type="Pocket" player="MeXxXyyy">CA C6</cards><action no="6" player="MeXxXyyy" type="3" sum="30" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="3" player="lostboy14" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 SJ D6</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="7" player="gladiador1010" type="4" sum="0" cards=""/><action no="8" player="MeXxXyyy" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="gladiador1010" type="4" sum="0" cards=""/><action no="11" player="MeXxXyyy" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="15" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="gladiador1010" type="4" sum="0" cards=""/><action no="14" player="MeXxXyyy" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439033600">
+		 <general>
+		  <startdate>2014-01-26 16:20:48</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="765" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="838" dealer="1" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="844" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="753" dealer="0" win="1,173" bet="753" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="1" sum="15" cards="[cards]"/><action no="2" player="lostboy14" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HQ H3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="gladiador1010">X X</cards><action no="4" player="gladiador1010" type="3" sum="30" cards=""/><action no="7" player="gladiador1010" type="3" sum="90" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="5" player="MeXxXyyy" type="23" sum="120" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="6" player="lostboy14" type="3" sum="90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 S2 D9</cards><action no="10" player="gladiador1010" type="4" sum="0" cards=""/><action no="8" player="MeXxXyyy" type="4" sum="0" cards=""/><action no="9" player="lostboy14" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="13" player="gladiador1010" type="0" sum="0" cards=""/><action no="11" player="MeXxXyyy" type="5" sum="180" cards=""/><action no="12" player="lostboy14" type="3" sum="180" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards><action no="14" player="MeXxXyyy" type="4" sum="0" cards=""/><action no="16" player="MeXxXyyy" type="0" sum="0" cards=""/><action no="15" player="lostboy14" type="5" sum="453" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439034034">
+		 <general>
+		  <startdate>2014-01-26 16:21:38</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="765" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="718" dealer="0" win="145" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="544" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="1,173" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="gladiador1010" type="15" sum="5" cards="[cards]"/><action no="4" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="1" player="lostboy14" type="15" sum="5" cards="[cards]"/><action no="5" player="lostboy14" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SJ D4</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="gladiador1010">CA D3</cards><action no="7" player="gladiador1010" type="3" sum="50" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="8" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="9" player="lostboy14" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK S8 C3</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="gladiador1010" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="14" player="gladiador1010" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards><action no="15" player="WorstCard" type="4" sum="0" cards=""/><action no="16" player="gladiador1010" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439034507">
+		 <general>
+		  <startdate>2014-01-26 16:22:27</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="710" dealer="0" win="775" bet="710" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="808" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="539" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="1,143" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="gladiador1010" type="15" sum="5" cards="[cards]"/><action no="6" player="gladiador1010" type="2" sum="50" cards="[cards]"/><action no="3" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="4" player="lostboy14" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H6 C6</cards><action no="9" player="WorstCard" type="23" sum="705" cards=""/><cards type="Pocket" player="gladiador1010">X X</cards><action no="10" player="gladiador1010" type="0" sum="0" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="7" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="8" player="lostboy14" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439051818">
+		 <general>
+		  <startdate>2014-01-26 16:22:46</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="775" dealer="1" win="865" bet="775" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="753" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="534" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="1,138" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="gladiador1010" type="15" sum="5" cards="[cards]"/><action no="5" player="gladiador1010" type="1" sum="25" cards="[cards]"/><action no="2" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="6" player="MeXxXyyy" type="2" sum="50" cards="[cards]"/><action no="3" player="lostboy14" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C5 SA</cards><action no="8" player="WorstCard" type="23" sum="770" cards=""/><cards type="Pocket" player="gladiador1010">X X</cards><action no="9" player="gladiador1010" type="0" sum="0" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="10" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="7" player="lostboy14" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439051974">
+		 <general>
+		  <startdate>2014-01-26 16:23:04</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="865" dealer="0" win="2,513" bet="865" rebuy="0" addon="0" reg_code="6188249152"/><player seat="4" name="gladiador1010" chips="723" dealer="1" win="0" bet="723" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="MeXxXyyy" chips="479" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="1,133" dealer="0" win="0" bet="865" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="gladiador1010" type="15" sum="10" cards="[cards]"/><action no="1" player="MeXxXyyy" type="15" sum="10" cards="[cards]"/><action no="5" player="MeXxXyyy" type="1" sum="50" cards="[cards]"/><action no="2" player="lostboy14" type="15" sum="10" cards="[cards]"/><action no="6" player="lostboy14" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SA SQ</cards><action no="7" player="WorstCard" type="23" sum="855" cards=""/><cards type="Pocket" player="gladiador1010">C4 H4</cards><action no="8" player="gladiador1010" type="7" sum="713" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="9" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="lostboy14">S8 H8</cards><action no="10" player="lostboy14" type="3" sum="755" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ CQ H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5439052218">
+		 <general>
+		  <startdate>2014-01-26 16:23:32</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="2,513" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="6188249152"/><player seat="7" name="MeXxXyyy" chips="419" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="268" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="MeXxXyyy" type="15" sum="10" cards="[cards]"/><action no="1" player="lostboy14" type="15" sum="10" cards="[cards]"/><action no="4" player="lostboy14" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D4 SA</cards><cards type="Pocket" player="MeXxXyyy">X X</cards><action no="6" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="lostboy14">X X</cards><action no="7" player="lostboy14" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439052339">
+		 <general>
+		  <startdate>2014-01-26 16:23:48</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="2,583" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6188249152"/><player seat="7" name="MeXxXyyy" chips="409" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="208" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="MeXxXyyy" type="15" sum="10" cards="[cards]"/><action no="5" player="MeXxXyyy" type="2" sum="100" cards="[cards]"/><action no="3" player="lostboy14" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H8 C6</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MeXxXyyy">X X</cards><cards type="Pocket" player="lostboy14">X X</cards><action no="6" player="lostboy14" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439052446">
+		 <general>
+		  <startdate>2014-01-26 16:24:00</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="2,523" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6188249152"/><player seat="7" name="MeXxXyyy" chips="479" dealer="0" win="418" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="lostboy14" chips="198" dealer="0" win="0" bet="198" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="MeXxXyyy" type="15" sum="10" cards="[cards]"/><action no="4" player="MeXxXyyy" type="1" sum="50" cards="[cards]"/><action no="2" player="lostboy14" type="15" sum="10" cards="[cards]"/><action no="5" player="lostboy14" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CJ D5</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="MeXxXyyy">DK H8</cards><action no="7" player="MeXxXyyy" type="23" sum="200" cards=""/><cards type="Pocket" player="lostboy14">CQ D3</cards><action no="8" player="lostboy14" type="7" sum="88" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 H4 HK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game>  
+	</session>

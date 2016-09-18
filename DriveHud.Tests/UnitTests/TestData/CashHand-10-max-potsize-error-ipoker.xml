@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<session sessioncode="7777777">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.5/$1</gametype>
+    <tablename>The Green Hornet #154</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2016-08-02 17:34:10</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>    
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="5278136">
+    <general>
+      <startdate>2016-08-02 17:34:10</startdate>
+      <players>
+        <player seat="1" name="RandomMove" chips="99.92" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="2" name="beau1980" chips="148.74" dealer="0" win="109.18" bet="148.74" rebuy="0" addon="0" />
+        <player seat="3" name="des427" chips="86.5" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="4" name="Nag1baToR" chips="100" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="5" name="LOVELIFEPK" chips="39.56" dealer="0" win="77.12" bet="39.56" rebuy="0" addon="0" />
+        <player seat="6" name="JstFishing" chips="70.35" dealer="0" win="0" bet="1" rebuy="0" addon="0" />
+        <player seat="7" name="Zugomi" chips="239.83" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="8" name="Food4Finci" chips="113.09" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="9" name="fhlobb" chips="214.58" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="10" name="nz111" chips="131.2" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="LOVELIFEPK" type="1" sum="0.5" cards="" />
+      <action no="2" player="JstFishing" type="2" sum="1" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="RandomMove">X X</cards>
+      <cards type="Pocket" player="beau1980">HK DK</cards>
+      <cards type="Pocket" player="des427">X X</cards>
+      <cards type="Pocket" player="LOVELIFEPK">H8 S10</cards>
+      <cards type="Pocket" player="JstFishing">X X</cards>
+      <cards type="Pocket" player="Zugomi">X X</cards>
+      <cards type="Pocket" player="Food4Finci">X X</cards>
+      <cards type="Pocket" player="fhlobb">X X</cards>
+      <cards type="Pocket" player="nz111">X X</cards>
+      <action no="3" player="Zugomi" type="0" sum="0" cards="" />
+      <action no="4" player="Food4Finci" type="0" sum="0" cards="" />
+      <action no="5" player="fhlobb" type="0" sum="0" cards="" />
+      <action no="6" player="nz111" type="0" sum="0" cards="" />
+      <action no="7" player="RandomMove" type="0" sum="0" cards="" />
+      <action no="8" player="beau1980" type="23" sum="3" cards="" />
+      <action no="9" player="des427" type="0" sum="0" cards="" />
+      <action no="10" player="LOVELIFEPK" type="3" sum="2.5" cards="" />
+      <action no="11" player="JstFishing" type="0" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">H9 H7 S9</cards>
+      <action no="12" player="LOVELIFEPK" type="4" sum="0" cards="" />
+      <action no="13" player="beau1980" type="5" sum="5" cards="" />
+      <action no="14" player="LOVELIFEPK" type="23" sum="10" cards="" />
+      <action no="15" player="beau1980" type="23" sum="145.74" cards="" />
+      <action no="16" player="LOVELIFEPK" type="3" sum="26.56" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">CJ</cards>
+    </round>
+    <round no="4">
+      <cards type="River" player="">C3</cards>
+    </round>
+  </game>
+</session>

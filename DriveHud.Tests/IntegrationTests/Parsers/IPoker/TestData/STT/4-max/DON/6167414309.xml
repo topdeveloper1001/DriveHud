@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6167414309">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>"SUPER TURBO" $5 Double up*4, 816834674</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>13</gamecount>  
+	          <startdate>2013-12-20 18:14:19</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>chinarock</nickname>  
+	          <bets>1,405</bets>  
+	          <wins>605</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>45</ipoints>
+        		<statuspoints>7.50</statuspoints>
+			  		<awardpoints>45</awardpoints>
+	          <tournamentname>"SUPER TURBO" $5 Double up*4</tournamentname><place>4</place><buyin>$5.00+$0.30</buyin> <totalbuyin>$5.30</totalbuyin> <ipoints>45</ipoints> <win>$0.00</win> <statuspoints>7.50</statuspoints> <awardpoints>45</awardpoints>  
+	    </general>  
+	    <game gamecode="5340727387">
+		 <general>
+		  <startdate>2013-12-20 18:14:19</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="800" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="800" dealer="0" win="204" bet="134" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="0987654321234567" type="1" sum="10" cards="[cards]"/><action no="2" player="mrpuf" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">D4 H4</cards><action no="4" player="chinarock" type="23" sum="50" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="5" player="0987654321234567" type="3" sum="40" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="6" player="mrpuf" type="0" sum="0" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="3" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 H2 CK</cards><action no="8" player="chinarock" type="0" sum="0" cards=""/><action no="7" player="0987654321234567" type="5" sum="84" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340727530">
+		 <general>
+		  <startdate>2013-12-20 18:14:51</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="750" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="870" dealer="1" win="85" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mrpuf" type="1" sum="10" cards="[cards]"/><action no="2" player="wismahaza1a" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">C5 C9</cards><action no="3" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="4" player="0987654321234567" type="3" sum="20" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="5" player="mrpuf" type="0" sum="0" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="6" player="wismahaza1a" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 C10 S9</cards><action no="8" player="0987654321234567" type="5" sum="35" cards=""/><action no="7" player="wismahaza1a" type="4" sum="0" cards=""/><action no="9" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340727671">
+		 <general>
+		  <startdate>2013-12-20 18:15:26</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="750" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="900" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="chinarock" type="2" sum="20" cards="[cards]"/><action no="1" player="wismahaza1a" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">S2 DQ</cards><action no="6" player="chinarock" type="4" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="3" player="0987654321234567" type="3" sum="20" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="4" player="mrpuf" type="0" sum="0" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="5" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 D10 CA</cards><action no="7" player="chinarock" type="4" sum="0" cards=""/><action no="9" player="chinarock" type="0" sum="0" cards=""/><action no="8" player="0987654321234567" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340727851">
+		 <general>
+		  <startdate>2013-12-20 18:16:08</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="730" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="930" dealer="0" win="0" bet="103" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="770" dealer="0" win="279" bet="166" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="chinarock" type="1" sum="10" cards="[cards]"/><action no="2" player="0987654321234567" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">H10 HJ</cards><action no="5" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="6" player="0987654321234567" type="3" sum="20" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="3" player="mrpuf" type="23" sum="40" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="4" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 HQ SA</cards><action no="7" player="0987654321234567" type="5" sum="63" cards=""/><action no="9" player="0987654321234567" type="0" sum="0" cards=""/><action no="8" player="mrpuf" type="23" sum="126" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340728022">
+		 <general>
+		  <startdate>2013-12-20 18:16:51</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="720" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="827" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="883" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="0987654321234567" type="1" sum="15" cards="[cards]"/><action no="2" player="mrpuf" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">HA H2</cards><action no="4" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="5" player="0987654321234567" type="0" sum="0" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><cards type="Pocket" player="wismahaza1a">X X</cards><action no="3" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340728097">
+		 <general>
+		  <startdate>2013-12-20 18:17:10</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="720" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="812" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="898" dealer="0" win="150" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mrpuf" type="1" sum="15" cards="[cards]"/><action no="2" player="wismahaza1a" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">HJ D8</cards><action no="3" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="4" player="0987654321234567" type="3" sum="30" cards=""/><action no="7" player="0987654321234567" type="0" sum="0" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="5" player="mrpuf" type="23" sum="90" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="6" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340728234">
+		 <general>
+		  <startdate>2013-12-20 18:17:45</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="720" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="782" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="958" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="740" dealer="0" win="102" bet="72" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="chinarock" type="2" sum="30" cards="[cards]"/><action no="1" player="wismahaza1a" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">H8 S4</cards><action no="6" player="chinarock" type="4" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="3" player="0987654321234567" type="0" sum="0" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="4" player="mrpuf" type="0" sum="0" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="5" player="wismahaza1a" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ H5 DA</cards><action no="8" player="chinarock" type="0" sum="0" cards=""/><action no="7" player="wismahaza1a" type="5" sum="42" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340728425">
+		 <general>
+		  <startdate>2013-12-20 18:18:30</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="690" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="782" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="958" dealer="0" win="195" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="770" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="5" player="chinarock" type="1" sum="25" cards="[cards]"/><action no="2" player="0987654321234567" type="15" sum="5" cards="[cards]"/><action no="6" player="0987654321234567" type="2" sum="50" cards="[cards]"/><action no="3" player="mrpuf" type="15" sum="5" cards="[cards]"/><action no="4" player="wismahaza1a" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">HK S6</cards><action no="9" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="10" player="0987654321234567" type="0" sum="0" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="7" player="mrpuf" type="23" sum="100" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="8" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340728510">
+		 <general>
+		  <startdate>2013-12-20 18:18:50</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="660" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="727" dealer="0" win="170" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="1,048" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="765" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="1" player="0987654321234567" type="15" sum="5" cards="[cards]"/><action no="5" player="0987654321234567" type="1" sum="25" cards="[cards]"/><action no="2" player="mrpuf" type="15" sum="5" cards="[cards]"/><action no="6" player="mrpuf" type="2" sum="50" cards="[cards]"/><action no="3" player="wismahaza1a" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">D2 H7</cards><action no="8" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="9" player="0987654321234567" type="23" sum="100" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="10" player="mrpuf" type="0" sum="0" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="7" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340728598">
+		 <general>
+		  <startdate>2013-12-20 18:19:11</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="655" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="792" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="993" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="760" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="4" player="0987654321234567" type="15" sum="5" cards="[cards]"/><action no="1" player="mrpuf" type="15" sum="5" cards="[cards]"/><action no="5" player="mrpuf" type="1" sum="25" cards="[cards]"/><action no="2" player="wismahaza1a" type="15" sum="5" cards="[cards]"/><action no="6" player="wismahaza1a" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">H9 S4</cards><action no="7" player="chinarock" type="0" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="8" player="0987654321234567" type="0" sum="0" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="9" player="mrpuf" type="0" sum="0" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards>
+	</round>
+	
+		</game><game gamecode="5340742262">
+		 <general>
+		  <startdate>2013-12-20 18:19:33</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="650" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="787" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="963" dealer="1" win="290" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="chinarock" type="15" sum="5" cards="[cards]"/><action no="6" player="chinarock" type="2" sum="50" cards="[cards]"/><action no="3" player="0987654321234567" type="15" sum="5" cards="[cards]"/><action no="4" player="mrpuf" type="15" sum="5" cards="[cards]"/><action no="1" player="wismahaza1a" type="15" sum="5" cards="[cards]"/><action no="5" player="wismahaza1a" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">D3 C2</cards><action no="10" player="chinarock" type="4" sum="0" cards=""/><cards type="Pocket" player="0987654321234567">X X</cards><action no="7" player="0987654321234567" type="0" sum="0" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="8" player="mrpuf" type="3" sum="50" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="9" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 C5 SK</cards><action no="11" player="chinarock" type="4" sum="0" cards=""/><action no="12" player="mrpuf" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards><action no="13" player="chinarock" type="4" sum="0" cards=""/><action no="15" player="chinarock" type="0" sum="0" cards=""/><action no="14" player="mrpuf" type="5" sum="145" cards=""/>
+	</round>
+	
+		</game><game gamecode="5340742456">
+		 <general>
+		  <startdate>2013-12-20 18:20:22</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="595" dealer="0" win="605" bet="595" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="782" dealer="0" win="605" bet="595" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="1,053" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="770" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="chinarock" type="15" sum="10" cards="[cards]"/><action no="5" player="chinarock" type="1" sum="50" cards="[cards]"/><action no="2" player="0987654321234567" type="15" sum="10" cards="[cards]"/><action no="6" player="0987654321234567" type="2" sum="100" cards="[cards]"/><action no="3" player="mrpuf" type="15" sum="10" cards="[cards]"/><action no="4" player="wismahaza1a" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">SA S8</cards><action no="9" player="chinarock" type="23" sum="585" cards=""/><cards type="Pocket" player="0987654321234567">HA H5</cards><action no="10" player="0987654321234567" type="3" sum="485" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="7" player="mrpuf" type="0" sum="0" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="8" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 S2 HJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards>
+	</round>
+	
+		</game><game gamecode="5340742583">
+		 <general>
+		  <startdate>2013-12-20 18:20:53</startdate>		  
+		  <players>
+		   <player seat="2" name="chinarock" chips="605" dealer="1" win="0" bet="605" rebuy="0" addon="0" reg_code="6167414309"/><player seat="4" name="0987654321234567" chips="792" dealer="0" win="1,330" bet="605" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mrpuf" chips="1,043" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="wismahaza1a" chips="760" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="chinarock" type="15" sum="10" cards="[cards]"/><action no="1" player="0987654321234567" type="15" sum="10" cards="[cards]"/><action no="5" player="0987654321234567" type="1" sum="50" cards="[cards]"/><action no="2" player="mrpuf" type="15" sum="10" cards="[cards]"/><action no="6" player="mrpuf" type="2" sum="100" cards="[cards]"/><action no="3" player="wismahaza1a" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="chinarock">H9 S10</cards><action no="8" player="chinarock" type="23" sum="595" cards=""/><cards type="Pocket" player="0987654321234567">DA C7</cards><action no="9" player="0987654321234567" type="3" sum="545" cards=""/><cards type="Pocket" player="mrpuf">X X</cards><action no="10" player="mrpuf" type="0" sum="0" cards=""/><cards type="Pocket" player="wismahaza1a">X X</cards><action no="7" player="wismahaza1a" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 CQ H4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game>  
+	</session>

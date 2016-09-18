@@ -1,0 +1,337 @@
+#Game No : 934066548
+***** 888poker Hand History for Game 934066548 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:57:29
+Table Sochi 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: MikeHatesYou ( $307 )
+Seat 7: fjreis ( $100 )
+Seat 9: Teranozavr ( $199 )
+MikeHatesYou posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+Teranozavr folds
+MikeHatesYou folds
+** Summary **
+fjreis did not show his hand
+fjreis collected [ $30 ]
+
+
+#Game No : 934066600
+***** 888poker Hand History for Game 934066600 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:57:36
+Table Sochi 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: MikeHatesYou ( $297 )
+Seat 7: fjreis ( $110 )
+Seat 9: Teranozavr ( $199 )
+fjreis posts small blind [$10]
+Teranozavr posts big blind [$20]
+** Dealing down cards **
+MikeHatesYou raises [$297]
+fjreis calls [$100]
+Teranozavr folds
+** Dealing flop ** [ 8s, 5c, Qs ]
+** Dealing turn ** [ 4h ]
+** Dealing river ** [ 6c ]
+** Summary **
+MikeHatesYou shows [ 7c, Ad ]
+fjreis shows [ 6h, Ac ]
+MikeHatesYou collected [ $237.50 ]
+
+
+#Game No : 934066752
+***** 888poker Hand History for Game 934066752 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:57:59
+Table Sochi 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: MikeHatesYou ( $424.50 )
+Seat 7: fjreis ( $100 )
+Seat 9: Teranozavr ( $179 )
+Teranozavr posts small blind [$10]
+MikeHatesYou folds
+fjreis posts big blind [$20]
+** Dealing down cards **
+Teranozavr folds
+** Summary **
+fjreis did not show his hand
+fjreis collected [ $30 ]
+
+
+#Game No : 934066816
+***** 888poker Hand History for Game 934066816 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:58:08
+Table Sochi 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $100 )
+Seat 7: fjreis ( $120 )
+Seat 9: Teranozavr ( $159 )
+Teranozavr posts small blind [$10]
+dazz604 posts big blind [$20]
+** Dealing down cards **
+fjreis folds
+Teranozavr raises [$149]
+dazz604 calls [$80]
+** Dealing flop ** [ 6d, 9d, 3c ]
+** Dealing turn ** [ 3h ]
+** Dealing river ** [ 3s ]
+** Summary **
+dazz604 shows [ Jc, Ah ]
+Teranozavr shows [ 9h, Jd ]
+Teranozavr collected [ $197.50 ]
+Teranozavr collected [ $59 ]
+
+
+#Game No : 934066949
+***** 888poker Hand History for Game 934066949 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:58:28
+Table Sochi 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $100 )
+Seat 7: fjreis ( $120 )
+Seat 9: Teranozavr ( $256.50 )
+dazz604 posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+Teranozavr raises [$256.50]
+dazz604 calls [$90]
+fjreis calls [$100]
+** Dealing flop ** [ 4d, Ac, Ts ]
+** Dealing turn ** [ 3d ]
+** Dealing river ** [ 2h ]
+** Summary **
+dazz604 shows [ As, 5h ]
+fjreis shows [ Ah, 8c ]
+Teranozavr shows [ 7h, 6h ]
+dazz604 collected [ $297.50 ]
+fjreis collected [ $40 ]
+
+
+#Game No : 934067107
+***** 888poker Hand History for Game 934067107 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:58:52
+Table Sochi 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $297.50 )
+Seat 7: fjreis ( $100 )
+Seat 9: Teranozavr ( $136.50 )
+fjreis posts small blind [$10]
+Teranozavr posts big blind [$20]
+** Dealing down cards **
+dazz604 folds
+fjreis raises [$90]
+Teranozavr calls [$80]
+** Dealing flop ** [ Ks, As, Ah ]
+** Dealing turn ** [ Ac ]
+** Dealing river ** [ 3s ]
+** Summary **
+fjreis shows [ 9c, Ts ]
+Teranozavr shows [ Qs, Qc ]
+Teranozavr collected [ $197.50 ]
+
+
+#Game No : 934067247
+***** 888poker Hand History for Game 934067247 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:59:13
+Table Sochi 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $297.50 )
+Seat 7: fjreis ( $100 )
+Seat 9: Teranozavr ( $234 )
+Teranozavr posts small blind [$10]
+dazz604 posts big blind [$20]
+** Dealing down cards **
+fjreis raises [$100]
+Teranozavr folds
+dazz604 folds
+** Summary **
+fjreis did not show his hand
+fjreis collected [ $50 ]
+
+
+#Game No : 934067304
+***** 888poker Hand History for Game 934067304 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:59:22
+Table Sochi 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $277.50 )
+Seat 7: fjreis ( $130 )
+Seat 9: Teranozavr ( $224 )
+dazz604 posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+Teranozavr folds
+dazz604 folds
+** Summary **
+fjreis did not show his hand
+fjreis collected [ $30 ]
+
+
+#Game No : 934067342
+***** 888poker Hand History for Game 934067342 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:59:27
+Table Sochi 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $267.50 )
+Seat 7: fjreis ( $140 )
+Seat 9: Teranozavr ( $224 )
+fjreis posts small blind [$10]
+Teranozavr posts big blind [$20]
+** Dealing down cards **
+dazz604 folds
+fjreis raises [$130]
+Teranozavr folds
+** Summary **
+fjreis did not show his hand
+fjreis collected [ $40 ]
+
+
+#Game No : 934067399
+***** 888poker Hand History for Game 934067399 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:59:36
+Table Sochi 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $267.50 )
+Seat 7: fjreis ( $160 )
+Seat 9: Teranozavr ( $204 )
+Teranozavr posts small blind [$10]
+dazz604 posts big blind [$20]
+** Dealing down cards **
+fjreis folds
+Teranozavr raises [$194]
+dazz604 folds
+** Summary **
+Teranozavr did not show his hand
+Teranozavr collected [ $40 ]
+
+
+#Game No : 934067453
+***** 888poker Hand History for Game 934067453 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:59:44
+Table Sochi 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $247.50 )
+Seat 7: fjreis ( $160 )
+Seat 9: Teranozavr ( $224 )
+dazz604 posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+Teranozavr folds
+dazz604 folds
+** Summary **
+fjreis did not show his hand
+fjreis collected [ $30 ]
+
+
+#Game No : 934067496
+***** 888poker Hand History for Game 934067496 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:59:50
+Table Sochi 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $237.50 )
+Seat 7: fjreis ( $170 )
+Seat 9: Teranozavr ( $224 )
+fjreis posts small blind [$10]
+Teranozavr posts big blind [$20]
+** Dealing down cards **
+dazz604 folds
+fjreis raises [$160]
+Teranozavr folds
+** Summary **
+fjreis did not show his hand
+fjreis collected [ $40 ]
+
+
+#Game No : 934067553
+***** 888poker Hand History for Game 934067553 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 18:59:59
+Table Sochi 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $237.50 )
+Seat 7: fjreis ( $190 )
+Seat 9: Teranozavr ( $204 )
+Teranozavr posts small blind [$10]
+dazz604 posts big blind [$20]
+** Dealing down cards **
+fjreis folds
+Teranozavr folds
+** Summary **
+dazz604 did not show his hand
+dazz604 collected [ $30 ]
+
+
+#Game No : 934067589
+***** 888poker Hand History for Game 934067589 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 19:00:05
+Table Sochi 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $247.50 )
+Seat 7: fjreis ( $190 )
+Seat 9: Teranozavr ( $194 )
+dazz604 posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+Teranozavr folds
+dazz604 folds
+** Summary **
+fjreis did not show his hand
+fjreis collected [ $30 ]
+
+
+#Game No : 934067625
+***** 888poker Hand History for Game 934067625 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 19:00:11
+Table Sochi 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $237.50 )
+Seat 7: fjreis ( $200 )
+Seat 9: Teranozavr ( $194 )
+fjreis posts small blind [$10]
+Teranozavr posts big blind [$20]
+** Dealing down cards **
+dazz604 raises [$237.50]
+fjreis folds
+Teranozavr folds
+** Summary **
+dazz604 did not show his hand
+dazz604 collected [ $50 ]
+
+
+#Game No : 934067673
+***** 888poker Hand History for Game 934067673 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 19:00:19
+Table Sochi 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 6: dazz604 ( $267.50 )
+Seat 7: fjreis ( $190 )
+Seat 9: Teranozavr ( $174 )
+Teranozavr posts small blind [$10]
+dazz604 posts big blind [$20]
+** Dealing down cards **
+fjreis folds
+Teranozavr raises [$164]
+dazz604 calls [$154]
+** Dealing flop ** [ Kh, Ac, 6c ]
+** Dealing turn ** [ 2d ]
+** Dealing river ** [ 8c ]
+** Summary **
+dazz604 shows [ 4c, 4d ]
+Teranozavr shows [ Td, Qh ]
+dazz604 collected [ $345.50 ]
+
+

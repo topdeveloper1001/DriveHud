@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188247946">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819097390</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>20</gamecount>  
+	          <startdate>2014-01-26 16:15:43</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,098</bets>  
+	          <wins>2,914</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,616</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>1</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.90</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5439016760">
+		 <general>
+		  <startdate>2014-01-26 16:15:43</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="800" dealer="0" win="240" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="kep11" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="julien66666" type="1" sum="10" cards="[cards]"/><action no="2" player="kep11" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="4" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><action no="5" player="julien66666" type="3" sum="10" cards=""/><cards type="Pocket" player="kep11">X X</cards><action no="6" player="kep11" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H8 CQ</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 H2 S6</cards><action no="7" player="julien66666" type="5" sum="20" cards=""/><action no="8" player="kep11" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="9" player="julien66666" type="5" sum="20" cards=""/><action no="10" player="kep11" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards><action no="11" player="julien66666" type="5" sum="120" cards=""/><action no="12" player="kep11" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439017068">
+		 <general>
+		  <startdate>2014-01-26 16:16:19</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="860" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="kep11" chips="740" dealer="0" win="0" bet="740" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="1,560" bet="800" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kep11" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="3" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><action no="4" player="julien66666" type="3" sum="20" cards=""/><cards type="Pocket" player="kep11">CA C8</cards><action no="5" player="kep11" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">H8 H5</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 HA D2</cards><action no="9" player="julien66666" type="0" sum="0" cards=""/><action no="7" player="kep11" type="5" sum="42" cards=""/><action no="8" player="WorstCard" type="3" sum="42" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards><action no="10" player="kep11" type="5" sum="101" cards=""/><action no="11" player="WorstCard" type="3" sum="101" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S4</cards><action no="12" player="kep11" type="5" sum="173" cards=""/><action no="14" player="kep11" type="7" sum="404" cards=""/><action no="13" player="WorstCard" type="23" sum="637" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439031647">
+		 <general>
+		  <startdate>2014-01-26 16:17:12</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="800" dealer="0" win="1,060" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="840" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,560" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MeXxXyyy" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="5" player="MeXxXyyy" type="3" sum="60" cards=""/><cards type="Pocket" player="julien66666">X X</cards><action no="3" player="julien66666" type="23" sum="80" cards=""/><cards type="Pocket" player="WorstCard">C4 H2</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 H7 DK</cards><action no="6" player="MeXxXyyy" type="4" sum="0" cards=""/><action no="8" player="MeXxXyyy" type="23" sum="720" cards=""/><action no="7" player="julien66666" type="5" sum="170" cards=""/><action no="9" player="julien66666" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439031955">
+		 <general>
+		  <startdate>2014-01-26 16:17:48</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,060" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="590" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="1" sum="15" cards="[cards]"/><action no="2" player="julien66666" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="4" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><cards type="Pocket" player="WorstCard">DJ S3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032059">
+		 <general>
+		  <startdate>2014-01-26 16:17:58</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,045" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="605" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,550" dealer="0" win="60" bet="30" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="julien66666" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="3" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">D8 SJ</cards><action no="4" player="julien66666" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">C9 SQ</cards><action no="5" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK C4 S5</cards><action no="6" player="julien66666" type="4" sum="0" cards=""/><action no="7" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="8" player="julien66666" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards><action no="10" player="julien66666" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032406">
+		 <general>
+		  <startdate>2014-01-26 16:18:34</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,045" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="575" dealer="1" win="165" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,580" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MeXxXyyy" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="5" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><action no="3" player="julien66666" type="23" sum="120" cards=""/><cards type="Pocket" player="WorstCard">DQ D6</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032564">
+		 <general>
+		  <startdate>2014-01-26 16:18:51</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,015" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="620" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,565" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="1" sum="15" cards="[cards]"/><action no="2" player="julien66666" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="4" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><cards type="Pocket" player="WorstCard">C2 D5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032726">
+		 <general>
+		  <startdate>2014-01-26 16:19:09</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="635" dealer="0" win="150" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,565" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="julien66666" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="3" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">SK CA</cards><action no="4" player="julien66666" type="23" sum="120" cards=""/><cards type="Pocket" player="WorstCard">C6 H5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032907">
+		 <general>
+		  <startdate>2014-01-26 16:19:28</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,000" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="665" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,535" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MeXxXyyy" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><cards type="Pocket" player="julien66666">X X</cards><action no="3" player="julien66666" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CJ C2</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439032994">
+		 <general>
+		  <startdate>2014-01-26 16:19:38</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,015" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="665" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,520" dealer="1" win="135" bet="90" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="1" sum="15" cards="[cards]"/><action no="2" player="julien66666" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="4" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><action no="5" player="julien66666" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ HJ</cards><action no="3" player="WorstCard" type="23" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439033118">
+		 <general>
+		  <startdate>2014-01-26 16:19:52</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,000" dealer="1" win="0" bet="238" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="635" dealer="0" win="531" bet="238" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,565" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="1" player="julien66666" type="15" sum="5" cards="[cards]"/><action no="4" player="julien66666" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">H5 C5</cards><action no="6" player="MeXxXyyy" type="23" sum="100" cards=""/><cards type="Pocket" player="julien66666">S10 SK</cards><action no="7" player="julien66666" type="3" sum="75" cards=""/><cards type="Pocket" player="WorstCard">DA C6</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK C10 HK</cards><action no="10" player="MeXxXyyy" type="5" sum="133" cards=""/><action no="9" player="julien66666" type="4" sum="0" cards=""/><action no="11" player="julien66666" type="3" sum="133" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="13" player="MeXxXyyy" type="4" sum="0" cards=""/><action no="12" player="julien66666" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards><action no="15" player="MeXxXyyy" type="4" sum="0" cards=""/><action no="14" player="julien66666" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439033420">
+		 <general>
+		  <startdate>2014-01-26 16:20:26</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="762" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="928" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,510" dealer="0" win="165" bet="105" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="5" player="MeXxXyyy" type="2" sum="50" cards="[cards]"/><action no="3" player="julien66666" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="8" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><action no="6" player="julien66666" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK C6</cards><action no="7" player="WorstCard" type="23" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439033594">
+		 <general>
+		  <startdate>2014-01-26 16:20:47</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="707" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="923" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,570" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="4" player="MeXxXyyy" type="1" sum="25" cards="[cards]"/><action no="2" player="julien66666" type="15" sum="5" cards="[cards]"/><action no="5" player="julien66666" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="7" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><cards type="Pocket" player="WorstCard">H5 SK</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439033721">
+		 <general>
+		  <startdate>2014-01-26 16:21:02</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="677" dealer="1" win="1,409" bet="677" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="958" dealer="0" win="281" bet="958" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,565" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="1" player="julien66666" type="15" sum="5" cards="[cards]"/><action no="4" player="julien66666" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">H7 CK</cards><action no="6" player="MeXxXyyy" type="23" sum="672" cards=""/><cards type="Pocket" player="julien66666">SQ DQ</cards><action no="7" player="julien66666" type="7" sum="928" cards=""/><cards type="Pocket" player="WorstCard">D5 C8</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK D3 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5439033926">
+		 <general>
+		  <startdate>2014-01-26 16:21:25</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,409" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="281" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,510" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="5" player="MeXxXyyy" type="2" sum="50" cards="[cards]"/><action no="3" player="julien66666" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><cards type="Pocket" player="julien66666">X X</cards><action no="6" player="julien66666" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 H5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439034049">
+		 <general>
+		  <startdate>2014-01-26 16:21:38</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,444" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="276" dealer="0" win="582" bet="276" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,480" dealer="1" win="0" bet="276" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="15" sum="5" cards="[cards]"/><action no="4" player="MeXxXyyy" type="1" sum="25" cards="[cards]"/><action no="2" player="julien66666" type="15" sum="5" cards="[cards]"/><action no="5" player="julien66666" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="7" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">D8 DA</cards><action no="8" player="julien66666" type="7" sum="221" cards=""/><cards type="Pocket" player="WorstCard">C2 H2</cards><action no="6" player="WorstCard" type="23" sum="250" cards=""/><action no="9" player="WorstCard" type="3" sum="21" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 CQ S5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game><game gamecode="5439034281">
+		 <general>
+		  <startdate>2014-01-26 16:22:06</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,414" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="582" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,204" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="MeXxXyyy" type="15" sum="10" cards="[cards]"/><action no="1" player="julien66666" type="15" sum="10" cards="[cards]"/><action no="4" player="julien66666" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="6" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">X X</cards><action no="7" player="julien66666" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SJ H9</cards>
+	</round>
+	
+		</game><game gamecode="5439034410">
+		 <general>
+		  <startdate>2014-01-26 16:22:19</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,404" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="522" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,274" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="MeXxXyyy" type="15" sum="10" cards="[cards]"/><action no="5" player="MeXxXyyy" type="2" sum="100" cards="[cards]"/><action no="3" player="julien66666" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><cards type="Pocket" player="julien66666">X X</cards><action no="6" player="julien66666" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 C3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439034552">
+		 <general>
+		  <startdate>2014-01-26 16:22:33</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,474" dealer="0" win="430" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="512" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,214" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MeXxXyyy" type="15" sum="10" cards="[cards]"/><action no="4" player="MeXxXyyy" type="1" sum="50" cards="[cards]"/><action no="2" player="julien66666" type="15" sum="10" cards="[cards]"/><action no="5" player="julien66666" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="7" player="MeXxXyyy" type="23" sum="300" cards=""/><cards type="Pocket" player="julien66666">X X</cards><action no="8" player="julien66666" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H8 C7</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439051882">
+		 <general>
+		  <startdate>2014-01-26 16:22:54</startdate>		  
+		  <players>
+		   <player seat="2" name="MeXxXyyy" chips="1,594" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="julien66666" chips="402" dealer="0" win="0" bet="402" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="1,204" dealer="0" win="814" bet="402" rebuy="0" addon="0" reg_code="6188247946"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="MeXxXyyy" type="15" sum="10" cards="[cards]"/><action no="1" player="julien66666" type="15" sum="10" cards="[cards]"/><action no="4" player="julien66666" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="MeXxXyyy">X X</cards><action no="6" player="MeXxXyyy" type="0" sum="0" cards=""/><cards type="Pocket" player="julien66666">C5 C3</cards><action no="7" player="julien66666" type="23" sum="392" cards=""/><cards type="Pocket" player="WorstCard">SJ DK</cards><action no="8" player="WorstCard" type="3" sum="292" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ DQ D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game>  
+	</session>

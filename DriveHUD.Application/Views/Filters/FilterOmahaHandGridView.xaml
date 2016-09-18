@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="DriveHUD.Application.Views.FilterOmahaHandGridView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DriveHUD.Application.Views"
+             mc:Ignorable="d" 
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ab="clr-namespace:DriveHUD.Common.Wpf.AttachedBehaviors;assembly=DriveHUD.Common.Wpf"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DriveHUD.Common.Wpf;component/ControlStyles/Filters/FilterListBoxTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+            <Style x:Key="FiltersListBoxStyle" TargetType="ListBox">
+                <Setter Property="MaxHeight" Value="650" />
+                <Setter Property="SelectionMode" Value="Multiple" />
+                <Setter Property="ItemContainerStyle" Value="{StaticResource FilterOmahaHandGridListBoxItemStyle}" />
+                <Setter Property="Background" Value="{StaticResource BackgroundBrush3}" />
+                <Setter Property="BorderThickness" Value="0" />
+                <Setter Property="ItemsSource" Value="{Binding FilterModel.HandGridCollection}"/>
+            </Style>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    
+    <Grid Margin="20 10">
+        <ListBox Style="{StaticResource FiltersListBoxStyle}">
+            <i:Interaction.Behaviors>
+                <ab:IgnoreMouseWheelBehavior />
+            </i:Interaction.Behaviors>
+        </ListBox>
+    </Grid>
+</UserControl>

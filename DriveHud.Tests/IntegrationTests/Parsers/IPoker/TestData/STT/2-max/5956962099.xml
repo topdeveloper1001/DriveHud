@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5956962099">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>"SUPER TURBO" Heads Up $1, 779941651</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:01</duration>  
+	          <gamecount>5</gamecount>  
+	          <startdate>2012-11-18 12:29:28</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>Gacrus</nickname>  
+	          <bets>4,700</bets>  
+	          <wins>6,200</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>3,000</chipsout>
+			  		<ipoints>1.25</ipoints>
+        		<statuspoints>1.25</statuspoints>
+			  		<awardpoints>1.25</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>"SUPER TURBO" Heads Up $1</tournamentname><place>1</place><buyin>$1.00+$0.05</buyin> <totalbuyin>$1.05</totalbuyin> <ipoints>1.25</ipoints> <win>$2.00</win> <statuspoints>1.25</statuspoints> <awardpoints>1.25</awardpoints>  
+	    </general>  
+	    <game gamecode="4375687384">
+		 <general>
+		  <startdate>2012-11-18 12:29:28</startdate>		  
+		  <players>
+		   <player seat="3" name="Radrigues0608" chips="1,500" dealer="1" win="180" bet="120" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Radrigues0608" type="1" sum="10" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Radrigues0608">X X</cards><action no="3" player="Radrigues0608" type="23" sum="60" cards=""/><cards type="Pocket" player="Gacrus">SK S6</cards><action no="4" player="Gacrus" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA D4 C3</cards><action no="6" player="Radrigues0608" type="4" sum="0" cards=""/><action no="5" player="Gacrus" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="8" player="Radrigues0608" type="5" sum="60" cards=""/><action no="7" player="Gacrus" type="4" sum="0" cards=""/><action no="9" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375687420">
+		 <general>
+		  <startdate>2012-11-18 12:29:55</startdate>		  
+		  <players>
+		   <player seat="3" name="Radrigues0608" chips="1,560" dealer="0" win="120" bet="80" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,440" dealer="1" win="0" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Radrigues0608" type="2" sum="20" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Radrigues0608">X X</cards><action no="4" player="Radrigues0608" type="23" sum="80" cards=""/><cards type="Pocket" player="Gacrus">C10 C2</cards><action no="3" player="Gacrus" type="23" sum="40" cards=""/><action no="5" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375687443">
+		 <general>
+		  <startdate>2012-11-18 12:30:15</startdate>		  
+		  <players>
+		   <player seat="3" name="Radrigues0608" chips="1,600" dealer="1" win="0" bet="1,400" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,400" dealer="0" win="2,800" bet="1,400" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Radrigues0608" type="1" sum="10" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Radrigues0608">HA D8</cards><action no="3" player="Radrigues0608" type="23" sum="60" cards=""/><cards type="Pocket" player="Gacrus">CJ H9</cards><action no="4" player="Gacrus" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 S5 H8</cards><action no="6" player="Radrigues0608" type="5" sum="90" cards=""/><action no="8" player="Radrigues0608" type="3" sum="1,250" cards=""/><action no="5" player="Gacrus" type="4" sum="0" cards=""/><action no="7" player="Gacrus" type="23" sum="1,340" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S4</cards>
+	</round>
+	
+		</game><game gamecode="4375687498">
+		 <general>
+		  <startdate>2012-11-18 12:30:58</startdate>		  
+		  <players>
+		   <player seat="3" name="Radrigues0608" chips="200" dealer="0" win="400" bet="200" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="2,800" dealer="1" win="2,600" bet="2,800" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Radrigues0608" type="2" sum="40" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Radrigues0608">S2 SK</cards><action no="4" player="Radrigues0608" type="7" sum="160" cards=""/><cards type="Pocket" player="Gacrus">D6 H9</cards><action no="3" player="Gacrus" type="23" sum="2,800" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ C6 DA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game><game gamecode="4375687528">
+		 <general>
+		  <startdate>2012-11-18 12:31:24</startdate>		  
+		  <players>
+		   <player seat="3" name="Radrigues0608" chips="400" dealer="1" win="0" bet="400" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="2,600" dealer="0" win="800" bet="400" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Radrigues0608" type="1" sum="20" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Radrigues0608">CQ D6</cards><action no="3" player="Radrigues0608" type="23" sum="400" cards=""/><cards type="Pocket" player="Gacrus">D5 CK</cards><action no="4" player="Gacrus" type="3" sum="360" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK HQ H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards>
+	</round>
+	
+		</game>  
+	</session>

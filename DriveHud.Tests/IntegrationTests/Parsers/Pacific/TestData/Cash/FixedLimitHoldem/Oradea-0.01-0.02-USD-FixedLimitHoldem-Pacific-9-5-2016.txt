@@ -1,0 +1,6362 @@
+#Game No : 456273610
+***** 888poker Hand History for Game 456273610 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:01:22
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 2: rags ( $16.96 )
+Seat 3: ChrisPi98 ( $0.97 )
+Seat 4: Zakkes22 ( $1.03 )
+Seat 5: xOSNIx ( $1.25 )
+Seat 6: elmusulman ( $0.66 )
+Seat 9: mcky1974 ( $0.59 )
+mcky1974 posts small blind [$0.01]
+rags posts big blind [$0.02]
+** Dealing down cards **
+ChrisPi98 calls [$0.02]
+Zakkes22 folds
+xOSNIx folds
+elmusulman raises [$0.04]
+mcky1974 calls [$0.03]
+rags calls [$0.02]
+ChrisPi98 calls [$0.02]
+** Dealing flop ** [ 8s, 8c, 8h ]
+mcky1974 bets [$0.02]
+rags folds
+ChrisPi98 raises [$0.04]
+elmusulman calls [$0.04]
+mcky1974 calls [$0.02]
+** Dealing turn ** [ Jd ]
+mcky1974 checks
+ChrisPi98 checks
+elmusulman bets [$0.04]
+mcky1974 calls [$0.04]
+ChrisPi98 calls [$0.04]
+** Dealing river ** [ Qs ]
+mcky1974 checks
+ChrisPi98 checks
+elmusulman bets [$0.04]
+mcky1974 raises [$0.08]
+ChrisPi98 folds
+elmusulman folds
+** Summary **
+mcky1974 collected [ $0.46 ]
+
+
+#Game No : 456273664
+***** 888poker Hand History for Game 456273664 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:02:31
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 2: rags ( $16.92 )
+Seat 3: ChrisPi98 ( $0.85 )
+Seat 4: Zakkes22 ( $1.03 )
+Seat 5: xOSNIx ( $1.25 )
+Seat 6: elmusulman ( $0.50 )
+Seat 9: mcky1974 ( $0.89 )
+rags posts small blind [$0.01]
+ChrisPi98 posts big blind [$0.02]
+** Dealing down cards **
+Zakkes22 calls [$0.02]
+xOSNIx folds
+elmusulman calls [$0.02]
+mcky1974 raises [$0.04]
+rags folds
+ChrisPi98 calls [$0.02]
+Zakkes22 calls [$0.02]
+elmusulman calls [$0.02]
+** Dealing flop ** [ Ts, 9s, 9c ]
+ChrisPi98 checks
+Zakkes22 checks
+elmusulman bets [$0.02]
+mcky1974 calls [$0.02]
+ChrisPi98 calls [$0.02]
+Zakkes22 calls [$0.02]
+** Dealing turn ** [ 4h ]
+ChrisPi98 checks
+Zakkes22 checks
+elmusulman bets [$0.04]
+mcky1974 calls [$0.04]
+ChrisPi98 calls [$0.04]
+Zakkes22 calls [$0.04]
+** Dealing river ** [ Qs ]
+ChrisPi98 bets [$0.04]
+Zakkes22 calls [$0.04]
+elmusulman calls [$0.04]
+mcky1974 folds
+** Summary **
+ChrisPi98 shows [ Js, As ]
+Zakkes22 mucks [ 9h, Jd ]
+elmusulman mucks [ 8d, Td ]
+ChrisPi98 collected [ $0.51 ]
+
+
+#Game No : 456273814
+***** 888poker Hand History for Game 456273814 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:05:28
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 2: rags ( $16.91 )
+Seat 3: ChrisPi98 ( $1.24 )
+Seat 5: xOSNIx ( $1.27 )
+Seat 6: elmusulman ( $0.36 )
+Seat 7: bommanster ( $0.18 )
+Seat 9: mcky1974 ( $0.75 )
+xOSNIx posts small blind [$0.01]
+elmusulman posts big blind [$0.02]
+** Dealing down cards **
+bommanster folds
+mcky1974 raises [$0.04]
+rags folds
+ChrisPi98 folds
+xOSNIx calls [$0.03]
+elmusulman calls [$0.02]
+** Dealing flop ** [ 2h, Ts, 7c ]
+xOSNIx checks
+elmusulman checks
+mcky1974 bets [$0.02]
+xOSNIx calls [$0.02]
+elmusulman folds
+** Dealing turn ** [ 8c ]
+xOSNIx checks
+mcky1974 bets [$0.04]
+xOSNIx calls [$0.04]
+** Dealing river ** [ 7h ]
+xOSNIx checks
+mcky1974 bets [$0.04]
+xOSNIx calls [$0.04]
+** Summary **
+mcky1974 shows [ 3d, 3h ]
+xOSNIx shows [ Qs, 8s ]
+xOSNIx collected [ $0.31 ]
+
+
+#Game No : 456273904
+***** 888poker Hand History for Game 456273904 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:07:16
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 2: rags ( $16.91 )
+Seat 3: ChrisPi98 ( $1.24 )
+Seat 5: xOSNIx ( $1.44 )
+Seat 6: elmusulman ( $0.32 )
+Seat 7: bommanster ( $0.18 )
+Seat 9: mcky1974 ( $0.61 )
+elmusulman folds
+bommanster posts small blind [$0.01]
+mcky1974 posts big blind [$0.02]
+** Dealing down cards **
+rags folds
+ChrisPi98 folds
+xOSNIx calls [$0.02]
+bommanster folds
+mcky1974 checks
+** Dealing flop ** [ As, 2h, Tc ]
+mcky1974 checks
+xOSNIx bets [$0.02]
+mcky1974 calls [$0.02]
+** Dealing turn ** [ Kh ]
+mcky1974 checks
+xOSNIx bets [$0.04]
+mcky1974 calls [$0.04]
+** Dealing river ** [ 6d ]
+mcky1974 checks
+xOSNIx bets [$0.04]
+mcky1974 raises [$0.08]
+xOSNIx calls [$0.04]
+** Summary **
+mcky1974 shows [ Ah, 2c ]
+xOSNIx mucks [ 3d, Kc ]
+mcky1974 collected [ $0.32 ]
+
+
+#Game No : 456273972
+***** 888poker Hand History for Game 456273972 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:08:40
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 5: xOSNIx ( $1.28 )
+Seat 6: elmusulman ( $0.32 )
+Seat 7: bommanster ( $0.17 )
+Seat 9: mcky1974 ( $0.77 )
+mcky1974 posts small blind [$0.01]
+xOSNIx posts big blind [$0.02]
+elmusulman posts dead blind [$0.01 + $0]
+** Dealing down cards **
+elmusulman calls [$0.02]
+bommanster folds
+mcky1974 raises [$0.03]
+xOSNIx folds
+elmusulman calls [$0.02]
+** Dealing flop ** [ 5s, 9c, 2s ]
+mcky1974 checks
+elmusulman bets [$0.02]
+mcky1974 calls [$0.02]
+** Dealing turn ** [ 8c ]
+mcky1974 bets [$0.04]
+elmusulman raises [$0.08]
+mcky1974 calls [$0.04]
+** Dealing river ** [ 2d ]
+mcky1974 checks
+elmusulman bets [$0.04]
+mcky1974 calls [$0.04]
+** Summary **
+elmusulman shows [ 5d, 4h ]
+mcky1974 shows [ 8h, 6s ]
+mcky1974 collected [ $0.38 ]
+
+
+#Game No : 456274006
+***** 888poker Hand History for Game 456274006 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:09:29
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 5: xOSNIx ( $1.26 )
+Seat 6: elmusulman ( $0.13 )
+Seat 7: bommanster ( $0.17 )
+Seat 9: mcky1974 ( $0.97 )
+xOSNIx posts small blind [$0.01]
+elmusulman posts big blind [$0.02]
+** Dealing down cards **
+bommanster folds
+mcky1974 calls [$0.02]
+xOSNIx calls [$0.01]
+elmusulman raises [$0.02]
+mcky1974 calls [$0.02]
+xOSNIx calls [$0.02]
+** Dealing flop ** [ 8s, 2d, As ]
+xOSNIx checks
+elmusulman bets [$0.02]
+mcky1974 folds
+xOSNIx calls [$0.02]
+** Dealing turn ** [ 5s ]
+xOSNIx bets [$0.04]
+elmusulman raises [$0.07]
+xOSNIx calls [$0.03]
+** Dealing river ** [ 6s ]
+** Summary **
+xOSNIx shows [ Ah, 7s ]
+elmusulman shows [ 5c, 3s ]
+xOSNIx collected [ $0.29 ]
+
+
+#Game No : 456274073
+***** 888poker Hand History for Game 456274073 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:10:41
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 5: xOSNIx ( $1.42 )
+Seat 7: bommanster ( $0.17 )
+Seat 8: proone222 ( $0.38 )
+Seat 9: mcky1974 ( $0.93 )
+bommanster posts small blind [$0.01]
+proone222 posts big blind [$0.02]
+** Dealing down cards **
+mcky1974 raises [$0.04]
+xOSNIx folds
+bommanster folds
+proone222 calls [$0.02]
+** Dealing flop ** [ 6h, Jh, 6c ]
+proone222 checks
+mcky1974 bets [$0.02]
+proone222 calls [$0.02]
+** Dealing turn ** [ Jc ]
+proone222 checks
+mcky1974 bets [$0.04]
+proone222 raises [$0.08]
+mcky1974 calls [$0.04]
+** Dealing river ** [ 9h ]
+proone222 bets [$0.04]
+mcky1974 calls [$0.04]
+** Summary **
+proone222 shows [ 6s, 3d ]
+mcky1974 mucks [ 4d, 9c ]
+proone222 collected [ $0.36 ]
+
+
+#Game No : 456274098
+***** 888poker Hand History for Game 456274098 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:11:11
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 5: xOSNIx ( $1.42 )
+Seat 7: bommanster ( $0.16 )
+Seat 8: proone222 ( $0.56 )
+Seat 9: mcky1974 ( $0.75 )
+proone222 posts small blind [$0.01]
+mcky1974 posts big blind [$0.02]
+** Dealing down cards **
+xOSNIx calls [$0.02]
+bommanster folds
+proone222 calls [$0.01]
+mcky1974 checks
+** Dealing flop ** [ 5d, Js, As ]
+proone222 bets [$0.02]
+mcky1974 calls [$0.02]
+xOSNIx calls [$0.02]
+** Dealing turn ** [ 2c ]
+proone222 bets [$0.04]
+mcky1974 folds
+xOSNIx raises [$0.08]
+proone222 calls [$0.04]
+** Dealing river ** [ Td ]
+proone222 checks
+xOSNIx bets [$0.04]
+proone222 folds
+** Summary **
+xOSNIx did not show his hand
+xOSNIx collected [ $0.27 ]
+
+
+#Game No : 456274152
+***** 888poker Hand History for Game 456274152 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:12:06
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 4
+Seat 5: xOSNIx ( $1.57 )
+Seat 7: bommanster ( $0.16 )
+Seat 8: proone222 ( $0.44 )
+Seat 9: mcky1974 ( $0.71 )
+mcky1974 posts small blind [$0.01]
+xOSNIx posts big blind [$0.02]
+** Dealing down cards **
+bommanster folds
+proone222 raises [$0.04]
+mcky1974 calls [$0.03]
+xOSNIx raises [$0.04]
+proone222 calls [$0.02]
+mcky1974 calls [$0.02]
+** Dealing flop ** [ 5c, Ts, Qs ]
+mcky1974 checks
+xOSNIx checks
+proone222 bets [$0.02]
+mcky1974 calls [$0.02]
+xOSNIx calls [$0.02]
+** Dealing turn ** [ 9h ]
+mcky1974 checks
+xOSNIx checks
+proone222 bets [$0.04]
+mcky1974 calls [$0.04]
+xOSNIx calls [$0.04]
+** Dealing river ** [ Th ]
+mcky1974 checks
+xOSNIx checks
+proone222 bets [$0.04]
+mcky1974 folds
+xOSNIx calls [$0.04]
+** Summary **
+proone222 shows [ Jd, Kh ]
+xOSNIx mucks [ 8h, Ah ]
+proone222 collected [ $0.42 ]
+
+
+#Game No : 456274265
+***** 888poker Hand History for Game 456274265 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:14:00
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 5: xOSNIx ( $1.41 )
+Seat 6: koda569517 ( $0.80 )
+Seat 7: bommanster ( $0.16 )
+Seat 8: proone222 ( $0.70 )
+Seat 9: mcky1974 ( $0.59 )
+xOSNIx posts small blind [$0.01]
+koda569517 posts big blind [$0.02]
+** Dealing down cards **
+bommanster folds
+proone222 calls [$0.02]
+mcky1974 calls [$0.02]
+xOSNIx calls [$0.01]
+koda569517 checks
+** Dealing flop ** [ Qh, Js, 5s ]
+xOSNIx checks
+koda569517 checks
+proone222 checks
+mcky1974 checks
+** Dealing turn ** [ Jc ]
+xOSNIx checks
+koda569517 checks
+proone222 checks
+mcky1974 checks
+** Dealing river ** [ 6s ]
+xOSNIx checks
+koda569517 checks
+proone222 checks
+mcky1974 bets [$0.04]
+xOSNIx calls [$0.04]
+koda569517 folds
+proone222 folds
+** Summary **
+mcky1974 shows [ Jd, 7c ]
+xOSNIx mucks [ 6h, 5h ]
+mcky1974 collected [ $0.16 ]
+
+
+#Game No : 456274535
+***** 888poker Hand History for Game 456274535 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:18:42
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $1.02 )
+Seat 6: koda569517 ( $0.68 )
+Seat 7: bommanster ( $0.05 )
+Seat 8: proone222 ( $0.98 )
+Seat 9: mcky1974 ( $0.93 )
+Seat 10: mokummoos ( $0.16 )
+mcky1974 posts small blind [$0.01]
+mokummoos posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 raises [$0.04]
+koda569517 calls [$0.04]
+bommanster folds
+proone222 calls [$0.04]
+mcky1974 calls [$0.03]
+mokummoos calls [$0.02]
+** Dealing flop ** [ 2c, Qc, 4d ]
+mcky1974 bets [$0.02]
+mokummoos calls [$0.02]
+Halfpint27 calls [$0.02]
+koda569517 calls [$0.02]
+proone222 raises [$0.04]
+mcky1974 raises [$0.04]
+mokummoos calls [$0.04]
+Halfpint27 calls [$0.04]
+koda569517 calls [$0.04]
+proone222 raises [$0.04]
+mcky1974 calls [$0.02]
+mokummoos calls [$0.02]
+Halfpint27 calls [$0.02]
+koda569517 calls [$0.02]
+** Dealing turn ** [ 4c ]
+mcky1974 checks
+mokummoos bets [$0.04]
+Halfpint27 calls [$0.04]
+koda569517 calls [$0.04]
+proone222 calls [$0.04]
+mcky1974 calls [$0.04]
+** Dealing river ** [ Jc ]
+mcky1974 checks
+Halfpint27 checks
+koda569517 checks
+proone222 checks
+** Summary **
+mcky1974 shows [ 2h, 5h ]
+mokummoos shows [ Ac, 5s ]
+Halfpint27 mucks [ Js, Ks ]
+koda569517 mucks [ 6c, Tc ]
+proone222 mucks [ Ts, Qh ]
+mokummoos collected [ $0.76 ]
+
+
+#Game No : 456274588
+***** 888poker Hand History for Game 456274588 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:19:38
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.86 )
+Seat 6: koda569517 ( $0.52 )
+Seat 7: bommanster ( $0.05 )
+Seat 8: proone222 ( $0.82 )
+Seat 9: mcky1974 ( $0.77 )
+Seat 10: mokummoos ( $0.76 )
+mokummoos posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+koda569517 folds
+bommanster folds
+proone222 raises [$0.04]
+mcky1974 raises [$0.06]
+mokummoos calls [$0.05]
+Halfpint27 calls [$0.04]
+proone222 calls [$0.02]
+** Dealing flop ** [ 6s, 4c, Jh ]
+mokummoos checks
+Halfpint27 checks
+proone222 checks
+mcky1974 checks
+** Dealing turn ** [ 6h ]
+mokummoos bets [$0.04]
+Halfpint27 raises [$0.08]
+proone222 folds
+mcky1974 calls [$0.08]
+mokummoos calls [$0.04]
+** Dealing river ** [ 2c ]
+mokummoos bets [$0.04]
+Halfpint27 raises [$0.08]
+mcky1974 folds
+mokummoos calls [$0.04]
+** Summary **
+Halfpint27 shows [ 8c, 6d ]
+mokummoos shows [ Td, 6c ]
+mokummoos collected [ $0.61 ]
+
+
+#Game No : 456274623
+***** 888poker Hand History for Game 456274623 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:20:17
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.64 )
+Seat 6: koda569517 ( $0.52 )
+Seat 7: bommanster ( $0.05 )
+Seat 8: proone222 ( $0.76 )
+Seat 9: mcky1974 ( $0.63 )
+Seat 10: mokummoos ( $1.15 )
+Halfpint27 posts small blind [$0.01]
+koda569517 posts big blind [$0.02]
+** Dealing down cards **
+bommanster folds
+proone222 calls [$0.02]
+mcky1974 calls [$0.02]
+mokummoos calls [$0.02]
+Halfpint27 calls [$0.01]
+koda569517 checks
+** Dealing flop ** [ Ts, Kd, 2c ]
+Halfpint27 checks
+koda569517 checks
+proone222 checks
+mcky1974 checks
+mokummoos checks
+** Dealing turn ** [ 8d ]
+Halfpint27 checks
+koda569517 checks
+proone222 checks
+mcky1974 checks
+mokummoos checks
+** Dealing river ** [ 5d ]
+Halfpint27 checks
+koda569517 bets [$0.04]
+proone222 folds
+mcky1974 calls [$0.04]
+mokummoos folds
+Halfpint27 folds
+** Summary **
+koda569517 shows [ 3d, 5c ]
+mcky1974 shows [ Qs, Tc ]
+mcky1974 collected [ $0.18 ]
+
+
+#Game No : 456274650
+***** 888poker Hand History for Game 456274650 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:20:54
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.62 )
+Seat 6: koda569517 ( $0.46 )
+Seat 7: bommanster ( $0.05 )
+Seat 8: proone222 ( $0.74 )
+Seat 9: mcky1974 ( $0.75 )
+Seat 10: mokummoos ( $1.13 )
+koda569517 posts small blind [$0.01]
+bommanster posts big blind [$0.02]
+** Dealing down cards **
+proone222 raises [$0.04]
+mcky1974 raises [$0.06]
+mokummoos folds
+Halfpint27 folds
+koda569517 calls [$0.05]
+bommanster folds
+proone222 raises [$0.04]
+mcky1974 calls [$0.02]
+koda569517 calls [$0.02]
+** Dealing flop ** [ Ks, 7h, Jh ]
+koda569517 checks
+proone222 bets [$0.02]
+mcky1974 calls [$0.02]
+koda569517 calls [$0.02]
+** Dealing turn ** [ 6s ]
+koda569517 checks
+proone222 bets [$0.04]
+mcky1974 calls [$0.04]
+koda569517 calls [$0.04]
+** Dealing river ** [ 6c ]
+koda569517 checks
+proone222 bets [$0.04]
+mcky1974 folds
+koda569517 calls [$0.04]
+** Summary **
+proone222 shows [ 8d, Td ]
+koda569517 shows [ 7s, 8c ]
+koda569517 collected [ $0.50 ]
+
+
+#Game No : 456274697
+***** 888poker Hand History for Game 456274697 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:21:44
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.62 )
+Seat 6: koda569517 ( $0.78 )
+Seat 7: bommanster ( $0.03 )
+Seat 8: proone222 ( $0.56 )
+Seat 9: mcky1974 ( $0.61 )
+Seat 10: mokummoos ( $1.13 )
+bommanster posts small blind [$0.01]
+proone222 posts big blind [$0.02]
+** Dealing down cards **
+mcky1974 raises [$0.04]
+mokummoos calls [$0.04]
+Halfpint27 folds
+koda569517 folds
+bommanster folds
+proone222 raises [$0.04]
+mcky1974 raises [$0.04]
+mokummoos calls [$0.04]
+proone222 calls [$0.02]
+** Dealing flop ** [ Ac, Qs, 4c ]
+proone222 checks
+mcky1974 checks
+mokummoos checks
+** Dealing turn ** [ Qd ]
+proone222 bets [$0.04]
+mcky1974 calls [$0.04]
+mokummoos folds
+** Dealing river ** [ 3h ]
+proone222 bets [$0.04]
+mcky1974 calls [$0.04]
+** Summary **
+proone222 shows [ Js, Qh ]
+mcky1974 mucks [ 6h, As ]
+proone222 collected [ $0.39 ]
+
+
+#Game No : 456274723
+***** 888poker Hand History for Game 456274723 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:22:18
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.62 )
+Seat 6: koda569517 ( $0.78 )
+Seat 7: bommanster ( $0.02 )
+Seat 8: proone222 ( $0.79 )
+Seat 9: mcky1974 ( $0.45 )
+Seat 10: mokummoos ( $1.05 )
+proone222 posts small blind [$0.01]
+mcky1974 posts big blind [$0.02]
+** Dealing down cards **
+mokummoos raises [$0.04]
+Halfpint27 folds
+koda569517 folds
+bommanster calls [$0.02]
+proone222 raises [$0.05]
+mcky1974 calls [$0.04]
+mokummoos calls [$0.02]
+** Dealing flop ** [ 2h, 6s, Qs ]
+proone222 checks
+mcky1974 checks
+mokummoos bets [$0.02]
+proone222 calls [$0.02]
+mcky1974 calls [$0.02]
+** Dealing turn ** [ 8d ]
+proone222 checks
+mcky1974 checks
+mokummoos bets [$0.04]
+proone222 calls [$0.04]
+mcky1974 calls [$0.04]
+** Dealing river ** [ 5s ]
+proone222 checks
+mcky1974 checks
+mokummoos bets [$0.04]
+proone222 folds
+mcky1974 calls [$0.04]
+** Summary **
+mokummoos shows [ Ks, Jd ]
+bommanster shows [ 7s, As ]
+mcky1974 mucks [ 6h, 9s ]
+bommanster collected [ $0.08 ]
+mcky1974 collected [ $0.36 ]
+
+
+#Game No : 456274764
+***** 888poker Hand History for Game 456274764 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:23:07
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.62 )
+Seat 6: koda569517 ( $0.78 )
+Seat 7: bommanster ( $0.08 )
+Seat 8: proone222 ( $0.67 )
+Seat 9: mcky1974 ( $0.65 )
+Seat 10: mokummoos ( $0.89 )
+mcky1974 posts small blind [$0.01]
+mokummoos posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 calls [$0.02]
+koda569517 calls [$0.02]
+bommanster folds
+proone222 calls [$0.02]
+mcky1974 folds
+mokummoos checks
+** Dealing flop ** [ 9c, Kc, Ks ]
+mokummoos checks
+Halfpint27 checks
+koda569517 checks
+proone222 bets [$0.02]
+mokummoos calls [$0.02]
+Halfpint27 folds
+koda569517 calls [$0.02]
+** Dealing turn ** [ 3d ]
+mokummoos checks
+koda569517 checks
+proone222 checks
+** Dealing river ** [ Qc ]
+mokummoos checks
+koda569517 checks
+proone222 bets [$0.04]
+mokummoos calls [$0.04]
+koda569517 folds
+** Summary **
+proone222 shows [ 4s, 7d ]
+mokummoos shows [ 9s, 2d ]
+mokummoos collected [ $0.22 ]
+
+
+#Game No : 456274792
+***** 888poker Hand History for Game 456274792 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:23:43
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.60 )
+Seat 6: koda569517 ( $0.74 )
+Seat 7: bommanster ( $0.08 )
+Seat 8: proone222 ( $0.59 )
+Seat 9: mcky1974 ( $0.64 )
+Seat 10: mokummoos ( $1.03 )
+mokummoos posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+koda569517 folds
+bommanster folds
+proone222 calls [$0.02]
+mcky1974 raises [$0.04]
+mokummoos calls [$0.03]
+Halfpint27 folds
+proone222 calls [$0.02]
+** Dealing flop ** [ Ts, 5h, Qh ]
+mokummoos checks
+proone222 checks
+mcky1974 bets [$0.02]
+mokummoos calls [$0.02]
+proone222 calls [$0.02]
+** Dealing turn ** [ 4c ]
+mokummoos checks
+proone222 checks
+mcky1974 bets [$0.04]
+mokummoos calls [$0.04]
+proone222 raises [$0.08]
+mcky1974 calls [$0.04]
+mokummoos folds
+** Dealing river ** [ Qs ]
+proone222 bets [$0.04]
+mcky1974 calls [$0.04]
+** Summary **
+proone222 shows [ Qd, 6c ]
+mcky1974 mucks [ Ks, Th ]
+proone222 collected [ $0.46 ]
+
+
+#Game No : 456274825
+***** 888poker Hand History for Game 456274825 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:24:21
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.58 )
+Seat 6: koda569517 ( $0.74 )
+Seat 7: bommanster ( $0.08 )
+Seat 8: proone222 ( $0.87 )
+Seat 9: mcky1974 ( $0.46 )
+Seat 10: mokummoos ( $0.93 )
+Halfpint27 posts small blind [$0.01]
+koda569517 posts big blind [$0.02]
+** Dealing down cards **
+bommanster folds
+proone222 calls [$0.02]
+mcky1974 calls [$0.02]
+mokummoos folds
+Halfpint27 raises [$0.03]
+koda569517 calls [$0.02]
+proone222 calls [$0.02]
+mcky1974 calls [$0.02]
+** Dealing flop ** [ 4c, Th, 9s ]
+Halfpint27 checks
+koda569517 bets [$0.02]
+proone222 folds
+mcky1974 calls [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ Qd ]
+Halfpint27 bets [$0.04]
+koda569517 calls [$0.04]
+mcky1974 calls [$0.04]
+** Dealing river ** [ 4d ]
+Halfpint27 bets [$0.04]
+koda569517 calls [$0.04]
+mcky1974 folds
+** Summary **
+Halfpint27 shows [ Qs, 7s ]
+koda569517 mucks [ 7c, Ts ]
+Halfpint27 collected [ $0.40 ]
+
+
+#Game No : 456274865
+***** 888poker Hand History for Game 456274865 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:25:00
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $0.84 )
+Seat 6: koda569517 ( $0.60 )
+Seat 7: bommanster ( $0.08 )
+Seat 8: proone222 ( $0.83 )
+Seat 9: mcky1974 ( $0.36 )
+Seat 10: mokummoos ( $0.93 )
+koda569517 posts small blind [$0.01]
+bommanster posts big blind [$0.02]
+** Dealing down cards **
+proone222 folds
+mcky1974 calls [$0.02]
+mokummoos folds
+Halfpint27 folds
+koda569517 calls [$0.01]
+bommanster checks
+** Dealing flop ** [ 2c, Td, 3c ]
+koda569517 checks
+bommanster bets [$0.02]
+mcky1974 folds
+koda569517 calls [$0.02]
+** Dealing turn ** [ 5s ]
+koda569517 bets [$0.04]
+bommanster calls [$0.04]
+** Dealing river ** [ Ah ]
+** Summary **
+koda569517 shows [ Qd, 5d ]
+bommanster shows [ 7h, Ts ]
+bommanster collected [ $0.18 ]
+
+
+#Game No : 456274954
+***** 888poker Hand History for Game 456274954 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:26:55
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: Max6532 ( $0.78 )
+Seat 4: Halfpint27 ( $0.82 )
+Seat 6: koda569517 ( $0.36 )
+Seat 7: bommanster ( $0.16 )
+Seat 8: proone222 ( $1.23 )
+Seat 9: mcky1974 ( $0.16 )
+mcky1974 posts small blind [$0.01]
+Max6532 posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 calls [$0.02]
+koda569517 folds
+bommanster folds
+proone222 folds
+mcky1974 calls [$0.01]
+Max6532 checks
+** Dealing flop ** [ Ac, 2c, 8d ]
+mcky1974 checks
+Max6532 checks
+Halfpint27 checks
+** Dealing turn ** [ 5h ]
+mcky1974 bets [$0.04]
+Max6532 calls [$0.04]
+Halfpint27 folds
+** Dealing river ** [ Qd ]
+mcky1974 bets [$0.04]
+Max6532 folds
+** Summary **
+mcky1974 did not show his hand
+mcky1974 collected [ $0.14 ]
+
+
+#Game No : 456274988
+***** 888poker Hand History for Game 456274988 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:27:31
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Max6532 ( $0.72 )
+Seat 4: Halfpint27 ( $0.80 )
+Seat 6: koda569517 ( $0.36 )
+Seat 7: bommanster ( $0.16 )
+Seat 8: proone222 ( $1.23 )
+Seat 9: mcky1974 ( $0.24 )
+Max6532 posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+koda569517 folds
+bommanster calls [$0.02]
+proone222 folds
+mcky1974 calls [$0.02]
+Max6532 calls [$0.01]
+Halfpint27 checks
+** Dealing flop ** [ 7d, Qc, As ]
+Max6532 checks
+Halfpint27 bets [$0.02]
+bommanster calls [$0.02]
+mcky1974 calls [$0.02]
+Max6532 calls [$0.02]
+** Dealing turn ** [ 9s ]
+Max6532 checks
+Halfpint27 bets [$0.04]
+bommanster calls [$0.04]
+mcky1974 folds
+Max6532 folds
+** Dealing river ** [ Jh ]
+Halfpint27 bets [$0.04]
+bommanster calls [$0.04]
+** Summary **
+Halfpint27 shows [ 6c, Ah ]
+bommanster mucks [ Qs, 4s ]
+Halfpint27 collected [ $0.31 ]
+
+
+#Game No : 456275357
+***** 888poker Hand History for Game 456275357 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:34:52
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Max6532 ( $0.60 )
+Seat 4: Halfpint27 ( $1.19 )
+Seat 5: rnrdotca ( $0.58 )
+Seat 6: koda569517 ( $0.06 )
+Seat 9: mcky1974 ( $0.50 )
+Seat 10: Silver271 ( $0.40 )
+mcky1974 posts small blind [$0.01]
+Silver271 posts big blind [$0.02]
+** Dealing down cards **
+Max6532 folds
+Halfpint27 calls [$0.02]
+rnrdotca folds
+koda569517 raises [$0.04]
+mcky1974 calls [$0.03]
+Silver271 calls [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing flop ** [ 5s, Ac, Kc ]
+mcky1974 checks
+Silver271 checks
+Halfpint27 checks
+koda569517 bets [$0.02]
+mcky1974 calls [$0.02]
+Silver271 calls [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ 8c ]
+mcky1974 checks
+Silver271 checks
+Halfpint27 checks
+** Dealing river ** [ 7c ]
+mcky1974 checks
+Silver271 checks
+Halfpint27 checks
+** Summary **
+mcky1974 shows [ 2h, 4d ]
+Silver271 shows [ As, Js ]
+Halfpint27 shows [ 4c, 3d ]
+koda569517 mucks [ Kh, Ad ]
+Halfpint27 collected [ $0.23 ]
+
+
+#Game No : 456275522
+***** 888poker Hand History for Game 456275522 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:38:32
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: Max6532 ( $0.38 )
+Seat 3: Bylbash111 ( $0.28 )
+Seat 4: Halfpint27 ( $1.28 )
+Seat 5: rnrdotca ( $0.95 )
+Seat 10: Silver271 ( $0.06 )
+Bylbash111 posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+rnrdotca calls [$0.02]
+Silver271 folds
+Max6532 calls [$0.02]
+Bylbash111 calls [$0.01]
+Halfpint27 checks
+** Dealing flop ** [ 3h, 4s, Qh ]
+Bylbash111 checks
+Halfpint27 checks
+rnrdotca checks
+Max6532 bets [$0.02]
+Bylbash111 folds
+Halfpint27 calls [$0.02]
+rnrdotca folds
+** Dealing turn ** [ 2c ]
+Halfpint27 checks
+Max6532 bets [$0.04]
+Halfpint27 folds
+** Summary **
+Max6532 collected [ $0.12 ]
+
+
+#Game No : 456275553
+***** 888poker Hand History for Game 456275553 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:39:14
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 1: Max6532 ( $0.46 )
+Seat 2: lexx030 ( $0.45 )
+Seat 3: Bylbash111 ( $0.26 )
+Seat 4: Halfpint27 ( $1.24 )
+Seat 5: rnrdotca ( $0.93 )
+Seat 10: Silver271 ( $0.06 )
+Halfpint27 posts small blind [$0.01]
+rnrdotca posts big blind [$0.02]
+lexx030 posts dead blind [$0.01 + $0.02]
+** Dealing down cards **
+Silver271 raises [$0.04]
+Max6532 raises [$0.06]
+lexx030 calls [$0.04]
+Bylbash111 folds
+Halfpint27 calls [$0.05]
+rnrdotca folds
+Silver271 calls [$0.02]
+** Dealing flop ** [ Td, 5h, 9d ]
+Halfpint27 checks
+Max6532 bets [$0.02]
+lexx030 calls [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ Qh ]
+Halfpint27 bets [$0.04]
+Max6532 calls [$0.04]
+lexx030 calls [$0.04]
+** Dealing river ** [ Th ]
+Halfpint27 bets [$0.04]
+Max6532 folds
+lexx030 folds
+** Summary **
+Halfpint27 shows [ Qc, Jc ]
+Silver271 shows [ Qd, 6s ]
+Halfpint27 collected [ $0.26 ]
+Halfpint27 collected [ $0.17 ]
+
+
+#Game No : 456275593
+***** 888poker Hand History for Game 456275593 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:40:09
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Max6532 ( $0.34 )
+Seat 2: lexx030 ( $0.32 )
+Seat 3: Bylbash111 ( $0.26 )
+Seat 4: Halfpint27 ( $1.55 )
+Seat 5: rnrdotca ( $0.91 )
+Seat 6: JERRYVARGAS1 ( $0.80 )
+rnrdotca posts small blind [$0.01]
+JERRYVARGAS1 posts big blind [$0.02]
+** Dealing down cards **
+Max6532 folds
+lexx030 calls [$0.02]
+Bylbash111 calls [$0.02]
+Halfpint27 raises [$0.04]
+rnrdotca calls [$0.03]
+JERRYVARGAS1 calls [$0.02]
+lexx030 calls [$0.02]
+Bylbash111 calls [$0.02]
+** Dealing flop ** [ 2d, 7h, 9s ]
+rnrdotca checks
+JERRYVARGAS1 checks
+lexx030 checks
+Bylbash111 checks
+Halfpint27 checks
+** Dealing turn ** [ Tc ]
+rnrdotca bets [$0.04]
+JERRYVARGAS1 calls [$0.04]
+lexx030 calls [$0.04]
+Bylbash111 folds
+Halfpint27 calls [$0.04]
+** Dealing river ** [ 4s ]
+rnrdotca bets [$0.04]
+JERRYVARGAS1 raises [$0.08]
+lexx030 folds
+Halfpint27 folds
+rnrdotca calls [$0.04]
+** Summary **
+JERRYVARGAS1 shows [ Td, Kh ]
+rnrdotca shows [ 7d, 2s ]
+rnrdotca collected [ $0.50 ]
+
+
+#Game No : 456275910
+***** 888poker Hand History for Game 456275910 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:47:57
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 3: Bylbash111 ( $0.10 )
+Seat 4: Halfpint27 ( $1.64 )
+Seat 5: rnrdotca ( $0.99 )
+Seat 6: JERRYVARGAS1 ( $0.55 )
+Seat 7: Druskonis ( $0.88 )
+Seat 9: mcky1974 ( $0.76 )
+Bylbash111 posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+rnrdotca folds
+JERRYVARGAS1 raises [$0.04]
+Druskonis calls [$0.04]
+mcky1974 calls [$0.04]
+Bylbash111 folds
+Halfpint27 calls [$0.02]
+** Dealing flop ** [ 7s, 8d, 5h ]
+Halfpint27 checks
+JERRYVARGAS1 bets [$0.02]
+Druskonis calls [$0.02]
+mcky1974 calls [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ 6s ]
+Halfpint27 checks
+JERRYVARGAS1 bets [$0.04]
+Druskonis folds
+mcky1974 raises [$0.08]
+Halfpint27 calls [$0.08]
+JERRYVARGAS1 raises [$0.08]
+mcky1974 raises [$0.08]
+Halfpint27 calls [$0.08]
+JERRYVARGAS1 calls [$0.04]
+** Dealing river ** [ Ts ]
+Halfpint27 checks
+JERRYVARGAS1 bets [$0.04]
+mcky1974 raises [$0.08]
+Halfpint27 folds
+JERRYVARGAS1 raises [$0.08]
+mcky1974 calls [$0.04]
+** Summary **
+JERRYVARGAS1 shows [ 9s, Ah ]
+mcky1974 shows [ 9h, Ad ]
+mcky1974 collected [ $0.46 ]
+JERRYVARGAS1 collected [ $0.47 ]
+
+
+#Game No : 456276351
+***** 888poker Hand History for Game 456276351 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:58:33
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 4: Halfpint27 ( $1.69 )
+Seat 5: rnrdotca ( $0.04 )
+Seat 7: Druskonis ( $0.42 )
+Seat 8: PJRBONES ( $0.86 )
+Seat 9: mcky1974 ( $0.41 )
+Seat 10: miltonwhite ( $2.04 )
+Halfpint27 posts small blind [$0.01]
+rnrdotca posts big blind [$0.02]
+** Dealing down cards **
+Druskonis folds
+PJRBONES calls [$0.02]
+mcky1974 calls [$0.02]
+miltonwhite calls [$0.02]
+Halfpint27 folds
+rnrdotca checks
+** Dealing flop ** [ Qh, Jc, 2d ]
+rnrdotca folds
+PJRBONES bets [$0.02]
+mcky1974 calls [$0.02]
+miltonwhite calls [$0.02]
+** Dealing turn ** [ 9d ]
+PJRBONES checks
+mcky1974 checks
+miltonwhite checks
+** Dealing river ** [ Js ]
+PJRBONES checks
+mcky1974 bets [$0.04]
+miltonwhite calls [$0.04]
+PJRBONES calls [$0.04]
+** Summary **
+mcky1974 shows [ Ad, Tc ]
+miltonwhite shows [ Qc, Ac ]
+PJRBONES mucks [ Td, Qs ]
+miltonwhite collected [ $0.26 ]
+
+
+#Game No : 456276383
+***** 888poker Hand History for Game 456276383 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 01:59:19
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 3: Bylbash111 ( $0.20 )
+Seat 4: Halfpint27 ( $1.68 )
+Seat 7: Druskonis ( $0.42 )
+Seat 8: PJRBONES ( $0.78 )
+Seat 9: mcky1974 ( $0.33 )
+Seat 10: miltonwhite ( $2.22 )
+Druskonis posts small blind [$0.01]
+PJRBONES posts big blind [$0.02]
+Bylbash111 posts big blind [$0.02]
+** Dealing down cards **
+mcky1974 calls [$0.02]
+miltonwhite folds
+Bylbash111 checks
+Halfpint27 calls [$0.02]
+Druskonis calls [$0.01]
+PJRBONES checks
+** Dealing flop ** [ 3c, 8s, 4d ]
+Druskonis checks
+PJRBONES bets [$0.02]
+mcky1974 calls [$0.02]
+Bylbash111 calls [$0.02]
+Halfpint27 folds
+Druskonis folds
+** Dealing turn ** [ Ac ]
+PJRBONES checks
+mcky1974 checks
+Bylbash111 checks
+** Dealing river ** [ Jh ]
+PJRBONES checks
+mcky1974 checks
+Bylbash111 checks
+** Summary **
+PJRBONES shows [ 4s, 9h ]
+mcky1974 mucks [ Qh, 6s ]
+Bylbash111 mucks [ 7d, 4c ]
+PJRBONES collected [ $0.16 ]
+
+
+#Game No : 456276613
+***** 888poker Hand History for Game 456276613 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:05:10
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.19 )
+Seat 2: bertalan1 ( $4.25 )
+Seat 3: Bylbash111 ( $0.67 )
+Seat 4: Halfpint27 ( $1.16 )
+Seat 7: Druskonis ( $0.42 )
+Seat 10: miltonwhite ( $2.19 )
+Bylbash111 posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+Druskonis calls [$0.02]
+miltonwhite calls [$0.02]
+YeeahBaby folds
+bertalan1 folds
+Bylbash111 calls [$0.01]
+Halfpint27 raises [$0.02]
+Druskonis calls [$0.02]
+miltonwhite calls [$0.02]
+Bylbash111 calls [$0.02]
+** Dealing flop ** [ 9c, Kh, As ]
+Bylbash111 checks
+Halfpint27 checks
+Druskonis checks
+miltonwhite bets [$0.02]
+Bylbash111 folds
+Halfpint27 calls [$0.02]
+Druskonis calls [$0.02]
+** Dealing turn ** [ Jc ]
+Halfpint27 checks
+Druskonis checks
+miltonwhite bets [$0.04]
+Halfpint27 calls [$0.04]
+Druskonis calls [$0.04]
+** Dealing river ** [ 4d ]
+Halfpint27 checks
+Druskonis checks
+miltonwhite bets [$0.04]
+Halfpint27 calls [$0.04]
+Druskonis folds
+** Summary **
+miltonwhite shows [ Ac, 8d ]
+Halfpint27 mucks [ Ts, Th ]
+miltonwhite collected [ $0.40 ]
+
+
+#Game No : 456277605
+***** 888poker Hand History for Game 456277605 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:31:33
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.29 )
+Seat 4: WaldeCat ( $0.20 )
+Seat 7: Hartwin.Cole ( $0.35 )
+Seat 8: GofaKuresElf ( $0.92 )
+Seat 9: Sanja24r ( $1.26 )
+Seat 10: miltonwhite ( $1.88 )
+GofaKuresElf posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+WaldeCat posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite folds
+YeeahBaby folds
+WaldeCat raises [$0.02]
+Hartwin.Cole folds
+GofaKuresElf folds
+Sanja24r folds
+** Summary **
+WaldeCat collected [ $0.05 ]
+
+
+#Game No : 456277628
+***** 888poker Hand History for Game 456277628 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:32:00
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.29 )
+Seat 4: WaldeCat ( $0.23 )
+Seat 7: Hartwin.Cole ( $0.35 )
+Seat 8: GofaKuresElf ( $0.91 )
+Seat 9: Sanja24r ( $1.24 )
+Seat 10: miltonwhite ( $1.88 )
+Sanja24r posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+YeeahBaby calls [$0.02]
+WaldeCat folds
+Hartwin.Cole calls [$0.02]
+GofaKuresElf folds
+Sanja24r raises [$0.03]
+miltonwhite calls [$0.02]
+YeeahBaby calls [$0.02]
+Hartwin.Cole calls [$0.02]
+** Dealing flop ** [ 6d, Jc, Jd ]
+Sanja24r bets [$0.02]
+miltonwhite folds
+YeeahBaby folds
+Hartwin.Cole calls [$0.02]
+** Dealing turn ** [ 7c ]
+Sanja24r checks
+Hartwin.Cole checks
+** Dealing river ** [ 6c ]
+Sanja24r checks
+Hartwin.Cole bets [$0.04]
+Sanja24r calls [$0.04]
+** Summary **
+Hartwin.Cole shows [ 8s, Ks ]
+Sanja24r shows [ Qh, Qs ]
+Sanja24r collected [ $0.27 ]
+
+
+#Game No : 456277699
+***** 888poker Hand History for Game 456277699 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:33:38
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.25 )
+Seat 4: WaldeCat ( $0.23 )
+Seat 7: Hartwin.Cole ( $0.25 )
+Seat 8: GofaKuresElf ( $0.91 )
+Seat 9: Sanja24r ( $1.41 )
+Seat 10: miltonwhite ( $1.84 )
+miltonwhite posts small blind [$0.01]
+YeeahBaby posts big blind [$0.02]
+** Dealing down cards **
+WaldeCat folds
+Hartwin.Cole calls [$0.02]
+GofaKuresElf calls [$0.02]
+Sanja24r folds
+miltonwhite folds
+YeeahBaby checks
+** Dealing flop ** [ 4c, 6s, Ah ]
+YeeahBaby checks
+Hartwin.Cole checks
+GofaKuresElf checks
+** Dealing turn ** [ 4h ]
+YeeahBaby checks
+Hartwin.Cole bets [$0.04]
+GofaKuresElf folds
+YeeahBaby folds
+** Summary **
+Hartwin.Cole collected [ $0.07 ]
+
+
+#Game No : 456277800
+***** 888poker Hand History for Game 456277800 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:35:55
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.23 )
+Seat 4: WaldeCat ( $0.34 )
+Seat 7: Hartwin.Cole ( $0.18 )
+Seat 8: GofaKuresElf ( $0.89 )
+Seat 9: Sanja24r ( $1.41 )
+Seat 10: miltonwhite ( $1.83 )
+Hartwin.Cole posts small blind [$0.01]
+GofaKuresElf posts big blind [$0.02]
+YeeahBaby posts dead blind [$0.01 + $0]
+** Dealing down cards **
+Sanja24r folds
+miltonwhite calls [$0.02]
+YeeahBaby folds
+WaldeCat calls [$0.02]
+Hartwin.Cole raises [$0.03]
+GofaKuresElf calls [$0.02]
+miltonwhite calls [$0.02]
+WaldeCat calls [$0.02]
+** Dealing flop ** [ 9c, Qs, 4c ]
+Hartwin.Cole bets [$0.02]
+GofaKuresElf calls [$0.02]
+miltonwhite calls [$0.02]
+WaldeCat folds
+** Dealing turn ** [ As ]
+Hartwin.Cole bets [$0.04]
+GofaKuresElf folds
+miltonwhite calls [$0.04]
+** Dealing river ** [ Qh ]
+Hartwin.Cole bets [$0.04]
+miltonwhite raises [$0.08]
+Hartwin.Cole folds
+** Summary **
+miltonwhite collected [ $0.38 ]
+
+
+#Game No : 456277844
+***** 888poker Hand History for Game 456277844 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:37:02
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.22 )
+Seat 4: WaldeCat ( $0.30 )
+Seat 7: Hartwin.Cole ( $0.04 )
+Seat 8: GofaKuresElf ( $0.83 )
+Seat 9: Sanja24r ( $1.41 )
+Seat 10: miltonwhite ( $2.07 )
+GofaKuresElf posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite calls [$0.02]
+YeeahBaby calls [$0.02]
+WaldeCat calls [$0.02]
+Hartwin.Cole folds
+GofaKuresElf folds
+Sanja24r raises [$0.02]
+miltonwhite calls [$0.02]
+YeeahBaby calls [$0.02]
+WaldeCat calls [$0.02]
+** Dealing flop ** [ 4h, 8s, 9c ]
+Sanja24r bets [$0.02]
+miltonwhite calls [$0.02]
+YeeahBaby folds
+WaldeCat calls [$0.02]
+** Dealing turn ** [ 7h ]
+Sanja24r bets [$0.04]
+miltonwhite calls [$0.04]
+WaldeCat calls [$0.04]
+** Dealing river ** [ 5h ]
+Sanja24r checks
+miltonwhite checks
+WaldeCat bets [$0.04]
+Sanja24r folds
+miltonwhite folds
+** Summary **
+WaldeCat collected [ $0.34 ]
+
+
+#Game No : 456277942
+***** 888poker Hand History for Game 456277942 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:39:06
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.14 )
+Seat 4: WaldeCat ( $0.69 )
+Seat 5: rnrdotca ( $1.74 )
+Seat 6: GRAA714 ( $0.80 )
+Seat 9: Sanja24r ( $1.30 )
+Seat 10: miltonwhite ( $1.95 )
+miltonwhite posts small blind [$0.01]
+YeeahBaby posts big blind [$0.02]
+GRAA714 posts big blind [$0.02]
+** Dealing down cards **
+WaldeCat calls [$0.02]
+rnrdotca calls [$0.02]
+GRAA714 checks
+Sanja24r folds
+miltonwhite folds
+YeeahBaby checks
+** Dealing flop ** [ Qd, Th, 9s ]
+YeeahBaby checks
+WaldeCat bets [$0.02]
+rnrdotca raises [$0.04]
+GRAA714 folds
+YeeahBaby folds
+WaldeCat calls [$0.02]
+** Dealing turn ** [ 8h ]
+WaldeCat checks
+rnrdotca checks
+** Dealing river ** [ 3h ]
+WaldeCat bets [$0.04]
+rnrdotca calls [$0.04]
+** Summary **
+WaldeCat shows [ Ad, Jd ]
+rnrdotca mucks [ Tc, As ]
+WaldeCat collected [ $0.24 ]
+
+
+#Game No : 456278078
+***** 888poker Hand History for Game 456278078 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:41:59
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.10 )
+Seat 4: WaldeCat ( $0.71 )
+Seat 5: rnrdotca ( $1.64 )
+Seat 8: RicharRTR ( $3.24 )
+Seat 9: Sanja24r ( $1.30 )
+Seat 10: miltonwhite ( $1.92 )
+WaldeCat posts small blind [$0.01]
+rnrdotca posts big blind [$0.02]
+** Dealing down cards **
+RicharRTR calls [$0.02]
+Sanja24r folds
+miltonwhite folds
+YeeahBaby folds
+WaldeCat calls [$0.01]
+rnrdotca checks
+** Dealing flop ** [ 9s, 9h, 9c ]
+WaldeCat checks
+rnrdotca checks
+RicharRTR checks
+** Dealing turn ** [ 3s ]
+WaldeCat bets [$0.04]
+rnrdotca calls [$0.04]
+RicharRTR folds
+** Dealing river ** [ 7d ]
+WaldeCat checks
+rnrdotca bets [$0.04]
+WaldeCat calls [$0.04]
+** Summary **
+rnrdotca shows [ 8s, 5c ]
+WaldeCat shows [ Ad, 2h ]
+WaldeCat collected [ $0.21 ]
+
+
+#Game No : 456278130
+***** 888poker Hand History for Game 456278130 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:43:12
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.10 )
+Seat 4: WaldeCat ( $0.82 )
+Seat 5: rnrdotca ( $1.54 )
+Seat 8: RicharRTR ( $3.22 )
+Seat 9: Sanja24r ( $1.30 )
+Seat 10: miltonwhite ( $1.92 )
+rnrdotca posts small blind [$0.01]
+RicharRTR posts big blind [$0.02]
+** Dealing down cards **
+Sanja24r folds
+miltonwhite calls [$0.02]
+YeeahBaby folds
+WaldeCat calls [$0.02]
+rnrdotca calls [$0.01]
+RicharRTR checks
+** Dealing flop ** [ 3h, 5h, 5s ]
+rnrdotca checks
+RicharRTR checks
+miltonwhite bets [$0.02]
+WaldeCat calls [$0.02]
+rnrdotca folds
+RicharRTR folds
+** Dealing turn ** [ 4c ]
+miltonwhite bets [$0.04]
+WaldeCat folds
+** Summary **
+miltonwhite collected [ $0.12 ]
+
+
+#Game No : 456278180
+***** 888poker Hand History for Game 456278180 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:44:18
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.10 )
+Seat 4: WaldeCat ( $0.78 )
+Seat 5: rnrdotca ( $1.52 )
+Seat 8: RicharRTR ( $3.20 )
+Seat 9: Sanja24r ( $1.30 )
+Seat 10: miltonwhite ( $2 )
+RicharRTR posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite folds
+YeeahBaby folds
+WaldeCat calls [$0.02]
+rnrdotca folds
+RicharRTR calls [$0.01]
+Sanja24r checks
+** Dealing flop ** [ 6s, 2d, 5h ]
+RicharRTR checks
+Sanja24r checks
+WaldeCat checks
+** Dealing turn ** [ 7d ]
+RicharRTR checks
+Sanja24r checks
+WaldeCat bets [$0.04]
+RicharRTR folds
+Sanja24r calls [$0.04]
+** Dealing river ** [ 4c ]
+Sanja24r checks
+WaldeCat checks
+** Summary **
+Sanja24r shows [ Qh, 4s ]
+WaldeCat mucks [ 9h, 4h ]
+Sanja24r collected [ $0.14 ]
+
+
+#Game No : 456278484
+***** 888poker Hand History for Game 456278484 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:51:27
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.22 )
+Seat 2: Halfpint27 ( $1.64 )
+Seat 4: WaldeCat ( $0.77 )
+Seat 8: RicharRTR ( $3.23 )
+Seat 9: Sanja24r ( $1.33 )
+Seat 10: miltonwhite ( $1.90 )
+RicharRTR posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite calls [$0.02]
+YeeahBaby folds
+Halfpint27 raises [$0.04]
+WaldeCat folds
+RicharRTR folds
+Sanja24r folds
+miltonwhite calls [$0.02]
+** Dealing flop ** [ 8s, 6d, Tc ]
+miltonwhite checks
+Halfpint27 bets [$0.02]
+miltonwhite calls [$0.02]
+** Dealing turn ** [ Kh ]
+miltonwhite checks
+Halfpint27 bets [$0.04]
+miltonwhite calls [$0.04]
+** Dealing river ** [ Jh ]
+miltonwhite checks
+Halfpint27 bets [$0.04]
+miltonwhite folds
+** Summary **
+Halfpint27 did not show his hand
+Halfpint27 collected [ $0.22 ]
+
+
+#Game No : 456278521
+***** 888poker Hand History for Game 456278521 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:52:15
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 1: YeeahBaby ( $0.22 )
+Seat 2: Halfpint27 ( $1.76 )
+Seat 8: RicharRTR ( $3.22 )
+Seat 9: Sanja24r ( $1.31 )
+Seat 10: miltonwhite ( $1.80 )
+Sanja24r posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+YeeahBaby calls [$0.02]
+Halfpint27 calls [$0.02]
+RicharRTR folds
+Sanja24r calls [$0.01]
+miltonwhite checks
+** Dealing flop ** [ 3d, 7s, 2h ]
+Sanja24r checks
+miltonwhite checks
+YeeahBaby bets [$0.02]
+Halfpint27 calls [$0.02]
+Sanja24r calls [$0.02]
+miltonwhite folds
+** Dealing turn ** [ Js ]
+Sanja24r checks
+YeeahBaby checks
+Halfpint27 checks
+** Dealing river ** [ 7h ]
+Sanja24r checks
+YeeahBaby checks
+Halfpint27 checks
+** Summary **
+Sanja24r shows [ 8c, Ad ]
+YeeahBaby shows [ As, 2d ]
+Halfpint27 mucks [ 5h, Ac ]
+YeeahBaby collected [ $0.14 ]
+
+
+#Game No : 456278560
+***** 888poker Hand History for Game 456278560 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 02:53:17
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: YeeahBaby ( $0.32 )
+Seat 2: Halfpint27 ( $1.72 )
+Seat 7: 37alexe ( $0.32 )
+Seat 8: RicharRTR ( $3.22 )
+Seat 9: Sanja24r ( $1.27 )
+Seat 10: miltonwhite ( $1.78 )
+miltonwhite posts small blind [$0.01]
+YeeahBaby posts big blind [$0.02]
+37alexe posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 folds
+37alexe checks
+RicharRTR folds
+Sanja24r folds
+miltonwhite raises [$0.03]
+YeeahBaby calls [$0.02]
+37alexe calls [$0.02]
+** Dealing flop ** [ As, Qh, 7s ]
+miltonwhite checks
+YeeahBaby checks
+37alexe checks
+** Dealing turn ** [ Kd ]
+miltonwhite checks
+YeeahBaby checks
+37alexe checks
+** Dealing river ** [ Ac ]
+miltonwhite bets [$0.04]
+YeeahBaby folds
+37alexe folds
+** Summary **
+miltonwhite collected [ $0.12 ]
+
+
+#Game No : 456278855
+***** 888poker Hand History for Game 456278855 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:00:46
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: robertpoppel ( $0.20 )
+Seat 2: Halfpint27 ( $1.72 )
+Seat 7: 37alexe ( $0.40 )
+Seat 8: RicharRTR ( $3.26 )
+Seat 9: Sanja24r ( $1.15 )
+Seat 10: miltonwhite ( $2.06 )
+Sanja24r posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+robertpoppel posts big blind [$0.02]
+** Dealing down cards **
+robertpoppel raises [$0.02]
+Halfpint27 calls [$0.04]
+37alexe folds
+RicharRTR folds
+Sanja24r folds
+miltonwhite folds
+** Dealing flop ** [ 2c, Td, 4d ]
+robertpoppel bets [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ 4c ]
+robertpoppel bets [$0.04]
+Halfpint27 calls [$0.04]
+** Dealing river ** [ Jh ]
+robertpoppel bets [$0.04]
+Halfpint27 calls [$0.04]
+** Summary **
+robertpoppel shows [ 8h, 8c ]
+Halfpint27 mucks [ Kd, Qc ]
+robertpoppel collected [ $0.30 ]
+
+
+#Game No : 456278888
+***** 888poker Hand History for Game 456278888 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:01:35
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: robertpoppel ( $0.36 )
+Seat 2: Halfpint27 ( $1.58 )
+Seat 7: 37alexe ( $0.40 )
+Seat 8: RicharRTR ( $3.26 )
+Seat 9: Sanja24r ( $1.14 )
+Seat 10: miltonwhite ( $2.04 )
+miltonwhite posts small blind [$0.01]
+robertpoppel posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 calls [$0.02]
+37alexe folds
+RicharRTR calls [$0.02]
+Sanja24r raises [$0.04]
+miltonwhite folds
+robertpoppel calls [$0.02]
+Halfpint27 calls [$0.02]
+RicharRTR calls [$0.02]
+** Dealing flop ** [ Kc, Tc, 6h ]
+robertpoppel bets [$0.02]
+Halfpint27 calls [$0.02]
+RicharRTR calls [$0.02]
+Sanja24r raises [$0.04]
+robertpoppel calls [$0.02]
+Halfpint27 calls [$0.02]
+RicharRTR folds
+** Dealing turn ** [ 5s ]
+robertpoppel checks
+Halfpint27 checks
+Sanja24r checks
+** Dealing river ** [ Th ]
+robertpoppel checks
+Halfpint27 checks
+Sanja24r checks
+** Summary **
+robertpoppel shows [ 8c, Jh ]
+Halfpint27 shows [ Ac, 4d ]
+Sanja24r shows [ Qh, Qs ]
+Sanja24r collected [ $0.30 ]
+
+
+#Game No : 456278948
+***** 888poker Hand History for Game 456278948 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:02:50
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 1: robertpoppel ( $0.28 )
+Seat 2: Halfpint27 ( $1.50 )
+Seat 7: 37alexe ( $0.40 )
+Seat 8: RicharRTR ( $3.20 )
+Seat 9: Sanja24r ( $1.36 )
+Seat 10: miltonwhite ( $2.03 )
+robertpoppel posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+37alexe folds
+RicharRTR folds
+Sanja24r folds
+miltonwhite calls [$0.02]
+robertpoppel raises [$0.03]
+Halfpint27 calls [$0.02]
+miltonwhite calls [$0.02]
+** Dealing flop ** [ 5h, 6h, 8c ]
+robertpoppel bets [$0.02]
+Halfpint27 calls [$0.02]
+miltonwhite calls [$0.02]
+** Dealing turn ** [ Jc ]
+robertpoppel checks
+Halfpint27 checks
+miltonwhite checks
+** Dealing river ** [ Ac ]
+robertpoppel bets [$0.04]
+Halfpint27 folds
+miltonwhite folds
+** Summary **
+robertpoppel collected [ $0.18 ]
+
+
+#Game No : 456279087
+***** 888poker Hand History for Game 456279087 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:06:00
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 1: robertpoppel ( $0.26 )
+Seat 2: Halfpint27 ( $1.62 )
+Seat 3: Ori2016 ( $0.54 )
+Seat 7: 37alexe ( $0.58 )
+Seat 9: Sanja24r ( $1.36 )
+Seat 10: miltonwhite ( $1.87 )
+37alexe posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite folds
+robertpoppel raises [$0.04]
+Halfpint27 folds
+Ori2016 calls [$0.04]
+37alexe folds
+Sanja24r raises [$0.04]
+robertpoppel calls [$0.02]
+Ori2016 calls [$0.02]
+** Dealing flop ** [ 3h, 2d, 9c ]
+Sanja24r bets [$0.02]
+robertpoppel calls [$0.02]
+Ori2016 folds
+** Dealing turn ** [ 3d ]
+Sanja24r bets [$0.04]
+robertpoppel calls [$0.04]
+** Dealing river ** [ 9s ]
+Sanja24r bets [$0.04]
+robertpoppel calls [$0.04]
+** Summary **
+Sanja24r shows [ Qd, Qc ]
+robertpoppel mucks [ Kh, Jc ]
+Sanja24r collected [ $0.38 ]
+
+
+#Game No : 456279124
+***** 888poker Hand History for Game 456279124 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:06:53
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.62 )
+Seat 3: Ori2016 ( $0.48 )
+Seat 6: YeeahBaby ( $0.28 )
+Seat 7: 37alexe ( $0.57 )
+Seat 9: Sanja24r ( $1.58 )
+Seat 10: miltonwhite ( $1.87 )
+Sanja24r posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+YeeahBaby posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 raises [$0.04]
+Ori2016 folds
+YeeahBaby calls [$0.02]
+37alexe folds
+Sanja24r folds
+miltonwhite calls [$0.02]
+** Dealing flop ** [ Td, 7s, Ah ]
+miltonwhite checks
+Halfpint27 checks
+YeeahBaby bets [$0.02]
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ Tc ]
+miltonwhite checks
+Halfpint27 checks
+YeeahBaby bets [$0.04]
+miltonwhite calls [$0.04]
+Halfpint27 folds
+** Dealing river ** [ Th ]
+miltonwhite checks
+YeeahBaby checks
+** Summary **
+miltonwhite shows [ Qd, Qc ]
+YeeahBaby mucks [ Kd, 8h ]
+miltonwhite collected [ $0.26 ]
+
+
+#Game No : 456279165
+***** 888poker Hand History for Game 456279165 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:07:59
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.56 )
+Seat 3: Ori2016 ( $0.48 )
+Seat 6: YeeahBaby ( $0.18 )
+Seat 7: 37alexe ( $0.57 )
+Seat 9: Sanja24r ( $1.57 )
+Seat 10: miltonwhite ( $2.03 )
+miltonwhite posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+Ori2016 calls [$0.02]
+YeeahBaby calls [$0.02]
+37alexe raises [$0.04]
+Sanja24r folds
+miltonwhite folds
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.02]
+YeeahBaby calls [$0.02]
+** Dealing flop ** [ 5s, Td, 9c ]
+Halfpint27 bets [$0.02]
+Ori2016 calls [$0.02]
+YeeahBaby raises [$0.04]
+37alexe calls [$0.04]
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.02]
+** Dealing turn ** [ 7c ]
+Halfpint27 bets [$0.04]
+Ori2016 folds
+YeeahBaby raises [$0.08]
+37alexe folds
+Halfpint27 calls [$0.04]
+** Dealing river ** [ 6c ]
+Halfpint27 checks
+YeeahBaby checks
+** Summary **
+Halfpint27 shows [ Js, Ts ]
+YeeahBaby shows [ Jh, Th ]
+Halfpint27 collected [ $0.24 ]
+YeeahBaby collected [ $0.23 ]
+
+
+#Game No : 456279205
+***** 888poker Hand History for Game 456279205 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:09:07
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.64 )
+Seat 3: Ori2016 ( $0.40 )
+Seat 6: YeeahBaby ( $0.25 )
+Seat 7: 37alexe ( $0.49 )
+Seat 9: Sanja24r ( $1.57 )
+Seat 10: miltonwhite ( $2.02 )
+Halfpint27 posts small blind [$0.01]
+Ori2016 posts big blind [$0.02]
+** Dealing down cards **
+YeeahBaby raises [$0.04]
+37alexe calls [$0.04]
+Sanja24r folds
+miltonwhite folds
+Halfpint27 calls [$0.03]
+Ori2016 calls [$0.02]
+** Dealing flop ** [ 5d, 6c, 4c ]
+Halfpint27 checks
+Ori2016 checks
+YeeahBaby checks
+37alexe checks
+** Dealing turn ** [ 2d ]
+Halfpint27 checks
+Ori2016 checks
+YeeahBaby checks
+37alexe checks
+** Dealing river ** [ 4h ]
+Halfpint27 checks
+Ori2016 checks
+YeeahBaby checks
+37alexe checks
+** Summary **
+Halfpint27 shows [ Js, 8h ]
+Ori2016 shows [ Qh, 7h ]
+YeeahBaby shows [ Jd, Ah ]
+37alexe mucks [ Jc, 9h ]
+YeeahBaby collected [ $0.16 ]
+
+
+#Game No : 456279241
+***** 888poker Hand History for Game 456279241 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:10:05
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.60 )
+Seat 3: Ori2016 ( $0.36 )
+Seat 6: YeeahBaby ( $0.37 )
+Seat 7: 37alexe ( $0.45 )
+Seat 9: Sanja24r ( $1.57 )
+Seat 10: miltonwhite ( $2.02 )
+Ori2016 posts small blind [$0.01]
+YeeahBaby posts big blind [$0.02]
+** Dealing down cards **
+37alexe folds
+Sanja24r folds
+miltonwhite folds
+Halfpint27 raises [$0.04]
+Ori2016 folds
+YeeahBaby folds
+** Summary **
+Halfpint27 collected [ $0.05 ]
+
+
+#Game No : 456279269
+***** 888poker Hand History for Game 456279269 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:10:40
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.63 )
+Seat 3: Ori2016 ( $0.35 )
+Seat 6: YeeahBaby ( $0.35 )
+Seat 7: 37alexe ( $0.45 )
+Seat 9: Sanja24r ( $1.57 )
+Seat 10: miltonwhite ( $2.02 )
+YeeahBaby posts small blind [$0.01]
+37alexe posts big blind [$0.02]
+** Dealing down cards **
+Sanja24r calls [$0.02]
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.02]
+YeeahBaby folds
+37alexe raises [$0.02]
+Sanja24r calls [$0.02]
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.02]
+** Dealing flop ** [ Tc, Td, 4h ]
+37alexe bets [$0.02]
+Sanja24r folds
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.02]
+** Dealing turn ** [ 2h ]
+37alexe bets [$0.04]
+miltonwhite calls [$0.04]
+Halfpint27 calls [$0.04]
+Ori2016 calls [$0.04]
+** Dealing river ** [ 5s ]
+37alexe checks
+miltonwhite bets [$0.04]
+Halfpint27 calls [$0.04]
+Ori2016 folds
+37alexe folds
+** Summary **
+miltonwhite shows [ 9s, 9d ]
+Halfpint27 mucks [ 7h, 4d ]
+miltonwhite collected [ $0.51 ]
+
+
+#Game No : 456279316
+***** 888poker Hand History for Game 456279316 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:11:43
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.49 )
+Seat 3: Ori2016 ( $0.25 )
+Seat 6: YeeahBaby ( $0.34 )
+Seat 7: 37alexe ( $0.35 )
+Seat 9: Sanja24r ( $1.53 )
+Seat 10: miltonwhite ( $2.39 )
+37alexe posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite folds
+Halfpint27 calls [$0.02]
+Ori2016 folds
+YeeahBaby folds
+37alexe raises [$0.03]
+Sanja24r folds
+Halfpint27 calls [$0.02]
+** Dealing flop ** [ Tc, 4h, 3h ]
+37alexe bets [$0.02]
+Halfpint27 folds
+** Summary **
+37alexe did not show his hand
+37alexe collected [ $0.10 ]
+
+
+#Game No : 456279335
+***** 888poker Hand History for Game 456279335 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:12:04
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.45 )
+Seat 3: Ori2016 ( $0.25 )
+Seat 6: YeeahBaby ( $0.34 )
+Seat 7: 37alexe ( $0.41 )
+Seat 9: Sanja24r ( $1.51 )
+Seat 10: miltonwhite ( $2.39 )
+Sanja24r posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.02]
+YeeahBaby calls [$0.02]
+37alexe folds
+Sanja24r folds
+miltonwhite checks
+** Dealing flop ** [ Ts, 8s, Tc ]
+miltonwhite checks
+Halfpint27 bets [$0.02]
+Ori2016 folds
+YeeahBaby folds
+miltonwhite folds
+** Summary **
+Halfpint27 did not show his hand
+Halfpint27 collected [ $0.09 ]
+
+
+#Game No : 456279375
+***** 888poker Hand History for Game 456279375 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:12:56
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.52 )
+Seat 3: Ori2016 ( $0.23 )
+Seat 6: YeeahBaby ( $0.32 )
+Seat 7: 37alexe ( $0.41 )
+Seat 9: Sanja24r ( $1.50 )
+Seat 10: miltonwhite ( $2.37 )
+miltonwhite posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+Ori2016 calls [$0.02]
+YeeahBaby folds
+37alexe raises [$0.04]
+Sanja24r folds
+miltonwhite folds
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.02]
+** Dealing flop ** [ 2d, Kd, Tc ]
+Halfpint27 checks
+Ori2016 checks
+37alexe bets [$0.02]
+Halfpint27 calls [$0.02]
+Ori2016 folds
+** Dealing turn ** [ 6c ]
+Halfpint27 checks
+37alexe bets [$0.04]
+Halfpint27 calls [$0.04]
+** Dealing river ** [ 7d ]
+Halfpint27 checks
+37alexe bets [$0.04]
+Halfpint27 calls [$0.04]
+** Summary **
+37alexe shows [ Ks, Jd ]
+Halfpint27 mucks [ 4d, Th ]
+37alexe collected [ $0.32 ]
+
+
+#Game No : 456279402
+***** 888poker Hand History for Game 456279402 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:13:33
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.38 )
+Seat 3: Ori2016 ( $0.19 )
+Seat 6: YeeahBaby ( $0.32 )
+Seat 7: 37alexe ( $0.59 )
+Seat 9: Sanja24r ( $1.50 )
+Seat 10: miltonwhite ( $2.36 )
+Halfpint27 posts small blind [$0.01]
+Ori2016 posts big blind [$0.02]
+** Dealing down cards **
+YeeahBaby folds
+37alexe folds
+Sanja24r folds
+miltonwhite folds
+Halfpint27 calls [$0.01]
+Ori2016 checks
+** Dealing flop ** [ 3d, 6s, 4h ]
+Halfpint27 checks
+Ori2016 checks
+** Dealing turn ** [ Qs ]
+Halfpint27 checks
+Ori2016 checks
+** Dealing river ** [ Qc ]
+Halfpint27 checks
+Ori2016 checks
+** Summary **
+Halfpint27 shows [ 2h, Kc ]
+Ori2016 mucks [ Ts, 9h ]
+Halfpint27 collected [ $0.04 ]
+
+
+#Game No : 456279428
+***** 888poker Hand History for Game 456279428 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:14:03
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: Halfpint27 ( $1.40 )
+Seat 3: Ori2016 ( $0.17 )
+Seat 6: YeeahBaby ( $0.32 )
+Seat 7: 37alexe ( $0.59 )
+Seat 9: Sanja24r ( $1.50 )
+Seat 10: miltonwhite ( $2.36 )
+Ori2016 posts small blind [$0.01]
+YeeahBaby posts big blind [$0.02]
+** Dealing down cards **
+37alexe folds
+Sanja24r folds
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.01]
+YeeahBaby checks
+** Dealing flop ** [ 9h, Th, 7h ]
+Ori2016 checks
+YeeahBaby bets [$0.02]
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+Ori2016 calls [$0.02]
+** Dealing turn ** [ 9s ]
+Ori2016 bets [$0.04]
+YeeahBaby calls [$0.04]
+miltonwhite raises [$0.08]
+Halfpint27 folds
+Ori2016 raises [$0.08]
+YeeahBaby folds
+miltonwhite raises [$0.08]
+Ori2016 calls [$0.01]
+** Dealing river ** [ Js ]
+** Summary **
+Ori2016 shows [ Qs, 9d ]
+miltonwhite shows [ 7s, 9c ]
+miltonwhite collected [ $0.44 ]
+
+
+#Game No : 456279485
+***** 888poker Hand History for Game 456279485 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:15:12
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 2: Halfpint27 ( $1.36 )
+Seat 7: 37alexe ( $0.59 )
+Seat 9: Sanja24r ( $1.50 )
+Seat 10: miltonwhite ( $2.63 )
+Sanja24r posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 raises [$0.04]
+37alexe calls [$0.04]
+Sanja24r folds
+miltonwhite calls [$0.02]
+** Dealing flop ** [ 3s, Qd, Td ]
+miltonwhite checks
+Halfpint27 checks
+37alexe checks
+** Dealing turn ** [ Js ]
+miltonwhite bets [$0.04]
+Halfpint27 raises [$0.08]
+37alexe calls [$0.08]
+miltonwhite calls [$0.04]
+** Dealing river ** [ Ah ]
+miltonwhite checks
+Halfpint27 bets [$0.04]
+37alexe folds
+miltonwhite folds
+** Summary **
+Halfpint27 did not show his hand
+Halfpint27 collected [ $0.36 ]
+
+
+#Game No : 456279524
+***** 888poker Hand History for Game 456279524 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:16:01
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: Halfpint27 ( $1.60 )
+Seat 7: 37alexe ( $0.47 )
+Seat 9: Sanja24r ( $1.49 )
+Seat 10: miltonwhite ( $2.51 )
+miltonwhite posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+37alexe raises [$0.04]
+Sanja24r folds
+miltonwhite folds
+Halfpint27 calls [$0.02]
+** Dealing flop ** [ 8c, Ac, Qh ]
+Halfpint27 checks
+37alexe bets [$0.02]
+Halfpint27 folds
+** Summary **
+37alexe did not show his hand
+37alexe collected [ $0.09 ]
+
+
+#Game No : 456279557
+***** 888poker Hand History for Game 456279557 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:16:48
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 4
+Seat 2: Halfpint27 ( $1.56 )
+Seat 7: 37alexe ( $0.52 )
+Seat 9: Sanja24r ( $1.49 )
+Seat 10: miltonwhite ( $2.50 )
+Halfpint27 posts small blind [$0.01]
+37alexe posts big blind [$0.02]
+** Dealing down cards **
+Sanja24r raises [$0.04]
+miltonwhite calls [$0.04]
+Halfpint27 calls [$0.03]
+37alexe folds
+** Dealing flop ** [ 3d, Qc, 5c ]
+Halfpint27 checks
+Sanja24r bets [$0.02]
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ 2s ]
+Halfpint27 checks
+Sanja24r bets [$0.04]
+miltonwhite raises [$0.08]
+Halfpint27 folds
+Sanja24r calls [$0.04]
+** Dealing river ** [ 3s ]
+Sanja24r checks
+miltonwhite bets [$0.04]
+Sanja24r calls [$0.04]
+** Summary **
+miltonwhite shows [ Ah, 4d ]
+Sanja24r mucks [ Ac, Kh ]
+miltonwhite collected [ $0.42 ]
+
+
+#Game No : 456279579
+***** 888poker Hand History for Game 456279579 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:17:29
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Halfpint27 ( $1.50 )
+Seat 7: 37alexe ( $0.50 )
+Seat 9: Sanja24r ( $1.31 )
+Seat 10: miltonwhite ( $2.74 )
+37alexe posts small blind [$0.01]
+Sanja24r folds
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 raises [$0.04]
+37alexe raises [$0.05]
+miltonwhite folds
+Halfpint27 raises [$0.04]
+37alexe calls [$0.02]
+** Dealing flop ** [ 7s, 9d, Jc ]
+37alexe checks
+Halfpint27 bets [$0.02]
+37alexe folds
+** Summary **
+Halfpint27 did not show his hand
+Halfpint27 collected [ $0.18 ]
+
+
+#Game No : 456279605
+***** 888poker Hand History for Game 456279605 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:17:56
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: Halfpint27 ( $1.60 )
+Seat 7: 37alexe ( $0.42 )
+Seat 10: miltonwhite ( $2.72 )
+miltonwhite posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+37alexe raises [$0.04]
+miltonwhite folds
+Halfpint27 calls [$0.02]
+** Dealing flop ** [ Kh, 4c, 9c ]
+Halfpint27 bets [$0.02]
+37alexe calls [$0.02]
+** Dealing turn ** [ 3d ]
+Halfpint27 bets [$0.04]
+37alexe calls [$0.04]
+** Dealing river ** [ 7s ]
+Halfpint27 bets [$0.04]
+37alexe folds
+** Summary **
+Halfpint27 did not show his hand
+Halfpint27 collected [ $0.20 ]
+
+
+#Game No : 456279630
+***** 888poker Hand History for Game 456279630 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:18:36
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 3
+Seat 2: Halfpint27 ( $1.70 )
+Seat 7: 37alexe ( $0.32 )
+Seat 10: miltonwhite ( $2.71 )
+Halfpint27 posts small blind [$0.01]
+37alexe posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.01]
+37alexe checks
+** Dealing flop ** [ 6d, 9s, 3d ]
+Halfpint27 checks
+37alexe checks
+miltonwhite checks
+** Dealing turn ** [ Js ]
+Halfpint27 checks
+37alexe checks
+miltonwhite checks
+** Dealing river ** [ 8d ]
+Halfpint27 bets [$0.04]
+37alexe folds
+miltonwhite folds
+** Summary **
+Halfpint27 did not show his hand
+Halfpint27 collected [ $0.06 ]
+
+
+#Game No : 456279677
+***** 888poker Hand History for Game 456279677 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:19:38
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Halfpint27 ( $1.74 )
+Seat 7: 37alexe ( $0.30 )
+Seat 10: miltonwhite ( $2.69 )
+37alexe posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 calls [$0.02]
+37alexe folds
+miltonwhite checks
+** Dealing flop ** [ 9c, 7h, 8d ]
+miltonwhite checks
+Halfpint27 bets [$0.02]
+miltonwhite calls [$0.02]
+** Dealing turn ** [ Tc ]
+miltonwhite checks
+Halfpint27 bets [$0.04]
+miltonwhite folds
+** Summary **
+Halfpint27 collected [ $0.09 ]
+
+
+#Game No : 456279694
+***** 888poker Hand History for Game 456279694 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:20:09
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 2: Halfpint27 ( $1.79 )
+Seat 3: GRAA714 ( $0.80 )
+Seat 7: 37alexe ( $0.29 )
+Seat 10: miltonwhite ( $2.65 )
+miltonwhite posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+GRAA714 posts big blind [$0.02]
+** Dealing down cards **
+GRAA714 checks
+37alexe folds
+miltonwhite calls [$0.01]
+Halfpint27 checks
+** Dealing flop ** [ 8c, Qc, 2c ]
+miltonwhite checks
+Halfpint27 checks
+GRAA714 bets [$0.02]
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ 4h ]
+miltonwhite checks
+Halfpint27 checks
+GRAA714 bets [$0.04]
+miltonwhite calls [$0.04]
+Halfpint27 folds
+** Dealing river ** [ Td ]
+miltonwhite checks
+GRAA714 bets [$0.04]
+miltonwhite folds
+** Summary **
+GRAA714 collected [ $0.19 ]
+
+
+#Game No : 456279716
+***** 888poker Hand History for Game 456279716 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:20:42
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.75 )
+Seat 3: GRAA714 ( $0.91 )
+Seat 4: SteffiGrudno ( $0.80 )
+Seat 7: 37alexe ( $0.29 )
+Seat 10: miltonwhite ( $2.57 )
+Halfpint27 posts small blind [$0.01]
+GRAA714 posts big blind [$0.02]
+SteffiGrudno posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno checks
+37alexe raises [$0.04]
+miltonwhite folds
+Halfpint27 calls [$0.03]
+GRAA714 folds
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ Ks, Ah, 9d ]
+Halfpint27 checks
+SteffiGrudno checks
+37alexe bets [$0.02]
+Halfpint27 folds
+SteffiGrudno folds
+** Summary **
+37alexe did not show his hand
+37alexe collected [ $0.14 ]
+
+
+#Game No : 456279737
+***** 888poker Hand History for Game 456279737 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:21:18
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.71 )
+Seat 3: GRAA714 ( $0.89 )
+Seat 4: SteffiGrudno ( $0.76 )
+Seat 7: 37alexe ( $0.39 )
+Seat 10: miltonwhite ( $2.57 )
+GRAA714 posts small blind [$0.01]
+SteffiGrudno posts big blind [$0.02]
+** Dealing down cards **
+37alexe folds
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+GRAA714 calls [$0.01]
+SteffiGrudno checks
+** Dealing flop ** [ Kc, 8s, 5s ]
+GRAA714 checks
+SteffiGrudno checks
+miltonwhite checks
+Halfpint27 bets [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+miltonwhite folds
+** Dealing turn ** [ 7h ]
+GRAA714 checks
+SteffiGrudno checks
+Halfpint27 bets [$0.04]
+GRAA714 calls [$0.04]
+SteffiGrudno calls [$0.04]
+** Dealing river ** [ 2d ]
+GRAA714 checks
+SteffiGrudno checks
+Halfpint27 bets [$0.04]
+GRAA714 calls [$0.04]
+SteffiGrudno calls [$0.04]
+** Summary **
+Halfpint27 shows [ 8d, 9h ]
+GRAA714 mucks [ Ac, 7d ]
+SteffiGrudno shows [ Kh, Td ]
+SteffiGrudno collected [ $0.37 ]
+
+
+#Game No : 456279756
+***** 888poker Hand History for Game 456279756 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:21:56
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.59 )
+Seat 3: GRAA714 ( $0.77 )
+Seat 4: SteffiGrudno ( $1.01 )
+Seat 7: 37alexe ( $0.39 )
+Seat 10: miltonwhite ( $2.55 )
+SteffiGrudno posts small blind [$0.01]
+37alexe posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite folds
+Halfpint27 calls [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.01]
+37alexe raises [$0.02]
+Halfpint27 calls [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ Td, 5s, Jc ]
+SteffiGrudno checks
+37alexe bets [$0.02]
+Halfpint27 folds
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing turn ** [ 5c ]
+SteffiGrudno checks
+37alexe bets [$0.04]
+GRAA714 calls [$0.04]
+SteffiGrudno calls [$0.04]
+** Dealing river ** [ Qc ]
+SteffiGrudno checks
+37alexe bets [$0.04]
+GRAA714 calls [$0.04]
+SteffiGrudno raises [$0.08]
+37alexe raises [$0.08]
+GRAA714 folds
+SteffiGrudno calls [$0.04]
+** Summary **
+37alexe shows [ Jd, As ]
+SteffiGrudno shows [ Kh, 9s ]
+SteffiGrudno collected [ $0.59 ]
+
+
+#Game No : 456279783
+***** 888poker Hand History for Game 456279783 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:22:31
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.55 )
+Seat 3: GRAA714 ( $0.63 )
+Seat 4: SteffiGrudno ( $1.38 )
+Seat 7: 37alexe ( $0.17 )
+Seat 10: miltonwhite ( $2.55 )
+37alexe posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 folds
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+37alexe raises [$0.03]
+miltonwhite folds
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ 4c, 3s, 7s ]
+37alexe bets [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno folds
+** Dealing turn ** [ Kh ]
+37alexe bets [$0.04]
+GRAA714 folds
+** Summary **
+37alexe did not show his hand
+37alexe collected [ $0.18 ]
+
+
+#Game No : 456279796
+***** 888poker Hand History for Game 456279796 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:22:53
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.55 )
+Seat 3: GRAA714 ( $0.57 )
+Seat 4: SteffiGrudno ( $1.34 )
+Seat 7: 37alexe ( $0.29 )
+Seat 10: miltonwhite ( $2.53 )
+miltonwhite posts small blind [$0.01]
+Halfpint27 posts big blind [$0.02]
+** Dealing down cards **
+GRAA714 folds
+SteffiGrudno calls [$0.02]
+37alexe raises [$0.04]
+miltonwhite folds
+Halfpint27 raises [$0.04]
+SteffiGrudno calls [$0.04]
+37alexe raises [$0.04]
+Halfpint27 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ 6h, Ts, Qd ]
+Halfpint27 bets [$0.02]
+SteffiGrudno folds
+37alexe raises [$0.04]
+Halfpint27 calls [$0.02]
+** Dealing turn ** [ 7h ]
+Halfpint27 bets [$0.04]
+37alexe raises [$0.08]
+Halfpint27 calls [$0.04]
+** Dealing river ** [ Th ]
+Halfpint27 checks
+37alexe bets [$0.04]
+Halfpint27 folds
+** Summary **
+37alexe did not show his hand
+37alexe collected [ $0.47 ]
+
+
+#Game No : 456279819
+***** 888poker Hand History for Game 456279819 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:23:32
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.35 )
+Seat 3: GRAA714 ( $0.57 )
+Seat 4: SteffiGrudno ( $1.26 )
+Seat 7: 37alexe ( $0.56 )
+Seat 10: miltonwhite ( $2.52 )
+Halfpint27 posts small blind [$0.01]
+GRAA714 posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno calls [$0.02]
+37alexe raises [$0.04]
+miltonwhite folds
+Halfpint27 calls [$0.03]
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ 5s, Jh, Qd ]
+Halfpint27 checks
+GRAA714 checks
+SteffiGrudno checks
+37alexe bets [$0.02]
+Halfpint27 calls [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno folds
+** Dealing turn ** [ Qh ]
+Halfpint27 checks
+GRAA714 checks
+37alexe bets [$0.04]
+Halfpint27 folds
+GRAA714 calls [$0.04]
+** Dealing river ** [ Kh ]
+GRAA714 checks
+37alexe bets [$0.04]
+GRAA714 calls [$0.04]
+** Summary **
+37alexe shows [ 9d, Ts ]
+GRAA714 mucks [ 3h, 3s ]
+37alexe collected [ $0.37 ]
+
+
+#Game No : 456279836
+***** 888poker Hand History for Game 456279836 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:24:02
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.29 )
+Seat 3: GRAA714 ( $0.43 )
+Seat 4: SteffiGrudno ( $1.22 )
+Seat 7: 37alexe ( $0.79 )
+Seat 10: miltonwhite ( $2.52 )
+GRAA714 posts small blind [$0.01]
+SteffiGrudno posts big blind [$0.02]
+** Dealing down cards **
+37alexe raises [$0.04]
+miltonwhite calls [$0.04]
+Halfpint27 calls [$0.04]
+GRAA714 calls [$0.03]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ 3h, 9c, 5d ]
+GRAA714 checks
+SteffiGrudno checks
+37alexe bets [$0.02]
+miltonwhite folds
+Halfpint27 calls [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno folds
+** Dealing turn ** [ Ks ]
+GRAA714 checks
+37alexe bets [$0.04]
+Halfpint27 folds
+GRAA714 folds
+** Summary **
+37alexe did not show his hand
+37alexe collected [ $0.25 ]
+
+
+#Game No : 456279855
+***** 888poker Hand History for Game 456279855 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:24:27
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.23 )
+Seat 3: GRAA714 ( $0.37 )
+Seat 4: SteffiGrudno ( $1.18 )
+Seat 7: 37alexe ( $0.98 )
+Seat 10: miltonwhite ( $2.48 )
+SteffiGrudno posts small blind [$0.01]
+37alexe posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite calls [$0.02]
+Halfpint27 calls [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.01]
+37alexe checks
+** Dealing flop ** [ Tc, Ad, Jh ]
+SteffiGrudno checks
+37alexe checks
+miltonwhite checks
+Halfpint27 checks
+GRAA714 checks
+** Dealing turn ** [ Ah ]
+SteffiGrudno bets [$0.04]
+37alexe folds
+miltonwhite calls [$0.04]
+Halfpint27 calls [$0.04]
+GRAA714 folds
+** Dealing river ** [ Ts ]
+SteffiGrudno bets [$0.04]
+miltonwhite folds
+Halfpint27 calls [$0.04]
+** Summary **
+SteffiGrudno shows [ Kc, Ac ]
+Halfpint27 mucks [ 8s, Jd ]
+SteffiGrudno collected [ $0.29 ]
+
+
+#Game No : 456279879
+***** 888poker Hand History for Game 456279879 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:25:11
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: Halfpint27 ( $1.13 )
+Seat 3: GRAA714 ( $0.35 )
+Seat 4: SteffiGrudno ( $1.37 )
+Seat 7: 37alexe ( $0.96 )
+Seat 10: miltonwhite ( $2.42 )
+37alexe posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+Halfpint27 folds
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+37alexe raises [$0.03]
+miltonwhite calls [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ 4c, 6d, 5d ]
+37alexe bets [$0.02]
+miltonwhite calls [$0.02]
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing turn ** [ 4s ]
+37alexe bets [$0.04]
+miltonwhite folds
+GRAA714 calls [$0.04]
+SteffiGrudno calls [$0.04]
+** Dealing river ** [ 7c ]
+37alexe bets [$0.04]
+GRAA714 calls [$0.04]
+SteffiGrudno calls [$0.04]
+** Summary **
+37alexe shows [ 5h, Kc ]
+GRAA714 shows [ Th, 7h ]
+SteffiGrudno shows [ 7s, 6c ]
+SteffiGrudno collected [ $0.46 ]
+
+
+#Game No : 456279902
+***** 888poker Hand History for Game 456279902 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:25:47
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 3: GRAA714 ( $0.21 )
+Seat 4: SteffiGrudno ( $1.69 )
+Seat 7: 37alexe ( $0.82 )
+Seat 10: miltonwhite ( $2.36 )
+miltonwhite posts small blind [$0.01]
+GRAA714 posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno calls [$0.02]
+37alexe raises [$0.04]
+miltonwhite calls [$0.03]
+GRAA714 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ Ah, 6c, Th ]
+miltonwhite checks
+GRAA714 checks
+SteffiGrudno checks
+37alexe bets [$0.02]
+miltonwhite calls [$0.02]
+GRAA714 folds
+SteffiGrudno folds
+** Dealing turn ** [ 4d ]
+miltonwhite checks
+37alexe bets [$0.04]
+miltonwhite calls [$0.04]
+** Dealing river ** [ 8c ]
+miltonwhite checks
+37alexe bets [$0.04]
+miltonwhite calls [$0.04]
+** Summary **
+37alexe shows [ 3s, 3d ]
+miltonwhite shows [ 8d, Kh ]
+miltonwhite collected [ $0.35 ]
+
+
+#Game No : 456279925
+***** 888poker Hand History for Game 456279925 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:26:20
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 3
+Seat 4: SteffiGrudno ( $1.65 )
+Seat 7: 37alexe ( $0.68 )
+Seat 10: miltonwhite ( $2.57 )
+SteffiGrudno posts small blind [$0.01]
+37alexe posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite raises [$0.04]
+SteffiGrudno folds
+37alexe raises [$0.04]
+miltonwhite calls [$0.02]
+** Dealing flop ** [ 8c, 3s, 4c ]
+37alexe bets [$0.02]
+miltonwhite raises [$0.04]
+37alexe raises [$0.04]
+miltonwhite calls [$0.02]
+** Dealing turn ** [ 5s ]
+37alexe bets [$0.04]
+miltonwhite calls [$0.04]
+** Dealing river ** [ 7d ]
+37alexe bets [$0.04]
+miltonwhite calls [$0.04]
+** Summary **
+37alexe shows [ As, 2d ]
+miltonwhite mucks [ Jh, Jd ]
+37alexe collected [ $0.39 ]
+
+
+#Game No : 456279943
+***** 888poker Hand History for Game 456279943 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:26:54
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 4: SteffiGrudno ( $1.64 )
+Seat 7: 37alexe ( $0.87 )
+Seat 10: miltonwhite ( $2.37 )
+37alexe posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno folds
+37alexe raises [$0.03]
+miltonwhite calls [$0.02]
+** Dealing flop ** [ 7h, 2s, Jd ]
+37alexe bets [$0.02]
+miltonwhite folds
+** Summary **
+37alexe collected [ $0.08 ]
+
+
+#Game No : 456279951
+***** 888poker Hand History for Game 456279951 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:27:09
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: REDRICK007 ( $0.20 )
+Seat 4: SteffiGrudno ( $1.64 )
+Seat 7: 37alexe ( $0.91 )
+Seat 10: miltonwhite ( $2.33 )
+miltonwhite posts small blind [$0.01]
+REDRICK007 posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno calls [$0.02]
+37alexe raises [$0.04]
+miltonwhite folds
+REDRICK007 calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ Ad, Jc, 9s ]
+REDRICK007 checks
+SteffiGrudno checks
+37alexe bets [$0.02]
+REDRICK007 folds
+SteffiGrudno folds
+** Summary **
+37alexe collected [ $0.13 ]
+
+
+#Game No : 456279979
+***** 888poker Hand History for Game 456279979 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:27:46
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 1: REDRICK007 ( $0.16 )
+Seat 4: SteffiGrudno ( $1.60 )
+Seat 5: messeymarv51 ( $0.80 )
+Seat 7: 37alexe ( $1 )
+Seat 10: miltonwhite ( $2.32 )
+REDRICK007 posts small blind [$0.01]
+SteffiGrudno posts big blind [$0.02]
+messeymarv51 posts big blind [$0.02]
+** Dealing down cards **
+messeymarv51 checks
+37alexe raises [$0.04]
+miltonwhite folds
+REDRICK007 calls [$0.03]
+SteffiGrudno calls [$0.02]
+messeymarv51 calls [$0.02]
+** Dealing flop ** [ Kc, Ad, Jc ]
+REDRICK007 checks
+SteffiGrudno checks
+messeymarv51 checks
+37alexe bets [$0.02]
+REDRICK007 calls [$0.02]
+SteffiGrudno calls [$0.02]
+messeymarv51 folds
+** Dealing turn ** [ Jd ]
+REDRICK007 checks
+SteffiGrudno checks
+37alexe bets [$0.04]
+REDRICK007 calls [$0.04]
+SteffiGrudno calls [$0.04]
+** Dealing river ** [ 2s ]
+REDRICK007 checks
+SteffiGrudno checks
+37alexe checks
+** Summary **
+REDRICK007 shows [ Qd, 2c ]
+SteffiGrudno shows [ As, 9d ]
+37alexe mucks [ 2h, Th ]
+SteffiGrudno collected [ $0.33 ]
+
+
+#Game No : 456280112
+***** 888poker Hand History for Game 456280112 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:31:26
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 4: SteffiGrudno ( $1.94 )
+Seat 5: messeymarv51 ( $0.90 )
+Seat 6: bommanster ( $0.11 )
+Seat 7: 37alexe ( $0.85 )
+Seat 8: GAMIK13 ( $0.18 )
+Seat 10: miltonwhite ( $2.24 )
+37alexe posts small blind [$0.01]
+GAMIK13 posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite calls [$0.02]
+SteffiGrudno calls [$0.02]
+messeymarv51 calls [$0.02]
+bommanster folds
+37alexe raises [$0.03]
+GAMIK13 calls [$0.02]
+miltonwhite calls [$0.02]
+SteffiGrudno calls [$0.02]
+messeymarv51 calls [$0.02]
+** Dealing flop ** [ Kh, 2d, 2c ]
+37alexe bets [$0.02]
+GAMIK13 calls [$0.02]
+miltonwhite calls [$0.02]
+SteffiGrudno folds
+messeymarv51 calls [$0.02]
+** Dealing turn ** [ Tc ]
+37alexe bets [$0.04]
+GAMIK13 calls [$0.04]
+miltonwhite calls [$0.04]
+messeymarv51 calls [$0.04]
+** Dealing river ** [ Qs ]
+37alexe bets [$0.04]
+GAMIK13 folds
+miltonwhite raises [$0.08]
+messeymarv51 calls [$0.08]
+37alexe raises [$0.08]
+miltonwhite raises [$0.08]
+messeymarv51 folds
+37alexe calls [$0.04]
+** Summary **
+miltonwhite shows [ Ac, Jc ]
+37alexe mucks [ 4s, Ks ]
+miltonwhite collected [ $0.80 ]
+
+
+#Game No : 456280158
+***** 888poker Hand History for Game 456280158 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:32:40
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 4: SteffiGrudno ( $1.90 )
+Seat 5: messeymarv51 ( $0.72 )
+Seat 6: bommanster ( $0.11 )
+Seat 7: 37alexe ( $0.59 )
+Seat 8: GAMIK13 ( $0.08 )
+Seat 10: miltonwhite ( $2.78 )
+GAMIK13 posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno calls [$0.02]
+messeymarv51 folds
+bommanster folds
+37alexe raises [$0.04]
+GAMIK13 folds
+miltonwhite folds
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ Qs, 7h, Kc ]
+SteffiGrudno checks
+37alexe bets [$0.02]
+SteffiGrudno folds
+** Summary **
+37alexe collected [ $0.11 ]
+
+
+#Game No : 456280259
+***** 888poker Hand History for Game 456280259 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:34:59
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 1: REDRICK007 ( $0.18 )
+Seat 4: SteffiGrudno ( $1.80 )
+Seat 5: messeymarv51 ( $0.72 )
+Seat 7: 37alexe ( $0.90 )
+Seat 8: GAMIK13 ( $0.07 )
+Seat 10: miltonwhite ( $2.70 )
+REDRICK007 posts small blind [$0.01]
+SteffiGrudno posts big blind [$0.02]
+** Dealing down cards **
+messeymarv51 calls [$0.02]
+37alexe raises [$0.04]
+GAMIK13 folds
+miltonwhite folds
+REDRICK007 calls [$0.03]
+SteffiGrudno calls [$0.02]
+messeymarv51 calls [$0.02]
+** Dealing flop ** [ 6d, 7h, 5s ]
+REDRICK007 checks
+SteffiGrudno checks
+messeymarv51 checks
+37alexe bets [$0.02]
+REDRICK007 calls [$0.02]
+SteffiGrudno folds
+messeymarv51 calls [$0.02]
+** Dealing turn ** [ Qd ]
+REDRICK007 checks
+messeymarv51 checks
+37alexe bets [$0.04]
+REDRICK007 folds
+messeymarv51 calls [$0.04]
+** Dealing river ** [ Jd ]
+messeymarv51 checks
+37alexe bets [$0.04]
+messeymarv51 calls [$0.04]
+** Summary **
+37alexe shows [ 6h, 6c ]
+messeymarv51 mucks [ Jh, Th ]
+37alexe collected [ $0.37 ]
+
+
+#Game No : 456280305
+***** 888poker Hand History for Game 456280305 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:36:05
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: REDRICK007 ( $0.12 )
+Seat 4: SteffiGrudno ( $1.76 )
+Seat 5: messeymarv51 ( $0.58 )
+Seat 7: 37alexe ( $1.13 )
+Seat 8: GAMIK13 ( $0.07 )
+Seat 10: miltonwhite ( $2.70 )
+SteffiGrudno posts small blind [$0.01]
+messeymarv51 posts big blind [$0.02]
+** Dealing down cards **
+37alexe raises [$0.04]
+GAMIK13 folds
+miltonwhite calls [$0.04]
+REDRICK007 folds
+SteffiGrudno calls [$0.03]
+messeymarv51 calls [$0.02]
+** Dealing flop ** [ Ts, Td, 2s ]
+SteffiGrudno checks
+messeymarv51 checks
+37alexe bets [$0.02]
+miltonwhite calls [$0.02]
+SteffiGrudno calls [$0.02]
+messeymarv51 calls [$0.02]
+** Dealing turn ** [ 7d ]
+SteffiGrudno checks
+messeymarv51 checks
+37alexe bets [$0.04]
+miltonwhite folds
+SteffiGrudno calls [$0.04]
+messeymarv51 calls [$0.04]
+** Dealing river ** [ 4s ]
+SteffiGrudno checks
+messeymarv51 checks
+37alexe bets [$0.04]
+SteffiGrudno raises [$0.08]
+messeymarv51 folds
+37alexe folds
+** Summary **
+SteffiGrudno collected [ $0.42 ]
+
+
+#Game No : 456280436
+***** 888poker Hand History for Game 456280436 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:39:25
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: REDRICK007 ( $0.12 )
+Seat 4: SteffiGrudno ( $1.92 )
+Seat 5: messeymarv51 ( $0.87 )
+Seat 6: FilmaCless ( $0.43 )
+Seat 7: 37alexe ( $1.30 )
+Seat 10: miltonwhite ( $2.43 )
+37alexe posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+REDRICK007 calls [$0.02]
+SteffiGrudno calls [$0.02]
+messeymarv51 folds
+FilmaCless calls [$0.02]
+37alexe raises [$0.03]
+miltonwhite calls [$0.02]
+REDRICK007 calls [$0.02]
+SteffiGrudno calls [$0.02]
+FilmaCless calls [$0.02]
+** Dealing flop ** [ 3s, Qh, 2c ]
+37alexe bets [$0.02]
+miltonwhite folds
+REDRICK007 raises [$0.04]
+SteffiGrudno folds
+FilmaCless calls [$0.04]
+37alexe raises [$0.04]
+REDRICK007 raises [$0.04]
+FilmaCless calls [$0.04]
+37alexe calls [$0.02]
+** Dealing turn ** [ 4h ]
+37alexe bets [$0.04]
+FilmaCless calls [$0.04]
+** Dealing river ** [ Ah ]
+37alexe bets [$0.04]
+FilmaCless calls [$0.04]
+** Summary **
+37alexe shows [ 4s, 5d ]
+REDRICK007 mucks [ Qs, 7s ]
+FilmaCless mucks [ 9s, 3d ]
+37alexe collected [ $0.42 ]
+37alexe collected [ $0.15 ]
+
+
+#Game No : 456280485
+***** 888poker Hand History for Game 456280485 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:40:27
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 4: SteffiGrudno ( $1.88 )
+Seat 5: messeymarv51 ( $0.87 )
+Seat 6: FilmaCless ( $0.23 )
+Seat 7: 37alexe ( $1.67 )
+Seat 10: miltonwhite ( $2.39 )
+miltonwhite posts small blind [$0.01]
+SteffiGrudno posts big blind [$0.02]
+** Dealing down cards **
+messeymarv51 folds
+FilmaCless calls [$0.02]
+37alexe raises [$0.04]
+miltonwhite calls [$0.03]
+SteffiGrudno calls [$0.02]
+FilmaCless calls [$0.02]
+** Dealing flop ** [ 4d, Ah, 7s ]
+miltonwhite checks
+SteffiGrudno checks
+FilmaCless checks
+37alexe bets [$0.02]
+miltonwhite calls [$0.02]
+SteffiGrudno folds
+FilmaCless calls [$0.02]
+** Dealing turn ** [ 9s ]
+miltonwhite checks
+FilmaCless checks
+37alexe checks
+** Dealing river ** [ Kc ]
+miltonwhite checks
+FilmaCless checks
+37alexe checks
+** Summary **
+miltonwhite shows [ Js, Kh ]
+FilmaCless mucks [ 2c, 6h ]
+37alexe mucks [ 6c, Jd ]
+miltonwhite collected [ $0.21 ]
+
+
+#Game No : 456280516
+***** 888poker Hand History for Game 456280516 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:41:08
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 4: SteffiGrudno ( $1.84 )
+Seat 5: messeymarv51 ( $0.87 )
+Seat 6: FilmaCless ( $0.17 )
+Seat 7: 37alexe ( $1.61 )
+Seat 10: miltonwhite ( $2.54 )
+SteffiGrudno posts small blind [$0.01]
+messeymarv51 posts big blind [$0.02]
+** Dealing down cards **
+FilmaCless calls [$0.02]
+37alexe raises [$0.04]
+miltonwhite calls [$0.04]
+SteffiGrudno folds
+messeymarv51 calls [$0.02]
+FilmaCless calls [$0.02]
+** Dealing flop ** [ 3s, 6c, Kh ]
+messeymarv51 checks
+FilmaCless bets [$0.02]
+37alexe raises [$0.04]
+miltonwhite folds
+messeymarv51 folds
+FilmaCless calls [$0.02]
+** Dealing turn ** [ 4h ]
+FilmaCless checks
+37alexe bets [$0.04]
+FilmaCless calls [$0.04]
+** Dealing river ** [ 5s ]
+FilmaCless bets [$0.04]
+37alexe raises [$0.08]
+FilmaCless calls [$0.01]
+** Summary **
+FilmaCless shows [ 6h, 7c ]
+37alexe shows [ Jd, Ks ]
+FilmaCless collected [ $0.41 ]
+
+
+#Game No : 456280558
+***** 888poker Hand History for Game 456280558 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:42:09
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: REDRICK007 ( $0.20 )
+Seat 4: SteffiGrudno ( $1.83 )
+Seat 5: messeymarv51 ( $0.83 )
+Seat 6: FilmaCless ( $0.41 )
+Seat 7: 37alexe ( $1.44 )
+Seat 10: miltonwhite ( $2.50 )
+messeymarv51 posts small blind [$0.01]
+FilmaCless posts big blind [$0.02]
+REDRICK007 posts dead blind [$0.01 + $0.02]
+** Dealing down cards **
+37alexe raises [$0.04]
+miltonwhite folds
+REDRICK007 calls [$0.02]
+SteffiGrudno folds
+messeymarv51 folds
+FilmaCless raises [$0.04]
+37alexe raises [$0.04]
+REDRICK007 calls [$0.04]
+FilmaCless calls [$0.02]
+** Dealing flop ** [ 8d, 2s, 9s ]
+FilmaCless bets [$0.02]
+37alexe raises [$0.04]
+REDRICK007 raises [$0.06]
+FilmaCless raises [$0.06]
+37alexe calls [$0.04]
+REDRICK007 calls [$0.02]
+** Dealing turn ** [ Qd ]
+FilmaCless bets [$0.04]
+37alexe raises [$0.08]
+REDRICK007 calls [$0.03]
+FilmaCless raises [$0.08]
+37alexe raises [$0.08]
+FilmaCless calls [$0.04]
+** Dealing river ** [ Ah ]
+FilmaCless bets [$0.04]
+37alexe folds
+** Summary **
+REDRICK007 shows [ 8s, 7c ]
+FilmaCless shows [ Qs, 9c ]
+FilmaCless collected [ $0.57 ]
+FilmaCless collected [ $0.24 ]
+
+
+#Game No : 456280601
+***** 888poker Hand History for Game 456280601 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:43:26
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 4: SteffiGrudno ( $1.83 )
+Seat 6: FilmaCless ( $0.90 )
+Seat 7: 37alexe ( $1.12 )
+Seat 10: miltonwhite ( $2.50 )
+37alexe posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno calls [$0.02]
+FilmaCless calls [$0.02]
+37alexe raises [$0.03]
+miltonwhite raises [$0.04]
+SteffiGrudno calls [$0.04]
+FilmaCless calls [$0.04]
+37alexe raises [$0.04]
+miltonwhite calls [$0.02]
+SteffiGrudno calls [$0.02]
+FilmaCless calls [$0.02]
+** Dealing flop ** [ Kc, 5s, Jd ]
+37alexe bets [$0.02]
+miltonwhite raises [$0.04]
+SteffiGrudno calls [$0.04]
+FilmaCless calls [$0.04]
+37alexe raises [$0.04]
+miltonwhite calls [$0.02]
+SteffiGrudno calls [$0.02]
+FilmaCless calls [$0.02]
+** Dealing turn ** [ 5h ]
+37alexe bets [$0.04]
+miltonwhite calls [$0.04]
+SteffiGrudno calls [$0.04]
+FilmaCless folds
+** Dealing river ** [ 7h ]
+37alexe bets [$0.04]
+miltonwhite raises [$0.08]
+SteffiGrudno folds
+37alexe raises [$0.08]
+miltonwhite calls [$0.04]
+** Summary **
+37alexe shows [ 7c, 2c ]
+miltonwhite shows [ 7d, Kd ]
+miltonwhite collected [ $0.88 ]
+
+
+#Game No : 456280638
+***** 888poker Hand History for Game 456280638 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:44:23
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 3: calumetvich ( $2.24 )
+Seat 4: SteffiGrudno ( $1.65 )
+Seat 6: FilmaCless ( $0.76 )
+Seat 7: 37alexe ( $0.82 )
+Seat 10: miltonwhite ( $3.08 )
+miltonwhite posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno calls [$0.02]
+FilmaCless folds
+37alexe raises [$0.04]
+miltonwhite calls [$0.03]
+calumetvich calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ 9h, 2s, 3h ]
+miltonwhite bets [$0.02]
+calumetvich folds
+SteffiGrudno calls [$0.02]
+37alexe folds
+** Dealing turn ** [ 6c ]
+miltonwhite bets [$0.04]
+SteffiGrudno folds
+** Summary **
+miltonwhite collected [ $0.19 ]
+
+
+#Game No : 456280666
+***** 888poker Hand History for Game 456280666 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:45:23
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 3: calumetvich ( $2.20 )
+Seat 4: SteffiGrudno ( $1.59 )
+Seat 6: FilmaCless ( $0.76 )
+Seat 7: 37alexe ( $0.78 )
+Seat 10: miltonwhite ( $3.21 )
+calumetvich posts small blind [$0.01]
+SteffiGrudno posts big blind [$0.02]
+** Dealing down cards **
+FilmaCless raises [$0.04]
+37alexe raises [$0.06]
+miltonwhite folds
+calumetvich calls [$0.05]
+SteffiGrudno calls [$0.04]
+FilmaCless raises [$0.04]
+37alexe calls [$0.02]
+calumetvich calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ Th, Ad, Js ]
+calumetvich checks
+SteffiGrudno checks
+FilmaCless bets [$0.02]
+37alexe folds
+calumetvich calls [$0.02]
+SteffiGrudno raises [$0.04]
+FilmaCless raises [$0.04]
+calumetvich calls [$0.04]
+SteffiGrudno calls [$0.02]
+** Dealing turn ** [ 3d ]
+calumetvich checks
+SteffiGrudno bets [$0.04]
+FilmaCless raises [$0.08]
+calumetvich calls [$0.08]
+SteffiGrudno calls [$0.04]
+** Dealing river ** [ 6h ]
+calumetvich checks
+SteffiGrudno checks
+FilmaCless bets [$0.04]
+calumetvich folds
+SteffiGrudno calls [$0.04]
+** Summary **
+FilmaCless shows [ 8c, Kd ]
+SteffiGrudno shows [ Td, As ]
+SteffiGrudno collected [ $0.78 ]
+
+
+#Game No : 456280699
+***** 888poker Hand History for Game 456280699 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:46:21
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 1: REDRICK007 ( $0.20 )
+Seat 3: calumetvich ( $1.98 )
+Seat 4: SteffiGrudno ( $2.11 )
+Seat 6: FilmaCless ( $0.50 )
+Seat 7: 37alexe ( $0.70 )
+Seat 10: miltonwhite ( $3.21 )
+SteffiGrudno posts small blind [$0.01]
+FilmaCless posts big blind [$0.02]
+REDRICK007 posts dead blind [$0.01 + $0.02]
+** Dealing down cards **
+37alexe raises [$0.04]
+miltonwhite folds
+REDRICK007 calls [$0.02]
+calumetvich calls [$0.04]
+SteffiGrudno calls [$0.03]
+FilmaCless calls [$0.02]
+** Dealing flop ** [ 2h, 9h, 5d ]
+SteffiGrudno checks
+FilmaCless checks
+37alexe bets [$0.02]
+REDRICK007 folds
+calumetvich calls [$0.02]
+SteffiGrudno folds
+FilmaCless calls [$0.02]
+** Dealing turn ** [ 6s ]
+FilmaCless checks
+37alexe bets [$0.04]
+calumetvich calls [$0.04]
+FilmaCless calls [$0.04]
+** Dealing river ** [ Ks ]
+FilmaCless checks
+37alexe bets [$0.04]
+calumetvich raises [$0.08]
+FilmaCless folds
+37alexe folds
+** Summary **
+calumetvich collected [ $0.45 ]
+
+
+#Game No : 456280749
+***** 888poker Hand History for Game 456280749 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:47:54
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: REDRICK007 ( $0.15 )
+Seat 3: calumetvich ( $2.29 )
+Seat 4: SteffiGrudno ( $2.07 )
+Seat 6: FilmaCless ( $0.40 )
+Seat 7: 37alexe ( $0.56 )
+Seat 10: miltonwhite ( $3.21 )
+FilmaCless posts small blind [$0.01]
+37alexe posts big blind [$0.02]
+** Dealing down cards **
+miltonwhite calls [$0.02]
+REDRICK007 raises [$0.04]
+calumetvich folds
+SteffiGrudno calls [$0.04]
+FilmaCless raises [$0.05]
+37alexe raises [$0.06]
+miltonwhite calls [$0.06]
+REDRICK007 calls [$0.04]
+SteffiGrudno calls [$0.04]
+FilmaCless calls [$0.02]
+** Dealing flop ** [ 3d, 4s, Jd ]
+FilmaCless checks
+37alexe bets [$0.02]
+miltonwhite folds
+REDRICK007 raises [$0.04]
+SteffiGrudno folds
+FilmaCless calls [$0.04]
+37alexe raises [$0.04]
+REDRICK007 raises [$0.03]
+FilmaCless calls [$0.03]
+37alexe calls [$0.01]
+** Dealing turn ** [ Qs ]
+FilmaCless checks
+37alexe bets [$0.04]
+FilmaCless calls [$0.04]
+** Dealing river ** [ 6c ]
+FilmaCless checks
+37alexe bets [$0.04]
+FilmaCless calls [$0.04]
+** Summary **
+37alexe shows [ 8s, 3s ]
+REDRICK007 mucks [ Kd, 9h ]
+FilmaCless mucks [ 7c, 3c ]
+37alexe collected [ $0.58 ]
+37alexe collected [ $0.16 ]
+
+
+#Game No : 456280797
+***** 888poker Hand History for Game 456280797 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:49:17
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 2: lajoje ( $0.80 )
+Seat 3: calumetvich ( $2.29 )
+Seat 4: SteffiGrudno ( $1.99 )
+Seat 6: FilmaCless ( $0.17 )
+Seat 7: 37alexe ( $1.07 )
+Seat 10: miltonwhite ( $3.13 )
+37alexe posts small blind [$0.01]
+miltonwhite posts big blind [$0.02]
+lajoje posts big blind [$0.02]
+** Dealing down cards **
+lajoje checks
+calumetvich folds
+SteffiGrudno calls [$0.02]
+FilmaCless calls [$0.02]
+37alexe raises [$0.03]
+miltonwhite calls [$0.02]
+lajoje calls [$0.02]
+SteffiGrudno calls [$0.02]
+FilmaCless calls [$0.02]
+** Dealing flop ** [ Jc, 3d, Kc ]
+37alexe bets [$0.02]
+miltonwhite folds
+lajoje calls [$0.02]
+SteffiGrudno calls [$0.02]
+FilmaCless calls [$0.02]
+** Dealing turn ** [ Jd ]
+37alexe checks
+lajoje checks
+SteffiGrudno checks
+FilmaCless checks
+** Dealing river ** [ 3s ]
+37alexe checks
+lajoje checks
+SteffiGrudno checks
+FilmaCless checks
+** Summary **
+37alexe shows [ Qh, 8h ]
+lajoje shows [ 9c, Qs ]
+SteffiGrudno shows [ Ac, 4d ]
+FilmaCless mucks [ Th, 4c ]
+SteffiGrudno collected [ $0.27 ]
+
+
+#Game No : 456280832
+***** 888poker Hand History for Game 456280832 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:50:23
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 2: lajoje ( $0.74 )
+Seat 3: calumetvich ( $2.29 )
+Seat 4: SteffiGrudno ( $2.20 )
+Seat 7: 37alexe ( $1.01 )
+Seat 10: miltonwhite ( $3.09 )
+miltonwhite posts small blind [$0.01]
+lajoje posts big blind [$0.02]
+** Dealing down cards **
+calumetvich folds
+SteffiGrudno calls [$0.02]
+37alexe raises [$0.04]
+miltonwhite calls [$0.03]
+lajoje folds
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ 3h, 7s, 5h ]
+miltonwhite checks
+SteffiGrudno checks
+37alexe bets [$0.02]
+miltonwhite calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing turn ** [ 6s ]
+miltonwhite checks
+SteffiGrudno checks
+37alexe bets [$0.04]
+miltonwhite calls [$0.04]
+SteffiGrudno raises [$0.08]
+37alexe raises [$0.08]
+miltonwhite calls [$0.08]
+SteffiGrudno raises [$0.08]
+37alexe calls [$0.04]
+miltonwhite calls [$0.04]
+** Dealing river ** [ 9c ]
+miltonwhite bets [$0.04]
+SteffiGrudno calls [$0.04]
+37alexe calls [$0.04]
+** Summary **
+miltonwhite shows [ Ad, 8s ]
+SteffiGrudno mucks [ 4c, 5s ]
+37alexe mucks [ 7h, Ks ]
+miltonwhite collected [ $0.76 ]
+
+
+#Game No : 456280889
+***** 888poker Hand History for Game 456280889 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:52:13
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 2: lajoje ( $0.72 )
+Seat 3: calumetvich ( $2.29 )
+Seat 4: SteffiGrudno ( $1.94 )
+Seat 7: 37alexe ( $0.75 )
+Seat 10: miltonwhite ( $3.59 )
+lajoje posts small blind [$0.01]
+calumetvich posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno calls [$0.02]
+37alexe raises [$0.04]
+miltonwhite calls [$0.04]
+lajoje raises [$0.05]
+calumetvich calls [$0.04]
+SteffiGrudno calls [$0.04]
+37alexe raises [$0.04]
+miltonwhite calls [$0.04]
+lajoje calls [$0.02]
+calumetvich calls [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing flop ** [ 2d, Qs, 5d ]
+lajoje checks
+calumetvich checks
+SteffiGrudno checks
+37alexe bets [$0.02]
+miltonwhite raises [$0.04]
+lajoje calls [$0.04]
+calumetvich folds
+SteffiGrudno folds
+37alexe raises [$0.04]
+miltonwhite raises [$0.04]
+lajoje calls [$0.04]
+37alexe calls [$0.02]
+** Dealing turn ** [ 7c ]
+lajoje checks
+37alexe bets [$0.04]
+miltonwhite raises [$0.08]
+lajoje calls [$0.08]
+37alexe raises [$0.08]
+miltonwhite calls [$0.04]
+lajoje calls [$0.04]
+** Dealing river ** [ 5s ]
+lajoje checks
+37alexe bets [$0.04]
+miltonwhite calls [$0.04]
+lajoje calls [$0.04]
+** Summary **
+37alexe shows [ 6c, 6s ]
+miltonwhite shows [ Th, Qc ]
+lajoje mucks [ 8c, 8d ]
+miltonwhite collected [ $1.07 ]
+
+
+#Game No : 456280944
+***** 888poker Hand History for Game 456280944 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 03:53:55
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: lajoje ( $0.40 )
+Seat 3: calumetvich ( $2.21 )
+Seat 4: SteffiGrudno ( $1.86 )
+Seat 5: LuMaNhEr ( $0.80 )
+Seat 7: 37alexe ( $0.43 )
+Seat 10: miltonwhite ( $4.34 )
+calumetvich posts small blind [$0.01]
+SteffiGrudno posts big blind [$0.02]
+LuMaNhEr posts big blind [$0.02]
+** Dealing down cards **
+LuMaNhEr checks
+37alexe raises [$0.04]
+miltonwhite folds
+lajoje folds
+calumetvich folds
+SteffiGrudno folds
+LuMaNhEr calls [$0.02]
+** Dealing flop ** [ Th, 3h, Qs ]
+LuMaNhEr bets [$0.02]
+37alexe raises [$0.04]
+LuMaNhEr calls [$0.02]
+** Dealing turn ** [ 6h ]
+LuMaNhEr checks
+37alexe bets [$0.04]
+LuMaNhEr folds
+** Summary **
+37alexe collected [ $0.19 ]
+
+
+#Game No : 456283777
+***** 888poker Hand History for Game 456283777 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 05:19:49
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Sanja24r ( $1.14 )
+Seat 2: lajoje ( $0.68 )
+Seat 5: GofaKuresElf ( $0.12 )
+Seat 7: HARRYS_TCB ( $0.20 )
+Seat 9: maty_nubile ( $0.28 )
+Seat 10: miltonwhite ( $4.98 )
+GofaKuresElf posts small blind [$0.01]
+HARRYS_TCB posts big blind [$0.02]
+** Dealing down cards **
+maty_nubile calls [$0.02]
+miltonwhite folds
+Sanja24r folds
+lajoje folds
+GofaKuresElf folds
+HARRYS_TCB checks
+** Dealing flop ** [ 8h, 8d, 6s ]
+HARRYS_TCB checks
+maty_nubile checks
+** Dealing turn ** [ Tc ]
+HARRYS_TCB bets [$0.04]
+maty_nubile folds
+** Summary **
+HARRYS_TCB collected [ $0.05 ]
+
+
+#Game No : 456287217
+***** 888poker Hand History for Game 456287217 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 07:03:58
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 2: HARRYS_TCB ( $0.98 )
+Seat 3: kokoloros ( $0.68 )
+Seat 4: tofig12 ( $0.39 )
+Seat 7: Chaser104 ( $1.92 )
+Seat 8: Dhawal1989 ( $1.65 )
+Seat 10: Foergaet ( $0.88 )
+HARRYS_TCB posts small blind [$0.01]
+kokoloros posts big blind [$0.02]
+** Dealing down cards **
+tofig12 calls [$0.02]
+Chaser104 calls [$0.02]
+Dhawal1989 raises [$0.04]
+Foergaet folds
+HARRYS_TCB calls [$0.03]
+kokoloros calls [$0.02]
+tofig12 calls [$0.02]
+Chaser104 calls [$0.02]
+** Dealing flop ** [ Qh, 7c, 3c ]
+HARRYS_TCB checks
+kokoloros checks
+tofig12 checks
+Chaser104 bets [$0.02]
+Dhawal1989 calls [$0.02]
+HARRYS_TCB folds
+kokoloros folds
+tofig12 folds
+** Dealing turn ** [ Th ]
+Chaser104 checks
+Dhawal1989 checks
+** Dealing river ** [ 7s ]
+Chaser104 bets [$0.04]
+Dhawal1989 folds
+** Summary **
+Chaser104 collected [ $0.23 ]
+
+
+#Game No : 456287268
+***** 888poker Hand History for Game 456287268 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 07:05:14
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: HARRYS_TCB ( $0.94 )
+Seat 3: kokoloros ( $0.64 )
+Seat 4: tofig12 ( $0.35 )
+Seat 7: Chaser104 ( $2.09 )
+Seat 8: Dhawal1989 ( $1.59 )
+Seat 10: Foergaet ( $0.88 )
+kokoloros posts small blind [$0.01]
+tofig12 posts big blind [$0.02]
+** Dealing down cards **
+Chaser104 calls [$0.02]
+Dhawal1989 folds
+Foergaet folds
+HARRYS_TCB calls [$0.02]
+kokoloros calls [$0.01]
+tofig12 checks
+** Dealing flop ** [ Qh, 4s, Ts ]
+kokoloros checks
+tofig12 bets [$0.02]
+Chaser104 raises [$0.04]
+HARRYS_TCB folds
+kokoloros folds
+tofig12 calls [$0.02]
+** Dealing turn ** [ 3d ]
+tofig12 checks
+Chaser104 bets [$0.04]
+tofig12 calls [$0.04]
+** Dealing river ** [ 3s ]
+tofig12 checks
+Chaser104 bets [$0.04]
+tofig12 calls [$0.04]
+** Summary **
+Chaser104 shows [ Qs, 8s ]
+tofig12 mucks [ Qc, 9d ]
+Chaser104 collected [ $0.31 ]
+
+
+#Game No : 456287292
+***** 888poker Hand History for Game 456287292 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 07:06:04
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 2: HARRYS_TCB ( $0.92 )
+Seat 3: kokoloros ( $1 )
+Seat 4: tofig12 ( $0.21 )
+Seat 7: Chaser104 ( $2.26 )
+Seat 8: Dhawal1989 ( $1.59 )
+Seat 10: Foergaet ( $0.88 )
+tofig12 posts small blind [$0.01]
+Chaser104 posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 calls [$0.02]
+Foergaet folds
+HARRYS_TCB folds
+kokoloros folds
+tofig12 calls [$0.01]
+Chaser104 checks
+** Dealing flop ** [ 4d, Jd, 5d ]
+tofig12 checks
+Chaser104 checks
+Dhawal1989 bets [$0.02]
+tofig12 calls [$0.02]
+Chaser104 folds
+** Dealing turn ** [ 7h ]
+tofig12 checks
+Dhawal1989 bets [$0.04]
+tofig12 calls [$0.04]
+** Dealing river ** [ Ts ]
+tofig12 checks
+Dhawal1989 checks
+** Summary **
+tofig12 shows [ Qd, 2h ]
+Dhawal1989 shows [ 5c, 8c ]
+Dhawal1989 collected [ $0.18 ]
+
+
+#Game No : 456287309
+***** 888poker Hand History for Game 456287309 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 07:06:41
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 2: HARRYS_TCB ( $0.92 )
+Seat 3: kokoloros ( $1 )
+Seat 4: tofig12 ( $0.13 )
+Seat 7: Chaser104 ( $2.24 )
+Seat 8: Dhawal1989 ( $1.69 )
+Seat 10: Foergaet ( $0.88 )
+Chaser104 posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+Foergaet raises [$0.04]
+HARRYS_TCB calls [$0.04]
+kokoloros calls [$0.04]
+tofig12 folds
+Chaser104 calls [$0.03]
+Dhawal1989 calls [$0.02]
+** Dealing flop ** [ 8s, 8c, 3h ]
+Chaser104 checks
+Dhawal1989 checks
+Foergaet bets [$0.02]
+HARRYS_TCB folds
+kokoloros calls [$0.02]
+Chaser104 calls [$0.02]
+Dhawal1989 folds
+** Dealing turn ** [ 4c ]
+Chaser104 checks
+Foergaet bets [$0.04]
+kokoloros folds
+Chaser104 calls [$0.04]
+** Dealing river ** [ Qs ]
+Chaser104 checks
+Foergaet bets [$0.04]
+Chaser104 folds
+** Summary **
+Foergaet collected [ $0.33 ]
+
+
+#Game No : 456287801
+***** 888poker Hand History for Game 456287801 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 07:19:28
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 2: HARRYS_TCB ( $2.13 )
+Seat 4: AErmolaew ( $0.15 )
+Seat 5: svssta ( $1.06 )
+Seat 6: Romann25 ( $0.06 )
+Seat 7: Chaser104 ( $1.42 )
+Seat 8: Dhawal1989 ( $1.68 )
+svssta posts small blind [$0.01]
+Romann25 posts big blind [$0.02]
+** Dealing down cards **
+Chaser104 folds
+Dhawal1989 raises [$0.04]
+HARRYS_TCB folds
+AErmolaew folds
+svssta calls [$0.03]
+Romann25 raises [$0.04]
+Dhawal1989 raises [$0.04]
+svssta folds
+** Dealing flop ** [ 7d, 9d, Ks ]
+** Dealing turn ** [ Th ]
+** Dealing river ** [ Qd ]
+** Summary **
+Romann25 shows [ 7h, Ah ]
+Dhawal1989 shows [ 5h, 5d ]
+Romann25 collected [ $0.16 ]
+
+
+#Game No : 456290909
+***** 888poker Hand History for Game 456290909 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:40:57
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: Red_Rum50 ( $1.09 )
+Seat 4: balkanboy966 ( $0.38 )
+Seat 5: svssta ( $1.43 )
+Seat 6: poker_jameso ( $0.76 )
+Seat 8: hillbillyp ( $0.39 )
+Seat 9: igorb70 ( $0.34 )
+balkanboy966 posts small blind [$0.01]
+svssta posts big blind [$0.02]
+** Dealing down cards **
+poker_jameso calls [$0.02]
+hillbillyp calls [$0.02]
+igorb70 folds
+Red_Rum50 folds
+balkanboy966 folds
+svssta checks
+** Dealing flop ** [ Ts, Td, 6d ]
+svssta checks
+poker_jameso checks
+hillbillyp checks
+** Dealing turn ** [ 4s ]
+svssta checks
+poker_jameso checks
+hillbillyp checks
+** Dealing river ** [ Ah ]
+svssta bets [$0.04]
+poker_jameso folds
+hillbillyp folds
+** Summary **
+svssta collected [ $0.07 ]
+
+
+#Game No : 456290949
+***** 888poker Hand History for Game 456290949 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:41:41
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 2: Red_Rum50 ( $1.09 )
+Seat 4: balkanboy966 ( $0.37 )
+Seat 5: svssta ( $1.48 )
+Seat 6: poker_jameso ( $0.74 )
+Seat 8: hillbillyp ( $0.37 )
+Seat 9: igorb70 ( $0.34 )
+svssta posts small blind [$0.01]
+poker_jameso posts big blind [$0.02]
+** Dealing down cards **
+hillbillyp calls [$0.02]
+igorb70 calls [$0.02]
+Red_Rum50 folds
+balkanboy966 calls [$0.02]
+svssta calls [$0.01]
+poker_jameso checks
+** Dealing flop ** [ 7s, Ts, 6d ]
+svssta checks
+poker_jameso checks
+hillbillyp checks
+igorb70 checks
+balkanboy966 checks
+** Dealing turn ** [ 4c ]
+svssta checks
+poker_jameso checks
+hillbillyp checks
+igorb70 checks
+balkanboy966 checks
+** Dealing river ** [ 4h ]
+svssta checks
+poker_jameso checks
+hillbillyp checks
+igorb70 bets [$0.04]
+balkanboy966 folds
+svssta folds
+poker_jameso raises [$0.08]
+hillbillyp folds
+igorb70 folds
+** Summary **
+poker_jameso collected [ $0.18 ]
+
+
+#Game No : 456291378
+***** 888poker Hand History for Game 456291378 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:52:09
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.80 )
+Seat 3: Dhawal1989 ( $0.69 )
+Seat 5: svssta ( $1.36 )
+Seat 6: poker_jameso ( $0.84 )
+Seat 7: Chaser104 ( $3.66 )
+Seat 8: hillbillyp ( $0.20 )
+hillbillyp posts small blind [$0.01]
+hawks96 posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 folds
+svssta raises [$0.04]
+poker_jameso folds
+Chaser104 calls [$0.04]
+hillbillyp folds
+hawks96 folds
+** Dealing flop ** [ Ah, 4s, Js ]
+svssta bets [$0.02]
+Chaser104 calls [$0.02]
+** Dealing turn ** [ 8h ]
+svssta bets [$0.04]
+Chaser104 calls [$0.04]
+** Dealing river ** [ 4h ]
+svssta bets [$0.04]
+Chaser104 calls [$0.04]
+** Summary **
+svssta shows [ 2h, 3h ]
+Chaser104 mucks [ Ad, 9d ]
+svssta collected [ $0.30 ]
+
+
+#Game No : 456291401
+***** 888poker Hand History for Game 456291401 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:52:43
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.78 )
+Seat 3: Dhawal1989 ( $0.69 )
+Seat 5: svssta ( $1.52 )
+Seat 6: poker_jameso ( $0.84 )
+Seat 7: Chaser104 ( $3.52 )
+Seat 8: hillbillyp ( $0.20 )
+hawks96 posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+poker_jameso folds
+Chaser104 calls [$0.02]
+hillbillyp folds
+hawks96 calls [$0.01]
+Dhawal1989 checks
+** Dealing flop ** [ Qc, Jh, Jc ]
+hawks96 checks
+Dhawal1989 checks
+Chaser104 checks
+** Dealing turn ** [ 6s ]
+hawks96 checks
+Dhawal1989 checks
+Chaser104 checks
+** Dealing river ** [ Kd ]
+hawks96 checks
+Dhawal1989 checks
+Chaser104 checks
+** Summary **
+hawks96 shows [ 3d, 3c ]
+Dhawal1989 mucks [ 5h, 7s ]
+Chaser104 mucks [ 9c, 7d ]
+hawks96 collected [ $0.06 ]
+
+
+#Game No : 456291434
+***** 888poker Hand History for Game 456291434 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:53:38
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: hawks96 ( $1.82 )
+Seat 3: Dhawal1989 ( $0.67 )
+Seat 5: svssta ( $1.52 )
+Seat 7: Chaser104 ( $3.50 )
+Seat 8: hillbillyp ( $0.20 )
+Dhawal1989 posts small blind [$0.01]
+svssta posts big blind [$0.02]
+** Dealing down cards **
+Chaser104 folds
+hillbillyp folds
+hawks96 folds
+Dhawal1989 folds
+** Summary **
+svssta did not show his hand
+svssta collected [ $0.03 ]
+
+
+#Game No : 456291450
+***** 888poker Hand History for Game 456291450 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:53:58
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 1: hawks96 ( $1.82 )
+Seat 3: Dhawal1989 ( $0.66 )
+Seat 5: svssta ( $1.53 )
+Seat 7: Chaser104 ( $3.50 )
+Seat 8: hillbillyp ( $0.20 )
+svssta posts small blind [$0.01]
+Chaser104 posts big blind [$0.02]
+** Dealing down cards **
+hillbillyp calls [$0.02]
+hawks96 folds
+Dhawal1989 folds
+svssta calls [$0.01]
+Chaser104 checks
+** Dealing flop ** [ 9c, Qs, 2d ]
+svssta checks
+Chaser104 bets [$0.02]
+hillbillyp calls [$0.02]
+svssta folds
+** Dealing turn ** [ 7c ]
+Chaser104 bets [$0.04]
+hillbillyp calls [$0.04]
+** Dealing river ** [ Qd ]
+Chaser104 bets [$0.04]
+hillbillyp raises [$0.08]
+Chaser104 folds
+** Summary **
+hillbillyp did not show his hand
+hillbillyp collected [ $0.25 ]
+
+
+#Game No : 456291474
+***** 888poker Hand History for Game 456291474 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:54:28
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: hawks96 ( $1.82 )
+Seat 3: Dhawal1989 ( $0.66 )
+Seat 5: svssta ( $1.51 )
+Seat 7: Chaser104 ( $3.38 )
+Seat 8: hillbillyp ( $0.33 )
+Chaser104 posts small blind [$0.01]
+hillbillyp posts big blind [$0.02]
+** Dealing down cards **
+hawks96 folds
+Dhawal1989 folds
+svssta raises [$0.04]
+Chaser104 folds
+hillbillyp calls [$0.02]
+** Dealing flop ** [ 9d, 9h, 7h ]
+hillbillyp checks
+svssta bets [$0.02]
+hillbillyp calls [$0.02]
+** Dealing turn ** [ Js ]
+hillbillyp checks
+svssta bets [$0.04]
+hillbillyp calls [$0.04]
+** Dealing river ** [ Ah ]
+hillbillyp checks
+svssta bets [$0.04]
+hillbillyp calls [$0.04]
+** Summary **
+svssta shows [ Jd, As ]
+hillbillyp mucks [ Jh, Ks ]
+svssta collected [ $0.28 ]
+
+
+#Game No : 456291501
+***** 888poker Hand History for Game 456291501 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:55:05
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.82 )
+Seat 3: Dhawal1989 ( $0.66 )
+Seat 5: svssta ( $1.65 )
+Seat 6: kum_piak ( $0.20 )
+Seat 7: Chaser104 ( $3.37 )
+Seat 8: hillbillyp ( $0.20 )
+hillbillyp posts small blind [$0.01]
+hawks96 posts big blind [$0.02]
+kum_piak posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 folds
+svssta folds
+kum_piak raises [$0.02]
+Chaser104 calls [$0.04]
+hillbillyp folds
+hawks96 calls [$0.02]
+** Dealing flop ** [ Ah, 2h, 2d ]
+hawks96 checks
+kum_piak checks
+Chaser104 checks
+** Dealing turn ** [ 7d ]
+hawks96 checks
+kum_piak checks
+Chaser104 checks
+** Dealing river ** [ 4h ]
+hawks96 checks
+kum_piak checks
+Chaser104 checks
+** Summary **
+hawks96 shows [ Qc, Jh ]
+kum_piak shows [ Qd, Ks ]
+Chaser104 mucks [ Qh, Jc ]
+kum_piak collected [ $0.13 ]
+
+
+#Game No : 456291524
+***** 888poker Hand History for Game 456291524 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:55:42
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.78 )
+Seat 3: Dhawal1989 ( $0.66 )
+Seat 5: svssta ( $1.65 )
+Seat 6: kum_piak ( $0.29 )
+Seat 7: Chaser104 ( $3.33 )
+Seat 8: hillbillyp ( $0.20 )
+hawks96 posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+kum_piak folds
+Chaser104 calls [$0.02]
+hillbillyp folds
+hawks96 folds
+Dhawal1989 checks
+** Dealing flop ** [ Ad, As, Jd ]
+Dhawal1989 bets [$0.02]
+Chaser104 folds
+** Summary **
+Dhawal1989 did not show his hand
+Dhawal1989 collected [ $0.05 ]
+
+
+#Game No : 456291540
+***** 888poker Hand History for Game 456291540 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:56:00
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.77 )
+Seat 3: Dhawal1989 ( $0.69 )
+Seat 5: svssta ( $1.65 )
+Seat 6: kum_piak ( $0.29 )
+Seat 7: Chaser104 ( $3.31 )
+Seat 8: hillbillyp ( $0.20 )
+Dhawal1989 posts small blind [$0.01]
+svssta posts big blind [$0.02]
+** Dealing down cards **
+kum_piak folds
+Chaser104 folds
+hillbillyp calls [$0.02]
+hawks96 folds
+Dhawal1989 calls [$0.01]
+svssta checks
+** Dealing flop ** [ 6h, 8c, Th ]
+Dhawal1989 checks
+svssta checks
+hillbillyp checks
+** Dealing turn ** [ Ks ]
+Dhawal1989 bets [$0.04]
+svssta folds
+hillbillyp calls [$0.04]
+** Dealing river ** [ 2d ]
+Dhawal1989 bets [$0.04]
+hillbillyp calls [$0.04]
+** Summary **
+Dhawal1989 shows [ Kd, 3d ]
+hillbillyp shows [ 5s, Kh ]
+hillbillyp collected [ $0.10 ]
+Dhawal1989 collected [ $0.11 ]
+
+
+#Game No : 456291565
+***** 888poker Hand History for Game 456291565 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:56:37
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.77 )
+Seat 3: Dhawal1989 ( $0.70 )
+Seat 5: svssta ( $1.63 )
+Seat 6: kum_piak ( $0.29 )
+Seat 7: Chaser104 ( $3.31 )
+Seat 8: hillbillyp ( $0.20 )
+svssta posts small blind [$0.01]
+kum_piak posts big blind [$0.02]
+** Dealing down cards **
+Chaser104 calls [$0.02]
+hillbillyp calls [$0.02]
+hawks96 calls [$0.02]
+Dhawal1989 folds
+svssta raises [$0.03]
+kum_piak folds
+Chaser104 calls [$0.02]
+hillbillyp calls [$0.02]
+hawks96 calls [$0.02]
+** Dealing flop ** [ 7h, Kd, Kh ]
+svssta checks
+Chaser104 bets [$0.02]
+hillbillyp calls [$0.02]
+hawks96 folds
+svssta calls [$0.02]
+** Dealing turn ** [ 5s ]
+svssta checks
+Chaser104 bets [$0.04]
+hillbillyp folds
+svssta folds
+** Summary **
+Chaser104 did not show his hand
+Chaser104 collected [ $0.23 ]
+
+
+#Game No : 456291605
+***** 888poker Hand History for Game 456291605 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:57:31
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.73 )
+Seat 3: Dhawal1989 ( $0.70 )
+Seat 5: svssta ( $1.57 )
+Seat 6: kum_piak ( $0.27 )
+Seat 7: Chaser104 ( $3.48 )
+Seat 8: hillbillyp ( $0.20 )
+kum_piak posts small blind [$0.01]
+Chaser104 posts big blind [$0.02]
+** Dealing down cards **
+hillbillyp calls [$0.02]
+hawks96 folds
+Dhawal1989 folds
+svssta raises [$0.04]
+kum_piak folds
+Chaser104 calls [$0.02]
+hillbillyp calls [$0.02]
+** Dealing flop ** [ Qd, 5h, Jd ]
+Chaser104 checks
+hillbillyp checks
+svssta bets [$0.02]
+Chaser104 folds
+hillbillyp calls [$0.02]
+** Dealing turn ** [ 8h ]
+hillbillyp checks
+svssta bets [$0.04]
+hillbillyp folds
+** Summary **
+svssta did not show his hand
+svssta collected [ $0.17 ]
+
+
+#Game No : 456291626
+***** 888poker Hand History for Game 456291626 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:58:05
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.73 )
+Seat 3: Dhawal1989 ( $0.70 )
+Seat 5: svssta ( $1.68 )
+Seat 6: kum_piak ( $0.26 )
+Seat 7: Chaser104 ( $3.44 )
+Seat 8: hillbillyp ( $0.20 )
+Chaser104 posts small blind [$0.01]
+hillbillyp posts big blind [$0.02]
+** Dealing down cards **
+hawks96 folds
+Dhawal1989 raises [$0.04]
+svssta folds
+kum_piak calls [$0.04]
+Chaser104 calls [$0.03]
+hillbillyp calls [$0.02]
+** Dealing flop ** [ 2d, 4s, 2s ]
+Chaser104 bets [$0.02]
+hillbillyp calls [$0.02]
+Dhawal1989 raises [$0.04]
+kum_piak folds
+Chaser104 calls [$0.02]
+hillbillyp folds
+** Dealing turn ** [ 9s ]
+Chaser104 checks
+Dhawal1989 bets [$0.04]
+Chaser104 calls [$0.04]
+** Dealing river ** [ 4c ]
+Chaser104 checks
+Dhawal1989 bets [$0.04]
+Chaser104 calls [$0.04]
+** Summary **
+Dhawal1989 shows [ 4d, 5d ]
+Chaser104 mucks [ 5s, 5h ]
+Dhawal1989 collected [ $0.40 ]
+
+
+#Game No : 456291654
+***** 888poker Hand History for Game 456291654 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:58:47
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.73 )
+Seat 3: Dhawal1989 ( $0.94 )
+Seat 5: svssta ( $1.68 )
+Seat 6: kum_piak ( $0.22 )
+Seat 7: Chaser104 ( $3.28 )
+Seat 8: hillbillyp ( $0.20 )
+hillbillyp posts small blind [$0.01]
+hawks96 posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 folds
+svssta folds
+kum_piak folds
+Chaser104 calls [$0.02]
+hillbillyp calls [$0.01]
+hawks96 checks
+** Dealing flop ** [ Tc, 8h, 2s ]
+hillbillyp checks
+hawks96 checks
+Chaser104 bets [$0.02]
+hillbillyp calls [$0.02]
+hawks96 folds
+** Dealing turn ** [ 4h ]
+hillbillyp checks
+Chaser104 checks
+** Dealing river ** [ 9h ]
+hillbillyp checks
+Chaser104 checks
+** Summary **
+hillbillyp shows [ 3c, 3d ]
+Chaser104 mucks [ 7h, As ]
+hillbillyp collected [ $0.10 ]
+
+
+#Game No : 456291680
+***** 888poker Hand History for Game 456291680 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 08:59:33
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.71 )
+Seat 3: Dhawal1989 ( $0.94 )
+Seat 5: svssta ( $1.68 )
+Seat 6: kum_piak ( $0.22 )
+Seat 7: Chaser104 ( $3.24 )
+Seat 8: hillbillyp ( $0.26 )
+hawks96 posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+svssta calls [$0.02]
+kum_piak calls [$0.02]
+Chaser104 folds
+hillbillyp calls [$0.02]
+hawks96 calls [$0.01]
+Dhawal1989 checks
+** Dealing flop ** [ 6s, 9h, 2h ]
+hawks96 checks
+Dhawal1989 checks
+svssta bets [$0.02]
+kum_piak folds
+hillbillyp calls [$0.02]
+hawks96 calls [$0.02]
+Dhawal1989 calls [$0.02]
+** Dealing turn ** [ 8d ]
+hawks96 checks
+Dhawal1989 checks
+svssta checks
+hillbillyp checks
+** Dealing river ** [ 7d ]
+hawks96 bets [$0.04]
+Dhawal1989 calls [$0.04]
+svssta folds
+hillbillyp folds
+** Summary **
+hawks96 shows [ 9d, Tc ]
+Dhawal1989 mucks [ 4c, 5h ]
+hawks96 collected [ $0.25 ]
+
+
+#Game No : 456291733
+***** 888poker Hand History for Game 456291733 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 09:00:48
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.88 )
+Seat 3: Dhawal1989 ( $0.86 )
+Seat 5: svssta ( $1.64 )
+Seat 6: kum_piak ( $0.20 )
+Seat 7: Chaser104 ( $3.24 )
+Seat 8: hillbillyp ( $0.22 )
+Dhawal1989 posts small blind [$0.01]
+svssta posts big blind [$0.02]
+** Dealing down cards **
+kum_piak calls [$0.02]
+Chaser104 calls [$0.02]
+hillbillyp calls [$0.02]
+hawks96 folds
+Dhawal1989 raises [$0.03]
+svssta calls [$0.02]
+kum_piak calls [$0.02]
+Chaser104 calls [$0.02]
+hillbillyp calls [$0.02]
+** Dealing flop ** [ 4h, 9s, 3c ]
+Dhawal1989 checks
+svssta checks
+kum_piak checks
+Chaser104 checks
+hillbillyp checks
+** Dealing turn ** [ 7s ]
+Dhawal1989 checks
+svssta checks
+kum_piak checks
+Chaser104 bets [$0.04]
+hillbillyp folds
+Dhawal1989 folds
+svssta folds
+kum_piak folds
+** Summary **
+Chaser104 collected [ $0.19 ]
+
+
+#Game No : 456291769
+***** 888poker Hand History for Game 456291769 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 09:01:39
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 1: hawks96 ( $1.88 )
+Seat 3: Dhawal1989 ( $0.82 )
+Seat 5: svssta ( $1.60 )
+Seat 6: kum_piak ( $0.16 )
+Seat 7: Chaser104 ( $3.39 )
+svssta posts small blind [$0.01]
+kum_piak posts big blind [$0.02]
+** Dealing down cards **
+Chaser104 folds
+hawks96 folds
+Dhawal1989 folds
+svssta raises [$0.03]
+kum_piak calls [$0.02]
+** Dealing flop ** [ 5s, Qs, 8s ]
+svssta bets [$0.02]
+kum_piak calls [$0.02]
+** Dealing turn ** [ Qh ]
+svssta bets [$0.04]
+kum_piak calls [$0.04]
+** Dealing river ** [ 5c ]
+svssta bets [$0.04]
+kum_piak folds
+** Summary **
+svssta collected [ $0.19 ]
+
+
+#Game No : 456291791
+***** 888poker Hand History for Game 456291791 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 09:02:10
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: hawks96 ( $1.88 )
+Seat 3: Dhawal1989 ( $0.82 )
+Seat 5: svssta ( $1.69 )
+Seat 6: kum_piak ( $0.06 )
+Seat 7: Chaser104 ( $3.39 )
+kum_piak posts small blind [$0.01]
+Chaser104 posts big blind [$0.02]
+** Dealing down cards **
+hawks96 folds
+Dhawal1989 raises [$0.04]
+svssta folds
+kum_piak folds
+Chaser104 calls [$0.02]
+** Dealing flop ** [ Tc, 8d, Kh ]
+Chaser104 checks
+Dhawal1989 bets [$0.02]
+Chaser104 folds
+** Summary **
+Dhawal1989 collected [ $0.09 ]
+
+
+#Game No : 456291803
+***** 888poker Hand History for Game 456291803 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 09:02:25
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.88 )
+Seat 2: Dibitor_Hunt ( $0.75 )
+Seat 3: Dhawal1989 ( $0.87 )
+Seat 5: svssta ( $1.69 )
+Seat 6: kum_piak ( $0.05 )
+Seat 7: Chaser104 ( $3.35 )
+Chaser104 posts small blind [$0.01]
+hawks96 posts big blind [$0.02]
+Dibitor_Hunt posts big blind [$0.02]
+** Dealing down cards **
+Dibitor_Hunt checks
+Dhawal1989 folds
+svssta raises [$0.04]
+kum_piak folds
+Chaser104 calls [$0.03]
+hawks96 calls [$0.02]
+Dibitor_Hunt calls [$0.02]
+** Dealing flop ** [ 3d, 2s, 7s ]
+Chaser104 bets [$0.02]
+hawks96 raises [$0.04]
+Dibitor_Hunt calls [$0.04]
+svssta calls [$0.04]
+Chaser104 calls [$0.02]
+** Dealing turn ** [ 9c ]
+Chaser104 checks
+hawks96 checks
+Dibitor_Hunt checks
+svssta checks
+** Dealing river ** [ 5h ]
+Chaser104 bets [$0.04]
+hawks96 folds
+Dibitor_Hunt calls [$0.04]
+svssta calls [$0.04]
+** Summary **
+Chaser104 shows [ 4d, 7d ]
+Dibitor_Hunt shows [ 7h, Js ]
+svssta mucks [ Ac, 5s ]
+Dibitor_Hunt collected [ $0.42 ]
+
+
+#Game No : 456291868
+***** 888poker Hand History for Game 456291868 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 09:03:41
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.80 )
+Seat 2: Dibitor_Hunt ( $1.05 )
+Seat 3: Dhawal1989 ( $0.87 )
+Seat 5: svssta ( $1.57 )
+Seat 6: kum_piak ( $0.05 )
+Seat 7: Chaser104 ( $3.23 )
+hawks96 posts small blind [$0.01]
+Dibitor_Hunt posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 folds
+svssta raises [$0.04]
+kum_piak folds
+Chaser104 folds
+hawks96 folds
+Dibitor_Hunt calls [$0.02]
+** Dealing flop ** [ Kc, Qs, 6s ]
+Dibitor_Hunt checks
+svssta bets [$0.02]
+Dibitor_Hunt calls [$0.02]
+** Dealing turn ** [ 9h ]
+Dibitor_Hunt checks
+svssta bets [$0.04]
+Dibitor_Hunt calls [$0.04]
+** Dealing river ** [ 8c ]
+Dibitor_Hunt checks
+svssta bets [$0.04]
+Dibitor_Hunt folds
+** Summary **
+svssta collected [ $0.20 ]
+
+
+#Game No : 456291954
+***** 888poker Hand History for Game 456291954 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 09:05:34
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: hawks96 ( $1.79 )
+Seat 2: Dibitor_Hunt ( $0.95 )
+Seat 3: Dhawal1989 ( $0.87 )
+Seat 5: svssta ( $1.67 )
+Seat 6: kum_piak ( $0.05 )
+Seat 7: Chaser104 ( $3.23 )
+Dibitor_Hunt posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+kum_piak calls [$0.02]
+Chaser104 calls [$0.02]
+hawks96 folds
+Dibitor_Hunt calls [$0.01]
+Dhawal1989 raises [$0.02]
+kum_piak calls [$0.02]
+Chaser104 calls [$0.02]
+Dibitor_Hunt calls [$0.02]
+** Dealing flop ** [ 5h, 8d, Ah ]
+Dibitor_Hunt checks
+Dhawal1989 bets [$0.02]
+kum_piak calls [$0.01]
+Chaser104 raises [$0.04]
+Dibitor_Hunt calls [$0.04]
+Dhawal1989 calls [$0.02]
+** Dealing turn ** [ Qc ]
+Dibitor_Hunt checks
+Dhawal1989 checks
+Chaser104 bets [$0.04]
+Dibitor_Hunt calls [$0.04]
+Dhawal1989 folds
+** Dealing river ** [ Td ]
+Dibitor_Hunt checks
+Chaser104 checks
+** Summary **
+Dibitor_Hunt shows [ 4h, Jh ]
+kum_piak shows [ Kd, 8c ]
+Chaser104 shows [ As, 8s ]
+Chaser104 collected [ $0.19 ]
+Chaser104 collected [ $0.17 ]
+
+
+#Game No : 456292325
+***** 888poker Hand History for Game 456292325 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 09:12:51
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 3: Dhawal1989 ( $0.86 )
+Seat 4: BaJlepuaHka ( $0.78 )
+Seat 5: svssta ( $1.59 )
+Seat 6: Busokam74 ( $1.15 )
+Seat 7: Chaser104 ( $3.76 )
+Seat 10: floppy5050 ( $2.15 )
+Dhawal1989 posts small blind [$0.01]
+BaJlepuaHka posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+Busokam74 calls [$0.02]
+Chaser104 folds
+floppy5050 folds
+Dhawal1989 calls [$0.01]
+BaJlepuaHka checks
+** Dealing flop ** [ 2c, 5h, Ac ]
+Dhawal1989 checks
+BaJlepuaHka checks
+Busokam74 bets [$0.02]
+Dhawal1989 folds
+BaJlepuaHka folds
+** Summary **
+Busokam74 collected [ $0.06 ]
+
+
+#Game No : 456294270
+***** 888poker Hand History for Game 456294270 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:01:33
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 3: Dhawal1989 ( $2.17 )
+Seat 6: Busokam74 ( $0.46 )
+Seat 8: PKolos ( $0.58 )
+Seat 9: oleg0752 ( $0.18 )
+Seat 10: svssta ( $1.57 )
+svssta posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+Busokam74 calls [$0.02]
+PKolos folds
+oleg0752 folds
+svssta raises [$0.03]
+Dhawal1989 calls [$0.02]
+Busokam74 calls [$0.02]
+** Dealing flop ** [ As, 8s, 3h ]
+svssta checks
+Dhawal1989 checks
+Busokam74 checks
+** Dealing turn ** [ 8d ]
+svssta bets [$0.04]
+Dhawal1989 folds
+Busokam74 folds
+** Summary **
+svssta collected [ $0.12 ]
+
+
+#Game No : 456294295
+***** 888poker Hand History for Game 456294295 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:02:12
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 3: Dhawal1989 ( $2.13 )
+Seat 6: Busokam74 ( $0.42 )
+Seat 8: PKolos ( $0.58 )
+Seat 9: oleg0752 ( $0.18 )
+Seat 10: svssta ( $1.65 )
+Dhawal1989 posts small blind [$0.01]
+Busokam74 posts big blind [$0.02]
+** Dealing down cards **
+PKolos folds
+oleg0752 folds
+svssta raises [$0.04]
+Dhawal1989 calls [$0.03]
+Busokam74 calls [$0.02]
+** Dealing flop ** [ 8c, 4c, 6d ]
+Dhawal1989 bets [$0.02]
+Busokam74 calls [$0.02]
+svssta calls [$0.02]
+** Dealing turn ** [ Qs ]
+Dhawal1989 bets [$0.04]
+Busokam74 calls [$0.04]
+svssta calls [$0.04]
+** Dealing river ** [ 9h ]
+Dhawal1989 bets [$0.04]
+Busokam74 calls [$0.04]
+svssta folds
+** Summary **
+Dhawal1989 shows [ 5c, 3c ]
+Busokam74 shows [ 4h, 8h ]
+Busokam74 collected [ $0.37 ]
+
+
+#Game No : 456294328
+***** 888poker Hand History for Game 456294328 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:03:08
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 2: nadin1606 ( $2.70 )
+Seat 3: Dhawal1989 ( $1.99 )
+Seat 6: Busokam74 ( $0.65 )
+Seat 8: PKolos ( $0.58 )
+Seat 9: oleg0752 ( $0.18 )
+Seat 10: svssta ( $1.55 )
+Busokam74 posts small blind [$0.01]
+PKolos posts big blind [$0.02]
+nadin1606 posts dead blind [$0.01 + $0.02]
+** Dealing down cards **
+oleg0752 raises [$0.04]
+svssta folds
+nadin1606 calls [$0.02]
+Dhawal1989 folds
+Busokam74 folds
+PKolos calls [$0.02]
+** Dealing flop ** [ Qs, 8c, Ks ]
+PKolos checks
+oleg0752 bets [$0.02]
+nadin1606 calls [$0.02]
+PKolos calls [$0.02]
+** Dealing turn ** [ 3d ]
+PKolos checks
+oleg0752 bets [$0.04]
+nadin1606 folds
+PKolos calls [$0.04]
+** Dealing river ** [ 8h ]
+PKolos checks
+oleg0752 checks
+** Summary **
+PKolos shows [ Qd, 6s ]
+oleg0752 mucks [ Jh, Tc ]
+PKolos collected [ $0.27 ]
+
+
+#Game No : 456294388
+***** 888poker Hand History for Game 456294388 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:04:39
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: nadin1606 ( $2.63 )
+Seat 3: Dhawal1989 ( $1.99 )
+Seat 9: oleg0752 ( $0.08 )
+Seat 10: svssta ( $1.55 )
+svssta posts small blind [$0.01]
+nadin1606 posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 raises [$0.04]
+oleg0752 folds
+svssta calls [$0.03]
+nadin1606 calls [$0.02]
+** Dealing flop ** [ 5h, Kh, Jh ]
+svssta checks
+nadin1606 checks
+Dhawal1989 bets [$0.02]
+svssta calls [$0.02]
+nadin1606 calls [$0.02]
+** Dealing turn ** [ Ac ]
+svssta checks
+nadin1606 checks
+Dhawal1989 checks
+** Dealing river ** [ 3s ]
+svssta bets [$0.04]
+nadin1606 calls [$0.04]
+Dhawal1989 folds
+** Summary **
+svssta shows [ Jd, Qc ]
+nadin1606 mucks [ 5c, 6s ]
+svssta collected [ $0.25 ]
+
+
+#Game No : 456294421
+***** 888poker Hand History for Game 456294421 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:05:39
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 4
+Seat 2: nadin1606 ( $2.53 )
+Seat 3: Dhawal1989 ( $1.93 )
+Seat 9: oleg0752 ( $0.08 )
+Seat 10: svssta ( $1.70 )
+nadin1606 posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+oleg0752 raises [$0.04]
+svssta calls [$0.04]
+nadin1606 folds
+Dhawal1989 raises [$0.04]
+oleg0752 calls [$0.02]
+svssta raises [$0.04]
+Dhawal1989 calls [$0.02]
+oleg0752 calls [$0.02]
+** Dealing flop ** [ 3c, 5c, Kd ]
+Dhawal1989 bets [$0.02]
+svssta calls [$0.02]
+** Dealing turn ** [ 4h ]
+Dhawal1989 bets [$0.04]
+svssta calls [$0.04]
+** Dealing river ** [ Qc ]
+Dhawal1989 bets [$0.04]
+svssta calls [$0.04]
+** Summary **
+Dhawal1989 shows [ Jc, Ac ]
+oleg0752 mucks [ 9d, Jd ]
+svssta mucks [ 7d, 7h ]
+Dhawal1989 collected [ $0.24 ]
+Dhawal1989 collected [ $0.19 ]
+
+
+#Game No : 456294446
+***** 888poker Hand History for Game 456294446 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:06:14
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: nadin1606 ( $2.52 )
+Seat 3: Dhawal1989 ( $2.18 )
+Seat 10: svssta ( $1.52 )
+Dhawal1989 posts small blind [$0.01]
+svssta posts big blind [$0.02]
+** Dealing down cards **
+nadin1606 calls [$0.02]
+Dhawal1989 raises [$0.03]
+svssta raises [$0.04]
+nadin1606 calls [$0.04]
+Dhawal1989 raises [$0.04]
+svssta calls [$0.02]
+nadin1606 calls [$0.02]
+** Dealing flop ** [ 9c, 7s, 8s ]
+Dhawal1989 bets [$0.02]
+svssta calls [$0.02]
+nadin1606 folds
+** Dealing turn ** [ 8h ]
+Dhawal1989 bets [$0.04]
+svssta calls [$0.04]
+** Dealing river ** [ Ts ]
+Dhawal1989 bets [$0.04]
+svssta raises [$0.08]
+Dhawal1989 raises [$0.08]
+svssta raises [$0.08]
+Dhawal1989 calls [$0.04]
+** Summary **
+svssta shows [ Qh, Js ]
+Dhawal1989 shows [ Ks, As ]
+Dhawal1989 collected [ $0.65 ]
+
+
+#Game No : 456294471
+***** 888poker Hand History for Game 456294471 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:06:48
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 3
+Seat 2: nadin1606 ( $2.44 )
+Seat 3: Dhawal1989 ( $2.53 )
+Seat 10: svssta ( $1.22 )
+svssta posts small blind [$0.01]
+nadin1606 posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 folds
+svssta raises [$0.03]
+nadin1606 calls [$0.02]
+** Dealing flop ** [ Ad, Jd, Td ]
+svssta bets [$0.02]
+nadin1606 folds
+** Summary **
+svssta collected [ $0.08 ]
+
+
+#Game No : 456294484
+***** 888poker Hand History for Game 456294484 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:07:06
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 3
+Seat 2: nadin1606 ( $2.40 )
+Seat 3: Dhawal1989 ( $2.53 )
+Seat 10: svssta ( $1.26 )
+nadin1606 posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+svssta raises [$0.04]
+nadin1606 folds
+Dhawal1989 calls [$0.02]
+** Dealing flop ** [ Js, 2c, 9d ]
+Dhawal1989 checks
+svssta bets [$0.02]
+Dhawal1989 folds
+** Summary **
+svssta collected [ $0.09 ]
+
+
+#Game No : 456294496
+***** 888poker Hand History for Game 456294496 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:07:22
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: nadin1606 ( $2.39 )
+Seat 3: Dhawal1989 ( $2.49 )
+Seat 10: svssta ( $1.31 )
+Dhawal1989 posts small blind [$0.01]
+svssta posts big blind [$0.02]
+** Dealing down cards **
+nadin1606 calls [$0.02]
+Dhawal1989 calls [$0.01]
+svssta checks
+** Dealing flop ** [ 8s, 2d, Qc ]
+Dhawal1989 checks
+svssta bets [$0.02]
+nadin1606 folds
+Dhawal1989 folds
+** Summary **
+svssta collected [ $0.06 ]
+
+
+#Game No : 456294518
+***** 888poker Hand History for Game 456294518 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:07:45
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 3
+Seat 2: nadin1606 ( $2.37 )
+Seat 3: Dhawal1989 ( $2.47 )
+Seat 10: svssta ( $1.35 )
+svssta posts small blind [$0.01]
+nadin1606 posts big blind [$0.02]
+** Dealing down cards **
+Dhawal1989 folds
+svssta folds
+** Summary **
+nadin1606 collected [ $0.03 ]
+
+
+#Game No : 456294523
+***** 888poker Hand History for Game 456294523 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 10:07:52
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 3
+Seat 2: nadin1606 ( $2.38 )
+Seat 3: Dhawal1989 ( $2.47 )
+Seat 10: svssta ( $1.34 )
+nadin1606 posts small blind [$0.01]
+Dhawal1989 posts big blind [$0.02]
+** Dealing down cards **
+svssta folds
+nadin1606 calls [$0.01]
+Dhawal1989 raises [$0.02]
+nadin1606 calls [$0.02]
+** Dealing flop ** [ 3c, Ks, 4d ]
+nadin1606 bets [$0.02]
+Dhawal1989 calls [$0.02]
+** Dealing turn ** [ 5d ]
+nadin1606 bets [$0.04]
+Dhawal1989 raises [$0.08]
+nadin1606 calls [$0.04]
+** Dealing river ** [ 9s ]
+nadin1606 checks
+Dhawal1989 bets [$0.04]
+nadin1606 folds
+** Summary **
+Dhawal1989 collected [ $0.27 ]
+
+
+#Game No : 456312187
+***** 888poker Hand History for Game 456312187 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:19:12
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: marchelo05 ( $0.60 )
+Seat 3: VVoskoboynik ( $0.74 )
+Seat 4: Sanja24r ( $0.93 )
+Seat 5: nannacaz ( $0.69 )
+Seat 6: PKolos ( $1.18 )
+Seat 10: skvizi13 ( $0.48 )
+VVoskoboynik posts small blind [$0.01]
+Sanja24r posts big blind [$0.02]
+** Dealing down cards **
+nannacaz calls [$0.02]
+PKolos calls [$0.02]
+skvizi13 folds
+marchelo05 folds
+VVoskoboynik folds
+Sanja24r checks
+** Dealing flop ** [ Qs, Jd, 2s ]
+Sanja24r checks
+nannacaz checks
+PKolos checks
+** Dealing turn ** [ 4h ]
+Sanja24r checks
+nannacaz checks
+PKolos checks
+** Dealing river ** [ 2d ]
+Sanja24r checks
+nannacaz bets [$0.04]
+PKolos folds
+Sanja24r folds
+** Summary **
+nannacaz collected [ $0.07 ]
+
+
+#Game No : 456312571
+***** 888poker Hand History for Game 456312571 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:25:16
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 2: marchelo05 ( $0.71 )
+Seat 3: VVoskoboynik ( $0.69 )
+Seat 5: nannacaz ( $0.78 )
+Seat 8: buffon2016 ( $0.11 )
+Seat 10: skvizi13 ( $0.63 )
+nannacaz posts small blind [$0.01]
+buffon2016 posts big blind [$0.02]
+** Dealing down cards **
+skvizi13 raises [$0.04]
+marchelo05 folds
+VVoskoboynik folds
+nannacaz calls [$0.03]
+buffon2016 folds
+** Dealing flop ** [ 9c, 6h, Kh ]
+nannacaz checks
+skvizi13 bets [$0.02]
+nannacaz folds
+** Summary **
+skvizi13 collected [ $0.10 ]
+
+
+#Game No : 456312596
+***** 888poker Hand History for Game 456312596 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:25:40
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: nashiehlu ( $0.18 )
+Seat 2: marchelo05 ( $0.71 )
+Seat 3: VVoskoboynik ( $0.69 )
+Seat 5: nannacaz ( $0.74 )
+Seat 8: buffon2016 ( $0.09 )
+Seat 10: skvizi13 ( $0.69 )
+buffon2016 posts small blind [$0.01]
+skvizi13 folds
+nashiehlu posts big blind [$0.02]
+** Dealing down cards **
+marchelo05 folds
+VVoskoboynik raises [$0.04]
+nannacaz calls [$0.04]
+buffon2016 folds
+nashiehlu folds
+** Dealing flop ** [ 8d, 5h, 5c ]
+VVoskoboynik bets [$0.02]
+nannacaz folds
+** Summary **
+VVoskoboynik collected [ $0.11 ]
+
+
+#Game No : 456312709
+***** 888poker Hand History for Game 456312709 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 15:27:15
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: nashiehlu ( $0.14 )
+Seat 2: marchelo05 ( $0.95 )
+Seat 3: VVoskoboynik ( $0.76 )
+Seat 5: nannacaz ( $0.68 )
+Seat 8: buffon2016 ( $0.06 )
+Seat 10: skvizi13 ( $0.69 )
+marchelo05 posts small blind [$0.01]
+VVoskoboynik posts big blind [$0.02]
+skvizi13 posts dead blind [$0.01 + $0.02]
+** Dealing down cards **
+nannacaz folds
+buffon2016 folds
+skvizi13 checks
+nashiehlu calls [$0.02]
+marchelo05 folds
+VVoskoboynik raises [$0.02]
+skvizi13 calls [$0.02]
+nashiehlu calls [$0.02]
+** Dealing flop ** [ 3d, 7d, 4s ]
+VVoskoboynik bets [$0.02]
+skvizi13 calls [$0.02]
+nashiehlu folds
+** Dealing turn ** [ 4h ]
+VVoskoboynik bets [$0.04]
+skvizi13 calls [$0.04]
+** Dealing river ** [ 3h ]
+VVoskoboynik bets [$0.04]
+skvizi13 calls [$0.04]
+** Summary **
+VVoskoboynik shows [ Ad, Qs ]
+skvizi13 mucks [ Ks, 5s ]
+VVoskoboynik collected [ $0.33 ]
+
+
+#Game No : 456315217
+***** 888poker Hand History for Game 456315217 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:03:38
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: steveman13 ( $2 )
+Seat 2: marchelo05 ( $0.87 )
+Seat 4: baysa ( $0.52 )
+Seat 7: fenixx210 ( $2.51 )
+Seat 8: buffon2016 ( $0.19 )
+buffon2016 posts small blind [$0.01]
+steveman13 posts big blind [$0.02]
+** Dealing down cards **
+marchelo05 folds
+baysa folds
+fenixx210 folds
+buffon2016 calls [$0.01]
+steveman13 checks
+** Dealing flop ** [ 9d, 6h, Kc ]
+buffon2016 checks
+steveman13 bets [$0.02]
+buffon2016 folds
+** Summary **
+steveman13 collected [ $0.04 ]
+
+
+#Game No : 456315598
+***** 888poker Hand History for Game 456315598 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:09:07
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: steveman13 ( $2.12 )
+Seat 4: baysa ( $0.39 )
+Seat 6: Shahmtw ( $0.20 )
+Seat 7: fenixx210 ( $2.55 )
+Seat 9: SteffiGrudno ( $0.79 )
+SteffiGrudno posts small blind [$0.01]
+steveman13 posts big blind [$0.02]
+** Dealing down cards **
+baysa folds
+Shahmtw folds
+fenixx210 folds
+SteffiGrudno calls [$0.01]
+steveman13 checks
+** Dealing flop ** [ Qc, 9c, 7c ]
+SteffiGrudno checks
+steveman13 bets [$0.02]
+SteffiGrudno calls [$0.02]
+** Dealing turn ** [ 5d ]
+SteffiGrudno checks
+steveman13 bets [$0.04]
+SteffiGrudno calls [$0.04]
+** Dealing river ** [ 6s ]
+SteffiGrudno checks
+steveman13 bets [$0.04]
+SteffiGrudno calls [$0.04]
+** Summary **
+steveman13 shows [ 9h, 8d ]
+SteffiGrudno mucks [ 6c, Ah ]
+steveman13 collected [ $0.23 ]
+
+
+#Game No : 456315736
+***** 888poker Hand History for Game 456315736 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:10:57
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: steveman13 ( $2.22 )
+Seat 4: baysa ( $0.15 )
+Seat 5: decla213 ( $0.40 )
+Seat 7: fenixx210 ( $2.55 )
+Seat 9: SteffiGrudno ( $1.09 )
+baysa posts small blind [$0.01]
+decla213 posts big blind [$0.02]
+** Dealing down cards **
+fenixx210 folds
+SteffiGrudno folds
+steveman13 raises [$0.04]
+baysa folds
+decla213 calls [$0.02]
+** Dealing flop ** [ Qh, 7s, 8s ]
+decla213 checks
+steveman13 checks
+** Dealing turn ** [ Tc ]
+decla213 checks
+steveman13 checks
+** Dealing river ** [ Qd ]
+decla213 checks
+steveman13 checks
+** Summary **
+decla213 shows [ Jd, 4h ]
+steveman13 shows [ Qc, 8c ]
+steveman13 collected [ $0.09 ]
+
+
+#Game No : 456315877
+***** 888poker Hand History for Game 456315877 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:13:02
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 3: Hebitowi ( $0.18 )
+Seat 4: baysa ( $0.14 )
+Seat 5: decla213 ( $0.40 )
+Seat 7: fenixx210 ( $2.53 )
+Seat 8: sexxigurl ( $1 )
+Seat 9: SteffiGrudno ( $1.09 )
+fenixx210 posts small blind [$0.01]
+sexxigurl posts big blind [$0.02]
+** Dealing down cards **
+SteffiGrudno folds
+Hebitowi calls [$0.02]
+baysa raises [$0.04]
+decla213 folds
+fenixx210 calls [$0.03]
+sexxigurl calls [$0.02]
+Hebitowi calls [$0.02]
+** Dealing flop ** [ Qh, Kd, Qc ]
+fenixx210 checks
+sexxigurl checks
+Hebitowi checks
+baysa bets [$0.02]
+fenixx210 calls [$0.02]
+sexxigurl folds
+Hebitowi calls [$0.02]
+** Dealing turn ** [ 9c ]
+fenixx210 bets [$0.04]
+Hebitowi calls [$0.04]
+baysa raises [$0.08]
+fenixx210 calls [$0.04]
+Hebitowi calls [$0.04]
+** Dealing river ** [ 3d ]
+fenixx210 bets [$0.04]
+Hebitowi calls [$0.04]
+** Summary **
+Hebitowi shows [ 4s, 4d ]
+baysa shows [ Ah, 2h ]
+fenixx210 shows [ Js, Td ]
+fenixx210 collected [ $0.44 ]
+fenixx210 collected [ $0.08 ]
+
+
+#Game No : 456316015
+***** 888poker Hand History for Game 456316015 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:15:14
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 4
+Seat 5: decla213 ( $0.36 )
+Seat 6: Shahmtw ( $0.20 )
+Seat 7: fenixx210 ( $2.94 )
+Seat 8: sexxigurl ( $0.95 )
+decla213 posts small blind [$0.01]
+Shahmtw posts big blind [$0.02]
+** Dealing down cards **
+fenixx210 raises [$0.04]
+sexxigurl folds
+decla213 calls [$0.03]
+Shahmtw calls [$0.02]
+** Dealing flop ** [ 7c, 6h, Ah ]
+decla213 bets [$0.02]
+Shahmtw folds
+fenixx210 raises [$0.04]
+decla213 calls [$0.02]
+** Dealing turn ** [ 4h ]
+decla213 bets [$0.04]
+fenixx210 calls [$0.04]
+** Dealing river ** [ Kc ]
+decla213 bets [$0.04]
+fenixx210 calls [$0.04]
+** Summary **
+decla213 shows [ 9h, 3h ]
+fenixx210 mucks [ Ac, Kh ]
+decla213 collected [ $0.35 ]
+
+
+#Game No : 456316150
+***** 888poker Hand History for Game 456316150 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:17:18
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 5: decla213 ( $0.49 )
+Seat 6: Shahmtw ( $0.26 )
+Seat 7: fenixx210 ( $2.76 )
+Seat 8: sexxigurl ( $0.95 )
+Seat 9: AErmolaew ( $0.78 )
+fenixx210 posts small blind [$0.01]
+sexxigurl posts big blind [$0.02]
+** Dealing down cards **
+AErmolaew folds
+decla213 calls [$0.02]
+Shahmtw calls [$0.02]
+fenixx210 calls [$0.01]
+sexxigurl checks
+** Dealing flop ** [ 5h, 4d, 7h ]
+fenixx210 checks
+sexxigurl checks
+decla213 bets [$0.02]
+Shahmtw folds
+fenixx210 calls [$0.02]
+sexxigurl folds
+** Dealing turn ** [ 9h ]
+fenixx210 checks
+decla213 bets [$0.04]
+fenixx210 folds
+** Summary **
+decla213 collected [ $0.12 ]
+
+
+#Game No : 456316202
+***** 888poker Hand History for Game 456316202 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:18:03
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 5: decla213 ( $0.57 )
+Seat 6: Shahmtw ( $0.24 )
+Seat 7: fenixx210 ( $2.72 )
+Seat 8: sexxigurl ( $0.93 )
+Seat 9: AErmolaew ( $0.78 )
+sexxigurl posts small blind [$0.01]
+AErmolaew posts big blind [$0.02]
+** Dealing down cards **
+decla213 calls [$0.02]
+Shahmtw folds
+fenixx210 folds
+sexxigurl folds
+AErmolaew checks
+** Dealing flop ** [ Ks, Tc, Th ]
+AErmolaew checks
+decla213 bets [$0.02]
+AErmolaew folds
+** Summary **
+decla213 collected [ $0.05 ]
+
+
+#Game No : 456316501
+***** 888poker Hand History for Game 456316501 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:22:08
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: BuddyJackson ( $0.06 )
+Seat 4: davictb1 ( $0.76 )
+Seat 6: Shahmtw ( $0.55 )
+Seat 7: fenixx210 ( $2.72 )
+Seat 8: sexxigurl ( $0.92 )
+Seat 9: AErmolaew ( $0.91 )
+davictb1 posts small blind [$0.01]
+Shahmtw posts big blind [$0.02]
+** Dealing down cards **
+fenixx210 folds
+sexxigurl folds
+AErmolaew folds
+BuddyJackson calls [$0.02]
+davictb1 raises [$0.03]
+Shahmtw calls [$0.02]
+BuddyJackson calls [$0.02]
+** Dealing flop ** [ 8c, Ad, 7s ]
+davictb1 bets [$0.02]
+Shahmtw folds
+BuddyJackson calls [$0.02]
+** Dealing turn ** [ Ks ]
+** Dealing river ** [ 2h ]
+** Summary **
+BuddyJackson shows [ Jh, As ]
+davictb1 shows [ Jd, Jc ]
+BuddyJackson collected [ $0.16 ]
+
+
+#Game No : 456316539
+***** 888poker Hand History for Game 456316539 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:22:42
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 2: BuddyJackson ( $0.16 )
+Seat 4: davictb1 ( $0.70 )
+Seat 7: fenixx210 ( $2.72 )
+Seat 8: sexxigurl ( $0.92 )
+Seat 9: AErmolaew ( $0.91 )
+Seat 10: Sergant36 ( $0.30 )
+fenixx210 posts small blind [$0.01]
+sexxigurl posts big blind [$0.02]
+Sergant36 posts big blind [$0.02]
+** Dealing down cards **
+AErmolaew folds
+Sergant36 checks
+BuddyJackson folds
+davictb1 folds
+fenixx210 folds
+sexxigurl checks
+** Dealing flop ** [ Kh, Ac, Ts ]
+sexxigurl checks
+Sergant36 checks
+** Dealing turn ** [ 2h ]
+sexxigurl checks
+Sergant36 checks
+** Dealing river ** [ 9h ]
+sexxigurl checks
+Sergant36 bets [$0.04]
+sexxigurl folds
+** Summary **
+Sergant36 collected [ $0.05 ]
+
+
+#Game No : 456317409
+***** 888poker Hand History for Game 456317409 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:35:37
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: batia001 ( $0.54 )
+Seat 5: AkibulAkib ( $0.61 )
+Seat 6: Hotrocks33 ( $0.44 )
+Seat 7: fenixx210 ( $2.88 )
+Seat 8: sexxigurl ( $1 )
+Seat 9: AErmolaew ( $0.89 )
+AkibulAkib posts small blind [$0.01]
+Hotrocks33 posts big blind [$0.02]
+** Dealing down cards **
+fenixx210 raises [$0.04]
+sexxigurl folds
+AErmolaew folds
+batia001 raises [$0.06]
+AkibulAkib calls [$0.05]
+Hotrocks33 calls [$0.04]
+fenixx210 raises [$0.04]
+batia001 calls [$0.02]
+AkibulAkib calls [$0.02]
+Hotrocks33 calls [$0.02]
+** Dealing flop ** [ 7s, 7c, Tc ]
+AkibulAkib checks
+Hotrocks33 bets [$0.02]
+fenixx210 calls [$0.02]
+batia001 raises [$0.04]
+AkibulAkib folds
+Hotrocks33 calls [$0.02]
+fenixx210 calls [$0.02]
+** Dealing turn ** [ 6h ]
+Hotrocks33 bets [$0.04]
+fenixx210 calls [$0.04]
+batia001 raises [$0.08]
+Hotrocks33 calls [$0.04]
+fenixx210 calls [$0.04]
+** Dealing river ** [ Qd ]
+Hotrocks33 checks
+fenixx210 checks
+batia001 checks
+** Summary **
+Hotrocks33 shows [ Ks, Ts ]
+fenixx210 mucks [ Kh, As ]
+batia001 shows [ Js, Jh ]
+batia001 collected [ $0.65 ]
+
+
+#Game No : 456318536
+***** 888poker Hand History for Game 456318536 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 16:51:38
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: batia001 ( $0.55 )
+Seat 2: Afanas79 ( $0.12 )
+Seat 3: wologor ( $0.67 )
+Seat 5: AkibulAkib ( $0.66 )
+Seat 7: fenixx210 ( $3.06 )
+Seat 9: AErmolaew ( $0.74 )
+AErmolaew posts small blind [$0.01]
+batia001 posts big blind [$0.02]
+** Dealing down cards **
+Afanas79 folds
+wologor calls [$0.02]
+AkibulAkib calls [$0.02]
+fenixx210 folds
+AErmolaew calls [$0.01]
+batia001 checks
+** Dealing flop ** [ 9h, 6h, 3c ]
+AErmolaew checks
+batia001 checks
+wologor checks
+AkibulAkib bets [$0.02]
+AErmolaew calls [$0.02]
+batia001 folds
+wologor calls [$0.02]
+** Dealing turn ** [ 5h ]
+AErmolaew checks
+wologor checks
+AkibulAkib checks
+** Dealing river ** [ Ad ]
+AErmolaew checks
+wologor checks
+AkibulAkib checks
+** Summary **
+AErmolaew shows [ Qs, Qc ]
+wologor mucks [ Jd, Tc ]
+AkibulAkib mucks [ 4c, 5s ]
+AErmolaew collected [ $0.14 ]
+
+
+#Game No : 456335366
+***** 888poker Hand History for Game 456335366 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:09:42
+Table Oradea 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: GONP18 ( $0.87 )
+Seat 2: GraAnd. ( $5.03 )
+Seat 7: fenixx210 ( $2.77 )
+Seat 8: VulekHector ( $1.15 )
+Seat 9: AErmolaew ( $2.40 )
+fenixx210 posts small blind [$0.01]
+VulekHector posts big blind [$0.02]
+** Dealing down cards **
+AErmolaew folds
+GONP18 raises [$0.04]
+GraAnd. folds
+fenixx210 folds
+VulekHector calls [$0.02]
+** Dealing flop ** [ 4h, 9d, Js ]
+VulekHector checks
+GONP18 bets [$0.02]
+VulekHector folds
+** Summary **
+GONP18 collected [ $0.09 ]
+
+
+#Game No : 456335417
+***** 888poker Hand History for Game 456335417 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:10:12
+Table Oradea 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: GONP18 ( $0.92 )
+Seat 2: GraAnd. ( $5.03 )
+Seat 7: fenixx210 ( $2.76 )
+Seat 8: VulekHector ( $1.11 )
+Seat 9: AErmolaew ( $2.40 )
+VulekHector posts small blind [$0.01]
+AErmolaew posts big blind [$0.02]
+** Dealing down cards **
+GONP18 folds
+GraAnd. calls [$0.02]
+fenixx210 folds
+VulekHector folds
+AErmolaew checks
+** Dealing flop ** [ Qh, 7c, 6d ]
+AErmolaew checks
+GraAnd. bets [$0.02]
+AErmolaew calls [$0.02]
+** Dealing turn ** [ Th ]
+AErmolaew checks
+GraAnd. checks
+** Dealing river ** [ Jc ]
+AErmolaew bets [$0.04]
+GraAnd. folds
+** Summary **
+AErmolaew collected [ $0.09 ]
+
+
+#Game No : 456335566
+***** 888poker Hand History for Game 456335566 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:11:41
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: GONP18 ( $0.90 )
+Seat 2: GraAnd. ( $5.17 )
+Seat 6: Mehrplusx ( $0.68 )
+Seat 7: fenixx210 ( $2.76 )
+Seat 8: VulekHector ( $1.06 )
+Seat 9: AErmolaew ( $2.44 )
+GONP18 posts small blind [$0.01]
+GraAnd. posts big blind [$0.02]
+** Dealing down cards **
+Mehrplusx folds
+fenixx210 raises [$0.04]
+VulekHector folds
+AErmolaew folds
+GONP18 calls [$0.03]
+GraAnd. calls [$0.02]
+** Dealing flop ** [ 5d, Jh, Ac ]
+GONP18 checks
+GraAnd. checks
+fenixx210 bets [$0.02]
+GONP18 folds
+GraAnd. folds
+** Summary **
+fenixx210 collected [ $0.12 ]
+
+
+#Game No : 456335610
+***** 888poker Hand History for Game 456335610 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:12:09
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: GONP18 ( $0.86 )
+Seat 2: GraAnd. ( $5.13 )
+Seat 6: Mehrplusx ( $0.68 )
+Seat 7: fenixx210 ( $2.84 )
+Seat 8: VulekHector ( $1.06 )
+Seat 9: AErmolaew ( $2.44 )
+GraAnd. posts small blind [$0.01]
+Mehrplusx posts big blind [$0.02]
+** Dealing down cards **
+fenixx210 folds
+VulekHector calls [$0.02]
+AErmolaew calls [$0.02]
+GONP18 calls [$0.02]
+GraAnd. calls [$0.01]
+Mehrplusx checks
+** Dealing flop ** [ Jd, Ts, 5d ]
+GraAnd. checks
+Mehrplusx checks
+VulekHector checks
+AErmolaew checks
+GONP18 checks
+** Dealing turn ** [ Jc ]
+GraAnd. checks
+Mehrplusx checks
+VulekHector bets [$0.04]
+AErmolaew folds
+GONP18 folds
+GraAnd. folds
+Mehrplusx folds
+** Summary **
+VulekHector collected [ $0.10 ]
+
+
+#Game No : 456335748
+***** 888poker Hand History for Game 456335748 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:13:39
+Table Oradea 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: GONP18 ( $0.84 )
+Seat 2: GraAnd. ( $5.24 )
+Seat 6: Mehrplusx ( $0.54 )
+Seat 7: fenixx210 ( $2.82 )
+Seat 8: VulekHector ( $1.14 )
+Seat 9: AErmolaew ( $2.42 )
+fenixx210 posts small blind [$0.01]
+VulekHector posts big blind [$0.02]
+** Dealing down cards **
+AErmolaew folds
+GONP18 calls [$0.02]
+GraAnd. calls [$0.02]
+Mehrplusx folds
+fenixx210 folds
+VulekHector checks
+** Dealing flop ** [ 3h, Jd, 6h ]
+VulekHector checks
+GONP18 checks
+GraAnd. bets [$0.02]
+VulekHector folds
+GONP18 calls [$0.02]
+** Dealing turn ** [ Kd ]
+GONP18 checks
+GraAnd. bets [$0.04]
+GONP18 folds
+** Summary **
+GraAnd. collected [ $0.11 ]
+
+
+#Game No : 456335889
+***** 888poker Hand History for Game 456335889 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:15:05
+Table Oradea 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: GONP18 ( $0.74 )
+Seat 2: GraAnd. ( $5.40 )
+Seat 6: Mehrplusx ( $0.54 )
+Seat 7: fenixx210 ( $2.81 )
+Seat 8: VulekHector ( $1.11 )
+Seat 9: AErmolaew ( $2.40 )
+AErmolaew posts small blind [$0.01]
+GONP18 posts big blind [$0.02]
+** Dealing down cards **
+GraAnd. calls [$0.02]
+Mehrplusx calls [$0.02]
+fenixx210 folds
+VulekHector folds
+AErmolaew folds
+GONP18 checks
+** Dealing flop ** [ Th, 6s, Td ]
+GONP18 checks
+GraAnd. checks
+Mehrplusx checks
+** Dealing turn ** [ 3d ]
+GONP18 checks
+GraAnd. checks
+Mehrplusx checks
+** Dealing river ** [ 2c ]
+GONP18 bets [$0.04]
+GraAnd. folds
+Mehrplusx calls [$0.04]
+** Summary **
+GONP18 shows [ 4s, 5h ]
+Mehrplusx mucks [ Ad, 8s ]
+GONP18 collected [ $0.15 ]
+
+
+#Game No : 456335992
+***** 888poker Hand History for Game 456335992 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:16:09
+Table Oradea 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: GONP18 ( $0.83 )
+Seat 2: GraAnd. ( $5.38 )
+Seat 6: Mehrplusx ( $0.48 )
+Seat 7: fenixx210 ( $2.81 )
+Seat 8: VulekHector ( $1.11 )
+Seat 9: AErmolaew ( $2.39 )
+GONP18 posts small blind [$0.01]
+GraAnd. posts big blind [$0.02]
+** Dealing down cards **
+Mehrplusx folds
+fenixx210 folds
+VulekHector calls [$0.02]
+AErmolaew folds
+GONP18 calls [$0.01]
+GraAnd. checks
+** Dealing flop ** [ 3h, Jh, Kd ]
+GONP18 checks
+GraAnd. checks
+VulekHector bets [$0.02]
+GONP18 folds
+GraAnd. folds
+** Summary **
+VulekHector collected [ $0.06 ]
+
+
+#Game No : 456337101
+***** 888poker Hand History for Game 456337101 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:27:38
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: GONP18 ( $1.33 )
+Seat 5: AndyStone41 ( $3.17 )
+Seat 6: Mehrplusx ( $0.42 )
+Seat 7: fenixx210 ( $2.64 )
+Seat 8: VulekHector ( $1.35 )
+Seat 9: AErmolaew ( $2.18 )
+Mehrplusx posts small blind [$0.01]
+fenixx210 posts big blind [$0.02]
+** Dealing down cards **
+VulekHector folds
+AErmolaew folds
+GONP18 calls [$0.02]
+AndyStone41 calls [$0.02]
+Mehrplusx calls [$0.01]
+fenixx210 checks
+** Dealing flop ** [ Ts, Tc, Jc ]
+Mehrplusx checks
+fenixx210 checks
+GONP18 bets [$0.02]
+AndyStone41 calls [$0.02]
+Mehrplusx calls [$0.02]
+fenixx210 folds
+** Dealing turn ** [ Jd ]
+Mehrplusx checks
+GONP18 bets [$0.04]
+AndyStone41 folds
+Mehrplusx calls [$0.04]
+** Dealing river ** [ Kc ]
+Mehrplusx checks
+GONP18 bets [$0.04]
+Mehrplusx calls [$0.04]
+** Summary **
+GONP18 shows [ Td, 8d ]
+Mehrplusx shows [ 9h, Th ]
+GONP18 collected [ $0.14 ]
+Mehrplusx collected [ $0.15 ]
+
+
+#Game No : 456342145
+***** 888poker Hand History for Game 456342145 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:23:04
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 2: KVN2014 ( $1.81 )
+Seat 3: Omnious_KGB ( $1.42 )
+Seat 5: AndyStone41 ( $3.69 )
+Seat 8: VulekHector ( $1.25 )
+Seat 10: AAlex777 ( $0.19 )
+VulekHector posts small blind [$0.01]
+AAlex777 posts big blind [$0.02]
+** Dealing down cards **
+KVN2014 folds
+Omnious_KGB raises [$0.04]
+AndyStone41 folds
+VulekHector folds
+AAlex777 calls [$0.02]
+** Dealing flop ** [ 3s, 2s, Ah ]
+AAlex777 checks
+Omnious_KGB bets [$0.02]
+AAlex777 calls [$0.02]
+** Dealing turn ** [ 2h ]
+AAlex777 checks
+Omnious_KGB bets [$0.04]
+AAlex777 folds
+** Summary **
+Omnious_KGB collected [ $0.13 ]
+
+
+#Game No : 456342302
+***** 888poker Hand History for Game 456342302 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:24:42
+Table Oradea 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: Nepaleidziam ( $2.14 )
+Seat 2: KVN2014 ( $1.94 )
+Seat 3: Omnious_KGB ( $1.49 )
+Seat 5: AndyStone41 ( $3.69 )
+Seat 8: VulekHector ( $1.24 )
+Seat 10: AAlex777 ( $0.12 )
+KVN2014 posts small blind [$0.01]
+Omnious_KGB posts big blind [$0.02]
+** Dealing down cards **
+AndyStone41 folds
+VulekHector calls [$0.02]
+AAlex777 raises [$0.04]
+Nepaleidziam calls [$0.04]
+KVN2014 calls [$0.03]
+Omnious_KGB folds
+VulekHector calls [$0.02]
+** Dealing flop ** [ 8d, 2d, 5s ]
+KVN2014 checks
+VulekHector checks
+AAlex777 bets [$0.02]
+Nepaleidziam calls [$0.02]
+KVN2014 calls [$0.02]
+VulekHector calls [$0.02]
+** Dealing turn ** [ 3h ]
+KVN2014 checks
+VulekHector checks
+AAlex777 bets [$0.04]
+Nepaleidziam calls [$0.04]
+KVN2014 calls [$0.04]
+VulekHector calls [$0.04]
+** Dealing river ** [ Ad ]
+KVN2014 checks
+VulekHector checks
+AAlex777 bets [$0.02]
+Nepaleidziam calls [$0.02]
+KVN2014 calls [$0.02]
+VulekHector calls [$0.02]
+** Summary **
+AAlex777 shows [ Jc, Jh ]
+Nepaleidziam shows [ 6d, Ah ]
+KVN2014 shows [ Ac, Js ]
+VulekHector shows [ As, 5h ]
+VulekHector collected [ $0.48 ]
+
+
+#Game No : 456342512
+***** 888poker Hand History for Game 456342512 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:26:59
+Table Oradea 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: KVN2014 ( $1.70 )
+Seat 3: Omnious_KGB ( $1.49 )
+Seat 4: fuzzy103222 ( $0.47 )
+Seat 5: AndyStone41 ( $3.67 )
+Seat 8: VulekHector ( $1.74 )
+AndyStone41 posts small blind [$0.01]
+VulekHector posts big blind [$0.02]
+** Dealing down cards **
+KVN2014 folds
+Omnious_KGB folds
+fuzzy103222 raises [$0.04]
+AndyStone41 folds
+VulekHector calls [$0.02]
+** Dealing flop ** [ Kd, 4c, 4d ]
+VulekHector checks
+fuzzy103222 checks
+** Dealing turn ** [ 6d ]
+VulekHector checks
+fuzzy103222 checks
+** Dealing river ** [ Qc ]
+VulekHector checks
+fuzzy103222 checks
+** Summary **
+VulekHector shows [ 5s, Ts ]
+fuzzy103222 shows [ 9c, Qd ]
+fuzzy103222 collected [ $0.09 ]
+
+
+#Game No : 456342569
+***** 888poker Hand History for Game 456342569 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:27:37
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 2: KVN2014 ( $1.70 )
+Seat 3: Omnious_KGB ( $1.49 )
+Seat 4: fuzzy103222 ( $0.52 )
+Seat 5: AndyStone41 ( $3.66 )
+Seat 8: VulekHector ( $1.70 )
+VulekHector posts small blind [$0.01]
+KVN2014 posts big blind [$0.02]
+** Dealing down cards **
+Omnious_KGB folds
+fuzzy103222 folds
+AndyStone41 folds
+VulekHector folds
+** Summary **
+KVN2014 collected [ $0.03 ]
+
+
+#Game No : 456347592
+***** 888poker Hand History for Game 456347592 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:20:16
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 1: kuajus ( $0.51 )
+Seat 2: KVN2014 ( $1.57 )
+Seat 4: fuzzy103222 ( $1.34 )
+Seat 5: AndyStone41 ( $3.40 )
+Seat 7: fenixx210 ( $2.87 )
+fuzzy103222 posts small blind [$0.01]
+AndyStone41 posts big blind [$0.02]
+** Dealing down cards **
+fenixx210 folds
+kuajus calls [$0.02]
+KVN2014 calls [$0.02]
+fuzzy103222 calls [$0.01]
+AndyStone41 checks
+** Dealing flop ** [ 5c, 8h, 9d ]
+fuzzy103222 bets [$0.02]
+AndyStone41 calls [$0.02]
+kuajus calls [$0.02]
+KVN2014 calls [$0.02]
+** Dealing turn ** [ 6d ]
+fuzzy103222 bets [$0.04]
+AndyStone41 raises [$0.08]
+kuajus calls [$0.08]
+KVN2014 folds
+fuzzy103222 calls [$0.04]
+** Dealing river ** [ 5d ]
+fuzzy103222 checks
+AndyStone41 checks
+kuajus checks
+** Summary **
+fuzzy103222 shows [ 9c, 6s ]
+AndyStone41 shows [ 2c, 7s ]
+kuajus shows [ 3c, 4h ]
+AndyStone41 collected [ $0.38 ]
+
+
+#Game No : 456353313
+***** 888poker Hand History for Game 456353313 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:36:50
+Table Oradea 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 2: KVN2014 ( $1.31 )
+Seat 4: skvizi13 ( $1.46 )
+Seat 5: candy744 ( $1.74 )
+Seat 6: paulepiscopo ( $0.87 )
+Seat 7: xOSNIx ( $0.35 )
+Seat 10: scquad ( $0.53 )
+paulepiscopo posts small blind [$0.01]
+xOSNIx posts big blind [$0.02]
+** Dealing down cards **
+scquad folds
+KVN2014 calls [$0.02]
+skvizi13 raises [$0.04]
+candy744 calls [$0.04]
+paulepiscopo calls [$0.03]
+xOSNIx folds
+KVN2014 calls [$0.02]
+** Dealing flop ** [ Js, Qd, 6d ]
+paulepiscopo checks
+KVN2014 checks
+skvizi13 bets [$0.02]
+candy744 calls [$0.02]
+paulepiscopo calls [$0.02]
+KVN2014 calls [$0.02]
+** Dealing turn ** [ 4h ]
+paulepiscopo checks
+KVN2014 checks
+skvizi13 checks
+candy744 checks
+** Dealing river ** [ 2h ]
+paulepiscopo checks
+KVN2014 checks
+skvizi13 checks
+candy744 checks
+** Summary **
+paulepiscopo shows [ 9h, 7d ]
+KVN2014 shows [ 4s, As ]
+skvizi13 mucks [ Ac, Kc ]
+candy744 mucks [ 9d, 8h ]
+KVN2014 collected [ $0.25 ]
+
+
+#Game No : 456354046
+***** 888poker Hand History for Game 456354046 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:47:45
+Table Oradea 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 2: rags ( $16.82 )
+Seat 3: AKulbovsky ( $0.15 )
+Seat 9: Unclevi ( $0.11 )
+Seat 10: scquad ( $0.53 )
+Unclevi folds
+scquad posts small blind [$0.01]
+rags posts big blind [$0.02]
+** Dealing down cards **
+AKulbovsky calls [$0.02]
+scquad folds
+rags checks
+** Dealing flop ** [ Th, 4c, 7h ]
+rags bets [$0.02]
+AKulbovsky calls [$0.02]
+** Dealing turn ** [ Jc ]
+rags checks
+AKulbovsky checks
+** Dealing river ** [ Ks ]
+rags checks
+AKulbovsky checks
+** Summary **
+rags shows [ 4s, Ah ]
+AKulbovsky mucks [ 5s, Ac ]
+rags collected [ $0.09 ]
+
+
+#Game No : 456354098
+***** 888poker Hand History for Game 456354098 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:48:24
+Table Oradea 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 3
+Seat 2: rags ( $16.87 )
+Seat 3: AKulbovsky ( $0.11 )
+Seat 10: scquad ( $0.52 )
+rags posts small blind [$0.01]
+AKulbovsky posts big blind [$0.02]
+** Dealing down cards **
+scquad folds
+rags calls [$0.01]
+AKulbovsky checks
+** Dealing flop ** [ 2s, 7d, 9c ]
+rags checks
+AKulbovsky checks
+** Dealing turn ** [ Jc ]
+rags checks
+AKulbovsky checks
+** Dealing river ** [ 6h ]
+rags checks
+AKulbovsky checks
+** Summary **
+rags shows [ 3h, 3s ]
+AKulbovsky shows [ 7s, 8s ]
+AKulbovsky collected [ $0.04 ]
+
+

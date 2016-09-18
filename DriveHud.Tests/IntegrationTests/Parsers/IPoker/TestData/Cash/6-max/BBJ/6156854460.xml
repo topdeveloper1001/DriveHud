@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6156854460">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>Fort Knox "Jackpot Sit N Go", 815773835</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>21</gamecount>  
+	          <startdate>2013-11-30 20:53:16</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>AlphaOmaha</nickname>  
+	          <bets>11,950</bets>  
+	          <wins>10,090</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>1,395</ipoints>
+        		<statuspoints>225</statuspoints>
+			  		<awardpoints>1,395</awardpoints>
+	          <tournamentname>Fort Knox "Jackpot Sit N Go"</tournamentname><place>3</place><buyin>$50.00+$9.00</buyin> <totalbuyin>$59.00</totalbuyin> <ipoints>1,395</ipoints> <win>$60.00</win> <statuspoints>225</statuspoints> <awardpoints>1,395</awardpoints>  
+	    </general>  
+	    <game gamecode="5291844116">
+		 <general>
+		  <startdate>2013-11-30 20:53:16</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="1,080" dealer="0" win="2,210" bet="1,180" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Tausei23" chips="830" dealer="0" win="0" bet="1,030" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,090" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="60wattosNeon" type="1" sum="100" cards="[cards]"/><action no="2" player="Tausei23" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><action no="5" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">HK C9</cards><action no="6" player="60wattosNeon" type="23" sum="1,180" cards=""/><cards type="Pocket" player="Tausei23">CK S5</cards><action no="7" player="Tausei23" type="7" sum="830" cards=""/><action no="3" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 H3 D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game><game gamecode="5291844190">
+		 <general>
+		  <startdate>2013-11-30 20:53:45</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,860" dealer="0" win="2,060" bet="1,860" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,210" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,090" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Daddymunter" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">C8 CK</cards><action no="2" player="AlphaOmaha" type="23" sum="1,860" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="3" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="4" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="5" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291844240">
+		 <general>
+		  <startdate>2013-11-30 20:54:08</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="2,060" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="890" dealer="0" win="1,090" bet="890" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/><action no="1" player="Daddymunter" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">C8 H2</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="3" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="4" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="5" player="Daddymunter" type="23" sum="890" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291844292">
+		 <general>
+		  <startdate>2013-11-30 20:54:29</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,860" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="840" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,090" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Rogga1968" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">S3 S6</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><cards type="Pocket" player="60wattosNeon">X X</cards><action no="3" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="4" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291844318">
+		 <general>
+		  <startdate>2013-11-30 20:54:43</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="940" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,210" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,090" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rogga1968" type="1" sum="100" cards="[cards]"/><action no="2" player="60wattosNeon" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">D8 C3</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="5" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><cards type="Pocket" player="Daddymunter">X X</cards><action no="3" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291844352">
+		 <general>
+		  <startdate>2013-11-30 20:54:57</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,310" dealer="0" win="2,510" bet="2,310" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,090" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="60wattosNeon" type="1" sum="100" cards="[cards]"/><action no="2" player="Daddymunter" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">C5 D4</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="4" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="5" player="60wattosNeon" type="23" sum="2,310" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="6" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291844386">
+		 <general>
+		  <startdate>2013-11-30 20:55:15</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,760" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="840" dealer="0" win="1,140" bet="840" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,510" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="890" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/><action no="1" player="Daddymunter" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">H2 C4</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="3" player="Rogga1968" type="23" sum="840" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="4" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="5" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865110">
+		 <general>
+		  <startdate>2013-11-30 20:55:48</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,560" dealer="0" win="1,760" bet="1,560" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="1,140" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Rogga1968" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">HK H10</cards><action no="5" player="AlphaOmaha" type="23" sum="1,560" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="6" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="3" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="4" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865150">
+		 <general>
+		  <startdate>2013-11-30 20:56:06</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="940" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,510" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="790" dealer="0" win="1,090" bet="790" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rogga1968" type="1" sum="100" cards="[cards]"/><action no="2" player="60wattosNeon" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">H4 D6</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="5" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="6" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="3" player="Daddymunter" type="23" sum="790" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865192">
+		 <general>
+		  <startdate>2013-11-30 20:56:25</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,310" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,090" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="60wattosNeon" type="1" sum="100" cards="[cards]"/><action no="2" player="Daddymunter" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">S6 CA</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="4" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="5" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards>
+	</round>
+	
+		</game><game gamecode="5291865233">
+		 <general>
+		  <startdate>2013-11-30 20:56:43</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,760" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="840" dealer="0" win="1,140" bet="840" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,210" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,190" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/><action no="1" player="Daddymunter" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">S9 C3</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="3" player="Rogga1968" type="23" sum="840" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="4" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="5" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865273">
+		 <general>
+		  <startdate>2013-11-30 20:57:02</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,560" dealer="0" win="1,760" bet="1,560" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="1,140" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,090" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Rogga1968" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">CK D4</cards><action no="5" player="AlphaOmaha" type="23" sum="1,560" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="6" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="3" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">X X</cards><action no="4" player="Daddymunter" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865320">
+		 <general>
+		  <startdate>2013-11-30 20:57:24</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="940" dealer="0" win="2,080" bet="940" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,210" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="1,090" dealer="0" win="150" bet="1,090" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rogga1968" type="1" sum="100" cards="[cards]"/><action no="2" player="60wattosNeon" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">H5 C4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">C2 CA</cards><action no="5" player="Rogga1968" type="7" sum="840" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="6" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">DQ C10</cards><action no="3" player="Daddymunter" type="23" sum="1,090" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ C5 C3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards>
+	</round>
+	
+		</game><game gamecode="5291865350">
+		 <general>
+		  <startdate>2013-11-30 20:57:45</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,760" dealer="0" win="450" bet="200" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="2,010" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Daddymunter" chips="150" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="60wattosNeon" type="1" sum="100" cards="[cards]"/><action no="2" player="Daddymunter" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">SK H10</cards><action no="3" player="AlphaOmaha" type="3" sum="200" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="4" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="5" player="60wattosNeon" type="0" sum="0" cards=""/><cards type="Pocket" player="Daddymunter">S10 C8</cards>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 S7 H6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards>
+	</round>
+	
+		</game><game gamecode="5291865423">
+		 <general>
+		  <startdate>2013-11-30 20:58:19</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="2,010" dealer="0" win="200" bet="200" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="2,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="1,910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">D5 D6</cards><cards type="Pocket" player="Rogga1968">X X</cards><action no="2" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="3" player="60wattosNeon" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865463">
+		 <general>
+		  <startdate>2013-11-30 20:58:39</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="2,010" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="2,080" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="1,910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Rogga1968" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">D3 C8</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><cards type="Pocket" player="60wattosNeon">X X</cards><action no="3" player="60wattosNeon" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865495">
+		 <general>
+		  <startdate>2013-11-30 20:58:56</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,910" dealer="1" win="2,210" bet="1,910" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="2,180" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="1,910" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rogga1968" type="1" sum="100" cards="[cards]"/><action no="2" player="60wattosNeon" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">H4 HQ</cards><action no="3" player="AlphaOmaha" type="23" sum="1,910" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="4" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="5" player="60wattosNeon" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865538">
+		 <general>
+		  <startdate>2013-11-30 20:59:11</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="2,210" dealer="0" win="0" bet="1,710" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="2,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="1,710" dealer="0" win="3,420" bet="1,710" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="AlphaOmaha" type="2" sum="200" cards="[cards]"/><action no="1" player="60wattosNeon" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">CK CJ</cards><action no="5" player="AlphaOmaha" type="3" sum="1,510" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="3" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">DK D3</cards><action no="4" player="60wattosNeon" type="23" sum="1,710" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ D8 CQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards>
+	</round>
+	
+		</game><game gamecode="5291865587">
+		 <general>
+		  <startdate>2013-11-30 20:59:37</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="500" dealer="0" win="600" bet="500" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="2,080" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="3,420" dealer="1" win="3,520" bet="3,420" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="100" cards="[cards]"/><action no="2" player="Rogga1968" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">S7 D8</cards><action no="4" player="AlphaOmaha" type="7" sum="400" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="5" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">H2 D2</cards><action no="3" player="60wattosNeon" type="23" sum="3,420" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 D6 H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards>
+	</round>
+	
+		</game><game gamecode="5291865640">
+		 <general>
+		  <startdate>2013-11-30 21:00:00</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="600" dealer="1" win="1,050" bet="600" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="1,880" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="3,520" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Rogga1968" type="1" sum="150" cards="[cards]"/><action no="2" player="60wattosNeon" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">H3 C2</cards><action no="3" player="AlphaOmaha" type="7" sum="600" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="4" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">X X</cards><action no="5" player="60wattosNeon" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291865706">
+		 <general>
+		  <startdate>2013-11-30 21:00:31</startdate>		  
+		  <players>
+		   <player seat="1" name="AlphaOmaha" chips="1,050" dealer="0" win="0" bet="1,050" rebuy="0" addon="0" reg_code="6156854460"/><player seat="5" name="Rogga1968" chips="1,730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="60wattosNeon" chips="3,220" dealer="0" win="4,270" bet="3,220" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="AlphaOmaha" type="2" sum="300" cards="[cards]"/><action no="1" player="60wattosNeon" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="AlphaOmaha">HQ C7</cards><action no="5" player="AlphaOmaha" type="7" sum="750" cards=""/><cards type="Pocket" player="Rogga1968">X X</cards><action no="3" player="Rogga1968" type="0" sum="0" cards=""/><cards type="Pocket" player="60wattosNeon">S6 SJ</cards><action no="4" player="60wattosNeon" type="23" sum="3,220" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 H7 D4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards>
+	</round>
+	
+		</game>  
+	</session>

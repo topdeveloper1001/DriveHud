@@ -1,0 +1,292 @@
+﻿<UserControl x:Class="DriveHUD.Application.Controls.TrackConditionsMeterView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DriveHUD.Application.Controls"
+             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="366.24">
+    <UserControl.Resources>
+
+        <SolidColorBrush x:Key="ScoresPanelBackground" Color="#35352f" />
+        <SolidColorBrush x:Key="ScoresPanelTextForeground" Color="#8e8e8e" />
+        <SolidColorBrush x:Key="ScoresPanelTitleForeground" Color="#ffffff" />
+
+        <Style x:Key="BaseBorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="CornerRadius" Value="2" />
+        </Style>
+
+        <Style x:Key="ScoreBorderStyle" TargetType="{x:Type Border}" BasedOn="{StaticResource BaseBorderStyle}">
+            <Setter Property="BorderThickness" Value="0,1,0,0" />
+            <Setter Property="Width" Value="25" />
+            <Setter Property="Height" Value="12" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="ScorePanelTextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource ScoresPanelTextForeground}" />
+            <Setter Property="Margin" Value="5,0,5,0" />
+            <Setter Property="FontSize" Value="9" />
+        </Style>
+        
+        <Style x:Key="TitleTextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource ScoresPanelTitleForeground}" />
+            <Setter Property="Margin" Value="0,-2,10,0" />
+            <Setter Property="FontSize" Value="9" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+        </Style>
+
+        <Style x:Key="ScorePanelBoxTextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource ScoresPanelTitleForeground}" />
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="0,-2,0,0" />
+            <Setter Property="FontSize" Value="9" />
+        </Style>
+
+        <Style x:Key="MeterBorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="Width" Value="12" />
+            <Setter Property="Height" Value="6" />
+            <Setter Property="BorderThickness" Value="0,1,0,0" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Margin" Value="1,0,0,0" />
+            <Setter Property="Background" Value="#3e3e3e" />
+            <Setter Property="BorderBrush" Value="#595959" />
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="11" />
+            <RowDefinition Height="14" />
+        </Grid.RowDefinitions>
+
+        <StackPanel
+                Grid.Row="0"                  
+                Orientation="Horizontal">
+
+            <TextBlock
+                    Style="{StaticResource TitleTextBlockStyle}"                
+                    Text="{ResX Key=Common_HudTrackConditions_TrackConditions}"
+                    />
+
+            <Grid>
+
+                <StackPanel
+                    Orientation="Horizontal"
+                    Margin="2">
+
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"                  
+                        CornerRadius="1,0,0,1"
+                        />
+
+                    <!-- Block 2 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"                                   
+                        />
+
+                    <!-- Block 3 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"                                 
+                        />
+
+                    <!-- Block 4 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"                                    
+                        />
+
+                    <!-- Block 5 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"                                        
+                        />
+
+                    <!-- Block 6 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"                                        
+                        />
+
+                    <!-- Block 7 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"                                   
+                        />
+
+                    <!-- Block 8 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        />
+
+                    <!-- Block 9 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"                       
+                        />
+
+                    <!-- Block 10 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        CornerRadius="0,1,1,0"
+                        />
+
+                </StackPanel>
+                
+                <StackPanel
+                    Orientation="Horizontal"                
+                    Margin="2,2,0,0">
+
+                    <!-- Block 1 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#c92a39"
+                        BorderBrush="#ff3c52"
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=1}"
+                        CornerRadius="1,0,0,1"
+                        />
+
+                    <!-- Block 2 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#c94939"
+                        BorderBrush="#ff6952"                    
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=2}"
+                        />
+
+                    <!-- Block 3 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#c96939"
+                        BorderBrush="#ff9652"                    
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=3}"
+                        />
+
+                    <!-- Block 4 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#c98d39"
+                        BorderBrush="#ffca52"                    
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=4}"
+                        />
+
+                    <!-- Block 5 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#c9ac39"
+                        BorderBrush="#fff652"         
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=5}"
+                        />
+
+                    <!-- Block 6 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#c9db39"
+                        BorderBrush="#ffff52"        
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=6}"
+                        />
+
+                    <!-- Block 7 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#bbdb39"
+                        BorderBrush="#ffff52"       
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=7}"
+                        />
+
+                    <!-- Block 8 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#a1d23c"
+                        BorderBrush="#bde962"     
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=8}"
+                        />
+
+                    <!-- Block 9 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#73c343"
+                        BorderBrush="#99e06e"        
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=9}"
+                        />
+
+                    <!-- Block 10 -->
+                    <Border
+                        Style="{StaticResource MeterBorderStyle}"
+                        Background="#51b848"
+                        BorderBrush="#b7d87b"
+                        CornerRadius="0,1,1,0"
+                        Visibility="{Binding AverageScores, Converter={dh:TrackConditionsScoreToVisibilityConverter}, ConverterParameter=10}"
+                        />
+
+                </StackPanel>
+
+            </Grid>
+
+        </StackPanel>
+
+        <!-- Bottom panel -->
+        <Border
+            Style="{StaticResource BaseBorderStyle}"
+            Grid.Row="1"
+            Padding="1,0,1,0"
+            Background="{StaticResource ScoresPanelBackground}">
+                           
+            <StackPanel           
+                Orientation="Horizontal">
+
+                <Border                    
+                    Style="{StaticResource ScoreBorderStyle}"
+                    Background="{Binding PotScores, Converter={dh:TrackConditionsScoreToColorConverter}}"
+                    BorderBrush="{Binding PotScores, Converter={dh:TrackConditionsScoreToColorConverter}, ConverterParameter=1}">
+
+                    <TextBlock
+                        Style="{StaticResource ScorePanelBoxTextBlockStyle}"
+                        Text="{Binding AveragePot, StringFormat={}{0:F2}}"
+                        />
+
+                </Border>
+
+                <TextBlock
+                    Style="{StaticResource ScorePanelTextBlockStyle}"
+                    Text="{ResX Key=Common_HudTrackConditions_AveragePotSize}"
+                    />
+
+                <Border                    
+                    Style="{StaticResource ScoreBorderStyle}"
+                    Background="{Binding VPIPScores, Converter={dh:TrackConditionsScoreToColorConverter}}"
+                    BorderBrush="{Binding VPIPScores, Converter={dh:TrackConditionsScoreToColorConverter}, ConverterParameter=1}">
+
+                    <TextBlock
+                        Style="{StaticResource ScorePanelBoxTextBlockStyle}"
+                        Text="{Binding VPIP, StringFormat={}{0:F0}}"
+                        />
+
+                </Border>
+
+                <TextBlock
+                    Style="{StaticResource ScorePanelTextBlockStyle}"
+                    Text="{ResX Key=Enum_Stat_VPIP}"
+                    />
+
+                <Border                    
+                    Style="{StaticResource ScoreBorderStyle}"
+                    Background="{Binding ThreeBetScores, Converter={dh:TrackConditionsScoreToColorConverter}}"
+                    BorderBrush="{Binding ThreeBetScores, Converter={dh:TrackConditionsScoreToColorConverter}, ConverterParameter=1}">
+
+                    <TextBlock
+                        Style="{StaticResource ScorePanelBoxTextBlockStyle}"
+                        Text="{Binding ThreeBet, StringFormat={}{0:F0}}"
+                        />
+
+                </Border>
+
+                <TextBlock
+                    Style="{StaticResource ScorePanelTextBlockStyle}"
+                    Text="{ResX Key=Enum_Stat_S3Bet}"
+                    />
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</UserControl>

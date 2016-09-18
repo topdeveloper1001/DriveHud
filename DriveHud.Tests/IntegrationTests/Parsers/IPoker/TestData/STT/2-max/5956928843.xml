@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5956928843">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>"SUPER TURBO" Heads Up $1, 779930371</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:08</duration>  
+	          <gamecount>20</gamecount>  
+	          <startdate>2012-11-18 11:41:52</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>Gacrus</nickname>  
+	          <bets>13,440</bets>  
+	          <wins>14,940</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>3,000</chipsout>
+			  		<ipoints>1.25</ipoints>
+        		<statuspoints>1.25</statuspoints>
+			  		<awardpoints>1.25</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>"SUPER TURBO" Heads Up $1</tournamentname><place>1</place><buyin>$1.00+$0.05</buyin> <totalbuyin>$1.05</totalbuyin> <ipoints>1.25</ipoints> <win>$2.00</win> <statuspoints>1.25</statuspoints> <awardpoints>1.25</awardpoints>  
+	    </general>  
+	    <game gamecode="4375644903">
+		 <general>
+		  <startdate>2012-11-18 11:41:52</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,500" dealer="1" win="180" bet="120" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="10" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">CJ HJ</cards><action no="3" player="Gacrus" type="23" sum="60" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="4" player="Jebila" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 D9 DQ</cards><action no="6" player="Gacrus" type="5" sum="60" cards=""/><action no="5" player="Jebila" type="4" sum="0" cards=""/><action no="7" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375644955">
+		 <general>
+		  <startdate>2012-11-18 11:42:28</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,560" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,440" dealer="1" win="120" bet="80" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="20" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">C6 HK</cards><action no="4" player="Gacrus" type="23" sum="40" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="3" player="Jebila" type="3" sum="10" cards=""/><action no="5" player="Jebila" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 H8 D3</cards><action no="6" player="Gacrus" type="4" sum="0" cards=""/><action no="7" player="Jebila" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards><action no="8" player="Gacrus" type="4" sum="0" cards=""/><action no="10" player="Gacrus" type="0" sum="0" cards=""/><action no="9" player="Jebila" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375645040">
+		 <general>
+		  <startdate>2012-11-18 11:43:25</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,520" dealer="1" win="240" bet="160" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,480" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="20" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">H10 S5</cards><action no="3" player="Gacrus" type="23" sum="80" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="4" player="Jebila" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 SQ CQ</cards><action no="6" player="Gacrus" type="5" sum="80" cards=""/><action no="5" player="Jebila" type="4" sum="0" cards=""/><action no="7" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375645082">
+		 <general>
+		  <startdate>2012-11-18 11:43:56</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,600" dealer="0" win="420" bet="300" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,400" dealer="1" win="0" bet="120" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="60" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">D2 C9</cards><action no="4" player="Gacrus" type="4" sum="0" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="3" player="Jebila" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ DQ H9</cards><action no="5" player="Gacrus" type="5" sum="60" cards=""/><action no="6" player="Jebila" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="7" player="Gacrus" type="5" sum="180" cards=""/><action no="8" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375645131">
+		 <general>
+		  <startdate>2012-11-18 11:44:32</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,720" dealer="1" win="360" bet="240" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,280" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="30" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">DA S8</cards><action no="3" player="Gacrus" type="23" sum="120" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="4" player="Jebila" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 D8 C5</cards><action no="6" player="Gacrus" type="5" sum="120" cards=""/><action no="5" player="Jebila" type="4" sum="0" cards=""/><action no="7" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648434">
+		 <general>
+		  <startdate>2012-11-18 11:45:19</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,840" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,160" dealer="1" win="300" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="100" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">D4 D6</cards><action no="4" player="Gacrus" type="4" sum="0" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="3" player="Jebila" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 HK S10</cards><action no="5" player="Gacrus" type="4" sum="0" cards=""/><action no="6" player="Jebila" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="7" player="Gacrus" type="4" sum="0" cards=""/><action no="9" player="Gacrus" type="0" sum="0" cards=""/><action no="8" player="Jebila" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648490">
+		 <general>
+		  <startdate>2012-11-18 11:46:04</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,740" dealer="1" win="0" bet="75" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,260" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="75" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">S2 H9</cards><action no="3" player="Gacrus" type="0" sum="0" cards=""/><cards type="Pocket" player="Jebila">X X</cards>
+	</round>
+	
+		</game><game gamecode="4375648510">
+		 <general>
+		  <startdate>2012-11-18 11:46:16</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,665" dealer="0" win="225" bet="150" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,335" dealer="1" win="0" bet="75" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="150" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">D2 D3</cards><cards type="Pocket" player="Jebila">X X</cards><action no="3" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648539">
+		 <general>
+		  <startdate>2012-11-18 11:46:32</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,740" dealer="1" win="1,890" bet="1,740" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,260" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="75" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">CJ CQ</cards><action no="3" player="Gacrus" type="23" sum="1,740" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="4" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648569">
+		 <general>
+		  <startdate>2012-11-18 11:46:51</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,890" dealer="0" win="225" bet="150" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,110" dealer="1" win="0" bet="75" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="150" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">DJ S9</cards><cards type="Pocket" player="Jebila">X X</cards><action no="3" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648587">
+		 <general>
+		  <startdate>2012-11-18 11:47:07</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,965" dealer="1" win="0" bet="100" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,035" dealer="0" win="300" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="100" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">D10 H4</cards><action no="3" player="Gacrus" type="0" sum="0" cards=""/><cards type="Pocket" player="Jebila">X X</cards>
+	</round>
+	
+		</game><game gamecode="4375648614">
+		 <general>
+		  <startdate>2012-11-18 11:47:23</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,865" dealer="0" win="300" bet="200" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,135" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="200" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">D9 S8</cards><cards type="Pocket" player="Jebila">X X</cards><action no="3" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648632">
+		 <general>
+		  <startdate>2012-11-18 11:47:31</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,965" dealer="1" win="930" bet="1,965" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,035" dealer="0" win="2,070" bet="1,035" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="100" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">S9 CK</cards><action no="3" player="Gacrus" type="23" sum="1,965" cards=""/><cards type="Pocket" player="Jebila">C3 DA</cards><action no="4" player="Jebila" type="7" sum="835" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 D8 S4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards>
+	</round>
+	
+		</game><game gamecode="4375648666">
+		 <general>
+		  <startdate>2012-11-18 11:47:56</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="930" dealer="0" win="1,230" bet="930" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="2,070" dealer="1" win="0" bet="300" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="300" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">H7 H6</cards><action no="4" player="Gacrus" type="23" sum="930" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="3" player="Jebila" type="3" sum="150" cards=""/><action no="5" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648688">
+		 <general>
+		  <startdate>2012-11-18 11:48:14</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,230" dealer="1" win="2,460" bet="1,230" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,770" dealer="0" win="0" bet="1,230" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="150" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">CA H2</cards><action no="3" player="Gacrus" type="23" sum="1,230" cards=""/><cards type="Pocket" player="Jebila">CJ SK</cards><action no="4" player="Jebila" type="3" sum="930" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 C10 C6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards>
+	</round>
+	
+		</game><game gamecode="4375648725">
+		 <general>
+		  <startdate>2012-11-18 11:48:40</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="2,460" dealer="0" win="0" bet="540" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="540" dealer="1" win="1,080" bet="540" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="300" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">C4 HK</cards><action no="4" player="Gacrus" type="3" sum="240" cards=""/><cards type="Pocket" player="Jebila">D8 H7</cards><action no="3" player="Jebila" type="7" sum="390" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 SJ H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S9</cards>
+	</round>
+	
+		</game><game gamecode="4375648754">
+		 <general>
+		  <startdate>2012-11-18 11:49:04</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,920" dealer="1" win="2,220" bet="1,920" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,080" dealer="0" win="0" bet="300" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="150" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">C8 D6</cards><action no="3" player="Gacrus" type="23" sum="1,920" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="4" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648787">
+		 <general>
+		  <startdate>2012-11-18 11:49:30</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="2,220" dealer="0" win="0" bet="780" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="780" dealer="1" win="1,560" bet="780" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="300" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">S5 SJ</cards><action no="4" player="Gacrus" type="3" sum="480" cards=""/><cards type="Pocket" player="Jebila">D4 CK</cards><action no="3" player="Jebila" type="23" sum="780" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 C9 HK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards>
+	</round>
+	
+		</game><game gamecode="4375648823">
+		 <general>
+		  <startdate>2012-11-18 11:50:00</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,440" dealer="1" win="1,740" bet="1,440" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,560" dealer="0" win="0" bet="300" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Gacrus" type="1" sum="150" cards="[cards]"/><action no="2" player="Jebila" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">D10 H5</cards><action no="3" player="Gacrus" type="23" sum="1,440" cards=""/><cards type="Pocket" player="Jebila">X X</cards><action no="4" player="Jebila" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375648843">
+		 <general>
+		  <startdate>2012-11-18 11:50:18</startdate>		  
+		  <players>
+		   <player seat="3" name="Gacrus" chips="1,740" dealer="0" win="2,520" bet="1,260" rebuy="0" addon="0"/><player seat="8" name="Jebila" chips="1,260" dealer="1" win="0" bet="1,260" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Gacrus" type="2" sum="300" cards="[cards]"/><action no="1" player="Jebila" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Gacrus">S6 S7</cards><action no="4" player="Gacrus" type="3" sum="960" cards=""/><cards type="Pocket" player="Jebila">S4 DA</cards><action no="3" player="Jebila" type="23" sum="1,260" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ SA SK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S9</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,2449 @@
+PokerStars Hand #3117069226: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:59:04
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($20.45 in chips)
+Seat 2: PLR_2210172AZ ($31.89 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.83 in chips)
+Seat 5: PLR_8099566BK ($38.21 in chips)
+Seat 6: PLR_6403943XW ($30.23 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [3s Qs]
+PLR_6403943XW: calls $0.25 
+PLR_9941188BL: raises $1.10 to $1.10
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+Uncalled bet ($0.85) returned to PLR_9941188BL
+PLR_9941188BL: shows [Ac Kd]
+PLR_9941188BL collected $0.85 from pot
+*** SUMMARY ***
+Total pot $0.85 | Rake $0.00
+Seat 1: PLR_9941188BL showed [Ac Kd] and won ($0.85)
+Seat 2: PLR_2210172AZ mucked [7c 2c]
+Seat 3: Hero (button) mucked [3s Qs]
+Seat 4: PLR_9726525LP (small blind) mucked [3c 6h]
+Seat 5: PLR_8099566BK (big blind) mucked [5s 4c]
+Seat 6: PLR_6403943XW mucked [Ts Ah]
+
+
+
+PokerStars Hand #3117069309: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:59:24
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($21.05 in chips)
+Seat 2: PLR_2210172AZ ($31.89 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($37.96 in chips)
+Seat 6: PLR_6403943XW ($29.98 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [8d Th]
+PLR_9941188BL: raises $0.85 to $0.85
+PLR_2210172AZ: calls $0.85 
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+*** FLOP *** [Kd 5c 2h]
+PLR_9941188BL: checks
+PLR_2210172AZ: checks
+*** TURN *** [Kd 5c 2h] [2s]
+PLR_9941188BL: bets $1.02 
+PLR_2210172AZ: calls $1.02 
+*** RIVER *** [Kd 5c 2h 2s] [3c]
+PLR_9941188BL: checks
+PLR_2210172AZ: checks
+*** SHOW DOWN ***
+PLR_9941188BL: shows [8s 8h] (two pair, Eights and Kings)
+PLR_2210172AZ: Mucks [Ah 5h] (Two pair)
+PLR_9941188BL collected $3.89 from pot
+*** SUMMARY ***
+Total pot $4.09 | Rake $0.20
+Board [Kd 5c 2h 2s 3c]
+Seat 1: PLR_9941188BL showed [8s 8h] and won ($3.89) with two pair, Eights and Kings
+Seat 2: PLR_2210172AZ mucked [Ah 5h]
+Seat 3: Hero mucked [8d Th]
+Seat 4: PLR_9726525LP (button) mucked [Tc 6h]
+Seat 5: PLR_8099566BK (small blind) mucked [7s 2d]
+Seat 6: PLR_6403943XW (big blind) mucked [2c Kh]
+
+
+
+PokerStars Hand #3117069547: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:00:27
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($23.07 in chips)
+Seat 2: PLR_2210172AZ ($30.02 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($37.86 in chips)
+Seat 6: PLR_6403943XW ($29.73 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [4h 7c]
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: calls $0.15 
+PLR_9941188BL: checks
+*** FLOP *** [2h Td 2c]
+PLR_6403943XW: checks
+PLR_9941188BL: bets $0.25 
+PLR_6403943XW: calls $0.25 
+*** TURN *** [2h Td 2c] [7s]
+PLR_6403943XW: checks
+PLR_9941188BL: bets $0.50 
+PLR_6403943XW: calls $0.50 
+*** RIVER *** [2h Td 2c 7s] [Jd]
+PLR_6403943XW: checks
+PLR_9941188BL: checks
+*** SHOW DOWN ***
+PLR_6403943XW: shows [Jh Th] (two pair, Jacks and Sevens)
+PLR_9941188BL: shows [Kd Tc] (two pair, Tens and Kings)
+PLR_6403943XW collected $1.9 from pot
+*** SUMMARY ***
+Total pot $2 | Rake $0.10
+Board [2h Td 2c 7s Jd]
+Seat 1: PLR_9941188BL (big blind) showed [Kd Tc] and lost with two pair, Tens and Kings
+Seat 2: PLR_2210172AZ mucked [Qh 7h]
+Seat 3: Hero mucked [4h 7c]
+Seat 4: PLR_9726525LP mucked [9c 2d]
+Seat 5: PLR_8099566BK (button) mucked [6s 4d]
+Seat 6: PLR_6403943XW (small blind) showed [Jh Th] and won ($1.9) with two pair, Tens and Kings
+
+
+
+PokerStars Hand #3117069715: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:01:11
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($22.07 in chips)
+Seat 2: PLR_2210172AZ ($30.02 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($37.86 in chips)
+Seat 6: PLR_6403943XW ($30.63 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [9c 4h]
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.65 
+PLR_2210172AZ: folds
+*** FLOP *** [3s 3d 8c]
+PLR_9941188BL: checks
+PLR_8099566BK: bets $1.12 
+PLR_9941188BL: folds
+Uncalled bet ($1.12) returned to PLR_8099566BK
+PLR_8099566BK: shows [5h 5c]
+PLR_8099566BK collected $1.67 from pot
+*** SUMMARY ***
+Total pot $1.75 | Rake $0.08
+Board [3s 3d 8c]
+Seat 1: PLR_9941188BL (small blind) mucked [Qd Tc]
+Seat 2: PLR_2210172AZ (big blind) mucked [7c 8h]
+Seat 3: Hero mucked [9c 4h]
+Seat 4: PLR_9726525LP mucked [2s 3c]
+Seat 5: PLR_8099566BK showed [5h 5c] and won ($1.67)
+Seat 6: PLR_6403943XW (button) mucked [2c 3h]
+
+
+
+PokerStars Hand #3117069923: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:02:03
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($21.32 in chips)
+Seat 2: PLR_2210172AZ ($29.77 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($38.78 in chips)
+Seat 6: PLR_6403943XW ($30.63 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [5h 3s]
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: calls $0.25 
+PLR_9941188BL: calls $0.25 
+PLR_2210172AZ: raises $1.15 to $1.25
+Hero: folds
+PLR_6403943XW: calls $1 
+PLR_9941188BL: calls $1 
+*** FLOP *** [Ah 7s Ac]
+PLR_2210172AZ: bets $2.25 
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+Uncalled bet ($2.25) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [Qs Kc]
+PLR_2210172AZ collected $3.8 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0.20
+Board [Ah 7s Ac]
+Seat 1: PLR_9941188BL (button) mucked [2s 2h]
+Seat 2: PLR_2210172AZ (small blind) showed [Qs Kc] and won ($3.8)
+Seat 3: Hero (big blind) mucked [5h 3s]
+Seat 4: PLR_9726525LP mucked [4c Qh]
+Seat 5: PLR_8099566BK mucked [6h 2d]
+Seat 6: PLR_6403943XW mucked [8c Tc]
+
+
+
+PokerStars Hand #3117070208: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:03:08
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($20.07 in chips)
+Seat 2: PLR_2210172AZ ($32.32 in chips)
+Seat 3: Hero ($22.60 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($38.78 in chips)
+Seat 6: PLR_6403943XW ($29.38 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Jh Qc]
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: raises $0.75 to $0.75
+Hero: folds
+PLR_9726525LP: calls $0.50 
+*** FLOP *** [4h 6s Ac]
+PLR_9726525LP: checks
+PLR_2210172AZ: bets $1.05 
+PLR_9726525LP: folds
+Uncalled bet ($1.05) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [Jc Ks]
+PLR_2210172AZ collected $1.52 from pot
+*** SUMMARY ***
+Total pot $1.6 | Rake $0.08
+Board [4h 6s Ac]
+Seat 1: PLR_9941188BL mucked [5h 2c]
+Seat 2: PLR_2210172AZ (button) showed [Jc Ks] and won ($1.52)
+Seat 3: Hero (small blind) mucked [Jh Qc]
+Seat 4: PLR_9726525LP (big blind) mucked [Kc 5c]
+Seat 5: PLR_8099566BK mucked [8d Th]
+Seat 6: PLR_6403943XW mucked [As 6d]
+
+
+
+PokerStars Hand #3117070395: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:03:52
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($20.07 in chips)
+Seat 2: PLR_2210172AZ ($33.09 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.98 in chips)
+Seat 5: PLR_8099566BK ($38.78 in chips)
+Seat 6: PLR_6403943XW ($29.38 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [6d Ac]
+PLR_6403943XW: folds
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: calls $0.25 
+*** FLOP *** [Kd Kc Ks]
+PLR_8099566BK: checks
+PLR_9941188BL: bets $0.81 
+PLR_8099566BK: folds
+Uncalled bet ($0.81) returned to PLR_9941188BL
+PLR_9941188BL: shows [9c 8d]
+PLR_9941188BL collected $1.05 from pot
+*** SUMMARY ***
+Total pot $1.1 | Rake $0.05
+Board [Kd Kc Ks]
+Seat 1: PLR_9941188BL showed [9c 8d] and won ($1.05)
+Seat 2: PLR_2210172AZ mucked [Jc 7h]
+Seat 3: Hero (button) mucked [6d Ac]
+Seat 4: PLR_9726525LP (small blind) mucked [5s 4d]
+Seat 5: PLR_8099566BK (big blind) mucked [Th 8c]
+Seat 6: PLR_6403943XW mucked [2d 3s]
+
+
+
+PokerStars Hand #3117070650: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:04:50
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($20.62 in chips)
+Seat 2: PLR_2210172AZ ($33.09 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($38.28 in chips)
+Seat 6: PLR_6403943XW ($29.38 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [8c Qc]
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: calls $0.25 
+*** FLOP *** [Ts 9d Jd]
+PLR_6403943XW: checks
+PLR_9941188BL: checks
+*** TURN *** [Ts 9d Jd] [9s]
+PLR_6403943XW: checks
+PLR_9941188BL: bets $0.55 
+PLR_6403943XW: folds
+Uncalled bet ($0.55) returned to PLR_9941188BL
+PLR_9941188BL: shows [5d Ah]
+PLR_9941188BL collected $1.05 from pot
+*** SUMMARY ***
+Total pot $1.1 | Rake $0.05
+Board [Ts 9d Jd 9s]
+Seat 1: PLR_9941188BL showed [5d Ah] and won ($1.05)
+Seat 2: PLR_2210172AZ mucked [4s 9c]
+Seat 3: Hero mucked [8c Qc]
+Seat 4: PLR_9726525LP (button) mucked [9h 5s]
+Seat 5: PLR_8099566BK (small blind) mucked [2d 7d]
+Seat 6: PLR_6403943XW (big blind) mucked [2h 2c]
+
+
+
+PokerStars Hand #3117070833: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:05:31
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($21.17 in chips)
+Seat 2: PLR_2210172AZ ($33.09 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($38.18 in chips)
+Seat 6: PLR_6403943XW ($28.88 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [2c 6d]
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: raises $0.65 to $0.75
+PLR_9941188BL: calls $0.50 
+*** FLOP *** [9s 9d 5s]
+PLR_6403943XW: checks
+PLR_9941188BL: checks
+*** TURN *** [9s 9d 5s] [Qh]
+PLR_6403943XW: bets $0.75 
+PLR_9941188BL: calls $0.75 
+*** RIVER *** [9s 9d 5s Qh] [6s]
+PLR_6403943XW: bets $1.50 
+PLR_9941188BL: folds
+Uncalled bet ($1.50) returned to PLR_6403943XW
+PLR_6403943XW: shows [Qc Ac]
+PLR_6403943XW collected $2.85 from pot
+*** SUMMARY ***
+Total pot $3 | Rake $0.15
+Board [9s 9d 5s Qh 6s]
+Seat 1: PLR_9941188BL (big blind) mucked [Ah Td]
+Seat 2: PLR_2210172AZ mucked [8h Kd]
+Seat 3: Hero mucked [2c 6d]
+Seat 4: PLR_9726525LP mucked [Jc 2d]
+Seat 5: PLR_8099566BK (button) mucked [3c 6h]
+Seat 6: PLR_6403943XW (small blind) showed [Qc Ac] and won ($2.85)
+
+
+
+PokerStars Hand #3117071009: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:06:11
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($19.67 in chips)
+Seat 2: PLR_2210172AZ ($33.09 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($38.18 in chips)
+Seat 6: PLR_6403943XW ($30.23 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [7d Ac]
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: calls $0.75 
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+*** FLOP *** [2s Jc 4d]
+PLR_8099566BK: checks
+PLR_6403943XW: checks
+*** TURN *** [2s Jc 4d] [3h]
+PLR_8099566BK: bets $0.92 
+PLR_6403943XW: folds
+Uncalled bet ($0.92) returned to PLR_8099566BK
+PLR_8099566BK: shows [Ks Ah]
+PLR_8099566BK collected $1.76 from pot
+*** SUMMARY ***
+Total pot $1.85 | Rake $0.09
+Board [2s Jc 4d 3h]
+Seat 1: PLR_9941188BL (small blind) mucked [9s 5s]
+Seat 2: PLR_2210172AZ (big blind) mucked [6c Qh]
+Seat 3: Hero mucked [7d Ac]
+Seat 4: PLR_9726525LP mucked [9d 7c]
+Seat 5: PLR_8099566BK showed [Ks Ah] and won ($1.76)
+Seat 6: PLR_6403943XW (button) mucked [Qs Kd]
+
+
+
+PokerStars Hand #3117071272: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:07:10
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($19.57 in chips)
+Seat 2: PLR_2210172AZ ($32.84 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($39.19 in chips)
+Seat 6: PLR_6403943XW ($29.48 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [3s 7d]
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: calls $0.75 
+PLR_9941188BL: calls $0.75 
+PLR_2210172AZ: calls $0.65 
+Hero: folds
+*** FLOP *** [Kd Th 9d]
+PLR_2210172AZ: checks
+PLR_8099566BK: checks
+PLR_6403943XW: bets $1.62 
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+PLR_8099566BK: raises $3.24 to $3.24
+PLR_6403943XW: calls $1.62 
+*** TURN *** [Kd Th 9d] [2c]
+PLR_8099566BK: bets $6.86 
+PLR_6403943XW: folds
+Uncalled bet ($6.86) returned to PLR_8099566BK
+PLR_8099566BK: shows [Qs Jh]
+PLR_8099566BK collected $9.25 from pot
+*** SUMMARY ***
+Total pot $9.73 | Rake $0.48
+Board [Kd Th 9d 2c]
+Seat 1: PLR_9941188BL (button) mucked [8d 7s]
+Seat 2: PLR_2210172AZ (small blind) mucked [4h 4s]
+Seat 3: Hero (big blind) mucked [3s 7d]
+Seat 4: PLR_9726525LP mucked [9c 6c]
+Seat 5: PLR_8099566BK showed [Qs Jh] and won ($9.25)
+Seat 6: PLR_6403943XW mucked [4d Ad]
+
+
+
+PokerStars Hand #3117071561: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:08:12
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($18.82 in chips)
+Seat 2: PLR_2210172AZ ($32.09 in chips)
+Seat 3: Hero ($22.25 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($44.45 in chips)
+Seat 6: PLR_6403943XW ($25.49 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [5s 2c]
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: shows [5c As]
+Uncalled bet ($0.25) returned to PLR_9726525LP
+PLR_9726525LP collected $0.1 from pot
+*** SUMMARY ***
+Total pot $0.1 | Rake $0.00
+Seat 1: PLR_9941188BL mucked [8h 4c]
+Seat 2: PLR_2210172AZ (button) mucked [4d Td]
+Seat 3: Hero (small blind) mucked [5s 2c]
+Seat 4: PLR_9726525LP (big blind) showed [5c As] and won ($0.1)
+Seat 5: PLR_8099566BK mucked [Ks 5h]
+Seat 6: PLR_6403943XW mucked [4s 5d]
+
+
+
+PokerStars Hand #3117071634: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:08:30
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($18.82 in chips)
+Seat 2: PLR_2210172AZ ($32.09 in chips)
+Seat 3: Hero ($22.15 in chips)
+Seat 4: PLR_9726525LP ($29.98 in chips)
+Seat 5: PLR_8099566BK ($44.45 in chips)
+Seat 6: PLR_6403943XW ($25.49 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [7d 9c]
+PLR_6403943XW: calls $0.25 
+PLR_9941188BL: calls $0.25 
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.50 to $0.75
+PLR_6403943XW: calls $0.50 
+PLR_9941188BL: calls $0.50 
+*** FLOP *** [Ah 3d Qs]
+PLR_8099566BK: checks
+PLR_6403943XW: checks 
+PLR_9941188BL: checks
+*** TURN *** [Ah 3d Qs] [9s]
+PLR_8099566BK: checks
+PLR_6403943XW: bets $1.42 
+PLR_9941188BL: folds
+PLR_8099566BK: folds
+Uncalled bet ($1.42) returned to PLR_6403943XW
+PLR_6403943XW: shows [Ad 4d]
+PLR_6403943XW collected $2.24 from pot
+*** SUMMARY ***
+Total pot $2.35 | Rake $0.11
+Board [Ah 3d Qs 9s]
+Seat 1: PLR_9941188BL mucked [7s 8h]
+Seat 2: PLR_2210172AZ mucked [6c Ks]
+Seat 3: Hero (button) mucked [7d 9c]
+Seat 4: PLR_9726525LP (small blind) mucked [Qh 2d]
+Seat 5: PLR_8099566BK (big blind) mucked [2h 2s]
+Seat 6: PLR_6403943XW showed [Ad 4d] and won ($2.24)
+
+
+
+PokerStars Hand #3117072097: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:10:15
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($18.07 in chips)
+Seat 2: PLR_2210172AZ ($32.09 in chips)
+Seat 3: Hero ($22.15 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($43.70 in chips)
+Seat 6: PLR_6403943XW ($26.98 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Jh Ah]
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: raises $0.75 to $0.75
+PLR_9726525LP: calls $0.75 
+PLR_8099566BK: calls $0.65 
+PLR_6403943XW: folds
+*** FLOP *** [7s 7h 9h]
+PLR_8099566BK: checks
+Hero: checks
+PLR_9726525LP: bets $1.75 
+PLR_8099566BK: calls $1.75 
+Hero: calls $1.75 
+*** TURN *** [7s 7h 9h] [4h]
+PLR_8099566BK: checks
+Hero: checks
+PLR_9726525LP: checks
+*** RIVER *** [7s 7h 9h 4h] [7c]
+PLR_8099566BK: checks
+Hero: checks
+PLR_9726525LP: bets $27.38 and is all-in
+PLR_8099566BK: folds
+Hero: folds
+Uncalled bet ($27.38) returned to PLR_9726525LP
+PLR_9726525LP: shows [7d Qd]
+PLR_9726525LP collected $7.37 from pot
+*** SUMMARY ***
+Total pot $7.75 | Rake $0.38
+Board [7s 7h 9h 4h 7c]
+Seat 1: PLR_9941188BL mucked [6d 5c]
+Seat 2: PLR_2210172AZ mucked [8h Ks]
+Seat 3: Hero mucked [Jh Ah]
+Seat 4: PLR_9726525LP (button) showed [7d Qd] and won ($7.37)
+Seat 5: PLR_8099566BK (small blind) mucked [Kh Qs]
+Seat 6: PLR_6403943XW (big blind) mucked [6h 3s]
+
+
+
+PokerStars Hand #3117062257: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:32:05
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($21.72 in chips)
+Seat 2: PLR_2210172AZ ($24.65 in chips)
+Seat 3: Hero ($25 in chips)
+Seat 4: PLR_9726525LP ($21.57 in chips)
+Seat 5: PLR_8099566BK ($27.05 in chips)
+Seat 6: PLR_6403943XW ($39.26 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [3s Qc]
+PLR_9726525LP: raises $0.75 to $0.75
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.75 
+PLR_2210172AZ: calls $0.65 
+Hero: folds
+*** FLOP *** [5d 8c 8s]
+PLR_2210172AZ: checks
+PLR_9726525LP: checks
+PLR_9941188BL: checks
+*** TURN *** [5d 8c 8s] [7d]
+PLR_2210172AZ: bets $1.63 
+PLR_9726525LP: folds
+PLR_9941188BL: calls $1.63 
+*** RIVER *** [5d 8c 8s 7d] [7c]
+PLR_2210172AZ: checks
+PLR_9941188BL: checks
+*** SHOW DOWN ***
+PLR_2210172AZ: shows [4s 6s] (a straight, Four to Eight)
+PLR_9941188BL: Mucks [Kd 9d] (Two pair)
+PLR_2210172AZ collected $5.48 from pot
+*** SUMMARY ***
+Total pot $5.76 | Rake $0.28
+Board [5d 8c 8s 7d 7c]
+Seat 1: PLR_9941188BL (button) mucked [Kd 9d]
+Seat 2: PLR_2210172AZ (small blind) showed [4s 6s] and won ($5.48) with a straight, Four to Eight
+Seat 3: Hero (big blind) mucked [3s Qc]
+Seat 4: PLR_9726525LP mucked [Ts Ks]
+Seat 5: PLR_8099566BK mucked [5h As]
+Seat 6: PLR_6403943XW mucked [Kh 6d]
+
+
+
+PokerStars Hand #3117062555: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:33:15
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($19.34 in chips)
+Seat 2: PLR_2210172AZ ($27.75 in chips)
+Seat 3: Hero ($24.75 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($27.05 in chips)
+Seat 6: PLR_6403943XW ($39.26 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [3d 5c]
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: shows [2d 8d]
+Uncalled bet ($0.25) returned to PLR_9726525LP
+PLR_9726525LP collected $0.1 from pot
+*** SUMMARY ***
+Total pot $0.1 | Rake $0.00
+Seat 1: PLR_9941188BL mucked [4d 6s]
+Seat 2: PLR_2210172AZ (button) mucked [5d 2s]
+Seat 3: Hero (small blind) mucked [3d 5c]
+Seat 4: PLR_9726525LP (big blind) showed [2d 8d] and won ($0.1)
+Seat 5: PLR_8099566BK mucked [Td 4s]
+Seat 6: PLR_6403943XW mucked [9s 6d]
+
+
+
+PokerStars Hand #3117062623: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:33:32
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($19.34 in chips)
+Seat 2: PLR_2210172AZ ($27.75 in chips)
+Seat 3: Hero ($24.65 in chips)
+Seat 4: PLR_9726525LP ($20.92 in chips)
+Seat 5: PLR_8099566BK ($27.05 in chips)
+Seat 6: PLR_6403943XW ($39.26 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [As Jh]
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: raises $0.75 to $0.75
+PLR_9726525LP: folds
+PLR_8099566BK: calls $0.50 
+*** FLOP *** [Ah Js 3d]
+PLR_8099566BK: checks
+Hero: bets $0.80 
+PLR_8099566BK: folds
+Uncalled bet ($0.80) returned to Hero
+Hero: shows [As Jh]
+Hero collected $1.52 from pot
+*** SUMMARY ***
+Total pot $1.6 | Rake $0.08
+Board [Ah Js 3d]
+Seat 1: PLR_9941188BL mucked [4d 3s]
+Seat 2: PLR_2210172AZ mucked [Qs 2s]
+Seat 3: Hero (button) won ($1.52)
+Seat 4: PLR_9726525LP (small blind) mucked [4c Qc]
+Seat 5: PLR_8099566BK (big blind) mucked [9d 8s]
+Seat 6: PLR_6403943XW mucked [3h Jc]
+
+
+
+PokerStars Hand #3117062769: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:34:02
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($19.34 in chips)
+Seat 2: PLR_2210172AZ ($27.75 in chips)
+Seat 3: Hero ($25.42 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($26.30 in chips)
+Seat 6: PLR_6403943XW ($39.26 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [2c 3c]
+PLR_9941188BL: raises $0.50 to $0.50
+Table leave user
+PLR_2210172AZ: calls $0.50 
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: calls $0.40 
+PLR_6403943XW: calls $0.25 
+*** FLOP *** [Td 3s 7s]
+PLR_8099566BK: checks
+PLR_6403943XW: checks
+PLR_9941188BL: bets $1.44 
+PLR_2210172AZ: calls $1.44 
+PLR_8099566BK: calls $1.44 
+PLR_6403943XW: folds
+*** TURN *** [Td 3s 7s] [6c]
+PLR_8099566BK: checks
+PLR_9941188BL: checks
+PLR_2210172AZ: bets $4.09 
+PLR_8099566BK: calls $4.09 
+PLR_9941188BL: calls $4.09 
+*** RIVER *** [Td 3s 7s 6c] [8c]
+PLR_8099566BK: bets $5.48 
+PLR_9941188BL: folds
+PLR_2210172AZ: calls $5.48 
+*** SHOW DOWN ***
+PLR_8099566BK: shows [9s Th] (a straight, Six to Ten)
+PLR_2210172AZ: Mucks [7c 7h] (Three of a kind)
+PLR_8099566BK collected $28.08 from pot
+*** SUMMARY ***
+Total pot $29.55 | Rake $1.47
+Board [Td 3s 7s 6c 8c]
+Seat 1: PLR_9941188BL mucked [8s Ts]
+Seat 2: PLR_2210172AZ mucked [7c 7h]
+Seat 3: Hero mucked [2c 3c]
+Seat 4: PLR_9726525LP (button) mucked [2h Qh]
+Seat 5: PLR_8099566BK (small blind) showed [9s Th] and won ($28.08) with a straight, Six to Ten
+Seat 6: PLR_6403943XW (big blind) mucked [6s Ad]
+
+
+
+PokerStars Hand #3117063240: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:35:48
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($13.31 in chips)
+Seat 2: PLR_2210172AZ ($16.24 in chips)
+Seat 3: Hero ($25.42 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($42.87 in chips)
+Seat 6: PLR_6403943XW ($38.76 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [5c 7s]
+PLR_2210172AZ: raises $0.75 to $0.75
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+Uncalled bet ($0.50) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [Jh Jc]
+PLR_2210172AZ collected $0.6 from pot
+*** SUMMARY ***
+Total pot $0.6 | Rake $0.00
+Seat 1: PLR_9941188BL (big blind) mucked [3s Qh]
+Seat 2: PLR_2210172AZ showed [Jh Jc] and won ($0.6)
+Seat 3: Hero mucked [5c 7s]
+Seat 4: PLR_9726525LP mucked [8c 9h]
+Seat 5: PLR_8099566BK (button) mucked [4h Td]
+Seat 6: PLR_6403943XW (small blind) mucked [4c Kc]
+
+
+
+PokerStars Hand #3117063454: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:36:36
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($13.06 in chips)
+Seat 2: PLR_2210172AZ ($25 in chips)
+Seat 3: Hero ($25.42 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($42.87 in chips)
+Seat 6: PLR_6403943XW ($38.66 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [7h Kc]
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: calls $0.75 
+PLR_9941188BL: folds
+PLR_2210172AZ: calls $0.50 
+*** FLOP *** [Kd 2h 7d]
+PLR_2210172AZ: checks
+PLR_8099566BK: checks
+PLR_6403943XW: checks
+*** TURN *** [Kd 2h 7d] [Jc]
+PLR_2210172AZ: checks
+PLR_8099566BK: checks
+PLR_6403943XW: checks
+*** RIVER *** [Kd 2h 7d Jc] [Qs]
+PLR_2210172AZ: bets $1.95 
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+Uncalled bet ($1.95) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [Ks 7s]
+PLR_2210172AZ collected $2.24 from pot
+*** SUMMARY ***
+Total pot $2.35 | Rake $0.11
+Board [Kd 2h 7d Jc Qs]
+Seat 1: PLR_9941188BL (small blind) mucked [Js 3h]
+Seat 2: PLR_2210172AZ (big blind) showed [Ks 7s] and won ($2.24)
+Seat 3: Hero mucked [7h Kc]
+Seat 4: PLR_9726525LP mucked [Qd 5c]
+Seat 5: PLR_8099566BK mucked [8c 9h]
+Seat 6: PLR_6403943XW (button) mucked [As 4s]
+
+
+
+PokerStars Hand #3117063728: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:37:38
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($12.96 in chips)
+Seat 2: PLR_2210172AZ ($26.49 in chips)
+Seat 3: Hero ($25.42 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($42.12 in chips)
+Seat 6: PLR_6403943XW ($37.91 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Ad 3c]
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: folds
+Hero: folds
+Uncalled bet ($0.25) returned to PLR_9941188BL
+PLR_9941188BL: shows [2d Kc]
+PLR_9941188BL collected $0.6 from pot
+*** SUMMARY ***
+Total pot $0.6 | Rake $0.00
+Seat 1: PLR_9941188BL (button) showed [2d Kc] and won ($0.6)
+Seat 2: PLR_2210172AZ (small blind) mucked [Ks 8h]
+Seat 3: Hero (big blind) mucked [Ad 3c]
+Seat 4: PLR_9726525LP mucked [7d 9s]
+Seat 5: PLR_8099566BK mucked [4h Qs]
+Seat 6: PLR_6403943XW mucked [6c Tc]
+
+
+
+PokerStars Hand #3117063900: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:38:17
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($13.31 in chips)
+Seat 2: PLR_2210172AZ ($26.39 in chips)
+Seat 3: Hero ($25.17 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($42.12 in chips)
+Seat 6: PLR_6403943XW ($37.91 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Jd 5h]
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: shows [Qh 7c]
+Uncalled bet ($0.25) returned to PLR_9726525LP
+PLR_9726525LP collected $0.1 from pot
+*** SUMMARY ***
+Total pot $0.1 | Rake $0.00
+Seat 1: PLR_9941188BL mucked [9s 8c]
+Seat 2: PLR_2210172AZ (button) mucked [Kh 3d]
+Seat 3: Hero (small blind) mucked [Jd 5h]
+Seat 4: PLR_9726525LP (big blind) showed [Qh 7c] and won ($0.1)
+Seat 5: PLR_8099566BK mucked [3c Kd]
+Seat 6: PLR_6403943XW mucked [5d 7h]
+
+
+
+PokerStars Hand #3117064098: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:39:03
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($13.31 in chips)
+Seat 2: PLR_2210172AZ ($26.39 in chips)
+Seat 3: Hero ($25.07 in chips)
+Seat 4: PLR_9726525LP ($20.92 in chips)
+Seat 5: PLR_8099566BK ($42.12 in chips)
+Seat 6: PLR_6403943XW ($37.91 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Ah Jd]
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: raises $0.75 to $0.75
+PLR_9726525LP: folds
+PLR_8099566BK: calls $0.50 
+*** FLOP *** [3s Js Qd]
+PLR_8099566BK: checks
+Hero: bets $1.05 
+PLR_8099566BK: calls $1.05 
+*** TURN *** [3s Js Qd] [9s]
+PLR_8099566BK: checks
+Hero: checks
+*** RIVER *** [3s Js Qd 9s] [6c]
+PLR_8099566BK: checks
+Hero: checks
+*** SHOW DOWN ***
+PLR_8099566BK: shows [9c Kh] (a pair of Nines)
+Hero: shows [Ah Jd] (a pair of Jacks)
+Hero collected $3.52 from pot
+*** SUMMARY ***
+Total pot $3.7 | Rake $0.18
+Board [3s Js Qd 9s 6c]
+Seat 1: PLR_9941188BL mucked [3h 2d]
+Seat 2: PLR_2210172AZ mucked [Td 6s]
+Seat 3: Hero (button) showed [Ah Jd] and won ($3.52) with a pair of Jacks
+Seat 4: PLR_9726525LP (small blind) mucked [Kc 8h]
+Seat 5: PLR_8099566BK (big blind) showed [9c Kh] and lost with a pair of Nines
+Seat 6: PLR_6403943XW mucked [8s 9d]
+
+
+
+PokerStars Hand #3117064327: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:39:52
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($13.31 in chips)
+Seat 2: PLR_2210172AZ ($26.39 in chips)
+Seat 3: Hero ($26.79 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($40.32 in chips)
+Seat 6: PLR_6403943XW ($37.91 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Qh Ts]
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: shows [Qs 2h]
+Uncalled bet ($0.25) returned to PLR_6403943XW
+PLR_6403943XW collected $0.1 from pot
+*** SUMMARY ***
+Total pot $0.1 | Rake $0.00
+Seat 1: PLR_9941188BL mucked [7d 8c]
+Seat 2: PLR_2210172AZ mucked [2s Ad]
+Seat 3: Hero mucked [Qh Ts]
+Seat 4: PLR_9726525LP (button) mucked [Jc 3h]
+Seat 5: PLR_8099566BK (small blind) mucked [3d 6s]
+Seat 6: PLR_6403943XW (big blind) showed [Qs 2h] and won ($0.1)
+
+
+
+PokerStars Hand #3117064407: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:40:10
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($13.31 in chips)
+Seat 2: PLR_2210172AZ ($26.39 in chips)
+Seat 3: Hero ($26.79 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($40.22 in chips)
+Seat 6: PLR_6403943XW ($38.01 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [4d 7h]
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: shows [Qs 8c]
+Uncalled bet ($0.25) returned to PLR_9941188BL
+PLR_9941188BL collected $0.1 from pot
+*** SUMMARY ***
+Total pot $0.1 | Rake $0.00
+Seat 1: PLR_9941188BL (big blind) showed [Qs 8c] and won ($0.1)
+Seat 2: PLR_2210172AZ mucked [9c 6h]
+Seat 3: Hero mucked [4d 7h]
+Seat 4: PLR_9726525LP mucked [3c 5h]
+Seat 5: PLR_8099566BK (button) mucked [4s 8s]
+Seat 6: PLR_6403943XW (small blind) mucked [7c Jh]
+
+
+
+PokerStars Hand #3117064490: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:40:26
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($13.41 in chips)
+Seat 2: PLR_2210172AZ ($26.39 in chips)
+Seat 3: Hero ($26.79 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($40.22 in chips)
+Seat 6: PLR_6403943XW ($37.91 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [6s 4c]
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.15 
+PLR_2210172AZ: raises $0.75 to $1
+PLR_9941188BL: calls $0.75 
+*** FLOP *** [Ac 8h Js]
+PLR_9941188BL: checks
+PLR_2210172AZ: bets $1.50 
+PLR_9941188BL: folds
+Uncalled bet ($1.50) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [Ah Ks]
+PLR_2210172AZ collected $1.9 from pot
+*** SUMMARY ***
+Total pot $2 | Rake $0.10
+Board [Ac 8h Js]
+Seat 1: PLR_9941188BL (small blind) mucked [4s 2h]
+Seat 2: PLR_2210172AZ (big blind) showed [Ah Ks] and won ($1.9)
+Seat 3: Hero mucked [6s 4c]
+Seat 4: PLR_9726525LP mucked [Kc 6c]
+Seat 5: PLR_8099566BK mucked [2c 9h]
+Seat 6: PLR_6403943XW (button) mucked [6d Tc]
+
+
+
+PokerStars Hand #3117064710: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:41:18
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($12.41 in chips)
+Seat 2: PLR_2210172AZ ($27.29 in chips)
+Seat 3: Hero ($26.79 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($40.22 in chips)
+Seat 6: PLR_6403943XW ($37.91 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [5c 2h]
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: calls $0.75 
+PLR_9941188BL: calls $0.75 
+PLR_2210172AZ: calls $0.65 
+Hero: folds
+*** FLOP *** [9s 4c 8h]
+PLR_2210172AZ: checks
+PLR_8099566BK: checks
+PLR_6403943XW: checks
+PLR_9941188BL: bets $1.62 
+PLR_2210172AZ: calls $1.62 
+PLR_8099566BK: folds
+PLR_6403943XW: calls $1.62 
+*** TURN *** [9s 4c 8h] [2s]
+PLR_2210172AZ: checks
+PLR_6403943XW: checks
+PLR_9941188BL: checks
+*** RIVER *** [9s 4c 8h 2s] [3d]
+PLR_2210172AZ: checks
+PLR_6403943XW: checks
+PLR_9941188BL: bets $4.28 
+PLR_2210172AZ: folds
+PLR_6403943XW: calls $4.28 
+*** SHOW DOWN ***
+PLR_9941188BL: shows [6h 5h] (a straight, Deuce to Six)
+PLR_6403943XW: Mucks [6s 8s] (One pair)
+PLR_9941188BL collected $15.84 from pot
+*** SUMMARY ***
+Total pot $16.67 | Rake $0.83
+Board [9s 4c 8h 2s 3d]
+Seat 1: PLR_9941188BL (button) showed [6h 5h] and won ($15.84) with a straight, Deuce to Six
+Seat 2: PLR_2210172AZ (small blind) mucked [Qs Tc]
+Seat 3: Hero (big blind) mucked [5c 2h]
+Seat 4: PLR_9726525LP mucked [5s Kh]
+Seat 5: PLR_8099566BK mucked [Ac Td]
+Seat 6: PLR_6403943XW mucked [6s 8s]
+
+
+
+PokerStars Hand #3117065034: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:42:33
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($24.60 in chips)
+Seat 2: PLR_2210172AZ ($24.92 in chips)
+Seat 3: Hero ($26.54 in chips)
+Seat 4: PLR_9726525LP ($20.82 in chips)
+Seat 5: PLR_8099566BK ($39.47 in chips)
+Seat 6: PLR_6403943XW ($31.26 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [6c 4d]
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: shows [Ts 9d]
+Uncalled bet ($0.25) returned to PLR_9726525LP
+PLR_9726525LP collected $0.1 from pot
+*** SUMMARY ***
+Total pot $0.1 | Rake $0.00
+Seat 1: PLR_9941188BL mucked [9s 2s]
+Seat 2: PLR_2210172AZ (button) mucked [Td 3s]
+Seat 3: Hero (small blind) mucked [6c 4d]
+Seat 4: PLR_9726525LP (big blind) showed [Ts 9d] and won ($0.1)
+Seat 5: PLR_8099566BK mucked [5c 3h]
+Seat 6: PLR_6403943XW mucked [8d As]
+
+
+
+PokerStars Hand #3117065255: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:43:23
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($24.60 in chips)
+Seat 2: PLR_2210172AZ ($24.92 in chips)
+Seat 3: Hero ($26.44 in chips)
+Seat 4: PLR_9726525LP ($20.92 in chips)
+Seat 5: PLR_8099566BK ($39.47 in chips)
+Seat 6: PLR_6403943XW ($31.26 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [5h Qd]
+PLR_6403943XW: folds
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: raises $1.90 to $2
+PLR_8099566BK: folds
+PLR_9941188BL: calls $1.50 
+*** FLOP *** [4h Ks Jh]
+PLR_9726525LP: checks
+PLR_9941188BL: checks
+*** TURN *** [4h Ks Jh] [Qh]
+PLR_9726525LP: bets $2.12 
+PLR_9941188BL: raises $5.35 to $5.35
+PLR_9726525LP: folds
+Uncalled bet ($3.23) returned to PLR_9941188BL
+PLR_9941188BL: shows [Ac Td]
+PLR_9941188BL collected $8.07 from pot
+*** SUMMARY ***
+Total pot $8.49 | Rake $0.42
+Board [4h Ks Jh Qh]
+Seat 1: PLR_9941188BL showed [Ac Td] and won ($8.07)
+Seat 2: PLR_2210172AZ mucked [7s 3h]
+Seat 3: Hero (button) mucked [5h Qd]
+Seat 4: PLR_9726525LP (small blind) mucked [9h 9c]
+Seat 5: PLR_8099566BK (big blind) mucked [2c Jd]
+Seat 6: PLR_6403943XW mucked [6d Qc]
+
+
+
+PokerStars Hand #3117065477: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:44:13
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($28.55 in chips)
+Seat 2: PLR_2210172AZ ($24.92 in chips)
+Seat 3: Hero ($26.44 in chips)
+Seat 4: PLR_9726525LP ($16.80 in chips)
+Seat 5: PLR_8099566BK ($39.22 in chips)
+Seat 6: PLR_6403943XW ($31.26 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [2d Qs]
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: calls $0.25 
+*** FLOP *** [7s 6c 5s]
+PLR_6403943XW: bets $1.05 
+PLR_9941188BL: calls $1.05 
+*** TURN *** [7s 6c 5s] [8c]
+PLR_6403943XW: bets $3.20 
+PLR_9941188BL: folds
+Uncalled bet ($3.20) returned to PLR_6403943XW
+PLR_6403943XW: shows [9d 6s]
+PLR_6403943XW collected $3.04 from pot
+*** SUMMARY ***
+Total pot $3.2 | Rake $0.16
+Board [7s 6c 5s 8c]
+Seat 1: PLR_9941188BL mucked [Qd 7d]
+Seat 2: PLR_2210172AZ mucked [8h 3d]
+Seat 3: Hero mucked [2d Qs]
+Seat 4: PLR_9726525LP (button) mucked [9h 6h]
+Seat 5: PLR_8099566BK (small blind) mucked [4s Kc]
+Seat 6: PLR_6403943XW (big blind) showed [9d 6s] and won ($3.04)
+
+
+
+PokerStars Hand #3117065698: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:45:04
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($27 in chips)
+Seat 2: PLR_2210172AZ ($24.92 in chips)
+Seat 3: Hero ($26.44 in chips)
+Seat 4: PLR_9726525LP ($25 in chips)
+Seat 5: PLR_8099566BK ($39.12 in chips)
+Seat 6: PLR_6403943XW ($32.75 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [8c 7d]
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.50 
+*** FLOP *** [Qs 3c 4c]
+PLR_9941188BL: checks
+PLR_8099566BK: checks
+*** TURN *** [Qs 3c 4c] [Js]
+PLR_9941188BL: checks
+PLR_8099566BK: checks
+*** RIVER *** [Qs 3c 4c Js] [Qc]
+PLR_9941188BL: checks
+PLR_8099566BK: checks
+*** SHOW DOWN ***
+PLR_9941188BL: shows [7c 5d] (a pair of Queens)
+PLR_8099566BK: shows [Kd 8d] (a pair of Queens)
+PLR_8099566BK collected $1.52 from pot
+*** SUMMARY ***
+Total pot $1.6 | Rake $0.08
+Board [Qs 3c 4c Js Qc]
+Seat 1: PLR_9941188BL (big blind) showed [7c 5d] and lost with a pair of Queens
+Seat 2: PLR_2210172AZ mucked [Ah 2d]
+Seat 3: Hero mucked [8c 7d]
+Seat 4: PLR_9726525LP mucked [8s 2h]
+Seat 5: PLR_8099566BK (button) showed [Kd 8d] and won ($1.52) with a pair of Queens
+Seat 6: PLR_6403943XW (small blind) mucked [As 9d]
+
+
+
+PokerStars Hand #3117065884: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:45:49
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($26.25 in chips)
+Seat 2: PLR_2210172AZ ($24.92 in chips)
+Seat 3: Hero ($26.44 in chips)
+Seat 4: PLR_9726525LP ($25 in chips)
+Seat 5: PLR_8099566BK ($39.89 in chips)
+Seat 6: PLR_6403943XW ($32.65 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Kd Kh]
+Hero: raises $0.75 to $0.75
+PLR_9726525LP: folds
+PLR_8099566BK: calls $0.75 
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+*** FLOP *** [9d Jd 6c]
+Hero: bets $1.35 
+PLR_8099566BK: calls $1.35 
+*** TURN *** [9d Jd 6c] [8h]
+Hero: bets $2.27 
+PLR_8099566BK: calls $2.27 
+*** RIVER *** [9d Jd 6c 8h] [Ks]
+Hero: bets $22.07 and is all-in
+PLR_8099566BK: folds
+Uncalled bet ($22.07) returned to Hero
+Hero: shows [Kd Kh]
+Hero collected $8.64 from pot
+*** SUMMARY ***
+Total pot $9.09 | Rake $0.45
+Board [9d Jd 6c 8h Ks]
+Seat 1: PLR_9941188BL (small blind) mucked [9h 6s]
+Seat 2: PLR_2210172AZ (big blind) mucked [7c Qh]
+Seat 3: Hero won ($8.64)
+Seat 4: PLR_9726525LP mucked [3h 9s]
+Seat 5: PLR_8099566BK mucked [6d Qd]
+Seat 6: PLR_6403943XW (button) mucked [As 2h]
+
+
+
+PokerStars Hand #3117066117: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:46:45
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($26.15 in chips)
+Seat 2: PLR_2210172AZ ($24.67 in chips)
+Seat 3: Hero ($30.71 in chips)
+Seat 4: PLR_9726525LP ($25 in chips)
+Seat 5: PLR_8099566BK ($35.52 in chips)
+Seat 6: PLR_6403943XW ($32.65 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [4c Jh]
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: raises $0.65 to $0.75
+Hero: folds
+Uncalled bet ($0.50) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [8d Td]
+PLR_2210172AZ collected $0.5 from pot
+*** SUMMARY ***
+Total pot $0.5 | Rake $0.00
+Seat 1: PLR_9941188BL (button) mucked [Qc 3s]
+Seat 2: PLR_2210172AZ (small blind) showed [8d Td] and won ($0.5)
+Seat 3: Hero (big blind) mucked [4c Jh]
+Seat 4: PLR_9726525LP mucked [Jd 3c]
+Seat 5: PLR_8099566BK mucked [4d Ts]
+Seat 6: PLR_6403943XW mucked [6d Jc]
+
+
+
+PokerStars Hand #3117066204: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:47:08
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($26.15 in chips)
+Seat 2: PLR_2210172AZ ($24.92 in chips)
+Seat 3: Hero ($30.46 in chips)
+Seat 4: PLR_9726525LP ($25 in chips)
+Seat 5: PLR_8099566BK ($35.52 in chips)
+Seat 6: PLR_6403943XW ($32.65 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [6d 5c]
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: folds
+PLR_9941188BL: raises $1.25 to $1.25
+PLR_2210172AZ: calls $1.25 
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: calls $0.50 
+*** FLOP *** [Jc 4s Qd]
+PLR_8099566BK: checks
+PLR_9941188BL: checks
+PLR_2210172AZ: checks
+*** TURN *** [Jc 4s Qd] [9d]
+PLR_8099566BK: checks
+PLR_9941188BL: bets $2.05 
+PLR_2210172AZ: folds
+PLR_8099566BK: folds
+Uncalled bet ($2.05) returned to PLR_9941188BL
+PLR_9941188BL: shows [5d Jd]
+PLR_9941188BL collected $3.9 from pot
+*** SUMMARY ***
+Total pot $4.1 | Rake $0.20
+Board [Jc 4s Qd 9d]
+Seat 1: PLR_9941188BL showed [5d Jd] and won ($3.9)
+Seat 2: PLR_2210172AZ (button) mucked [2s As]
+Seat 3: Hero (small blind) mucked [6d 5c]
+Seat 4: PLR_9726525LP (big blind) mucked [3c 8s]
+Seat 5: PLR_8099566BK mucked [7c 9c]
+Seat 6: PLR_6403943XW mucked [Ac 5s]
+
+
+
+PokerStars Hand #3117066462: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:48:03
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($28.80 in chips)
+Seat 2: PLR_2210172AZ ($23.67 in chips)
+Seat 3: Hero ($30.36 in chips)
+Seat 4: PLR_9726525LP ($24.75 in chips)
+Seat 5: PLR_8099566BK ($34.27 in chips)
+Seat 6: PLR_6403943XW ($32.65 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Kd 5h]
+PLR_6403943XW: folds
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: calls $0.40 
+PLR_8099566BK: calls $0.25 
+*** FLOP *** [Qs 8s 6h]
+PLR_9726525LP: bets $0.75 
+PLR_8099566BK: folds
+PLR_9941188BL: calls $0.75 
+*** TURN *** [Qs 8s 6h] [6c]
+PLR_9726525LP: checks
+PLR_9941188BL: bets $1.50 
+PLR_9726525LP: calls $1.50 
+*** RIVER *** [Qs 8s 6h 6c] [Ad]
+PLR_9726525LP: checks
+PLR_9941188BL: bets $3.87 
+PLR_9726525LP: calls $3.87 
+*** SHOW DOWN ***
+PLR_9941188BL: shows [Jh Tc] (a pair of Sixs)
+PLR_9726525LP: shows [Qc Ks] (two pair, Queens and Aces)
+PLR_9726525LP collected $13.06 from pot
+*** SUMMARY ***
+Total pot $13.74 | Rake $0.68
+Board [Qs 8s 6h 6c Ad]
+Seat 1: PLR_9941188BL showed [Jh Tc] and lost with a pair of Sixes
+Seat 2: PLR_2210172AZ mucked [5s 2h]
+Seat 3: Hero (button) mucked [Kd 5h]
+Seat 4: PLR_9726525LP (small blind) showed [Qc Ks] and won ($13.06) with two pair, Queens and Aces
+Seat 5: PLR_8099566BK (big blind) mucked [4h As]
+Seat 6: PLR_6403943XW mucked [8d Js]
+
+
+
+PokerStars Hand #3117066734: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:49:05
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($22.18 in chips)
+Seat 2: PLR_2210172AZ ($23.67 in chips)
+Seat 3: Hero ($30.36 in chips)
+Seat 4: PLR_9726525LP ($31.19 in chips)
+Seat 5: PLR_8099566BK ($33.77 in chips)
+Seat 6: PLR_6403943XW ($32.65 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [9c 9s]
+PLR_9941188BL: folds
+PLR_2210172AZ: raises $0.75 to $0.75
+Hero: raises $2.60 to $2.60
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_2210172AZ: raises $7.14 to $7.89
+Hero: calls $5.29 
+*** FLOP *** [8c Td Ks]
+PLR_2210172AZ: bets $13.58 
+Hero: folds
+Uncalled bet ($13.58) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [Qh Qd]
+PLR_2210172AZ collected $15.33 from pot
+*** SUMMARY ***
+Total pot $16.13 | Rake $0.80
+Board [8c Td Ks]
+Seat 1: PLR_9941188BL mucked [8h 5s]
+Seat 2: PLR_2210172AZ showed [Qh Qd] and won ($15.33)
+Seat 3: Hero mucked [9c 9s]
+Seat 4: PLR_9726525LP (button) mucked [Jc 6c]
+Seat 5: PLR_8099566BK (small blind) mucked [7d Kh]
+Seat 6: PLR_6403943XW (big blind) mucked [5h 6h]
+
+
+
+PokerStars Hand #3117067041: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:50:18
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($22.18 in chips)
+Seat 2: PLR_2210172AZ ($31.11 in chips)
+Seat 3: Hero ($22.47 in chips)
+Seat 4: PLR_9726525LP ($31.19 in chips)
+Seat 5: PLR_8099566BK ($33.67 in chips)
+Seat 6: PLR_6403943XW ($32.40 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Qc Kc]
+PLR_2210172AZ: folds
+Hero: raises $0.75 to $0.75
+PLR_9726525LP: calls $0.75 
+PLR_8099566BK: calls $0.75 
+PLR_6403943XW: calls $0.65 
+PLR_9941188BL: folds
+*** FLOP *** [5s Th 5d]
+PLR_6403943XW: checks
+Hero: checks
+PLR_9726525LP: bets $1.62 
+PLR_8099566BK: calls $1.62 
+PLR_6403943XW: calls $1.62 
+Hero: folds
+*** TURN *** [5s Th 5d] [2s]
+PLR_6403943XW: bets $4.05 
+PLR_9726525LP: folds
+PLR_8099566BK: calls $4.05 
+*** RIVER *** [5s Th 5d 2s] [Td]
+PLR_6403943XW: checks
+PLR_8099566BK: checks
+*** SHOW DOWN ***
+PLR_6403943XW: shows [8h 5h] (a full house, Fives full of Tens)
+PLR_8099566BK: shows [6c 5c] (a full house, Fives full of Tens)
+PLR_8099566BK collected $7.7 from pot
+PLR_6403943XW collected $7.7 from pot
+*** SUMMARY ***
+Total pot $16.21 | Rake $0.81
+Board [5s Th 5d 2s Td]
+Seat 1: PLR_9941188BL (big blind) mucked [4h 2d]
+Seat 2: PLR_2210172AZ mucked [Jd Ts]
+Seat 3: Hero mucked [Qc Kc]
+Seat 4: PLR_9726525LP mucked [7h 7d]
+Seat 5: PLR_8099566BK (button) showed [6c 5c] and won ($7.7) with a full house, Fives full of Tens
+Seat 6: PLR_6403943XW (small blind) showed [8h 5h] and won ($7.7) with a full house, Fives full of Tens
+
+
+
+PokerStars Hand #3117067409: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:51:44
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($21.93 in chips)
+Seat 2: PLR_2210172AZ ($31.11 in chips)
+Seat 3: Hero ($21.72 in chips)
+Seat 4: PLR_9726525LP ($28.82 in chips)
+Seat 5: PLR_8099566BK ($34.95 in chips)
+Seat 6: PLR_6403943XW ($33.68 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Js 3d]
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.15 
+PLR_2210172AZ: checks
+*** FLOP *** [2h 6h 2d]
+PLR_9941188BL: checks
+PLR_2210172AZ: bets $0.50 
+PLR_9941188BL: folds
+Uncalled bet ($0.50) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [9c 6c]
+PLR_2210172AZ collected $0.48 from pot
+*** SUMMARY ***
+Total pot $0.5 | Rake $0.02
+Board [2h 6h 2d]
+Seat 1: PLR_9941188BL (small blind) mucked [9h Ts]
+Seat 2: PLR_2210172AZ (big blind) showed [9c 6c] and won ($0.48)
+Seat 3: Hero mucked [Js 3d]
+Seat 4: PLR_9726525LP mucked [4c 5d]
+Seat 5: PLR_8099566BK mucked [2s 5s]
+Seat 6: PLR_6403943XW (button) mucked [3h 4s]
+
+
+
+PokerStars Hand #3117067557: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:52:18
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($21.68 in chips)
+Seat 2: PLR_2210172AZ ($31.34 in chips)
+Seat 3: Hero ($21.72 in chips)
+Seat 4: PLR_9726525LP ($28.82 in chips)
+Seat 5: PLR_8099566BK ($34.95 in chips)
+Seat 6: PLR_6403943XW ($33.68 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [9c Qc]
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: calls $0.40 
+Hero: calls $0.25 
+*** FLOP *** [3d 2h 8c]
+PLR_2210172AZ: checks
+Hero: checks
+PLR_9941188BL: bets $0.98 
+PLR_2210172AZ: folds
+Hero: folds
+Uncalled bet ($0.98) returned to PLR_9941188BL
+PLR_9941188BL: shows [3s Ad]
+PLR_9941188BL collected $1.43 from pot
+*** SUMMARY ***
+Total pot $1.5 | Rake $0.07
+Board [3d 2h 8c]
+Seat 1: PLR_9941188BL (button) showed [3s Ad] and won ($1.43)
+Seat 2: PLR_2210172AZ (small blind) mucked [Jd Ks]
+Seat 3: Hero (big blind) mucked [9c Qc]
+Seat 4: PLR_9726525LP mucked [As 4c]
+Seat 5: PLR_8099566BK mucked [4h 6s]
+Seat 6: PLR_6403943XW mucked [5c Ts]
+
+
+
+PokerStars Hand #3117067723: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:52:59
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($22.61 in chips)
+Seat 2: PLR_2210172AZ ($30.84 in chips)
+Seat 3: Hero ($24.50 in chips)
+Seat 4: PLR_9726525LP ($28.82 in chips)
+Seat 5: PLR_8099566BK ($34.95 in chips)
+Seat 6: PLR_6403943XW ($33.68 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Qc Qd]
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: calls $0.75 
+PLR_9941188BL: calls $0.75 
+PLR_2210172AZ: calls $0.75 
+Hero: raises $4.90 to $5
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Uncalled bet ($4.25) returned to Hero
+Hero: shows [Qc Qd]
+Hero collected $4 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0.00
+Seat 1: PLR_9941188BL mucked [Ad Jc]
+Seat 2: PLR_2210172AZ (button) mucked [As 3s]
+Seat 3: Hero (small blind) won ($4)
+Seat 4: PLR_9726525LP (big blind) mucked [6d 9s]
+Seat 5: PLR_8099566BK mucked [Tc Ah]
+Seat 6: PLR_6403943XW mucked [6s 8s]
+
+
+
+PokerStars Hand #3117067929: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:53:45
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($21.86 in chips)
+Seat 2: PLR_2210172AZ ($30.09 in chips)
+Seat 3: Hero ($27.75 in chips)
+Seat 4: PLR_9726525LP ($28.57 in chips)
+Seat 5: PLR_8099566BK ($34.20 in chips)
+Seat 6: PLR_6403943XW ($32.93 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Ah Ts]
+PLR_6403943XW: calls $0.25 
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: raises $1.10 to $1.10
+PLR_9726525LP: folds
+PLR_8099566BK: calls $0.85 
+PLR_6403943XW: calls $0.85 
+*** FLOP *** [7c 5c Js]
+PLR_8099566BK: checks
+PLR_6403943XW: checks
+Hero: checks
+*** TURN *** [7c 5c Js] [Qd]
+PLR_8099566BK: checks
+PLR_6403943XW: checks
+Hero: bets $2.20 
+PLR_8099566BK: calls $2.20 
+PLR_6403943XW: folds
+*** RIVER *** [7c 5c Js Qd] [4s]
+PLR_8099566BK: checks
+Hero: checks
+*** SHOW DOWN ***
+PLR_8099566BK: shows [Jh 8c] (a pair of Jacks)
+Hero: Mucks [Ah Ts] (High Card)
+PLR_8099566BK collected $7.41 from pot
+*** SUMMARY ***
+Total pot $7.8 | Rake $0.39
+Board [7c 5c Js Qd 4s]
+Seat 1: PLR_9941188BL mucked [4c Qs]
+Seat 2: PLR_2210172AZ mucked [Kc 9d]
+Seat 3: Hero (button) mucked [Ah Ts]
+Seat 4: PLR_9726525LP (small blind) mucked [Tc 7h]
+Seat 5: PLR_8099566BK (big blind) showed [Jh 8c] and won ($7.41) with a pair of Jacks
+Seat 6: PLR_6403943XW mucked [9h 6h]
+
+
+
+PokerStars Hand #3117068286: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:55:15
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($21.86 in chips)
+Seat 2: PLR_2210172AZ ($30.09 in chips)
+Seat 3: Hero ($24.45 in chips)
+Seat 4: PLR_9726525LP ($28.47 in chips)
+Seat 5: PLR_8099566BK ($38.31 in chips)
+Seat 6: PLR_6403943XW ($31.83 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [2s 4d]
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: raises $0.75 to $0.75
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+Uncalled bet ($0.50) returned to PLR_9726525LP
+PLR_9726525LP: shows [Qd 8c]
+PLR_9726525LP collected $0.6 from pot
+*** SUMMARY ***
+Total pot $0.6 | Rake $0.00
+Seat 1: PLR_9941188BL mucked [5h 2d]
+Seat 2: PLR_2210172AZ mucked [Th Ac]
+Seat 3: Hero mucked [2s 4d]
+Seat 4: PLR_9726525LP (button) showed [Qd 8c] and won ($0.6)
+Seat 5: PLR_8099566BK (small blind) mucked [Kh 7d]
+Seat 6: PLR_6403943XW (big blind) mucked [6c Ts]
+
+
+
+PokerStars Hand #3117068389: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:55:40
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($21.86 in chips)
+Seat 2: PLR_2210172AZ ($30.09 in chips)
+Seat 3: Hero ($24.45 in chips)
+Seat 4: PLR_9726525LP ($28.82 in chips)
+Seat 5: PLR_8099566BK ($38.21 in chips)
+Seat 6: PLR_6403943XW ($31.58 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Th 9h]
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: raises $0.75 to $0.75
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.50 
+*** FLOP *** [Ah 8h 9d]
+PLR_9941188BL: checks
+PLR_9726525LP: bets $0.80 
+PLR_9941188BL: calls $0.80 
+*** TURN *** [Ah 8h 9d] [3h]
+PLR_9941188BL: checks
+PLR_9726525LP: bets $1.60 
+PLR_9941188BL: folds
+Uncalled bet ($1.60) returned to PLR_9726525LP
+PLR_9726525LP: shows [Ad 5h]
+PLR_9726525LP collected $3.04 from pot
+*** SUMMARY ***
+Total pot $3.2 | Rake $0.16
+Board [Ah 8h 9d 3h]
+Seat 1: PLR_9941188BL (big blind) mucked [7d 8s]
+Seat 2: PLR_2210172AZ mucked [8d 2s]
+Seat 3: Hero mucked [Th 9h]
+Seat 4: PLR_9726525LP showed [Ad 5h] and won ($3.04)
+Seat 5: PLR_8099566BK (button) mucked [5d 9s]
+Seat 6: PLR_6403943XW (small blind) mucked [4h 5c]
+
+
+
+PokerStars Hand #3117068544: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:56:16
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($20.31 in chips)
+Seat 2: PLR_2210172AZ ($30.09 in chips)
+Seat 3: Hero ($24.45 in chips)
+Seat 4: PLR_9726525LP ($30.31 in chips)
+Seat 5: PLR_8099566BK ($38.21 in chips)
+Seat 6: PLR_6403943XW ($31.48 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Ac 2c]
+Hero: raises $0.75 to $0.75
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.65 
+PLR_2210172AZ: calls $0.50 
+*** FLOP *** [Qh Td 7d]
+PLR_9941188BL: checks
+PLR_2210172AZ: checks
+Hero: checks
+*** TURN *** [Qh Td 7d] [6h]
+PLR_9941188BL: bets $2.25 
+PLR_2210172AZ: folds
+Hero: folds
+Uncalled bet ($2.25) returned to PLR_9941188BL
+PLR_9941188BL: shows [Ts Tc]
+PLR_9941188BL collected $2.14 from pot
+*** SUMMARY ***
+Total pot $2.25 | Rake $0.11
+Board [Qh Td 7d 6h]
+Seat 1: PLR_9941188BL (small blind) showed [Ts Tc] and won ($2.14)
+Seat 2: PLR_2210172AZ (big blind) mucked [Js As]
+Seat 3: Hero mucked [Ac 2c]
+Seat 4: PLR_9726525LP mucked [9c Ad]
+Seat 5: PLR_8099566BK mucked [4c 6c]
+Seat 6: PLR_6403943XW (button) mucked [Ks 4h]
+
+
+
+PokerStars Hand #3117068797: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:57:20
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($21.70 in chips)
+Seat 2: PLR_2210172AZ ($29.34 in chips)
+Seat 3: Hero ($23.70 in chips)
+Seat 4: PLR_9726525LP ($30.31 in chips)
+Seat 5: PLR_8099566BK ($38.21 in chips)
+Seat 6: PLR_6403943XW ($31.48 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [As Jd]
+PLR_9726525LP: raises $0.75 to $0.75
+PLR_8099566BK: folds 
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: calls $0.50 
+*** FLOP *** [3c 6d 8h]
+Hero: checks
+PLR_9726525LP: bets $0.80 
+Hero: folds
+Uncalled bet ($0.80) returned to PLR_9726525LP
+PLR_9726525LP: shows [Qd Ad]
+PLR_9726525LP collected $1.52 from pot
+*** SUMMARY ***
+Total pot $1.6 | Rake $0.08
+Board [3c 6d 8h]
+Seat 1: PLR_9941188BL (button) mucked [4s 2c]
+Seat 2: PLR_2210172AZ (small blind) mucked [Jc 8s]
+Seat 3: Hero (big blind) mucked [As Jd]
+Seat 4: PLR_9726525LP showed [Qd Ad] and won ($1.52)
+Seat 5: PLR_8099566BK mucked [Kc Td]
+Seat 6: PLR_6403943XW mucked [Qh 2h]
+
+
+
+PokerStars Hand #3117069060: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:58:23
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($21.70 in chips)
+Seat 2: PLR_2210172AZ ($29.24 in chips)
+Seat 3: Hero ($22.95 in chips)
+Seat 4: PLR_9726525LP ($31.08 in chips)
+Seat 6: PLR_6403943XW ($31.48 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [8s Js]
+PLR_6403943XW: calls $0.25 
+PLR_9941188BL: calls $0.25 
+PLR_2210172AZ: raises $1.25 to $1.25
+Hero: folds
+PLR_9726525LP: folds
+Seat re-join
+PLR_6403943XW: calls $1 
+PLR_9941188BL: calls $1 
+*** FLOP *** [5h Jd Qd]
+PLR_6403943XW: checks
+PLR_9941188BL: checks
+PLR_2210172AZ: bets $2.55 
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+Uncalled bet ($2.55) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [6h 5d]
+PLR_2210172AZ collected $3.9 from pot
+*** SUMMARY ***
+Total pot $4.1 | Rake $0.20
+Board [5h Jd Qd]
+Seat 1: PLR_9941188BL mucked [7s 9h]
+Seat 2: PLR_2210172AZ (button) showed [6h 5d] and won ($3.9)
+Seat 3: Hero (small blind) mucked [8s Js]
+Seat 4: PLR_9726525LP (big blind) mucked [3d 2d]
+Seat 6: PLR_6403943XW mucked [6s 6c]
+
+
+
+PokerStars Hand #3117069226: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:59:04
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($20.45 in chips)
+Seat 2: PLR_2210172AZ ($31.89 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.83 in chips)
+Seat 5: PLR_8099566BK ($38.21 in chips)
+Seat 6: PLR_6403943XW ($30.23 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [3s Qs]
+PLR_6403943XW: calls $0.25 
+PLR_9941188BL: raises $1.10 to $1.10
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+Uncalled bet ($0.85) returned to PLR_9941188BL
+PLR_9941188BL: shows [Ac Kd]
+PLR_9941188BL collected $0.85 from pot
+*** SUMMARY ***
+Total pot $0.85 | Rake $0.00
+Seat 1: PLR_9941188BL showed [Ac Kd] and won ($0.85)
+Seat 2: PLR_2210172AZ mucked [7c 2c]
+Seat 3: Hero (button) mucked [3s Qs]
+Seat 4: PLR_9726525LP (small blind) mucked [3c 6h]
+Seat 5: PLR_8099566BK (big blind) mucked [5s 4c]
+Seat 6: PLR_6403943XW mucked [Ts Ah]
+
+
+
+PokerStars Hand #3117069309: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 10:59:24
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($21.05 in chips)
+Seat 2: PLR_2210172AZ ($31.89 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($37.96 in chips)
+Seat 6: PLR_6403943XW ($29.98 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [8d Th]
+PLR_9941188BL: raises $0.85 to $0.85
+PLR_2210172AZ: calls $0.85 
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+*** FLOP *** [Kd 5c 2h]
+PLR_9941188BL: checks
+PLR_2210172AZ: checks
+*** TURN *** [Kd 5c 2h] [2s]
+PLR_9941188BL: bets $1.02 
+PLR_2210172AZ: calls $1.02 
+*** RIVER *** [Kd 5c 2h 2s] [3c]
+PLR_9941188BL: checks
+PLR_2210172AZ: checks
+*** SHOW DOWN ***
+PLR_9941188BL: shows [8s 8h] (two pair, Eights and Kings)
+PLR_2210172AZ: Mucks [Ah 5h] (Two pair)
+PLR_9941188BL collected $3.89 from pot
+*** SUMMARY ***
+Total pot $4.09 | Rake $0.20
+Board [Kd 5c 2h 2s 3c]
+Seat 1: PLR_9941188BL showed [8s 8h] and won ($3.89) with two pair, Eights and Kings
+Seat 2: PLR_2210172AZ mucked [Ah 5h]
+Seat 3: Hero mucked [8d Th]
+Seat 4: PLR_9726525LP (button) mucked [Tc 6h]
+Seat 5: PLR_8099566BK (small blind) mucked [7s 2d]
+Seat 6: PLR_6403943XW (big blind) mucked [2c Kh]
+
+
+
+PokerStars Hand #3117069547: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:00:27
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($23.07 in chips)
+Seat 2: PLR_2210172AZ ($30.02 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($37.86 in chips)
+Seat 6: PLR_6403943XW ($29.73 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [4h 7c]
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: calls $0.15 
+PLR_9941188BL: checks
+*** FLOP *** [2h Td 2c]
+PLR_6403943XW: checks
+PLR_9941188BL: bets $0.25 
+PLR_6403943XW: calls $0.25 
+*** TURN *** [2h Td 2c] [7s]
+PLR_6403943XW: checks
+PLR_9941188BL: bets $0.50 
+PLR_6403943XW: calls $0.50 
+*** RIVER *** [2h Td 2c 7s] [Jd]
+PLR_6403943XW: checks
+PLR_9941188BL: checks
+*** SHOW DOWN ***
+PLR_6403943XW: shows [Jh Th] (two pair, Jacks and Sevens)
+PLR_9941188BL: shows [Kd Tc] (two pair, Tens and Kings)
+PLR_6403943XW collected $1.9 from pot
+*** SUMMARY ***
+Total pot $2 | Rake $0.10
+Board [2h Td 2c 7s Jd]
+Seat 1: PLR_9941188BL (big blind) showed [Kd Tc] and lost with two pair, Tens and Kings
+Seat 2: PLR_2210172AZ mucked [Qh 7h]
+Seat 3: Hero mucked [4h 7c]
+Seat 4: PLR_9726525LP mucked [9c 2d]
+Seat 5: PLR_8099566BK (button) mucked [6s 4d]
+Seat 6: PLR_6403943XW (small blind) showed [Jh Th] and won ($1.9) with two pair, Tens and Kings
+
+
+
+PokerStars Hand #3117069715: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:01:11
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($22.07 in chips)
+Seat 2: PLR_2210172AZ ($30.02 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($37.86 in chips)
+Seat 6: PLR_6403943XW ($30.63 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [9c 4h]
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.65 
+PLR_2210172AZ: folds
+*** FLOP *** [3s 3d 8c]
+PLR_9941188BL: checks
+PLR_8099566BK: bets $1.12 
+PLR_9941188BL: folds
+Uncalled bet ($1.12) returned to PLR_8099566BK
+PLR_8099566BK: shows [5h 5c]
+PLR_8099566BK collected $1.67 from pot
+*** SUMMARY ***
+Total pot $1.75 | Rake $0.08
+Board [3s 3d 8c]
+Seat 1: PLR_9941188BL (small blind) mucked [Qd Tc]
+Seat 2: PLR_2210172AZ (big blind) mucked [7c 8h]
+Seat 3: Hero mucked [9c 4h]
+Seat 4: PLR_9726525LP mucked [2s 3c]
+Seat 5: PLR_8099566BK showed [5h 5c] and won ($1.67)
+Seat 6: PLR_6403943XW (button) mucked [2c 3h]
+
+
+
+PokerStars Hand #3117069923: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:02:03
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($21.32 in chips)
+Seat 2: PLR_2210172AZ ($29.77 in chips)
+Seat 3: Hero ($22.85 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($38.78 in chips)
+Seat 6: PLR_6403943XW ($30.63 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [5h 3s]
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: calls $0.25 
+PLR_9941188BL: calls $0.25 
+PLR_2210172AZ: raises $1.15 to $1.25
+Hero: folds
+PLR_6403943XW: calls $1 
+PLR_9941188BL: calls $1 
+*** FLOP *** [Ah 7s Ac]
+PLR_2210172AZ: bets $2.25 
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+Uncalled bet ($2.25) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [Qs Kc]
+PLR_2210172AZ collected $3.8 from pot
+*** SUMMARY ***
+Total pot $4 | Rake $0.20
+Board [Ah 7s Ac]
+Seat 1: PLR_9941188BL (button) mucked [2s 2h]
+Seat 2: PLR_2210172AZ (small blind) showed [Qs Kc] and won ($3.8)
+Seat 3: Hero (big blind) mucked [5h 3s]
+Seat 4: PLR_9726525LP mucked [4c Qh]
+Seat 5: PLR_8099566BK mucked [6h 2d]
+Seat 6: PLR_6403943XW mucked [8c Tc]
+
+
+
+PokerStars Hand #3117070208: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:03:08
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($20.07 in chips)
+Seat 2: PLR_2210172AZ ($32.32 in chips)
+Seat 3: Hero ($22.60 in chips)
+Seat 4: PLR_9726525LP ($30.73 in chips)
+Seat 5: PLR_8099566BK ($38.78 in chips)
+Seat 6: PLR_6403943XW ($29.38 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Jh Qc]
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: raises $0.75 to $0.75
+Hero: folds
+PLR_9726525LP: calls $0.50 
+*** FLOP *** [4h 6s Ac]
+PLR_9726525LP: checks
+PLR_2210172AZ: bets $1.05 
+PLR_9726525LP: folds
+Uncalled bet ($1.05) returned to PLR_2210172AZ
+PLR_2210172AZ: shows [Jc Ks]
+PLR_2210172AZ collected $1.52 from pot
+*** SUMMARY ***
+Total pot $1.6 | Rake $0.08
+Board [4h 6s Ac]
+Seat 1: PLR_9941188BL mucked [5h 2c]
+Seat 2: PLR_2210172AZ (button) showed [Jc Ks] and won ($1.52)
+Seat 3: Hero (small blind) mucked [Jh Qc]
+Seat 4: PLR_9726525LP (big blind) mucked [Kc 5c]
+Seat 5: PLR_8099566BK mucked [8d Th]
+Seat 6: PLR_6403943XW mucked [As 6d]
+
+
+
+PokerStars Hand #3117070395: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:03:52
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($20.07 in chips)
+Seat 2: PLR_2210172AZ ($33.09 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.98 in chips)
+Seat 5: PLR_8099566BK ($38.78 in chips)
+Seat 6: PLR_6403943XW ($29.38 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [6d Ac]
+PLR_6403943XW: folds
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: calls $0.25 
+*** FLOP *** [Kd Kc Ks]
+PLR_8099566BK: checks
+PLR_9941188BL: bets $0.81 
+PLR_8099566BK: folds
+Uncalled bet ($0.81) returned to PLR_9941188BL
+PLR_9941188BL: shows [9c 8d]
+PLR_9941188BL collected $1.05 from pot
+*** SUMMARY ***
+Total pot $1.1 | Rake $0.05
+Board [Kd Kc Ks]
+Seat 1: PLR_9941188BL showed [9c 8d] and won ($1.05)
+Seat 2: PLR_2210172AZ mucked [Jc 7h]
+Seat 3: Hero (button) mucked [6d Ac]
+Seat 4: PLR_9726525LP (small blind) mucked [5s 4d]
+Seat 5: PLR_8099566BK (big blind) mucked [Th 8c]
+Seat 6: PLR_6403943XW mucked [2d 3s]
+
+
+
+PokerStars Hand #3117070650: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:04:50
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($20.62 in chips)
+Seat 2: PLR_2210172AZ ($33.09 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($38.28 in chips)
+Seat 6: PLR_6403943XW ($29.38 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [8c Qc]
+PLR_9941188BL: raises $0.50 to $0.50
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: calls $0.25 
+*** FLOP *** [Ts 9d Jd]
+PLR_6403943XW: checks
+PLR_9941188BL: checks
+*** TURN *** [Ts 9d Jd] [9s]
+PLR_6403943XW: checks
+PLR_9941188BL: bets $0.55 
+PLR_6403943XW: folds
+Uncalled bet ($0.55) returned to PLR_9941188BL
+PLR_9941188BL: shows [5d Ah]
+PLR_9941188BL collected $1.05 from pot
+*** SUMMARY ***
+Total pot $1.1 | Rake $0.05
+Board [Ts 9d Jd 9s]
+Seat 1: PLR_9941188BL showed [5d Ah] and won ($1.05)
+Seat 2: PLR_2210172AZ mucked [4s 9c]
+Seat 3: Hero mucked [8c Qc]
+Seat 4: PLR_9726525LP (button) mucked [9h 5s]
+Seat 5: PLR_8099566BK (small blind) mucked [2d 7d]
+Seat 6: PLR_6403943XW (big blind) mucked [2h 2c]
+
+
+
+PokerStars Hand #3117070833: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:05:31
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($21.17 in chips)
+Seat 2: PLR_2210172AZ ($33.09 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($38.18 in chips)
+Seat 6: PLR_6403943XW ($28.88 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [2c 6d]
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+PLR_6403943XW: raises $0.65 to $0.75
+PLR_9941188BL: calls $0.50 
+*** FLOP *** [9s 9d 5s]
+PLR_6403943XW: checks
+PLR_9941188BL: checks
+*** TURN *** [9s 9d 5s] [Qh]
+PLR_6403943XW: bets $0.75 
+PLR_9941188BL: calls $0.75 
+*** RIVER *** [9s 9d 5s Qh] [6s]
+PLR_6403943XW: bets $1.50 
+PLR_9941188BL: folds
+Uncalled bet ($1.50) returned to PLR_6403943XW
+PLR_6403943XW: shows [Qc Ac]
+PLR_6403943XW collected $2.85 from pot
+*** SUMMARY ***
+Total pot $3 | Rake $0.15
+Board [9s 9d 5s Qh 6s]
+Seat 1: PLR_9941188BL (big blind) mucked [Ah Td]
+Seat 2: PLR_2210172AZ mucked [8h Kd]
+Seat 3: Hero mucked [2c 6d]
+Seat 4: PLR_9726525LP mucked [Jc 2d]
+Seat 5: PLR_8099566BK (button) mucked [3c 6h]
+Seat 6: PLR_6403943XW (small blind) showed [Qc Ac] and won ($2.85)
+
+
+
+PokerStars Hand #3117071009: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:06:11
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($19.67 in chips)
+Seat 2: PLR_2210172AZ ($33.09 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($38.18 in chips)
+Seat 6: PLR_6403943XW ($30.23 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [7d Ac]
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: calls $0.75 
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+*** FLOP *** [2s Jc 4d]
+PLR_8099566BK: checks
+PLR_6403943XW: checks
+*** TURN *** [2s Jc 4d] [3h]
+PLR_8099566BK: bets $0.92 
+PLR_6403943XW: folds
+Uncalled bet ($0.92) returned to PLR_8099566BK
+PLR_8099566BK: shows [Ks Ah]
+PLR_8099566BK collected $1.76 from pot
+*** SUMMARY ***
+Total pot $1.85 | Rake $0.09
+Board [2s Jc 4d 3h]
+Seat 1: PLR_9941188BL (small blind) mucked [9s 5s]
+Seat 2: PLR_2210172AZ (big blind) mucked [6c Qh]
+Seat 3: Hero mucked [7d Ac]
+Seat 4: PLR_9726525LP mucked [9d 7c]
+Seat 5: PLR_8099566BK showed [Ks Ah] and won ($1.76)
+Seat 6: PLR_6403943XW (button) mucked [Qs Kd]
+
+
+
+PokerStars Hand #3117071272: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:07:10
+Table '#9933508' 6-max Seat #1 is the button
+Seat 1: PLR_9941188BL ($19.57 in chips)
+Seat 2: PLR_2210172AZ ($32.84 in chips)
+Seat 3: Hero ($22.50 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($39.19 in chips)
+Seat 6: PLR_6403943XW ($29.48 in chips)
+PLR_2210172AZ: posts small blind $0.10
+Hero: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [3s 7d]
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: calls $0.75 
+PLR_9941188BL: calls $0.75 
+PLR_2210172AZ: calls $0.65 
+Hero: folds
+*** FLOP *** [Kd Th 9d]
+PLR_2210172AZ: checks
+PLR_8099566BK: checks
+PLR_6403943XW: bets $1.62 
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+PLR_8099566BK: raises $3.24 to $3.24
+PLR_6403943XW: calls $1.62 
+*** TURN *** [Kd Th 9d] [2c]
+PLR_8099566BK: bets $6.86 
+PLR_6403943XW: folds
+Uncalled bet ($6.86) returned to PLR_8099566BK
+PLR_8099566BK: shows [Qs Jh]
+PLR_8099566BK collected $9.25 from pot
+*** SUMMARY ***
+Total pot $9.73 | Rake $0.48
+Board [Kd Th 9d 2c]
+Seat 1: PLR_9941188BL (button) mucked [8d 7s]
+Seat 2: PLR_2210172AZ (small blind) mucked [4h 4s]
+Seat 3: Hero (big blind) mucked [3s 7d]
+Seat 4: PLR_9726525LP mucked [9c 6c]
+Seat 5: PLR_8099566BK showed [Qs Jh] and won ($9.25)
+Seat 6: PLR_6403943XW mucked [4d Ad]
+
+
+
+PokerStars Hand #3117071561: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:08:12
+Table '#9933508' 6-max Seat #2 is the button
+Seat 1: PLR_9941188BL ($18.82 in chips)
+Seat 2: PLR_2210172AZ ($32.09 in chips)
+Seat 3: Hero ($22.25 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($44.45 in chips)
+Seat 6: PLR_6403943XW ($25.49 in chips)
+Hero: posts small blind $0.10
+PLR_9726525LP: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [5s 2c]
+PLR_8099566BK: folds
+PLR_6403943XW: folds
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: shows [5c As]
+Uncalled bet ($0.25) returned to PLR_9726525LP
+PLR_9726525LP collected $0.1 from pot
+*** SUMMARY ***
+Total pot $0.1 | Rake $0.00
+Seat 1: PLR_9941188BL mucked [8h 4c]
+Seat 2: PLR_2210172AZ (button) mucked [4d Td]
+Seat 3: Hero (small blind) mucked [5s 2c]
+Seat 4: PLR_9726525LP (big blind) showed [5c As] and won ($0.1)
+Seat 5: PLR_8099566BK mucked [Ks 5h]
+Seat 6: PLR_6403943XW mucked [4s 5d]
+
+
+
+PokerStars Hand #3117071634: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:08:30
+Table '#9933508' 6-max Seat #3 is the button
+Seat 1: PLR_9941188BL ($18.82 in chips)
+Seat 2: PLR_2210172AZ ($32.09 in chips)
+Seat 3: Hero ($22.15 in chips)
+Seat 4: PLR_9726525LP ($29.98 in chips)
+Seat 5: PLR_8099566BK ($44.45 in chips)
+Seat 6: PLR_6403943XW ($25.49 in chips)
+PLR_9726525LP: posts small blind $0.10
+PLR_8099566BK: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [7d 9c]
+PLR_6403943XW: calls $0.25 
+PLR_9941188BL: calls $0.25 
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: folds
+PLR_8099566BK: raises $0.50 to $0.75
+PLR_6403943XW: calls $0.50 
+PLR_9941188BL: calls $0.50 
+*** FLOP *** [Ah 3d Qs]
+PLR_8099566BK: checks
+PLR_6403943XW: checks 
+PLR_9941188BL: checks
+*** TURN *** [Ah 3d Qs] [9s]
+PLR_8099566BK: checks
+PLR_6403943XW: bets $1.42 
+PLR_9941188BL: folds
+PLR_8099566BK: folds
+Uncalled bet ($1.42) returned to PLR_6403943XW
+PLR_6403943XW: shows [Ad 4d]
+PLR_6403943XW collected $2.24 from pot
+*** SUMMARY ***
+Total pot $2.35 | Rake $0.11
+Board [Ah 3d Qs 9s]
+Seat 1: PLR_9941188BL mucked [7s 8h]
+Seat 2: PLR_2210172AZ mucked [6c Ks]
+Seat 3: Hero (button) mucked [7d 9c]
+Seat 4: PLR_9726525LP (small blind) mucked [Qh 2d]
+Seat 5: PLR_8099566BK (big blind) mucked [2h 2s]
+Seat 6: PLR_6403943XW showed [Ad 4d] and won ($2.24)
+
+
+
+PokerStars Hand #3117072097: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:10:15
+Table '#9933508' 6-max Seat #4 is the button
+Seat 1: PLR_9941188BL ($18.07 in chips)
+Seat 2: PLR_2210172AZ ($32.09 in chips)
+Seat 3: Hero ($22.15 in chips)
+Seat 4: PLR_9726525LP ($29.88 in chips)
+Seat 5: PLR_8099566BK ($43.70 in chips)
+Seat 6: PLR_6403943XW ($26.98 in chips)
+PLR_8099566BK: posts small blind $0.10
+PLR_6403943XW: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Jh Ah]
+PLR_9941188BL: folds
+PLR_2210172AZ: folds
+Hero: raises $0.75 to $0.75
+PLR_9726525LP: calls $0.75 
+PLR_8099566BK: calls $0.65 
+PLR_6403943XW: folds
+*** FLOP *** [7s 7h 9h]
+PLR_8099566BK: checks
+Hero: checks
+PLR_9726525LP: bets $1.75 
+PLR_8099566BK: calls $1.75 
+Hero: calls $1.75 
+*** TURN *** [7s 7h 9h] [4h]
+PLR_8099566BK: checks
+Hero: checks
+PLR_9726525LP: checks
+*** RIVER *** [7s 7h 9h 4h] [7c]
+PLR_8099566BK: checks
+Hero: checks
+PLR_9726525LP: bets $27.38 and is all-in
+PLR_8099566BK: folds
+Hero: folds
+Uncalled bet ($27.38) returned to PLR_9726525LP
+PLR_9726525LP: shows [7d Qd]
+PLR_9726525LP collected $7.37 from pot
+*** SUMMARY ***
+Total pot $7.75 | Rake $0.38
+Board [7s 7h 9h 4h 7c]
+Seat 1: PLR_9941188BL mucked [6d 5c]
+Seat 2: PLR_2210172AZ mucked [8h Ks]
+Seat 3: Hero mucked [Jh Ah]
+Seat 4: PLR_9726525LP (button) showed [7d Qd] and won ($7.37)
+Seat 5: PLR_8099566BK (small blind) mucked [Kh Qs]
+Seat 6: PLR_6403943XW (big blind) mucked [6h 3s]
+
+
+
+PokerStars Hand #3117072505: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:11:49
+Table '#9933508' 6-max Seat #5 is the button
+Seat 1: PLR_9941188BL ($18.07 in chips)
+Seat 2: PLR_2210172AZ ($32.09 in chips)
+Seat 3: Hero ($19.65 in chips)
+Seat 4: PLR_9726525LP ($34.75 in chips)
+Seat 5: PLR_8099566BK ($41.20 in chips)
+Seat 6: PLR_6403943XW ($26.73 in chips)
+PLR_6403943XW: posts small blind $0.10
+PLR_9941188BL: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [Qs 3s]
+PLR_2210172AZ: folds
+Hero: folds
+PLR_9726525LP: raises $0.75 to $0.75
+PLR_8099566BK: calls $0.75 
+PLR_6403943XW: folds
+PLR_9941188BL: calls $0.50 
+*** FLOP *** [4s Qc 5h]
+PLR_9941188BL: checks
+PLR_9726525LP: checks
+PLR_8099566BK: checks
+*** TURN *** [4s Qc 5h] [9h]
+PLR_9941188BL: bets $1.53 
+PLR_9726525LP: folds
+PLR_8099566BK: folds
+Uncalled bet ($1.53) returned to PLR_9941188BL
+PLR_9941188BL: shows [6h Qh]
+PLR_9941188BL collected $2.24 from pot
+*** SUMMARY ***
+Total pot $2.35 | Rake $0.11
+Board [4s Qc 5h 9h]
+Seat 1: PLR_9941188BL (big blind) showed [6h Qh] and won ($2.24)
+Seat 2: PLR_2210172AZ mucked [7c Jh]
+Seat 3: Hero mucked [Qs 3s]
+Seat 4: PLR_9726525LP mucked [As Tc]
+Seat 5: PLR_8099566BK (button) mucked [8c Ts]
+Seat 6: PLR_6403943XW (small blind) mucked [2h 3h]
+
+
+
+PokerStars Hand #3117072814: Hold'em No Limit ($0.10/$0.25) - 2015/08/18 11:13:04
+Table '#9933508' 6-max Seat #6 is the button
+Seat 1: PLR_9941188BL ($19.56 in chips)
+Seat 2: PLR_2210172AZ ($32.09 in chips)
+Seat 3: Hero ($19.65 in chips)
+Seat 4: PLR_9726525LP ($34 in chips)
+Seat 5: PLR_8099566BK ($40.45 in chips)
+Seat 6: PLR_6403943XW ($26.63 in chips)
+PLR_9941188BL: posts small blind $0.10
+PLR_2210172AZ: posts big blind $0.25
+*** HOLE CARDS ***
+Dealt to Hero [5h Kh]
+Hero: folds
+PLR_9726525LP: folds (disconnect)
+PLR_8099566BK: raises $0.75 to $0.75
+PLR_6403943XW: folds
+PLR_9941188BL: folds 
+PLR_2210172AZ: folds
+Uncalled bet ($0.50) returned to PLR_8099566BK
+PLR_8099566BK: shows [Jc 8c]
+PLR_8099566BK collected $0.6 from pot
+*** SUMMARY ***
+Total pot $0.6 | Rake $0.00
+Seat 1: PLR_9941188BL (small blind) mucked [8d Tc]
+Seat 2: PLR_2210172AZ (big blind) mucked [Js 3d]
+Seat 3: Hero mucked [5h Kh]
+Seat 4: PLR_9726525LP mucked [Jd Ad]
+Seat 5: PLR_8099566BK showed [Jc 8c] and won ($0.6)
+Seat 6: PLR_6403943XW (button) mucked [5c 9c]
+
+
+
+

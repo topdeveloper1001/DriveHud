@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6190234509">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819373875</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:08</duration>  
+	          <gamecount>19</gamecount>  
+	          <startdate>2014-01-29 16:25:42</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>3,680</bets>  
+	          <wins>4,280</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,400</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5452333516">
+		 <general>
+		  <startdate>2014-01-29 16:25:42</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="800" dealer="0" win="60" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ceres0511" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="4" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">C3 H3</cards><action no="5" player="ceres0511" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">H4 SA</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="hlatkij">D7 DJ</cards><action no="3" player="hlatkij" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 CQ H8</cards><action no="7" player="ceres0511" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards><action no="10" player="ceres0511" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="13" player="ceres0511" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="15" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452333879">
+		 <general>
+		  <startdate>2014-01-29 16:26:30</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="800" dealer="0" win="85" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="840" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="hlatkij" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="3" player="7803" type="3" sum="20" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="4" player="ceres0511" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SK H9</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="6" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ DJ S7</cards><action no="8" player="7803" type="5" sum="35" cards=""/><action no="7" player="hlatkij" type="4" sum="0" cards=""/><action no="9" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452334133">
+		 <general>
+		  <startdate>2014-01-29 16:27:02</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="830" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="780" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="820" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="7803" type="2" sum="20" cards="[cards]"/><action no="1" player="hlatkij" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="6" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="3" player="ceres0511" type="23" sum="60" cards=""/><cards type="Pocket" player="WorstCard">C7 D8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="5" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452334299">
+		 <general>
+		  <startdate>2014-01-29 16:27:24</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="810" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="810" dealer="0" win="40" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="810" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="7803" type="1" sum="10" cards="[cards]"/><action no="2" player="ceres0511" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">C7 CQ</cards><action no="5" player="7803" type="3" sum="10" cards=""/><cards type="Pocket" player="ceres0511">SA D7</cards><action no="6" player="ceres0511" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DA H6</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="4" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK SJ C2</cards><action no="7" player="7803" type="4" sum="0" cards=""/><action no="8" player="ceres0511" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="9" player="7803" type="4" sum="0" cards=""/><action no="10" player="ceres0511" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards><action no="11" player="7803" type="4" sum="0" cards=""/><action no="12" player="ceres0511" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452334870">
+		 <general>
+		  <startdate>2014-01-29 16:28:34</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="830" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="810" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ceres0511" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="4" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="5" player="ceres0511" type="23" sum="60" cards=""/><cards type="Pocket" player="WorstCard">D6 S10</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="3" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452335029">
+		 <general>
+		  <startdate>2014-01-29 16:28:54</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="860" dealer="1" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="740" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="810" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="hlatkij" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="3" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="4" player="ceres0511" type="23" sum="60" cards=""/><cards type="Pocket" player="WorstCard">DK D10</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="6" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452351168">
+		 <general>
+		  <startdate>2014-01-29 16:29:12</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="790" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="905" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="725" dealer="1" win="0" bet="150" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="780" dealer="0" win="360" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="7803" type="2" sum="30" cards="[cards]"/><action no="1" player="hlatkij" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="6" player="7803" type="3" sum="30" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="3" player="ceres0511" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HK S8</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="hlatkij">CK H9</cards><action no="5" player="hlatkij" type="3" sum="45" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 C5 HQ</cards><action no="8" player="7803" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="7" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards><action no="11" player="7803" type="4" sum="0" cards=""/><action no="14" player="7803" type="0" sum="0" cards=""/><action no="12" player="WorstCard" type="5" sum="90" cards=""/><action no="10" player="hlatkij" type="4" sum="0" cards=""/><action no="13" player="hlatkij" type="3" sum="90" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards><action no="16" player="WorstCard" type="4" sum="0" cards=""/><action no="15" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452351646">
+		 <general>
+		  <startdate>2014-01-29 16:30:08</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="730" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="905" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="575" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="990" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="7803" type="15" sum="5" cards="[cards]"/><action no="5" player="7803" type="1" sum="25" cards="[cards]"/><action no="2" player="ceres0511" type="15" sum="5" cards="[cards]"/><action no="6" player="ceres0511" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="hlatkij" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="9" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><cards type="Pocket" player="WorstCard">CK S8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="8" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452351747">
+		 <general>
+		  <startdate>2014-01-29 16:30:22</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="700" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="945" dealer="0" win="170" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="570" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="985" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="7803" type="15" sum="5" cards="[cards]"/><action no="1" player="ceres0511" type="15" sum="5" cards="[cards]"/><action no="5" player="ceres0511" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="hlatkij" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="8" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="9" player="ceres0511" type="23" sum="100" cards=""/><cards type="Pocket" player="WorstCard">C9 H3</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="7" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452351947">
+		 <general>
+		  <startdate>2014-01-29 16:30:44</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="695" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="1,010" dealer="1" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="515" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="980" dealer="0" win="245" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="7803" type="15" sum="5" cards="[cards]"/><action no="4" player="ceres0511" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="hlatkij" type="15" sum="5" cards="[cards]"/><action no="6" player="hlatkij" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="7" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">D7 C8</cards><action no="8" player="ceres0511" type="23" sum="100" cards=""/><cards type="Pocket" player="WorstCard">S9 C7</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">HA D5</cards><action no="10" player="hlatkij" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA D6 H6</cards><action no="12" player="ceres0511" type="4" sum="0" cards=""/><action no="11" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="14" player="ceres0511" type="4" sum="0" cards=""/><action no="13" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="16" player="ceres0511" type="4" sum="0" cards=""/><action no="15" player="hlatkij" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452352244">
+		 <general>
+		  <startdate>2014-01-29 16:31:22</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="690" dealer="0" win="0" bet="485" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="905" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="485" dealer="1" win="1,005" bet="485" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="1,120" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="7803" type="15" sum="5" cards="[cards]"/><action no="6" player="7803" type="2" sum="50" cards="[cards]"/><action no="3" player="ceres0511" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="hlatkij" type="15" sum="5" cards="[cards]"/><action no="5" player="hlatkij" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">S10 HA</cards><action no="10" player="7803" type="3" sum="430" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="7" player="ceres0511" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H9 DQ</cards><action no="8" player="WorstCard" type="23" sum="480" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="9" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 D5 D8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards>
+	</round>
+	
+		</game><game gamecode="5452352537">
+		 <general>
+		  <startdate>2014-01-29 16:31:58</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="205" dealer="0" win="335" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="900" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,005" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="1,090" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="7803" type="15" sum="10" cards="[cards]"/><action no="5" player="7803" type="1" sum="50" cards="[cards]"/><action no="2" player="ceres0511" type="15" sum="10" cards="[cards]"/><action no="6" player="ceres0511" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="hlatkij" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="9" player="7803" type="7" sum="145" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="10" player="ceres0511" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H10 S5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="8" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452352671">
+		 <general>
+		  <startdate>2014-01-29 16:32:15</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="335" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="790" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="995" dealer="0" win="190" bet="110" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="1,080" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="7803" type="15" sum="10" cards="[cards]"/><action no="1" player="ceres0511" type="15" sum="10" cards="[cards]"/><action no="5" player="ceres0511" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="hlatkij" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">X X</cards><action no="8" player="7803" type="0" sum="0" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="9" player="ceres0511" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK C4</cards><cards type="Pocket" player="hlatkij">X X</cards><action no="7" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452352794">
+		 <general>
+		  <startdate>2014-01-29 16:32:30</startdate>		  
+		  <players>
+		   <player seat="2" name="7803" chips="325" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="ceres0511" chips="730" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,075" dealer="0" win="1,520" bet="1,075" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="1,070" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="7803" type="15" sum="10" cards="[cards]"/><action no="4" player="ceres0511" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="hlatkij" type="15" sum="10" cards="[cards]"/><action no="6" player="hlatkij" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="7803">D8 DQ</cards><action no="7" player="7803" type="23" sum="315" cards=""/><cards type="Pocket" player="ceres0511">X X</cards><action no="8" player="ceres0511" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK DA</cards><action no="9" player="WorstCard" type="23" sum="1,065" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="10" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 SQ H6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards>
+	</round>
+	
+		</game><game gamecode="5452353041">
+		 <general>
+		  <startdate>2014-01-29 16:33:00</startdate>		  
+		  <players>
+		   <player seat="4" name="ceres0511" chips="720" dealer="0" win="840" bet="720" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,520" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="960" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ceres0511" type="15" sum="10" cards="[cards]"/><action no="5" player="ceres0511" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="hlatkij" type="15" sum="10" cards="[cards]"/><action no="4" player="hlatkij" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ceres0511">X X</cards><action no="8" player="ceres0511" type="23" sum="710" cards=""/><cards type="Pocket" player="WorstCard">C9 S7</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="7" player="hlatkij" type="3" sum="50" cards=""/><action no="9" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452353258">
+		 <general>
+		  <startdate>2014-01-29 16:33:26</startdate>		  
+		  <players>
+		   <player seat="4" name="ceres0511" chips="840" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,510" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="850" dealer="1" win="580" bet="410" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ceres0511" type="15" sum="10" cards="[cards]"/><action no="4" player="ceres0511" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="hlatkij" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ceres0511">X X</cards><action no="7" player="ceres0511" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 S10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="6" player="hlatkij" type="23" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452353464">
+		 <general>
+		  <startdate>2014-01-29 16:33:52</startdate>		  
+		  <players>
+		   <player seat="4" name="ceres0511" chips="780" dealer="1" win="1,035" bet="780" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,400" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="1,020" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="ceres0511" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="hlatkij" type="15" sum="15" cards="[cards]"/><action no="5" player="hlatkij" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ceres0511">X X</cards><action no="6" player="ceres0511" type="23" sum="765" cards=""/><cards type="Pocket" player="WorstCard">H6 H10</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="8" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452353595">
+		 <general>
+		  <startdate>2014-01-29 16:34:08</startdate>		  
+		  <players>
+		   <player seat="4" name="ceres0511" chips="1,035" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,310" dealer="1" win="1,565" bet="1,310" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="855" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="ceres0511" type="15" sum="15" cards="[cards]"/><action no="5" player="ceres0511" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="hlatkij" type="15" sum="15" cards="[cards]"/><action no="4" player="hlatkij" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ceres0511">X X</cards><action no="8" player="ceres0511" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 D2</cards><action no="6" player="WorstCard" type="23" sum="1,295" cards=""/><cards type="Pocket" player="hlatkij">X X</cards><action no="7" player="hlatkij" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452353757">
+		 <general>
+		  <startdate>2014-01-29 16:34:27</startdate>		  
+		  <players>
+		   <player seat="4" name="ceres0511" chips="870" dealer="0" win="1,800" bet="870" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,565" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6190234509"/><player seat="9" name="hlatkij" chips="765" dealer="1" win="0" bet="765" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ceres0511" type="15" sum="15" cards="[cards]"/><action no="4" player="ceres0511" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="hlatkij" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="ceres0511">H9 DA</cards><action no="7" player="ceres0511" type="7" sum="780" cards=""/><cards type="Pocket" player="WorstCard">D8 DQ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="hlatkij">CA C5</cards><action no="6" player="hlatkij" type="23" sum="750" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 HK H4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards>
+	</round>
+	
+		</game>  
+	</session>

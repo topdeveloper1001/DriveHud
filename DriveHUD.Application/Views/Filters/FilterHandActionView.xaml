@@ -1,0 +1,557 @@
+﻿<UserControl x:Class="DriveHUD.Application.Views.FilterHandActionView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
+             xmlns:ac="clr-namespace:DriveHUD.Controls.ActionTreeControl;assembly=DriveHUD.Controls"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:enum="clr-namespace:HandHistories.Objects.Actions;assembly=HandHistories.Objects"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:ab="clr-namespace:DriveHUD.Common.Wpf.AttachedBehaviors;assembly=DriveHUD.Common.Wpf"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="1200">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/DriveHUD.Common.Wpf;component/ControlStyles/Filters/FilterHandActionTemplate.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
+
+            <sys:String x:Key="ChooseHand">Choose your hand first</sys:String>
+            <sys:String x:Key="ChooseOption">Choose additional actions</sys:String>
+
+            <Style x:Key="RaiseStyle" TargetType="ac:ActionTreeNode">
+                <Setter Property="ContentBackgroundBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#324529" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentBorderThickness" Value="2"/>
+                <Setter  Property="ContentBorderBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#6DAD32"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="CallStyle" TargetType="ac:ActionTreeNode">
+                <Setter Property="ContentBackgroundBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#242F41" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentBorderThickness" Value="2"/>
+                <Setter  Property="ContentBorderBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#325398"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="CheckStyle" TargetType="ac:ActionTreeNode">
+                <Setter Property="ContentBackgroundBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#3A3B3F" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentBorderThickness" Value="2"/>
+                <Setter  Property="ContentBorderBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#9A9A9A"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="BetStyle" TargetType="ac:ActionTreeNode">
+                <Setter Property="ContentBackgroundBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#3E2528" />
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ContentBorderThickness" Value="2"/>
+                <Setter  Property="ContentBorderBrush">
+                    <Setter.Value>
+                        <SolidColorBrush Color="#9A3432"/>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <x:Array x:Key="PreflopItems" Type="ac:ActionTreeNode">
+                <ac:ActionTreeNode UserContent="R">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource RaiseStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference PreflopRaiseButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="ac:ActionTreeNode.IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="C">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource CallStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference PreflopCallButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="ac:ActionTreeNode.IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="Ch">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource CheckStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference PreflopCheckButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="ac:ActionTreeNode.IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="Empty" IsEmptyNode="True"/>
+            </x:Array>
+
+            <x:Array x:Key="FlopItems" Type="ac:ActionTreeNode">
+                <ac:ActionTreeNode UserContent="C">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource CallStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference FlopCallButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="R">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource RaiseStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference FlopRaiseButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="Ch">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource CheckStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference FlopCheckButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="B">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource BetStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference FlopBetButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+            </x:Array>
+
+            <x:Array x:Key="TurnItems" Type="ac:ActionTreeNode">
+                <ac:ActionTreeNode UserContent="R">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource RaiseStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference TurnRaiseButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="C">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource CallStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference TurnCallButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="Ch">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource CheckStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference TurnCheckButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="B">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource BetStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference TurnBetButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+            </x:Array>
+
+            <x:Array x:Key="RiverItems" Type="ac:ActionTreeNode">
+                <ac:ActionTreeNode UserContent="C">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource CallStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference RiverCallButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="R">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource RaiseStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference RiverRaiseButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="Ch">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource CheckStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference RiverCheckButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+                <ac:ActionTreeNode UserContent="B">
+                    <ac:ActionTreeNode.Style>
+                        <Style TargetType="ac:ActionTreeNode" BasedOn="{StaticResource BetStyle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Source={x:Reference RiverBetButton}, Path=IsSelected}" Value="True">
+                                    <Setter Property="IsSelected" Value="True" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </ac:ActionTreeNode.Style>
+                </ac:ActionTreeNode>
+            </x:Array>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid Background="{StaticResource GridStripBackground}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--#region Headers-->
+        <StackPanel Margin="0">
+            <Border>
+                <TextBlock x:Name="PreflopTextBlock" Text="{ResX Key=Common_Preflop}" Foreground="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=BorderBrush}" Margin="0 10" HorizontalAlignment="Center" Style="{StaticResource Title_H1}" />
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="{StaticResource BackgroundBlueBrush}" />
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="BorderBrush" Value="White" />
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding ElementName=PreflopCallButton, Path=IsSelected}" Value="False"/>
+                                    <Condition Binding="{Binding ElementName=PreflopRaiseButton, Path=IsSelected}" Value="False" />
+                                    <Condition Binding="{Binding ElementName=PreflopCheckButton, Path=IsSelected}" Value="False" />
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource ForegroundBrush}" />
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <Separator Margin="0 0 0 10"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <Border>
+                <TextBlock Text="{ResX Key=Common_Flop}" Foreground="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=BorderBrush}" Margin="0 10" HorizontalAlignment="Center" Style="{StaticResource Title_H1}"  />
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="{StaticResource BackgroundBlueBrush}" />
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="BorderBrush" Value="White" />
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding ElementName=FlopCallButton, Path=IsSelected}" Value="False"/>
+                                    <Condition Binding="{Binding ElementName=FlopRaiseButton, Path=IsSelected}" Value="False" />
+                                    <Condition Binding="{Binding ElementName=FlopCheckButton, Path=IsSelected}" Value="False" />
+                                    <Condition Binding="{Binding ElementName=FlopBetButton, Path=IsSelected}" Value="False" />
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource ForegroundBrush}" />
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <Separator Margin="0 0 0 10"/>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <Border>
+                <TextBlock Text="{ResX Key=Common_Turn}" Foreground="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=BorderBrush}" Margin="0 10" HorizontalAlignment="Center" Style="{StaticResource Title_H1}"  />
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="{StaticResource BackgroundBlueBrush}" />
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="BorderBrush" Value="White" />
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding ElementName=TurnCallButton, Path=IsSelected}" Value="False"/>
+                                    <Condition Binding="{Binding ElementName=TurnRaiseButton, Path=IsSelected}" Value="False" />
+                                    <Condition Binding="{Binding ElementName=TurnCheckButton, Path=IsSelected}" Value="False" />
+                                    <Condition Binding="{Binding ElementName=TurnBetButton, Path=IsSelected}" Value="False" />
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource ForegroundBrush}" />
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <Separator Margin="0 0 0 10"/>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <Border>
+                <TextBlock Text="{ResX Key=Common_River}" Foreground="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=BorderBrush}" Margin="0 10" HorizontalAlignment="Center" Style="{StaticResource Title_H1}" />
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Setter Property="Background" Value="{StaticResource BackgroundBlueBrush}" />
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="BorderBrush" Value="White" />
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding ElementName=RiverCallButton, Path=IsSelected}" Value="False"/>
+                                    <Condition Binding="{Binding ElementName=RiverRaiseButton, Path=IsSelected}" Value="False" />
+                                    <Condition Binding="{Binding ElementName=RiverCheckButton, Path=IsSelected}" Value="False" />
+                                    <Condition Binding="{Binding ElementName=RiverBetButton, Path=IsSelected}" Value="False" />
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="Background" Value="Transparent"/>
+                                <Setter Property="BorderBrush" Value="{StaticResource ForegroundBrush}" />
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <Separator Margin="0 0 0 10"/>
+        </StackPanel>
+        <!--#endregion-->
+
+        <!--#region Buttons-->
+        <ListBox Grid.Column="0" SelectionMode="Single" Grid.Row="1" Style="{StaticResource ThreeRadioButtonListBoxStyle}" Margin="10 0">
+            <ListBoxItem x:Name="PreflopRaiseButton" Content="{ResX Key=Common_Raise}"
+                         IsSelected="{Binding Path=FilterModel.PreflopButtons[0].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="PreflopCallButton" Content="{ResX Key=Common_Call}"
+                         IsSelected="{Binding Path=FilterModel.PreflopButtons[1].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="PreflopCheckButton"  Content="{ResX Key=Common_Check}"
+                         IsSelected="{Binding Path=FilterModel.PreflopButtons[2].IsChecked, Mode=TwoWay}"/>
+            <i:Interaction.Behaviors>
+                <ab:ListBoxSingleClickUnselectBehavior />
+            </i:Interaction.Behaviors>
+        </ListBox>
+
+        <ListBox Grid.Column="1" Grid.Row="1" Style="{StaticResource FourRadioButtonListBoxStyle}" Margin="10 0">
+            <ListBoxItem x:Name="FlopCheckButton" Content="{ResX Key=Common_Check}"
+                          IsSelected="{Binding Path=FilterModel.FlopButtons[0].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="FlopBetButton" Content="{ResX Key=Common_Bet}"
+                          IsSelected="{Binding Path=FilterModel.FlopButtons[1].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="FlopCallButton" Content="{ResX Key=Common_Call}" 
+                          IsSelected="{Binding Path=FilterModel.FlopButtons[2].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="FlopRaiseButton" Content="{ResX Key=Common_Raise}" 
+                          IsSelected="{Binding Path=FilterModel.FlopButtons[3].IsChecked, Mode=TwoWay}"/>
+            <i:Interaction.Behaviors>
+                <ab:ListBoxSingleClickUnselectBehavior />
+            </i:Interaction.Behaviors>
+        </ListBox>
+
+        <ListBox Grid.Column="2" Grid.Row="1"  Style="{StaticResource FourRadioButtonListBoxStyle}" Margin="10 0">
+            <ListBoxItem x:Name="TurnCheckButton" Content="{ResX Key=Common_Check}" 
+                          IsSelected="{Binding Path=FilterModel.TurnButtons[0].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="TurnBetButton" Content="{ResX Key=Common_Bet}" 
+                          IsSelected="{Binding Path=FilterModel.TurnButtons[1].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="TurnCallButton" Content="{ResX Key=Common_Call}" 
+                          IsSelected="{Binding Path=FilterModel.TurnButtons[2].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="TurnRaiseButton" Content="{ResX Key=Common_Raise}" 
+                          IsSelected="{Binding Path=FilterModel.TurnButtons[3].IsChecked, Mode=TwoWay}"/>
+            <i:Interaction.Behaviors>
+                <ab:ListBoxSingleClickUnselectBehavior />
+            </i:Interaction.Behaviors>
+        </ListBox>
+
+        <ListBox Grid.Column="3" Grid.Row="1" Style="{StaticResource FourRadioButtonListBoxStyle}" Margin="10 0">
+            <ListBoxItem x:Name="RiverCheckButton" Content="{ResX Key=Common_Check}"
+                          IsSelected="{Binding Path=FilterModel.RiverButtons[0].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="RiverBetButton" Content="{ResX Key=Common_Bet}"
+                          IsSelected="{Binding Path=FilterModel.RiverButtons[1].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="RiverCallButton" Content="{ResX Key=Common_Call}"
+                          Selector.IsSelected="{Binding Path=FilterModel.RiverButtons[2].IsChecked, Mode=TwoWay}"/>
+            <ListBoxItem x:Name="RiverRaiseButton" Content="{ResX Key=Common_Raise}"
+                          IsSelected="{Binding Path=FilterModel.RiverButtons[3].IsChecked, Mode=TwoWay}"/>
+            <i:Interaction.Behaviors>
+                <ab:ListBoxSingleClickUnselectBehavior />
+            </i:Interaction.Behaviors>
+        </ListBox>
+        <!--#endregion-->
+
+        <!--#region Dropdowns -->
+
+        <StackPanel Grid.Column="0" Grid.Row="2" Margin="10 0">
+            <Grid>
+                <control:ComboBoxEx>
+                    <control:ComboBoxEx.Style>
+                        <Style TargetType="{x:Type control:ComboBoxEx}" BasedOn="{StaticResource HandActionComboBoxStyle}">
+                            <Setter Property="Watermark" Value="{StaticResource ChooseHand}" />
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding ElementName=PreflopCallButton, Path=IsSelected}" Value="True">
+                                    <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                    <Setter Property="ItemsSource" Value="{Binding FilterModel.PreflopCallItems}" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=PreflopRaiseButton, Path=IsSelected}" Value="True">
+                                    <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                    <Setter Property="ItemsSource" Value="{Binding FilterModel.PreflopRaiseItems}" />
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding ElementName=PreflopCheckButton, Path=IsSelected}" Value="True">
+                                    <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                    <Setter Property="ItemsSource" Value="{Binding FilterModel.PreflopCheckItems}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </control:ComboBoxEx.Style>
+                </control:ComboBoxEx>
+            </Grid>
+            <Separator />
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="2" Margin="10 0">
+            <control:ComboBoxEx>
+                <control:ComboBoxEx.Style>
+                    <Style TargetType="control:ComboBoxEx" BasedOn="{StaticResource HandActionComboBoxStyle}">
+                        <Setter Property="Watermark" Value="{StaticResource ChooseHand}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=FlopCallButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.FlopCallItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=FlopRaiseButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.FlopRaiseItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=FlopCheckButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.FlopCheckItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=FlopBetButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.FlopBetItems}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </control:ComboBoxEx.Style>
+            </control:ComboBoxEx>
+            <Separator />
+        </StackPanel>
+
+        <StackPanel Grid.Column="2" Grid.Row="2" Margin="10 0">
+            <control:ComboBoxEx>
+                <control:ComboBoxEx.Style>
+                    <Style TargetType="control:ComboBoxEx" BasedOn="{StaticResource HandActionComboBoxStyle}">
+                        <Setter Property="Watermark" Value="{StaticResource ChooseHand}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=TurnCallButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.TurnCallItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=TurnRaiseButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.TurnRaiseItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=TurnCheckButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.TurnCheckItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=TurnBetButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.TurnBetItems}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </control:ComboBoxEx.Style>
+            </control:ComboBoxEx>
+            <Separator />
+        </StackPanel>
+
+        <StackPanel Grid.Column="3" Grid.Row="2" Margin="10 0">
+            <control:ComboBoxEx>
+                <control:ComboBoxEx.Style>
+                    <Style TargetType="control:ComboBoxEx" BasedOn="{StaticResource HandActionComboBoxStyle}">
+                        <Setter Property="Watermark" Value="{StaticResource ChooseHand}" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ElementName=RiverCallButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.RiverCallItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=RiverRaiseButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.RiverRaiseItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=RiverCheckButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.RiverCheckItems}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ElementName=RiverBetButton, Path=IsSelected}" Value="True">
+                                <Setter Property="Watermark" Value="{StaticResource ChooseOption}" />
+                                <Setter Property="ItemsSource" Value="{Binding FilterModel.RiverBetItems}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </control:ComboBoxEx.Style>
+            </control:ComboBoxEx>
+            <Separator />
+        </StackPanel>
+        <!--#endregion-->
+
+        <!--#region TreeView-->
+        <ac:ActionTree x:Name="ActionTree0" ItemsSource="{StaticResource PreflopItems}" RightTree="{Binding ElementName=ActionTree1}"  Grid.Column="0" Grid.Row="3"/>
+        <ac:ActionTree x:Name="ActionTree1" ItemsSource="{StaticResource FlopItems}" LeftTree="{Binding ElementName=ActionTree0}" RightTree="{Binding ElementName=ActionTree2}" Grid.Column="1" Grid.Row="3"/>
+        <ac:ActionTree x:Name="ActionTree2" ItemsSource="{StaticResource TurnItems}" LeftTree="{Binding ElementName=ActionTree1}" RightTree="{Binding ElementName=ActionTree3}" Grid.Column="2" Grid.Row="3"/>
+        <ac:ActionTree x:Name="ActionTree3" ItemsSource="{StaticResource RiverItems}" LeftTree="{Binding ElementName=ActionTree2}" Grid.Column="3" Grid.Row="3"/>
+        <!--#endregion-->
+    </Grid>
+
+</UserControl>

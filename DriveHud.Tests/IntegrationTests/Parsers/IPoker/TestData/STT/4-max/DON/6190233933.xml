@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6190233933">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819373741</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:08</duration>  
+	          <gamecount>16</gamecount>  
+	          <startdate>2014-01-29 16:24:29</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>1,415</bets>  
+	          <wins>1,420</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>805</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5452332929">
+		 <general>
+		  <startdate>2014-01-29 16:24:29</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="800" dealer="0" win="0" bet="350" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="800" dealer="0" win="720" bet="350" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Wlad41" type="1" sum="10" cards="[cards]"/><action no="2" player="atis65" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H10 CK</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">S4 HA</cards><action no="5" player="Wlad41" type="3" sum="10" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="6" player="atis65" type="4" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">D7 S7</cards><action no="3" player="bottlebeachsmile" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 C8 C6</cards><action no="7" player="Wlad41" type="5" sum="60" cards=""/><action no="8" player="atis65" type="0" sum="0" cards=""/><action no="9" player="bottlebeachsmile" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards><action no="10" player="Wlad41" type="5" sum="90" cards=""/><action no="11" player="bottlebeachsmile" type="3" sum="90" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards><action no="12" player="Wlad41" type="5" sum="180" cards=""/><action no="13" player="bottlebeachsmile" type="3" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452333406">
+		 <general>
+		  <startdate>2014-01-29 16:25:28</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="260" bet="125" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="1,170" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="atis65" type="1" sum="10" cards="[cards]"/><action no="2" player="bottlebeachsmile" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DQ DA</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="4" player="Wlad41" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="5" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">HA D9</cards><action no="6" player="bottlebeachsmile" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ H7 C5</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="7" player="bottlebeachsmile" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="10" player="WorstCard" type="5" sum="65" cards=""/><action no="9" player="bottlebeachsmile" type="4" sum="0" cards=""/><action no="11" player="bottlebeachsmile" type="3" sum="65" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="bottlebeachsmile" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452333784">
+		 <general>
+		  <startdate>2014-01-29 16:26:18</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="935" dealer="0" win="75" bet="45" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="770" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="1,045" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="bottlebeachsmile" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HJ H9</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="3" player="Wlad41" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="4" player="atis65" type="3" sum="20" cards=""/><cards type="Pocket" player="bottlebeachsmile">X X</cards><action no="5" player="bottlebeachsmile" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 C9 D9</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="8" player="atis65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="9" player="WorstCard" type="5" sum="25" cards=""/><action no="10" player="atis65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452334210">
+		 <general>
+		  <startdate>2014-01-29 16:27:11</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="965" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="450" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="750" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="1,035" dealer="1" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Wlad41" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D10 S6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="6" player="Wlad41" type="4" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="3" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">X X</cards><action no="4" player="bottlebeachsmile" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA C5 D9</cards><action no="7" player="Wlad41" type="5" sum="60" cards=""/><action no="8" player="bottlebeachsmile" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452334458">
+		 <general>
+		  <startdate>2014-01-29 16:27:43</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="950" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="495" dealer="0" win="240" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="750" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="1,005" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Wlad41" type="1" sum="15" cards="[cards]"/><action no="2" player="atis65" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SA H2</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="5" player="Wlad41" type="3" sum="45" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="6" player="atis65" type="3" sum="30" cards=""/><cards type="Pocket" player="bottlebeachsmile">X X</cards><action no="3" player="bottlebeachsmile" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 DK S2</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><action no="7" player="Wlad41" type="5" sum="60" cards=""/><action no="8" player="atis65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452334776">
+		 <general>
+		  <startdate>2014-01-29 16:28:23</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="615" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="690" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="1,005" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="atis65" type="1" sum="15" cards="[cards]"/><action no="2" player="bottlebeachsmile" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C2 D5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="4" player="Wlad41" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="5" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">X X</cards>
+	</round>
+	
+		</game><game gamecode="5452334902">
+		 <general>
+		  <startdate>2014-01-29 16:28:39</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="890" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="615" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="675" dealer="1" win="195" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="1,020" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Wlad41" type="15" sum="5" cards="[cards]"/><action no="4" player="atis65" type="15" sum="5" cards="[cards]"/><action no="1" player="bottlebeachsmile" type="15" sum="5" cards="[cards]"/><action no="5" player="bottlebeachsmile" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D6 C7</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="7" player="Wlad41" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="8" player="atis65" type="3" sum="50" cards=""/><cards type="Pocket" player="bottlebeachsmile">X X</cards><action no="9" player="bottlebeachsmile" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 SQ C10</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="atis65" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="15" player="WorstCard" type="0" sum="0" cards=""/><action no="14" player="atis65" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452351297">
+		 <general>
+		  <startdate>2014-01-29 16:29:27</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="835" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="610" dealer="0" win="1,255" bet="610" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="765" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="990" dealer="1" win="0" bet="610" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Wlad41" type="15" sum="5" cards="[cards]"/><action no="6" player="Wlad41" type="2" sum="50" cards="[cards]"/><action no="3" player="atis65" type="15" sum="5" cards="[cards]"/><action no="4" player="bottlebeachsmile" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C9 C7</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">CA HA</cards><action no="10" player="Wlad41" type="23" sum="200" cards=""/><action no="12" player="Wlad41" type="7" sum="405" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="7" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">SA S8</cards><action no="8" player="bottlebeachsmile" type="23" sum="100" cards=""/><action no="11" player="bottlebeachsmile" type="23" sum="600" cards=""/><action no="13" player="bottlebeachsmile" type="3" sum="5" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 H10 C6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5452351604">
+		 <general>
+		  <startdate>2014-01-29 16:30:04</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="805" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="1,255" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="760" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="380" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Wlad41" type="15" sum="5" cards="[cards]"/><action no="5" player="Wlad41" type="1" sum="25" cards="[cards]"/><action no="2" player="atis65" type="15" sum="5" cards="[cards]"/><action no="6" player="atis65" type="2" sum="50" cards="[cards]"/><action no="3" player="bottlebeachsmile" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S7 DJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="9" player="Wlad41" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><cards type="Pocket" player="bottlebeachsmile">X X</cards><action no="7" player="bottlebeachsmile" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452351789">
+		 <general>
+		  <startdate>2014-01-29 16:30:27</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="1,225" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="375" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Wlad41" type="15" sum="5" cards="[cards]"/><action no="1" player="atis65" type="15" sum="5" cards="[cards]"/><action no="5" player="atis65" type="1" sum="25" cards="[cards]"/><action no="2" player="bottlebeachsmile" type="15" sum="5" cards="[cards]"/><action no="6" player="bottlebeachsmile" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C10 H3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="8" player="Wlad41" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="9" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">X X</cards>
+	</round>
+	
+		</game><game gamecode="5452352055">
+		 <general>
+		  <startdate>2014-01-29 16:30:57</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="795" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="1,220" dealer="0" win="390" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="770" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="415" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Wlad41" type="15" sum="10" cards="[cards]"/><action no="4" player="atis65" type="15" sum="10" cards="[cards]"/><action no="1" player="bottlebeachsmile" type="15" sum="10" cards="[cards]"/><action no="5" player="bottlebeachsmile" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D2 H8</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="7" player="Wlad41" type="23" sum="200" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="8" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">X X</cards><action no="9" player="bottlebeachsmile" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452352240">
+		 <general>
+		  <startdate>2014-01-29 16:31:22</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="685" dealer="0" win="815" bet="685" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="1,400" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="760" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="355" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Wlad41" type="15" sum="10" cards="[cards]"/><action no="6" player="Wlad41" type="2" sum="100" cards="[cards]"/><action no="3" player="atis65" type="15" sum="10" cards="[cards]"/><action no="4" player="bottlebeachsmile" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S7 D9</cards><action no="9" player="WorstCard" type="23" sum="675" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><action no="10" player="Wlad41" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="7" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">X X</cards><action no="8" player="bottlebeachsmile" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452352502">
+		 <general>
+		  <startdate>2014-01-29 16:31:54</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="815" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="1,290" dealer="0" win="810" bet="345" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="750" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bottlebeachsmile" chips="345" dealer="0" win="0" bet="345" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Wlad41" type="15" sum="10" cards="[cards]"/><action no="5" player="Wlad41" type="1" sum="50" cards="[cards]"/><action no="2" player="atis65" type="15" sum="10" cards="[cards]"/><action no="6" player="atis65" type="2" sum="100" cards="[cards]"/><action no="3" player="bottlebeachsmile" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SJ S10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">SQ SA</cards><action no="9" player="Wlad41" type="3" sum="285" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="10" player="atis65" type="0" sum="0" cards=""/><cards type="Pocket" player="bottlebeachsmile">DJ H9</cards><action no="7" player="bottlebeachsmile" type="23" sum="335" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 D3 H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5452352811">
+		 <general>
+		  <startdate>2014-01-29 16:32:32</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="805" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="1,755" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="640" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Wlad41" type="15" sum="15" cards="[cards]"/><action no="1" player="atis65" type="15" sum="15" cards="[cards]"/><action no="4" player="atis65" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D3 S9</cards><cards type="Pocket" player="Wlad41">X X</cards><action no="6" player="Wlad41" type="0" sum="0" cards=""/><cards type="Pocket" player="atis65">X X</cards><action no="7" player="atis65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452352964">
+		 <general>
+		  <startdate>2014-01-29 16:32:51</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="910" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="1,740" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="550" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Wlad41" type="15" sum="15" cards="[cards]"/><action no="5" player="Wlad41" type="2" sum="150" cards="[cards]"/><action no="3" player="atis65" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C10 S8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">X X</cards><cards type="Pocket" player="atis65">X X</cards><action no="6" player="atis65" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5452353116">
+		 <general>
+		  <startdate>2014-01-29 16:33:08</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="820" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6190233933"/><player seat="4" name="Wlad41" chips="1,845" dealer="0" win="1,085" bet="535" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="atis65" chips="535" dealer="0" win="0" bet="535" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Wlad41" type="15" sum="15" cards="[cards]"/><action no="4" player="Wlad41" type="1" sum="75" cards="[cards]"/><action no="2" player="atis65" type="15" sum="15" cards="[cards]"/><action no="5" player="atis65" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S4 S6</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Wlad41">H7 D7</cards><action no="7" player="Wlad41" type="23" sum="300" cards=""/><action no="9" player="Wlad41" type="3" sum="220" cards=""/><cards type="Pocket" player="atis65">S8 D4</cards><action no="8" player="atis65" type="23" sum="520" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 CJ D10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards>
+	</round>
+	
+		</game>  
+	</session>

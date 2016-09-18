@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224225861">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824220561</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:29</duration>  
+	          <gamecount>63</gamecount>  
+	          <startdate>2014-03-25 17:23:51</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>13,005</bets>  
+	          <wins>14,365</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>2,860</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601219684">
+		 <general>
+		  <startdate>2014-03-25 17:23:51</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="1,500" dealer="0" win="3,000" bet="1,500" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="dsumner" chips="1,500" dealer="0" win="0" bet="1,500" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="10" cards="[cards]"/><action no="2" player="dsumner" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">D7 SK</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">CJ DA</cards><action no="7" player="mmiichal" type="23" sum="60" cards=""/><cards type="Pocket" player="dsumner">C2 H2</cards><action no="8" player="dsumner" type="3" sum="40" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ CQ C7</cards><action no="9" player="mmiichal" type="4" sum="0" cards=""/><action no="11" player="mmiichal" type="3" sum="80" cards=""/><action no="10" player="dsumner" type="5" sum="80" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="12" player="mmiichal" type="4" sum="0" cards=""/><action no="14" player="mmiichal" type="3" sum="80" cards=""/><action no="13" player="dsumner" type="5" sum="80" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards><action no="15" player="mmiichal" type="5" sum="120" cards=""/><action no="17" player="mmiichal" type="7" sum="1,160" cards=""/><action no="16" player="dsumner" type="23" sum="1,280" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220043">
+		 <general>
+		  <startdate>2014-03-25 17:25:10</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,500" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="3,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">HA CA</cards><action no="4" player="moonbaseone" type="23" sum="60" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="2" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220211">
+		 <general>
+		  <startdate>2014-03-25 17:25:41</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="3,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,480" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C4 S10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="60" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="7" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220305">
+		 <general>
+		  <startdate>2014-03-25 17:25:59</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="3,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Prestonchad" type="1" sum="10" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">CA S9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="4" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="6" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601220416">
+		 <general>
+		  <startdate>2014-03-25 17:26:21</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="3,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,470" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C3 H6</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="3" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="5" player="Prestonchad" type="23" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220497">
+		 <general>
+		  <startdate>2014-03-25 17:26:38</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="3,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,500" dealer="1" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="mmiichal" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">S7 C3</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="7" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220621">
+		 <general>
+		  <startdate>2014-03-25 17:27:00</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,980" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">S10 C6</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="6" player="mmiichal" type="23" sum="60" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="3" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220779">
+		 <general>
+		  <startdate>2014-03-25 17:27:30</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="3,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">CQ H6</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235306">
+		 <general>
+		  <startdate>2014-03-25 17:27:46</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="3,000" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,530" dealer="0" win="370" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Prestonchad" type="1" sum="10" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H8 D6</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">HA SJ</cards><action no="4" player="mmiichal" type="23" sum="60" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="6" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">DQ HQ</cards><action no="7" player="Strik3rPo4ition" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D10 C6</cards><action no="9" player="mmiichal" type="4" sum="0" cards=""/><action no="8" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="11" player="mmiichal" type="3" sum="60" cards=""/><action no="10" player="Strik3rPo4ition" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H6</cards><action no="13" player="mmiichal" type="3" sum="60" cards=""/><action no="12" player="Strik3rPo4ition" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235517">
+		 <general>
+		  <startdate>2014-03-25 17:28:29</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,490" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,720" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">CQ S3</cards><cards type="Pocket" player="mmiichal">X X</cards><action no="3" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="5" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235585">
+		 <general>
+		  <startdate>2014-03-25 17:28:43</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,820" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,700" dealer="1" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="mmiichal" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">SK C8</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="7" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235688">
+		 <general>
+		  <startdate>2014-03-25 17:29:04</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,470" dealer="0" win="820" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,760" dealer="0" win="0" bet="400" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">DA D8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="6" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">CQ HQ</cards><action no="7" player="DONCorleoneXX" type="23" sum="200" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="3" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">CJ SJ</cards><action no="4" player="Strik3rPo4ition" type="23" sum="80" cards=""/><action no="8" player="Strik3rPo4ition" type="3" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 HK S3</cards><action no="9" player="DONCorleoneXX" type="5" sum="200" cards=""/><action no="10" player="Strik3rPo4ition" type="3" sum="200" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S9</cards><action no="11" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="14" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236071">
+		 <general>
+		  <startdate>2014-03-25 17:30:18</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,490" dealer="0" win="150" bet="90" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,890" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H4 D4</cards><action no="4" player="moonbaseone" type="3" sum="40" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="7" player="Prestonchad" type="4" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 HA DA</cards><action no="9" player="moonbaseone" type="5" sum="50" cards=""/><action no="8" player="Prestonchad" type="4" sum="0" cards=""/><action no="10" player="Prestonchad" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236251">
+		 <general>
+		  <startdate>2014-03-25 17:30:58</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,760" dealer="0" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,870" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,360" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Prestonchad" type="1" sum="20" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C3 HA</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="4" player="mmiichal" type="23" sum="80" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="6" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236454">
+		 <general>
+		  <startdate>2014-03-25 17:31:39</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,550" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,320" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C9 DJ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="3" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="5" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236590">
+		 <general>
+		  <startdate>2014-03-25 17:32:07</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,820" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,870" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="mmiichal" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C8 DJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="7" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236717">
+		 <general>
+		  <startdate>2014-03-25 17:32:32</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,480" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,760" dealer="0" win="240" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,960" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">DJ H5</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="6" player="mmiichal" type="23" sum="180" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="3" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236840">
+		 <general>
+		  <startdate>2014-03-25 17:32:59</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,900" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,440" dealer="0" win="816" bet="576" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">S6 HK</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="7" player="Prestonchad" type="3" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 CK D6</cards><action no="8" player="DONCorleoneXX" type="5" sum="120" cards=""/><action no="9" player="Prestonchad" type="3" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="11" player="Prestonchad" type="5" sum="336" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248313">
+		 <general>
+		  <startdate>2014-03-25 17:33:55</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,660" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,680" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,360" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Prestonchad" type="1" sum="30" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">S4 SK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="4" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="6" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601248543">
+		 <general>
+		  <startdate>2014-03-25 17:34:17</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,660" dealer="0" win="450" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,650" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,390" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C6 D3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="3" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="5" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="3" sum="90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 S7 CK</cards><action no="9" player="DONCorleoneXX" type="5" sum="150" cards=""/><action no="8" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248974">
+		 <general>
+		  <startdate>2014-03-25 17:35:02</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,420" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,820" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,650" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="mmiichal" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">S6 DJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="7" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="23" sum="120" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249242">
+		 <general>
+		  <startdate>2014-03-25 17:35:31</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,840" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,740" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">HJ S9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="6" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">C8 D8</cards><action no="3" player="Prestonchad" type="23" sum="120" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249598">
+		 <general>
+		  <startdate>2014-03-25 17:36:04</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,780" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,830" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C5 D4</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="7" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249800">
+		 <general>
+		  <startdate>2014-03-25 17:36:25</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,390" dealer="0" win="1,540" bet="1,390" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,730" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,420" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Prestonchad" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">DK DA</cards><action no="3" player="moonbaseone" type="23" sum="1,390" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="4" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="6" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250004">
+		 <general>
+		  <startdate>2014-03-25 17:36:49</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,680" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,320" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C9 DK</cards><cards type="Pocket" player="mmiichal">X X</cards><action no="3" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="5" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250149">
+		 <general>
+		  <startdate>2014-03-25 17:37:02</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,730" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="mmiichal" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">D2 H8</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="7" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="23" sum="200" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250349">
+		 <general>
+		  <startdate>2014-03-25 17:37:24</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,630" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,880" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="50" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">HJ H4</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="6" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="Prestonchad">X X</cards><action no="3" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250507">
+		 <general>
+		  <startdate>2014-03-25 17:37:42</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="1" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,930" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,680" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H3 S4</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="23" sum="300" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="7" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250778">
+		 <general>
+		  <startdate>2014-03-25 17:38:11</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,580" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Prestonchad" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H5 D9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="4" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="6" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601250948">
+		 <general>
+		  <startdate>2014-03-25 17:38:31</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,320" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C10 D2</cards><cards type="Pocket" player="mmiichal">X X</cards><action no="3" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="5" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601251123">
+		 <general>
+		  <startdate>2014-03-25 17:38:48</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,730" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,530" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="mmiichal" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H5 H3</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="7" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="23" sum="200" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264368">
+		 <general>
+		  <startdate>2014-03-25 17:39:08</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,630" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,880" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,270" dealer="0" win="353" bet="203" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="50" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C10 C3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="6" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="3" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="23" sum="203" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264514">
+		 <general>
+		  <startdate>2014-03-25 17:39:39</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,780" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,680" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H6 D3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264665">
+		 <general>
+		  <startdate>2014-03-25 17:40:10</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,730" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,420" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Prestonchad" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H7 H5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="4" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="6" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601264783">
+		 <general>
+		  <startdate>2014-03-25 17:40:34</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,540" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,655" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,495" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H9 HQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="3" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="5" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">SA CA</cards><action no="6" player="Strik3rPo4ition" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264943">
+		 <general>
+		  <startdate>2014-03-25 17:41:03</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,655" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="mmiichal" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">HK S2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265025">
+		 <general>
+		  <startdate>2014-03-25 17:41:17</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,315" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,655" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,655" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">HQ D3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="6" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="Prestonchad">X X</cards><action no="3" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265117">
+		 <general>
+		  <startdate>2014-03-25 17:41:32</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,315" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,805" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,655" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">DJ H9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265260">
+		 <general>
+		  <startdate>2014-03-25 17:41:54</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,315" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,730" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Prestonchad" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">D8 H9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="4" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="6" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601265402">
+		 <general>
+		  <startdate>2014-03-25 17:42:17</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,315" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,655" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,720" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">HA D6</cards><cards type="Pocket" player="mmiichal">X X</cards><action no="3" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="5" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265527">
+		 <general>
+		  <startdate>2014-03-25 17:42:40</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,390" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,655" dealer="0" win="1,880" bet="1,655" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="mmiichal" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C10 D6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="7" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="4" player="Prestonchad" type="23" sum="1,655" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265644">
+		 <general>
+		  <startdate>2014-03-25 17:43:01</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,315" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,430" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,730" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mmiichal" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H8 DJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="6" player="mmiichal" type="23" sum="300" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="3" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265822">
+		 <general>
+		  <startdate>2014-03-25 17:43:36</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,315" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,580" dealer="1" win="675" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,580" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,880" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="Prestonchad" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C2 S8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="5" player="mmiichal" type="23" sum="450" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="7" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265932">
+		 <general>
+		  <startdate>2014-03-25 17:43:56</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,315" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,805" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,505" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,730" dealer="0" win="2,030" bet="1,730" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="6" player="Prestonchad" type="1" sum="100" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">SQ S3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="9" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="11" player="Prestonchad" type="23" sum="1,705" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="12" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277674">
+		 <general>
+		  <startdate>2014-03-25 17:44:20</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,290" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,780" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,480" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,030" dealer="1" win="2,430" bet="2,030" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,420" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">CK C6</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="8" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="10" player="Prestonchad" type="23" sum="2,005" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="11" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277832">
+		 <general>
+		  <startdate>2014-03-25 17:44:51</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,065" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,755" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,455" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,430" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,295" dealer="1" win="1,695" bet="1,295" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="7" player="mmiichal" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">S5 S2</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="12" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="9" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="23" sum="1,270" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277977">
+		 <general>
+		  <startdate>2014-03-25 17:45:23</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="940" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,530" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,430" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,405" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,695" dealer="0" win="825" bet="425" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="6" player="mmiichal" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="7" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/><action no="3" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C7 D10</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="11" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="8" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="23" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278124">
+		 <general>
+		  <startdate>2014-03-25 17:45:51</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="915" dealer="0" win="1,315" bet="915" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,405" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,205" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,380" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="2,095" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/><action no="2" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="7" player="Prestonchad" type="2" sum="200" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C6 DJ</cards><action no="9" player="moonbaseone" type="23" sum="890" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="10" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="12" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278218">
+		 <general>
+		  <startdate>2014-03-25 17:46:08</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,315" dealer="0" win="1,715" bet="1,315" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,380" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,080" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,155" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="2,070" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="6" player="Prestonchad" type="1" sum="100" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">HJ CJ</cards><action no="8" player="moonbaseone" type="23" sum="1,290" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="9" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="11" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="12" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278314">
+		 <general>
+		  <startdate>2014-03-25 17:46:29</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,715" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,355" dealer="0" win="1,025" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,055" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,030" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,845" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">CQ S9</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="8" player="mmiichal" type="23" sum="600" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="10" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="11" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278462">
+		 <general>
+		  <startdate>2014-03-25 17:46:55</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,490" dealer="0" win="1,790" bet="1,490" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,755" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,030" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,005" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,720" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="7" player="mmiichal" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">HK H7</cards><action no="11" player="moonbaseone" type="23" sum="1,465" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="12" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="9" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278638">
+		 <general>
+		  <startdate>2014-03-25 17:47:26</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,790" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,530" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,005" dealer="0" win="425" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,980" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,695" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="6" player="mmiichal" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="7" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/><action no="3" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C5 DQ</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="11" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="Prestonchad">X X</cards><action no="8" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278718">
+		 <general>
+		  <startdate>2014-03-25 17:47:40</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,765" dealer="0" win="2,165" bet="1,765" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,405" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,205" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,955" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,670" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/><action no="2" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="7" player="Prestonchad" type="2" sum="200" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">D6 DA</cards><action no="9" player="moonbaseone" type="23" sum="1,740" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="10" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="12" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278925">
+		 <general>
+		  <startdate>2014-03-25 17:48:20</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="2,165" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,380" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,080" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,730" dealer="0" win="2,130" bet="1,730" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="6" player="Prestonchad" type="1" sum="150" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">D2 S4</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="9" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="11" player="Prestonchad" type="23" sum="1,705" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="12" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279131">
+		 <general>
+		  <startdate>2014-03-25 17:48:54</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="2,140" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,355" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,055" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,130" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,320" dealer="0" win="1,720" bet="1,320" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C10 H2</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="8" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="10" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="11" player="Strik3rPo4ition" type="23" sum="1,295" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279249">
+		 <general>
+		  <startdate>2014-03-25 17:49:14</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,815" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,330" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,030" dealer="0" win="1,580" bet="1,030" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,105" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,720" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="7" player="mmiichal" type="2" sum="300" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">D6 CQ</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="12" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="23" sum="1,005" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="9" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292376">
+		 <general>
+		  <startdate>2014-03-25 17:49:40</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,640" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,005" dealer="0" win="1,625" bet="1,225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,580" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,080" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,695" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="6" player="mmiichal" type="1" sum="150" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="7" player="DONCorleoneXX" type="2" sum="300" cards="[cards]"/><action no="3" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">S6 C8</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="11" player="mmiichal" type="23" sum="1,200" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="8" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292655">
+		 <general>
+		  <startdate>2014-03-25 17:50:29</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,615" dealer="0" win="2,165" bet="1,615" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,405" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,255" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,055" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,670" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="1" sum="150" cards="[cards]"/><action no="2" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="7" player="Prestonchad" type="2" sum="300" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">CQ SK</cards><action no="9" player="moonbaseone" type="23" sum="1,590" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="10" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">X X</cards><action no="12" player="Prestonchad" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292878">
+		 <general>
+		  <startdate>2014-03-25 17:51:10</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="2,165" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,380" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,080" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="1,730" dealer="0" win="2,130" bet="1,730" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,645" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="6" player="Prestonchad" type="1" sum="150" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">D8 C10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="9" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">CA H8</cards><action no="11" player="Prestonchad" type="23" sum="1,705" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="12" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293034">
+		 <general>
+		  <startdate>2014-03-25 17:51:42</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="2,140" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="2,355" dealer="0" win="4,785" bet="2,130" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,055" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Prestonchad" chips="2,130" dealer="1" win="0" bet="2,130" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,320" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="mmiichal" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="Prestonchad" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">CA DJ</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">HA CK</cards><action no="8" player="mmiichal" type="23" sum="900" cards=""/><action no="13" player="mmiichal" type="3" sum="1,205" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Prestonchad">CJ HJ</cards><action no="10" player="Prestonchad" type="23" sum="2,105" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="11" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA C7 HQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards>
+	</round>
+	
+		</game><game gamecode="5601293218">
+		 <general>
+		  <startdate>2014-03-25 17:52:16</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,815" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="5,010" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,030" dealer="0" win="1,700" bet="950" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,145" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="200" cards="[cards]"/><action no="2" player="mmiichal" type="15" sum="50" cards="[cards]"/><action no="6" player="mmiichal" type="2" sum="400" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="50" cards="[cards]"/><action no="4" player="Strik3rPo4ition" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H8 CQ</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="10" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="23" sum="900" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293329">
+		 <general>
+		  <startdate>2014-03-25 17:52:37</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,565" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="4,560" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="1,780" dealer="0" win="800" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,095" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="1" player="mmiichal" type="15" sum="50" cards="[cards]"/><action no="5" player="mmiichal" type="1" sum="200" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="50" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="400" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C2 D8</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="9" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293416">
+		 <general>
+		  <startdate>2014-03-25 17:52:53</startdate>		  
+		  <players>
+		   <player seat="1" name="moonbaseone" chips="1,515" dealer="0" win="2,860" bet="1,515" rebuy="0" addon="0" reg_code="6224225861"/><player seat="3" name="mmiichal" chips="4,310" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="DONCorleoneXX" chips="2,130" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Strik3rPo4ition" chips="1,045" dealer="0" win="0" bet="1,045" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="4" player="mmiichal" type="15" sum="50" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="50" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="200" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="50" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">DK C2</cards><action no="7" player="moonbaseone" type="23" sum="1,465" cards=""/><cards type="Pocket" player="mmiichal">X X</cards><action no="8" player="mmiichal" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">D10 H5</cards><action no="10" player="Strik3rPo4ition" type="7" sum="595" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 D6 H4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards>
+	</round>
+	
+		</game>  
+	</session>

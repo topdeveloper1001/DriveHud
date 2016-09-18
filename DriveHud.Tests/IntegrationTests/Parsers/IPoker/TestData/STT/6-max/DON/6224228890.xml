@@ -1,0 +1,483 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224228890">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824221450</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:14</duration>  
+	          <gamecount>26</gamecount>  
+	          <startdate>2014-03-25 17:33:58</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>2,410</bets>  
+	          <wins>910</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>0</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>5</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>0</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>0</awardpoints>  
+	    </general>  
+	    <game gamecode="5601248334">
+		 <general>
+		  <startdate>2014-03-25 17:33:58</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,500" dealer="0" win="25" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,500" dealer="0" win="25" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="6" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK C3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">S3 H9</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="3" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">D7 D9</cards><action no="5" player="11reddevils" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ D5 C5</cards><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="10" player="11reddevils" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="11" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="11reddevils" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="14" player="11reddevils" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248804">
+		 <general>
+		  <startdate>2014-03-25 17:34:44</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,505" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,505" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="empomador1973" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="5" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S7 C5</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="4" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248991">
+		 <general>
+		  <startdate>2014-03-25 17:35:04</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,495" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,510" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,505" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="empomador1973" type="1" sum="10" cards="[cards]"/><action no="2" player="theDL" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="4" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C9 D6</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="7" player="empomador1973" type="23" sum="60" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="3" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249281">
+		 <general>
+		  <startdate>2014-03-25 17:35:35</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,500" dealer="0" win="810" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,495" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,530" dealer="1" win="0" bet="280" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,505" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="10" cards="[cards]"/><action no="2" player="11reddevils" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="3" player="cornee85" type="23" sum="80" cards=""/><cards type="Pocket" player="moonbaseone">D2 C4</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="6" player="empomador1973" type="3" sum="80" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="8" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 D8 SJ</cards><action no="9" player="cornee85" type="5" sum="100" cards=""/><action no="10" player="empomador1973" type="3" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="11" player="cornee85" type="5" sum="100" cards=""/><action no="12" player="empomador1973" type="3" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards><action no="13" player="cornee85" type="5" sum="220" cards=""/><action no="14" player="empomador1973" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249635">
+		 <general>
+		  <startdate>2014-03-25 17:36:08</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,810" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,495" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,250" dealer="0" win="380" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,485" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="cornee85" type="2" sum="20" cards="[cards]"/><action no="1" player="11reddevils" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">H6 SJ</cards><action no="8" player="cornee85" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 H8</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">S6 CA</cards><action no="5" player="empomador1973" type="3" sum="20" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="7" player="11reddevils" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 C6 D4</cards><action no="10" player="cornee85" type="5" sum="60" cards=""/><action no="11" player="empomador1973" type="3" sum="60" cards=""/><action no="9" player="11reddevils" type="4" sum="0" cards=""/><action no="12" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="13" player="cornee85" type="5" sum="80" cards=""/><action no="14" player="empomador1973" type="3" sum="80" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards><action no="15" player="cornee85" type="5" sum="20" cards=""/><action no="16" player="empomador1973" type="3" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250334">
+		 <general>
+		  <startdate>2014-03-25 17:37:22</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,630" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,495" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,450" dealer="0" win="100" bet="70" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,465" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cornee85" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="7" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 D6</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="4" player="empomador1973" type="3" sum="20" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="6" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 C4 H5</cards><action no="9" player="moonbaseone" type="4" sum="0" cards=""/><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><action no="10" player="empomador1973" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250710">
+		 <general>
+		  <startdate>2014-03-25 17:38:04</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,620" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,495" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,480" dealer="0" win="200" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,465" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="6" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 CK</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="3" player="empomador1973" type="3" sum="40" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="5" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA D4 D7</cards><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="10" player="empomador1973" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601251027">
+		 <general>
+		  <startdate>2014-03-25 17:38:39</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,455" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,540" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,465" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="empomador1973" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="5" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 HK</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="4" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264387">
+		 <general>
+		  <startdate>2014-03-25 17:39:12</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,620" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,435" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,560" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,470" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,465" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="empomador1973" type="1" sum="20" cards="[cards]"/><action no="2" player="theDL" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="4" player="cornee85" type="3" sum="40" cards=""/><cards type="Pocket" player="moonbaseone">SJ D2</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="7" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="4" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="3" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 SQ C10</cards><action no="10" player="cornee85" type="4" sum="0" cards=""/><action no="9" player="theDL" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="12" player="cornee85" type="4" sum="0" cards=""/><action no="11" player="theDL" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S9</cards><action no="14" player="cornee85" type="5" sum="80" cards=""/><action no="13" player="theDL" type="4" sum="0" cards=""/><action no="15" player="theDL" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264710">
+		 <general>
+		  <startdate>2014-03-25 17:40:20</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,435" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,540" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,430" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,465" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="20" cards="[cards]"/><action no="2" player="11reddevils" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="3" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK CJ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="6" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601264805">
+		 <general>
+		  <startdate>2014-03-25 17:40:38</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,680" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,435" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,540" dealer="0" win="200" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,485" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="cornee85" type="2" sum="40" cards="[cards]"/><action no="1" player="11reddevils" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="8" player="cornee85" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK D5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="5" player="empomador1973" type="3" sum="40" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="7" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 D8 S10</cards><action no="9" player="cornee85" type="4" sum="0" cards=""/><action no="11" player="cornee85" type="0" sum="0" cards=""/><action no="10" player="empomador1973" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264995">
+		 <general>
+		  <startdate>2014-03-25 17:41:12</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,640" dealer="0" win="0" bet="360" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,450" dealer="0" win="760" bet="360" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,435" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,600" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,465" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cornee85" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">SA H5</cards><action no="7" player="cornee85" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">S2 C10</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="4" player="empomador1973" type="3" sum="40" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="6" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 D2 CA</cards><action no="9" player="cornee85" type="5" sum="80" cards=""/><action no="10" player="moonbaseone" type="3" sum="80" cards=""/><action no="11" player="empomador1973" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="12" player="cornee85" type="5" sum="80" cards=""/><action no="13" player="moonbaseone" type="3" sum="80" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards><action no="14" player="cornee85" type="5" sum="160" cards=""/><action no="15" player="moonbaseone" type="3" sum="160" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265298">
+		 <general>
+		  <startdate>2014-03-25 17:42:01</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,280" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,435" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,465" dealer="0" win="420" bet="270" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="6" player="cornee85" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">D8 H3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="3" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="5" player="11reddevils" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK S8 D5</cards><action no="11" player="cornee85" type="0" sum="0" cards=""/><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="10" player="11reddevils" type="5" sum="210" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265500">
+		 <general>
+		  <startdate>2014-03-25 17:42:36</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,375" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,560" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,410" dealer="0" win="663" bet="453" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,615" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="empomador1973" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="5" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 S8</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="8" player="empomador1973" type="3" sum="120" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="23" sum="180" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="4" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 DJ C6</cards><action no="9" player="empomador1973" type="4" sum="0" cards=""/><action no="11" player="empomador1973" type="0" sum="0" cards=""/><action no="10" player="theDL" type="5" sum="273" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265670">
+		 <general>
+		  <startdate>2014-03-25 17:43:06</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,345" dealer="1" win="450" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,380" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,620" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,615" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="empomador1973" type="1" sum="30" cards="[cards]"/><action no="2" player="theDL" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="4" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 C10</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="7" player="empomador1973" type="3" sum="90" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="3" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 C2 D2</cards><action no="10" player="DONCorleoneXX" type="5" sum="150" cards=""/><action no="9" player="empomador1973" type="4" sum="0" cards=""/><action no="11" player="empomador1973" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265826">
+		 <general>
+		  <startdate>2014-03-25 17:43:37</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="1,220" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,525" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,260" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,560" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,615" dealer="0" win="540" bet="240" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="30" cards="[cards]"/><action no="2" player="11reddevils" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">CJ CA</cards><action no="3" player="cornee85" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">HK C9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="6" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="3" sum="30" cards=""/><cards type="Pocket" player="11reddevils">H9 C2</cards><action no="8" player="11reddevils" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 S9 D3</cards><action no="11" player="cornee85" type="3" sum="60" cards=""/><action no="9" player="theDL" type="4" sum="0" cards=""/><action no="12" player="theDL" type="0" sum="0" cards=""/><action no="10" player="11reddevils" type="5" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="14" player="cornee85" type="3" sum="60" cards=""/><action no="13" player="11reddevils" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards><action no="16" player="cornee85" type="3" sum="60" cards=""/><action no="15" player="11reddevils" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277671">
+		 <general>
+		  <startdate>2014-03-25 17:44:20</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="980" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,525" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,260" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,915" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="cornee85" type="2" sum="60" cards="[cards]"/><action no="1" player="11reddevils" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="8" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK SQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="5" player="empomador1973" type="23" sum="180" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="7" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277865">
+		 <general>
+		  <startdate>2014-03-25 17:44:57</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="920" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,820" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,525" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,500" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,885" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="cornee85" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="7" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 C10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="4" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="23" sum="180" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="6" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278017">
+		 <general>
+		  <startdate>2014-03-25 17:45:30</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="890" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,525" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,350" dealer="0" win="300" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="6" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK C2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="3" player="empomador1973" type="3" sum="60" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="5" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ DK C3</cards><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="10" player="empomador1973" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278180">
+		 <general>
+		  <startdate>2014-03-25 17:46:01</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,730" dealer="1" win="0" bet="425" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,465" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,440" dealer="0" win="1,915" bet="1,440" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="empomador1973" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">X X</cards><action no="5" player="cornee85" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D3 H3</cards><action no="6" player="moonbaseone" type="23" sum="200" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="8" player="empomador1973" type="3" sum="100" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="4" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA H9 H10</cards><action no="10" player="moonbaseone" type="5" sum="225" cards=""/><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><action no="9" player="empomador1973" type="4" sum="0" cards=""/><action no="11" player="empomador1973" type="23" sum="1,240" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278347">
+		 <general>
+		  <startdate>2014-03-25 17:46:36</startdate>		  
+		  <players>
+		   <player seat="1" name="cornee85" chips="890" dealer="0" win="0" bet="890" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,305" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="1,415" dealer="1" win="2,455" bet="1,415" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,915" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,590" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="empomador1973" type="1" sum="50" cards="[cards]"/><action no="2" player="theDL" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="cornee85">HA H10</cards><action no="4" player="cornee85" type="23" sum="400" cards=""/><action no="9" player="cornee85" type="7" sum="490" cards=""/><cards type="Pocket" player="moonbaseone">CQ D2</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">HQ DQ</cards><action no="6" player="DONCorleoneXX" type="23" sum="1,415" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="7" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="3" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 H7 C2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards>
+	</round>
+	
+		</game><game gamecode="5601278516">
+		 <general>
+		  <startdate>2014-03-25 17:47:05</startdate>		  
+		  <players>
+		   <player seat="3" name="moonbaseone" chips="1,305" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="2,455" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,865" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,490" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,885" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="50" cards="[cards]"/><action no="2" player="11reddevils" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">SQ S7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="5" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601278601">
+		 <general>
+		  <startdate>2014-03-25 17:47:20</startdate>		  
+		  <players>
+		   <player seat="3" name="moonbaseone" chips="1,305" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="2,455" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,865" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,935" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/><action no="1" player="11reddevils" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C5 DA</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="4" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="6" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278706">
+		 <general>
+		  <startdate>2014-03-25 17:47:37</startdate>		  
+		  <players>
+		   <player seat="3" name="moonbaseone" chips="1,355" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="2,455" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,865" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,885" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">H2 S4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="empomador1973">X X</cards><action no="3" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="5" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278761">
+		 <general>
+		  <startdate>2014-03-25 17:47:48</startdate>		  
+		  <players>
+		   <player seat="3" name="moonbaseone" chips="1,305" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="2,505" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,865" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="empomador1973" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">C7 SK</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="200" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="7" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="4" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278878">
+		 <general>
+		  <startdate>2014-03-25 17:48:10</startdate>		  
+		  <players>
+		   <player seat="3" name="moonbaseone" chips="1,305" dealer="0" win="0" bet="1,305" rebuy="0" addon="0" reg_code="6224228890"/><player seat="5" name="DONCorleoneXX" chips="2,605" dealer="1" win="4,060" bet="2,605" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="empomador1973" chips="1,765" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="theDL" chips="1,440" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="11reddevils" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="empomador1973" type="1" sum="50" cards="[cards]"/><action no="2" player="theDL" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="moonbaseone">DQ HA</cards><action no="4" player="moonbaseone" type="23" sum="1,305" cards=""/><cards type="Pocket" player="DONCorleoneXX">SA CA</cards><action no="5" player="DONCorleoneXX" type="23" sum="2,605" cards=""/><cards type="Pocket" player="empomador1973">X X</cards><action no="6" player="empomador1973" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="11reddevils">X X</cards><action no="3" player="11reddevils" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 D5 SJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,157 @@
+﻿//-----------------------------------------------------------------------
+// <copyright file="HudStatSettingsViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.ViewModels;
+using System;
+using System.Collections.ObjectModel;
+using System.Linq;
+using ReactiveUI;
+using DriveHUD.Common;
+using System.Windows.Media;
+
+namespace DriveHUD.Application.ViewModels
+{
+    public class HudStatSettingsViewModel : ViewModelBase
+    {
+        public HudStatSettingsViewModel(HudStatSettingsViewModelInfo viewModelInfo)
+        {
+            Initialize(viewModelInfo);
+        }
+
+        private void Initialize(HudStatSettingsViewModelInfo viewModelInfo)
+        {
+            Check.ArgumentNotNull(() => viewModelInfo);
+
+            var clonedItems = viewModelInfo.SelectedStatInfoCollection.Select(x => x.Clone()).ToArray();
+
+            if (viewModelInfo.SelectedStatInfo != null)
+            {
+                var clonedSelectedItem = clonedItems.FirstOrDefault(x => x.Id == viewModelInfo.SelectedStatInfo.Id);
+
+                if (clonedSelectedItem != null)
+                {
+                    selectedItem = clonedSelectedItem;
+                }
+            }
+            else
+            {
+                selectedItem = clonedItems.FirstOrDefault();
+            }
+
+            items = new ObservableCollection<StatInfo>(clonedItems);
+
+            SaveCommand = ReactiveCommand.Create();
+            SaveCommand.Subscribe(x =>
+            {
+                if (viewModelInfo.Save != null)
+                {
+                    viewModelInfo.Save();
+                }
+            });
+
+            CancelCommand = ReactiveCommand.Create();
+            CancelCommand.Subscribe(x =>
+            {
+                if (viewModelInfo.Cancel != null)
+                {
+                    viewModelInfo.Cancel();
+                }
+            });
+
+            SelectColorCommand = ReactiveCommand.Create();
+            SelectColorCommand.Subscribe(x => SelectColor(x as StatInfoOptionValueRange));
+
+            PickerSelectColorCommand = ReactiveCommand.Create();
+            PickerSelectColorCommand.Subscribe(x => IsColorPickerPopupOpened = false);
+
+            this.ObservableForProperty(x => x.SelectedColor).Subscribe(x =>
+            {
+                if (selectedStatInfoOptionValueRange != null)
+                {
+                    selectedStatInfoOptionValueRange.Color = x.Value;
+                }
+            });
+        }
+
+        public ReactiveCommand<object> SaveCommand { get; private set; }
+
+        public ReactiveCommand<object> CancelCommand { get; private set; }
+
+        public ReactiveCommand<object> SelectColorCommand { get; private set; }
+
+        public ReactiveCommand<object> PickerSelectColorCommand { get; private set; }
+
+        private ObservableCollection<StatInfo> items;
+
+        public ObservableCollection<StatInfo> Items
+        {
+            get
+            {
+                return items;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref items, value);
+            }
+        }
+
+        private StatInfo selectedItem;
+
+        public StatInfo SelectedItem
+        {
+            get
+            {
+                return selectedItem;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedItem, value);
+            }
+        }
+
+        private bool isColorPickerPopupOpened;
+
+        public bool IsColorPickerPopupOpened
+        {
+            get
+            {
+                return isColorPickerPopupOpened;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref isColorPickerPopupOpened, value);
+            }
+        }
+
+        private Color selectedColor;
+
+        public Color SelectedColor
+        {
+            get
+            {
+                return selectedColor;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref selectedColor, value);
+            }
+        }
+
+        private StatInfoOptionValueRange selectedStatInfoOptionValueRange;
+
+        private void SelectColor(StatInfoOptionValueRange statInfoValueRange)
+        {
+            IsColorPickerPopupOpened = true;
+            selectedStatInfoOptionValueRange = statInfoValueRange;
+        }
+    }
+}

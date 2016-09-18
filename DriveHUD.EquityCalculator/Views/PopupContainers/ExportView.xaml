@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="DriveHUD.EquityCalculator.Views.ExportView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DriveHUD.EquityCalculator.Views"
+             xmlns:vm="clr-namespace:DriveHUD.EquityCalculator.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+
+    <UserControl.DataContext>
+        <vm:ExportViewModel />
+    </UserControl.DataContext>
+    <StackPanel Margin="10">
+
+        <TextBlock Text="{ResX Key=Common_ExportData}" Style="{StaticResource Title_H1}" />
+
+        <Separator/>
+        
+        <UniformGrid Margin="5 10" Columns="3" HorizontalAlignment="Stretch">
+            <Button Grid.Column="0" Command="{Binding ExportECCommand}" Content="{ResX Key=Common_Export_EC}" Margin="10" />
+            <Button Grid.Column="1" Command="{Binding ExportBothCommand}"  Content="{ResX Key=Common_Export_Both}"  Margin="10" />
+            <Button Grid.Column="2" Command="{Binding ExportHHCommand}" Content="{ResX Key=Common_Export_HH}"  Margin="10"/>
+        </UniformGrid>
+
+        <Separator/>
+
+        <Button Margin="0 20" Content="{ResX Key=Common_Close}" Command="{Binding CloseCommand}" Style="{StaticResource ButtonStyle}" HorizontalAlignment="Left" />
+
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189530971">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819274937</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>14</gamecount>  
+	          <startdate>2014-01-28 16:51:14</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>465</bets>  
+	          <wins>355</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>690</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>1</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.90</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5449304237">
+		 <general>
+		  <startdate>2014-01-28 16:51:14</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="800" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Dimmon82500" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">X X</cards><action no="4" player="achodada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C4 H6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="6" player="Dimmon82500" type="4" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">X X</cards><action no="3" player="Gaborjuve" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA D9 H3</cards><action no="7" player="Dimmon82500" type="4" sum="0" cards=""/><action no="9" player="Dimmon82500" type="0" sum="0" cards=""/><action no="8" player="Gaborjuve" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449304401">
+		 <general>
+		  <startdate>2014-01-28 16:51:32</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="70" bet="20" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="830" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dimmon82500" type="1" sum="10" cards="[cards]"/><action no="2" player="Gaborjuve" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">SK D3</cards><action no="3" player="achodada" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">C5 S5</cards><action no="4" player="WorstCard" type="3" sum="20" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="5" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">SQ C2</cards><action no="6" player="Gaborjuve" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 D10 D8</cards><action no="8" player="achodada" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="7" player="Gaborjuve" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards><action no="11" player="achodada" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="Gaborjuve" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards><action no="14" player="achodada" type="4" sum="0" cards=""/><action no="15" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="Gaborjuve" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449304788">
+		 <general>
+		  <startdate>2014-01-28 16:52:15</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="780" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="810" dealer="0" win="120" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="achodada" type="2" sum="20" cards="[cards]"/><action no="1" player="Gaborjuve" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">CQ SJ</cards><action no="6" player="achodada" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C2 D6</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="4" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">H3 C8</cards><action no="5" player="Gaborjuve" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 HA C10</cards><action no="8" player="achodada" type="3" sum="20" cards=""/><action no="7" player="Gaborjuve" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards><action no="10" player="achodada" type="3" sum="20" cards=""/><action no="9" player="Gaborjuve" type="5" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S9</cards><action no="12" player="achodada" type="4" sum="0" cards=""/><action no="11" player="Gaborjuve" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449305217">
+		 <general>
+		  <startdate>2014-01-28 16:53:01</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="720" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="840" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="870" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="achodada" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">X X</cards><action no="5" player="achodada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D10 C6</cards><cards type="Pocket" player="Dimmon82500">X X</cards><action no="3" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">X X</cards><action no="4" player="Gaborjuve" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449305336">
+		 <general>
+		  <startdate>2014-01-28 16:53:16</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="710" dealer="1" win="195" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="850" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="770" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Dimmon82500" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">C10 S8</cards><action no="4" player="achodada" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">SQ C5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">H7 D5</cards><action no="6" player="Dimmon82500" type="4" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">X X</cards><action no="3" player="Gaborjuve" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 C8 CK</cards><action no="8" player="achodada" type="4" sum="0" cards=""/><action no="7" player="Dimmon82500" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards><action no="10" player="achodada" type="3" sum="60" cards=""/><action no="9" player="Dimmon82500" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="12" player="achodada" type="4" sum="0" cards=""/><action no="11" player="Dimmon82500" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449319406">
+		 <general>
+		  <startdate>2014-01-28 16:53:58</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="815" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="835" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="680" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dimmon82500" type="1" sum="15" cards="[cards]"/><action no="2" player="Gaborjuve" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">X X</cards><action no="3" player="achodada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D3 C9</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="5" player="Dimmon82500" type="23" sum="90" cards=""/><cards type="Pocket" player="Gaborjuve">X X</cards><action no="6" player="Gaborjuve" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449319602">
+		 <general>
+		  <startdate>2014-01-28 16:54:19</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="815" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="835" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="710" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="840" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="achodada" type="2" sum="30" cards="[cards]"/><action no="1" player="Gaborjuve" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">X X</cards><action no="6" player="achodada" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DA DQ</cards><action no="3" player="WorstCard" type="23" sum="90" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="4" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">X X</cards><action no="5" player="Gaborjuve" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449319918">
+		 <general>
+		  <startdate>2014-01-28 16:54:52</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="785" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="880" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="710" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="825" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="achodada" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">X X</cards><action no="5" player="achodada" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">S7 HJ</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="3" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">X X</cards><action no="4" player="Gaborjuve" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 S5 H8</cards><action no="7" player="achodada" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards><action no="9" player="achodada" type="4" sum="0" cards=""/><action no="11" player="achodada" type="0" sum="0" cards=""/><action no="10" player="WorstCard" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320183">
+		 <general>
+		  <startdate>2014-01-28 16:55:23</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="755" dealer="1" win="195" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="910" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="710" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="825" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="achodada" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Dimmon82500" type="15" sum="5" cards="[cards]"/><action no="6" player="Dimmon82500" type="2" sum="50" cards="[cards]"/><action no="3" player="Gaborjuve" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">X X</cards><action no="8" player="achodada" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">S6 HJ</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="10" player="Dimmon82500" type="4" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">X X</cards><action no="7" player="Gaborjuve" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 DA H7</cards><action no="12" player="achodada" type="5" sum="50" cards=""/><action no="11" player="Dimmon82500" type="4" sum="0" cards=""/><action no="13" player="Dimmon82500" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320540">
+		 <general>
+		  <startdate>2014-01-28 16:56:12</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="845" dealer="0" win="0" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="880" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="655" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="820" dealer="0" win="445" bet="205" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="achodada" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Dimmon82500" type="15" sum="5" cards="[cards]"/><action no="5" player="Dimmon82500" type="1" sum="25" cards="[cards]"/><action no="2" player="Gaborjuve" type="15" sum="5" cards="[cards]"/><action no="6" player="Gaborjuve" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">S9 S4</cards><action no="7" player="achodada" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">S2 SA</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">X X</cards><action no="9" player="Dimmon82500" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">SQ H6</cards><action no="10" player="Gaborjuve" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 D4 DQ</cards><action no="12" player="achodada" type="3" sum="50" cards=""/><action no="11" player="Gaborjuve" type="5" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="14" player="achodada" type="3" sum="50" cards=""/><action no="13" player="Gaborjuve" type="5" sum="50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="16" player="achodada" type="3" sum="50" cards=""/><action no="15" player="Gaborjuve" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449320823">
+		 <general>
+		  <startdate>2014-01-28 16:56:48</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="640" dealer="0" win="1,285" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="875" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189530971"/><player seat="7" name="Dimmon82500" chips="625" dealer="1" win="0" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="Gaborjuve" chips="1,060" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="achodada" type="15" sum="5" cards="[cards]"/><action no="6" player="achodada" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Dimmon82500" type="15" sum="5" cards="[cards]"/><action no="1" player="Gaborjuve" type="15" sum="5" cards="[cards]"/><action no="5" player="Gaborjuve" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">CJ HK</cards><action no="10" player="achodada" type="23" sum="250" cards=""/><action no="12" player="achodada" type="3" sum="370" cards=""/><cards type="Pocket" player="WorstCard">H3 SJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Dimmon82500">H5 D5</cards><action no="8" player="Dimmon82500" type="23" sum="150" cards=""/><action no="11" player="Dimmon82500" type="23" sum="620" cards=""/><cards type="Pocket" player="Gaborjuve">X X</cards><action no="9" player="Gaborjuve" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 S8 H2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D10</cards>
+	</round>
+	
+		</game><game gamecode="5449321179">
+		 <general>
+		  <startdate>2014-01-28 16:57:33</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="1,300" dealer="0" win="0" bet="1,030" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="870" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189530971"/><player seat="9" name="Gaborjuve" chips="1,030" dealer="1" win="2,170" bet="1,030" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="achodada" type="15" sum="10" cards="[cards]"/><action no="4" player="achodada" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Gaborjuve" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">D9 D8</cards><action no="7" player="achodada" type="3" sum="250" cards=""/><cards type="Pocket" player="WorstCard">CK C7</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">D10 C10</cards><action no="6" player="Gaborjuve" type="23" sum="300" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA C9 SA</cards><action no="9" player="achodada" type="4" sum="0" cards=""/><action no="11" player="achodada" type="3" sum="720" cards=""/><action no="10" player="Gaborjuve" type="5" sum="720" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards>
+	</round>
+	
+		</game><game gamecode="5449321503">
+		 <general>
+		  <startdate>2014-01-28 16:58:17</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="270" dealer="1" win="300" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="760" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189530971"/><player seat="9" name="Gaborjuve" chips="2,170" dealer="0" win="340" bet="310" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="achodada" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Gaborjuve" type="15" sum="10" cards="[cards]"/><action no="5" player="Gaborjuve" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">S3 SK</cards><action no="6" player="achodada" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">SJ S9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">D8 CK</cards><action no="8" player="Gaborjuve" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 DA S10</cards><action no="10" player="achodada" type="7" sum="60" cards=""/><action no="9" player="Gaborjuve" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="5449321784">
+		 <general>
+		  <startdate>2014-01-28 16:58:52</startdate>		  
+		  <players>
+		   <player seat="2" name="achodada" chips="300" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189530971"/><player seat="9" name="Gaborjuve" chips="2,200" dealer="0" win="620" bet="310" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="achodada" type="15" sum="10" cards="[cards]"/><action no="5" player="achodada" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Gaborjuve" type="15" sum="10" cards="[cards]"/><action no="4" player="Gaborjuve" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="achodada">D4 D7</cards><action no="8" player="achodada" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">C5 S10</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Gaborjuve">DJ H8</cards><action no="7" player="Gaborjuve" type="3" sum="50" cards=""/><action no="9" player="Gaborjuve" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 CA C3</cards><action no="11" player="achodada" type="7" sum="90" cards=""/><action no="10" player="Gaborjuve" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards>
+	</round>
+	
+		</game>  
+	</session>

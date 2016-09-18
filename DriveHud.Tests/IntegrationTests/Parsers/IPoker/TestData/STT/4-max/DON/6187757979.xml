@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187757979">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819028735</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:10</duration>  
+	          <gamecount>32</gamecount>  
+	          <startdate>2014-01-25 18:41:49</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>4,684</bets>  
+	          <wins>5,177</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,293</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5436665904">
+		 <general>
+		  <startdate>2014-01-25 18:41:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mkmumin" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="800" dealer="0" win="221" bet="151" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Pustefiix" type="1" sum="10" cards="[cards]"/><action no="2" player="mkmumin" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D7 D5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="5" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="6" player="mkmumin" type="3" sum="40" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="3" player="sprimos" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 D2 C2</cards><action no="7" player="mkmumin" type="4" sum="0" cards=""/><action no="9" player="mkmumin" type="0" sum="0" cards=""/><action no="8" player="sprimos" type="5" sum="91" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436666189">
+		 <general>
+		  <startdate>2014-01-25 18:42:22</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="790" dealer="1" win="1,500" bet="740" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="mkmumin" chips="740" dealer="0" win="0" bet="740" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="870" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mkmumin" type="1" sum="10" cards="[cards]"/><action no="2" player="sprimos" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C8 H2</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">CA HK</cards><action no="4" player="Pustefiix" type="23" sum="100" cards=""/><action no="7" player="Pustefiix" type="3" sum="80" cards=""/><cards type="Pocket" player="mkmumin">SA CJ</cards><action no="5" player="mkmumin" type="23" sum="180" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="6" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 H5 D10</cards><action no="9" player="Pustefiix" type="3" sum="560" cards=""/><action no="8" player="mkmumin" type="5" sum="560" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards>
+	</round>
+	
+		</game><game gamecode="5436666503">
+		 <general>
+		  <startdate>2014-01-25 18:42:54</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,550" dealer="0" win="110" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="850" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="sprimos" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SQ H9</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="3" player="Pustefiix" type="23" sum="80" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="4" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436666685">
+		 <general>
+		  <startdate>2014-01-25 18:43:13</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,580" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="840" dealer="1" win="110" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Pustefiix" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HJ DK</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="5" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="3" player="sprimos" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436666865">
+		 <general>
+		  <startdate>2014-01-25 18:43:33</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,560" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="870" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Pustefiix" type="1" sum="10" cards="[cards]"/><action no="2" player="sprimos" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D6 H4</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="4" player="Pustefiix" type="23" sum="60" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="5" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436666993">
+		 <general>
+		  <startdate>2014-01-25 18:43:47</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="770" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,580" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="850" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="sprimos" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CJ C5</cards><cards type="Pocket" player="Pustefiix">X X</cards><action no="3" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="4" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436667101">
+		 <general>
+		  <startdate>2014-01-25 18:43:58</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="780" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,580" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="840" dealer="1" win="165" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Pustefiix" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DA H6</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="5" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="3" player="sprimos" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436667217">
+		 <general>
+		  <startdate>2014-01-25 18:44:12</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="765" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,550" dealer="0" win="180" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="885" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Pustefiix" type="1" sum="15" cards="[cards]"/><action no="2" player="sprimos" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C7 HK</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="4" player="Pustefiix" type="3" sum="15" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="5" player="sprimos" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ SJ H5</cards><action no="6" player="Pustefiix" type="5" sum="120" cards=""/><action no="7" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436667468">
+		 <general>
+		  <startdate>2014-01-25 18:44:38</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="765" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,580" dealer="1" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="855" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="sprimos" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H5 H2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="3" player="Pustefiix" type="23" sum="60" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="4" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436667598">
+		 <general>
+		  <startdate>2014-01-25 18:44:54</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="735" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,625" dealer="0" win="255" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="840" dealer="1" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Pustefiix" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H3 D5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="5" player="Pustefiix" type="23" sum="150" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="3" player="sprimos" type="23" sum="90" cards=""/><action no="6" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436667874">
+		 <general>
+		  <startdate>2014-01-25 18:45:25</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="720" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,730" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="750" dealer="0" win="810" bet="750" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Pustefiix" type="1" sum="15" cards="[cards]"/><action no="2" player="sprimos" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D2 S7</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="4" player="Pustefiix" type="23" sum="60" cards=""/><action no="6" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="5" player="sprimos" type="23" sum="750" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436668090">
+		 <general>
+		  <startdate>2014-01-25 18:45:48</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="720" dealer="0" win="795" bet="720" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,670" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="810" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="sprimos" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S9 D9</cards><action no="5" player="WorstCard" type="23" sum="720" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="3" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="4" player="sprimos" type="23" sum="75" cards=""/><action no="6" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436668245">
+		 <general>
+		  <startdate>2014-01-25 18:46:05</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="795" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,670" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="735" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Pustefiix" type="15" sum="5" cards="[cards]"/><action no="5" player="Pustefiix" type="2" sum="50" cards="[cards]"/><action no="3" player="sprimos" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C2 DJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><cards type="Pocket" player="sprimos">X X</cards><action no="6" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436668362">
+		 <general>
+		  <startdate>2014-01-25 18:46:18</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="765" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,705" dealer="0" win="733" bet="730" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="730" dealer="0" win="732" bet="730" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Pustefiix" type="15" sum="5" cards="[cards]"/><action no="4" player="Pustefiix" type="1" sum="25" cards="[cards]"/><action no="2" player="sprimos" type="15" sum="5" cards="[cards]"/><action no="5" player="sprimos" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H8 D2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">DA D5</cards><action no="7" player="Pustefiix" type="3" sum="25" cards=""/><cards type="Pocket" player="sprimos">CA C7</cards><action no="8" player="sprimos" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 S4 SA</cards><action no="9" player="Pustefiix" type="5" sum="50" cards=""/><action no="11" player="Pustefiix" type="3" sum="625" cards=""/><action no="10" player="sprimos" type="23" sum="675" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S10</cards>
+	</round>
+	
+		</game><game gamecode="5436680407">
+		 <general>
+		  <startdate>2014-01-25 18:46:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="760" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,708" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="732" dealer="0" win="792" bet="732" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Pustefiix" type="15" sum="5" cards="[cards]"/><action no="1" player="sprimos" type="15" sum="5" cards="[cards]"/><action no="4" player="sprimos" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D2 HJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="6" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="7" player="sprimos" type="23" sum="727" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436680579">
+		 <general>
+		  <startdate>2014-01-25 18:47:09</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="705" dealer="0" win="1,415" bet="705" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,703" dealer="0" win="0" bet="705" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="792" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Pustefiix" type="15" sum="5" cards="[cards]"/><action no="5" player="Pustefiix" type="2" sum="50" cards="[cards]"/><action no="3" player="sprimos" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SQ CK</cards><action no="7" player="WorstCard" type="23" sum="700" cards=""/><cards type="Pocket" player="Pustefiix">D9 H9</cards><action no="8" player="Pustefiix" type="3" sum="650" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="6" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK H6 D4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game><game gamecode="5436680783">
+		 <general>
+		  <startdate>2014-01-25 18:47:30</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,415" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="998" dealer="0" win="165" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="787" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Pustefiix" type="15" sum="5" cards="[cards]"/><action no="4" player="Pustefiix" type="1" sum="25" cards="[cards]"/><action no="2" player="sprimos" type="15" sum="5" cards="[cards]"/><action no="5" player="sprimos" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H9 H6</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="7" player="Pustefiix" type="23" sum="100" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="8" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436680928">
+		 <general>
+		  <startdate>2014-01-25 18:47:47</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,410" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,058" dealer="1" win="190" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="732" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Pustefiix" type="15" sum="5" cards="[cards]"/><action no="1" player="sprimos" type="15" sum="5" cards="[cards]"/><action no="4" player="sprimos" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C7 SJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="6" player="Pustefiix" type="23" sum="100" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="7" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436681148">
+		 <general>
+		  <startdate>2014-01-25 18:48:11</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,355" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,143" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="702" dealer="1" win="872" bet="702" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Pustefiix" type="15" sum="10" cards="[cards]"/><action no="5" player="Pustefiix" type="2" sum="100" cards="[cards]"/><action no="3" player="sprimos" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C2 S6</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="8" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="6" player="sprimos" type="23" sum="692" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436681341">
+		 <general>
+		  <startdate>2014-01-25 18:48:31</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,295" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,033" dealer="0" win="1,253" bet="1,033" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="872" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Pustefiix" type="15" sum="10" cards="[cards]"/><action no="4" player="Pustefiix" type="1" sum="50" cards="[cards]"/><action no="2" player="sprimos" type="15" sum="10" cards="[cards]"/><action no="5" player="sprimos" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D3 D10</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="7" player="Pustefiix" type="3" sum="50" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="8" player="sprimos" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 S5 HK</cards><action no="9" player="Pustefiix" type="4" sum="0" cards=""/><action no="10" player="sprimos" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards><action no="11" player="Pustefiix" type="5" sum="100" cards=""/><action no="12" player="sprimos" type="3" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards><action no="13" player="Pustefiix" type="5" sum="823" cards=""/><action no="14" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436681670">
+		 <general>
+		  <startdate>2014-01-25 18:49:10</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,285" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,253" dealer="1" win="0" bet="662" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="662" dealer="0" win="1,434" bet="662" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Pustefiix" type="15" sum="10" cards="[cards]"/><action no="1" player="sprimos" type="15" sum="10" cards="[cards]"/><action no="4" player="sprimos" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D8 S10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">DK D9</cards><action no="6" player="Pustefiix" type="23" sum="200" cards=""/><action no="9" player="Pustefiix" type="3" sum="452" cards=""/><cards type="Pocket" player="sprimos">D10 DJ</cards><action no="7" player="sprimos" type="23" sum="652" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK H7 HJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game><game gamecode="5436681975">
+		 <general>
+		  <startdate>2014-01-25 18:49:45</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,175" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="591" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="1,434" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Pustefiix" type="15" sum="10" cards="[cards]"/><action no="5" player="Pustefiix" type="2" sum="100" cards="[cards]"/><action no="3" player="sprimos" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D5 D7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><cards type="Pocket" player="sprimos">X X</cards><action no="6" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436682113">
+		 <general>
+		  <startdate>2014-01-25 18:50:03</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,115" dealer="1" win="0" bet="661" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="661" dealer="0" win="1,487" bet="661" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="1,424" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Pustefiix" type="15" sum="15" cards="[cards]"/><action no="4" player="Pustefiix" type="1" sum="75" cards="[cards]"/><action no="2" player="sprimos" type="15" sum="15" cards="[cards]"/><action no="5" player="sprimos" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S8 H8</cards><action no="6" player="WorstCard" type="23" sum="300" cards=""/><action no="9" player="WorstCard" type="3" sum="346" cards=""/><cards type="Pocket" player="Pustefiix">SA C4</cards><action no="7" player="Pustefiix" type="23" sum="646" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="8" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ S10 H10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards>
+	</round>
+	
+		</game><game gamecode="5436682358">
+		 <general>
+		  <startdate>2014-01-25 18:50:32</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="454" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,487" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="1,259" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Pustefiix" type="15" sum="15" cards="[cards]"/><action no="1" player="sprimos" type="15" sum="15" cards="[cards]"/><action no="4" player="sprimos" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DJ D6</cards><cards type="Pocket" player="Pustefiix">X X</cards><action no="6" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="7" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436682479">
+		 <general>
+		  <startdate>2014-01-25 18:50:46</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="559" dealer="0" win="739" bet="559" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,472" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="1,169" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Pustefiix" type="15" sum="15" cards="[cards]"/><action no="5" player="Pustefiix" type="2" sum="150" cards="[cards]"/><action no="3" player="sprimos" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S4 C2</cards><action no="7" player="WorstCard" type="23" sum="544" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="8" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="6" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436682626">
+		 <general>
+		  <startdate>2014-01-25 18:51:02</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="739" dealer="1" win="1,568" bet="739" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,307" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="1,154" dealer="0" win="0" bet="739" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="Pustefiix" type="15" sum="15" cards="[cards]"/><action no="4" player="Pustefiix" type="1" sum="75" cards="[cards]"/><action no="2" player="sprimos" type="15" sum="15" cards="[cards]"/><action no="5" player="sprimos" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C6 CQ</cards><action no="6" player="WorstCard" type="23" sum="724" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="7" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">HQ H10</cards><action no="8" player="sprimos" type="3" sum="574" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 S6 CJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game><game gamecode="5436682807">
+		 <general>
+		  <startdate>2014-01-25 18:51:23</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,568" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,217" dealer="1" win="1,472" bet="1,217" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="415" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="Pustefiix" type="15" sum="15" cards="[cards]"/><action no="1" player="sprimos" type="15" sum="15" cards="[cards]"/><action no="4" player="sprimos" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S4 S5</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="6" player="Pustefiix" type="23" sum="1,202" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="7" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436682982">
+		 <general>
+		  <startdate>2014-01-25 18:51:41</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,403" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,472" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="325" dealer="1" win="580" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="Pustefiix" type="15" sum="15" cards="[cards]"/><action no="5" player="Pustefiix" type="2" sum="150" cards="[cards]"/><action no="3" player="sprimos" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H9 D7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="8" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="6" player="sprimos" type="23" sum="310" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436683181">
+		 <general>
+		  <startdate>2014-01-25 18:52:03</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,313" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,307" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="580" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="Pustefiix" type="15" sum="20" cards="[cards]"/><action no="4" player="Pustefiix" type="1" sum="100" cards="[cards]"/><action no="2" player="sprimos" type="15" sum="20" cards="[cards]"/><action no="5" player="sprimos" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S6 DQ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="7" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards>
+	</round>
+	
+		</game><game gamecode="5436683278">
+		 <general>
+		  <startdate>2014-01-25 18:52:15</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,293" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,187" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="720" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="200" cards="[cards]"/><action no="3" player="Pustefiix" type="15" sum="20" cards="[cards]"/><action no="1" player="sprimos" type="15" sum="20" cards="[cards]"/><action no="4" player="sprimos" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H10 C10</cards><cards type="Pocket" player="Pustefiix">X X</cards><action no="6" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="7" player="sprimos" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436683408">
+		 <general>
+		  <startdate>2014-01-25 18:52:29</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,433" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="1,167" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="600" dealer="1" win="940" bet="600" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/><action no="2" player="Pustefiix" type="15" sum="20" cards="[cards]"/><action no="5" player="Pustefiix" type="2" sum="200" cards="[cards]"/><action no="3" player="sprimos" type="15" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H3 C2</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">X X</cards><action no="8" player="Pustefiix" type="0" sum="0" cards=""/><cards type="Pocket" player="sprimos">X X</cards><action no="6" player="sprimos" type="23" sum="580" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436683578">
+		 <general>
+		  <startdate>2014-01-25 18:52:45</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,313" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="6187757979"/><player seat="4" name="Pustefiix" chips="947" dealer="0" win="1,907" bet="947" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="sprimos" chips="940" dealer="0" win="0" bet="940" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="Pustefiix" type="15" sum="20" cards="[cards]"/><action no="4" player="Pustefiix" type="1" sum="100" cards="[cards]"/><action no="2" player="sprimos" type="15" sum="20" cards="[cards]"/><action no="5" player="sprimos" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S2 CJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Pustefiix">SQ SJ</cards><action no="7" player="Pustefiix" type="23" sum="927" cards=""/><cards type="Pocket" player="sprimos">HA H9</cards><action no="8" player="sprimos" type="7" sum="720" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 DQ C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game>  
+	</session>

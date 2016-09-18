@@ -1,0 +1,57 @@
+﻿<Window x:Class="DriveHUD.Application.Social.TwitterOAuth"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon ="../images/drivehud.ico"
+        FontFamily="./Fonts/#Open Sans"
+        Foreground="#7D7F84"
+        Background="#1F2124"
+        ResizeMode="NoResize"
+        Title="Tweet" 
+        SizeToContent="WidthAndHeight"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid x:Name="gridAuth" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <WebBrowser Name="browserControl" Margin="0" Height="495" Width="795"
+                        VerticalAlignment="Top" />
+            <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+                <TextBlock Text="Enter PIN :" Margin="5" VerticalAlignment="Center"/>
+                <TextBox x:Name="txtPincode" Margin="5" Width="180" MaxLength="10"/>
+                <Button x:Name="btnVerify" Click="btnVerify_Click" Margin="5" Content="Verify" 
+                        Style="{StaticResource ButtonStyle}"/>
+                <Button x:Name="btnRefresh" Click="btnRefresh_Click" Margin="5" Content="Refresh" 
+                        Style="{StaticResource ButtonStyle}"/>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid x:Name="gridTweet" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="Tweet:" Margin="5" VerticalAlignment="Center"/>
+            <TextBox  x:Name="txtTweet"
+                Grid.Row="1" Margin="5"
+                MaxLength="140" Height="150" Width="450"
+                TextWrapping="Wrap"
+                AcceptsReturn="True"
+                BorderThickness="1" 
+                HorizontalAlignment="Left"      
+                VerticalContentAlignment="Stretch"
+                HorizontalContentAlignment="Stretch" />
+
+            <Button x:Name="btnTweet" Grid.Row="2" HorizontalAlignment="Right" 
+                    Click="btnTweet_Click" Margin="5" Content="Post" Style="{StaticResource ButtonStyle}"/>
+
+
+        </Grid>
+
+    </Grid>
+</Window>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188318595">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819104528</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>24</gamecount>  
+	          <startdate>2014-01-26 17:52:57</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,812</bets>  
+	          <wins>3,703</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,691</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5439313391">
+		 <general>
+		  <startdate>2014-01-26 17:52:57</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="6188318595"/><player seat="4" name="handsoman2011" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="thyrstill" chips="800" dealer="0" win="330" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="handsoman2011" type="1" sum="10" cards="[cards]"/><action no="2" player="thyrstill" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CK C10</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="handsoman2011">X X</cards><action no="5" player="handsoman2011" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="6" player="thyrstill" type="23" sum="240" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="3" player="ema19v" type="3" sum="20" cards=""/><action no="7" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439313655">
+		 <general>
+		  <startdate>2014-01-26 17:53:33</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="740" dealer="0" win="412" bet="241" rebuy="0" addon="0" reg_code="6188318595"/><player seat="4" name="handsoman2011" chips="790" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="thyrstill" chips="890" dealer="0" win="0" bet="101" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="thyrstill" type="1" sum="10" cards="[cards]"/><action no="2" player="ema19v" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H9 H10</cards><action no="3" player="WorstCard" type="23" sum="50" cards=""/><cards type="Pocket" player="handsoman2011">X X</cards><action no="4" player="handsoman2011" type="3" sum="50" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="5" player="thyrstill" type="3" sum="40" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="6" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 H3 C8</cards><action no="8" player="WorstCard" type="5" sum="51" cards=""/><action no="9" player="handsoman2011" type="0" sum="0" cards=""/><action no="7" player="thyrstill" type="4" sum="0" cards=""/><action no="10" player="thyrstill" type="3" sum="51" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="12" player="WorstCard" type="5" sum="140" cards=""/><action no="11" player="thyrstill" type="4" sum="0" cards=""/><action no="13" player="thyrstill" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439314046">
+		 <general>
+		  <startdate>2014-01-26 17:54:26</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="911" dealer="0" win="1,661" bet="911" rebuy="0" addon="0" reg_code="6188318595"/><player seat="4" name="handsoman2011" chips="740" dealer="0" win="0" bet="740" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="thyrstill" chips="789" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="760" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="ema19v" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK SJ</cards><action no="6" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="handsoman2011">H7 H8</cards><action no="3" player="handsoman2011" type="3" sum="20" cards=""/><action no="7" player="handsoman2011" type="3" sum="40" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="4" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="5" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK DJ D3</cards><action no="8" player="WorstCard" type="5" sum="65" cards=""/><action no="9" player="handsoman2011" type="3" sum="65" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="10" player="WorstCard" type="5" sum="140" cards=""/><action no="11" player="handsoman2011" type="3" sum="140" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CQ</cards><action no="12" player="WorstCard" type="5" sum="646" cards=""/><action no="13" player="handsoman2011" type="7" sum="475" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439324664">
+		 <general>
+		  <startdate>2014-01-26 17:55:38</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,661" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="789" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="750" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="thyrstill" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S10 C3</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><cards type="Pocket" player="ema19v">X X</cards><action no="3" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439324759">
+		 <general>
+		  <startdate>2014-01-26 17:55:50</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,646" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="804" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="750" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="thyrstill" type="1" sum="15" cards="[cards]"/><action no="2" player="ema19v" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C10 H6</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="4" player="thyrstill" type="23" sum="90" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="5" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439324863">
+		 <general>
+		  <startdate>2014-01-26 17:56:08</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,646" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="834" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="720" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="ema19v" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S3 H7</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="3" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="4" player="ema19v" type="23" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439325004">
+		 <general>
+		  <startdate>2014-01-26 17:56:30</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,616" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="834" dealer="0" win="240" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="750" dealer="1" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="thyrstill" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SA H3</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="5" player="thyrstill" type="4" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="3" player="ema19v" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 S2 HQ</cards><action no="6" player="thyrstill" type="4" sum="0" cards=""/><action no="8" player="thyrstill" type="23" sum="120" cards=""/><action no="7" player="ema19v" type="5" sum="45" cards=""/><action no="9" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439325293">
+		 <general>
+		  <startdate>2014-01-26 17:57:14</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,601" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="924" dealer="0" win="215" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="675" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="thyrstill" type="15" sum="5" cards="[cards]"/><action no="4" player="thyrstill" type="1" sum="25" cards="[cards]"/><action no="2" player="ema19v" type="15" sum="5" cards="[cards]"/><action no="5" player="ema19v" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S9 C8</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="7" player="thyrstill" type="23" sum="150" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="8" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439325426">
+		 <general>
+		  <startdate>2014-01-26 17:57:35</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,596" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="984" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="620" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="thyrstill" type="15" sum="5" cards="[cards]"/><action no="1" player="ema19v" type="15" sum="5" cards="[cards]"/><action no="4" player="ema19v" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D3 CA</cards><cards type="Pocket" player="thyrstill">X X</cards><action no="6" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="7" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439325517">
+		 <general>
+		  <startdate>2014-01-26 17:57:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,631" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="979" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="590" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="thyrstill" type="15" sum="5" cards="[cards]"/><action no="5" player="thyrstill" type="2" sum="50" cards="[cards]"/><action no="3" player="ema19v" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S5 D2</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><cards type="Pocket" player="ema19v">X X</cards><action no="6" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439325628">
+		 <general>
+		  <startdate>2014-01-26 17:58:04</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,601" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="1,014" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="585" dealer="0" win="215" bet="155" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="thyrstill" type="15" sum="5" cards="[cards]"/><action no="4" player="thyrstill" type="1" sum="25" cards="[cards]"/><action no="2" player="ema19v" type="15" sum="5" cards="[cards]"/><action no="5" player="ema19v" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C2 DA</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="7" player="thyrstill" type="3" sum="25" cards=""/><action no="9" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="8" player="ema19v" type="23" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439325813">
+		 <general>
+		  <startdate>2014-01-26 17:58:33</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,596" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="959" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="645" dealer="0" win="190" bet="130" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="thyrstill" type="15" sum="5" cards="[cards]"/><action no="1" player="ema19v" type="15" sum="5" cards="[cards]"/><action no="4" player="ema19v" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SK C3</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="6" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="7" player="ema19v" type="23" sum="125" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439325951">
+		 <general>
+		  <startdate>2014-01-26 17:58:55</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,541" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="954" dealer="0" win="360" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="705" dealer="1" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="thyrstill" type="15" sum="5" cards="[cards]"/><action no="5" player="thyrstill" type="2" sum="50" cards="[cards]"/><action no="3" player="ema19v" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H6 CJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="8" player="thyrstill" type="4" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="6" player="ema19v" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK HJ D3</cards><action no="9" player="thyrstill" type="4" sum="0" cards=""/><action no="11" player="thyrstill" type="3" sum="50" cards=""/><action no="10" player="ema19v" type="5" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards><action no="12" player="thyrstill" type="5" sum="120" cards=""/><action no="13" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439326151">
+		 <general>
+		  <startdate>2014-01-26 17:59:28</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,511" dealer="1" win="380" bet="210" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="1,089" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="600" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="thyrstill" type="15" sum="10" cards="[cards]"/><action no="4" player="thyrstill" type="1" sum="50" cards="[cards]"/><action no="2" player="ema19v" type="15" sum="10" cards="[cards]"/><action no="5" player="ema19v" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SK CQ</cards><action no="6" player="WorstCard" type="23" sum="200" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="7" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="8" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439326275">
+		 <general>
+		  <startdate>2014-01-26 17:59:47</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,681" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="1,029" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="490" dealer="0" win="610" bet="490" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="thyrstill" type="15" sum="10" cards="[cards]"/><action no="1" player="ema19v" type="15" sum="10" cards="[cards]"/><action no="4" player="ema19v" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H2 D7</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="6" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="7" player="ema19v" type="23" sum="480" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439326413">
+		 <general>
+		  <startdate>2014-01-26 18:00:05</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,571" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="1,019" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="610" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="thyrstill" type="15" sum="10" cards="[cards]"/><action no="5" player="thyrstill" type="2" sum="100" cards="[cards]"/><action no="3" player="ema19v" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S2 D2</cards><action no="7" player="WorstCard" type="23" sum="200" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="8" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="6" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439326515">
+		 <general>
+		  <startdate>2014-01-26 18:00:23</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,691" dealer="1" win="380" bet="210" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="909" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="600" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="thyrstill" type="15" sum="10" cards="[cards]"/><action no="4" player="thyrstill" type="1" sum="50" cards="[cards]"/><action no="2" player="ema19v" type="15" sum="10" cards="[cards]"/><action no="5" player="ema19v" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HK CJ</cards><action no="6" player="WorstCard" type="23" sum="200" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="7" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="8" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439326673">
+		 <general>
+		  <startdate>2014-01-26 18:00:43</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,861" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="849" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="490" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="thyrstill" type="15" sum="10" cards="[cards]"/><action no="1" player="ema19v" type="15" sum="10" cards="[cards]"/><action no="4" player="ema19v" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DQ H6</cards><cards type="Pocket" player="thyrstill">X X</cards><action no="6" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="7" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439326752">
+		 <general>
+		  <startdate>2014-01-26 18:00:55</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,931" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="839" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="430" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="thyrstill" type="15" sum="10" cards="[cards]"/><action no="5" player="thyrstill" type="2" sum="100" cards="[cards]"/><action no="3" player="ema19v" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S3 C3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><cards type="Pocket" player="ema19v">X X</cards><action no="6" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439326898">
+		 <general>
+		  <startdate>2014-01-26 18:01:16</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,871" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="909" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="420" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="thyrstill" type="15" sum="15" cards="[cards]"/><action no="4" player="thyrstill" type="1" sum="75" cards="[cards]"/><action no="2" player="ema19v" type="15" sum="15" cards="[cards]"/><action no="5" player="ema19v" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S9 D2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="7" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards>
+	</round>
+	
+		</game><game gamecode="5439344186">
+		 <general>
+		  <startdate>2014-01-26 18:01:31</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,856" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="819" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="525" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="thyrstill" type="15" sum="15" cards="[cards]"/><action no="1" player="ema19v" type="15" sum="15" cards="[cards]"/><action no="4" player="ema19v" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S6 DK</cards><cards type="Pocket" player="thyrstill">X X</cards><action no="6" player="thyrstill" type="0" sum="0" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="7" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439344939">
+		 <general>
+		  <startdate>2014-01-26 18:01:43</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,961" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="804" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="435" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="thyrstill" type="15" sum="15" cards="[cards]"/><action no="5" player="thyrstill" type="2" sum="150" cards="[cards]"/><action no="3" player="ema19v" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK C9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><cards type="Pocket" player="ema19v">X X</cards><action no="6" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439345908">
+		 <general>
+		  <startdate>2014-01-26 18:01:59</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,871" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="909" dealer="0" win="795" bet="615" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="420" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="thyrstill" type="15" sum="15" cards="[cards]"/><action no="4" player="thyrstill" type="1" sum="75" cards="[cards]"/><action no="2" player="ema19v" type="15" sum="15" cards="[cards]"/><action no="5" player="ema19v" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CK S3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">X X</cards><action no="7" player="thyrstill" type="23" sum="600" cards=""/><cards type="Pocket" player="ema19v">X X</cards><action no="8" player="ema19v" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439346919">
+		 <general>
+		  <startdate>2014-01-26 18:02:20</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,856" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6188318595"/><player seat="7" name="thyrstill" chips="1,089" dealer="1" win="735" bet="315" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="ema19v" chips="255" dealer="0" win="0" bet="255" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="thyrstill" type="15" sum="15" cards="[cards]"/><action no="1" player="ema19v" type="15" sum="15" cards="[cards]"/><action no="4" player="ema19v" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H7 S4</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="thyrstill">H10 D10</cards><action no="6" player="thyrstill" type="23" sum="300" cards=""/><cards type="Pocket" player="ema19v">D8 SJ</cards><action no="7" player="ema19v" type="7" sum="165" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 H3 D7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game>  
+	</session>

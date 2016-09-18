@@ -1,0 +1,100 @@
+﻿<telerik:RadWindow x:Class="DriveHUD.Application.HUDColor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:DriveHUD.Application.Controls"        
+        xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:application="clr-namespace:DriveHUD.Application"
+        xmlns:converter="clr-namespace:DriveHUD.Application.ValueConverters"
+    	xmlns:navigation="clr-namespace:Telerik.Windows.Controls.Navigation;assembly=Telerik.Windows.Controls.Navigation"
+        xmlns:Chromes="clr-namespace:Telerik.Windows.Controls.Chromes;assembly=Telerik.Windows.Controls"
+        xmlns:telerikPrimitives="clr-namespace:Telerik.Windows.Controls.Primitives;assembly=Telerik.Windows.Controls"        
+        Header="DriveHUD" 
+        FontFamily="./Fonts/#Open Sans"
+        Height="180"
+        Width="600"
+        ResizeMode="NoResize"
+        Foreground="#7D7F84"
+        Background="#1F2124"
+        WindowStartupLocation="CenterScreen" Closed="RadWindow_Closed_1" >
+    <!--<application:GadgetPanel HeaderColor="#fd3e0e">-->
+    <Grid Name="grdMain">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />            
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,0,0,0" Grid.RowSpan="2" >
+            <CheckBox Name="chkActive1" Content="In Active" Background="White" Margin="3" Click="chkActive1_Click_1" ></CheckBox>
+            <Label>
+                <TextBlock Name="lblActive1" Text="" TextWrapping="Wrap" Height="50" Width="100" Background="Red"/>
+            </Label>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <TextBox Name="txtActive1" Margin="4,3,2,3" Text="{Binding Active,UpdateSourceTrigger=PropertyChanged}" TextChanged="txtActive1_TextChanged_1" Width="60" ></TextBox>
+                <telerik:RadColorPicker  Name="RadActive1" Tag="lblActive1" IsEnabled="{Binding IsChecked, ElementName=chkActive1 }"  SelectedColor="Green" Margin="1" Background="Green"  IsDropDownOpen="False" SelectedColorChanged="colorPicker_SelectedColorChanged">                    
+                </telerik:RadColorPicker>
+            </StackPanel>
+
+        </StackPanel >
+        <StackPanel Grid.Column="1" Grid.Row="0" >
+            <CheckBox  Name="chkActive2" Content="In Active" Background="White" Margin="3" ></CheckBox>
+
+            <Label  >
+                <TextBlock Name="lblActive2" Text="" TextWrapping="Wrap" Height="50" Width="100" Background="Orange"  />
+            </Label>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <TextBox Name="txtActive2" Margin="1" Width="60" Text="{Binding Active2,UpdateSourceTrigger=PropertyChanged}"  TextChanged="txtActive2_TextChanged_1"  ></TextBox>
+                <telerik:RadColorPicker  Name="RadActive2" Tag="lblActive2" IsEnabled="{Binding IsChecked, ElementName=chkActive2 }"  SelectedColor="Orange" Margin="1" Background="Orange"  IsDropDownOpen="False" SelectedColorChanged="colorPicker_SelectedColorChanged">
+            </telerik:RadColorPicker>
+            </StackPanel>
+            
+        </StackPanel>
+        <StackPanel Grid.Column="2" Grid.Row="0" >
+            <CheckBox Name="chkActive3" Content="In Active" Background="White" Margin="3" ></CheckBox>
+            <Label  >
+                <TextBlock Name="lblActive3" Text="" TextWrapping="Wrap" Height="50" Width="100" Background="Yellow"  />
+            </Label>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <TextBox Name="txtActive3" Margin="1" Width="60" Text="{Binding Active3,UpdateSourceTrigger=PropertyChanged}"  TextChanged="txtActive3_TextChanged_1"  ></TextBox>
+                <telerik:RadColorPicker  Name="RadActive3" Tag="lblActive3" IsEnabled="{Binding IsChecked, ElementName=chkActive3 }"  SelectedColor="Yellow" Margin="1" Background="Yellow"  IsDropDownOpen="False" SelectedColorChanged="colorPicker_SelectedColorChanged">                    
+                </telerik:RadColorPicker>
+            </StackPanel>
+
+        </StackPanel>
+        <StackPanel  Grid.Column="3" Grid.Row="0">
+            <CheckBox Name="chkActive4" Content="In Active" Background="White" Margin="3" ></CheckBox>
+            <Label  >
+                <TextBlock Name="lblActive4" Text="" TextWrapping="Wrap" Height="50" Width="100" Background="Blue"/>
+            </Label>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <TextBox Name="txtActive4" Margin="1" Width="60" Text="{Binding Active4,UpdateSourceTrigger=PropertyChanged}"  TextChanged="txtActive4_TextChanged_1"  ></TextBox>
+                <telerik:RadColorPicker  Name="RadActive4" Tag="lblActive4" IsEnabled="{Binding IsChecked, ElementName=chkActive4 }"  SelectedColor="Blue" Margin="1" Background="Blue"  IsDropDownOpen="False" SelectedColorChanged="colorPicker_SelectedColorChanged">                    
+                </telerik:RadColorPicker>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel  Grid.Column="4" Grid.Row="0">
+            <CheckBox Name="chkActive5" Content="In Active" Background="White" Margin="3" ></CheckBox>           
+            <Label >
+                <TextBlock Name="lblActive5" Text="" TextWrapping="Wrap" Height="50" Width="100" Background="Green"/>
+            </Label>
+            <StackPanel Orientation="Horizontal" Margin="3">
+                <TextBox Name="txtActive5" Margin="1" Width="60" Text="{Binding Active5,UpdateSourceTrigger=PropertyChanged}" ></TextBox>
+                <telerik:RadColorPicker  Name="RadActive5" Tag="lblActive5" IsEnabled="{Binding IsChecked, ElementName=chkActive5 }"  SelectedColor="Green" Margin="1" Background="Green"  IsDropDownOpen="False" SelectedColorChanged="colorPicker_SelectedColorChanged">                   
+                </telerik:RadColorPicker>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel  Grid.Column="3" Grid.Row="1" Grid.ColumnSpan="2" Orientation="Horizontal"   HorizontalAlignment="Right">            
+            <!--<Button Name="btnOk" Margin="5" Content="Ok" HorizontalAlignment="Right"></Button>
+            <Button Name="btnClose" Margin="5" Content="Close"  HorizontalAlignment="Right"></Button>-->
+        </StackPanel>
+    </Grid>
+    <!--</application:GadgetPanel>-->
+</telerik:RadWindow>

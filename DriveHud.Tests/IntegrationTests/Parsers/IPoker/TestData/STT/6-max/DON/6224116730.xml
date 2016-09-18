@@ -1,0 +1,1200 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224116730">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824204909</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:32</duration>  
+	          <gamecount>74</gamecount>  
+	          <startdate>2014-03-25 14:04:05</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>18,313</bets>  
+	          <wins>22,243</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>5,430</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5600753071">
+		 <general>
+		  <startdate>2014-03-25 14:04:05</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="10" cards="[cards]"/><action no="2" player="kisius" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><cards type="Pocket" player="moonbaseone">HK S7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="5" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600753194">
+		 <general>
+		  <startdate>2014-03-25 14:04:39</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,500" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 D8</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="4" player="donny154" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ HK H3</cards><action no="9" player="moonbaseone" type="4" sum="0" cards=""/><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><action no="10" player="donny154" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600753310">
+		 <general>
+		  <startdate>2014-03-25 14:05:12</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ D7</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><cards type="Pocket" player="donny154">X X</cards><action no="3" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600753347">
+		 <general>
+		  <startdate>2014-03-25 14:05:23</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,530" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="10" cards="[cards]"/><action no="2" player="donny154" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 C7</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600753440">
+		 <general>
+		  <startdate>2014-03-25 14:05:47</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,500" dealer="1" win="80" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,540" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="2" sum="20" cards="[cards]"/><action no="1" player="donny154" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ H5</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="23" sum="50" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="7" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600753542">
+		 <general>
+		  <startdate>2014-03-25 14:06:18</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="1" sum="10" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 S9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="6" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600753610">
+		 <general>
+		  <startdate>2014-03-25 14:06:36</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,530" dealer="0" win="80" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="10" cards="[cards]"/><action no="2" player="kisius" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 SK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="23" sum="50" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="5" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600753683">
+		 <general>
+		  <startdate>2014-03-25 14:06:58</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,480" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,470" dealer="0" win="240" bet="180" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="23" sum="60" cards=""/><action no="9" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 H7</cards><action no="8" player="moonbaseone" type="23" sum="180" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="4" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600753833">
+		 <general>
+		  <startdate>2014-03-25 14:07:37</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,530" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,530" dealer="0" win="110" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C9 C3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="3" player="donny154" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600753891">
+		 <general>
+		  <startdate>2014-03-25 14:07:54</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,540" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,560" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="10" cards="[cards]"/><action no="2" player="donny154" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 D5</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600753936">
+		 <general>
+		  <startdate>2014-03-25 14:08:10</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,470" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,530" dealer="1" win="160" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,570" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="2" sum="40" cards="[cards]"/><action no="1" player="donny154" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA C3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="23" sum="100" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="7" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600754012">
+		 <general>
+		  <startdate>2014-03-25 14:08:31</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,430" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,590" dealer="0" win="160" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="1" sum="20" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="8" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ H9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="23" sum="100" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="6" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600763225">
+		 <general>
+		  <startdate>2014-03-25 14:08:51</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,450" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,420" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="20" cards="[cards]"/><action no="2" player="kisius" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><cards type="Pocket" player="moonbaseone">D2 DQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="5" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600763275">
+		 <general>
+		  <startdate>2014-03-25 14:09:06</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,440" dealer="0" win="0" bet="384" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,520" dealer="0" win="768" bet="384" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">C9 DA</cards><action no="7" player="kisius" type="23" sum="80" cards=""/><cards type="Pocket" player="moonbaseone">S10 SJ</cards><action no="8" player="moonbaseone" type="3" sum="40" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="4" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 H2 CJ</cards><action no="9" player="kisius" type="5" sum="112" cards=""/><action no="10" player="moonbaseone" type="3" sum="112" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards><action no="11" player="kisius" type="5" sum="192" cards=""/><action no="12" player="moonbaseone" type="3" sum="192" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards><action no="13" player="kisius" type="4" sum="0" cards=""/><action no="14" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600763466">
+		 <general>
+		  <startdate>2014-03-25 14:10:08</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,056" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,904" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H7 C5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><cards type="Pocket" player="donny154">X X</cards><action no="3" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600763542">
+		 <general>
+		  <startdate>2014-03-25 14:10:29</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,056" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,884" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,670" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,550" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="20" cards="[cards]"/><action no="2" player="donny154" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 S7</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600763620">
+		 <general>
+		  <startdate>2014-03-25 14:10:54</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,410" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,056" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,884" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,570" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="2" sum="40" cards="[cards]"/><action no="1" player="donny154" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="4" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 S2</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="7" player="donny154" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA HQ S7</cards><action no="10" player="PistolStar17" type="0" sum="0" cards=""/><action no="9" player="donny154" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600763762">
+		 <general>
+		  <startdate>2014-03-25 14:11:33</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,370" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,430" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,056" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,884" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,610" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="1" sum="20" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DQ H5</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="6" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600763823">
+		 <general>
+		  <startdate>2014-03-25 14:11:54</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,350" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,450" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,056" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,884" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="20" cards="[cards]"/><action no="2" player="kisius" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="23" sum="80" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 C5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="5" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600763908">
+		 <general>
+		  <startdate>2014-03-25 14:12:19</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,350" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,016" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,884" dealer="0" win="510" bet="240" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">H8 HA</cards><action no="5" player="PistolStar17" type="23" sum="120" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 DA</cards><action no="8" player="moonbaseone" type="3" sum="60" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="4" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 S10 D7</cards><action no="10" player="PistolStar17" type="5" sum="120" cards=""/><action no="9" player="moonbaseone" type="4" sum="0" cards=""/><action no="11" player="moonbaseone" type="3" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CJ</cards><action no="13" player="PistolStar17" type="4" sum="0" cards=""/><action no="12" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards><action no="15" player="PistolStar17" type="4" sum="0" cards=""/><action no="14" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600764035">
+		 <general>
+		  <startdate>2014-03-25 14:12:57</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="986" dealer="1" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,154" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="23" sum="180" cards=""/><cards type="Pocket" player="moonbaseone">D7 C4</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="3" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600764111">
+		 <general>
+		  <startdate>2014-03-25 14:13:20</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,124" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,590" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,610" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="30" cards="[cards]"/><action no="2" player="donny154" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 DJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600764198">
+		 <general>
+		  <startdate>2014-03-25 14:13:46</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,124" dealer="0" win="240" bet="150" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,640" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="2" sum="60" cards="[cards]"/><action no="1" player="donny154" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 CA</cards><action no="5" player="moonbaseone" type="23" sum="150" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="7" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600764277">
+		 <general>
+		  <startdate>2014-03-25 14:14:08</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,050" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,490" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,214" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,610" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="1" sum="30" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="8" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 D2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="23" sum="120" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="6" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600774857">
+		 <general>
+		  <startdate>2014-03-25 14:14:35</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,020" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,430" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,214" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="30" cards="[cards]"/><action no="2" player="kisius" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="23" sum="120" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 D7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="5" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600774965">
+		 <general>
+		  <startdate>2014-03-25 14:15:08</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,400" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,016" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,214" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,610" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 H10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="4" player="donny154" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600775034">
+		 <general>
+		  <startdate>2014-03-25 14:15:30</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="986" dealer="1" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,154" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,650" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="23" sum="180" cards=""/><cards type="Pocket" player="moonbaseone">D5 S7</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="3" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600775095">
+		 <general>
+		  <startdate>2014-03-25 14:15:49</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,124" dealer="1" win="510" bet="240" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,590" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,700" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="30" cards="[cards]"/><action no="2" player="donny154" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA C7</cards><action no="6" player="moonbaseone" type="23" sum="120" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">HK HQ</cards><action no="8" player="donny154" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 H3 D9</cards><action no="10" player="moonbaseone" type="4" sum="0" cards=""/><action no="9" player="donny154" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="12" player="moonbaseone" type="3" sum="120" cards=""/><action no="11" player="donny154" type="5" sum="120" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards><action no="14" player="moonbaseone" type="4" sum="0" cards=""/><action no="13" player="donny154" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600775208">
+		 <general>
+		  <startdate>2014-03-25 14:16:24</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,394" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,460" dealer="0" win="400" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="2" sum="100" cards="[cards]"/><action no="1" player="donny154" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="4" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S9 CK</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="7" player="donny154" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 C3 C6</cards><action no="10" player="PistolStar17" type="4" sum="0" cards=""/><action no="9" player="donny154" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards><action no="12" player="PistolStar17" type="4" sum="0" cards=""/><action no="11" player="donny154" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="14" player="PistolStar17" type="0" sum="0" cards=""/><action no="13" player="donny154" type="5" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600775441">
+		 <general>
+		  <startdate>2014-03-25 14:17:29</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,010" dealer="0" win="1,110" bet="1,010" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,400" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,394" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="1" sum="50" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="23" sum="1,010" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="8" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK H3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="6" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600775551">
+		 <general>
+		  <startdate>2014-03-25 14:18:00</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,300" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,394" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="50" cards="[cards]"/><action no="2" player="kisius" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><cards type="Pocket" player="moonbaseone">C10 CA</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="5" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600775627">
+		 <general>
+		  <startdate>2014-03-25 14:18:22</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,126" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,394" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,560" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 HK</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="4" player="donny154" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 HQ S9</cards><action no="9" player="moonbaseone" type="4" sum="0" cards=""/><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><action no="10" player="donny154" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600775788">
+		 <general>
+		  <startdate>2014-03-25 14:19:07</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,294" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,710" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK D6</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="4" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="3" player="donny154" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 DK HQ</cards><action no="9" player="silverbelarus" type="4" sum="0" cards=""/><action no="10" player="donny154" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="11" player="silverbelarus" type="4" sum="0" cards=""/><action no="13" player="silverbelarus" type="0" sum="0" cards=""/><action no="12" player="donny154" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600784143">
+		 <general>
+		  <startdate>2014-03-25 14:19:40</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,244" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,460" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="50" cards="[cards]"/><action no="2" player="donny154" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 S9</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600784219">
+		 <general>
+		  <startdate>2014-03-25 14:19:58</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,110" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,244" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,410" dealer="1" win="400" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,910" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="2" sum="100" cards="[cards]"/><action no="1" player="donny154" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D3 DK</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="23" sum="250" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="7" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600784294">
+		 <general>
+		  <startdate>2014-03-25 14:20:18</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,010" dealer="0" win="1,160" bet="1,010" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,244" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="1" sum="75" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="23" sum="1,010" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="8" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 C2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="6" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600784402">
+		 <general>
+		  <startdate>2014-03-25 14:20:46</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,160" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,100" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,244" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,560" dealer="0" win="600" bet="375" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="75" cards="[cards]"/><action no="2" player="kisius" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 H10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="23" sum="375" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="5" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600784533">
+		 <general>
+		  <startdate>2014-03-25 14:21:23</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,025" dealer="1" win="1,250" bet="1,025" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="926" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,244" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,785" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="23" sum="1,025" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 S6</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="4" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600784614">
+		 <general>
+		  <startdate>2014-03-25 14:21:45</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="851" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,094" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,785" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="4" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="5" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 S5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><cards type="Pocket" player="donny154">X X</cards><action no="3" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600784716">
+		 <general>
+		  <startdate>2014-03-25 14:22:14</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="851" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,019" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,860" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="75" cards="[cards]"/><action no="2" player="donny154" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="3" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="4" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ D4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600784796">
+		 <general>
+		  <startdate>2014-03-25 14:22:36</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,160" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="851" dealer="0" win="1,076" bet="851" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,019" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,785" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,935" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="2" sum="150" cards="[cards]"/><action no="1" player="donny154" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="3" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="23" sum="851" cards=""/><cards type="Pocket" player="moonbaseone">C10 DJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="7" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600784895">
+		 <general>
+		  <startdate>2014-03-25 14:23:05</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,010" dealer="0" win="2,170" bet="1,010" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,250" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,019" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,785" dealer="0" win="775" bet="1,785" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="1" sum="75" cards="[cards]"/><action no="2" player="DONJohn90" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">HA HQ</cards><action no="7" player="PistolStar17" type="7" sum="935" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="8" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 D6</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">C8 D8</cards><action no="5" player="silverbelarus" type="23" sum="1,785" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="6" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 S2 C9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards>
+	</round>
+	
+		</game><game gamecode="5600785003">
+		 <general>
+		  <startdate>2014-03-25 14:23:34</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,170" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,100" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,019" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="775" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONJohn90" type="1" sum="75" cards="[cards]"/><action no="2" player="kisius" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="6" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="7" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><cards type="Pocket" player="moonbaseone">C9 DQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="5" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600785074">
+		 <general>
+		  <startdate>2014-03-25 14:23:51</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,170" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,025" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,151" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,019" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="775" dealer="0" win="1,000" bet="775" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="5" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="6" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ H2</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="23" sum="775" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="4" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600785188">
+		 <general>
+		  <startdate>2014-03-25 14:24:22</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,170" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,025" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,869" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,000" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="1,050" bet="625" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="5" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="6" player="kisius" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="8" player="silverbelarus" type="2" sum="200" cards="[cards]"/><action no="3" player="donny154" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="10" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="11" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="12" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA DJ</cards><action no="13" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="14" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="9" player="donny154" type="23" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600796462">
+		 <general>
+		  <startdate>2014-03-25 14:24:46</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,145" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,000" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,051" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,744" dealer="1" win="2,169" bet="1,744" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="775" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="2,285" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="4" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="5" player="kisius" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="7" player="silverbelarus" type="1" sum="100" cards="[cards]"/><action no="2" player="donny154" type="15" sum="25" cards="[cards]"/><action no="8" player="donny154" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="9" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="10" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="11" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ D10</cards><action no="12" player="moonbaseone" type="23" sum="1,719" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="13" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="14" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600796533">
+		 <general>
+		  <startdate>2014-03-25 14:25:04</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,120" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="975" dealer="0" win="1,400" bet="975" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,026" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,169" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="650" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="2,060" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="8" player="PistolStar17" type="2" sum="200" cards="[cards]"/><action no="3" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="4" player="kisius" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="donny154" type="15" sum="25" cards="[cards]"/><action no="7" player="donny154" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="14" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="9" player="DONJohn90" type="23" sum="950" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="10" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 HA</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="12" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="13" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600796622">
+		 <general>
+		  <startdate>2014-03-25 14:25:25</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,895" dealer="0" win="1,150" bet="825" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,400" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,001" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,144" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="625" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,935" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="7" player="PistolStar17" type="1" sum="100" cards="[cards]"/><action no="2" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="8" player="DONJohn90" type="2" sum="200" cards="[cards]"/><action no="3" player="kisius" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="6" player="donny154" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="13" player="PistolStar17" type="23" sum="800" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="14" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="9" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 H8</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="11" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="12" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600796739">
+		 <general>
+		  <startdate>2014-03-25 14:25:55</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,220" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,175" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="976" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,119" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="600" dealer="0" win="1,025" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,910" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="1" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="7" player="DONJohn90" type="1" sum="100" cards="[cards]"/><action no="2" player="kisius" type="15" sum="25" cards="[cards]"/><action no="8" player="kisius" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="5" player="donny154" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="12" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="13" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="14" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 SQ</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="23" sum="575" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="11" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600796830">
+		 <general>
+		  <startdate>2014-03-25 14:26:19</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,195" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,050" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="751" dealer="0" win="950" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,094" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,025" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,885" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="6" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="1" player="kisius" type="15" sum="25" cards="[cards]"/><action no="7" player="kisius" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="8" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="4" player="donny154" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="11" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="12" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="13" player="kisius" type="23" sum="600" cards=""/><cards type="Pocket" player="moonbaseone">C9 CK</cards><action no="14" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="10" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600796979">
+		 <general>
+		  <startdate>2014-03-25 14:26:56</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,170" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,025" dealer="0" win="1,450" bet="1,025" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,076" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,869" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,000" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,860" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="5" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="6" player="kisius" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="8" player="silverbelarus" type="2" sum="200" cards="[cards]"/><action no="3" player="donny154" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="10" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="11" player="DONJohn90" type="23" sum="1,000" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="12" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 D5</cards><action no="13" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="14" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">X X</cards><action no="9" player="donny154" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600797128">
+		 <general>
+		  <startdate>2014-03-25 14:27:36</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,145" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,450" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,051" dealer="0" win="2,302" bet="1,051" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,744" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="775" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="1,835" dealer="0" win="0" bet="1,051" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="4" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="5" player="kisius" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="7" player="silverbelarus" type="1" sum="100" cards="[cards]"/><action no="2" player="donny154" type="15" sum="25" cards="[cards]"/><action no="8" player="donny154" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="9" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="10" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">CQ DA</cards><action no="11" player="kisius" type="23" sum="1,026" cards=""/><cards type="Pocket" player="moonbaseone">C10 C9</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="13" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">CJ DJ</cards><action no="14" player="donny154" type="3" sum="826" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 HK H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S6</cards>
+	</round>
+	
+		</game><game gamecode="5600797220">
+		 <general>
+		  <startdate>2014-03-25 14:28:02</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,120" dealer="0" win="1,668" bet="784" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,425" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="2,302" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,719" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="650" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="donny154" chips="784" dealer="0" win="0" bet="784" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="8" player="PistolStar17" type="2" sum="200" cards="[cards]"/><action no="3" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="4" player="kisius" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="1" player="donny154" type="15" sum="25" cards="[cards]"/><action no="7" player="donny154" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">SK HK</cards><action no="14" player="PistolStar17" type="3" sum="559" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="9" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="10" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 H9</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="12" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="donny154">H2 SA</cards><action no="13" player="donny154" type="23" sum="759" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK CJ D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game><game gamecode="5600797332">
+		 <general>
+		  <startdate>2014-03-25 14:28:33</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="3,004" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,400" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="2,277" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,694" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="625" dealer="0" win="1,175" bet="625" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="6" player="PistolStar17" type="1" sum="150" cards="[cards]"/><action no="2" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="7" player="DONJohn90" type="2" sum="300" cards="[cards]"/><action no="3" player="kisius" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="11" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="12" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 D5</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="7" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600797498">
+		 <general>
+		  <startdate>2014-03-25 14:29:20</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,829" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,075" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="2,252" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,669" dealer="0" win="2,219" bet="1,669" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,175" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="1" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="6" player="DONJohn90" type="1" sum="150" cards="[cards]"/><action no="2" player="kisius" type="15" sum="25" cards="[cards]"/><action no="7" player="kisius" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="10" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="11" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="12" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA H2</cards><action no="8" player="moonbaseone" type="23" sum="1,644" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600797599">
+		 <general>
+		  <startdate>2014-03-25 14:29:48</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,804" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="900" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,927" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,219" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,150" dealer="0" win="1,700" bet="1,150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="5" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="1" player="kisius" type="15" sum="25" cards="[cards]"/><action no="6" player="kisius" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="9" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="10" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="11" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 DA</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="23" sum="1,125" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600806736">
+		 <general>
+		  <startdate>2014-03-25 14:30:04</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,779" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="875" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,752" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,894" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,700" dealer="0" win="575" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="4" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="5" player="kisius" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="7" player="silverbelarus" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="9" player="DONJohn90" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="10" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 H8</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards>
+	</round>
+	
+		</game><game gamecode="5600806809">
+		 <general>
+		  <startdate>2014-03-25 14:30:26</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,754" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="850" dealer="0" win="1,400" bet="850" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,727" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,719" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,950" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="7" player="PistolStar17" type="2" sum="300" cards="[cards]"/><action no="3" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="4" player="kisius" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="25" cards="[cards]"/><action no="6" player="silverbelarus" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="12" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">X X</cards><action no="8" player="DONJohn90" type="23" sum="825" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="9" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 S7</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="11" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600806894">
+		 <general>
+		  <startdate>2014-03-25 14:30:51</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,429" dealer="0" win="1,438" bet="1,400" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,400" dealer="0" win="1,437" bet="1,400" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,702" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,694" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,775" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="6" player="PistolStar17" type="1" sum="150" cards="[cards]"/><action no="2" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="7" player="DONJohn90" type="2" sum="300" cards="[cards]"/><action no="3" player="kisius" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="silverbelarus" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">H8 SA</cards><action no="11" player="PistolStar17" type="23" sum="1,200" cards=""/><action no="13" player="PistolStar17" type="3" sum="175" cards=""/><cards type="Pocket" player="DONJohn90">DA D5</cards><action no="12" player="DONJohn90" type="7" sum="1,075" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 C9</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 S10 D9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5600806982">
+		 <general>
+		  <startdate>2014-03-25 14:31:21</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,467" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONJohn90" chips="1,437" dealer="0" win="0" bet="1,437" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="1,677" dealer="0" win="2,949" bet="1,437" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,669" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,750" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="1" player="DONJohn90" type="15" sum="25" cards="[cards]"/><action no="6" player="DONJohn90" type="1" sum="150" cards="[cards]"/><action no="2" player="kisius" type="15" sum="25" cards="[cards]"/><action no="7" player="kisius" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="10" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="DONJohn90">D7 H8</cards><action no="11" player="DONJohn90" type="23" sum="1,412" cards=""/><cards type="Pocket" player="kisius">HQ DA</cards><action no="12" player="kisius" type="3" sum="1,112" cards=""/><cards type="Pocket" player="moonbaseone">D4 D3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ SQ H10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game><game gamecode="5600807076">
+		 <general>
+		  <startdate>2014-03-25 14:31:48</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,442" dealer="0" win="0" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,189" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,644" dealer="0" win="2,469" bet="1,644" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,725" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="PistolStar17" type="15" sum="25" cards="[cards]"/><action no="1" player="kisius" type="15" sum="25" cards="[cards]"/><action no="5" player="kisius" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="23" sum="600" cards=""/><action no="11" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="9" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA S10</cards><action no="10" player="moonbaseone" type="23" sum="1,619" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807179">
+		 <general>
+		  <startdate>2014-03-25 14:32:17</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,817" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,014" dealer="1" win="3,764" bet="3,014" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,469" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,700" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="4" player="kisius" type="15" sum="50" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="200" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="50" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="23" sum="2,964" cards=""/><cards type="Pocket" player="moonbaseone">S7 DJ</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807268">
+		 <general>
+		  <startdate>2014-03-25 14:32:41</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,767" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,764" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,219" dealer="1" win="2,969" bet="2,219" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,250" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="6" player="PistolStar17" type="2" sum="400" cards="[cards]"/><action no="3" player="kisius" type="15" sum="50" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="50" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="10" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C8 S8</cards><action no="8" player="moonbaseone" type="23" sum="2,169" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807343">
+		 <general>
+		  <startdate>2014-03-25 14:33:01</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,317" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,714" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,969" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,000" dealer="1" win="1,600" bet="850" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="5" player="PistolStar17" type="1" sum="200" cards="[cards]"/><action no="2" player="kisius" type="15" sum="50" cards="[cards]"/><action no="6" player="kisius" type="2" sum="400" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="9" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="10" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 D3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="23" sum="800" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807396">
+		 <general>
+		  <startdate>2014-03-25 14:33:18</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,067" dealer="1" win="1,817" bet="1,067" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,264" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,919" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,750" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="1" player="kisius" type="15" sum="50" cards="[cards]"/><action no="5" player="kisius" type="1" sum="200" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="400" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="23" sum="1,017" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="9" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C6 DK</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807463">
+		 <general>
+		  <startdate>2014-03-25 14:33:38</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,817" dealer="0" win="2,567" bet="1,817" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,014" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,469" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,700" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="4" player="kisius" type="15" sum="50" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="200" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="50" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="23" sum="1,767" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 S7</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807529">
+		 <general>
+		  <startdate>2014-03-25 14:34:01</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,567" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="2,964" dealer="0" win="3,714" bet="2,964" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,219" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,250" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="6" player="PistolStar17" type="2" sum="400" cards="[cards]"/><action no="3" player="kisius" type="15" sum="50" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="50" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="10" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="23" sum="2,914" cards=""/><cards type="Pocket" player="moonbaseone">HQ SQ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807614">
+		 <general>
+		  <startdate>2014-03-25 14:34:28</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="2,117" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,714" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,169" dealer="0" win="2,919" bet="2,169" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,000" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="5" player="PistolStar17" type="1" sum="200" cards="[cards]"/><action no="2" player="kisius" type="15" sum="50" cards="[cards]"/><action no="6" player="kisius" type="2" sum="400" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="9" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="10" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA C8</cards><action no="7" player="moonbaseone" type="23" sum="2,119" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807678">
+		 <general>
+		  <startdate>2014-03-25 14:34:51</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,867" dealer="1" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,264" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="2,919" dealer="0" win="300" bet="1,250" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="950" dealer="0" win="2,200" bet="950" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="1" player="kisius" type="15" sum="50" cards="[cards]"/><action no="5" player="kisius" type="1" sum="200" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="400" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="8" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="9" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 HA</cards><action no="10" player="moonbaseone" type="23" sum="1,200" cards=""/><cards type="Pocket" player="silverbelarus">C7 C9</cards><action no="7" player="silverbelarus" type="23" sum="800" cards=""/><action no="11" player="silverbelarus" type="7" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 SQ C2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards>
+	</round>
+	
+		</game><game gamecode="5600807797">
+		 <general>
+		  <startdate>2014-03-25 14:35:25</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,817" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,014" dealer="1" win="3,764" bet="3,014" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,969" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="2,200" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="4" player="kisius" type="15" sum="50" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="200" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="50" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">X X</cards><action no="7" player="PistolStar17" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="23" sum="2,964" cards=""/><cards type="Pocket" player="moonbaseone">SJ H2</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="10" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600807859">
+		 <general>
+		  <startdate>2014-03-25 14:35:44</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="1,767" dealer="0" win="0" bet="1,719" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,764" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="1,719" dealer="1" win="3,738" bet="1,719" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,750" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="PistolStar17" type="15" sum="50" cards="[cards]"/><action no="6" player="PistolStar17" type="2" sum="400" cards="[cards]"/><action no="3" player="kisius" type="15" sum="50" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="1" player="silverbelarus" type="15" sum="50" cards="[cards]"/><action no="5" player="silverbelarus" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">HA D8</cards><action no="10" player="PistolStar17" type="3" sum="1,269" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CK D3</cards><action no="8" player="moonbaseone" type="23" sum="1,669" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="9" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 D7 D10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game><game gamecode="5600817306">
+		 <general>
+		  <startdate>2014-03-25 14:36:06</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="48" dealer="0" win="192" bet="48" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,714" dealer="0" win="756" bet="700" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="3,738" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,500" dealer="1" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="PistolStar17" type="15" sum="48" cards="[cards]"/><action no="2" player="kisius" type="15" sum="100" cards="[cards]"/><action no="5" player="kisius" type="2" sum="600" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="100" cards="[cards]"/><action no="4" player="silverbelarus" type="15" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">HJ D9</cards><cards type="Pocket" player="kisius">SJ HQ</cards><cards type="Pocket" player="moonbaseone">D7 DJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 D8 S2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game><game gamecode="5600817367">
+		 <general>
+		  <startdate>2014-03-25 14:36:27</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="192" dealer="1" win="676" bet="192" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,770" dealer="0" win="0" bet="700" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="3,638" dealer="0" win="1,016" bet="700" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,400" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="PistolStar17" type="15" sum="100" cards="[cards]"/><action no="1" player="kisius" type="15" sum="100" cards="[cards]"/><action no="5" player="kisius" type="1" sum="300" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="100" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="600" cards="[cards]"/><action no="3" player="silverbelarus" type="15" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">HQ SK</cards><action no="8" player="PistolStar17" type="7" sum="92" cards=""/><cards type="Pocket" player="kisius">D7 DJ</cards><action no="9" player="kisius" type="3" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">C7 CQ</cards><action no="10" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 C10 S3</cards><action no="11" player="kisius" type="4" sum="0" cards=""/><action no="12" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="13" player="kisius" type="4" sum="0" cards=""/><action no="14" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="15" player="kisius" type="4" sum="0" cards=""/><action no="16" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600817479">
+		 <general>
+		  <startdate>2014-03-25 14:37:01</startdate>		  
+		  <players>
+		   <player seat="1" name="PistolStar17" chips="676" dealer="0" win="0" bet="676" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="kisius" chips="3,070" dealer="1" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="moonbaseone" chips="3,954" dealer="0" win="2,176" bet="700" rebuy="0" addon="0" reg_code="6224116730"/><player seat="8" name="silverbelarus" chips="1,300" dealer="0" win="0" bet="700" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="PistolStar17" type="15" sum="100" cards="[cards]"/><action no="4" player="kisius" type="15" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="100" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="300" cards="[cards]"/><action no="2" player="silverbelarus" type="15" sum="100" cards="[cards]"/><action no="6" player="silverbelarus" type="2" sum="600" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="PistolStar17">S7 D6</cards><action no="7" player="PistolStar17" type="7" sum="576" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 C10</cards><action no="9" player="moonbaseone" type="3" sum="300" cards=""/><cards type="Pocket" player="silverbelarus">H9 CK</cards><action no="10" player="silverbelarus" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 HQ D3</cards><action no="11" player="moonbaseone" type="4" sum="0" cards=""/><action no="12" player="silverbelarus" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CJ</cards><action no="13" player="moonbaseone" type="4" sum="0" cards=""/><action no="14" player="silverbelarus" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards><action no="15" player="moonbaseone" type="4" sum="0" cards=""/><action no="16" player="silverbelarus" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

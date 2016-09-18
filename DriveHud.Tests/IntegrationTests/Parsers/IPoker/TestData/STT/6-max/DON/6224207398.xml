@@ -1,0 +1,770 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224207398">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824218292</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:28</duration>  
+	          <gamecount>48</gamecount>  
+	          <startdate>2014-03-25 16:57:00</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>8,300</bets>  
+	          <wins>8,375</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,575</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601147378">
+		 <general>
+		  <startdate>2014-03-25 16:57:00</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,500" dealer="0" win="100" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lenamatze" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="7" player="lenamatze" type="23" sum="80" cards=""/><cards type="Pocket" player="moonbaseone">C7 C6</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="5" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147498">
+		 <general>
+		  <startdate>2014-03-25 16:57:30</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,500" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="kisius" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="6" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 S8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="23" sum="60" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="4" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147610">
+		 <general>
+		  <startdate>2014-03-25 16:58:03</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,530" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="5" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 S4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><cards type="Pocket" player="Regi79">X X</cards><action no="3" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147734">
+		 <general>
+		  <startdate>2014-03-25 16:58:40</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,540" dealer="0" win="120" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="Regi79" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="4" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ S9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">H6 DA</cards><action no="7" player="DONCorleoneXX" type="23" sum="60" cards=""/><cards type="Pocket" player="Regi79">HA C3</cards><action no="8" player="Regi79" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ S6 HQ</cards><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="10" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="11" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="14" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147876">
+		 <general>
+		  <startdate>2014-03-25 16:59:20</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,600" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,440" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="20" cards="[cards]"/><action no="1" player="Regi79" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="3" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 C10</cards><action no="4" player="moonbaseone" type="23" sum="60" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="7" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147982">
+		 <general>
+		  <startdate>2014-03-25 16:59:51</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="10" cards="[cards]"/><action no="2" player="lenamatze" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><cards type="Pocket" player="moonbaseone">C8 H4</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="6" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601148091">
+		 <general>
+		  <startdate>2014-03-25 17:00:20</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,530" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,470" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lenamatze" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="7" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 C7</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="23" sum="60" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="5" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601148206">
+		 <general>
+		  <startdate>2014-03-25 17:00:44</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,600" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="kisius" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="6" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 H7</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="23" sum="60" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="4" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601159792">
+		 <general>
+		  <startdate>2014-03-25 17:01:25</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,630" dealer="0" win="100" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,430" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="5" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 CQ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">D7 S7</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="Regi79">H5 HA</cards><action no="3" player="Regi79" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK C5 HJ</cards><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="10" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="11" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="14" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160091">
+		 <general>
+		  <startdate>2014-03-25 17:02:29</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="0" win="200" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,690" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,390" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="Regi79" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="23" sum="140" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="4" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 CA</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="8" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160249">
+		 <general>
+		  <startdate>2014-03-25 17:03:02</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,530" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,460" dealer="0" win="600" bet="420" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,670" dealer="1" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,350" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="40" cards="[cards]"/><action no="1" player="Regi79" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="3" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 S2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="23" sum="120" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="3" sum="120" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="7" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 D2 C4</cards><action no="9" player="kisius" type="5" sum="300" cards=""/><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160444">
+		 <general>
+		  <startdate>2014-03-25 17:03:41</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,520" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,550" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="20" cards="[cards]"/><action no="2" player="lenamatze" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="8" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D8 S10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="6" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160712">
+		 <general>
+		  <startdate>2014-03-25 17:04:34</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lenamatze" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="7" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 S10</cards><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="5" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160893">
+		 <general>
+		  <startdate>2014-03-25 17:05:07</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,460" dealer="1" win="330" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="kisius" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="6" player="lenamatze" type="23" sum="240" cards=""/><cards type="Pocket" player="moonbaseone">H5 S7</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="8" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="4" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601161084">
+		 <general>
+		  <startdate>2014-03-25 17:05:46</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,580" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,610" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="5" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H7 D6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="23" sum="120" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="3" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601179884">
+		 <general>
+		  <startdate>2014-03-25 17:06:38</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,550" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="Regi79" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="4" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ D6</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601179987">
+		 <general>
+		  <startdate>2014-03-25 17:06:58</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,470" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,550" dealer="0" win="330" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,360" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="60" cards="[cards]"/><action no="1" player="Regi79" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="3" player="lenamatze" type="23" sum="240" cards=""/><cards type="Pocket" player="moonbaseone">SK S8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="7" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180126">
+		 <general>
+		  <startdate>2014-03-25 17:07:22</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,410" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,640" dealer="0" win="405" bet="255" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,520" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="30" cards="[cards]"/><action no="2" player="lenamatze" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="8" player="lenamatze" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">DJ CA</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="6" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 SJ H4</cards><action no="9" player="lenamatze" type="4" sum="0" cards=""/><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="11" player="lenamatze" type="5" sum="135" cards=""/><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180325">
+		 <general>
+		  <startdate>2014-03-25 17:07:59</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,790" dealer="0" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,460" dealer="0" win="540" bet="360" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lenamatze" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="7" player="lenamatze" type="3" sum="30" cards=""/><action no="9" player="lenamatze" type="3" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">S10 HA</cards><action no="8" player="moonbaseone" type="23" sum="180" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="5" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA S6 HK</cards><action no="10" player="lenamatze" type="4" sum="0" cards=""/><action no="12" player="lenamatze" type="0" sum="0" cards=""/><action no="11" player="moonbaseone" type="5" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180512">
+		 <general>
+		  <startdate>2014-03-25 17:08:36</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,610" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,640" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="kisius" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="6" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 D10</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="4" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180616">
+		 <general>
+		  <startdate>2014-03-25 17:08:57</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,610" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,670" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,400" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kisius" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="5" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 SJ</cards><action no="6" player="moonbaseone" type="23" sum="120" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="7" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="3" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180844">
+		 <general>
+		  <startdate>2014-03-25 17:09:42</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,610" dealer="0" win="1,760" bet="1,610" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,340" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,330" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="Regi79" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="4" player="lenamatze" type="23" sum="1,610" cards=""/><cards type="Pocket" player="moonbaseone">C8 H4</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="6" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="8" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180984">
+		 <general>
+		  <startdate>2014-03-25 17:10:11</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,640" dealer="0" win="385" bet="235" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,290" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,230" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/><action no="1" player="Regi79" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="3" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S7 HK</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="5" player="kisius" type="23" sum="235" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="7" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601181188">
+		 <general>
+		  <startdate>2014-03-25 17:10:51</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,280" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,760" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,700" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,180" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="lenamatze" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><cards type="Pocket" player="moonbaseone">C5 SJ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="4" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="6" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601191841">
+		 <general>
+		  <startdate>2014-03-25 17:11:21</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,230" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,810" dealer="0" win="1,910" bet="1,810" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,700" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lenamatze" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="7" player="lenamatze" type="23" sum="1,810" cards=""/><cards type="Pocket" player="moonbaseone">HQ SK</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">X X</cards><action no="3" player="kisius" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="5" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601191981">
+		 <general>
+		  <startdate>2014-03-25 17:11:49</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="1,910" dealer="1" win="3,750" bet="1,910" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,600" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224207398"/><player seat="6" name="kisius" chips="1,790" dealer="0" win="0" bet="1,790" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="DONCorleoneXX" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="kisius" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">CA D10</cards><action no="6" player="lenamatze" type="23" sum="1,910" cards=""/><cards type="Pocket" player="moonbaseone">H10 S9</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="kisius">HK CK</cards><action no="8" player="kisius" type="7" sum="1,690" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="4" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA H4 C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards>
+	</round>
+	
+		</game><game gamecode="5601192180">
+		 <general>
+		  <startdate>2014-03-25 17:12:31</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,750" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,550" dealer="1" win="1,650" bet="1,550" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,290" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="4" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H7 HA</cards><action no="5" player="moonbaseone" type="23" sum="1,550" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="2" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601192403">
+		 <general>
+		  <startdate>2014-03-25 17:13:14</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,750" dealer="0" win="3,975" bet="3,750" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,190" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,180" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="Regi79" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="4" player="lenamatze" type="23" sum="3,750" cards=""/><cards type="Pocket" player="moonbaseone">S4 H3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="7" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601192574">
+		 <general>
+		  <startdate>2014-03-25 17:13:49</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,230" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,975" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,115" dealer="1" win="1,340" bet="1,115" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,030" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="150" cards="[cards]"/><action no="1" player="Regi79" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="3" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA D9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="1,115" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="6" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601192814">
+		 <general>
+		  <startdate>2014-03-25 17:14:38</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,080" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,975" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="955" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="75" cards="[cards]"/><action no="2" player="lenamatze" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><cards type="Pocket" player="moonbaseone">D4 D2</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="5" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601193038">
+		 <general>
+		  <startdate>2014-03-25 17:15:22</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,005" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="4,050" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,650" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,340" dealer="0" win="1,565" bet="1,340" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="955" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lenamatze" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="6" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D5 D3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="23" sum="1,340" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="4" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601193206">
+		 <general>
+		  <startdate>2014-03-25 17:15:53</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,005" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,975" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,565" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="955" dealer="0" win="375" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="5" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ D6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">SQ CJ</cards><action no="7" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="Regi79">SJ CK</cards><action no="3" player="Regi79" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 H2 C9</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="9" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="11" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="13" player="Regi79" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601205990">
+		 <general>
+		  <startdate>2014-03-25 17:16:53</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,005" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,975" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,425" dealer="1" win="525" bet="300" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,415" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,180" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="Regi79" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="4" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ HQ</cards><action no="5" player="moonbaseone" type="23" sum="300" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="7" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206115">
+		 <general>
+		  <startdate>2014-03-25 17:17:16</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,005" dealer="0" win="425" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,975" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,650" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,340" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,030" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="7" player="VanTr4X" type="2" sum="200" cards="[cards]"/><action no="3" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Regi79" type="15" sum="25" cards="[cards]"/><action no="6" player="Regi79" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="lenamatze">X X</cards><action no="8" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 DK</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="11" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206289">
+		 <general>
+		  <startdate>2014-03-25 17:17:51</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,205" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,950" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,625" dealer="0" win="2,025" bet="1,625" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,315" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="905" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="6" player="VanTr4X" type="1" sum="100" cards="[cards]"/><action no="2" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="7" player="lenamatze" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="Regi79" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="11" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="12" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DQ CQ</cards><action no="8" player="moonbaseone" type="23" sum="1,600" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="10" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206470">
+		 <general>
+		  <startdate>2014-03-25 17:18:30</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,080" dealer="1" win="1,480" bet="1,080" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,725" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="2,025" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,290" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="880" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="1" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="6" player="lenamatze" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="Regi79" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="10" player="VanTr4X" type="23" sum="1,055" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="11" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C3 H6</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="9" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206646">
+		 <general>
+		  <startdate>2014-03-25 17:19:08</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,480" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,600" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,800" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="1,265" dealer="0" win="0" bet="855" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="855" dealer="0" win="1,885" bet="855" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="5" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="7" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/><action no="3" player="Regi79" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="9" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="10" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D10 C2</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">CA H9</cards><action no="12" player="DONCorleoneXX" type="3" sum="630" cards=""/><cards type="Pocket" player="Regi79">DJ HJ</cards><action no="8" player="Regi79" type="23" sum="830" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 H8 HQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards>
+	</round>
+	
+		</game><game gamecode="5601206854">
+		 <general>
+		  <startdate>2014-03-25 17:19:51</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,455" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,575" dealer="0" win="3,425" bet="3,025" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,675" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="410" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,885" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="4" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/><action no="2" player="Regi79" type="15" sum="25" cards="[cards]"/><action no="7" player="Regi79" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="9" player="lenamatze" type="23" sum="3,000" cards=""/><cards type="Pocket" player="moonbaseone">C10 DK</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="12" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601207087">
+		 <general>
+		  <startdate>2014-03-25 17:20:37</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,430" dealer="0" win="1,105" bet="485" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,975" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,650" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224207398"/><player seat="8" name="DONCorleoneXX" chips="285" dealer="1" win="0" bet="285" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="Regi79" chips="1,660" dealer="0" win="0" bet="285" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="7" player="VanTr4X" type="2" sum="200" cards="[cards]"/><action no="3" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Regi79" type="15" sum="25" cards="[cards]"/><action no="6" player="Regi79" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">S5 S6</cards><action no="12" player="VanTr4X" type="3" sum="60" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="8" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 S3</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">HQ CA</cards><action no="10" player="DONCorleoneXX" type="7" sum="260" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="11" player="Regi79" type="3" sum="160" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 C7 D4</cards><action no="14" player="VanTr4X" type="5" sum="200" cards=""/><action no="13" player="Regi79" type="4" sum="0" cards=""/><action no="15" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards>
+	</round>
+	
+		</game><game gamecode="5601207368">
+		 <general>
+		  <startdate>2014-03-25 17:21:34</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="2,050" dealer="0" win="2,425" bet="2,050" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,950" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,625" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="1,375" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="5" player="VanTr4X" type="1" sum="150" cards="[cards]"/><action no="2" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="6" player="lenamatze" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="Regi79" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="9" player="VanTr4X" type="23" sum="2,025" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="10" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK S7</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="8" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219307">
+		 <general>
+		  <startdate>2014-03-25 17:22:35</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="2,425" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,625" dealer="0" win="2,200" bet="1,825" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,600" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="1,350" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="1" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="5" player="lenamatze" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="Regi79" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="9" player="lenamatze" type="23" sum="1,800" cards=""/><cards type="Pocket" player="moonbaseone">CQ D8</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="7" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219437">
+		 <general>
+		  <startdate>2014-03-25 17:23:00</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="2,400" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="4,000" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,275" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="1,325" dealer="0" win="550" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="4" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="Regi79" type="15" sum="25" cards="[cards]"/><action no="6" player="Regi79" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="8" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 D4</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601219572">
+		 <general>
+		  <startdate>2014-03-25 17:23:29</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="2,375" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,975" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,100" dealer="1" win="1,625" bet="1,100" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="1,550" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="6" player="VanTr4X" type="2" sum="300" cards="[cards]"/><action no="3" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="Regi79" type="15" sum="25" cards="[cards]"/><action no="5" player="Regi79" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="10" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="7" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK S6</cards><action no="8" player="moonbaseone" type="23" sum="1,075" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="9" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219714">
+		 <general>
+		  <startdate>2014-03-25 17:23:56</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="2,050" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="3,950" dealer="0" win="550" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,625" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="1,375" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="5" player="VanTr4X" type="1" sum="150" cards="[cards]"/><action no="2" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="6" player="lenamatze" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="Regi79" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="9" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><cards type="Pocket" player="moonbaseone">H5 S9</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="8" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219788">
+		 <general>
+		  <startdate>2014-03-25 17:24:14</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,875" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="4,175" dealer="0" win="2,200" bet="1,825" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,600" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="1,350" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="1" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="5" player="lenamatze" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/><action no="3" player="Regi79" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="9" player="lenamatze" type="23" sum="1,800" cards=""/><cards type="Pocket" player="moonbaseone">S6 C9</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="7" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219899">
+		 <general>
+		  <startdate>2014-03-25 17:24:37</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,850" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="4,550" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,275" dealer="0" win="1,650" bet="1,275" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="1,325" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="4" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/><action no="2" player="Regi79" type="15" sum="25" cards="[cards]"/><action no="6" player="Regi79" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="8" player="lenamatze" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H2 C10</cards><action no="9" player="moonbaseone" type="23" sum="1,250" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="10" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219989">
+		 <general>
+		  <startdate>2014-03-25 17:24:58</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,825" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="4,525" dealer="0" win="5,050" bet="4,525" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,650" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="1,000" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="6" player="VanTr4X" type="2" sum="300" cards="[cards]"/><action no="3" player="lenamatze" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="Regi79" type="15" sum="25" cards="[cards]"/><action no="5" player="Regi79" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="10" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="lenamatze">X X</cards><action no="7" player="lenamatze" type="23" sum="4,500" cards=""/><cards type="Pocket" player="moonbaseone">H7 S4</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">X X</cards><action no="9" player="Regi79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220101">
+		 <general>
+		  <startdate>2014-03-25 17:25:22</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="825" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="lenamatze" chips="5,050" dealer="0" win="2,525" bet="825" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,625" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224207398"/><player seat="10" name="Regi79" chips="825" dealer="1" win="0" bet="825" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="15" sum="50" cards="[cards]"/><action no="5" player="VanTr4X" type="1" sum="200" cards="[cards]"/><action no="2" player="lenamatze" type="15" sum="50" cards="[cards]"/><action no="6" player="lenamatze" type="2" sum="400" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="50" cards="[cards]"/><action no="4" player="Regi79" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">CA SJ</cards><action no="9" player="VanTr4X" type="3" sum="575" cards=""/><cards type="Pocket" player="lenamatze">C2 DK</cards><action no="10" player="lenamatze" type="3" sum="375" cards=""/><cards type="Pocket" player="moonbaseone">S5 C8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Regi79">DJ CK</cards><action no="8" player="Regi79" type="7" sum="775" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 C6 D6</cards><action no="11" player="VanTr4X" type="4" sum="0" cards=""/><action no="12" player="lenamatze" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="13" player="VanTr4X" type="4" sum="0" cards=""/><action no="14" player="lenamatze" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards><action no="15" player="VanTr4X" type="4" sum="0" cards=""/><action no="16" player="lenamatze" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

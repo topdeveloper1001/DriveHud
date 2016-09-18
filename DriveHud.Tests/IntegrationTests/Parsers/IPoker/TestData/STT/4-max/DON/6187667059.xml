@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187667059">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819017446</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>20</gamecount>  
+	          <startdate>2014-01-25 16:24:14</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>5,860</bets>  
+	          <wins>6,505</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,445</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5436257172">
+		 <general>
+		  <startdate>2014-01-25 16:24:14</startdate>		  
+		  <players>
+		   <player seat="2" name="Kikerics" chips="800" dealer="1" win="0" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="800" dealer="0" win="1,610" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="joaosemtil" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Kikerics">SA C10</cards><action no="4" player="Kikerics" type="23" sum="60" cards=""/><action no="7" player="Kikerics" type="7" sum="740" cards=""/><cards type="Pocket" player="WorstCard">DQ S2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">HA SJ</cards><action no="6" player="joaosemtil" type="23" sum="780" cards=""/><action no="8" player="joaosemtil" type="7" sum="20" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="3" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 S4 HK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards>
+	</round>
+	
+		</game><game gamecode="5436257407">
+		 <general>
+		  <startdate>2014-01-25 16:24:41</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,610" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="joaosemtil" type="1" sum="10" cards="[cards]"/><action no="2" player="hamse109" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DQ H6</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="4" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards>
+	</round>
+	
+		</game><game gamecode="5436257515">
+		 <general>
+		  <startdate>2014-01-25 16:24:53</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="790" dealer="0" win="40" bet="40" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,600" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="810" dealer="0" win="40" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="hamse109" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S7 D6</cards><action no="5" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="3" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">S6 H7</cards><action no="4" player="hamse109" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ H4 D3</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="6" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="8" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards><action no="11" player="WorstCard" type="5" sum="20" cards=""/><action no="10" player="hamse109" type="4" sum="0" cards=""/><action no="12" player="hamse109" type="3" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436274612">
+		 <general>
+		  <startdate>2014-01-25 16:25:26</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,600" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="810" dealer="1" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="joaosemtil" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C3 HJ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="5" player="joaosemtil" type="4" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="3" player="hamse109" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 S4 C2</cards><action no="6" player="joaosemtil" type="4" sum="0" cards=""/><action no="7" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="8" player="joaosemtil" type="4" sum="0" cards=""/><action no="10" player="joaosemtil" type="0" sum="0" cards=""/><action no="9" player="hamse109" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436275307">
+		 <general>
+		  <startdate>2014-01-25 16:26:46</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="780" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,580" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="840" dealer="0" win="255" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="joaosemtil" type="1" sum="15" cards="[cards]"/><action no="2" player="hamse109" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D2 DQ</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="4" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="5" player="hamse109" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 D6 S4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><action no="6" player="hamse109" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436275493">
+		 <general>
+		  <startdate>2014-01-25 16:27:08</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="720" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,565" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="915" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="hamse109" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D2 DQ</cards><action no="5" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="3" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="4" player="hamse109" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 S4 C7</cards><action no="7" player="WorstCard" type="5" sum="30" cards=""/><action no="6" player="hamse109" type="4" sum="0" cards=""/><action no="8" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436275779">
+		 <general>
+		  <startdate>2014-01-25 16:27:42</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="750" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,565" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="885" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="joaosemtil" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H3 D8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><cards type="Pocket" player="hamse109">X X</cards><action no="3" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436275868">
+		 <general>
+		  <startdate>2014-01-25 16:27:54</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="735" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,580" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="885" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="joaosemtil" type="1" sum="15" cards="[cards]"/><action no="2" player="hamse109" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CK S6</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="4" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards>
+	</round>
+	
+		</game><game gamecode="5436276134">
+		 <general>
+		  <startdate>2014-01-25 16:28:30</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="735" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,565" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="900" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="joaosemtil" type="15" sum="5" cards="[cards]"/><action no="1" player="hamse109" type="15" sum="5" cards="[cards]"/><action no="4" player="hamse109" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HK CA</cards><cards type="Pocket" player="joaosemtil">X X</cards><action no="6" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="7" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436276242">
+		 <general>
+		  <startdate>2014-01-25 16:28:42</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="770" dealer="0" win="880" bet="770" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,560" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="870" dealer="1" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="joaosemtil" type="15" sum="5" cards="[cards]"/><action no="5" player="joaosemtil" type="2" sum="50" cards="[cards]"/><action no="3" player="hamse109" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DA CJ</cards><action no="7" player="WorstCard" type="23" sum="765" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="8" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="6" player="hamse109" type="3" sum="50" cards=""/><action no="9" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436276529">
+		 <general>
+		  <startdate>2014-01-25 16:29:16</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="880" dealer="1" win="240" bet="105" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,505" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="815" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="joaosemtil" type="15" sum="5" cards="[cards]"/><action no="4" player="joaosemtil" type="1" sum="25" cards="[cards]"/><action no="2" player="hamse109" type="15" sum="5" cards="[cards]"/><action no="5" player="hamse109" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SA C5</cards><action no="6" player="WorstCard" type="23" sum="100" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="7" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">S5 H4</cards><action no="8" player="hamse109" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK C8 HQ</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436276877">
+		 <general>
+		  <startdate>2014-01-25 16:29:59</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,015" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,475" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="710" dealer="0" win="165" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="joaosemtil" type="15" sum="5" cards="[cards]"/><action no="1" player="hamse109" type="15" sum="5" cards="[cards]"/><action no="4" player="hamse109" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S8 C10</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="6" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="7" player="hamse109" type="3" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 SQ HA</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><action no="9" player="hamse109" type="5" sum="50" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436277134">
+		 <general>
+		  <startdate>2014-01-25 16:30:30</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="960" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,470" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="770" dealer="1" win="380" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="joaosemtil" type="15" sum="10" cards="[cards]"/><action no="5" player="joaosemtil" type="2" sum="100" cards="[cards]"/><action no="3" player="hamse109" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D7 H2</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="8" player="joaosemtil" type="4" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="6" player="hamse109" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 DA C4</cards><action no="9" player="joaosemtil" type="4" sum="0" cards=""/><action no="10" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards><action no="11" player="joaosemtil" type="4" sum="0" cards=""/><action no="13" player="joaosemtil" type="0" sum="0" cards=""/><action no="12" player="hamse109" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436277559">
+		 <general>
+		  <startdate>2014-01-25 16:31:25</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="900" dealer="1" win="1,070" bet="900" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,360" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="940" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="joaosemtil" type="15" sum="10" cards="[cards]"/><action no="4" player="joaosemtil" type="1" sum="50" cards="[cards]"/><action no="2" player="hamse109" type="15" sum="10" cards="[cards]"/><action no="5" player="hamse109" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S2 SA</cards><action no="6" player="WorstCard" type="23" sum="890" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="7" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="8" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436291316">
+		 <general>
+		  <startdate>2014-01-25 16:31:54</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,070" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,300" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="830" dealer="0" win="830" bet="610" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="joaosemtil" type="15" sum="10" cards="[cards]"/><action no="1" player="hamse109" type="15" sum="10" cards="[cards]"/><action no="4" player="hamse109" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SA D4</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="6" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="7" player="hamse109" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 HQ C4</cards><action no="10" player="WorstCard" type="5" sum="100" cards=""/><action no="9" player="hamse109" type="4" sum="0" cards=""/><action no="11" player="hamse109" type="3" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards><action no="15" player="WorstCard" type="0" sum="0" cards=""/><action no="14" player="hamse109" type="5" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436291612">
+		 <general>
+		  <startdate>2014-01-25 16:32:29</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="860" dealer="0" win="1,190" bet="860" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,290" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="1,050" dealer="1" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="joaosemtil" type="15" sum="15" cards="[cards]"/><action no="5" player="joaosemtil" type="2" sum="150" cards="[cards]"/><action no="3" player="hamse109" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SK D10</cards><action no="7" player="WorstCard" type="23" sum="845" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="8" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="6" player="hamse109" type="3" sum="150" cards=""/><action no="9" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436291807">
+		 <general>
+		  <startdate>2014-01-25 16:32:51</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,190" dealer="1" win="1,445" bet="1,190" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,125" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="885" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="joaosemtil" type="15" sum="15" cards="[cards]"/><action no="4" player="joaosemtil" type="1" sum="75" cards="[cards]"/><action no="2" player="hamse109" type="15" sum="15" cards="[cards]"/><action no="5" player="hamse109" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S9 DA</cards><action no="6" player="WorstCard" type="23" sum="1,175" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="7" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="8" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436291965">
+		 <general>
+		  <startdate>2014-01-25 16:33:10</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,445" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,035" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="720" dealer="0" win="345" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="joaosemtil" type="15" sum="15" cards="[cards]"/><action no="1" player="hamse109" type="15" sum="15" cards="[cards]"/><action no="4" player="hamse109" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SJ S4</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="6" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">CA H8</cards><action no="7" player="hamse109" type="3" sum="75" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 HK D5</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="12" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="hamse109" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436292193">
+		 <general>
+		  <startdate>2014-01-25 16:33:39</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,280" dealer="0" win="1,460" bet="1,280" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="1,020" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="900" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="joaosemtil" type="15" sum="15" cards="[cards]"/><action no="5" player="joaosemtil" type="2" sum="150" cards="[cards]"/><action no="3" player="hamse109" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HA C5</cards><action no="7" player="WorstCard" type="23" sum="1,265" cards=""/><cards type="Pocket" player="joaosemtil">X X</cards><action no="8" player="joaosemtil" type="0" sum="0" cards=""/><cards type="Pocket" player="hamse109">X X</cards><action no="6" player="hamse109" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436292370">
+		 <general>
+		  <startdate>2014-01-25 16:33:59</startdate>		  
+		  <players>
+		   <player seat="4" name="WorstCard" chips="1,460" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6187667059"/><player seat="7" name="joaosemtil" chips="855" dealer="0" win="0" bet="855" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hamse109" chips="885" dealer="0" win="1,725" bet="855" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="joaosemtil" type="15" sum="15" cards="[cards]"/><action no="4" player="joaosemtil" type="1" sum="75" cards="[cards]"/><action no="2" player="hamse109" type="15" sum="15" cards="[cards]"/><action no="5" player="hamse109" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D5 HK</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="joaosemtil">CK D3</cards><action no="7" player="joaosemtil" type="23" sum="840" cards=""/><cards type="Pocket" player="hamse109">CA C10</cards><action no="8" player="hamse109" type="3" sum="690" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 S2 HA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game>  
+	</session>

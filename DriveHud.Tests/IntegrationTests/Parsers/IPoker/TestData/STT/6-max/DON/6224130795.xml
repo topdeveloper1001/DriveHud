@@ -1,0 +1,601 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224130795">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824206903</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:19</duration>  
+	          <gamecount>37</gamecount>  
+	          <startdate>2014-03-25 14:35:49</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>4,815</bets>  
+	          <wins>3,315</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>0</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>5</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>0</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>0</awardpoints>  
+	    </general>  
+	    <game gamecode="5600817234">
+		 <general>
+		  <startdate>2014-03-25 14:35:49</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,500" dealer="0" win="240" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="itrustmyself9" type="1" sum="10" cards="[cards]"/><action no="2" player="patrickgough79" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="6" player="hefty22" type="0" sum="0" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="7" player="itrustmyself9" type="23" sum="60" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="8" player="patrickgough79" type="3" sum="40" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="4" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 D10</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 CK CQ</cards><action no="9" player="itrustmyself9" type="4" sum="0" cards=""/><action no="10" player="patrickgough79" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CJ</cards><action no="11" player="itrustmyself9" type="4" sum="0" cards=""/><action no="13" player="itrustmyself9" type="0" sum="0" cards=""/><action no="12" player="patrickgough79" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600817412">
+		 <general>
+		  <startdate>2014-03-25 14:36:40</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,500" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,560" dealer="0" win="870" bet="560" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,500" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="patrickgough79" type="1" sum="10" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="5" player="hefty22" type="3" sum="50" cards=""/><action no="10" player="hefty22" type="3" sum="190" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="6" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="7" player="patrickgough79" type="23" sum="240" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="3" player="jackCiach" type="23" sum="50" cards=""/><action no="9" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S9 HA</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ HJ HK</cards><action no="12" player="hefty22" type="0" sum="0" cards=""/><action no="11" player="patrickgough79" type="5" sum="320" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600817656">
+		 <general>
+		  <startdate>2014-03-25 14:37:52</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,260" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,870" dealer="1" win="225" bet="135" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,450" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="10" cards="[cards]"/><action no="2" player="jackCiach" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="4" player="hefty22" type="3" sum="20" cards=""/><action no="9" player="hefty22" type="3" sum="40" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="5" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="6" player="patrickgough79" type="23" sum="60" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="8" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK H8</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 CK D4</cards><action no="10" player="hefty22" type="4" sum="0" cards=""/><action no="12" player="hefty22" type="0" sum="0" cards=""/><action no="11" player="patrickgough79" type="5" sum="75" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600817828">
+		 <general>
+		  <startdate>2014-03-25 14:38:47</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,470" dealer="1" win="100" bet="70" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,430" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackCiach" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="3" player="hefty22" type="0" sum="0" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="4" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="5" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="23" sum="70" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="7" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 H8</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600817928">
+		 <general>
+		  <startdate>2014-03-25 14:39:14</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,200" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="hefty22" type="2" sum="20" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><cards type="Pocket" player="itrustmyself9">X X</cards><action no="3" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="4" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="6" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C6 C5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600818045">
+		 <general>
+		  <startdate>2014-03-25 14:39:48</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,210" dealer="0" win="100" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,440" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,960" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hefty22" type="1" sum="10" cards="[cards]"/><action no="2" player="itrustmyself9" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="7" player="hefty22" type="3" sum="10" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="8" player="itrustmyself9" type="4" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="3" player="patrickgough79" type="3" sum="20" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="5" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 D10</cards><action no="6" player="moonbaseone" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA S7 DA</cards><action no="9" player="hefty22" type="5" sum="20" cards=""/><action no="10" player="itrustmyself9" type="0" sum="0" cards=""/><action no="11" player="patrickgough79" type="0" sum="0" cards=""/><action no="12" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600818207">
+		 <general>
+		  <startdate>2014-03-25 14:40:34</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,270" dealer="1" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,420" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,940" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="itrustmyself9" type="1" sum="20" cards="[cards]"/><action no="2" player="patrickgough79" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="6" player="hefty22" type="3" sum="40" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="7" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="8" player="patrickgough79" type="4" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="4" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 HK</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK DJ C4</cards><action no="10" player="hefty22" type="5" sum="80" cards=""/><action no="9" player="patrickgough79" type="4" sum="0" cards=""/><action no="11" player="patrickgough79" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600830354">
+		 <general>
+		  <startdate>2014-03-25 14:41:26</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,400" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,900" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,500" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="patrickgough79" type="1" sum="20" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="5" player="hefty22" type="0" sum="0" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="6" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="7" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="jackCiach">X X</cards><action no="3" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 DJ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600830448">
+		 <general>
+		  <startdate>2014-03-25 14:41:50</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,520" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="20" cards="[cards]"/><action no="2" player="jackCiach" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="4" player="hefty22" type="0" sum="0" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="5" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="6" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><cards type="Pocket" player="moonbaseone">C7 SA</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600830517">
+		 <general>
+		  <startdate>2014-03-25 14:42:07</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,500" dealer="1" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,440" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackCiach" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><action no="3" player="hefty22" type="0" sum="0" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="4" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="5" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="23" sum="120" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="7" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 HA</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600830622">
+		 <general>
+		  <startdate>2014-03-25 14:42:34</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,330" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,410" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="hefty22" type="2" sum="40" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">X X</cards><cards type="Pocket" player="itrustmyself9">X X</cards><action no="3" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="4" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="6" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 HK</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600830730">
+		 <general>
+		  <startdate>2014-03-25 14:42:59</startdate>		  
+		  <players>
+		   <player seat="1" name="hefty22" chips="1,350" dealer="0" win="0" bet="1,350" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="itrustmyself9" chips="1,400" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,880" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="1,560" dealer="0" win="2,990" bet="1,560" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hefty22" type="1" sum="20" cards="[cards]"/><action no="2" player="itrustmyself9" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hefty22">DA HA</cards><action no="7" player="hefty22" type="23" sum="160" cards=""/><cards type="Pocket" player="itrustmyself9">X X</cards><action no="8" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="3" player="patrickgough79" type="3" sum="40" cards=""/><action no="9" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">H4 D4</cards><action no="4" player="VanTr4X" type="3" sum="40" cards=""/><action no="10" player="VanTr4X" type="3" sum="120" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="5" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S7 S8</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 D2 S4</cards><action no="11" player="hefty22" type="5" sum="880" cards=""/><action no="13" player="hefty22" type="7" sum="310" cards=""/><action no="12" player="VanTr4X" type="7" sum="1,400" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game><game gamecode="5600830918">
+		 <general>
+		  <startdate>2014-03-25 14:43:46</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,360" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,840" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,390" dealer="0" win="160" bet="100" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="itrustmyself9" type="1" sum="20" cards="[cards]"/><action no="2" player="patrickgough79" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="6" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="7" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="4" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA S10</cards><action no="5" player="moonbaseone" type="23" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600831001">
+		 <general>
+		  <startdate>2014-03-25 14:44:08</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,990" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="patrickgough79" type="1" sum="30" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="5" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="6" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="jackCiach">X X</cards><action no="3" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 D6</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600831164">
+		 <general>
+		  <startdate>2014-03-25 14:44:50</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="3,020" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,420" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,450" dealer="0" win="240" bet="150" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="30" cards="[cards]"/><action no="2" player="jackCiach" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="4" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="5" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="7" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA CJ</cards><action no="3" player="moonbaseone" type="23" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600831290">
+		 <general>
+		  <startdate>2014-03-25 14:45:21</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,770" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,990" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,360" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,540" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackCiach" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="3" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="4" player="patrickgough79" type="23" sum="120" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="6" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 S5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600831403">
+		 <general>
+		  <startdate>2014-03-25 14:45:50</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,340" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,990" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="itrustmyself9" type="2" sum="60" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="7" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="3" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="23" sum="120" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="5" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 S8</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600838496">
+		 <general>
+		  <startdate>2014-03-25 14:46:21</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,280" dealer="0" win="450" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,860" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="3,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,450" dealer="1" win="0" bet="120" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="itrustmyself9" type="1" sum="30" cards="[cards]"/><action no="2" player="patrickgough79" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="6" player="itrustmyself9" type="3" sum="90" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="7" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="4" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA D9</cards><action no="5" player="moonbaseone" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 C5 H5</cards><action no="8" player="itrustmyself9" type="5" sum="150" cards=""/><action no="9" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600838644">
+		 <general>
+		  <startdate>2014-03-25 14:47:04</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,800" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="3,080" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,330" dealer="0" win="510" bet="330" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="patrickgough79" type="1" sum="30" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="5" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="6" player="patrickgough79" type="3" sum="90" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="3" player="jackCiach" type="23" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">SJ H9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 D5 S9</cards><action no="8" player="patrickgough79" type="4" sum="0" cards=""/><action no="10" player="patrickgough79" type="0" sum="0" cards=""/><action no="9" player="jackCiach" type="5" sum="210" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600838818">
+		 <general>
+		  <startdate>2014-03-25 14:47:55</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="3,020" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,510" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="jackCiach" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="4" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="5" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><cards type="Pocket" player="moonbaseone">D4 SK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600838880">
+		 <general>
+		  <startdate>2014-03-25 14:48:14</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,970" dealer="1" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,560" dealer="0" win="1,860" bet="1,560" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackCiach" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="3" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="4" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="23" sum="200" cards=""/><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="6" player="jackCiach" type="23" sum="1,560" cards=""/><cards type="Pocket" player="moonbaseone">H6 D6</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600838964">
+		 <general>
+		  <startdate>2014-03-25 14:48:41</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,460" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,860" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,230" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="itrustmyself9" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><cards type="Pocket" player="patrickgough79">X X</cards><action no="3" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="5" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 D4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600839025">
+		 <general>
+		  <startdate>2014-03-25 14:48:59</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,510" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="0" win="1,880" bet="1,680" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,180" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="itrustmyself9" type="1" sum="50" cards="[cards]"/><action no="2" player="patrickgough79" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="6" player="itrustmyself9" type="23" sum="200" cards=""/><action no="8" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">C7 DK</cards><action no="7" player="patrickgough79" type="23" sum="1,680" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="4" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 HJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600839126">
+		 <general>
+		  <startdate>2014-03-25 14:49:27</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,310" dealer="1" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,880" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,770" dealer="0" win="3,020" bet="2,770" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="patrickgough79" type="1" sum="50" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="5" player="itrustmyself9" type="23" sum="200" cards=""/><action no="8" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="6" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="23" sum="2,770" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="3" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK C4</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600839219">
+		 <general>
+		  <startdate>2014-03-25 14:49:53</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,110" dealer="0" win="1,260" bet="1,110" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,830" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="3,020" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,860" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="jackCiach" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="4" player="itrustmyself9" type="23" sum="1,110" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="5" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="7" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 S10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600839306">
+		 <general>
+		  <startdate>2014-03-25 14:50:17</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,260" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,760" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,180" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackCiach" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="3" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="4" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="6" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 HJ</cards>
+	</round>
+	
+		</game><game gamecode="5600839419">
+		 <general>
+		  <startdate>2014-03-25 14:50:47</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,260" dealer="0" win="1,510" bet="1,260" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,710" dealer="1" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,230" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="itrustmyself9" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="7" player="itrustmyself9" type="23" sum="1,260" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="3" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="5" player="jackCiach" type="23" sum="200" cards=""/><action no="8" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 SJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600839541">
+		 <general>
+		  <startdate>2014-03-25 14:51:21</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,510" dealer="0" win="300" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,830" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,180" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="itrustmyself9" type="1" sum="50" cards="[cards]"/><action no="2" player="patrickgough79" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="6" player="itrustmyself9" type="23" sum="200" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="7" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="4" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ S5</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600850353">
+		 <general>
+		  <startdate>2014-03-25 14:51:37</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,610" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,730" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,970" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="patrickgough79" type="1" sum="50" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="5" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="6" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="jackCiach">X X</cards><action no="3" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 D3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600850417">
+		 <general>
+		  <startdate>2014-03-25 14:51:57</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="3,020" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,510" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,180" dealer="0" win="1,405" bet="1,180" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="75" cards="[cards]"/><action no="2" player="jackCiach" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="4" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="5" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="7" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK HA</cards><action no="3" player="moonbaseone" type="23" sum="1,180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600850560">
+		 <general>
+		  <startdate>2014-03-25 14:52:37</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,945" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,360" dealer="0" win="1,360" bet="1,360" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,405" dealer="0" win="1,360" bet="1,360" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackCiach" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="3" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="4" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">DA C6</cards><action no="6" player="jackCiach" type="23" sum="1,360" cards=""/><cards type="Pocket" player="moonbaseone">D9 CA</cards><action no="7" player="moonbaseone" type="3" sum="1,210" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 D5 C2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5600850671">
+		 <general>
+		  <startdate>2014-03-25 14:53:09</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,610" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,945" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,405" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="itrustmyself9" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><cards type="Pocket" player="patrickgough79">X X</cards><action no="3" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="5" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ C9</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600850768">
+		 <general>
+		  <startdate>2014-03-25 14:53:38</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,685" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,945" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,330" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="itrustmyself9" type="1" sum="75" cards="[cards]"/><action no="2" player="patrickgough79" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="6" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="4" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 H6</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600850852">
+		 <general>
+		  <startdate>2014-03-25 14:54:01</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,610" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,755" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,945" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="patrickgough79" type="1" sum="75" cards="[cards]"/><action no="2" player="VanTr4X" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="5" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="6" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="jackCiach">X X</cards><action no="3" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 S7</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600850954">
+		 <general>
+		  <startdate>2014-03-25 14:54:29</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,680" dealer="1" win="1,905" bet="1,680" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="3,020" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,360" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="75" cards="[cards]"/><action no="2" player="jackCiach" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="4" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="5" player="patrickgough79" type="23" sum="1,680" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="7" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ S10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600851059">
+		 <general>
+		  <startdate>2014-03-25 14:54:56</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,610" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,905" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,945" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="1,210" dealer="0" win="2,420" bet="1,210" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,330" dealer="0" win="0" bet="1,210" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackCiach" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">X X</cards><action no="3" player="itrustmyself9" type="0" sum="0" cards=""/><cards type="Pocket" player="patrickgough79">X X</cards><action no="4" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">DJ SA</cards><action no="6" player="jackCiach" type="23" sum="1,210" cards=""/><cards type="Pocket" player="moonbaseone">HQ DA</cards><action no="7" player="moonbaseone" type="3" sum="1,060" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 SJ C10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards>
+	</round>
+	
+		</game><game gamecode="5600851160">
+		 <general>
+		  <startdate>2014-03-25 14:55:32</startdate>		  
+		  <players>
+		   <player seat="3" name="itrustmyself9" chips="1,610" dealer="0" win="270" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="patrickgough79" chips="1,905" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="VanTr4X" chips="2,945" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="jackCiach" chips="2,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="120" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6224130795"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="itrustmyself9" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="itrustmyself9">CJ H9</cards><cards type="Pocket" player="patrickgough79">X X</cards><action no="3" player="patrickgough79" type="0" sum="0" cards=""/><cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="jackCiach">X X</cards><action no="5" player="jackCiach" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H2 H4</cards><action no="6" player="moonbaseone" type="7" sum="45" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 C6 S10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards>
+	</round>
+	
+		</game>  
+	</session>

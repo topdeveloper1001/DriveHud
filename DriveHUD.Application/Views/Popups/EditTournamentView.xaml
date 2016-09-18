@@ -1,0 +1,215 @@
+﻿<Window x:Class="DriveHUD.Application.Views.EditTournamentView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:controls="clr-namespace:DriveHUD.Common.Wpf.Controls;assembly=DriveHUD.Common.Wpf"
+        Title="Edit Tournament"
+        FontFamily="./Fonts/#Open Sans"
+        Icon ="/images/drivehud.ico"
+        Height="370"
+        Width="350"
+        ResizeMode="NoResize"
+        Foreground="#7D7F84"
+        Background="#1F2124"
+        WindowStartupLocation="CenterScreen">
+
+    <Window.Resources>
+        <ControlTemplate x:Key="EditTournamentComboBoxToggleButton"
+                 TargetType="{x:Type ToggleButton}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="30"/>
+                </Grid.ColumnDefinitions>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Normal"/>
+                        <VisualState x:Name="MouseOver">
+                        </VisualState>
+                        <VisualState x:Name="Pressed"/>
+                        <VisualState x:Name="Disabled">
+                            <Storyboard>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).
+                (GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                          Storyboard.TargetName="Border">
+                                    <EasingColorKeyFrame KeyTime="0"
+                                   Value="{StaticResource DisabledControlDarkColor}"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Shape.Fill).
+                (SolidColorBrush.Color)"
+                                          Storyboard.TargetName="Arrow">
+                                    <EasingColorKeyFrame KeyTime="0"
+                                   Value="{StaticResource DisabledForegroundColor}"/>
+                                </ColorAnimationUsingKeyFrames>
+                                <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.BorderBrush).
+                (GradientBrush.GradientStops)[1].(GradientStop.Color)"
+                                          Storyboard.TargetName="Border">
+                                    <EasingColorKeyFrame KeyTime="0"
+                                   Value="{StaticResource DisabledBorderDarkColor}"/>
+                                </ColorAnimationUsingKeyFrames>
+                            </Storyboard>
+                        </VisualState>
+                    </VisualStateGroup>
+                    <VisualStateGroup x:Name="CheckStates">
+                        <VisualState x:Name="Checked"/>
+                        <VisualState x:Name="Unchecked"/>
+                        <VisualState x:Name="Indeterminate"/>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                <Border x:Name="Border" Grid.Column="1" CornerRadius="2" BorderThickness="2">
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="#181a1d"/>
+                    </Border.BorderBrush>
+                    <Border.Background>
+                        <SolidColorBrush Color="{StaticResource ControlMediumColor}"/>
+                    </Border.Background>
+                </Border>
+                <Border x:Name="Inner"  Grid.Column="0" CornerRadius="2">
+                    <Border.Background>
+                        <SolidColorBrush Color="#181a1d"/>
+                    </Border.Background>
+                </Border>
+                <Border x:Name="GlyphBorder" Grid.ColumnSpan="2" CornerRadius="2" BorderThickness="2">
+                    <Border.BorderBrush>
+                        <SolidColorBrush Color="#181a1d"/>
+                    </Border.BorderBrush>
+                </Border>
+                <Path x:Name="Arrow"
+                Grid.Column="1"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Data="M 0 0 L 4 4 L 8 0 Z" >
+                    <Path.Fill>
+                        <SolidColorBrush Color="{StaticResource GlyphColor}"/>
+                    </Path.Fill>
+                </Path>
+            </Grid>
+        </ControlTemplate>
+
+        <Style TargetType="TextBlock" BasedOn="{StaticResource {x:Type TextBlock}}">
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+
+        <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Height" Value="25"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="MaxLength" Value="100" />
+            <Setter Property="HorizontalAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="4">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <!-- Buy in -->
+        <TextBlock  Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Right" Margin="5"><Run Text="{ResX Common_BuyIn}"/>:</TextBlock>
+        <TextBox x:Name="BuyInText" Grid.Row="0" Grid.Column="1" Text="{Binding BuyIn, Mode=TwoWay, StringFormat={}{0:0.##}, ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged}" />
+
+        <!-- Tournament Type -->
+        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right"  Margin="5"><Run Text="{ResX Common_TournamentType}"/>:</TextBlock>
+        <controls:ComboBoxEx Width="150" Height="25"
+                             Margin="5"
+                             Grid.Row="1" Grid.Column="1" 
+                             HorizontalAlignment="Left"
+                             ItemsSource="{Binding TournamentTypeItems}"
+                             SelectedItem="{Binding TournamentTypeSelectedItem}"
+                             Background="{StaticResource BackgroundBrush}"
+                             ToggleButtonTemplate="{StaticResource EditTournamentComboBoxToggleButton}"
+                             ItemContainerStyle="{StaticResource ComboboxItemContainerBlueStyle}"
+                             ItemsBackgroundColor="{StaticResource ComboboxBackGroundBrush}"/>
+ 
+        <!-- Game Type -->
+
+        <TextBlock Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Right" Margin="5"><Run Text="{ResX Common_GameType}"/>:</TextBlock>
+        <controls:ComboBoxEx Width="150" Height="25"
+                             Margin="5"
+                             Grid.Row="2" Grid.Column="1"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                             HorizontalAlignment="Left"
+                             ItemsSource="{Binding GameTypeItems}"
+                             SelectedItem="{Binding GameTypeSelectedItem}"
+                             Background="{StaticResource BackgroundBrush}"
+                             ToggleButtonTemplate="{StaticResource EditTournamentComboBoxToggleButton}"
+                             ItemContainerStyle="{StaticResource ComboboxItemContainerBlueStyle}"
+                             ItemsBackgroundColor="{StaticResource ComboboxBackGroundBrush}"/>
+
+        <!-- Speed -->
+        <TextBlock Grid.Row="3" Grid.Column="0"  HorizontalAlignment="Right" Margin="5"><Run Text="{ResX Common_Speed}"/>:</TextBlock>
+        <controls:ComboBoxEx Width="150" Height="25"
+                             Margin="5"
+                             Grid.Row="3" Grid.Column="1"
+                             HorizontalAlignment="Left"
+                             VerticalContentAlignment="Center" HorizontalContentAlignment="Center"
+                             ItemsSource="{Binding TournamentSpeedItems}"
+                             SelectedItem="{Binding TournamentSpeedSelectedItem}"
+                             Background="{StaticResource BackgroundBrush}"
+                             ToggleButtonTemplate="{StaticResource EditTournamentComboBoxToggleButton}"
+                             ItemContainerStyle="{StaticResource ComboboxItemContainerBlueStyle}"
+                             ItemsBackgroundColor="{StaticResource ComboboxBackGroundBrush}"/>
+
+
+
+        <!-- Rebuy -->
+        <TextBlock Grid.Row="4" Grid.Column="0"  HorizontalAlignment="Right" Margin="5"><Run Text="{ResX Common_Rebuy}"/>:</TextBlock>
+        <TextBox x:Name="RebuyText" Grid.Row="4" Grid.Column="1" Margin="5" Text="{Binding Rebuy, Mode=TwoWay, StringFormat={}{0:0.##}, ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged}" />
+
+        <!-- Rake -->
+        <TextBlock Grid.Row="5" Grid.Column="0"  HorizontalAlignment="Right" Margin="5"><Run Text="{ResX Common_Rake}"/>:</TextBlock>
+        <TextBox x:Name="RakeText" Grid.Row="5" Grid.Column="1" Margin="5" Text="{Binding Rake, Mode=TwoWay, StringFormat={}{0:0.##}, ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged}" />
+
+        <!-- Place -->
+        <TextBlock Grid.Row="6" Grid.Column="0"  HorizontalAlignment="Right" Margin="5"><Run Text="{ResX Common_Place}"/>:</TextBlock>
+        <TextBox x:Name="PlaceText" Grid.Row="6" Grid.Column="1" Text="{Binding Place, Mode=TwoWay, ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged}" />
+
+        <!-- Won -->
+        <TextBlock Grid.Row="7" Grid.Column="0"  HorizontalAlignment="Right" Margin="5"><Run Text="{ResX Common_WonAmount}"/>:</TextBlock>
+        <TextBox x:Name="WonText" Grid.Row="7" Grid.Column="1" Text="{Binding WonAmount, Mode=TwoWay, StringFormat={}{0:0.##}, ValidatesOnExceptions=true, NotifyOnValidationError=true, UpdateSourceTrigger=PropertyChanged}" />
+
+        <StackPanel Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Save" 
+                    IsDefault="True"
+                    Margin="0,5,0,5"
+                    HorizontalAlignment="Right"
+                    Command="{Binding SaveCommand}">
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource ButtonStyle}">
+                        <Setter Property="IsEnabled" Value="False"/>
+                        <Style.Triggers>
+                            <MultiDataTrigger>
+                                <MultiDataTrigger.Conditions>
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=BuyInText}" Value="False" />
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=RebuyText}" Value="False" />
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=RakeText}" Value="False" />
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=PlaceText}" Value="False" />
+                                    <Condition Binding="{Binding Path=(Validation.HasError), ElementName=WonText}" Value="False" />
+                                </MultiDataTrigger.Conditions>
+                                <Setter Property="IsEnabled" Value="True" />
+                            </MultiDataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+            <Button Style="{StaticResource ButtonStyle}"
+                    Content="Cancel" Margin="10,5,10,5"
+                    Command="{Binding CancelCommand}"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

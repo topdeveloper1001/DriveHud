@@ -1,0 +1,1688 @@
+#Game No : 436505714
+***** 888poker Hand History for Game 436505714 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:15:45
+Table Pretoria 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.89 )
+Seat 3: Gunsan56 ( $0.14 )
+Seat 4: Scoots10 ( $2.34 )
+Seat 5: xxBlue777xx ( $3.47 )
+Seat 6: fad86 ( $0.73 )
+Gunsan56 posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+fad86 folds
+scquad folds
+Gunsan56 calls [$0.01]
+Scoots10 raises [$0.02]
+Gunsan56 calls [$0.02]
+** Dealing flop ** [ Jh, 7d, 6h ]
+Gunsan56 checks
+Scoots10 bets [$0.02]
+Gunsan56 calls [$0.02]
+** Dealing turn ** [ 9h ]
+Gunsan56 checks
+Scoots10 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Dealing river ** [ Ac ]
+Gunsan56 checks
+Scoots10 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+Gunsan56 shows [ Ks, 3c ]
+Scoots10 shows [ Qh, 4c ]
+Gunsan56 collected [ $0.27 ]
+
+
+#Game No : 436505770
+***** 888poker Hand History for Game 436505770 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:15:52
+Table Pretoria 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.89 )
+Seat 3: Gunsan56 ( $0.27 )
+Seat 4: Scoots10 ( $2.20 )
+Seat 5: xxBlue777xx ( $3.47 )
+Seat 6: fad86 ( $0.73 )
+Scoots10 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+scquad folds
+Gunsan56 calls [$0.02]
+Scoots10 calls [$0.01]
+xxBlue777xx checks
+** Dealing flop ** [ Qd, 3s, 8c ]
+Scoots10 checks
+xxBlue777xx checks
+fad86 checks
+Gunsan56 checks
+** Dealing turn ** [ Js ]
+Scoots10 checks
+xxBlue777xx bets [$0.04]
+fad86 calls [$0.04]
+Gunsan56 calls [$0.04]
+Scoots10 folds
+** Dealing river ** [ 8h ]
+xxBlue777xx checks
+fad86 checks
+Gunsan56 checks
+** Summary **
+xxBlue777xx shows [ 9c, Qs ]
+fad86 mucks [ 2s, 7s ]
+Gunsan56 mucks [ 2c, 9d ]
+xxBlue777xx collected [ $0.19 ]
+
+
+#Game No : 436505850
+***** 888poker Hand History for Game 436505850 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:16:51
+Table Pretoria 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.89 )
+Seat 3: Gunsan56 ( $0.21 )
+Seat 4: Scoots10 ( $2.18 )
+Seat 5: xxBlue777xx ( $3.60 )
+Seat 6: fad86 ( $0.67 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+scquad folds
+Gunsan56 calls [$0.02]
+Scoots10 folds
+xxBlue777xx calls [$0.01]
+fad86 checks
+** Dealing flop ** [ Jh, 9d, Kh ]
+xxBlue777xx checks
+fad86 checks
+Gunsan56 checks
+** Dealing turn ** [ As ]
+xxBlue777xx checks
+fad86 checks
+Gunsan56 bets [$0.04]
+xxBlue777xx folds
+fad86 folds
+** Summary **
+Gunsan56 did not show his hand
+Gunsan56 collected [ $0.06 ]
+
+
+#Game No : 436505886
+***** 888poker Hand History for Game 436505886 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:17:17
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.89 )
+Seat 3: Gunsan56 ( $0.25 )
+Seat 4: Scoots10 ( $2.18 )
+Seat 5: xxBlue777xx ( $3.58 )
+Seat 6: fad86 ( $0.65 )
+fad86 posts small blind [$0.01]
+scquad posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 folds
+Scoots10 raises [$0.04]
+xxBlue777xx folds
+fad86 calls [$0.03]
+scquad folds
+** Dealing flop ** [ 4s, 3d, 3s ]
+fad86 checks
+Scoots10 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 5c ]
+fad86 checks
+Scoots10 bets [$0.04]
+fad86 folds
+** Summary **
+Scoots10 did not show his hand
+Scoots10 collected [ $0.14 ]
+
+
+#Game No : 436505938
+***** 888poker Hand History for Game 436505938 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:17:54
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.87 )
+Seat 3: Gunsan56 ( $0.25 )
+Seat 4: Scoots10 ( $2.26 )
+Seat 5: xxBlue777xx ( $3.58 )
+Seat 6: fad86 ( $0.59 )
+scquad posts small blind [$0.01]
+Gunsan56 posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 calls [$0.02]
+xxBlue777xx folds
+fad86 calls [$0.02]
+scquad calls [$0.01]
+Gunsan56 checks
+** Dealing flop ** [ 9c, Td, 7c ]
+scquad checks
+Gunsan56 bets [$0.02]
+Scoots10 folds
+fad86 calls [$0.02]
+scquad folds
+** Dealing turn ** [ 2h ]
+Gunsan56 bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ 9d ]
+Gunsan56 bets [$0.04]
+fad86 calls [$0.04]
+** Summary **
+Gunsan56 shows [ 8s, Ts ]
+fad86 mucks [ 7h, 6h ]
+Gunsan56 collected [ $0.27 ]
+
+
+#Game No : 436506024
+***** 888poker Hand History for Game 436506024 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:19:00
+Table Pretoria 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.85 )
+Seat 3: Gunsan56 ( $0.40 )
+Seat 4: Scoots10 ( $2.24 )
+Seat 5: xxBlue777xx ( $3.58 )
+Seat 6: fad86 ( $0.47 )
+Gunsan56 posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+fad86 calls [$0.02]
+scquad folds
+Gunsan56 calls [$0.01]
+Scoots10 raises [$0.02]
+fad86 calls [$0.02]
+Gunsan56 calls [$0.02]
+** Dealing flop ** [ 3h, 4h, 2h ]
+Gunsan56 checks
+Scoots10 bets [$0.02]
+fad86 raises [$0.04]
+Gunsan56 calls [$0.04]
+Scoots10 calls [$0.02]
+** Dealing turn ** [ Js ]
+Gunsan56 checks
+Scoots10 checks
+fad86 bets [$0.04]
+Gunsan56 folds
+Scoots10 folds
+** Summary **
+fad86 did not show his hand
+fad86 collected [ $0.23 ]
+
+
+#Game No : 436506068
+***** 888poker Hand History for Game 436506068 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:19:38
+Table Pretoria 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.85 )
+Seat 3: Gunsan56 ( $0.32 )
+Seat 4: Scoots10 ( $2.16 )
+Seat 5: xxBlue777xx ( $3.58 )
+Seat 6: fad86 ( $0.62 )
+Scoots10 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+scquad folds
+Gunsan56 calls [$0.02]
+Scoots10 folds
+xxBlue777xx checks
+** Dealing flop ** [ Ts, Td, 7c ]
+xxBlue777xx checks
+Gunsan56 bets [$0.02]
+xxBlue777xx folds
+** Summary **
+Gunsan56 did not show his hand
+Gunsan56 collected [ $0.05 ]
+
+
+#Game No : 436506122
+***** 888poker Hand History for Game 436506122 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:20:17
+Table Pretoria 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.85 )
+Seat 3: Gunsan56 ( $0.35 )
+Seat 4: Scoots10 ( $2.15 )
+Seat 5: xxBlue777xx ( $3.56 )
+Seat 6: fad86 ( $0.62 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+scquad folds
+Gunsan56 folds
+Scoots10 folds
+xxBlue777xx calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 9s, 5h, 2s ]
+xxBlue777xx checks
+fad86 bets [$0.02]
+xxBlue777xx folds
+** Summary **
+fad86 did not show his hand
+fad86 collected [ $0.04 ]
+
+
+#Game No : 436506145
+***** 888poker Hand History for Game 436506145 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:20:37
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 2: scquad ( $0.85 )
+Seat 3: Gunsan56 ( $0.35 )
+Seat 4: Scoots10 ( $2.15 )
+Seat 5: xxBlue777xx ( $3.54 )
+Seat 6: fad86 ( $0.64 )
+fad86 posts small blind [$0.01]
+scquad folds
+Gunsan56 posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 folds
+xxBlue777xx folds
+fad86 folds
+** Summary **
+Gunsan56 did not show his hand
+Gunsan56 collected [ $0.03 ]
+
+
+#Game No : 436506162
+***** 888poker Hand History for Game 436506162 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:20:48
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 3: Gunsan56 ( $0.36 )
+Seat 4: Scoots10 ( $2.15 )
+Seat 5: xxBlue777xx ( $3.54 )
+Seat 6: fad86 ( $0.63 )
+Gunsan56 posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+fad86 calls [$0.02]
+Gunsan56 calls [$0.01]
+Scoots10 checks
+** Dealing flop ** [ 2c, 3h, Qs ]
+Gunsan56 checks
+Scoots10 bets [$0.02]
+fad86 raises [$0.04]
+Gunsan56 folds
+Scoots10 raises [$0.04]
+fad86 calls [$0.02]
+** Dealing turn ** [ 6s ]
+Scoots10 bets [$0.04]
+fad86 folds
+** Summary **
+Scoots10 collected [ $0.18 ]
+
+
+#Game No : 436506200
+***** 888poker Hand History for Game 436506200 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:21:17
+Table Pretoria 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 3: Gunsan56 ( $0.34 )
+Seat 4: Scoots10 ( $2.25 )
+Seat 5: xxBlue777xx ( $3.54 )
+Seat 6: fad86 ( $0.55 )
+Scoots10 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+Gunsan56 folds
+Scoots10 calls [$0.01]
+xxBlue777xx checks
+** Dealing flop ** [ 3h, Ac, Ts ]
+Scoots10 bets [$0.02]
+xxBlue777xx folds
+fad86 folds
+** Summary **
+Scoots10 collected [ $0.06 ]
+
+
+#Game No : 436506241
+***** 888poker Hand History for Game 436506241 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:21:42
+Table Pretoria 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 3: Gunsan56 ( $0.34 )
+Seat 4: Scoots10 ( $2.29 )
+Seat 5: xxBlue777xx ( $3.52 )
+Seat 6: fad86 ( $0.53 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 calls [$0.02]
+Scoots10 calls [$0.02]
+xxBlue777xx calls [$0.01]
+fad86 checks
+** Dealing flop ** [ Qs, 8d, Ts ]
+xxBlue777xx checks
+fad86 checks
+Gunsan56 bets [$0.02]
+Scoots10 calls [$0.02]
+xxBlue777xx raises [$0.04]
+fad86 folds
+Gunsan56 calls [$0.02]
+Scoots10 calls [$0.02]
+** Dealing turn ** [ Kd ]
+xxBlue777xx checks
+Gunsan56 checks
+Scoots10 bets [$0.04]
+xxBlue777xx calls [$0.04]
+Gunsan56 calls [$0.04]
+** Dealing river ** [ Ac ]
+xxBlue777xx checks
+Gunsan56 checks
+Scoots10 bets [$0.04]
+xxBlue777xx calls [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+Scoots10 shows [ Qd, Tc ]
+xxBlue777xx mucks [ 9s, As ]
+Gunsan56 shows [ 8h, Ad ]
+Gunsan56 collected [ $0.42 ]
+
+
+#Game No : 436506309
+***** 888poker Hand History for Game 436506309 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:22:32
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 1: lelik3333 ( $0.26 )
+Seat 3: Gunsan56 ( $0.62 )
+Seat 4: Scoots10 ( $2.15 )
+Seat 5: xxBlue777xx ( $3.38 )
+Seat 6: fad86 ( $0.51 )
+fad86 posts small blind [$0.01]
+lelik3333 posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 calls [$0.02]
+Scoots10 folds
+xxBlue777xx folds
+fad86 calls [$0.01]
+lelik3333 raises [$0.02]
+Gunsan56 calls [$0.02]
+fad86 calls [$0.02]
+** Dealing flop ** [ 4d, Tc, 2c ]
+fad86 checks
+lelik3333 checks
+Gunsan56 checks
+** Dealing turn ** [ Ks ]
+fad86 checks
+lelik3333 checks
+Gunsan56 checks
+** Dealing river ** [ 9s ]
+fad86 checks
+lelik3333 checks
+Gunsan56 checks
+** Summary **
+fad86 shows [ 7d, 3c ]
+lelik3333 shows [ As, Jh ]
+Gunsan56 mucks [ Qs, 6s ]
+lelik3333 collected [ $0.12 ]
+
+
+#Game No : 436506381
+***** 888poker Hand History for Game 436506381 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:23:27
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: lelik3333 ( $0.34 )
+Seat 3: Gunsan56 ( $0.58 )
+Seat 4: Scoots10 ( $2.15 )
+Seat 5: xxBlue777xx ( $3.38 )
+Seat 6: fad86 ( $0.47 )
+lelik3333 posts small blind [$0.01]
+Gunsan56 posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 folds
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.02]
+lelik3333 calls [$0.01]
+Gunsan56 checks
+** Dealing flop ** [ 8h, 9s, Js ]
+lelik3333 bets [$0.02]
+Gunsan56 folds
+xxBlue777xx raises [$0.04]
+fad86 calls [$0.04]
+lelik3333 calls [$0.02]
+** Dealing turn ** [ Jc ]
+lelik3333 checks
+xxBlue777xx bets [$0.04]
+fad86 calls [$0.04]
+lelik3333 calls [$0.04]
+** Dealing river ** [ 9h ]
+lelik3333 checks
+xxBlue777xx checks
+fad86 checks
+** Summary **
+lelik3333 shows [ 8c, Th ]
+xxBlue777xx shows [ Ts, Qc ]
+fad86 mucks [ 6s, Qs ]
+xxBlue777xx collected [ $0.31 ]
+
+
+#Game No : 436506487
+***** 888poker Hand History for Game 436506487 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:24:49
+Table Pretoria 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: lelik3333 ( $0.24 )
+Seat 3: Gunsan56 ( $0.56 )
+Seat 4: Scoots10 ( $2.15 )
+Seat 5: xxBlue777xx ( $3.59 )
+Seat 6: fad86 ( $0.37 )
+Seat 8: Larbak.sp ( $2 )
+Gunsan56 posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+Larbak.sp posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.02]
+Larbak.sp checks
+lelik3333 raises [$0.04]
+Gunsan56 folds
+Scoots10 calls [$0.02]
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.02]
+Larbak.sp calls [$0.02]
+** Dealing flop ** [ 8h, Jc, Kd ]
+Scoots10 checks
+xxBlue777xx checks
+fad86 checks
+Larbak.sp checks
+lelik3333 checks
+** Dealing turn ** [ 3h ]
+Scoots10 checks
+xxBlue777xx bets [$0.04]
+fad86 folds
+Larbak.sp calls [$0.04]
+lelik3333 calls [$0.04]
+Scoots10 folds
+** Dealing river ** [ Kc ]
+xxBlue777xx checks
+Larbak.sp bets [$0.04]
+lelik3333 calls [$0.04]
+xxBlue777xx calls [$0.04]
+** Summary **
+Larbak.sp shows [ Jd, Tc ]
+lelik3333 mucks [ Ac, 2d ]
+xxBlue777xx shows [ As, Js ]
+xxBlue777xx collected [ $0.43 ]
+
+
+#Game No : 436506839
+***** 888poker Hand History for Game 436506839 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:29:44
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: lelik3333 ( $0.24 )
+Seat 2: Castro942 ( $2.78 )
+Seat 3: Gunsan56 ( $0.74 )
+Seat 4: Scoots10 ( $2.37 )
+Seat 5: xxBlue777xx ( $3.81 )
+Seat 6: fad86 ( $0.61 )
+lelik3333 posts small blind [$0.01]
+Castro942 posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 calls [$0.02]
+Scoots10 folds
+xxBlue777xx folds
+fad86 folds
+lelik3333 calls [$0.01]
+Castro942 checks
+** Dealing flop ** [ 3c, Th, Ks ]
+lelik3333 checks
+Castro942 bets [$0.02]
+Gunsan56 calls [$0.02]
+lelik3333 folds
+** Dealing turn ** [ 2c ]
+Castro942 bets [$0.04]
+Gunsan56 folds
+** Summary **
+Castro942 collected [ $0.10 ]
+
+
+#Game No : 436506879
+***** 888poker Hand History for Game 436506879 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:30:19
+Table Pretoria 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: Castro942 ( $2.84 )
+Seat 3: Gunsan56 ( $0.70 )
+Seat 4: Scoots10 ( $2.37 )
+Seat 5: xxBlue777xx ( $3.81 )
+Seat 6: fad86 ( $0.61 )
+Gunsan56 posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+fad86 folds
+Castro942 folds
+Gunsan56 calls [$0.01]
+Scoots10 checks
+** Dealing flop ** [ As, 4h, 2h ]
+Gunsan56 checks
+Scoots10 bets [$0.02]
+Gunsan56 calls [$0.02]
+** Dealing turn ** [ 8s ]
+Gunsan56 checks
+Scoots10 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Dealing river ** [ 2s ]
+Gunsan56 checks
+Scoots10 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+Scoots10 shows [ 4d, 3c ]
+Gunsan56 shows [ 9s, 8d ]
+Gunsan56 collected [ $0.23 ]
+
+
+#Game No : 436506910
+***** 888poker Hand History for Game 436506910 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:30:47
+Table Pretoria 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 2: Castro942 ( $2.84 )
+Seat 3: Gunsan56 ( $0.81 )
+Seat 4: Scoots10 ( $2.25 )
+Seat 5: xxBlue777xx ( $3.81 )
+Seat 6: fad86 ( $0.61 )
+Scoots10 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+Castro942 calls [$0.02]
+Gunsan56 calls [$0.02]
+Scoots10 calls [$0.01]
+xxBlue777xx checks
+** Dealing flop ** [ As, 7h, 7d ]
+Scoots10 checks
+xxBlue777xx checks
+fad86 bets [$0.02]
+Castro942 folds
+Gunsan56 calls [$0.02]
+Scoots10 folds
+xxBlue777xx folds
+** Dealing turn ** [ 2s ]
+fad86 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Dealing river ** [ Qs ]
+fad86 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+fad86 shows [ Ad, 4c ]
+Gunsan56 shows [ 4d, Ac ]
+fad86 collected [ $0.15 ]
+Gunsan56 collected [ $0.14 ]
+
+
+#Game No : 436506962
+***** 888poker Hand History for Game 436506962 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:31:40
+Table Pretoria 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: Castro942 ( $2.82 )
+Seat 3: Gunsan56 ( $0.83 )
+Seat 4: Scoots10 ( $2.23 )
+Seat 5: xxBlue777xx ( $3.79 )
+Seat 6: fad86 ( $0.64 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Castro942 folds
+Gunsan56 folds
+Scoots10 calls [$0.02]
+xxBlue777xx calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 4c, Jh, 6h ]
+xxBlue777xx checks
+fad86 checks
+Scoots10 bets [$0.02]
+xxBlue777xx folds
+fad86 folds
+** Summary **
+Scoots10 collected [ $0.06 ]
+
+
+#Game No : 436507034
+***** 888poker Hand History for Game 436507034 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:32:42
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 2: Castro942 ( $2.82 )
+Seat 3: Gunsan56 ( $0.83 )
+Seat 4: Scoots10 ( $2.27 )
+Seat 5: xxBlue777xx ( $3.77 )
+Seat 6: fad86 ( $0.62 )
+fad86 posts small blind [$0.01]
+Castro942 posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 calls [$0.02]
+Scoots10 folds
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.01]
+Castro942 checks
+** Dealing flop ** [ 4d, 2h, Kd ]
+fad86 checks
+Castro942 checks
+Gunsan56 checks
+xxBlue777xx checks
+** Dealing turn ** [ 7h ]
+fad86 checks
+Castro942 checks
+Gunsan56 checks
+xxBlue777xx checks
+** Dealing river ** [ 9d ]
+fad86 checks
+Castro942 checks
+Gunsan56 bets [$0.04]
+xxBlue777xx folds
+fad86 folds
+Castro942 folds
+** Summary **
+Gunsan56 collected [ $0.08 ]
+
+
+#Game No : 436507100
+***** 888poker Hand History for Game 436507100 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:33:34
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: Castro942 ( $2.80 )
+Seat 3: Gunsan56 ( $0.89 )
+Seat 4: Scoots10 ( $2.27 )
+Seat 5: xxBlue777xx ( $3.75 )
+Seat 6: fad86 ( $0.60 )
+Castro942 posts small blind [$0.01]
+Gunsan56 posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 folds
+xxBlue777xx calls [$0.02]
+fad86 folds
+Castro942 calls [$0.01]
+Gunsan56 checks
+** Dealing flop ** [ 7d, 5s, Qd ]
+Castro942 checks
+Gunsan56 checks
+xxBlue777xx bets [$0.02]
+Castro942 calls [$0.02]
+Gunsan56 folds
+** Dealing turn ** [ Ac ]
+Castro942 checks
+xxBlue777xx bets [$0.04]
+Castro942 calls [$0.04]
+** Dealing river ** [ 9s ]
+Castro942 bets [$0.04]
+xxBlue777xx calls [$0.04]
+** Summary **
+Castro942 shows [ 9c, 7s ]
+xxBlue777xx shows [ Ah, 7h ]
+xxBlue777xx collected [ $0.25 ]
+
+
+#Game No : 436507156
+***** 888poker Hand History for Game 436507156 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:34:27
+Table Pretoria 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.68 )
+Seat 3: Gunsan56 ( $0.87 )
+Seat 5: xxBlue777xx ( $3.88 )
+Seat 6: fad86 ( $0.60 )
+Gunsan56 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+Castro942 calls [$0.02]
+Gunsan56 calls [$0.01]
+xxBlue777xx checks
+** Dealing flop ** [ 5h, 4h, 6s ]
+Gunsan56 bets [$0.02]
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.02]
+Castro942 folds
+** Dealing turn ** [ 2c ]
+Gunsan56 checks
+xxBlue777xx checks
+fad86 bets [$0.04]
+Gunsan56 calls [$0.04]
+xxBlue777xx folds
+** Dealing river ** [ 8c ]
+Gunsan56 checks
+fad86 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+fad86 shows [ 4c, 7c ]
+Gunsan56 mucks [ 6c, Th ]
+fad86 collected [ $0.29 ]
+
+
+#Game No : 436507230
+***** 888poker Hand History for Game 436507230 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:35:35
+Table Pretoria 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.66 )
+Seat 3: Gunsan56 ( $0.75 )
+Seat 5: xxBlue777xx ( $3.84 )
+Seat 6: fad86 ( $0.77 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Castro942 raises [$0.04]
+Gunsan56 folds
+xxBlue777xx folds
+fad86 calls [$0.02]
+** Dealing flop ** [ 3s, Jc, Ad ]
+fad86 checks
+Castro942 checks
+** Dealing turn ** [ Ah ]
+fad86 bets [$0.04]
+Castro942 calls [$0.04]
+** Dealing river ** [ 6h ]
+fad86 bets [$0.04]
+Castro942 calls [$0.04]
+** Summary **
+fad86 shows [ Ks, As ]
+Castro942 mucks [ 9h, 9c ]
+fad86 collected [ $0.24 ]
+
+
+#Game No : 436507274
+***** 888poker Hand History for Game 436507274 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:36:13
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.54 )
+Seat 3: Gunsan56 ( $0.75 )
+Seat 5: xxBlue777xx ( $3.83 )
+Seat 6: fad86 ( $0.89 )
+fad86 posts small blind [$0.01]
+Castro942 posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 calls [$0.02]
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.01]
+Castro942 checks
+** Dealing flop ** [ 6h, Qs, 5s ]
+fad86 checks
+Castro942 bets [$0.02]
+Gunsan56 calls [$0.02]
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ Jh ]
+fad86 checks
+Castro942 bets [$0.04]
+Gunsan56 folds
+xxBlue777xx calls [$0.04]
+fad86 folds
+** Dealing river ** [ 2h ]
+Castro942 bets [$0.04]
+xxBlue777xx raises [$0.08]
+Castro942 folds
+** Summary **
+xxBlue777xx collected [ $0.31 ]
+
+
+#Game No : 436507337
+***** 888poker Hand History for Game 436507337 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:37:09
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.42 )
+Seat 3: Gunsan56 ( $0.71 )
+Seat 5: xxBlue777xx ( $4.02 )
+Seat 6: fad86 ( $0.85 )
+Castro942 posts small blind [$0.01]
+Gunsan56 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+fad86 folds
+Castro942 calls [$0.01]
+Gunsan56 checks
+** Dealing flop ** [ 8c, Kc, 5s ]
+Castro942 bets [$0.02]
+Gunsan56 folds
+** Summary **
+Castro942 collected [ $0.04 ]
+
+
+#Game No : 436507366
+***** 888poker Hand History for Game 436507366 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:37:34
+Table Pretoria 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.44 )
+Seat 3: Gunsan56 ( $0.69 )
+Seat 5: xxBlue777xx ( $4.02 )
+Seat 6: fad86 ( $0.85 )
+Gunsan56 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+Castro942 calls [$0.02]
+Gunsan56 calls [$0.01]
+xxBlue777xx checks
+** Dealing flop ** [ Jh, 5h, Ac ]
+Gunsan56 checks
+xxBlue777xx checks
+fad86 bets [$0.02]
+Castro942 folds
+Gunsan56 folds
+xxBlue777xx calls [$0.02]
+** Dealing turn ** [ 9h ]
+xxBlue777xx checks
+fad86 bets [$0.04]
+xxBlue777xx folds
+** Summary **
+fad86 collected [ $0.12 ]
+
+
+#Game No : 436507431
+***** 888poker Hand History for Game 436507431 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:38:27
+Table Pretoria 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.42 )
+Seat 3: Gunsan56 ( $0.67 )
+Seat 5: xxBlue777xx ( $3.98 )
+Seat 6: fad86 ( $0.93 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Castro942 folds
+Gunsan56 calls [$0.02]
+xxBlue777xx folds
+fad86 checks
+** Dealing flop ** [ Kc, Td, 9h ]
+fad86 checks
+Gunsan56 checks
+** Dealing turn ** [ 4d ]
+fad86 checks
+Gunsan56 checks
+** Dealing river ** [ Tc ]
+fad86 checks
+Gunsan56 checks
+** Summary **
+fad86 shows [ 7c, Js ]
+Gunsan56 shows [ Ah, 6c ]
+Gunsan56 collected [ $0.05 ]
+
+
+#Game No : 436507469
+***** 888poker Hand History for Game 436507469 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:38:55
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.42 )
+Seat 3: Gunsan56 ( $0.70 )
+Seat 5: xxBlue777xx ( $3.97 )
+Seat 6: fad86 ( $0.91 )
+fad86 posts small blind [$0.01]
+Castro942 posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 calls [$0.02]
+xxBlue777xx folds
+fad86 calls [$0.01]
+Castro942 checks
+** Dealing flop ** [ Js, Kh, Qs ]
+fad86 checks
+Castro942 bets [$0.02]
+Gunsan56 folds
+fad86 calls [$0.02]
+** Dealing turn ** [ 6h ]
+fad86 checks
+Castro942 bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ Ad ]
+fad86 bets [$0.04]
+Castro942 folds
+** Summary **
+fad86 collected [ $0.18 ]
+
+
+#Game No : 436507511
+***** 888poker Hand History for Game 436507511 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:39:39
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.34 )
+Seat 3: Gunsan56 ( $0.68 )
+Seat 5: xxBlue777xx ( $3.97 )
+Seat 6: fad86 ( $1.01 )
+Castro942 posts small blind [$0.01]
+Gunsan56 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+fad86 calls [$0.02]
+Castro942 calls [$0.01]
+Gunsan56 checks
+** Dealing flop ** [ 6c, Tc, 9h ]
+Castro942 bets [$0.02]
+Gunsan56 calls [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 9d ]
+Castro942 bets [$0.04]
+Gunsan56 calls [$0.04]
+fad86 folds
+** Dealing river ** [ Td ]
+Castro942 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+Castro942 shows [ 7d, 8c ]
+Gunsan56 mucks [ Kh, Jc ]
+Castro942 collected [ $0.27 ]
+
+
+#Game No : 436507561
+***** 888poker Hand History for Game 436507561 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:40:19
+Table Pretoria 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.49 )
+Seat 3: Gunsan56 ( $0.56 )
+Seat 5: xxBlue777xx ( $3.97 )
+Seat 6: fad86 ( $0.97 )
+Gunsan56 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+Castro942 calls [$0.02]
+Gunsan56 calls [$0.01]
+xxBlue777xx checks
+** Dealing flop ** [ 2s, 4h, 6c ]
+Gunsan56 bets [$0.02]
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.02]
+Castro942 folds
+** Dealing turn ** [ 5c ]
+Gunsan56 bets [$0.04]
+xxBlue777xx calls [$0.04]
+fad86 folds
+** Dealing river ** [ 3s ]
+Gunsan56 checks
+xxBlue777xx bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+xxBlue777xx shows [ 5d, 2c ]
+Gunsan56 shows [ Jc, 6d ]
+Gunsan56 collected [ $0.15 ]
+xxBlue777xx collected [ $0.14 ]
+
+
+#Game No : 436507600
+***** 888poker Hand History for Game 436507600 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:40:54
+Table Pretoria 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.47 )
+Seat 3: Gunsan56 ( $0.59 )
+Seat 5: xxBlue777xx ( $3.99 )
+Seat 6: fad86 ( $0.93 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Castro942 folds
+Gunsan56 calls [$0.02]
+xxBlue777xx calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 8d, 7d, 9s ]
+xxBlue777xx checks
+fad86 checks
+Gunsan56 bets [$0.02]
+xxBlue777xx folds
+fad86 calls [$0.02]
+** Dealing turn ** [ 2d ]
+fad86 checks
+Gunsan56 checks
+** Dealing river ** [ 5s ]
+fad86 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+fad86 shows [ 6d, Ah ]
+Gunsan56 mucks [ Th, 7s ]
+fad86 collected [ $0.18 ]
+
+
+#Game No : 436507652
+***** 888poker Hand History for Game 436507652 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:41:38
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.47 )
+Seat 3: Gunsan56 ( $0.51 )
+Seat 5: xxBlue777xx ( $3.97 )
+Seat 6: fad86 ( $1.03 )
+fad86 posts small blind [$0.01]
+Castro942 posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 calls [$0.02]
+xxBlue777xx folds
+fad86 calls [$0.01]
+Castro942 raises [$0.02]
+Gunsan56 calls [$0.02]
+fad86 calls [$0.02]
+** Dealing flop ** [ 7c, Js, Tc ]
+fad86 bets [$0.02]
+Castro942 raises [$0.04]
+Gunsan56 folds
+fad86 calls [$0.02]
+** Dealing turn ** [ 5c ]
+fad86 checks
+Castro942 bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ 4d ]
+fad86 checks
+Castro942 checks
+** Summary **
+fad86 shows [ Qh, Jd ]
+Castro942 mucks [ Ad, Kc ]
+fad86 collected [ $0.27 ]
+
+
+#Game No : 436507729
+***** 888poker Hand History for Game 436507729 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:42:54
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.35 )
+Seat 3: Gunsan56 ( $0.47 )
+Seat 5: xxBlue777xx ( $3.97 )
+Seat 6: fad86 ( $1.18 )
+Castro942 posts small blind [$0.01]
+Gunsan56 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+fad86 calls [$0.02]
+Castro942 folds
+Gunsan56 checks
+** Dealing flop ** [ Jd, 2c, Kh ]
+Gunsan56 checks
+fad86 bets [$0.02]
+Gunsan56 calls [$0.02]
+** Dealing turn ** [ Ah ]
+Gunsan56 checks
+fad86 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Dealing river ** [ 4h ]
+Gunsan56 checks
+fad86 bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+fad86 shows [ Ad, 4d ]
+Gunsan56 mucks [ Ts, 2d ]
+fad86 collected [ $0.24 ]
+
+
+#Game No : 436507762
+***** 888poker Hand History for Game 436507762 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:43:23
+Table Pretoria 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.34 )
+Seat 3: Gunsan56 ( $0.35 )
+Seat 5: xxBlue777xx ( $3.97 )
+Seat 6: fad86 ( $1.30 )
+Gunsan56 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+Castro942 folds
+Gunsan56 calls [$0.01]
+xxBlue777xx checks
+** Dealing flop ** [ 8d, Qd, 8s ]
+Gunsan56 checks
+xxBlue777xx checks
+** Dealing turn ** [ 7h ]
+Gunsan56 bets [$0.04]
+xxBlue777xx folds
+** Summary **
+Gunsan56 collected [ $0.04 ]
+
+
+#Game No : 436507828
+***** 888poker Hand History for Game 436507828 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:44:12
+Table Pretoria 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 2: Castro942 ( $2.34 )
+Seat 3: Gunsan56 ( $0.37 )
+Seat 5: xxBlue777xx ( $3.95 )
+Seat 6: fad86 ( $1.30 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Castro942 folds
+Gunsan56 calls [$0.02]
+xxBlue777xx calls [$0.01]
+fad86 checks
+** Dealing flop ** [ Th, Qd, 5d ]
+xxBlue777xx checks
+fad86 checks
+Gunsan56 checks
+** Dealing turn ** [ Qc ]
+xxBlue777xx checks
+fad86 checks
+Gunsan56 checks
+** Dealing river ** [ Tc ]
+xxBlue777xx checks
+fad86 checks
+Gunsan56 checks
+** Summary **
+xxBlue777xx shows [ 7h, 4c ]
+fad86 shows [ Ks, 8s ]
+Gunsan56 mucks [ 6h, 4s ]
+fad86 collected [ $0.06 ]
+
+
+#Game No : 436507885
+***** 888poker Hand History for Game 436507885 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:45:03
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 2: Castro942 ( $2.34 )
+Seat 3: Gunsan56 ( $0.35 )
+Seat 5: xxBlue777xx ( $3.93 )
+Seat 6: fad86 ( $1.34 )
+Seat 8: paulepiscopo ( $0.79 )
+fad86 posts small blind [$0.01]
+paulepiscopo posts big blind [$0.02]
+** Dealing down cards **
+Castro942 calls [$0.02]
+Gunsan56 calls [$0.02]
+xxBlue777xx folds
+fad86 calls [$0.01]
+paulepiscopo checks
+** Dealing flop ** [ 7s, Tc, 5h ]
+fad86 checks
+paulepiscopo checks
+Castro942 checks
+Gunsan56 bets [$0.02]
+fad86 calls [$0.02]
+paulepiscopo calls [$0.02]
+Castro942 calls [$0.02]
+** Dealing turn ** [ 5d ]
+fad86 checks
+paulepiscopo checks
+Castro942 bets [$0.04]
+Gunsan56 calls [$0.04]
+fad86 calls [$0.04]
+paulepiscopo calls [$0.04]
+** Dealing river ** [ 6h ]
+fad86 checks
+paulepiscopo checks
+Castro942 bets [$0.04]
+Gunsan56 calls [$0.04]
+fad86 calls [$0.04]
+paulepiscopo folds
+** Summary **
+Castro942 shows [ 9s, 5s ]
+Gunsan56 mucks [ 7d, Kd ]
+fad86 mucks [ Ah, Ts ]
+Castro942 collected [ $0.42 ]
+
+
+#Game No : 436508005
+***** 888poker Hand History for Game 436508005 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:46:48
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 2: Castro942 ( $2.64 )
+Seat 3: Gunsan56 ( $0.23 )
+Seat 5: xxBlue777xx ( $3.93 )
+Seat 6: fad86 ( $1.22 )
+Seat 8: paulepiscopo ( $0.71 )
+Seat 9: LINOK100 ( $0.80 )
+paulepiscopo posts small blind [$0.01]
+LINOK100 posts big blind [$0.02]
+** Dealing down cards **
+Castro942 folds
+Gunsan56 calls [$0.02]
+xxBlue777xx folds
+fad86 folds
+paulepiscopo calls [$0.01]
+LINOK100 raises [$0.02]
+Gunsan56 calls [$0.02]
+paulepiscopo calls [$0.02]
+** Dealing flop ** [ Kc, 8s, Ad ]
+paulepiscopo checks
+LINOK100 checks
+Gunsan56 checks
+** Dealing turn ** [ 7c ]
+paulepiscopo bets [$0.04]
+LINOK100 calls [$0.04]
+Gunsan56 folds
+** Dealing river ** [ Jh ]
+paulepiscopo bets [$0.04]
+LINOK100 calls [$0.04]
+** Summary **
+paulepiscopo shows [ 5c, Ah ]
+LINOK100 mucks [ Qc, Qh ]
+paulepiscopo collected [ $0.27 ]
+
+
+#Game No : 436508055
+***** 888poker Hand History for Game 436508055 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:47:27
+Table Pretoria 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 2: Castro942 ( $2.64 )
+Seat 3: Gunsan56 ( $0.19 )
+Seat 5: xxBlue777xx ( $3.93 )
+Seat 6: fad86 ( $1.22 )
+Seat 8: paulepiscopo ( $0.86 )
+Seat 9: LINOK100 ( $0.68 )
+LINOK100 posts small blind [$0.01]
+Castro942 posts big blind [$0.02]
+** Dealing down cards **
+Gunsan56 raises [$0.04]
+xxBlue777xx folds
+fad86 folds
+paulepiscopo calls [$0.04]
+LINOK100 folds
+Castro942 folds
+** Dealing flop ** [ 6d, 8c, Ts ]
+Gunsan56 checks
+paulepiscopo bets [$0.02]
+Gunsan56 calls [$0.02]
+** Dealing turn ** [ 5h ]
+Gunsan56 checks
+paulepiscopo bets [$0.04]
+Gunsan56 calls [$0.04]
+** Dealing river ** [ Jh ]
+Gunsan56 checks
+paulepiscopo bets [$0.04]
+Gunsan56 calls [$0.04]
+** Summary **
+paulepiscopo shows [ Td, 9h ]
+Gunsan56 mucks [ 9d, 9s ]
+paulepiscopo collected [ $0.30 ]
+
+
+#Game No : 436508095
+***** 888poker Hand History for Game 436508095 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:48:05
+Table Pretoria 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 2: Castro942 ( $2.62 )
+Seat 3: Gunsan56 ( $0.05 )
+Seat 5: xxBlue777xx ( $3.93 )
+Seat 6: fad86 ( $1.22 )
+Seat 8: paulepiscopo ( $1.02 )
+Seat 9: LINOK100 ( $0.67 )
+Castro942 posts small blind [$0.01]
+Gunsan56 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx calls [$0.02]
+fad86 folds
+paulepiscopo calls [$0.02]
+LINOK100 calls [$0.02]
+Castro942 calls [$0.01]
+Gunsan56 raises [$0.02]
+xxBlue777xx calls [$0.02]
+paulepiscopo calls [$0.02]
+LINOK100 calls [$0.02]
+Castro942 calls [$0.02]
+** Dealing flop ** [ 5s, 4c, 7c ]
+Castro942 checks
+Gunsan56 bets [$0.01]
+xxBlue777xx calls [$0.01]
+paulepiscopo calls [$0.01]
+LINOK100 calls [$0.01]
+Castro942 folds
+** Dealing turn ** [ Ah ]
+xxBlue777xx checks
+paulepiscopo checks
+LINOK100 checks
+** Dealing river ** [ 6c ]
+xxBlue777xx bets [$0.04]
+paulepiscopo folds
+LINOK100 folds
+** Summary **
+Gunsan56 shows [ Qd, Jc ]
+xxBlue777xx shows [ 8h, Jh ]
+xxBlue777xx collected [ $0.23 ]
+
+
+#Game No : 436508167
+***** 888poker Hand History for Game 436508167 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:49:09
+Table Pretoria 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: Castro942 ( $2.58 )
+Seat 5: xxBlue777xx ( $4.11 )
+Seat 6: fad86 ( $1.22 )
+Seat 8: paulepiscopo ( $0.97 )
+Seat 9: LINOK100 ( $0.62 )
+xxBlue777xx posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+paulepiscopo calls [$0.02]
+LINOK100 folds
+Castro942 folds
+xxBlue777xx calls [$0.01]
+fad86 checks
+** Dealing flop ** [ As, 8s, 2c ]
+xxBlue777xx checks
+fad86 checks
+paulepiscopo bets [$0.02]
+xxBlue777xx folds
+fad86 calls [$0.02]
+** Dealing turn ** [ Td ]
+fad86 checks
+paulepiscopo bets [$0.04]
+fad86 folds
+** Summary **
+paulepiscopo collected [ $0.10 ]
+
+
+#Game No : 436508225
+***** 888poker Hand History for Game 436508225 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:49:54
+Table Pretoria 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: mileusnic89 ( $0.20 )
+Seat 2: Castro942 ( $2.58 )
+Seat 5: xxBlue777xx ( $4.09 )
+Seat 6: fad86 ( $1.18 )
+Seat 8: paulepiscopo ( $1.03 )
+Seat 9: LINOK100 ( $0.62 )
+fad86 posts small blind [$0.01]
+paulepiscopo posts big blind [$0.02]
+mileusnic89 posts big blind [$0.02]
+** Dealing down cards **
+LINOK100 calls [$0.02]
+mileusnic89 checks
+Castro942 calls [$0.02]
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.01]
+paulepiscopo checks
+** Dealing flop ** [ 4h, 2d, 9c ]
+fad86 checks
+paulepiscopo checks
+LINOK100 bets [$0.02]
+mileusnic89 calls [$0.02]
+Castro942 calls [$0.02]
+xxBlue777xx calls [$0.02]
+fad86 folds
+paulepiscopo calls [$0.02]
+** Dealing turn ** [ 3c ]
+paulepiscopo checks
+LINOK100 bets [$0.04]
+mileusnic89 calls [$0.04]
+Castro942 calls [$0.04]
+xxBlue777xx folds
+paulepiscopo calls [$0.04]
+** Dealing river ** [ 6c ]
+paulepiscopo checks
+LINOK100 bets [$0.04]
+mileusnic89 calls [$0.04]
+Castro942 calls [$0.04]
+paulepiscopo calls [$0.04]
+** Summary **
+LINOK100 shows [ 2s, 2c ]
+mileusnic89 mucks [ 3s, 4c ]
+Castro942 mucks [ Jh, 9d ]
+paulepiscopo mucks [ 9s, 7s ]
+LINOK100 collected [ $0.52 ]
+
+
+#Game No : 436508324
+***** 888poker Hand History for Game 436508324 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:51:17
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: mileusnic89 ( $0.08 )
+Seat 2: Castro942 ( $2.46 )
+Seat 5: xxBlue777xx ( $4.05 )
+Seat 6: fad86 ( $1.16 )
+Seat 8: paulepiscopo ( $0.91 )
+Seat 9: LINOK100 ( $1.02 )
+paulepiscopo posts small blind [$0.01]
+LINOK100 posts big blind [$0.02]
+** Dealing down cards **
+mileusnic89 calls [$0.02]
+Castro942 folds
+xxBlue777xx calls [$0.02]
+fad86 folds
+paulepiscopo calls [$0.01]
+LINOK100 checks
+** Dealing flop ** [ 4c, 8h, Jd ]
+paulepiscopo checks
+LINOK100 checks
+mileusnic89 checks
+xxBlue777xx checks
+** Dealing turn ** [ 3h ]
+paulepiscopo checks
+LINOK100 checks
+mileusnic89 checks
+xxBlue777xx checks
+** Dealing river ** [ 7s ]
+paulepiscopo checks
+LINOK100 bets [$0.04]
+mileusnic89 calls [$0.04]
+xxBlue777xx folds
+paulepiscopo folds
+** Summary **
+LINOK100 shows [ 7c, 9s ]
+mileusnic89 mucks [ 6d, 7h ]
+LINOK100 collected [ $0.16 ]
+
+
+#Game No : 436508404
+***** 888poker Hand History for Game 436508404 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:52:24
+Table Pretoria 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: mileusnic89 ( $0.02 )
+Seat 2: Castro942 ( $2.46 )
+Seat 5: xxBlue777xx ( $4.03 )
+Seat 6: fad86 ( $1.16 )
+Seat 8: paulepiscopo ( $0.89 )
+Seat 9: LINOK100 ( $1.12 )
+LINOK100 posts small blind [$0.01]
+mileusnic89 posts big blind [$0.02]
+** Dealing down cards **
+Castro942 calls [$0.02]
+xxBlue777xx folds
+fad86 folds
+paulepiscopo calls [$0.02]
+LINOK100 calls [$0.01]
+** Dealing flop ** [ Ks, 7h, 6h ]
+LINOK100 checks
+Castro942 bets [$0.02]
+paulepiscopo folds
+LINOK100 calls [$0.02]
+** Dealing turn ** [ 6d ]
+LINOK100 checks
+Castro942 checks
+** Dealing river ** [ 3s ]
+LINOK100 checks
+Castro942 checks
+** Summary **
+LINOK100 shows [ 9c, Td ]
+mileusnic89 shows [ Jc, 4s ]
+Castro942 mucks [ 8h, 9d ]
+mileusnic89 collected [ $0.08 ]
+LINOK100 collected [ $0.04 ]
+
+
+#Game No : 436508465
+***** 888poker Hand History for Game 436508465 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:53:24
+Table Pretoria 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: mileusnic89 ( $0.08 )
+Seat 2: Castro942 ( $2.42 )
+Seat 5: xxBlue777xx ( $4.03 )
+Seat 6: fad86 ( $1.16 )
+Seat 8: paulepiscopo ( $0.87 )
+Seat 9: LINOK100 ( $1.12 )
+mileusnic89 posts small blind [$0.01]
+Castro942 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+fad86 calls [$0.02]
+paulepiscopo calls [$0.02]
+LINOK100 folds
+mileusnic89 calls [$0.01]
+Castro942 raises [$0.02]
+fad86 calls [$0.02]
+paulepiscopo calls [$0.02]
+mileusnic89 calls [$0.02]
+** Dealing flop ** [ 5h, 2c, 7h ]
+mileusnic89 bets [$0.02]
+Castro942 folds
+fad86 raises [$0.04]
+paulepiscopo calls [$0.04]
+mileusnic89 calls [$0.02]
+** Dealing turn ** [ 2d ]
+fad86 bets [$0.04]
+paulepiscopo folds
+** Dealing river ** [ Ts ]
+** Summary **
+mileusnic89 shows [ 2h, 5s ]
+fad86 shows [ Qs, 7d ]
+mileusnic89 collected [ $0.27 ]
+
+
+#Game No : 436508531
+***** 888poker Hand History for Game 436508531 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:54:15
+Table Pretoria 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: mileusnic89 ( $0.27 )
+Seat 2: Castro942 ( $2.38 )
+Seat 5: xxBlue777xx ( $4.03 )
+Seat 6: fad86 ( $1.08 )
+Seat 8: paulepiscopo ( $0.79 )
+Seat 9: LINOK100 ( $1.12 )
+Castro942 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+paulepiscopo calls [$0.02]
+LINOK100 raises [$0.04]
+mileusnic89 folds
+Castro942 calls [$0.03]
+xxBlue777xx calls [$0.02]
+fad86 calls [$0.02]
+paulepiscopo calls [$0.02]
+** Dealing flop ** [ 2c, As, 6h ]
+Castro942 checks
+xxBlue777xx checks
+fad86 checks
+paulepiscopo bets [$0.02]
+LINOK100 raises [$0.04]
+Castro942 folds
+xxBlue777xx folds
+fad86 folds
+paulepiscopo calls [$0.02]
+** Dealing turn ** [ Qc ]
+paulepiscopo bets [$0.04]
+LINOK100 raises [$0.08]
+paulepiscopo calls [$0.04]
+** Dealing river ** [ Jh ]
+paulepiscopo checks
+LINOK100 bets [$0.04]
+paulepiscopo calls [$0.04]
+** Summary **
+LINOK100 shows [ Ac, Ks ]
+paulepiscopo mucks [ 6c, 7c ]
+LINOK100 collected [ $0.50 ]
+
+
+#Game No : 436508811
+***** 888poker Hand History for Game 436508811 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:58:04
+Table Pretoria 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: mileusnic89 ( $0.23 )
+Seat 5: xxBlue777xx ( $3.87 )
+Seat 6: fad86 ( $1.21 )
+Seat 8: paulepiscopo ( $0.41 )
+Seat 9: LINOK100 ( $1.42 )
+Seat 10: BuddyJackson ( $0.41 )
+paulepiscopo posts small blind [$0.01]
+LINOK100 folds
+BuddyJackson posts big blind [$0.02]
+** Dealing down cards **
+mileusnic89 calls [$0.02]
+xxBlue777xx folds
+fad86 calls [$0.02]
+paulepiscopo calls [$0.01]
+BuddyJackson checks
+** Dealing flop ** [ 4h, Jc, 3c ]
+paulepiscopo checks
+BuddyJackson checks
+mileusnic89 bets [$0.02]
+fad86 calls [$0.02]
+paulepiscopo calls [$0.02]
+BuddyJackson folds
+** Dealing turn ** [ 2h ]
+paulepiscopo checks
+mileusnic89 bets [$0.04]
+fad86 calls [$0.04]
+paulepiscopo calls [$0.04]
+** Dealing river ** [ Qc ]
+paulepiscopo checks
+mileusnic89 bets [$0.04]
+fad86 folds
+paulepiscopo calls [$0.04]
+** Summary **
+mileusnic89 shows [ 2c, 2s ]
+paulepiscopo mucks [ 5h, 4d ]
+mileusnic89 collected [ $0.33 ]
+
+

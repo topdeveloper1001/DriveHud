@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189484190">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819268052</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>15</gamecount>  
+	          <startdate>2014-01-28 15:40:54</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,424</bets>  
+	          <wins>1,624</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>3</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5449100844">
+		 <general>
+		  <startdate>2014-01-28 15:40:54</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="2VALETA" chips="800" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pokerkransje" type="1" sum="10" cards="[cards]"/><action no="2" player="2VALETA" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="4" player="shukar99999" type="0" sum="0" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><action no="5" player="pokerkransje" type="3" sum="10" cards=""/><cards type="Pocket" player="2VALETA">X X</cards><action no="6" player="2VALETA" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C8 DQ</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 DK S10</cards><action no="7" player="pokerkransje" type="4" sum="0" cards=""/><action no="9" player="pokerkransje" type="0" sum="0" cards=""/><action no="8" player="2VALETA" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449112796">
+		 <general>
+		  <startdate>2014-01-28 15:41:26</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="2VALETA" chips="820" dealer="0" win="80" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="2VALETA" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="3" player="shukar99999" type="3" sum="20" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><action no="4" player="pokerkransje" type="0" sum="0" cards=""/><cards type="Pocket" player="2VALETA">X X</cards><action no="5" player="2VALETA" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">C2 H8</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ C5 SA</cards><action no="9" player="shukar99999" type="0" sum="0" cards=""/><action no="7" player="2VALETA" type="5" sum="20" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449113086">
+		 <general>
+		  <startdate>2014-01-28 15:41:49</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="780" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="780" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="2VALETA" chips="860" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="shukar99999" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><cards type="Pocket" player="pokerkransje">X X</cards><action no="3" player="pokerkransje" type="0" sum="0" cards=""/><cards type="Pocket" player="2VALETA">X X</cards><action no="4" player="2VALETA" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C9 H4</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449113282">
+		 <general>
+		  <startdate>2014-01-28 15:42:01</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="790" dealer="0" win="480" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="780" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="2VALETA" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="shukar99999" type="1" sum="10" cards="[cards]"/><action no="2" player="pokerkransje" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">D7 HA</cards><action no="5" player="shukar99999" type="3" sum="10" cards=""/><cards type="Pocket" player="pokerkransje">C5 CK</cards><action no="6" player="pokerkransje" type="4" sum="0" cards=""/><cards type="Pocket" player="2VALETA">X X</cards><action no="3" player="2VALETA" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S8 C4</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK CJ DA</cards><action no="7" player="shukar99999" type="5" sum="20" cards=""/><action no="8" player="pokerkransje" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="9" player="shukar99999" type="5" sum="20" cards=""/><action no="10" player="pokerkransje" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S10</cards><action no="11" player="shukar99999" type="5" sum="20" cards=""/><action no="13" player="shukar99999" type="3" sum="160" cards=""/><action no="12" player="pokerkransje" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449114008">
+		 <general>
+		  <startdate>2014-01-28 15:42:48</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="1,030" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="540" dealer="0" win="620" bet="540" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="2VALETA" chips="860" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pokerkransje" type="1" sum="10" cards="[cards]"/><action no="2" player="2VALETA" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="4" player="shukar99999" type="3" sum="20" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><action no="5" player="pokerkransje" type="3" sum="10" cards=""/><cards type="Pocket" player="2VALETA">X X</cards><action no="6" player="2VALETA" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CJ D8</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 C6 S7</cards><action no="9" player="shukar99999" type="0" sum="0" cards=""/><action no="7" player="pokerkransje" type="4" sum="0" cards=""/><action no="10" player="pokerkransje" type="3" sum="20" cards=""/><action no="8" player="2VALETA" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="11" player="pokerkransje" type="4" sum="0" cards=""/><action no="13" player="pokerkransje" type="23" sum="500" cards=""/><action no="12" player="2VALETA" type="5" sum="20" cards=""/><action no="14" player="2VALETA" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449114344">
+		 <general>
+		  <startdate>2014-01-28 15:43:33</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="620" dealer="1" win="1,270" bet="620" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="2VALETA" chips="800" dealer="0" win="180" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="2VALETA" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="3" player="shukar99999" type="0" sum="0" cards=""/><cards type="Pocket" player="pokerkransje">SA HA</cards><action no="4" player="pokerkransje" type="23" sum="60" cards=""/><action no="7" player="pokerkransje" type="23" sum="120" cards=""/><action no="9" player="pokerkransje" type="7" sum="500" cards=""/><cards type="Pocket" player="2VALETA">CQ SQ</cards><action no="5" player="2VALETA" type="23" sum="90" cards=""/><action no="8" player="2VALETA" type="23" sum="800" cards=""/><cards type="Pocket" player="WorstCard">H5 S4</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ S6 C5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards>
+	</round>
+	
+		</game><game gamecode="5449114588">
+		 <general>
+		  <startdate>2014-01-28 15:44:05</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="1,010" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,270" dealer="0" win="435" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="2VALETA" chips="180" dealer="1" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="740" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="shukar99999" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="6" player="shukar99999" type="3" sum="30" cards=""/><cards type="Pocket" player="pokerkransje">S6 HQ</cards><action no="3" player="pokerkransje" type="3" sum="30" cards=""/><action no="7" player="pokerkransje" type="3" sum="30" cards=""/><cards type="Pocket" player="2VALETA">S2 S7</cards><action no="4" player="2VALETA" type="23" sum="60" cards=""/><cards type="Pocket" player="WorstCard">S9 D2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 S10 H6</cards><action no="8" player="shukar99999" type="4" sum="0" cards=""/><action no="9" player="pokerkransje" type="4" sum="0" cards=""/><action no="10" player="2VALETA" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CJ</cards><action no="11" player="shukar99999" type="4" sum="0" cards=""/><action no="12" player="pokerkransje" type="4" sum="0" cards=""/><action no="13" player="2VALETA" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="14" player="shukar99999" type="4" sum="0" cards=""/><action no="17" player="shukar99999" type="0" sum="0" cards=""/><action no="15" player="pokerkransje" type="4" sum="0" cards=""/><action no="18" player="pokerkransje" type="3" sum="120" cards=""/><action no="16" player="2VALETA" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449114993">
+		 <general>
+		  <startdate>2014-01-28 15:45:01</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="950" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,525" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="725" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="shukar99999" type="15" sum="5" cards="[cards]"/><action no="4" player="shukar99999" type="1" sum="25" cards="[cards]"/><action no="2" player="pokerkransje" type="15" sum="5" cards="[cards]"/><action no="5" player="pokerkransje" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="7" player="shukar99999" type="0" sum="0" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><cards type="Pocket" player="WorstCard">D8 SK</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449115160">
+		 <general>
+		  <startdate>2014-01-28 15:45:22</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="920" dealer="1" win="265" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,560" dealer="0" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="720" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="shukar99999" type="15" sum="5" cards="[cards]"/><action no="1" player="pokerkransje" type="15" sum="5" cards="[cards]"/><action no="4" player="pokerkransje" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">SJ H10</cards><action no="6" player="shukar99999" type="3" sum="50" cards=""/><cards type="Pocket" player="pokerkransje">HA S8</cards><action no="7" player="pokerkransje" type="3" sum="25" cards=""/><cards type="Pocket" player="WorstCard">D3 CQ</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK DJ S3</cards><action no="11" player="shukar99999" type="4" sum="0" cards=""/><action no="9" player="pokerkransje" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="14" player="shukar99999" type="4" sum="0" cards=""/><action no="12" player="pokerkransje" type="4" sum="0" cards=""/><action no="13" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards><action no="17" player="shukar99999" type="3" sum="50" cards=""/><action no="15" player="pokerkransje" type="5" sum="50" cards=""/><action no="16" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449115512">
+		 <general>
+		  <startdate>2014-01-28 15:46:08</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="1,080" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,455" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="665" dealer="0" win="725" bet="665" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="shukar99999" type="15" sum="5" cards="[cards]"/><action no="5" player="shukar99999" type="2" sum="50" cards="[cards]"/><action no="3" player="pokerkransje" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="8" player="shukar99999" type="0" sum="0" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><action no="6" player="pokerkransje" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S7 D5</cards><action no="7" player="WorstCard" type="23" sum="660" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449115652">
+		 <general>
+		  <startdate>2014-01-28 15:46:25</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="1,025" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,450" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="725" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="shukar99999" type="15" sum="5" cards="[cards]"/><action no="4" player="shukar99999" type="1" sum="25" cards="[cards]"/><action no="2" player="pokerkransje" type="15" sum="5" cards="[cards]"/><action no="5" player="pokerkransje" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="7" player="shukar99999" type="0" sum="0" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><cards type="Pocket" player="WorstCard">H2 C3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449115798">
+		 <general>
+		  <startdate>2014-01-28 15:46:43</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="995" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,485" dealer="0" win="58" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="720" dealer="0" win="57" bet="55" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="shukar99999" type="15" sum="5" cards="[cards]"/><action no="1" player="pokerkransje" type="15" sum="5" cards="[cards]"/><action no="4" player="pokerkransje" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="6" player="shukar99999" type="0" sum="0" cards=""/><cards type="Pocket" player="pokerkransje">C4 HJ</cards><action no="7" player="pokerkransje" type="3" sum="25" cards=""/><cards type="Pocket" player="WorstCard">HK C2</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 H10 S10</cards><action no="9" player="pokerkransje" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards><action no="11" player="pokerkransje" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards><action no="13" player="pokerkransje" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449128091">
+		 <general>
+		  <startdate>2014-01-28 15:47:19</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="990" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,488" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="722" dealer="0" win="842" bet="722" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="shukar99999" type="15" sum="10" cards="[cards]"/><action no="5" player="shukar99999" type="2" sum="100" cards="[cards]"/><action no="3" player="pokerkransje" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="8" player="shukar99999" type="0" sum="0" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><action no="6" player="pokerkransje" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 HQ</cards><action no="7" player="WorstCard" type="23" sum="712" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449128319">
+		 <general>
+		  <startdate>2014-01-28 15:47:47</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="880" dealer="0" win="530" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,478" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="842" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="shukar99999" type="15" sum="10" cards="[cards]"/><action no="4" player="shukar99999" type="1" sum="50" cards="[cards]"/><action no="2" player="pokerkransje" type="15" sum="10" cards="[cards]"/><action no="5" player="pokerkransje" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">X X</cards><action no="7" player="shukar99999" type="3" sum="50" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><action no="8" player="pokerkransje" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK S2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA C8 S7</cards><action no="9" player="shukar99999" type="4" sum="0" cards=""/><action no="11" player="shukar99999" type="3" sum="100" cards=""/><action no="10" player="pokerkransje" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DA</cards><action no="12" player="shukar99999" type="4" sum="0" cards=""/><action no="13" player="pokerkransje" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="14" player="shukar99999" type="5" sum="100" cards=""/><action no="15" player="pokerkransje" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449128584">
+		 <general>
+		  <startdate>2014-01-28 15:48:22</startdate>		  
+		  <players>
+		   <player seat="2" name="shukar99999" chips="1,100" dealer="1" win="1,774" bet="832" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="pokerkransje" chips="1,268" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="832" dealer="0" win="0" bet="832" rebuy="0" addon="0" reg_code="6189484190"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="shukar99999" type="15" sum="10" cards="[cards]"/><action no="1" player="pokerkransje" type="15" sum="10" cards="[cards]"/><action no="4" player="pokerkransje" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="shukar99999">CK HQ</cards><action no="6" player="shukar99999" type="3" sum="100" cards=""/><action no="9" player="shukar99999" type="3" sum="722" cards=""/><cards type="Pocket" player="pokerkransje">X X</cards><action no="7" player="pokerkransje" type="3" sum="50" cards=""/><action no="10" player="pokerkransje" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ DK</cards><action no="8" player="WorstCard" type="23" sum="822" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 D2 H2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards>
+	</round>
+	
+		</game>  
+	</session>

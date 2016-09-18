@@ -1,0 +1,1844 @@
+#Game No : 932900665
+***** 888poker Hand History for Game 932900665 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:30:50
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: I_AM_MASHINE ( $1,000 )
+Seat 4: telperion ( $1,000 )
+Seat 7: Kikakukka ( $1,000 )
+Seat 9: D1emm ( $1,000 )
+I_AM_MASHINE posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+D1emm raises [$1,000]
+I_AM_MASHINE folds
+telperion folds
+** Summary **
+D1emm collected [ $500 ]
+
+
+#Game No : 932900737
+***** 888poker Hand History for Game 932900737 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:31:03
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: I_AM_MASHINE ( $900 )
+Seat 4: telperion ( $1,000 )
+Seat 7: Kikakukka ( $1,000 )
+Seat 9: D1emm ( $1,300 )
+telperion posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+D1emm folds
+I_AM_MASHINE folds
+telperion folds
+** Summary **
+Kikakukka collected [ $300 ]
+
+
+#Game No : 932900774
+***** 888poker Hand History for Game 932900774 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:31:11
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,000 )
+Seat 2: I_AM_MASHINE ( $900 )
+Seat 4: telperion ( $1,000 )
+Seat 7: Kikakukka ( $1,100 )
+Seat 9: D1emm ( $1,300 )
+Kikakukka posts small blind [$100]
+D1emm folds
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+I_AM_MASHINE folds
+telperion folds
+Kikakukka raises [$1,000]
+Lohtamo folds
+** Summary **
+Kikakukka collected [ $1,300 ]
+
+
+#Game No : 932900823
+***** 888poker Hand History for Game 932900823 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:31:21
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: Lohtamo ( $1,000 )
+Seat 2: I_AM_MASHINE ( $900 )
+Seat 4: telperion ( $1,000 )
+Seat 7: Kikakukka ( $1,300 )
+Lohtamo posts small blind [$100]
+I_AM_MASHINE posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Kikakukka folds
+Lohtamo raises [$900]
+I_AM_MASHINE calls [$700]
+** Dealing flop ** [ 6h, 8c, Qd ]
+** Dealing turn ** [ Th ]
+** Dealing river ** [ Qs ]
+** Summary **
+Lohtamo shows [ 6c, Jh ]
+I_AM_MASHINE shows [ 4c, Ac ]
+Lohtamo collected [ $1,795 ]
+
+
+#Game No : 932900934
+***** 888poker Hand History for Game 932900934 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:31:41
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: Lohtamo ( $1,895 )
+Seat 2: I_AM_MASHINE ( $1,000 )
+Seat 4: telperion ( $1,000 )
+Seat 7: Kikakukka ( $1,300 )
+I_AM_MASHINE posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+Kikakukka raises [$1,300]
+Lohtamo folds
+I_AM_MASHINE folds
+telperion folds
+** Summary **
+Kikakukka collected [ $500 ]
+
+
+#Game No : 932901011
+***** 888poker Hand History for Game 932901011 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:31:55
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,895 )
+Seat 2: I_AM_MASHINE ( $900 )
+Seat 4: telperion ( $1,000 )
+Seat 6: LOST_FAN ( $1,000 )
+Seat 7: Kikakukka ( $1,600 )
+telperion posts small blind [$100]
+LOST_FAN folds
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+I_AM_MASHINE raises [$900]
+telperion raises [$900]
+Kikakukka folds
+** Dealing flop ** [ Jh, 3h, 2s ]
+** Dealing turn ** [ 4d ]
+** Dealing river ** [ Kc ]
+** Summary **
+I_AM_MASHINE shows [ Qh, 4h ]
+telperion shows [ Ad, 2d ]
+I_AM_MASHINE collected [ $1,995 ]
+telperion collected [ $100 ]
+
+
+#Game No : 932901161
+***** 888poker Hand History for Game 932901161 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:32:24
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: Lohtamo ( $1,895 )
+Seat 2: I_AM_MASHINE ( $1,995 )
+Seat 4: telperion ( $1,000 )
+Seat 7: Kikakukka ( $1,400 )
+Kikakukka posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+I_AM_MASHINE folds
+telperion folds
+Kikakukka raises [$1,300]
+Lohtamo folds
+** Summary **
+Kikakukka collected [ $1,600 ]
+
+
+#Game No : 932901234
+***** 888poker Hand History for Game 932901234 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:32:38
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: Lohtamo ( $1,695 )
+Seat 2: I_AM_MASHINE ( $1,995 )
+Seat 4: telperion ( $1,000 )
+Seat 7: Kikakukka ( $1,600 )
+Lohtamo posts small blind [$100]
+I_AM_MASHINE posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Kikakukka raises [$1,600]
+Lohtamo folds
+I_AM_MASHINE folds
+** Summary **
+Kikakukka collected [ $500 ]
+
+
+#Game No : 932901287
+***** 888poker Hand History for Game 932901287 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:32:50
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: Lohtamo ( $1,595 )
+Seat 2: I_AM_MASHINE ( $1,795 )
+Seat 4: telperion ( $1,000 )
+Seat 7: Kikakukka ( $1,900 )
+I_AM_MASHINE posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+Lohtamo raises [$1,595]
+I_AM_MASHINE raises [$1,695]
+telperion folds
+** Dealing flop ** [ Ts, 9s, Th ]
+** Dealing turn ** [ 4h ]
+** Dealing river ** [ 9c ]
+** Summary **
+Lohtamo shows [ 2h, As ]
+I_AM_MASHINE shows [ 2c, Ac ]
+I_AM_MASHINE collected [ $1,692.50 ]
+Lohtamo collected [ $1,692.50 ]
+
+
+#Game No : 932901452
+***** 888poker Hand History for Game 932901452 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:33:21
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,692.50 )
+Seat 2: I_AM_MASHINE ( $1,892.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: LOST_FAN ( $1,000 )
+Seat 7: Kikakukka ( $1,900 )
+telperion posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+Lohtamo folds
+I_AM_MASHINE folds
+telperion raises [$900]
+LOST_FAN folds
+** Summary **
+telperion collected [ $400 ]
+
+
+#Game No : 932901533
+***** 888poker Hand History for Game 932901533 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:33:35
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,692.50 )
+Seat 2: I_AM_MASHINE ( $1,892.50 )
+Seat 4: telperion ( $1,200 )
+Seat 6: LOST_FAN ( $1,000 )
+Seat 7: Kikakukka ( $1,900 )
+LOST_FAN posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+I_AM_MASHINE folds
+telperion folds
+LOST_FAN raises [$900]
+Kikakukka folds
+** Summary **
+LOST_FAN collected [ $400 ]
+
+
+#Game No : 932901598
+***** 888poker Hand History for Game 932901598 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:33:50
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Lohtamo ( $1,692.50 )
+Seat 2: I_AM_MASHINE ( $1,892.50 )
+Seat 4: telperion ( $1,200 )
+Seat 6: LOST_FAN ( $1,200 )
+Seat 7: Kikakukka ( $1,700 )
+Seat 9: D1emm ( $1,300 )
+Kikakukka posts small blind [$100]
+D1emm folds
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+I_AM_MASHINE folds
+telperion folds
+LOST_FAN folds
+Kikakukka folds
+** Summary **
+Lohtamo did not show his hand
+Lohtamo collected [ $300 ]
+
+
+#Game No : 932901741
+***** 888poker Hand History for Game 932901741 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:34:14
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,792.50 )
+Seat 2: I_AM_MASHINE ( $1,892.50 )
+Seat 4: telperion ( $1,200 )
+Seat 6: LOST_FAN ( $1,200 )
+Seat 7: Kikakukka ( $1,600 )
+Lohtamo posts small blind [$100]
+I_AM_MASHINE posts big blind [$200]
+** Dealing down cards **
+telperion folds
+LOST_FAN folds
+Kikakukka folds
+Lohtamo folds
+** Summary **
+I_AM_MASHINE collected [ $300 ]
+
+
+#Game No : 932901903
+***** 888poker Hand History for Game 932901903 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:34:44
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,692.50 )
+Seat 2: I_AM_MASHINE ( $1,992.50 )
+Seat 4: telperion ( $1,200 )
+Seat 6: LOST_FAN ( $1,200 )
+Seat 7: Kikakukka ( $1,600 )
+I_AM_MASHINE posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+LOST_FAN raises [$1,200]
+Kikakukka folds
+Lohtamo folds
+I_AM_MASHINE folds
+telperion calls [$1,000]
+** Dealing flop ** [ 9s, 9h, 3s ]
+** Dealing turn ** [ Qd ]
+** Dealing river ** [ 7s ]
+** Summary **
+telperion shows [ Qs, Tc ]
+LOST_FAN shows [ Qc, As ]
+LOST_FAN collected [ $2,495 ]
+
+
+#Game No : 932902060
+***** 888poker Hand History for Game 932902060 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:35:13
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,692.50 )
+Seat 2: I_AM_MASHINE ( $1,892.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: LOST_FAN ( $2,495 )
+Seat 7: Kikakukka ( $1,600 )
+telperion posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+Lohtamo folds
+I_AM_MASHINE folds
+telperion folds
+** Summary **
+LOST_FAN collected [ $300 ]
+
+
+#Game No : 932902179
+***** 888poker Hand History for Game 932902179 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:35:35
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,692.50 )
+Seat 2: I_AM_MASHINE ( $1,892.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: LOST_FAN ( $2,595 )
+Seat 7: Kikakukka ( $1,600 )
+LOST_FAN posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+I_AM_MASHINE raises [$1,892.50]
+telperion folds
+LOST_FAN folds
+Kikakukka folds
+** Summary **
+I_AM_MASHINE collected [ $500 ]
+
+
+#Game No : 932902300
+***** 888poker Hand History for Game 932902300 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:35:59
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Lohtamo ( $1,692.50 )
+Seat 2: I_AM_MASHINE ( $2,192.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: LOST_FAN ( $2,495 )
+Seat 7: Kikakukka ( $1,400 )
+Seat 9: D1emm ( $1,300 )
+Kikakukka posts small blind [$100]
+D1emm folds
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+I_AM_MASHINE folds
+telperion folds
+LOST_FAN raises [$2,495]
+Kikakukka folds
+Lohtamo folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $2,795 ]
+
+
+#Game No : 932902388
+***** 888poker Hand History for Game 932902388 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:36:15
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,492.50 )
+Seat 2: I_AM_MASHINE ( $2,192.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: LOST_FAN ( $2,795 )
+Seat 7: Kikakukka ( $1,300 )
+Lohtamo posts small blind [$100]
+I_AM_MASHINE posts big blind [$200]
+** Dealing down cards **
+telperion folds
+LOST_FAN raises [$2,795]
+Kikakukka folds
+Lohtamo folds
+I_AM_MASHINE folds
+** Summary **
+LOST_FAN collected [ $500 ]
+
+
+#Game No : 932902484
+***** 888poker Hand History for Game 932902484 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:36:31
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,392.50 )
+Seat 2: I_AM_MASHINE ( $1,992.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: LOST_FAN ( $3,095 )
+Seat 7: Kikakukka ( $1,300 )
+I_AM_MASHINE posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+LOST_FAN folds
+Kikakukka folds
+Lohtamo folds
+I_AM_MASHINE raises [$1,892.50]
+telperion calls [$800]
+** Dealing flop ** [ 7d, Ac, 6h ]
+** Dealing turn ** [ 3s ]
+** Dealing river ** [ 8h ]
+** Summary **
+I_AM_MASHINE shows [ Qc, 7c ]
+telperion shows [ Jh, Kc ]
+I_AM_MASHINE collected [ $1,995 ]
+
+
+#Game No : 932902666
+***** 888poker Hand History for Game 932902666 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:37:07
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: Lohtamo ( $1,392.50 )
+Seat 2: I_AM_MASHINE ( $2,987.50 )
+Seat 6: LOST_FAN ( $3,095 )
+Seat 7: Kikakukka ( $1,300 )
+Seat 9: D1emm ( $1,300 )
+LOST_FAN folds
+Kikakukka posts small blind [$100]
+** Dealing down cards **
+D1emm folds
+Lohtamo folds
+I_AM_MASHINE folds
+** Summary **
+Kikakukka collected [ $100 ]
+
+
+#Game No : 932902784
+***** 888poker Hand History for Game 932902784 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:37:32
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 6: LOST_FAN ( $3,095 )
+Seat 7: Kikakukka ( $1,300 )
+Seat 9: D1emm ( $1,300 )
+Kikakukka posts small blind [$100]
+** Dealing down cards **
+D1emm folds
+LOST_FAN folds
+** Summary **
+Kikakukka collected [ $100 ]
+
+
+#Game No : 932902842
+***** 888poker Hand History for Game 932902842 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:37:42
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 6: LOST_FAN ( $3,095 )
+Seat 7: Kikakukka ( $1,300 )
+Seat 9: D1emm ( $1,300 )
+Kikakukka posts small blind [$100]
+** Dealing down cards **
+D1emm folds
+LOST_FAN folds
+** Summary **
+Kikakukka collected [ $100 ]
+
+
+#Game No : 932903357
+***** 888poker Hand History for Game 932903357 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:39:24
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: samothraki ( $1,000 )
+Seat 2: I_AM_MASHINE ( $2,987.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: LOST_FAN ( $3,095 )
+Seat 7: Kikakukka ( $1,300 )
+Seat 9: OrioNeMaster ( $1,000 )
+samothraki posts small blind [$100]
+** Dealing down cards **
+I_AM_MASHINE folds
+telperion folds
+LOST_FAN folds
+Kikakukka folds
+OrioNeMaster folds
+** Summary **
+samothraki collected [ $100 ]
+
+
+#Game No : 932903560
+***** 888poker Hand History for Game 932903560 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:40:02
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: samothraki ( $1,000 )
+Seat 4: telperion ( $1,000 )
+Seat 9: OrioNeMaster ( $1,100 )
+samothraki posts small blind [$100]
+** Dealing down cards **
+telperion folds
+OrioNeMaster folds
+** Summary **
+samothraki collected [ $100 ]
+
+
+#Game No : 932903872
+***** 888poker Hand History for Game 932903872 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:41:01
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: samothraki ( $1,000 )
+Seat 2: I_AM_MASHINE ( $2,987.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $1,300 )
+Seat 9: OrioNeMaster ( $1,100 )
+telperion posts small blind [$100]
+Sopirty posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+OrioNeMaster folds
+samothraki raises [$1,000]
+I_AM_MASHINE folds
+telperion folds
+Sopirty folds
+** Summary **
+samothraki did not show his hand
+samothraki collected [ $500 ]
+
+
+#Game No : 932904008
+***** 888poker Hand History for Game 932904008 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:41:26
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: samothraki ( $1,300 )
+Seat 2: I_AM_MASHINE ( $2,987.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $1,300 )
+Seat 9: OrioNeMaster ( $1,100 )
+Sopirty posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster folds
+samothraki folds
+I_AM_MASHINE raises [$2,987.50]
+telperion folds
+Sopirty calls [$900]
+Kikakukka folds
+** Dealing flop ** [ Qd, 8d, Ts ]
+** Dealing turn ** [ 8c ]
+** Dealing river ** [ Kc ]
+** Summary **
+I_AM_MASHINE shows [ Ac, 6d ]
+Sopirty shows [ Kh, Ks ]
+Sopirty collected [ $2,195 ]
+
+
+#Game No : 932904150
+***** 888poker Hand History for Game 932904150 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:41:54
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: samothraki ( $1,300 )
+Seat 2: I_AM_MASHINE ( $1,987.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: Sopirty ( $2,195 )
+Seat 7: Kikakukka ( $1,100 )
+Seat 9: OrioNeMaster ( $1,100 )
+Kikakukka posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+samothraki folds
+I_AM_MASHINE folds
+telperion folds
+Sopirty folds
+Kikakukka raises [$1,000]
+OrioNeMaster calls [$900]
+** Dealing flop ** [ 3c, 6c, 3h ]
+** Dealing turn ** [ 6d ]
+** Dealing river ** [ Ts ]
+** Summary **
+Kikakukka shows [ Qc, 8c ]
+OrioNeMaster shows [ Ac, Jd ]
+OrioNeMaster collected [ $2,195 ]
+
+
+#Game No : 932904283
+***** 888poker Hand History for Game 932904283 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:42:18
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: samothraki ( $1,300 )
+Seat 2: I_AM_MASHINE ( $1,987.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: Sopirty ( $2,195 )
+Seat 7: Kikakukka ( $1,000 )
+Seat 9: OrioNeMaster ( $2,195 )
+OrioNeMaster posts small blind [$100]
+samothraki posts big blind [$200]
+** Dealing down cards **
+I_AM_MASHINE folds
+telperion folds
+Sopirty folds
+Kikakukka folds
+OrioNeMaster raises [$2,095]
+samothraki folds
+** Summary **
+OrioNeMaster did not show his hand
+OrioNeMaster collected [ $400 ]
+
+
+#Game No : 932904405
+***** 888poker Hand History for Game 932904405 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:42:43
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: samothraki ( $1,100 )
+Seat 2: I_AM_MASHINE ( $1,987.50 )
+Seat 4: telperion ( $1,000 )
+Seat 6: Sopirty ( $2,195 )
+Seat 7: Kikakukka ( $1,000 )
+Seat 9: OrioNeMaster ( $2,395 )
+samothraki posts small blind [$100]
+I_AM_MASHINE folds
+telperion posts big blind [$200]
+** Dealing down cards **
+Sopirty folds
+Kikakukka folds
+OrioNeMaster folds
+samothraki raises [$1,000]
+telperion folds
+** Summary **
+samothraki did not show his hand
+samothraki collected [ $1,300 ]
+
+
+#Game No : 932904582
+***** 888poker Hand History for Game 932904582 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:43:15
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: samothraki ( $1,300 )
+Seat 4: telperion ( $1,000 )
+Seat 6: Sopirty ( $2,195 )
+Seat 7: Kikakukka ( $1,000 )
+Seat 9: OrioNeMaster ( $2,395 )
+telperion posts small blind [$100]
+Sopirty posts big blind [$200]
+** Dealing down cards **
+Kikakukka raises [$1,000]
+OrioNeMaster folds
+samothraki folds
+telperion folds
+Sopirty folds
+** Summary **
+Kikakukka collected [ $500 ]
+
+
+#Game No : 932904648
+***** 888poker Hand History for Game 932904648 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:43:31
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: samothraki ( $1,300 )
+Seat 4: telperion ( $1,000 )
+Seat 6: Sopirty ( $1,995 )
+Seat 7: Kikakukka ( $1,300 )
+Seat 9: OrioNeMaster ( $2,395 )
+Sopirty posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster folds
+samothraki folds
+telperion raises [$1,000]
+Sopirty folds
+Kikakukka calls [$800]
+** Dealing flop ** [ 6s, 2h, Td ]
+** Dealing turn ** [ 5s ]
+** Dealing river ** [ 2s ]
+** Summary **
+telperion shows [ Jd, 9c ]
+Kikakukka shows [ Ac, Ad ]
+Kikakukka collected [ $2,095 ]
+
+
+#Game No : 932904804
+***** 888poker Hand History for Game 932904804 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:43:59
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: samothraki ( $1,300 )
+Seat 4: telperion ( $1,000 )
+Seat 6: Sopirty ( $1,895 )
+Seat 7: Kikakukka ( $2,395 )
+Seat 9: OrioNeMaster ( $2,395 )
+Kikakukka posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+samothraki folds
+telperion raises [$1,000]
+Sopirty raises [$1,895]
+Kikakukka folds
+OrioNeMaster folds
+** Dealing flop ** [ 4c, 3s, 5d ]
+** Dealing turn ** [ Ts ]
+** Dealing river ** [ Js ]
+** Summary **
+telperion shows [ Jc, Qc ]
+Sopirty shows [ Qs, Kh ]
+telperion collected [ $2,295 ]
+
+
+#Game No : 932905011
+***** 888poker Hand History for Game 932905011 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:44:38
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: samothraki ( $1,300 )
+Seat 4: telperion ( $2,295 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,295 )
+Seat 9: OrioNeMaster ( $2,195 )
+OrioNeMaster posts small blind [$100]
+samothraki folds
+telperion posts big blind [$200]
+** Dealing down cards **
+Sopirty folds
+Kikakukka folds
+OrioNeMaster raises [$2,095]
+telperion calls [$1,995]
+** Dealing flop ** [ 7d, 3c, 8s ]
+** Dealing turn ** [ 6s ]
+** Dealing river ** [ Th ]
+** Summary **
+telperion shows [ Td, Kd ]
+OrioNeMaster shows [ Ad, Qh ]
+telperion collected [ $4,385 ]
+
+
+#Game No : 932905179
+***** 888poker Hand History for Game 932905179 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:45:11
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 4: telperion ( $4,485 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,295 )
+Seat 9: OrioNeMaster ( $1,000 )
+telperion posts small blind [$100]
+Sopirty posts big blind [$200]
+** Dealing down cards **
+Kikakukka raises [$2,295]
+OrioNeMaster folds
+telperion folds
+Sopirty folds
+** Summary **
+Kikakukka collected [ $500 ]
+
+
+#Game No : 932905276
+***** 888poker Hand History for Game 932905276 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:45:28
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 4: telperion ( $4,385 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,595 )
+Seat 9: OrioNeMaster ( $1,000 )
+Sopirty posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster raises [$1,000]
+telperion raises [$4,385]
+Sopirty folds
+Kikakukka folds
+** Dealing flop ** [ 6c, Qc, Jc ]
+** Dealing turn ** [ 2c ]
+** Dealing river ** [ 7c ]
+** Summary **
+telperion shows [ Jh, Jd ]
+OrioNeMaster shows [ Ks, Kh ]
+telperion collected [ $1,147.50 ]
+OrioNeMaster collected [ $1,147.50 ]
+
+
+#Game No : 932905438
+***** 888poker Hand History for Game 932905438 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:46:02
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 4: telperion ( $4,532.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,395 )
+Seat 9: OrioNeMaster ( $1,147.50 )
+Kikakukka posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+Kikakukka raises [$2,295]
+OrioNeMaster folds
+** Summary **
+Kikakukka collected [ $400 ]
+
+
+#Game No : 932905498
+***** 888poker Hand History for Game 932905498 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:46:13
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: samothraki ( $1,300 )
+Seat 4: telperion ( $4,532.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,595 )
+Seat 9: OrioNeMaster ( $1,000 )
+OrioNeMaster posts small blind [$100]
+samothraki posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+Kikakukka folds
+OrioNeMaster raises [$900]
+samothraki calls [$800]
+** Dealing flop ** [ 9h, 3d, 4h ]
+** Dealing turn ** [ 7d ]
+** Dealing river ** [ 3s ]
+** Summary **
+samothraki shows [ 3h, Kd ]
+OrioNeMaster shows [ Ad, 7s ]
+samothraki collected [ $1,995 ]
+
+
+#Game No : 932905769
+***** 888poker Hand History for Game 932905769 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:47:06
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: samothraki ( $2,295 )
+Seat 2: DPRSNK ( $1,000 )
+Seat 4: telperion ( $4,532.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,595 )
+Seat 9: OrioNeMaster ( $1,000 )
+samothraki posts small blind [$100]
+DPRSNK posts big blind [$200]
+** Dealing down cards **
+telperion raises [$400]
+Sopirty folds
+Kikakukka folds
+OrioNeMaster folds
+samothraki folds
+DPRSNK calls [$200]
+** Dealing flop ** [ Jh, 7s, Ks ]
+DPRSNK checks
+telperion bets [$200]
+DPRSNK folds
+** Summary **
+telperion did not show his hand
+telperion collected [ $895 ]
+
+
+#Game No : 932906015
+***** 888poker Hand History for Game 932906015 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:47:50
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: samothraki ( $2,195 )
+Seat 2: DPRSNK ( $600 )
+Seat 4: telperion ( $5,027.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,595 )
+Seat 9: OrioNeMaster ( $1,000 )
+DPRSNK posts small blind [$100]
+telperion folds
+Sopirty posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+OrioNeMaster raises [$1,000]
+samothraki folds
+DPRSNK folds
+Sopirty folds
+** Summary **
+OrioNeMaster did not show his hand
+OrioNeMaster collected [ $1,300 ]
+
+
+#Game No : 932906305
+***** 888poker Hand History for Game 932906305 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:48:44
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: samothraki ( $2,195 )
+Seat 2: DPRSNK ( $1,000 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,595 )
+Seat 9: OrioNeMaster ( $1,300 )
+Sopirty posts small blind [$100]
+** Dealing down cards **
+Kikakukka folds
+OrioNeMaster folds
+samothraki folds
+DPRSNK folds
+** Summary **
+Sopirty collected [ $100 ]
+
+
+#Game No : 932907268
+***** 888poker Hand History for Game 932907268 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:51:46
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: samothraki ( $2,195 )
+Seat 2: DPRSNK ( $1,000 )
+Seat 4: telperion ( $5,027.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,595 )
+Seat 9: OrioNeMaster ( $1,300 )
+samothraki posts small blind [$100]
+DPRSNK posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+Kikakukka raises [$2,595]
+OrioNeMaster folds
+samothraki folds
+DPRSNK folds
+** Summary **
+Kikakukka did not show his hand
+Kikakukka collected [ $500 ]
+
+
+#Game No : 932907373
+***** 888poker Hand History for Game 932907373 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:52:08
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: samothraki ( $2,095 )
+Seat 2: DPRSNK ( $800 )
+Seat 4: telperion ( $5,027.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,895 )
+Seat 9: OrioNeMaster ( $1,300 )
+DPRSNK posts small blind [$100]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+Kikakukka folds
+OrioNeMaster folds
+samothraki folds
+** Summary **
+DPRSNK did not show his hand
+DPRSNK collected [ $100 ]
+
+
+#Game No : 932912911
+***** 888poker Hand History for Game 932912911 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:11:11
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 2: DPRSNK ( $1,000 )
+Seat 4: telperion ( $5,027.50 )
+Seat 9: OrioNeMaster ( $1,300 )
+OrioNeMaster posts small blind [$100]
+DPRSNK posts big blind [$200]
+** Dealing down cards **
+telperion folds
+OrioNeMaster raises [$1,200]
+DPRSNK calls [$800]
+** Dealing flop ** [ 6c, Th, 8c ]
+** Dealing turn ** [ Kd ]
+** Dealing river ** [ Td ]
+** Summary **
+DPRSNK shows [ Ts, Qc ]
+OrioNeMaster shows [ Qh, 5h ]
+DPRSNK collected [ $1,995 ]
+OrioNeMaster collected [ $300 ]
+
+
+#Game No : 932913398
+***** 888poker Hand History for Game 932913398 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:12:54
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 6: Sopirty ( $1,995 )
+Seat 7: Kikakukka ( $2,895 )
+Seat 9: OrioNeMaster ( $1,000 )
+Sopirty posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster folds
+Sopirty folds
+** Summary **
+Kikakukka collected [ $300 ]
+
+
+#Game No : 932913472
+***** 888poker Hand History for Game 932913472 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:13:08
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 4: telperion ( $5,027.50 )
+Seat 6: Sopirty ( $1,895 )
+Seat 7: Kikakukka ( $2,995 )
+Seat 9: OrioNeMaster ( $1,000 )
+Kikakukka posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Sopirty raises [$1,895]
+Kikakukka folds
+OrioNeMaster calls [$800]
+** Dealing flop ** [ 7s, 9c, 3h ]
+** Dealing turn ** [ Jh ]
+** Dealing river ** [ Qh ]
+** Summary **
+Sopirty shows [ Kh, As ]
+OrioNeMaster shows [ Kc, 7h ]
+OrioNeMaster collected [ $2,095 ]
+
+
+#Game No : 932914033
+***** 888poker Hand History for Game 932914033 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:14:58
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: samothraki ( $1,795 )
+Seat 2: Lohtamo ( $1,100 )
+Seat 4: telperion ( $5,027.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,895 )
+Seat 9: OrioNeMaster ( $2,295 )
+Lohtamo posts small blind [$100]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+Kikakukka folds
+OrioNeMaster folds
+samothraki folds
+** Summary **
+Lohtamo collected [ $100 ]
+
+
+#Game No : 932914552
+***** 888poker Hand History for Game 932914552 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:16:47
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $4,927.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 9: OrioNeMaster ( $3,590 )
+telperion posts small blind [$100]
+Sopirty posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster raises [$400]
+Lohtamo folds
+telperion folds
+Sopirty folds
+** Summary **
+OrioNeMaster collected [ $500 ]
+
+
+#Game No : 932914665
+***** 888poker Hand History for Game 932914665 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:17:11
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $4,827.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,895 )
+Seat 9: OrioNeMaster ( $3,890 )
+Sopirty posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster raises [$400]
+Lohtamo folds
+telperion folds
+Sopirty folds
+Kikakukka folds
+** Summary **
+OrioNeMaster collected [ $500 ]
+
+
+#Game No : 932914723
+***** 888poker Hand History for Game 932914723 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:17:25
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $4,827.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: Kikakukka ( $2,695 )
+Seat 9: OrioNeMaster ( $4,190 )
+Kikakukka posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+Lohtamo raises [$1,000]
+telperion raises [$4,827.50]
+Sopirty folds
+Kikakukka folds
+OrioNeMaster folds
+** Dealing flop ** [ Jd, 4s, Th ]
+** Dealing turn ** [ 5c ]
+** Dealing river ** [ Kh ]
+** Summary **
+Lohtamo shows [ Js, Kd ]
+telperion shows [ 9c, 9s ]
+Lohtamo collected [ $2,295 ]
+
+
+#Game No : 932915212
+***** 888poker Hand History for Game 932915212 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:19:02
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: Lohtamo ( $1,695 )
+Seat 4: telperion ( $3,827.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 9: OrioNeMaster ( $4,090 )
+Lohtamo posts small blind [$100]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+OrioNeMaster folds
+** Summary **
+Lohtamo collected [ $100 ]
+
+
+#Game No : 932915772
+***** 888poker Hand History for Game 932915772 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:20:57
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: Lohtamo ( $1,992.50 )
+Seat 4: telperion ( $3,627.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: LOST_FAN ( $1,100 )
+Seat 9: OrioNeMaster ( $4,090 )
+LOST_FAN posts small blind [$100]
+OrioNeMaster folds
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+LOST_FAN raises [$1,000]
+Lohtamo calls [$900]
+** Dealing flop ** [ 2s, 8h, Th ]
+** Dealing turn ** [ Qs ]
+** Dealing river ** [ Ad ]
+** Summary **
+Lohtamo shows [ 6h, 6c ]
+LOST_FAN shows [ 6s, Ks ]
+Lohtamo collected [ $2,195 ]
+
+
+#Game No : 932915880
+***** 888poker Hand History for Game 932915880 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:21:19
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 2: Lohtamo ( $3,087.50 )
+Seat 4: telperion ( $3,627.50 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: LOST_FAN ( $1,000 )
+Lohtamo posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+Sopirty folds
+LOST_FAN raises [$1,000]
+Lohtamo raises [$2,987.50]
+telperion folds
+** Dealing flop ** [ 5c, 3s, 6d ]
+** Dealing turn ** [ Jc ]
+** Dealing river ** [ Kh ]
+** Summary **
+Lohtamo shows [ Ad, 4d ]
+LOST_FAN shows [ Ks, 7c ]
+LOST_FAN collected [ $2,195 ]
+
+
+#Game No : 932916315
+***** 888poker Hand History for Game 932916315 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:22:48
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $5,710 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: LOST_FAN ( $3,190 )
+Seat 9: OrioNeMaster ( $4,090 )
+LOST_FAN posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+telperion folds
+Sopirty raises [$1,000]
+LOST_FAN raises [$3,090]
+OrioNeMaster folds
+** Dealing flop ** [ 5d, 7s, 2d ]
+** Dealing turn ** [ Td ]
+** Dealing river ** [ Ts ]
+** Summary **
+Sopirty shows [ Ah, 6d ]
+LOST_FAN shows [ 3d, 3c ]
+LOST_FAN collected [ $2,195 ]
+
+
+#Game No : 932916449
+***** 888poker Hand History for Game 932916449 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:23:16
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: samothraki ( $1,795 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $5,710 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: LOST_FAN ( $4,385 )
+Seat 9: OrioNeMaster ( $3,890 )
+OrioNeMaster posts small blind [$100]
+samothraki posts big blind [$200]
+** Dealing down cards **
+Lohtamo raises [$1,000]
+telperion folds
+Sopirty folds
+LOST_FAN folds
+OrioNeMaster folds
+samothraki folds
+** Summary **
+Lohtamo did not show his hand
+Lohtamo collected [ $500 ]
+
+
+#Game No : 932916921
+***** 888poker Hand History for Game 932916921 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:24:55
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: samothraki ( $4,085 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $4,115 )
+Seat 6: Sopirty ( $1,100 )
+Seat 7: LOST_FAN ( $4,685 )
+Seat 9: OrioNeMaster ( $3,790 )
+Sopirty posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster folds
+samothraki folds
+Lohtamo folds
+telperion folds
+Sopirty raises [$1,000]
+LOST_FAN folds
+** Summary **
+Sopirty did not show his hand
+Sopirty collected [ $400 ]
+
+
+#Game No : 932917030
+***** 888poker Hand History for Game 932917030 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:25:14
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: samothraki ( $4,085 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $4,115 )
+Seat 6: Sopirty ( $1,300 )
+Seat 7: LOST_FAN ( $4,485 )
+Seat 9: OrioNeMaster ( $3,790 )
+LOST_FAN posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+samothraki folds
+Lohtamo folds
+telperion folds
+Sopirty folds
+LOST_FAN raises [$450]
+OrioNeMaster calls [$350]
+** Dealing flop ** [ Jd, Qs, 3h ]
+LOST_FAN bets [$350]
+OrioNeMaster folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $1,095 ]
+
+
+#Game No : 932917479
+***** 888poker Hand History for Game 932917479 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:26:47
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: samothraki ( $3,885 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $4,115 )
+Seat 6: Sopirty ( $1,447.50 )
+Seat 7: LOST_FAN ( $5,177.50 )
+Seat 9: OrioNeMaster ( $3,140 )
+samothraki posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+LOST_FAN folds
+OrioNeMaster folds
+samothraki raises [$3,785]
+Lohtamo calls [$800]
+** Dealing flop ** [ 4s, 5h, 4c ]
+** Dealing turn ** [ 3h ]
+** Dealing river ** [ 9c ]
+** Summary **
+samothraki shows [ Ac, 8d ]
+Lohtamo shows [ Qh, Ks ]
+samothraki collected [ $1,995 ]
+
+
+#Game No : 932917638
+***** 888poker Hand History for Game 932917638 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:27:22
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: samothraki ( $4,880 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $4,115 )
+Seat 6: Sopirty ( $1,447.50 )
+Seat 7: LOST_FAN ( $5,177.50 )
+Seat 9: OrioNeMaster ( $3,140 )
+Lohtamo posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+Sopirty folds
+LOST_FAN folds
+OrioNeMaster folds
+samothraki raises [$400]
+Lohtamo folds
+telperion folds
+** Summary **
+samothraki did not show his hand
+samothraki collected [ $500 ]
+
+
+#Game No : 932917910
+***** 888poker Hand History for Game 932917910 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:28:20
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: samothraki ( $5,180 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $3,815 )
+Seat 6: Sopirty ( $2,990 )
+Seat 7: LOST_FAN ( $3,730 )
+Seat 9: OrioNeMaster ( $3,140 )
+Sopirty posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster folds
+samothraki raises [$400]
+Lohtamo folds
+telperion folds
+Sopirty folds
+LOST_FAN calls [$200]
+** Dealing flop ** [ Kc, As, 9s ]
+LOST_FAN checks
+samothraki checks
+** Dealing turn ** [ Jc ]
+LOST_FAN checks
+samothraki checks
+** Dealing river ** [ Jh ]
+LOST_FAN checks
+samothraki checks
+** Summary **
+LOST_FAN shows [ 9c, Qs ]
+samothraki shows [ Th, Ts ]
+samothraki collected [ $895 ]
+
+
+#Game No : 932918143
+***** 888poker Hand History for Game 932918143 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:29:13
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: samothraki ( $5,675 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $3,815 )
+Seat 6: Sopirty ( $2,890 )
+Seat 7: LOST_FAN ( $3,330 )
+Seat 9: OrioNeMaster ( $3,140 )
+LOST_FAN posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+samothraki folds
+Lohtamo raises [$1,000]
+telperion folds
+Sopirty folds
+LOST_FAN folds
+OrioNeMaster folds
+** Summary **
+Lohtamo did not show his hand
+Lohtamo collected [ $500 ]
+
+
+#Game No : 932918359
+***** 888poker Hand History for Game 932918359 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:30:01
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: samothraki ( $5,475 )
+Seat 2: Lohtamo ( $1,300 )
+Seat 4: telperion ( $3,815 )
+Seat 6: Sopirty ( $3,190 )
+Seat 7: LOST_FAN ( $3,230 )
+Seat 9: OrioNeMaster ( $2,840 )
+samothraki posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+telperion raises [$400]
+Sopirty folds
+LOST_FAN folds
+OrioNeMaster folds
+samothraki folds
+Lohtamo calls [$200]
+** Dealing flop ** [ 3d, Ac, 2h ]
+Lohtamo checks
+telperion bets [$200]
+Lohtamo raises [$900]
+telperion calls [$700]
+** Dealing turn ** [ Jh ]
+** Dealing river ** [ 5h ]
+** Summary **
+Lohtamo shows [ 3c, Ks ]
+telperion shows [ 4d, 4s ]
+telperion collected [ $2,695 ]
+
+
+#Game No : 932918622
+***** 888poker Hand History for Game 932918622 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:31:01
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: samothraki ( $5,375 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $5,210 )
+Seat 6: Sopirty ( $3,190 )
+Seat 7: LOST_FAN ( $3,230 )
+Seat 9: OrioNeMaster ( $2,840 )
+Lohtamo posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+Sopirty folds
+LOST_FAN folds
+OrioNeMaster folds
+samothraki folds
+Lohtamo raises [$900]
+telperion folds
+** Summary **
+Lohtamo did not show his hand
+Lohtamo collected [ $400 ]
+
+
+#Game No : 932918907
+***** 888poker Hand History for Game 932918907 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:32:05
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: samothraki ( $5,375 )
+Seat 2: Lohtamo ( $1,200 )
+Seat 4: telperion ( $5,407 )
+Seat 6: Sopirty ( $2,788 )
+Seat 7: LOST_FAN ( $3,230 )
+Seat 9: OrioNeMaster ( $2,840 )
+Sopirty posts small blind [$100]
+LOST_FAN posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster folds
+samothraki folds
+Lohtamo folds
+telperion raises [$400]
+Sopirty folds
+LOST_FAN raises [$1,745]
+telperion folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $900 ]
+
+
+#Game No : 932919176
+***** 888poker Hand History for Game 932919176 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:33:06
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: samothraki ( $5,375 )
+Seat 2: Lohtamo ( $1,200 )
+Seat 4: telperion ( $5,007 )
+Seat 6: Sopirty ( $2,688 )
+Seat 7: LOST_FAN ( $3,730 )
+Seat 9: OrioNeMaster ( $2,840 )
+LOST_FAN posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+samothraki folds
+Lohtamo folds
+telperion folds
+Sopirty folds
+LOST_FAN raises [$3,630]
+OrioNeMaster folds
+** Summary **
+LOST_FAN did not show his hand
+LOST_FAN collected [ $400 ]
+
+
+#Game No : 932919642
+***** 888poker Hand History for Game 932919642 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:34:52
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: samothraki ( $5,075 )
+Seat 2: Lohtamo ( $1,000 )
+Seat 4: telperion ( $6,302 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: LOST_FAN ( $3,930 )
+Seat 9: OrioNeMaster ( $5,475 )
+Lohtamo posts small blind [$100]
+telperion folds
+Sopirty folds
+LOST_FAN folds
+OrioNeMaster folds
+samothraki posts big blind [$200]
+** Dealing down cards **
+Lohtamo raises [$900]
+samothraki folds
+** Summary **
+Lohtamo did not show his hand
+Lohtamo collected [ $1,200 ]
+
+
+#Game No : 932920263
+***** 888poker Hand History for Game 932920263 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:37:10
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: Lohtamo ( $1,200 )
+Seat 4: telperion ( $6,302 )
+Seat 6: Sopirty ( $1,000 )
+Lohtamo posts small blind [$100]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+** Summary **
+Lohtamo collected [ $100 ]
+
+
+#Game No : 932920644
+***** 888poker Hand History for Game 932920644 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:38:40
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: samothraki ( $4,875 )
+Seat 2: Lohtamo ( $1,500 )
+Seat 4: telperion ( $7,297 )
+Seat 6: Sopirty ( $900 )
+Seat 9: OrioNeMaster ( $5,275 )
+OrioNeMaster posts small blind [$100]
+samothraki folds
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+telperion raises [$400]
+Sopirty folds
+OrioNeMaster folds
+Lohtamo raises [$1,300]
+telperion calls [$1,100]
+** Dealing flop ** [ 6d, 2s, 3d ]
+** Dealing turn ** [ Th ]
+** Dealing river ** [ 7s ]
+** Summary **
+Lohtamo shows [ Ks, Kh ]
+telperion shows [ 7c, Ac ]
+Lohtamo collected [ $3,095 ]
+
+
+#Game No : 932920810
+***** 888poker Hand History for Game 932920810 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:39:17
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: Lohtamo ( $3,095 )
+Seat 4: telperion ( $5,797 )
+Seat 6: Sopirty ( $1,000 )
+Seat 9: OrioNeMaster ( $5,175 )
+Lohtamo posts small blind [$100]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+OrioNeMaster folds
+** Summary **
+Lohtamo collected [ $100 ]
+
+
+#Game No : 932922594
+***** 888poker Hand History for Game 932922594 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:45:56
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: samothraki ( $4,875 )
+Seat 2: Lohtamo ( $3,095 )
+Seat 4: telperion ( $5,797 )
+Seat 9: OrioNeMaster ( $5,175 )
+Lohtamo posts small blind [$100]
+** Dealing down cards **
+telperion folds
+OrioNeMaster folds
+samothraki folds
+** Summary **
+Lohtamo collected [ $100 ]
+
+
+#Game No : 932923092
+***** 888poker Hand History for Game 932923092 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:47:51
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Lohtamo ( $2,995 )
+Seat 4: telperion ( $5,897 )
+Seat 6: Sopirty ( $1,000 )
+telperion posts small blind [$100]
+Sopirty posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+telperion raises [$5,797]
+Sopirty calls [$800]
+** Dealing flop ** [ 3c, 4s, Jc ]
+** Dealing turn ** [ 6d ]
+** Dealing river ** [ 5s ]
+** Summary **
+telperion shows [ 2h, 4h ]
+Sopirty shows [ Ad, 8s ]
+telperion collected [ $1,995 ]
+
+
+#Game No : 932923202
+***** 888poker Hand History for Game 932923202 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:48:19
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 2: Lohtamo ( $2,995 )
+Seat 4: telperion ( $6,892 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: eatwhatukill ( $1,000 )
+Sopirty posts small blind [$100]
+eatwhatukill posts big blind [$200]
+** Dealing down cards **
+Lohtamo folds
+telperion raises [$6,892]
+Sopirty folds
+eatwhatukill folds
+** Summary **
+telperion collected [ $500 ]
+
+
+#Game No : 932923520
+***** 888poker Hand History for Game 932923520 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:49:30
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: samothraki ( $4,675 )
+Seat 2: Lohtamo ( $3,295 )
+Seat 4: telperion ( $8,387 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: eatwhatukill ( $1,000 )
+Seat 9: OrioNeMaster ( $4,875 )
+samothraki posts small blind [$100]
+Lohtamo posts big blind [$200]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+eatwhatukill raises [$1,000]
+OrioNeMaster folds
+samothraki folds
+Lohtamo calls [$800]
+** Dealing flop ** [ 3c, 5s, 8d ]
+** Dealing turn ** [ 7c ]
+** Dealing river ** [ 9s ]
+** Summary **
+Lohtamo shows [ Qs, Qd ]
+eatwhatukill shows [ Td, Js ]
+eatwhatukill collected [ $2,095 ]
+
+
+#Game No : 932923721
+***** 888poker Hand History for Game 932923721 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:50:12
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: samothraki ( $4,575 )
+Seat 2: Lohtamo ( $2,295 )
+Seat 4: telperion ( $8,387 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: eatwhatukill ( $2,095 )
+Seat 9: OrioNeMaster ( $4,875 )
+Lohtamo posts small blind [$100]
+telperion folds
+Sopirty folds
+eatwhatukill posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster raises [$400]
+samothraki folds
+Lohtamo folds
+eatwhatukill folds
+** Summary **
+OrioNeMaster did not show his hand
+OrioNeMaster collected [ $500 ]
+
+
+#Game No : 932923806
+***** 888poker Hand History for Game 932923806 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:50:30
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: samothraki ( $4,575 )
+Seat 2: Lohtamo ( $2,195 )
+Seat 7: eatwhatukill ( $1,895 )
+Seat 9: OrioNeMaster ( $5,175 )
+eatwhatukill posts small blind [$100]
+** Dealing down cards **
+OrioNeMaster folds
+samothraki folds
+Lohtamo folds
+** Summary **
+eatwhatukill collected [ $100 ]
+
+
+#Game No : 932924596
+***** 888poker Hand History for Game 932924596 *****
+$100/$200 Blinds No Limit Holdem - *** 05 09 2016 00:53:24
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: samothraki ( $4,575 )
+Seat 2: Lohtamo ( $2,195 )
+Seat 4: telperion ( $8,387 )
+Seat 6: Sopirty ( $1,000 )
+Seat 7: D1emm ( $1,000 )
+Lohtamo posts small blind [$100]
+** Dealing down cards **
+telperion folds
+Sopirty folds
+D1emm folds
+samothraki folds
+** Summary **
+Lohtamo collected [ $100 ]
+
+

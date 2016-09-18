@@ -1,0 +1,726 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224213243">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824219713</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:25</duration>  
+	          <gamecount>44</gamecount>  
+	          <startdate>2014-03-25 17:14:26</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>7,335</bets>  
+	          <wins>5,835</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>0</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>4</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>0</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>0</awardpoints>  
+	    </general>  
+	    <game gamecode="5601192749">
+		 <general>
+		  <startdate>2014-03-25 17:14:26</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,500" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LuCkY_DuCkY" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="7" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="3" player="Obsti83" type="3" sum="20" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 HA</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 SA C6</cards><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="10" player="Obsti83" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601193074">
+		 <general>
+		  <startdate>2014-03-25 17:15:28</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,530" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,500" dealer="0" win="230" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="Obsti83" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="6" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">S5 SA</cards><action no="8" player="Obsti83" type="3" sum="30" cards=""/><cards type="Pocket" player="Onyiiiii">D8 DA</cards><action no="3" player="Onyiiiii" type="23" sum="50" cards=""/><cards type="Pocket" player="moonbaseone">C2 S8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 HK DJ</cards><action no="9" player="Obsti83" type="4" sum="0" cards=""/><action no="10" player="Onyiiiii" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="11" player="Obsti83" type="5" sum="60" cards=""/><action no="12" player="Onyiiiii" type="3" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CQ</cards><action no="13" player="Obsti83" type="4" sum="0" cards=""/><action no="14" player="Onyiiiii" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601193315">
+		 <general>
+		  <startdate>2014-03-25 17:16:17</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,470" dealer="1" win="0" bet="130" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,420" dealer="0" win="420" bet="270" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,620" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Obsti83" type="1" sum="10" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="5" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="60" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="7" player="Obsti83" type="3" sum="50" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 S5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 CK C2</cards><action no="10" player="DONCorleoneXX" type="5" sum="70" cards=""/><action no="9" player="Obsti83" type="4" sum="0" cards=""/><action no="11" player="Obsti83" type="3" sum="70" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="12" player="Obsti83" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards><action no="15" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="14" player="Obsti83" type="5" sum="140" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206144">
+		 <general>
+		  <startdate>2014-03-25 17:17:22</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,340" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,570" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,600" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="4" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="60" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="6" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C9 S4</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206323">
+		 <general>
+		  <startdate>2014-03-25 17:17:58</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,590" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,480" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="3" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="5" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ DA</cards><action no="7" player="moonbaseone" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206491">
+		 <general>
+		  <startdate>2014-03-25 17:18:35</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,490" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="20" cards="[cards]"/><action no="2" player="LuCkY_DuCkY" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="4" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 S7</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206660">
+		 <general>
+		  <startdate>2014-03-25 17:19:10</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,510" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,370" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="360" bet="220" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LuCkY_DuCkY" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="7" player="LuCkY_DuCkY" type="3" sum="80" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="3" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ CA</cards><action no="5" player="moonbaseone" type="23" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ HK S5</cards><action no="9" player="LuCkY_DuCkY" type="4" sum="0" cards=""/><action no="11" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><action no="10" player="moonbaseone" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601207003">
+		 <general>
+		  <startdate>2014-03-25 17:20:20</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,410" dealer="1" win="260" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,330" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,570" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,640" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="Obsti83" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="6" player="LuCkY_DuCkY" type="23" sum="160" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="8" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 C5</cards><action no="4" player="moonbaseone" type="3" sum="40" cards=""/><action no="9" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601207226">
+		 <general>
+		  <startdate>2014-03-25 17:21:06</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,510" dealer="0" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,310" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,530" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,590" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Obsti83" type="1" sum="20" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="5" player="LuCkY_DuCkY" type="23" sum="80" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="7" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 DQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601207429">
+		 <general>
+		  <startdate>2014-03-25 17:21:47</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,460" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,510" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,550" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,600" dealer="0" win="180" bet="80" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">D6 SA</cards><action no="3" player="Strik3rPo4ition" type="23" sum="80" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="4" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="6" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 H5</cards><action no="8" player="moonbaseone" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK S2 S7</cards><action no="10" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="9" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="12" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="11" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="14" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="13" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219478">
+		 <general>
+		  <startdate>2014-03-25 17:23:07</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,380" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,700" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="60" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="3" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="5" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 S9</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219595">
+		 <general>
+		  <startdate>2014-03-25 17:23:33</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,410" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,570" dealer="0" win="1,840" bet="1,570" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,510" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,670" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/><action no="2" player="LuCkY_DuCkY" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="8" player="LuCkY_DuCkY" type="3" sum="60" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="4" player="Obsti83" type="23" sum="120" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 S3</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 D6 D7</cards><action no="9" player="LuCkY_DuCkY" type="5" sum="120" cards=""/><action no="10" player="Obsti83" type="3" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards><action no="11" player="LuCkY_DuCkY" type="5" sum="1,330" cards=""/><action no="12" player="Obsti83" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219868">
+		 <general>
+		  <startdate>2014-03-25 17:24:30</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,840" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,310" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,270" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LuCkY_DuCkY" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="7" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="3" player="Obsti83" type="23" sum="120" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 DQ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219950">
+		 <general>
+		  <startdate>2014-03-25 17:24:50</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,380" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,810" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,250" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,360" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="Obsti83" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="120" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="6" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="8" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA C4</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220161">
+		 <general>
+		  <startdate>2014-03-25 17:25:33</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,810" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,220" dealer="1" win="1,250" bet="1,220" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,300" dealer="0" win="1,330" bet="1,300" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,530" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,670" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Obsti83" type="1" sum="30" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="5" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">CA HK</cards><action no="6" player="DONCorleoneXX" type="23" sum="120" cards=""/><action no="9" player="DONCorleoneXX" type="7" sum="1,100" cards=""/><cards type="Pocket" player="Obsti83">SK HA</cards><action no="7" player="Obsti83" type="23" sum="1,300" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 H10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 DQ H4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CQ</cards>
+	</round>
+	
+		</game><game gamecode="5601220399">
+		 <general>
+		  <startdate>2014-03-25 17:26:16</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,810" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,330" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,470" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,670" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="4" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="6" player="Obsti83" type="23" sum="120" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C10 DJ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220466">
+		 <general>
+		  <startdate>2014-03-25 17:26:33</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,470" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,810" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,250" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,610" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="3" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="23" sum="200" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="5" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ C5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220594">
+		 <general>
+		  <startdate>2014-03-25 17:26:56</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,370" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,810" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/><action no="2" player="LuCkY_DuCkY" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="4" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK C7</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220787">
+		 <general>
+		  <startdate>2014-03-25 17:27:32</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,320" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,860" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,400" dealer="0" win="1,600" bet="1,400" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LuCkY_DuCkY" type="1" sum="50" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="7" player="LuCkY_DuCkY" type="23" sum="200" cards=""/><action no="9" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="23" sum="1,400" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="3" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK C3</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235421">
+		 <general>
+		  <startdate>2014-03-25 17:28:10</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,660" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,600" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,420" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="Obsti83" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="6" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="8" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="23" sum="200" cards=""/><cards type="Pocket" player="moonbaseone">SQ D7</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235580">
+		 <general>
+		  <startdate>2014-03-25 17:28:42</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,660" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,320" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,590" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Obsti83" type="1" sum="50" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="5" player="LuCkY_DuCkY" type="23" sum="200" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="7" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 HK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235736">
+		 <general>
+		  <startdate>2014-03-25 17:29:14</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,810" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,270" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,490" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="4" player="LuCkY_DuCkY" type="23" sum="200" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="6" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 C9</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235902">
+		 <general>
+		  <startdate>2014-03-25 17:29:45</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,320" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,460" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="3" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="5" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 H2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236042">
+		 <general>
+		  <startdate>2014-03-25 17:30:12</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,370" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,960" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,410" dealer="1" win="350" bet="200" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/><action no="2" player="LuCkY_DuCkY" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="8" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="4" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 H2</cards><action no="6" player="moonbaseone" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236200">
+		 <general>
+		  <startdate>2014-03-25 17:30:47</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,320" dealer="1" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="1,860" dealer="0" win="2,310" bet="1,860" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,550" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LuCkY_DuCkY" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="300" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="7" player="LuCkY_DuCkY" type="3" sum="225" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="3" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ H10</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 DA C10</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/><action no="9" player="LuCkY_DuCkY" type="5" sum="1,560" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236430">
+		 <general>
+		  <startdate>2014-03-25 17:31:36</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,310" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,400" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,270" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="Obsti83" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="6" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 D9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236498">
+		 <general>
+		  <startdate>2014-03-25 17:31:50</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,325" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,345" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,440" dealer="0" win="1,740" bet="1,440" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Obsti83" type="1" sum="75" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="5" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">X X</cards><action no="7" player="Obsti83" type="23" sum="300" cards=""/><action no="9" player="Obsti83" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="23" sum="1,440" cards=""/><cards type="Pocket" player="moonbaseone">H8 H10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236692">
+		 <general>
+		  <startdate>2014-03-25 17:32:28</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,325" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Obsti83" chips="1,045" dealer="1" win="0" bet="1,045" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="1,740" dealer="0" win="2,935" bet="1,740" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,560" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="4" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Obsti83">SK C4</cards><action no="6" player="Obsti83" type="23" sum="1,045" cards=""/><cards type="Pocket" player="Onyiiiii">S10 HA</cards><action no="7" player="Onyiiiii" type="7" sum="1,665" cards=""/><cards type="Pocket" player="moonbaseone">C5 CJ</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ S8 DA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards>
+	</round>
+	
+		</game><game gamecode="5601236802">
+		 <general>
+		  <startdate>2014-03-25 17:32:51</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,020" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,325" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,935" dealer="1" win="3,160" bet="2,935" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,410" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="3" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="23" sum="2,935" cards=""/><cards type="Pocket" player="moonbaseone">DK C6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248016">
+		 <general>
+		  <startdate>2014-03-25 17:33:19</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="870" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,310" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,325" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="3,160" dealer="0" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,335" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/><action no="2" player="LuCkY_DuCkY" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="7" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">D4 DQ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248379">
+		 <general>
+		  <startdate>2014-03-25 17:34:00</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="795" dealer="1" win="1,020" bet="795" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,160" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,325" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="3,385" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,335" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LuCkY_DuCkY" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="795" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="6" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 CJ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248703">
+		 <general>
+		  <startdate>2014-03-25 17:34:32</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,020" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,085" dealer="1" win="2,485" bet="2,085" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,175" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="3,385" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,335" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/><action no="2" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="7" player="Onyiiiii" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="9" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="10" player="LuCkY_DuCkY" type="23" sum="2,060" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="12" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 C8</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249014">
+		 <general>
+		  <startdate>2014-03-25 17:35:05</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="995" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,485" dealer="0" win="825" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,050" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="3,160" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,310" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="4" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="6" player="Onyiiiii" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="9" player="LuCkY_DuCkY" type="23" sum="400" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="11" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ C6</cards><action no="12" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249251">
+		 <general>
+		  <startdate>2014-03-25 17:35:32</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="970" dealer="0" win="425" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,885" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,025" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="3,035" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,085" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/><action no="3" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">S5 D5</cards><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="8" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="10" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D3 S8</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601249432">
+		 <general>
+		  <startdate>2014-03-25 17:35:51</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="1,170" dealer="0" win="0" bet="1,000" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,860" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,000" dealer="0" win="2,275" bet="1,000" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="3,010" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="960" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/><action no="2" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="7" player="LuCkY_DuCkY" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">H8 S8</cards><action no="11" player="Strik3rPo4ition" type="3" sum="875" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="12" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">SQ HQ</cards><action no="8" player="DONCorleoneXX" type="23" sum="975" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="9" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C6 D5</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 S7 D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards>
+	</round>
+	
+		</game><game gamecode="5601249841">
+		 <general>
+		  <startdate>2014-03-25 17:36:30</startdate>		  
+		  <players>
+		   <player seat="1" name="Strik3rPo4ition" chips="170" dealer="1" win="0" bet="170" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="LuCkY_DuCkY" chips="2,635" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="2,275" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,985" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="935" dealer="0" win="1,480" bet="935" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="1" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="6" player="LuCkY_DuCkY" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="7" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/><action no="3" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Strik3rPo4ition">SA CQ</cards><action no="10" player="Strik3rPo4ition" type="7" sum="145" cards=""/><cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="11" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="12" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 SJ</cards><action no="9" player="moonbaseone" type="23" sum="910" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 H5 DJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HJ</cards>
+	</round>
+	
+		</game><game gamecode="5601250181">
+		 <general>
+		  <startdate>2014-03-25 17:37:05</startdate>		  
+		  <players>
+		   <player seat="3" name="LuCkY_DuCkY" chips="2,510" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="2,050" dealer="0" win="2,325" bet="2,050" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,960" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/><action no="2" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="6" player="Onyiiiii" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="8" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="23" sum="2,025" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="10" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ H6</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250453">
+		 <general>
+		  <startdate>2014-03-25 17:37:35</startdate>		  
+		  <players>
+		   <player seat="3" name="LuCkY_DuCkY" chips="2,485" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="2,325" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,735" dealer="0" win="3,010" bet="2,735" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,455" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="5" player="Onyiiiii" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="7" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="9" player="Onyiiiii" type="23" sum="2,710" cards=""/><cards type="Pocket" player="moonbaseone">DK S2</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250663">
+		 <general>
+		  <startdate>2014-03-25 17:37:59</startdate>		  
+		  <players>
+		   <player seat="3" name="LuCkY_DuCkY" chips="2,460" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="2,300" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="3,010" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,230" dealer="0" win="1,505" bet="1,230" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="6" player="LuCkY_DuCkY" type="2" sum="200" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="10" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 S5</cards><action no="9" player="moonbaseone" type="23" sum="1,205" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601250861">
+		 <general>
+		  <startdate>2014-03-25 17:38:21</startdate>		  
+		  <players>
+		   <player seat="3" name="LuCkY_DuCkY" chips="2,235" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="2,275" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,985" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,505" dealer="1" win="1,880" bet="1,505" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="5" player="LuCkY_DuCkY" type="1" sum="100" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/><action no="3" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="9" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 D10</cards><action no="8" player="moonbaseone" type="23" sum="1,480" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601251081">
+		 <general>
+		  <startdate>2014-03-25 17:38:44</startdate>		  
+		  <players>
+		   <player seat="3" name="LuCkY_DuCkY" chips="2,110" dealer="1" win="2,635" bet="2,110" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="2,050" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,960" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,880" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="150" cards="[cards]"/><action no="2" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="6" player="Onyiiiii" type="2" sum="300" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="8" player="LuCkY_DuCkY" type="23" sum="2,085" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="10" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C9 S3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264372">
+		 <general>
+		  <startdate>2014-03-25 17:39:09</startdate>		  
+		  <players>
+		   <player seat="3" name="LuCkY_DuCkY" chips="2,635" dealer="0" win="1,150" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,875" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,635" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,855" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="5" player="Onyiiiii" type="1" sum="150" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="7" player="LuCkY_DuCkY" type="23" sum="600" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="9" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ DK</cards><action no="10" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264498">
+		 <general>
+		  <startdate>2014-03-25 17:39:36</startdate>		  
+		  <players>
+		   <player seat="3" name="LuCkY_DuCkY" chips="3,160" dealer="0" win="0" bet="325" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,850" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,460" dealer="1" win="2,985" bet="2,460" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,530" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="6" player="LuCkY_DuCkY" type="2" sum="300" cards="[cards]"/><action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="10" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="23" sum="2,435" cards=""/><cards type="Pocket" player="moonbaseone">H4 CJ</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601264590">
+		 <general>
+		  <startdate>2014-03-25 17:39:55</startdate>		  
+		  <players>
+		   <player seat="3" name="LuCkY_DuCkY" chips="2,835" dealer="0" win="0" bet="175" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="DONCorleoneXX" chips="1,825" dealer="0" win="2,910" bet="1,355" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Onyiiiii" chips="2,985" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,355" dealer="1" win="0" bet="1,355" rebuy="0" addon="0" reg_code="6224213243"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="LuCkY_DuCkY" type="15" sum="25" cards="[cards]"/><action no="5" player="LuCkY_DuCkY" type="1" sum="150" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="300" cards="[cards]"/><action no="3" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="LuCkY_DuCkY">X X</cards><action no="9" player="LuCkY_DuCkY" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">HA D2</cards><action no="10" player="DONCorleoneXX" type="3" sum="1,030" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C9 DJ</cards><action no="8" player="moonbaseone" type="23" sum="1,330" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 H6 H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game>  
+	</session>

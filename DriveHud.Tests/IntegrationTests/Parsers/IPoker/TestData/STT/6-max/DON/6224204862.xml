@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224204862">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824217546</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:20</duration>  
+	          <gamecount>27</gamecount>  
+	          <startdate>2014-03-25 16:50:44</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>4,070</bets>  
+	          <wins>2,570</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>0</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>6</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>0</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>0</awardpoints>  
+	    </general>  
+	    <game gamecode="5601131455">
+		 <general>
+		  <startdate>2014-03-25 16:50:44</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="1" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,500" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,500" dealer="0" win="430" bet="260" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/><action no="2" player="Kinjirushi" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="3" sum="20" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="8" player="Kinjirushi" type="4" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="4" player="pistolpete9" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">D3 HK</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 S4 D5</cards><action no="11" player="VanTr4X" type="4" sum="0" cards=""/><action no="9" player="Kinjirushi" type="4" sum="0" cards=""/><action no="10" player="pistolpete9" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="14" player="VanTr4X" type="3" sum="60" cards=""/><action no="12" player="Kinjirushi" type="4" sum="0" cards=""/><action no="15" player="Kinjirushi" type="3" sum="60" cards=""/><action no="13" player="pistolpete9" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards><action no="18" player="VanTr4X" type="0" sum="0" cards=""/><action no="16" player="Kinjirushi" type="4" sum="0" cards=""/><action no="19" player="Kinjirushi" type="0" sum="0" cards=""/><action no="17" player="pistolpete9" type="5" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131896">
+		 <general>
+		  <startdate>2014-03-25 16:52:28</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,420" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,670" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kinjirushi" type="1" sum="10" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="7" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="3" player="pistolpete9" type="23" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">SJ H8</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601132067">
+		 <general>
+		  <startdate>2014-03-25 16:53:10</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,410" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,700" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/><action no="2" player="pistolpete9" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="6" player="Kinjirushi" type="23" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="8" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HK H6</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601132290">
+		 <general>
+		  <startdate>2014-03-25 16:53:59</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,470" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,680" dealer="0" win="200" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pistolpete9" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="5" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="40" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="7" player="pistolpete9" type="3" sum="30" cards=""/><cards type="Pocket" player="moonbaseone">D8 HA</cards><action no="8" player="moonbaseone" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ C9 HJ</cards><action no="11" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="9" player="pistolpete9" type="4" sum="0" cards=""/><action no="10" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S9</cards><action no="14" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="12" player="pistolpete9" type="4" sum="0" cards=""/><action no="13" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards><action no="17" player="Strik3rPo4ition" type="0" sum="0" cards=""/><action no="15" player="pistolpete9" type="5" sum="80" cards=""/><action no="16" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147059">
+		 <general>
+		  <startdate>2014-03-25 16:55:24</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,420" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,760" dealer="1" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="40" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="4" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="6" player="pistolpete9" type="23" sum="80" cards=""/><cards type="Pocket" player="moonbaseone">SJ CQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147184">
+		 <general>
+		  <startdate>2014-03-25 16:56:01</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,380" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,490" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,430" dealer="0" win="1,690" bet="1,430" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="23" sum="240" cards=""/><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="3" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="23" sum="80" cards=""/><action no="9" player="Strik3rPo4ition" type="23" sum="1,430" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="5" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 DJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147385">
+		 <general>
+		  <startdate>2014-03-25 16:57:00</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,250" dealer="0" win="540" bet="340" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,440" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,820" dealer="0" win="0" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="Kinjirushi" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="23" sum="160" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="8" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="4" player="pistolpete9" type="3" sum="40" cards=""/><action no="9" player="pistolpete9" type="3" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">C4 H9</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 HQ DQ</cards><action no="10" player="DONCorleoneXX" type="5" sum="180" cards=""/><action no="11" player="pistolpete9" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147593">
+		 <general>
+		  <startdate>2014-03-25 16:57:58</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,400" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,690" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kinjirushi" type="1" sum="20" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="7" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="pistolpete9">X X</cards><action no="3" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 SK</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601147805">
+		 <general>
+		  <startdate>2014-03-25 16:59:00</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,710" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,660" dealer="0" win="960" bet="615" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="315" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/><action no="2" player="pistolpete9" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="6" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="8" player="pistolpete9" type="3" sum="90" cards=""/><cards type="Pocket" player="moonbaseone">CQ CK</cards><action no="3" player="moonbaseone" type="23" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 S6 DA</cards><action no="9" player="pistolpete9" type="4" sum="0" cards=""/><action no="11" player="pistolpete9" type="3" sum="165" cards=""/><action no="10" player="moonbaseone" type="5" sum="165" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="12" player="pistolpete9" type="4" sum="0" cards=""/><action no="13" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards><action no="14" player="pistolpete9" type="5" sum="300" cards=""/><action no="15" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601148016">
+		 <general>
+		  <startdate>2014-03-25 17:00:01</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,680" dealer="1" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="2,005" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,125" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pistolpete9" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="5" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="120" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="7" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D6 D10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601148159">
+		 <general>
+		  <startdate>2014-03-25 17:00:34</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,380" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,975" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,065" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="60" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="4" player="Kinjirushi" type="23" sum="180" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="6" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C4 S4</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601159763">
+		 <general>
+		  <startdate>2014-03-25 17:01:19</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,300" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,450" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,975" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,035" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="23" sum="120" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="3" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="5" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 S8</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601159960">
+		 <general>
+		  <startdate>2014-03-25 17:02:02</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,390" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,470" dealer="0" win="750" bet="480" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,975" dealer="0" win="0" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,035" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="Kinjirushi" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="8" player="Kinjirushi" type="23" sum="240" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="4" player="pistolpete9" type="23" sum="120" cards=""/><action no="9" player="pistolpete9" type="3" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">S4 C6</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 DK HK</cards><action no="10" player="Kinjirushi" type="5" sum="240" cards=""/><action no="11" player="pistolpete9" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160174">
+		 <general>
+		  <startdate>2014-03-25 17:02:45</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,740" dealer="0" win="400" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,770" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,735" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,035" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kinjirushi" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="7" player="Kinjirushi" type="23" sum="300" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="3" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C3 DK</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160314">
+		 <general>
+		  <startdate>2014-03-25 17:03:14</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="1,360" dealer="0" win="0" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,670" dealer="0" win="1,300" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,735" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,035" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/><action no="2" player="pistolpete9" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">H7 C7</cards><action no="5" player="DONCorleoneXX" type="23" sum="200" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="6" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">H9 S9</cards><action no="7" player="Strik3rPo4ition" type="3" sum="150" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="8" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 S8</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ S6 HJ</cards><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="9" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards><action no="12" player="DONCorleoneXX" type="3" sum="200" cards=""/><action no="11" player="Strik3rPo4ition" type="5" sum="200" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards><action no="14" player="DONCorleoneXX" type="3" sum="200" cards=""/><action no="13" player="Strik3rPo4ition" type="5" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160518">
+		 <general>
+		  <startdate>2014-03-25 17:03:55</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,840" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,370" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,635" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,035" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pistolpete9" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="5" player="Kinjirushi" type="23" sum="300" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="7" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C8 D8</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160762">
+		 <general>
+		  <startdate>2014-03-25 17:04:43</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,360" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,585" dealer="1" win="550" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="935" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="4" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="6" player="pistolpete9" type="23" sum="400" cards=""/><cards type="Pocket" player="moonbaseone">DK S8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601160920">
+		 <general>
+		  <startdate>2014-03-25 17:05:13</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,260" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="760" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,735" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="885" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="3" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="5" player="pistolpete9" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">DA D10</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601179729">
+		 <general>
+		  <startdate>2014-03-25 17:06:09</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,210" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="660" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,990" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="885" dealer="0" win="1,035" bet="885" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="Kinjirushi" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="8" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="4" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA D8</cards><action no="5" player="moonbaseone" type="23" sum="885" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601179937">
+		 <general>
+		  <startdate>2014-03-25 17:06:49</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="610" dealer="1" win="835" bet="610" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,890" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,370" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,035" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kinjirushi" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="610" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="7" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="3" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 S3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180181">
+		 <general>
+		  <startdate>2014-03-25 17:07:33</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="835" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,815" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,220" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,885" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,035" dealer="0" win="1,260" bet="1,035" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/><action no="2" player="pistolpete9" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="6" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="8" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA CQ</cards><action no="3" player="moonbaseone" type="23" sum="1,035" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180349">
+		 <general>
+		  <startdate>2014-03-25 17:08:03</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="835" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,145" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,735" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,260" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="pistolpete9" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="5" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="7" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 S9</cards>
+	</round>
+	
+		</game><game gamecode="5601180477">
+		 <general>
+		  <startdate>2014-03-25 17:08:29</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,210" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="835" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,145" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,660" dealer="1" win="1,885" bet="1,660" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,335" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="4" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="6" player="pistolpete9" type="23" sum="1,660" cards=""/><cards type="Pocket" player="moonbaseone">CJ C2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180771">
+		 <general>
+		  <startdate>2014-03-25 17:09:27</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,060" dealer="0" win="1,210" bet="1,060" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="835" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,815" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,145" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,260" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="75" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="23" sum="1,060" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="3" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="5" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 HQ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601180907">
+		 <general>
+		  <startdate>2014-03-25 17:09:58</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,210" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="685" dealer="0" win="835" bet="685" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,815" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,145" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,260" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="Kinjirushi" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="23" sum="685" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="8" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="4" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 C8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601181019">
+		 <general>
+		  <startdate>2014-03-25 17:10:19</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,210" dealer="0" win="2,645" bet="1,210" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="835" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,665" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="2,145" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,260" dealer="0" win="50" bet="1,260" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kinjirushi" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">HK SA</cards><action no="5" player="VanTr4X" type="7" sum="1,210" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="7" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">X X</cards><action no="3" player="pistolpete9" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA H4</cards><action no="4" player="moonbaseone" type="23" sum="1,260" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 C9 D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards>
+	</round>
+	
+		</game><game gamecode="5601181192">
+		 <general>
+		  <startdate>2014-03-25 17:10:52</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="2,645" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DONCorleoneXX" chips="835" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Kinjirushi" chips="1,590" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Strik3rPo4ition" chips="1,995" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="pistolpete9" chips="1,885" dealer="0" win="475" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="50" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224204862"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="VanTr4X" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="Kinjirushi" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="7" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/><action no="2" player="pistolpete9" type="15" sum="25" cards="[cards]"/><action no="8" player="pistolpete9" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="10" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="Kinjirushi">X X</cards><action no="12" player="Kinjirushi" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="13" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="pistolpete9">C7 HA</cards><cards type="Pocket" player="moonbaseone">H7 C5</cards><action no="9" player="moonbaseone" type="7" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 HJ S3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards>
+	</round>
+	
+		</game>  
+	</session>

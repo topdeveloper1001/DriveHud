@@ -1,0 +1,422 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:control="clr-namespace:DriveHUD.Common.Wpf.Controls"
+                    xmlns:enum="clr-namespace:Model.Enums;assembly=Model">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DriveHUD.Common.Resources;component/Cards.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style x:Key="CardImageBinder" TargetType="control:CardImageControl">
+        <Style.Setters>
+            <Setter Property="Source" Value="{StaticResource CardBack}"/>
+        </Style.Setters>
+        <Style.Triggers>
+            <!--Clubs-->
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}"  Value="{x:Static enum:RangeCardRank.Two}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card2c}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Three}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card3c}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Four}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card4c}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Five}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card5c}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Six}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card6c}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Seven}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card7c}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Eight}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card8c}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Nine}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card9c}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Ten}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardTc}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Jack}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardJc}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Queen}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardQc}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.King}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardKc}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Ace}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardAc}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.None}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Clubs}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardClub}"/>
+            </MultiDataTrigger>
+            <!--End clubs-->
+
+            <!--Diamonds-->
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}"  Value="{x:Static enum:RangeCardRank.Two}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card2d}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Three}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card3d}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Four}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card4d}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Five}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card5d}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Six}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card6d}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Seven}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card7d}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Eight}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card8d}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Nine}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card9d}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Ten}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardTd}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Jack}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardJd}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Queen}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardQd}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.King}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardKd}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Ace}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardAd}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.None}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Diamonds}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardDiamond}"/>
+            </MultiDataTrigger>
+            <!--End Diamonds-->
+
+            <!--Hearts-->
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}"  Value="{x:Static enum:RangeCardRank.Two}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card2h}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Three}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card3h}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Four}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card4h}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Five}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card5h}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Six}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card6h}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Seven}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card7h}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Eight}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card8h}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Nine}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card9h}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Ten}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardTh}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Jack}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardJh}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Queen}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardQh}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.King}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardKh}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Ace}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardAh}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.None}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Hearts}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardHeart}"/>
+            </MultiDataTrigger>
+            <!--End Hearts-->
+
+            <!--Spades-->
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}"  Value="{x:Static enum:RangeCardRank.Two}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card2s}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Three}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card3s}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Four}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card4s}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Five}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card5s}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Six}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card6s}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Seven}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card7s}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Eight}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card8s}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Nine}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource Card9s}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Ten}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardTs}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Jack}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardJs}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Queen}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardQs}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.King}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardKs}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.Ace}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardAs}"/>
+            </MultiDataTrigger>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RankValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardRank.None}" />
+                    <Condition Binding="{Binding SuitValue, RelativeSource={RelativeSource Self}}" Value="{x:Static enum:RangeCardSuit.Spades}" />
+                </MultiDataTrigger.Conditions>
+                <Setter Property="Source" Value="{StaticResource CardSpade}"/>
+            </MultiDataTrigger>
+            <!--End Spades-->
+
+        </Style.Triggers>
+    </Style>
+
+</ResourceDictionary>

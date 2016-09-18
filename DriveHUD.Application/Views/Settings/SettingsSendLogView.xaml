@@ -1,0 +1,80 @@
+﻿<UserControl x:Class="DriveHUD.Application.Views.Settings.SettingsSendLogView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DriveHUD.Application.Views.Settings"
+             mc:Ignorable="d" 
+             Height="350"
+             Width="400">
+    <Border BorderBrush="{StaticResource BackgroundBrush3}" Padding="15" BorderThickness="1" Background="{StaticResource PopupBackground}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="{ResX Key=Settings_Name}" 
+                       Margin="15 5" Foreground="{StaticResource ForegroundBrush}"
+                       Style="{StaticResource Title_H2}" />
+
+                <TextBox Grid.Row="0" Grid.Column="1" 
+                     Margin="15 5" Foreground="White" 
+                     HorizontalAlignment="Stretch"
+                     Text="{Binding UserName, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="{ResX Key=Settings_Email}"  
+                       Margin="15 5" Foreground="{StaticResource ForegroundBrush}"
+                       Style="{StaticResource Title_H2}" />
+
+                <TextBox Grid.Row="1" Grid.Column="1" 
+                     Margin="15 5" Foreground="White" 
+                     HorizontalAlignment="Stretch" VerticalAlignment="Top"
+                     Text="{Binding UserEmail, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="{ResX Key=Settings_Message}"  
+                       Margin="15 5" Foreground="{StaticResource ForegroundBrush}"
+                       VerticalAlignment="Top"
+                       Style="{StaticResource Title_H2}" />
+
+                <TextBox Grid.Row="2" Grid.Column="1"
+                     Margin="15 5" Foreground="White" 
+                     HorizontalAlignment="Stretch"
+                     TextWrapping="Wrap" AcceptsReturn="True" 
+                     Height="150" MaxHeight="150"
+                     VerticalScrollBarVisibility="Auto"
+                     Text="{Binding UserMessage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
+            </Grid>
+
+            <Button Grid.Row="1"
+                Height="30" Width="150" Margin="15" 
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Content="{ResX Key=Common_Send}"
+                Command="{Binding SendMessageCommand}"/>
+
+            <dh:ProgressBarEx Grid.Row="2" Height="20"
+                          IsIndeterminate="True"
+                          BorderBrush="{StaticResource BackgroundBrush4}"
+                          BorderThickness="1"
+                          Margin="15"
+                          VerticalAlignment="Bottom"
+                          Visibility="{Binding IsSending, Converter={dh:BoolToVisibilityConverter} }"
+                          Style="{StaticResource ProgressBarExStyle1}"/>
+        </Grid>
+    </Border>
+</UserControl>

@@ -1,0 +1,631 @@
+#Game No : 553815000
+***** 888poker Hand History for Game 553815000 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:20:57
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $1,000 )
+Seat 2: nonameeeee ( $2,000 )
+Seat 4: BlowJOBama ( $1,200 )
+Seat 6: mayothedon ( $2,000 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,000 )
+rudy0014 posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama raises [$54]
+mayothedon folds
+IWontBluffU folds
+GreenHullK folds
+rudy0014 folds
+nonameeeee folds
+** Summary **
+BlowJOBama did not show his hand
+BlowJOBama collected [ $50 ]
+
+
+#Game No : 553815014
+***** 888poker Hand History for Game 553815014 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:21:18
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $990 )
+Seat 2: nonameeeee ( $1,980 )
+Seat 4: BlowJOBama ( $1,230 )
+Seat 6: mayothedon ( $2,000 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,000 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+mayothedon folds
+IWontBluffU raises [$50]
+GreenHullK folds
+rudy0014 folds
+nonameeeee folds
+BlowJOBama calls [$30]
+** Dealing flop ** [ 2s, Ah, 7s ]
+BlowJOBama checks
+IWontBluffU bets [$27]
+BlowJOBama folds
+** Summary **
+IWontBluffU did not show his hand
+IWontBluffU collected [ $106 ]
+
+
+#Game No : 553815046
+***** 888poker Hand History for Game 553815046 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:22:01
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $990 )
+Seat 2: nonameeeee ( $1,970 )
+Seat 4: BlowJOBama ( $1,200 )
+Seat 6: mayothedon ( $2,000 )
+Seat 7: IWontBluffU ( $2,056 )
+Seat 9: GreenHullK ( $2,000 )
+BlowJOBama posts small blind [$10]
+mayothedon posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+GreenHullK folds
+rudy0014 calls [$20]
+nonameeeee folds
+BlowJOBama folds
+mayothedon raises [$50]
+rudy0014 calls [$50]
+** Dealing flop ** [ 2h, 9h, 2c ]
+mayothedon bets [$60]
+rudy0014 folds
+** Summary **
+mayothedon did not show his hand
+mayothedon collected [ $146 ]
+
+
+#Game No : 553815075
+***** 888poker Hand History for Game 553815075 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:22:32
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $920 )
+Seat 2: nonameeeee ( $1,970 )
+Seat 4: BlowJOBama ( $1,200 )
+Seat 6: mayothedon ( $2,076 )
+Seat 7: IWontBluffU ( $2,056 )
+Seat 9: GreenHullK ( $2,000 )
+mayothedon posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+GreenHullK raises [$60]
+rudy0014 calls [$60]
+nonameeeee folds
+BlowJOBama calls [$60]
+mayothedon folds
+IWontBluffU calls [$40]
+** Dealing flop ** [ 8c, 5d, Th ]
+IWontBluffU bets [$187.50]
+GreenHullK calls [$187.50]
+rudy0014 folds
+BlowJOBama folds
+** Dealing turn ** [ 9d ]
+IWontBluffU bets [$217]
+GreenHullK calls [$217]
+** Dealing river ** [ 3h ]
+IWontBluffU bets [$379]
+GreenHullK raises [$1,535.50]
+IWontBluffU folds
+** Summary **
+GreenHullK did not show his hand
+GreenHullK collected [ $1,813 ]
+
+
+#Game No : 553815129
+***** 888poker Hand History for Game 553815129 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:24:02
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $860 )
+Seat 2: nonameeeee ( $1,970 )
+Seat 4: BlowJOBama ( $1,200 )
+Seat 6: mayothedon ( $2,066 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,969.50 )
+IWontBluffU posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+rudy0014 calls [$20]
+nonameeeee folds
+BlowJOBama raises [$75]
+mayothedon folds
+IWontBluffU calls [$65]
+GreenHullK folds
+rudy0014 calls [$55]
+** Dealing flop ** [ Ac, 5c, Ts ]
+IWontBluffU checks
+rudy0014 checks
+BlowJOBama bets [$122.50]
+IWontBluffU folds
+rudy0014 folds
+** Summary **
+BlowJOBama did not show his hand
+BlowJOBama collected [ $241 ]
+
+
+#Game No : 553815151
+***** 888poker Hand History for Game 553815151 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:24:42
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $785 )
+Seat 2: nonameeeee ( $1,970 )
+Seat 4: BlowJOBama ( $1,366 )
+Seat 6: mayothedon ( $2,066 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,949.50 )
+GreenHullK posts small blind [$10]
+rudy0014 posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+BlowJOBama folds
+mayothedon folds
+IWontBluffU raises [$60]
+GreenHullK folds
+rudy0014 calls [$40]
+** Dealing flop ** [ 2d, 5c, Ac ]
+rudy0014 bets [$20]
+IWontBluffU folds
+** Summary **
+rudy0014 did not show his hand
+rudy0014 collected [ $126 ]
+
+
+#Game No : 553815180
+***** 888poker Hand History for Game 553815180 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:25:22
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $851 )
+Seat 2: nonameeeee ( $1,970 )
+Seat 4: BlowJOBama ( $1,366 )
+Seat 6: mayothedon ( $2,066 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,939.50 )
+rudy0014 posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+mayothedon raises [$50]
+IWontBluffU folds
+GreenHullK calls [$50]
+rudy0014 calls [$40]
+nonameeeee folds
+** Dealing flop ** [ Ks, Ad, 8d ]
+rudy0014 checks
+mayothedon bets [$80]
+GreenHullK folds
+rudy0014 folds
+** Summary **
+mayothedon did not show his hand
+mayothedon collected [ $166 ]
+
+
+#Game No : 553815195
+***** 888poker Hand History for Game 553815195 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:25:56
+Table Downey 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $801 )
+Seat 2: nonameeeee ( $1,950 )
+Seat 4: BlowJOBama ( $1,366 )
+Seat 6: mayothedon ( $2,182 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,889.50 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+mayothedon raises [$50]
+IWontBluffU folds
+GreenHullK folds
+rudy0014 calls [$50]
+nonameeeee folds
+BlowJOBama calls [$30]
+** Dealing flop ** [ 5c, Ks, 6s ]
+BlowJOBama checks
+mayothedon bets [$80]
+rudy0014 raises [$160]
+BlowJOBama raises [$370]
+mayothedon folds
+rudy0014 calls [$210]
+** Dealing turn ** [ Qh ]
+BlowJOBama bets [$620]
+rudy0014 calls [$381]
+** Dealing river ** [ 9d ]
+** Summary **
+rudy0014 shows [ 5d, Kd ]
+BlowJOBama shows [ Td, Kh ]
+rudy0014 collected [ $1,738 ]
+
+
+#Game No : 553815238
+***** 888poker Hand History for Game 553815238 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:27:04
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $1,738 )
+Seat 2: nonameeeee ( $1,940 )
+Seat 4: BlowJOBama ( $2,000 )
+Seat 6: mayothedon ( $2,052 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,889.50 )
+BlowJOBama posts small blind [$10]
+mayothedon posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+GreenHullK folds
+rudy0014 calls [$20]
+nonameeeee raises [$80]
+BlowJOBama folds
+mayothedon folds
+rudy0014 calls [$60]
+** Dealing flop ** [ 8h, 3h, 8d ]
+rudy0014 bets [$190]
+nonameeeee calls [$190]
+** Dealing turn ** [ 5d ]
+rudy0014 checks
+nonameeeee bets [$380]
+rudy0014 calls [$380]
+** Dealing river ** [ Qc ]
+rudy0014 checks
+nonameeeee bets [$1,088]
+rudy0014 folds
+** Summary **
+nonameeeee did not show his hand
+nonameeeee collected [ $1,326 ]
+
+
+#Game No : 553815279
+***** 888poker Hand History for Game 553815279 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:28:11
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $1,088 )
+Seat 2: nonameeeee ( $2,616 )
+Seat 4: BlowJOBama ( $2,000 )
+Seat 6: mayothedon ( $2,032 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,889.50 )
+mayothedon posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+rudy0014 calls [$20]
+nonameeeee raises [$80]
+BlowJOBama calls [$80]
+mayothedon folds
+IWontBluffU calls [$60]
+rudy0014 calls [$60]
+** Dealing flop ** [ Qc, 7h, 7d ]
+IWontBluffU checks
+rudy0014 checks
+nonameeeee checks
+BlowJOBama bets [$100]
+IWontBluffU folds
+rudy0014 folds
+nonameeeee folds
+** Summary **
+BlowJOBama did not show his hand
+BlowJOBama collected [ $326 ]
+
+
+#Game No : 553815305
+***** 888poker Hand History for Game 553815305 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:28:50
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: rudy0014 ( $1,008 )
+Seat 2: nonameeeee ( $2,536 )
+Seat 4: BlowJOBama ( $2,246 )
+Seat 6: mayothedon ( $2,022 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,889.50 )
+IWontBluffU posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+rudy0014 calls [$20]
+nonameeeee folds
+BlowJOBama raises [$75]
+mayothedon folds
+IWontBluffU folds
+GreenHullK folds
+rudy0014 calls [$55]
+** Dealing flop ** [ Ac, 3d, 3c ]
+rudy0014 checks
+BlowJOBama bets [$80]
+rudy0014 calls [$80]
+** Dealing turn ** [ Kc ]
+rudy0014 checks
+BlowJOBama bets [$170]
+rudy0014 calls [$170]
+** Dealing river ** [ Ad ]
+rudy0014 bets [$680]
+BlowJOBama calls [$680]
+** Summary **
+rudy0014 shows [ Ks, Qh ]
+BlowJOBama shows [ 8h, Ah ]
+BlowJOBama collected [ $2,036 ]
+
+
+#Game No : 553815344
+***** 888poker Hand History for Game 553815344 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:29:52
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 2: nonameeeee ( $2,536 )
+Seat 4: BlowJOBama ( $3,277 )
+Seat 6: mayothedon ( $2,022 )
+Seat 7: IWontBluffU ( $2,000 )
+Seat 9: GreenHullK ( $2,869.50 )
+GreenHullK posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+mayothedon folds
+IWontBluffU raises [$60]
+GreenHullK folds
+nonameeeee folds
+** Summary **
+IWontBluffU collected [ $50 ]
+
+
+#Game No : 553815366
+***** 888poker Hand History for Game 553815366 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:30:19
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 2: nonameeeee ( $2,516 )
+Seat 4: BlowJOBama ( $3,277 )
+Seat 6: mayothedon ( $2,022 )
+Seat 7: IWontBluffU ( $2,030 )
+Seat 9: GreenHullK ( $2,859.50 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+mayothedon raises [$50]
+IWontBluffU folds
+GreenHullK folds
+nonameeeee folds
+BlowJOBama folds
+** Summary **
+mayothedon collected [ $50 ]
+
+
+#Game No : 553815382
+***** 888poker Hand History for Game 553815382 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:30:38
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: nonameeeee ( $2,506 )
+Seat 4: BlowJOBama ( $3,257 )
+Seat 6: mayothedon ( $2,052 )
+Seat 7: IWontBluffU ( $2,030 )
+Seat 9: GreenHullK ( $2,859.50 )
+BlowJOBama posts small blind [$10]
+mayothedon posts big blind [$20]
+** Dealing down cards **
+IWontBluffU folds
+GreenHullK folds
+nonameeeee folds
+BlowJOBama folds
+** Summary **
+mayothedon collected [ $30 ]
+
+
+#Game No : 553815390
+***** 888poker Hand History for Game 553815390 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:30:50
+Table Downey 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: nonameeeee ( $2,506 )
+Seat 4: BlowJOBama ( $3,247 )
+Seat 6: mayothedon ( $2,062 )
+Seat 7: IWontBluffU ( $2,030 )
+Seat 9: GreenHullK ( $2,859.50 )
+mayothedon posts small blind [$10]
+IWontBluffU posts big blind [$20]
+** Dealing down cards **
+GreenHullK folds
+nonameeeee folds
+BlowJOBama folds
+mayothedon calls [$10]
+IWontBluffU raises [$64]
+mayothedon folds
+** Summary **
+IWontBluffU collected [ $40 ]
+
+
+#Game No : 553815411
+***** 888poker Hand History for Game 553815411 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:31:25
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: nonameeeee ( $2,506 )
+Seat 4: BlowJOBama ( $3,247 )
+Seat 6: mayothedon ( $2,042 )
+Seat 7: IWontBluffU ( $2,050 )
+Seat 9: GreenHullK ( $2,859.50 )
+IWontBluffU posts small blind [$10]
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+BlowJOBama folds
+mayothedon raises [$50]
+IWontBluffU folds
+GreenHullK raises [$180]
+mayothedon calls [$150]
+** Dealing flop ** [ 4d, Ad, Jh ]
+GreenHullK checks
+mayothedon checks
+** Dealing turn ** [ 2h ]
+GreenHullK bets [$307.50]
+mayothedon calls [$307.50]
+** Dealing river ** [ 4s ]
+GreenHullK checks
+mayothedon checks
+** Summary **
+GreenHullK shows [ 7h, 9h ]
+mayothedon shows [ Kd, Td ]
+mayothedon collected [ $1,021 ]
+
+
+#Game No : 553815458
+***** 888poker Hand History for Game 553815458 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:32:59
+Table Downey 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 2: nonameeeee ( $2,506 )
+Seat 4: BlowJOBama ( $3,247 )
+Seat 6: mayothedon ( $2,555.50 )
+Seat 7: IWontBluffU ( $2,040 )
+Seat 9: GreenHullK ( $2,352 )
+GreenHullK posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+BlowJOBama folds
+mayothedon folds
+IWontBluffU folds
+GreenHullK raises [$50]
+nonameeeee raises [$170]
+GreenHullK raises [$420]
+nonameeeee calls [$290]
+** Dealing flop ** [ Kc, 5s, 8h ]
+GreenHullK bets [$340]
+nonameeeee calls [$340]
+** Dealing turn ** [ Ks ]
+GreenHullK checks
+nonameeeee checks
+** Dealing river ** [ 5h ]
+GreenHullK bets [$1,532]
+nonameeeee calls [$1,532]
+** Summary **
+nonameeeee shows [ Kh, Th ]
+GreenHullK shows [ 5c, 7c ]
+nonameeeee collected [ $4,700 ]
+
+
+#Game No : 553815511
+***** 888poker Hand History for Game 553815511 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:34:33
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 2: nonameeeee ( $4,854 )
+Seat 4: BlowJOBama ( $3,247 )
+Seat 6: mayothedon ( $2,555.50 )
+Seat 7: IWontBluffU ( $2,040 )
+Seat 9: GreenHullK ( $2,000 )
+nonameeeee posts small blind [$10]
+BlowJOBama posts big blind [$20]
+** Dealing down cards **
+mayothedon folds
+IWontBluffU folds
+GreenHullK raises [$50]
+nonameeeee folds
+BlowJOBama calls [$30]
+** Dealing flop ** [ Qc, 6h, Qh ]
+BlowJOBama checks
+GreenHullK bets [$40]
+BlowJOBama folds
+** Summary **
+GreenHullK did not show his hand
+GreenHullK collected [ $106 ]
+
+
+#Game No : 553815522
+***** 888poker Hand History for Game 553815522 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:34:56
+Table Downey 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: nonameeeee ( $4,844 )
+Seat 4: BlowJOBama ( $3,197 )
+Seat 6: mayothedon ( $2,555.50 )
+Seat 7: IWontBluffU ( $2,040 )
+Seat 9: GreenHullK ( $2,056 )
+BlowJOBama folds
+mayothedon posts small blind [$10]
+IWontBluffU folds
+GreenHullK posts big blind [$20]
+** Dealing down cards **
+nonameeeee folds
+mayothedon calls [$10]
+GreenHullK checks
+** Dealing flop ** [ Ts, 3c, Ac ]
+mayothedon bets [$20]
+GreenHullK folds
+** Summary **
+mayothedon did not show his hand
+mayothedon collected [ $38 ]
+
+
+#Game No : 553815542
+***** 888poker Hand History for Game 553815542 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:35:27
+Table Downey 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 2: nonameeeee ( $4,844 )
+Seat 6: mayothedon ( $2,573.50 )
+Seat 9: GreenHullK ( $2,036 )
+GreenHullK posts small blind [$10]
+nonameeeee posts big blind [$20]
+** Dealing down cards **
+mayothedon raises [$50]
+GreenHullK raises [$170]
+nonameeeee folds
+mayothedon raises [$430]
+GreenHullK folds
+** Summary **
+mayothedon did not show his hand
+mayothedon collected [ $380 ]
+
+
+#Game No : 553815579
+***** 888poker Hand History for Game 553815579 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 02:36:22
+Table Downey 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: nonameeeee ( $4,824 )
+Seat 6: mayothedon ( $2,773.50 )
+Seat 9: GreenHullK ( $2,000 )
+nonameeeee posts small blind [$10]
+mayothedon posts big blind [$20]
+** Dealing down cards **
+GreenHullK raises [$50]
+nonameeeee raises [$174]
+mayothedon folds
+GreenHullK calls [$134]
+** Dealing flop ** [ 2c, 8c, Qd ]
+nonameeeee bets [$133]
+GreenHullK folds
+** Summary **
+nonameeeee did not show his hand
+nonameeeee collected [ $385.50 ]
+
+

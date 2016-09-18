@@ -1,0 +1,553 @@
+#Game No : 406806288
+***** 888poker Hand History for Game 406806288 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:40:18
+Table Junin 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: nannacaz ( $0.32 )
+Seat 3: fuzzy103222 ( $0.38 )
+Seat 5: valester ( $0.74 )
+Seat 6: jaxsu ( $1.21 )
+Seat 9: silvano_br ( $0.26 )
+silvano_br posts small blind [$0.01]
+nannacaz posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+valester folds
+jaxsu folds
+silvano_br calls [$0.03]
+nannacaz calls [$0.02]
+** Dealing flop ** [ 9c, 7s, Ts ]
+silvano_br checks
+nannacaz checks
+fuzzy103222 bets [$0.02]
+silvano_br calls [$0.02]
+nannacaz calls [$0.02]
+** Dealing turn ** [ 9d ]
+silvano_br checks
+nannacaz checks
+fuzzy103222 bets [$0.04]
+silvano_br calls [$0.04]
+nannacaz folds
+** Dealing river ** [ 2h ]
+silvano_br checks
+fuzzy103222 checks
+** Summary **
+silvano_br shows [ Qc, 8h ]
+fuzzy103222 shows [ Jd, Qh ]
+fuzzy103222 collected [ $0.25 ]
+
+
+#Game No : 406806362
+***** 888poker Hand History for Game 406806362 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:40:52
+Table Junin 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: nannacaz ( $0.26 )
+Seat 3: fuzzy103222 ( $0.53 )
+Seat 5: valester ( $0.74 )
+Seat 6: jaxsu ( $1.21 )
+Seat 9: silvano_br ( $0.16 )
+nannacaz posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+valester folds
+jaxsu calls [$0.02]
+silvano_br raises [$0.04]
+nannacaz calls [$0.03]
+fuzzy103222 folds
+jaxsu calls [$0.02]
+** Dealing flop ** [ Jh, 6h, Td ]
+nannacaz checks
+jaxsu checks
+silvano_br bets [$0.02]
+nannacaz calls [$0.02]
+jaxsu calls [$0.02]
+** Dealing turn ** [ 2h ]
+nannacaz checks
+jaxsu checks
+silvano_br bets [$0.04]
+nannacaz calls [$0.04]
+jaxsu folds
+** Dealing river ** [ 5s ]
+nannacaz checks
+silvano_br bets [$0.04]
+nannacaz calls [$0.04]
+** Summary **
+silvano_br shows [ Th, Ad ]
+nannacaz mucks [ Qd, 6d ]
+silvano_br collected [ $0.35 ]
+
+
+#Game No : 406806413
+***** 888poker Hand History for Game 406806413 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:41:36
+Table Junin 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: nannacaz ( $0.12 )
+Seat 3: fuzzy103222 ( $0.51 )
+Seat 5: valester ( $0.74 )
+Seat 9: silvano_br ( $0.37 )
+fuzzy103222 posts small blind [$0.01]
+valester posts big blind [$0.02]
+** Dealing down cards **
+silvano_br raises [$0.04]
+nannacaz calls [$0.04]
+fuzzy103222 calls [$0.03]
+valester calls [$0.02]
+** Dealing flop ** [ 4d, 7s, 2c ]
+fuzzy103222 bets [$0.02]
+valester folds
+silvano_br folds
+nannacaz folds
+** Summary **
+fuzzy103222 collected [ $0.16 ]
+
+
+#Game No : 406806459
+***** 888poker Hand History for Game 406806459 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:42:11
+Table Junin 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 4
+Seat 1: nannacaz ( $0.08 )
+Seat 3: fuzzy103222 ( $0.63 )
+Seat 5: valester ( $0.70 )
+Seat 9: silvano_br ( $0.33 )
+valester posts small blind [$0.01]
+silvano_br posts big blind [$0.02]
+** Dealing down cards **
+nannacaz calls [$0.02]
+fuzzy103222 raises [$0.04]
+valester folds
+silvano_br calls [$0.02]
+nannacaz folds
+** Dealing flop ** [ Ad, 9c, Tc ]
+silvano_br checks
+fuzzy103222 bets [$0.02]
+silvano_br folds
+** Summary **
+fuzzy103222 collected [ $0.11 ]
+
+
+#Game No : 406806488
+***** 888poker Hand History for Game 406806488 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:42:34
+Table Junin 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 1: nannacaz ( $0.06 )
+Seat 3: fuzzy103222 ( $0.70 )
+Seat 5: valester ( $0.69 )
+Seat 9: silvano_br ( $0.29 )
+silvano_br posts small blind [$0.01]
+nannacaz posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+valester folds
+silvano_br folds
+nannacaz calls [$0.02]
+** Dealing flop ** [ 7h, 2d, 3s ]
+nannacaz checks
+fuzzy103222 bets [$0.02]
+nannacaz calls [$0.02]
+** Dealing turn ** [ 7d ]
+** Dealing river ** [ Jh ]
+** Summary **
+nannacaz shows [ Ts, As ]
+fuzzy103222 shows [ Kh, Ks ]
+fuzzy103222 collected [ $0.13 ]
+
+
+#Game No : 406806519
+***** 888poker Hand History for Game 406806519 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:43:01
+Table Junin 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.77 )
+Seat 5: valester ( $0.69 )
+Seat 9: silvano_br ( $0.28 )
+fuzzy103222 posts small blind [$0.01]
+valester posts big blind [$0.02]
+** Dealing down cards **
+silvano_br raises [$0.04]
+fuzzy103222 folds
+valester calls [$0.02]
+** Dealing flop ** [ 4s, 9d, Ts ]
+valester checks
+silvano_br bets [$0.02]
+valester calls [$0.02]
+** Dealing turn ** [ 2s ]
+valester checks
+silvano_br bets [$0.04]
+valester calls [$0.04]
+** Dealing river ** [ 5c ]
+valester checks
+silvano_br bets [$0.04]
+valester folds
+** Summary **
+silvano_br collected [ $0.20 ]
+
+
+#Game No : 406806613
+***** 888poker Hand History for Game 406806613 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:44:18
+Table Junin 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.76 )
+Seat 5: valester ( $0.59 )
+Seat 9: silvano_br ( $0.38 )
+valester posts small blind [$0.01]
+silvano_br posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 folds
+valester folds
+** Summary **
+silvano_br collected [ $0.03 ]
+
+
+#Game No : 406806631
+***** 888poker Hand History for Game 406806631 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:44:31
+Table Junin 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.76 )
+Seat 5: valester ( $0.58 )
+Seat 9: silvano_br ( $0.39 )
+silvano_br posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+valester raises [$0.04]
+silvano_br calls [$0.03]
+fuzzy103222 raises [$0.04]
+valester raises [$0.04]
+silvano_br calls [$0.04]
+fuzzy103222 calls [$0.02]
+** Dealing flop ** [ 2d, 5h, 7s ]
+silvano_br checks
+fuzzy103222 bets [$0.02]
+valester raises [$0.04]
+silvano_br folds
+fuzzy103222 calls [$0.02]
+** Dealing turn ** [ 9h ]
+fuzzy103222 checks
+valester bets [$0.04]
+fuzzy103222 calls [$0.04]
+** Dealing river ** [ 3h ]
+fuzzy103222 checks
+valester bets [$0.04]
+fuzzy103222 folds
+** Summary **
+valester collected [ $0.38 ]
+
+
+#Game No : 406806721
+***** 888poker Hand History for Game 406806721 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:45:36
+Table Junin 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.60 )
+Seat 5: valester ( $0.80 )
+Seat 9: silvano_br ( $0.31 )
+fuzzy103222 posts small blind [$0.01]
+valester posts big blind [$0.02]
+** Dealing down cards **
+silvano_br folds
+fuzzy103222 folds
+** Summary **
+valester collected [ $0.03 ]
+
+
+#Game No : 406806735
+***** 888poker Hand History for Game 406806735 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:45:47
+Table Junin 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.59 )
+Seat 5: valester ( $0.81 )
+Seat 9: silvano_br ( $0.31 )
+valester posts small blind [$0.01]
+silvano_br posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+valester folds
+silvano_br calls [$0.02]
+** Dealing flop ** [ 8h, Tc, 6d ]
+silvano_br checks
+fuzzy103222 checks
+** Dealing turn ** [ Js ]
+silvano_br checks
+fuzzy103222 checks
+** Dealing river ** [ 9s ]
+silvano_br checks
+fuzzy103222 checks
+** Summary **
+silvano_br shows [ Kc, 3d ]
+fuzzy103222 shows [ 4h, Kd ]
+fuzzy103222 collected [ $0.04 ]
+silvano_br collected [ $0.05 ]
+
+
+#Game No : 406806784
+***** 888poker Hand History for Game 406806784 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:46:26
+Table Junin 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.59 )
+Seat 5: valester ( $0.80 )
+Seat 9: silvano_br ( $0.32 )
+silvano_br posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+valester calls [$0.02]
+silvano_br folds
+fuzzy103222 checks
+** Dealing flop ** [ 6d, Qh, 4s ]
+fuzzy103222 bets [$0.02]
+valester calls [$0.02]
+** Dealing turn ** [ Ac ]
+fuzzy103222 bets [$0.04]
+valester folds
+** Summary **
+fuzzy103222 collected [ $0.09 ]
+
+
+#Game No : 406806815
+***** 888poker Hand History for Game 406806815 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:46:59
+Table Junin 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.64 )
+Seat 5: valester ( $0.76 )
+Seat 9: silvano_br ( $0.31 )
+fuzzy103222 posts small blind [$0.01]
+valester posts big blind [$0.02]
+** Dealing down cards **
+silvano_br raises [$0.04]
+fuzzy103222 calls [$0.03]
+valester raises [$0.04]
+silvano_br calls [$0.02]
+fuzzy103222 calls [$0.02]
+** Dealing flop ** [ 5s, Jh, Tc ]
+fuzzy103222 checks
+valester checks
+silvano_br bets [$0.02]
+fuzzy103222 folds
+valester calls [$0.02]
+** Dealing turn ** [ 7s ]
+valester checks
+silvano_br bets [$0.04]
+valester calls [$0.04]
+** Dealing river ** [ Qh ]
+valester checks
+silvano_br checks
+** Summary **
+valester shows [ Ks, Ah ]
+silvano_br mucks [ 6h, Jd ]
+valester collected [ $0.29 ]
+
+
+#Game No : 406806871
+***** 888poker Hand History for Game 406806871 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:47:48
+Table Junin 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.58 )
+Seat 5: valester ( $0.93 )
+Seat 9: silvano_br ( $0.19 )
+valester posts small blind [$0.01]
+silvano_br posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 folds
+valester folds
+** Summary **
+silvano_br collected [ $0.03 ]
+
+
+#Game No : 406806885
+***** 888poker Hand History for Game 406806885 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:48:01
+Table Junin 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.58 )
+Seat 5: valester ( $0.92 )
+Seat 9: silvano_br ( $0.20 )
+silvano_br posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+valester folds
+silvano_br raises [$0.03]
+fuzzy103222 folds
+** Summary **
+silvano_br collected [ $0.04 ]
+
+
+#Game No : 406806954
+***** 888poker Hand History for Game 406806954 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:49:00
+Table Junin 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.77 )
+Seat 4: Dragiza ( $0.60 )
+Seat 9: silvano_br ( $0.20 )
+fuzzy103222 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+silvano_br raises [$0.04]
+fuzzy103222 calls [$0.03]
+Dragiza calls [$0.02]
+** Dealing flop ** [ Tc, Kh, 7s ]
+fuzzy103222 bets [$0.02]
+Dragiza folds
+silvano_br calls [$0.02]
+** Dealing turn ** [ Qd ]
+fuzzy103222 bets [$0.04]
+silvano_br raises [$0.08]
+fuzzy103222 calls [$0.04]
+** Dealing river ** [ 4s ]
+fuzzy103222 checks
+silvano_br bets [$0.04]
+fuzzy103222 calls [$0.04]
+** Summary **
+silvano_br shows [ Kc, Jc ]
+fuzzy103222 mucks [ 8s, Ks ]
+silvano_br collected [ $0.38 ]
+
+
+#Game No : 406807006
+***** 888poker Hand History for Game 406807006 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:49:43
+Table Junin 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.59 )
+Seat 4: Dragiza ( $0.56 )
+Seat 9: silvano_br ( $0.40 )
+Dragiza posts small blind [$0.01]
+silvano_br posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+Dragiza folds
+silvano_br calls [$0.02]
+** Dealing flop ** [ Qd, Js, 8h ]
+silvano_br checks
+fuzzy103222 bets [$0.02]
+silvano_br folds
+** Summary **
+fuzzy103222 collected [ $0.09 ]
+
+
+#Game No : 406807035
+***** 888poker Hand History for Game 406807035 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:50:11
+Table Junin 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.64 )
+Seat 4: Dragiza ( $0.55 )
+Seat 9: silvano_br ( $0.36 )
+silvano_br posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+silvano_br raises [$0.03]
+fuzzy103222 folds
+** Summary **
+silvano_br collected [ $0.04 ]
+
+
+#Game No : 406807050
+***** 888poker Hand History for Game 406807050 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:50:21
+Table Junin 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.62 )
+Seat 4: Dragiza ( $0.55 )
+Seat 9: silvano_br ( $0.38 )
+fuzzy103222 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+silvano_br folds
+fuzzy103222 calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ Jc, 2d, Kd ]
+fuzzy103222 bets [$0.02]
+Dragiza raises [$0.04]
+fuzzy103222 calls [$0.02]
+** Dealing turn ** [ 2c ]
+fuzzy103222 checks
+Dragiza checks
+** Dealing river ** [ 4s ]
+fuzzy103222 checks
+Dragiza checks
+** Summary **
+fuzzy103222 shows [ 4d, Kc ]
+Dragiza mucks [ Js, 8c ]
+fuzzy103222 collected [ $0.12 ]
+
+
+#Game No : 406807101
+***** 888poker Hand History for Game 406807101 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:51:06
+Table Junin 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.68 )
+Seat 4: Dragiza ( $0.49 )
+Seat 9: silvano_br ( $0.38 )
+Dragiza posts small blind [$0.01]
+silvano_br posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+Dragiza folds
+silvano_br calls [$0.02]
+** Dealing flop ** [ 9d, 8s, Ah ]
+silvano_br checks
+fuzzy103222 bets [$0.02]
+silvano_br calls [$0.02]
+** Dealing turn ** [ 5c ]
+silvano_br checks
+fuzzy103222 checks
+** Dealing river ** [ 7h ]
+silvano_br bets [$0.04]
+fuzzy103222 folds
+** Summary **
+silvano_br collected [ $0.13 ]
+
+
+#Game No : 406807149
+***** 888poker Hand History for Game 406807149 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:51:39
+Table Junin 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 3: fuzzy103222 ( $0.62 )
+Seat 4: Dragiza ( $0.48 )
+Seat 9: silvano_br ( $0.45 )
+silvano_br posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+Dragiza calls [$0.02]
+silvano_br folds
+fuzzy103222 checks
+** Dealing flop ** [ Tc, 6d, Ad ]
+fuzzy103222 checks
+Dragiza bets [$0.02]
+fuzzy103222 folds
+** Summary **
+Dragiza collected [ $0.05 ]
+
+

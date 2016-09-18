@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189513946">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 50c Double Up*4, 819272614</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:10</duration>  
+	          <gamecount>24</gamecount>  
+	          <startdate>2014-01-28 16:26:40</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>5,690</bets>  
+	          <wins>6,405</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,515</chipsout>
+			  		<ipoints>1.15</ipoints>
+        		<statuspoints>1.15</statuspoints>
+			  		<awardpoints>1.15</awardpoints>
+	          <tournamentname>‘Super Turbo’ 50c Double Up*4</tournamentname><place>1</place><buyin>€0.45+€0.05</buyin> <totalbuyin>€0.50</totalbuyin> <ipoints>1.15</ipoints> <win>€0.90</win> <statuspoints>1.15</statuspoints> <awardpoints>1.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5449229266">
+		 <general>
+		  <startdate>2014-01-28 16:26:40</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="800" dealer="1" win="249" bet="159" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="800" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="mandhiok" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">D8 SA</cards><action no="4" player="harry090909" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">S9 C6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="6" player="mandhiok" type="4" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="3" player="dejankurt" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 S3 DJ</cards><action no="9" player="harry090909" type="5" sum="20" cards=""/><action no="7" player="mandhiok" type="4" sum="0" cards=""/><action no="10" player="mandhiok" type="3" sum="20" cards=""/><action no="8" player="dejankurt" type="4" sum="0" cards=""/><action no="11" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="13" player="harry090909" type="4" sum="0" cards=""/><action no="12" player="mandhiok" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="15" player="harry090909" type="23" sum="119" cards=""/><action no="14" player="mandhiok" type="5" sum="20" cards=""/><action no="16" player="mandhiok" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449229899">
+		 <general>
+		  <startdate>2014-01-28 16:27:50</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="890" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="110" bet="60" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="740" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mandhiok" type="1" sum="10" cards="[cards]"/><action no="2" player="dejankurt" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="3" player="harry090909" type="3" sum="20" cards=""/><action no="7" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HK S10</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="5" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="6" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449230116">
+		 <general>
+		  <startdate>2014-01-28 16:28:16</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="870" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="840" dealer="0" win="80" bet="50" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="760" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="harry090909" type="2" sum="20" cards="[cards]"/><action no="1" player="dejankurt" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="6" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ DA</cards><action no="3" player="WorstCard" type="23" sum="50" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="4" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="5" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449230317">
+		 <general>
+		  <startdate>2014-01-28 16:28:38</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="850" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="870" dealer="0" win="90" bet="50" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="750" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="harry090909" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="5" player="harry090909" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">CK S9</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="3" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="4" player="dejankurt" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 S5 HK</cards><action no="7" player="harry090909" type="4" sum="0" cards=""/><action no="10" player="harry090909" type="0" sum="0" cards=""/><action no="8" player="WorstCard" type="5" sum="30" cards=""/><action no="9" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449230744">
+		 <general>
+		  <startdate>2014-01-28 16:29:29</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="830" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="910" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="730" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="730" dealer="0" win="75" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="mandhiok" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="4" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D2 C5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">C10 CJ</cards><action no="6" player="mandhiok" type="4" sum="0" cards=""/><cards type="Pocket" player="dejankurt">D5 CA</cards><action no="3" player="dejankurt" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ D3 S4</cards><action no="7" player="mandhiok" type="4" sum="0" cards=""/><action no="8" player="dejankurt" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="9" player="mandhiok" type="4" sum="0" cards=""/><action no="10" player="dejankurt" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards><action no="11" player="mandhiok" type="4" sum="0" cards=""/><action no="12" player="dejankurt" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449245322">
+		 <general>
+		  <startdate>2014-01-28 16:30:08</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="895" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="700" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="775" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mandhiok" type="1" sum="15" cards="[cards]"/><action no="2" player="dejankurt" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="3" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H10 D2</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="5" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449245532">
+		 <general>
+		  <startdate>2014-01-28 16:30:33</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="830" dealer="0" win="240" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="895" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="685" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="790" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="harry090909" type="2" sum="30" cards="[cards]"/><action no="1" player="dejankurt" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="6" player="harry090909" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 CA</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="4" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="5" player="dejankurt" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 SJ C3</cards><action no="8" player="harry090909" type="5" sum="30" cards=""/><action no="7" player="dejankurt" type="4" sum="0" cards=""/><action no="9" player="dejankurt" type="3" sum="30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards><action no="11" player="harry090909" type="5" sum="120" cards=""/><action no="10" player="dejankurt" type="4" sum="0" cards=""/><action no="12" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449245816">
+		 <general>
+		  <startdate>2014-01-28 16:31:04</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="890" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="895" dealer="0" win="985" bet="895" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="685" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="730" dealer="1" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="harry090909" type="15" sum="5" cards="[cards]"/><action no="5" player="harry090909" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="mandhiok" type="15" sum="5" cards="[cards]"/><action no="4" player="dejankurt" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="9" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D5 S5</cards><action no="10" player="WorstCard" type="23" sum="890" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="7" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="8" player="dejankurt" type="3" sum="50" cards=""/><action no="11" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449246051">
+		 <general>
+		  <startdate>2014-01-28 16:31:33</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="860" dealer="1" win="950" bet="860" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="985" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="680" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="675" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="harry090909" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="mandhiok" type="15" sum="5" cards="[cards]"/><action no="6" player="mandhiok" type="2" sum="50" cards="[cards]"/><action no="3" player="dejankurt" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="8" player="harry090909" type="23" sum="855" cards=""/><cards type="Pocket" player="WorstCard">S6 C2</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="10" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="7" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449246287">
+		 <general>
+		  <startdate>2014-01-28 16:31:59</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="950" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="955" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="625" dealer="0" win="690" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="670" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="harry090909" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="mandhiok" type="15" sum="5" cards="[cards]"/><action no="5" player="mandhiok" type="1" sum="25" cards="[cards]"/><action no="2" player="dejankurt" type="15" sum="5" cards="[cards]"/><action no="6" player="dejankurt" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="7" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 H7</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="9" player="mandhiok" type="23" sum="620" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="10" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449246496">
+		 <general>
+		  <startdate>2014-01-28 16:32:22</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="945" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="950" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="690" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="615" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="harry090909" type="15" sum="5" cards="[cards]"/><action no="6" player="harry090909" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="mandhiok" type="15" sum="5" cards="[cards]"/><action no="1" player="dejankurt" type="15" sum="5" cards="[cards]"/><action no="5" player="dejankurt" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">C5 SA</cards><cards type="Pocket" player="WorstCard">D7 D2</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="8" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="9" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449246679">
+		 <general>
+		  <startdate>2014-01-28 16:32:47</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="985" dealer="0" win="400" bet="985" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="945" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="685" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="585" dealer="1" win="1,290" bet="585" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="harry090909" type="15" sum="10" cards="[cards]"/><action no="5" player="harry090909" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="mandhiok" type="15" sum="10" cards="[cards]"/><action no="4" player="dejankurt" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">DA S4</cards><action no="9" player="harry090909" type="23" sum="975" cards=""/><cards type="Pocket" player="WorstCard">CQ DJ</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="7" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">DQ SQ</cards><action no="8" player="dejankurt" type="3" sum="100" cards=""/><action no="11" player="dejankurt" type="7" sum="475" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK D10 SJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards>
+	</round>
+	
+		</game><game gamecode="5449246931">
+		 <general>
+		  <startdate>2014-01-28 16:33:16</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="400" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="835" dealer="0" win="965" bet="835" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="675" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="1,290" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="harry090909" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="mandhiok" type="15" sum="10" cards="[cards]"/><action no="6" player="mandhiok" type="2" sum="100" cards="[cards]"/><action no="3" player="dejankurt" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="8" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 D2</cards><action no="9" player="WorstCard" type="23" sum="825" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="10" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="7" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449247152">
+		 <general>
+		  <startdate>2014-01-28 16:33:40</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="390" dealer="0" win="590" bet="310" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="965" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="565" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="1,280" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="harry090909" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="mandhiok" type="15" sum="10" cards="[cards]"/><action no="5" player="mandhiok" type="1" sum="50" cards="[cards]"/><action no="2" player="dejankurt" type="15" sum="10" cards="[cards]"/><action no="6" player="dejankurt" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">H9 S9</cards><action no="7" player="harry090909" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">DJ DQ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">X X</cards><action no="9" player="mandhiok" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="10" player="dejankurt" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA C4 C5</cards><action no="12" player="harry090909" type="5" sum="100" cards=""/><action no="11" player="dejankurt" type="4" sum="0" cards=""/><action no="13" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449247381">
+		 <general>
+		  <startdate>2014-01-28 16:34:06</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="670" dealer="0" win="1,080" bet="505" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="955" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189513946"/><player seat="7" name="mandhiok" chips="505" dealer="1" win="0" bet="505" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="dejankurt" chips="1,070" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="harry090909" type="15" sum="10" cards="[cards]"/><action no="6" player="harry090909" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="mandhiok" type="15" sum="10" cards="[cards]"/><action no="1" player="dejankurt" type="15" sum="10" cards="[cards]"/><action no="5" player="dejankurt" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">CK C9</cards><action no="10" player="harry090909" type="3" sum="395" cards=""/><cards type="Pocket" player="WorstCard">C5 DJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mandhiok">C2 DA</cards><action no="8" player="mandhiok" type="23" sum="495" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="9" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H7 S4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards>
+	</round>
+	
+		</game><game gamecode="5449247613">
+		 <general>
+		  <startdate>2014-01-28 16:34:34</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="1,245" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="945" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="1,010" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="harry090909" type="15" sum="10" cards="[cards]"/><action no="4" player="harry090909" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="dejankurt" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="7" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 CQ</cards><cards type="Pocket" player="dejankurt">X X</cards><action no="6" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449247760">
+		 <general>
+		  <startdate>2014-01-28 16:34:50</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="1,185" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,015" dealer="0" win="1,195" bet="1,015" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="1,000" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="harry090909" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="dejankurt" type="15" sum="15" cards="[cards]"/><action no="5" player="dejankurt" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="6" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 S7</cards><action no="7" player="WorstCard" type="23" sum="1,000" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="8" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449247909">
+		 <general>
+		  <startdate>2014-01-28 16:35:07</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="1,170" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,195" dealer="1" win="1,450" bet="1,195" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="835" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="harry090909" type="15" sum="15" cards="[cards]"/><action no="5" player="harry090909" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="dejankurt" type="15" sum="15" cards="[cards]"/><action no="4" player="dejankurt" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="8" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA DA</cards><action no="6" player="WorstCard" type="23" sum="1,180" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="7" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449248088">
+		 <general>
+		  <startdate>2014-01-28 16:35:28</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="1,005" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,450" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="745" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="harry090909" type="15" sum="15" cards="[cards]"/><action no="4" player="harry090909" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="dejankurt" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="7" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H7 HJ</cards><cards type="Pocket" player="dejankurt">X X</cards><action no="6" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449261526">
+		 <general>
+		  <startdate>2014-01-28 16:35:46</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="915" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,555" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="730" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="harry090909" type="15" sum="15" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="dejankurt" type="15" sum="15" cards="[cards]"/><action no="5" player="dejankurt" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="6" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SQ C6</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449261649">
+		 <general>
+		  <startdate>2014-01-28 16:36:02</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="900" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,465" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="835" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="harry090909" type="15" sum="15" cards="[cards]"/><action no="5" player="harry090909" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="dejankurt" type="15" sum="15" cards="[cards]"/><action no="4" player="dejankurt" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">CJ DJ</cards><cards type="Pocket" player="WorstCard">H3 DQ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="7" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449261766">
+		 <general>
+		  <startdate>2014-01-28 16:36:15</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="1,005" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,450" dealer="0" win="1,080" bet="675" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="745" dealer="1" win="0" bet="315" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="harry090909" type="15" sum="15" cards="[cards]"/><action no="4" player="harry090909" type="1" sum="75" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="dejankurt" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="7" player="harry090909" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D8 H10</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="6" player="dejankurt" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 S9 S10</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="dejankurt" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards><action no="11" player="WorstCard" type="5" sum="150" cards=""/><action no="12" player="dejankurt" type="3" sum="150" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards><action no="13" player="WorstCard" type="5" sum="360" cards=""/><action no="14" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449262043">
+		 <general>
+		  <startdate>2014-01-28 16:36:49</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="915" dealer="1" win="1,255" bet="915" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,855" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="430" dealer="0" win="0" bet="220" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="harry090909" type="15" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="100" cards="[cards]"/><action no="2" player="dejankurt" type="15" sum="20" cards="[cards]"/><action no="5" player="dejankurt" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">X X</cards><action no="6" player="harry090909" type="23" sum="895" cards=""/><cards type="Pocket" player="WorstCard">D3 C3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="dejankurt">X X</cards><action no="8" player="dejankurt" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449262214">
+		 <general>
+		  <startdate>2014-01-28 16:37:09</startdate>		  
+		  <players>
+		   <player seat="2" name="harry090909" chips="1,255" dealer="0" win="650" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="1,735" dealer="1" win="0" bet="220" rebuy="0" addon="0" reg_code="6189513946"/><player seat="9" name="dejankurt" chips="210" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="harry090909" type="15" sum="20" cards="[cards]"/><action no="5" player="harry090909" type="2" sum="200" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="20" cards="[cards]"/><action no="1" player="dejankurt" type="15" sum="20" cards="[cards]"/><action no="4" player="dejankurt" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="harry090909">S7 C3</cards><action no="8" player="harry090909" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SQ HK</cards><action no="6" player="WorstCard" type="3" sum="200" cards=""/><cards type="Pocket" player="dejankurt">S2 C5</cards><action no="7" player="dejankurt" type="7" sum="90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 H9 DA</cards><action no="9" player="harry090909" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S9</cards><action no="11" player="harry090909" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="13" player="harry090909" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

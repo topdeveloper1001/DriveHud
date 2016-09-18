@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="7777777">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.05/$0.1</gametype>
+    <tablename>Brad Pitt #268</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2016-08-01 11:37:15</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>    
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="4830566">
+    <general>
+      <startdate>2016-08-01 11:37:15</startdate>
+      <players>
+        <player seat="1" name="Lecter1978" chips="12.92" dealer="1" win="0" bet="0.3" rebuy="0" addon="0" />
+        <player seat="2" name="JessicaCDN" chips="11.94" dealer="0" win="1.2" bet="0.9" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="Lecter1978" type="1" sum="0.05" cards="" />
+      <action no="2" player="JessicaCDN" type="2" sum="0.1" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="Lecter1978">X X</cards>
+      <cards type="Pocket" player="JessicaCDN">X X</cards>
+      <action no="3" player="Lecter1978" type="23" sum="0.3" cards="" />
+      <action no="4" player="JessicaCDN" type="23" sum="0.9" cards="" />
+      <action no="5" player="Lecter1978" type="0" sum="0" cards="" />
+    </round>
+  </game>
+</session>

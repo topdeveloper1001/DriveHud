@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188237871">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819096170</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>16</gamecount>  
+	          <startdate>2014-01-26 16:00:01</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>4,076</bets>  
+	          <wins>3,276</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>3</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5438975612">
+		 <general>
+		  <startdate>2014-01-26 16:00:01</startdate>		  
+		  <players>
+		   <player seat="2" name="Shymaher1975" chips="800" dealer="1" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="HelmutK57" chips="800" dealer="0" win="200" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="HelmutK57" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Shymaher1975">SK D10</cards><action no="4" player="Shymaher1975" type="3" sum="20" cards=""/><cards type="Pocket" player="HelmutK57">D4 DQ</cards><action no="5" player="HelmutK57" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">S8 SA</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="3" player="maxwell2891" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 C9 HQ</cards><action no="10" player="Shymaher1975" type="3" sum="20" cards=""/><action no="7" player="HelmutK57" type="5" sum="20" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/><action no="9" player="maxwell2891" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="12" player="Shymaher1975" type="3" sum="20" cards=""/><action no="11" player="HelmutK57" type="5" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="14" player="Shymaher1975" type="3" sum="20" cards=""/><action no="13" player="HelmutK57" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5438975869">
+		 <general>
+		  <startdate>2014-01-26 16:00:37</startdate>		  
+		  <players>
+		   <player seat="2" name="Shymaher1975" chips="720" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="HelmutK57" chips="920" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="780" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="maxwell2891" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Shymaher1975">X X</cards><action no="3" player="Shymaher1975" type="0" sum="0" cards=""/><cards type="Pocket" player="HelmutK57">X X</cards><action no="4" player="HelmutK57" type="3" sum="20" cards=""/><action no="7" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SJ D8</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="6" player="maxwell2891" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5438976051">
+		 <general>
+		  <startdate>2014-01-26 16:01:00</startdate>		  
+		  <players>
+		   <player seat="2" name="Shymaher1975" chips="720" dealer="0" win="520" bet="280" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="HelmutK57" chips="900" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="120" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="810" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Shymaher1975" type="2" sum="20" cards="[cards]"/><action no="1" player="maxwell2891" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Shymaher1975">X X</cards><action no="6" player="Shymaher1975" type="23" sum="120" cards=""/><cards type="Pocket" player="HelmutK57">X X</cards><action no="3" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ SJ</cards><action no="4" player="WorstCard" type="23" sum="50" cards=""/><action no="7" player="WorstCard" type="3" sum="70" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="5" player="maxwell2891" type="3" sum="40" cards=""/><action no="8" player="maxwell2891" type="3" sum="70" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 SK C2</cards><action no="10" player="Shymaher1975" type="5" sum="160" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="9" player="maxwell2891" type="4" sum="0" cards=""/><action no="12" player="maxwell2891" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5438976342">
+		 <general>
+		  <startdate>2014-01-26 16:01:36</startdate>		  
+		  <players>
+		   <player seat="2" name="Shymaher1975" chips="960" dealer="0" win="200" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="HelmutK57" chips="900" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="650" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="690" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Shymaher1975" type="1" sum="10" cards="[cards]"/><action no="2" player="HelmutK57" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Shymaher1975">X X</cards><action no="5" player="Shymaher1975" type="3" sum="10" cards=""/><cards type="Pocket" player="HelmutK57">X X</cards><action no="6" player="HelmutK57" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 C8</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="4" player="maxwell2891" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ D4 SQ</cards><action no="7" player="Shymaher1975" type="5" sum="140" cards=""/><action no="8" player="HelmutK57" type="0" sum="0" cards=""/><action no="9" player="maxwell2891" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5438976518">
+		 <general>
+		  <startdate>2014-01-26 16:01:57</startdate>		  
+		  <players>
+		   <player seat="2" name="Shymaher1975" chips="1,000" dealer="1" win="210" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="HelmutK57" chips="880" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="650" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="670" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="HelmutK57" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Shymaher1975">X X</cards><action no="4" player="Shymaher1975" type="3" sum="20" cards=""/><cards type="Pocket" player="HelmutK57">X X</cards><action no="5" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CK C4</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="3" player="maxwell2891" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 CQ H9</cards><action no="9" player="Shymaher1975" type="5" sum="140" cards=""/><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/><action no="8" player="maxwell2891" type="4" sum="0" cards=""/><action no="11" player="maxwell2891" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5438976726">
+		 <general>
+		  <startdate>2014-01-26 16:02:28</startdate>		  
+		  <players>
+		   <player seat="2" name="Shymaher1975" chips="1,050" dealer="0" win="0" bet="650" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="HelmutK57" chips="870" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="630" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="650" dealer="0" win="1,315" bet="650" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="maxwell2891" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Shymaher1975">SJ H5</cards><action no="3" player="Shymaher1975" type="3" sum="30" cards=""/><action no="7" player="Shymaher1975" type="3" sum="60" cards=""/><cards type="Pocket" player="HelmutK57">X X</cards><action no="4" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 C2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">S5 S9</cards><action no="6" player="maxwell2891" type="23" sum="90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 HQ HJ</cards><action no="9" player="Shymaher1975" type="23" sum="180" cards=""/><action no="8" player="maxwell2891" type="5" sum="90" cards=""/><action no="10" player="maxwell2891" type="3" sum="90" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="12" player="Shymaher1975" type="3" sum="120" cards=""/><action no="11" player="maxwell2891" type="5" sum="120" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards><action no="14" player="Shymaher1975" type="3" sum="260" cards=""/><action no="13" player="maxwell2891" type="5" sum="260" cards=""/>
+	</round>
+	
+		</game><game gamecode="5438977060">
+		 <general>
+		  <startdate>2014-01-26 16:03:06</startdate>		  
+		  <players>
+		   <player seat="2" name="Shymaher1975" chips="400" dealer="0" win="0" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="HelmutK57" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="615" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="1,315" dealer="0" win="940" bet="540" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="Shymaher1975" type="2" sum="30" cards="[cards]"/><action no="1" player="maxwell2891" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="Shymaher1975">CA S3</cards><action no="6" player="Shymaher1975" type="23" sum="90" cards=""/><cards type="Pocket" player="HelmutK57">X X</cards><action no="3" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C2 DQ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">SJ S5</cards><action no="5" player="maxwell2891" type="23" sum="60" cards=""/><action no="7" player="maxwell2891" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D5 C9</cards><action no="9" player="Shymaher1975" type="7" sum="310" cards=""/><action no="8" player="maxwell2891" type="5" sum="450" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards>
+	</round>
+	
+		</game><game gamecode="5438977321">
+		 <general>
+		  <startdate>2014-01-26 16:03:39</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="870" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="615" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="1,715" dealer="1" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="HelmutK57" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">X X</cards><action no="4" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CQ D2</cards><action no="2" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="3" player="maxwell2891" type="23" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5438977471">
+		 <general>
+		  <startdate>2014-01-26 16:03:56</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="840" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="615" dealer="0" win="690" bet="615" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="1,745" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="HelmutK57" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">X X</cards><action no="4" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA S8</cards><action no="5" player="WorstCard" type="23" sum="615" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="3" player="maxwell2891" type="23" sum="60" cards=""/><action no="6" player="maxwell2891" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5438977616">
+		 <general>
+		  <startdate>2014-01-26 16:04:13</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="825" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="690" dealer="0" win="1,385" bet="690" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="1,685" dealer="0" win="0" bet="690" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="HelmutK57" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="maxwell2891" type="15" sum="5" cards="[cards]"/><action no="5" player="maxwell2891" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">X X</cards><action no="6" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ SA</cards><action no="7" player="WorstCard" type="23" sum="685" cards=""/><cards type="Pocket" player="maxwell2891">S2 DA</cards><action no="8" player="maxwell2891" type="3" sum="635" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 C8 C9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D10</cards>
+	</round>
+	
+		</game><game gamecode="5438977791">
+		 <general>
+		  <startdate>2014-01-26 16:04:35</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="820" dealer="0" win="822" bet="820" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,385" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="995" dealer="0" win="858" bet="855" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="HelmutK57" type="15" sum="5" cards="[cards]"/><action no="5" player="HelmutK57" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="maxwell2891" type="15" sum="5" cards="[cards]"/><action no="4" player="maxwell2891" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">SK DK</cards><action no="8" player="HelmutK57" type="23" sum="100" cards=""/><action no="10" player="HelmutK57" type="23" sum="200" cards=""/><action no="12" player="HelmutK57" type="23" sum="300" cards=""/><action no="14" player="HelmutK57" type="23" sum="500" cards=""/><action no="16" player="HelmutK57" type="7" sum="315" cards=""/><cards type="Pocket" player="WorstCard">S3 HJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">HK CK</cards><action no="7" player="maxwell2891" type="3" sum="25" cards=""/><action no="9" player="maxwell2891" type="23" sum="150" cards=""/><action no="11" player="maxwell2891" type="23" sum="250" cards=""/><action no="13" player="maxwell2891" type="23" sum="400" cards=""/><action no="15" player="maxwell2891" type="23" sum="850" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA C4 C2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D10</cards>
+	</round>
+	
+		</game><game gamecode="5438978203">
+		 <general>
+		  <startdate>2014-01-26 16:05:22</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="822" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,380" dealer="0" win="382" bet="1,380" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="998" dealer="1" win="2,026" bet="998" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="HelmutK57" type="15" sum="5" cards="[cards]"/><action no="4" player="HelmutK57" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="maxwell2891" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">X X</cards><action no="7" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 SA</cards><action no="8" player="WorstCard" type="3" sum="50" cards=""/><cards type="Pocket" player="maxwell2891">DK HA</cards><action no="6" player="maxwell2891" type="23" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 D7 D10</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="23" sum="1,275" cards=""/><action no="10" player="maxwell2891" type="5" sum="100" cards=""/><action no="12" player="maxwell2891" type="7" sum="793" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards>
+	</round>
+	
+		</game><game gamecode="5438999805">
+		 <general>
+		  <startdate>2014-01-26 16:05:54</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="792" dealer="1" win="0" bet="382" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="382" dealer="0" win="819" bet="382" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="2,026" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="HelmutK57" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="maxwell2891" type="15" sum="5" cards="[cards]"/><action no="5" player="maxwell2891" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">S6 HA</cards><action no="6" player="HelmutK57" type="3" sum="50" cards=""/><action no="9" player="HelmutK57" type="3" sum="327" cards=""/><cards type="Pocket" player="WorstCard">CA DJ</cards><action no="7" player="WorstCard" type="23" sum="377" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="8" player="maxwell2891" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 H7 SQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5438999991">
+		 <general>
+		  <startdate>2014-01-26 16:06:17</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="410" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="819" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="1,971" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="HelmutK57" type="15" sum="10" cards="[cards]"/><action no="5" player="HelmutK57" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="maxwell2891" type="15" sum="10" cards="[cards]"/><action no="4" player="maxwell2891" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">X X</cards><cards type="Pocket" player="WorstCard">S5 H9</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="7" player="maxwell2891" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439000077">
+		 <general>
+		  <startdate>2014-01-26 16:06:29</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="480" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="809" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="1,911" dealer="1" win="960" bet="690" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="HelmutK57" type="15" sum="10" cards="[cards]"/><action no="4" player="HelmutK57" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="maxwell2891" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">X X</cards><action no="7" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CQ SJ</cards><action no="8" player="WorstCard" type="3" sum="100" cards=""/><cards type="Pocket" player="maxwell2891">X X</cards><action no="6" player="maxwell2891" type="23" sum="200" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA C7 CA</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="10" player="maxwell2891" type="5" sum="480" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439000268">
+		 <general>
+		  <startdate>2014-01-26 16:06:52</startdate>		  
+		  <players>
+		   <player seat="4" name="HelmutK57" chips="420" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="599" dealer="0" win="0" bet="599" rebuy="0" addon="0" reg_code="6188237871"/><player seat="9" name="maxwell2891" chips="2,181" dealer="0" win="1,208" bet="599" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="HelmutK57" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="maxwell2891" type="15" sum="10" cards="[cards]"/><action no="5" player="maxwell2891" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="HelmutK57">X X</cards><action no="6" player="HelmutK57" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S10 C2</cards><action no="7" player="WorstCard" type="23" sum="589" cards=""/><cards type="Pocket" player="maxwell2891">H3 CK</cards><action no="8" player="maxwell2891" type="3" sum="489" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 SA DQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H4</cards>
+	</round>
+	
+		</game>  
+	</session>

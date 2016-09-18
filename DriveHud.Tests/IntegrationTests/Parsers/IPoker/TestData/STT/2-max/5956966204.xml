@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5956966204">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>"SUPER TURBO" Heads Up $1, 779944921</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:05</duration>  
+	          <gamecount>18</gamecount>  
+	          <startdate>2012-11-18 12:44:13</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>Gacrus</nickname>  
+	          <bets>4,925</bets>  
+	          <wins>3,425</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>1.25</ipoints>
+        		<statuspoints>1.25</statuspoints>
+			  		<awardpoints>1.25</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>"SUPER TURBO" Heads Up $1</tournamentname><place>2</place><buyin>$1.00+$0.05</buyin> <totalbuyin>$1.05</totalbuyin> <ipoints>1.25</ipoints> <win>$0.00</win> <statuspoints>1.25</statuspoints> <awardpoints>1.25</awardpoints>  
+	    </general>  
+	    <game gamecode="4375699617">
+		 <general>
+		  <startdate>2012-11-18 12:44:13</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,500" dealer="1" win="260" bet="200" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="10" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="3" player="jackk7777" type="3" sum="10" cards=""/><action no="5" player="jackk7777" type="3" sum="40" cards=""/><cards type="Pocket" player="Gacrus">C10 DQ</cards><action no="4" player="Gacrus" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 S5 C2</cards><action no="7" player="jackk7777" type="5" sum="140" cards=""/><action no="6" player="Gacrus" type="4" sum="0" cards=""/><action no="8" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375699664">
+		 <general>
+		  <startdate>2012-11-18 12:44:44</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,560" dealer="0" win="30" bet="20" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,440" dealer="1" win="0" bet="10" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="20" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><cards type="Pocket" player="Gacrus">D7 S5</cards><action no="3" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375699679">
+		 <general>
+		  <startdate>2012-11-18 12:44:51</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,570" dealer="1" win="0" bet="10" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,430" dealer="0" win="30" bet="20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="10" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="3" player="jackk7777" type="0" sum="0" cards=""/><cards type="Pocket" player="Gacrus">D9 DQ</cards>
+	</round>
+	
+		</game><game gamecode="4375699693">
+		 <general>
+		  <startdate>2012-11-18 12:45:01</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,560" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,440" dealer="1" win="120" bet="80" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="20" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="4" player="jackk7777" type="3" sum="20" cards=""/><cards type="Pocket" player="Gacrus">H2 SQ</cards><action no="3" player="Gacrus" type="23" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 D10 S3</cards><action no="5" player="jackk7777" type="4" sum="0" cards=""/><action no="7" player="jackk7777" type="0" sum="0" cards=""/><action no="6" player="Gacrus" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375699725">
+		 <general>
+		  <startdate>2012-11-18 12:45:18</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,520" dealer="1" win="800" bet="400" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,480" dealer="0" win="0" bet="400" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="20" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">C9 CQ</cards><action no="3" player="jackk7777" type="23" sum="80" cards=""/><cards type="Pocket" player="Gacrus">HK HQ</cards><action no="4" player="Gacrus" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 CJ H9</cards><action no="6" player="jackk7777" type="5" sum="120" cards=""/><action no="5" player="Gacrus" type="4" sum="0" cards=""/><action no="7" player="Gacrus" type="3" sum="120" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards><action no="9" player="jackk7777" type="4" sum="0" cards=""/><action no="8" player="Gacrus" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards><action no="11" player="jackk7777" type="3" sum="200" cards=""/><action no="10" player="Gacrus" type="5" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375699783">
+		 <general>
+		  <startdate>2012-11-18 12:45:55</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,920" dealer="0" win="0" bet="80" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,080" dealer="1" win="240" bet="160" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="40" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="4" player="jackk7777" type="3" sum="40" cards=""/><cards type="Pocket" player="Gacrus">H9 C7</cards><action no="3" player="Gacrus" type="23" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 C5 SQ</cards><action no="5" player="jackk7777" type="4" sum="0" cards=""/><action no="7" player="jackk7777" type="0" sum="0" cards=""/><action no="6" player="Gacrus" type="5" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375699811">
+		 <general>
+		  <startdate>2012-11-18 12:46:12</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,840" dealer="1" win="0" bet="20" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,160" dealer="0" win="60" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="20" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="3" player="jackk7777" type="0" sum="0" cards=""/><cards type="Pocket" player="Gacrus">SA C7</cards>
+	</round>
+	
+		</game><game gamecode="4375703530">
+		 <general>
+		  <startdate>2012-11-18 12:46:23</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,820" dealer="0" win="0" bet="120" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,180" dealer="1" win="360" bet="240" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="60" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="4" player="jackk7777" type="3" sum="60" cards=""/><cards type="Pocket" player="Gacrus">S8 S6</cards><action no="3" player="Gacrus" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 HK S9</cards><action no="5" player="jackk7777" type="4" sum="0" cards=""/><action no="7" player="jackk7777" type="0" sum="0" cards=""/><action no="6" player="Gacrus" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375703565">
+		 <general>
+		  <startdate>2012-11-18 12:46:41</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,700" dealer="1" win="0" bet="30" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,300" dealer="0" win="90" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="30" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="3" player="jackk7777" type="0" sum="0" cards=""/><cards type="Pocket" player="Gacrus">H7 HA</cards>
+	</round>
+	
+		</game><game gamecode="4375703584">
+		 <general>
+		  <startdate>2012-11-18 12:46:50</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,670" dealer="0" win="90" bet="60" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,330" dealer="1" win="0" bet="30" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="60" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><cards type="Pocket" player="Gacrus">S3 D7</cards><action no="3" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375703597">
+		 <general>
+		  <startdate>2012-11-18 12:46:58</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,700" dealer="1" win="900" bet="450" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,300" dealer="0" win="0" bet="450" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="30" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">SJ H9</cards><action no="3" player="jackk7777" type="3" sum="30" cards=""/><cards type="Pocket" player="Gacrus">C2 HQ</cards><action no="4" player="Gacrus" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ C6 C5</cards><action no="6" player="jackk7777" type="4" sum="0" cards=""/><action no="5" player="Gacrus" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards><action no="8" player="jackk7777" type="3" sum="90" cards=""/><action no="7" player="Gacrus" type="5" sum="90" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards><action no="10" player="jackk7777" type="23" sum="300" cards=""/><action no="9" player="Gacrus" type="5" sum="150" cards=""/><action no="11" player="Gacrus" type="3" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375703666">
+		 <general>
+		  <startdate>2012-11-18 12:47:40</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="2,150" dealer="0" win="0" bet="850" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="850" dealer="1" win="1,700" bet="850" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="100" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">H4 SA</cards><action no="4" player="jackk7777" type="3" sum="750" cards=""/><cards type="Pocket" player="Gacrus">D9 DA</cards><action no="3" player="Gacrus" type="23" sum="850" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 C6 C8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game><game gamecode="4375703705">
+		 <general>
+		  <startdate>2012-11-18 12:48:04</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,300" dealer="1" win="300" bet="200" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,700" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="50" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="3" player="jackk7777" type="23" sum="200" cards=""/><cards type="Pocket" player="Gacrus">C6 C5</cards><action no="4" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375703722">
+		 <general>
+		  <startdate>2012-11-18 12:48:15</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,400" dealer="0" win="225" bet="150" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,600" dealer="1" win="0" bet="75" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="150" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><cards type="Pocket" player="Gacrus">DJ C3</cards><action no="3" player="Gacrus" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4375703741">
+		 <general>
+		  <startdate>2012-11-18 12:48:28</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,475" dealer="1" win="0" bet="75" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,525" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="75" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">X X</cards><action no="3" player="jackk7777" type="0" sum="0" cards=""/><cards type="Pocket" player="Gacrus">H8 SA</cards>
+	</round>
+	
+		</game><game gamecode="4375703758">
+		 <general>
+		  <startdate>2012-11-18 12:48:36</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="1,400" dealer="0" win="2,800" bet="1,400" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="1,600" dealer="1" win="200" bet="1,600" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="150" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">HA CK</cards><action no="4" player="jackk7777" type="7" sum="1,250" cards=""/><cards type="Pocket" player="Gacrus">S6 S5</cards><action no="3" player="Gacrus" type="23" sum="1,600" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ S3 H2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game><game gamecode="4375703797">
+		 <general>
+		  <startdate>2012-11-18 12:49:01</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="2,800" dealer="1" win="100" bet="300" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="200" dealer="0" win="400" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jackk7777" type="1" sum="75" cards="[cards]"/><action no="2" player="Gacrus" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">H6 C5</cards><action no="3" player="jackk7777" type="23" sum="300" cards=""/><cards type="Pocket" player="Gacrus">C9 CJ</cards><action no="4" player="Gacrus" type="7" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 H3 HK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S9</cards>
+	</round>
+	
+		</game><game gamecode="4375703839">
+		 <general>
+		  <startdate>2012-11-18 12:49:27</startdate>		  
+		  <players>
+		   <player seat="3" name="jackk7777" chips="2,600" dealer="0" win="800" bet="400" rebuy="0" addon="0"/><player seat="8" name="Gacrus" chips="400" dealer="1" win="0" bet="400" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="jackk7777" type="2" sum="200" cards="[cards]"/><action no="1" player="Gacrus" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="jackk7777">D6 C6</cards><action no="4" player="jackk7777" type="3" sum="200" cards=""/><cards type="Pocket" player="Gacrus">H7 SA</cards><action no="3" player="Gacrus" type="7" sum="300" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 S4 HJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game>  
+	</session>

@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187500504">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 818993815</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>12</gamecount>  
+	          <startdate>2014-01-25 10:28:53</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>995</bets>  
+	          <wins>195</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>4</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.00</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5435500804">
+		 <general>
+		  <startdate>2014-01-25 10:28:53</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AKwaak" type="1" sum="10" cards="[cards]"/><action no="2" player="CrazyNastjuha" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="4" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="5" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><cards type="Pocket" player="WorstCard">S2 D5</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435500928">
+		 <general>
+		  <startdate>2014-01-25 10:29:19</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="810" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="CrazyNastjuha" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="3" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="4" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="5" player="CrazyNastjuha" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">HQ D6</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 DJ D5</cards><action no="7" player="CrazyNastjuha" type="5" sum="20" cards=""/><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435501169">
+		 <general>
+		  <startdate>2014-01-25 10:30:09</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="830" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="780" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="godofpoker30" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="6" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="3" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="4" player="CrazyNastjuha" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D2 DQ</cards><action no="5" player="WorstCard" type="23" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435501316">
+		 <general>
+		  <startdate>2014-01-25 10:30:36</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="780" dealer="0" win="40" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="790" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="godofpoker30" type="1" sum="10" cards="[cards]"/><action no="2" player="AKwaak" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">SQ S5</cards><action no="5" player="godofpoker30" type="3" sum="10" cards=""/><cards type="Pocket" player="AKwaak">HQ C7</cards><action no="6" player="AKwaak" type="4" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="3" player="CrazyNastjuha" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D6 D9</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ H10 C5</cards><action no="7" player="godofpoker30" type="4" sum="0" cards=""/><action no="8" player="AKwaak" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards><action no="9" player="godofpoker30" type="4" sum="0" cards=""/><action no="10" player="AKwaak" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards><action no="11" player="godofpoker30" type="4" sum="0" cards=""/><action no="12" player="AKwaak" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435501586">
+		 <general>
+		  <startdate>2014-01-25 10:31:34</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="770" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="830" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="135" bet="90" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AKwaak" type="1" sum="15" cards="[cards]"/><action no="2" player="CrazyNastjuha" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="4" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="5" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="6" player="CrazyNastjuha" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ CJ</cards><action no="3" player="WorstCard" type="23" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435501745">
+		 <general>
+		  <startdate>2014-01-25 10:32:11</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="755" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="800" dealer="0" win="150" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="845" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="CrazyNastjuha" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="3" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="4" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="5" player="CrazyNastjuha" type="23" sum="120" cards=""/><cards type="Pocket" player="WorstCard">D2 C7</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435508108">
+		 <general>
+		  <startdate>2014-01-25 10:32:46</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="755" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="830" dealer="1" win="165" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="815" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="godofpoker30" type="2" sum="30" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="6" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="3" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="4" player="CrazyNastjuha" type="23" sum="120" cards=""/><cards type="Pocket" player="WorstCard">D7 H6</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435508264">
+		 <general>
+		  <startdate>2014-01-25 10:33:18</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="755" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="875" dealer="0" win="195" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="godofpoker30" type="15" sum="5" cards="[cards]"/><action no="5" player="godofpoker30" type="1" sum="25" cards="[cards]"/><action no="2" player="AKwaak" type="15" sum="5" cards="[cards]"/><action no="6" player="AKwaak" type="2" sum="50" cards="[cards]"/><action no="3" player="CrazyNastjuha" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="9" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="10" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="7" player="CrazyNastjuha" type="23" sum="100" cards=""/><cards type="Pocket" player="WorstCard">H2 SA</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435508401">
+		 <general>
+		  <startdate>2014-01-25 10:33:45</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="740" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="700" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="965" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="795" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="godofpoker30" type="15" sum="5" cards="[cards]"/><action no="1" player="AKwaak" type="15" sum="5" cards="[cards]"/><action no="5" player="AKwaak" type="1" sum="25" cards="[cards]"/><action no="2" player="CrazyNastjuha" type="15" sum="5" cards="[cards]"/><action no="6" player="CrazyNastjuha" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="8" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="9" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><cards type="Pocket" player="WorstCard">D7 DQ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435508526">
+		 <general>
+		  <startdate>2014-01-25 10:34:10</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="735" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="670" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="1,005" dealer="0" win="170" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="790" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="godofpoker30" type="15" sum="5" cards="[cards]"/><action no="4" player="AKwaak" type="15" sum="5" cards="[cards]"/><action no="1" player="CrazyNastjuha" type="15" sum="5" cards="[cards]"/><action no="5" player="CrazyNastjuha" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="7" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="8" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="9" player="CrazyNastjuha" type="23" sum="100" cards=""/><cards type="Pocket" player="WorstCard">C3 H4</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435508677">
+		 <general>
+		  <startdate>2014-01-25 10:34:43</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="730" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="665" dealer="0" win="295" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="1,070" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="735" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="godofpoker30" type="15" sum="5" cards="[cards]"/><action no="6" player="godofpoker30" type="2" sum="50" cards="[cards]"/><action no="3" player="AKwaak" type="15" sum="5" cards="[cards]"/><action no="4" player="CrazyNastjuha" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="10" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="7" player="AKwaak" type="23" sum="200" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="8" player="CrazyNastjuha" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CQ HK</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435508858">
+		 <general>
+		  <startdate>2014-01-25 10:35:16</startdate>		  
+		  <players>
+		   <player seat="2" name="godofpoker30" chips="675" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="AKwaak" chips="755" dealer="0" win="1,480" bet="705" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="CrazyNastjuha" chips="1,065" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="705" dealer="1" win="0" bet="705" rebuy="0" addon="0" reg_code="6187500504"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="godofpoker30" type="15" sum="10" cards="[cards]"/><action no="5" player="godofpoker30" type="1" sum="50" cards="[cards]"/><action no="2" player="AKwaak" type="15" sum="10" cards="[cards]"/><action no="6" player="AKwaak" type="2" sum="100" cards="[cards]"/><action no="3" player="CrazyNastjuha" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="godofpoker30">X X</cards><action no="9" player="godofpoker30" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">HA H3</cards><action no="10" player="AKwaak" type="3" sum="595" cards=""/><cards type="Pocket" player="CrazyNastjuha">X X</cards><action no="7" player="CrazyNastjuha" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SA D4</cards><action no="8" player="WorstCard" type="23" sum="695" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ D3 DQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game>  
+	</session>

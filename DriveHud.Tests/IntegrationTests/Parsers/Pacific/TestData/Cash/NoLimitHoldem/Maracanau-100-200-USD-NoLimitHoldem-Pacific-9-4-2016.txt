@@ -1,0 +1,417 @@
+#Game No : 932632900
+***** 888poker Hand History for Game 932632900 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:38:17
+Table Maracanau 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: _Dharma_ ( $1,000 )
+Seat 2: solmir1 ( $1,000 )
+Seat 4: OrionMaster ( $1,000 )
+Seat 9: Knight1306 ( $1,000 )
+solmir1 posts small blind [$100]
+OrionMaster posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+_Dharma_ raises [$1,000]
+solmir1 folds
+OrionMaster folds
+** Summary **
+_Dharma_ collected [ $500 ]
+
+
+#Game No : 932632978
+***** 888poker Hand History for Game 932632978 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:38:32
+Table Maracanau 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: _Dharma_ ( $1,300 )
+Seat 2: solmir1 ( $1,000 )
+Seat 4: OrionMaster ( $1,000 )
+Seat 7: Jao15 ( $1,000 )
+Seat 9: Knight1306 ( $1,000 )
+OrionMaster posts small blind [$100]
+Jao15 folds
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+_Dharma_ folds
+solmir1 folds
+OrionMaster raises [$900]
+Knight1306 calls [$800]
+** Dealing flop ** [ 8d, Kc, 5c ]
+** Dealing turn ** [ 4h ]
+** Dealing river ** [ 6c ]
+** Summary **
+OrionMaster shows [ 7h, 9s ]
+Knight1306 shows [ Ad, As ]
+OrionMaster collected [ $1,995 ]
+
+
+#Game No : 932633108
+***** 888poker Hand History for Game 932633108 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:38:58
+Table Maracanau 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: _Dharma_ ( $1,300 )
+Seat 2: solmir1 ( $1,000 )
+Seat 4: OrionMaster ( $1,995 )
+Seat 9: Knight1306 ( $1,000 )
+Knight1306 posts small blind [$100]
+_Dharma_ posts big blind [$200]
+** Dealing down cards **
+solmir1 raises [$1,000]
+OrionMaster folds
+Knight1306 folds
+_Dharma_ folds
+** Summary **
+solmir1 collected [ $500 ]
+
+
+#Game No : 932633175
+***** 888poker Hand History for Game 932633175 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:39:11
+Table Maracanau 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 1: _Dharma_ ( $1,100 )
+Seat 2: solmir1 ( $1,300 )
+Seat 4: OrionMaster ( $1,995 )
+Seat 9: Knight1306 ( $900 )
+_Dharma_ posts small blind [$100]
+solmir1 folds
+OrionMaster posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+_Dharma_ raises [$1,000]
+OrionMaster calls [$900]
+** Dealing flop ** [ 3h, 9c, Td ]
+** Dealing turn ** [ Ad ]
+** Dealing river ** [ 5s ]
+** Summary **
+_Dharma_ shows [ 6h, Js ]
+OrionMaster shows [ 9s, Qs ]
+OrionMaster collected [ $2,195 ]
+
+
+#Game No : 932633421
+***** 888poker Hand History for Game 932633421 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:39:52
+Table Maracanau 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: _Dharma_ ( $1,000 )
+Seat 4: OrionMaster ( $3,090 )
+Seat 6: Jao15 ( $1,000 )
+Seat 9: Knight1306 ( $900 )
+OrionMaster posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Knight1306 raises [$900]
+_Dharma_ folds
+OrionMaster folds
+Jao15 calls [$700]
+** Dealing flop ** [ 9s, Kh, 3c ]
+** Dealing turn ** [ Ks ]
+** Dealing river ** [ 3h ]
+** Summary **
+Jao15 shows [ 6d, Ac ]
+Knight1306 shows [ 3d, Ah ]
+Knight1306 collected [ $1,895 ]
+
+
+#Game No : 932633580
+***** 888poker Hand History for Game 932633580 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:40:20
+Table Maracanau 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: _Dharma_ ( $1,000 )
+Seat 4: OrionMaster ( $2,990 )
+Seat 6: Jao15 ( $1,000 )
+Seat 7: GrossWinsss ( $1,000 )
+Seat 9: Knight1306 ( $1,895 )
+Jao15 posts small blind [$100]
+GrossWinsss posts big blind [$200]
+** Dealing down cards **
+Knight1306 raises [$1,895]
+_Dharma_ calls [$1,000]
+OrionMaster folds
+Jao15 folds
+GrossWinsss folds
+** Dealing flop ** [ 4c, Kh, 6s ]
+** Dealing turn ** [ 3d ]
+** Dealing river ** [ Qd ]
+** Summary **
+_Dharma_ shows [ Ad, Kd ]
+Knight1306 shows [ 5s, 5c ]
+_Dharma_ collected [ $2,295 ]
+
+
+#Game No : 932633784
+***** 888poker Hand History for Game 932633784 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:40:58
+Table Maracanau 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: _Dharma_ ( $2,295 )
+Seat 4: OrionMaster ( $2,990 )
+Seat 6: Jao15 ( $900 )
+Seat 7: GrossWinsss ( $1,000 )
+Seat 9: Knight1306 ( $895 )
+GrossWinsss posts small blind [$100]
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+_Dharma_ folds
+OrionMaster folds
+Jao15 folds
+GrossWinsss calls [$100]
+Knight1306 raises [$695]
+GrossWinsss folds
+** Summary **
+Knight1306 collected [ $400 ]
+
+
+#Game No : 932634005
+***** 888poker Hand History for Game 932634005 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:41:36
+Table Maracanau 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: _Dharma_ ( $2,295 )
+Seat 4: OrionMaster ( $2,990 )
+Seat 6: Jao15 ( $900 )
+Seat 7: GrossWinsss ( $1,000 )
+Seat 9: Knight1306 ( $1,095 )
+Knight1306 posts small blind [$100]
+_Dharma_ posts big blind [$200]
+** Dealing down cards **
+OrionMaster folds
+Jao15 folds
+GrossWinsss folds
+Knight1306 raises [$995]
+_Dharma_ calls [$895]
+** Dealing flop ** [ 6c, 8c, 5h ]
+** Dealing turn ** [ 8s ]
+** Dealing river ** [ 7s ]
+** Summary **
+_Dharma_ shows [ 5d, Kd ]
+Knight1306 shows [ Qs, Tc ]
+_Dharma_ collected [ $2,185 ]
+
+
+#Game No : 932634265
+***** 888poker Hand History for Game 932634265 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:42:24
+Table Maracanau 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: _Dharma_ ( $3,385 )
+Seat 2: OrioNeMaster ( $1,000 )
+Seat 4: OrionMaster ( $2,990 )
+Seat 6: Jao15 ( $900 )
+Seat 7: GrossWinsss ( $1,000 )
+Seat 9: Knight1306 ( $1,000 )
+_Dharma_ posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+OrionMaster folds
+Jao15 folds
+GrossWinsss folds
+Knight1306 folds
+_Dharma_ raises [$3,285]
+OrioNeMaster calls [$800]
+** Dealing flop ** [ 6c, 7h, Tc ]
+** Dealing turn ** [ 2d ]
+** Dealing river ** [ 4s ]
+** Summary **
+_Dharma_ shows [ Ah, Ad ]
+OrioNeMaster shows [ 8c, Ts ]
+_Dharma_ collected [ $1,995 ]
+
+
+#Game No : 932634437
+***** 888poker Hand History for Game 932634437 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:42:52
+Table Maracanau 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: _Dharma_ ( $4,380 )
+Seat 2: OrioNeMaster ( $1,000 )
+Seat 4: OrionMaster ( $2,990 )
+Seat 6: Jao15 ( $900 )
+Seat 7: GrossWinsss ( $1,000 )
+Seat 9: Knight1306 ( $1,000 )
+OrioNeMaster posts small blind [$100]
+OrionMaster posts big blind [$200]
+** Dealing down cards **
+Jao15 folds
+GrossWinsss folds
+Knight1306 folds
+_Dharma_ folds
+OrioNeMaster raises [$900]
+OrionMaster calls [$800]
+** Dealing flop ** [ 9s, 8d, 5c ]
+** Dealing turn ** [ 4h ]
+** Dealing river ** [ Qh ]
+** Summary **
+OrioNeMaster shows [ 5h, Ad ]
+OrionMaster shows [ Jh, 7h ]
+OrioNeMaster collected [ $1,995 ]
+
+
+#Game No : 932634648
+***** 888poker Hand History for Game 932634648 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:43:26
+Table Maracanau 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: _Dharma_ ( $4,380 )
+Seat 2: OrioNeMaster ( $1,995 )
+Seat 4: OrionMaster ( $1,990 )
+Seat 6: Jao15 ( $900 )
+Seat 7: GrossWinsss ( $1,000 )
+Seat 9: Knight1306 ( $1,000 )
+OrionMaster posts small blind [$100]
+Jao15 folds
+GrossWinsss folds
+Knight1306 posts big blind [$200]
+** Dealing down cards **
+_Dharma_ folds
+OrioNeMaster folds
+OrionMaster raises [$1,890]
+Knight1306 calls [$800]
+** Dealing flop ** [ 3d, 9d, Jd ]
+** Dealing turn ** [ Qh ]
+** Dealing river ** [ Ad ]
+** Summary **
+OrionMaster shows [ Qc, 9h ]
+Knight1306 shows [ 8s, Qs ]
+OrionMaster collected [ $1,995 ]
+OrionMaster collected [ $990 ]
+
+
+#Game No : 932634860
+***** 888poker Hand History for Game 932634860 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:44:03
+Table Maracanau 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: _Dharma_ ( $4,380 )
+Seat 2: OrioNeMaster ( $1,995 )
+Seat 4: OrionMaster ( $2,985 )
+Seat 9: Knight1306 ( $1,000 )
+Knight1306 posts small blind [$100]
+_Dharma_ posts big blind [$200]
+** Dealing down cards **
+OrioNeMaster folds
+OrionMaster raises [$400]
+Knight1306 folds
+_Dharma_ raises [$4,180]
+OrionMaster calls [$2,585]
+** Dealing flop ** [ 6h, 6d, Ac ]
+** Dealing turn ** [ 5h ]
+** Dealing river ** [ 9s ]
+** Summary **
+_Dharma_ shows [ Jd, Ah ]
+OrionMaster shows [ Kh, Qc ]
+_Dharma_ collected [ $6,065 ]
+
+
+#Game No : 932635230
+***** 888poker Hand History for Game 932635230 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:45:05
+Table Maracanau 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 1: _Dharma_ ( $7,460 )
+Seat 2: OrioNeMaster ( $1,995 )
+Seat 4: OrionMaster ( $1,000 )
+Seat 9: Knight1306 ( $900 )
+_Dharma_ posts small blind [$100]
+OrioNeMaster posts big blind [$200]
+** Dealing down cards **
+OrionMaster folds
+Knight1306 raises [$900]
+_Dharma_ folds
+OrioNeMaster folds
+** Summary **
+Knight1306 collected [ $500 ]
+
+
+#Game No : 932635349
+***** 888poker Hand History for Game 932635349 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:45:28
+Table Maracanau 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: _Dharma_ ( $7,360 )
+Seat 2: OrioNeMaster ( $1,795 )
+Seat 4: OrionMaster ( $1,000 )
+Seat 9: Knight1306 ( $1,200 )
+OrioNeMaster posts small blind [$100]
+OrionMaster posts big blind [$200]
+** Dealing down cards **
+Knight1306 folds
+_Dharma_ folds
+OrioNeMaster raises [$1,695]
+OrionMaster calls [$800]
+** Dealing flop ** [ 9d, 2h, 4s ]
+** Dealing turn ** [ 2c ]
+** Dealing river ** [ 3c ]
+** Summary **
+OrioNeMaster shows [ 8d, 8h ]
+OrionMaster shows [ 7s, Qh ]
+OrioNeMaster collected [ $1,995 ]
+
+
+#Game No : 932635530
+***** 888poker Hand History for Game 932635530 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:46:01
+Table Maracanau 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: _Dharma_ ( $7,360 )
+Seat 2: OrioNeMaster ( $2,790 )
+Seat 4: OrionMaster ( $1,000 )
+Seat 6: Jao15 ( $900 )
+Seat 9: Knight1306 ( $1,200 )
+OrionMaster posts small blind [$100]
+Jao15 posts big blind [$200]
+** Dealing down cards **
+Knight1306 raises [$1,200]
+_Dharma_ raises [$7,360]
+OrioNeMaster folds
+OrionMaster folds
+Jao15 folds
+** Dealing flop ** [ Js, 6s, 7d ]
+** Dealing turn ** [ 7h ]
+** Dealing river ** [ 6c ]
+** Summary **
+_Dharma_ shows [ As, Kc ]
+Knight1306 shows [ 9s, Ks ]
+_Dharma_ collected [ $2,695 ]
+
+
+#Game No : 932635693
+***** 888poker Hand History for Game 932635693 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 11:46:31
+Table Maracanau 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: _Dharma_ ( $8,855 )
+Seat 2: OrioNeMaster ( $2,790 )
+Seat 4: OrionMaster ( $1,000 )
+Seat 6: Jao15 ( $700 )
+Seat 7: GrossWinsss ( $1,000 )
+Jao15 posts small blind [$100]
+** Dealing down cards **
+GrossWinsss folds
+_Dharma_ folds
+OrioNeMaster folds
+OrionMaster folds
+** Summary **
+Jao15 did not show his hand
+Jao15 collected [ $100 ]
+
+

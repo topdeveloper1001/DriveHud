@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224190245">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824216096</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:19</duration>  
+	          <gamecount>38</gamecount>  
+	          <startdate>2014-03-25 16:31:49</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>2,535</bets>  
+	          <wins>2,280</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,245</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601075020">
+		 <general>
+		  <startdate>2014-03-25 16:31:49</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,500" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="10" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="6" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="23" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="3" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 S2</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088272">
+		 <general>
+		  <startdate>2014-03-25 16:32:41</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/><action no="2" player="Tastentiger35" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="5" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 HQ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088355">
+		 <general>
+		  <startdate>2014-03-25 16:32:59</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,500" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tastentiger35" type="1" sum="10" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="4" player="gymhungk" type="23" sum="60" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="7" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C2 S10</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088455">
+		 <general>
+		  <startdate>2014-03-25 16:33:23</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,470" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="3" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="40" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="6" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 C8</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088568">
+		 <general>
+		  <startdate>2014-03-25 16:33:50</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,530" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="gymhungk" type="2" sum="20" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="5" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 CQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088678">
+		 <general>
+		  <startdate>2014-03-25 16:34:14</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,540" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gymhungk" type="1" sum="10" cards="[cards]"/><action no="2" player="theDL" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="7" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="4" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C9 H4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088868">
+		 <general>
+		  <startdate>2014-03-25 16:35:02</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,530" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="10" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="6" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="3" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ CA</cards><action no="5" player="moonbaseone" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601088982">
+		 <general>
+		  <startdate>2014-03-25 16:35:27</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/><action no="2" player="Tastentiger35" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="5" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H3 C4</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089075">
+		 <general>
+		  <startdate>2014-03-25 16:35:49</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,530" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,510" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,470" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,500" dealer="0" win="480" bet="300" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tastentiger35" type="1" sum="20" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="4" player="gymhungk" type="3" sum="120" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="7" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DA DK</cards><action no="3" player="moonbaseone" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA DQ C10</cards><action no="10" player="gymhungk" type="0" sum="0" cards=""/><action no="9" player="moonbaseone" type="5" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089210">
+		 <general>
+		  <startdate>2014-03-25 16:36:21</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,490" dealer="1" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,430" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,680" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="3" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="6" player="Tastentiger35" type="23" sum="80" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H7 S3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089288">
+		 <general>
+		  <startdate>2014-03-25 16:36:39</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,410" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,640" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="gymhungk" type="2" sum="40" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="5" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK H8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601089399">
+		 <general>
+		  <startdate>2014-03-25 16:37:06</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,430" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,520" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gymhungk" type="1" sum="20" cards="[cards]"/><action no="2" player="theDL" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="7" player="gymhungk" type="23" sum="80" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="4" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 HQ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601101992">
+		 <general>
+		  <startdate>2014-03-25 16:37:45</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,470" dealer="1" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,470" dealer="0" win="180" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="20" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">HK HJ</cards><action no="6" player="gymhungk" type="23" sum="80" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">SA CJ</cards><action no="8" player="Strik3rPo4ition" type="3" sum="40" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="3" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 H4</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 H3 C10</cards><action no="10" player="gymhungk" type="4" sum="0" cards=""/><action no="9" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H9</cards><action no="12" player="gymhungk" type="4" sum="0" cards=""/><action no="11" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards><action no="14" player="gymhungk" type="4" sum="0" cards=""/><action no="13" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102287">
+		 <general>
+		  <startdate>2014-03-25 16:38:59</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,390" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,570" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,550" dealer="0" win="260" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="20" cards="[cards]"/><action no="2" player="Tastentiger35" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="5" player="gymhungk" type="23" sum="80" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="8" player="Tastentiger35" type="3" sum="40" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ S2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK HK CQ</cards><action no="10" player="gymhungk" type="4" sum="0" cards=""/><action no="9" player="Tastentiger35" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards><action no="12" player="gymhungk" type="0" sum="0" cards=""/><action no="11" player="Tastentiger35" type="5" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102557">
+		 <general>
+		  <startdate>2014-03-25 16:39:57</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,310" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,650" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,410" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tastentiger35" type="1" sum="30" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="4" player="gymhungk" type="23" sum="120" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="7" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ H8</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102684">
+		 <general>
+		  <startdate>2014-03-25 16:40:23</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,620" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,350" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="3" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="6" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ CK</cards>
+	</round>
+	
+		</game><game gamecode="5601102850">
+		 <general>
+		  <startdate>2014-03-25 16:41:04</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,400" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,320" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,650" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="gymhungk" type="2" sum="60" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="5" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S7 H2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601102918">
+		 <general>
+		  <startdate>2014-03-25 16:41:22</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,430" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gymhungk" type="1" sum="30" cards="[cards]"/><action no="2" player="theDL" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="7" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="4" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C5 SQ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601103090">
+		 <general>
+		  <startdate>2014-03-25 16:41:56</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,400" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,490" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,550" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,620" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="30" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="6" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="3" player="Tastentiger35" type="23" sum="180" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 SJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601103196">
+		 <general>
+		  <startdate>2014-03-25 16:42:21</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,490" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,710" dealer="0" win="360" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/><action no="2" player="Tastentiger35" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="5" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="23" sum="120" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="8" player="Tastentiger35" type="3" sum="60" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ HQ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ C10 S9</cards><action no="9" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="11" player="Strik3rPo4ition" type="0" sum="0" cards=""/><action no="10" player="Tastentiger35" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601116915">
+		 <general>
+		  <startdate>2014-03-25 16:43:19</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,370" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,830" dealer="0" win="240" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,320" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tastentiger35" type="1" sum="30" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="4" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="7" player="Tastentiger35" type="23" sum="180" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="8" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S3 H4</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117073">
+		 <general>
+		  <startdate>2014-03-25 16:43:54</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,890" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,260" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="3" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="6" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 CA</cards>
+	</round>
+	
+		</game><game gamecode="5601117163">
+		 <general>
+		  <startdate>2014-03-25 16:44:15</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,400" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,890" dealer="0" win="675" bet="425" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,210" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,670" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="gymhungk" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="8" player="gymhungk" type="3" sum="100" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="5" player="Tastentiger35" type="23" sum="200" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="6" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ H10</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK SJ H6</cards><action no="9" player="gymhungk" type="4" sum="0" cards=""/><action no="11" player="gymhungk" type="0" sum="0" cards=""/><action no="10" player="Tastentiger35" type="5" sum="225" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117359">
+		 <general>
+		  <startdate>2014-03-25 16:45:04</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,200" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,460" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,370" dealer="0" win="416" bet="266" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,140" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gymhungk" type="1" sum="50" cards="[cards]"/><action no="2" player="theDL" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="7" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="8" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="23" sum="266" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="4" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK SQ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117462">
+		 <general>
+		  <startdate>2014-03-25 16:45:29</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,150" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,360" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,520" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,140" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="6" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="Tastentiger35">X X</cards><action no="3" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H9 H6</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117579">
+		 <general>
+		  <startdate>2014-03-25 16:45:58</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,150" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,310" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,570" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,140" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/><action no="2" player="Tastentiger35" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="5" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="6" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 S7</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601117735">
+		 <general>
+		  <startdate>2014-03-25 16:46:33</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,150" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,520" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,190" dealer="0" win="1,210" bet="1,210" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,210" dealer="0" win="1,210" bet="1,210" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tastentiger35" type="1" sum="50" cards="[cards]"/><action no="2" player="silverbelarus" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="4" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">HA S8</cards><action no="7" player="Tastentiger35" type="23" sum="300" cards=""/><action no="9" player="Tastentiger35" type="3" sum="910" cards=""/><cards type="Pocket" player="silverbelarus">CA D9</cards><action no="8" player="silverbelarus" type="23" sum="1,210" cards=""/><cards type="Pocket" player="moonbaseone">CQ C7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 DJ C3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5601117849">
+		 <general>
+		  <startdate>2014-03-25 16:46:59</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,150" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="1,310" dealer="0" win="2,770" bet="1,310" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="1,520" dealer="0" win="0" bet="1,310" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,190" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,210" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,620" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="3" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">CQ HQ</cards><action no="4" player="theDL" type="23" sum="1,310" cards=""/><cards type="Pocket" player="Strik3rPo4ition">CJ HJ</cards><action no="5" player="Strik3rPo4ition" type="3" sum="1,310" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="6" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">X X</cards><action no="7" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H10 S10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA S3 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5601118009">
+		 <general>
+		  <startdate>2014-03-25 16:47:35</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="1,150" dealer="0" win="2,650" bet="1,150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,190" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="1,160" dealer="1" win="10" bet="1,160" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,520" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="gymhungk" type="2" sum="100" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">CA HK</cards><action no="8" player="gymhungk" type="7" sum="1,050" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="5" player="Tastentiger35" type="23" sum="300" cards=""/><action no="9" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">DK SK</cards><action no="6" player="silverbelarus" type="23" sum="1,160" cards=""/><cards type="Pocket" player="moonbaseone">SQ D9</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 CJ CQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S10</cards>
+	</round>
+	
+		</game><game gamecode="5601118165">
+		 <general>
+		  <startdate>2014-03-25 16:48:15</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,650" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,770" dealer="0" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="210" dealer="0" win="465" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="10" dealer="0" win="40" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gymhungk" type="1" sum="75" cards="[cards]"/><action no="2" player="theDL" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="7" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">HK S4</cards><action no="8" player="theDL" type="3" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">H9 SQ</cards><action no="3" player="Strik3rPo4ition" type="7" sum="210" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="4" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">S6 C6</cards><action no="5" player="silverbelarus" type="7" sum="10" cards=""/><cards type="Pocket" player="moonbaseone">SA C4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 C9 S5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards>
+	</round>
+	
+		</game><game gamecode="5601118255">
+		 <general>
+		  <startdate>2014-03-25 16:48:38</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,575" dealer="1" win="565" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,560" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="465" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,890" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="silverbelarus" chips="40" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">DA DK</cards><action no="6" player="gymhungk" type="23" sum="300" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="7" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="3" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="silverbelarus">H6 D9</cards><action no="4" player="silverbelarus" type="7" sum="40" cards=""/><cards type="Pocket" player="moonbaseone">S7 C5</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 D2 HQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards>
+	</round>
+	
+		</game><game gamecode="5601131101">
+		 <general>
+		  <startdate>2014-03-25 16:49:19</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,485" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Strik3rPo4ition" chips="315" dealer="0" win="0" bet="315" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,890" dealer="0" win="630" bet="315" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/><action no="2" player="Tastentiger35" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="4" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">H2 S10</cards><action no="6" player="Strik3rPo4ition" type="23" sum="315" cards=""/><cards type="Pocket" player="Tastentiger35">H6 D10</cards><action no="7" player="Tastentiger35" type="3" sum="165" cards=""/><cards type="Pocket" player="moonbaseone">D7 C6</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK S4 H3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="5601131225">
+		 <general>
+		  <startdate>2014-03-25 16:49:48</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,205" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tastentiger35" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="3" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="5" player="Tastentiger35" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">S6 D2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131340">
+		 <general>
+		  <startdate>2014-03-25 16:50:16</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,840" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,355" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,320" dealer="0" win="1,470" bet="1,320" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="gymhungk" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="6" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="3" player="theDL" type="0" sum="0" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="4" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DQ D10</cards><action no="5" player="moonbaseone" type="23" sum="1,320" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131419">
+		 <general>
+		  <startdate>2014-03-25 16:50:35</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,690" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,485" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,355" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gymhungk" type="1" sum="75" cards="[cards]"/><action no="2" player="theDL" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="5" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><cards type="Pocket" player="Tastentiger35">X X</cards><action no="3" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 H2</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131466">
+		 <general>
+		  <startdate>2014-03-25 16:50:46</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,615" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,560" dealer="0" win="900" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,355" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="theDL" type="1" sum="75" cards="[cards]"/><action no="2" player="Tastentiger35" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="4" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="5" player="theDL" type="23" sum="300" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="6" player="Tastentiger35" type="3" sum="150" cards=""/><cards type="Pocket" player="moonbaseone">H9 H8</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 DA SA</cards><action no="7" player="theDL" type="5" sum="300" cards=""/><action no="8" player="Tastentiger35" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131583">
+		 <general>
+		  <startdate>2014-03-25 16:51:15</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,615" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="2,860" dealer="1" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="2,055" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Tastentiger35" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="3" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">X X</cards><action no="4" player="theDL" type="23" sum="300" cards=""/><cards type="Pocket" player="Tastentiger35">X X</cards><action no="5" player="Tastentiger35" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CQ D2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601131702">
+		 <general>
+		  <startdate>2014-03-25 16:51:42</startdate>		  
+		  <players>
+		   <player seat="1" name="gymhungk" chips="2,615" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="theDL" chips="3,085" dealer="0" win="4,185" bet="1,980" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Tastentiger35" chips="1,980" dealer="1" win="0" bet="1,980" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="moonbaseone" chips="1,320" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224190245"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="gymhungk" type="2" sum="150" cards="[cards]"/><action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="gymhungk">X X</cards><action no="6" player="gymhungk" type="0" sum="0" cards=""/><cards type="Pocket" player="theDL">CQ DQ</cards><action no="3" player="theDL" type="23" sum="300" cards=""/><action no="7" player="theDL" type="3" sum="1,680" cards=""/><cards type="Pocket" player="Tastentiger35">CA S9</cards><action no="4" player="Tastentiger35" type="23" sum="1,980" cards=""/><cards type="Pocket" player="moonbaseone">C6 C7</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK DA D10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards>
+	</round>
+	
+		</game>  
+	</session>

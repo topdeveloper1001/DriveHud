@@ -1,0 +1,2335 @@
+#Game No : 406810187
+***** 888poker Hand History for Game 406810187 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:34:34
+Table Liege 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 2: Tomkass400 ( $1.62 )
+Seat 4: badshotboy ( $1.90 )
+Seat 5: fad86 ( $1.47 )
+Seat 6: INDIGR ( $0.40 )
+Seat 7: rags ( $15.80 )
+Seat 9: skvizi13 ( $0.58 )
+Tomkass400 posts small blind [$0.01]
+badshotboy folds
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+INDIGR calls [$0.02]
+rags folds
+skvizi13 folds
+Tomkass400 calls [$0.01]
+fad86 raises [$0.02]
+INDIGR calls [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ Ts, 7s, Qc ]
+Tomkass400 checks
+fad86 checks
+INDIGR checks
+** Dealing turn ** [ 9s ]
+Tomkass400 checks
+fad86 checks
+INDIGR bets [$0.04]
+Tomkass400 folds
+fad86 folds
+** Summary **
+INDIGR collected [ $0.12 ]
+
+
+#Game No : 406810249
+***** 888poker Hand History for Game 406810249 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:35:31
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: 12547sjc ( $0.90 )
+Seat 2: Tomkass400 ( $1.58 )
+Seat 5: fad86 ( $1.43 )
+Seat 6: INDIGR ( $0.48 )
+Seat 7: rags ( $15.80 )
+Seat 9: skvizi13 ( $0.58 )
+fad86 posts small blind [$0.01]
+INDIGR posts big blind [$0.02]
+12547sjc posts big blind [$0.02]
+** Dealing down cards **
+rags calls [$0.02]
+skvizi13 raises [$0.04]
+12547sjc folds
+Tomkass400 calls [$0.04]
+fad86 folds
+INDIGR calls [$0.02]
+rags calls [$0.02]
+** Dealing flop ** [ Jd, 5c, 6c ]
+INDIGR checks
+rags checks
+skvizi13 bets [$0.02]
+Tomkass400 calls [$0.02]
+INDIGR folds
+rags calls [$0.02]
+** Dealing turn ** [ Qs ]
+rags checks
+skvizi13 checks
+Tomkass400 checks
+** Dealing river ** [ Ts ]
+rags checks
+skvizi13 checks
+Tomkass400 checks
+** Summary **
+rags shows [ 7d, 5d ]
+skvizi13 shows [ Ad, Tc ]
+Tomkass400 mucks [ 6s, Ah ]
+skvizi13 collected [ $0.24 ]
+
+
+#Game No : 406810352
+***** 888poker Hand History for Game 406810352 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:36:59
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 5
+Seat 2: Tomkass400 ( $1.52 )
+Seat 5: fad86 ( $1.42 )
+Seat 6: INDIGR ( $0.44 )
+Seat 7: rags ( $15.74 )
+Seat 9: skvizi13 ( $0.76 )
+INDIGR posts small blind [$0.01]
+rags posts big blind [$0.02]
+** Dealing down cards **
+skvizi13 folds
+Tomkass400 calls [$0.02]
+fad86 raises [$0.04]
+INDIGR folds
+rags calls [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ 7h, Ts, 2d ]
+rags bets [$0.02]
+Tomkass400 calls [$0.02]
+fad86 raises [$0.04]
+rags calls [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ Qc ]
+rags checks
+Tomkass400 bets [$0.04]
+fad86 raises [$0.08]
+rags folds
+Tomkass400 raises [$0.08]
+fad86 calls [$0.04]
+** Dealing river ** [ 9c ]
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Summary **
+Tomkass400 shows [ Qd, 2s ]
+fad86 mucks [ Td, Ad ]
+Tomkass400 collected [ $0.55 ]
+
+
+#Game No : 406810394
+***** 888poker Hand History for Game 406810394 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:37:36
+Table Liege 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 2: Tomkass400 ( $1.83 )
+Seat 5: fad86 ( $1.18 )
+Seat 6: INDIGR ( $0.43 )
+Seat 7: rags ( $15.66 )
+Seat 9: skvizi13 ( $0.76 )
+rags posts small blind [$0.01]
+skvizi13 folds
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 raises [$0.04]
+INDIGR folds
+rags folds
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ Qc, Kd, 2c ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ 6d ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ 3h ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ 5c, Ac ]
+Tomkass400 mucks [ Jd, 7c ]
+fad86 collected [ $0.28 ]
+
+
+#Game No : 406810431
+***** 888poker Hand History for Game 406810431 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:38:03
+Table Liege 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $1.69 )
+Seat 5: fad86 ( $1.32 )
+Seat 6: INDIGR ( $0.43 )
+Seat 7: rags ( $15.65 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+INDIGR raises [$0.04]
+rags folds
+Tomkass400 calls [$0.03]
+fad86 calls [$0.02]
+** Dealing flop ** [ 8h, 3s, Kh ]
+Tomkass400 checks
+fad86 bets [$0.02]
+INDIGR folds
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ 7d ]
+Tomkass400 checks
+fad86 checks
+** Dealing river ** [ 4h ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 folds
+** Summary **
+fad86 collected [ $0.16 ]
+
+
+#Game No : 406810480
+***** 888poker Hand History for Game 406810480 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:38:51
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: Tomkass400 ( $1.63 )
+Seat 5: fad86 ( $1.42 )
+Seat 6: INDIGR ( $0.39 )
+Seat 7: rags ( $15.65 )
+Seat 8: devdema ( $0.07 )
+fad86 posts small blind [$0.01]
+INDIGR folds
+rags posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 calls [$0.02]
+fad86 calls [$0.01]
+rags checks
+** Dealing flop ** [ As, Qh, Kd ]
+fad86 checks
+rags checks
+Tomkass400 checks
+** Dealing turn ** [ 9d ]
+fad86 checks
+rags checks
+Tomkass400 checks
+** Dealing river ** [ Qd ]
+fad86 checks
+rags checks
+Tomkass400 checks
+** Summary **
+fad86 shows [ 2d, 4s ]
+rags shows [ 4h, Jd ]
+Tomkass400 mucks [ 3h, 6c ]
+rags collected [ $0.06 ]
+
+
+#Game No : 406810535
+***** 888poker Hand History for Game 406810535 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:39:39
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $1.61 )
+Seat 5: fad86 ( $1.40 )
+Seat 7: rags ( $15.69 )
+Seat 8: devdema ( $0.07 )
+rags posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 calls [$0.02]
+fad86 calls [$0.02]
+rags calls [$0.01]
+devdema raises [$0.02]
+Tomkass400 calls [$0.02]
+fad86 calls [$0.02]
+rags folds
+** Dealing flop ** [ Qd, Ac, 9s ]
+devdema bets [$0.02]
+Tomkass400 folds
+fad86 folds
+** Summary **
+devdema did not show his hand
+devdema collected [ $0.14 ]
+
+
+#Game No : 406810583
+***** 888poker Hand History for Game 406810583 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:40:18
+Table Liege 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $1.57 )
+Seat 5: fad86 ( $1.36 )
+Seat 7: rags ( $15.67 )
+Seat 8: devdema ( $0.17 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+rags calls [$0.02]
+devdema calls [$0.01]
+Tomkass400 checks
+** Dealing flop ** [ 7c, Kd, 9s ]
+devdema bets [$0.02]
+Tomkass400 calls [$0.02]
+fad86 calls [$0.02]
+rags raises [$0.04]
+devdema calls [$0.02]
+Tomkass400 calls [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ Qh ]
+devdema bets [$0.04]
+Tomkass400 calls [$0.04]
+fad86 folds
+rags calls [$0.04]
+** Dealing river ** [ 3h ]
+devdema bets [$0.04]
+Tomkass400 folds
+rags calls [$0.04]
+** Summary **
+devdema shows [ 9c, Qd ]
+rags mucks [ Jd, Kc ]
+devdema collected [ $0.42 ]
+
+
+#Game No : 406810625
+***** 888poker Hand History for Game 406810625 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:40:55
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $1.47 )
+Seat 5: fad86 ( $1.30 )
+Seat 7: rags ( $15.53 )
+Seat 8: devdema ( $0.45 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+rags raises [$0.04]
+devdema folds
+Tomkass400 calls [$0.03]
+fad86 calls [$0.02]
+** Dealing flop ** [ Ad, 3c, 8c ]
+Tomkass400 checks
+fad86 checks
+rags checks
+** Dealing turn ** [ Kh ]
+Tomkass400 checks
+fad86 checks
+rags checks
+** Dealing river ** [ 6h ]
+Tomkass400 bets [$0.04]
+fad86 folds
+rags folds
+** Summary **
+Tomkass400 collected [ $0.12 ]
+
+
+#Game No : 406810650
+***** 888poker Hand History for Game 406810650 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:41:20
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: Tomkass400 ( $1.55 )
+Seat 5: fad86 ( $1.26 )
+Seat 7: rags ( $15.49 )
+Seat 8: devdema ( $0.45 )
+Seat 10: 12547sjc ( $0.90 )
+fad86 posts small blind [$0.01]
+rags folds
+devdema posts big blind [$0.02]
+12547sjc posts big blind [$0.02]
+** Dealing down cards **
+12547sjc checks
+Tomkass400 raises [$0.04]
+fad86 calls [$0.03]
+devdema calls [$0.02]
+12547sjc calls [$0.02]
+** Dealing flop ** [ 4s, 8d, Qd ]
+fad86 checks
+devdema checks
+12547sjc checks
+Tomkass400 bets [$0.02]
+fad86 folds
+devdema folds
+12547sjc calls [$0.02]
+** Dealing turn ** [ Qh ]
+12547sjc checks
+Tomkass400 bets [$0.04]
+12547sjc calls [$0.04]
+** Dealing river ** [ 6s ]
+12547sjc checks
+Tomkass400 bets [$0.04]
+12547sjc calls [$0.04]
+** Summary **
+Tomkass400 shows [ Qs, 5h ]
+12547sjc mucks [ Td, 6d ]
+Tomkass400 collected [ $0.35 ]
+
+
+#Game No : 406810687
+***** 888poker Hand History for Game 406810687 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:41:54
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $1.76 )
+Seat 5: fad86 ( $1.22 )
+Seat 8: devdema ( $0.41 )
+Seat 10: 12547sjc ( $0.76 )
+devdema posts small blind [$0.01]
+12547sjc posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 calls [$0.04]
+devdema folds
+12547sjc folds
+** Dealing flop ** [ Tc, Ah, 9c ]
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ Qh ]
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ 5c ]
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Summary **
+Tomkass400 shows [ Kd, 5h ]
+fad86 shows [ 8s, 8d ]
+fad86 collected [ $0.30 ]
+
+
+#Game No : 406810718
+***** 888poker Hand History for Game 406810718 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:42:16
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $1.62 )
+Seat 5: fad86 ( $1.38 )
+Seat 8: devdema ( $0.40 )
+Seat 10: 12547sjc ( $0.74 )
+12547sjc posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 raises [$0.04]
+devdema calls [$0.04]
+12547sjc folds
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ 5c, 3h, 2c ]
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+devdema folds
+** Dealing turn ** [ 6c ]
+Tomkass400 bets [$0.04]
+fad86 folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.17 ]
+
+
+#Game No : 406810749
+***** 888poker Hand History for Game 406810749 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:42:40
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.73 )
+Seat 5: fad86 ( $1.32 )
+Seat 8: devdema ( $0.36 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 folds
+devdema calls [$0.02]
+** Dealing flop ** [ 9d, Kd, 8h ]
+devdema checks
+Tomkass400 checks
+** Dealing turn ** [ 9h ]
+devdema checks
+Tomkass400 checks
+** Dealing river ** [ Ks ]
+devdema bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+devdema shows [ As, 5h ]
+Tomkass400 mucks [ 6c, Jh ]
+devdema collected [ $0.17 ]
+
+
+#Game No : 406810769
+***** 888poker Hand History for Game 406810769 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:43:03
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.65 )
+Seat 5: fad86 ( $1.31 )
+Seat 8: devdema ( $0.45 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+devdema folds
+Tomkass400 checks
+** Dealing flop ** [ Ts, 5c, Ah ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Tomkass400 raises [$0.04]
+fad86 folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.09 ]
+
+
+#Game No : 406810790
+***** 888poker Hand History for Game 406810790 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:43:18
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.70 )
+Seat 5: fad86 ( $1.27 )
+Seat 8: devdema ( $0.44 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 raises [$0.03]
+fad86 calls [$0.02]
+** Dealing flop ** [ 2s, 8h, 6s ]
+Tomkass400 bets [$0.02]
+fad86 raises [$0.04]
+Tomkass400 raises [$0.04]
+fad86 raises [$0.04]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ 8s ]
+Tomkass400 bets [$0.04]
+fad86 folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.23 ]
+
+
+#Game No : 406810816
+***** 888poker Hand History for Game 406810816 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:43:40
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.81 )
+Seat 5: fad86 ( $1.15 )
+Seat 8: devdema ( $0.44 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 calls [$0.03]
+devdema calls [$0.02]
+** Dealing flop ** [ Ah, 9c, 6d ]
+fad86 checks
+devdema checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+devdema folds
+** Dealing turn ** [ Qc ]
+fad86 checks
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ 4d ]
+fad86 checks
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Summary **
+Tomkass400 shows [ 7c, Jc ]
+fad86 shows [ 6c, 8h ]
+fad86 collected [ $0.31 ]
+
+
+#Game No : 406810852
+***** 888poker Hand History for Game 406810852 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:44:10
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.67 )
+Seat 5: fad86 ( $1.32 )
+Seat 8: devdema ( $0.40 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+devdema calls [$0.01]
+Tomkass400 checks
+** Dealing flop ** [ Ts, Ac, 8s ]
+devdema checks
+Tomkass400 checks
+** Dealing turn ** [ 9h ]
+devdema checks
+Tomkass400 bets [$0.04]
+devdema calls [$0.04]
+** Dealing river ** [ Qs ]
+devdema checks
+Tomkass400 checks
+** Summary **
+devdema shows [ 7d, 5d ]
+Tomkass400 shows [ 4c, 2s ]
+Tomkass400 collected [ $0.06 ]
+devdema collected [ $0.06 ]
+
+
+#Game No : 406810895
+***** 888poker Hand History for Game 406810895 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:44:46
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.67 )
+Seat 5: fad86 ( $1.32 )
+Seat 8: devdema ( $0.40 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 calls [$0.01]
+fad86 checks
+** Dealing flop ** [ Th, Jc, 4c ]
+Tomkass400 checks
+fad86 checks
+** Dealing turn ** [ Qc ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 folds
+** Summary **
+fad86 did not show his hand
+fad86 collected [ $0.04 ]
+
+
+#Game No : 406810916
+***** 888poker Hand History for Game 406810916 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:45:03
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.65 )
+Seat 5: fad86 ( $1.34 )
+Seat 8: devdema ( $0.40 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 calls [$0.02]
+fad86 calls [$0.01]
+devdema checks
+** Dealing flop ** [ 6h, 7c, 5c ]
+fad86 checks
+devdema checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+devdema calls [$0.02]
+** Dealing turn ** [ 3c ]
+fad86 checks
+devdema checks
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+devdema calls [$0.04]
+** Dealing river ** [ 6s ]
+fad86 checks
+devdema checks
+Tomkass400 bets [$0.04]
+fad86 folds
+devdema calls [$0.04]
+** Summary **
+Tomkass400 shows [ 4h, 3d ]
+devdema mucks [ 8d, Td ]
+Tomkass400 collected [ $0.31 ]
+
+
+#Game No : 406810969
+***** 888poker Hand History for Game 406810969 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:45:51
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.84 )
+Seat 5: fad86 ( $1.26 )
+Seat 8: devdema ( $0.28 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+devdema folds
+Tomkass400 checks
+** Dealing flop ** [ 9d, 7s, 2c ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ Kd ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 folds
+** Summary **
+fad86 did not show his hand
+fad86 collected [ $0.09 ]
+
+
+#Game No : 406810982
+***** 888poker Hand History for Game 406810982 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:46:07
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.80 )
+Seat 5: fad86 ( $1.31 )
+Seat 8: devdema ( $0.27 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 raises [$0.03]
+fad86 calls [$0.02]
+** Dealing flop ** [ 7d, 4d, Ks ]
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 3d ]
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ 8s ]
+Tomkass400 bets [$0.04]
+fad86 raises [$0.08]
+Tomkass400 raises [$0.08]
+fad86 raises [$0.08]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ 6d, Qd ]
+Tomkass400 mucks [ Kd, Ac ]
+fad86 collected [ $0.50 ]
+
+
+#Game No : 406811010
+***** 888poker Hand History for Game 406811010 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:46:33
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.54 )
+Seat 5: fad86 ( $1.55 )
+Seat 8: devdema ( $0.27 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 calls [$0.02]
+fad86 calls [$0.01]
+devdema checks
+** Dealing flop ** [ Ks, 6s, 8c ]
+fad86 checks
+devdema checks
+Tomkass400 checks
+** Dealing turn ** [ Ts ]
+fad86 checks
+devdema checks
+Tomkass400 checks
+** Dealing river ** [ 2h ]
+fad86 checks
+devdema checks
+Tomkass400 checks
+** Summary **
+fad86 shows [ 2s, 9d ]
+devdema mucks [ 7c, 4c ]
+Tomkass400 mucks [ 3d, Qh ]
+fad86 collected [ $0.06 ]
+
+
+#Game No : 406811050
+***** 888poker Hand History for Game 406811050 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:47:13
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.52 )
+Seat 5: fad86 ( $1.59 )
+Seat 8: devdema ( $0.25 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+devdema folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.03 ]
+
+
+#Game No : 406811058
+***** 888poker Hand History for Game 406811058 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:47:21
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.53 )
+Seat 5: fad86 ( $1.59 )
+Seat 8: devdema ( $0.24 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 raises [$0.03]
+fad86 calls [$0.02]
+** Dealing flop ** [ 3c, 8c, 4c ]
+Tomkass400 bets [$0.02]
+fad86 folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.08 ]
+
+
+#Game No : 406811083
+***** 888poker Hand History for Game 406811083 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:47:42
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.57 )
+Seat 5: fad86 ( $1.55 )
+Seat 8: devdema ( $0.24 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 calls [$0.02]
+fad86 raises [$0.03]
+devdema folds
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ Jd, Th, 4c ]
+fad86 bets [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ 8s ]
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ Td ]
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ Ac, Kd ]
+Tomkass400 mucks [ Qh, 7s ]
+fad86 collected [ $0.29 ]
+
+
+#Game No : 406811106
+***** 888poker Hand History for Game 406811106 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:48:09
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.43 )
+Seat 5: fad86 ( $1.70 )
+Seat 8: devdema ( $0.22 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+devdema calls [$0.01]
+Tomkass400 raises [$0.02]
+fad86 calls [$0.02]
+devdema calls [$0.02]
+** Dealing flop ** [ 5s, Kd, Qh ]
+devdema checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+devdema calls [$0.02]
+** Dealing turn ** [ Jc ]
+devdema checks
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+devdema folds
+** Dealing river ** [ 8d ]
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Summary **
+Tomkass400 shows [ 8h, 9c ]
+fad86 mucks [ 5h, Ad ]
+Tomkass400 collected [ $0.33 ]
+
+
+#Game No : 406811138
+***** 888poker Hand History for Game 406811138 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:48:38
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.62 )
+Seat 5: fad86 ( $1.56 )
+Seat 8: devdema ( $0.16 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 8c, Ah, 5d ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ 3h ]
+Tomkass400 checks
+fad86 checks
+** Dealing river ** [ 5h ]
+Tomkass400 checks
+fad86 checks
+** Summary **
+Tomkass400 shows [ 7d, Jh ]
+fad86 mucks [ 7h, 2c ]
+Tomkass400 collected [ $0.08 ]
+
+
+#Game No : 406811162
+***** 888poker Hand History for Game 406811162 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:49:03
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.66 )
+Seat 5: fad86 ( $1.52 )
+Seat 8: devdema ( $0.16 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 calls [$0.03]
+devdema folds
+** Dealing flop ** [ 4s, 5d, Ac ]
+fad86 checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 9d ]
+fad86 checks
+Tomkass400 bets [$0.04]
+fad86 folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.14 ]
+
+
+#Game No : 406811193
+***** 888poker Hand History for Game 406811193 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:49:28
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.74 )
+Seat 5: fad86 ( $1.46 )
+Seat 8: devdema ( $0.14 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+devdema folds
+Tomkass400 raises [$0.02]
+fad86 calls [$0.02]
+** Dealing flop ** [ 9d, Ad, Qd ]
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 5h ]
+Tomkass400 bets [$0.04]
+fad86 raises [$0.08]
+Tomkass400 raises [$0.08]
+fad86 calls [$0.04]
+** Dealing river ** [ Ts ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ As, 7d ]
+Tomkass400 mucks [ 3s, Kh ]
+fad86 collected [ $0.43 ]
+
+
+#Game No : 406811222
+***** 888poker Hand History for Game 406811222 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:49:56
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.52 )
+Seat 5: fad86 ( $1.67 )
+Seat 8: devdema ( $0.13 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 raises [$0.03]
+fad86 calls [$0.02]
+** Dealing flop ** [ 5d, 3s, 6c ]
+Tomkass400 bets [$0.02]
+fad86 raises [$0.04]
+Tomkass400 raises [$0.04]
+fad86 calls [$0.02]
+** Dealing turn ** [ 7h ]
+Tomkass400 bets [$0.04]
+fad86 raises [$0.08]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ 8s ]
+Tomkass400 bets [$0.04]
+fad86 raises [$0.08]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ 4c, 6d ]
+Tomkass400 mucks [ 7c, Ad ]
+fad86 collected [ $0.50 ]
+
+
+#Game No : 406811257
+***** 888poker Hand History for Game 406811257 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:50:37
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.26 )
+Seat 5: fad86 ( $1.91 )
+Seat 8: devdema ( $0.13 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 calls [$0.02]
+fad86 raises [$0.03]
+devdema folds
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ Jh, 8c, 6s ]
+fad86 checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 5s ]
+fad86 checks
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ 8h ]
+fad86 checks
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Summary **
+Tomkass400 shows [ 9c, 6h ]
+fad86 mucks [ Ks, Qh ]
+Tomkass400 collected [ $0.29 ]
+
+
+#Game No : 406811292
+***** 888poker Hand History for Game 406811292 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:51:04
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.41 )
+Seat 5: fad86 ( $1.77 )
+Seat 8: devdema ( $0.11 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+devdema folds
+Tomkass400 raises [$0.02]
+fad86 calls [$0.02]
+** Dealing flop ** [ 2s, Jc, 6s ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ Ah ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ Js ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 folds
+** Summary **
+fad86 did not show his hand
+fad86 collected [ $0.20 ]
+
+
+#Game No : 406811312
+***** 888poker Hand History for Game 406811312 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:51:27
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.31 )
+Seat 5: fad86 ( $1.87 )
+Seat 8: devdema ( $0.10 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema calls [$0.02]
+Tomkass400 raises [$0.03]
+fad86 calls [$0.02]
+devdema raises [$0.04]
+Tomkass400 raises [$0.04]
+fad86 calls [$0.04]
+devdema calls [$0.02]
+** Dealing flop ** [ 8h, Ad, Td ]
+Tomkass400 bets [$0.02]
+fad86 folds
+devdema calls [$0.02]
+** Dealing turn ** [ Qs ]
+** Dealing river ** [ 5h ]
+** Summary **
+Tomkass400 shows [ Th, Kd ]
+devdema shows [ Qc, Qh ]
+devdema collected [ $0.27 ]
+
+
+#Game No : 406811349
+***** 888poker Hand History for Game 406811349 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:51:59
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.21 )
+Seat 5: fad86 ( $1.79 )
+Seat 8: devdema ( $0.27 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 calls [$0.02]
+fad86 calls [$0.01]
+devdema checks
+** Dealing flop ** [ Ad, Js, Tc ]
+fad86 checks
+devdema checks
+Tomkass400 checks
+** Dealing turn ** [ 6c ]
+fad86 bets [$0.04]
+devdema folds
+Tomkass400 calls [$0.04]
+** Dealing river ** [ As ]
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ Ah, 6h ]
+Tomkass400 mucks [ 2d, 6s ]
+fad86 collected [ $0.21 ]
+
+
+#Game No : 406811377
+***** 888poker Hand History for Game 406811377 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:52:24
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.11 )
+Seat 5: fad86 ( $1.90 )
+Seat 8: devdema ( $0.25 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+devdema folds
+Tomkass400 raises [$0.02]
+fad86 calls [$0.02]
+** Dealing flop ** [ 4c, 2h, Ts ]
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 3d ]
+Tomkass400 bets [$0.04]
+fad86 raises [$0.08]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ Ah ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ 5h, 5s ]
+Tomkass400 mucks [ Qs, 6s ]
+fad86 collected [ $0.36 ]
+
+
+#Game No : 406811400
+***** 888poker Hand History for Game 406811400 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:52:49
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $0.93 )
+Seat 5: fad86 ( $2.08 )
+Seat 8: devdema ( $0.24 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 6s, Qc, 7s ]
+Tomkass400 checks
+fad86 checks
+** Dealing turn ** [ 5d ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ Th ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 folds
+** Summary **
+fad86 did not show his hand
+fad86 collected [ $0.12 ]
+
+
+#Game No : 406811426
+***** 888poker Hand History for Game 406811426 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:53:15
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $0.87 )
+Seat 5: fad86 ( $2.14 )
+Seat 8: devdema ( $0.24 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 calls [$0.02]
+fad86 calls [$0.01]
+devdema checks
+** Dealing flop ** [ Jc, 9d, 5d ]
+fad86 checks
+devdema checks
+Tomkass400 checks
+** Dealing turn ** [ 2d ]
+fad86 checks
+devdema bets [$0.04]
+Tomkass400 calls [$0.04]
+fad86 folds
+** Dealing river ** [ 4c ]
+devdema bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+devdema shows [ 5c, 6h ]
+Tomkass400 shows [ 2h, 4s ]
+Tomkass400 collected [ $0.21 ]
+
+
+#Game No : 406811461
+***** 888poker Hand History for Game 406811461 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:53:46
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $0.98 )
+Seat 5: fad86 ( $2.12 )
+Seat 8: devdema ( $0.14 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 folds
+devdema folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.03 ]
+
+
+#Game No : 406811477
+***** 888poker Hand History for Game 406811477 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:53:55
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $0.99 )
+Seat 5: fad86 ( $2.12 )
+Seat 8: devdema ( $0.13 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema calls [$0.02]
+Tomkass400 calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 2h, Qh, 5c ]
+Tomkass400 bets [$0.02]
+fad86 folds
+devdema calls [$0.02]
+** Dealing turn ** [ 2s ]
+Tomkass400 bets [$0.04]
+devdema calls [$0.04]
+** Dealing river ** [ Kc ]
+Tomkass400 bets [$0.04]
+devdema raises [$0.05]
+Tomkass400 calls [$0.01]
+** Summary **
+Tomkass400 shows [ 4h, 3c ]
+devdema shows [ Qs, 3s ]
+devdema collected [ $0.27 ]
+
+
+#Game No : 406811512
+***** 888poker Hand History for Game 406811512 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:54:21
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $0.86 )
+Seat 5: fad86 ( $2.10 )
+Seat 8: devdema ( $0.27 )
+fad86 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 folds
+devdema calls [$0.02]
+** Dealing flop ** [ 9s, 5h, 5d ]
+devdema checks
+Tomkass400 checks
+** Dealing turn ** [ 7d ]
+devdema bets [$0.04]
+Tomkass400 raises [$0.08]
+devdema raises [$0.08]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ 2h ]
+devdema bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+devdema shows [ 3c, 5c ]
+Tomkass400 mucks [ 3d, Qd ]
+devdema collected [ $0.39 ]
+
+
+#Game No : 406811539
+***** 888poker Hand History for Game 406811539 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:54:50
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $0.66 )
+Seat 5: fad86 ( $2.09 )
+Seat 8: devdema ( $0.46 )
+devdema posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+devdema calls [$0.01]
+Tomkass400 raises [$0.02]
+fad86 calls [$0.02]
+devdema calls [$0.02]
+** Dealing flop ** [ 8s, Td, 7h ]
+devdema bets [$0.02]
+Tomkass400 raises [$0.04]
+fad86 calls [$0.04]
+devdema raises [$0.04]
+Tomkass400 raises [$0.04]
+fad86 calls [$0.04]
+devdema calls [$0.02]
+** Dealing turn ** [ 9d ]
+devdema checks
+Tomkass400 checks
+fad86 bets [$0.04]
+devdema calls [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ 8c ]
+devdema checks
+Tomkass400 checks
+fad86 bets [$0.04]
+devdema calls [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ 9h, 8h ]
+devdema mucks [ 6c, 9c ]
+Tomkass400 mucks [ Ad, 9s ]
+fad86 collected [ $0.57 ]
+
+
+#Game No : 406811586
+***** 888poker Hand History for Game 406811586 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:55:34
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $0.46 )
+Seat 5: fad86 ( $2.46 )
+Seat 8: devdema ( $0.26 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+Tomkass400 calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 8d, Jd, 9c ]
+Tomkass400 bets [$0.02]
+fad86 folds
+** Summary **
+Tomkass400 collected [ $0.04 ]
+
+
+#Game No : 406811635
+***** 888poker Hand History for Game 406811635 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:56:14
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.48 )
+Seat 5: fad86 ( $2.44 )
+Seat 6: Dragiza ( $0.59 )
+Seat 8: devdema ( $0.26 )
+fad86 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+devdema raises [$0.04]
+Tomkass400 raises [$0.06]
+fad86 folds
+Dragiza folds
+devdema raises [$0.04]
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ 6d, 6s, 9s ]
+devdema bets [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ Jh ]
+devdema bets [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ Ks ]
+devdema bets [$0.04]
+Tomkass400 raises [$0.08]
+devdema raises [$0.08]
+Tomkass400 calls [$0.04]
+** Summary **
+Tomkass400 shows [ Td, Qs ]
+devdema shows [ Ac, As ]
+Tomkass400 collected [ $0.53 ]
+
+
+#Game No : 406811675
+***** 888poker Hand History for Game 406811675 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:57:00
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.75 )
+Seat 5: fad86 ( $2.43 )
+Seat 6: Dragiza ( $0.57 )
+Seat 9: Scoots10 ( $1.80 )
+Dragiza posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 raises [$0.06]
+Dragiza folds
+Scoots10 folds
+Tomkass400 raises [$0.04]
+fad86 calls [$0.02]
+** Dealing flop ** [ Kh, 2c, Kd ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ 6s ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ Js ]
+Tomkass400 checks
+fad86 checks
+** Summary **
+Tomkass400 shows [ Qh, Ac ]
+fad86 shows [ Qd, Ad ]
+fad86 collected [ $0.15 ]
+Tomkass400 collected [ $0.15 ]
+
+
+#Game No : 406811711
+***** 888poker Hand History for Game 406811711 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:57:33
+Table Liege 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.76 )
+Seat 5: fad86 ( $2.44 )
+Seat 6: Dragiza ( $0.56 )
+Seat 9: Scoots10 ( $1.78 )
+Scoots10 posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+Dragiza folds
+Scoots10 calls [$0.01]
+Tomkass400 checks
+** Dealing flop ** [ 9s, 6s, 3c ]
+Scoots10 bets [$0.02]
+Tomkass400 calls [$0.02]
+fad86 folds
+** Dealing turn ** [ 4c ]
+Scoots10 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ Th ]
+Scoots10 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+Scoots10 shows [ 8s, Js ]
+Tomkass400 shows [ Kd, 4h ]
+Tomkass400 collected [ $0.25 ]
+
+
+#Game No : 406811744
+***** 888poker Hand History for Game 406811744 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:58:00
+Table Liege 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.89 )
+Seat 5: fad86 ( $2.42 )
+Seat 6: Dragiza ( $0.56 )
+Seat 9: Scoots10 ( $1.66 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Dragiza folds
+Scoots10 raises [$0.04]
+Tomkass400 raises [$0.05]
+fad86 calls [$0.04]
+Scoots10 raises [$0.04]
+Tomkass400 calls [$0.02]
+fad86 calls [$0.02]
+** Dealing flop ** [ 5s, 4d, Qh ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Scoots10 calls [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ 8d ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Scoots10 folds
+Tomkass400 calls [$0.04]
+** Dealing river ** [ 4s ]
+Tomkass400 checks
+fad86 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ Th, 4h ]
+Tomkass400 mucks [ 7c, Kc ]
+fad86 collected [ $0.44 ]
+
+
+#Game No : 406811772
+***** 888poker Hand History for Game 406811772 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:58:32
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.71 )
+Seat 5: fad86 ( $2.68 )
+Seat 6: Dragiza ( $0.56 )
+Seat 9: Scoots10 ( $1.56 )
+fad86 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 folds
+Tomkass400 calls [$0.02]
+fad86 calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ Qc, 6s, 3h ]
+fad86 checks
+Dragiza checks
+Tomkass400 bets [$0.02]
+fad86 folds
+Dragiza folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.06 ]
+
+
+#Game No : 406811798
+***** 888poker Hand History for Game 406811798 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:58:56
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.75 )
+Seat 5: fad86 ( $2.66 )
+Seat 6: Dragiza ( $0.54 )
+Seat 9: Scoots10 ( $1.56 )
+Dragiza posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 calls [$0.02]
+fad86 folds
+Dragiza raises [$0.03]
+Scoots10 folds
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ Qd, Js, 2c ]
+Dragiza bets [$0.02]
+Tomkass400 folds
+** Summary **
+Dragiza did not show his hand
+Dragiza collected [ $0.10 ]
+
+
+#Game No : 406811833
+***** 888poker Hand History for Game 406811833 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:59:26
+Table Liege 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.71 )
+Seat 5: fad86 ( $2.66 )
+Seat 6: Dragiza ( $0.60 )
+Seat 9: Scoots10 ( $1.54 )
+Scoots10 posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+Dragiza folds
+Scoots10 folds
+Tomkass400 checks
+** Dealing flop ** [ 2d, Kc, 7h ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Tomkass400 folds
+** Summary **
+fad86 did not show his hand
+fad86 collected [ $0.05 ]
+
+
+#Game No : 406811846
+***** 888poker Hand History for Game 406811846 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 23:59:41
+Table Liege 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.69 )
+Seat 5: fad86 ( $2.69 )
+Seat 6: Dragiza ( $0.60 )
+Seat 9: Scoots10 ( $1.53 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Dragiza raises [$0.04]
+Scoots10 folds
+Tomkass400 raises [$0.05]
+fad86 folds
+Dragiza raises [$0.04]
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ 8c, Td, Kc ]
+Tomkass400 bets [$0.02]
+Dragiza calls [$0.02]
+** Dealing turn ** [ 9s ]
+Tomkass400 bets [$0.04]
+Dragiza calls [$0.04]
+** Dealing river ** [ 8h ]
+Tomkass400 bets [$0.04]
+Dragiza calls [$0.04]
+** Summary **
+Tomkass400 shows [ Tc, Ts ]
+Dragiza mucks [ Qh, Qs ]
+Tomkass400 collected [ $0.37 ]
+
+
+#Game No : 406811892
+***** 888poker Hand History for Game 406811892 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:00:20
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.88 )
+Seat 5: fad86 ( $2.67 )
+Seat 6: Dragiza ( $0.42 )
+Seat 9: Scoots10 ( $1.53 )
+fad86 posts small blind [$0.01]
+Dragiza posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 folds
+Tomkass400 calls [$0.02]
+fad86 calls [$0.01]
+Dragiza checks
+** Dealing flop ** [ 7d, 6c, 6d ]
+fad86 checks
+Dragiza checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+Dragiza folds
+** Dealing turn ** [ Kd ]
+fad86 checks
+Tomkass400 bets [$0.04]
+fad86 folds
+** Summary **
+Tomkass400 did not show his hand
+Tomkass400 collected [ $0.10 ]
+
+
+#Game No : 406811931
+***** 888poker Hand History for Game 406811931 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:00:59
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 2: Tomkass400 ( $0.94 )
+Seat 5: fad86 ( $2.63 )
+Seat 6: Dragiza ( $0.40 )
+Seat 9: Scoots10 ( $1.53 )
+Dragiza posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 calls [$0.04]
+Dragiza folds
+Scoots10 folds
+** Dealing flop ** [ 3h, 3c, 2d ]
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ Kd ]
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ 5d ]
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+** Summary **
+Tomkass400 shows [ 6c, 4d ]
+fad86 mucks [ Ad, 7c ]
+Tomkass400 collected [ $0.30 ]
+
+
+#Game No : 406811984
+***** 888poker Hand History for Game 406811984 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:01:52
+Table Liege 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.10 )
+Seat 5: fad86 ( $2.49 )
+Seat 9: Scoots10 ( $1.51 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 folds
+Tomkass400 calls [$0.01]
+fad86 raises [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing flop ** [ Ts, 7c, 9h ]
+Tomkass400 checks
+fad86 bets [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ Js ]
+Tomkass400 checks
+fad86 checks
+** Dealing river ** [ 7d ]
+Tomkass400 bets [$0.04]
+fad86 folds
+** Summary **
+Tomkass400 collected [ $0.12 ]
+
+
+#Game No : 406812019
+***** 888poker Hand History for Game 406812019 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:02:32
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: Tomkass400 ( $1.16 )
+Seat 5: fad86 ( $2.43 )
+Seat 9: Scoots10 ( $1.51 )
+fad86 posts small blind [$0.01]
+Scoots10 posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 calls [$0.03]
+Scoots10 raises [$0.04]
+Tomkass400 raises [$0.04]
+fad86 calls [$0.04]
+Scoots10 calls [$0.02]
+** Dealing flop ** [ 8h, Jd, 6c ]
+fad86 checks
+Scoots10 checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+Scoots10 calls [$0.02]
+** Dealing turn ** [ 5c ]
+fad86 checks
+Scoots10 checks
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+Scoots10 calls [$0.04]
+** Dealing river ** [ 4c ]
+fad86 checks
+Scoots10 checks
+Tomkass400 bets [$0.04]
+fad86 folds
+Scoots10 calls [$0.04]
+** Summary **
+Tomkass400 shows [ 8s, Ah ]
+Scoots10 mucks [ Ad, Ts ]
+Tomkass400 collected [ $0.48 ]
+
+
+#Game No : 406812049
+***** 888poker Hand History for Game 406812049 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:03:06
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 4
+Seat 1: dolicy14 ( $1.40 )
+Seat 2: Tomkass400 ( $1.46 )
+Seat 5: fad86 ( $2.29 )
+Seat 9: Scoots10 ( $1.33 )
+Scoots10 posts small blind [$0.01]
+dolicy14 posts big blind [$0.02]
+** Dealing down cards **
+Tomkass400 raises [$0.04]
+fad86 calls [$0.04]
+Scoots10 folds
+dolicy14 calls [$0.02]
+** Dealing flop ** [ Ts, 3s, 9h ]
+dolicy14 checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+dolicy14 folds
+** Dealing turn ** [ 8c ]
+Tomkass400 bets [$0.04]
+fad86 raises [$0.08]
+Tomkass400 raises [$0.08]
+fad86 calls [$0.04]
+** Dealing river ** [ 4s ]
+Tomkass400 bets [$0.04]
+fad86 folds
+** Summary **
+Tomkass400 collected [ $0.39 ]
+
+
+#Game No : 406812080
+***** 888poker Hand History for Game 406812080 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:03:41
+Table Liege 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: dolicy14 ( $1.36 )
+Seat 2: Tomkass400 ( $1.67 )
+Seat 5: fad86 ( $2.11 )
+Seat 7: comablack69 ( $0.32 )
+Seat 9: Scoots10 ( $1.32 )
+dolicy14 posts small blind [$0.01]
+Tomkass400 posts big blind [$0.02]
+comablack69 posts big blind [$0.02]
+** Dealing down cards **
+fad86 raises [$0.04]
+comablack69 calls [$0.02]
+Scoots10 folds
+dolicy14 folds
+Tomkass400 raises [$0.04]
+fad86 calls [$0.02]
+comablack69 calls [$0.02]
+** Dealing flop ** [ 5d, 3s, 9c ]
+Tomkass400 checks
+fad86 bets [$0.02]
+comablack69 calls [$0.02]
+Tomkass400 calls [$0.02]
+** Dealing turn ** [ 6c ]
+Tomkass400 checks
+fad86 bets [$0.04]
+comablack69 calls [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ 4c ]
+Tomkass400 checks
+fad86 bets [$0.04]
+comablack69 calls [$0.04]
+Tomkass400 calls [$0.04]
+** Summary **
+fad86 shows [ Ah, 2c ]
+comablack69 mucks [ 9h, Qd ]
+Tomkass400 mucks [ 8h, Ad ]
+fad86 collected [ $0.47 ]
+
+
+#Game No : 406812116
+***** 888poker Hand History for Game 406812116 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:04:19
+Table Liege 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: dolicy14 ( $1.35 )
+Seat 2: Tomkass400 ( $1.51 )
+Seat 5: fad86 ( $2.42 )
+Seat 7: comablack69 ( $0.16 )
+Seat 9: Scoots10 ( $1.32 )
+Seat 10: candy744 ( $1.12 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+candy744 posts big blind [$0.02]
+** Dealing down cards **
+comablack69 calls [$0.02]
+Scoots10 folds
+candy744 checks
+dolicy14 folds
+Tomkass400 calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 8d, Js, 7s ]
+Tomkass400 checks
+fad86 checks
+comablack69 checks
+candy744 checks
+** Dealing turn ** [ Qd ]
+Tomkass400 bets [$0.04]
+fad86 calls [$0.04]
+comablack69 folds
+candy744 raises [$0.08]
+Tomkass400 raises [$0.08]
+fad86 calls [$0.08]
+candy744 raises [$0.08]
+Tomkass400 calls [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ Kd ]
+Tomkass400 checks
+fad86 checks
+candy744 bets [$0.04]
+Tomkass400 calls [$0.04]
+fad86 calls [$0.04]
+** Summary **
+candy744 shows [ Th, 9c ]
+Tomkass400 mucks [ Qs, 5h ]
+fad86 mucks [ 6d, Qh ]
+candy744 collected [ $0.65 ]
+
+
+#Game No : 406812160
+***** 888poker Hand History for Game 406812160 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:05:07
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: dolicy14 ( $1.35 )
+Seat 2: Tomkass400 ( $1.29 )
+Seat 5: fad86 ( $2.20 )
+Seat 7: comablack69 ( $0.14 )
+Seat 9: Scoots10 ( $1.32 )
+Seat 10: candy744 ( $1.55 )
+fad86 posts small blind [$0.01]
+comablack69 posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 raises [$0.04]
+candy744 folds
+dolicy14 folds
+Tomkass400 calls [$0.04]
+fad86 calls [$0.03]
+comablack69 calls [$0.02]
+** Dealing flop ** [ Jh, Ks, 2s ]
+fad86 checks
+comablack69 checks
+Scoots10 bets [$0.02]
+Tomkass400 calls [$0.02]
+fad86 folds
+comablack69 folds
+** Dealing turn ** [ Qs ]
+Scoots10 bets [$0.04]
+Tomkass400 calls [$0.04]
+** Dealing river ** [ Ah ]
+Scoots10 bets [$0.04]
+Tomkass400 raises [$0.08]
+Scoots10 raises [$0.08]
+Tomkass400 raises [$0.08]
+Scoots10 calls [$0.04]
+** Summary **
+Tomkass400 shows [ 7d, Ts ]
+Scoots10 mucks [ Kc, Kh ]
+Tomkass400 collected [ $0.57 ]
+
+
+#Game No : 406812418
+***** 888poker Hand History for Game 406812418 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:09:27
+Table Liege 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: dolicy14 ( $1.32 )
+Seat 2: Tomkass400 ( $2.03 )
+Seat 5: fad86 ( $1.77 )
+Seat 8: xxBlue777xx ( $2.90 )
+Seat 9: Scoots10 ( $1.03 )
+Seat 10: candy744 ( $1.70 )
+Tomkass400 posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx calls [$0.02]
+Scoots10 folds
+candy744 folds
+dolicy14 folds
+Tomkass400 raises [$0.03]
+fad86 calls [$0.02]
+xxBlue777xx calls [$0.02]
+** Dealing flop ** [ Qd, 7c, 9d ]
+Tomkass400 bets [$0.02]
+fad86 folds
+xxBlue777xx folds
+** Summary **
+Tomkass400 collected [ $0.12 ]
+
+
+#Game No : 406812436
+***** 888poker Hand History for Game 406812436 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:09:52
+Table Liege 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: dolicy14 ( $1.32 )
+Seat 2: Tomkass400 ( $2.11 )
+Seat 5: fad86 ( $1.73 )
+Seat 8: xxBlue777xx ( $2.86 )
+Seat 9: Scoots10 ( $1.03 )
+Seat 10: candy744 ( $1.70 )
+fad86 posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+Scoots10 folds
+candy744 calls [$0.02]
+dolicy14 folds
+Tomkass400 calls [$0.02]
+fad86 calls [$0.01]
+xxBlue777xx checks
+** Dealing flop ** [ 6d, 4c, 7d ]
+fad86 checks
+xxBlue777xx checks
+candy744 checks
+Tomkass400 bets [$0.02]
+fad86 calls [$0.02]
+xxBlue777xx folds
+candy744 calls [$0.02]
+** Dealing turn ** [ Jh ]
+fad86 checks
+candy744 checks
+Tomkass400 bets [$0.04]
+fad86 folds
+candy744 folds
+** Summary **
+Tomkass400 collected [ $0.14 ]
+
+
+#Game No : 406812690
+***** 888poker Hand History for Game 406812690 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:14:01
+Table Liege 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: dolicy14 ( $1.32 )
+Seat 3: Jas309 ( $6.33 )
+Seat 5: fad86 ( $1.51 )
+Seat 8: xxBlue777xx ( $2.74 )
+Seat 9: Scoots10 ( $1.14 )
+Seat 10: candy744 ( $2 )
+candy744 posts small blind [$0.01]
+dolicy14 posts big blind [$0.02]
+** Dealing down cards **
+Jas309 calls [$0.02]
+fad86 calls [$0.02]
+xxBlue777xx calls [$0.02]
+Scoots10 folds
+candy744 calls [$0.01]
+dolicy14 checks
+** Dealing flop ** [ 8h, Td, Js ]
+candy744 bets [$0.02]
+dolicy14 calls [$0.02]
+Jas309 calls [$0.02]
+fad86 calls [$0.02]
+xxBlue777xx folds
+** Dealing turn ** [ Jc ]
+candy744 checks
+dolicy14 bets [$0.04]
+Jas309 calls [$0.04]
+fad86 calls [$0.04]
+candy744 calls [$0.04]
+** Dealing river ** [ 9c ]
+candy744 checks
+dolicy14 bets [$0.04]
+Jas309 raises [$0.08]
+fad86 folds
+candy744 folds
+dolicy14 calls [$0.04]
+** Summary **
+Jas309 shows [ Ac, Qd ]
+dolicy14 mucks [ 8c, 7d ]
+Jas309 collected [ $0.48 ]
+
+
+#Game No : 406812795
+***** 888poker Hand History for Game 406812795 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:16:00
+Table Liege 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: dolicy14 ( $1.15 )
+Seat 5: fad86 ( $1.43 )
+Seat 7: shkoldv ( $1.90 )
+Seat 8: xxBlue777xx ( $2.72 )
+Seat 9: Scoots10 ( $1.14 )
+Seat 10: candy744 ( $1.92 )
+fad86 posts small blind [$0.01]
+shkoldv posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx folds
+Scoots10 folds
+candy744 folds
+dolicy14 calls [$0.02]
+fad86 calls [$0.01]
+shkoldv checks
+** Dealing flop ** [ Jd, 3h, 5h ]
+fad86 bets [$0.02]
+shkoldv folds
+dolicy14 calls [$0.02]
+** Dealing turn ** [ 9c ]
+fad86 bets [$0.04]
+dolicy14 folds
+** Summary **
+fad86 collected [ $0.10 ]
+
+
+#Game No : 406814301
+***** 888poker Hand History for Game 406814301 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:47:11
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: thegrind14 ( $0.32 )
+Seat 4: rags ( $16.84 )
+Seat 5: fad86 ( $2.67 )
+Seat 7: shkoldv ( $1.78 )
+Seat 8: xxBlue777xx ( $3.51 )
+Seat 9: 123charly321 ( $0.40 )
+123charly321 posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+rags calls [$0.02]
+fad86 folds
+shkoldv folds
+xxBlue777xx folds
+123charly321 calls [$0.01]
+thegrind14 checks
+** Dealing flop ** [ Qh, 4h, Qs ]
+123charly321 checks
+thegrind14 bets [$0.02]
+rags folds
+123charly321 calls [$0.02]
+** Dealing turn ** [ Ts ]
+123charly321 checks
+thegrind14 checks
+** Dealing river ** [ 2d ]
+123charly321 checks
+thegrind14 checks
+** Summary **
+123charly321 shows [ Th, Jh ]
+thegrind14 mucks [ 7c, 7h ]
+123charly321 collected [ $0.10 ]
+
+
+#Game No : 406814422
+***** 888poker Hand History for Game 406814422 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:49:38
+Table Liege 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: thegrind14 ( $0.41 )
+Seat 3: yan_robert88 ( $0.24 )
+Seat 4: rags ( $16.79 )
+Seat 5: fad86 ( $2.57 )
+Seat 7: shkoldv ( $1.78 )
+Seat 8: xxBlue777xx ( $3.62 )
+fad86 posts small blind [$0.01]
+shkoldv posts big blind [$0.02]
+** Dealing down cards **
+xxBlue777xx raises [$0.04]
+thegrind14 folds
+yan_robert88 calls [$0.04]
+rags folds
+fad86 calls [$0.03]
+shkoldv folds
+** Dealing flop ** [ 6d, 8h, Ts ]
+fad86 checks
+xxBlue777xx checks
+yan_robert88 bets [$0.02]
+fad86 calls [$0.02]
+xxBlue777xx calls [$0.02]
+** Dealing turn ** [ 9h ]
+fad86 checks
+xxBlue777xx checks
+yan_robert88 checks
+** Dealing river ** [ Kd ]
+fad86 bets [$0.04]
+xxBlue777xx folds
+yan_robert88 calls [$0.04]
+** Summary **
+fad86 shows [ 7d, 5d ]
+yan_robert88 mucks [ 6s, 8s ]
+fad86 collected [ $0.27 ]
+
+
+#Game No : 406814470
+***** 888poker Hand History for Game 406814470 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:50:44
+Table Liege 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: thegrind14 ( $0.41 )
+Seat 3: yan_robert88 ( $0.14 )
+Seat 4: rags ( $16.79 )
+Seat 5: fad86 ( $2.74 )
+Seat 7: shkoldv ( $1.76 )
+Seat 8: xxBlue777xx ( $3.56 )
+shkoldv posts small blind [$0.01]
+xxBlue777xx posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 folds
+yan_robert88 folds
+rags folds
+fad86 calls [$0.02]
+shkoldv folds
+xxBlue777xx checks
+** Dealing flop ** [ Ts, 8c, 7c ]
+xxBlue777xx checks
+fad86 bets [$0.02]
+xxBlue777xx folds
+** Summary **
+fad86 collected [ $0.05 ]
+
+
+#Game No : 406814493
+***** 888poker Hand History for Game 406814493 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:51:19
+Table Liege 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: thegrind14 ( $0.41 )
+Seat 3: yan_robert88 ( $0.14 )
+Seat 4: rags ( $16.79 )
+Seat 5: fad86 ( $2.77 )
+Seat 7: shkoldv ( $1.75 )
+Seat 8: xxBlue777xx ( $3.54 )
+xxBlue777xx posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+yan_robert88 folds
+rags folds
+fad86 folds
+shkoldv folds
+xxBlue777xx folds
+** Summary **
+thegrind14 collected [ $0.03 ]
+
+
+#Game No : 406814513
+***** 888poker Hand History for Game 406814513 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:51:42
+Table Liege 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: thegrind14 ( $0.42 )
+Seat 3: yan_robert88 ( $0.14 )
+Seat 4: rags ( $16.79 )
+Seat 5: fad86 ( $2.77 )
+Seat 7: shkoldv ( $1.75 )
+Seat 8: xxBlue777xx ( $3.53 )
+thegrind14 posts small blind [$0.01]
+yan_robert88 posts big blind [$0.02]
+** Dealing down cards **
+rags raises [$0.04]
+fad86 calls [$0.04]
+shkoldv folds
+xxBlue777xx calls [$0.04]
+thegrind14 folds
+yan_robert88 calls [$0.02]
+** Dealing flop ** [ 3s, 9c, 2c ]
+yan_robert88 checks
+rags checks
+fad86 checks
+xxBlue777xx bets [$0.02]
+yan_robert88 folds
+rags calls [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ Js ]
+rags checks
+fad86 checks
+xxBlue777xx bets [$0.04]
+rags calls [$0.04]
+fad86 calls [$0.04]
+** Dealing river ** [ Ac ]
+rags checks
+fad86 checks
+xxBlue777xx bets [$0.04]
+rags folds
+fad86 raises [$0.08]
+xxBlue777xx raises [$0.08]
+fad86 raises [$0.08]
+xxBlue777xx calls [$0.04]
+** Summary **
+fad86 shows [ 4c, 6c ]
+xxBlue777xx shows [ 8c, Jc ]
+xxBlue777xx collected [ $0.64 ]
+
+
+#Game No : 406814606
+***** 888poker Hand History for Game 406814606 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:53:25
+Table Liege 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: thegrind14 ( $0.41 )
+Seat 3: yan_robert88 ( $0.10 )
+Seat 4: rags ( $16.69 )
+Seat 5: fad86 ( $2.51 )
+Seat 7: shkoldv ( $1.75 )
+Seat 8: xxBlue777xx ( $3.91 )
+yan_robert88 posts small blind [$0.01]
+rags posts big blind [$0.02]
+** Dealing down cards **
+fad86 calls [$0.02]
+shkoldv folds
+xxBlue777xx raises [$0.04]
+thegrind14 folds
+yan_robert88 folds
+rags folds
+fad86 calls [$0.02]
+** Dealing flop ** [ 5d, 3d, 7c ]
+fad86 checks
+xxBlue777xx bets [$0.02]
+fad86 calls [$0.02]
+** Dealing turn ** [ 4h ]
+fad86 checks
+xxBlue777xx checks
+** Dealing river ** [ As ]
+fad86 bets [$0.04]
+xxBlue777xx calls [$0.04]
+** Summary **
+fad86 shows [ Ks, 9s ]
+xxBlue777xx shows [ Js, Jh ]
+xxBlue777xx collected [ $0.22 ]
+
+
+#Game No : 406814662
+***** 888poker Hand History for Game 406814662 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 06 09 2016 00:54:33
+Table Liege 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 1: thegrind14 ( $0.41 )
+Seat 3: yan_robert88 ( $0.09 )
+Seat 4: rags ( $16.67 )
+Seat 5: fad86 ( $2.41 )
+Seat 7: shkoldv ( $1.75 )
+Seat 8: xxBlue777xx ( $4.03 )
+rags posts small blind [$0.01]
+fad86 posts big blind [$0.02]
+** Dealing down cards **
+shkoldv folds
+xxBlue777xx calls [$0.02]
+thegrind14 folds
+yan_robert88 folds
+rags calls [$0.01]
+fad86 checks
+** Dealing flop ** [ 6s, Ts, Kh ]
+rags checks
+fad86 checks
+xxBlue777xx bets [$0.02]
+rags calls [$0.02]
+fad86 folds
+** Dealing turn ** [ 4s ]
+rags checks
+xxBlue777xx checks
+** Dealing river ** [ 3d ]
+rags checks
+xxBlue777xx checks
+** Summary **
+rags shows [ 7c, Ks ]
+xxBlue777xx mucks [ 6h, 7h ]
+rags collected [ $0.10 ]
+
+

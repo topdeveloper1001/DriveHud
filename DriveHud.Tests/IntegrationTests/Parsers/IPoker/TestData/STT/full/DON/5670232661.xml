@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5670232661">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>$1 NLH Double Up *10, 726320221</tablename>  
+	          <tournamentcurrency>USD</tournamentcurrency>  
+	          <duration>00:57</duration>  
+	          <gamecount>80</gamecount>  
+	          <startdate>2012-06-06 10:32:50</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>WhiteRiderT</nickname>  
+	          <bets>11,765</bets>  
+	          <wins>12,235</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,970</chipsout>
+			  		<ipoints>3.40</ipoints>
+        		<statuspoints>3.40</statuspoints>
+			  		<awardpoints>3.40</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>$1 NLH Double Up *10</tournamentname><place>1</place><buyin>$1.00+$0.20</buyin> <totalbuyin>$1.20</totalbuyin> <ipoints>3.40</ipoints> <win>$2.00</win> <statuspoints>3.40</statuspoints> <awardpoints>3.40</awardpoints>  
+	    </general>  
+	    <game gamecode="4153879617">
+		 <general>
+		  <startdate>2012-06-06 10:32:50</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,500" dealer="0" win="771" bet="400" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,500" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,500" dealer="0" win="0" bet="211" rebuy="0" addon="0"/><player seat="10" name="Submind" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="airiux1" type="1" sum="10" cards="[cards]"/><action no="2" player="BabyImOnFire" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="10" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="11" player="airiux1" type="3" sum="10" cards=""/><action no="17" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="BabyImOnFire">X X</cards><action no="12" player="BabyImOnFire" type="23" sum="100" cards=""/><cards type="Pocket" player="WhiteRiderT">H9 C5</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="4" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="5" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="6" player="Leonrd" type="3" sum="20" cards=""/><action no="13" player="Leonrd" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="7" player="FunkoFister" type="3" sum="20" cards=""/><action no="14" player="FunkoFister" type="3" sum="80" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="8" player="mactaste1" type="3" sum="20" cards=""/><action no="15" player="mactaste1" type="3" sum="80" cards=""/><cards type="Pocket" player="Submind">X X</cards><action no="9" player="Submind" type="3" sum="20" cards=""/><action no="16" player="Submind" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA D2 C7</cards><action no="18" player="BabyImOnFire" type="5" sum="111" cards=""/><action no="19" player="FunkoFister" type="0" sum="0" cards=""/><action no="20" player="mactaste1" type="3" sum="111" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="21" player="BabyImOnFire" type="4" sum="0" cards=""/><action no="22" player="mactaste1" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="23" player="BabyImOnFire" type="5" sum="189" cards=""/><action no="24" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153879819">
+		 <general>
+		  <startdate>2012-06-06 10:34:17</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,480" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,871" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="1,480" dealer="0" win="1,285" bet="815" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,289" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Submind" chips="1,480" dealer="0" win="0" bet="440" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="BabyImOnFire" type="1" sum="10" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="10" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="BabyImOnFire">X X</cards><action no="11" player="BabyImOnFire" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H10 H5</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="3" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="4" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="5" player="Leonrd" type="3" sum="20" cards=""/><action no="13" player="Leonrd" type="23" sum="120" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="6" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="7" player="mactaste1" type="0" sum="0" cards=""/><cards type="Pocket" player="Submind">X X</cards><action no="8" player="Submind" type="23" sum="40" cards=""/><action no="14" player="Submind" type="3" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 C6 HA</cards><action no="15" player="Leonrd" type="4" sum="0" cards=""/><action no="17" player="Leonrd" type="3" sum="100" cards=""/><action no="16" player="Submind" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards><action no="18" player="Leonrd" type="5" sum="60" cards=""/><action no="19" player="Submind" type="3" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S2</cards><action no="20" player="Leonrd" type="4" sum="0" cards=""/><action no="22" player="Leonrd" type="23" sum="535" cards=""/><action no="21" player="Submind" type="5" sum="160" cards=""/><action no="23" player="Submind" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153881655">
+		 <general>
+		  <startdate>2012-06-06 10:36:00</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,480" dealer="0" win="330" bet="100" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,861" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,500" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,500" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="1,950" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,289" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Submind" chips="1,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="10" cards="[cards]"/><action no="2" player="MattKurtz" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="8" player="naffy123" type="3" sum="20" cards=""/><cards type="Pocket" player="airiux1">S10 CA</cards><action no="9" player="airiux1" type="3" sum="20" cards=""/><cards type="Pocket" player="BabyImOnFire">X X</cards><action no="10" player="BabyImOnFire" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CJ S4</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">D4 C5</cards><action no="12" player="MattKurtz" type="4" sum="0" cards=""/><cards type="Pocket" player="merlin99977">HA H5</cards><action no="3" player="merlin99977" type="3" sum="20" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="4" player="Leonrd" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="5" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="6" player="mactaste1" type="0" sum="0" cards=""/><cards type="Pocket" player="Submind">X X</cards><action no="7" player="Submind" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 D5 C10</cards><action no="15" player="naffy123" type="0" sum="0" cards=""/><action no="16" player="airiux1" type="3" sum="20" cards=""/><action no="13" player="MattKurtz" type="4" sum="0" cards=""/><action no="17" player="MattKurtz" type="3" sum="20" cards=""/><action no="14" player="merlin99977" type="5" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards><action no="20" player="airiux1" type="23" sum="40" cards=""/><action no="18" player="MattKurtz" type="4" sum="0" cards=""/><action no="21" player="MattKurtz" type="3" sum="40" cards=""/><action no="19" player="merlin99977" type="5" sum="20" cards=""/><action no="22" player="merlin99977" type="3" sum="20" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards><action no="25" player="airiux1" type="5" sum="20" cards=""/><action no="23" player="MattKurtz" type="4" sum="0" cards=""/><action no="26" player="MattKurtz" type="3" sum="20" cards=""/><action no="24" player="merlin99977" type="4" sum="0" cards=""/><action no="27" player="merlin99977" type="3" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153881812">
+		 <general>
+		  <startdate>2012-06-06 10:37:13</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,480" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,710" dealer="0" win="70" bet="40" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,861" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,400" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,400" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="1,950" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,289" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Submind" chips="1,040" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MattKurtz" type="1" sum="10" cards="[cards]"/><action no="2" player="merlin99977" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="7" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="8" player="airiux1" type="3" sum="20" cards=""/><cards type="Pocket" player="BabyImOnFire">X X</cards><action no="9" player="BabyImOnFire" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H4 CA</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="11" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="12" player="merlin99977" type="4" sum="0" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="3" player="Leonrd" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="4" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="5" player="mactaste1" type="0" sum="0" cards=""/><cards type="Pocket" player="Submind">X X</cards><action no="6" player="Submind" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK S5 S6</cards><action no="14" player="airiux1" type="4" sum="0" cards=""/><action no="13" player="merlin99977" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="16" player="airiux1" type="5" sum="20" cards=""/><action no="15" player="merlin99977" type="4" sum="0" cards=""/><action no="17" player="merlin99977" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153881930">
+		 <general>
+		  <startdate>2012-06-06 10:38:05</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,480" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,740" dealer="0" win="320" bet="180" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,861" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,380" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="1,950" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,289" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="Submind" chips="1,040" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="merlin99977" type="1" sum="10" cards="[cards]"/><action no="2" player="Leonrd" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="6" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="7" player="airiux1" type="3" sum="20" cards=""/><cards type="Pocket" player="BabyImOnFire">X X</cards><action no="8" player="BabyImOnFire" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HK C8</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="10" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="11" player="merlin99977" type="3" sum="10" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="12" player="Leonrd" type="4" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="3" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="4" player="mactaste1" type="0" sum="0" cards=""/><cards type="Pocket" player="Submind">X X</cards><action no="5" player="Submind" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 SA SQ</cards><action no="16" player="airiux1" type="23" sum="160" cards=""/><action no="13" player="merlin99977" type="4" sum="0" cards=""/><action no="17" player="merlin99977" type="0" sum="0" cards=""/><action no="14" player="Leonrd" type="4" sum="0" cards=""/><action no="18" player="Leonrd" type="0" sum="0" cards=""/><action no="15" player="Submind" type="5" sum="80" cards=""/><action no="19" player="Submind" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153882066">
+		 <general>
+		  <startdate>2012-06-06 10:39:08</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,480" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,861" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="1,930" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,400" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,289" dealer="0" win="2,279" bet="1,289" rebuy="0" addon="0"/><player seat="10" name="Submind" chips="940" dealer="0" win="0" bet="940" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Leonrd" type="1" sum="10" cards="[cards]"/><action no="2" player="FunkoFister" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="5" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="6" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="BabyImOnFire">X X</cards><action no="7" player="BabyImOnFire" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D6 S4</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="11" player="Leonrd" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="12" player="FunkoFister" type="3" sum="20" cards=""/><cards type="Pocket" player="mactaste1">D7 D8</cards><action no="3" player="mactaste1" type="3" sum="20" cards=""/><action no="13" player="mactaste1" type="3" sum="20" cards=""/><cards type="Pocket" player="Submind">HK DA</cards><action no="4" player="Submind" type="23" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 DK C7</cards><action no="14" player="FunkoFister" type="4" sum="0" cards=""/><action no="17" player="FunkoFister" type="0" sum="0" cards=""/><action no="15" player="mactaste1" type="5" sum="130" cards=""/><action no="16" player="Submind" type="3" sum="130" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="18" player="mactaste1" type="5" sum="390" cards=""/><action no="19" player="Submind" type="3" sum="390" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards><action no="20" player="mactaste1" type="5" sum="729" cards=""/><action no="21" player="Submind" type="7" sum="380" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153882254">
+		 <general>
+		  <startdate>2012-06-06 10:40:40</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,480" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,861" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="1,920" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,360" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,279" dealer="0" win="60" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="FunkoFister" type="1" sum="20" cards="[cards]"/><action no="2" player="mactaste1" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="3" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="4" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="BabyImOnFire">X X</cards><action no="5" player="BabyImOnFire" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D3 C8</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="7" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="8" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="9" player="Leonrd" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="10" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards>
+	</round>
+	
+		</game><game gamecode="4153885461">
+		 <general>
+		  <startdate>2012-06-06 10:41:28</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,480" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,880" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,861" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,470" dealer="0" win="3,120" bet="1,470" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,390" dealer="0" win="0" bet="120" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="1,920" dealer="0" win="0" bet="1,470" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,299" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="2" sum="40" cards="[cards]"/><action no="1" player="mactaste1" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="11" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="3" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="BabyImOnFire">X X</cards><action no="4" player="BabyImOnFire" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SA HA</cards><action no="5" player="WhiteRiderT" type="23" sum="120" cards=""/><action no="12" player="WhiteRiderT" type="23" sum="1,470" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="6" player="MattKurtz" type="3" sum="120" cards=""/><action no="13" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="7" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="Leonrd">CQ DA</cards><action no="8" player="Leonrd" type="23" sum="480" cards=""/><action no="14" player="Leonrd" type="3" sum="990" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="10" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 H10 SQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="4153885648">
+		 <general>
+		  <startdate>2012-06-06 10:42:55</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,440" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,880" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="3" name="BabyImOnFire" chips="1,861" dealer="0" win="0" bet="1,861" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,120" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,279" dealer="1" win="3,782" bet="1,861" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="1" sum="20" cards="[cards]"/><action no="2" player="airiux1" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="10" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="11" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="BabyImOnFire">SJ HJ</cards><action no="3" player="BabyImOnFire" type="23" sum="222.22" cards=""/><cards type="Pocket" player="WhiteRiderT">D4 C2</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="5" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="6" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="7" player="Leonrd" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="8" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">DA H5</cards><action no="9" player="mactaste1" type="3" sum="222.22" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 SA DQ</cards><action no="12" player="BabyImOnFire" type="4" sum="0" cards=""/><action no="14" player="BabyImOnFire" type="23" sum="1,638.78" cards=""/><action no="13" player="mactaste1" type="5" sum="504.44" cards=""/><action no="15" player="mactaste1" type="3" sum="1,134.34" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game><game gamecode="4153885819">
+		 <general>
+		  <startdate>2012-06-06 10:44:23</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,420" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,840" dealer="0" win="0" bet="80" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,120" dealer="0" win="160" bet="80" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,270" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="4,200" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="airiux1" type="1" sum="20" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="8" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">H2 C8</cards><action no="9" player="airiux1" type="3" sum="20" cards=""/><cards type="Pocket" player="WhiteRiderT">CA HJ</cards><action no="10" player="WhiteRiderT" type="4" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="3" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="4" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="5" player="Leonrd" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="6" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="7" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 D6 D7</cards><action no="11" player="airiux1" type="4" sum="0" cards=""/><action no="12" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="13" player="airiux1" type="4" sum="0" cards=""/><action no="14" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards><action no="15" player="airiux1" type="4" sum="0" cards=""/><action no="17" player="airiux1" type="3" sum="40" cards=""/><action no="16" player="WhiteRiderT" type="5" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153885918">
+		 <general>
+		  <startdate>2012-06-06 10:45:09</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,760" dealer="1" win="440" bet="180" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,200" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,270" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,360" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="450" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="4,200" dealer="0" win="0" bet="140" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="20" cards="[cards]"/><action no="2" player="MattKurtz" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="7" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="8" player="airiux1" type="3" sum="40" cards=""/><cards type="Pocket" player="WhiteRiderT">D8 C7</cards><action no="9" player="WhiteRiderT" type="3" sum="20" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="10" player="MattKurtz" type="4" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="3" player="merlin99977" type="3" sum="40" cards=""/><cards type="Pocket" player="Leonrd">X X</cards><action no="4" player="Leonrd" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="5" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="6" player="mactaste1" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 H5 SJ</cards><action no="15" player="airiux1" type="3" sum="100" cards=""/><action no="11" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="16" player="WhiteRiderT" type="0" sum="0" cards=""/><action no="12" player="MattKurtz" type="4" sum="0" cards=""/><action no="17" player="MattKurtz" type="0" sum="0" cards=""/><action no="13" player="merlin99977" type="4" sum="0" cards=""/><action no="18" player="merlin99977" type="0" sum="0" cards=""/><action no="14" player="mactaste1" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards><action no="20" player="airiux1" type="4" sum="0" cards=""/><action no="19" player="mactaste1" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards><action no="22" player="airiux1" type="5" sum="40" cards=""/><action no="21" player="mactaste1" type="4" sum="0" cards=""/><action no="23" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153886126">
+		 <general>
+		  <startdate>2012-06-06 10:46:45</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="1,420" dealer="0" win="3,350" bet="1,420" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,020" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,230" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,320" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="7" name="Leonrd" chips="450" dealer="0" win="0" bet="450" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="4,060" dealer="0" win="0" bet="1,420" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MattKurtz" type="1" sum="20" cards="[cards]"/><action no="2" player="merlin99977" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">DA CA</cards><action no="6" player="naffy123" type="23" sum="860" cards=""/><action no="12" player="naffy123" type="7" sum="560" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="7" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S4 H5</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="Leonrd">D10 C9</cards><action no="3" player="Leonrd" type="23" sum="450" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="4" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">D9 HA</cards><action no="5" player="mactaste1" type="3" sum="450" cards=""/><action no="11" player="mactaste1" type="23" sum="1,270" cards=""/><action no="13" player="mactaste1" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 C7 S3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="4153888925">
+		 <general>
+		  <startdate>2012-06-06 10:47:55</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,020" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,210" dealer="1" win="1,020" bet="600" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,280" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,340" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,640" dealer="0" win="0" bet="300" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="merlin99977" type="1" sum="30" cards="[cards]"/><action no="2" player="FunkoFister" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="4" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="5" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D2 H3</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">S9 D9</cards><action no="7" player="MattKurtz" type="3" sum="60" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="8" player="merlin99977" type="3" sum="30" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="4" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="3" player="mactaste1" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 H9 C6</cards><action no="13" player="MattKurtz" type="3" sum="60" cards=""/><action no="10" player="merlin99977" type="4" sum="0" cards=""/><action no="14" player="merlin99977" type="0" sum="0" cards=""/><action no="11" player="FunkoFister" type="4" sum="0" cards=""/><action no="15" player="FunkoFister" type="0" sum="0" cards=""/><action no="12" player="mactaste1" type="5" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="17" player="MattKurtz" type="3" sum="180" cards=""/><action no="16" player="mactaste1" type="5" sum="180" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards><action no="19" player="MattKurtz" type="5" sum="300" cards=""/><action no="18" player="mactaste1" type="4" sum="0" cards=""/><action no="20" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153889087">
+		 <general>
+		  <startdate>2012-06-06 10:49:35</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,020" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,220" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,280" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,340" dealer="0" win="90" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="FunkoFister" type="1" sum="30" cards="[cards]"/><action no="2" player="mactaste1" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="3" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="4" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CK H5</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="6" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="7" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="8" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards>
+	</round>
+	
+		</game><game gamecode="4153889129">
+		 <general>
+		  <startdate>2012-06-06 10:50:00</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,350" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,020" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,250" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,370" dealer="0" win="240" bet="180" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="2" sum="60" cards="[cards]"/><action no="1" player="mactaste1" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="4" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="3" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SJ DK</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="5" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="6" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="7" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="8" player="mactaste1" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 C10 D6</cards><action no="11" player="naffy123" type="0" sum="0" cards=""/><action no="10" player="mactaste1" type="5" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153889182">
+		 <general>
+		  <startdate>2012-06-06 10:50:32</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,290" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,020" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,630" dealer="0" win="0" bet="240" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,220" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,250" dealer="0" win="0" bet="240" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,430" dealer="1" win="1,620" bet="1,050" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="1" sum="30" cards="[cards]"/><action no="2" player="airiux1" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="8" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H8 HJ</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="4" player="MattKurtz" type="3" sum="60" cards=""/><action no="10" player="MattKurtz" type="3" sum="180" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="5" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="6" player="FunkoFister" type="3" sum="60" cards=""/><action no="11" player="FunkoFister" type="3" sum="180" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="7" player="mactaste1" type="23" sum="240" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 D4 C7</cards><action no="12" player="MattKurtz" type="4" sum="0" cards=""/><action no="15" player="MattKurtz" type="0" sum="0" cards=""/><action no="13" player="FunkoFister" type="4" sum="0" cards=""/><action no="16" player="FunkoFister" type="0" sum="0" cards=""/><action no="14" player="mactaste1" type="5" sum="810" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153889295">
+		 <general>
+		  <startdate>2012-06-06 10:51:36</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,960" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,220" dealer="0" win="0" bet="240" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="3,000" dealer="0" win="855" bet="525" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="airiux1" type="1" sum="30" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="7" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="8" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HQ CK</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="3" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="4" player="merlin99977" type="23" sum="120" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="5" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="6" player="mactaste1" type="3" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK D8 C3</cards><action no="10" player="merlin99977" type="5" sum="60" cards=""/><action no="11" player="mactaste1" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="12" player="merlin99977" type="5" sum="60" cards=""/><action no="13" player="mactaste1" type="3" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards><action no="14" player="merlin99977" type="4" sum="0" cards=""/><action no="16" player="merlin99977" type="0" sum="0" cards=""/><action no="15" player="mactaste1" type="5" sum="285" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153889384">
+		 <general>
+		  <startdate>2012-06-06 10:52:31</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,930" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,100" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,390" dealer="0" win="90" bet="60" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="980" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="3,330" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="30" cards="[cards]"/><action no="2" player="MattKurtz" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="6" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="7" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CJ S7</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><cards type="Pocket" player="merlin99977">X X</cards><action no="3" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="4" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="5" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153889435">
+		 <general>
+		  <startdate>2012-06-06 10:53:00</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,070" dealer="1" win="240" bet="150" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,420" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="980" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="3,330" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MattKurtz" type="1" sum="30" cards="[cards]"/><action no="2" player="merlin99977" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="5" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="6" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DK HQ</cards><action no="7" player="WhiteRiderT" type="23" sum="150" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="8" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="3" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="4" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153889523">
+		 <general>
+		  <startdate>2012-06-06 10:53:56</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,390" dealer="1" win="350" bet="200" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="920" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,010" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="3,330" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="merlin99977" type="1" sum="50" cards="[cards]"/><action no="2" player="FunkoFister" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="4" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="5" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CK S7</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">H4 H7</cards><action no="7" player="MattKurtz" type="3" sum="100" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="8" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="4" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="3" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ D10 C3</cards><action no="11" player="MattKurtz" type="5" sum="100" cards=""/><action no="10" player="FunkoFister" type="4" sum="0" cards=""/><action no="12" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153889578">
+		 <general>
+		  <startdate>2012-06-06 10:54:33</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="870" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="910" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="3,330" dealer="0" win="150" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="FunkoFister" type="1" sum="50" cards="[cards]"/><action no="2" player="mactaste1" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="3" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="4" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 DA</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="6" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="7" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="8" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards>
+	</round>
+	
+		</game><game gamecode="4153893645">
+		 <general>
+		  <startdate>2012-06-06 10:54:56</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="150" bet="100" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="860" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="3,380" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="2" sum="100" cards="[cards]"/><action no="1" player="mactaste1" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><cards type="Pocket" player="airiux1">X X</cards><action no="3" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S2 H6</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="5" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="6" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="7" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="8" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153893681">
+		 <general>
+		  <startdate>2012-06-06 10:55:20</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,310" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,930" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="870" dealer="0" win="1,020" bet="870" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="3,330" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="1" sum="50" cards="[cards]"/><action no="2" player="airiux1" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="8" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C10 C4</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="4" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="5" player="merlin99977" type="23" sum="870" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="6" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="7" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153893716">
+		 <general>
+		  <startdate>2012-06-06 10:55:42</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,830" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,160" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,540" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,020" dealer="0" win="2,290" bet="1,020" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="3,330" dealer="0" win="2,310" bet="3,330" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="airiux1" type="1" sum="50" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="7" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="8" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D5 C5</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="3" player="MattKurtz" type="3" sum="100" cards=""/><action no="10" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">DA CA</cards><action no="4" player="merlin99977" type="23" sum="1,020" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="5" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">HK DJ</cards><action no="6" player="mactaste1" type="23" sum="3,330" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H10 D8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game><game gamecode="4153893779">
+		 <general>
+		  <startdate>2012-06-06 10:56:24</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,780" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,060" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,440" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="860" dealer="0" win="1,010" bet="860" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/><action no="2" player="MattKurtz" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="6" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="7" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HQ H4</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="3" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="4" player="FunkoFister" type="23" sum="860" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="5" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153893819">
+		 <general>
+		  <startdate>2012-06-06 10:56:50</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,780" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,010" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,340" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,290" dealer="0" win="300" bet="200" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MattKurtz" type="1" sum="50" cards="[cards]"/><action no="2" player="merlin99977" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="5" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="6" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D7 S10</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="8" player="MattKurtz" type="3" sum="50" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="4" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="3" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="4" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 CK C5</cards><action no="10" player="MattKurtz" type="4" sum="0" cards=""/><action no="12" player="MattKurtz" type="0" sum="0" cards=""/><action no="11" player="merlin99977" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153893869">
+		 <general>
+		  <startdate>2012-06-06 10:57:23</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,780" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,240" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,390" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,010" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,310" dealer="0" win="450" bet="300" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="merlin99977" type="1" sum="50" cards="[cards]"/><action no="2" player="FunkoFister" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="4" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="5" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C7 H4</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="7" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="8" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="3" player="mactaste1" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153893911">
+		 <general>
+		  <startdate>2012-06-06 10:57:54</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,780" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,340" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="910" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,460" dealer="0" win="350" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="FunkoFister" type="1" sum="50" cards="[cards]"/><action no="2" player="mactaste1" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="3" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="4" player="airiux1" type="3" sum="100" cards=""/><cards type="Pocket" player="WhiteRiderT">H4 S8</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="6" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="7" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="8" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="9" player="mactaste1" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 S6 SK</cards><action no="11" player="airiux1" type="0" sum="0" cards=""/><action no="10" player="mactaste1" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153893986">
+		 <general>
+		  <startdate>2012-06-06 10:58:47</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,260" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="860" dealer="1" win="1,820" bet="860" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,610" dealer="0" win="0" bet="860" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="2" sum="100" cards="[cards]"/><action no="1" player="mactaste1" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="3" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SA S3</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="5" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="6" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">D2 S2</cards><action no="7" player="FunkoFister" type="23" sum="860" cards=""/><cards type="Pocket" player="mactaste1">HA S7</cards><action no="8" player="mactaste1" type="3" sum="810" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ DA SJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards>
+	</round>
+	
+		</game><game gamecode="4153894037">
+		 <general>
+		  <startdate>2012-06-06 10:59:25</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,160" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,680" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,750" dealer="1" win="350" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="1" sum="50" cards="[cards]"/><action no="2" player="airiux1" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="8" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H2 D3</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="4" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="5" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="6" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="7" player="mactaste1" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153894068">
+		 <general>
+		  <startdate>2012-06-06 10:59:50</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,110" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,580" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,010" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,900" dealer="0" win="550" bet="400" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="airiux1" type="1" sum="50" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="7" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="8" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HJ SK</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="3" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="4" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="5" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="6" player="mactaste1" type="23" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153894095">
+		 <general>
+		  <startdate>2012-06-06 11:00:13</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,110" dealer="0" win="950" bet="400" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,910" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,240" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,340" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="2,050" dealer="0" win="0" bet="400" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/><action no="2" player="MattKurtz" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">D10 H10</cards><action no="6" player="naffy123" type="3" sum="200" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="7" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SK S9</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="3" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="4" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">D9 CQ</cards><action no="5" player="mactaste1" type="23" sum="200" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 S8 CJ</cards><action no="11" player="naffy123" type="3" sum="100" cards=""/><action no="10" player="mactaste1" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards><action no="13" player="naffy123" type="3" sum="100" cards=""/><action no="12" player="mactaste1" type="5" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards><action no="15" player="naffy123" type="4" sum="0" cards=""/><action no="14" player="mactaste1" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153894184">
+		 <general>
+		  <startdate>2012-06-06 11:01:19</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,860" dealer="1" win="625" bet="400" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,140" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,340" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MattKurtz" type="1" sum="75" cards="[cards]"/><action no="2" player="merlin99977" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="5" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="6" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DQ HA</cards><action no="7" player="WhiteRiderT" type="23" sum="400" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="8" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="3" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="4" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153894217">
+		 <general>
+		  <startdate>2012-06-06 11:01:49</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,085" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,065" dealer="1" win="0" bet="150" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,190" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,820" dealer="0" win="375" bet="150" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="merlin99977" type="1" sum="75" cards="[cards]"/><action no="2" player="FunkoFister" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="4" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="5" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S3 C4</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">CJ S5</cards><action no="7" player="MattKurtz" type="3" sum="150" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="8" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">D3 H7</cards><action no="9" player="FunkoFister" type="4" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="3" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK D6 D8</cards><action no="11" player="MattKurtz" type="4" sum="0" cards=""/><action no="10" player="FunkoFister" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards><action no="13" player="MattKurtz" type="4" sum="0" cards=""/><action no="12" player="FunkoFister" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards><action no="15" player="MattKurtz" type="4" sum="0" cards=""/><action no="14" player="FunkoFister" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900494">
+		 <general>
+		  <startdate>2012-06-06 11:02:38</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,085" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="915" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,115" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,045" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,650" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="FunkoFister" type="1" sum="75" cards="[cards]"/><action no="2" player="mactaste1" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="3" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="4" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C7 S4</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="6" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="7" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="8" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards>
+	</round>
+	
+		</game><game gamecode="4153900523">
+		 <general>
+		  <startdate>2012-06-06 11:03:01</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,660" dealer="0" win="4,710" bet="3,660" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,530" dealer="0" win="0" bet="300" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,085" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="915" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,115" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,970" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="1,725" dealer="0" win="0" bet="750" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="2" sum="150" cards="[cards]"/><action no="1" player="mactaste1" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="23" sum="300" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="3" player="airiux1" type="3" sum="150" cards=""/><action no="10" player="airiux1" type="3" sum="150" cards=""/><cards type="Pocket" player="WhiteRiderT">S6 S9</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="5" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="6" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="7" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">X X</cards><action no="8" player="mactaste1" type="3" sum="75" cards=""/><action no="11" player="mactaste1" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 SQ H7</cards><action no="13" player="naffy123" type="23" sum="3,360" cards=""/><action no="14" player="airiux1" type="0" sum="0" cards=""/><action no="12" player="mactaste1" type="5" sum="450" cards=""/><action no="15" player="mactaste1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900582">
+		 <general>
+		  <startdate>2012-06-06 11:03:59</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,710" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,230" dealer="0" win="2,025" bet="975" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,085" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="915" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,115" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="mactaste1" chips="975" dealer="1" win="0" bet="975" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="1" sum="75" cards="[cards]"/><action no="2" player="airiux1" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="8" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">HA HK</cards><action no="9" player="airiux1" type="3" sum="825" cards=""/><cards type="Pocket" player="WhiteRiderT">C9 DA</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="4" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="5" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="6" player="FunkoFister" type="0" sum="0" cards=""/><cards type="Pocket" player="mactaste1">H10 S9</cards><action no="7" player="mactaste1" type="23" sum="975" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK HQ S4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards>
+	</round>
+	
+		</game><game gamecode="4153900618">
+		 <general>
+		  <startdate>2012-06-06 11:04:30</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,635" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,280" dealer="0" win="450" bet="300" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,085" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="915" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,115" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="airiux1" type="1" sum="75" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="6" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="7" player="airiux1" type="3" sum="75" cards=""/><cards type="Pocket" player="WhiteRiderT">C3 DA</cards><action no="8" player="WhiteRiderT" type="4" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="3" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="4" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="5" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 SK H7</cards><action no="9" player="airiux1" type="4" sum="0" cards=""/><action no="10" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H4</cards><action no="11" player="airiux1" type="5" sum="150" cards=""/><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900657">
+		 <general>
+		  <startdate>2012-06-06 11:05:12</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,635" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,430" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,935" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="915" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,115" dealer="0" win="2,340" bet="2,115" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/><action no="2" player="MattKurtz" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="5" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="6" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C6 D2</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="8" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="3" player="merlin99977" type="23" sum="2,115" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="4" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900686">
+		 <general>
+		  <startdate>2012-06-06 11:05:44</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,635" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,430" dealer="0" win="0" bet="765" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,860" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="765" dealer="0" win="1,680" bet="765" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,340" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MattKurtz" type="1" sum="75" cards="[cards]"/><action no="2" player="merlin99977" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="4" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">H8 H7</cards><action no="5" player="airiux1" type="3" sum="150" cards=""/><cards type="Pocket" player="WhiteRiderT">SQ D2</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">S10 D9</cards><action no="7" player="MattKurtz" type="3" sum="75" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="8" player="merlin99977" type="4" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="3" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ C9 C4</cards><action no="11" player="airiux1" type="3" sum="150" cards=""/><action no="9" player="MattKurtz" type="5" sum="150" cards=""/><action no="10" player="merlin99977" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="13" player="airiux1" type="3" sum="465" cards=""/><action no="12" player="MattKurtz" type="5" sum="465" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="4153900722">
+		 <general>
+		  <startdate>2012-06-06 11:06:39</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,635" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,665" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,860" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,680" dealer="1" win="0" bet="150" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,190" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,970" dealer="0" win="2,420" bet="1,970" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="merlin99977" type="1" sum="75" cards="[cards]"/><action no="2" player="FunkoFister" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="3" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="4" player="airiux1" type="3" sum="150" cards=""/><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H8 C6</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="6" player="MattKurtz" type="3" sum="150" cards=""/><action no="10" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="7" player="merlin99977" type="3" sum="75" cards=""/><action no="11" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="8" player="FunkoFister" type="23" sum="1,970" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900756">
+		 <general>
+		  <startdate>2012-06-06 11:07:31</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,635" dealer="0" win="1,725" bet="900" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,515" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,860" dealer="0" win="0" bet="750" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,040" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,420" dealer="0" win="0" bet="75" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="2" sum="150" cards="[cards]"/><action no="1" player="FunkoFister" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">SA SK</cards><action no="8" player="naffy123" type="3" sum="150" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="3" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CA DK</cards><action no="4" player="WhiteRiderT" type="23" sum="300" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="5" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="6" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="7" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 C10 D7</cards><action no="9" player="naffy123" type="5" sum="150" cards=""/><action no="10" player="WhiteRiderT" type="3" sum="150" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="11" player="naffy123" type="4" sum="0" cards=""/><action no="13" player="naffy123" type="3" sum="300" cards=""/><action no="12" player="WhiteRiderT" type="5" sum="300" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards><action no="14" player="naffy123" type="5" sum="150" cards=""/><action no="15" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900784">
+		 <general>
+		  <startdate>2012-06-06 11:08:13</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="5,460" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,515" dealer="0" win="0" bet="425" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,110" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,530" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,040" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,345" dealer="1" win="1,450" bet="825" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="7" player="naffy123" type="1" sum="100" cards="[cards]"/><action no="2" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="8" player="airiux1" type="2" sum="200" cards="[cards]"/><action no="3" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="4" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="5" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="6" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="13" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="14" player="airiux1" type="3" sum="200" cards=""/><cards type="Pocket" player="WhiteRiderT">S7 SA</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="10" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="11" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="12" player="FunkoFister" type="23" sum="400" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK DJ H6</cards><action no="15" player="airiux1" type="4" sum="0" cards=""/><action no="17" player="airiux1" type="0" sum="0" cards=""/><action no="16" player="FunkoFister" type="5" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900808">
+		 <general>
+		  <startdate>2012-06-06 11:08:53</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="5,335" dealer="1" win="650" bet="225" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,090" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,085" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,505" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,015" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,970" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="1" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="7" player="airiux1" type="1" sum="100" cards="[cards]"/><action no="2" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="8" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/><action no="3" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="4" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="5" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">HQ HA</cards><action no="12" player="naffy123" type="3" sum="200" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="13" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D10 DJ</cards><action no="14" player="WhiteRiderT" type="4" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="11" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 S6 CJ</cards><action no="16" player="naffy123" type="4" sum="0" cards=""/><action no="15" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards><action no="18" player="naffy123" type="4" sum="0" cards=""/><action no="17" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C10</cards><action no="20" player="naffy123" type="4" sum="0" cards=""/><action no="19" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900842">
+		 <general>
+		  <startdate>2012-06-06 11:09:42</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="5,760" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="965" dealer="1" win="0" bet="625" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,860" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,480" dealer="0" win="1,650" bet="825" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,990" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,945" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="6" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="1" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="7" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/><action no="2" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="8" player="MattKurtz" type="2" sum="200" cards="[cards]"/><action no="3" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="4" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="11" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="12" player="airiux1" type="3" sum="200" cards=""/><cards type="Pocket" player="WhiteRiderT">SA C5</cards><action no="13" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">SJ SK</cards><action no="14" player="MattKurtz" type="4" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="10" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 CJ C7</cards><action no="16" player="airiux1" type="3" sum="200" cards=""/><action no="15" player="MattKurtz" type="5" sum="200" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="18" player="airiux1" type="3" sum="200" cards=""/><action no="17" player="MattKurtz" type="5" sum="200" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards><action no="20" player="airiux1" type="0" sum="0" cards=""/><action no="19" player="MattKurtz" type="5" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900877">
+		 <general>
+		  <startdate>2012-06-06 11:10:38</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="5,735" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="340" dealer="0" win="765" bet="340" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,735" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,305" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,965" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,920" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="5" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="6" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="1" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="7" player="MattKurtz" type="1" sum="100" cards="[cards]"/><action no="2" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="8" player="merlin99977" type="2" sum="200" cards="[cards]"/><action no="3" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="10" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="11" player="airiux1" type="3" sum="200" cards=""/><cards type="Pocket" player="WhiteRiderT">CA D6</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="13" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="14" player="merlin99977" type="4" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 SK H4</cards><action no="16" player="airiux1" type="7" sum="115" cards=""/><action no="15" player="merlin99977" type="4" sum="0" cards=""/><action no="17" player="merlin99977" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153900902">
+		 <general>
+		  <startdate>2012-06-06 11:11:24</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="5,710" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="765" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,710" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,180" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,740" dealer="0" win="750" bet="425" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,895" dealer="0" win="0" bet="225" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="4" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="5" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="6" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="1" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="7" player="merlin99977" type="1" sum="100" cards="[cards]"/><action no="2" player="FunkoFister" type="15" sum="25" cards="[cards]"/><action no="8" player="FunkoFister" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="10" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D3 S5</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="12" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="13" player="merlin99977" type="23" sum="400" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="14" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906522">
+		 <general>
+		  <startdate>2012-06-06 11:12:08</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="5,685" dealer="0" win="4,945" bet="5,685" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="740" dealer="0" win="1,780" bet="740" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,685" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,155" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,065" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,670" dealer="0" win="0" bet="225" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="8" player="naffy123" type="2" sum="200" cards="[cards]"/><action no="3" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="4" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="5" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="6" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="1" player="FunkoFister" type="15" sum="25" cards="[cards]"/><action no="7" player="FunkoFister" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">H7 D3</cards><action no="14" player="naffy123" type="4" sum="0" cards=""/><cards type="Pocket" player="airiux1">DA C8</cards><action no="9" player="airiux1" type="3" sum="200" cards=""/><cards type="Pocket" player="WhiteRiderT">S9 D7</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="11" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="12" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="13" player="FunkoFister" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 CK D2</cards><action no="16" player="naffy123" type="4" sum="0" cards=""/><action no="17" player="airiux1" type="4" sum="0" cards=""/><action no="15" player="FunkoFister" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="19" player="naffy123" type="4" sum="0" cards=""/><action no="20" player="airiux1" type="4" sum="0" cards=""/><action no="18" player="FunkoFister" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards><action no="22" player="naffy123" type="5" sum="5,460" cards=""/><action no="23" player="airiux1" type="7" sum="515" cards=""/><action no="21" player="FunkoFister" type="4" sum="0" cards=""/><action no="24" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906547">
+		 <general>
+		  <startdate>2012-06-06 11:13:04</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,945" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,780" dealer="0" win="450" bet="225" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,660" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,130" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,040" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,445" dealer="1" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="7" player="naffy123" type="1" sum="100" cards="[cards]"/><action no="2" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="8" player="airiux1" type="2" sum="200" cards="[cards]"/><action no="3" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="4" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="5" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="6" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="13" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><cards type="Pocket" player="WhiteRiderT">C9 C4</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="10" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="11" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="12" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906553">
+		 <general>
+		  <startdate>2012-06-06 11:13:20</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,820" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,005" dealer="0" win="550" bet="225" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,635" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,105" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,015" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,420" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="1" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="7" player="airiux1" type="1" sum="100" cards="[cards]"/><action no="2" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="8" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/><action no="3" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="4" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="5" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="12" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">D9 DK</cards><action no="13" player="airiux1" type="3" sum="100" cards=""/><cards type="Pocket" player="WhiteRiderT">D7 H6</cards><action no="14" player="WhiteRiderT" type="4" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="11" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 HQ H9</cards><action no="15" player="airiux1" type="4" sum="0" cards=""/><action no="16" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="17" player="airiux1" type="4" sum="0" cards=""/><action no="18" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards><action no="19" player="airiux1" type="4" sum="0" cards=""/><action no="20" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906575">
+		 <general>
+		  <startdate>2012-06-06 11:14:05</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,795" dealer="0" win="0" bet="825" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,330" dealer="1" win="2,050" bet="825" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,410" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,080" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,990" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,395" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="6" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="1" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="7" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/><action no="2" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="8" player="MattKurtz" type="2" sum="200" cards="[cards]"/><action no="3" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="4" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">SJ SK</cards><action no="11" player="naffy123" type="23" sum="400" cards=""/><cards type="Pocket" player="airiux1">C10 S10</cards><action no="12" player="airiux1" type="3" sum="400" cards=""/><cards type="Pocket" player="WhiteRiderT">D6 DK</cards><action no="13" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="14" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="10" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 D2 S8</cards><action no="15" player="naffy123" type="5" sum="200" cards=""/><action no="16" player="airiux1" type="3" sum="200" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="17" player="naffy123" type="5" sum="200" cards=""/><action no="18" player="airiux1" type="3" sum="200" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="19" player="naffy123" type="4" sum="0" cards=""/><action no="20" player="airiux1" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906590">
+		 <general>
+		  <startdate>2012-06-06 11:14:46</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,970" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="3,555" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,285" dealer="1" win="1,710" bet="1,285" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,855" dealer="0" win="0" bet="125" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,965" dealer="0" win="0" bet="225" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,370" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="5" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="6" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="1" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="7" player="MattKurtz" type="1" sum="100" cards="[cards]"/><action no="2" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="8" player="merlin99977" type="2" sum="200" cards="[cards]"/><action no="3" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="10" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="11" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SA H10</cards><action no="12" player="WhiteRiderT" type="23" sum="1,260" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="13" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="14" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906601">
+		 <general>
+		  <startdate>2012-06-06 11:15:14</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,945" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="3,530" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,710" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,730" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="1,740" dealer="0" win="1,050" bet="625" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,345" dealer="0" win="0" bet="325" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="4" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="5" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="6" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="1" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="7" player="merlin99977" type="1" sum="150" cards="[cards]"/><action no="2" player="FunkoFister" type="15" sum="25" cards="[cards]"/><action no="8" player="FunkoFister" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="10" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S2 HJ</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="12" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="13" player="merlin99977" type="23" sum="600" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="14" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906615">
+		 <general>
+		  <startdate>2012-06-06 11:15:59</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,920" dealer="0" win="0" bet="325" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="3,505" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,685" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,705" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,165" dealer="1" win="1,200" bet="625" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,020" dealer="0" win="0" bet="175" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="8" player="naffy123" type="2" sum="300" cards="[cards]"/><action no="3" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="4" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="5" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="6" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="1" player="FunkoFister" type="15" sum="25" cards="[cards]"/><action no="7" player="FunkoFister" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="14" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C2 HK</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="11" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="12" player="merlin99977" type="23" sum="600" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="13" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906624">
+		 <general>
+		  <startdate>2012-06-06 11:16:23</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,595" dealer="0" win="0" bet="175" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="3,480" dealer="0" win="0" bet="1,225" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,660" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,680" dealer="0" win="2,700" bet="1,250" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,740" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,845" dealer="1" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="7" player="naffy123" type="1" sum="150" cards="[cards]"/><action no="2" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="8" player="airiux1" type="2" sum="300" cards="[cards]"/><action no="3" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="4" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="5" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="6" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="13" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">SJ HK</cards><action no="14" player="airiux1" type="4" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HJ H2</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">DJ CA</cards><action no="10" player="MattKurtz" type="3" sum="300" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="11" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="12" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ H6 S5</cards><action no="15" player="airiux1" type="4" sum="0" cards=""/><action no="16" player="MattKurtz" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="17" player="airiux1" type="5" sum="300" cards=""/><action no="18" player="MattKurtz" type="3" sum="300" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D10</cards><action no="19" player="airiux1" type="5" sum="300" cards=""/><action no="21" player="airiux1" type="3" sum="300" cards=""/><action no="20" player="MattKurtz" type="23" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906639">
+		 <general>
+		  <startdate>2012-06-06 11:17:14</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,420" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,255" dealer="0" win="0" bet="175" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,635" dealer="0" win="600" bet="325" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,155" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,715" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,820" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="1" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="7" player="airiux1" type="1" sum="150" cards="[cards]"/><action no="2" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="8" player="WhiteRiderT" type="2" sum="300" cards="[cards]"/><action no="3" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="4" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="5" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="12" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="13" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HA C4</cards><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="11" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906645">
+		 <general>
+		  <startdate>2012-06-06 11:17:40</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,395" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,080" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,910" dealer="0" win="0" bet="175" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,130" dealer="0" win="600" bet="325" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,690" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,795" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="6" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="1" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="7" player="WhiteRiderT" type="1" sum="150" cards="[cards]"/><action no="2" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="8" player="MattKurtz" type="2" sum="300" cards="[cards]"/><action no="3" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="4" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="11" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="12" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D2 D6</cards><action no="13" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="10" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906650">
+		 <general>
+		  <startdate>2012-06-06 11:18:02</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,370" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,055" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,735" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,405" dealer="0" win="2,025" bet="1,300" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,665" dealer="0" win="0" bet="625" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,770" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="5" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="6" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="1" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="7" player="MattKurtz" type="1" sum="150" cards="[cards]"/><action no="2" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="8" player="merlin99977" type="2" sum="300" cards="[cards]"/><action no="3" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="10" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="11" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SQ HJ</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">D3 S8</cards><action no="13" player="MattKurtz" type="3" sum="150" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="14" player="merlin99977" type="4" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK H3 D8</cards><action no="15" player="MattKurtz" type="4" sum="0" cards=""/><action no="17" player="MattKurtz" type="3" sum="300" cards=""/><action no="16" player="merlin99977" type="5" sum="300" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards><action no="18" player="MattKurtz" type="4" sum="0" cards=""/><action no="19" player="merlin99977" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="20" player="MattKurtz" type="5" sum="675" cards=""/><action no="21" player="merlin99977" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906659">
+		 <general>
+		  <startdate>2012-06-06 11:18:53</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,345" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,030" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,710" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="4,130" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,040" dealer="0" win="2,465" bet="2,040" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,745" dealer="0" win="0" bet="325" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="4" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="5" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="6" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="1" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="7" player="merlin99977" type="1" sum="150" cards="[cards]"/><action no="2" player="FunkoFister" type="15" sum="25" cards="[cards]"/><action no="8" player="FunkoFister" type="2" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="10" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D5 S4</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="12" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="13" player="merlin99977" type="23" sum="2,015" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="14" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906664">
+		 <general>
+		  <startdate>2012-06-06 11:19:20</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,320" dealer="0" win="0" bet="325" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="2,005" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,685" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="4,105" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,465" dealer="1" win="1,350" bet="625" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,420" dealer="0" win="0" bet="325" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="8" player="naffy123" type="2" sum="300" cards="[cards]"/><action no="3" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="4" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="5" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="6" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="1" player="FunkoFister" type="15" sum="25" cards="[cards]"/><action no="7" player="FunkoFister" type="1" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="14" player="naffy123" type="4" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DJ C4</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="11" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="12" player="merlin99977" type="3" sum="300" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="13" player="FunkoFister" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA H3 S8</cards><action no="16" player="naffy123" type="4" sum="0" cards=""/><action no="19" player="naffy123" type="0" sum="0" cards=""/><action no="17" player="merlin99977" type="5" sum="300" cards=""/><action no="15" player="FunkoFister" type="4" sum="0" cards=""/><action no="18" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906673">
+		 <general>
+		  <startdate>2012-06-06 11:20:22</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="2,995" dealer="0" win="1,050" bet="625" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,980" dealer="0" win="0" bet="325" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,660" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="4,080" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,190" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,095" dealer="1" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="7" player="naffy123" type="1" sum="150" cards="[cards]"/><action no="2" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="8" player="airiux1" type="2" sum="300" cards="[cards]"/><action no="3" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="4" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="5" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="6" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="13" player="naffy123" type="3" sum="150" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="14" player="airiux1" type="4" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C2 H2</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="10" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="11" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="12" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H10 S7</cards><action no="15" player="naffy123" type="5" sum="300" cards=""/><action no="16" player="airiux1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906676">
+		 <general>
+		  <startdate>2012-06-06 11:20:44</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,420" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,655" dealer="0" win="0" bet="175" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,635" dealer="0" win="0" bet="325" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="4,055" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,165" dealer="0" win="1,200" bet="625" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,070" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="1" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="7" player="airiux1" type="1" sum="150" cards="[cards]"/><action no="2" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="8" player="WhiteRiderT" type="2" sum="300" cards="[cards]"/><action no="3" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="4" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="5" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="12" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="13" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H9 S4</cards><action no="14" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="23" sum="600" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="11" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906681">
+		 <general>
+		  <startdate>2012-06-06 11:21:22</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,395" dealer="0" win="1,200" bet="625" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,480" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,310" dealer="0" win="0" bet="175" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="4,030" dealer="0" win="0" bet="325" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,740" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,045" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="6" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="1" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="7" player="WhiteRiderT" type="1" sum="150" cards="[cards]"/><action no="2" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="8" player="MattKurtz" type="2" sum="300" cards="[cards]"/><action no="3" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="4" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="11" player="naffy123" type="3" sum="300" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="12" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CQ H7</cards><action no="13" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="14" player="MattKurtz" type="4" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="10" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 HA SK</cards><action no="16" player="naffy123" type="5" sum="300" cards=""/><action no="15" player="MattKurtz" type="4" sum="0" cards=""/><action no="17" player="MattKurtz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906683">
+		 <general>
+		  <startdate>2012-06-06 11:21:46</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,970" dealer="0" win="1,800" bet="925" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,455" dealer="0" win="0" bet="25" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,135" dealer="1" win="0" bet="25" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,705" dealer="0" win="0" bet="175" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,715" dealer="0" win="0" bet="625" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,020" dealer="0" win="0" bet="25" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="naffy123" type="15" sum="25" cards="[cards]"/><action no="5" player="airiux1" type="15" sum="25" cards="[cards]"/><action no="6" player="WhiteRiderT" type="15" sum="25" cards="[cards]"/><action no="1" player="MattKurtz" type="15" sum="25" cards="[cards]"/><action no="7" player="MattKurtz" type="1" sum="150" cards="[cards]"/><action no="2" player="merlin99977" type="15" sum="25" cards="[cards]"/><action no="8" player="merlin99977" type="2" sum="300" cards="[cards]"/><action no="3" player="FunkoFister" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="10" player="naffy123" type="3" sum="300" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="11" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SQ D8</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="13" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="14" player="merlin99977" type="4" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ CK H6</cards><action no="16" player="naffy123" type="3" sum="300" cards=""/><action no="15" player="merlin99977" type="5" sum="300" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="18" player="naffy123" type="4" sum="0" cards=""/><action no="17" player="merlin99977" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards><action no="20" player="naffy123" type="5" sum="300" cards=""/><action no="19" player="merlin99977" type="4" sum="0" cards=""/><action no="21" player="merlin99977" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906688">
+		 <general>
+		  <startdate>2012-06-06 11:22:24</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,845" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,430" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,110" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,530" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,090" dealer="0" win="0" bet="995" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="995" dealer="0" win="2,190" bet="995" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="4" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="5" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="6" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="1" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="7" player="merlin99977" type="1" sum="200" cards="[cards]"/><action no="2" player="FunkoFister" type="15" sum="50" cards="[cards]"/><action no="8" player="FunkoFister" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="10" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S2 C7</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="12" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">D7 CK</cards><action no="13" player="merlin99977" type="23" sum="800" cards=""/><action no="15" player="merlin99977" type="3" sum="145" cards=""/><cards type="Pocket" player="FunkoFister">H9 S10</cards><action no="14" player="FunkoFister" type="7" sum="545" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA H8 C6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="4153906694">
+		 <general>
+		  <startdate>2012-06-06 11:23:01</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,795" dealer="0" win="0" bet="450" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,380" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,060" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,480" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,095" dealer="1" win="1,700" bet="850" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,190" dealer="0" win="0" bet="250" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="8" player="naffy123" type="2" sum="400" cards="[cards]"/><action no="3" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="4" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="5" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="6" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="1" player="FunkoFister" type="15" sum="50" cards="[cards]"/><action no="7" player="FunkoFister" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="14" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C7 H4</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="11" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="12" player="merlin99977" type="23" sum="800" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="13" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906702">
+		 <general>
+		  <startdate>2012-06-06 11:23:43</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,345" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,330" dealer="0" win="0" bet="450" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,010" dealer="0" win="1,860" bet="1,010" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,430" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,945" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,940" dealer="1" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="7" player="naffy123" type="1" sum="200" cards="[cards]"/><action no="2" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="8" player="airiux1" type="2" sum="400" cards="[cards]"/><action no="3" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="4" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="5" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="6" player="FunkoFister" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="13" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="14" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SK C10</cards><action no="9" player="WhiteRiderT" type="23" sum="960" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="10" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="11" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="12" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906706">
+		 <general>
+		  <startdate>2012-06-06 11:24:11</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,095" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="880" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,860" dealer="0" win="900" bet="450" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,380" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,895" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,890" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="1" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="7" player="airiux1" type="1" sum="200" cards="[cards]"/><action no="2" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="8" player="WhiteRiderT" type="2" sum="400" cards="[cards]"/><action no="3" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="4" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="5" player="FunkoFister" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="12" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="13" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D9 SQ</cards><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="11" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906711">
+		 <general>
+		  <startdate>2012-06-06 11:24:36</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,045" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="630" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,310" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,330" dealer="0" win="900" bet="450" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,845" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,840" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="6" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="1" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="7" player="WhiteRiderT" type="1" sum="200" cards="[cards]"/><action no="2" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="8" player="MattKurtz" type="2" sum="400" cards="[cards]"/><action no="3" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="4" player="FunkoFister" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="11" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="12" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H2 DK</cards><action no="13" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="10" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906715">
+		 <general>
+		  <startdate>2012-06-06 11:25:05</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,995" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="580" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,060" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,780" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,795" dealer="0" win="900" bet="450" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,790" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="5" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="6" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="1" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="7" player="MattKurtz" type="1" sum="200" cards="[cards]"/><action no="2" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="8" player="merlin99977" type="2" sum="400" cards="[cards]"/><action no="3" player="FunkoFister" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="10" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="11" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S7 DA</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="13" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906722">
+		 <general>
+		  <startdate>2012-06-06 11:25:34</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,945" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="530" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,010" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,530" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,245" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,740" dealer="0" win="900" bet="450" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="4" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="5" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="6" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="1" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="7" player="merlin99977" type="1" sum="200" cards="[cards]"/><action no="2" player="FunkoFister" type="15" sum="50" cards="[cards]"/><action no="8" player="FunkoFister" type="2" sum="400" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="10" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 CQ</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="12" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="13" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards>
+	</round>
+	
+		</game><game gamecode="4153906727">
+		 <general>
+		  <startdate>2012-06-06 11:25:58</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,895" dealer="0" win="900" bet="450" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="480" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,960" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,480" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,995" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,190" dealer="0" win="0" bet="250" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="8" player="naffy123" type="2" sum="400" cards="[cards]"/><action no="3" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="4" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="5" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="6" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="1" player="FunkoFister" type="15" sum="50" cards="[cards]"/><action no="7" player="FunkoFister" type="1" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><cards type="Pocket" player="airiux1">X X</cards><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H6 CA</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="11" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="12" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="13" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906730">
+		 <general>
+		  <startdate>2012-06-06 11:26:22</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,345" dealer="0" win="40" bet="450" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="430" dealer="0" win="1,440" bet="430" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,910" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="3,430" dealer="0" win="0" bet="450" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,945" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,940" dealer="1" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="7" player="naffy123" type="1" sum="200" cards="[cards]"/><action no="2" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="8" player="airiux1" type="2" sum="380" cards="[cards]"/><action no="3" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="4" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="5" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="6" player="FunkoFister" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">D10 CA</cards><action no="13" player="naffy123" type="3" sum="200" cards=""/><cards type="Pocket" player="airiux1">C2 C3</cards><cards type="Pocket" player="WhiteRiderT">H8 H6</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">HA H4</cards><action no="10" player="MattKurtz" type="3" sum="400" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="11" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="12" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 H3 CJ</cards><action no="14" player="naffy123" type="4" sum="0" cards=""/><action no="15" player="MattKurtz" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="16" player="naffy123" type="4" sum="0" cards=""/><action no="17" player="MattKurtz" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards><action no="18" player="naffy123" type="4" sum="0" cards=""/><action no="19" player="MattKurtz" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906737">
+		 <general>
+		  <startdate>2012-06-06 11:27:06</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,935" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,440" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,860" dealer="0" win="0" bet="450" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,980" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="2,895" dealer="0" win="1,700" bet="850" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,890" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="1" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="7" player="airiux1" type="1" sum="200" cards="[cards]"/><action no="2" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="8" player="WhiteRiderT" type="2" sum="400" cards="[cards]"/><action no="3" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="4" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="5" player="FunkoFister" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="12" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="13" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C2 D7</cards><action no="14" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="23" sum="800" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="11" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906743">
+		 <general>
+		  <startdate>2012-06-06 11:27:33</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,885" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,190" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="1,410" dealer="0" win="3,020" bet="1,410" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,930" dealer="0" win="0" bet="1,410" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,745" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,840" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="5" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="6" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="1" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="7" player="WhiteRiderT" type="1" sum="200" cards="[cards]"/><action no="2" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="8" player="MattKurtz" type="2" sum="400" cards="[cards]"/><action no="3" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="4" player="FunkoFister" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="11" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="12" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SQ SK</cards><action no="13" player="WhiteRiderT" type="23" sum="1,360" cards=""/><cards type="Pocket" player="MattKurtz">DK D6</cards><action no="14" player="MattKurtz" type="3" sum="960" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="9" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="10" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 S6 DQ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards>
+	</round>
+	
+		</game><game gamecode="4153906751">
+		 <general>
+		  <startdate>2012-06-06 11:28:25</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,835" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,140" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="3,020" dealer="1" win="0" bet="50" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,520" dealer="0" win="0" bet="250" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,695" dealer="0" win="0" bet="450" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,790" dealer="0" win="2,640" bet="1,790" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="naffy123" type="15" sum="50" cards="[cards]"/><action no="5" player="airiux1" type="15" sum="50" cards="[cards]"/><action no="6" player="WhiteRiderT" type="15" sum="50" cards="[cards]"/><action no="1" player="MattKurtz" type="15" sum="50" cards="[cards]"/><action no="7" player="MattKurtz" type="1" sum="200" cards="[cards]"/><action no="2" player="merlin99977" type="15" sum="50" cards="[cards]"/><action no="8" player="merlin99977" type="2" sum="400" cards="[cards]"/><action no="3" player="FunkoFister" type="15" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="10" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="11" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DJ CQ</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="13" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="14" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="9" player="FunkoFister" type="23" sum="1,740" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906758">
+		 <general>
+		  <startdate>2012-06-06 11:29:01</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,785" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="1,090" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,970" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,270" dealer="1" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="3,245" dealer="0" win="2,400" bet="1,300" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="2,640" dealer="0" win="0" bet="700" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="naffy123" type="15" sum="100" cards="[cards]"/><action no="4" player="airiux1" type="15" sum="100" cards="[cards]"/><action no="5" player="WhiteRiderT" type="15" sum="100" cards="[cards]"/><action no="6" player="MattKurtz" type="15" sum="100" cards="[cards]"/><action no="1" player="merlin99977" type="15" sum="100" cards="[cards]"/><action no="7" player="merlin99977" type="1" sum="300" cards="[cards]"/><action no="2" player="FunkoFister" type="15" sum="100" cards="[cards]"/><action no="8" player="FunkoFister" type="2" sum="600" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="9" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="10" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H6 S5</cards><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="12" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="13" player="merlin99977" type="3" sum="300" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="14" player="FunkoFister" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 HA D6</cards><action no="15" player="merlin99977" type="5" sum="600" cards=""/><action no="16" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906768">
+		 <general>
+		  <startdate>2012-06-06 11:29:48</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="3,685" dealer="0" win="1,500" bet="700" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="990" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,870" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,170" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="4,345" dealer="1" win="0" bet="100" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,940" dealer="0" win="0" bet="400" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="naffy123" type="15" sum="100" cards="[cards]"/><action no="8" player="naffy123" type="2" sum="600" cards="[cards]"/><action no="3" player="airiux1" type="15" sum="100" cards="[cards]"/><action no="4" player="WhiteRiderT" type="15" sum="100" cards="[cards]"/><action no="5" player="MattKurtz" type="15" sum="100" cards="[cards]"/><action no="6" player="merlin99977" type="15" sum="100" cards="[cards]"/><action no="1" player="FunkoFister" type="15" sum="100" cards="[cards]"/><action no="7" player="FunkoFister" type="1" sum="300" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><cards type="Pocket" player="airiux1">X X</cards><action no="9" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C10 HK</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="11" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="12" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="13" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906770">
+		 <general>
+		  <startdate>2012-06-06 11:30:05</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,485" dealer="0" win="0" bet="400" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="890" dealer="0" win="0" bet="700" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,770" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="1,070" dealer="0" win="2,470" bet="1,070" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="4,245" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,540" dealer="1" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="naffy123" type="15" sum="100" cards="[cards]"/><action no="7" player="naffy123" type="1" sum="300" cards="[cards]"/><action no="2" player="airiux1" type="15" sum="100" cards="[cards]"/><action no="8" player="airiux1" type="2" sum="600" cards="[cards]"/><action no="3" player="WhiteRiderT" type="15" sum="100" cards="[cards]"/><action no="4" player="MattKurtz" type="15" sum="100" cards="[cards]"/><action no="5" player="merlin99977" type="15" sum="100" cards="[cards]"/><action no="6" player="FunkoFister" type="15" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">X X</cards><action no="13" player="naffy123" type="0" sum="0" cards=""/><cards type="Pocket" player="airiux1">X X</cards><action no="14" player="airiux1" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C9 S8</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="10" player="MattKurtz" type="7" sum="970" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="11" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="12" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4153906774">
+		 <general>
+		  <startdate>2012-06-06 11:30:31</startdate>		  
+		  <players>
+		   <player seat="1" name="naffy123" chips="4,085" dealer="1" win="1,890" bet="700" rebuy="0" addon="0"/><player seat="2" name="airiux1" chips="190" dealer="0" win="0" bet="190" rebuy="0" addon="0"/><player seat="4" name="WhiteRiderT" chips="2,670" dealer="0" win="0" bet="700" rebuy="0" addon="0"/><player seat="5" name="MattKurtz" chips="2,470" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="merlin99977" chips="4,145" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="8" name="FunkoFister" chips="1,440" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="6" player="naffy123" type="15" sum="100" cards="[cards]"/><action no="1" player="airiux1" type="15" sum="100" cards="[cards]"/><action no="7" player="airiux1" type="1" sum="90" cards="[cards]"/><action no="2" player="WhiteRiderT" type="15" sum="100" cards="[cards]"/><action no="8" player="WhiteRiderT" type="2" sum="600" cards="[cards]"/><action no="3" player="MattKurtz" type="15" sum="100" cards="[cards]"/><action no="4" player="merlin99977" type="15" sum="100" cards="[cards]"/><action no="5" player="FunkoFister" type="15" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="naffy123">D10 S10</cards><action no="12" player="naffy123" type="3" sum="600" cards=""/><cards type="Pocket" player="airiux1">C8 S8</cards><cards type="Pocket" player="WhiteRiderT">H3 HA</cards><action no="13" player="WhiteRiderT" type="4" sum="0" cards=""/><cards type="Pocket" player="MattKurtz">X X</cards><action no="9" player="MattKurtz" type="0" sum="0" cards=""/><cards type="Pocket" player="merlin99977">X X</cards><action no="10" player="merlin99977" type="0" sum="0" cards=""/><cards type="Pocket" player="FunkoFister">X X</cards><action no="11" player="FunkoFister" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 SJ C10</cards><action no="15" player="naffy123" type="4" sum="0" cards=""/><action no="14" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards><action no="17" player="naffy123" type="4" sum="0" cards=""/><action no="16" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="19" player="naffy123" type="4" sum="0" cards=""/><action no="18" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

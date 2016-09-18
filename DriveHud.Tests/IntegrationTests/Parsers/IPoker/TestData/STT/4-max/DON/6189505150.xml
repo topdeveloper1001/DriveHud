@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189505150">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819271291</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>13</gamecount>  
+	          <startdate>2014-01-28 16:13:10</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,035</bets>  
+	          <wins>2,270</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,035</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5449192539">
+		 <general>
+		  <startdate>2014-01-28 16:13:10</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="80" bet="50" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kocha011" type="1" sum="10" cards="[cards]"/><action no="2" player="ballanus88" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H6 SA</cards><action no="4" player="WorstCard" type="23" sum="50" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="5" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="6" player="ballanus88" type="0" sum="0" cards=""/><cards type="Pocket" player="martina1966">X X</cards><action no="3" player="martina1966" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449192849">
+		 <general>
+		  <startdate>2014-01-28 16:13:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="830" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="790" dealer="1" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="780" dealer="0" win="1,580" bet="780" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="800" dealer="0" win="20" bet="800" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ballanus88" type="1" sum="10" cards="[cards]"/><action no="2" player="martina1966" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H9 C3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="4" player="kocha011" type="3" sum="20" cards=""/><cards type="Pocket" player="ballanus88">S8 CK</cards><action no="5" player="ballanus88" type="3" sum="10" cards=""/><cards type="Pocket" player="martina1966">D8 D2</cards><action no="6" player="martina1966" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 S7 C5</cards><action no="9" player="kocha011" type="0" sum="0" cards=""/><action no="7" player="ballanus88" type="5" sum="60" cards=""/><action no="8" player="martina1966" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="10" player="ballanus88" type="5" sum="180" cards=""/><action no="11" player="martina1966" type="3" sum="180" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards><action no="12" player="ballanus88" type="4" sum="0" cards=""/><action no="14" player="ballanus88" type="7" sum="520" cards=""/><action no="13" player="martina1966" type="5" sum="540" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449193584">
+		 <general>
+		  <startdate>2014-01-28 16:15:19</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="830" dealer="0" win="50" bet="30" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,580" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="martina1966" chips="20" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="martina1966" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CJ DJ</cards><cards type="Pocket" player="kocha011">X X</cards><action no="3" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="4" player="ballanus88" type="0" sum="0" cards=""/><cards type="Pocket" player="martina1966">H3 H7</cards><action no="5" player="martina1966" type="7" sum="5" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H8 D10 D7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D5</cards>
+	</round>
+	
+		</game><game gamecode="5449193758">
+		 <general>
+		  <startdate>2014-01-28 16:15:40</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="850" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="770" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="kocha011" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C3 CQ</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kocha011">X X</cards><cards type="Pocket" player="ballanus88">X X</cards><action no="3" player="ballanus88" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449193840">
+		 <general>
+		  <startdate>2014-01-28 16:15:50</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="835" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="785" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,580" dealer="0" win="165" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kocha011" type="1" sum="15" cards="[cards]"/><action no="2" player="ballanus88" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HK S8</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="4" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="5" player="ballanus88" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK H2 CA</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="6" player="ballanus88" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><action no="8" player="ballanus88" type="5" sum="30" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449194043">
+		 <general>
+		  <startdate>2014-01-28 16:16:17</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="775" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,655" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="ballanus88" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D2 H2</cards><action no="5" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="3" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="4" player="ballanus88" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 D5 C6</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="6" player="ballanus88" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="8" player="ballanus88" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="10" player="ballanus88" type="5" sum="30" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449194344">
+		 <general>
+		  <startdate>2014-01-28 16:16:55</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="745" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="770" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,685" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="kocha011" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C9 H4</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="5" player="kocha011" type="3" sum="30" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="3" player="ballanus88" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 S5 D3</cards><action no="6" player="kocha011" type="4" sum="0" cards=""/><action no="7" player="ballanus88" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards><action no="8" player="kocha011" type="5" sum="90" cards=""/><action no="9" player="ballanus88" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449194618">
+		 <general>
+		  <startdate>2014-01-28 16:17:27</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="730" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="845" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,625" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="kocha011" type="15" sum="5" cards="[cards]"/><action no="4" player="kocha011" type="1" sum="25" cards="[cards]"/><action no="2" player="ballanus88" type="15" sum="5" cards="[cards]"/><action no="5" player="ballanus88" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D4 H5</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="7" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449194836">
+		 <general>
+		  <startdate>2014-01-28 16:17:54</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="725" dealer="0" win="835" bet="725" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="815" dealer="1" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,660" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="kocha011" type="15" sum="5" cards="[cards]"/><action no="1" player="ballanus88" type="15" sum="5" cards="[cards]"/><action no="4" player="ballanus88" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S10 DA</cards><action no="8" player="WorstCard" type="23" sum="720" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="6" player="kocha011" type="3" sum="50" cards=""/><action no="9" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="7" player="ballanus88" type="3" sum="25" cards=""/><action no="10" player="ballanus88" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449209268">
+		 <general>
+		  <startdate>2014-01-28 16:18:22</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="835" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="760" dealer="0" win="0" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,605" dealer="1" win="940" bet="705" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="kocha011" type="15" sum="5" cards="[cards]"/><action no="5" player="kocha011" type="2" sum="50" cards="[cards]"/><action no="3" player="ballanus88" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H5 S9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="8" player="kocha011" type="4" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="6" player="ballanus88" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 D9 S7</cards><action no="9" player="kocha011" type="5" sum="50" cards=""/><action no="11" player="kocha011" type="3" sum="50" cards=""/><action no="10" player="ballanus88" type="23" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DK</cards><action no="12" player="kocha011" type="5" sum="50" cards=""/><action no="14" player="kocha011" type="0" sum="0" cards=""/><action no="13" player="ballanus88" type="23" sum="550" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449209781">
+		 <general>
+		  <startdate>2014-01-28 16:19:22</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="805" dealer="1" win="975" bet="805" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="555" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,840" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="kocha011" type="15" sum="10" cards="[cards]"/><action no="4" player="kocha011" type="1" sum="50" cards="[cards]"/><action no="2" player="ballanus88" type="15" sum="10" cards="[cards]"/><action no="5" player="ballanus88" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CK D7</cards><action no="6" player="WorstCard" type="23" sum="795" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="7" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="8" player="ballanus88" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449209966">
+		 <general>
+		  <startdate>2014-01-28 16:19:43</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="975" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="495" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,730" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="kocha011" type="15" sum="10" cards="[cards]"/><action no="1" player="ballanus88" type="15" sum="10" cards="[cards]"/><action no="4" player="ballanus88" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SJ S4</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="kocha011">X X</cards><action no="6" player="kocha011" type="0" sum="0" cards=""/><cards type="Pocket" player="ballanus88">X X</cards><action no="7" player="ballanus88" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK H7 H2</cards><action no="10" player="WorstCard" type="5" sum="100" cards=""/><action no="9" player="ballanus88" type="4" sum="0" cards=""/><action no="11" player="ballanus88" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449210380">
+		 <general>
+		  <startdate>2014-01-28 16:20:31</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,095" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6189505150"/><player seat="4" name="kocha011" chips="485" dealer="0" win="0" bet="485" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ballanus88" chips="1,620" dealer="1" win="1,030" bet="485" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="kocha011" type="15" sum="10" cards="[cards]"/><action no="5" player="kocha011" type="2" sum="100" cards="[cards]"/><action no="3" player="ballanus88" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C8 HA</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="kocha011">CQ CJ</cards><action no="8" player="kocha011" type="23" sum="300" cards=""/><cards type="Pocket" player="ballanus88">H2 SA</cards><action no="6" player="ballanus88" type="3" sum="100" cards=""/><action no="9" player="ballanus88" type="3" sum="200" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D9 D2</cards><action no="10" player="kocha011" type="5" sum="175" cards=""/><action no="11" player="ballanus88" type="3" sum="175" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game>  
+	</session>

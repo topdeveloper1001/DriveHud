@@ -1,0 +1,1970 @@
+#Game No : 436667195
+***** 888poker Hand History for Game 436667195 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:06:33
+Table Yakima 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 6: AbeoBbeo1909 ( $199 )
+Seat 7: surik_vaio ( $100 )
+Seat 9: RoyalbIush ( $100 )
+surik_vaio posts small blind [$10]
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 raises [$199]
+surik_vaio folds
+RoyalbIush calls [$80]
+** Dealing flop ** [ 9s, 9c, 5c ]
+** Dealing turn ** [ 8s ]
+** Dealing river ** [ 4h ]
+** Summary **
+AbeoBbeo1909 shows [ 4d, As ]
+RoyalbIush shows [ Kh, 7s ]
+AbeoBbeo1909 collected [ $207.50 ]
+
+
+#Game No : 436667229
+***** 888poker Hand History for Game 436667229 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:06:38
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 6: AbeoBbeo1909 ( $306.50 )
+Seat 7: surik_vaio ( $100 )
+Seat 9: RoyalbIush ( $100 )
+RoyalbIush posts small blind [$10]
+AbeoBbeo1909 posts big blind [$20]
+** Dealing down cards **
+surik_vaio raises [$100]
+RoyalbIush folds
+AbeoBbeo1909 folds
+** Summary **
+surik_vaio did not show his hand
+surik_vaio collected [ $50 ]
+
+
+#Game No : 436667247
+***** 888poker Hand History for Game 436667247 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:06:48
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 6: AbeoBbeo1909 ( $286.50 )
+Seat 7: surik_vaio ( $130 )
+Seat 9: RoyalbIush ( $100 )
+AbeoBbeo1909 posts small blind [$10]
+surik_vaio folds
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 folds
+** Summary **
+RoyalbIush did not show his hand
+RoyalbIush collected [ $30 ]
+
+
+#Game No : 436667275
+***** 888poker Hand History for Game 436667275 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:07:07
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 6: AbeoBbeo1909 ( $296.50 )
+Seat 7: surik_vaio ( $130 )
+Seat 9: RoyalbIush ( $100 )
+AbeoBbeo1909 posts small blind [$10]
+surik_vaio posts big blind [$20]
+** Dealing down cards **
+RoyalbIush raises [$100]
+AbeoBbeo1909 raises [$170]
+surik_vaio folds
+** Dealing flop ** [ 3d, Jh, Js ]
+** Dealing turn ** [ 6c ]
+** Dealing river ** [ As ]
+** Summary **
+AbeoBbeo1909 shows [ 3h, Kh ]
+RoyalbIush shows [ Ac, 7c ]
+RoyalbIush collected [ $217.50 ]
+
+
+#Game No : 436667298
+***** 888poker Hand History for Game 436667298 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:07:28
+Table Yakima 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 6: AbeoBbeo1909 ( $196.50 )
+Seat 7: surik_vaio ( $110 )
+Seat 9: RoyalbIush ( $217.50 )
+surik_vaio posts small blind [$10]
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 raises [$196.50]
+surik_vaio folds
+RoyalbIush folds
+** Summary **
+AbeoBbeo1909 collected [ $50 ]
+
+
+#Game No : 436667336
+***** 888poker Hand History for Game 436667336 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:07:50
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $100 )
+Seat 6: AbeoBbeo1909 ( $226.50 )
+Seat 7: surik_vaio ( $100 )
+Seat 9: RoyalbIush ( $197.50 )
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 folds
+surik_vaio folds
+RoyalbIush raises [$187.50]
+mult1313 folds
+** Summary **
+RoyalbIush did not show his hand
+RoyalbIush collected [ $40 ]
+
+
+#Game No : 436667363
+***** 888poker Hand History for Game 436667363 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:08:11
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $100 )
+Seat 6: AbeoBbeo1909 ( $226.50 )
+Seat 7: surik_vaio ( $100 )
+Seat 9: RoyalbIush ( $217.50 )
+mult1313 posts small blind [$10]
+AbeoBbeo1909 posts big blind [$20]
+** Dealing down cards **
+surik_vaio folds
+RoyalbIush raises [$217.50]
+mult1313 folds
+AbeoBbeo1909 folds
+** Summary **
+RoyalbIush did not show his hand
+RoyalbIush collected [ $50 ]
+
+
+#Game No : 436667377
+***** 888poker Hand History for Game 436667377 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:08:21
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $100 )
+Seat 6: AbeoBbeo1909 ( $206.50 )
+Seat 7: surik_vaio ( $100 )
+Seat 9: RoyalbIush ( $247.50 )
+AbeoBbeo1909 posts small blind [$10]
+surik_vaio folds
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+AbeoBbeo1909 folds
+** Summary **
+RoyalbIush did not show his hand
+RoyalbIush collected [ $30 ]
+
+
+#Game No : 436667390
+***** 888poker Hand History for Game 436667390 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:08:29
+Table Yakima 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $100 )
+Seat 6: AbeoBbeo1909 ( $196.50 )
+Seat 9: RoyalbIush ( $257.50 )
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 folds
+RoyalbIush folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $30 ]
+
+
+#Game No : 436667408
+***** 888poker Hand History for Game 436667408 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:08:37
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $110 )
+Seat 6: AbeoBbeo1909 ( $196.50 )
+Seat 9: RoyalbIush ( $247.50 )
+mult1313 posts small blind [$10]
+AbeoBbeo1909 posts big blind [$20]
+** Dealing down cards **
+RoyalbIush raises [$247.50]
+mult1313 calls [$100]
+AbeoBbeo1909 folds
+** Dealing flop ** [ 2s, Qs, 6c ]
+** Dealing turn ** [ Jh ]
+** Dealing river ** [ 8s ]
+** Summary **
+mult1313 shows [ Qd, Qc ]
+RoyalbIush shows [ 7h, 9h ]
+mult1313 collected [ $237.50 ]
+
+
+#Game No : 436667453
+***** 888poker Hand History for Game 436667453 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:09:02
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $237.50 )
+Seat 6: AbeoBbeo1909 ( $176.50 )
+Seat 9: RoyalbIush ( $137.50 )
+AbeoBbeo1909 posts small blind [$10]
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+AbeoBbeo1909 raises [$166.50]
+RoyalbIush folds
+** Summary **
+AbeoBbeo1909 did not show his hand
+AbeoBbeo1909 collected [ $40 ]
+
+
+#Game No : 436667482
+***** 888poker Hand History for Game 436667482 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:09:21
+Table Yakima 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $237.50 )
+Seat 6: AbeoBbeo1909 ( $196.50 )
+Seat 9: RoyalbIush ( $117.50 )
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 raises [$196.50]
+RoyalbIush folds
+mult1313 folds
+** Summary **
+AbeoBbeo1909 did not show his hand
+AbeoBbeo1909 collected [ $50 ]
+
+
+#Game No : 436667499
+***** 888poker Hand History for Game 436667499 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:09:31
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $217.50 )
+Seat 6: AbeoBbeo1909 ( $226.50 )
+Seat 9: RoyalbIush ( $107.50 )
+mult1313 posts small blind [$10]
+AbeoBbeo1909 posts big blind [$20]
+** Dealing down cards **
+RoyalbIush folds
+mult1313 folds
+** Summary **
+AbeoBbeo1909 did not show his hand
+AbeoBbeo1909 collected [ $30 ]
+
+
+#Game No : 436667515
+***** 888poker Hand History for Game 436667515 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:09:38
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $207.50 )
+Seat 6: AbeoBbeo1909 ( $236.50 )
+Seat 9: RoyalbIush ( $107.50 )
+AbeoBbeo1909 posts small blind [$10]
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+mult1313 calls [$20]
+AbeoBbeo1909 folds
+RoyalbIush checks
+** Dealing flop ** [ 5s, 8h, 8c ]
+RoyalbIush checks
+mult1313 bets [$50]
+RoyalbIush folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $47.50 ]
+
+
+#Game No : 436667546
+***** 888poker Hand History for Game 436667546 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:09:55
+Table Yakima 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $235 )
+Seat 6: AbeoBbeo1909 ( $226.50 )
+Seat 9: RoyalbIush ( $100 )
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 folds
+RoyalbIush raises [$90]
+mult1313 folds
+** Summary **
+RoyalbIush did not show his hand
+RoyalbIush collected [ $40 ]
+
+
+#Game No : 436667571
+***** 888poker Hand History for Game 436667571 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:10:09
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $215 )
+Seat 6: AbeoBbeo1909 ( $226.50 )
+Seat 9: RoyalbIush ( $120 )
+mult1313 posts small blind [$10]
+AbeoBbeo1909 posts big blind [$20]
+** Dealing down cards **
+RoyalbIush raises [$120]
+mult1313 folds
+AbeoBbeo1909 folds
+** Summary **
+RoyalbIush did not show his hand
+RoyalbIush collected [ $50 ]
+
+
+#Game No : 436667588
+***** 888poker Hand History for Game 436667588 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:10:19
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $205 )
+Seat 6: AbeoBbeo1909 ( $206.50 )
+Seat 9: RoyalbIush ( $150 )
+AbeoBbeo1909 posts small blind [$10]
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+mult1313 raises [$40]
+AbeoBbeo1909 folds
+RoyalbIush folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $50 ]
+
+
+#Game No : 436667606
+***** 888poker Hand History for Game 436667606 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:10:29
+Table Yakima 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $235 )
+Seat 6: AbeoBbeo1909 ( $196.50 )
+Seat 9: RoyalbIush ( $130 )
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 folds
+RoyalbIush raises [$120]
+mult1313 calls [$110]
+** Dealing flop ** [ Tc, 2h, 4d ]
+** Dealing turn ** [ Qh ]
+** Dealing river ** [ 7s ]
+** Summary **
+mult1313 shows [ Qd, Jh ]
+RoyalbIush shows [ 6s, 8h ]
+mult1313 collected [ $257.50 ]
+
+
+#Game No : 436667635
+***** 888poker Hand History for Game 436667635 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:10:51
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $362.50 )
+Seat 6: AbeoBbeo1909 ( $196.50 )
+Seat 9: RoyalbIush ( $100 )
+mult1313 posts small blind [$10]
+AbeoBbeo1909 posts big blind [$20]
+** Dealing down cards **
+RoyalbIush raises [$100]
+mult1313 folds
+AbeoBbeo1909 calls [$80]
+** Dealing flop ** [ 2h, Td, 7d ]
+** Dealing turn ** [ 8s ]
+** Dealing river ** [ 6d ]
+** Summary **
+AbeoBbeo1909 shows [ Th, 6h ]
+RoyalbIush shows [ Ad, 2d ]
+RoyalbIush collected [ $207.50 ]
+
+
+#Game No : 436667684
+***** 888poker Hand History for Game 436667684 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:11:21
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $352.50 )
+Seat 6: AbeoBbeo1909 ( $100 )
+Seat 9: RoyalbIush ( $207.50 )
+AbeoBbeo1909 posts small blind [$10]
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+AbeoBbeo1909 folds
+** Summary **
+RoyalbIush did not show his hand
+RoyalbIush collected [ $30 ]
+
+
+#Game No : 436667696
+***** 888poker Hand History for Game 436667696 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:11:30
+Table Yakima 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $352.50 )
+Seat 6: AbeoBbeo1909 ( $100 )
+Seat 9: RoyalbIush ( $217.50 )
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 raises [$100]
+RoyalbIush folds
+mult1313 folds
+** Summary **
+AbeoBbeo1909 did not show his hand
+AbeoBbeo1909 collected [ $50 ]
+
+
+#Game No : 436667728
+***** 888poker Hand History for Game 436667728 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:11:47
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $332.50 )
+Seat 6: AbeoBbeo1909 ( $130 )
+Seat 9: RoyalbIush ( $207.50 )
+mult1313 posts small blind [$10]
+AbeoBbeo1909 posts big blind [$20]
+** Dealing down cards **
+RoyalbIush folds
+mult1313 raises [$322.50]
+AbeoBbeo1909 calls [$110]
+** Dealing flop ** [ 5d, Kc, Ts ]
+** Dealing turn ** [ 8s ]
+** Dealing river ** [ 4s ]
+** Summary **
+mult1313 shows [ 8d, Kh ]
+AbeoBbeo1909 shows [ 7d, As ]
+mult1313 collected [ $257.50 ]
+
+
+#Game No : 436667766
+***** 888poker Hand History for Game 436667766 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:12:15
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $460 )
+Seat 6: AbeoBbeo1909 ( $100 )
+Seat 9: RoyalbIush ( $207.50 )
+AbeoBbeo1909 posts small blind [$10]
+RoyalbIush posts big blind [$20]
+** Dealing down cards **
+mult1313 raises [$460]
+AbeoBbeo1909 folds
+RoyalbIush folds
+** Summary **
+mult1313 collected [ $50 ]
+
+
+#Game No : 436667786
+***** 888poker Hand History for Game 436667786 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:12:26
+Table Yakima 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $490 )
+Seat 6: AbeoBbeo1909 ( $100 )
+Seat 9: RoyalbIush ( $187.50 )
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+AbeoBbeo1909 raises [$100]
+RoyalbIush folds
+mult1313 calls [$80]
+** Dealing flop ** [ 9s, 4s, 3c ]
+** Dealing turn ** [ 7h ]
+** Dealing river ** [ 2c ]
+** Summary **
+mult1313 shows [ 4h, Ah ]
+AbeoBbeo1909 shows [ 8s, 7d ]
+AbeoBbeo1909 collected [ $207.50 ]
+
+
+#Game No : 436667881
+***** 888poker Hand History for Game 436667881 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:13:20
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $566.50 )
+Seat 6: AbeoBbeo1909 ( $207.50 )
+Seat 9: RoyalbIush ( $100 )
+AbeoBbeo1909 folds
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+RoyalbIush folds
+** Summary **
+mult1313 collected [ $30 ]
+
+
+#Game No : 436667911
+***** 888poker Hand History for Game 436667911 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:13:38
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $556.50 )
+Seat 4: fjreis ( $100 )
+Seat 9: RoyalbIush ( $120 )
+mult1313 posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+RoyalbIush raises [$120]
+mult1313 folds
+fjreis folds
+** Summary **
+RoyalbIush collected [ $50 ]
+
+
+#Game No : 436667930
+***** 888poker Hand History for Game 436667930 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:13:47
+Table Yakima 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $546.50 )
+Seat 4: fjreis ( $80 )
+Seat 9: RoyalbIush ( $150 )
+RoyalbIush posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+fjreis folds
+RoyalbIush raises [$140]
+mult1313 folds
+** Summary **
+RoyalbIush collected [ $40 ]
+
+
+#Game No : 436667945
+***** 888poker Hand History for Game 436667945 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:13:59
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: mult1313 ( $526.50 )
+Seat 2: alwayswin111 ( $100 )
+Seat 4: fjreis ( $80 )
+Seat 6: AbeoBbeo1909 ( $207.50 )
+Seat 9: RoyalbIush ( $170 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+fjreis folds
+AbeoBbeo1909 raises [$207.50]
+RoyalbIush calls [$170]
+mult1313 folds
+alwayswin111 folds
+** Dealing flop ** [ 6d, 2s, Kc ]
+** Dealing turn ** [ Jc ]
+** Dealing river ** [ 2h ]
+** Summary **
+AbeoBbeo1909 shows [ 5d, As ]
+RoyalbIush shows [ Ad, Jd ]
+RoyalbIush collected [ $366 ]
+
+
+#Game No : 436668017
+***** 888poker Hand History for Game 436668017 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:14:40
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $516.50 )
+Seat 2: alwayswin111 ( $100 )
+Seat 4: fjreis ( $80 )
+Seat 9: RoyalbIush ( $366 )
+alwayswin111 posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+RoyalbIush raises [$40]
+mult1313 folds
+alwayswin111 folds
+fjreis folds
+** Summary **
+RoyalbIush collected [ $50 ]
+
+
+#Game No : 436668042
+***** 888poker Hand History for Game 436668042 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:14:54
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: mult1313 ( $516.50 )
+Seat 2: alwayswin111 ( $100 )
+Seat 4: fjreis ( $60 )
+Seat 7: rufstation ( $100 )
+Seat 9: RoyalbIush ( $396 )
+fjreis posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+RoyalbIush raises [$40]
+mult1313 folds
+alwayswin111 folds
+fjreis folds
+rufstation calls [$20]
+** Dealing flop ** [ 3c, Ah, 9c ]
+rufstation checks
+RoyalbIush bets [$90]
+rufstation folds
+** Summary **
+RoyalbIush did not show his hand
+RoyalbIush collected [ $86 ]
+
+
+#Game No : 436668100
+***** 888poker Hand History for Game 436668100 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:15:23
+Table Yakima 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: mult1313 ( $516.50 )
+Seat 2: alwayswin111 ( $100 )
+Seat 4: fjreis ( $50 )
+Seat 7: rufstation ( $100 )
+Seat 9: RoyalbIush ( $442 )
+rufstation posts small blind [$10]
+RoyalbIush folds
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+fjreis raises [$50]
+rufstation raises [$90]
+mult1313 folds
+** Dealing flop ** [ 2d, 9h, 6h ]
+** Dealing turn ** [ 3c ]
+** Dealing river ** [ 5h ]
+** Summary **
+fjreis shows [ 8s, Ac ]
+rufstation shows [ Ah, 7h ]
+rufstation collected [ $116 ]
+rufstation collected [ $50 ]
+
+
+#Game No : 436668145
+***** 888poker Hand History for Game 436668145 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:15:48
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $496.50 )
+Seat 2: alwayswin111 ( $100 )
+Seat 7: rufstation ( $166 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 raises [$486.50]
+alwayswin111 calls [$80]
+** Dealing flop ** [ 4c, 7h, Kd ]
+** Dealing turn ** [ Kh ]
+** Dealing river ** [ 5h ]
+** Summary **
+mult1313 shows [ Qc, 9c ]
+alwayswin111 shows [ Js, 7s ]
+alwayswin111 collected [ $197.50 ]
+
+
+#Game No : 436668179
+***** 888poker Hand History for Game 436668179 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:16:11
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $396.50 )
+Seat 2: alwayswin111 ( $197.50 )
+Seat 7: rufstation ( $166 )
+alwayswin111 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 raises [$187.50]
+rufstation calls [$146]
+** Dealing flop ** [ 9s, 2d, Kc ]
+** Dealing turn ** [ 5s ]
+** Dealing river ** [ Qh ]
+** Summary **
+alwayswin111 shows [ 9h, 8c ]
+rufstation shows [ Ad, 7d ]
+alwayswin111 collected [ $329.50 ]
+
+
+#Game No : 436668216
+***** 888poker Hand History for Game 436668216 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:16:33
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $396.50 )
+Seat 2: alwayswin111 ( $361 )
+Seat 7: rufstation ( $100 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+rufstation raises [$90]
+mult1313 calls [$80]
+** Dealing flop ** [ 4s, Ks, Ah ]
+** Dealing turn ** [ 3d ]
+** Dealing river ** [ 7d ]
+** Summary **
+mult1313 shows [ 6c, Ad ]
+rufstation shows [ Qc, Jc ]
+mult1313 collected [ $197.50 ]
+
+
+#Game No : 436668253
+***** 888poker Hand History for Game 436668253 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:16:53
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $494 )
+Seat 2: alwayswin111 ( $361 )
+Seat 7: rufstation ( $100 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 calls [$10]
+alwayswin111 checks
+** Dealing flop ** [ Td, 6s, Kc ]
+mult1313 checks
+alwayswin111 checks
+** Dealing turn ** [ 6c ]
+mult1313 bets [$20]
+alwayswin111 folds
+** Summary **
+mult1313 collected [ $38 ]
+
+
+#Game No : 436668286
+***** 888poker Hand History for Game 436668286 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:17:13
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $512 )
+Seat 2: alwayswin111 ( $341 )
+Seat 7: rufstation ( $100 )
+alwayswin111 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 raises [$331]
+rufstation calls [$80]
+** Dealing flop ** [ 7d, 2d, Qc ]
+** Dealing turn ** [ 2h ]
+** Dealing river ** [ 4s ]
+** Summary **
+alwayswin111 shows [ Jh, 8d ]
+rufstation shows [ Ah, Tc ]
+rufstation collected [ $197.50 ]
+
+
+#Game No : 436668320
+***** 888poker Hand History for Game 436668320 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:17:35
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $512 )
+Seat 2: alwayswin111 ( $241 )
+Seat 7: rufstation ( $197.50 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+rufstation folds
+** Summary **
+mult1313 collected [ $30 ]
+
+
+#Game No : 436668330
+***** 888poker Hand History for Game 436668330 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:17:41
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $522 )
+Seat 2: alwayswin111 ( $241 )
+Seat 7: rufstation ( $187.50 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation raises [$187.50]
+mult1313 folds
+alwayswin111 folds
+** Summary **
+rufstation collected [ $50 ]
+
+
+#Game No : 436668352
+***** 888poker Hand History for Game 436668352 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:18:00
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $512 )
+Seat 2: alwayswin111 ( $221 )
+Seat 7: rufstation ( $217.50 )
+alwayswin111 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 folds
+** Summary **
+rufstation collected [ $30 ]
+
+
+#Game No : 436668364
+***** 888poker Hand History for Game 436668364 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:18:06
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $512 )
+Seat 2: alwayswin111 ( $211 )
+Seat 7: rufstation ( $227.50 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 raises [$211]
+rufstation folds
+mult1313 calls [$191]
+** Dealing flop ** [ 6c, Ts, 2c ]
+** Dealing turn ** [ 3c ]
+** Dealing river ** [ 5c ]
+** Summary **
+mult1313 shows [ Js, Jc ]
+alwayswin111 shows [ 2s, Ac ]
+alwayswin111 collected [ $429.50 ]
+
+
+#Game No : 436668418
+***** 888poker Hand History for Game 436668418 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:18:35
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $301 )
+Seat 2: alwayswin111 ( $429.50 )
+Seat 7: rufstation ( $217.50 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $30 ]
+
+
+#Game No : 436668441
+***** 888poker Hand History for Game 436668441 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:18:49
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $291 )
+Seat 2: alwayswin111 ( $439.50 )
+Seat 7: rufstation ( $217.50 )
+alwayswin111 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 raises [$429.50]
+rufstation calls [$197.50]
+** Dealing flop ** [ 9h, 5s, 2s ]
+** Dealing turn ** [ Qs ]
+** Dealing river ** [ 8s ]
+** Summary **
+alwayswin111 shows [ 8h, 9c ]
+rufstation shows [ 6h, Ac ]
+alwayswin111 collected [ $432.50 ]
+
+
+#Game No : 436668478
+***** 888poker Hand History for Game 436668478 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:19:15
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $291 )
+Seat 2: alwayswin111 ( $654.50 )
+Seat 7: rufstation ( $100 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 raises [$654.50]
+rufstation folds
+mult1313 folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $50 ]
+
+
+#Game No : 436668501
+***** 888poker Hand History for Game 436668501 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:19:31
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $271 )
+Seat 2: alwayswin111 ( $684.50 )
+Seat 7: rufstation ( $100 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $30 ]
+
+
+#Game No : 436668518
+***** 888poker Hand History for Game 436668518 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:19:37
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $261 )
+Seat 2: alwayswin111 ( $694.50 )
+Seat 7: rufstation ( $100 )
+alwayswin111 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 raises [$261]
+alwayswin111 folds
+rufstation folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $50 ]
+
+
+#Game No : 436668543
+***** 888poker Hand History for Game 436668543 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:19:50
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $291 )
+Seat 2: alwayswin111 ( $684.50 )
+Seat 7: rufstation ( $100 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+rufstation raises [$90]
+mult1313 calls [$80]
+** Dealing flop ** [ 2c, Jc, 9c ]
+** Dealing turn ** [ Th ]
+** Dealing river ** [ Kd ]
+** Summary **
+mult1313 shows [ Td, Jd ]
+rufstation shows [ Tc, Qh ]
+rufstation collected [ $197.50 ]
+
+
+#Game No : 436668586
+***** 888poker Hand History for Game 436668586 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:20:15
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $191 )
+Seat 2: alwayswin111 ( $684.50 )
+Seat 7: rufstation ( $197.50 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 calls [$10]
+alwayswin111 checks
+** Dealing flop ** [ 6d, 6c, Js ]
+mult1313 checks
+alwayswin111 checks
+** Dealing turn ** [ 5s ]
+mult1313 bets [$20]
+alwayswin111 calls [$20]
+** Dealing river ** [ 8d ]
+mult1313 bets [$20]
+alwayswin111 folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $77.50 ]
+
+
+#Game No : 436668677
+***** 888poker Hand History for Game 436668677 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:21:05
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $228.50 )
+Seat 2: alwayswin111 ( $644.50 )
+Seat 7: rufstation ( $197.50 )
+alwayswin111 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 raises [$634.50]
+rufstation folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $40 ]
+
+
+#Game No : 436668694
+***** 888poker Hand History for Game 436668694 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:21:15
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $228.50 )
+Seat 2: alwayswin111 ( $664.50 )
+Seat 7: rufstation ( $177.50 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+rufstation folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $30 ]
+
+
+#Game No : 436668708
+***** 888poker Hand History for Game 436668708 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:21:24
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $238.50 )
+Seat 2: alwayswin111 ( $664.50 )
+Seat 7: rufstation ( $167.50 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 raises [$30]
+alwayswin111 raises [$644.50]
+mult1313 calls [$198.50]
+** Dealing flop ** [ 5s, Tc, 4h ]
+** Dealing turn ** [ 3h ]
+** Dealing river ** [ 4d ]
+** Summary **
+mult1313 shows [ Td, Kd ]
+alwayswin111 shows [ 7d, Ah ]
+mult1313 collected [ $474.50 ]
+
+
+#Game No : 436668751
+***** 888poker Hand History for Game 436668751 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:21:50
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $474.50 )
+Seat 2: alwayswin111 ( $426 )
+Seat 4: ArtemPol ( $100 )
+Seat 7: rufstation ( $167.50 )
+alwayswin111 posts small blind [$10]
+ArtemPol posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+alwayswin111 raises [$416]
+ArtemPol calls [$80]
+** Dealing flop ** [ 5d, 5s, 9d ]
+** Dealing turn ** [ Jd ]
+** Dealing river ** [ 2d ]
+** Summary **
+alwayswin111 shows [ 5c, 4c ]
+ArtemPol shows [ Ad, 9h ]
+ArtemPol collected [ $196 ]
+
+
+#Game No : 436668798
+***** 888poker Hand History for Game 436668798 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:22:19
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $474.50 )
+Seat 2: alwayswin111 ( $326 )
+Seat 4: ArtemPol ( $196 )
+Seat 7: rufstation ( $167.50 )
+ArtemPol posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 folds
+ArtemPol raises [$186]
+rufstation calls [$147.50]
+** Dealing flop ** [ 5s, 4s, 6c ]
+** Dealing turn ** [ 3c ]
+** Dealing river ** [ Qs ]
+** Summary **
+ArtemPol shows [ Qd, Ac ]
+rufstation shows [ 5h, As ]
+ArtemPol collected [ $331 ]
+
+
+#Game No : 436668847
+***** 888poker Hand History for Game 436668847 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:22:45
+Table Yakima 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $474.50 )
+Seat 2: alwayswin111 ( $326 )
+Seat 4: ArtemPol ( $359.50 )
+Seat 7: rufstation ( $100 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+ArtemPol raises [$40]
+rufstation folds
+mult1313 calls [$20]
+** Dealing flop ** [ 2s, 5s, 6d ]
+mult1313 checks
+ArtemPol checks
+** Dealing turn ** [ Qs ]
+mult1313 checks
+ArtemPol bets [$40]
+mult1313 calls [$40]
+** Dealing river ** [ 7d ]
+mult1313 checks
+ArtemPol checks
+** Summary **
+mult1313 shows [ Qd, Ks ]
+ArtemPol mucks [ As, Kh ]
+mult1313 collected [ $166 ]
+
+
+#Game No : 436668916
+***** 888poker Hand History for Game 436668916 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:23:21
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $560.50 )
+Seat 2: alwayswin111 ( $326 )
+Seat 4: ArtemPol ( $279.50 )
+Seat 7: rufstation ( $100 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+ArtemPol folds
+rufstation raises [$100]
+mult1313 folds
+alwayswin111 calls [$80]
+** Dealing flop ** [ 3c, 4c, 5d ]
+** Dealing turn ** [ 6d ]
+** Dealing river ** [ 8h ]
+** Summary **
+alwayswin111 shows [ Js, Jh ]
+rufstation shows [ Ts, Kc ]
+alwayswin111 collected [ $206 ]
+
+
+#Game No : 436668962
+***** 888poker Hand History for Game 436668962 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:23:43
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $550.50 )
+Seat 2: alwayswin111 ( $432 )
+Seat 4: ArtemPol ( $279.50 )
+Seat 7: rufstation ( $100 )
+alwayswin111 posts small blind [$10]
+ArtemPol posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+alwayswin111 folds
+** Summary **
+ArtemPol did not show his hand
+ArtemPol collected [ $30 ]
+
+
+#Game No : 436668977
+***** 888poker Hand History for Game 436668977 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:23:53
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $550.50 )
+Seat 2: alwayswin111 ( $422 )
+Seat 4: ArtemPol ( $289.50 )
+Seat 7: rufstation ( $100 )
+ArtemPol posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 raises [$45]
+ArtemPol folds
+rufstation folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $50 ]
+
+
+#Game No : 436669052
+***** 888poker Hand History for Game 436669052 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:24:41
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $530.50 )
+Seat 2: alwayswin111 ( $568 )
+Seat 4: ArtemPol ( $279.50 )
+Seat 7: rufstation ( $100 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+ArtemPol folds
+rufstation raises [$100]
+mult1313 folds
+alwayswin111 calls [$80]
+** Dealing flop ** [ Qc, 2s, Qh ]
+** Dealing turn ** [ Ks ]
+** Dealing river ** [ 5s ]
+** Summary **
+alwayswin111 shows [ Jh, 9s ]
+rufstation shows [ Kc, Th ]
+rufstation collected [ $206 ]
+
+
+#Game No : 436669109
+***** 888poker Hand History for Game 436669109 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:25:11
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $520.50 )
+Seat 2: alwayswin111 ( $468 )
+Seat 4: ArtemPol ( $279.50 )
+Seat 7: rufstation ( $206 )
+alwayswin111 posts small blind [$10]
+ArtemPol posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+alwayswin111 raises [$40]
+ArtemPol folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $40 ]
+
+
+#Game No : 436669137
+***** 888poker Hand History for Game 436669137 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:25:32
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $520.50 )
+Seat 2: alwayswin111 ( $488 )
+Seat 4: ArtemPol ( $259.50 )
+Seat 7: rufstation ( $206 )
+ArtemPol posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 folds
+ArtemPol raises [$249.50]
+rufstation folds
+** Summary **
+ArtemPol did not show his hand
+ArtemPol collected [ $40 ]
+
+
+#Game No : 436669162
+***** 888poker Hand History for Game 436669162 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:25:51
+Table Yakima 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $520.50 )
+Seat 2: alwayswin111 ( $488 )
+Seat 4: ArtemPol ( $279.50 )
+Seat 7: rufstation ( $186 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+ArtemPol folds
+rufstation folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $30 ]
+
+
+#Game No : 436669183
+***** 888poker Hand History for Game 436669183 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:26:01
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $530.50 )
+Seat 2: alwayswin111 ( $488 )
+Seat 4: ArtemPol ( $279.50 )
+Seat 7: rufstation ( $176 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+ArtemPol folds
+rufstation raises [$176]
+mult1313 raises [$520.50]
+alwayswin111 folds
+** Dealing flop ** [ Js, 8h, 9h ]
+** Dealing turn ** [ 9d ]
+** Dealing river ** [ 7h ]
+** Summary **
+mult1313 shows [ Jd, Ah ]
+rufstation shows [ Qs, 8s ]
+mult1313 collected [ $368 ]
+
+
+#Game No : 436669244
+***** 888poker Hand History for Game 436669244 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:26:37
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $722.50 )
+Seat 2: alwayswin111 ( $468 )
+Seat 4: ArtemPol ( $279.50 )
+Seat 7: rufstation ( $100 )
+alwayswin111 posts small blind [$10]
+ArtemPol posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+alwayswin111 calls [$10]
+ArtemPol checks
+** Dealing flop ** [ 8d, Tc, Qc ]
+alwayswin111 bets [$20]
+ArtemPol calls [$20]
+** Dealing turn ** [ 7s ]
+alwayswin111 checks
+ArtemPol bets [$40]
+alwayswin111 calls [$40]
+** Dealing river ** [ 2c ]
+alwayswin111 checks
+ArtemPol bets [$199.50]
+alwayswin111 folds
+** Summary **
+ArtemPol did not show his hand
+ArtemPol collected [ $156 ]
+
+
+#Game No : 436669315
+***** 888poker Hand History for Game 436669315 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:27:24
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $722.50 )
+Seat 2: alwayswin111 ( $388 )
+Seat 4: ArtemPol ( $355.50 )
+Seat 7: rufstation ( $100 )
+ArtemPol posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 raises [$45]
+ArtemPol folds
+rufstation folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $50 ]
+
+
+#Game No : 436669341
+***** 888poker Hand History for Game 436669341 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:27:44
+Table Yakima 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $722.50 )
+Seat 2: alwayswin111 ( $418 )
+Seat 4: ArtemPol ( $345.50 )
+Seat 7: rufstation ( $100 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 raises [$45]
+ArtemPol folds
+rufstation folds
+mult1313 folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $50 ]
+
+
+#Game No : 436669365
+***** 888poker Hand History for Game 436669365 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:27:57
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $702.50 )
+Seat 2: alwayswin111 ( $448 )
+Seat 4: ArtemPol ( $345.50 )
+Seat 7: rufstation ( $100 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+ArtemPol folds
+rufstation raises [$100]
+mult1313 folds
+alwayswin111 folds
+** Summary **
+rufstation did not show his hand
+rufstation collected [ $50 ]
+
+
+#Game No : 436669381
+***** 888poker Hand History for Game 436669381 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:28:08
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $692.50 )
+Seat 2: alwayswin111 ( $428 )
+Seat 4: ArtemPol ( $345.50 )
+Seat 7: rufstation ( $130 )
+alwayswin111 posts small blind [$10]
+ArtemPol posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+alwayswin111 calls [$10]
+ArtemPol checks
+** Dealing flop ** [ 6d, Ah, 2d ]
+alwayswin111 bets [$20]
+ArtemPol folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $38 ]
+
+
+#Game No : 436669430
+***** 888poker Hand History for Game 436669430 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:28:34
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $692.50 )
+Seat 2: alwayswin111 ( $446 )
+Seat 4: ArtemPol ( $325.50 )
+Seat 7: rufstation ( $130 )
+ArtemPol posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 raises [$40]
+alwayswin111 folds
+ArtemPol folds
+rufstation folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $50 ]
+
+
+#Game No : 436669454
+***** 888poker Hand History for Game 436669454 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:28:48
+Table Yakima 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $722.50 )
+Seat 2: alwayswin111 ( $446 )
+Seat 4: ArtemPol ( $315.50 )
+Seat 7: rufstation ( $110 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+ArtemPol raises [$40]
+rufstation folds
+mult1313 folds
+** Summary **
+ArtemPol did not show his hand
+ArtemPol collected [ $50 ]
+
+
+#Game No : 436669469
+***** 888poker Hand History for Game 436669469 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:29:00
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $702.50 )
+Seat 2: alwayswin111 ( $446 )
+Seat 4: ArtemPol ( $345.50 )
+Seat 7: rufstation ( $100 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+ArtemPol folds
+rufstation folds
+mult1313 folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $30 ]
+
+
+#Game No : 436669477
+***** 888poker Hand History for Game 436669477 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:29:08
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $692.50 )
+Seat 2: alwayswin111 ( $456 )
+Seat 4: ArtemPol ( $345.50 )
+Seat 7: rufstation ( $100 )
+alwayswin111 posts small blind [$10]
+ArtemPol posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+alwayswin111 calls [$10]
+ArtemPol raises [$325.50]
+alwayswin111 folds
+** Summary **
+ArtemPol did not show his hand
+ArtemPol collected [ $40 ]
+
+
+#Game No : 436669504
+***** 888poker Hand History for Game 436669504 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:29:23
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $692.50 )
+Seat 2: alwayswin111 ( $436 )
+Seat 4: ArtemPol ( $365.50 )
+Seat 7: rufstation ( $100 )
+ArtemPol posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 raises [$40]
+alwayswin111 folds
+ArtemPol raises [$355.50]
+rufstation folds
+mult1313 folds
+** Summary **
+ArtemPol did not show his hand
+ArtemPol collected [ $100 ]
+
+
+#Game No : 436669538
+***** 888poker Hand History for Game 436669538 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:29:43
+Table Yakima 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $652.50 )
+Seat 2: alwayswin111 ( $436 )
+Seat 4: ArtemPol ( $425.50 )
+Seat 7: rufstation ( $100 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+ArtemPol folds
+rufstation folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $30 ]
+
+
+#Game No : 436669550
+***** 888poker Hand History for Game 436669550 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:29:49
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $662.50 )
+Seat 2: alwayswin111 ( $436 )
+Seat 4: ArtemPol ( $425.50 )
+Seat 7: rufstation ( $100 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+ArtemPol folds
+rufstation raises [$100]
+mult1313 folds
+alwayswin111 calls [$80]
+** Dealing flop ** [ 9s, 8h, 5d ]
+** Dealing turn ** [ 7h ]
+** Dealing river ** [ 2c ]
+** Summary **
+alwayswin111 shows [ Ah, 3c ]
+rufstation shows [ Kc, 9h ]
+rufstation collected [ $206 ]
+
+
+#Game No : 436669589
+***** 888poker Hand History for Game 436669589 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:30:11
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $652.50 )
+Seat 2: alwayswin111 ( $336 )
+Seat 4: ArtemPol ( $425.50 )
+Seat 7: rufstation ( $206 )
+alwayswin111 posts small blind [$10]
+ArtemPol posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 raises [$40]
+alwayswin111 raises [$326]
+ArtemPol folds
+mult1313 calls [$296]
+** Dealing flop ** [ Kc, 5d, 3d ]
+** Dealing turn ** [ 2h ]
+** Dealing river ** [ Jd ]
+** Summary **
+mult1313 shows [ Jc, Js ]
+alwayswin111 shows [ 4c, Ah ]
+alwayswin111 collected [ $688 ]
+
+
+#Game No : 436669635
+***** 888poker Hand History for Game 436669635 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:30:42
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $316.50 )
+Seat 2: alwayswin111 ( $688 )
+Seat 4: ArtemPol ( $405.50 )
+Seat 7: rufstation ( $206 )
+ArtemPol posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 folds
+ArtemPol raises [$395.50]
+rufstation calls [$186]
+** Dealing flop ** [ Ah, 2h, As ]
+** Dealing turn ** [ 3h ]
+** Dealing river ** [ 8h ]
+** Summary **
+ArtemPol shows [ Td, Qs ]
+rufstation shows [ Qc, Ks ]
+rufstation collected [ $408 ]
+
+
+#Game No : 436669666
+***** 888poker Hand History for Game 436669666 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:31:03
+Table Yakima 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $316.50 )
+Seat 2: alwayswin111 ( $688 )
+Seat 4: ArtemPol ( $199.50 )
+Seat 7: rufstation ( $408 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+ArtemPol folds
+rufstation folds
+** Summary **
+mult1313 did not show his hand
+mult1313 collected [ $30 ]
+
+
+#Game No : 436669686
+***** 888poker Hand History for Game 436669686 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:31:10
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $326.50 )
+Seat 2: alwayswin111 ( $688 )
+Seat 4: ArtemPol ( $199.50 )
+Seat 7: rufstation ( $398 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+ArtemPol raises [$199.50]
+rufstation folds
+mult1313 folds
+alwayswin111 folds
+** Summary **
+ArtemPol did not show his hand
+ArtemPol collected [ $50 ]
+
+
+#Game No : 436669706
+***** 888poker Hand History for Game 436669706 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:31:23
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: mult1313 ( $316.50 )
+Seat 2: alwayswin111 ( $668 )
+Seat 4: ArtemPol ( $229.50 )
+Seat 7: rufstation ( $398 )
+alwayswin111 posts small blind [$10]
+ArtemPol folds
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 calls [$10]
+rufstation checks
+** Dealing flop ** [ Td, 4h, 2c ]
+alwayswin111 bets [$20]
+rufstation folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $38 ]
+
+
+#Game No : 436669728
+***** 888poker Hand History for Game 436669728 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:31:38
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $316.50 )
+Seat 2: alwayswin111 ( $686 )
+Seat 7: rufstation ( $378 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 raises [$45]
+rufstation folds
+mult1313 raises [$296.50]
+alwayswin111 folds
+** Summary **
+mult1313 collected [ $100 ]
+
+
+#Game No : 436669748
+***** 888poker Hand History for Game 436669748 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:31:51
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $371.50 )
+Seat 2: alwayswin111 ( $641 )
+Seat 7: rufstation ( $368 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 raises [$30]
+alwayswin111 folds
+** Summary **
+mult1313 collected [ $40 ]
+
+
+#Game No : 436669766
+***** 888poker Hand History for Game 436669766 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:32:04
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $391.50 )
+Seat 2: alwayswin111 ( $621 )
+Seat 7: rufstation ( $368 )
+alwayswin111 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 calls [$10]
+rufstation raises [$40]
+alwayswin111 calls [$40]
+** Dealing flop ** [ 8c, 6h, 5s ]
+alwayswin111 checks
+rufstation checks
+** Dealing turn ** [ Js ]
+alwayswin111 bets [$80]
+rufstation raises [$308]
+alwayswin111 folds
+** Summary **
+rufstation collected [ $277.50 ]
+
+
+#Game No : 436669827
+***** 888poker Hand History for Game 436669827 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:32:48
+Table Yakima 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $391.50 )
+Seat 2: alwayswin111 ( $481 )
+Seat 7: rufstation ( $505.50 )
+rufstation posts small blind [$10]
+mult1313 posts big blind [$20]
+** Dealing down cards **
+alwayswin111 folds
+rufstation calls [$10]
+mult1313 raises [$60]
+rufstation folds
+** Summary **
+mult1313 collected [ $40 ]
+
+
+#Game No : 436669850
+***** 888poker Hand History for Game 436669850 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:33:00
+Table Yakima 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $411.50 )
+Seat 2: alwayswin111 ( $481 )
+Seat 7: rufstation ( $485.50 )
+mult1313 posts small blind [$10]
+alwayswin111 posts big blind [$20]
+** Dealing down cards **
+rufstation folds
+mult1313 folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $30 ]
+
+
+#Game No : 436669857
+***** 888poker Hand History for Game 436669857 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:33:06
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $401.50 )
+Seat 2: alwayswin111 ( $491 )
+Seat 7: rufstation ( $485.50 )
+alwayswin111 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+alwayswin111 raises [$40]
+rufstation folds
+** Summary **
+alwayswin111 did not show his hand
+alwayswin111 collected [ $40 ]
+
+
+#Game No : 436671854
+***** 888poker Hand History for Game 436671854 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:53:27
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $325 )
+Seat 7: rufstation ( $414.50 )
+Seat 9: fjreis ( $197.50 )
+rufstation posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+mult1313 folds
+rufstation raises [$404.50]
+fjreis calls [$177.50]
+** Dealing flop ** [ Qs, 6h, 2c ]
+** Dealing turn ** [ 4c ]
+** Dealing river ** [ Jd ]
+** Summary **
+rufstation shows [ 6d, 7s ]
+fjreis shows [ Kh, 5c ]
+rufstation collected [ $392.50 ]
+
+
+#Game No : 436672029
+***** 888poker Hand History for Game 436672029 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:55:11
+Table Yakima 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $384 )
+Seat 7: rufstation ( $548.50 )
+Seat 9: fjreis ( $100 )
+mult1313 posts small blind [$10]
+rufstation posts big blind [$20]
+** Dealing down cards **
+fjreis folds
+mult1313 calls [$10]
+rufstation checks
+** Dealing flop ** [ Td, Ts, 8d ]
+mult1313 checks
+rufstation checks
+** Dealing turn ** [ 4s ]
+mult1313 checks
+rufstation checks
+** Dealing river ** [ As ]
+mult1313 bets [$20]
+rufstation calls [$20]
+** Summary **
+mult1313 shows [ 6c, Qh ]
+rufstation shows [ 6s, Kh ]
+rufstation collected [ $77.50 ]
+
+
+#Game No : 436672095
+***** 888poker Hand History for Game 436672095 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 16:55:47
+Table Yakima 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: mult1313 ( $344 )
+Seat 7: rufstation ( $586 )
+Seat 9: fjreis ( $100 )
+rufstation posts small blind [$10]
+fjreis posts big blind [$20]
+** Dealing down cards **
+mult1313 raises [$40]
+rufstation folds
+fjreis raises [$80]
+mult1313 calls [$60]
+** Dealing flop ** [ 9s, 7c, Jh ]
+** Dealing turn ** [ 9c ]
+** Dealing river ** [ Jd ]
+** Summary **
+mult1313 shows [ 8d, Ks ]
+fjreis shows [ Ad, 8c ]
+fjreis collected [ $207.50 ]
+
+

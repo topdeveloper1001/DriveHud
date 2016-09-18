@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6156859958">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>Rio "Jackpot Sit N Go", 815774072</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:01</duration>  
+	          <gamecount>4</gamecount>  
+	          <startdate>2013-11-30 20:53:08</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>AlphaOmaha</nickname>  
+	          <bets>1,230</bets>  
+	          <wins>726</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>542.50</ipoints>
+        		<statuspoints>87.50</statuspoints>
+			  		<awardpoints>542.50</awardpoints>
+	          <tournamentname>Rio "Jackpot Sit N Go"</tournamentname><place>5</place><buyin>$20.00+$3.50</buyin> <totalbuyin>$23.50</totalbuyin> <ipoints>542.50</ipoints> <win>$0.00</win> <statuspoints>87.50</statuspoints> <awardpoints>542.50</awardpoints>  
+	    </general>  
+	    <game gamecode="5291844107">
+		 <general>
+		  <startdate>2013-11-30 20:53:08</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="840" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DarthKelm" chips="630" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Nzolppp" chips="3,326" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="504" dealer="0" win="654" bet="504" rebuy="0" addon="0" reg_code="6156859958"/><player seat="10" name="Str8forVictory" chips="550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="silverbelarus" type="1" sum="50" cards="[cards]"/><action no="2" player="DarthKelm" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <action no="6" player="silverbelarus" type="0" sum="0" cards=""/><action no="7" player="DarthKelm" type="0" sum="0" cards=""/><action no="3" player="Nzolppp" type="0" sum="0" cards=""/><action no="4" player="AlphaOmaha" type="23" sum="504" cards=""/><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5291844158">
+		 <general>
+		  <startdate>2013-11-30 20:53:30</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="840" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DarthKelm" chips="630" dealer="0" win="1,360" bet="630" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Nzolppp" chips="3,326" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="654" dealer="0" win="24" bet="654" rebuy="0" addon="0" reg_code="6156859958"/><player seat="10" name="Str8forVictory" chips="550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DarthKelm" type="1" sum="50" cards="[cards]"/><action no="2" player="Nzolppp" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="5" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="DarthKelm">HA SK</cards><action no="6" player="DarthKelm" type="7" sum="580" cards=""/><cards type="Pocket" player="Nzolppp">X X</cards><action no="7" player="Nzolppp" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CJ HJ</cards><action no="3" player="AlphaOmaha" type="23" sum="654" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK C3 D6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards>
+	</round>
+	
+		</game><game gamecode="5291844223">
+		 <general>
+		  <startdate>2013-11-30 20:54:00</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DarthKelm" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Nzolppp" chips="3,226" dealer="0" win="26" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="24" dealer="0" win="48" bet="24" rebuy="0" addon="0" reg_code="6156859958"/><player seat="10" name="Str8forVictory" chips="550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Nzolppp" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="24" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="4" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="DarthKelm">X X</cards><action no="5" player="DarthKelm" type="0" sum="0" cards=""/><cards type="Pocket" player="Nzolppp">D5 SK</cards><cards type="Pocket" player="AlphaOmaha">SQ H10</cards><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ D4 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards>
+	</round>
+	
+		</game><game gamecode="5291844265">
+		 <general>
+		  <startdate>2013-11-30 20:54:19</startdate>		  
+		  <players>
+		   <player seat="1" name="silverbelarus" chips="840" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="DarthKelm" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Nzolppp" chips="3,202" dealer="1" win="3,350" bet="3,202" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="AlphaOmaha" chips="48" dealer="0" win="0" bet="48" rebuy="0" addon="0" reg_code="6156859958"/><player seat="10" name="Str8forVictory" chips="550" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="48" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="silverbelarus">X X</cards><action no="3" player="silverbelarus" type="0" sum="0" cards=""/><cards type="Pocket" player="DarthKelm">X X</cards><action no="4" player="DarthKelm" type="0" sum="0" cards=""/><cards type="Pocket" player="Nzolppp">S7 HK</cards><action no="5" player="Nzolppp" type="23" sum="3,202" cards=""/><cards type="Pocket" player="AlphaOmaha">D3 S2</cards><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ S5 H8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SJ</cards>
+	</round>
+	
+		</game>  
+	</session>

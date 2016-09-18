@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187757296">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819028669</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:08</duration>  
+	          <gamecount>15</gamecount>  
+	          <startdate>2014-01-25 18:41:03</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,444</bets>  
+	          <wins>1,644</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>4</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5436665491">
+		 <general>
+		  <startdate>2014-01-25 18:41:03</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="800" dealer="0" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="lvvvVvvvl" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="4" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HJ C7</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="6" player="lvvvVvvvl" type="0" sum="0" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="3" player="firewall113" type="23" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436665775">
+		 <general>
+		  <startdate>2014-01-25 18:41:35</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="80" bet="50" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="830" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lvvvVvvvl" type="1" sum="10" cards="[cards]"/><action no="2" player="firewall113" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="3" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DA C9</cards><action no="4" player="WorstCard" type="23" sum="50" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="5" player="lvvvVvvvl" type="0" sum="0" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="6" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436666039">
+		 <general>
+		  <startdate>2014-01-25 18:42:04</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="820" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="810" dealer="0" win="220" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="soniccccp" type="2" sum="20" cards="[cards]"/><action no="1" player="firewall113" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="6" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CQ HJ</cards><action no="3" player="WorstCard" type="23" sum="50" cards=""/><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="4" player="lvvvVvvvl" type="0" sum="0" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="5" player="firewall113" type="23" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436666312">
+		 <general>
+		  <startdate>2014-01-25 18:42:35</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="780" dealer="0" win="40" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="770" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="soniccccp" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">H7 H8</cards><action no="5" player="soniccccp" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">D6 S10</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="3" player="lvvvVvvvl" type="0" sum="0" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="4" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ H5 HJ</cards><action no="7" player="soniccccp" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C8</cards><action no="9" player="soniccccp" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="11" player="soniccccp" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436666688">
+		 <general>
+		  <startdate>2014-01-25 18:43:14</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="750" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="880" dealer="0" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="lvvvVvvvl" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="4" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 D5</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="6" player="lvvvVvvvl" type="0" sum="0" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="3" player="firewall113" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436666925">
+		 <general>
+		  <startdate>2014-01-25 18:43:39</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="735" dealer="1" win="420" bet="195" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="740" dealer="0" win="0" bet="195" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="925" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="lvvvVvvvl" type="1" sum="15" cards="[cards]"/><action no="2" player="firewall113" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="3" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA DJ</cards><action no="4" player="WorstCard" type="23" sum="75" cards=""/><cards type="Pocket" player="lvvvVvvvl">SK C10</cards><action no="5" player="lvvvVvvvl" type="3" sum="60" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="6" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 CJ SA</cards><action no="8" player="WorstCard" type="5" sum="90" cards=""/><action no="7" player="lvvvVvvvl" type="4" sum="0" cards=""/><action no="9" player="lvvvVvvvl" type="3" sum="90" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards><action no="11" player="WorstCard" type="3" sum="30" cards=""/><action no="10" player="lvvvVvvvl" type="5" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S4</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="lvvvVvvvl" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436667363">
+		 <general>
+		  <startdate>2014-01-25 18:44:27</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="960" dealer="0" win="4" bet="549" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="545" dealer="1" win="1,135" bet="545" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="895" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="soniccccp" type="2" sum="30" cards="[cards]"/><action no="1" player="firewall113" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="6" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CJ HK</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="lvvvVvvvl">D9 DQ</cards><action no="4" player="lvvvVvvvl" type="3" sum="60" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="5" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 D4 CK</cards><action no="7" player="WorstCard" type="5" sum="83" cards=""/><action no="8" player="lvvvVvvvl" type="3" sum="83" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D5</cards><action no="9" player="WorstCard" type="5" sum="166" cards=""/><action no="10" player="lvvvVvvvl" type="3" sum="166" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="11" player="WorstCard" type="5" sum="240" cards=""/><action no="12" player="lvvvVvvvl" type="7" sum="236" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436667699">
+		 <general>
+		  <startdate>2014-01-25 18:45:05</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="415" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="1,135" dealer="0" win="345" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="880" dealer="1" win="0" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="soniccccp" type="15" sum="5" cards="[cards]"/><action no="5" player="soniccccp" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="lvvvVvvvl" type="15" sum="5" cards="[cards]"/><action no="4" player="firewall113" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="9" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C5 H8</cards><action no="10" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="7" player="lvvvVvvvl" type="3" sum="50" cards=""/><action no="11" player="lvvvVvvvl" type="23" sum="150" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="8" player="firewall113" type="23" sum="100" cards=""/><action no="12" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436668053">
+		 <general>
+		  <startdate>2014-01-25 18:45:45</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="740" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="360" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="1,325" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="775" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="soniccccp" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="lvvvVvvvl" type="15" sum="5" cards="[cards]"/><action no="6" player="lvvvVvvvl" type="2" sum="50" cards="[cards]"/><action no="3" player="firewall113" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="8" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 D3</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><cards type="Pocket" player="firewall113">X X</cards><action no="7" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436668219">
+		 <general>
+		  <startdate>2014-01-25 18:46:03</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="735" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="330" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="1,365" dealer="0" win="0" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="770" dealer="0" win="420" bet="205" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="soniccccp" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="lvvvVvvvl" type="15" sum="5" cards="[cards]"/><action no="5" player="lvvvVvvvl" type="1" sum="25" cards="[cards]"/><action no="2" player="firewall113" type="15" sum="5" cards="[cards]"/><action no="6" player="firewall113" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="7" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S3 H2</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">D5 D3</cards><action no="9" player="lvvvVvvvl" type="3" sum="25" cards=""/><cards type="Pocket" player="firewall113">D7 SQ</cards><action no="10" player="firewall113" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA D8 CQ</cards><action no="11" player="lvvvVvvvl" type="4" sum="0" cards=""/><action no="12" player="firewall113" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="13" player="lvvvVvvvl" type="4" sum="0" cards=""/><action no="15" player="lvvvVvvvl" type="3" sum="50" cards=""/><action no="14" player="firewall113" type="5" sum="50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HQ</cards><action no="16" player="lvvvVvvvl" type="4" sum="0" cards=""/><action no="18" player="lvvvVvvvl" type="3" sum="100" cards=""/><action no="17" player="firewall113" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436680456">
+		 <general>
+		  <startdate>2014-01-25 18:46:54</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="730" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="325" dealer="0" win="415" bet="325" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="1,160" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="985" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="soniccccp" type="15" sum="5" cards="[cards]"/><action no="6" player="soniccccp" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="lvvvVvvvl" type="15" sum="5" cards="[cards]"/><action no="1" player="firewall113" type="15" sum="5" cards="[cards]"/><action no="5" player="firewall113" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="10" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DK H2</cards><action no="7" player="WorstCard" type="23" sum="320" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="8" player="lvvvVvvvl" type="0" sum="0" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="9" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436680615">
+		 <general>
+		  <startdate>2014-01-25 18:47:13</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="675" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="415" dealer="0" win="145" bet="110" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="1,155" dealer="0" win="145" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="955" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="soniccccp" type="15" sum="10" cards="[cards]"/><action no="5" player="soniccccp" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="lvvvVvvvl" type="15" sum="10" cards="[cards]"/><action no="4" player="firewall113" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="9" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C10 H2</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">HK S8</cards><action no="7" player="lvvvVvvvl" type="3" sum="100" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="8" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 S9 D6</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="lvvvVvvvl" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="14" player="lvvvVvvvl" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards><action no="15" player="WorstCard" type="4" sum="0" cards=""/><action no="16" player="lvvvVvvvl" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436680967">
+		 <general>
+		  <startdate>2014-01-25 18:47:50</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="615" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="450" dealer="0" win="580" bet="450" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="1,190" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="945" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="soniccccp" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="lvvvVvvvl" type="15" sum="10" cards="[cards]"/><action no="6" player="lvvvVvvvl" type="2" sum="100" cards="[cards]"/><action no="3" player="firewall113" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="8" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 D8</cards><action no="9" player="WorstCard" type="23" sum="440" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="10" player="lvvvVvvvl" type="0" sum="0" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="7" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436681219">
+		 <general>
+		  <startdate>2014-01-25 18:48:19</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="605" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="580" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="1,080" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="935" dealer="0" win="340" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="soniccccp" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="lvvvVvvvl" type="15" sum="10" cards="[cards]"/><action no="5" player="lvvvVvvvl" type="1" sum="50" cards="[cards]"/><action no="2" player="firewall113" type="15" sum="10" cards="[cards]"/><action no="6" player="firewall113" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="7" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C2 S8</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="lvvvVvvvl">X X</cards><action no="9" player="lvvvVvvvl" type="3" sum="50" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="10" player="firewall113" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ D8 H3</cards><action no="11" player="lvvvVvvvl" type="4" sum="0" cards=""/><action no="12" player="firewall113" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards><action no="13" player="lvvvVvvvl" type="4" sum="0" cards=""/><action no="15" player="lvvvVvvvl" type="0" sum="0" cards=""/><action no="14" player="firewall113" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436681667">
+		 <general>
+		  <startdate>2014-01-25 18:49:09</startdate>		  
+		  <players>
+		   <player seat="2" name="soniccccp" chips="595" dealer="0" win="0" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="570" dealer="0" win="0" bet="570" rebuy="0" addon="0" reg_code="6187757296"/><player seat="7" name="lvvvVvvvl" chips="970" dealer="1" win="1,395" bet="570" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="firewall113" chips="1,065" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="soniccccp" type="15" sum="15" cards="[cards]"/><action no="6" player="soniccccp" type="2" sum="150" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="lvvvVvvvl" type="15" sum="15" cards="[cards]"/><action no="1" player="firewall113" type="15" sum="15" cards="[cards]"/><action no="5" player="firewall113" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="soniccccp">X X</cards><action no="10" player="soniccccp" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DQ S5</cards><action no="7" player="WorstCard" type="23" sum="555" cards=""/><cards type="Pocket" player="lvvvVvvvl">SQ HA</cards><action no="8" player="lvvvVvvvl" type="3" sum="555" cards=""/><cards type="Pocket" player="firewall113">X X</cards><action no="9" player="firewall113" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK S9 D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game>  
+	</session>

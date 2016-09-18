@@ -1,0 +1,1071 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9B9115F6-C76E-4F23-B050-295287D140C5}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DriveHUD.Application</RootNamespace>
+    <AssemblyName>DriveHUD.Application</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DebugSymbols>false</DebugSymbols>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>images\drivehud.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>sign.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>DriveHUD.Application.Startup</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DeployLX.Licensing.v5">
+      <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
+    </Reference>
+    <Reference Include="DHCReg, Version=1.0.0.343, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\DHCReg.dll</HintPath>
+    </Reference>
+    <Reference Include="DHHReg, Version=1.0.0.343, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\DHHReg.dll</HintPath>
+    </Reference>
+    <Reference Include="DHOReg, Version=1.0.0.343, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\DHOReg.dll</HintPath>
+    </Reference>
+    <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Facebook.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.5\lib\net45-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ManagedWinapi, Version=0.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\dependencies\ManagedWinapi.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Expression.Interactions, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ServiceLocation, Version=1.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\CommonServiceLocator.1.3\lib\portable-net4+sl5+netcore45+wpa81+wp8\Microsoft.Practices.ServiceLocation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.4.0.1\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\dependencies\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NLog, Version=3.2.0.0, Culture=neutral, PublicKeyToken=5120e14c03d0593c, processorArchitecture=MSIL">
+      <HintPath>..\packages\NLog.3.2.0.0\lib\net45\NLog.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\dependencies\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism.Unity.Wpf, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Unity.6.1.1\lib\net45\Prism.Unity.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Prism.Wpf, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.6.1.0\lib\net45\Prism.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ReactiveUI, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\reactiveui-core.6.5.0\lib\Net45\ReactiveUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Splat, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Splat.1.6.2\lib\Net45\Splat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-XAML.2.2.5\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Chart, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.DataVisualization, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Diagrams.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams.Extensions, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Diagrams.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.RibbonView, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.RibbonView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Diagrams.Core, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Diagrams.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.PersistenceFramework, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.PersistenceFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Twitterizer2, Version=2.4.0.2028, Culture=neutral, PublicKeyToken=69d1469eac671567, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Lib\Twitterizer2.dll</HintPath>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="UIAutomationTypes" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Behaviors\DropIndicationDetails.cs" />
+    <Compile Include="Behaviors\ListBoxDragDropBehavior.cs" />
+    <Compile Include="Bootstrapper.cs" />
+    <Compile Include="BraceletControl.xaml.cs">
+      <DependentUpon>BraceletControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CardUC.cs" />
+    <Compile Include="ChartGadget.xaml.cs">
+      <DependentUpon>ChartGadget.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChartSeriesTypeSwitch.cs" />
+    <Compile Include="Controls\DropDownMenu.xaml.cs">
+      <DependentUpon>DropDownMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudPanel.xaml.cs">
+      <DependentUpon>HudPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudPlayerToolTip.xaml.cs">
+      <DependentUpon>HudPlayerToolTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\HudStatToolTip.xaml.cs">
+      <DependentUpon>HudStatToolTip.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
+      <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Licensing\DeployLXLicensingServer.cs" />
+    <Compile Include="Licensing\ILicenseInfo.cs" />
+    <Compile Include="Licensing\LicenseCouldNotActivateException.cs" />
+    <Compile Include="Licensing\LicenseException.cs" />
+    <Compile Include="Licensing\LicenseExpiredException.cs" />
+    <Compile Include="Licensing\LicenseInfo.cs" />
+    <Compile Include="Licensing\LicenseInvalidSerialException.cs" />
+    <Compile Include="Licensing\LicenseNoConnectionException.cs" />
+    <Compile Include="Licensing\LicenseSubType.cs" />
+    <Compile Include="Licensing\LicenseType.cs" />
+    <Compile Include="Security\DHTReg.cs" />
+    <Compile Include="SingleInstance.cs" />
+    <Compile Include="SplashScreen\ISplashScreen.cs" />
+    <Compile Include="SplashScreen\SplashWindow.xaml.cs">
+      <DependentUpon>SplashWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Startup.cs" />
+    <Compile Include="TableConfigurators\PokerStarsTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\BovadaTableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\CommonTableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\ITableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\ITableSeatArea.cs" />
+    <Compile Include="TableConfigurators\SeatArea\TableSeatArea.cs" />
+    <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
+    <Compile Include="UpdaterInfo.cs" />
+    <Compile Include="ViewModels\Filters\IFilterView.cs" />
+    <Compile Include="ViewModels\Hud\BetOnlineHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\BovadaHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\HudTableLayoutMenuItem.cs" />
+    <Compile Include="ViewModels\Hud\HudTrackConditionsViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudTrackConditionsViewModelInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudViewType.cs" />
+    <Compile Include="Controls\IDropDownMenuItem.cs" />
+    <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
+    <Compile Include="ViewModels\New\AppsViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
+    <Compile Include="ViewModels\PopupContainers\PopupContainerBaseNotificationViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\PopupContainerSupportViewModel.cs" />
+    <Compile Include="ViewModels\Hud\PokerStarsHudPanelService.cs" />
+    <Compile Include="ViewModels\Popups\PlayerNoteViewModel.cs" />
+    <Compile Include="ViewModels\Registration\LicenseInfoViewModel.cs" />
+    <Compile Include="ViewModels\Registration\RegistrationViewModel.cs" />
+    <Compile Include="ViewModels\Settings\ISettingsViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsBonusesAddEditViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsRakeBackViewModelInfo.cs" />
+    <Compile Include="ViewModels\Settings\SettingsCurrencyViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsGeneralViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsPopupViewModelBase.cs" />
+    <Compile Include="ViewModels\Settings\SettingsRakeBackAddEditViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsRakeBackViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsSendLogViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsSupportViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsUpgradeViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsViewModel.cs" />
+    <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
+    <Compile Include="Views\New\AppsView.xaml.cs">
+      <DependentUpon>AppsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterDateView.xaml.cs">
+      <DependentUpon>FilterDateView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml.cs">
+      <DependentUpon>PopupContainerBaseNotificationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\PopupContainerSupportView.xaml.cs">
+      <DependentUpon>PopupContainerSupportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Popups\PlayerNoteView.xaml.cs">
+      <DependentUpon>PlayerNoteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudBumperStickersSettingsView.xaml.cs">
+      <DependentUpon>HudBumperStickersSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registration\RegistrationView.xaml.cs">
+      <DependentUpon>RegistrationView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Security\SessionService.cs" />
+    <Compile Include="Security\UserSession.cs" />
+    <Compile Include="TableConfigurators\CommonRichTableConfiguration.cs" />
+    <Compile Include="ViewModels\Hud\HudTableLayout.cs" />
+    <Compile Include="ViewModels\Popups\EditTournamentViewModel.cs" />
+    <Compile Include="ViewModels\Popups\DataRemoverViewModel.cs" />
+    <Compile Include="Views\Popups\EditTournamentView.xaml.cs">
+      <DependentUpon>EditTournamentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Popups\DataRemoverView.xaml.cs">
+      <DependentUpon>DataRemoverView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\New\ConfigurePostgresqlServer.xaml.cs">
+      <DependentUpon>ConfigurePostgresqlServer.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ViewModels\New\ConfigurePostgresqlServerViewModel.cs" />
+    <Compile Include="Controls\DragCanvas.cs" />
+    <Compile Include="Controls\HudRichPanel.xaml.cs">
+      <DependentUpon>HudRichPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\RadGridViewSettings.cs" />
+    <Compile Include="Controls\RadListBoxDragDropBehavior.cs" />
+    <Compile Include="Common\StaticClasses.cs" />
+    <Compile Include="ControlTemplateSelectors\ReplayerTemplateSelector.cs" />
+    <Compile Include="ControlTemplateSelectors\TemplateSelectors.cs" />
+    <Compile Include="CustomeGauge.xaml.cs">
+      <DependentUpon>CustomeGauge.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeployLXKeys.cs" />
+    <Compile Include="Views\Popups\HandNoteView.xaml.cs">
+      <DependentUpon>HandNoteView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HudPlayerViewModel.cs" />
+    <Compile Include="Licensing\ILicenseService.cs" />
+    <Compile Include="Licensing\LicenseService.cs" />
+    <Compile Include="Models\Misc.cs" />
+    <Compile Include="Models\PubSubEventModel.cs" />
+    <Compile Include="ReportsLayout\PokerSiteLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\ShowdownHandsLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\TournamentPokerSiteLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\TournamentsLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\TournamentsResultLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\TournamentStackSizeLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\TournamentStatsLayoutCreator.cs" />
+    <Compile Include="Social\FacebookOAuth.xaml.cs">
+      <DependentUpon>FacebookOAuth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Social\TwitterOAuth.xaml.cs">
+      <DependentUpon>TwitterOAuth.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Social\TwitterStuff.cs" />
+    <Compile Include="TableConfigurators\BaseTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\BovadaRichTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\BovadaTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\CommonTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\FilterTableConfigurators\FilterBaseTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\FilterTableConfigurators\IFilterTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\ReplayerTableConfigurators\IReplayerTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\ITableConfigurator.cs" />
+    <Compile Include="TableConfigurators\ReplayerTableConfigurators\ReplayerTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\TableConfiguratorHelper.cs" />
+    <Compile Include="ValueConverters\CurrentViewModelConverter.cs" />
+    <Compile Include="ValueConverters\CurrentViewModelMultiConverter.cs" />
+    <Compile Include="ValueConverters\FilterTableRingBooleanToBrushConverter.cs" />
+    <Compile Include="ViewModels\Filters\FilterBoardTextureViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterDateViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterHandActionViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterHandGridViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterHandValueViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterHoleCardsViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterOmahaHandGridViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterQuickViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterStandardViewModel.cs" />
+    <Compile Include="ViewModels\Filters\FilterViewModel.cs" />
+    <Compile Include="ViewModels\Hud\EnumGameTypeWrapper.cs" />
+    <Compile Include="ViewModels\Filters\IFilterViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudDefaultSettings.cs" />
+    <Compile Include="ViewModels\Hud\HudElementViewModelCreator.cs" />
+    <Compile Include="ViewModels\Hud\HudLayoutsService.cs" />
+    <Compile Include="ViewModels\Hud\HudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\HudPlayerSettingsViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudPlayerSettingsViewModelInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudPlayerType.cs" />
+    <Compile Include="ViewModels\Hud\HudPlayerTypeStat.cs" />
+    <Compile Include="ViewModels\Hud\HudSavedDataInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudSavedLayout.cs" />
+    <Compile Include="ViewModels\Hud\HudSelectLayoutViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudSelectLayoutViewModelInfo.cs" />
+    <Compile Include="ViewModels\Hud\HudStatsBehavior.cs" />
+    <Compile Include="ViewModels\Hud\HudStatSettingsViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudStatSettingsViewModelInfo.cs" />
+    <Compile Include="ViewModels\Hud\IHudElementViewModelCreator.cs" />
+    <Compile Include="ViewModels\Hud\IHudLayoutsService.cs" />
+    <Compile Include="ViewModels\Hud\IHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\PlayerHudContent.cs" />
+    <Compile Include="ViewModels\IProgressViewModel.cs" />
+    <Compile Include="ViewModels\New\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerCardSelectorViewModelNotification.cs" />
+    <Compile Include="ViewModels\PopupContainers\PopupContainerCardSelectorViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\PopupContainerFiltersViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudViewModel.cs" />
+    <Compile Include="ViewModels\New\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\New\ReportGadgetViewModel.cs" />
+    <Compile Include="ViewModels\New\TournamentViewModel.cs" />
+    <Compile Include="ViewModels\Popups\HandNoteViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudElementViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudLayout.cs" />
+    <Compile Include="ViewModels\Hud\HudPainter.cs" />
+    <Compile Include="ViewModels\Hud\HudTableViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerFiltersViewModelNotification.cs" />
+    <Compile Include="ViewModels\PopupContainers\PopupContainerSettingsViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerSettingsViewModelNotification.cs" />
+    <Compile Include="ViewModels\PopupViewModelBase.cs" />
+    <Compile Include="ViewModels\ProgressViewModel.cs" />
+    <Compile Include="ViewModels\Replayer\ReplayerCardViewModel.cs" />
+    <Compile Include="ViewModels\Replayer\ReplayerChipsContainer.cs" />
+    <Compile Include="ViewModels\Replayer\ReplayerPlayerViewModel.cs" />
+    <Compile Include="ViewModels\Replayer\ReplayerTableState.cs" />
+    <Compile Include="ViewModels\Replayer\ReplayerViewModel.cs" />
+    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="MarginSetter.cs" />
+    <Compile Include="Views\Filters\FilterOmahaHandGridView.xaml.cs">
+      <DependentUpon>FilterOmahaHandGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterHandGridView.xaml.cs">
+      <DependentUpon>FilterHandGridView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudLayoutsPopup.xaml.cs">
+      <DependentUpon>HudLayoutsPopup.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudPlayerSettingsView.xaml.cs">
+      <DependentUpon>HudPlayerSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudStatSettingsView.xaml.cs">
+      <DependentUpon>HudStatSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\New\DashboardView.xaml.cs">
+      <DependentUpon>DashboardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\New\ReportGadgetView.xaml.cs">
+      <DependentUpon>ReportGadgetView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ReportsLayout\HoleCardsLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\OverAllReportLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\PositiontLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\ReportLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\ReportManager.cs" />
+    <Compile Include="ReportsLayout\SessionsLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\StakesLayoutCreator.cs" />
+    <Compile Include="ReportsLayout\TimeLayoutCreator.cs" />
+    <Compile Include="Reports\OverAllReport.xaml.cs">
+      <DependentUpon>OverAllReport.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\New\TournamentView.xaml.cs">
+      <DependentUpon>TournamentView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ValueConverters\BoolToggleConverter.cs" />
+    <Compile Include="ValueConverters\BoolToTextConverter.cs" />
+    <Compile Include="ValueConverters\BoolToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\ColorToBrushConverter.cs" />
+    <Compile Include="ValueConverters\ColorToChipsConverter.cs" />
+    <Compile Include="ValueConverters\DecimalToPlayerPotConverter.cs" />
+    <Compile Include="ValueConverters\DecimalToPotConverter.cs" />
+    <Compile Include="ValueConverters\FilterCountConverter.cs" />
+    <Compile Include="ValueConverters\IntToCardConverter.cs" />
+    <Compile Include="ValueConverters\MathConverter.cs" />
+    <Compile Include="ValueConverters\ParameterToBoolConverter.cs" />
+    <Compile Include="ValueConverters\PotConverter.cs" />
+    <Compile Include="ValueConverters\ReplayerBrushPlayerConverter.cs" />
+    <Compile Include="ValueConverters\ScreenStateConverter.cs" />
+    <Compile Include="ValueConverters\ScreenStateVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\StatTypeToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\TextToVisibilityConverter.cs" />
+    <Compile Include="ValueConverters\TextToWidthConverter.cs" />
+    <Compile Include="ValueConverters\ValueToColorConverter.cs" />
+    <Compile Include="ValueConverters\ValueToEquityConverter.cs" />
+    <Compile Include="ValueConverters\ZeroNonZeroToVisibilityConverter.cs" />
+    <Compile Include="Views\Hud\HudView.xaml.cs">
+      <DependentUpon>HudView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudWindow.xaml.cs">
+      <DependentUpon>HudWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\PopupContainerCardSelectorView.xaml.cs">
+      <DependentUpon>PopupContainerCardSelectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\PopupContainerFiltersView.xaml.cs">
+      <DependentUpon>PopupContainerFiltersView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\PopupContainers\PopupContainerSettingsView.xaml.cs">
+      <DependentUpon>PopupContainerSettingsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterBoardTextureView.xaml.cs">
+      <DependentUpon>FilterBoardTextureView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterHandActionView.xaml.cs">
+      <DependentUpon>FilterHandActionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterHandValueView.xaml.cs">
+      <DependentUpon>FilterHandValueView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterHoleCardsView.xaml.cs">
+      <DependentUpon>FilterHoleCardsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterQuickView.xaml.cs">
+      <DependentUpon>FilterQuickView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Filters\FilterStandardView.xaml.cs">
+      <DependentUpon>FilterStandardView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Registration\RegistrationViewNotification.cs" />
+    <Compile Include="Views\Replayer\ReplayerView.xaml.cs">
+      <DependentUpon>ReplayerView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsBonusesAddEditView.xaml.cs">
+      <DependentUpon>SettingsBonusesAddEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsCurrencyView.xaml.cs">
+      <DependentUpon>SettingsCurrencyView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsGeneralView.xaml.cs">
+      <DependentUpon>SettingsGeneralView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsRakeBackAddEditView.xaml.cs">
+      <DependentUpon>SettingsRakeBackAddEditView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsRakeBackView.xaml.cs">
+      <DependentUpon>SettingsRakeBackView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsSendLogView.xaml.cs">
+      <DependentUpon>SettingsSendLogView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsSupportView.xaml.cs">
+      <DependentUpon>SettingsSupportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsUpgradeView.xaml.cs">
+      <DependentUpon>SettingsUpgradeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Settings\SettingsSiteView.xaml.cs">
+      <DependentUpon>SettingsSiteView.xaml</DependentUpon>
+    </Compile>
+    <Page Include="BraceletControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Brushes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChartGadget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadContextMenuTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadDateTimePickerTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ToggleSwitchTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\DropDownMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\HudPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudPlayerToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudStatToolTip.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\TrackConditionsMeterView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="SplashScreen\SplashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\New\AppsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterDateView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudBumperStickersSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupContainers\PopupContainerBaseNotificationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupContainers\PopupContainerSupportView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Popups\PlayerNoteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Registration\RegistrationView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Popups\EditTournamentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Popups\DataRemoverView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\New\ConfigurePostgresqlServer.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\DataTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\DefaultListBoxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadExpanderTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ProgressBarExTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlStyles\ButtonTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\CheckBoxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ColorsResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ComboboxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadDropDownButtonTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadInputControlTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadioButtonLeftTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadioButtonRightTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadioButtonTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadListBoxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\RadWindowTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ReplayerTemplates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlStyles\ReportRadioButtonTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\TextboxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\HudRichPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomeGauge.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GadgetPanel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Popups\HandNoteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="GadgetPanel.xaml.cs">
+      <DependentUpon>GadgetPanel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="ControlStyles\RadGridStyle.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Filters\FilterOmahaHandGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterHandGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudLayoutsPopup.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudPlayerSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudStatSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\New\DashboardView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\New\ReportGadgetView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Reports\OverAllReport.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Social\FacebookOAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Social\TwitterOAuth.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Steel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\New\TournamentView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Hud\HudWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\PopupContainers\PopupContainerCardSelectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupContainers\PopupContainerFiltersView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\PopupContainers\PopupContainerSettingsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterBoardTextureView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterHandActionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterHandValueView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterHoleCardsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterQuickView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Filters\FilterStandardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Replayer\ReplayerView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings\SettingsBonusesAddEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings\SettingsCurrencyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Settings\SettingsGeneralView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Settings\SettingsRakeBackAddEditView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings\SettingsRakeBackView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Settings\SettingsSendLogView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Settings\SettingsSupportView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Settings\SettingsUpgradeView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\Settings\SettingsSiteView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="PaletteManager.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="runtime.lic" />
+    <None Include="sign.snk" />
+    <Resource Include="images\drivehud.ico" />
+    <Resource Include="images\splashscreen.jpg" />
+    <Resource Include="Fonts\OpenSans-Regular.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Fonts\DancingScript-Regular.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
+    </None>
+    <Resource Include="Fonts\helsinki.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.Common.Infrastructure\DriveHUD.Common.Infrastructure.csproj">
+      <Project>{b7bb6a80-de1e-463d-8a4a-ec010262e567}</Project>
+      <Name>DriveHUD.Common.Infrastructure</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
+      <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
+      <Name>DriveHUD.Common.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Wpf\DriveHUD.Common.Wpf.csproj">
+      <Project>{ab1a2f50-a5c0-4ccd-bf93-26c2a1d5f0e4}</Project>
+      <Name>DriveHUD.Common.Wpf</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
+      <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
+      <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.DBMigrator\DriveHUD.DBMigrator.csproj">
+      <Project>{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}</Project>
+      <Name>DriveHUD.DBMigrator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Importer\DriveHUD.Importers.csproj">
+      <Project>{67ee116c-c86b-46aa-964a-f80cae372a8b}</Project>
+      <Name>DriveHUD.Importers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.EquityCalculator\DriveHUD.EquityCalculator.csproj">
+      <Project>{efa4cfd3-8e01-494b-a274-f2092c922ef7}</Project>
+      <Name>DriveHUD.EquityCalculator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.ViewModels\DriveHUD.ViewModels.csproj">
+      <Project>{C6A64D15-132D-46A6-8C95-42D8934FF6B4}</Project>
+      <Name>DriveHUD.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Controls\DriveHUD.Controls.csproj">
+      <Project>{86ac9d11-047a-49c6-805c-d76bf68ada7a}</Project>
+      <Name>DriveHUD.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{92F8B855-AF92-4969-8882-CE8FD3797CF0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Objects\HandHistories.Objects.csproj">
+      <Project>{d5c61a3a-2725-47d9-a828-f5ce4ec19a4a}</Project>
+      <Name>HandHistories.Objects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Parser\HandHistories.Parser.csproj">
+      <Project>{0f131db6-4891-4a24-a529-87f4816b9923}</Project>
+      <Name>HandHistories.Parser</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\clean_db.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\CapPipedB.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\CapPipedI.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Lib\Facebook.dll" />
+    <Content Include="Lib\Twitterizer2.dll" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)\tools\SubWCRev\subwcrev.exe" "$(SolutionDir)." "$(ProjectDir)Properties\AssemblyInfo.template.cs" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

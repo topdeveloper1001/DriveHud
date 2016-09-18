@@ -1,0 +1,92 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DriveHUD.Common.Resources">
+
+    <BitmapImage x:Key="CardBack" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/back.png" />
+    <!-- Clubs -->
+    <BitmapImage x:Key="Card2c" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/0.png" />
+    <BitmapImage x:Key="Card3c" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/1.png" />
+    <BitmapImage x:Key="Card4c" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/2.png" />
+    <BitmapImage x:Key="Card5c" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/3.png" />
+    <BitmapImage x:Key="Card6c" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/4.png" />
+    <BitmapImage x:Key="Card7c" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/5.png" />
+    <BitmapImage x:Key="Card8c" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/6.png" />
+    <BitmapImage x:Key="Card9c" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/7.png" />
+    <BitmapImage x:Key="CardTc" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/8.png" />
+    <BitmapImage x:Key="CardJc" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/9.png" />
+    <BitmapImage x:Key="CardQc" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/10.png" />
+    <BitmapImage x:Key="CardKc" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/11.png" />
+    <BitmapImage x:Key="CardAc" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/12.png" />
+    <BitmapImage x:Key="CardClub" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/club.png" />
+    <!--End Clubs-->
+
+    <!-- Diamonds -->
+    <BitmapImage x:Key="Card2d" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/13.png" />
+    <BitmapImage x:Key="Card3d" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/14.png" />
+    <BitmapImage x:Key="Card4d" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/15.png" />
+    <BitmapImage x:Key="Card5d" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/16.png" />
+    <BitmapImage x:Key="Card6d" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/17.png" />
+    <BitmapImage x:Key="Card7d" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/18.png" />
+    <BitmapImage x:Key="Card8d" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/19.png" />
+    <BitmapImage x:Key="Card9d" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/20.png" />
+    <BitmapImage x:Key="CardTd" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/21.png" />
+    <BitmapImage x:Key="CardJd" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/22.png" />
+    <BitmapImage x:Key="CardQd" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/23.png" />
+    <BitmapImage x:Key="CardKd" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/24.png" />
+    <BitmapImage x:Key="CardAd" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/25.png" />
+    <BitmapImage x:Key="CardDiamond" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/diamond.png" />
+    <!--End Diamonds-->
+
+    <!-- Hearts -->
+    <BitmapImage x:Key="Card2h" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/26.png" />
+    <BitmapImage x:Key="Card3h" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/27.png" />
+    <BitmapImage x:Key="Card4h" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/28.png" />
+    <BitmapImage x:Key="Card5h" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/29.png" />
+    <BitmapImage x:Key="Card6h" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/30.png" />
+    <BitmapImage x:Key="Card7h" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/31.png" />
+    <BitmapImage x:Key="Card8h" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/32.png" />
+    <BitmapImage x:Key="Card9h" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/33.png" />
+    <BitmapImage x:Key="CardTh" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/34.png" />
+    <BitmapImage x:Key="CardJh" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/35.png" />
+    <BitmapImage x:Key="CardQh" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/36.png" />
+    <BitmapImage x:Key="CardKh" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/37.png" />
+    <BitmapImage x:Key="CardAh" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/38.png" />
+    <BitmapImage x:Key="CardHeart" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/heart.png" />
+    <!--End Hearts -->
+
+    <!-- Spades -->
+    <BitmapImage x:Key="Card2s" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/39.png" />
+    <BitmapImage x:Key="Card3s" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/40.png" />
+    <BitmapImage x:Key="Card4s" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/41.png" />
+    <BitmapImage x:Key="Card5s" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/42.png" />
+    <BitmapImage x:Key="Card6s" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/43.png" />
+    <BitmapImage x:Key="Card7s" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/44.png" />
+    <BitmapImage x:Key="Card8s" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/45.png" />
+    <BitmapImage x:Key="Card9s" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/46.png" />
+    <BitmapImage x:Key="CardTs" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/47.png" />
+    <BitmapImage x:Key="CardJs" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/48.png" />
+    <BitmapImage x:Key="CardQs" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/49.png" />
+    <BitmapImage x:Key="CardKs" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/50.png" />
+    <BitmapImage x:Key="CardAs" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/51.png" />
+    <BitmapImage x:Key="CardSpade" UriSource="/DriveHUD.Common.Resources;component/images/cards_new/spade.png" />
+    <!--End Spades -->
+    
+    <!-- Suits -->
+    <BitmapImage x:Key="SuitCC" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/cc.png"/>
+    <BitmapImage x:Key="SuitCD" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/cd.png"/>
+    <BitmapImage x:Key="SuitCH" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/ch.png"/>
+    <BitmapImage x:Key="SuitCS" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/cs.png"/>
+    <BitmapImage x:Key="SuitDC" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/dc.png"/>
+    <BitmapImage x:Key="SuitDD" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/dd.png"/>
+    <BitmapImage x:Key="SuitDH" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/dh.png"/>
+    <BitmapImage x:Key="SuitDS" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/ds.png"/>
+    <BitmapImage x:Key="SuitHC" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/hc.png"/>
+    <BitmapImage x:Key="SuitHD" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/hd.png"/>
+    <BitmapImage x:Key="SuitHH" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/hh.png"/>
+    <BitmapImage x:Key="SuitHS" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/hs.png"/>
+    <BitmapImage x:Key="SuitSC" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/sc.png"/>
+    <BitmapImage x:Key="SuitSD" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/sd.png"/>
+    <BitmapImage x:Key="SuitSH" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/sh.png"/>
+    <BitmapImage x:Key="SuitSS" UriSource="/DriveHUD.Common.Resources;component/images/HandSuits/ss.png"/>
+
+</ResourceDictionary>

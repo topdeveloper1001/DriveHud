@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189524175">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819274015</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>14</gamecount>  
+	          <startdate>2014-01-28 16:41:04</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>1,585</bets>  
+	          <wins>785</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>4</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.00</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5449264702">
+		 <general>
+		  <startdate>2014-01-28 16:41:04</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="800" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kim100ch777" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="4" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="5" player="kim100ch777" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">HK S4</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="3" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 H2 S6</cards><action no="7" player="kim100ch777" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards><action no="9" player="kim100ch777" type="5" sum="20" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449283210">
+		 <general>
+		  <startdate>2014-01-28 16:42:06</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="800" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Goreprixike4" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="3" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="4" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C3 S2</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449283336">
+		 <general>
+		  <startdate>2014-01-28 16:42:21</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="800" dealer="0" win="40" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="810" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="696Supernaut696" type="2" sum="20" cards="[cards]"/><action no="1" player="Goreprixike4" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">D7 S4</cards><action no="6" player="696Supernaut696" type="4" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="3" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CJ S7</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">D5 DA</cards><action no="5" player="Goreprixike4" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ H7 HQ</cards><action no="8" player="696Supernaut696" type="4" sum="0" cards=""/><action no="7" player="Goreprixike4" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards><action no="10" player="696Supernaut696" type="4" sum="0" cards=""/><action no="9" player="Goreprixike4" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H6</cards><action no="12" player="696Supernaut696" type="4" sum="0" cards=""/><action no="11" player="Goreprixike4" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449283755">
+		 <general>
+		  <startdate>2014-01-28 16:43:12</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="820" dealer="0" win="120" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="820" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="696Supernaut696" type="1" sum="15" cards="[cards]"/><action no="2" player="kim100ch777" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="5" player="696Supernaut696" type="23" sum="90" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="6" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S4 D3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="4" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449284031">
+		 <general>
+		  <startdate>2014-01-28 16:43:45</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="850" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="790" dealer="0" win="60" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kim100ch777" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="4" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">S3 HK</cards><action no="5" player="kim100ch777" type="3" sum="15" cards=""/><cards type="Pocket" player="WorstCard">C5 S7</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="3" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S10 S9 S2</cards><action no="7" player="kim100ch777" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="9" player="kim100ch777" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DK</cards><action no="11" player="kim100ch777" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449284308">
+		 <general>
+		  <startdate>2014-01-28 16:44:18</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="850" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="820" dealer="1" win="105" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="740" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="790" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Goreprixike4" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="3" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="4" player="kim100ch777" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">SJ H7</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="6" player="Goreprixike4" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK D9 S2</cards><action no="8" player="kim100ch777" type="5" sum="30" cards=""/><action no="7" player="Goreprixike4" type="4" sum="0" cards=""/><action no="9" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449284664">
+		 <general>
+		  <startdate>2014-01-28 16:44:56</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="850" dealer="0" win="180" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="865" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="725" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="760" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="696Supernaut696" type="2" sum="30" cards="[cards]"/><action no="1" player="Goreprixike4" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">S10 S9</cards><action no="6" player="696Supernaut696" type="4" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="3" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ H7</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">DA C10</cards><action no="5" player="Goreprixike4" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 H3 D5</cards><action no="8" player="696Supernaut696" type="3" sum="30" cards=""/><action no="7" player="Goreprixike4" type="5" sum="30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D7</cards><action no="10" player="696Supernaut696" type="4" sum="0" cards=""/><action no="9" player="Goreprixike4" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S8</cards><action no="12" player="696Supernaut696" type="5" sum="30" cards=""/><action no="11" player="Goreprixike4" type="4" sum="0" cards=""/><action no="13" player="Goreprixike4" type="3" sum="30" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449285068">
+		 <general>
+		  <startdate>2014-01-28 16:45:42</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="940" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="865" dealer="0" win="95" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="725" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="670" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="696Supernaut696" type="15" sum="5" cards="[cards]"/><action no="5" player="696Supernaut696" type="1" sum="25" cards="[cards]"/><action no="2" player="kim100ch777" type="15" sum="5" cards="[cards]"/><action no="6" player="kim100ch777" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="Goreprixike4" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="9" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><cards type="Pocket" player="WorstCard">S3 D4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="8" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449285215">
+		 <general>
+		  <startdate>2014-01-28 16:46:00</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="910" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="905" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="720" dealer="0" win="785" bet="720" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="665" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="696Supernaut696" type="15" sum="5" cards="[cards]"/><action no="1" player="kim100ch777" type="15" sum="5" cards="[cards]"/><action no="5" player="kim100ch777" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Goreprixike4" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="8" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="9" player="kim100ch777" type="3" sum="25" cards=""/><action no="11" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SA D7</cards><action no="10" player="WorstCard" type="23" sum="715" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="7" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449285435">
+		 <general>
+		  <startdate>2014-01-28 16:46:25</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="905" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="850" dealer="1" win="745" bet="355" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="785" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="660" dealer="0" win="0" bet="355" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="696Supernaut696" type="15" sum="5" cards="[cards]"/><action no="4" player="kim100ch777" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Goreprixike4" type="15" sum="5" cards="[cards]"/><action no="6" player="Goreprixike4" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="7" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">C10 DK</cards><action no="8" player="kim100ch777" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">C2 C4</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">D6 SA</cards><action no="10" player="Goreprixike4" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ HA SQ</cards><action no="12" player="kim100ch777" type="3" sum="50" cards=""/><action no="11" player="Goreprixike4" type="5" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="14" player="kim100ch777" type="23" sum="100" cards=""/><action no="13" player="Goreprixike4" type="5" sum="50" cards=""/><action no="15" player="Goreprixike4" type="3" sum="50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards><action no="17" player="kim100ch777" type="5" sum="150" cards=""/><action no="16" player="Goreprixike4" type="4" sum="0" cards=""/><action no="18" player="Goreprixike4" type="3" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449285759">
+		 <general>
+		  <startdate>2014-01-28 16:47:04</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="900" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="1,240" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="755" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="305" dealer="0" win="435" bet="305" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="696Supernaut696" type="15" sum="10" cards="[cards]"/><action no="6" player="696Supernaut696" type="2" sum="100" cards="[cards]"/><action no="3" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Goreprixike4" type="15" sum="10" cards="[cards]"/><action no="5" player="Goreprixike4" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="10" player="696Supernaut696" type="4" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="7" player="kim100ch777" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D5 H10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="9" player="Goreprixike4" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 D8 S9</cards><action no="12" player="696Supernaut696" type="0" sum="0" cards=""/><action no="11" player="Goreprixike4" type="5" sum="195" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449285999">
+		 <general>
+		  <startdate>2014-01-28 16:47:31</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="790" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="1,230" dealer="0" win="190" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="745" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="435" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="696Supernaut696" type="15" sum="10" cards="[cards]"/><action no="5" player="696Supernaut696" type="1" sum="50" cards="[cards]"/><action no="2" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="6" player="kim100ch777" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="Goreprixike4" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="9" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><cards type="Pocket" player="WorstCard">C7 DJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="8" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449286146">
+		 <general>
+		  <startdate>2014-01-28 16:47:50</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="730" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="1,310" dealer="0" win="340" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="735" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="425" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="696Supernaut696" type="15" sum="10" cards="[cards]"/><action no="1" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="5" player="kim100ch777" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Goreprixike4" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="8" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">X X</cards><action no="9" player="kim100ch777" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">SJ HQ</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="7" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 HA C9</cards><action no="11" player="kim100ch777" type="5" sum="100" cards=""/><action no="12" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449302739">
+		 <general>
+		  <startdate>2014-01-28 16:48:18</startdate>		  
+		  <players>
+		   <player seat="2" name="696Supernaut696" chips="720" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="kim100ch777" chips="1,440" dealer="1" win="1,370" bet="625" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="625" dealer="0" win="0" bet="625" rebuy="0" addon="0" reg_code="6189524175"/><player seat="9" name="Goreprixike4" chips="415" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="696Supernaut696" type="15" sum="10" cards="[cards]"/><action no="4" player="kim100ch777" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Goreprixike4" type="15" sum="10" cards="[cards]"/><action no="6" player="Goreprixike4" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="696Supernaut696">X X</cards><action no="7" player="696Supernaut696" type="0" sum="0" cards=""/><cards type="Pocket" player="kim100ch777">HQ CQ</cards><action no="8" player="kim100ch777" type="3" sum="100" cards=""/><action no="11" player="kim100ch777" type="3" sum="515" cards=""/><cards type="Pocket" player="WorstCard">C6 D6</cards><action no="9" player="WorstCard" type="23" sum="615" cards=""/><cards type="Pocket" player="Goreprixike4">X X</cards><action no="10" player="Goreprixike4" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ SA C5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards>
+	</round>
+	
+		</game>  
+	</session>

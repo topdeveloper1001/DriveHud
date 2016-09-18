@@ -1,0 +1,163 @@
+#Game No : 436461549
+***** 888poker Hand History for Game 436461549 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 17:06:14
+Table Provo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.16 )
+Seat 4: guahaihoque ( $0.52 )
+Seat 6: Biathlon1605 ( $0.32 )
+guahaihoque posts small blind [$0.01]
+Biathlon1605 posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 raises [$0.04]
+guahaihoque folds
+Biathlon1605 calls [$0.02]
+** Dealing flop ** [ 7c, Jh, 2s ]
+Biathlon1605 checks
+thegrind14 bets [$0.02]
+Biathlon1605 calls [$0.02]
+** Dealing turn ** [ 7d ]
+Biathlon1605 checks
+thegrind14 bets [$0.04]
+Biathlon1605 calls [$0.04]
+** Dealing river ** [ 8h ]
+Biathlon1605 bets [$0.04]
+thegrind14 raises [$0.06]
+Biathlon1605 calls [$0.02]
+** Summary **
+thegrind14 shows [ Ac, Ah ]
+Biathlon1605 shows [ 4d, 7s ]
+Biathlon1605 collected [ $0.32 ]
+
+
+#Game No : 436461699
+***** 888poker Hand History for Game 436461699 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 17:07:48
+Table Provo 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 1: LeafsFan13 ( $0.80 )
+Seat 2: thegrind14 ( $0.22 )
+Seat 4: guahaihoque ( $0.48 )
+guahaihoque posts small blind [$0.01]
+LeafsFan13 posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 calls [$0.02]
+guahaihoque folds
+LeafsFan13 checks
+** Dealing flop ** [ 9s, 4d, 9h ]
+LeafsFan13 checks
+thegrind14 bets [$0.02]
+LeafsFan13 calls [$0.02]
+** Dealing turn ** [ 5c ]
+LeafsFan13 checks
+thegrind14 checks
+** Dealing river ** [ 5h ]
+LeafsFan13 bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+LeafsFan13 shows [ 7s, Qc ]
+thegrind14 shows [ Tc, Kc ]
+thegrind14 collected [ $0.17 ]
+
+
+#Game No : 436461731
+***** 888poker Hand History for Game 436461731 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 17:08:10
+Table Provo 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: LeafsFan13 ( $0.72 )
+Seat 2: thegrind14 ( $0.31 )
+Seat 4: guahaihoque ( $0.47 )
+LeafsFan13 posts small blind [$0.01]
+thegrind14 posts big blind [$0.02]
+** Dealing down cards **
+guahaihoque calls [$0.02]
+LeafsFan13 raises [$0.03]
+thegrind14 calls [$0.02]
+guahaihoque calls [$0.02]
+** Dealing flop ** [ 6d, 8d, Js ]
+LeafsFan13 bets [$0.02]
+thegrind14 folds
+guahaihoque calls [$0.02]
+** Dealing turn ** [ 2h ]
+LeafsFan13 bets [$0.04]
+guahaihoque calls [$0.04]
+** Dealing river ** [ 4d ]
+LeafsFan13 bets [$0.04]
+guahaihoque raises [$0.08]
+LeafsFan13 raises [$0.08]
+guahaihoque calls [$0.04]
+** Summary **
+LeafsFan13 shows [ Ac, Jc ]
+guahaihoque shows [ Jd, As ]
+guahaihoque collected [ $0.23 ]
+LeafsFan13 collected [ $0.23 ]
+
+
+#Game No : 436461778
+***** 888poker Hand History for Game 436461778 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 17:08:41
+Table Provo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: LeafsFan13 ( $0.73 )
+Seat 2: thegrind14 ( $0.27 )
+Seat 4: guahaihoque ( $0.48 )
+thegrind14 posts small blind [$0.01]
+guahaihoque folds
+LeafsFan13 posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 calls [$0.01]
+LeafsFan13 checks
+** Dealing flop ** [ Td, Jd, Qh ]
+thegrind14 bets [$0.02]
+LeafsFan13 raises [$0.04]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ Ts ]
+thegrind14 checks
+LeafsFan13 bets [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ Jh ]
+thegrind14 checks
+LeafsFan13 bets [$0.04]
+thegrind14 calls [$0.04]
+** Summary **
+LeafsFan13 shows [ 6c, Qs ]
+thegrind14 shows [ 2c, Qc ]
+thegrind14 collected [ $0.14 ]
+LeafsFan13 collected [ $0.13 ]
+
+
+#Game No : 436462589
+***** 888poker Hand History for Game 436462589 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 17:17:00
+Table Provo 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: LeafsFan13 ( $10.20 )
+Seat 2: thegrind14 ( $0.65 )
+Seat 4: M_Obi72 ( $0.20 )
+thegrind14 posts small blind [$0.01]
+M_Obi72 posts big blind [$0.02]
+** Dealing down cards **
+LeafsFan13 folds
+thegrind14 calls [$0.01]
+M_Obi72 checks
+** Dealing flop ** [ Qs, Td, 8s ]
+thegrind14 checks
+M_Obi72 checks
+** Dealing turn ** [ As ]
+thegrind14 bets [$0.04]
+M_Obi72 calls [$0.04]
+** Dealing river ** [ 5s ]
+thegrind14 checks
+M_Obi72 bets [$0.04]
+thegrind14 folds
+** Summary **
+M_Obi72 did not show his hand
+M_Obi72 collected [ $0.12 ]
+
+

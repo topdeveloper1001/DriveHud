@@ -1,0 +1,39 @@
+﻿<Application x:Class="DriveHUD.Application.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:application="clr-namespace:DriveHUD.Application" 
+             xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"             
+             DispatcherUnhandledException="Application_DispatcherUnhandledException"
+             Exit="Application_Exit">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources.xaml"/>
+                <ResourceDictionary Source="ColorsResource.xaml"/>
+                <ResourceDictionary Source="ControlStyles/DataTemplates.xaml"/>
+                <ResourceDictionary Source="ControlStyles/RadWindowTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/ComboboxTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/TextboxTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/RadDropDownButtonTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/CheckBoxTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/RadGridStyle.xaml"/>
+                <ResourceDictionary Source="ControlStyles/ButtonTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/RadioButtonLeftTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/RadioButtonTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/RadioButtonRightTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/ReportRadioButtonTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/ProgressBarExTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/RadExpanderTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/RadListBoxTemplate.xaml"/>
+                <ResourceDictionary Source="ControlStyles/DefaultListBoxTemplate.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/DriveHUD.Common.Wpf;component/ControlStyles/TextBlockTemplate.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/DriveHUD.Common.Wpf;component/ControlStyles/SliderTemplate.xaml" />
+                <ResourceDictionary Source="ControlStyles/RadInputControlTemplates.xaml" />
+                <ResourceDictionary Source="ControlStyles/ToggleSwitchTemplate.xaml" />
+                <ResourceDictionary Source="ControlStyles/RadContextMenuTemplate.xaml" />
+                <ResourceDictionary Source="ControlStyles/RadDateTimePickerTemplate.xaml"/>
+                <telerik:Windows8ResourceDictionary/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

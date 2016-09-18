@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187537689">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 818998742</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>15</gamecount>  
+	          <startdate>2014-01-25 12:03:14</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>3,747</bets>  
+	          <wins>4,732</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,785</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>1</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.36</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5435657833">
+		 <general>
+		  <startdate>2014-01-25 12:03:14</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="800" dealer="1" win="330" bet="260" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Ziccerboy90" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="800" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Ziccerboy90" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="4" player="f0r3v3rul" type="23" sum="260" cards=""/><cards type="Pocket" player="Ziccerboy90">X X</cards><action no="5" player="Ziccerboy90" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H3 C5</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="3" player="taran251" type="23" sum="40" cards=""/><action no="7" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435670487">
+		 <general>
+		  <startdate>2014-01-25 12:03:42</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Ziccerboy90" chips="790" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="760" dealer="0" win="270" bet="220" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="taran251" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="3" player="f0r3v3rul" type="0" sum="0" cards=""/><cards type="Pocket" player="Ziccerboy90">X X</cards><action no="4" player="Ziccerboy90" type="23" sum="40" cards=""/><action no="7" player="Ziccerboy90" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S4 HA</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="6" player="taran251" type="23" sum="220" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435670628">
+		 <general>
+		  <startdate>2014-01-25 12:04:07</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="870" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Ziccerboy90" chips="750" dealer="0" win="135" bet="85" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="810" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="f0r3v3rul" type="2" sum="20" cards="[cards]"/><action no="1" player="taran251" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="6" player="f0r3v3rul" type="3" sum="20" cards=""/><cards type="Pocket" player="Ziccerboy90">X X</cards><action no="3" player="Ziccerboy90" type="23" sum="40" cards=""/><cards type="Pocket" player="WorstCard">SK C4</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="5" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 CQ CJ</cards><action no="7" player="f0r3v3rul" type="4" sum="0" cards=""/><action no="9" player="f0r3v3rul" type="0" sum="0" cards=""/><action no="8" player="Ziccerboy90" type="5" sum="45" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435670828">
+		 <general>
+		  <startdate>2014-01-25 12:04:40</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="830" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Ziccerboy90" chips="800" dealer="0" win="160" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="f0r3v3rul" type="1" sum="10" cards="[cards]"/><action no="2" player="Ziccerboy90" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="5" player="f0r3v3rul" type="3" sum="10" cards=""/><action no="7" player="f0r3v3rul" type="0" sum="0" cards=""/><cards type="Pocket" player="Ziccerboy90">X X</cards><action no="6" player="Ziccerboy90" type="23" sum="140" cards=""/><cards type="Pocket" player="WorstCard">D4 HK</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="4" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671000">
+		 <general>
+		  <startdate>2014-01-25 12:05:08</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="810" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Ziccerboy90" chips="820" dealer="0" win="50" bet="820" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="770" dealer="0" win="1,540" bet="770" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Ziccerboy90" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="4" player="f0r3v3rul" type="0" sum="0" cards=""/><cards type="Pocket" player="Ziccerboy90">C9 S9</cards><action no="5" player="Ziccerboy90" type="23" sum="60" cards=""/><cards type="Pocket" player="WorstCard">DQ D9</cards><action no="6" player="WorstCard" type="3" sum="40" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="3" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D5 D8</cards><action no="7" player="Ziccerboy90" type="5" sum="60" cards=""/><action no="9" player="Ziccerboy90" type="23" sum="760" cards=""/><action no="8" player="WorstCard" type="23" sum="140" cards=""/><action no="10" player="WorstCard" type="7" sum="570" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards>
+	</round>
+	
+		</game><game gamecode="5435671333">
+		 <general>
+		  <startdate>2014-01-25 12:06:01</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="810" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Ziccerboy90" chips="50" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,540" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="800" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="taran251" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="3" player="f0r3v3rul" type="0" sum="0" cards=""/><cards type="Pocket" player="Ziccerboy90">X X</cards><action no="4" player="Ziccerboy90" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SQ S7</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435671431">
+		 <general>
+		  <startdate>2014-01-25 12:06:16</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="810" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Ziccerboy90" chips="50" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,525" dealer="1" win="332" bet="227" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="815" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="f0r3v3rul" type="2" sum="30" cards="[cards]"/><action no="1" player="taran251" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="6" player="f0r3v3rul" type="3" sum="60" cards=""/><cards type="Pocket" player="Ziccerboy90">X X</cards><action no="3" player="Ziccerboy90" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SK HK</cards><action no="4" player="WorstCard" type="23" sum="90" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="5" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 H10 H3</cards><action no="7" player="f0r3v3rul" type="4" sum="0" cards=""/><action no="9" player="f0r3v3rul" type="0" sum="0" cards=""/><action no="8" player="WorstCard" type="5" sum="137" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671606">
+		 <general>
+		  <startdate>2014-01-25 12:06:44</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="720" dealer="0" win="110" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Ziccerboy90" chips="50" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="f0r3v3rul" type="1" sum="15" cards="[cards]"/><action no="2" player="Ziccerboy90" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">CJ H7</cards><action no="5" player="f0r3v3rul" type="23" sum="60" cards=""/><cards type="Pocket" player="Ziccerboy90">D5 H4</cards><action no="6" player="Ziccerboy90" type="7" sum="20" cards=""/><cards type="Pocket" player="WorstCard">D6 C2</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="4" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 DK D10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards>
+	</round>
+	
+		</game><game gamecode="5435671768">
+		 <general>
+		  <startdate>2014-01-25 12:07:09</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,630" dealer="0" win="30" bet="30" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="3" player="f0r3v3rul" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 SA</cards><cards type="Pocket" player="taran251">X X</cards><action no="2" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671850">
+		 <general>
+		  <startdate>2014-01-25 12:07:20</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="770" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,630" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="800" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="f0r3v3rul" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="taran251" type="15" sum="5" cards="[cards]"/><action no="5" player="taran251" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="6" player="f0r3v3rul" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">CQ H8</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435671955">
+		 <general>
+		  <startdate>2014-01-25 12:07:37</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="765" dealer="0" win="196" bet="136" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,600" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="835" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="f0r3v3rul" type="15" sum="5" cards="[cards]"/><action no="5" player="f0r3v3rul" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="taran251" type="15" sum="5" cards="[cards]"/><action no="4" player="taran251" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="8" player="f0r3v3rul" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D7 H9</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="7" player="taran251" type="3" sum="25" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 S6 D9</cards><action no="10" player="f0r3v3rul" type="5" sum="81" cards=""/><action no="9" player="taran251" type="4" sum="0" cards=""/><action no="11" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672183">
+		 <general>
+		  <startdate>2014-01-25 12:08:14</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="825" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="1,595" dealer="0" win="120" bet="900" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="780" dealer="1" win="1,615" bet="780" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="f0r3v3rul" type="15" sum="5" cards="[cards]"/><action no="4" player="f0r3v3rul" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="taran251" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="7" player="f0r3v3rul" type="3" sum="25" cards=""/><cards type="Pocket" player="WorstCard">H5 H4</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="taran251">H10 C9</cards><action no="6" player="taran251" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 HK D6</cards><action no="9" player="f0r3v3rul" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="taran251" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards><action no="12" player="f0r3v3rul" type="4" sum="0" cards=""/><action no="15" player="f0r3v3rul" type="0" sum="0" cards=""/><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="16" player="WorstCard" type="3" sum="50" cards=""/><action no="14" player="taran251" type="5" sum="50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards><action no="17" player="WorstCard" type="5" sum="265" cards=""/><action no="19" player="WorstCard" type="23" sum="795" cards=""/><action no="18" player="taran251" type="23" sum="530" cards=""/><action no="20" player="taran251" type="7" sum="145" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435680970">
+		 <general>
+		  <startdate>2014-01-25 12:09:32</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="770" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="815" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="1,615" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="f0r3v3rul" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="taran251" type="15" sum="10" cards="[cards]"/><action no="5" player="taran251" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="6" player="f0r3v3rul" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D10 C7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards>
+	</round>
+	
+		</game><game gamecode="5435681111">
+		 <general>
+		  <startdate>2014-01-25 12:09:54</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="760" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="755" dealer="1" win="925" bet="755" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="1,685" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="f0r3v3rul" type="15" sum="10" cards="[cards]"/><action no="5" player="f0r3v3rul" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="taran251" type="15" sum="10" cards="[cards]"/><action no="4" player="taran251" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">X X</cards><action no="8" player="f0r3v3rul" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">DJ HJ</cards><action no="6" player="WorstCard" type="23" sum="745" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="7" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681227">
+		 <general>
+		  <startdate>2014-01-25 12:10:12</startdate>		  
+		  <players>
+		   <player seat="2" name="f0r3v3rul" chips="650" dealer="0" win="0" bet="650" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="WorstCard" chips="925" dealer="0" win="1,785" bet="925" rebuy="0" addon="0" reg_code="6187537689"/><player seat="9" name="taran251" chips="1,625" dealer="1" win="0" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="f0r3v3rul" type="15" sum="10" cards="[cards]"/><action no="4" player="f0r3v3rul" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="taran251" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="f0r3v3rul">H9 HK</cards><action no="7" player="f0r3v3rul" type="3" sum="50" cards=""/><cards type="Pocket" player="WorstCard">S8 HJ</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="taran251">X X</cards><action no="6" player="taran251" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CJ DJ SK</cards><action no="9" player="f0r3v3rul" type="4" sum="0" cards=""/><action no="12" player="f0r3v3rul" type="23" sum="540" cards=""/><action no="10" player="WorstCard" type="5" sum="100" cards=""/><action no="13" player="WorstCard" type="7" sum="715" cards=""/><action no="11" player="taran251" type="3" sum="100" cards=""/><action no="14" player="taran251" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards>
+	</round>
+	
+		</game>  
+	</session>

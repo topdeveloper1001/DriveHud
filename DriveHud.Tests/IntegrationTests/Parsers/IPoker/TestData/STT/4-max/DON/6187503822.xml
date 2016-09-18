@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187503822">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 818994165</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:09</duration>  
+	          <gamecount>18</gamecount>  
+	          <startdate>2014-01-25 10:36:49</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>2,460</bets>  
+	          <wins>1,660</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>3</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.00</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5435509329">
+		 <general>
+		  <startdate>2014-01-25 10:36:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="800" dealer="0" win="140" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="800" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AKwaak" type="1" sum="10" cards="[cards]"/><action no="2" player="breadmaker1" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D6 D5</cards><action no="4" player="WorstCard" type="3" sum="20" cards=""/><action no="8" player="WorstCard" type="3" sum="20" cards=""/><cards type="Pocket" player="AKwaak">S9 CA</cards><action no="5" player="AKwaak" type="23" sum="40" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="6" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">SJ HQ</cards><action no="3" player="bobrIrina" type="3" sum="20" cards=""/><action no="7" player="bobrIrina" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 CK DK</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="AKwaak" type="4" sum="0" cards=""/><action no="10" player="bobrIrina" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="12" player="AKwaak" type="4" sum="0" cards=""/><action no="13" player="bobrIrina" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="17" player="WorstCard" type="4" sum="0" cards=""/><action no="15" player="AKwaak" type="4" sum="0" cards=""/><action no="16" player="bobrIrina" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435509676">
+		 <general>
+		  <startdate>2014-01-25 10:37:55</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="900" dealer="1" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="760" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="breadmaker1" type="1" sum="10" cards="[cards]"/><action no="2" player="bobrIrina" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S7 CQ</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="4" player="AKwaak" type="23" sum="40" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="5" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="6" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435509777">
+		 <general>
+		  <startdate>2014-01-25 10:38:17</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="760" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="740" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="bobrIrina" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H5 SQ</cards><cards type="Pocket" player="AKwaak">X X</cards><action no="3" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="4" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="5" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516627">
+		 <general>
+		  <startdate>2014-01-25 10:38:34</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="770" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="930" dealer="0" win="130" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="770" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="AKwaak" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D7 D3</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="6" player="AKwaak" type="4" sum="0" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="3" player="breadmaker1" type="3" sum="20" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="4" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ C7 S7</cards><action no="7" player="AKwaak" type="5" sum="80" cards=""/><action no="8" player="breadmaker1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516754">
+		 <general>
+		  <startdate>2014-01-25 10:38:59</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="760" dealer="1" win="270" bet="165" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="960" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="750" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="730" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AKwaak" type="1" sum="15" cards="[cards]"/><action no="2" player="breadmaker1" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CA H10</cards><action no="4" player="WorstCard" type="23" sum="75" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="5" player="AKwaak" type="3" sum="60" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="6" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="3" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ H4 H5</cards><action no="8" player="WorstCard" type="5" sum="90" cards=""/><action no="7" player="AKwaak" type="4" sum="0" cards=""/><action no="9" player="AKwaak" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435516937">
+		 <general>
+		  <startdate>2014-01-25 10:39:37</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="865" dealer="0" win="315" bet="195" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="885" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="720" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="730" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="breadmaker1" type="1" sum="15" cards="[cards]"/><action no="2" player="bobrIrina" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DJ SA</cards><action no="3" player="WorstCard" type="23" sum="90" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="4" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="5" player="breadmaker1" type="3" sum="75" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="6" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 C2 HK</cards><action no="8" player="WorstCard" type="5" sum="105" cards=""/><action no="7" player="breadmaker1" type="4" sum="0" cards=""/><action no="9" player="breadmaker1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517063">
+		 <general>
+		  <startdate>2014-01-25 10:40:02</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="985" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="885" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="630" dealer="1" win="150" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="700" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="bobrIrina" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK S7</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="3" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="4" player="breadmaker1" type="3" sum="30" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="5" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 DQ HA</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="0" sum="0" cards=""/><action no="8" player="breadmaker1" type="5" sum="75" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517229">
+		 <general>
+		  <startdate>2014-01-25 10:40:32</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="955" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="885" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="675" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="685" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="AKwaak" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S5 H9</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><cards type="Pocket" player="breadmaker1">X X</cards><action no="3" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="4" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517309">
+		 <general>
+		  <startdate>2014-01-25 10:40:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="940" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="900" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="675" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="685" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AKwaak" type="1" sum="15" cards="[cards]"/><action no="2" player="breadmaker1" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D9 H8</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="5" player="AKwaak" type="23" sum="60" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="6" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="3" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517413">
+		 <general>
+		  <startdate>2014-01-25 10:41:09</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="940" dealer="0" win="0" bet="253" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="930" dealer="1" win="691" bet="353" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="645" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="685" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="AKwaak" type="15" sum="5" cards="[cards]"/><action no="1" player="breadmaker1" type="15" sum="5" cards="[cards]"/><action no="5" player="breadmaker1" type="1" sum="25" cards="[cards]"/><action no="2" player="bobrIrina" type="15" sum="5" cards="[cards]"/><action no="6" player="bobrIrina" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CJ H10</cards><action no="7" player="WorstCard" type="23" sum="100" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="8" player="AKwaak" type="3" sum="100" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="9" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="10" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK D7 D9</cards><action no="11" player="WorstCard" type="5" sum="148" cards=""/><action no="12" player="AKwaak" type="3" sum="148" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards><action no="13" player="WorstCard" type="4" sum="0" cards=""/><action no="15" player="WorstCard" type="0" sum="0" cards=""/><action no="14" player="AKwaak" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517649">
+		 <general>
+		  <startdate>2014-01-25 10:41:54</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="687" dealer="0" win="0" bet="155" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="1,268" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="615" dealer="1" win="690" bet="500" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="630" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="AKwaak" type="15" sum="5" cards="[cards]"/><action no="4" player="breadmaker1" type="15" sum="5" cards="[cards]"/><action no="1" player="bobrIrina" type="15" sum="5" cards="[cards]"/><action no="5" player="bobrIrina" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S7 S6</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="AKwaak">X X</cards><action no="7" player="AKwaak" type="0" sum="0" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="8" player="breadmaker1" type="3" sum="50" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="9" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK H4 H5</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="13" player="WorstCard" type="3" sum="50" cards=""/><action no="12" player="breadmaker1" type="5" sum="50" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards><action no="14" player="WorstCard" type="4" sum="0" cards=""/><action no="16" player="WorstCard" type="3" sum="50" cards=""/><action no="15" player="breadmaker1" type="5" sum="50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards><action no="17" player="WorstCard" type="4" sum="0" cards=""/><action no="19" player="WorstCard" type="0" sum="0" cards=""/><action no="18" player="breadmaker1" type="5" sum="345" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435517972">
+		 <general>
+		  <startdate>2014-01-25 10:42:58</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="532" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="1,263" dealer="0" win="0" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="805" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="600" dealer="1" win="1,270" bet="600" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="AKwaak" type="15" sum="10" cards="[cards]"/><action no="6" player="AKwaak" type="2" sum="100" cards="[cards]"/><action no="3" player="breadmaker1" type="15" sum="10" cards="[cards]"/><action no="4" player="bobrIrina" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HJ C10</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">SA H5</cards><action no="10" player="AKwaak" type="3" sum="490" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="7" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">S4 HA</cards><action no="8" player="bobrIrina" type="23" sum="590" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 C7 S10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards>
+	</round>
+	
+		</game><game gamecode="5435518093">
+		 <general>
+		  <startdate>2014-01-25 10:43:24</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="472" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6187503822"/><player seat="4" name="AKwaak" chips="663" dealer="0" win="0" bet="663" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="breadmaker1" chips="795" dealer="0" win="1,346" bet="663" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="1,270" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="AKwaak" type="15" sum="10" cards="[cards]"/><action no="5" player="AKwaak" type="1" sum="50" cards="[cards]"/><action no="2" player="breadmaker1" type="15" sum="10" cards="[cards]"/><action no="6" player="breadmaker1" type="2" sum="100" cards="[cards]"/><action no="3" player="bobrIrina" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C6 SJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="AKwaak">D2 D6</cards><action no="9" player="AKwaak" type="23" sum="653" cards=""/><cards type="Pocket" player="breadmaker1">D4 S4</cards><action no="10" player="breadmaker1" type="3" sum="553" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="7" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 C4 H9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C5</cards>
+	</round>
+	
+		</game><game gamecode="5435524729">
+		 <general>
+		  <startdate>2014-01-25 10:43:58</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="462" dealer="0" win="984" bet="462" rebuy="0" addon="0" reg_code="6187503822"/><player seat="7" name="breadmaker1" chips="1,478" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="1,260" dealer="0" win="48" bet="510" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="breadmaker1" type="15" sum="10" cards="[cards]"/><action no="4" player="breadmaker1" type="1" sum="50" cards="[cards]"/><action no="2" player="bobrIrina" type="15" sum="10" cards="[cards]"/><action no="5" player="bobrIrina" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SQ HQ</cards><action no="6" player="WorstCard" type="23" sum="200" cards=""/><action no="9" player="WorstCard" type="7" sum="252" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="7" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">H9 D9</cards><action no="8" player="bobrIrina" type="23" sum="500" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C8 CK S6</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D8</cards>
+	</round>
+	
+		</game><game gamecode="5435524837">
+		 <general>
+		  <startdate>2014-01-25 10:44:21</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="984" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6187503822"/><player seat="7" name="breadmaker1" chips="1,418" dealer="1" win="420" bet="250" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="798" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="breadmaker1" type="15" sum="10" cards="[cards]"/><action no="1" player="bobrIrina" type="15" sum="10" cards="[cards]"/><action no="4" player="bobrIrina" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SK C3</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="6" player="breadmaker1" type="3" sum="100" cards=""/><cards type="Pocket" player="bobrIrina">X X</cards><action no="7" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA H7 SQ</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="10" player="breadmaker1" type="5" sum="140" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525049">
+		 <general>
+		  <startdate>2014-01-25 10:45:00</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="874" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="6187503822"/><player seat="7" name="breadmaker1" chips="1,588" dealer="0" win="270" bet="165" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="738" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="75" cards="[cards]"/><action no="2" player="breadmaker1" type="15" sum="15" cards="[cards]"/><action no="5" player="breadmaker1" type="2" sum="150" cards="[cards]"/><action no="3" player="bobrIrina" type="15" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H10 H5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><cards type="Pocket" player="bobrIrina">X X</cards><action no="6" player="bobrIrina" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435525153">
+		 <general>
+		  <startdate>2014-01-25 10:45:22</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="784" dealer="1" win="61" bet="784" rebuy="0" addon="0" reg_code="6187503822"/><player seat="7" name="breadmaker1" chips="1,693" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="723" dealer="0" win="1,536" bet="723" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="1" player="breadmaker1" type="15" sum="15" cards="[cards]"/><action no="4" player="breadmaker1" type="1" sum="75" cards="[cards]"/><action no="2" player="bobrIrina" type="15" sum="15" cards="[cards]"/><action no="5" player="bobrIrina" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C6 SK</cards><action no="6" player="WorstCard" type="23" sum="769" cards=""/><cards type="Pocket" player="breadmaker1">X X</cards><action no="7" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">HJ HK</cards><action no="8" player="bobrIrina" type="7" sum="558" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 H4 CJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards>
+	</round>
+	
+		</game><game gamecode="5435525295">
+		 <general>
+		  <startdate>2014-01-25 10:45:52</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="61" dealer="0" win="0" bet="61" rebuy="0" addon="0" reg_code="6187503822"/><player seat="7" name="breadmaker1" chips="1,603" dealer="1" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="bobrIrina" chips="1,536" dealer="0" win="166" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="46" cards="[cards]"/><action no="3" player="breadmaker1" type="15" sum="15" cards="[cards]"/><action no="1" player="bobrIrina" type="15" sum="15" cards="[cards]"/><action no="4" player="bobrIrina" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H7 H3</cards><cards type="Pocket" player="breadmaker1">X X</cards><action no="6" player="breadmaker1" type="0" sum="0" cards=""/><cards type="Pocket" player="bobrIrina">C8 S6</cards>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 D3 C5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards>
+	</round>
+	
+		</game>  
+	</session>

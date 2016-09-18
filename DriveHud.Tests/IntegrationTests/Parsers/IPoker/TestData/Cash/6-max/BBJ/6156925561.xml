@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6156925561">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>Rio "Jackpot Sit N Go", 815782142</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:22</duration>  
+	          <gamecount>44</gamecount>  
+	          <startdate>2013-11-30 22:50:09</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>AlphaOmaha</nickname>  
+	          <bets>4,998</bets>  
+	          <wins>3,998</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>542.50</ipoints>
+        		<statuspoints>87.50</statuspoints>
+			  		<awardpoints>542.50</awardpoints>
+	          <tournamentname>Rio "Jackpot Sit N Go"</tournamentname><place>4</place><buyin>$20.00+$3.50</buyin> <totalbuyin>$23.50</totalbuyin> <ipoints>542.50</ipoints> <win>$0.00</win> <statuspoints>87.50</statuspoints> <awardpoints>542.50</awardpoints>  
+	    </general>  
+	    <game gamecode="5292156138">
+		 <general>
+		  <startdate>2013-11-30 22:50:09</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,000" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="1,000" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,000" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="10" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="6" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="7" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SA D5</cards><action no="8" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292156213">
+		 <general>
+		  <startdate>2013-11-30 22:50:48</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="990" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,030" dealer="0" win="110" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="10" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="5" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S8 DK</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="8" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="3" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292156267">
+		 <general>
+		  <startdate>2013-11-30 22:51:17</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="970" dealer="1" win="150" bet="100" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,000" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,060" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="10" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="4" player="avocatmaitre" type="3" sum="20" cards=""/><action no="9" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SA DQ</cards><action no="6" player="AlphaOmaha" type="23" sum="100" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="8" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171068">
+		 <general>
+		  <startdate>2013-11-30 22:52:25</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="980" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="990" dealer="0" win="80" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="980" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,060" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MookieTheRumDog" type="1" sum="10" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="3" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="23" sum="50" cards=""/><cards type="Pocket" player="AlphaOmaha">D8 D9</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="7" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="8" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171162">
+		 <general>
+		  <startdate>2013-11-30 22:53:16</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="980" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,040" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="avocatmaitre" type="2" sum="20" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HA C5</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="6" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="7" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171201">
+		 <general>
+		  <startdate>2013-11-30 22:53:36</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="990" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="1,020" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="970" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,030" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="avocatmaitre" type="1" sum="10" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="7" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="8" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">CJ H3</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="23" sum="60" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="6" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171251">
+		 <general>
+		  <startdate>2013-11-30 22:53:58</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="980" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="1,000" dealer="0" win="80" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,020" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,030" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="10" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="6" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="7" player="haralambie1" type="23" sum="60" cards=""/><cards type="Pocket" player="AlphaOmaha">D6 S8</cards><action no="8" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="5" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171306">
+		 <general>
+		  <startdate>2013-11-30 22:54:29</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="980" dealer="0" win="210" bet="140" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="1,020" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,000" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="970" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,000" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,030" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="10" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="5" player="avocatmaitre" type="23" sum="140" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DJ C7</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="8" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="3" player="MookieTheRumDog" type="23" sum="40" cards=""/><action no="9" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="4" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171372">
+		 <general>
+		  <startdate>2013-11-30 22:55:02</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="1,020" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="950" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="960" dealer="0" win="510" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,030" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="10" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="4" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="23" sum="50" cards=""/><action no="9" player="haralambie1" type="3" sum="50" cards=""/><cards type="Pocket" player="AlphaOmaha">D7 S10</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="8" player="MookieTheRumDog" type="23" sum="100" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="3" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 DJ DQ</cards><action no="11" player="haralambie1" type="4" sum="0" cards=""/><action no="10" player="MookieTheRumDog" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards><action no="13" player="haralambie1" type="3" sum="100" cards=""/><action no="12" player="MookieTheRumDog" type="5" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="15" player="haralambie1" type="0" sum="0" cards=""/><action no="14" player="MookieTheRumDog" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171497">
+		 <general>
+		  <startdate>2013-11-30 22:56:07</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="940" dealer="1" win="1,200" bet="940" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,170" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="1,030" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="MookieTheRumDog" type="1" sum="10" cards="[cards]"/><action no="2" player="assasinno3" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="3" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C8 H7</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="23" sum="60" cards=""/><action no="9" player="Str8forVictory" type="23" sum="940" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="7" player="MookieTheRumDog" type="3" sum="50" cards=""/><action no="10" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">X X</cards><action no="8" player="assasinno3" type="23" sum="200" cards=""/><action no="11" player="assasinno3" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171573">
+		 <general>
+		  <startdate>2013-11-30 22:56:43</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,050" dealer="0" win="1,940" bet="1,050" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,110" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="assasinno3" chips="830" dealer="0" win="0" bet="830" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="avocatmaitre" type="2" sum="20" cards="[cards]"/><action no="1" player="assasinno3" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">CQ HQ</cards><action no="8" player="avocatmaitre" type="7" sum="1,030" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H6 C7</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="6" player="MookieTheRumDog" type="23" sum="60" cards=""/><action no="9" player="MookieTheRumDog" type="0" sum="0" cards=""/><cards type="Pocket" player="assasinno3">SA DQ</cards><action no="7" player="assasinno3" type="23" sum="830" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 D8 S7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="5292171640">
+		 <general>
+		  <startdate>2013-11-30 22:57:17</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,940" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="820" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="avocatmaitre" type="1" sum="20" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="6" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><cards type="Pocket" player="AlphaOmaha">H9 C10</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171675">
+		 <general>
+		  <startdate>2013-11-30 22:57:36</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,920" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="840" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="5" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C6 C3</cards><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292171712">
+		 <general>
+		  <startdate>2013-11-30 22:57:54</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,010" dealer="0" win="1,050" bet="1,010" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,200" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="4" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DA C2</cards><action no="6" player="AlphaOmaha" type="23" sum="1,010" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="3" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187155">
+		 <general>
+		  <startdate>2013-11-30 22:58:20</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,050" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,160" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,050" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="20" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="3" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H2 DA</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292187197">
+		 <general>
+		  <startdate>2013-11-30 22:58:37</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,920" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,140" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,070" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="avocatmaitre" type="2" sum="40" cards="[cards]"/><action no="1" player="MookieTheRumDog" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">SJ H2</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="6" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187238">
+		 <general>
+		  <startdate>2013-11-30 22:58:52</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,940" dealer="0" win="560" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="820" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,140" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,050" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="avocatmaitre" type="1" sum="20" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="6" player="avocatmaitre" type="23" sum="120" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="7" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C5 SA</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="80" cards=""/><action no="8" player="Str8forVictory" type="3" sum="40" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ H3 SJ</cards><action no="9" player="avocatmaitre" type="4" sum="0" cards=""/><action no="10" player="Str8forVictory" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="11" player="avocatmaitre" type="5" sum="280" cards=""/><action no="12" player="Str8forVictory" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187337">
+		 <general>
+		  <startdate>2013-11-30 22:59:45</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="2,100" dealer="1" win="140" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,050" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,050" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="5" player="avocatmaitre" type="23" sum="80" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H6 D8</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187409">
+		 <general>
+		  <startdate>2013-11-30 23:00:18</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="2,160" dealer="0" win="0" bet="1,050" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="760" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,010" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,020" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,050" dealer="0" win="2,160" bet="1,050" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">S7 D3</cards><action no="4" player="avocatmaitre" type="23" sum="200" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H2 D2</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">C8 S8</cards><action no="3" player="MookieTheRumDog" type="23" sum="120" cards=""/><action no="8" player="MookieTheRumDog" type="3" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ S3 H7</cards><action no="10" player="avocatmaitre" type="3" sum="850" cards=""/><action no="9" player="MookieTheRumDog" type="5" sum="850" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards>
+	</round>
+	
+		</game><game gamecode="5292187499">
+		 <general>
+		  <startdate>2013-11-30 23:00:56</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,110" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="980" dealer="0" win="120" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="2,160" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="20" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="3" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H2 C7</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="23" sum="80" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="7" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187550">
+		 <general>
+		  <startdate>2013-11-30 23:01:19</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,110" dealer="0" win="340" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="760" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,020" dealer="1" win="0" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="2,120" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="avocatmaitre" type="2" sum="40" cards="[cards]"/><action no="1" player="MookieTheRumDog" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">D4 C4</cards><action no="7" player="avocatmaitre" type="3" sum="40" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H5 SJ</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">SA H6</cards><action no="5" player="Str8forVictory" type="23" sum="80" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="6" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 C2 C8</cards><action no="8" player="avocatmaitre" type="5" sum="40" cards=""/><action no="9" player="Str8forVictory" type="3" sum="40" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="10" player="avocatmaitre" type="5" sum="40" cards=""/><action no="11" player="Str8forVictory" type="3" sum="40" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards><action no="12" player="avocatmaitre" type="4" sum="0" cards=""/><action no="13" player="Str8forVictory" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187645">
+		 <general>
+		  <startdate>2013-11-30 23:02:00</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,290" dealer="0" win="320" bet="240" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="760" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="2,100" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="avocatmaitre" type="1" sum="20" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="6" player="avocatmaitre" type="23" sum="80" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="7" player="haralambie1" type="3" sum="40" cards=""/><cards type="Pocket" player="AlphaOmaha">D10 H2</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 CK C3</cards><action no="8" player="avocatmaitre" type="5" sum="160" cards=""/><action no="9" player="haralambie1" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187735">
+		 <general>
+		  <startdate>2013-11-30 23:02:42</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,370" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="680" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="990" dealer="0" win="1,090" bet="990" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="2,100" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="20" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="5" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="23" sum="100" cards=""/><action no="8" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H9 D9</cards><action no="7" player="AlphaOmaha" type="23" sum="990" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187823">
+		 <general>
+		  <startdate>2013-11-30 23:03:16</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="580" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,090" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="2,100" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="20" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="4" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HQ H8</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="3" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292187887">
+		 <general>
+		  <startdate>2013-11-30 23:03:44</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,070" dealer="1" win="578" bet="398" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="880" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="2,100" dealer="0" win="0" bet="160" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="20" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="3" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H7 S7</cards><action no="5" player="AlphaOmaha" type="23" sum="80" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="7" player="MookieTheRumDog" type="3" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 SA DJ</cards><action no="9" player="AlphaOmaha" type="3" sum="80" cards=""/><action no="8" player="MookieTheRumDog" type="5" sum="80" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="11" player="AlphaOmaha" type="5" sum="238" cards=""/><action no="10" player="MookieTheRumDog" type="4" sum="0" cards=""/><action no="12" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201548">
+		 <general>
+		  <startdate>2013-11-30 23:04:41</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,370" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="580" dealer="0" win="670" bet="580" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,940" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="avocatmaitre" type="2" sum="60" cards="[cards]"/><action no="1" player="MookieTheRumDog" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="7" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="23" sum="580" cards=""/><cards type="Pocket" player="AlphaOmaha">CJ H8</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="6" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201659">
+		 <general>
+		  <startdate>2013-11-30 23:05:24</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="1,310" dealer="0" win="0" bet="670" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="670" dealer="0" win="1,340" bet="670" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="avocatmaitre" type="1" sum="30" cards="[cards]"/><action no="2" player="haralambie1" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">CA C4</cards><action no="6" player="avocatmaitre" type="23" sum="240" cards=""/><action no="8" player="avocatmaitre" type="3" sum="430" cards=""/><cards type="Pocket" player="haralambie1">HA SA</cards><action no="7" player="haralambie1" type="23" sum="670" cards=""/><cards type="Pocket" player="AlphaOmaha">H7 D10</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 D9 H3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards>
+	</round>
+	
+		</game><game gamecode="5292201766">
+		 <general>
+		  <startdate>2013-11-30 23:06:15</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="640" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="1,340" dealer="0" win="210" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,250" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">X X</cards><action no="5" player="avocatmaitre" type="0" sum="0" cards=""/><cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="23" sum="150" cards=""/><cards type="Pocket" player="AlphaOmaha">D5 D7</cards><action no="7" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201827">
+		 <general>
+		  <startdate>2013-11-30 23:06:45</startdate>		  
+		  <players>
+		   <player seat="1" name="avocatmaitre" chips="640" dealer="0" win="0" bet="640" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="haralambie1" chips="1,400" dealer="1" win="2,130" bet="1,400" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,190" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="avocatmaitre">SK S2</cards><action no="4" player="avocatmaitre" type="23" sum="240" cards=""/><action no="8" player="avocatmaitre" type="7" sum="400" cards=""/><cards type="Pocket" player="haralambie1">H10 S10</cards><action no="5" player="haralambie1" type="23" sum="1,400" cards=""/><cards type="Pocket" player="AlphaOmaha">HQ S6</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="7" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="3" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA DQ D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game><game gamecode="5292201923">
+		 <general>
+		  <startdate>2013-11-30 23:07:27</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,130" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,160" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C3 D5</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292201951">
+		 <general>
+		  <startdate>2013-11-30 23:07:38</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,130" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,160" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,940" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="60" cards="[cards]"/><action no="1" player="MookieTheRumDog" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><cards type="Pocket" player="AlphaOmaha">S5 D7</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292201987">
+		 <general>
+		  <startdate>2013-11-30 23:07:58</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,160" dealer="0" win="210" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,160" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="23" sum="150" cards=""/><cards type="Pocket" player="AlphaOmaha">C5 SK</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202028">
+		 <general>
+		  <startdate>2013-11-30 23:08:16</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,220" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,100" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="770" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">HQ C9</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="3" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202057">
+		 <general>
+		  <startdate>2013-11-30 23:08:30</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,070" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="800" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H5 S4</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292202110">
+		 <general>
+		  <startdate>2013-11-30 23:08:51</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,220" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,070" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="770" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,940" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="60" cards="[cards]"/><action no="1" player="MookieTheRumDog" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><cards type="Pocket" player="AlphaOmaha">C3 C2</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202133">
+		 <general>
+		  <startdate>2013-11-30 23:09:04</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,250" dealer="0" win="210" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,070" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="770" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="23" sum="150" cards=""/><cards type="Pocket" player="AlphaOmaha">S5 D6</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292202190">
+		 <general>
+		  <startdate>2013-11-30 23:09:29</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,310" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,010" dealer="0" win="1,070" bet="1,010" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="770" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="30" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">S7 H7</cards><action no="5" player="AlphaOmaha" type="23" sum="1,010" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="6" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="3" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215181">
+		 <general>
+		  <startdate>2013-11-30 23:09:50</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,310" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,070" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="710" dealer="0" win="770" bet="710" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="30" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">C8 DJ</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="23" sum="710" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="6" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215243">
+		 <general>
+		  <startdate>2013-11-30 23:10:16</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,310" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,070" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="770" dealer="1" win="860" bet="770" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,850" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="60" cards="[cards]"/><action no="1" player="MookieTheRumDog" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">DJ H5</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="770" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215302">
+		 <general>
+		  <startdate>2013-11-30 23:10:43</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,250" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,070" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,820" dealer="1" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="30" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="5" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">H3 S3</cards><action no="6" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="23" sum="180" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215381">
+		 <general>
+		  <startdate>2013-11-30 23:11:19</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,220" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="1,010" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="AlphaOmaha" type="1" sum="50" cards="[cards]"/><action no="2" player="Str8forVictory" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="4" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D2 S5</cards><action no="5" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="3" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215414">
+		 <general>
+		  <startdate>2013-11-30 23:11:32</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,220" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="960" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="910" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Str8forVictory" type="1" sum="50" cards="[cards]"/><action no="2" player="MookieTheRumDog" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="3" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D10 H5</cards><action no="4" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="5" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards>
+	</round>
+	
+		</game><game gamecode="5292215432">
+		 <general>
+		  <startdate>2013-11-30 23:11:45</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,220" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="960" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="860" dealer="1" win="1,010" bet="860" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,960" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="haralambie1" type="2" sum="100" cards="[cards]"/><action no="1" player="MookieTheRumDog" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">X X</cards><action no="6" player="haralambie1" type="0" sum="0" cards=""/><cards type="Pocket" player="AlphaOmaha">D3 D9</cards><action no="3" player="AlphaOmaha" type="0" sum="0" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="4" player="Str8forVictory" type="23" sum="860" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="5" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5292215490">
+		 <general>
+		  <startdate>2013-11-30 23:12:11</startdate>		  
+		  <players>
+		   <player seat="3" name="haralambie1" chips="2,120" dealer="0" win="3,080" bet="2,120" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="AlphaOmaha" chips="960" dealer="0" win="0" bet="960" rebuy="0" addon="0" reg_code="6156925561"/><player seat="6" name="Str8forVictory" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="MookieTheRumDog" chips="1,910" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="haralambie1" type="1" sum="50" cards="[cards]"/><action no="2" player="AlphaOmaha" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="haralambie1">H9 SA</cards><action no="5" player="haralambie1" type="23" sum="2,120" cards=""/><cards type="Pocket" player="AlphaOmaha">SJ DK</cards><action no="6" player="AlphaOmaha" type="7" sum="860" cards=""/><cards type="Pocket" player="Str8forVictory">X X</cards><action no="3" player="Str8forVictory" type="0" sum="0" cards=""/><cards type="Pocket" player="MookieTheRumDog">X X</cards><action no="4" player="MookieTheRumDog" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK S6 DA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards>
+	</round>
+	
+		</game>  
+	</session>

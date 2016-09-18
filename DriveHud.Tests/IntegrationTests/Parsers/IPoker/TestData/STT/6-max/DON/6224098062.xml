@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224098062">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824203352</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:19</duration>  
+	          <gamecount>28</gamecount>  
+	          <startdate>2014-03-25 13:39:35</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>4,160</bets>  
+	          <wins>7,095</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>4,435</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5600700081">
+		 <general>
+		  <startdate>2014-03-25 13:39:35</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ HK</cards><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="3" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="4" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="5" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710084">
+		 <general>
+		  <startdate>2014-03-25 13:40:04</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,500" dealer="0" win="430" bet="220" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,500" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,500" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="bobbythedoggy" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="23" sum="100" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S5 C5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="8" player="bobbythedoggy" type="3" sum="80" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="3" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="4" player="kinggent" type="23" sum="40" cards=""/><action no="9" player="kinggent" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H4 SA</cards><action no="12" player="VanTr4X" type="5" sum="120" cards=""/><action no="10" player="bobbythedoggy" type="4" sum="0" cards=""/><action no="13" player="bobbythedoggy" type="0" sum="0" cards=""/><action no="11" player="kinggent" type="4" sum="0" cards=""/><action no="14" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710288">
+		 <general>
+		  <startdate>2014-03-25 13:41:11</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,710" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,400" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,500" dealer="0" win="0" bet="103" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,400" dealer="0" win="368" bet="255" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bobbythedoggy" type="1" sum="10" cards="[cards]"/><action no="2" player="griddlec" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S9 D3</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="7" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="8" player="griddlec" type="3" sum="20" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="3" player="kinggent" type="23" sum="40" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 C7 C5</cards><action no="9" player="griddlec" type="4" sum="0" cards=""/><action no="11" player="griddlec" type="3" sum="63" cards=""/><action no="10" player="kinggent" type="5" sum="63" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards><action no="12" player="griddlec" type="4" sum="0" cards=""/><action no="13" player="kinggent" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards><action no="14" player="griddlec" type="4" sum="0" cards=""/><action no="16" player="griddlec" type="0" sum="0" cards=""/><action no="15" player="kinggent" type="5" sum="152" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710479">
+		 <general>
+		  <startdate>2014-03-25 13:42:14</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,710" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,390" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,397" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,513" dealer="0" win="195" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="griddlec" type="1" sum="10" cards="[cards]"/><action no="2" player="kinggent" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D4 DJ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="6" player="bobbythedoggy" type="23" sum="40" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="7" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="8" player="kinggent" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ CA C10</cards><action no="10" player="bobbythedoggy" type="5" sum="20" cards=""/><action no="9" player="kinggent" type="4" sum="0" cards=""/><action no="11" player="kinggent" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="13" player="bobbythedoggy" type="4" sum="0" cards=""/><action no="12" player="kinggent" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="15" player="bobbythedoggy" type="0" sum="0" cards=""/><action no="14" player="kinggent" type="5" sum="65" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710667">
+		 <general>
+		  <startdate>2014-03-25 13:43:17</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,710" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,330" dealer="0" win="280" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,387" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,583" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="20" cards="[cards]"/><action no="1" player="kinggent" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="8" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ CJ</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="5" player="bobbythedoggy" type="23" sum="40" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="6" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="7" player="kinggent" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 D5 H10</cards><action no="10" player="bobbythedoggy" type="5" sum="20" cards=""/><action no="9" player="kinggent" type="4" sum="0" cards=""/><action no="11" player="kinggent" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards><action no="13" player="bobbythedoggy" type="5" sum="140" cards=""/><action no="12" player="kinggent" type="4" sum="0" cards=""/><action no="14" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710841">
+		 <general>
+		  <startdate>2014-03-25 13:44:18</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,690" dealer="0" win="140" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,490" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,387" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,523" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="20" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="23" sum="100" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="8" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D3 SK</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="4" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="5" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="6" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600710953">
+		 <general>
+		  <startdate>2014-03-25 13:44:54</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,450" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,410" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,387" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,523" dealer="0" win="340" bet="160" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H7 S6</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="3" player="bobbythedoggy" type="3" sum="40" cards=""/><action no="9" player="bobbythedoggy" type="3" sum="40" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="4" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="5" player="kinggent" type="23" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 SK DK</cards><action no="10" player="bobbythedoggy" type="5" sum="40" cards=""/><action no="12" player="bobbythedoggy" type="0" sum="0" cards=""/><action no="11" player="kinggent" type="23" sum="80" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600719568">
+		 <general>
+		  <startdate>2014-03-25 13:45:56</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,730" dealer="0" win="0" bet="360" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,290" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,387" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,703" dealer="0" win="1,326" bet="906" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="bobbythedoggy" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="3" sum="120" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D3 SJ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="8" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="3" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="4" player="kinggent" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S7 S5 H8</cards><action no="10" player="VanTr4X" type="3" sum="240" cards=""/><action no="9" player="kinggent" type="5" sum="240" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="12" player="VanTr4X" type="0" sum="0" cards=""/><action no="11" player="kinggent" type="5" sum="546" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600719754">
+		 <general>
+		  <startdate>2014-03-25 13:46:56</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,250" dealer="0" win="0" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,387" dealer="0" win="880" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="2,123" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bobbythedoggy" type="1" sum="20" cards="[cards]"/><action no="2" player="griddlec" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SA S2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">DJ HK</cards><action no="7" player="bobbythedoggy" type="3" sum="60" cards=""/><cards type="Pocket" player="griddlec">D6 DK</cards><action no="8" player="griddlec" type="3" sum="40" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="3" player="kinggent" type="23" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 CK H9</cards><action no="9" player="bobbythedoggy" type="5" sum="40" cards=""/><action no="12" player="bobbythedoggy" type="3" sum="40" cards=""/><action no="10" player="griddlec" type="23" sum="80" cards=""/><action no="11" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="13" player="bobbythedoggy" type="5" sum="40" cards=""/><action no="15" player="bobbythedoggy" type="3" sum="160" cards=""/><action no="14" player="griddlec" type="23" sum="200" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards><action no="16" player="bobbythedoggy" type="5" sum="40" cards=""/><action no="17" player="griddlec" type="3" sum="40" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600719984">
+		 <general>
+		  <startdate>2014-03-25 13:48:08</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,370" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="850" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="1,867" dealer="0" win="480" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="2,043" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="griddlec" type="1" sum="30" cards="[cards]"/><action no="2" player="kinggent" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="23" sum="120" cards=""/><action no="9" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 S6</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="6" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="7" player="griddlec" type="23" sum="300" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="8" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600720132">
+		 <general>
+		  <startdate>2014-03-25 13:48:53</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,250" dealer="0" win="1,440" bet="690" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="850" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,047" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,983" dealer="0" win="0" bet="690" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="60" cards="[cards]"/><action no="1" player="kinggent" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">HA D5</cards><action no="8" player="VanTr4X" type="3" sum="60" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 H4</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="5" player="bobbythedoggy" type="3" sum="60" cards=""/><action no="9" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="6" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">HK S5</cards><action no="7" player="kinggent" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 C9 S10</cards><action no="11" player="VanTr4X" type="3" sum="210" cards=""/><action no="10" player="kinggent" type="5" sum="210" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="13" player="VanTr4X" type="4" sum="0" cards=""/><action no="12" player="kinggent" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards><action no="15" player="VanTr4X" type="3" sum="360" cards=""/><action no="14" player="kinggent" type="5" sum="360" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600720352">
+		 <general>
+		  <startdate>2014-03-25 13:50:04</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="2,000" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,430" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="790" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,047" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,293" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="30" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="8" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ S4</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="4" player="bobbythedoggy" type="23" sum="120" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="5" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="6" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600720434">
+		 <general>
+		  <startdate>2014-03-25 13:50:27</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,370" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,047" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,293" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK HJ</cards><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="3" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="4" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="5" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730294">
+		 <general>
+		  <startdate>2014-03-25 13:50:55</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="880" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,047" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,293" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="bobbythedoggy" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C3 H5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><cards type="Pocket" player="griddlec">X X</cards><action no="3" player="griddlec" type="0" sum="0" cards=""/><cards type="Pocket" player="kinggent">X X</cards><action no="4" player="kinggent" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730384">
+		 <general>
+		  <startdate>2014-03-25 13:51:24</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="910" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,047" dealer="0" win="2,660" bet="1,337" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="kinggent" chips="1,293" dealer="0" win="0" bet="1,293" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bobbythedoggy" type="1" sum="30" cards="[cards]"/><action no="2" player="griddlec" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D5 H10</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="7" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">CK C6</cards><action no="8" player="griddlec" type="3" sum="60" cards=""/><cards type="Pocket" player="kinggent">H8 HA</cards><action no="3" player="kinggent" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 CJ C8</cards><action no="9" player="griddlec" type="4" sum="0" cards=""/><action no="11" player="griddlec" type="3" sum="189" cards=""/><action no="10" player="kinggent" type="5" sum="189" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards><action no="12" player="griddlec" type="4" sum="0" cards=""/><action no="14" player="griddlec" type="23" sum="908" cards=""/><action no="13" player="kinggent" type="5" sum="454" cards=""/><action no="15" player="kinggent" type="3" sum="454" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="16" player="griddlec" type="5" sum="120" cards=""/><action no="17" player="kinggent" type="7" sum="76" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730615">
+		 <general>
+		  <startdate>2014-03-25 13:52:32</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,970" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,340" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="880" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="3,370" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/><action no="1" player="griddlec" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 C9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="5" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="6" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730673">
+		 <general>
+		  <startdate>2014-03-25 13:52:51</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="2,020" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,340" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="880" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="3,320" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ HQ</cards><action no="3" player="moonbaseone" type="23" sum="200" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="4" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="5" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730770">
+		 <general>
+		  <startdate>2014-03-25 13:53:24</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,240" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="880" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="3,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S4 H7</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="3" player="bobbythedoggy" type="23" sum="200" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="4" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730842">
+		 <general>
+		  <startdate>2014-03-25 13:53:44</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,190" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,030" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="3,320" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="bobbythedoggy" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H2 H6</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><cards type="Pocket" player="griddlec">X X</cards><action no="3" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600730893">
+		 <general>
+		  <startdate>2014-03-25 13:54:01</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="1" win="350" bet="200" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,080" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="3,320" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bobbythedoggy" type="1" sum="50" cards="[cards]"/><action no="2" player="griddlec" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D9 C9</cards><action no="5" player="moonbaseone" type="23" sum="200" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="6" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="7" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600731003">
+		 <general>
+		  <startdate>2014-03-25 13:54:38</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,970" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,030" dealer="1" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="3,220" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="100" cards="[cards]"/><action no="1" player="griddlec" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 D6</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="5" player="bobbythedoggy" type="23" sum="200" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="6" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600731066">
+		 <general>
+		  <startdate>2014-03-25 13:55:00</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,870" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,190" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,180" dealer="0" win="1,100" bet="750" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="3,170" dealer="1" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="50" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="6" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="7" player="Traianks" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ CJ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="4" player="bobbythedoggy" type="3" sum="100" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="5" player="griddlec" type="3" sum="100" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ H10 C8</cards><action no="8" player="Traianks" type="4" sum="0" cards=""/><action no="11" player="Traianks" type="0" sum="0" cards=""/><action no="9" player="bobbythedoggy" type="5" sum="100" cards=""/><action no="10" player="griddlec" type="3" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="12" player="bobbythedoggy" type="5" sum="550" cards=""/><action no="13" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600731194">
+		 <general>
+		  <startdate>2014-03-25 13:56:05</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,090" dealer="0" win="1,240" bet="1,090" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,590" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="5" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="23" sum="1,090" cards=""/><cards type="Pocket" player="moonbaseone">S10 SQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="3" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="4" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600731258">
+		 <general>
+		  <startdate>2014-03-25 13:56:36</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,240" dealer="1" win="1,465" bet="1,240" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,440" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,530" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="bobbythedoggy" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="5" player="Traianks" type="23" sum="1,240" cards=""/><cards type="Pocket" player="moonbaseone">D6 H2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="7" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="3" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600739801">
+		 <general>
+		  <startdate>2014-03-25 13:57:13</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,465" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,365" dealer="1" win="525" bet="300" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,380" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,970" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bobbythedoggy" type="1" sum="75" cards="[cards]"/><action no="2" player="griddlec" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="3" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="4" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HA CJ</cards><action no="5" player="moonbaseone" type="23" sum="300" cards=""/><cards type="Pocket" player="bobbythedoggy">X X</cards><action no="6" player="bobbythedoggy" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="7" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600739860">
+		 <general>
+		  <startdate>2014-03-25 13:57:40</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,820" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,465" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="1,590" dealer="0" win="3,120" bet="1,590" rebuy="0" addon="0" reg_code="6224098062"/><player seat="6" name="bobbythedoggy" chips="1,305" dealer="1" win="0" bet="1,305" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="griddlec" chips="2,820" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="VanTr4X" type="2" sum="150" cards="[cards]"/><action no="1" player="griddlec" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="7" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="3" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HJ H10</cards><action no="4" player="moonbaseone" type="23" sum="1,590" cards=""/><cards type="Pocket" player="bobbythedoggy">D7 H7</cards><action no="5" player="bobbythedoggy" type="7" sum="1,305" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="6" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ H2 D9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HA</cards>
+	</round>
+	
+		</game><game gamecode="5600739959">
+		 <general>
+		  <startdate>2014-03-25 13:58:25</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,670" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,465" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="3,120" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224098062"/><player seat="8" name="griddlec" chips="2,745" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="VanTr4X" type="1" sum="75" cards="[cards]"/><action no="2" player="Traianks" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">DK DA</cards><action no="5" player="VanTr4X" type="23" sum="300" cards=""/><cards type="Pocket" player="Traianks">X X</cards><action no="6" player="Traianks" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ S6</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="4" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5600740008">
+		 <general>
+		  <startdate>2014-03-25 13:58:48</startdate>		  
+		  <players>
+		   <player seat="1" name="VanTr4X" chips="1,820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="Traianks" chips="1,315" dealer="0" win="0" bet="1,315" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="moonbaseone" chips="3,120" dealer="0" win="2,630" bet="1,315" rebuy="0" addon="0" reg_code="6224098062"/><player seat="8" name="griddlec" chips="2,745" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Traianks" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="VanTr4X">X X</cards><action no="4" player="VanTr4X" type="0" sum="0" cards=""/><cards type="Pocket" player="Traianks">CQ D8</cards><action no="5" player="Traianks" type="23" sum="1,315" cards=""/><cards type="Pocket" player="moonbaseone">S3 D3</cards><action no="6" player="moonbaseone" type="3" sum="1,165" cards=""/><cards type="Pocket" player="griddlec">X X</cards><action no="3" player="griddlec" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 S4 H5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards>
+	</round>
+	
+		</game>  
+	</session>

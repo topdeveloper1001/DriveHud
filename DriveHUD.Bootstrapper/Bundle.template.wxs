@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
+     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
+     xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+
+  <?ifndef ProductVersion?>
+  <?define ProductVersion = "1.0.3.$WCREV$" ?>
+  <?endif ?>
+
+  <?ifndef ProductName?>
+  <?define ProductName = "DriveHUD" ?>
+  <?endif ?>
+
+  <?ifndef ProductUrl?>
+  <?define ProductUrl = "www.acepokersolutions.com" ?>
+  <?endif ?>
+
+  <?ifndef Manufacturer?>
+  <?define Manufacturer = "Ace Poker Solutions" ?>
+  <?endif ?>
+
+
+  <Bundle Name="$(var.ProductName)"
+          Version="$(var.ProductVersion)"
+          HelpUrl="$(var.ProductUrl)"
+          AboutUrl="$(var.ProductUrl)"
+          Manufacturer="$(var.Manufacturer)"
+          Copyright="(c) All rights reserved."
+          DisableModify="yes"
+          IconSourceFile="$(var.DriveHUD.Application.TargetDir)..\..\images\drivehud.ico"
+          UpgradeCode="d57055f7-9cf4-4582-a873-d606ac3ab658">
+
+    <bal:Condition  Message="This software can only be installed on Windows Vista and higher.">
+      <![CDATA[VersionNT >= v6.0]]>
+    </bal:Condition>
+
+    <BootstrapperApplicationRef Id='ManagedBootstrapperApplicationHost'>
+
+      <Payload SourceFile='$(var.DriveHUD.Bootstrapper.App.TargetPath)' />
+      <Payload SourceFile='$(var.DriveHUD.Bootstrapper.App.ProjectDir)BootstrapperCore.config' />
+      <Payload SourceFile='$(var.DriveHUD.Bootstrapper.App.ProjectDir)Resources/EULA.rtf' />
+      <Payload SourceFile='$(var.DriveHUD.Bootstrapper.App.TargetDir)GalaSoft.MvvmLight.dll' />
+
+    </BootstrapperApplicationRef>
+
+    <!-- Determine what items are installed in the event of an upgrade-->
+    <util:RegistrySearch Root="HKCU" Key="Software\$(var.Manufacturer)\$(var.ProductName)" Variable="ProductSHMInstalled" Result="exists" />
+    <!--<bal:Condition Message="Another version of this product is already installed. Installation of this version cannot continue. To configure or remove the existing version of this product, use Add/Remove Programs on the Control Panel.">
+      Not ProductSHMInstalled
+    </bal:Condition>-->
+
+    <Variable Name="EXECUTABLE" bal:Overridable='yes' Value='"$(var.DriveHUD.Application.TargetFileName)"'/>
+    <Variable Name="RELATIVEEXECUTABLEPATH" bal:Overridable='yes' Value='"$(var.ProductName)"'/>
+
+    
+    <Chain>
+      <PackageGroupRef Id="NetFx45Web"/>
+      <PackageGroupRef Id="POSTGRESQL"/>
+      <RollbackBoundary/>
+      <MsiPackage Id="DriveHUD" Compressed="yes" SourceFile="$(var.DriveHUD.Setup.TargetPath)" Vital="yes">
+        <MsiProperty Name="MANUFACTURERDIR" Value="[MANUFACTURERDIR]"/>
+        <MsiProperty Name="INSTALLDESKTOPSHORTCUT" Value="[INSTALLDESKTOPSHORTCUT]"/>
+        <MsiProperty Name="INSTALLPROGRAMMENUSHORTCUT" Value="[INSTALLPROGRAMMENUSHORTCUT]"/>
+        <MsiProperty Name="REMOVEPLAYERDATA" Value="[REMOVEPLAYERDATA]"/>
+      </MsiPackage>
+    </Chain>
+  </Bundle>
+  
+  <!-- POSTGRESQL -->
+  <Fragment>
+    <util:RegistrySearch Id ="PostgresqlPath_x64"
+       Root="HKLM"
+       Key="SOFTWARE\PostgreSQL\Installations\postgresql-x64-9.5"
+       Result="exists"
+       Value="Version"
+       Variable="PostgresqlInstalled_x64"
+       Win64="yes" />
+
+    <util:RegistrySearch Id="Postgresql_x86"
+      Root="HKLM"
+      Key="SOFTWARE\PostgreSQL\Installations\postgresql-9.5"
+      Result="exists"
+      Value="Version"
+      Variable="PostgresqlInstalled_x86"
+      Win64="no"/>
+
+    <PackageGroup Id="POSTGRESQL">
+      <ExePackage Id="PostSQL94_x64" SourceFile="Prerequisites\Postgresql\postgresql-9.5.3-1-windows-x64.exe"
+                  Name="PostgreSQL x64 9.5"
+                  DisplayName="PostgreSQL x64 9.5"
+                  Description ="PostgreSQL x64 9.5 setup"
+                  InstallCommand="--mode unattended --unattendedmodeui minimalWithDialogs --superaccount postgres --superpassword postgrespass --datadir &quot;[ProgramFiles6432Folder]PostgreSQL\9.5\data&quot;"
+                  InstallCondition="VersionNT64"
+                  DetectCondition="PostgresqlInstalled_x64"
+                  Cache="no"
+                  Compressed="yes"
+                  PerMachine="yes"
+                  Permanent="yes"/>
+
+      <ExePackage Id="PostSQL94_x86" SourceFile="Prerequisites\Postgresql\postgresql-9.5.3-1-windows.exe"
+                Name="PostgreSQL x86 9.5"
+                DisplayName="PostgreSQL x86 9.5"
+                Description="PostgreSQL x86 9.5 setup"
+                InstallCommand="--mode unattended --unattendedmodeui minimalWithDialogs --superaccount postgres --superpassword postgrespass --datadir &quot;[ProgramFiles6432Folder]PostgreSQL\9.5\data&quot;"
+                InstallCondition="(NOT VersionNT64)"
+                DetectCondition="PostgresqlInstalled_x86"
+                Cache="no"
+                Compressed="yes"
+                PerMachine="yes"
+                Permanent="yes"/>
+    </PackageGroup>
+
+  </Fragment>
+</Wix>

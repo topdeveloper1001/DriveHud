@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224217299">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824219548</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:22</duration>  
+	          <gamecount>36</gamecount>  
+	          <startdate>2014-03-25 17:12:04</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>5,218</bets>  
+	          <wins>7,000</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>3,282</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601192047">
+		 <general>
+		  <startdate>2014-03-25 17:12:04</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,500" dealer="0" win="180" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="10" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="3" sum="30" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="3" sum="20" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="3" player="YorbloKe" type="23" sum="40" cards=""/><cards type="Pocket" player="moonbaseone">C9 HK</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="5" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H7 S5 C8</cards><action no="9" player="jampackstam" type="5" sum="60" cards=""/><action no="10" player="Onyiiiii" type="0" sum="0" cards=""/><action no="11" player="YorbloKe" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601192246">
+		 <general>
+		  <startdate>2014-03-25 17:12:42</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,580" dealer="1" win="0" bet="601" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,460" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="1,460" dealer="0" win="1,332" bet="601" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="10" cards="[cards]"/><action no="2" player="YorbloKe" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="60" cards=""/><action no="9" player="DONCorleoneXX" type="3" sum="60" cards=""/><cards type="Pocket" player="jampackstam">S5 CK</cards><action no="6" player="jampackstam" type="23" sum="120" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">C8 D8</cards><action no="8" player="YorbloKe" type="3" sum="100" cards=""/><cards type="Pocket" player="moonbaseone">C7 CQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="4" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA D7 C5</cards><action no="11" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="14" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="12" player="jampackstam" type="5" sum="259" cards=""/><action no="10" player="YorbloKe" type="4" sum="0" cards=""/><action no="13" player="YorbloKe" type="3" sum="259" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="16" player="jampackstam" type="4" sum="0" cards=""/><action no="15" player="YorbloKe" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="18" player="jampackstam" type="3" sum="222" cards=""/><action no="17" player="YorbloKe" type="5" sum="222" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601192610">
+		 <general>
+		  <startdate>2014-03-25 17:13:57</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="979" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,450" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,191" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,500" dealer="0" win="200" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="YorbloKe" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">C5 SJ</cards><action no="7" player="YorbloKe" type="3" sum="10" cards=""/><cards type="Pocket" player="moonbaseone">S10 S3</cards><action no="8" player="moonbaseone" type="4" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">CJ SQ</cards><action no="3" player="Wemyzz" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ H2 H4</cards><action no="9" player="YorbloKe" type="5" sum="20" cards=""/><action no="10" player="moonbaseone" type="0" sum="0" cards=""/><action no="11" player="Wemyzz" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D6</cards><action no="12" player="YorbloKe" type="4" sum="0" cards=""/><action no="14" player="YorbloKe" type="3" sum="50" cards=""/><action no="13" player="Wemyzz" type="5" sum="50" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards><action no="15" player="YorbloKe" type="4" sum="0" cards=""/><action no="16" player="Wemyzz" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601193032">
+		 <general>
+		  <startdate>2014-03-25 17:15:21</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="979" dealer="0" win="260" bet="170" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,101" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,610" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="Wemyzz" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="23" sum="40" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="6" player="YorbloKe" type="3" sum="40" cards=""/><cards type="Pocket" player="moonbaseone">H3 H8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="8" player="Wemyzz" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 H6 SQ</cards><action no="10" player="jampackstam" type="5" sum="130" cards=""/><action no="11" player="YorbloKe" type="0" sum="0" cards=""/><action no="9" player="Wemyzz" type="4" sum="0" cards=""/><action no="12" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601193361">
+		 <general>
+		  <startdate>2014-03-25 17:16:25</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,380" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,069" dealer="0" win="220" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,061" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,570" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/><action no="1" player="Wemyzz" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="23" sum="160" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="5" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 C4</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="7" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601205995">
+		 <general>
+		  <startdate>2014-03-25 17:16:54</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,340" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,129" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,450" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,061" dealer="0" win="180" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="4" player="YorbloKe" type="23" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">CQ SA</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="6" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206156">
+		 <general>
+		  <startdate>2014-03-25 17:17:23</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,320" dealer="1" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,089" dealer="0" win="680" bet="400" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,450" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,121" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,550" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="20" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="3" sum="40" cards=""/><action no="10" player="DONCorleoneXX" type="3" sum="40" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="23" sum="80" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="3" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C8 S8</cards><action no="4" player="moonbaseone" type="3" sum="40" cards=""/><action no="9" player="moonbaseone" type="3" sum="40" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="5" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 D7 S7</cards><action no="13" player="DONCorleoneXX" type="3" sum="40" cards=""/><action no="11" player="jampackstam" type="5" sum="40" cards=""/><action no="12" player="moonbaseone" type="3" sum="40" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="16" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="14" player="jampackstam" type="4" sum="0" cards=""/><action no="15" player="moonbaseone" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards><action no="19" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="17" player="jampackstam" type="5" sum="280" cards=""/><action no="18" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206599">
+		 <general>
+		  <startdate>2014-03-25 17:18:59</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,369" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,410" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,121" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,550" dealer="0" win="390" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="20" cards="[cards]"/><action no="2" player="YorbloKe" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="8" player="YorbloKe" type="3" sum="80" cards=""/><cards type="Pocket" player="moonbaseone">S9 SQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="4" player="Wemyzz" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ C6 C3</cards><action no="9" player="YorbloKe" type="4" sum="0" cards=""/><action no="11" player="YorbloKe" type="0" sum="0" cards=""/><action no="10" player="Wemyzz" type="5" sum="130" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206793">
+		 <general>
+		  <startdate>2014-03-25 17:19:40</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,200" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,369" dealer="0" win="220" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,390" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,001" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,350" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="YorbloKe" type="1" sum="20" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="23" sum="160" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="7" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 HK</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="3" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601206968">
+		 <general>
+		  <startdate>2014-03-25 17:20:12</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,200" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,429" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="1,981" dealer="1" win="585" bet="315" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,310" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,690" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="Wemyzz" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="23" sum="120" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="6" player="YorbloKe" type="3" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">S5 S9</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="8" player="Wemyzz" type="3" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D9 H6 CQ</cards><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="13" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="11" player="YorbloKe" type="5" sum="195" cards=""/><action no="9" player="Wemyzz" type="4" sum="0" cards=""/><action no="12" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601207293">
+		 <general>
+		  <startdate>2014-03-25 17:21:17</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,080" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,429" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,251" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,280" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,570" dealer="0" win="120" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/><action no="1" player="Wemyzz" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">S4 D8</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="5" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 D5</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">S7 H9</cards><action no="7" player="Wemyzz" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 HA SA</cards><action no="10" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="9" player="Wemyzz" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="11" player="Wemyzz" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards><action no="14" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="13" player="Wemyzz" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219264">
+		 <general>
+		  <startdate>2014-03-25 17:22:27</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="1,020" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,429" dealer="0" win="660" bet="480" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,390" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,251" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,280" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,630" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="3" sum="90" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="4" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 HA</cards><action no="5" player="moonbaseone" type="23" sum="150" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="6" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA D6 SK</cards><action no="9" player="jampackstam" type="5" sum="330" cards=""/><action no="10" player="moonbaseone" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219535">
+		 <general>
+		  <startdate>2014-03-25 17:23:21</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="990" dealer="1" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,609" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,390" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,251" dealer="0" win="270" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,130" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="30" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="3" sum="60" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="4" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="3" player="YorbloKe" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">H10 DA</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="5" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HA D10 C3</cards><action no="11" player="DONCorleoneXX" type="0" sum="0" cards=""/><action no="9" player="Onyiiiii" type="4" sum="0" cards=""/><action no="12" player="Onyiiiii" type="0" sum="0" cards=""/><action no="10" player="YorbloKe" type="5" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219767">
+		 <general>
+		  <startdate>2014-03-25 17:24:11</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,579" dealer="1" win="1,300" bet="950" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,330" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,401" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,130" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="50" cards="[cards]"/><action no="2" player="YorbloKe" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="23" sum="200" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="8" player="YorbloKe" type="3" sum="100" cards=""/><cards type="Pocket" player="moonbaseone">C2 HQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="4" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 D8 S4</cards><action no="10" player="jampackstam" type="23" sum="750" cards=""/><action no="9" player="YorbloKe" type="5" sum="100" cards=""/><action no="11" player="YorbloKe" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601219901">
+		 <general>
+		  <startdate>2014-03-25 17:24:37</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,929" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,280" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="2,101" dealer="0" win="0" bet="1,130" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="1,130" dealer="0" win="2,260" bet="1,130" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,630" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="YorbloKe" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">C10 S10</cards><action no="7" player="YorbloKe" type="23" sum="300" cards=""/><action no="9" player="YorbloKe" type="3" sum="830" cards=""/><cards type="Pocket" player="moonbaseone">DJ SJ</cards><action no="8" player="moonbaseone" type="23" sum="1,130" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="3" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 HA S9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards>
+	</round>
+	
+		</game><game gamecode="5601220095">
+		 <general>
+		  <startdate>2014-03-25 17:25:20</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,929" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,280" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="971" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,260" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,630" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="Wemyzz" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="23" sum="200" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="6" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C8 H3</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="8" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220191">
+		 <general>
+		  <startdate>2014-03-25 17:25:36</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,079" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,280" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="971" dealer="0" win="0" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,210" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,530" dealer="0" win="1,000" bet="600" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DONCorleoneXX" type="2" sum="100" cards="[cards]"/><action no="1" player="Wemyzz" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="5" player="YorbloKe" type="23" sum="200" cards=""/><cards type="Pocket" player="moonbaseone">HA D2</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="7" player="Wemyzz" type="3" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 SA H5</cards><action no="10" player="YorbloKe" type="4" sum="0" cards=""/><action no="9" player="Wemyzz" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards><action no="12" player="YorbloKe" type="5" sum="100" cards=""/><action no="11" player="Wemyzz" type="4" sum="0" cards=""/><action no="13" player="Wemyzz" type="3" sum="100" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards><action no="15" player="YorbloKe" type="0" sum="0" cards=""/><action no="14" player="Wemyzz" type="5" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220520">
+		 <general>
+		  <startdate>2014-03-25 17:26:41</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="830" dealer="0" win="930" bet="830" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="2,079" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,280" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="671" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="50" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="23" sum="830" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="8" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="4" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C8 DQ</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="6" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601220650">
+		 <general>
+		  <startdate>2014-03-25 17:27:04</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,979" dealer="0" win="0" bet="671" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,280" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="671" dealer="0" win="1,442" bet="671" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="50" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">DK HA</cards><action no="7" player="jampackstam" type="3" sum="621" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="8" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">CK SK</cards><action no="3" player="YorbloKe" type="23" sum="671" cards=""/><cards type="Pocket" player="moonbaseone">H8 C3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="5" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 H4 D5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards>
+	</round>
+	
+		</game><game gamecode="5601220797">
+		 <general>
+		  <startdate>2014-03-25 17:27:34</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,308" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,180" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="1,442" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,210" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="50" cards="[cards]"/><action no="2" player="YorbloKe" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><cards type="Pocket" player="moonbaseone">DQ D9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="4" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235369">
+		 <general>
+		  <startdate>2014-03-25 17:27:59</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,308" dealer="0" win="1,458" bet="1,308" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,130" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="1,492" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,210" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="YorbloKe" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="23" sum="1,308" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="7" player="YorbloKe" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D2 D3</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="3" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235470">
+		 <general>
+		  <startdate>2014-03-25 17:28:19</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,458" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,130" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="1,442" dealer="1" win="525" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,110" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,930" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="Wemyzz" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">X X</cards><action no="6" player="YorbloKe" type="23" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">H6 C8</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="8" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235595">
+		 <general>
+		  <startdate>2014-03-25 17:28:43</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="930" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,458" dealer="0" win="0" bet="750" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,130" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="YorbloKe" chips="1,667" dealer="0" win="0" bet="1,667" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,035" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="1,780" dealer="0" win="4,347" bet="1,780" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/><action no="1" player="Wemyzz" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="3" player="jampackstam" type="23" sum="750" cards=""/><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="YorbloKe">DK DQ</cards><action no="5" player="YorbloKe" type="3" sum="750" cards=""/><action no="10" player="YorbloKe" type="7" sum="917" cards=""/><cards type="Pocket" player="moonbaseone">S7 SJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">DA HA</cards><action no="7" player="Wemyzz" type="23" sum="1,780" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 SA D2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5601235820">
+		 <general>
+		  <startdate>2014-03-25 17:29:31</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="780" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="708" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,130" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,035" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,347" dealer="1" win="825" bet="600" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C8 D3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="5" player="Wemyzz" type="23" sum="600" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601235955">
+		 <general>
+		  <startdate>2014-03-25 17:29:55</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="705" dealer="1" win="147" bet="705" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="558" dealer="0" win="1,266" bet="558" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,130" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,035" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,572" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="75" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">H8 CA</cards><action no="5" player="DONCorleoneXX" type="23" sum="705" cards=""/><cards type="Pocket" player="jampackstam">DA C9</cards><action no="6" player="jampackstam" type="7" sum="483" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SQ DJ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="4" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 HQ S7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="5601236103">
+		 <general>
+		  <startdate>2014-03-25 17:30:24</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="147" dealer="0" win="258" bet="147" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,266" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="980" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,035" dealer="0" win="2,149" bet="2,035" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,572" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Onyiiiii" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">SJ CA</cards><action no="4" player="DONCorleoneXX" type="7" sum="147" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="5" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="6" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DJ HA</cards><action no="7" player="moonbaseone" type="23" sum="2,035" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="3" player="Wemyzz" type="3" sum="150" cards=""/><action no="8" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 SQ H3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards>
+	</round>
+	
+		</game><game gamecode="5601236240">
+		 <general>
+		  <startdate>2014-03-25 17:30:55</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="258" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,266" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="905" dealer="1" win="1,130" bet="905" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,149" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,422" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="Wemyzz" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="4" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="5" player="Onyiiiii" type="23" sum="905" cards=""/><cards type="Pocket" player="moonbaseone">C2 CJ</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="7" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236333">
+		 <general>
+		  <startdate>2014-03-25 17:31:15</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="258" dealer="0" win="591" bet="258" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,266" dealer="0" win="492" bet="750" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,130" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,074" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,272" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DONCorleoneXX" type="2" sum="150" cards="[cards]"/><action no="1" player="Wemyzz" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">CJ C5</cards><action no="7" player="DONCorleoneXX" type="7" sum="108" cards=""/><cards type="Pocket" player="jampackstam">DA H8</cards><action no="3" player="jampackstam" type="23" sum="750" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="4" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">HQ C4</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="6" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D5 D6 S5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C8</cards>
+	</round>
+	
+		</game><game gamecode="5601236477">
+		 <general>
+		  <startdate>2014-03-25 17:31:44</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="591" dealer="0" win="741" bet="591" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,008" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,130" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,074" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,197" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="1" sum="75" cards="[cards]"/><action no="2" player="jampackstam" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="23" sum="591" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="3" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H8 C9</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="5" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236567">
+		 <general>
+		  <startdate>2014-03-25 17:32:03</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="741" dealer="1" win="966" bet="741" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="858" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="1,130" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,074" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,197" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jampackstam" type="1" sum="75" cards="[cards]"/><action no="2" player="Onyiiiii" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="741" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="6" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="7" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S10 D7</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="4" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236687">
+		 <general>
+		  <startdate>2014-03-25 17:32:27</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="966" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="783" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="980" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,074" dealer="0" win="425" bet="225" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,197" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="1" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="6" player="Onyiiiii" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="7" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="Wemyzz" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="10" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">X X</cards><action no="11" player="Onyiiiii" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 CJ</cards><cards type="Pocket" player="Wemyzz">X X</cards><action no="8" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601236761">
+		 <general>
+		  <startdate>2014-03-25 17:32:42</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="941" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="758" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="5" name="Onyiiiii" chips="855" dealer="1" win="0" bet="855" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,274" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="4,172" dealer="0" win="1,885" bet="855" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="5" player="Onyiiiii" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="Wemyzz" type="15" sum="25" cards="[cards]"/><action no="7" player="Wemyzz" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="Onyiiiii">SQ DQ</cards><action no="10" player="Onyiiiii" type="23" sum="830" cards=""/><cards type="Pocket" player="moonbaseone">S5 D6</cards><action no="11" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">DJ HA</cards><action no="12" player="Wemyzz" type="3" sum="630" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 SJ S10</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards>
+	</round>
+	
+		</game><game gamecode="5601236871">
+		 <general>
+		  <startdate>2014-03-25 17:33:05</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="916" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="733" dealer="0" win="1,108" bet="733" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,149" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="5,202" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="6" player="DONCorleoneXX" type="2" sum="200" cards="[cards]"/><action no="3" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="Wemyzz" type="15" sum="25" cards="[cards]"/><action no="5" player="Wemyzz" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="7" player="jampackstam" type="23" sum="708" cards=""/><cards type="Pocket" player="moonbaseone">DJ S4</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="9" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248127">
+		 <general>
+		  <startdate>2014-03-25 17:33:32</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="691" dealer="0" win="966" bet="691" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="1,108" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,124" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="5,077" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="5" player="DONCorleoneXX" type="1" sum="100" cards="[cards]"/><action no="2" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="6" player="jampackstam" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="Wemyzz" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="9" player="DONCorleoneXX" type="23" sum="666" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="10" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S2 DA</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="8" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248440">
+		 <general>
+		  <startdate>2014-03-25 17:34:06</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="966" dealer="1" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="883" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,099" dealer="0" win="400" bet="225" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="5,052" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="1" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="5" player="jampackstam" type="1" sum="100" cards="[cards]"/><action no="2" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="6" player="moonbaseone" type="2" sum="200" cards="[cards]"/><action no="3" player="Wemyzz" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">X X</cards><action no="9" player="jampackstam" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S8 H6</cards><cards type="Pocket" player="Wemyzz">X X</cards><action no="7" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601248624">
+		 <general>
+		  <startdate>2014-03-25 17:34:26</startdate>		  
+		  <players>
+		   <player seat="1" name="DONCorleoneXX" chips="941" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="jampackstam" chips="758" dealer="1" win="0" bet="758" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="moonbaseone" chips="2,274" dealer="0" win="1,766" bet="758" rebuy="0" addon="0" reg_code="6224217299"/><player seat="10" name="Wemyzz" chips="5,027" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="DONCorleoneXX" type="15" sum="25" cards="[cards]"/><action no="4" player="jampackstam" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="Wemyzz" type="15" sum="25" cards="[cards]"/><action no="6" player="Wemyzz" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/><cards type="Pocket" player="jampackstam">DK C4</cards><action no="8" player="jampackstam" type="23" sum="733" cards=""/><cards type="Pocket" player="moonbaseone">S7 CA</cards><action no="9" player="moonbaseone" type="3" sum="633" cards=""/><cards type="Pocket" player="Wemyzz">X X</cards><action no="10" player="Wemyzz" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 S6 D4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game>  
+	</session>

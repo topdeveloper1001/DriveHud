@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6189504737">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 20c Double Up*4, 819271211</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:06</duration>  
+	          <gamecount>23</gamecount>  
+	          <startdate>2014-01-28 16:12:18</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>1,265</bets>  
+	          <wins>465</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.46</ipoints>
+        		<statuspoints>0.46</statuspoints>
+			  		<awardpoints>0.46</awardpoints>
+	          <tournamentname>‘Super Turbo’ 20c Double Up*4</tournamentname><place>3</place><buyin>€0.18+€0.02</buyin> <totalbuyin>€0.20</totalbuyin> <ipoints>0.46</ipoints> <win>€0.00</win> <statuspoints>0.46</statuspoints> <awardpoints>0.46</awardpoints>  
+	    </general>  
+	    <game gamecode="5449192131">
+		 <general>
+		  <startdate>2014-01-28 16:12:18</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="800" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="800" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="facciadavilla" chips="800" dealer="0" win="90" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Eropga" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="4" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H2 H10</cards><action no="5" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">C8 S5</cards><action no="6" player="Eropga" type="4" sum="0" cards=""/><cards type="Pocket" player="facciadavilla">HK H8</cards><action no="3" player="facciadavilla" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 DQ HJ</cards><action no="7" player="Eropga" type="4" sum="0" cards=""/><action no="8" player="facciadavilla" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="9" player="Eropga" type="4" sum="0" cards=""/><action no="10" player="facciadavilla" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S3</cards><action no="11" player="Eropga" type="5" sum="20" cards=""/><action no="12" player="facciadavilla" type="3" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449192338">
+		 <general>
+		  <startdate>2014-01-28 16:12:43</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="760" dealer="0" win="80" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="facciadavilla" chips="850" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Eropga" type="1" sum="10" cards="[cards]"/><action no="2" player="facciadavilla" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="3" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ H5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">HJ D2</cards><action no="5" player="Eropga" type="3" sum="10" cards=""/><cards type="Pocket" player="facciadavilla">S6 D5</cards><action no="6" player="facciadavilla" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 C2 DA</cards><action no="7" player="Eropga" type="5" sum="20" cards=""/><action no="8" player="facciadavilla" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HK</cards><action no="9" player="Eropga" type="4" sum="0" cards=""/><action no="10" player="facciadavilla" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards><action no="11" player="Eropga" type="4" sum="0" cards=""/><action no="12" player="facciadavilla" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449192518">
+		 <general>
+		  <startdate>2014-01-28 16:13:07</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="800" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="800" dealer="1" win="1,640" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="facciadavilla" chips="810" dealer="0" win="0" bet="800" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="winda123" type="2" sum="20" cards="[cards]"/><action no="1" player="facciadavilla" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="6" player="winda123" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HA S6</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">S8 S2</cards><action no="4" player="Eropga" type="3" sum="20" cards=""/><cards type="Pocket" player="facciadavilla">D6 D9</cards><action no="5" player="facciadavilla" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 C8 C7</cards><action no="8" player="winda123" type="4" sum="0" cards=""/><action no="11" player="winda123" type="3" sum="20" cards=""/><action no="9" player="Eropga" type="5" sum="20" cards=""/><action no="7" player="facciadavilla" type="4" sum="0" cards=""/><action no="10" player="facciadavilla" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards><action no="13" player="winda123" type="0" sum="0" cards=""/><action no="14" player="Eropga" type="3" sum="84" cards=""/><action no="12" player="facciadavilla" type="5" sum="84" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards><action no="16" player="Eropga" type="23" sum="676" cards=""/><action no="15" player="facciadavilla" type="5" sum="202" cards=""/><action no="17" player="facciadavilla" type="3" sum="474" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449192821">
+		 <general>
+		  <startdate>2014-01-28 16:13:45</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="760" dealer="0" win="280" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="790" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,640" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="facciadavilla" chips="10" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="winda123" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">H7 H10</cards><action no="5" player="winda123" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">SK DQ</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="3" player="Eropga" type="3" sum="20" cards=""/><cards type="Pocket" player="facciadavilla">D7 HQ</cards><action no="4" player="facciadavilla" type="7" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK HJ S4</cards><action no="7" player="winda123" type="4" sum="0" cards=""/><action no="10" player="winda123" type="3" sum="35" cards=""/><action no="8" player="WorstCard" type="5" sum="35" cards=""/><action no="9" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards><action no="11" player="winda123" type="4" sum="0" cards=""/><action no="13" player="winda123" type="3" sum="70" cards=""/><action no="12" player="WorstCard" type="5" sum="70" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards><action no="14" player="winda123" type="4" sum="0" cards=""/><action no="15" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449193094">
+		 <general>
+		  <startdate>2014-01-28 16:14:19</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="915" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="665" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,620" dealer="0" win="30" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="Eropga" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="3" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">D2 H7</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449193184">
+		 <general>
+		  <startdate>2014-01-28 16:14:29</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="915" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="655" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,630" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="winda123" type="2" sum="30" cards="[cards]"/><action no="1" player="Eropga" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="5" player="winda123" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S9 D7</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="4" player="Eropga" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S5 C9 H8</cards><action no="7" player="winda123" type="3" sum="30" cards=""/><action no="6" player="Eropga" type="5" sum="30" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DQ</cards><action no="9" player="winda123" type="3" sum="60" cards=""/><action no="8" player="Eropga" type="5" sum="60" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards><action no="11" player="winda123" type="0" sum="0" cards=""/><action no="10" player="Eropga" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449193425">
+		 <general>
+		  <startdate>2014-01-28 16:14:59</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="795" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="655" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,750" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="winda123" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="4" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">C10 D6</cards><cards type="Pocket" player="Eropga">X X</cards><action no="3" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449193512">
+		 <general>
+		  <startdate>2014-01-28 16:15:10</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="670" dealer="0" win="105" bet="75" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,750" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Eropga" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="3" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SA CJ</cards><action no="4" player="WorstCard" type="23" sum="75" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="5" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449193618">
+		 <general>
+		  <startdate>2014-01-28 16:15:25</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="780" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,720" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="winda123" type="2" sum="30" cards="[cards]"/><action no="1" player="Eropga" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="5" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S8 S7</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="4" player="Eropga" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449193791">
+		 <general>
+		  <startdate>2014-01-28 16:15:44</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="750" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,750" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="winda123" type="1" sum="15" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="4" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">SQ SJ</cards><cards type="Pocket" player="Eropga">X X</cards><action no="3" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449193870">
+		 <general>
+		  <startdate>2014-01-28 16:15:54</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="735" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="715" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,750" dealer="0" win="45" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="Eropga" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="3" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S4 C4</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449193988">
+		 <general>
+		  <startdate>2014-01-28 16:16:09</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="735" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,765" dealer="0" win="120" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="winda123" type="2" sum="30" cards="[cards]"/><action no="1" player="Eropga" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">D2 S8</cards><action no="5" player="winda123" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 S10</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">S7 CK</cards><action no="4" player="Eropga" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 H9 CQ</cards><action no="7" player="winda123" type="4" sum="0" cards=""/><action no="6" player="Eropga" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards><action no="9" player="winda123" type="5" sum="30" cards=""/><action no="8" player="Eropga" type="4" sum="0" cards=""/><action no="10" player="Eropga" type="3" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D6</cards><action no="12" player="winda123" type="4" sum="0" cards=""/><action no="11" player="Eropga" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449194180">
+		 <general>
+		  <startdate>2014-01-28 16:16:34</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="675" dealer="0" win="265" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="700" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,825" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="winda123" type="15" sum="5" cards="[cards]"/><action no="4" player="winda123" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Eropga" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="7" player="winda123" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">S2 H7</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="6" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449194326">
+		 <general>
+		  <startdate>2014-01-28 16:16:53</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="735" dealer="1" win="820" bet="735" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="645" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,820" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="winda123" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Eropga" type="15" sum="5" cards="[cards]"/><action no="5" player="Eropga" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="6" player="winda123" type="23" sum="730" cards=""/><cards type="Pocket" player="WorstCard">H3 HJ</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="8" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449194448">
+		 <general>
+		  <startdate>2014-01-28 16:17:07</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="820" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="615" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,765" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="winda123" type="15" sum="5" cards="[cards]"/><action no="5" player="winda123" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Eropga" type="15" sum="5" cards="[cards]"/><action no="4" player="Eropga" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><cards type="Pocket" player="WorstCard">S8 HK</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="7" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449194583">
+		 <general>
+		  <startdate>2014-01-28 16:17:23</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="855" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="610" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,735" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="winda123" type="15" sum="5" cards="[cards]"/><action no="4" player="winda123" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Eropga" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="7" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H6 C6</cards><cards type="Pocket" player="Eropga">X X</cards><action no="6" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449194687">
+		 <general>
+		  <startdate>2014-01-28 16:17:35</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="825" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="645" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,730" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="winda123" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Eropga" type="15" sum="5" cards="[cards]"/><action no="5" player="Eropga" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="6" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">H4 C5</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards>
+	</round>
+	
+		</game><game gamecode="5449194795">
+		 <general>
+		  <startdate>2014-01-28 16:17:49</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="820" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="615" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,765" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="winda123" type="15" sum="5" cards="[cards]"/><action no="5" player="winda123" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="Eropga" type="15" sum="5" cards="[cards]"/><action no="4" player="Eropga" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><cards type="Pocket" player="WorstCard">SQ D3</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="7" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449209125">
+		 <general>
+		  <startdate>2014-01-28 16:18:03</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="855" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="610" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,735" dealer="1" win="190" bet="105" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="winda123" type="15" sum="5" cards="[cards]"/><action no="4" player="winda123" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="Eropga" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="7" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S2 H3</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="6" player="Eropga" type="23" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449209237">
+		 <general>
+		  <startdate>2014-01-28 16:18:17</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="825" dealer="1" win="440" bet="355" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="555" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,820" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="winda123" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="Eropga" type="15" sum="5" cards="[cards]"/><action no="5" player="Eropga" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="6" player="winda123" type="23" sum="350" cards=""/><cards type="Pocket" player="WorstCard">H5 S4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="8" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449209363">
+		 <general>
+		  <startdate>2014-01-28 16:18:32</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="910" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="525" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,765" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="winda123" type="15" sum="10" cards="[cards]"/><action no="5" player="winda123" type="2" sum="100" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="Eropga" type="15" sum="10" cards="[cards]"/><action no="4" player="Eropga" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><cards type="Pocket" player="WorstCard">C2 H10</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="Eropga">X X</cards><action no="7" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449209464">
+		 <general>
+		  <startdate>2014-01-28 16:18:45</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="980" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="515" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,705" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="winda123" type="15" sum="10" cards="[cards]"/><action no="4" player="winda123" type="1" sum="50" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="Eropga" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="7" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HQ C5</cards><cards type="Pocket" player="Eropga">X X</cards><action no="6" player="Eropga" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5449209559">
+		 <general>
+		  <startdate>2014-01-28 16:18:56</startdate>		  
+		  <players>
+		   <player seat="2" name="winda123" chips="920" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="WorstCard" chips="585" dealer="0" win="0" bet="585" rebuy="0" addon="0" reg_code="6189504737"/><player seat="7" name="Eropga" chips="1,695" dealer="0" win="1,180" bet="585" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="winda123" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="Eropga" type="15" sum="10" cards="[cards]"/><action no="5" player="Eropga" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="winda123">X X</cards><action no="6" player="winda123" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">HK S3</cards><action no="7" player="WorstCard" type="23" sum="575" cards=""/><cards type="Pocket" player="Eropga">S6 SK</cards><action no="8" player="Eropga" type="3" sum="475" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DQ SJ C4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H6</cards>
+	</round>
+	
+		</game>  
+	</session>

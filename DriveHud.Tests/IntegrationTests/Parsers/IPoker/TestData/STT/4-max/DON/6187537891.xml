@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187537891">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 818998784</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>17</gamecount>  
+	          <startdate>2014-01-25 12:03:47</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>4,432</bets>  
+	          <wins>5,114</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,482</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5435670510">
+		 <general>
+		  <startdate>2014-01-25 12:03:47</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="800" dealer="0" win="140" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="kalimata81" chips="800" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="daemonium1" type="1" sum="10" cards="[cards]"/><action no="2" player="kalimata81" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DQ S3</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="5" player="daemonium1" type="23" sum="40" cards=""/><cards type="Pocket" player="kalimata81">X X</cards><action no="6" player="kalimata81" type="3" sum="20" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="3" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 HA D9</cards><action no="7" player="daemonium1" type="5" sum="60" cards=""/><action no="8" player="kalimata81" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435670663">
+		 <general>
+		  <startdate>2014-01-25 12:04:13</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="840" dealer="1" win="80" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="kalimata81" chips="760" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="kalimata81" type="1" sum="10" cards="[cards]"/><action no="2" player="hankmuudy" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D5 C7</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="4" player="daemonium1" type="23" sum="50" cards=""/><cards type="Pocket" player="kalimata81">X X</cards><action no="5" player="kalimata81" type="0" sum="0" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="6" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435670855">
+		 <general>
+		  <startdate>2014-01-25 12:04:45</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="1,510" bet="750" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="kalimata81" chips="750" dealer="1" win="0" bet="750" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="780" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="hankmuudy" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DJ D10</cards><action no="6" player="WorstCard" type="3" sum="20" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="3" player="daemonium1" type="0" sum="0" cards=""/><cards type="Pocket" player="kalimata81">HA D9</cards><action no="4" player="kalimata81" type="23" sum="40" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="5" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 C2 C10</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="WorstCard" type="3" sum="710" cards=""/><action no="8" player="kalimata81" type="5" sum="710" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CK</cards>
+	</round>
+	
+		</game><game gamecode="5435671047">
+		 <general>
+		  <startdate>2014-01-25 12:05:17</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,560" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="870" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="770" dealer="1" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="daemonium1" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H4 C10</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="5" player="daemonium1" type="0" sum="0" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="3" player="hankmuudy" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671190">
+		 <general>
+		  <startdate>2014-01-25 12:05:39</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,550" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="850" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="800" dealer="0" win="270" bet="170" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="daemonium1" type="1" sum="10" cards="[cards]"/><action no="2" player="hankmuudy" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SK S4</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="4" player="daemonium1" type="23" sum="50" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="5" player="hankmuudy" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ SQ CJ</cards><action no="6" player="daemonium1" type="5" sum="50" cards=""/><action no="8" player="daemonium1" type="0" sum="0" cards=""/><action no="7" player="hankmuudy" type="23" sum="120" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671353">
+		 <general>
+		  <startdate>2014-01-25 12:06:04</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,550" dealer="0" win="360" bet="240" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="750" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="900" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="hankmuudy" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">SJ SA</cards><action no="5" player="WorstCard" type="3" sum="30" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="3" player="daemonium1" type="0" sum="0" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="4" player="hankmuudy" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 H10 DK</cards><action no="7" player="WorstCard" type="3" sum="60" cards=""/><action no="6" player="hankmuudy" type="5" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="9" player="WorstCard" type="5" sum="120" cards=""/><action no="8" player="hankmuudy" type="4" sum="0" cards=""/><action no="10" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671639">
+		 <general>
+		  <startdate>2014-01-25 12:06:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,670" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="750" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="daemonium1" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S8 HQ</cards><action no="4" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="5" player="daemonium1" type="3" sum="30" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="3" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 DJ S6</cards><action no="6" player="WorstCard" type="5" sum="60" cards=""/><action no="7" player="daemonium1" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/><action no="9" player="daemonium1" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435671822">
+		 <general>
+		  <startdate>2014-01-25 12:07:16</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,550" dealer="1" win="270" bet="150" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="870" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="780" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="daemonium1" type="1" sum="15" cards="[cards]"/><action no="2" player="hankmuudy" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CK H3</cards><action no="3" player="WorstCard" type="23" sum="60" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="4" player="daemonium1" type="3" sum="45" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="5" player="hankmuudy" type="3" sum="30" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 CA D7</cards><action no="8" player="WorstCard" type="5" sum="90" cards=""/><action no="6" player="daemonium1" type="4" sum="0" cards=""/><action no="9" player="daemonium1" type="0" sum="0" cards=""/><action no="7" player="hankmuudy" type="4" sum="0" cards=""/><action no="10" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672041">
+		 <general>
+		  <startdate>2014-01-25 12:07:51</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,670" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="810" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="720" dealer="0" win="265" bet="205" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="daemonium1" type="15" sum="5" cards="[cards]"/><action no="1" player="hankmuudy" type="15" sum="5" cards="[cards]"/><action no="4" player="hankmuudy" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H7 DJ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="6" player="daemonium1" type="0" sum="0" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="7" player="hankmuudy" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672186">
+		 <general>
+		  <startdate>2014-01-25 12:08:14</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,615" dealer="0" win="0" bet="213" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="805" dealer="0" win="573" bet="355" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="780" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="daemonium1" type="15" sum="5" cards="[cards]"/><action no="5" player="daemonium1" type="2" sum="50" cards="[cards]"/><action no="3" player="hankmuudy" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DQ C9</cards><action no="7" player="WorstCard" type="23" sum="100" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="8" player="daemonium1" type="3" sum="50" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="6" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HJ S5 HA</cards><action no="9" player="WorstCard" type="5" sum="108" cards=""/><action no="11" player="WorstCard" type="0" sum="0" cards=""/><action no="10" player="daemonium1" type="23" sum="250" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435672417">
+		 <general>
+		  <startdate>2014-01-25 12:08:46</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,402" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="1,023" dealer="0" win="190" bet="130" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="775" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="daemonium1" type="15" sum="5" cards="[cards]"/><action no="4" player="daemonium1" type="1" sum="25" cards="[cards]"/><action no="2" player="hankmuudy" type="15" sum="5" cards="[cards]"/><action no="5" player="hankmuudy" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D7 CK</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="7" player="daemonium1" type="23" sum="125" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="8" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435680837">
+		 <general>
+		  <startdate>2014-01-25 12:09:09</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,397" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="1,083" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="720" dealer="0" win="265" bet="205" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="daemonium1" type="15" sum="5" cards="[cards]"/><action no="1" player="hankmuudy" type="15" sum="5" cards="[cards]"/><action no="4" player="hankmuudy" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HJ DK</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="6" player="daemonium1" type="0" sum="0" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="7" player="hankmuudy" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435680953">
+		 <general>
+		  <startdate>2014-01-25 12:09:29</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,342" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="1,078" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="780" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="daemonium1" type="15" sum="5" cards="[cards]"/><action no="5" player="daemonium1" type="2" sum="50" cards="[cards]"/><action no="3" player="hankmuudy" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D3 S9</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><cards type="Pocket" player="hankmuudy">X X</cards><action no="6" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681120">
+		 <general>
+		  <startdate>2014-01-25 12:09:55</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,312" dealer="1" win="1,482" bet="1,312" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="1,113" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="775" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="daemonium1" type="15" sum="10" cards="[cards]"/><action no="4" player="daemonium1" type="1" sum="50" cards="[cards]"/><action no="2" player="hankmuudy" type="15" sum="10" cards="[cards]"/><action no="5" player="hankmuudy" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S3 SK</cards><action no="6" player="WorstCard" type="23" sum="1,302" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="7" player="daemonium1" type="0" sum="0" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="8" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681256">
+		 <general>
+		  <startdate>2014-01-25 12:10:16</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,482" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="1,053" dealer="1" win="430" bet="260" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="665" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="daemonium1" type="15" sum="10" cards="[cards]"/><action no="1" player="hankmuudy" type="15" sum="10" cards="[cards]"/><action no="4" player="hankmuudy" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S4 H3</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="6" player="daemonium1" type="23" sum="250" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="7" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681383">
+		 <general>
+		  <startdate>2014-01-25 12:10:35</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,372" dealer="0" win="1,492" bet="1,372" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="1,223" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="605" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="daemonium1" type="15" sum="10" cards="[cards]"/><action no="5" player="daemonium1" type="2" sum="100" cards="[cards]"/><action no="3" player="hankmuudy" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HA S8</cards><action no="7" player="WorstCard" type="23" sum="1,362" cards=""/><cards type="Pocket" player="daemonium1">X X</cards><action no="8" player="daemonium1" type="0" sum="0" cards=""/><cards type="Pocket" player="hankmuudy">X X</cards><action no="6" player="hankmuudy" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5435681497">
+		 <general>
+		  <startdate>2014-01-25 12:10:51</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="1,492" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6187537891"/><player seat="4" name="daemonium1" chips="1,113" dealer="0" win="1,200" bet="595" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="hankmuudy" chips="595" dealer="0" win="0" bet="595" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="daemonium1" type="15" sum="10" cards="[cards]"/><action no="4" player="daemonium1" type="1" sum="50" cards="[cards]"/><action no="2" player="hankmuudy" type="15" sum="10" cards="[cards]"/><action no="5" player="hankmuudy" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H7 DJ</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="daemonium1">DK HJ</cards><action no="7" player="daemonium1" type="23" sum="250" cards=""/><action no="9" player="daemonium1" type="3" sum="335" cards=""/><cards type="Pocket" player="hankmuudy">CQ D7</cards><action no="8" player="hankmuudy" type="23" sum="585" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SK C7 H4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C9</cards>
+	</round>
+	
+		</game>  
+	</session>

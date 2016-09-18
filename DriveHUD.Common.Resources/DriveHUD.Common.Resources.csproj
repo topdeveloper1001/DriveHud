@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3527933A-4C5C-45EB-B0AD-42E3F34FC48D}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DriveHUD.Common.Resources</RootNamespace>
+    <AssemblyName>DriveHUD.Common.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Common.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Enums.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Enums.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Errors.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Errors.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Main.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressMessages.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProgressMessages.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ResourceRegistrator.cs" />
+    <Compile Include="ResourceStrings.cs" />
+    <Compile Include="Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Settings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowdownHands.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ShowdownHands.resx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowdownHandsResourceStrings.cs" />
+    <Compile Include="SystemSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SystemSettings.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Common.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Common.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Enums.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Enums.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Errors.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Errors.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Main.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressMessages.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ProgressMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowdownHands.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>ShowdownHands.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SystemSettings.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SystemSettings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
+      <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
+      <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\blackChip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Bovada\Table6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Bovada\Table9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\card.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\13.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\14.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\15.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\17.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\18.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\21.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\22.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\23.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\27.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\28.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\31.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\33.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\34.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\35.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\36.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\37.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\38.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\39.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\41.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\42.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\43.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\44.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\46.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\47.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\49.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\52.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Chips\Black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Chips\Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Chips\Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Chips\Grey.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Chips\Orange.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Chips\Purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Chips\Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Chips\Yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\D.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo_old.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo2_old.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\ReplayerTable.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Table.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\TempPics\TempPic00.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\whiteChip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\Tournament\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Cards.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\HandSuits\cc.png" />
+    <Resource Include="images\HandSuits\cd.PNG" />
+    <Resource Include="images\HandSuits\ch.PNG" />
+    <Resource Include="images\HandSuits\cs.PNG" />
+    <Resource Include="images\HandSuits\dc.PNG" />
+    <Resource Include="images\HandSuits\dd.png" />
+    <Resource Include="images\HandSuits\dh.PNG" />
+    <Resource Include="images\HandSuits\ds.PNG" />
+    <Resource Include="images\HandSuits\hc.PNG" />
+    <Resource Include="images\HandSuits\hd.PNG" />
+    <Resource Include="images\HandSuits\hh.png" />
+    <Resource Include="images\HandSuits\hs.PNG" />
+    <Resource Include="images\HandSuits\sc.PNG" />
+    <Resource Include="images\HandSuits\sd.PNG" />
+    <Resource Include="images\HandSuits\sh.PNG" />
+    <Resource Include="images\HandSuits\ss.PNG" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards_new\0.png" />
+    <Resource Include="images\cards_new\1.png" />
+    <Resource Include="images\cards_new\10.png" />
+    <Resource Include="images\cards_new\11.png" />
+    <Resource Include="images\cards_new\12.png" />
+    <Resource Include="images\cards_new\13.png" />
+    <Resource Include="images\cards_new\14.png" />
+    <Resource Include="images\cards_new\15.png" />
+    <Resource Include="images\cards_new\16.png" />
+    <Resource Include="images\cards_new\17.png" />
+    <Resource Include="images\cards_new\18.png" />
+    <Resource Include="images\cards_new\19.png" />
+    <Resource Include="images\cards_new\2.png" />
+    <Resource Include="images\cards_new\20.png" />
+    <Resource Include="images\cards_new\21.png" />
+    <Resource Include="images\cards_new\22.png" />
+    <Resource Include="images\cards_new\23.png" />
+    <Resource Include="images\cards_new\24.png" />
+    <Resource Include="images\cards_new\25.png" />
+    <Resource Include="images\cards_new\26.png" />
+    <Resource Include="images\cards_new\27.png" />
+    <Resource Include="images\cards_new\28.png" />
+    <Resource Include="images\cards_new\29.png" />
+    <Resource Include="images\cards_new\3.png" />
+    <Resource Include="images\cards_new\30.png" />
+    <Resource Include="images\cards_new\31.png" />
+    <Resource Include="images\cards_new\32.png" />
+    <Resource Include="images\cards_new\33.png" />
+    <Resource Include="images\cards_new\34.png" />
+    <Resource Include="images\cards_new\35.png" />
+    <Resource Include="images\cards_new\36.png" />
+    <Resource Include="images\cards_new\37.png" />
+    <Resource Include="images\cards_new\38.png" />
+    <Resource Include="images\cards_new\39.png" />
+    <Resource Include="images\cards_new\4.png" />
+    <Resource Include="images\cards_new\40.png" />
+    <Resource Include="images\cards_new\41.png" />
+    <Resource Include="images\cards_new\42.png" />
+    <Resource Include="images\cards_new\43.png" />
+    <Resource Include="images\cards_new\44.png" />
+    <Resource Include="images\cards_new\45.png" />
+    <Resource Include="images\cards_new\46.png" />
+    <Resource Include="images\cards_new\47.png" />
+    <Resource Include="images\cards_new\48.png" />
+    <Resource Include="images\cards_new\49.png" />
+    <Resource Include="images\cards_new\5.png" />
+    <Resource Include="images\cards_new\50.png" />
+    <Resource Include="images\cards_new\51.png" />
+    <Resource Include="images\cards_new\52.png" />
+    <Resource Include="images\cards_new\6.png" />
+    <Resource Include="images\cards_new\7.png" />
+    <Resource Include="images\cards_new\8.png" />
+    <Resource Include="images\cards_new\9.png" />
+    <Resource Include="images\cards_new\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\HUDIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Filters\Table6.png" />
+    <Resource Include="images\Filters\Table9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Filters\Player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\Bovada\Table2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\PlayerTypes\Bad LAG.png" />
+    <Resource Include="images\PlayerTypes\Fish.png" />
+    <Resource Include="images\PlayerTypes\Nit.png" />
+    <Resource Include="images\PlayerTypes\Nutball.png" />
+    <Resource Include="images\PlayerTypes\Standard Reg.png" />
+    <Resource Include="images\PlayerTypes\Tight Reg.png" />
+    <Resource Include="images\PlayerTypes\Tricky LAG.png" />
+    <Resource Include="images\PlayerTypes\Whale.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\cards_new\club.png" />
+    <Resource Include="images\cards_new\diamond.png" />
+    <Resource Include="images\cards_new\heart.png" />
+    <Resource Include="images\cards_new\spade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-6max-Basic.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Layouts\DH-FR-Basic.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\icons\drivehud.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-OH.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-OH.xml" />
+    <EmbeddedResource Include="Layouts\DH-MTT-Basic.xml" />
+    <EmbeddedResource Include="Layouts\DH-SNG-Basic.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-10max-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-MTT-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-SNG-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-OH.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-OH-BOL.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-10max-MTT-Basic-OH-BOL.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-10max-SNG-Basic-OH-BOL.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-MTT-Basic-OH.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-OH.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-OH.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-OH-BOL.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-OH-BOL.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-OH-BOL.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-OH.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-OH.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-SNG-Basic-OH.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-OH-BOL.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\logo32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\hud\cards_hand.png" />
+    <Resource Include="images\hud\dollar_sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-10max-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-MTT-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-MTT-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-MTT-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-MTT-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-SNG-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-SNG-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-SNG-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-SNG-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-OH-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-BOL-T.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-OH-BOL-S.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-OH-BOL-T.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)\tools\SubWCRev\subwcrev.exe" "$(SolutionDir)." "$(ProjectDir)Properties\AssemblyInfo.template.cs" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

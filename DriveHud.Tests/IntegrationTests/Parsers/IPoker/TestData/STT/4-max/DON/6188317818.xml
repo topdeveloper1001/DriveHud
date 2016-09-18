@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6188317818">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819104468</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:07</duration>  
+	          <gamecount>11</gamecount>  
+	          <startdate>2014-01-26 17:52:06</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>480</bets>  
+	          <wins>325</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>645</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5439313055">
+		 <general>
+		  <startdate>2014-01-26 17:52:06</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="800" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Sirdigasss" type="1" sum="10" cards="[cards]"/><action no="2" player="themopster72" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">X X</cards><action no="4" player="alinn00" type="0" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">X X</cards><action no="5" player="Sirdigasss" type="3" sum="10" cards=""/><cards type="Pocket" player="themopster72">X X</cards><action no="6" player="themopster72" type="4" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S4 S3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ H3 HK</cards><action no="7" player="Sirdigasss" type="4" sum="0" cards=""/><action no="9" player="Sirdigasss" type="0" sum="0" cards=""/><action no="8" player="themopster72" type="5" sum="20" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439313312">
+		 <general>
+		  <startdate>2014-01-26 17:52:44</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="780" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="820" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="800" dealer="0" win="60" bet="20" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="themopster72" type="1" sum="10" cards="[cards]"/><action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">C4 D4</cards><action no="3" player="alinn00" type="3" sum="20" cards=""/><cards type="Pocket" player="Sirdigasss">X X</cards><action no="4" player="Sirdigasss" type="0" sum="0" cards=""/><cards type="Pocket" player="themopster72">C7 H6</cards><action no="5" player="themopster72" type="3" sum="10" cards=""/><cards type="Pocket" player="WorstCard">D6 S5</cards><action no="6" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK SA H5</cards><action no="9" player="alinn00" type="4" sum="0" cards=""/><action no="7" player="themopster72" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">DJ</cards><action no="12" player="alinn00" type="4" sum="0" cards=""/><action no="10" player="themopster72" type="4" sum="0" cards=""/><action no="11" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards><action no="15" player="alinn00" type="4" sum="0" cards=""/><action no="13" player="themopster72" type="4" sum="0" cards=""/><action no="14" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439313854">
+		 <general>
+		  <startdate>2014-01-26 17:53:58</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="780" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="780" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="800" dealer="1" win="80" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="840" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="alinn00" type="2" sum="20" cards="[cards]"/><action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">X X</cards><action no="6" player="alinn00" type="4" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">X X</cards><action no="3" player="Sirdigasss" type="0" sum="0" cards=""/><cards type="Pocket" player="themopster72">X X</cards><action no="4" player="themopster72" type="3" sum="20" cards=""/><cards type="Pocket" player="WorstCard">DJ HQ</cards><action no="5" player="WorstCard" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA C3 D9</cards><action no="8" player="alinn00" type="4" sum="0" cards=""/><action no="11" player="alinn00" type="0" sum="0" cards=""/><action no="9" player="themopster72" type="5" sum="20" cards=""/><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439314168">
+		 <general>
+		  <startdate>2014-01-26 17:54:44</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="760" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="780" dealer="0" win="1,590" bet="780" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="840" dealer="0" win="0" bet="780" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="alinn00" type="1" sum="15" cards="[cards]"/><action no="2" player="Sirdigasss" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">X X</cards><action no="5" player="alinn00" type="3" sum="15" cards=""/><cards type="Pocket" player="Sirdigasss">H3 D4</cards><action no="6" player="Sirdigasss" type="4" sum="0" cards=""/><cards type="Pocket" player="themopster72">CQ S10</cards><action no="3" player="themopster72" type="3" sum="30" cards=""/><cards type="Pocket" player="WorstCard">SA C5</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 C4 HQ</cards><action no="7" player="alinn00" type="4" sum="0" cards=""/><action no="10" player="alinn00" type="0" sum="0" cards=""/><action no="8" player="Sirdigasss" type="5" sum="90" cards=""/><action no="9" player="themopster72" type="3" sum="90" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C3</cards><action no="11" player="Sirdigasss" type="5" sum="270" cards=""/><action no="13" player="Sirdigasss" type="7" sum="390" cards=""/><action no="12" player="themopster72" type="23" sum="540" cards=""/><action no="14" player="themopster72" type="3" sum="120" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C6</cards>
+	</round>
+	
+		</game><game gamecode="5439324624">
+		 <general>
+		  <startdate>2014-01-26 17:55:30</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="730" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="1,590" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="60" dealer="0" win="135" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="820" dealer="0" win="15" bet="75" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Sirdigasss" type="1" sum="15" cards="[cards]"/><action no="2" player="themopster72" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">X X</cards><action no="4" player="alinn00" type="0" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">X X</cards><action no="5" player="Sirdigasss" type="0" sum="0" cards=""/><cards type="Pocket" player="themopster72">SK S8</cards><action no="6" player="themopster72" type="7" sum="30" cards=""/><cards type="Pocket" player="WorstCard">SA HQ</cards><action no="3" player="WorstCard" type="23" sum="75" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S3 HK D7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game><game gamecode="5439324862">
+		 <general>
+		  <startdate>2014-01-26 17:56:08</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="730" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="1,575" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="135" dealer="0" win="280" bet="135" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="760" dealer="0" win="20" bet="155" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="alinn00" type="15" sum="5" cards="[cards]"/><action no="4" player="Sirdigasss" type="15" sum="5" cards="[cards]"/><action no="1" player="themopster72" type="15" sum="5" cards="[cards]"/><action no="5" player="themopster72" type="1" sum="25" cards="[cards]"/><action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="6" player="WorstCard" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">X X</cards><action no="7" player="alinn00" type="0" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">X X</cards><action no="8" player="Sirdigasss" type="0" sum="0" cards=""/><cards type="Pocket" player="themopster72">C10 DQ</cards><action no="9" player="themopster72" type="23" sum="100" cards=""/><action no="11" player="themopster72" type="7" sum="30" cards=""/><cards type="Pocket" player="WorstCard">H6 D10</cards><action no="10" player="WorstCard" type="23" sum="150" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S9 S8 HJ</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards>
+	</round>
+	
+		</game><game gamecode="5439325098">
+		 <general>
+		  <startdate>2014-01-26 17:56:44</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="725" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="1,570" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="280" dealer="1" win="295" bet="205" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="625" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="alinn00" type="15" sum="5" cards="[cards]"/><action no="6" player="alinn00" type="2" sum="50" cards="[cards]"/><action no="3" player="Sirdigasss" type="15" sum="5" cards="[cards]"/><action no="4" player="themopster72" type="15" sum="5" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">X X</cards><action no="10" player="alinn00" type="0" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">X X</cards><action no="7" player="Sirdigasss" type="0" sum="0" cards=""/><cards type="Pocket" player="themopster72">X X</cards><action no="8" player="themopster72" type="23" sum="200" cards=""/><cards type="Pocket" player="WorstCard">H3 S8</cards><action no="9" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439325233">
+		 <general>
+		  <startdate>2014-01-26 17:57:05</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="670" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="1,565" dealer="0" win="35" bet="405" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="370" dealer="0" win="775" bet="370" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="595" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="alinn00" type="15" sum="5" cards="[cards]"/><action no="5" player="alinn00" type="1" sum="25" cards="[cards]"/><action no="2" player="Sirdigasss" type="15" sum="5" cards="[cards]"/><action no="6" player="Sirdigasss" type="2" sum="50" cards="[cards]"/><action no="3" player="themopster72" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">X X</cards><action no="9" player="alinn00" type="0" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">DK C10</cards><action no="10" player="Sirdigasss" type="3" sum="200" cards=""/><cards type="Pocket" player="themopster72">SA HK</cards><action no="7" player="themopster72" type="23" sum="250" cards=""/><cards type="Pocket" player="WorstCard">C5 HA</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C2 C8 C3</cards><action no="11" player="Sirdigasss" type="5" sum="150" cards=""/><action no="12" player="themopster72" type="7" sum="115" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H2</cards>
+	</round>
+	
+		</game><game gamecode="5439325532">
+		 <general>
+		  <startdate>2014-01-26 17:57:51</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="640" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="1,195" dealer="0" win="1,980" bet="1,195" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="themopster72" chips="775" dealer="0" win="0" bet="775" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="590" dealer="0" win="0" bet="5" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="alinn00" type="15" sum="5" cards="[cards]"/><action no="1" player="Sirdigasss" type="15" sum="5" cards="[cards]"/><action no="5" player="Sirdigasss" type="1" sum="25" cards="[cards]"/><action no="2" player="themopster72" type="15" sum="5" cards="[cards]"/><action no="6" player="themopster72" type="2" sum="50" cards="[cards]"/><action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">X X</cards><action no="8" player="alinn00" type="0" sum="0" cards=""/><cards type="Pocket" player="Sirdigasss">C9 D9</cards><action no="9" player="Sirdigasss" type="23" sum="200" cards=""/><action no="11" player="Sirdigasss" type="23" sum="1,190" cards=""/><cards type="Pocket" player="themopster72">C8 CA</cards><action no="10" player="themopster72" type="23" sum="350" cards=""/><action no="12" player="themopster72" type="7" sum="420" cards=""/><cards type="Pocket" player="WorstCard">H5 H6</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SQ C5 D3</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards>
+	</round>
+	
+		</game><game gamecode="5439325763">
+		 <general>
+		  <startdate>2014-01-26 17:58:25</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="635" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="1,980" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="585" dealer="0" win="230" bet="110" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="alinn00" type="15" sum="10" cards="[cards]"/><action no="3" player="Sirdigasss" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">D10 CQ</cards><action no="5" player="alinn00" type="3" sum="100" cards=""/><cards type="Pocket" player="Sirdigasss">X X</cards><action no="6" player="Sirdigasss" type="0" sum="0" cards=""/><cards type="Pocket" player="WorstCard">S5 HJ</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 DK C8</cards><action no="9" player="alinn00" type="4" sum="0" cards=""/><action no="8" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S8</cards><action no="11" player="alinn00" type="4" sum="0" cards=""/><action no="10" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="13" player="alinn00" type="4" sum="0" cards=""/><action no="12" player="WorstCard" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5439326026">
+		 <general>
+		  <startdate>2014-01-26 17:59:06</startdate>		  
+		  <players>
+		   <player seat="2" name="alinn00" chips="525" dealer="0" win="0" bet="525" rebuy="0" addon="0" reg_code="-"/><player seat="4" name="Sirdigasss" chips="1,970" dealer="0" win="1,110" bet="525" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="WorstCard" chips="705" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6188317818"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="alinn00" type="15" sum="10" cards="[cards]"/><action no="5" player="alinn00" type="2" sum="100" cards="[cards]"/><action no="3" player="Sirdigasss" type="15" sum="10" cards="[cards]"/><action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="alinn00">C7 C3</cards><action no="8" player="alinn00" type="7" sum="415" cards=""/><cards type="Pocket" player="Sirdigasss">HQ CJ</cards><action no="6" player="Sirdigasss" type="23" sum="400" cards=""/><action no="9" player="Sirdigasss" type="3" sum="115" cards=""/><cards type="Pocket" player="WorstCard">S2 S7</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D8 H4 D4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards>
+	</round>
+	
+		</game>  
+	</session>

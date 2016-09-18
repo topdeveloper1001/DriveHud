@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AB1A2F50-A5C0-4CCD-BF93-26C2A1D5F0E4}</ProjectGuid>
+    <OutputType>library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DriveHUD.Common.Wpf</RootNamespace>
+    <AssemblyName>DriveHUD.Common.Wpf</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Prism">
+      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+    </Reference>
+    <Reference Include="Prism.Wpf">
+      <HintPath>..\packages\Prism.Wpf.6.1.0\lib\net45\Prism.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Data, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Diagrams, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Diagrams.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.GridView, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.GridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Input, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Controls.Navigation, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Controls.Navigation.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Data, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Windows.Diagrams.Core, Version=2016.1.112.45, Culture=neutral, PublicKeyToken=5803cfa389c90ce7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Telerik\UI for WPF Q1 2016\Binaries\WPF45\Telerik.Windows.Diagrams.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Actions\PopupAction.cs" />
+    <Compile Include="Actions\PopupActionNotification.cs" />
+    <Compile Include="Actions\PopupTelerikWindowAction.cs" />
+    <Compile Include="Actions\PopupWindowAction.cs" />
+    <Compile Include="AttachedBehaviors\GridExtensions.cs" />
+    <Compile Include="AttachedBehaviors\IgnoreMouseWheelBehavior.cs" />
+    <Compile Include="AttachedBehaviors\ListBoxSingleClickUnselectBehavior.cs" />
+    <Compile Include="AttachedBehaviors\MainScrollBarBehavior.cs" />
+    <Compile Include="Controls\CardImageControl.cs" />
+    <Compile Include="Controls\ComboBoxEx.cs" />
+    <Compile Include="Controls\NonTopmostPopup.cs" />
+    <Compile Include="Controls\ProgressBarEx.cs" />
+    <Compile Include="Controls\ToggleSwitch.cs" />
+    <Compile Include="Converters\BackgroundToForegroundColorConverter.cs" />
+    <Compile Include="Converters\BoolNotConverter.cs" />
+    <Compile Include="Converters\BoolToVisibilityConverter.cs" />
+    <Compile Include="Converters\ColorBrightnessToSolidBrushConverter.cs" />
+    <Compile Include="Converters\ColorToSolidBrushConverter.cs" />
+    <Compile Include="Converters\DateTimeToLocalizedDateTimeConverter.cs" />
+    <Compile Include="Converters\DecimalToDoubleConverter.cs" />
+    <Compile Include="Converters\EnumBoolConverter.cs" />
+    <Compile Include="Converters\EnumToLocalizedStringConverter.cs" />
+    <Compile Include="Converters\EnumToVisiblityConverter.cs" />
+    <Compile Include="Converters\MarkupExtensionConverterBase.cs" />
+    <Compile Include="Converters\MRatioConverters.cs" />
+    <Compile Include="Converters\MultiBooleanOrConveter.cs" />
+    <Compile Include="Converters\ObjectToTypeConverter.cs" />
+    <Compile Include="Converters\StaticResourceConverter.cs" />
+    <Compile Include="Converters\StringIsEmptyToBoolConverter.cs" />
+    <Compile Include="Converters\StringToImageSourceConverter.cs" />
+    <Compile Include="Converters\StreetToVisibilityConverter.cs" />
+    <Compile Include="Converters\TiltMeterToVisibilityConverter.cs" />
+    <Compile Include="Converters\TrackConditionsScoreToColorConverter.cs" />
+    <Compile Include="Converters\TrackConditionsScoreToVisibilityConverter.cs" />
+    <Compile Include="DataTemplateSelectors\BoardTextureTemplateSelector.cs" />
+    <Compile Include="DataTemplateSelectors\DynamicTemplateSelector.cs" />
+    <Compile Include="DataTemplateSelectors\FacingPreflopTemplateSelector.cs" />
+    <Compile Include="DataTemplateSelectors\OmahaHandGridTemplateSelector.cs" />
+    <Compile Include="Helpers\ColorsHelper.cs" />
+    <Compile Include="Helpers\TextMeasurer.cs" />
+    <Compile Include="MarkupExtensions\IconExtension.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ResX\DynamicKeyProvider.cs" />
+    <Compile Include="ResX\EnumResXKeyProviderExtension.cs" />
+    <Compile Include="ResX\ManagedMarkupExtension.cs" />
+    <Compile Include="ResX\ResXConverter.cs" />
+    <Compile Include="ResX\ResXExtension.cs" />
+    <Compile Include="ResX\ResXKeyPart.cs" />
+    <Compile Include="ResX\ResXKeyProviderExtension.cs" />
+    <Compile Include="ResX\ResXParam.cs" />
+    <Compile Include="ResX\ResXParamBase.cs" />
+    <Compile Include="XmlnsDefinitionInfo.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
+      <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
+      <Name>DriveHUD.Common.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common\DriveHUD.Common.csproj">
+      <Project>{d7903448-ed88-4f04-9a16-7f9486c4291f}</Project>
+      <Name>DriveHUD.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
+      <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
+      <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.ViewModels\DriveHUD.ViewModels.csproj">
+      <Project>{c6a64d15-132d-46a6-8c95-42d8934ff6b4}</Project>
+      <Name>DriveHUD.ViewModels</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{92f8b855-af92-4969-8882-ce8fd3797cf0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Objects\HandHistories.Objects.csproj">
+      <Project>{d5c61a3a-2725-47d9-a828-f5ce4ec19a4a}</Project>
+      <Name>HandHistories.Objects</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ResX\resources.xml" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Page Include="ControlStyles\CardImageBinder.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="ControlStyles\CardSelectorTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\Filters\FilterBoardTextureTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\Filters\FilterComboBoxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\Filters\FilterListBoxTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\Filters\FilterHandActionTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\Filters\FilterOmahaHandGridTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ReportGadget\FacingPreflopTemplates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ReportGadget\ReportGridTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\ReportGadget\ReportMenuItemTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\SliderTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\TextBlockTemplate.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>"$(SolutionDir)\tools\SubWCRev\subwcrev.exe" "$(SolutionDir)." "$(ProjectDir)Properties\AssemblyInfo.template.cs" "$(ProjectDir)Properties\AssemblyInfo.cs"</PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6187674800">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Super Turbo’ 10c Double Up*4, 819018340</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:08</duration>  
+	          <gamecount>20</gamecount>  
+	          <startdate>2014-01-25 16:36:10</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>WorstCard</nickname>  
+	          <bets>3,997</bets>  
+	          <wins>4,681</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>1,484</chipsout>
+			  		<ipoints>0.23</ipoints>
+        		<statuspoints>0.23</statuspoints>
+			  		<awardpoints>0.23</awardpoints>
+	          <tournamentname>‘Super Turbo’ 10c Double Up*4</tournamentname><place>1</place><buyin>€0.09+€0.01</buyin> <totalbuyin>€0.10</totalbuyin> <ipoints>0.23</ipoints> <win>€0.18</win> <statuspoints>0.23</statuspoints> <awardpoints>0.23</awardpoints>  
+	    </general>  
+	    <game gamecode="5436293493">
+		 <general>
+		  <startdate>2014-01-25 16:36:10</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="800" dealer="0" win="1,620" bet="800" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="800" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="9" name="grigbrig" chips="800" dealer="0" win="0" bet="800" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mkmumin" type="1" sum="10" cards="[cards]"/><action no="2" player="ridingstrong" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DA D3</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">H10 C10</cards><action no="5" player="mkmumin" type="23" sum="100" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="6" player="ridingstrong" type="0" sum="0" cards=""/><cards type="Pocket" player="grigbrig">S9 H7</cards><action no="3" player="grigbrig" type="3" sum="20" cards=""/><action no="7" player="grigbrig" type="3" sum="80" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 S8 DJ</cards><action no="8" player="mkmumin" type="5" sum="110" cards=""/><action no="9" player="grigbrig" type="3" sum="110" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards><action no="10" player="mkmumin" type="4" sum="0" cards=""/><action no="12" player="mkmumin" type="3" sum="140" cards=""/><action no="11" player="grigbrig" type="5" sum="140" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CJ</cards><action no="13" player="mkmumin" type="4" sum="0" cards=""/><action no="15" player="mkmumin" type="7" sum="450" cards=""/><action no="14" player="grigbrig" type="5" sum="450" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436293871">
+		 <general>
+		  <startdate>2014-01-25 16:36:55</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="800" dealer="0" win="0" bet="62" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,620" dealer="1" win="0" bet="193" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="780" dealer="0" win="448" bet="193" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="20" cards="[cards]"/><action no="1" player="ridingstrong" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DK D8</cards><action no="5" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="mkmumin">H10 HK</cards><action no="3" player="mkmumin" type="3" sum="20" cards=""/><cards type="Pocket" player="ridingstrong">HQ H7</cards><action no="4" player="ridingstrong" type="3" sum="10" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D7 H4 SQ</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="8" player="mkmumin" type="4" sum="0" cards=""/><action no="6" player="ridingstrong" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="10" player="WorstCard" type="3" sum="42" cards=""/><action no="11" player="mkmumin" type="3" sum="42" cards=""/><action no="9" player="ridingstrong" type="5" sum="42" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S7</cards><action no="13" player="WorstCard" type="0" sum="0" cards=""/><action no="14" player="mkmumin" type="3" sum="131" cards=""/><action no="12" player="ridingstrong" type="5" sum="131" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436294212">
+		 <general>
+		  <startdate>2014-01-25 16:37:36</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="738" dealer="0" win="758" bet="738" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,427" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,035" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="10" cards="[cards]"/><action no="2" player="mkmumin" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DA SK</cards><action no="4" player="WorstCard" type="23" sum="738" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="5" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="3" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436308063">
+		 <general>
+		  <startdate>2014-01-25 16:37:51</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="758" dealer="1" win="0" bet="40" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,407" dealer="0" win="240" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,035" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mkmumin" type="1" sum="10" cards="[cards]"/><action no="2" player="ridingstrong" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DQ D9</cards><action no="3" player="WorstCard" type="23" sum="40" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="4" player="mkmumin" type="3" sum="30" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="5" player="ridingstrong" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H10 DA CQ</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><action no="6" player="mkmumin" type="5" sum="120" cards=""/><action no="7" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436308344">
+		 <general>
+		  <startdate>2014-01-25 16:38:26</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="718" dealer="0" win="60" bet="30" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,487" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="995" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="2" sum="30" cards="[cards]"/><action no="1" player="ridingstrong" type="1" sum="15" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DJ C9</cards><action no="5" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="3" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">HJ H7</cards><action no="4" player="ridingstrong" type="3" sum="15" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 C10 SK</cards><action no="7" player="WorstCard" type="4" sum="0" cards=""/><action no="6" player="ridingstrong" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S5</cards><action no="9" player="WorstCard" type="4" sum="0" cards=""/><action no="8" player="ridingstrong" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards><action no="11" player="WorstCard" type="4" sum="0" cards=""/><action no="10" player="ridingstrong" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436308970">
+		 <general>
+		  <startdate>2014-01-25 16:39:07</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="748" dealer="0" win="0" bet="15" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,487" dealer="0" win="0" bet="466" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="965" dealer="1" win="947" bet="466" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="1" sum="15" cards="[cards]"/><action no="2" player="mkmumin" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C10 S7</cards><action no="4" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">CA HJ</cards><action no="5" player="mkmumin" type="3" sum="60" cards=""/><cards type="Pocket" player="ridingstrong">HK SA</cards><action no="3" player="ridingstrong" type="23" sum="90" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 S4 H5</cards><action no="6" player="mkmumin" type="4" sum="0" cards=""/><action no="8" player="mkmumin" type="23" sum="196" cards=""/><action no="7" player="ridingstrong" type="5" sum="98" cards=""/><action no="9" player="ridingstrong" type="3" sum="98" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HA</cards><action no="10" player="mkmumin" type="5" sum="30" cards=""/><action no="11" player="ridingstrong" type="3" sum="30" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D7</cards><action no="12" player="mkmumin" type="5" sum="60" cards=""/><action no="14" player="mkmumin" type="3" sum="90" cards=""/><action no="13" player="ridingstrong" type="23" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436309892">
+		 <general>
+		  <startdate>2014-01-25 16:39:55</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="733" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,021" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,446" dealer="0" win="270" bet="180" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="mkmumin" type="1" sum="15" cards="[cards]"/><action no="2" player="ridingstrong" type="2" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C8 D3</cards><action no="3" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="4" player="mkmumin" type="3" sum="15" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="5" player="ridingstrong" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 S7 S6</cards><action no="6" player="mkmumin" type="5" sum="60" cards=""/><action no="7" player="ridingstrong" type="3" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="8" player="mkmumin" type="4" sum="0" cards=""/><action no="10" player="mkmumin" type="0" sum="0" cards=""/><action no="9" player="ridingstrong" type="5" sum="90" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436310348">
+		 <general>
+		  <startdate>2014-01-25 16:40:31</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="733" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="931" dealer="1" win="190" bet="105" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,536" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="mkmumin" type="15" sum="5" cards="[cards]"/><action no="1" player="ridingstrong" type="15" sum="5" cards="[cards]"/><action no="4" player="ridingstrong" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C6 C10</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="6" player="mkmumin" type="23" sum="100" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="7" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436310488">
+		 <general>
+		  <startdate>2014-01-25 16:40:48</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="678" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,016" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,506" dealer="1" win="240" bet="155" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="mkmumin" type="15" sum="5" cards="[cards]"/><action no="5" player="mkmumin" type="2" sum="50" cards="[cards]"/><action no="3" player="ridingstrong" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S4 C3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="8" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="6" player="ridingstrong" type="23" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436310600">
+		 <general>
+		  <startdate>2014-01-25 16:41:02</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="648" dealer="1" win="733" bet="648" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="961" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,591" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="mkmumin" type="15" sum="5" cards="[cards]"/><action no="4" player="mkmumin" type="1" sum="25" cards="[cards]"/><action no="2" player="ridingstrong" type="15" sum="5" cards="[cards]"/><action no="5" player="ridingstrong" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H8 D9</cards><action no="6" player="WorstCard" type="23" sum="643" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="7" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="8" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436310773">
+		 <general>
+		  <startdate>2014-01-25 16:41:25</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="733" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="931" dealer="1" win="240" bet="155" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,536" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="50" cards="[cards]"/><action no="3" player="mkmumin" type="15" sum="5" cards="[cards]"/><action no="1" player="ridingstrong" type="15" sum="5" cards="[cards]"/><action no="4" player="ridingstrong" type="1" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">CQ S8</cards><action no="8" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="6" player="mkmumin" type="23" sum="150" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="7" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436310927">
+		 <general>
+		  <startdate>2014-01-25 16:41:42</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="678" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,016" dealer="0" win="90" bet="55" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,506" dealer="1" win="0" bet="5" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="25" cards="[cards]"/><action no="2" player="mkmumin" type="15" sum="5" cards="[cards]"/><action no="5" player="mkmumin" type="2" sum="50" cards="[cards]"/><action no="3" player="ridingstrong" type="15" sum="5" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H2 S3</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><cards type="Pocket" player="ridingstrong">X X</cards><action no="6" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436311016">
+		 <general>
+		  <startdate>2014-01-25 16:41:53</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="648" dealer="1" win="733" bet="648" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,051" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,501" dealer="0" win="0" bet="55" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="5" cards="[cards]"/><action no="1" player="mkmumin" type="15" sum="5" cards="[cards]"/><action no="4" player="mkmumin" type="1" sum="25" cards="[cards]"/><action no="2" player="ridingstrong" type="15" sum="5" cards="[cards]"/><action no="5" player="ridingstrong" type="2" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">DA H10</cards><action no="6" player="WorstCard" type="23" sum="643" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="7" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="8" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436311162">
+		 <general>
+		  <startdate>2014-01-25 16:42:11</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="733" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,021" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,446" dealer="0" win="330" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="mkmumin" type="15" sum="10" cards="[cards]"/><action no="1" player="ridingstrong" type="15" sum="10" cards="[cards]"/><action no="4" player="ridingstrong" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">D8 C6</cards><action no="8" player="WorstCard" type="4" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="6" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="7" player="ridingstrong" type="3" sum="50" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK H7 H6</cards><action no="10" player="WorstCard" type="4" sum="0" cards=""/><action no="9" player="ridingstrong" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SA</cards><action no="12" player="WorstCard" type="0" sum="0" cards=""/><action no="11" player="ridingstrong" type="5" sum="100" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436311436">
+		 <general>
+		  <startdate>2014-01-25 16:42:47</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="623" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="1,011" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,566" dealer="1" win="380" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="mkmumin" type="15" sum="10" cards="[cards]"/><action no="5" player="mkmumin" type="2" sum="100" cards="[cards]"/><action no="3" player="ridingstrong" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">C2 S4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="8" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="6" player="ridingstrong" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436311594">
+		 <general>
+		  <startdate>2014-01-25 16:43:05</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="563" dealer="1" win="733" bet="563" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="901" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,736" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="mkmumin" type="15" sum="10" cards="[cards]"/><action no="4" player="mkmumin" type="1" sum="50" cards="[cards]"/><action no="2" player="ridingstrong" type="15" sum="10" cards="[cards]"/><action no="5" player="ridingstrong" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">HA DK</cards><action no="6" player="WorstCard" type="23" sum="553" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="7" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="8" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436311765">
+		 <general>
+		  <startdate>2014-01-25 16:43:26</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="733" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="841" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,626" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="100" cards="[cards]"/><action no="3" player="mkmumin" type="15" sum="10" cards="[cards]"/><action no="1" player="ridingstrong" type="15" sum="10" cards="[cards]"/><action no="4" player="ridingstrong" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H3 S5</cards><cards type="Pocket" player="mkmumin">X X</cards><action no="6" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="7" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436327669">
+		 <general>
+		  <startdate>2014-01-25 16:43:49</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="803" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="831" dealer="0" win="0" bet="110" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,566" dealer="1" win="380" bet="210" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="4" player="WorstCard" type="1" sum="50" cards="[cards]"/><action no="2" player="mkmumin" type="15" sum="10" cards="[cards]"/><action no="5" player="mkmumin" type="2" sum="100" cards="[cards]"/><action no="3" player="ridingstrong" type="15" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H3 S4</cards><action no="7" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="8" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="6" player="ridingstrong" type="23" sum="200" cards=""/>
+	</round>
+	
+		</game><game gamecode="5436327792">
+		 <general>
+		  <startdate>2014-01-25 16:44:05</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="743" dealer="1" win="0" bet="10" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="721" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,736" dealer="0" win="180" bet="110" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="WorstCard" type="15" sum="10" cards="[cards]"/><action no="1" player="mkmumin" type="15" sum="10" cards="[cards]"/><action no="4" player="mkmumin" type="1" sum="50" cards="[cards]"/><action no="2" player="ridingstrong" type="15" sum="10" cards="[cards]"/><action no="5" player="ridingstrong" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">H8 H2</cards><action no="6" player="WorstCard" type="0" sum="0" cards=""/><cards type="Pocket" player="mkmumin">X X</cards><action no="7" player="mkmumin" type="0" sum="0" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards>
+	</round>
+	
+		</game><game gamecode="5436327929">
+		 <general>
+		  <startdate>2014-01-25 16:44:19</startdate>		  
+		  <players>
+		   <player seat="2" name="WorstCard" chips="733" dealer="0" win="1,484" bet="733" rebuy="0" addon="0" reg_code="6187674800"/><player seat="4" name="mkmumin" chips="661" dealer="1" win="0" bet="661" rebuy="0" addon="0" reg_code="-"/><player seat="7" name="ridingstrong" chips="1,806" dealer="0" win="0" bet="90" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="WorstCard" type="15" sum="15" cards="[cards]"/><action no="5" player="WorstCard" type="2" sum="150" cards="[cards]"/><action no="3" player="mkmumin" type="15" sum="15" cards="[cards]"/><action no="1" player="ridingstrong" type="15" sum="15" cards="[cards]"/><action no="4" player="ridingstrong" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="WorstCard">S7 SA</cards><action no="8" player="WorstCard" type="7" sum="568" cards=""/><cards type="Pocket" player="mkmumin">DA C5</cards><action no="6" player="mkmumin" type="23" sum="600" cards=""/><action no="9" player="mkmumin" type="7" sum="46" cards=""/><cards type="Pocket" player="ridingstrong">X X</cards><action no="7" player="ridingstrong" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 H6 H7</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game>  
+	</session>

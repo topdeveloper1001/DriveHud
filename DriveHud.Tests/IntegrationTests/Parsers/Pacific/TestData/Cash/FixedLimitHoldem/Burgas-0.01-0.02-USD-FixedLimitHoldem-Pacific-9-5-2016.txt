@@ -1,0 +1,37 @@
+#Game No : 436471207
+***** 888poker Hand History for Game 436471207 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 18:43:35
+Table Burgas 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: thegrind14 ( $0.20 )
+Seat 4: kucher1408 ( $0.81 )
+Seat 6: Frabagoos ( $4 )
+kucher1408 posts small blind [$0.01]
+Frabagoos posts big blind [$0.02]
+** Dealing down cards **
+thegrind14 calls [$0.02]
+kucher1408 raises [$0.03]
+Frabagoos calls [$0.02]
+thegrind14 calls [$0.02]
+** Dealing flop ** [ 2s, Qd, 8d ]
+kucher1408 bets [$0.02]
+Frabagoos calls [$0.02]
+thegrind14 calls [$0.02]
+** Dealing turn ** [ 4s ]
+kucher1408 bets [$0.04]
+Frabagoos calls [$0.04]
+thegrind14 calls [$0.04]
+** Dealing river ** [ Ts ]
+kucher1408 checks
+Frabagoos checks
+thegrind14 bets [$0.04]
+kucher1408 calls [$0.04]
+** Summary **
+thegrind14 shows [ 5s, 8s ]
+kucher1408 mucks [ 6d, Ad ]
+Frabagoos mucks [ 3h, Ah ]
+thegrind14 collected [ $0.29 ]
+thegrind14 collected [ $0.08 ]
+
+

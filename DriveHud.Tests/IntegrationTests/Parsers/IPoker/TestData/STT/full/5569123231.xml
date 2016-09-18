@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="5569123231">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>Helsinki, 712405551</tablename>  
+	          <tournamentcurrency>USD</tournamentcurrency>  
+	          <duration>00:40</duration>  
+	          <gamecount>54</gamecount>  
+	          <startdate>2012-04-24 16:22:47</startdate>  
+	          <currency>USD</currency>  
+	          <nickname>WhiteRiderT</nickname>  
+	          <bets>9,450</bets>  
+	          <wins>7,950</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>0</chipsout>
+			  		<ipoints>0.34</ipoints>
+        		<statuspoints>0.34</statuspoints>
+			  		<awardpoints>0.34</awardpoints>
+			  		<is_asian>0</is_asian>
+	          <tournamentname>Helsinki</tournamentname><place>4</place><buyin>$0.10+$0.02</buyin> <totalbuyin>$0.12</totalbuyin> <ipoints>0.34</ipoints> <win>$0.00</win> <statuspoints>0.34</statuspoints> <awardpoints>0.34</awardpoints>  
+	    </general>  
+	    <game gamecode="4097571932">
+		 <general>
+		  <startdate>2012-04-24 16:22:47</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,500" dealer="0" win="110" bet="80" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aRkker" type="1" sum="10" cards="[cards]"/><action no="2" player="hadhad09" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="10" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="aRkker">X X</cards><action no="11" player="aRkker" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="12" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="3" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="4" player="feri972" type="23" sum="80" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="6" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="7" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="8" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HA S10</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097572042">
+		 <general>
+		  <startdate>2012-04-24 16:23:28</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="1,490" dealer="1" win="310" bet="140" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,500" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="10" cards="[cards]"/><action no="2" player="Dreadlyman" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="9" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="aRkker">X X</cards><action no="10" player="aRkker" type="3" sum="60" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="11" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="12" player="Dreadlyman" type="3" sum="40" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="3" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="5" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="6" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="7" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D10 HJ</cards><action no="8" player="WhiteRiderT" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 SK DK</cards><action no="15" player="aRkker" type="23" sum="80" cards=""/><action no="13" player="Dreadlyman" type="4" sum="0" cards=""/><action no="16" player="Dreadlyman" type="0" sum="0" cards=""/><action no="14" player="WhiteRiderT" type="5" sum="40" cards=""/><action no="17" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097572245">
+		 <general>
+		  <startdate>2012-04-24 16:24:53</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,440" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,530" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,500" dealer="0" win="110" bet="80" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dreadlyman" type="1" sum="10" cards="[cards]"/><action no="2" player="feri972" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="8" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="aRkker">X X</cards><action no="9" player="aRkker" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="10" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="11" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="12" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="3" player="G07M1LK" type="23" sum="80" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="4" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="5" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="6" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SQ D9</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097572382">
+		 <general>
+		  <startdate>2012-04-24 16:25:40</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,500" dealer="0" win="250" bet="120" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,510" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,530" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="feri972" type="1" sum="10" cards="[cards]"/><action no="2" player="G07M1LK" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="7" player="beldr" type="23" sum="60" cards=""/><cards type="Pocket" player="aRkker">X X</cards><action no="8" player="aRkker" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="9" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="10" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="11" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="12" player="G07M1LK" type="3" sum="40" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="3" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="4" player="longlad37" type="3" sum="20" cards=""/><action no="13" player="longlad37" type="3" sum="40" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="5" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D3 HQ</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK S3 H5</cards><action no="16" player="beldr" type="5" sum="60" cards=""/><action no="14" player="G07M1LK" type="4" sum="0" cards=""/><action no="17" player="G07M1LK" type="0" sum="0" cards=""/><action no="15" player="longlad37" type="4" sum="0" cards=""/><action no="18" player="longlad37" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097572570">
+		 <general>
+		  <startdate>2012-04-24 16:26:51</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,630" dealer="0" win="0" bet="160" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="1,660" dealer="0" win="190" bet="1,660" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="1,470" dealer="0" win="3,250" bet="1,470" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,430" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,470" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,440" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="10" cards="[cards]"/><action no="2" player="Bobek38" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="6" player="beldr" type="23" sum="60" cards=""/><cards type="Pocket" player="aRkker">DQ D9</cards><action no="7" player="aRkker" type="3" sum="60" cards=""/><cards type="Pocket" player="hadhad09">S4 HA</cards><action no="8" player="hadhad09" type="3" sum="60" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="9" player="Dreadlyman" type="3" sum="60" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="10" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="11" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="12" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="3" player="longlad37" type="3" sum="20" cards=""/><action no="13" player="longlad37" type="3" sum="40" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="4" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H6 C2</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA D6 CA</cards><action no="15" player="beldr" type="4" sum="0" cards=""/><action no="16" player="aRkker" type="4" sum="0" cards=""/><action no="17" player="hadhad09" type="4" sum="0" cards=""/><action no="18" player="Dreadlyman" type="4" sum="0" cards=""/><action no="14" player="longlad37" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards><action no="20" player="beldr" type="5" sum="100" cards=""/><action no="25" player="beldr" type="0" sum="0" cards=""/><action no="21" player="aRkker" type="3" sum="100" cards=""/><action no="26" player="aRkker" type="3" sum="300" cards=""/><action no="22" player="hadhad09" type="23" sum="400" cards=""/><action no="23" player="Dreadlyman" type="0" sum="0" cards=""/><action no="19" player="longlad37" type="4" sum="0" cards=""/><action no="24" player="longlad37" type="0" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards><action no="27" player="aRkker" type="5" sum="1,200" cards=""/><action no="28" player="hadhad09" type="7" sum="1,010" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097578109">
+		 <general>
+		  <startdate>2012-04-24 16:29:00</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,370" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,460" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,380" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,500" dealer="0" win="110" bet="80" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Bobek38" type="1" sum="10" cards="[cards]"/><action no="2" player="longlad37" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="5" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="aRkker">X X</cards><action no="6" player="aRkker" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="7" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="8" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="9" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="10" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="11" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="12" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="23" sum="80" cards=""/><cards type="Pocket" player="WhiteRiderT">H2 CA</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097578241">
+		 <general>
+		  <startdate>2012-04-24 16:29:48</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="190" dealer="0" win="440" bet="190" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,370" dealer="0" win="150" bet="340" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,360" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,530" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,400" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="longlad37" type="1" sum="20" cards="[cards]"/><action no="2" player="ata" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="4" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="aRkker">SJ SA</cards><action no="5" player="aRkker" type="23" sum="190" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="6" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">HK H10</cards><action no="7" player="Dreadlyman" type="23" sum="340" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="8" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="9" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="10" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="11" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="12" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H6 D7</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D6 S6 C2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C7</cards>
+	</round>
+	
+		</game><game gamecode="4097578362">
+		 <general>
+		  <startdate>2012-04-24 16:30:36</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,250" dealer="0" win="3,310" bet="3,250" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,340" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,400" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="20" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="3" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="aRkker">X X</cards><action no="4" player="aRkker" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="5" player="hadhad09" type="23" sum="3,250" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="6" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="7" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="8" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="9" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="10" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="11" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CA C7</cards><action no="12" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097578482">
+		 <general>
+		  <startdate>2012-04-24 16:31:24</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,470" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,310" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,180" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,470" dealer="0" win="0" bet="120" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,340" dealer="0" win="1,540" bet="1,340" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,360" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="beldr" type="2" sum="40" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="12" player="beldr" type="4" sum="0" cards=""/><cards type="Pocket" player="aRkker">X X</cards><action no="3" player="aRkker" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="4" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="5" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="6" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="7" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="8" player="Bobek38" type="3" sum="40" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="9" player="longlad37" type="3" sum="40" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="10" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S6 S7</cards><action no="11" player="WhiteRiderT" type="3" sum="20" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK S2 CJ</cards><action no="14" player="beldr" type="4" sum="0" cards=""/><action no="18" player="beldr" type="0" sum="0" cards=""/><action no="15" player="Bobek38" type="5" sum="80" cards=""/><action no="19" player="Bobek38" type="0" sum="0" cards=""/><action no="16" player="longlad37" type="23" sum="1,300" cards=""/><action no="13" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="17" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097578678">
+		 <general>
+		  <startdate>2012-04-24 16:32:41</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,430" dealer="0" win="0" bet="20" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="440" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,310" dealer="0" win="3,730" bet="3,310" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,180" dealer="0" win="0" bet="180" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,500" dealer="0" win="0" bet="180" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,460" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="beldr" type="1" sum="20" cards="[cards]"/><action no="2" player="aRkker" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="11" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="aRkker">X X</cards><action no="12" player="aRkker" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">S8 SQ</cards><action no="3" player="hadhad09" type="3" sum="40" cards=""/><action no="13" player="hadhad09" type="3" sum="140" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="4" player="Dreadlyman" type="23" sum="180" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="5" player="feri972" type="3" sum="180" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="6" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="7" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="8" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="9" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S5 DJ</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK D8 DQ</cards><action no="14" player="hadhad09" type="5" sum="3,130" cards=""/><action no="15" player="Dreadlyman" type="0" sum="0" cards=""/><action no="16" player="feri972" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097584335">
+		 <general>
+		  <startdate>2012-04-24 16:33:56</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="2" name="aRkker" chips="400" dealer="0" win="0" bet="400" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,730" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,460" dealer="0" win="840" bet="400" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,540" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="aRkker" type="1" sum="20" cards="[cards]"/><action no="2" player="hadhad09" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="10" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="aRkker">DA H5</cards><action no="11" player="aRkker" type="23" sum="400" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="12" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="3" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="4" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">CK DQ</cards><action no="5" player="G07M1LK" type="3" sum="40" cards=""/><action no="13" player="G07M1LK" type="3" sum="360" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="6" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="7" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="8" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SK HQ</cards><action no="9" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK S10 D9</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards>
+	</round>
+	
+		</game><game gamecode="4097584611">
+		 <general>
+		  <startdate>2012-04-24 16:34:48</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,690" dealer="0" win="480" bet="360" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,000" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,900" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,540" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="20" cards="[cards]"/><action no="2" player="Dreadlyman" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="9" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">S4 S7</cards><action no="10" player="hadhad09" type="3" sum="20" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="11" player="Dreadlyman" type="4" sum="0" cards=""/><cards type="Pocket" player="feri972">X X</cards><action no="3" player="feri972" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="3" sum="40" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="5" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="6" player="longlad37" type="3" sum="40" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="7" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C9 D4</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C4 DQ D10</cards><action no="12" player="hadhad09" type="4" sum="0" cards=""/><action no="13" player="Dreadlyman" type="4" sum="0" cards=""/><action no="14" player="G07M1LK" type="4" sum="0" cards=""/><action no="15" player="longlad37" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H7</cards><action no="16" player="hadhad09" type="5" sum="320" cards=""/><action no="17" player="Dreadlyman" type="0" sum="0" cards=""/><action no="18" player="G07M1LK" type="0" sum="0" cards=""/><action no="19" player="longlad37" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097585045">
+		 <general>
+		  <startdate>2012-04-24 16:36:05</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,810" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="960" dealer="0" win="0" bet="40" rebuy="0" addon="0"/><player seat="5" name="feri972" chips="1,320" dealer="0" win="0" bet="1,320" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="1,860" dealer="0" win="3,220" bet="1,860" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dreadlyman" type="1" sum="20" cards="[cards]"/><action no="2" player="feri972" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="8" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="9" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="10" player="Dreadlyman" type="3" sum="20" cards=""/><cards type="Pocket" player="feri972">SK D6</cards><action no="11" player="feri972" type="4" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">S3 S5</cards><action no="3" player="G07M1LK" type="3" sum="40" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="4" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="5" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="6" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S10 H9</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 DK S9</cards><action no="12" player="Dreadlyman" type="4" sum="0" cards=""/><action no="15" player="Dreadlyman" type="0" sum="0" cards=""/><action no="13" player="feri972" type="4" sum="0" cards=""/><action no="16" player="feri972" type="23" sum="240" cards=""/><action no="14" player="G07M1LK" type="5" sum="90" cards=""/><action no="17" player="G07M1LK" type="3" sum="150" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="18" player="feri972" type="5" sum="200" cards=""/><action no="20" player="feri972" type="7" sum="840" cards=""/><action no="19" player="G07M1LK" type="23" sum="1,580" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C2</cards>
+	</round>
+	
+		</game><game gamecode="4097585492">
+		 <general>
+		  <startdate>2012-04-24 16:37:23</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,810" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="920" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="3,220" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,470" dealer="0" win="240" bet="180" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="6" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="7" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="8" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="9" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="2" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="3" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="4" player="ata" type="23" sum="180" cards=""/><cards type="Pocket" player="WhiteRiderT">HK D5</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097585714">
+		 <general>
+		  <startdate>2012-04-24 16:38:06</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,810" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="920" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="3,160" dealer="0" win="2,700" bet="1,320" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,350" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="1,500" dealer="0" win="0" bet="1,320" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="30" cards="[cards]"/><action no="2" player="Bobek38" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="6" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="7" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="8" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">S5 D9</cards><action no="9" player="G07M1LK" type="3" sum="30" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="10" player="Bobek38" type="4" sum="0" cards=""/><cards type="Pocket" player="longlad37">SK DA</cards><action no="3" player="longlad37" type="3" sum="60" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="4" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C2 SQ</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA H3 H4</cards><action no="11" player="G07M1LK" type="4" sum="0" cards=""/><action no="14" player="G07M1LK" type="3" sum="60" cards=""/><action no="12" player="Bobek38" type="4" sum="0" cards=""/><action no="15" player="Bobek38" type="0" sum="0" cards=""/><action no="13" player="longlad37" type="5" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="16" player="G07M1LK" type="5" sum="300" cards=""/><action no="17" player="longlad37" type="3" sum="300" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards><action no="18" player="G07M1LK" type="5" sum="900" cards=""/><action no="19" player="longlad37" type="3" sum="900" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097592762">
+		 <general>
+		  <startdate>2012-04-24 16:39:16</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,810" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="920" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,540" dealer="1" win="0" bet="180" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,290" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="180" dealer="0" win="390" bet="180" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Bobek38" type="1" sum="30" cards="[cards]"/><action no="2" player="longlad37" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="5" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="6" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="7" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">S8 DJ</cards><action no="8" player="G07M1LK" type="3" sum="60" cards=""/><action no="11" player="G07M1LK" type="3" sum="60" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="9" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">CJ CA</cards><action no="10" player="longlad37" type="23" sum="120" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">DA HJ</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 H10 D3</cards><action no="13" player="G07M1LK" type="3" sum="60" cards=""/><action no="12" player="longlad37" type="7" sum="60" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H9</cards>
+	</round>
+	
+		</game><game gamecode="4097592945">
+		 <general>
+		  <startdate>2012-04-24 16:40:17</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,810" dealer="0" win="0" bet="180" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="920" dealer="0" win="1,190" bet="920" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,260" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="390" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,530" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="longlad37" type="1" sum="30" cards="[cards]"/><action no="2" player="ata" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="4" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="5" player="hadhad09" type="3" sum="60" cards=""/><action no="11" player="hadhad09" type="3" sum="120" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="6" player="Dreadlyman" type="23" sum="180" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="7" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">X X</cards><action no="8" player="Bobek38" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="9" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="10" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SK D6</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 S5 HA</cards><action no="12" player="hadhad09" type="4" sum="0" cards=""/><action no="14" player="hadhad09" type="0" sum="0" cards=""/><action no="13" player="Dreadlyman" type="5" sum="740" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097593097">
+		 <general>
+		  <startdate>2012-04-24 16:41:09</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,630" dealer="0" win="2,610" bet="1,260" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="7" name="Bobek38" chips="1,260" dealer="0" win="0" bet="1,260" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="360" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,470" dealer="0" win="0" bet="30" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,320" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="30" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="3" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">HA DK</cards><action no="4" player="hadhad09" type="23" sum="240" cards=""/><action no="11" player="hadhad09" type="3" sum="1,020" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="5" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="6" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="Bobek38">SJ DA</cards><action no="7" player="Bobek38" type="23" sum="1,260" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="8" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="9" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CJ H9</cards><action no="10" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H5 C10 S2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards>
+	</round>
+	
+		</game><game gamecode="4097593234">
+		 <general>
+		  <startdate>2012-04-24 16:41:58</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,410" dealer="0" win="570" bet="360" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,980" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,360" dealer="0" win="0" bet="180" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,260" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="beldr" type="2" sum="60" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="9" player="beldr" type="23" sum="180" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="3" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="4" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="3" sum="60" cards=""/><action no="10" player="G07M1LK" type="3" sum="120" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="6" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="7" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D2 DQ</cards><action no="8" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA H8 C10</cards><action no="11" player="beldr" type="5" sum="180" cards=""/><action no="12" player="G07M1LK" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097593336">
+		 <general>
+		  <startdate>2012-04-24 16:42:36</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="1,620" dealer="0" win="3,240" bet="1,620" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,980" dealer="0" win="0" bet="1,620" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,180" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="beldr" type="1" sum="30" cards="[cards]"/><action no="2" player="hadhad09" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">DA HK</cards><action no="8" player="beldr" type="23" sum="180" cards=""/><cards type="Pocket" player="hadhad09">C6 CK</cards><action no="9" player="hadhad09" type="3" sum="120" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="3" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">X X</cards><action no="5" player="longlad37" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="6" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SA H6</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C5 DK S4</cards><action no="10" player="beldr" type="5" sum="180" cards=""/><action no="12" player="beldr" type="23" sum="1,170" cards=""/><action no="11" player="hadhad09" type="23" sum="675" cards=""/><action no="13" player="hadhad09" type="3" sum="495" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H3</cards><action no="14" player="beldr" type="5" sum="270" cards=""/><action no="15" player="hadhad09" type="3" sum="270" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CQ</cards>
+	</round>
+	
+		</game><game gamecode="4097593487">
+		 <general>
+		  <startdate>2012-04-24 16:43:34</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,240" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,360" dealer="0" win="780" bet="360" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,190" dealer="0" win="0" bet="60" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,180" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="8" name="longlad37" chips="360" dealer="0" win="0" bet="360" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="30" cards="[cards]"/><action no="2" player="Dreadlyman" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="7" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">HK SK</cards><action no="8" player="hadhad09" type="23" sum="240" cards=""/><action no="11" player="hadhad09" type="3" sum="120" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="9" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="3" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="longlad37">C7 H7</cards><action no="4" player="longlad37" type="3" sum="60" cards=""/><action no="10" player="longlad37" type="7" sum="300" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="5" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H3 C6</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ D3 DK</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DQ</cards>
+	</round>
+	
+		</game><game gamecode="4097593663">
+		 <general>
+		  <startdate>2012-04-24 16:44:36</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,780" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,130" dealer="0" win="1,230" bet="1,130" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,180" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dreadlyman" type="1" sum="50" cards="[cards]"/><action no="2" player="G07M1LK" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="5" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="6" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="7" player="Dreadlyman" type="23" sum="1,130" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="8" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CK H7</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097598864">
+		 <general>
+		  <startdate>2012-04-24 16:45:13</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,780" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,230" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,080" dealer="0" win="700" bet="600" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,440" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="50" cards="[cards]"/><action no="2" player="ata" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="4" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="5" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="6" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="7" player="G07M1LK" type="23" sum="600" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="8" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S9 S5</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097598990">
+		 <general>
+		  <startdate>2012-04-24 16:45:59</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,780" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,180" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,340" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="0" win="150" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="50" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="3" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="4" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="5" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="6" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="7" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D8 S8</cards>
+	</round>
+	
+		</game><game gamecode="4097599052">
+		 <general>
+		  <startdate>2012-04-24 16:46:26</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,240" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,780" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,230" dealer="0" win="1,380" bet="1,230" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,180" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,280" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="beldr" type="2" sum="100" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="8" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="3" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="4" player="Dreadlyman" type="23" sum="1,230" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="6" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D4 DJ</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097599178">
+		 <general>
+		  <startdate>2012-04-24 16:47:07</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,140" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,780" dealer="0" win="150" bet="100" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,180" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="beldr" type="1" sum="50" cards="[cards]"/><action no="2" player="hadhad09" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="7" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><cards type="Pocket" player="Dreadlyman">X X</cards><action no="3" player="Dreadlyman" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="5" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C5 CQ</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097599247">
+		 <general>
+		  <startdate>2012-04-24 16:47:35</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,090" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,830" dealer="0" win="400" bet="300" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,380" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,180" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="50" cards="[cards]"/><action no="2" player="Dreadlyman" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="6" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="7" player="hadhad09" type="3" sum="50" cards=""/><cards type="Pocket" player="Dreadlyman">X X</cards><action no="8" player="Dreadlyman" type="4" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="3" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="4" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SA H2</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 H9 D3</cards><action no="9" player="hadhad09" type="5" sum="200" cards=""/><action no="10" player="Dreadlyman" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097599387">
+		 <general>
+		  <startdate>2012-04-24 16:48:21</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,090" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,930" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="4" name="Dreadlyman" chips="1,280" dealer="0" win="0" bet="1,280" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,180" dealer="0" win="2,560" bet="1,280" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Dreadlyman" type="1" sum="50" cards="[cards]"/><action no="2" player="G07M1LK" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="5" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="6" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="Dreadlyman">H8 SJ</cards><action no="7" player="Dreadlyman" type="3" sum="50" cards=""/><action no="9" player="Dreadlyman" type="3" sum="200" cards=""/><cards type="Pocket" player="G07M1LK">SA HQ</cards><action no="8" player="G07M1LK" type="23" sum="300" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 H7</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 DA H6</cards><action no="10" player="Dreadlyman" type="5" sum="980" cards=""/><action no="11" player="G07M1LK" type="3" sum="980" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S5</cards>
+	</round>
+	
+		</game><game gamecode="4097599545">
+		 <general>
+		  <startdate>2012-04-24 16:49:21</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,090" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,930" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,460" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="0" win="150" bet="100" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="50" cards="[cards]"/><action no="2" player="ata" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="4" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="5" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="6" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><cards type="Pocket" player="WhiteRiderT">C6 S10</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097599615">
+		 <general>
+		  <startdate>2012-04-24 16:49:44</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,090" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,930" dealer="0" win="450" bet="300" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,410" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,340" dealer="0" win="0" bet="50" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,230" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="50" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="3" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="4" player="hadhad09" type="23" sum="300" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="6" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D4 SA</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097599712">
+		 <general>
+		  <startdate>2012-04-24 16:50:19</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="3,090" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,080" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,410" dealer="0" win="450" bet="300" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,130" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="beldr" type="2" sum="100" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="7" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="3" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="23" sum="300" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="5" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">C10 H7</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097612002">
+		 <general>
+		  <startdate>2012-04-24 16:51:03</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,990" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,080" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,560" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,080" dealer="1" win="1,305" bet="1,080" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="beldr" type="1" sum="75" cards="[cards]"/><action no="2" player="hadhad09" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="6" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="7" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="3" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="4" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H5 H6</cards><action no="5" player="WhiteRiderT" type="23" sum="1,080" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097612066">
+		 <general>
+		  <startdate>2012-04-24 16:51:25</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,915" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,930" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,560" dealer="0" win="300" bet="150" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,305" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="75" cards="[cards]"/><action no="2" player="G07M1LK" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="5" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">C8 HK</cards><action no="6" player="hadhad09" type="3" sum="75" cards=""/><cards type="Pocket" player="G07M1LK">C9 S2</cards><action no="7" player="G07M1LK" type="4" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S9 SQ</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 S3 H7</cards><action no="8" player="hadhad09" type="4" sum="0" cards=""/><action no="9" player="G07M1LK" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards><action no="10" player="hadhad09" type="4" sum="0" cards=""/><action no="11" player="G07M1LK" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DJ</cards><action no="12" player="hadhad09" type="4" sum="0" cards=""/><action no="13" player="G07M1LK" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097612208">
+		 <general>
+		  <startdate>2012-04-24 16:52:13</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,915" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,780" dealer="1" win="675" bet="450" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,710" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,290" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,305" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="75" cards="[cards]"/><action no="2" player="ata" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="4" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="5" player="hadhad09" type="23" sum="450" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="6" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="7" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SJ H6</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097612285">
+		 <general>
+		  <startdate>2012-04-24 16:52:43</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,915" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,005" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,635" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,140" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,305" dealer="0" win="225" bet="150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="75" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="3" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="4" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="6" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">CK D7</cards>
+	</round>
+	
+		</game><game gamecode="4097612378">
+		 <general>
+		  <startdate>2012-04-24 16:53:15</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,915" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,005" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,635" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,065" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,380" dealer="0" win="1,530" bet="1,380" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="beldr" type="2" sum="150" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="7" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="3" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="5" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D6 CQ</cards><action no="6" player="WhiteRiderT" type="23" sum="1,380" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097612454">
+		 <general>
+		  <startdate>2012-04-24 16:53:39</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,765" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,005" dealer="0" win="375" bet="150" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,635" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,065" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="beldr" type="1" sum="75" cards="[cards]"/><action no="2" player="hadhad09" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="6" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">SQ S2</cards><action no="7" player="hadhad09" type="4" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">S6 S7</cards><action no="3" player="G07M1LK" type="3" sum="150" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="4" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">H8 H4</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DJ CK HK</cards><action no="8" player="hadhad09" type="4" sum="0" cards=""/><action no="9" player="G07M1LK" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D10</cards><action no="10" player="hadhad09" type="4" sum="0" cards=""/><action no="11" player="G07M1LK" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D4</cards><action no="12" player="hadhad09" type="4" sum="0" cards=""/><action no="13" player="G07M1LK" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097612551">
+		 <general>
+		  <startdate>2012-04-24 16:54:11</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,690" dealer="1" win="675" bet="450" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,230" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,485" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,065" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="75" cards="[cards]"/><action no="2" player="G07M1LK" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="5" player="beldr" type="23" sum="450" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="6" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="7" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">SK C9</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097612649">
+		 <general>
+		  <startdate>2012-04-24 16:54:43</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,915" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,155" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,335" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,065" dealer="0" win="225" bet="150" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="75" cards="[cards]"/><action no="2" player="ata" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="4" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="5" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="6" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><cards type="Pocket" player="WhiteRiderT">S8 SQ</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097612730">
+		 <general>
+		  <startdate>2012-04-24 16:55:12</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,915" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="4,155" dealer="0" win="0" bet="1,140" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,260" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="1,140" dealer="0" win="2,430" bet="1,140" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,530" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="75" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="3" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">S10 S9</cards><action no="4" player="hadhad09" type="3" sum="150" cards=""/><action no="8" player="hadhad09" type="3" sum="150" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">DQ HQ</cards><action no="6" player="ata" type="23" sum="300" cards=""/><cards type="Pocket" player="WhiteRiderT">H7 S2</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA H9 HA</cards><action no="10" player="hadhad09" type="3" sum="840" cards=""/><action no="9" player="ata" type="5" sum="840" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="4097612904">
+		 <general>
+		  <startdate>2012-04-24 16:56:12</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,915" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,015" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="2,430" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,380" dealer="0" win="1,530" bet="1,380" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="beldr" type="2" sum="150" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="7" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="3" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="5" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D6 CQ</cards><action no="6" player="WhiteRiderT" type="23" sum="1,380" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097618058">
+		 <general>
+		  <startdate>2012-04-24 16:56:49</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,765" dealer="0" win="0" bet="75" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="3,015" dealer="0" win="0" bet="150" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="2,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,530" dealer="1" win="1,755" bet="1,530" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="beldr" type="1" sum="75" cards="[cards]"/><action no="2" player="hadhad09" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="6" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="7" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="3" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="4" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 C8</cards><action no="5" player="WhiteRiderT" type="23" sum="1,530" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097618127">
+		 <general>
+		  <startdate>2012-04-24 16:57:10</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,690" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="2,865" dealer="0" win="5,730" bet="2,865" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="5,260" dealer="0" win="0" bet="2,865" rebuy="0" addon="0"/><player seat="9" name="ata" chips="2,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,755" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="75" cards="[cards]"/><action no="2" player="G07M1LK" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="5" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">S3 D3</cards><action no="6" player="hadhad09" type="23" sum="2,865" cards=""/><cards type="Pocket" player="G07M1LK">CQ HA</cards><action no="7" player="G07M1LK" type="3" sum="2,715" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HQ D6</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D10 D2 H2</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">HK</cards>
+	</round>
+	
+		</game><game gamecode="4097618253">
+		 <general>
+		  <startdate>2012-04-24 16:57:58</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,690" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="5,730" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="2,395" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="9" name="ata" chips="2,430" dealer="0" win="300" bet="200" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,755" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="100" cards="[cards]"/><action no="2" player="ata" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="4" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="5" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="6" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><cards type="Pocket" player="WhiteRiderT">H6 CQ</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097618352">
+		 <general>
+		  <startdate>2012-04-24 16:58:33</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,690" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="5,730" dealer="0" win="700" bet="400" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="2,295" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="2,530" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,755" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="100" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">X X</cards><action no="3" player="beldr" type="0" sum="0" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="4" player="hadhad09" type="23" sum="400" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="6" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 S6</cards><action no="7" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097618445">
+		 <general>
+		  <startdate>2012-04-24 16:59:05</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="2,690" dealer="0" win="0" bet="2,295" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="6,030" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="2,295" dealer="0" win="4,690" bet="2,295" rebuy="0" addon="0"/><player seat="9" name="ata" chips="2,430" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,555" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="beldr" type="2" sum="200" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">SJ HQ</cards><action no="7" player="beldr" type="3" sum="2,095" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="3" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">DK C9</cards><action no="4" player="G07M1LK" type="23" sum="2,295" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="5" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 D5</cards><action no="6" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 CA D8</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H5</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards>
+	</round>
+	
+		</game><game gamecode="4097618573">
+		 <general>
+		  <startdate>2012-04-24 16:59:50</startdate>		  
+		  <players>
+		   <player seat="1" name="beldr" chips="395" dealer="0" win="0" bet="395" rebuy="0" addon="0"/><player seat="3" name="hadhad09" chips="6,030" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,690" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="2,430" dealer="0" win="1,195" bet="600" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,455" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="beldr" type="1" sum="100" cards="[cards]"/><action no="2" player="hadhad09" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="beldr">C8 D8</cards><action no="6" player="beldr" type="7" sum="295" cards=""/><cards type="Pocket" player="hadhad09">X X</cards><action no="7" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="3" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">HQ HA</cards><action no="4" player="ata" type="23" sum="600" cards=""/><cards type="Pocket" player="WhiteRiderT">S3 CK</cards><action no="5" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H2 CJ DA</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D4</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards>
+	</round>
+	
+		</game><game gamecode="4097618684">
+		 <general>
+		  <startdate>2012-04-24 17:00:24</startdate>		  
+		  <players>
+		   <player seat="3" name="hadhad09" chips="5,830" dealer="0" win="600" bet="400" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,690" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="9" name="ata" chips="3,025" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,455" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="100" cards="[cards]"/><action no="2" player="G07M1LK" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hadhad09">C7 HQ</cards><action no="5" player="hadhad09" type="3" sum="100" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="6" player="G07M1LK" type="4" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D10 H4</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S4 D7 C6</cards><action no="7" player="hadhad09" type="5" sum="200" cards=""/><action no="8" player="G07M1LK" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097618781">
+		 <general>
+		  <startdate>2012-04-24 17:00:57</startdate>		  
+		  <players>
+		   <player seat="3" name="hadhad09" chips="6,030" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,490" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="9" name="ata" chips="3,025" dealer="0" win="3,225" bet="3,025" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,455" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="100" cards="[cards]"/><action no="2" player="ata" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hadhad09">X X</cards><action no="4" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="3" sum="100" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="6" player="ata" type="4" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">D6 C7</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 CQ SJ</cards><action no="7" player="G07M1LK" type="4" sum="0" cards=""/><action no="8" player="ata" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D2</cards><action no="9" player="G07M1LK" type="4" sum="0" cards=""/><action no="11" player="G07M1LK" type="0" sum="0" cards=""/><action no="10" player="ata" type="5" sum="2,825" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097618882">
+		 <general>
+		  <startdate>2012-04-24 17:01:33</startdate>		  
+		  <players>
+		   <player seat="3" name="hadhad09" chips="6,030" dealer="0" win="700" bet="400" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,290" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="3,225" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,455" dealer="0" win="0" bet="200" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="100" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hadhad09">X X</cards><action no="3" player="hadhad09" type="3" sum="200" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="5" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S9 D8</cards><action no="6" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HQ H2 S4</cards><action no="8" player="hadhad09" type="4" sum="0" cards=""/><action no="7" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S2</cards><action no="10" player="hadhad09" type="5" sum="200" cards=""/><action no="9" player="WhiteRiderT" type="4" sum="0" cards=""/><action no="11" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097618968">
+		 <general>
+		  <startdate>2012-04-24 17:01:59</startdate>		  
+		  <players>
+		   <player seat="3" name="hadhad09" chips="6,330" dealer="0" win="0" bet="200" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="3,125" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,255" dealer="0" win="1,455" bet="1,255" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="hadhad09" type="2" sum="200" cards="[cards]"/><action no="1" player="WhiteRiderT" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hadhad09">X X</cards><action no="6" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="3" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><action no="4" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">HK H6</cards><action no="5" player="WhiteRiderT" type="23" sum="1,255" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097619019">
+		 <general>
+		  <startdate>2012-04-24 17:02:12</startdate>		  
+		  <players>
+		   <player seat="3" name="hadhad09" chips="6,130" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,290" dealer="0" win="300" bet="200" rebuy="0" addon="0"/><player seat="9" name="ata" chips="3,125" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,455" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="hadhad09" type="1" sum="100" cards="[cards]"/><action no="2" player="G07M1LK" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hadhad09">X X</cards><action no="5" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><cards type="Pocket" player="ata">X X</cards><action no="3" player="ata" type="0" sum="0" cards=""/><cards type="Pocket" player="WhiteRiderT">S4 D6</cards><action no="4" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097626554">
+		 <general>
+		  <startdate>2012-04-24 17:02:34</startdate>		  
+		  <players>
+		   <player seat="3" name="hadhad09" chips="6,030" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,390" dealer="0" win="0" bet="100" rebuy="0" addon="0"/><player seat="9" name="ata" chips="3,125" dealer="0" win="300" bet="200" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,455" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="G07M1LK" type="1" sum="100" cards="[cards]"/><action no="2" player="ata" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hadhad09">X X</cards><action no="4" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="5" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">X X</cards><cards type="Pocket" player="WhiteRiderT">CJ C3</cards><action no="3" player="WhiteRiderT" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4097626602">
+		 <general>
+		  <startdate>2012-04-24 17:02:48</startdate>		  
+		  <players>
+		   <player seat="3" name="hadhad09" chips="6,030" dealer="0" win="0" bet="0" rebuy="0" addon="0"/><player seat="6" name="G07M1LK" chips="4,290" dealer="1" win="0" bet="0" rebuy="0" addon="0"/><player seat="9" name="ata" chips="3,225" dealer="0" win="2,910" bet="1,455" rebuy="0" addon="0"/><player seat="10" name="WhiteRiderT" chips="1,455" dealer="0" win="0" bet="1,455" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ata" type="1" sum="100" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="hadhad09">X X</cards><action no="3" player="hadhad09" type="0" sum="0" cards=""/><cards type="Pocket" player="G07M1LK">X X</cards><action no="4" player="G07M1LK" type="0" sum="0" cards=""/><cards type="Pocket" player="ata">SA D9</cards><action no="5" player="ata" type="3" sum="100" cards=""/><cards type="Pocket" player="WhiteRiderT">S6 S7</cards><action no="6" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D3 D2 C9</cards><action no="7" player="ata" type="4" sum="0" cards=""/><action no="8" player="WhiteRiderT" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H8</cards><action no="9" player="ata" type="4" sum="0" cards=""/><action no="11" player="ata" type="3" sum="1,255" cards=""/><action no="10" player="WhiteRiderT" type="5" sum="1,255" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H6</cards>
+	</round>
+	
+		</game>  
+	</session>

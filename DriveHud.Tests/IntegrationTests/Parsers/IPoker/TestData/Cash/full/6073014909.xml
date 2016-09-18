@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6073014909">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem L $0.02/$0.04</gametype>  
+	          <tablename>Dodli, 640068031</tablename>
+	          <tablecurrency>USD</tablecurrency>  
+	          <duration>00:15</duration>  
+	          <gamecount>10</gamecount>  
+	          <startdate>2013-06-20 09:37:19</startdate>  
+	          <currency>GBP</currency>  
+	          <nickname>WhiteRiderT</nickname>  
+	          <bets>$0.03</bets>  
+	          <wins>$0</wins>  
+	          <chipsin>$1</chipsin>
+			  		<chipsout>$0.97</chipsout>
+			  		<ipoints>0</ipoints>
+        		<statuspoints>0</statuspoints>
+			  		<awardpoints>0</awardpoints>
+			  		<is_asian>[is_asian]</is_asian>
+	            
+	    </general>  
+	    <game gamecode="4897117737">
+		 <general>
+		  <startdate>2013-06-20 09:37:19</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.19" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.84" dealer="1" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="3" name="gera6828" chips="$2.67" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.59" dealer="0" win="$0" bet="$0.12" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.31" dealer="0" win="$0.29" bet="$0.12" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.86" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$1" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.78" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="gera6828" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="DRR1424669" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">X X</cards><action no="6" player="SAOKiritoX" type="0" sum="$0" cards=""/><cards type="Pocket" player="jayco2">X X</cards><action no="7" player="jayco2" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="gera6828">X X</cards><action no="8" player="gera6828" type="3" sum="$0.01" cards=""/><cards type="Pocket" player="DRR1424669">H3 DA</cards><action no="9" player="DRR1424669" type="4" sum="$0" cards=""/><cards type="Pocket" player="ANANLELE">CA HA</cards><action no="3" player="ANANLELE" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="4" player="Kaljamba" type="0" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">X X</cards><action no="5" player="irinnaa" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK H10 SA</cards><action no="14" player="jayco2" type="0" sum="$0" cards=""/><action no="10" player="gera6828" type="4" sum="$0" cards=""/><action no="15" player="gera6828" type="0" sum="$0" cards=""/><action no="11" player="DRR1424669" type="5" sum="$0.02" cards=""/><action no="12" player="ANANLELE" type="3" sum="$0.02" cards=""/><action no="13" player="irinnaa" type="0" sum="$0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C2</cards><action no="16" player="DRR1424669" type="5" sum="$0.04" cards=""/><action no="17" player="ANANLELE" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H5</cards><action no="18" player="DRR1424669" type="5" sum="$0.04" cards=""/><action no="19" player="ANANLELE" type="3" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897118649">
+		 <general>
+		  <startdate>2013-06-20 09:38:39</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.19" dealer="0" win="$0.25" bet="$0.08" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.82" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="3" name="gera6828" chips="$2.65" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.47" dealer="1" win="$0" bet="$0.08" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.48" dealer="0" win="$0" bet="$0.08" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.86" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$1" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.76" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ANANLELE" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="Kaljamba" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">DK SQ</cards><action no="4" player="SAOKiritoX" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="jayco2">X X</cards><action no="5" player="jayco2" type="0" sum="$0" cards=""/><cards type="Pocket" player="DRR1424669">X X</cards><action no="6" player="DRR1424669" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="ANANLELE">X X</cards><action no="7" player="ANANLELE" type="3" sum="$0.01" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="8" player="Kaljamba" type="4" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">X X</cards><action no="3" player="irinnaa" type="0" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">HK C8 C5</cards><action no="11" player="SAOKiritoX" type="5" sum="$0.02" cards=""/><action no="12" player="DRR1424669" type="3" sum="$0.02" cards=""/><action no="9" player="ANANLELE" type="4" sum="$0" cards=""/><action no="13" player="ANANLELE" type="3" sum="$0.02" cards=""/><action no="10" player="Kaljamba" type="4" sum="$0" cards=""/><action no="14" player="Kaljamba" type="0" sum="$0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H6</cards><action no="16" player="SAOKiritoX" type="5" sum="$0.04" cards=""/><action no="17" player="DRR1424669" type="3" sum="$0.04" cards=""/><action no="15" player="ANANLELE" type="4" sum="$0" cards=""/><action no="18" player="ANANLELE" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">S9</cards><action no="20" player="SAOKiritoX" type="4" sum="$0" cards=""/><action no="21" player="DRR1424669" type="4" sum="$0" cards=""/><action no="19" player="ANANLELE" type="4" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897121181">
+		 <general>
+		  <startdate>2013-06-20 09:40:34</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.36" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.82" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.39" dealer="0" win="$0" bet="$0.04" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.40" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.84" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$1" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.76" dealer="0" win="$0.17" bet="$0.08" rebuy="0" addon="0"/><player seat="10" name="cscsabat2" chips="$1" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Kaljamba" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="WhiteRiderT" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">X X</cards><action no="4" player="SAOKiritoX" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="jayco2">X X</cards><action no="5" player="jayco2" type="0" sum="$0" cards=""/><cards type="Pocket" player="DRR1424669">X X</cards><action no="6" player="DRR1424669" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="ANANLELE">X X</cards><action no="7" player="ANANLELE" type="0" sum="$0" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="8" player="Kaljamba" type="0" sum="$0" cards=""/><cards type="Pocket" player="WhiteRiderT">C7 D3</cards><action no="9" player="WhiteRiderT" type="4" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">X X</cards><action no="3" player="irinnaa" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D4 C8 S7</cards><action no="12" player="SAOKiritoX" type="0" sum="$0" cards=""/><action no="13" player="DRR1424669" type="3" sum="$0.02" cards=""/><action no="10" player="WhiteRiderT" type="4" sum="$0" cards=""/><action no="14" player="WhiteRiderT" type="0" sum="$0" cards=""/><action no="11" player="irinnaa" type="5" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards><action no="16" player="DRR1424669" type="4" sum="$0" cards=""/><action no="15" player="irinnaa" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SA</cards><action no="18" player="DRR1424669" type="0" sum="$0" cards=""/><action no="17" player="irinnaa" type="5" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897122053">
+		 <general>
+		  <startdate>2013-06-20 09:41:42</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.34" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.82" dealer="0" win="$0" bet="$0.06" rebuy="0" addon="0"/><player seat="3" name="KIRIGAMI" chips="$6.55" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.35" dealer="0" win="$0.34" bet="$0.14" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.40" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.83" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$0.98" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.85" dealer="0" win="$0" bet="$0.14" rebuy="0" addon="0"/><player seat="10" name="cscsabat2" chips="$1" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="WhiteRiderT" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="irinnaa" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">X X</cards><action no="3" player="SAOKiritoX" type="0" sum="$0" cards=""/><cards type="Pocket" player="jayco2">X X</cards><action no="4" player="jayco2" type="3" sum="$0.02" cards=""/><action no="10" player="jayco2" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="DRR1424669">CQ SQ</cards><action no="5" player="DRR1424669" type="23" sum="$0.04" cards=""/><cards type="Pocket" player="ANANLELE">X X</cards><action no="6" player="ANANLELE" type="0" sum="$0" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="7" player="Kaljamba" type="0" sum="$0" cards=""/><cards type="Pocket" player="WhiteRiderT">DJ C4</cards><action no="8" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">D2 DQ</cards><action no="9" player="irinnaa" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SJ D3 HQ</cards><action no="12" player="jayco2" type="3" sum="$0.02" cards=""/><action no="13" player="DRR1424669" type="3" sum="$0.02" cards=""/><action no="11" player="irinnaa" type="5" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CK</cards><action no="15" player="jayco2" type="4" sum="$0" cards=""/><action no="18" player="jayco2" type="0" sum="$0" cards=""/><action no="16" player="DRR1424669" type="5" sum="$0.04" cards=""/><action no="14" player="irinnaa" type="4" sum="$0" cards=""/><action no="17" player="irinnaa" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C3</cards><action no="20" player="DRR1424669" type="5" sum="$0.04" cards=""/><action no="19" player="irinnaa" type="4" sum="$0" cards=""/><action no="21" player="irinnaa" type="3" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897124059">
+		 <general>
+		  <startdate>2013-06-20 09:43:11</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.34" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.76" dealer="0" win="$0" bet="$0.14" rebuy="0" addon="0"/><player seat="3" name="KIRIGAMI" chips="$6.55" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.55" dealer="0" win="$0" bet="$0.14" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.40" dealer="0" win="$0" bet="$0.10" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.83" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$0.97" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.71" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0"/><player seat="10" name="cscsabat2" chips="$1" dealer="0" win="$0.51" bet="$0.14" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="irinnaa" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="cscsabat2" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">X X</cards><action no="3" player="SAOKiritoX" type="0" sum="$0" cards=""/><cards type="Pocket" player="jayco2">CA CK</cards><action no="4" player="jayco2" type="23" sum="$0.04" cards=""/><cards type="Pocket" player="DRR1424669">C10 CQ</cards><action no="5" player="DRR1424669" type="3" sum="$0.04" cards=""/><cards type="Pocket" player="ANANLELE">X X</cards><action no="6" player="ANANLELE" type="3" sum="$0.04" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="7" player="Kaljamba" type="0" sum="$0" cards=""/><cards type="Pocket" player="WhiteRiderT">D8 C9</cards><action no="8" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">X X</cards><action no="9" player="irinnaa" type="0" sum="$0" cards=""/><cards type="Pocket" player="cscsabat2">H10 H9</cards><action no="10" player="cscsabat2" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H6 C7 C4</cards><action no="12" player="jayco2" type="4" sum="$0" cards=""/><action no="16" player="jayco2" type="3" sum="$0.02" cards=""/><action no="13" player="DRR1424669" type="5" sum="$0.02" cards=""/><action no="14" player="ANANLELE" type="3" sum="$0.02" cards=""/><action no="11" player="cscsabat2" type="4" sum="$0" cards=""/><action no="15" player="cscsabat2" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S7</cards><action no="18" player="jayco2" type="4" sum="$0" cards=""/><action no="22" player="jayco2" type="3" sum="$0.04" cards=""/><action no="19" player="DRR1424669" type="5" sum="$0.04" cards=""/><action no="20" player="ANANLELE" type="3" sum="$0.04" cards=""/><action no="17" player="cscsabat2" type="4" sum="$0" cards=""/><action no="21" player="cscsabat2" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D9</cards><action no="24" player="jayco2" type="4" sum="$0" cards=""/><action no="28" player="jayco2" type="3" sum="$0.04" cards=""/><action no="25" player="DRR1424669" type="5" sum="$0.04" cards=""/><action no="26" player="ANANLELE" type="0" sum="$0" cards=""/><action no="23" player="cscsabat2" type="4" sum="$0" cards=""/><action no="27" player="cscsabat2" type="3" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897125370">
+		 <general>
+		  <startdate>2013-06-20 09:45:03</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.34" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.62" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="3" name="KIRIGAMI" chips="$6.55" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.41" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.30" dealer="0" win="$0.26" bet="$0.12" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.83" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.70" dealer="1" win="$0" bet="$0.12" rebuy="0" addon="0"/><player seat="10" name="cscsabat2" chips="$1.37" dealer="0" win="$0" bet="$0.01" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="SAOKiritoX" type="2" sum="$0.02" cards="[cards]"/><action no="1" player="cscsabat2" type="1" sum="$0.01" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">X X</cards><action no="10" player="SAOKiritoX" type="4" sum="$0" cards=""/><cards type="Pocket" player="jayco2">X X</cards><action no="3" player="jayco2" type="0" sum="$0" cards=""/><cards type="Pocket" player="DRR1424669">X X</cards><action no="4" player="DRR1424669" type="0" sum="$0" cards=""/><cards type="Pocket" player="ANANLELE">D9 C9</cards><action no="5" player="ANANLELE" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="6" player="Kaljamba" type="0" sum="$0" cards=""/><cards type="Pocket" player="WhiteRiderT">C8 H4</cards><action no="7" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">D7 HA</cards><action no="8" player="irinnaa" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="cscsabat2">X X</cards><action no="9" player="cscsabat2" type="0" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DA S9 S6</cards><action no="11" player="SAOKiritoX" type="4" sum="$0" cards=""/><action no="14" player="SAOKiritoX" type="0" sum="$0" cards=""/><action no="12" player="ANANLELE" type="5" sum="$0.02" cards=""/><action no="13" player="irinnaa" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C10</cards><action no="15" player="ANANLELE" type="5" sum="$0.04" cards=""/><action no="16" player="irinnaa" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards><action no="17" player="ANANLELE" type="5" sum="$0.04" cards=""/><action no="18" player="irinnaa" type="3" sum="$0.04" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897126990">
+		 <general>
+		  <startdate>2013-06-20 09:46:08</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.32" dealer="0" win="$0" bet="$0.24" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.62" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.41" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.44" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.83" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.58" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="10" name="cscsabat2" chips="$1.36" dealer="1" win="$0.52" bet="$0.24" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="SAOKiritoX" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="jayco2" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">SK C2</cards><action no="9" player="SAOKiritoX" type="3" sum="$0.01" cards=""/><cards type="Pocket" player="jayco2">X X</cards><action no="10" player="jayco2" type="4" sum="$0" cards=""/><cards type="Pocket" player="DRR1424669">X X</cards><action no="3" player="DRR1424669" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="ANANLELE">X X</cards><action no="4" player="ANANLELE" type="0" sum="$0" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="5" player="Kaljamba" type="0" sum="$0" cards=""/><cards type="Pocket" player="WhiteRiderT">C6 HQ</cards><action no="6" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">X X</cards><action no="7" player="irinnaa" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="cscsabat2">SJ SA</cards><action no="8" player="cscsabat2" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S2 S8 S7</cards><action no="11" player="SAOKiritoX" type="4" sum="$0" cards=""/><action no="16" player="SAOKiritoX" type="3" sum="$0.02" cards=""/><action no="12" player="jayco2" type="4" sum="$0" cards=""/><action no="17" player="jayco2" type="0" sum="$0" cards=""/><action no="13" player="DRR1424669" type="4" sum="$0" cards=""/><action no="18" player="DRR1424669" type="0" sum="$0" cards=""/><action no="14" player="irinnaa" type="4" sum="$0" cards=""/><action no="19" player="irinnaa" type="0" sum="$0" cards=""/><action no="15" player="cscsabat2" type="5" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="20" player="SAOKiritoX" type="4" sum="$0" cards=""/><action no="22" player="SAOKiritoX" type="23" sum="$0.08" cards=""/><action no="21" player="cscsabat2" type="5" sum="$0.04" cards=""/><action no="23" player="cscsabat2" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H10</cards><action no="24" player="SAOKiritoX" type="4" sum="$0" cards=""/><action no="26" player="SAOKiritoX" type="23" sum="$0.08" cards=""/><action no="28" player="SAOKiritoX" type="3" sum="$0.04" cards=""/><action no="25" player="cscsabat2" type="5" sum="$0.04" cards=""/><action no="27" player="cscsabat2" type="23" sum="$0.12" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897128728">
+		 <general>
+		  <startdate>2013-06-20 09:47:56</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.08" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.60" dealer="0" win="$0.24" bet="$0.08" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.39" dealer="0" win="$0" bet="$0.08" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.44" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.83" dealer="0" win="$0" bet="$0.04" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.56" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="10" name="cscsabat2" chips="$1.64" dealer="0" win="$0" bet="$0.04" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="jayco2" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="DRR1424669" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">X X</cards><action no="8" player="SAOKiritoX" type="0" sum="$0" cards=""/><cards type="Pocket" player="jayco2">SA DQ</cards><action no="9" player="jayco2" type="3" sum="$0.03" cards=""/><cards type="Pocket" player="DRR1424669">C6 HK</cards><action no="10" player="DRR1424669" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="ANANLELE">X X</cards><action no="3" player="ANANLELE" type="0" sum="$0" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="4" player="Kaljamba" type="23" sum="$0.04" cards=""/><cards type="Pocket" player="WhiteRiderT">D4 H8</cards><action no="5" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">X X</cards><action no="6" player="irinnaa" type="0" sum="$0" cards=""/><cards type="Pocket" player="cscsabat2">X X</cards><action no="7" player="cscsabat2" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S6 S5 S9</cards><action no="11" player="jayco2" type="4" sum="$0" cards=""/><action no="12" player="DRR1424669" type="4" sum="$0" cards=""/><action no="13" player="Kaljamba" type="4" sum="$0" cards=""/><action no="14" player="cscsabat2" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C9</cards><action no="15" player="jayco2" type="4" sum="$0" cards=""/><action no="16" player="DRR1424669" type="4" sum="$0" cards=""/><action no="17" player="Kaljamba" type="4" sum="$0" cards=""/><action no="18" player="cscsabat2" type="4" sum="$0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SK</cards><action no="19" player="jayco2" type="5" sum="$0.04" cards=""/><action no="20" player="DRR1424669" type="3" sum="$0.04" cards=""/><action no="21" player="Kaljamba" type="0" sum="$0" cards=""/><action no="22" player="cscsabat2" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897130044">
+		 <general>
+		  <startdate>2013-06-20 09:49:23</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.08" dealer="0" win="$0" bet="$0.04" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.76" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.31" dealer="0" win="$0.41" bet="$0.14" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.44" dealer="0" win="$0" bet="$0.14" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.79" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.56" dealer="0" win="$0" bet="$0.10" rebuy="0" addon="0"/><player seat="10" name="cscsabat2" chips="$1.60" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="DRR1424669" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="ANANLELE" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">X X</cards><action no="7" player="SAOKiritoX" type="23" sum="$0.04" cards=""/><cards type="Pocket" player="jayco2">X X</cards><action no="8" player="jayco2" type="0" sum="$0" cards=""/><cards type="Pocket" player="DRR1424669">H10 S9</cards><action no="9" player="DRR1424669" type="3" sum="$0.03" cards=""/><cards type="Pocket" player="ANANLELE">H7 D7</cards><action no="10" player="ANANLELE" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="3" player="Kaljamba" type="0" sum="$0" cards=""/><cards type="Pocket" player="WhiteRiderT">C7 HQ</cards><action no="4" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">X X</cards><action no="5" player="irinnaa" type="3" sum="$0.02" cards=""/><action no="11" player="irinnaa" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="cscsabat2">X X</cards><action no="6" player="cscsabat2" type="0" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 C3 S4</cards><action no="15" player="SAOKiritoX" type="0" sum="$0" cards=""/><action no="12" player="DRR1424669" type="5" sum="$0.02" cards=""/><action no="13" player="ANANLELE" type="3" sum="$0.02" cards=""/><action no="14" player="irinnaa" type="3" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D9</cards><action no="16" player="DRR1424669" type="5" sum="$0.04" cards=""/><action no="17" player="ANANLELE" type="3" sum="$0.04" cards=""/><action no="18" player="irinnaa" type="3" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards><action no="19" player="DRR1424669" type="5" sum="$0.04" cards=""/><action no="20" player="ANANLELE" type="3" sum="$0.04" cards=""/><action no="21" player="irinnaa" type="0" sum="$0" cards=""/>
+	</round>
+	
+		</game><game gamecode="4897130786">
+		 <general>
+		  <startdate>2013-06-20 09:50:35</startdate>		  
+		  <players>
+		   <player seat="1" name="SAOKiritoX" chips="$2.04" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="2" name="jayco2" chips="$0.76" dealer="0" win="$0.29" bet="$0.14" rebuy="0" addon="0"/><player seat="3" name="RaduIon1966" chips="$0" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="4" name="DRR1424669" chips="$0.58" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="5" name="ANANLELE" chips="$0.30" dealer="0" win="$0" bet="$0.14" rebuy="0" addon="0"/><player seat="6" name="Kaljamba" chips="$1.79" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/><player seat="8" name="WhiteRiderT" chips="$0.97" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="9" name="irinnaa" chips="$0.46" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/><player seat="10" name="cscsabat2" chips="$1.60" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ANANLELE" type="1" sum="$0.01" cards="[cards]"/><action no="2" player="Kaljamba" type="2" sum="$0.02" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="SAOKiritoX">X X</cards><action no="6" player="SAOKiritoX" type="0" sum="$0" cards=""/><cards type="Pocket" player="jayco2">CA D5</cards><action no="7" player="jayco2" type="3" sum="$0.02" cards=""/><action no="11" player="jayco2" type="3" sum="$0.02" cards=""/><cards type="Pocket" player="DRR1424669">X X</cards><action no="8" player="DRR1424669" type="0" sum="$0" cards=""/><cards type="Pocket" player="ANANLELE">DQ HQ</cards><action no="9" player="ANANLELE" type="23" sum="$0.04" cards=""/><cards type="Pocket" player="Kaljamba">X X</cards><action no="10" player="Kaljamba" type="0" sum="$0" cards=""/><cards type="Pocket" player="WhiteRiderT">S8 H3</cards><action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/><cards type="Pocket" player="irinnaa">X X</cards><action no="4" player="irinnaa" type="0" sum="$0" cards=""/><cards type="Pocket" player="cscsabat2">X X</cards><action no="5" player="cscsabat2" type="0" sum="$0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C9 DJ D8</cards><action no="13" player="jayco2" type="3" sum="$0.02" cards=""/><action no="12" player="ANANLELE" type="5" sum="$0.02" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S6</cards><action no="15" player="jayco2" type="3" sum="$0.04" cards=""/><action no="14" player="ANANLELE" type="5" sum="$0.04" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H7</cards><action no="17" player="jayco2" type="5" sum="$0.04" cards=""/><action no="16" player="ANANLELE" type="4" sum="$0" cards=""/><action no="18" player="ANANLELE" type="3" sum="$0.04" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

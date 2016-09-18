@@ -1,0 +1,390 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<HandHistory>
+	<GameState historyId="000000000000001e000000000444ea05" hand="8281817" lastHand="8281478" serverTime="1470811993039" mucked="0">
+		<Seats number="10" me="8" dealer="7" mayWaitForBB="false" winners="false">
+			<Seat id="0" timedOut="true">
+				<PlayerInfo nickname="MstrMindNY" avatar="1-25e" level="0" uuid="445c05b9-6712-453c-a664-2e8bfc053049" rank="0.12">
+					<Location city="New York" countryId="840" network="bol" />
+					<Chips stack-size="0.54" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="1">
+				<PlayerInfo nickname="Big Sarge" avatar="14-2379f9d" level="0" uuid="cf8547de-94c7-4b29-83a6-d064e3e67dd0" rank="21.75">
+					<Location city="fayetteville" countryId="840" network="bol" />
+					<Chips stack-size="2.38" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="2">
+				<PlayerInfo nickname="MrSluggo" avatar="14-2b563e" uuid="748260fb-59ed-42ea-99cb-668c37bb1789" rank="166.74">
+					<Location city="aurora" countryId="840" network="bol" />
+					<Chips stack-size="2.04" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="3">
+				<PlayerInfo nickname="slayer86" avatar="14-379ffa" level="0" uuid="2008546e-cafd-4041-9635-84c45340739e" rank="241.64">
+					<Location city="Hesperia" countryId="840" network="bol" />
+					<Chips stack-size="1.91" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="4">
+				<PlayerInfo nickname="donKKer" avatar="1-25f" level="0" uuid="bce43725-8d40-4dad-99ad-de2db6937e1e" rank="524.79">
+					<Location city="sliven" countryId="100" network="tg" />
+					<Chips stack-size="3.39" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="5">
+				<PlayerInfo nickname="ricster" level="0" uuid="5fdae641-8637-442e-92f4-8148495ffe53" rank="0">
+					<Location city="New orleans" countryId="840" network="bol" />
+					<Chips stack-size="1" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="6">
+				<PlayerInfo nickname="Floorboard" level="0" uuid="08fc816c-ee9f-4829-a25f-0b206b2874c9" rank="15.67">
+					<Location city="dekalb" countryId="840" network="bol" />
+					<Chips stack-size="0.87" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="7">
+				<PlayerInfo nickname="Puasaak" avatar="1-25c" level="0" uuid="a6b79af4-47ca-44cf-8753-dc91068d5a4a" rank="29.79">
+					<Location city="Sharan" countryId="643" network="tg" />
+					<Chips stack-size="2" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="8">
+				<PlayerInfo nickname="Peon84" avatar="1-270" level="0" uuid="a83cc327-9140-4523-a161-71eb0b4aa28e" rank="1.14">
+					<Location city="Moscow" countryId="643" network="bol" />
+					<Chips stack-size="0.51" />
+				</PlayerInfo>
+			</Seat>
+			<Seat id="9">
+				<PlayerInfo nickname="bear35150" level="0" uuid="c9427640-bc84-4789-b0cf-8b5541c55a52" rank="75.44">
+					<Location city="sylacauga" countryId="840" network="sb" />
+					<Chips stack-size="1" />
+				</PlayerInfo>
+			</Seat>
+		</Seats>
+		<SessionStatistics buyIn="0.4" bets="0.08" wins="0.19" sessionStartTime="1470811603289">
+			<Hands total="4" won="1" raked="2" />
+			<Showdown total="1" won="1" />
+			<Allin total="0" won="0" />
+			<Round number="0" folds="2" won="0" />
+			<Round number="1" folds="0" won="0" />
+			<Round number="2" folds="1" won="0" />
+			<Round number="3" folds="0" won="1" />
+		</SessionStatistics>
+	</GameState>
+	<Changes>
+		<NewHand dealer="7" number="8281817" startTime="1470811993505" change_time="1470811993" />
+		<ActiveSeats change_time="1470811993">
+			<Seat id="0" />
+			<Seat id="1" />
+			<Seat id="2" />
+			<Seat id="3" />
+			<Seat id="4" />
+			<Seat id="5" />
+			<Seat id="6" />
+			<Seat id="7" />
+			<Seat id="8" />
+			<Seat id="9" />
+		</ActiveSeats>
+		<PlayerAction seat="8" change_time="1470811993">
+			<PostSmallBlind amount="0.01" />
+		</PlayerAction>
+		<PlayerAction seat="9" change_time="1470811993">
+			<PostBigBlind amount="0.02" />
+		</PlayerAction>
+		<PlayerAction seat="5" change_time="1470811993">
+			<PostBigBlind amount="0.02" />
+		</PlayerAction>
+		<DealingCards change_time="1470811993">
+			<Seat id="8">
+				<Cards>
+					<Card id="0">Jd</Card>
+					<Card id="1">4h</Card>
+				</Cards>
+			</Seat>
+			<Seat id="9">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+			<Seat id="0">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+			<Seat id="1">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+			<Seat id="2">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+			<Seat id="3">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+			<Seat id="4">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+			<Seat id="5">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+			<Seat id="6">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+			<Seat id="7">
+				<Cards>
+					<Card id="0">xx</Card>
+					<Card id="1">xx</Card>
+				</Cards>
+			</Seat>
+		</DealingCards>
+		<ActiveChange timeBank="70000" elapsed="0" seat="0" time="30000" startTime="1470811993506" change_time="1470811993">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="0" change_time="1470811998">
+			<Fold />
+		</PlayerAction>
+		<ActiveChange timeBank="130000" elapsed="1" seat="1" time="30000" startTime="1470811998486" change_time="1470811998">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="1" change_time="1470811999">
+			<Call amount="0.02" />
+		</PlayerAction>
+		<ActiveChange timeBank="60000" elapsed="0" seat="2" time="30000" startTime="1470811998988" change_time="1470811999">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="2" change_time="1470811999">
+			<Fold />
+		</PlayerAction>
+		<ActiveChange timeBank="70000" elapsed="0" seat="3" time="30000" startTime="1470811999150" change_time="1470811999">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="3" change_time="1470812003">
+			<Call amount="0.02" />
+		</PlayerAction>
+		<ActiveChange timeBank="90000" elapsed="0" seat="4" time="30000" startTime="1470812003513" change_time="1470812003">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="4" change_time="1470812006">
+			<Fold />
+		</PlayerAction>
+		<ActiveChange timeBank="60000" autoTimeBank="true" elapsed="0" seat="5" time="30000" startTime="1470812006418" change_time="1470812006">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="5" change_time="1470812006">
+			<Check />
+		</PlayerAction>
+		<ActiveChange timeBank="70000" elapsed="0" seat="6" time="30000" startTime="1470812006663" change_time="1470812006">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="6" change_time="1470812009">
+			<Fold />
+		</PlayerAction>
+		<ActiveChange timeBank="80000" elapsed="0" seat="7" time="30000" startTime="1470812009431" change_time="1470812009">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="7" change_time="1470812009">
+			<Fold />
+		</PlayerAction>
+		<ActiveChange timeBank="23700" autoTimeBank="true" elapsed="0" seat="8" time="30000" startTime="1470812009728" change_time="1470812009">
+			<Actions>
+				<Fold />
+				<Call amount="0.01" />
+				<Raise max="0.50" min="0.03" />
+			</Actions>
+		</ActiveChange>
+		<PlayerAction seat="8" change_time="1470812012">
+			<Fold />
+		</PlayerAction>
+		<ActiveChange timeBank="60000" autoTimeBank="true" elapsed="0" seat="9" time="30000" startTime="1470812012328" change_time="1470812012" />
+		<PlayerAction seat="9" change_time="1470812016">
+			<Check />
+		</PlayerAction>
+		<PotsChange change_time="1470812016">
+			<Pot pot="0" seat="1" change="0.02" />
+			<Pot pot="0" seat="3" change="0.02" />
+			<Pot pot="0" seat="5" change="0.02" />
+			<Pot pot="0" seat="8" change="0.01" />
+			<Pot pot="0" seat="9" change="0.02" />
+		</PotsChange>
+		<DealingFlop change_time="1470812017">
+			<Cards>
+				<Card id="0">8d</Card>
+				<Card id="1">3h</Card>
+				<Card id="2">3s</Card>
+			</Cards>
+		</DealingFlop>
+		<ActiveChange timeBank="60000" autoTimeBank="true" elapsed="0" seat="9" time="30000" startTime="1470812017047" change_time="1470812017" />
+		<PlayerAction seat="9" change_time="1470812046">
+			<UseTimeBank elapsed="0" time="60000" startTime="1470812047163" />
+		</PlayerAction>
+		<NewWaitingPlayer me="false" id="1" change_time="1470812058">
+			<PlayerInfo casino-bonus="false" poker-bonus="false" remote-casino-bonus="false" remote-club-bonus="false" uuid="8a3a2d1b-f5cb-4f08-adb9-b1a13c465f0d" rank="533.13" nickname="stryfe555" preferred-wallet="USD" level="0">
+				<Location countryId="840" city="san antonio" network="bol" />
+			</PlayerInfo>
+		</NewWaitingPlayer>
+		<PlayerAction seat="9" change_time="1470812106">
+			<TimedOut sitOut="true" />
+		</PlayerAction>
+		<PlayerAction seat="9" change_time="1470812106">
+			<Check />
+		</PlayerAction>
+		<ActiveChange timeBank="130000" autoTimeBank="true" elapsed="0" seat="1" time="30000" startTime="1470812107480" change_time="1470812106" />
+		<PlayerAction seat="1" change_time="1470812108">
+			<Check />
+		</PlayerAction>
+		<ActiveChange timeBank="70000" autoTimeBank="true" elapsed="0" seat="3" time="30000" startTime="1470812109675" change_time="1470812108" />
+		<PlayerAction seat="3" change_time="1470812114">
+			<Bet amount="0.04" />
+		</PlayerAction>
+		<ActiveChange timeBank="60000" autoTimeBank="true" elapsed="0" seat="5" time="30000" startTime="1470812115372" change_time="1470812114" />
+		<PlayerAction seat="5" change_time="1470812114">
+			<Fold />
+		</PlayerAction>
+		<ActiveChange timeBank="0" autoTimeBank="true" elapsed="0" seat="9" time="30000" startTime="1470812115497" change_time="1470812114" />
+		<PlayerAction seat="9" change_time="1470812121">
+			<Call amount="0.04" />
+		</PlayerAction>
+		<ActiveChange timeBank="130000" autoTimeBank="true" elapsed="0" seat="1" time="30000" startTime="1470812122098" change_time="1470812121" />
+		<PlayerAction seat="1" change_time="1470812123">
+			<Fold />
+		</PlayerAction>
+		<PotsChange change_time="1470812123">
+			<Pot pot="0" seat="3" change="0.04" />
+			<Pot pot="0" seat="9" change="0.04" />
+		</PotsChange>
+		<DealingTurn change_time="1470812124">
+			<Cards>
+				<Card id="3">Qc</Card>
+			</Cards>
+		</DealingTurn>
+		<ActiveChange timeBank="0" autoTimeBank="true" elapsed="0" seat="9" time="30000" startTime="1470812125165" change_time="1470812124" />
+		<PlayerAction seat="9" change_time="1470812128">
+			<Check />
+		</PlayerAction>
+		<ActiveChange timeBank="70000" autoTimeBank="true" elapsed="0" seat="3" time="30000" startTime="1470812129249" change_time="1470812128" />
+		<PlayerAction seat="3" change_time="1470812132">
+			<Check />
+		</PlayerAction>
+		<DealingRiver change_time="1470812133">
+			<Cards>
+				<Card id="4">6d</Card>
+			</Cards>
+		</DealingRiver>
+		<ActiveChange timeBank="0" autoTimeBank="true" elapsed="0" seat="9" time="30000" startTime="1470812134529" change_time="1470812133" />
+		<PlayerAction seat="9" change_time="1470812140">
+			<Bet amount="0.17" />
+		</PlayerAction>
+		<ActiveChange timeBank="70000" autoTimeBank="true" elapsed="0" seat="3" time="30000" startTime="1470812139915" change_time="1470812140" />
+		<PlayerAction seat="3" change_time="1470812143">
+			<Call amount="0.17" />
+		</PlayerAction>
+		<PotsChange change_time="1470812143">
+			<Pot pot="0" seat="3" change="0.17" />
+			<Pot pot="0" seat="9" change="0.17" />
+		</PotsChange>
+		<RakeChange change_time="1470812143">
+			<Rake pot="0" change="0.02" />
+		</RakeChange>
+		<PlayerAction seat="9" change_time="1470812145">
+			<Show combination="two pairs, Eights and Threes">
+				<Cards>
+					<Card id="0">8h</Card>
+					<Card id="1">7c</Card>
+				</Cards>
+			</Show>
+		</PlayerAction>
+		<CombinationChange seat="9" strength="two pairs, Eights and Threes" change_time="1470812145" />
+		<PlayerAction seat="3" change_time="1470812145">
+			<Show combination="two pairs, Eights and Sixes">
+				<Cards>
+					<Card id="0">8s</Card>
+					<Card id="1">6s</Card>
+				</Cards>
+			</Show>
+		</PlayerAction>
+		<CombinationChange seat="3" strength="two pairs, Eights and Sixes" change_time="1470812145" />
+		<Winners change_time="1470812145">
+			<Winner pot="0" combination="two pairs, Eights and Sixes" amount="0.49" seat="3">
+				<Cards>
+					<Card id="0">8d</Card>
+					<Card id="1">8s</Card>
+					<Card id="2">6d</Card>
+					<Card id="3">6s</Card>
+					<Card id="4">Qc</Card>
+				</Cards>
+			</Winner>
+		</Winners>
+		<EndHand lastHand="8281817" change_time="1470812147" />
+	</Changes>
+	<TableDetails id="1e-3e56d98" name="James Bond #663" type="SINGLE_TABLE" share-type="LOCAL">
+		<SingleTable game="TEXAS_HOLDEM" limit="NO_LIMIT" mode="USD">
+			<Parameters stakes-low="0.01" stakes-high="0.02" />
+			<Seats number="10" />
+		</SingleTable>
+		<PROTOCOL_FEATURES>
+			<PROTOCOL_FEATURE name="buy_in_preferences" />
+			<PROTOCOL_FEATURE name="contest_jackpots" />
+			<PROTOCOL_FEATURE name="contests" />
+			<PROTOCOL_FEATURE name="cp_exchange" />
+			<PROTOCOL_FEATURE name="currency_exchange_rates" />
+			<PROTOCOL_FEATURE name="fast_blinds" />
+			<PROTOCOL_FEATURE name="locked_bonuses" />
+			<PROTOCOL_FEATURE name="may_wait_for_bb" />
+			<PROTOCOL_FEATURE name="multi_bbj" />
+		</PROTOCOL_FEATURES>
+	</TableDetails>
+	<RelocationData me="8" pivot="5" />
+</HandHistory>

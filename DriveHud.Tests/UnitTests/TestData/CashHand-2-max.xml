@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<HandHistory>
+  <GameState hand="4830566" serverTime="1470051435235" mucked="0">
+    <Seats number="2" dealer="0" winners="false">
+      <Seat id="0">
+        <PlayerInfo nickname="Lecter1978" avatar="1-26b" level="0" uuid="533c6a7f-4e19-4fdc-bada-529d5c7e8c55" rank="957.7">
+          <Location city="Saltrod" countryId="578" network="tg" />
+          <Chips stack-size="12.92" />
+        </PlayerInfo>
+      </Seat>
+      <Seat id="1">
+        <PlayerInfo nickname="JessicaCDN" level="0" uuid="dfd003ae-aace-4700-bf4c-cd871e801e1d" rank="388.22">
+          <Location city="Budapest" countryId="348" network="tg" />
+          <Chips stack-size="11.94" />
+        </PlayerInfo>
+      </Seat>
+    </Seats>
+  </GameState>
+  <Changes>
+    <NewHand dealer="0" number="4830566" startTime="1470051435593" change_time="1470051435" />
+    <ActiveSeats change_time="1470051435">
+      <Seat id="0" />
+      <Seat id="1" />
+    </ActiveSeats>
+    <PlayerAction seat="0" change_time="1470051435">
+      <PostSmallBlind amount="0.05" />
+    </PlayerAction>
+    <PlayerAction seat="1" change_time="1470051435">
+      <PostBigBlind amount="0.10" />
+    </PlayerAction>
+    <DealingCards change_time="1470051435">
+      <Seat id="1">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+      <Seat id="0">
+        <Cards>
+          <Card id="0">xx</Card>
+          <Card id="1">xx</Card>
+        </Cards>
+      </Seat>
+    </DealingCards>
+    <ActiveChange timeBank="37151" autoTimeBank="true" seat="0" elapsed="0" time="15000" startTime="1470051435593" change_time="1470051435" />
+    <PlayerAction seat="0" change_time="1470051439">
+      <Raise amount="0.25" />
+    </PlayerAction>
+    <ActiveChange timeBank="40503" autoTimeBank="true" seat="1" elapsed="0" time="15000" startTime="1470051439521" change_time="1470051439" />
+    <PlayerAction seat="1" change_time="1470051442">
+      <Raise amount="0.80" />
+    </PlayerAction>
+    <ActiveChange timeBank="37151" autoTimeBank="true" seat="0" elapsed="0" time="15000" startTime="1470051442859" change_time="1470051442" />
+    <PlayerAction seat="0" change_time="1470051444">
+      <Fold />
+    </PlayerAction>
+    <PlayerAction seat="1" change_time="1470051444">
+      <UncalledBet amount="0.60" />
+    </PlayerAction>
+    <PotsChange change_time="1470051444">
+      <Pot pot="0" seat="0" change="0.30" />
+      <Pot pot="0" seat="1" change="0.30" />
+    </PotsChange>
+    <ActiveChange seat="1" elapsed="0" time="5000" startTime="1470051445909" change_time="1470051445" />
+    <PlayerAction seat="1" change_time="1470051446">
+      <Muck />
+    </PlayerAction>
+    <Winners change_time="1470051446">
+      <Winner pot="0" seat="1" amount="0.60" />
+    </Winners>
+    <EndHand change_time="1470051448" />
+  </Changes>
+  <TableDetails id="17-31f6298" name="Brad Pitt #268" type="SINGLE_TABLE" share-type="LOCAL">
+    <SingleTable game="TEXAS_HOLDEM" limit="NO_LIMIT" mode="USD">
+      <Parameters stakes-low="0.05" stakes-high="0.1" />
+      <Seats number="2" />
+    </SingleTable>
+    <PROTOCOL_FEATURES>
+      <PROTOCOL_FEATURE name="buy_in_preferences" />
+      <PROTOCOL_FEATURE name="contest_jackpots" />
+      <PROTOCOL_FEATURE name="contests" />
+      <PROTOCOL_FEATURE name="cp_exchange" />
+      <PROTOCOL_FEATURE name="currency_exchange_rates" />
+      <PROTOCOL_FEATURE name="fast_blinds" />
+      <PROTOCOL_FEATURE name="locked_bonuses" />
+      <PROTOCOL_FEATURE name="may_wait_for_bb" />
+      <PROTOCOL_FEATURE name="multi_bbj" />
+    </PROTOCOL_FEATURES>
+  </TableDetails>
+</HandHistory>

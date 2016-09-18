@@ -1,0 +1,2406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="5942111910">  
+	<general>  
+		<mode>real</mode>
+		<gametype>Holdem NL</gametype>  
+		<tablename>$3 Freezeout, 767141471</tablename>
+		<tournamentcurrency/>  
+		<duration>00:50</duration>  
+		<gamecount>52</gamecount>  
+		<startdate>2012-10-12 07:30:33</startdate>  
+		<currency>USD</currency>  
+		<nickname>NikiTheDog</nickname>  
+		<bets>4,960</bets>  
+		<wins>3,460</wins>  
+		<chipsin>0</chipsin>
+		<chipsout>0</chipsout>
+		<ipoints>6.12</ipoints>
+		<statuspoints>5.10</statuspoints>
+		<awardpoints>6.12</awardpoints>
+		<is_asian>0</is_asian>
+		<tournamentname>$3 Freezeout</tournamentname>
+		<place>41</place>
+		<buyin>$3.00+$0.30</buyin>
+		<totalbuyin>$3.30</totalbuyin>
+		<ipoints>6.12</ipoints>
+		<win>$0.00</win>
+		<statuspoints>5.10</statuspoints>
+		<awardpoints>6.12</awardpoints>  
+	</general>  
+	<game gamecode="4321413838">
+		<general>
+			<startdate>2012-10-12 07:30:33</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,500" dealer="1" win="0" bet="290" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Kovinval1" chips="1,500" dealer="0" win="945" bet="605" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="666monika" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="Terrykent" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DA DJ</cards>
+			<action no="8" player="NikiTheDog" type="23" sum="290" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="9" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="10" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="3" player="reichricchi" type="3" sum="20" cards=""/>
+			<action no="11" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="4" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="5" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Kovinval1">X X</cards>
+			<action no="6" player="Kovinval1" type="23" sum="80" cards=""/>
+			<action no="12" player="Kovinval1" type="3" sum="210" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="7" player="nudelauge" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H2 C3 DQ</cards>
+			<action no="14" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<action no="13" player="Kovinval1" type="5" sum="315" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321413843">
+		<general>
+			<startdate>2012-10-12 07:31:33</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,480" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,480" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,500" dealer="0" win="0" bet="175" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Kovinval1" chips="1,840" dealer="0" win="480" bet="275" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Terrykent" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="reichricchi" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">H5 D4</cards>
+			<action no="7" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="8" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="9" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="10" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="3" player="alice50" type="3" sum="20" cards=""/>
+			<action no="11" player="alice50" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="4" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Kovinval1">X X</cards>
+			<action no="5" player="Kovinval1" type="23" sum="80" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="6" player="nudelauge" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S2 D8 H9</cards>
+			<action no="12" player="alice50" type="4" sum="0" cards=""/>
+			<action no="14" player="alice50" type="3" sum="95" cards=""/>
+			<action no="13" player="Kovinval1" type="5" sum="95" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SJ</cards>
+			<action no="15" player="alice50" type="4" sum="0" cards=""/>
+			<action no="16" player="Kovinval1" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">HK</cards>
+			<action no="17" player="alice50" type="4" sum="0" cards=""/>
+			<action no="19" player="alice50" type="0" sum="0" cards=""/>
+			<action no="18" player="Kovinval1" type="5" sum="100" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321413854">
+		<general>
+			<startdate>2012-10-12 07:32:54</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,470" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,460" dealer="0" win="390" bet="250" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,325" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="8" name="Kovinval1" chips="2,045" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="reichricchi" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="alice50" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">H5 C5</cards>
+			<action no="6" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="7" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="8" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="9" player="reichricchi" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="10" player="alice50" type="3" sum="100" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="3" player="sniffysballs" type="3" sum="20" cards=""/>
+			<action no="11" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Kovinval1">X X</cards>
+			<action no="4" player="Kovinval1" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="5" player="nudelauge" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D4 D8 H3</cards>
+			<action no="12" player="reichricchi" type="5" sum="130" cards=""/>
+			<action no="13" player="alice50" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321413864">
+		<general>
+			<startdate>2012-10-12 07:33:51</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,210" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,600" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,205" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,480" dealer="0" win="180" bet="100" rebuy="0" addon="0"/>
+				<player seat="8" name="Kovinval1" chips="2,045" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="alice50" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="sniffysballs" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">D5 C3</cards>
+			<action no="5" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="6" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="7" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="8" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="9" player="alice50" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="10" player="sniffysballs" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="Kovinval1">X X</cards>
+			<action no="3" player="Kovinval1" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="4" player="nudelauge" type="23" sum="40" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SQ C6 H4</cards>
+			<action no="11" player="alice50" type="4" sum="0" cards=""/>
+			<action no="12" player="sniffysballs" type="4" sum="0" cards=""/>
+			<action no="13" player="nudelauge" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C5</cards>
+			<action no="14" player="alice50" type="4" sum="0" cards=""/>
+			<action no="17" player="alice50" type="0" sum="0" cards=""/>
+			<action no="15" player="sniffysballs" type="5" sum="60" cards=""/>
+			<action no="16" player="nudelauge" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321413871">
+		<general>
+			<startdate>2012-10-12 07:34:47</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,210" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,165" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,560" dealer="0" win="280" bet="180" rebuy="0" addon="0"/>
+				<player seat="8" name="Kovinval1" chips="2,045" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="1,460" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="sniffysballs" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="Kovinval1" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">S7 D7</cards>
+			<action no="4" player="NikiTheDog" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="5" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="6" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="7" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="8" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="9" player="sniffysballs" type="3" sum="10" cards=""/>
+			<cards type="Pocket" player="Kovinval1">X X</cards>
+			<action no="10" player="Kovinval1" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="3" player="nudelauge" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CQ DA D4</cards>
+			<action no="14" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<action no="11" player="sniffysballs" type="4" sum="0" cards=""/>
+			<action no="15" player="sniffysballs" type="3" sum="40" cards=""/>
+			<action no="12" player="Kovinval1" type="4" sum="0" cards=""/>
+			<action no="16" player="Kovinval1" type="0" sum="0" cards=""/>
+			<action no="13" player="nudelauge" type="5" sum="40" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C7</cards>
+			<action no="17" player="sniffysballs" type="4" sum="0" cards=""/>
+			<action no="18" player="nudelauge" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">SJ</cards>
+			<action no="19" player="sniffysballs" type="5" sum="120" cards=""/>
+			<action no="20" player="nudelauge" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321413878">
+		<general>
+			<startdate>2012-10-12 07:35:55</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,190" dealer="0" win="90" bet="60" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,165" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,660" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Kovinval1" chips="2,025" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="1,400" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Kovinval1" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="nudelauge" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DJ CK</cards>
+			<action no="3" player="NikiTheDog" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="4" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="5" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="6" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="7" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="8" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Kovinval1">X X</cards>
+			<action no="9" player="Kovinval1" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="10" player="nudelauge" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HK CQ S7</cards>
+			<action no="12" player="NikiTheDog" type="5" sum="40" cards=""/>
+			<action no="11" player="nudelauge" type="4" sum="0" cards=""/>
+			<action no="13" player="nudelauge" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321413887">
+		<general>
+			<startdate>2012-10-12 07:36:42</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,220" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,165" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Kovinval1" chips="2,015" dealer="1" win="0" bet="160" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="1,380" dealer="0" win="1,580" bet="1,380" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="NikiTheDog" type="2" sum="20" cards="[cards]"/>
+			<action no="1" player="nudelauge" type="1" sum="10" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">D3 CQ</cards>
+			<action no="10" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="3" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="4" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="5" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="6" player="alice50" type="3" sum="20" cards=""/>
+			<action no="11" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="7" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Kovinval1">X X</cards>
+			<action no="8" player="Kovinval1" type="23" sum="50" cards=""/>
+			<action no="12" player="Kovinval1" type="3" sum="50" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="9" player="nudelauge" type="23" sum="100" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C4 DQ D5</cards>
+			<action no="14" player="Kovinval1" type="4" sum="0" cards=""/>
+			<action no="13" player="nudelauge" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D4</cards>
+			<action no="16" player="Kovinval1" type="3" sum="60" cards=""/>
+			<action no="15" player="nudelauge" type="5" sum="60" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H9</cards>
+			<action no="18" player="Kovinval1" type="0" sum="0" cards=""/>
+			<action no="17" player="nudelauge" type="5" sum="1,220" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415597">
+		<general>
+			<startdate>2012-10-12 07:38:21</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,200" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,470" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,600" dealer="0" win="70" bet="20" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,145" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,660" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="Kovinval1" chips="1,855" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="1,580" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NikiTheDog" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="666monika" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">H5 H8</cards>
+			<action no="9" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">DK C8</cards>
+			<action no="10" player="666monika" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="3" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">SQ SK</cards>
+			<action no="4" player="reichricchi" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="alice50">S9 HQ</cards>
+			<action no="5" player="alice50" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="6" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Kovinval1">X X</cards>
+			<action no="7" player="Kovinval1" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="8" player="nudelauge" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CJ C6 DJ</cards>
+			<action no="11" player="666monika" type="4" sum="0" cards=""/>
+			<action no="12" player="reichricchi" type="4" sum="0" cards=""/>
+			<action no="13" player="alice50" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DA</cards>
+			<action no="14" player="666monika" type="4" sum="0" cards=""/>
+			<action no="15" player="reichricchi" type="4" sum="0" cards=""/>
+			<action no="16" player="alice50" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S4</cards>
+			<action no="17" player="666monika" type="4" sum="0" cards=""/>
+			<action no="18" player="reichricchi" type="4" sum="0" cards=""/>
+			<action no="19" player="alice50" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415606">
+		<general>
+			<startdate>2012-10-12 07:39:27</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,190" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,470" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,470" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,650" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,125" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,660" dealer="0" win="75" bet="45" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="666monika" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="Terrykent" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">S10 C8</cards>
+			<action no="6" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="7" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="8" player="Terrykent" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="3" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="4" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="5" player="sniffysballs" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C2 H2 H9</cards>
+			<action no="9" player="Terrykent" type="4" sum="0" cards=""/>
+			<action no="11" player="Terrykent" type="0" sum="0" cards=""/>
+			<action no="10" player="sniffysballs" type="5" sum="25" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415613">
+		<general>
+			<startdate>2012-10-12 07:40:13</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,460" dealer="1" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,450" dealer="0" win="0" bet="10" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,650" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,125" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,290" dealer="0" win="135" bet="65" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Terrykent" type="1" sum="10" cards="[cards]"/>
+			<action no="2" player="reichricchi" type="2" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">HJ D3</cards>
+			<action no="6" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="7" player="666monika" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="8" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="9" player="reichricchi" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="3" player="alice50" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="4" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="5" player="BluffBichon003" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">HK D9 S4</cards>
+			<action no="13" player="666monika" type="4" sum="0" cards=""/>
+			<action no="10" player="reichricchi" type="4" sum="0" cards=""/>
+			<action no="11" player="alice50" type="4" sum="0" cards=""/>
+			<action no="12" player="BluffBichon003" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D8</cards>
+			<action no="17" player="666monika" type="0" sum="0" cards=""/>
+			<action no="14" player="reichricchi" type="4" sum="0" cards=""/>
+			<action no="18" player="reichricchi" type="0" sum="0" cards=""/>
+			<action no="15" player="alice50" type="4" sum="0" cards=""/>
+			<action no="19" player="alice50" type="0" sum="0" cards=""/>
+			<action no="16" player="BluffBichon003" type="5" sum="45" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415624">
+		<general>
+			<startdate>2012-10-12 07:41:33</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,440" dealer="0" win="0" bet="90" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,630" dealer="0" win="0" bet="90" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,105" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,360" dealer="0" win="520" bet="310" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="reichricchi" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="alice50" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DJ S7</cards>
+			<action no="5" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="6" player="666monika" type="3" sum="90" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="7" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="8" player="reichricchi" type="3" sum="75" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="9" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="3" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="4" player="BluffBichon003" type="23" sum="90" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C10 HK D6</cards>
+			<action no="12" player="666monika" type="0" sum="0" cards=""/>
+			<action no="10" player="reichricchi" type="4" sum="0" cards=""/>
+			<action no="13" player="reichricchi" type="0" sum="0" cards=""/>
+			<action no="11" player="BluffBichon003" type="5" sum="220" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415635">
+		<general>
+			<startdate>2012-10-12 07:42:38</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,540" dealer="1" win="407" bet="264" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,075" dealer="0" win="0" bet="15" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,690" dealer="0" win="0" bet="128" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="alice50" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="sniffysballs" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">S6 D3</cards>
+			<action no="4" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="5" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="6" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="7" player="reichricchi" type="23" sum="60" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="8" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="9" player="sniffysballs" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="3" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C2 S8 S7</cards>
+			<action no="11" player="reichricchi" type="5" sum="68" cards=""/>
+			<action no="10" player="sniffysballs" type="4" sum="0" cards=""/>
+			<action no="12" player="sniffysballs" type="3" sum="68" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D9</cards>
+			<action no="14" player="reichricchi" type="5" sum="136" cards=""/>
+			<action no="13" player="sniffysballs" type="4" sum="0" cards=""/>
+			<action no="15" player="sniffysballs" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415645">
+		<general>
+			<startdate>2012-10-12 07:43:51</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,440" dealer="0" win="120" bet="60" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,683" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,060" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,562" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,500" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,570" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="sniffysballs" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="haldir123" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DJ S3</cards>
+			<action no="4" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="5" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="6" player="Terrykent" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="7" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="8" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="9" player="sniffysballs" type="3" sum="15" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="10" player="haldir123" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="3" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H6 SA HJ</cards>
+			<action no="13" player="Terrykent" type="5" sum="30" cards=""/>
+			<action no="11" player="sniffysballs" type="4" sum="0" cards=""/>
+			<action no="14" player="sniffysballs" type="0" sum="0" cards=""/>
+			<action no="12" player="haldir123" type="4" sum="0" cards=""/>
+			<action no="15" player="haldir123" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415652">
+		<general>
+			<startdate>2012-10-12 07:44:42</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,190" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,683" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,060" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="sniffysballs" chips="1,532" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,470" dealer="0" win="0" bet="300" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,570" dealer="0" win="840" bet="540" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="haldir123" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="BluffBichon003" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DQ HJ</cards>
+			<action no="3" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="4" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="5" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="6" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="7" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="sniffysballs">X X</cards>
+			<action no="8" player="sniffysballs" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="9" player="haldir123" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="10" player="BluffBichon003" type="3" sum="90" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H10 H6 DJ</cards>
+			<action no="11" player="haldir123" type="5" sum="180" cards=""/>
+			<action no="12" player="BluffBichon003" type="3" sum="180" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S7</cards>
+			<action no="13" player="haldir123" type="4" sum="0" cards=""/>
+			<action no="15" player="haldir123" type="0" sum="0" cards=""/>
+			<action no="14" player="BluffBichon003" type="5" sum="240" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415664">
+		<general>
+			<startdate>2012-10-12 07:45:56</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,190" dealer="0" win="390" bet="285" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,350" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,683" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,060" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,170" dealer="1" win="0" bet="90" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,870" dealer="0" win="0" bet="15" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="NikiTheDog" type="2" sum="30" cards="[cards]"/>
+			<action no="1" player="BluffBichon003" type="1" sum="15" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">HA SQ</cards>
+			<action no="9" player="NikiTheDog" type="23" sum="285" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="3" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="4" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="5" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="6" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="7" player="haldir123" type="23" sum="90" cards=""/>
+			<action no="10" player="haldir123" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="8" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321415668">
+		<general>
+			<startdate>2012-10-12 07:46:26</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,295" dealer="0" win="0" bet="15" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,350" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,500" dealer="0" win="105" bet="60" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,683" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,060" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,080" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,855" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NikiTheDog" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="666monika" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DJ C3</cards>
+			<action no="8" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="9" player="666monika" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="3" player="Terrykent" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="4" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="5" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="6" player="haldir123" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="7" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S8 H4 C5</cards>
+			<action no="10" player="666monika" type="4" sum="0" cards=""/>
+			<action no="12" player="666monika" type="0" sum="0" cards=""/>
+			<action no="11" player="Terrykent" type="5" sum="30" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418280">
+		<general>
+			<startdate>2012-10-12 07:47:24</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,280" dealer="1" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,320" dealer="0" win="1,028" bet="578" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,545" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,683" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,060" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,080" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,855" dealer="0" win="0" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="666monika" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="Terrykent" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">H7 HA</cards>
+			<action no="7" player="NikiTheDog" type="3" sum="30" cards=""/>
+			<action no="13" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="8" player="666monika" type="3" sum="15" cards=""/>
+			<action no="14" player="666monika" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="9" player="Terrykent" type="23" sum="60" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="3" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="4" player="alice50" type="3" sum="30" cards=""/>
+			<action no="10" player="alice50" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="5" player="haldir123" type="3" sum="30" cards=""/>
+			<action no="11" player="haldir123" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="6" player="BluffBichon003" type="3" sum="30" cards=""/>
+			<action no="12" player="BluffBichon003" type="3" sum="30" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S3 S8 S4</cards>
+			<action no="15" player="666monika" type="4" sum="0" cards=""/>
+			<action no="20" player="666monika" type="23" sum="518" cards=""/>
+			<action no="16" player="Terrykent" type="5" sum="90" cards=""/>
+			<action no="21" player="Terrykent" type="0" sum="0" cards=""/>
+			<action no="17" player="alice50" type="0" sum="0" cards=""/>
+			<action no="18" player="haldir123" type="0" sum="0" cards=""/>
+			<action no="19" player="BluffBichon003" type="3" sum="90" cards=""/>
+			<action no="22" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418288">
+		<general>
+			<startdate>2012-10-12 07:48:39</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,770" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,395" dealer="0" win="0" bet="15" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,683" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,000" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="LF1968" chips="1,500" dealer="0" win="765" bet="510" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="gimah" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,705" dealer="0" win="0" bet="210" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Terrykent" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="reichricchi" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">HA D10</cards>
+			<action no="8" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="9" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="10" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="11" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="3" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="LF1968">X X</cards>
+			<action no="4" player="LF1968" type="3" sum="30" cards=""/>
+			<action no="12" player="LF1968" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="5" player="haldir123" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="gimah">X X</cards>
+			<action no="6" player="gimah" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="7" player="BluffBichon003" type="23" sum="90" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S6 H4 D4</cards>
+			<action no="13" player="LF1968" type="5" sum="120" cards=""/>
+			<action no="14" player="BluffBichon003" type="3" sum="120" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S5</cards>
+			<action no="15" player="LF1968" type="5" sum="300" cards=""/>
+			<action no="16" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418294">
+		<general>
+			<startdate>2012-10-12 07:49:25</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,653" dealer="0" win="0" bet="15" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="1,000" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="6" name="LF1968" chips="1,755" dealer="0" win="0" bet="390" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="gimah" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,495" dealer="0" win="1,930" bet="1,495" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="reichricchi" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="alice50" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">D5 D9</cards>
+			<action no="7" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="8" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="9" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="10" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="11" player="alice50" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="LF1968">X X</cards>
+			<action no="3" player="LF1968" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="4" player="haldir123" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="gimah">X X</cards>
+			<action no="5" player="gimah" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="6" player="BluffBichon003" type="3" sum="30" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H2 HQ D7</cards>
+			<action no="12" player="alice50" type="4" sum="0" cards=""/>
+			<action no="15" player="alice50" type="0" sum="0" cards=""/>
+			<action no="13" player="LF1968" type="5" sum="120" cards=""/>
+			<action no="14" player="BluffBichon003" type="3" sum="120" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H4</cards>
+			<action no="16" player="LF1968" type="5" sum="240" cards=""/>
+			<action no="17" player="BluffBichon003" type="3" sum="240" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S6</cards>
+			<action no="18" player="LF1968" type="4" sum="0" cards=""/>
+			<action no="20" player="LF1968" type="0" sum="0" cards=""/>
+			<action no="19" player="BluffBichon003" type="5" sum="1,105" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418304">
+		<general>
+			<startdate>2012-10-12 07:50:28</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,638" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="970" dealer="0" win="0" bet="15" rebuy="0" addon="0"/>
+				<player seat="6" name="LF1968" chips="1,365" dealer="0" win="1,620" bet="1,365" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,020" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="gimah" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,930" dealer="0" win="0" bet="240" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="alice50" type="1" sum="15" cards="[cards]"/>
+			<action no="2" player="LF1968" type="2" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">CJ HA</cards>
+			<action no="6" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="7" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="8" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="9" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="10" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="LF1968">X X</cards>
+			<action no="11" player="LF1968" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="3" player="haldir123" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="gimah">X X</cards>
+			<action no="4" player="gimah" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="5" player="BluffBichon003" type="23" sum="90" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DK D8 S5</cards>
+			<action no="12" player="LF1968" type="4" sum="0" cards=""/>
+			<action no="14" player="LF1968" type="23" sum="1,275" cards=""/>
+			<action no="13" player="BluffBichon003" type="5" sum="150" cards=""/>
+			<action no="15" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418308">
+		<general>
+			<startdate>2012-10-12 07:51:10</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,638" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="955" dealer="1" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="6" name="LF1968" chips="1,620" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,020" dealer="0" win="600" bet="360" rebuy="0" addon="0"/>
+				<player seat="9" name="gimah" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="LF1968" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="haldir123" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">CQ C6</cards>
+			<action no="5" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="6" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="7" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="8" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="9" player="alice50" type="3" sum="40" cards=""/>
+			<action no="12" player="alice50" type="3" sum="80" cards=""/>
+			<cards type="Pocket" player="LF1968">X X</cards>
+			<action no="10" player="LF1968" type="3" sum="20" cards=""/>
+			<action no="13" player="LF1968" type="3" sum="80" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="11" player="haldir123" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="gimah">X X</cards>
+			<action no="3" player="gimah" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="4" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C8 D4 H4</cards>
+			<action no="16" player="alice50" type="0" sum="0" cards=""/>
+			<action no="14" player="LF1968" type="4" sum="0" cards=""/>
+			<action no="17" player="LF1968" type="0" sum="0" cards=""/>
+			<action no="15" player="haldir123" type="5" sum="240" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418313">
+		<general>
+			<startdate>2012-10-12 07:52:01</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,638" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="835" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="LF1968" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,260" dealer="0" win="400" bet="280" rebuy="0" addon="0"/>
+				<player seat="9" name="gimah" chips="1,500" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,690" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="haldir123" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="gimah" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">D5 DK</cards>
+			<action no="4" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="5" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="6" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="7" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="8" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="LF1968">X X</cards>
+			<action no="9" player="LF1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="10" player="haldir123" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="gimah">X X</cards>
+			<action no="11" player="gimah" type="3" sum="80" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="3" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C7 H8 CA</cards>
+			<action no="12" player="haldir123" type="5" sum="160" cards=""/>
+			<action no="13" player="gimah" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418324">
+		<general>
+			<startdate>2012-10-12 07:52:56</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,250" dealer="0" win="1,000" bet="540" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,380" dealer="0" win="0" bet="140" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,638" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="835" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="LF1968" chips="1,500" dealer="0" win="0" bet="140" rebuy="0" addon="0"/>
+				<player seat="8" name="haldir123" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="gimah" chips="1,380" dealer="0" win="0" bet="140" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,690" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="gimah" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="BluffBichon003" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">CJ CA</cards>
+			<action no="3" player="NikiTheDog" type="23" sum="140" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="4" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="5" player="Terrykent" type="3" sum="140" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="6" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="7" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="LF1968">X X</cards>
+			<action no="8" player="LF1968" type="3" sum="140" cards=""/>
+			<cards type="Pocket" player="haldir123">X X</cards>
+			<action no="9" player="haldir123" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="gimah">X X</cards>
+			<action no="10" player="gimah" type="3" sum="120" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="11" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SA C8 HJ</cards>
+			<action no="13" player="NikiTheDog" type="5" sum="400" cards=""/>
+			<action no="14" player="Terrykent" type="0" sum="0" cards=""/>
+			<action no="15" player="LF1968" type="0" sum="0" cards=""/>
+			<action no="12" player="gimah" type="4" sum="0" cards=""/>
+			<action no="16" player="gimah" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418333">
+		<general>
+			<startdate>2012-10-12 07:54:09</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,710" dealer="0" win="720" bet="480" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,240" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,638" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="835" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="LF1968" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,650" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="NikiTheDog" type="2" sum="40" cards="[cards]"/>
+			<action no="1" player="BluffBichon003" type="1" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">CK HK</cards>
+			<action no="9" player="NikiTheDog" type="23" sum="480" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="3" player="666monika" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">X X</cards>
+			<action no="4" player="Terrykent" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="5" player="reichricchi" type="23" sum="120" cards=""/>
+			<action no="10" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="6" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="LF1968">X X</cards>
+			<action no="7" player="LF1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="8" player="BluffBichon003" type="3" sum="100" cards=""/>
+			<action no="11" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321418342">
+		<general>
+			<startdate>2012-10-12 07:54:53</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,950" dealer="0" win="660" bet="640" rebuy="0" addon="0"/>
+				<player seat="2" name="666monika" chips="1,770" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="3" name="Terrykent" chips="1,240" dealer="0" win="660" bet="640" rebuy="0" addon="0"/>
+				<player seat="4" name="reichricchi" chips="1,518" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="alice50" chips="835" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="LF1968" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="BluffBichon003" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NikiTheDog" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="666monika" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DQ CJ</cards>
+			<action no="8" player="NikiTheDog" type="3" sum="20" cards=""/>
+			<cards type="Pocket" player="666monika">X X</cards>
+			<action no="9" player="666monika" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="Terrykent">H8 HQ</cards>
+			<action no="3" player="Terrykent" type="3" sum="40" cards=""/>
+			<cards type="Pocket" player="reichricchi">X X</cards>
+			<action no="4" player="reichricchi" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="alice50">X X</cards>
+			<action no="5" player="alice50" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="LF1968">X X</cards>
+			<action no="6" player="LF1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="BluffBichon003">X X</cards>
+			<action no="7" player="BluffBichon003" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D10 S3 H9</cards>
+			<action no="10" player="NikiTheDog" type="5" sum="120" cards=""/>
+			<action no="11" player="666monika" type="0" sum="0" cards=""/>
+			<action no="12" player="Terrykent" type="3" sum="120" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DJ</cards>
+			<action no="13" player="NikiTheDog" type="4" sum="0" cards=""/>
+			<action no="15" player="NikiTheDog" type="3" sum="40" cards=""/>
+			<action no="14" player="Terrykent" type="5" sum="40" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">S8</cards>
+			<action no="16" player="NikiTheDog" type="5" sum="440" cards=""/>
+			<action no="17" player="Terrykent" type="3" sum="440" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321420401">
+		<general>
+			<startdate>2012-10-12 07:57:15</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,970" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="3,100" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,575" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="1,030" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="8" name="enfieldsexy" chips="2,005" dealer="0" win="60" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AAJennyfish88" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="enfieldsexy" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">D5 S9</cards>
+			<action no="3" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="4" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="5" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="6" player="YuraDDD" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="7" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="8" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="enfieldsexy">X X</cards>
+		</round>
+
+	</game>
+	<game gamecode="4321420406">
+		<general>
+			<startdate>2012-10-12 07:57:37</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,970" dealer="0" win="160" bet="120" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="3,100" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="1,010" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="enfieldsexy" chips="2,025" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="NikiTheDog" type="2" sum="40" cards="[cards]"/>
+			<action no="1" player="enfieldsexy" type="1" sum="20" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">CK D4</cards>
+			<action no="9" player="NikiTheDog" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="3" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="4" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="5" player="YuraDDD" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="6" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="7" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="enfieldsexy">X X</cards>
+			<action no="8" player="enfieldsexy" type="3" sum="20" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C4 S10 H6</cards>
+			<action no="11" player="NikiTheDog" type="4" sum="0" cards=""/>
+			<action no="10" player="enfieldsexy" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">DK</cards>
+			<action no="13" player="NikiTheDog" type="5" sum="80" cards=""/>
+			<action no="12" player="enfieldsexy" type="4" sum="0" cards=""/>
+			<action no="14" player="enfieldsexy" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321420417">
+		<general>
+			<startdate>2012-10-12 07:58:38</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="2,010" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,360" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,430" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="3,100" dealer="0" win="0" bet="660" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="enfieldsexy" chips="1,985" dealer="1" win="2,705" bet="1,985" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NikiTheDog" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="subaru888" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">D8 DK</cards>
+			<action no="8" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="9" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="3" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="4" player="YuraDDD" type="23" sum="200" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="5" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="6" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="enfieldsexy">X X</cards>
+			<action no="7" player="enfieldsexy" type="3" sum="200" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H4 HK H9</cards>
+			<action no="10" player="YuraDDD" type="5" sum="460" cards=""/>
+			<action no="12" player="YuraDDD" type="0" sum="0" cards=""/>
+			<action no="11" player="enfieldsexy" type="23" sum="1,785" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321420425">
+		<general>
+			<startdate>2012-10-12 07:59:32</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,990" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,320" dealer="0" win="0" bet="20" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,430" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="2,440" dealer="0" win="220" bet="160" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="enfieldsexy" chips="2,705" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="subaru888" type="1" sum="20" cards="[cards]"/>
+			<action no="2" player="ChelFighter" type="2" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">C3 H2</cards>
+			<action no="8" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="9" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="10" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="3" player="YuraDDD" type="23" sum="160" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="4" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="5" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="enfieldsexy">X X</cards>
+			<action no="6" player="enfieldsexy" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<action no="7" player="CocktaRossa" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321420437">
+		<general>
+			<startdate>2012-10-12 08:00:47</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,300" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,390" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="2,500" dealer="0" win="5,090" bet="2,500" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="enfieldsexy" chips="2,705" dealer="0" win="0" bet="2,500" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="ChelFighter" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="YuraDDD" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">D9 H8</cards>
+			<action no="7" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="8" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="9" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">H3 CJ</cards>
+			<action no="10" player="YuraDDD" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="3" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="4" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="enfieldsexy">DA S2</cards>
+			<action no="5" player="enfieldsexy" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<action no="6" player="CocktaRossa" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C2 C7 CA</cards>
+			<action no="11" player="YuraDDD" type="5" sum="60" cards=""/>
+			<action no="14" player="YuraDDD" type="23" sum="2,440" cards=""/>
+			<action no="12" player="enfieldsexy" type="23" sum="780" cards=""/>
+			<action no="15" player="enfieldsexy" type="3" sum="1,660" cards=""/>
+			<action no="13" player="CocktaRossa" type="0" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C8</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">H4</cards>
+		</round>
+
+	</game>
+	<game gamecode="4321420449">
+		<general>
+			<startdate>2012-10-12 08:01:51</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,360" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="5,090" dealer="0" win="360" bet="240" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,575" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="enfieldsexy" chips="205" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,440" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="YuraDDD" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="krichard" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">S2 D2</cards>
+			<action no="6" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="7" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="8" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="9" player="YuraDDD" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="10" player="krichard" type="4" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="3" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="enfieldsexy">X X</cards>
+			<action no="4" player="enfieldsexy" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<action no="5" player="CocktaRossa" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H2 C3 DK</cards>
+			<action no="11" player="YuraDDD" type="5" sum="180" cards=""/>
+			<action no="12" player="krichard" type="0" sum="0" cards=""/>
+			<action no="13" player="CocktaRossa" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321420461">
+		<general>
+			<startdate>2012-10-12 08:02:54</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="5,210" dealer="1" win="1,230" bet="1,140" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,515" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="1,010" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="8" name="enfieldsexy" chips="205" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="krichard" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="AAJennyfish88" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">SA D9</cards>
+			<action no="5" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="6" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="7" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="8" player="YuraDDD" type="23" sum="1,140" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="9" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="10" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="enfieldsexy">X X</cards>
+			<action no="3" player="enfieldsexy" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<action no="4" player="CocktaRossa" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321420469">
+		<general>
+			<startdate>2012-10-12 08:03:36</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="5,300" dealer="0" win="955" bet="720" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,485" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="950" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="8" name="enfieldsexy" chips="205" dealer="0" win="0" bet="205" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="AAJennyfish88" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="enfieldsexy" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">D9 CA</cards>
+			<action no="4" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="5" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="6" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">CK DK</cards>
+			<action no="7" player="YuraDDD" type="23" sum="720" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="8" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="9" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="enfieldsexy">H2 C8</cards>
+			<action no="10" player="enfieldsexy" type="7" sum="145" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<action no="3" player="CocktaRossa" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">DQ C2 DJ</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">HJ</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">D7</cards>
+		</round>
+
+	</game>
+	<game gamecode="4321420480">
+		<general>
+			<startdate>2012-10-12 08:04:48</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="5,535" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,485" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="920" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,380" dealer="0" win="60" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="FergDog24" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="CocktaRossa" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">S4 S7</cards>
+			<action no="3" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="4" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="5" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="6" player="YuraDDD" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="7" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="8" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="2" player="FergDog24" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321420482">
+		<general>
+			<startdate>2012-10-12 08:05:14</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,990" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="5,535" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,485" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="920" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,380" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="10" name="FergDog24" chips="1,500" dealer="0" win="210" bet="150" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="CocktaRossa" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="FergDog24" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DJ C9</cards>
+			<action no="3" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="4" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="5" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="6" player="YuraDDD" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="7" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="8" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<action no="9" player="CocktaRossa" type="3" sum="30" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="10" player="FergDog24" type="4" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C5 D9 HK</cards>
+			<action no="11" player="CocktaRossa" type="4" sum="0" cards=""/>
+			<action no="13" player="CocktaRossa" type="0" sum="0" cards=""/>
+			<action no="12" player="FergDog24" type="5" sum="90" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424401">
+		<general>
+			<startdate>2012-10-12 08:05:57</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,990" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,300" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="5,535" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,485" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="920" dealer="0" win="210" bet="120" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,320" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="FergDog24" chips="1,560" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="NikiTheDog" type="2" sum="60" cards="[cards]"/>
+			<action no="1" player="FergDog24" type="1" sum="30" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">CJ S7</cards>
+			<action no="10" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="3" player="subaru888" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="4" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="5" player="YuraDDD" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="6" player="krichard" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="7" player="AAJennyfish88" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<action no="8" player="CocktaRossa" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="9" player="FergDog24" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424407">
+		<general>
+			<startdate>2012-10-12 08:06:51</startdate>		  
+			<players>
+				<player seat="1" name="NikiTheDog" chips="1,930" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="2" name="subaru888" chips="1,300" dealer="0" win="1,570" bet="1,300" rebuy="0" addon="0"/>
+				<player seat="3" name="ChelFighter" chips="5,360" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="YuraDDD" chips="5,535" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="krichard" chips="2,485" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="6" name="AAJennyfish88" chips="1,010" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="dennis998" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="CocktaRossa" chips="1,320" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+				<player seat="10" name="FergDog24" chips="1,530" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NikiTheDog" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="subaru888" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="NikiTheDog">DJ D8</cards>
+			<action no="10" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="subaru888">X X</cards>
+			<action no="11" player="subaru888" type="3" sum="60" cards=""/>
+			<cards type="Pocket" player="ChelFighter">X X</cards>
+			<action no="3" player="ChelFighter" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="YuraDDD">X X</cards>
+			<action no="4" player="YuraDDD" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="krichard">X X</cards>
+			<action no="5" player="krichard" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="AAJennyfish88">X X</cards>
+			<action no="6" player="AAJennyfish88" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dennis998">X X</cards>
+			<action no="7" player="dennis998" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="CocktaRossa">X X</cards>
+			<action no="8" player="CocktaRossa" type="3" sum="120" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="9" player="FergDog24" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D2 HK H7</cards>
+			<action no="12" player="subaru888" type="5" sum="1,180" cards=""/>
+			<action no="13" player="krichard" type="0" sum="0" cards=""/>
+			<action no="14" player="CocktaRossa" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424417">
+		<general>
+			<startdate>2012-10-12 08:08:02</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="1,500" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="2,475" dealer="0" win="420" bet="240" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,530" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,900" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="4,624" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,380" dealer="0" win="0" bet="120" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="JINJIALE" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="5haun1968" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="7" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="8" player="JINJIALE" type="3" sum="30" cards=""/>
+			<action no="11" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="9" player="5haun1968" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="3" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">D3 C8</cards>
+			<action no="4" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="5" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="6" player="dogan21" type="3" sum="60" cards=""/>
+			<action no="10" player="dogan21" type="3" sum="60" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C5 H6 DJ</cards>
+			<action no="12" player="5haun1968" type="5" sum="120" cards=""/>
+			<action no="13" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424420">
+		<general>
+			<startdate>2012-10-12 08:08:43</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="1,440" dealer="1" win="866" bet="536" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="2,655" dealer="0" win="0" bet="165" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,530" dealer="0" win="0" bet="165" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,900" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="4,624" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="5haun1968" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="FergDog24" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="6" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="7" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="8" player="JINJIALE" type="23" sum="165" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="9" player="5haun1968" type="3" sum="135" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="10" player="FergDog24" type="3" sum="105" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">H3 H9</cards>
+			<action no="3" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="4" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="5" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D5 CQ H7</cards>
+			<action no="13" player="JINJIALE" type="5" sum="371" cards=""/>
+			<action no="11" player="5haun1968" type="4" sum="0" cards=""/>
+			<action no="14" player="5haun1968" type="0" sum="0" cards=""/>
+			<action no="12" player="FergDog24" type="4" sum="0" cards=""/>
+			<action no="15" player="FergDog24" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424430">
+		<general>
+			<startdate>2012-10-12 08:09:51</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,500" dealer="0" win="0" bet="900" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="1,770" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="2,490" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,365" dealer="0" win="0" bet="30" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,900" dealer="0" win="0" bet="60" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="4,624" dealer="0" win="1,890" bet="900" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="FergDog24" type="1" sum="30" cards="[cards]"/>
+			<action no="2" player="NikiTheDog" type="2" sum="60" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="5" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">D10 C10</cards>
+			<action no="6" player="Lunte99" type="3" sum="120" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="7" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="8" player="5haun1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="9" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">D7 SA</cards>
+			<action no="10" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">HQ H10</cards>
+			<action no="3" player="nudelauge" type="23" sum="120" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="4" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C3 SJ C8</cards>
+			<action no="12" player="Lunte99" type="5" sum="180" cards=""/>
+			<action no="11" player="nudelauge" type="4" sum="0" cards=""/>
+			<action no="13" player="nudelauge" type="3" sum="180" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D9</cards>
+			<action no="15" player="Lunte99" type="5" sum="180" cards=""/>
+			<action no="14" player="nudelauge" type="4" sum="0" cards=""/>
+			<action no="16" player="nudelauge" type="3" sum="180" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C2</cards>
+			<action no="18" player="Lunte99" type="3" sum="420" cards=""/>
+			<action no="17" player="nudelauge" type="5" sum="420" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424442">
+		<general>
+			<startdate>2012-10-12 08:11:20</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="1,770" dealer="0" win="320" bet="200" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="2,490" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,335" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,840" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,614" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NikiTheDog" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="nudelauge" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="4" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="5" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="6" player="JINJIALE" type="23" sum="200" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="7" player="5haun1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="8" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">D10 H3</cards>
+			<action no="9" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="10" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="3" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424450">
+		<general>
+			<startdate>2012-10-12 08:12:01</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="1,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="2,490" dealer="0" win="0" bet="240" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,335" dealer="0" win="920" bet="560" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,800" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,534" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,260" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="nudelauge" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="dogan21" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="3" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="4" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="5" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="6" player="5haun1968" type="3" sum="80" cards=""/>
+			<action no="11" player="5haun1968" type="3" sum="160" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="7" player="FergDog24" type="23" sum="240" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">C7 DK</cards>
+			<action no="8" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="9" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="10" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C3 SK CJ</cards>
+			<action no="12" player="5haun1968" type="4" sum="0" cards=""/>
+			<action no="14" player="5haun1968" type="0" sum="0" cards=""/>
+			<action no="13" player="FergDog24" type="5" sum="320" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424458">
+		<general>
+			<startdate>2012-10-12 08:13:06</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,500" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="600" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="1,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="2,250" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,800" dealer="0" win="440" bet="320" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,494" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,180" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="xxLJUTIKxx" type="2" sum="80" cards="[cards]"/>
+			<action no="1" player="dogan21" type="1" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="10" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="3" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="4" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="5" player="5haun1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="6" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">DA DK</cards>
+			<action no="7" player="NikiTheDog" type="23" sum="320" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="8" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="9" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424462">
+		<general>
+			<startdate>2012-10-12 08:13:35</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,420" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="600" dealer="0" win="1,120" bet="600" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="1,890" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="2,250" dealer="0" win="0" bet="240" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,920" dealer="0" win="0" bet="240" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,494" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,140" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xxLJUTIKxx" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="Lunte99" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="9" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="10" player="Lunte99" type="3" sum="160" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="3" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="4" player="5haun1968" type="23" sum="240" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="5" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">SK S10</cards>
+			<action no="6" player="NikiTheDog" type="3" sum="240" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="7" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="8" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D2 H4 H8</cards>
+			<action no="11" player="Lunte99" type="4" sum="0" cards=""/>
+			<action no="12" player="5haun1968" type="4" sum="0" cards=""/>
+			<action no="13" player="NikiTheDog" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">D9</cards>
+			<action no="14" player="Lunte99" type="5" sum="360" cards=""/>
+			<action no="15" player="5haun1968" type="0" sum="0" cards=""/>
+			<action no="16" player="NikiTheDog" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424471">
+		<general>
+			<startdate>2012-10-12 08:14:45</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,380" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,120" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="1,890" dealer="0" win="520" bet="320" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="2,010" dealer="0" win="0" bet="160" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,494" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,140" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="Lunte99" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="JINJIALE" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="8" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="9" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="10" player="JINJIALE" type="23" sum="160" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="3" player="5haun1968" type="3" sum="80" cards=""/>
+			<action no="11" player="5haun1968" type="3" sum="80" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="4" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">DJ S3</cards>
+			<action no="5" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="6" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="7" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S8 SA H8</cards>
+			<action no="12" player="JINJIALE" type="4" sum="0" cards=""/>
+			<action no="13" player="5haun1968" type="4" sum="0" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">C4</cards>
+			<action no="14" player="JINJIALE" type="5" sum="160" cards=""/>
+			<action no="15" player="5haun1968" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424480">
+		<general>
+			<startdate>2012-10-12 08:16:01</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,080" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="2,090" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="1,850" dealer="0" win="0" bet="160" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,695" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,494" dealer="0" win="520" bet="320" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,140" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="JINJIALE" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="5haun1968" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="7" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="8" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="9" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="10" player="5haun1968" type="3" sum="80" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="3" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">S2 DK</cards>
+			<action no="4" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="5" player="nudelauge" type="23" sum="160" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="6" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S10 C6 HQ</cards>
+			<action no="11" player="5haun1968" type="4" sum="0" cards=""/>
+			<action no="13" player="5haun1968" type="0" sum="0" cards=""/>
+			<action no="12" player="nudelauge" type="5" sum="160" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321424489">
+		<general>
+			<startdate>2012-10-12 08:16:56</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,080" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="2,050" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="1,690" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,695" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,680" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,694" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,140" dealer="0" win="360" bet="240" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="5haun1968" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="FergDog24" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="6" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="7" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="8" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="9" player="5haun1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="10" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">H9 C5</cards>
+			<action no="3" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="4" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="5" player="dogan21" type="23" sum="240" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321427271">
+		<general>
+			<startdate>2012-10-12 08:17:47</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,080" dealer="0" win="1,440" bet="1,080" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="2,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="1,650" dealer="1" win="0" bet="240" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,615" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,680" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,694" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="FergDog24" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="NikiTheDog" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="5" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="6" player="Lunte99" type="23" sum="240" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="7" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="8" player="5haun1968" type="3" sum="240" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="9" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">C10 DK</cards>
+			<action no="10" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="3" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="4" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">SK SQ S8</cards>
+			<action no="11" player="Lunte99" type="5" sum="840" cards=""/>
+			<action no="12" player="5haun1968" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321427276">
+		<general>
+			<startdate>2012-10-12 08:18:40</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="2,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="1,410" dealer="0" win="0" bet="320" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,575" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,600" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="5,694" dealer="0" win="680" bet="320" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,260" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="NikiTheDog" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="nudelauge" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="4" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="5" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="6" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">S3 S6</cards>
+			<action no="7" player="5haun1968" type="23" sum="160" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="8" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">S4 HK</cards>
+			<action no="9" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">D6 D5</cards>
+			<action no="10" player="nudelauge" type="3" sum="80" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="3" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">S9 DA C7</cards>
+			<action no="12" player="5haun1968" type="5" sum="160" cards=""/>
+			<action no="11" player="nudelauge" type="4" sum="0" cards=""/>
+			<action no="13" player="nudelauge" type="3" sum="160" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">S5</cards>
+			<action no="15" player="5haun1968" type="4" sum="0" cards=""/>
+			<action no="14" player="nudelauge" type="4" sum="0" cards=""/>
+		</round>
+		<round no="4">
+			<cards type="River" player="">C3</cards>
+			<action no="17" player="5haun1968" type="4" sum="0" cards=""/>
+			<action no="16" player="nudelauge" type="4" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321427284">
+		<general>
+			<startdate>2012-10-12 08:19:35</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,380" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="2,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="1,090" dealer="0" win="1,290" bet="1,090" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,560" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="6,054" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,260" dealer="0" win="0" bet="80" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="nudelauge" type="1" sum="40" cards="[cards]"/>
+			<action no="2" player="dogan21" type="2" sum="80" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="3" player="xxLJUTIKxx" type="3" sum="80" cards=""/>
+			<action no="11" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="4" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="5" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="6" player="5haun1968" type="23" sum="1,090" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="7" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">C7 SJ</cards>
+			<action no="8" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="9" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="10" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321427290">
+		<general>
+			<startdate>2012-10-12 08:20:18</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,300" dealer="0" win="120" bet="80" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="2,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="1,290" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,575" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="6,014" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,180" dealer="0" win="0" bet="40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="xxLJUTIKxx" type="2" sum="80" cards="[cards]"/>
+			<action no="1" player="dogan21" type="1" sum="40" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="3" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="4" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="5" player="5haun1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FergDog24">X X</cards>
+			<action no="6" player="FergDog24" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">H7 D9</cards>
+			<action no="7" player="NikiTheDog" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="8" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="9" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="4321427296">
+		<general>
+			<startdate>2012-10-12 08:20:50</startdate>		  
+			<players>
+				<player seat="1" name="xxLJUTIKxx" chips="1,340" dealer="0" win="0" bet="50" rebuy="0" addon="0"/>
+				<player seat="2" name="Lunte99" chips="1,440" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="4" name="JINJIALE" chips="2,050" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="5" name="5haun1968" chips="1,290" dealer="0" win="0" bet="100" rebuy="0" addon="0"/>
+				<player seat="6" name="FergDog24" chips="1,575" dealer="0" win="3,370" bet="1,560" rebuy="0" addon="0"/>
+				<player seat="8" name="NikiTheDog" chips="1,560" dealer="0" win="0" bet="1,560" rebuy="0" addon="0"/>
+				<player seat="9" name="nudelauge" chips="6,014" dealer="0" win="0" bet="0" rebuy="0" addon="0"/>
+				<player seat="10" name="dogan21" chips="3,140" dealer="1" win="0" bet="0" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="1" player="xxLJUTIKxx" type="1" sum="50" cards="[cards]"/>
+			<action no="2" player="Lunte99" type="2" sum="100" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="xxLJUTIKxx">X X</cards>
+			<action no="9" player="xxLJUTIKxx" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="Lunte99">X X</cards>
+			<action no="10" player="Lunte99" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="JINJIALE">X X</cards>
+			<action no="3" player="JINJIALE" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="5haun1968">X X</cards>
+			<action no="4" player="5haun1968" type="3" sum="100" cards=""/>
+			<action no="11" player="5haun1968" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="FergDog24">CJ CA</cards>
+			<action no="5" player="FergDog24" type="3" sum="100" cards=""/>
+			<action no="12" player="FergDog24" type="3" sum="1,460" cards=""/>
+			<cards type="Pocket" player="NikiTheDog">HQ SQ</cards>
+			<action no="6" player="NikiTheDog" type="23" sum="1,560" cards=""/>
+			<cards type="Pocket" player="nudelauge">X X</cards>
+			<action no="7" player="nudelauge" type="0" sum="0" cards=""/>
+			<cards type="Pocket" player="dogan21">X X</cards>
+			<action no="8" player="dogan21" type="0" sum="0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">CK H8 H4</cards>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">SJ</cards>
+		</round>
+		<round no="4">
+			<cards type="River" player="">DA</cards>
+		</round>
+
+	</game>  
+</session>

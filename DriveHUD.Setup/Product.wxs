@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <?include Variables.wxi?>
+  <Product Id="$(var.ProductCode)"
+           Name="$(var.ProductName)"
+           Language="1033"
+           Version="$(var.ProductVersion)"
+           Manufacturer="$(var.Manufacturer)"
+           UpgradeCode="$(var.UpgradeCode)">
+    <Package InstallerVersion="301"
+             Compressed="yes"
+             InstallScope="perMachine"
+             Manufacturer="$(var.Manufacturer)"
+             Description="Installs $(var.ProductName)"
+             Keywords="$(var.ProductName),Installer,MSI" />
+    <MediaTemplate EmbedCab="yes" />
+
+    <MajorUpgrade
+      Schedule="afterInstallExecute"
+      DowngradeErrorMessage="A newer version of [ProductName] is already installed."/>
+
+    <!-- Properties -->
+    <Property Id="INSTALLDESKTOPSHORTCUT" />
+    <Property Id="INSTALLPROGRAMMENUSHORTCUT" />
+    <Property Id="REMOVEPLAYERDATA"/>
+
+    <!-- Directory Structure -->
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="ProgramFilesFolder">
+        <Directory Id="MANUFACTURERDIR" Name="$(var.Manufacturer)">
+          <Directory Id="INSTALLDIR" Name="$(var.ProductName)">
+            <Directory Id="BIN" Name="bin">
+              <Directory Id="LIB" Name="Lib"/>
+            </Directory>
+            <Directory Id="DATA" Name="Data">
+              <Directory Id="PLAYERTYPES" Name="PlayerTypes"/>
+            </Directory>
+            <Directory Id="SCRIPTS" Name="Scripts"/>
+          </Directory>
+        </Directory>
+      </Directory>
+      <Directory Id="DesktopFolder" />
+      <Directory Id="ProgramMenuFolder">
+        <Directory Id="ProgramMenuDir" Name="$(var.ProductName)"/>
+      </Directory>
+    </Directory>
+
+    <!-- Components -->
+    <DirectoryRef Id="INSTALLDIR">
+      <Component Id="$(var.DriveHUD.Application.TargetFileName)">
+        <File Id="$(var.DriveHUD.Application.TargetFileName)" Source="$(var.DriveHUD.Application.TargetPath)" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="App.config">
+        <File Id="App.config" Name="$(var.DriveHUD.Application.TargetFileName).config" Vital="yes" Source="$(var.DriveHUD.Application.ProjectDir)\app.config" />
+      </Component>
+      <Component Id="DHCReg.dll" Guid="{12B4DF2F-64B0-44A7-B449-B2FA41B5D7FA}">
+        <File Id="DHCReg.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\DHCReg.dll" />
+      </Component>
+      <Component Id="DHHReg.dll" Guid="{A31333D2-48FC-4DCB-8E6B-BD5C0ACDB8E6}">
+        <File Id="DHHReg.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\DHHReg.dll" />
+      </Component>
+      <Component Id="DHOReg.dll" Guid="{DA7A9861-E9EC-43CC-B6B4-937DE1FB2670}">
+        <File Id="DHOReg.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\DHOReg.dll" />
+      </Component>
+      <Component Id="DriveHUD.Updater.exe" Guid="{F62CC064-5D14-4AEA-9A77-FFD13398AFEA}">
+        <File Id="DriveHUD.Updater.exe" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\DriveHUD.Updater.exe" />
+      </Component>
+      <Component Id="DriveHUD.Updater.exe.config" Guid="{8814B3F8-6980-438F-B635-5E5493E0B26E}">
+        <File Id="DriveHUD.Updater.exe.config" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\DriveHUD.Updater.exe.config" />
+      </Component>
+      <Component Id="DriveHUD.Updater.Core.dll" Guid="{B7076833-4E68-4B7C-BF29-3515D5B002FC}">
+        <File Id="DriveHUD.Updater.Core.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\DriveHUD.Updater.Core.dll" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="INSTALLDIR">
+      <Component Id="Shortcuts" Guid="{D29AF16C-2EC7-4447-BD6B-CFA8AEA13993}">
+        <Shortcut Id="UninstallShortcut"  Name="Uninstall $(var.ProductName)" Description="Uninstalls $(var.ProductName) and all of its components" Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]" />
+        <RemoveFolder Id="RemoveINSTALLDIR" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\$(var.Manufacturer)\$(var.ProductName)" Name="installed"  Type="integer"  Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="BIN">
+      <Component Id="DriveHUD.Entities.dll" Guid="{53593C97-332F-431F-9D85-081EEAE0E246}">
+        <File Id="DriveHUD.Entities.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\DriveHUD.Entities.dll" />
+      </Component>
+      <Component Id="$(var.DriveHUD.ViewModels.TargetFileName)" Guid="{CA897FED-9E3D-4706-9539-3CA474D790E4}">
+        <File Id="$(var.DriveHUD.ViewModels.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.ViewModels.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.DriveHUD.Common.TargetFileName)" Guid="{23025E1A-3FAE-4CD1-AA48-7C70FD4C3134}">
+        <File Id="$(var.DriveHUD.Common.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.Common.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.DriveHUD.Common.Resources.TargetFileName)" Guid="{DC26E80F-40EA-430D-AF91-B3F627029CE3}">
+        <File Id="$(var.DriveHUD.Common.Resources.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.Common.Resources.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.DriveHUD.Common.Infrastructure.TargetFileName)" Guid="{A0A93DAC-520F-49A1-9BD6-7393059504F7}">
+        <File Id="$(var.DriveHUD.Common.Infrastructure.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.Common.Infrastructure.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.DriveHUD.Common.Wpf.TargetFileName)" Guid="{06F0AD8F-7539-4996-A0C7-927B5B7C6EB2}">
+        <File Id="$(var.DriveHUD.Common.Wpf.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.Common.Wpf.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.DriveHUD.EquityCalculator.TargetFileName)" Guid="{E4EF0A5B-5623-4291-98AC-4AD47E7CA119}">
+        <File Id="$(var.DriveHUD.EquityCalculator.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.EquityCalculator.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.DriveHUD.Controls.TargetFileName)" Guid="{EE89DACB-923F-4B91-9136-1689357CDE1A}">
+        <File Id="$(var.DriveHUD.Controls.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.Controls.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.DriveHUD.Importers.TargetFileName)" Guid="{C850656B-AE89-4DD6-8EB4-76B81DF6ACB0}">
+        <File Id="$(var.DriveHUD.Importers.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.Importers.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.Model.TargetFileName)" Guid="{87680A6E-E263-4CA5-BE3D-88F4999F8A1D}">
+        <File Id="$(var.Model.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.Model.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.HandHistories.Objects.TargetFileName)" Guid="{EF5CC6A7-5784-4E6D-B93D-0652430DE633}">
+        <File Id="$(var.HandHistories.Objects.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.HandHistories.Objects.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.HandHistories.Parser.TargetFileName)" Guid="{B399D6FC-3E00-4C42-A9BC-8FD2C2F719B3}">
+        <File Id="$(var.HandHistories.Parser.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.HandHistories.Parser.TargetFileName)" />
+      </Component>
+      <Component Id="$(var.DriveHUD.DBMigrator.TargetFileName)" Guid="{6A447C59-73B8-465E-8736-DFDEB8AB7673}">
+        <File Id="$(var.DriveHUD.DBMigrator.TargetFileName)" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)$(var.DriveHUD.DBMigrator.TargetFileName)" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="BIN">
+      <Component Id="FluentMigrator.dll" Guid="{B6806ECF-979B-428F-A90A-1D3A135BA50A}">
+        <File Id="FluentMigrator.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\FluentMigrator.dll" />
+      </Component>
+      <Component Id="FluentMigrator.Runner.dll" Guid="{7432020E-3DF9-4A2D-AD06-D17812DAE411}">
+        <File Id="FluentMigrator.Runner.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\FluentMigrator.Runner.dll" />
+      </Component>
+      <Component Id="FluentNHibernate.dll" Guid="{89B1B7B8-54EF-47D3-9C83-8D4F57A176BC}">
+        <File Id="FluentNHibernate.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\FluentNHibernate.dll" />
+      </Component>
+      <Component Id="HandEvaluator.dll" Guid="{FA4F1319-A1B8-4CB1-8351-281D2F405661}">
+        <File Id="HandEvaluator.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\HandEvaluator.dll" />
+      </Component>
+      <Component Id="Npgsql.dll" Guid="{D084432B-B21E-4725-AF84-A257E28B0A86}">
+        <File Id="Npgsql.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Npgsql.dll" />
+      </Component>
+      <Component Id="Mono.Security.dll" Guid="{772BF070-5B38-42F8-902B-2AD5D404806D}">
+        <File Id="Mono.Security.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Mono.Security.dll" />
+      </Component>
+      <Component Id="Iesi.Collections.dll" Guid="{D636A987-53DC-41CD-9D59-EF131FB7850F}">
+        <File Id="Iesi.Collections.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Iesi.Collections.dll" />
+      </Component>
+      <Component Id="ManagedWinapi.dll" Guid="{A9951555-1A1B-4AF3-B4F6-7526935D6107}">
+        <File Id="ManagedWinapi.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\ManagedWinapi.dll" />
+      </Component>
+      <Component Id="ManagedWinapiNativeHelper.dll" Guid="{AEB1DE80-827C-44DA-BF0B-0E12954E0FD7}">
+        <File Id="ManagedWinapiNativeHelper.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\ManagedWinapiNativeHelper.dll" />
+      </Component>
+      <Component Id="NHibernate.dll" Guid="{CC82081C-1385-432F-B941-242118D2F434}">
+        <File Id="NHibernate.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\NHibernate.dll" />
+      </Component>
+      <Component Id="NLog.dll" Guid="{81FDBBD2-FD8B-4B43-A90F-333938EFD0EF}">
+        <File Id="NLog.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\NLog.dll" />
+      </Component>
+      <Component Id="protobufnet.dll" Guid="{AB2D1023-1875-4D5D-8438-0F60BC04D260}">
+        <File Id="protobufnet.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\protobuf-net.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.dll" Guid="{4FF9BE6B-13F7-4F8D-95CD-A20B324ACC7F}">
+        <File Id="Telerik.Windows.Controls.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.Chart.dll" Guid="{C75AA8DA-55E0-45A9-8E6D-A8CA8C4E86E6}">
+        <File Id="Telerik.Windows.Controls.Chart.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.Chart.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.DataVisualization.dll" Guid="{8E29397B-BB7F-4CF9-864E-471188D6F6E4}">
+        <File Id="Telerik.Windows.Controls.DataVisualization.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.DataVisualization.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.Diagrams.dll" Guid="{95EE824E-3EEE-4795-AD94-47391B798755}">
+        <File Id="Telerik.Windows.Controls.Diagrams.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.Diagrams.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.Diagrams.Extensions.dll" Guid="{BBEC6078-9AB0-486C-9C23-F400D8D1F6E1}">
+        <File Id="Telerik.Windows.Controls.Diagrams.Extensions.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.Diagrams.Extensions.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.GridView.dll" Guid="{432EAFA3-A781-4735-8D5B-440D48E28B43}">
+        <File Id="Telerik.Windows.Controls.GridView.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.GridView.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.Input.dll" Guid="{8AF04420-1359-4A54-8865-6ED6D5CAD9B6}">
+        <File Id="Telerik.Windows.Controls.Input.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.Input.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.Navigation.dll" Guid="{4A177EB9-E05F-407E-8AE9-2EF5A97EDE85}">
+        <File Id="Telerik.Windows.Controls.Navigation.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.Navigation.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.RibbonView.dll" Guid="{D2C487DF-AD63-4CF7-9AE6-3E6AB3803C1C}">
+        <File Id="Telerik.Windows.Controls.RibbonView.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.RibbonView.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Data.dll" Guid="{B0460B2C-2247-4805-A27E-DC3C783BF2CE}">
+        <File Id="Telerik.Windows.Data.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Data.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Diagrams.Core.dll" Guid="{79B6795D-37B1-4C8C-8E12-935C43F84976}">
+        <File Id="Telerik.Windows.Diagrams.Core.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Diagrams.Core.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.PersistenceFramework.dll" Guid="{530FD436-8DC3-4986-84FD-17E990A168D4}">
+        <File Id="Telerik.Windows.PersistenceFramework.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.PersistenceFramework.dll" />
+      </Component>
+      <Component Id="DeployLX.Licensing.v5.dll">
+        <File Id="DeployLX.Licensing.v5.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.ProjectDir)\..\dependencies\DeployLX.Licensing.v5.dll" />
+      </Component>
+      <Component Id="Facebook.dll">
+        <File Id="Facebook.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Facebook.dll" />
+      </Component>
+      <Component Id="Twitterizer2.dll">
+        <File Id="Twitterizer2.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Twitterizer2.dll" />
+      </Component>
+      <Component Id="log4net.dll" Guid="{4DB7E459-75D8-4C18-BC52-A01B65B427F7}">
+        <File Id="log4net.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\log4net.dll" />
+      </Component>
+      <Component Id="Prism.Unity.Wpf.dll" Guid="{8F780AF0-18FA-44CA-9E91-753AFDAE7760}">
+        <File Id="PRISM.UNITY.WPF.DLL" Name="Prism.Unity.Wpf.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Prism.Unity.Wpf.dll" />
+      </Component>
+      <Component Id="Prism.Wpf.dll" Guid="{5B6A8EB1-0A66-4878-B94F-B74AF8FE1C76}">
+        <File Id="PRISM.WPF.DLL" Name="Prism.Wpf.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Prism.Wpf.dll" />
+      </Component>
+      <Component Id="Prism.dll" Guid="{48A8474C-50B8-48EA-8345-637AFA153E26}">
+        <File Id="PRISM.DLL" Name="Prism.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Prism.dll" />
+      </Component>
+      <Component Id="Microsoft.Practices.Unity.dll" Guid="{5C2BF91C-1BB5-45BC-A2C6-AD49CAD48B98}">
+        <File Id="MICROSOFT.PRACTICES.UNITY.DLL" Name="Microsoft.Practices.Unity.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Microsoft.Practices.Unity.dll" />
+      </Component>
+      <Component Id="Microsoft.Practices.ServiceLocation.dll" Guid="{E994A6A9-B8F2-4738-8A83-1109ED8C45DB}">
+        <File Id="MICROSOFT.PRACTICES.SERVICELOCATION.DLL" Name="Microsoft.Practices.ServiceLocation.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Microsoft.Practices.ServiceLocation.dll" />
+      </Component>
+      <Component Id="System.Windows.Interactivity.dll" Guid="{BA7B9756-9CAC-48E5-95C1-1C2067428188}">
+        <File Id="SYSTEM.WINDOWS.INTERACTIVITY.DLL" Name="System.Windows.Interactivity.dll" Source="$(var.DriveHUD.Application.TargetDir)\System.Windows.Interactivity.dll" />
+      </Component>
+      <Component Id="Microsoft.Expression.Interactions.dll" Guid="{8B25A2B7-19FA-4090-8B39-6F4347E48F3C}">
+        <File Id="MICROSOFT.EXPRESSION.INTERACTIONS.DLL" Name="Microsoft.Expression.Interactions.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Microsoft.Expression.Interactions.dll" />
+      </Component>
+      <Component Id="ReactiveUI.dll" Guid="B4C53A6B-F4EB-4042-AE45-0B78DC9D629A">
+        <File Id="REACTIVEUI.DLL" Name="ReactiveUI.dll" Source="$(var.DriveHUD.Application.TargetDir)\ReactiveUI.dll" />
+      </Component>
+      <Component Id="Splat.dll" Guid="FBE0DF00-CBA3-4D67-8866-588B2E378238">
+        <File Id="SPLAT.DLL" Name="Splat.dll" Source="$(var.DriveHUD.Application.TargetDir)\Splat.dll" />
+      </Component>
+      <Component Id="System.Reactive.Core.dll" Guid="8BCB6C48-19C2-495D-BAE5-27609704BE26">
+        <File Id="SYSTEM.REACTIVE.CORE.DLL" Name="System.Reactive.Core.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\System.Reactive.Core.dll" />
+      </Component>
+      <Component Id="System.Reactive.Interfaces.dll" Guid="16695406-C842-4880-9C22-817ADA068CFC">
+        <File Id="SYSTEM.REACTIVE.INTERFACES.DLL" Name="System.Reactive.Interfaces.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\System.Reactive.Interfaces.dll" />
+      </Component>
+      <Component Id="System.Reactive.Linq.dll" Guid="965B026B-CD2D-4989-BE94-94C643711F5D">
+        <File Id="SYSTEM.REACTIVE.LINQ.DLL" Name="System.Reactive.Linq.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\System.Reactive.Linq.dll" />
+      </Component>
+      <Component Id="System.Reactive.PlatformServices.dll" Guid="AD25971B-E034-4916-96D9-CA36330A1041">
+        <File Id="SYSTEM.REACTIVE.PLATFORMSERVICES.DLL" Name="System.Reactive.PlatformServices.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\System.Reactive.PlatformServices.dll" />
+      </Component>
+      <Component Id="System.Reactive.Windows.Threading.dll" Guid="D4DDD828-0A07-4229-B7A9-74721157F352">
+        <File Id="SYSTEM.REACTIVE.WINDOWS.THREADING.DLL" Name="System.Reactive.Windows.Threading.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\System.Reactive.Windows.Threading.dll" />
+      </Component>
+      <Component Id="Newtonsoft.Json.dll" Guid="{290819DB-0A48-4DF2-BDE6-168C68E6F1D3}">
+        <File Id="Newtonsoft.Json.dll" Name="Newtonsoft.Json.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Newtonsoft.Json.dll" />
+      </Component>
+      <Component Id="Microsoft.Practices.Unity.Configuration.dll" Guid="{9892979E-B331-4F9A-8149-A5497187D10B}">
+        <File Id="Microsoft.Practices.Unity.Configuration.dll" Name="Microsoft.Practices.Unity.Configuration.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Microsoft.Practices.Unity.Configuration.dll" />
+      </Component>
+      <Component Id="Microsoft.Practices.Unity.RegistrationByConvention.dll" Guid="{B2B1567F-58BE-4E46-B2BF-2D2497B01CC6}">
+        <File Id="Microsoft.Practices.Unity.RegistrationByConvention.dll" Name="Microsoft.Practices.Unity.RegistrationByConvention.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Microsoft.Practices.Unity.RegistrationByConvention.dll" />
+      </Component>
+      <Component Id="Telerik.Windows.Controls.Data.dll" Guid="{90713AC2-3EF8-449C-8FD3-B0B18AFEBD4F}">
+        <File Id="Telerik.Windows.Controls.Data.dll" Name="Telerik.Windows.Controls.Data.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Telerik.Windows.Controls.Data.dll" />
+      </Component>
+      <Component Id="Microsoft.Expression.Drawing.dll" Guid="{72509625-8FD7-40E5-93AF-BCFBA0CC091D}">
+        <File Id="Microsoft.Expression.Drawing.dll" Name="Microsoft.Expression.Drawing.dll" KeyPath="yes" Source="$(var.DriveHUD.Application.TargetDir)\Microsoft.Expression.Drawing.dll" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="LIB">
+      <Component Id="CAPPIPEDB.DLL" DiskId="1" Guid="4BA6C7E5-C1BE-476B-B50F-66BED055E922">
+        <File Id="CAPPIPEDB.DLL" Name="CapPipedB.dll" Source="$(var.DriveHUD.Application.TargetDir)\Lib\CapPipedB.dll" />
+      </Component>
+      <Component Id="CAPPIPEDI.DLL" Guid="{66448353-8776-45EA-B6B2-5E57A8D958CB}">
+        <File Id="CAPPIPEDI.DLL" Name="CapPipedI.dll" Source="$(var.DriveHUD.Application.TargetDir)\Lib\CapPipedI.dll" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="PLAYERTYPES">
+      <Component Id="BAD_LAG.PNG" DiskId="1" Guid="0C2FC918-F642-4848-8628-2D4FAFB9378C">
+        <File Id="BAD_LAG.PNG" Name="Bad LAG.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\Bad LAG.png" />
+      </Component>
+      <Component Id="BOOK.PNG" DiskId="1" Guid="F528F4EF-C1A5-4D30-952F-C8B924A81A06">
+        <File Id="BOOK.PNG" Name="book.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\book.png" />
+      </Component>
+      <Component Id="CAT_2.PNG" DiskId="1" Guid="2A1E6A24-6E48-4BF5-8E73-0C764BE8CD8C">
+        <File Id="CAT_2.PNG" Name="cat-2.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\cat-2.png" />
+      </Component>
+      <Component Id="CAT.PNG" DiskId="1" Guid="9D0F7EF2-DB06-4AF3-8E51-6FFD8D892157">
+        <File Id="CAT.PNG" Name="cat.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\cat.png" />
+      </Component>
+      <Component Id="CRAZY_FACE_2.PNG" DiskId="1" Guid="9F26CC22-80C2-4EB9-9952-F56598E52AB6">
+        <File Id="CRAZY_FACE_2.PNG" Name="crazy-face-2.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\crazy-face-2.png" />
+      </Component>
+      <Component Id="CRAZY_FACE.PNG" DiskId="1" Guid="64CDFF64-DC74-4B34-BCA1-09DF5CE652FB">
+        <File Id="CRAZY_FACE.PNG" Name="crazy-face.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\crazy-face.png" />
+      </Component>
+      <Component Id="DONKEY_2.PNG" DiskId="1" Guid="B4D9EEAE-6C01-4878-8B50-263C7EB7B472">
+        <File Id="DONKEY_2.PNG" Name="donkey-2.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\donkey-2.png" />
+      </Component>
+      <Component Id="DONKEY.PNG" DiskId="1" Guid="1EB90231-6772-45F0-946D-75597216432C">
+        <File Id="DONKEY.PNG" Name="donkey.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\donkey.png" />
+      </Component>
+      <Component Id="FISH.PNG" DiskId="1" Guid="0FD04EA8-939B-4E7F-BCE5-EFF8AB686C66">
+        <File Id="FISH.PNG" Name="Fish.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\Fish.png" />
+      </Component>
+      <Component Id="KNIFE_2.PNG" DiskId="1" Guid="2847B0A0-F83D-42DB-B5C7-ED4A96D77FE1">
+        <File Id="KNIFE_2.PNG" Name="knife-2.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\knife-2.png" />
+      </Component>
+      <Component Id="KNIFE.PNG" DiskId="1" Guid="A93B5122-580E-419C-9F37-0040C910E72E">
+        <File Id="KNIFE.PNG" Name="knife.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\knife.png" />
+      </Component>
+      <Component Id="MONEY_BAG.PNG" DiskId="1" Guid="317B9804-8B60-4727-A35D-29F7E87D42E8">
+        <File Id="MONEY_BAG.PNG" Name="money-bag.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\money-bag.png" />
+      </Component>
+      <Component Id="NIT.PNG" DiskId="1" Guid="0DB64685-6CDC-428A-BEF1-2F93291A4AA8">
+        <File Id="NIT.PNG" Name="Nit.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\Nit.png" />
+      </Component>
+      <Component Id="NUTBALL.PNG" DiskId="1" Guid="AA0D4078-B356-435E-87D1-929629546E81">
+        <File Id="NUTBALL.PNG" Name="Nutball.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\Nutball.png" />
+      </Component>
+      <Component Id="POKER_CARD.PNG" DiskId="1" Guid="06140B57-9843-4A52-A486-9796C1880604">
+        <File Id="POKER_CARD.PNG" Name="poker-card.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\poker-card.png" />
+      </Component>
+      <Component Id="ROCK_2.PNG" DiskId="1" Guid="DC9F2E3B-E432-44AF-B722-B0D6D4A13F08">
+        <File Id="ROCK_2.PNG" Name="rock-2.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\rock-2.png" />
+      </Component>
+      <Component Id="ROCK.PNG" DiskId="1" Guid="BA67FF7B-8BF8-452A-9476-2896AAD64BDE">
+        <File Id="ROCK.PNG" Name="rock.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\rock.png" />
+      </Component>
+      <Component Id="STANDARD_REG.PNG" DiskId="1" Guid="B13E3459-C441-45D9-B7C2-379E5E1DA6EF">
+        <File Id="STANDARD_REG.PNG" Name="Standard Reg.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\Standard Reg.png" />
+      </Component>
+      <Component Id="TIGHT_REG.PNG" DiskId="1" Guid="8073740A-BBD9-4C16-B4AC-29E52AD46D5B">
+        <File Id="TIGHT_REG.PNG" Name="Tight Reg.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\Tight Reg.png" />
+      </Component>
+      <Component Id="TRICKY_LAG.PNG" DiskId="1" Guid="3F8CFF18-84F6-44E4-92D4-AB9D741F22A8">
+        <File Id="TRICKY_LAG.PNG" Name="Tricky LAG.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\Tricky LAG.png" />
+      </Component>
+      <Component Id="TV_2.PNG" DiskId="1" Guid="AEEA9E81-0BFC-4639-8B0F-37E95C82A3D1">
+        <File Id="TV_2.PNG" Name="tv-2.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\tv-2.png" />
+      </Component>
+      <Component Id="TV.PNG" DiskId="1" Guid="112B484E-6281-457E-8660-41CF3B9F34D5">
+        <File Id="TV.PNG" Name="tv.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\tv.png" />
+      </Component>
+      <Component Id="WHALE.PNG" DiskId="1" Guid="B715A973-8872-4E55-824F-C22654C381D9">
+        <File Id="WHALE.PNG" Name="Whale.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\Whale.png" />
+      </Component>
+      <Component Id="ZOMBIE.PNG" DiskId="1" Guid="3EFF0736-9E61-4246-B160-85EFCCA378D3">
+        <File Id="ZOMBIE.PNG" Name="zombie.png" Source="$(var.DriveHUD.Application.TargetDir)\Data\PlayerTypes\zombie.png" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="SCRIPTS">
+      <Component Id="clean_db.sql" Guid="{665CFCB5-BDB5-4312-8E70-8CDA6656B0C3}">
+        <File Id="clean_db.sql" KeyPath="yes" Source="$(var.DriveHUD.Application.ProjectDir)\Scripts\clean_db.sql" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="ProgramMenuDir">
+      <Component Id="StartMenuShortcuts" Guid="8DE53C6F-F2BE-4077-BC69-F3626D95D1B9">
+        <Condition>INSTALLPROGRAMMENUSHORTCUT</Condition>
+        <Shortcut Id="ApplicationStartMenuShortcut" Name="$(var.ProductName)" Description="$(var.ProductName)" Target="[#$(var.DriveHUD.Application.TargetFileName)]" Icon="StartMenuIcon.exe" WorkingDirectory="INSTALLDIR" />
+        <Shortcut Id="UninstallProduct" Name="Uninstall $(var.ProductName)" Description="Uninstalls $(var.ProductName)" Target="[System64Folder]msiexec.exe" Arguments="/x [ProductCode]" />
+        <RemoveFolder Id="RemoveProgramMenuFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\$(var.Manufacturer)\$(var.ProductName)" Name="installed"  Type="integer"  Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="DesktopFolder">
+      <Component Id="DesktopShortcuts" Guid="{11089872-F307-4232-A8EE-65854123C18F}">
+        <Condition>INSTALLDESKTOPSHORTCUT</Condition>
+        <Shortcut Id="ApplicationStartDesktopShortcut" Name="$(var.ProductName)" Description="$(var.ProductName)" Target="[#$(var.DriveHUD.Application.TargetFileName)]" Icon="StartMenuIcon.exe" WorkingDirectory="INSTALLDIR" />
+        <RemoveFolder Id="RemoveDesktopFolder" On="uninstall" />
+        <RegistryValue Root="HKCU" Key="Software\$(var.Manufacturer)\$(var.ProductName)" Name="installed"  Type="integer"  Value="1" KeyPath="yes" />
+      </Component>
+    </DirectoryRef>
+
+    <!-- Custom Actions -->
+    <CustomAction Id='DataCleaner' Directory='INSTALLDIR'
+                   ExeCommand='[SystemFolder]cmd.exe /C $(var.DriveHUD.Application.TargetFileName) -uninstall' Execute='deferred' Return='ignore'  />
+
+    <InstallExecuteSequence>
+      <Custom Action="DataCleaner" After='InstallInitialize'>(NOT UPGRADINGPRODUCTCODE) AND (REMOVE="ALL") AND REMOVEPLAYERDATA</Custom>
+    </InstallExecuteSequence>
+
+    <Icon Id="DesktopIcon.exe" SourceFile="$(var.DriveHUD.Application.ProjectDir)\images\drivehud.ico" />
+    <Icon Id="StartMenuIcon.exe" SourceFile="$(var.DriveHUD.Application.ProjectDir)\images\drivehud.ico" />
+
+    <Feature Id="ProductFeature" Title="$(var.ProductName) Setup" Level="1">
+      <ComponentRef Id="Shortcuts"/>
+      <ComponentRef Id="StartMenuShortcuts"/>
+      <ComponentRef Id="DesktopShortcuts"/>
+      <ComponentRef Id="$(var.DriveHUD.Application.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.ViewModels.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.Common.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.Common.Resources.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.Common.Infrastructure.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.Common.Wpf.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.EquityCalculator.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.Controls.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.Importers.TargetFileName)" />
+      <ComponentRef Id="$(var.Model.TargetFileName)" />
+      <ComponentRef Id="$(var.HandHistories.Objects.TargetFileName)" />
+      <ComponentRef Id="$(var.HandHistories.Parser.TargetFileName)" />
+      <ComponentRef Id="$(var.DriveHUD.DBMigrator.TargetFileName)"/>
+      <ComponentRef Id="DHCReg.dll" />
+      <ComponentRef Id="DHHReg.dll" />
+      <ComponentRef Id="DHOReg.dll" />
+      <ComponentRef Id="DriveHUD.Updater.exe"/>
+      <ComponentRef Id="DriveHUD.Updater.exe.config"/>
+      <ComponentRef Id="DriveHUD.Updater.Core.dll"/>
+      <ComponentRef Id ="DriveHUD.Entities.dll" />
+      <ComponentRef Id="clean_db.sql" />
+      <ComponentRef Id="FluentMigrator.dll"/>
+      <ComponentRef Id="FluentMigrator.Runner.dll"/>
+      <ComponentRef Id="FluentNHibernate.dll" />
+      <ComponentRef Id="HandEvaluator.dll" />
+      <ComponentRef Id="Npgsql.dll" />
+      <ComponentRef Id="Mono.Security.dll" />
+      <ComponentRef Id="Iesi.Collections.dll" />
+      <ComponentRef Id="ManagedWinapi.dll" />
+      <ComponentRef Id="ManagedWinapiNativeHelper.dll" />
+      <ComponentRef Id="NHibernate.dll" />
+      <ComponentRef Id="NLog.dll" />
+      <ComponentRef Id="protobufnet.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.Chart.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.DataVisualization.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.Diagrams.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.Diagrams.Extensions.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.GridView.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.Input.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.Navigation.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.RibbonView.dll" />
+      <ComponentRef Id="Telerik.Windows.Data.dll" />
+      <ComponentRef Id="Telerik.Windows.Diagrams.Core.dll" />
+      <ComponentRef Id="Telerik.Windows.PersistenceFramework.dll" />
+      <ComponentRef Id="DeployLX.Licensing.v5.dll" />
+      <ComponentRef Id="Facebook.dll" />
+      <ComponentRef Id="Twitterizer2.dll" />
+      <ComponentRef Id="App.config" />
+      <ComponentRef Id="log4net.dll" />
+      <ComponentRef Id="Prism.Unity.Wpf.dll" />
+      <ComponentRef Id="Prism.Wpf.dll" />
+      <ComponentRef Id="Prism.dll" />
+      <ComponentRef Id="Microsoft.Practices.Unity.dll" />
+      <ComponentRef Id="Microsoft.Practices.ServiceLocation.dll" />
+      <ComponentRef Id="System.Windows.Interactivity.dll" />
+      <ComponentRef Id="Microsoft.Expression.Interactions.dll" />
+      <ComponentRef Id="ReactiveUI.dll" />
+      <ComponentRef Id="Splat.dll" />
+      <ComponentRef Id="System.Reactive.Core.dll" />
+      <ComponentRef Id="System.Reactive.Interfaces.dll" />
+      <ComponentRef Id="System.Reactive.Linq.dll" />
+      <ComponentRef Id="System.Reactive.PlatformServices.dll" />
+      <ComponentRef Id="System.Reactive.Windows.Threading.dll" />
+      <ComponentRef Id="Newtonsoft.Json.dll" />
+      <ComponentRef Id="Microsoft.Practices.Unity.Configuration.dll" />
+      <ComponentRef Id="Microsoft.Practices.Unity.RegistrationByConvention.dll" />
+      <ComponentRef Id="Telerik.Windows.Controls.Data.dll" />
+      <ComponentRef Id="Microsoft.Expression.Drawing.dll" />
+      <ComponentRef Id="CAPPIPEDB.DLL" />
+      <ComponentRef Id="CAPPIPEDI.DLL" />
+      <ComponentRef Id="BAD_LAG.PNG" />
+      <ComponentRef Id="BOOK.PNG" />
+      <ComponentRef Id="CAT_2.PNG" />
+      <ComponentRef Id="CAT.PNG" />
+      <ComponentRef Id="CRAZY_FACE_2.PNG" />
+      <ComponentRef Id="CRAZY_FACE.PNG" />
+      <ComponentRef Id="DONKEY_2.PNG" />
+      <ComponentRef Id="DONKEY.PNG" />
+      <ComponentRef Id="FISH.PNG" />
+      <ComponentRef Id="KNIFE_2.PNG" />
+      <ComponentRef Id="KNIFE.PNG" />
+      <ComponentRef Id="MONEY_BAG.PNG" />
+      <ComponentRef Id="NIT.PNG" />
+      <ComponentRef Id="NUTBALL.PNG" />
+      <ComponentRef Id="POKER_CARD.PNG" />
+      <ComponentRef Id="ROCK_2.PNG" />
+      <ComponentRef Id="ROCK.PNG" />
+      <ComponentRef Id="STANDARD_REG.PNG" />
+      <ComponentRef Id="TIGHT_REG.PNG" />
+      <ComponentRef Id="TRICKY_LAG.PNG" />
+      <ComponentRef Id="TV_2.PNG"/>
+      <ComponentRef Id="TV.PNG" />
+      <ComponentRef Id="WHALE.PNG" />
+      <ComponentRef Id="ZOMBIE.PNG" />
+    </Feature>
+
+    <!--<Icon Id="prodIcon.ico" SourceFile="$(var.DriveHUD.Application.ProjectDir)\images\logo2.ico" />
+    <WixVariable Id="WixUILicenseRtf" Value="EULA.rtf" />-->
+    <!--<WixVariable Id="WixUIBannerBmp" Value="$(var.DriveHUD.Application.ProjectDir)\images\logo.ico" />-->
+    <!--<Property Id="ExitSuccess" Value="1" />
+    <Property Id="WIXUI_INSTALLDIR" Value="INSTALLDIR" />
+    <Property Id="ARPPRODUCTICON" Value="prodIcon.ico" />
+    <Property Id="POSTGRESQLX64">
+      <RegistrySearch Id="PostgresqlX64RegSearch" Root="HKLM" Key="SOFTWARE\PostgreSQL\Installations\postgresql-x64-9.4" Name="Version" Win64="yes" Type="raw" />
+    </Property>
+    <Property Id="POSTGRESQLX32">
+      <RegistrySearch Id="PostgresqlX32RegSearch" Root="HKLM" Key="SOFTWARE\PostgreSQL\Installations\postgresql-9.4" Name="Version" Win64="no" Type="raw" />
+    </Property>
+    <UIRef Id="WixUI_InstallDir" />
+    <PropertyRef Id="NETFRAMEWORK45" />
+    <Condition Message="OS must be Windows 7, Windows Server 2008 or higher.">VersionNT &gt;= 600</Condition>
+    <Condition Message="This application requires .NET Framework 4.5">Installed OR NETFRAMEWORK45</Condition>
+    -->
+    <!--<Condition Message="This application requires Postgres SQL 9.4">POSTGRESQLX64 OR POSTGRESQLX32</Condition>-->
+    <!--
+    <UI>
+      <InstallUISequence>
+        -->
+    <!--<Show Dialog="MyNewDlg" After="SomeAction">Installed</Show>-->
+    <!--
+        <Show Dialog="ExitDialog" OnExit="success">NOT ExitSuccess = 1</Show>
+      </InstallUISequence>
+    </UI>-->
+  </Product>
+</Wix>

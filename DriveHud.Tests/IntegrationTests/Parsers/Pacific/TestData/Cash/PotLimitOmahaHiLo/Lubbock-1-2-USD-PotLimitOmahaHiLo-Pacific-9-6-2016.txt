@@ -1,0 +1,5160 @@
+#Game No : 553786992
+***** 888poker Hand History for Game 553786992 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:29:32
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $134 )
+Seat 6: angelicafer ( $93.26 )
+GdRackBaby posts small blind [$1]
+angelicafer posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+angelicafer calls [$3]
+** Dealing flop ** [ Qs, 6h, Ts ]
+angelicafer bets [$7.50]
+GdRackBaby calls [$7.50]
+** Dealing turn ** [ Td ]
+angelicafer bets [$2]
+GdRackBaby calls [$2]
+** Dealing river ** [ 8s ]
+angelicafer bets [$2]
+GdRackBaby calls [$2]
+** Summary **
+angelicafer shows [ Qc, 4s, 2s, 4d ]
+(Hi: 2s, 4s, 8s, Ts, Qs)
+GdRackBaby shows [ Jc, 7c, 5h, Qh ]
+angelicafer collected [ $32 ]
+
+
+#Game No : 553787050
+***** 888poker Hand History for Game 553787050 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:29:51
+Table Lubbock 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $117.50 )
+Seat 6: angelicafer ( $108.76 )
+angelicafer posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+angelicafer calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Qh, 8d, 2c ]
+GdRackBaby checks
+angelicafer checks
+** Dealing turn ** [ 3d ]
+GdRackBaby checks
+angelicafer checks
+** Dealing river ** [ 2s ]
+GdRackBaby checks
+angelicafer checks
+** Summary **
+GdRackBaby shows [ 4s, Jd, 9s, 5s ]
+(Lo: 2s, 3d, 4s, 5s, 8d)
+angelicafer shows [ 9c, 9h, Th, 5h ]
+(Hi: 9c, 9h, 2c, 2s, Qh)
+angelicafer collected [ $1.90 ]
+GdRackBaby collected [ $1.90 ]
+
+
+#Game No : 553787093
+***** 888poker Hand History for Game 553787093 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:30:16
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $117.40 )
+Seat 6: angelicafer ( $108.66 )
+GdRackBaby posts small blind [$1]
+angelicafer posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+angelicafer calls [$3]
+** Dealing flop ** [ Kc, Ac, Jh ]
+angelicafer checks
+GdRackBaby bets [$7.50]
+angelicafer calls [$7.50]
+** Dealing turn ** [ Th ]
+angelicafer checks
+GdRackBaby checks
+** Dealing river ** [ 6h ]
+angelicafer bets [$2]
+GdRackBaby raises [$16.50]
+angelicafer calls [$14.50]
+** Summary **
+GdRackBaby shows [ 3h, Jd, Kh, 6c ]
+(Hi: 3h, 6h, Th, Jh, Kh)
+angelicafer shows [ Tc, Qc, 8h, Js ]
+GdRackBaby collected [ $57 ]
+
+
+#Game No : 553787145
+***** 888poker Hand History for Game 553787145 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:30:45
+Table Lubbock 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $145.40 )
+Seat 6: angelicafer ( $79.66 )
+angelicafer posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+angelicafer calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 7s, 5s, 2h ]
+GdRackBaby checks
+angelicafer checks
+** Dealing turn ** [ Jd ]
+GdRackBaby checks
+angelicafer bets [$3]
+GdRackBaby folds
+** Summary **
+angelicafer did not show his hand
+angelicafer collected [ $3.80 ]
+
+
+#Game No : 553787201
+***** 888poker Hand History for Game 553787201 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:31:14
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $143.40 )
+Seat 6: angelicafer ( $81.46 )
+GdRackBaby posts small blind [$1]
+angelicafer posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+angelicafer did not show his hand
+angelicafer collected [ $3 ]
+
+
+#Game No : 553787218
+***** 888poker Hand History for Game 553787218 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:31:22
+Table Lubbock 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $142.40 )
+Seat 6: angelicafer ( $82.46 )
+angelicafer posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+angelicafer calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Js, As, 2h ]
+GdRackBaby bets [$4]
+angelicafer calls [$4]
+** Dealing turn ** [ 3d ]
+GdRackBaby bets [$9]
+angelicafer calls [$9]
+** Dealing river ** [ Ah ]
+GdRackBaby checks
+angelicafer checks
+** Summary **
+GdRackBaby shows [ Qh, 6h, 5d, 8c ]
+(Lo: 2h, 3d, 5d, 6h, Ah)
+angelicafer shows [ 9s, 4h, Ks, 8s ]
+(Hi: As, Ah, 9s, Js, Ks)
+angelicafer collected [ $14.50 ]
+GdRackBaby collected [ $14.50 ]
+
+
+#Game No : 553787274
+***** 888poker Hand History for Game 553787274 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:31:50
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $141.90 )
+Seat 6: angelicafer ( $81.96 )
+GdRackBaby posts small blind [$1]
+angelicafer posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+angelicafer folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553787306
+***** 888poker Hand History for Game 553787306 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:32:03
+Table Lubbock 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $143.90 )
+Seat 6: angelicafer ( $79.96 )
+angelicafer posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+angelicafer calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 7h, Ad, Ts ]
+GdRackBaby bets [$4]
+angelicafer calls [$4]
+** Dealing turn ** [ Ac ]
+GdRackBaby bets [$12]
+angelicafer folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553787353
+***** 888poker Hand History for Game 553787353 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:32:24
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $149.30 )
+Seat 6: angelicafer ( $73.96 )
+GdRackBaby posts small blind [$1]
+angelicafer posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+angelicafer did not show his hand
+angelicafer collected [ $3 ]
+
+
+#Game No : 553787372
+***** 888poker Hand History for Game 553787372 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:32:35
+Table Lubbock 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $148.30 )
+Seat 6: angelicafer ( $74.96 )
+angelicafer posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+angelicafer calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Ah, Th, 4c ]
+GdRackBaby checks
+angelicafer bets [$3]
+GdRackBaby folds
+** Summary **
+angelicafer did not show his hand
+angelicafer collected [ $3.80 ]
+
+
+#Game No : 553787413
+***** 888poker Hand History for Game 553787413 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:32:56
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $146.30 )
+Seat 6: angelicafer ( $76.76 )
+GdRackBaby posts small blind [$1]
+angelicafer posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+angelicafer calls [$3]
+** Dealing flop ** [ Tc, 9d, Qs ]
+angelicafer bets [$5]
+GdRackBaby folds
+** Summary **
+angelicafer did not show his hand
+angelicafer collected [ $9.50 ]
+
+
+#Game No : 553787439
+***** 888poker Hand History for Game 553787439 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:33:13
+Table Lubbock 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 2
+Seat 4: GdRackBaby ( $141.30 )
+Seat 6: angelicafer ( $81.26 )
+angelicafer posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+angelicafer calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Td, 7s, 8s ]
+GdRackBaby bets [$4]
+angelicafer calls [$4]
+** Dealing turn ** [ 2c ]
+GdRackBaby checks
+angelicafer checks
+** Dealing river ** [ Kd ]
+GdRackBaby checks
+angelicafer checks
+** Summary **
+GdRackBaby shows [ Qs, 9s, Qh, Ks ]
+angelicafer shows [ 5d, 8d, Jd, 2d ]
+(Hi: 8d, 8s, 2d, 2c, Kd)
+angelicafer collected [ $11.40 ]
+
+
+#Game No : 553788318
+***** 888poker Hand History for Game 553788318 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:40:33
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $44.50 )
+Seat 4: GdRackBaby ( $179.94 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 4c, 3h, Kh ]
+GdRackBaby bets [$4]
+11990815 raises [$16]
+GdRackBaby raises [$48]
+11990815 calls [$26.50]
+** Dealing turn ** [ 3c ]
+** Dealing river ** [ 5d ]
+** Summary **
+11990815 shows [ 5c, 7h, 6c, 6h ]
+(Lo: 3c, 4c, 5d, 6h, 7h)
+GdRackBaby shows [ 4d, 4s, Kc, 9c ]
+(Hi: 4d, 4s, 4c, 3h, 3c)
+GdRackBaby collected [ $44 ]
+11990815 collected [ $44 ]
+
+
+#Game No : 553788369
+***** 888poker Hand History for Game 553788369 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:40:58
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $44 )
+Seat 4: GdRackBaby ( $179.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553788427
+***** 888poker Hand History for Game 553788427 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:41:34
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $37 )
+Seat 4: GdRackBaby ( $185.94 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 collected [ $3 ]
+
+
+#Game No : 553788505
+***** 888poker Hand History for Game 553788505 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:42:10
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $25.50 )
+Seat 4: GdRackBaby ( $196.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby raises [$40]
+11990815 calls [$10.50]
+** Dealing flop ** [ Jc, 4c, 3s ]
+** Dealing turn ** [ 7d ]
+** Dealing river ** [ 2c ]
+** Summary **
+11990815 shows [ 3c, 3h, 8c, 9d ]
+(Hi: 2c, 3c, 4c, 8c, Jc)
+GdRackBaby shows [ 7s, Jh, 5d, 3d ]
+(Lo: 2c, 3d, 4c, 5d, 7d)
+11990815 collected [ $25 ]
+GdRackBaby collected [ $25 ]
+
+
+#Game No : 553788589
+***** 888poker Hand History for Game 553788589 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:42:46
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $26 )
+Seat 4: GdRackBaby ( $194.94 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 collected [ $3 ]
+
+
+#Game No : 553788642
+***** 888poker Hand History for Game 553788642 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:43:15
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $25 )
+Seat 4: GdRackBaby ( $195.74 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553789756
+***** 888poker Hand History for Game 553789756 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:52:05
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $47 )
+Seat 4: GdRackBaby ( $211.32 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Td, 4c, Qh ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby calls [$4]
+** Dealing turn ** [ 8s ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ Ts ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553789804
+***** 888poker Hand History for Game 553789804 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:52:27
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $52.40 )
+Seat 4: GdRackBaby ( $205.32 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 7c, Th, Ah ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 8d ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ Tc ]
+11990815 bets [$25]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $24 ]
+
+
+#Game No : 553789850
+***** 888poker Hand History for Game 553789850 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:52:52
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $63.90 )
+Seat 4: GdRackBaby ( $192.82 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553789863
+***** 888poker Hand History for Game 553789863 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:52:57
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $62.90 )
+Seat 4: GdRackBaby ( $193.82 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Qd, Ad, Ac ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 7c ]
+11990815 bets [$25]
+GdRackBaby raises [$81.25]
+11990815 calls [$25.40]
+** Dealing river ** [ 9h ]
+** Summary **
+11990815 shows [ 6h, As, Qh, 3c ]
+(Hi: As, Ad, Ac, Qh, Qd)
+GdRackBaby shows [ Ts, 7d, Tc, Ah ]
+11990815 collected [ $124.80 ]
+
+
+#Game No : 553789938
+***** 888poker Hand History for Game 553789938 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:53:32
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $124.80 )
+Seat 4: GdRackBaby ( $130.92 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Qc, 2d, Qh ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 8d ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ 3d ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ 2s, 8s, 9s, 5c ]
+(Hi: Qc, Qh, 8s, 8d, 9s)
+11990815 shows [ Th, 3s, As, 5d ]
+(Lo: 2d, 3d, 5d, 8d, As)
+GdRackBaby collected [ $1.90 ]
+11990815 collected [ $1.90 ]
+
+
+#Game No : 553789971
+***** 888poker Hand History for Game 553789971 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:53:50
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $124.70 )
+Seat 4: GdRackBaby ( $130.82 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Qh, As, Kh ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553789996
+***** 888poker Hand History for Game 553789996 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:54:02
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $119.70 )
+Seat 4: GdRackBaby ( $135.32 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 6c, 3h, 6s ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 4h ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553790036
+***** 888poker Hand History for Game 553790036 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:54:19
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $121.50 )
+Seat 4: GdRackBaby ( $133.32 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553790053
+***** 888poker Hand History for Game 553790053 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:54:26
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $119.50 )
+Seat 4: GdRackBaby ( $135.32 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Qd, Qc, 7c ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Jc ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553790074
+***** 888poker Hand History for Game 553790074 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:54:38
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $121.30 )
+Seat 4: GdRackBaby ( $133.32 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 9h, 7c, Kc ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 5d ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 3d ]
+11990815 bets [$25]
+GdRackBaby raises [$100]
+11990815 calls [$75]
+** Summary **
+GdRackBaby shows [ 8d, 9c, Ah, 2h ]
+(Lo: 2h, 3d, 5d, 7c, Ah)
+11990815 shows [ 8h, 8s, 6h, Td ]
+(Hi: 5d, 6h, 7c, 8s, 9h)
+11990815 collected [ $112 ]
+GdRackBaby collected [ $112 ]
+
+
+#Game No : 553790123
+***** 888poker Hand History for Game 553790123 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:55:00
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $120.80 )
+Seat 4: GdRackBaby ( $132.82 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 calls [$12]
+** Dealing flop ** [ 7c, 3d, Qd ]
+GdRackBaby bets [$20]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $35 ]
+
+
+#Game No : 553790181
+***** 888poker Hand History for Game 553790181 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:55:30
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $102.80 )
+Seat 4: GdRackBaby ( $149.82 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 8s, 5h, Ad ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 raises [$32.50]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $24 ]
+
+
+#Game No : 553790218
+***** 888poker Hand History for Game 553790218 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:55:48
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $114.30 )
+Seat 4: GdRackBaby ( $137.32 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553790242
+***** 888poker Hand History for Game 553790242 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:55:57
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $116.30 )
+Seat 4: GdRackBaby ( $135.32 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $10 ]
+
+
+#Game No : 553790266
+***** 888poker Hand History for Game 553790266 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:56:07
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $121.30 )
+Seat 4: GdRackBaby ( $130.32 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Jh, 9h, 7s ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 5h ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ As ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ 2d, 7d, 2h, 9c ]
+(Hi: 9c, 9h, 7d, 7s, As)
+11990815 shows [ Kc, 5c, Ks, 3d ]
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553790302
+***** 888poker Hand History for Game 553790302 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:56:26
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $119.30 )
+Seat 4: GdRackBaby ( $132.12 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553790317
+***** 888poker Hand History for Game 553790317 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:56:32
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $117.30 )
+Seat 4: GdRackBaby ( $134.12 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553790332
+***** 888poker Hand History for Game 553790332 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:56:37
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $116.30 )
+Seat 4: GdRackBaby ( $135.12 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553790346
+***** 888poker Hand History for Game 553790346 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:56:44
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $114.30 )
+Seat 4: GdRackBaby ( $137.12 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 calls [$12]
+** Dealing flop ** [ Td, Qh, 4h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Kd ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ 6c ]
+GdRackBaby checks
+11990815 bets [$36]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $35 ]
+
+
+#Game No : 553790425
+***** 888poker Hand History for Game 553790425 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:57:26
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $131.30 )
+Seat 4: GdRackBaby ( $119.12 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 6s, 5h, Ac ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553790459
+***** 888poker Hand History for Game 553790459 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:57:39
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $126.30 )
+Seat 4: GdRackBaby ( $123.62 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 8s, 4d, 4s ]
+GdRackBaby bets [$4]
+11990815 raises [$16]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553790483
+***** 888poker Hand History for Game 553790483 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:57:54
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $131.70 )
+Seat 4: GdRackBaby ( $117.62 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 7h, Ac, Qd ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553790512
+***** 888poker Hand History for Game 553790512 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:58:09
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $126.70 )
+Seat 4: GdRackBaby ( $122.12 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Jd, Qs, 7c ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553790544
+***** 888poker Hand History for Game 553790544 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:58:22
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $128.50 )
+Seat 4: GdRackBaby ( $120.12 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby calls [$10]
+** Dealing flop ** [ Ks, 2c, 5s ]
+11990815 bets [$30]
+GdRackBaby calls [$30]
+** Dealing turn ** [ 6d ]
+11990815 bets [$83.50]
+GdRackBaby calls [$75.12]
+** Dealing river ** [ 7h ]
+** Summary **
+11990815 shows [ Ah, Qc, 3h, Qs ]
+(Hi: Qc, Qs, 6d, 7h, Ks)
+(Lo: 2c, 3h, 5s, 6d, Ah)
+GdRackBaby shows [ Ac, Th, 4c, 2s ]
+11990815 collected [ $119.62 ]
+11990815 collected [ $119.62 ]
+
+
+#Game No : 553790600
+***** 888poker Hand History for Game 553790600 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:58:49
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $247.62 )
+Seat 4: GdRackBaby ( $200 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 calls [$12]
+** Dealing flop ** [ Ah, 6s, Jh ]
+GdRackBaby bets [$24]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $35 ]
+
+
+#Game No : 553790643
+***** 888poker Hand History for Game 553790643 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:59:10
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $229.62 )
+Seat 4: GdRackBaby ( $217 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553790655
+***** 888poker Hand History for Game 553790655 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:59:17
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $227.62 )
+Seat 4: GdRackBaby ( $219 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 5h, 3h, 6h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 7c ]
+GdRackBaby bets [$3]
+11990815 calls [$3]
+** Dealing river ** [ 2h ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ 5c, Kh, Qc, 4s ]
+(Hi: 3h, 4s, 5c, 6h, 7c)
+(Lo: 2h, 3h, 4s, 5c, 6h)
+11990815 mucks [ Jd, 5d, 5s, 6s ]
+GdRackBaby collected [ $4.75 ]
+GdRackBaby collected [ $4.75 ]
+
+
+#Game No : 553790690
+***** 888poker Hand History for Game 553790690 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:59:36
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $222.62 )
+Seat 4: GdRackBaby ( $223.50 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 7s, 7h, 6h ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553790719
+***** 888poker Hand History for Game 553790719 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 20:59:51
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $217.62 )
+Seat 4: GdRackBaby ( $228 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Ah, 8d, 3h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 6d ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ Td ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ Jd, Th, 4s, 8s ]
+(Hi: Th, Td, 8s, 8d, Ah)
+11990815 shows [ 3s, 5d, 4c, 4h ]
+(Lo: 3h, 4h, 5d, 6d, Ah)
+GdRackBaby collected [ $1.90 ]
+11990815 collected [ $1.90 ]
+
+
+#Game No : 553790757
+***** 888poker Hand History for Game 553790757 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:00:10
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $217.52 )
+Seat 4: GdRackBaby ( $227.90 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553790773
+***** 888poker Hand History for Game 553790773 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:00:16
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $215.52 )
+Seat 4: GdRackBaby ( $229.90 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 raises [$48]
+GdRackBaby raises [$144]
+11990815 raises [$161.52]
+GdRackBaby calls [$53.52]
+** Dealing flop ** [ 8d, 5d, 4d ]
+** Dealing turn ** [ 3s ]
+** Dealing river ** [ 3c ]
+** Summary **
+11990815 shows [ Ad, 2d, Jc, 2s ]
+(Hi: 2d, 4d, 5d, 8d, Ad)
+(Lo: 2s, 3c, 4d, 5d, Ad)
+GdRackBaby shows [ As, 7d, Ac, 6h ]
+11990815 collected [ $215.02 ]
+11990815 collected [ $215.02 ]
+
+
+#Game No : 553790827
+***** 888poker Hand History for Game 553790827 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:00:44
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $430.04 )
+Seat 4: GdRackBaby ( $175.22 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553790833
+***** 888poker Hand History for Game 553790833 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:00:49
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $431.04 )
+Seat 4: GdRackBaby ( $174.22 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553790846
+***** 888poker Hand History for Game 553790846 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:00:54
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $430.04 )
+Seat 4: GdRackBaby ( $175.22 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553790852
+***** 888poker Hand History for Game 553790852 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:00:58
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $431.04 )
+Seat 4: GdRackBaby ( $199 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Qh, 9d, Th ]
+GdRackBaby bets [$4]
+11990815 calls [$4]
+** Dealing turn ** [ 3h ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ Ac ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553790885
+***** 888poker Hand History for Game 553790885 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:01:16
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $425.04 )
+Seat 4: GdRackBaby ( $204.40 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553790899
+***** 888poker Hand History for Game 553790899 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:01:24
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $423.04 )
+Seat 4: GdRackBaby ( $206.40 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Jd, As, 3h ]
+GdRackBaby bets [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553790935
+***** 888poker Hand History for Game 553790935 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:01:38
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $421.04 )
+Seat 4: GdRackBaby ( $208.20 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Jh, 4s, As ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 8h ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553790979
+***** 888poker Hand History for Game 553790979 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:02:01
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $425.54 )
+Seat 4: GdRackBaby ( $203.20 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ Jc, 8d, 9d ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553791016
+***** 888poker Hand History for Game 553791016 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:02:19
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $430.94 )
+Seat 4: GdRackBaby ( $197.20 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553791040
+***** 888poker Hand History for Game 553791040 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:02:30
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $428.94 )
+Seat 4: GdRackBaby ( $199.20 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553791076
+***** 888poker Hand History for Game 553791076 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:02:46
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $430.94 )
+Seat 4: GdRackBaby ( $197.20 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$5]
+11990815 calls [$4]
+** Dealing flop ** [ Ah, 3s, 8d ]
+11990815 checks
+GdRackBaby bets [$9]
+11990815 raises [$39]
+GdRackBaby calls [$30]
+** Dealing turn ** [ Qd ]
+11990815 bets [$90]
+GdRackBaby raises [$152.20]
+11990815 calls [$62.20]
+** Dealing river ** [ 9h ]
+** Summary **
+11990815 shows [ 4d, Ac, 2h, 4h ]
+(Lo: 2h, 3s, 4h, 8d, Ah)
+GdRackBaby shows [ 6c, 5h, 4c, Ad ]
+(Hi: Ad, Ah, 6c, 9h, Qd)
+GdRackBaby collected [ $196.70 ]
+11990815 collected [ $196.70 ]
+
+
+#Game No : 553791148
+***** 888poker Hand History for Game 553791148 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:03:17
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $430.44 )
+Seat 4: GdRackBaby ( $196.70 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Jc, 4c, 2s ]
+GdRackBaby bets [$4]
+11990815 calls [$4]
+** Dealing turn ** [ 9c ]
+GdRackBaby bets [$9]
+11990815 calls [$9]
+** Dealing river ** [ 9s ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ Ks, 4h, Jd, Td ]
+(Hi: Jd, Jc, 9c, 9s, Ks)
+11990815 shows [ 3h, 8c, 4s, Ah ]
+GdRackBaby collected [ $29 ]
+
+
+#Game No : 553791219
+***** 888poker Hand History for Game 553791219 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:03:56
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $415.44 )
+Seat 4: GdRackBaby ( $210.70 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553791241
+***** 888poker Hand History for Game 553791241 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:04:09
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $413.44 )
+Seat 4: GdRackBaby ( $212.70 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 8s, 5s, 3c ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553791284
+***** 888poker Hand History for Game 553791284 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:04:31
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $415.24 )
+Seat 4: GdRackBaby ( $210.70 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 8d, Qh, 2d ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Td ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 8c ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ 2s, 6h, 9s, Ad ]
+(Hi: 8d, 8c, 2s, 2d, Ad)
+GdRackBaby shows [ 5d, Jh, 6c, As ]
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553791349
+***** 888poker Hand History for Game 553791349 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:05:02
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $419.74 )
+Seat 4: GdRackBaby ( $205.70 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 6c, 7s, 3h ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553791380
+***** 888poker Hand History for Game 553791380 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:05:15
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $425.14 )
+Seat 4: GdRackBaby ( $199.70 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 2h, 2s, Js ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553791406
+***** 888poker Hand History for Game 553791406 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:05:30
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $420.14 )
+Seat 4: GdRackBaby ( $204.20 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553791419
+***** 888poker Hand History for Game 553791419 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:05:37
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $418.14 )
+Seat 4: GdRackBaby ( $206.20 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553791428
+***** 888poker Hand History for Game 553791428 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:05:45
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $416.14 )
+Seat 4: GdRackBaby ( $208.20 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Kc, 2c, 7c ]
+GdRackBaby bets [$4]
+11990815 calls [$4]
+** Dealing turn ** [ 4d ]
+GdRackBaby bets [$9]
+11990815 calls [$9]
+** Dealing river ** [ 9h ]
+GdRackBaby bets [$22.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3.25 ]
+GdRackBaby collected [ $3.25 ]
+
+
+#Game No : 553791475
+***** 888poker Hand History for Game 553791475 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:06:06
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $401.14 )
+Seat 4: GdRackBaby ( $222.20 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Qd, 7d, Qh ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Qs ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 8s ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ 2d, 3h, 2s, 8h ]
+(Hi: Qd, Qh, Qs, 2d, 2s)
+GdRackBaby shows [ 9d, 7h, As, 6c ]
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553791521
+***** 888poker Hand History for Game 553791521 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:06:28
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $405.64 )
+Seat 4: GdRackBaby ( $217.20 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 calls [$12]
+** Dealing flop ** [ 9s, 7d, Qh ]
+GdRackBaby checks
+11990815 bets [$36]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $35 ]
+
+
+#Game No : 553791557
+***** 888poker Hand History for Game 553791557 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:06:44
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $422.64 )
+Seat 4: GdRackBaby ( $199.20 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 3c, 2d, 9d ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 raises [$32.50]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $24 ]
+
+
+#Game No : 553791591
+***** 888poker Hand History for Game 553791591 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:07:03
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $434.14 )
+Seat 4: GdRackBaby ( $186.70 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 3c, 3h, Ah ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553792558
+***** 888poker Hand History for Game 553792558 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:15:00
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $327.44 )
+Seat 4: GdRackBaby ( $302.80 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby calls [$10]
+** Dealing flop ** [ Th, Qc, 7c ]
+11990815 checks
+GdRackBaby bets [$22.50]
+11990815 raises [$97.50]
+GdRackBaby calls [$75]
+** Dealing turn ** [ Js ]
+11990815 bets [$170.75]
+GdRackBaby raises [$190.30]
+11990815 calls [$19.55]
+** Dealing river ** [ Ts ]
+** Summary **
+11990815 shows [ 7d, Qh, 3c, Ah ]
+GdRackBaby shows [ 9c, 5d, 8c, 6s ]
+(Hi: 8c, 9c, Ts, Js, Qc)
+GdRackBaby collected [ $604.60 ]
+
+
+#Game No : 553792622
+***** 888poker Hand History for Game 553792622 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:15:29
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $24.64 )
+Seat 4: GdRackBaby ( $604.60 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 raises [$18.64]
+GdRackBaby calls [$6.64]
+** Dealing flop ** [ Kd, Jc, Kc ]
+** Dealing turn ** [ 2d ]
+** Dealing river ** [ 2s ]
+** Summary **
+11990815 shows [ 3d, 3s, 7h, As ]
+GdRackBaby shows [ 2c, Ts, 8s, 6d ]
+(Hi: 2c, 2d, 2s, Ts, Kc)
+GdRackBaby collected [ $48.28 ]
+
+
+#Game No : 553792662
+***** 888poker Hand History for Game 553792662 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:15:50
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $40 )
+Seat 4: GdRackBaby ( $628.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 7s, 8d, 9d ]
+11990815 bets [$10]
+GdRackBaby raises [$40]
+11990815 calls [$25]
+** Dealing turn ** [ Ad ]
+** Dealing river ** [ 5d ]
+** Summary **
+11990815 shows [ 3c, 7d, 3d, 9s ]
+(Hi: 3d, 7d, 8d, 9d, Ad)
+GdRackBaby shows [ 6h, 2d, Th, Ac ]
+(Lo: 2d, 5d, 6h, 7s, Ad)
+11990815 collected [ $39.50 ]
+GdRackBaby collected [ $39.50 ]
+
+
+#Game No : 553792701
+***** 888poker Hand History for Game 553792701 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:16:12
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $39.50 )
+Seat 4: GdRackBaby ( $627.74 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 raises [$33.50]
+GdRackBaby calls [$21.50]
+** Dealing flop ** [ 4h, 7d, 8h ]
+** Dealing turn ** [ Ad ]
+** Dealing river ** [ 2h ]
+** Summary **
+11990815 shows [ 4d, Qh, 9s, Qs ]
+GdRackBaby shows [ As, Ac, 5s, 5h ]
+(Hi: As, Ac, Ad, 7d, 8h)
+(Lo: 2h, 4h, 5h, 7d, Ac)
+GdRackBaby collected [ $39 ]
+GdRackBaby collected [ $39 ]
+
+
+#Game No : 553792762
+***** 888poker Hand History for Game 553792762 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:16:37
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $40 )
+Seat 4: GdRackBaby ( $666.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$3]
+11990815 calls [$2]
+** Dealing flop ** [ 7h, 4d, Ts ]
+11990815 checks
+GdRackBaby bets [$8]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $7.60 ]
+
+
+#Game No : 553792786
+***** 888poker Hand History for Game 553792786 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:16:49
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $36 )
+Seat 4: GdRackBaby ( $669.84 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553792803
+***** 888poker Hand History for Game 553792803 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:16:55
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $38 )
+Seat 4: GdRackBaby ( $667.84 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553792815
+***** 888poker Hand History for Game 553792815 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:17:00
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $39 )
+Seat 4: GdRackBaby ( $666.84 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553792820
+***** 888poker Hand History for Game 553792820 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:17:06
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $41 )
+Seat 4: GdRackBaby ( $664.84 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Js, 7d, 9s ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 3c ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553792847
+***** 888poker Hand History for Game 553792847 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:17:20
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $45.50 )
+Seat 4: GdRackBaby ( $659.84 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ Qd, Td, 6s ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 2c ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby raises [$48]
+11990815 calls [$27.50]
+** Dealing river ** [ Jh ]
+** Summary **
+11990815 shows [ Ks, 5s, As, 8d ]
+(Hi: Td, Jh, Qd, Ks, As)
+GdRackBaby shows [ Jd, 6d, 2h, Qh ]
+11990815 collected [ $90 ]
+
+
+#Game No : 553792886
+***** 888poker Hand History for Game 553792886 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:17:41
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $90 )
+Seat 4: GdRackBaby ( $614.34 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ As, Ad, Jh ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ Td ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 8s ]
+11990815 bets [$25]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $24 ]
+
+
+#Game No : 553792935
+***** 888poker Hand History for Game 553792935 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:18:08
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $101.50 )
+Seat 4: GdRackBaby ( $601.84 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 3c, Qs, 5d ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 4d ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553792958
+***** 888poker Hand History for Game 553792958 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:18:19
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $103.30 )
+Seat 4: GdRackBaby ( $599.84 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Kd, Tc, 9d ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 8h ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553792981
+***** 888poker Hand History for Game 553792981 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:18:33
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $98.30 )
+Seat 4: GdRackBaby ( $604.34 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Kc, 3d, 9c ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553793007
+***** 888poker Hand History for Game 553793007 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:18:44
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $100.10 )
+Seat 4: GdRackBaby ( $602.34 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553793016
+***** 888poker Hand History for Game 553793016 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:18:48
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $101.10 )
+Seat 4: GdRackBaby ( $601.34 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 6d, 8c, 4h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Ts ]
+GdRackBaby bets [$3]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553793036
+***** 888poker Hand History for Game 553793036 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:19:01
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $99.10 )
+Seat 4: GdRackBaby ( $603.14 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Jc, 8h, Qc ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 8c ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553793063
+***** 888poker Hand History for Game 553793063 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:19:16
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $103.60 )
+Seat 4: GdRackBaby ( $598.14 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553793077
+***** 888poker Hand History for Game 553793077 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:19:24
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $105.60 )
+Seat 4: GdRackBaby ( $596.14 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 5s, 9h, Th ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 6d ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 7h ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ 2c, 3h, 7s, 9c ]
+(Hi: 9c, 9h, 7s, 7h, Th)
+(Lo: 2c, 3h, 5s, 6d, 7h)
+GdRackBaby shows [ 5d, 9d, 7c, Ad ]
+(Hi: 9d, 9h, 7c, 7h, Th)
+GdRackBaby collected [ $6 ]
+11990815 collected [ $6 ]
+11990815 collected [ $12 ]
+
+
+#Game No : 553793122
+***** 888poker Hand History for Game 553793122 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:19:50
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $111.10 )
+Seat 4: GdRackBaby ( $589.64 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553793137
+***** 888poker Hand History for Game 553793137 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:19:57
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $113.10 )
+Seat 4: GdRackBaby ( $587.64 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553793152
+***** 888poker Hand History for Game 553793152 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:20:04
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $111.10 )
+Seat 4: GdRackBaby ( $589.64 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 6c, Ad, 8h ]
+GdRackBaby bets [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553793177
+***** 888poker Hand History for Game 553793177 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:20:18
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $109.10 )
+Seat 4: GdRackBaby ( $591.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby raises [$40]
+11990815 raises [$94.10]
+GdRackBaby calls [$64.10]
+** Dealing flop ** [ Qh, Ts, 5s ]
+** Dealing turn ** [ Tc ]
+** Dealing river ** [ 3s ]
+** Summary **
+11990815 shows [ Ac, 2h, Kd, 6h ]
+(Hi: Ts, Tc, Qh, Kd, Ac)
+GdRackBaby shows [ 2d, Kc, 7c, Ad ]
+(Hi: Ts, Tc, Qh, Kc, Ad)
+GdRackBaby collected [ $108.60 ]
+11990815 collected [ $108.60 ]
+
+
+#Game No : 553793227
+***** 888poker Hand History for Game 553793227 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:20:43
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $108.60 )
+Seat 4: GdRackBaby ( $590.94 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 raises [$48]
+GdRackBaby raises [$144]
+11990815 calls [$54.60]
+** Dealing flop ** [ Th, Qh, 5d ]
+** Dealing turn ** [ 9s ]
+** Dealing river ** [ 7d ]
+** Summary **
+11990815 shows [ 4s, Qc, Ad, 3c ]
+GdRackBaby shows [ 2h, Ac, 6s, As ]
+(Hi: Ac, As, 9s, Th, Qh)
+GdRackBaby collected [ $216.20 ]
+
+
+#Game No : 553793265
+***** 888poker Hand History for Game 553793265 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:21:09
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $40 )
+Seat 4: GdRackBaby ( $698.54 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$3]
+11990815 calls [$2]
+** Dealing flop ** [ Jc, 2c, Qc ]
+11990815 checks
+GdRackBaby bets [$6]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $7.60 ]
+
+
+#Game No : 553793299
+***** 888poker Hand History for Game 553793299 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:21:23
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $36 )
+Seat 4: GdRackBaby ( $702.14 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 5s, Qs, Qh ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553793313
+***** 888poker Hand History for Game 553793313 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:21:34
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $41.40 )
+Seat 4: GdRackBaby ( $696.14 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby raises [$40]
+11990815 calls [$26.40]
+** Dealing flop ** [ 6c, 5h, 8d ]
+** Dealing turn ** [ Jh ]
+** Dealing river ** [ Ks ]
+** Summary **
+11990815 shows [ 4d, 2h, Jc, 2c ]
+GdRackBaby shows [ 3c, Ad, Ts, As ]
+(Hi: Ad, As, 8d, Jh, Ks)
+(Lo: 3c, 5h, 6c, 8d, As)
+GdRackBaby collected [ $40.90 ]
+GdRackBaby collected [ $40.90 ]
+
+
+#Game No : 553793360
+***** 888poker Hand History for Game 553793360 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:22:00
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $40 )
+Seat 4: GdRackBaby ( $736.54 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ Ad, 8s, 3c ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553793382
+***** 888poker Hand History for Game 553793382 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:22:11
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $45.40 )
+Seat 4: GdRackBaby ( $730.54 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553793387
+***** 888poker Hand History for Game 553793387 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:22:16
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $46.40 )
+Seat 4: GdRackBaby ( $729.54 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ Jc, 3c, Th ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Qd ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby calls [$12]
+** Dealing river ** [ 6s ]
+GdRackBaby checks
+11990815 bets [$28.40]
+GdRackBaby calls [$28.40]
+** Summary **
+11990815 shows [ 9d, Ks, 5s, Jd ]
+(Hi: 9d, Th, Jc, Qd, Ks)
+GdRackBaby shows [ 9h, 2d, 7d, 8d ]
+11990815 collected [ $91.80 ]
+
+
+#Game No : 553793448
+***** 888poker Hand History for Game 553793448 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:22:47
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $91.80 )
+Seat 4: GdRackBaby ( $683.14 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553793455
+***** 888poker Hand History for Game 553793455 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:22:51
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $92.80 )
+Seat 4: GdRackBaby ( $682.14 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553793468
+***** 888poker Hand History for Game 553793468 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:23:00
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $94.80 )
+Seat 4: GdRackBaby ( $680.14 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$3]
+11990815 calls [$2]
+** Dealing flop ** [ Th, 6d, 5s ]
+11990815 checks
+GdRackBaby bets [$8]
+11990815 calls [$8]
+** Dealing turn ** [ Jd ]
+11990815 bets [$24]
+GdRackBaby calls [$24]
+** Dealing river ** [ Ac ]
+11990815 bets [$58.80]
+GdRackBaby calls [$58.80]
+** Summary **
+11990815 shows [ Ad, 8h, Td, 4s ]
+(Hi: Ad, Ac, Td, Th, Jd)
+GdRackBaby shows [ 8s, 3h, 5c, Ts ]
+(Lo: 3h, 5s, 6d, 8s, Ac)
+11990815 collected [ $94.30 ]
+GdRackBaby collected [ $94.30 ]
+
+
+#Game No : 553793536
+***** 888poker Hand History for Game 553793536 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:23:36
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $200 )
+Seat 4: GdRackBaby ( $679.64 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ Jc, Td, 7d ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 9c ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553793593
+***** 888poker Hand History for Game 553793593 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:24:09
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $149 )
+Seat 4: GdRackBaby ( $729.04 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ Ts, 2d, 7c ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ As ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553793612
+***** 888poker Hand History for Game 553793612 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:24:20
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $143 )
+Seat 4: GdRackBaby ( $734.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$3]
+11990815 raises [$10]
+GdRackBaby calls [$8]
+** Dealing flop ** [ 7s, Kh, Ks ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 7h ]
+11990815 checks
+GdRackBaby bets [$18]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $23 ]
+
+
+#Game No : 553793644
+***** 888poker Hand History for Game 553793644 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:24:36
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $131 )
+Seat 4: GdRackBaby ( $745.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553793662
+***** 888poker Hand History for Game 553793662 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:24:43
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $133 )
+Seat 4: GdRackBaby ( $743.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$3]
+11990815 calls [$2]
+** Dealing flop ** [ As, Ac, Qh ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 8h ]
+11990815 checks
+GdRackBaby bets [$6]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $7.60 ]
+
+
+#Game No : 553793700
+***** 888poker Hand History for Game 553793700 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:25:04
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $129 )
+Seat 4: GdRackBaby ( $747.04 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 calls [$12]
+** Dealing flop ** [ Kd, Tc, 4d ]
+GdRackBaby checks
+11990815 bets [$36]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $35 ]
+
+
+#Game No : 553793728
+***** 888poker Hand History for Game 553793728 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:25:18
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $146 )
+Seat 4: GdRackBaby ( $729.04 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$3]
+11990815 calls [$2]
+** Dealing flop ** [ Qc, Jc, 9s ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Tc ]
+11990815 bets [$8]
+GdRackBaby calls [$8]
+** Dealing river ** [ Jd ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ Qd, 7c, 6d, 4c ]
+GdRackBaby shows [ 5h, 3c, 8c, 8d ]
+(Hi: 3c, 8c, Tc, Jc, Qc)
+GdRackBaby collected [ $23 ]
+
+
+#Game No : 553793760
+***** 888poker Hand History for Game 553793760 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:25:39
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $134 )
+Seat 4: GdRackBaby ( $740.04 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 3c, Js, Td ]
+GdRackBaby bets [$4]
+11990815 calls [$4]
+** Dealing turn ** [ 2c ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553793784
+***** 888poker Hand History for Game 553793784 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:25:52
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $128 )
+Seat 4: GdRackBaby ( $745.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby calls [$10]
+** Dealing flop ** [ 4c, 2s, 9s ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 8c ]
+11990815 checks
+GdRackBaby bets [$22.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $29 ]
+
+
+#Game No : 553793822
+***** 888poker Hand History for Game 553793822 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:26:12
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $113 )
+Seat 4: GdRackBaby ( $759.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553793834
+***** 888poker Hand History for Game 553793834 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:26:18
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $115 )
+Seat 4: GdRackBaby ( $757.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby calls [$10]
+** Dealing flop ** [ As, 2d, 9s ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 4s ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 8c ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ 5h, Ac, Kc, 8h ]
+(Hi: Ac, As, 8h, 8c, 9s)
+(Lo: 2d, 4s, 5h, 8h, As)
+GdRackBaby mucks [ 2h, 7h, Td, Ad ]
+11990815 collected [ $14.50 ]
+11990815 collected [ $14.50 ]
+
+
+#Game No : 553793872
+***** 888poker Hand History for Game 553793872 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:26:41
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $129 )
+Seat 4: GdRackBaby ( $742.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 9c, 7c, Ah ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby raises [$48]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $35 ]
+
+
+#Game No : 553793906
+***** 888poker Hand History for Game 553793906 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:26:59
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $111 )
+Seat 4: GdRackBaby ( $759.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553793914
+***** 888poker Hand History for Game 553793914 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:27:04
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $112 )
+Seat 4: GdRackBaby ( $758.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553793922
+***** 888poker Hand History for Game 553793922 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:27:09
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $111 )
+Seat 4: GdRackBaby ( $759.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 9h, 8c, 5d ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Js ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ Jh ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553793962
+***** 888poker Hand History for Game 553793962 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:27:28
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $115.50 )
+Seat 4: GdRackBaby ( $754.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 8c, 2s, 5c ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553793985
+***** 888poker Hand History for Game 553793985 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:27:39
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $117.30 )
+Seat 4: GdRackBaby ( $752.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 3c, 9s, Kd ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 4h ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553794015
+***** 888poker Hand History for Game 553794015 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:27:54
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $121.80 )
+Seat 4: GdRackBaby ( $747.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ As, 3s, 2s ]
+GdRackBaby bets [$6]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553794037
+***** 888poker Hand History for Game 553794037 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:28:08
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $115.80 )
+Seat 4: GdRackBaby ( $752.84 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 8s, 6h, 6c ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Td ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 9h ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ 4c, 5d, 3d, Qs ]
+GdRackBaby shows [ 5h, 3s, 3h, As ]
+(Hi: 6h, 6c, 3s, 3h, Td)
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553794067
+***** 888poker Hand History for Game 553794067 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:28:25
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $110.80 )
+Seat 4: GdRackBaby ( $757.34 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 2s, Kh, 3h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Td ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553794095
+***** 888poker Hand History for Game 553794095 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:28:42
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $104.80 )
+Seat 4: GdRackBaby ( $762.74 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Qd, 4h, Qs ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 9d ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ Jh ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553794126
+***** 888poker Hand History for Game 553794126 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:28:58
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $99.80 )
+Seat 4: GdRackBaby ( $767.24 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553794135
+***** 888poker Hand History for Game 553794135 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:29:03
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $98.80 )
+Seat 4: GdRackBaby ( $768.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 7s, Tc, Jh ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 4h ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing river ** [ Ah ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ 4c, 3d, 5d, 4d ]
+(Hi: 4c, 4d, 4h, Jh, Ah)
+(Lo: 3d, 4h, 5d, 7s, Ah)
+GdRackBaby mucks [ 6c, 7c, As, Jd ]
+11990815 collected [ $12 ]
+11990815 collected [ $12 ]
+
+
+#Game No : 553794157
+***** 888poker Hand History for Game 553794157 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:29:24
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $110.30 )
+Seat 4: GdRackBaby ( $755.74 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Ad, 2h, 9h ]
+GdRackBaby bets [$4]
+11990815 calls [$4]
+** Dealing turn ** [ 9s ]
+GdRackBaby bets [$12]
+11990815 calls [$12]
+** Dealing river ** [ 3d ]
+GdRackBaby bets [$36]
+11990815 raises [$92.30]
+GdRackBaby calls [$56.30]
+** Summary **
+11990815 shows [ 7c, 5s, 4c, Kd ]
+(Lo: 2h, 3d, 4c, 5s, Ad)
+GdRackBaby shows [ 3s, 9d, Kh, 5h ]
+(Hi: 9d, 9h, 9s, 3s, 3d)
+GdRackBaby collected [ $109.80 ]
+11990815 collected [ $109.80 ]
+
+
+#Game No : 553794203
+***** 888poker Hand History for Game 553794203 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:29:47
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $109.80 )
+Seat 4: GdRackBaby ( $755.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Ts, 9h, Kc ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Ah ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553794230
+***** 888poker Hand History for Game 553794230 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:30:00
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $114.30 )
+Seat 4: GdRackBaby ( $750.24 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 4c, 3c, 2h ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553794256
+***** 888poker Hand History for Game 553794256 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:30:15
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $116.10 )
+Seat 4: GdRackBaby ( $748.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 5s, 6h, 3c ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553794276
+***** 888poker Hand History for Game 553794276 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:30:28
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $111.10 )
+Seat 4: GdRackBaby ( $752.74 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 raises [$48]
+GdRackBaby raises [$144]
+11990815 calls [$57.10]
+** Dealing flop ** [ 8c, 3s, Td ]
+** Dealing turn ** [ 4d ]
+** Dealing river ** [ 2h ]
+** Summary **
+11990815 shows [ Qs, 8s, Ad, Ah ]
+(Hi: Ad, Ah, 4d, 8c, Td)
+(Lo: 2h, 3s, 4d, 8s, Ah)
+GdRackBaby shows [ 2s, Ac, Kc, Qd ]
+(Lo: 2s, 3s, 4d, 8c, Ac)
+11990815 collected [ $110.60 ]
+GdRackBaby collected [ $55.30 ]
+11990815 collected [ $55.30 ]
+
+
+#Game No : 553794315
+***** 888poker Hand History for Game 553794315 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:30:53
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $165.90 )
+Seat 4: GdRackBaby ( $696.94 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 9c, Th, 7c ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 raises [$32.50]
+GdRackBaby calls [$25]
+** Dealing turn ** [ Jh ]
+11990815 bets [$75]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $74 ]
+
+
+#Game No : 553794359
+***** 888poker Hand History for Game 553794359 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:31:15
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $202.40 )
+Seat 4: GdRackBaby ( $659.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 6d, 7c, Qd ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553794384
+***** 888poker Hand History for Game 553794384 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:31:29
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $207.80 )
+Seat 4: GdRackBaby ( $653.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 7d, Kc, 3d ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 raises [$32.50]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $24 ]
+
+
+#Game No : 553794409
+***** 888poker Hand History for Game 553794409 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:31:45
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $219.30 )
+Seat 4: GdRackBaby ( $640.94 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ 8d, Td, Jc ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby calls [$12]
+** Dealing turn ** [ 4h ]
+GdRackBaby checks
+11990815 bets [$36]
+GdRackBaby calls [$36]
+** Dealing river ** [ 3h ]
+GdRackBaby bets [$108]
+11990815 raises [$165.30]
+GdRackBaby calls [$57.30]
+** Summary **
+11990815 shows [ Jh, Th, Tc, 6s ]
+(Hi: Th, Tc, Td, 8d, Jc)
+GdRackBaby shows [ 5c, As, Jd, Ts ]
+(Lo: 3h, 4h, 5c, 8d, As)
+11990815 collected [ $218.80 ]
+GdRackBaby collected [ $218.80 ]
+
+
+#Game No : 553794461
+***** 888poker Hand History for Game 553794461 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:32:12
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $218.80 )
+Seat 4: GdRackBaby ( $640.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby calls [$10]
+** Dealing flop ** [ 2s, 5h, Ts ]
+11990815 bets [$30]
+GdRackBaby calls [$30]
+** Dealing turn ** [ 3c ]
+11990815 bets [$90]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $89 ]
+
+
+#Game No : 553794488
+***** 888poker Hand History for Game 553794488 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:32:27
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $262.80 )
+Seat 4: GdRackBaby ( $595.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553794498
+***** 888poker Hand History for Game 553794498 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:32:32
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $261.80 )
+Seat 4: GdRackBaby ( $596.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 6d, Kd, Qd ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 2d ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553794518
+***** 888poker Hand History for Game 553794518 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:32:44
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $266.30 )
+Seat 4: GdRackBaby ( $591.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ Js, 7c, 3h ]
+GdRackBaby bets [$9]
+11990815 raises [$39]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $29 ]
+
+
+#Game No : 553794546
+***** 888poker Hand History for Game 553794546 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:32:57
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $280.30 )
+Seat 4: GdRackBaby ( $576.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 2d, 5d, Th ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553794568
+***** 888poker Hand History for Game 553794568 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:33:08
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $275.30 )
+Seat 4: GdRackBaby ( $580.94 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553794578
+***** 888poker Hand History for Game 553794578 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:33:14
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $274.30 )
+Seat 4: GdRackBaby ( $581.94 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 6c, 3c, 2c ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553794594
+***** 888poker Hand History for Game 553794594 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:33:25
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $269.30 )
+Seat 4: GdRackBaby ( $586.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Ks, 5h, 8d ]
+GdRackBaby bets [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553794618
+***** 888poker Hand History for Game 553794618 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:33:36
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $267.30 )
+Seat 4: GdRackBaby ( $588.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 5h, Qh, Qd ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553794641
+***** 888poker Hand History for Game 553794641 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:33:47
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $262.30 )
+Seat 4: GdRackBaby ( $592.74 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ Ts, 6c, 9c ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 7c ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553794674
+***** 888poker Hand History for Game 553794674 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:34:06
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $256.30 )
+Seat 4: GdRackBaby ( $598.14 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553794684
+***** 888poker Hand History for Game 553794684 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:34:11
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $257.30 )
+Seat 4: GdRackBaby ( $597.14 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ Qs, Qd, 3s ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553794707
+***** 888poker Hand History for Game 553794707 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:34:23
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $262.70 )
+Seat 4: GdRackBaby ( $591.14 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 2d, 2s, Qc ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 raises [$32.50]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $24 ]
+
+
+#Game No : 553794729
+***** 888poker Hand History for Game 553794729 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:34:39
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $274.20 )
+Seat 4: GdRackBaby ( $578.64 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Jd, Ah, 5s ]
+GdRackBaby bets [$4]
+11990815 calls [$4]
+** Dealing turn ** [ Qs ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553794749
+***** 888poker Hand History for Game 553794749 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:34:53
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $279.60 )
+Seat 4: GdRackBaby ( $572.64 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ As, 8h, Tc ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Kc ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 4s ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ Kh, Jd, 6h, 6c ]
+(Hi: Kh, Kc, Tc, Jd, As)
+GdRackBaby shows [ 9h, 5s, 6s, Qc ]
+(Lo: 4s, 5s, 6s, 8h, As)
+11990815 collected [ $4.75 ]
+GdRackBaby collected [ $4.75 ]
+
+
+#Game No : 553794785
+***** 888poker Hand History for Game 553794785 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:35:12
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $279.35 )
+Seat 4: GdRackBaby ( $572.39 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ 4c, 4d, 9s ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 5s ]
+GdRackBaby bets [$9]
+11990815 calls [$9]
+** Dealing river ** [ 4s ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ 3d, 9d, 8d, Ah ]
+(Hi: 4c, 4d, 4s, 9d, Ah)
+11990815 shows [ Jh, 2s, 3h, 6d ]
+GdRackBaby collected [ $29 ]
+
+
+#Game No : 553794821
+***** 888poker Hand History for Game 553794821 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:35:35
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $264.35 )
+Seat 4: GdRackBaby ( $586.39 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553794830
+***** 888poker Hand History for Game 553794830 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:35:39
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $265.35 )
+Seat 4: GdRackBaby ( $585.39 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ 5c, 4s, Jh ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553794851
+***** 888poker Hand History for Game 553794851 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:35:53
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $259.35 )
+Seat 4: GdRackBaby ( $590.79 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Ks, 9s, 5h ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 6h ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ Ac ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $1 ]
+GdRackBaby collected [ $1 ]
+
+
+#Game No : 553794880
+***** 888poker Hand History for Game 553794880 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:36:11
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $254.35 )
+Seat 4: GdRackBaby ( $595.29 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 4h, 8c, 9s ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Ts ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ Qh ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ 9c, 8s, Kd, 3c ]
+(Hi: 9c, 9s, 8s, 8c, Qh)
+11990815 shows [ 5c, Jh, Jd, 4d ]
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553794910
+***** 888poker Hand History for Game 553794910 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:36:31
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $252.35 )
+Seat 4: GdRackBaby ( $597.09 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553794924
+***** 888poker Hand History for Game 553794924 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:36:37
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $250.35 )
+Seat 4: GdRackBaby ( $599.09 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ Qs, 4h, Ah ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553794940
+***** 888poker Hand History for Game 553794940 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:36:49
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $244.35 )
+Seat 4: GdRackBaby ( $604.49 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 8d, Kh, Tc ]
+11990815 checks
+GdRackBaby bets [$5]
+11990815 calls [$5]
+** Dealing turn ** [ 7h ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ Qc ]
+11990815 bets [$20]
+GdRackBaby raises [$50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $59 ]
+
+
+#Game No : 553794991
+***** 888poker Hand History for Game 553794991 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:37:13
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $214.35 )
+Seat 4: GdRackBaby ( $633.49 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 2s, 5c, 5h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 6h ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ 7h ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $11.40 ]
+
+
+#Game No : 553795016
+***** 888poker Hand History for Game 553795016 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:37:28
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $219.75 )
+Seat 4: GdRackBaby ( $627.49 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 9c, Kd, 6d ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553795037
+***** 888poker Hand History for Game 553795037 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:37:40
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $214.75 )
+Seat 4: GdRackBaby ( $631.99 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 9d, 4s, 8c ]
+GdRackBaby checks
+11990815 bets [$12]
+GdRackBaby calls [$12]
+** Dealing turn ** [ 4c ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ 4h ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ 5c, Ks, 2c, 3d ]
+(Hi: 4s, 4c, 4h, 5c, Ks)
+11990815 shows [ 6h, Td, 9c, 7d ]
+GdRackBaby collected [ $35 ]
+
+
+#Game No : 553795081
+***** 888poker Hand History for Game 553795081 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:38:03
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $196.75 )
+Seat 4: GdRackBaby ( $648.99 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 3s, Th, 6h ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 8d ]
+11990815 checks
+GdRackBaby bets [$12.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $24 ]
+
+
+#Game No : 553795146
+***** 888poker Hand History for Game 553795146 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:38:42
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $182.25 )
+Seat 4: GdRackBaby ( $662.29 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 5s, 6c, Ah ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 2c ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553795177
+***** 888poker Hand History for Game 553795177 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:38:56
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $186.75 )
+Seat 4: GdRackBaby ( $657.29 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ Tc, 8c, 7s ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 5c ]
+GdRackBaby bets [$9]
+11990815 calls [$9]
+** Dealing river ** [ Ac ]
+GdRackBaby bets [$22.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $29 ]
+
+
+#Game No : 553795212
+***** 888poker Hand History for Game 553795212 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:39:17
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $171.75 )
+Seat 4: GdRackBaby ( $671.29 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 8h, 3h, Ah ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Qh ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 9h ]
+11990815 bets [$10]
+GdRackBaby calls [$10]
+** Summary **
+11990815 shows [ 5s, 5h, 3d, Qs ]
+(Hi: Qs, Qh, 3d, 3h, Ah)
+GdRackBaby shows [ Qc, Jh, 6d, 4c ]
+(Lo: 3h, 4c, 6d, 8h, Ah)
+11990815 collected [ $14.50 ]
+GdRackBaby collected [ $14.50 ]
+
+
+#Game No : 553795245
+***** 888poker Hand History for Game 553795245 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:39:36
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $171.25 )
+Seat 4: GdRackBaby ( $670.79 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 7c, 4d, 2c ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 2h ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ 3c ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ Jd, 5h, Ts, 5c ]
+11990815 shows [ Ac, 9h, Ah, As ]
+(Hi: Ah, As, 2c, 2h, 7c)
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553795276
+***** 888poker Hand History for Game 553795276 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:39:56
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $173.05 )
+Seat 4: GdRackBaby ( $668.79 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 6d, 7d, 5c ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 2h ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553795298
+***** 888poker Hand History for Game 553795298 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:40:10
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $177.55 )
+Seat 4: GdRackBaby ( $663.79 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 4d, Jc, Ts ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 8s ]
+GdRackBaby bets [$4]
+11990815 raises [$16]
+GdRackBaby calls [$12]
+** Dealing river ** [ 4c ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ Qh, 4h, 6d, 9s ]
+(Hi: 8s, 9s, Ts, Jc, Qh)
+11990815 shows [ 5d, 9d, 3h, 7d ]
+GdRackBaby collected [ $35 ]
+
+
+#Game No : 553795347
+***** 888poker Hand History for Game 553795347 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:40:35
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $159.55 )
+Seat 4: GdRackBaby ( $680.79 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553795356
+***** 888poker Hand History for Game 553795356 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:40:40
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $160.55 )
+Seat 4: GdRackBaby ( $679.79 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 4d, 5d, 7s ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 4c ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ Ah ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553795401
+***** 888poker Hand History for Game 553795401 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:41:05
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $162.35 )
+Seat 4: GdRackBaby ( $677.79 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby calls [$10]
+** Dealing flop ** [ 2c, 2d, 8d ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ 5h ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ Jh ]
+11990815 bets [$30]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $29 ]
+
+
+#Game No : 553795439
+***** 888poker Hand History for Game 553795439 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:41:32
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $176.35 )
+Seat 4: GdRackBaby ( $662.79 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 5s, 3s, 6h ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553795462
+***** 888poker Hand History for Game 553795462 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:41:45
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $178.15 )
+Seat 4: GdRackBaby ( $660.79 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Ad, 9h, 3d ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553795478
+***** 888poker Hand History for Game 553795478 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:41:56
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $173.15 )
+Seat 4: GdRackBaby ( $665.29 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Kd, 6d, 8h ]
+GdRackBaby bets [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553795506
+***** 888poker Hand History for Game 553795506 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:42:09
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $171.15 )
+Seat 4: GdRackBaby ( $667.09 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Kd, Qd, Ah ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 5s ]
+11990815 checks
+GdRackBaby bets [$18.75]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $24 ]
+
+
+#Game No : 553795533
+***** 888poker Hand History for Game 553795533 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:42:28
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $158.65 )
+Seat 4: GdRackBaby ( $678.59 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553795545
+***** 888poker Hand History for Game 553795545 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:42:34
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $160.65 )
+Seat 4: GdRackBaby ( $676.59 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $10 ]
+
+
+#Game No : 553795557
+***** 888poker Hand History for Game 553795557 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:42:42
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $165.65 )
+Seat 4: GdRackBaby ( $671.59 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 5d, Tc, Kh ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Ts ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553795579
+***** 888poker Hand History for Game 553795579 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:42:58
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $159.65 )
+Seat 4: GdRackBaby ( $676.99 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Jh, 4d, As ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Qh ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553795623
+***** 888poker Hand History for Game 553795623 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:43:19
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $164.15 )
+Seat 4: GdRackBaby ( $671.99 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553795631
+***** 888poker Hand History for Game 553795631 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:43:25
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $163.15 )
+Seat 4: GdRackBaby ( $672.99 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Ad, Kc, 3s ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 5c ]
+11990815 checks
+GdRackBaby bets [$18.75]
+11990815 calls [$18.75]
+** Dealing river ** [ 6c ]
+11990815 checks
+GdRackBaby bets [$46.87]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $7.32 ]
+GdRackBaby collected [ $7.31 ]
+
+
+#Game No : 553795670
+***** 888poker Hand History for Game 553795670 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:43:47
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $131.90 )
+Seat 4: GdRackBaby ( $703.24 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 5c, 7h, Kd ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553795698
+***** 888poker Hand History for Game 553795698 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:44:04
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $133.70 )
+Seat 4: GdRackBaby ( $701.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 8d, 3c, Ac ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Js ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553795712
+***** 888poker Hand History for Game 553795712 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:44:17
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $138.20 )
+Seat 4: GdRackBaby ( $696.24 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Ac, 3h, 7h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 7c ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553795742
+***** 888poker Hand History for Game 553795742 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:44:33
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $140 )
+Seat 4: GdRackBaby ( $694.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 9c, Th, Qh ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Kh ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ Kd ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ 5s, Qc, 4s, 2h ]
+GdRackBaby shows [ 5d, Td, Jh, 6d ]
+(Hi: 9c, Td, Jh, Qh, Kd)
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553795773
+***** 888poker Hand History for Game 553795773 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:44:52
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $135 )
+Seat 4: GdRackBaby ( $698.74 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby calls [$4]
+** Dealing flop ** [ 4d, Ah, 7h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Qs ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553795787
+***** 888poker Hand History for Game 553795787 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:45:06
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $129 )
+Seat 4: GdRackBaby ( $704.14 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Kc, 3c, 9h ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 8c ]
+11990815 checks
+GdRackBaby checks
+** Dealing river ** [ 5s ]
+11990815 bets [$25]
+GdRackBaby calls [$25]
+** Summary **
+11990815 shows [ Qc, Qd, Qh, Ac ]
+(Hi: 3c, 8c, Qc, Kc, Ac)
+GdRackBaby shows [ Jc, Td, 9c, 7d ]
+11990815 collected [ $74 ]
+
+
+#Game No : 553795837
+***** 888poker Hand History for Game 553795837 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:45:32
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $165.50 )
+Seat 4: GdRackBaby ( $666.64 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 9h, As, 6c ]
+GdRackBaby bets [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553795851
+***** 888poker Hand History for Game 553795851 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:45:43
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $163.50 )
+Seat 4: GdRackBaby ( $668.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553795858
+***** 888poker Hand History for Game 553795858 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:45:47
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $164.50 )
+Seat 4: GdRackBaby ( $667.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553795881
+***** 888poker Hand History for Game 553795881 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:45:59
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $166.50 )
+Seat 4: GdRackBaby ( $665.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553795891
+***** 888poker Hand History for Game 553795891 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:46:07
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $164.50 )
+Seat 4: GdRackBaby ( $667.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ As, 2s, 6c ]
+GdRackBaby bets [$4]
+11990815 calls [$4]
+** Dealing turn ** [ 6h ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ 7h ]
+GdRackBaby bets [$9]
+11990815 calls [$9]
+** Summary **
+GdRackBaby shows [ 4h, 7s, 5d, Ts ]
+(Hi: 7s, 7h, 6c, 6h, Ts)
+11990815 shows [ 5h, 7d, 3c, Tc ]
+(Hi: 7d, 7h, 6c, 6h, Tc)
+(Lo: 2s, 3c, 5h, 6h, As)
+GdRackBaby collected [ $7.25 ]
+11990815 collected [ $7.25 ]
+11990815 collected [ $14.50 ]
+
+
+#Game No : 553795920
+***** 888poker Hand History for Game 553795920 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:46:25
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $171.25 )
+Seat 4: GdRackBaby ( $659.69 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 8c, Qd, 2d ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $9.50 ]
+
+
+#Game No : 553795943
+***** 888poker Hand History for Game 553795943 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:46:36
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $166.25 )
+Seat 4: GdRackBaby ( $664.19 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Jh, 2s, 9c ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 2h ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553795986
+***** 888poker Hand History for Game 553795986 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:46:57
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $168.05 )
+Seat 4: GdRackBaby ( $662.19 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3 ]
+
+
+#Game No : 553796001
+***** 888poker Hand History for Game 553796001 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:47:07
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $169.05 )
+Seat 4: GdRackBaby ( $661.19 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Jh, As, 2h ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ 9d ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553796031
+***** 888poker Hand History for Game 553796031 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:47:25
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $170.85 )
+Seat 4: GdRackBaby ( $659.19 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Ah, 2s, Ks ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ 8d ]
+11990815 checks
+GdRackBaby bets [$18.75]
+11990815 calls [$18.75]
+** Dealing river ** [ Kc ]
+11990815 checks
+GdRackBaby bets [$46.87]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $7.32 ]
+GdRackBaby collected [ $7.31 ]
+
+
+#Game No : 553796092
+***** 888poker Hand History for Game 553796092 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:48:00
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $139.60 )
+Seat 4: GdRackBaby ( $689.44 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553796108
+***** 888poker Hand History for Game 553796108 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:48:07
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $141.60 )
+Seat 4: GdRackBaby ( $687.44 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby calls [$10]
+** Dealing flop ** [ Kc, Jc, 6h ]
+11990815 bets [$30]
+GdRackBaby raises [$120]
+11990815 raises [$96.60]
+GdRackBaby calls [$6.60]
+** Dealing turn ** [ 2s ]
+** Dealing river ** [ 7c ]
+** Summary **
+11990815 shows [ 4c, 6s, 3h, 5c ]
+(Hi: 4c, 5c, 7c, Jc, Kc)
+(Lo: 2s, 3h, 4c, 6h, 7c)
+GdRackBaby shows [ 9h, Ks, Jh, Ac ]
+11990815 collected [ $141.10 ]
+11990815 collected [ $141.10 ]
+
+
+#Game No : 553796151
+***** 888poker Hand History for Game 553796151 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:48:33
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $282.20 )
+Seat 4: GdRackBaby ( $545.84 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby raises [$4]
+11990815 calls [$4]
+** Dealing flop ** [ Js, 5h, 2c ]
+GdRackBaby bets [$9]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $11.40 ]
+
+
+#Game No : 553796166
+***** 888poker Hand History for Game 553796166 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:48:45
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $276.20 )
+Seat 4: GdRackBaby ( $551.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553796179
+***** 888poker Hand History for Game 553796179 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:48:54
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $274.20 )
+Seat 4: GdRackBaby ( $553.24 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553796191
+***** 888poker Hand History for Game 553796191 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:48:59
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $273.20 )
+Seat 4: GdRackBaby ( $554.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 6c, 2d, Ad ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Js ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553796217
+***** 888poker Hand History for Game 553796217 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:49:15
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $277.70 )
+Seat 4: GdRackBaby ( $549.24 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ Th, 5h, 3d ]
+GdRackBaby checks
+11990815 bets [$4]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $3.80 ]
+
+
+#Game No : 553796245
+***** 888poker Hand History for Game 553796245 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:49:29
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $279.50 )
+Seat 4: GdRackBaby ( $547.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ 7d, 2s, Ah ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 calls [$7.50]
+** Dealing turn ** [ Kd ]
+11990815 checks
+GdRackBaby bets [$18.75]
+11990815 calls [$18.75]
+** Dealing river ** [ Js ]
+11990815 checks
+GdRackBaby checks
+** Summary **
+11990815 shows [ 3c, 6s, 8s, 3s ]
+GdRackBaby shows [ 5s, 3d, 5c, 2c ]
+(Hi: 5s, 5c, Js, Kd, Ah)
+(Lo: 2s, 3d, 5c, 7d, Ah)
+GdRackBaby collected [ $30.75 ]
+GdRackBaby collected [ $30.75 ]
+
+
+#Game No : 553796294
+***** 888poker Hand History for Game 553796294 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:49:57
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $248.25 )
+Seat 4: GdRackBaby ( $577.49 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $4 ]
+
+
+#Game No : 553796310
+***** 888poker Hand History for Game 553796310 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:50:04
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $250.25 )
+Seat 4: GdRackBaby ( $575.49 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Js, Qd, 5h ]
+11990815 checks
+GdRackBaby bets [$7.50]
+11990815 raises [$32.50]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $24 ]
+
+
+#Game No : 553796336
+***** 888poker Hand History for Game 553796336 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:50:21
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $261.75 )
+Seat 4: GdRackBaby ( $562.99 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 calls [$12]
+** Dealing flop ** [ 8d, 4s, 5d ]
+GdRackBaby checks
+11990815 bets [$36]
+GdRackBaby calls [$36]
+** Dealing turn ** [ Jh ]
+GdRackBaby checks
+11990815 bets [$108]
+GdRackBaby raises [$432]
+11990815 calls [$99.75]
+** Dealing river ** [ As ]
+** Summary **
+11990815 shows [ 7d, Kc, Ac, 6d ]
+(Hi: 4s, 5d, 6d, 7d, 8d)
+(Lo: 4s, 5d, 6d, 7d, As)
+GdRackBaby shows [ Ad, 9d, Ah, 6h ]
+11990815 collected [ $261.25 ]
+11990815 collected [ $261.25 ]
+
+
+#Game No : 553796389
+***** 888poker Hand History for Game 553796389 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:50:49
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $522.50 )
+Seat 4: GdRackBaby ( $301.24 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 calls [$3]
+** Dealing flop ** [ Ts, 6c, Js ]
+11990815 checks
+GdRackBaby checks
+** Dealing turn ** [ Qc ]
+11990815 bets [$10]
+GdRackBaby folds
+** Summary **
+11990815 did not show his hand
+11990815 collected [ $9.50 ]
+
+
+#Game No : 553796428
+***** 888poker Hand History for Game 553796428 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:51:09
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $527 )
+Seat 4: GdRackBaby ( $296.24 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 raises [$5]
+GdRackBaby raises [$16]
+11990815 raises [$48]
+GdRackBaby calls [$36]
+** Dealing flop ** [ 4s, 5c, 7s ]
+GdRackBaby checks
+11990815 bets [$108]
+GdRackBaby raises [$242.24]
+11990815 calls [$134.24]
+** Dealing turn ** [ 6s ]
+** Dealing river ** [ 8s ]
+** Summary **
+11990815 shows [ Ac, 3s, Kh, Kd ]
+(Hi: Kh, Kd, 6s, 7s, 8s)
+GdRackBaby shows [ 5d, 2s, Ad, 2c ]
+(Lo: 2c, 4s, 5c, 6s, Ad)
+11990815 collected [ $295.74 ]
+GdRackBaby collected [ $295.74 ]
+
+
+#Game No : 553796470
+***** 888poker Hand History for Game 553796470 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:51:36
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $526.50 )
+Seat 4: GdRackBaby ( $295.74 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 raises [$13]
+GdRackBaby calls [$10]
+** Dealing flop ** [ Kc, 5d, 8h ]
+11990815 bets [$30]
+GdRackBaby calls [$30]
+** Dealing turn ** [ Th ]
+11990815 bets [$90]
+GdRackBaby raises [$250.74]
+11990815 calls [$160.74]
+** Dealing river ** [ 7h ]
+** Summary **
+11990815 shows [ 2s, 3s, 2h, Ah ]
+(Hi: 2h, 7h, 8h, Th, Ah)
+(Lo: 2h, 5d, 7h, 8h, Ah)
+GdRackBaby shows [ 5c, Jh, 9c, Kd ]
+11990815 collected [ $295.24 ]
+11990815 collected [ $295.24 ]
+
+
+#Game No : 553796514
+***** 888poker Hand History for Game 553796514 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:52:01
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $821.24 )
+Seat 4: GdRackBaby ( $200 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $3 ]
+
+
+#Game No : 553796525
+***** 888poker Hand History for Game 553796525 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:52:06
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $820.24 )
+Seat 4: GdRackBaby ( $201 )
+GdRackBaby posts small blind [$1]
+11990815 posts big blind [$2]
+** Dealing down cards **
+GdRackBaby raises [$4]
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $4 ]
+
+
+#Game No : 553796556
+***** 888poker Hand History for Game 553796556 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:52:21
+Table Lubbock 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $818.24 )
+Seat 4: GdRackBaby ( $203 )
+11990815 posts small blind [$1]
+GdRackBaby posts big blind [$2]
+** Dealing down cards **
+11990815 calls [$1]
+GdRackBaby checks
+** Dealing flop ** [ 9s, Js, 8s ]
+GdRackBaby checks
+11990815 checks
+** Dealing turn ** [ Kc ]
+GdRackBaby checks
+11990815 checks
+** Dealing river ** [ 7h ]
+GdRackBaby checks
+11990815 checks
+** Summary **
+GdRackBaby shows [ 9d, Jh, 6s, Qd ]
+(Hi: Jh, Js, 9d, 9s, Kc)
+11990815 shows [ Td, As, 3h, 5d ]
+GdRackBaby collected [ $3.80 ]
+
+
+#Game No : 553796598
+***** 888poker Hand History for Game 553796598 *****
+$1/$2 Blinds Pot Limit OmahaHL - *** 06 09 2016 21:52:45
+Table Lubbock 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 2
+Seat 1: 11990815 ( $816.24 )
+Seat 4: GdRackBaby ( $204.80 )
+GdRackBaby posts small blind [$1]
+** Dealing down cards **
+11990815 folds
+** Summary **
+GdRackBaby did not show his hand
+GdRackBaby collected [ $1 ]
+
+

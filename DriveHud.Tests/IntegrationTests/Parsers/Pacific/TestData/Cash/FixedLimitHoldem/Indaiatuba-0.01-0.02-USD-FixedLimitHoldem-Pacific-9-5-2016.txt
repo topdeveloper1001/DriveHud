@@ -1,0 +1,1288 @@
+#Game No : 553707957
+***** 888poker Hand History for Game 553707957 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:56:18
+Table Indaiatuba 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.86 )
+Seat 2: fenixx210 ( $1.99 )
+Seat 4: Rockets ( $2.04 )
+Seat 7: Strakh ( $0.50 )
+Seat 8: samstag14 ( $1.48 )
+Seat 10: seanpnpt ( $0.43 )
+Strakh posts small blind [$0.01]
+samstag14 folds
+seanpnpt posts big blind [$0.02]
+** Dealing down cards **
+Omnious_KGB folds
+fenixx210 folds
+Rockets folds
+Strakh calls [$0.01]
+seanpnpt checks
+** Dealing flop ** [ Jc, Kd, 4h ]
+Strakh checks
+seanpnpt checks
+** Dealing turn ** [ As ]
+Strakh checks
+seanpnpt checks
+** Dealing river ** [ 8h ]
+Strakh checks
+seanpnpt checks
+** Summary **
+Strakh shows [ 8s, 2s ]
+seanpnpt mucks [ 2c, 9c ]
+Strakh collected [ $0.04 ]
+
+
+#Game No : 553708029
+***** 888poker Hand History for Game 553708029 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:56:55
+Table Indaiatuba 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: Omnious_KGB ( $0.86 )
+Seat 2: fenixx210 ( $1.99 )
+Seat 7: Strakh ( $0.52 )
+Seat 10: seanpnpt ( $0.41 )
+seanpnpt posts small blind [$0.01]
+Omnious_KGB posts big blind [$0.02]
+** Dealing down cards **
+fenixx210 folds
+Strakh calls [$0.02]
+seanpnpt calls [$0.01]
+Omnious_KGB checks
+** Dealing flop ** [ 8h, As, Kh ]
+seanpnpt checks
+Omnious_KGB checks
+Strakh checks
+** Dealing turn ** [ 7d ]
+seanpnpt checks
+Omnious_KGB checks
+Strakh checks
+** Dealing river ** [ 3d ]
+seanpnpt checks
+Omnious_KGB checks
+Strakh checks
+** Summary **
+seanpnpt shows [ Jh, Qs ]
+Omnious_KGB mucks [ Th, 2d ]
+Strakh shows [ 7c, Tc ]
+Strakh collected [ $0.06 ]
+
+
+#Game No : 553708140
+***** 888poker Hand History for Game 553708140 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:57:55
+Table Indaiatuba 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 1: Omnious_KGB ( $0.84 )
+Seat 2: fenixx210 ( $1.99 )
+Seat 3: Gerrit667 ( $1.05 )
+Seat 7: Strakh ( $0.56 )
+Seat 10: seanpnpt ( $0.39 )
+Omnious_KGB posts small blind [$0.01]
+fenixx210 posts big blind [$0.02]
+** Dealing down cards **
+Gerrit667 folds
+Strakh folds
+seanpnpt folds
+Omnious_KGB raises [$0.03]
+fenixx210 calls [$0.02]
+** Dealing flop ** [ Js, 4s, Qd ]
+Omnious_KGB bets [$0.02]
+fenixx210 calls [$0.02]
+** Dealing turn ** [ Ts ]
+Omnious_KGB checks
+fenixx210 checks
+** Dealing river ** [ 6s ]
+Omnious_KGB checks
+fenixx210 checks
+** Summary **
+Omnious_KGB shows [ 3c, 3s ]
+fenixx210 shows [ 7s, Kd ]
+fenixx210 collected [ $0.12 ]
+
+
+#Game No : 553708214
+***** 888poker Hand History for Game 553708214 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:58:42
+Table Indaiatuba 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: Omnious_KGB ( $0.78 )
+Seat 2: fenixx210 ( $2.05 )
+Seat 3: Gerrit667 ( $1.05 )
+Seat 7: Strakh ( $0.56 )
+Seat 10: seanpnpt ( $0.39 )
+fenixx210 posts small blind [$0.01]
+Gerrit667 posts big blind [$0.02]
+** Dealing down cards **
+Strakh calls [$0.02]
+seanpnpt folds
+Omnious_KGB raises [$0.04]
+fenixx210 folds
+Gerrit667 folds
+Strakh calls [$0.02]
+** Dealing flop ** [ 6d, 8d, 2c ]
+Strakh checks
+Omnious_KGB bets [$0.02]
+Strakh calls [$0.02]
+** Dealing turn ** [ Jc ]
+Strakh checks
+Omnious_KGB checks
+** Dealing river ** [ Ts ]
+Strakh checks
+Omnious_KGB checks
+** Summary **
+Strakh shows [ 7d, Ac ]
+Omnious_KGB shows [ Qs, As ]
+Omnious_KGB collected [ $0.15 ]
+
+
+#Game No : 553708301
+***** 888poker Hand History for Game 553708301 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 20:59:28
+Table Indaiatuba 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.87 )
+Seat 2: fenixx210 ( $2.04 )
+Seat 3: Gerrit667 ( $1.03 )
+Seat 7: Strakh ( $0.50 )
+Seat 9: AAlex777 ( $0.20 )
+Seat 10: seanpnpt ( $0.39 )
+Gerrit667 posts small blind [$0.01]
+Strakh posts big blind [$0.02]
+AAlex777 posts big blind [$0.02]
+** Dealing down cards **
+AAlex777 checks
+seanpnpt folds
+Omnious_KGB folds
+fenixx210 folds
+Gerrit667 calls [$0.01]
+Strakh checks
+** Dealing flop ** [ 9d, Ac, 4s ]
+Gerrit667 checks
+Strakh checks
+AAlex777 bets [$0.02]
+Gerrit667 folds
+Strakh folds
+** Summary **
+AAlex777 collected [ $0.06 ]
+
+
+#Game No : 553708375
+***** 888poker Hand History for Game 553708375 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:00:11
+Table Indaiatuba 10 Max (Real Money)
+Seat 3 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.87 )
+Seat 2: fenixx210 ( $2.04 )
+Seat 3: Gerrit667 ( $1.01 )
+Seat 7: Strakh ( $0.48 )
+Seat 9: AAlex777 ( $0.24 )
+Seat 10: seanpnpt ( $0.39 )
+Strakh posts small blind [$0.01]
+AAlex777 posts big blind [$0.02]
+** Dealing down cards **
+seanpnpt folds
+Omnious_KGB folds
+fenixx210 folds
+Gerrit667 folds
+Strakh calls [$0.01]
+AAlex777 checks
+** Dealing flop ** [ 3s, 6h, 9c ]
+Strakh checks
+AAlex777 checks
+** Dealing turn ** [ Jd ]
+Strakh checks
+AAlex777 bets [$0.04]
+Strakh calls [$0.04]
+** Dealing river ** [ 2h ]
+Strakh bets [$0.04]
+AAlex777 calls [$0.04]
+** Summary **
+Strakh shows [ 5s, 4h ]
+AAlex777 mucks [ Js, Qs ]
+Strakh collected [ $0.19 ]
+
+
+#Game No : 553709384
+***** 888poker Hand History for Game 553709384 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:10:33
+Table Indaiatuba 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.83 )
+Seat 3: Gerrit667 ( $1.20 )
+Seat 4: Rockets ( $1.92 )
+Seat 7: Strakh ( $0.31 )
+Seat 9: AAlex777 ( $0.08 )
+Seat 10: seanpnpt ( $0.49 )
+AAlex777 posts small blind [$0.01]
+seanpnpt posts big blind [$0.02]
+** Dealing down cards **
+Omnious_KGB folds
+Gerrit667 calls [$0.02]
+Rockets calls [$0.02]
+Strakh folds
+AAlex777 calls [$0.01]
+seanpnpt checks
+** Dealing flop ** [ Qc, 9d, 6h ]
+AAlex777 checks
+seanpnpt checks
+Gerrit667 checks
+Rockets checks
+** Dealing turn ** [ 8c ]
+AAlex777 checks
+seanpnpt checks
+Gerrit667 bets [$0.04]
+Rockets folds
+AAlex777 calls [$0.04]
+seanpnpt calls [$0.04]
+** Dealing river ** [ 6d ]
+AAlex777 checks
+seanpnpt checks
+Gerrit667 checks
+** Summary **
+AAlex777 shows [ 4c, 7c ]
+seanpnpt shows [ Qd, 3d ]
+Gerrit667 mucks [ Ks, 9c ]
+seanpnpt collected [ $0.19 ]
+
+
+#Game No : 553709467
+***** 888poker Hand History for Game 553709467 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:11:30
+Table Indaiatuba 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.83 )
+Seat 3: Gerrit667 ( $1.14 )
+Seat 4: Rockets ( $1.90 )
+Seat 7: Strakh ( $0.31 )
+Seat 9: AAlex777 ( $0.02 )
+Seat 10: seanpnpt ( $0.62 )
+seanpnpt posts small blind [$0.01]
+Omnious_KGB posts big blind [$0.02]
+** Dealing down cards **
+Gerrit667 folds
+Rockets raises [$0.04]
+Strakh folds
+AAlex777 folds
+seanpnpt calls [$0.03]
+Omnious_KGB folds
+** Dealing flop ** [ 7c, Ks, 9s ]
+seanpnpt checks
+Rockets bets [$0.02]
+seanpnpt calls [$0.02]
+** Dealing turn ** [ 7d ]
+seanpnpt checks
+Rockets bets [$0.04]
+seanpnpt calls [$0.04]
+** Dealing river ** [ 2h ]
+seanpnpt checks
+Rockets checks
+** Summary **
+seanpnpt shows [ Qd, Js ]
+Rockets shows [ Qh, Ac ]
+Rockets collected [ $0.21 ]
+
+
+#Game No : 553709888
+***** 888poker Hand History for Game 553709888 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:15:55
+Table Indaiatuba 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.92 )
+Seat 3: Gerrit667 ( $1.05 )
+Seat 5: Brunasss ( $0.85 )
+Seat 6: Ger_Asia ( $0.98 )
+Seat 7: Strakh ( $0.09 )
+Seat 8: scifi8 ( $1.04 )
+Ger_Asia posts small blind [$0.01]
+Strakh folds
+scifi8 posts big blind [$0.02]
+** Dealing down cards **
+Omnious_KGB raises [$0.04]
+Gerrit667 folds
+Brunasss raises [$0.06]
+Ger_Asia folds
+scifi8 folds
+Omnious_KGB calls [$0.02]
+** Dealing flop ** [ 4s, Qc, 3h ]
+Omnious_KGB bets [$0.02]
+Brunasss raises [$0.04]
+Omnious_KGB calls [$0.02]
+** Dealing turn ** [ 5h ]
+Omnious_KGB checks
+Brunasss checks
+** Dealing river ** [ Ad ]
+Omnious_KGB checks
+Brunasss bets [$0.04]
+Omnious_KGB calls [$0.04]
+** Summary **
+Brunasss shows [ Ac, 9h ]
+Omnious_KGB mucks [ Js, Qs ]
+Brunasss collected [ $0.30 ]
+
+
+#Game No : 553709944
+***** 888poker Hand History for Game 553709944 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:16:33
+Table Indaiatuba 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.78 )
+Seat 3: Gerrit667 ( $1.05 )
+Seat 5: Brunasss ( $1.01 )
+Seat 6: Ger_Asia ( $0.97 )
+Seat 8: scifi8 ( $1.02 )
+Seat 9: devdema ( $0.30 )
+scifi8 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+Omnious_KGB folds
+Gerrit667 calls [$0.02]
+Brunasss calls [$0.02]
+Ger_Asia folds
+scifi8 calls [$0.01]
+devdema checks
+** Dealing flop ** [ Ac, Jd, 3s ]
+scifi8 bets [$0.02]
+devdema folds
+Gerrit667 calls [$0.02]
+Brunasss calls [$0.02]
+** Dealing turn ** [ 9d ]
+scifi8 bets [$0.04]
+Gerrit667 folds
+Brunasss calls [$0.04]
+** Dealing river ** [ 8c ]
+scifi8 bets [$0.04]
+Brunasss folds
+** Summary **
+scifi8 collected [ $0.21 ]
+
+
+#Game No : 553710007
+***** 888poker Hand History for Game 553710007 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:17:12
+Table Indaiatuba 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.78 )
+Seat 3: Gerrit667 ( $1.01 )
+Seat 5: Brunasss ( $0.93 )
+Seat 6: Ger_Asia ( $0.97 )
+Seat 8: scifi8 ( $1.15 )
+Seat 9: devdema ( $0.28 )
+devdema posts small blind [$0.01]
+Omnious_KGB posts big blind [$0.02]
+** Dealing down cards **
+Gerrit667 folds
+Brunasss calls [$0.02]
+Ger_Asia folds
+scifi8 calls [$0.02]
+devdema folds
+Omnious_KGB checks
+** Dealing flop ** [ Jc, 5s, 3s ]
+Omnious_KGB checks
+Brunasss bets [$0.02]
+scifi8 calls [$0.02]
+Omnious_KGB folds
+** Dealing turn ** [ 9d ]
+Brunasss checks
+scifi8 checks
+** Dealing river ** [ Kh ]
+Brunasss checks
+scifi8 checks
+** Summary **
+Brunasss shows [ Qc, 5h ]
+scifi8 mucks [ Qh, Ac ]
+Brunasss collected [ $0.11 ]
+
+
+#Game No : 553710472
+***** 888poker Hand History for Game 553710472 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:22:12
+Table Indaiatuba 10 Max (Real Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.70 )
+Seat 3: Gerrit667 ( $1.38 )
+Seat 4: Rockets ( $1.74 )
+Seat 5: SteffiGrudno ( $0.82 )
+Seat 8: scifi8 ( $0.91 )
+Seat 9: devdema ( $0.57 )
+devdema posts small blind [$0.01]
+Omnious_KGB posts big blind [$0.02]
+** Dealing down cards **
+Gerrit667 folds
+Rockets folds
+SteffiGrudno calls [$0.02]
+scifi8 calls [$0.02]
+devdema folds
+Omnious_KGB checks
+** Dealing flop ** [ Td, 2s, Ks ]
+Omnious_KGB checks
+SteffiGrudno checks
+scifi8 bets [$0.02]
+Omnious_KGB folds
+SteffiGrudno folds
+** Summary **
+scifi8 collected [ $0.07 ]
+
+
+#Game No : 553710510
+***** 888poker Hand History for Game 553710510 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:22:38
+Table Indaiatuba 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: Omnious_KGB ( $0.68 )
+Seat 3: Gerrit667 ( $1.38 )
+Seat 4: Rockets ( $1.74 )
+Seat 5: SteffiGrudno ( $0.80 )
+Seat 8: scifi8 ( $0.96 )
+Seat 9: devdema ( $0.56 )
+Omnious_KGB posts small blind [$0.01]
+Gerrit667 posts big blind [$0.02]
+** Dealing down cards **
+Rockets folds
+SteffiGrudno calls [$0.02]
+scifi8 calls [$0.02]
+devdema calls [$0.02]
+Omnious_KGB folds
+Gerrit667 checks
+** Dealing flop ** [ Js, 4s, 9s ]
+Gerrit667 checks
+SteffiGrudno checks
+scifi8 checks
+devdema bets [$0.02]
+Gerrit667 calls [$0.02]
+SteffiGrudno calls [$0.02]
+scifi8 calls [$0.02]
+** Dealing turn ** [ 5d ]
+Gerrit667 checks
+SteffiGrudno checks
+scifi8 bets [$0.04]
+devdema calls [$0.04]
+Gerrit667 calls [$0.04]
+SteffiGrudno calls [$0.04]
+** Dealing river ** [ Kc ]
+Gerrit667 checks
+SteffiGrudno checks
+scifi8 bets [$0.04]
+devdema calls [$0.04]
+Gerrit667 calls [$0.04]
+SteffiGrudno folds
+** Summary **
+scifi8 shows [ As, 8s ]
+devdema mucks [ Jc, Th ]
+Gerrit667 mucks [ 5c, 9c ]
+scifi8 collected [ $0.43 ]
+
+
+#Game No : 553710903
+***** 888poker Hand History for Game 553710903 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:26:29
+Table Indaiatuba 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: Omnious_KGB ( $1.05 )
+Seat 3: Gerrit667 ( $1.25 )
+Seat 4: Rockets ( $1.65 )
+Seat 7: rags ( $16.53 )
+Seat 8: scifi8 ( $1.27 )
+rags posts small blind [$0.01]
+scifi8 posts big blind [$0.02]
+** Dealing down cards **
+Omnious_KGB folds
+Gerrit667 calls [$0.02]
+Rockets folds
+rags calls [$0.01]
+scifi8 checks
+** Dealing flop ** [ 4h, Qd, Qs ]
+rags checks
+scifi8 checks
+Gerrit667 checks
+** Dealing turn ** [ 6s ]
+rags bets [$0.04]
+scifi8 folds
+Gerrit667 calls [$0.04]
+** Dealing river ** [ Ac ]
+rags checks
+Gerrit667 checks
+** Summary **
+rags shows [ Ts, 9s ]
+Gerrit667 shows [ 6h, Kh ]
+Gerrit667 collected [ $0.14 ]
+
+
+#Game No : 553713581
+***** 888poker Hand History for Game 553713581 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:54:43
+Table Indaiatuba 10 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: apxap ( $0.80 )
+Seat 2: wologor ( $0.24 )
+Seat 3: Gerrit667 ( $1.88 )
+Seat 7: rags ( $16.52 )
+Seat 10: fuzzy103222 ( $0.60 )
+fuzzy103222 posts small blind [$0.01]
+apxap posts big blind [$0.02]
+** Dealing down cards **
+wologor folds
+Gerrit667 folds
+rags folds
+fuzzy103222 raises [$0.03]
+apxap calls [$0.02]
+** Dealing flop ** [ 4h, 6c, Kh ]
+fuzzy103222 bets [$0.02]
+apxap folds
+** Summary **
+fuzzy103222 collected [ $0.08 ]
+
+
+#Game No : 553713615
+***** 888poker Hand History for Game 553713615 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 21:55:04
+Table Indaiatuba 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 1: apxap ( $0.76 )
+Seat 2: wologor ( $0.24 )
+Seat 3: Gerrit667 ( $1.88 )
+Seat 7: rags ( $16.52 )
+Seat 10: fuzzy103222 ( $0.64 )
+apxap posts small blind [$0.01]
+wologor posts big blind [$0.02]
+** Dealing down cards **
+Gerrit667 folds
+rags folds
+fuzzy103222 folds
+apxap calls [$0.01]
+wologor raises [$0.02]
+apxap calls [$0.02]
+** Dealing flop ** [ Ks, Th, 9c ]
+apxap bets [$0.02]
+wologor calls [$0.02]
+** Dealing turn ** [ 2d ]
+apxap bets [$0.04]
+wologor calls [$0.04]
+** Dealing river ** [ Qs ]
+apxap bets [$0.04]
+wologor calls [$0.04]
+** Summary **
+apxap shows [ Jh, Qd ]
+wologor mucks [ Tc, As ]
+apxap collected [ $0.27 ]
+
+
+#Game No : 553715590
+***** 888poker Hand History for Game 553715590 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:17:23
+Table Indaiatuba 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 1: apxap ( $0.75 )
+Seat 2: wologor ( $0.55 )
+Seat 5: Stolpaj ( $0.97 )
+Seat 7: rags ( $16.67 )
+Seat 9: devdema ( $1.36 )
+Seat 10: fuzzy103222 ( $0.78 )
+apxap posts small blind [$0.01]
+wologor posts big blind [$0.02]
+** Dealing down cards **
+Stolpaj folds
+rags raises [$0.04]
+devdema folds
+fuzzy103222 calls [$0.04]
+apxap folds
+wologor calls [$0.02]
+** Dealing flop ** [ 8s, 5c, 5s ]
+wologor checks
+rags bets [$0.02]
+fuzzy103222 calls [$0.02]
+wologor calls [$0.02]
+** Dealing turn ** [ Jc ]
+wologor checks
+rags checks
+fuzzy103222 checks
+** Dealing river ** [ Kh ]
+wologor checks
+rags checks
+fuzzy103222 bets [$0.04]
+wologor folds
+rags calls [$0.04]
+** Summary **
+fuzzy103222 shows [ Kc, Td ]
+rags shows [ Ah, Ks ]
+rags collected [ $0.26 ]
+
+
+#Game No : 553715667
+***** 888poker Hand History for Game 553715667 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:18:15
+Table Indaiatuba 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: apxap ( $0.74 )
+Seat 2: wologor ( $0.49 )
+Seat 5: Stolpaj ( $0.97 )
+Seat 7: rags ( $16.83 )
+Seat 9: devdema ( $1.36 )
+Seat 10: fuzzy103222 ( $0.68 )
+wologor posts small blind [$0.01]
+Stolpaj posts big blind [$0.02]
+** Dealing down cards **
+rags folds
+devdema folds
+fuzzy103222 folds
+apxap calls [$0.02]
+wologor raises [$0.03]
+Stolpaj calls [$0.02]
+apxap calls [$0.02]
+** Dealing flop ** [ Jc, Th, 9c ]
+wologor bets [$0.02]
+Stolpaj raises [$0.04]
+apxap calls [$0.04]
+wologor calls [$0.02]
+** Dealing turn ** [ 7d ]
+wologor checks
+Stolpaj bets [$0.04]
+apxap folds
+wologor folds
+** Summary **
+Stolpaj collected [ $0.23 ]
+
+
+#Game No : 553715723
+***** 888poker Hand History for Game 553715723 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:18:53
+Table Indaiatuba 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: apxap ( $0.66 )
+Seat 2: wologor ( $0.41 )
+Seat 5: Stolpaj ( $1.12 )
+Seat 6: nicksky1 ( $1.44 )
+Seat 9: devdema ( $1.36 )
+Seat 10: fuzzy103222 ( $0.68 )
+Stolpaj posts small blind [$0.01]
+nicksky1 posts big blind [$0.02]
+** Dealing down cards **
+devdema folds
+fuzzy103222 folds
+apxap folds
+wologor raises [$0.04]
+Stolpaj folds
+nicksky1 calls [$0.02]
+** Dealing flop ** [ 3d, Tc, Ac ]
+nicksky1 checks
+wologor bets [$0.02]
+nicksky1 calls [$0.02]
+** Dealing turn ** [ 5c ]
+nicksky1 checks
+wologor checks
+** Dealing river ** [ 2d ]
+nicksky1 bets [$0.04]
+wologor calls [$0.04]
+** Summary **
+nicksky1 shows [ 9s, Ts ]
+wologor shows [ Qd, Qh ]
+wologor collected [ $0.20 ]
+
+
+#Game No : 553715757
+***** 888poker Hand History for Game 553715757 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:19:18
+Table Indaiatuba 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 1: apxap ( $0.66 )
+Seat 2: wologor ( $0.51 )
+Seat 5: Stolpaj ( $1.11 )
+Seat 6: nicksky1 ( $1.34 )
+Seat 9: devdema ( $1.36 )
+Seat 10: fuzzy103222 ( $0.68 )
+nicksky1 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+apxap folds
+wologor folds
+Stolpaj folds
+nicksky1 folds
+devdema folds
+** Summary **
+fuzzy103222 did not show his hand
+fuzzy103222 collected [ $0.05 ]
+
+
+#Game No : 553715771
+***** 888poker Hand History for Game 553715771 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:19:27
+Table Indaiatuba 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: apxap ( $0.66 )
+Seat 2: wologor ( $0.51 )
+Seat 5: Stolpaj ( $1.11 )
+Seat 6: nicksky1 ( $1.33 )
+Seat 9: devdema ( $1.34 )
+Seat 10: fuzzy103222 ( $0.71 )
+devdema posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+apxap calls [$0.02]
+wologor folds
+Stolpaj calls [$0.02]
+nicksky1 calls [$0.02]
+devdema folds
+fuzzy103222 checks
+** Dealing flop ** [ 6h, Th, Qs ]
+fuzzy103222 checks
+apxap bets [$0.02]
+Stolpaj folds
+nicksky1 folds
+fuzzy103222 folds
+** Summary **
+apxap collected [ $0.09 ]
+
+
+#Game No : 553715808
+***** 888poker Hand History for Game 553715808 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:19:51
+Table Indaiatuba 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: apxap ( $0.73 )
+Seat 2: wologor ( $0.51 )
+Seat 5: Stolpaj ( $1.09 )
+Seat 6: nicksky1 ( $1.31 )
+Seat 9: devdema ( $1.33 )
+Seat 10: fuzzy103222 ( $0.69 )
+fuzzy103222 posts small blind [$0.01]
+apxap folds
+wologor posts big blind [$0.02]
+** Dealing down cards **
+Stolpaj folds
+nicksky1 calls [$0.02]
+devdema folds
+fuzzy103222 calls [$0.01]
+wologor checks
+** Dealing flop ** [ Jc, 6c, 4d ]
+fuzzy103222 checks
+wologor bets [$0.02]
+nicksky1 calls [$0.02]
+fuzzy103222 calls [$0.02]
+** Dealing turn ** [ Js ]
+fuzzy103222 checks
+wologor bets [$0.04]
+nicksky1 calls [$0.04]
+fuzzy103222 folds
+** Dealing river ** [ 8s ]
+wologor bets [$0.04]
+nicksky1 folds
+** Summary **
+wologor collected [ $0.19 ]
+
+
+#Game No : 553715860
+***** 888poker Hand History for Game 553715860 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:20:32
+Table Indaiatuba 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 2: wologor ( $0.62 )
+Seat 4: DennisFJ90 ( $1 )
+Seat 5: Stolpaj ( $1.09 )
+Seat 6: nicksky1 ( $1.23 )
+Seat 9: devdema ( $1.33 )
+Seat 10: fuzzy103222 ( $0.65 )
+wologor posts small blind [$0.01]
+DennisFJ90 posts big blind [$0.02]
+** Dealing down cards **
+Stolpaj calls [$0.02]
+nicksky1 folds
+devdema calls [$0.02]
+fuzzy103222 folds
+wologor folds
+DennisFJ90 checks
+** Dealing flop ** [ Ts, 2c, 3c ]
+DennisFJ90 checks
+Stolpaj bets [$0.02]
+devdema folds
+DennisFJ90 folds
+** Summary **
+Stolpaj collected [ $0.07 ]
+
+
+#Game No : 553715894
+***** 888poker Hand History for Game 553715894 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:20:57
+Table Indaiatuba 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 2: wologor ( $0.61 )
+Seat 4: DennisFJ90 ( $0.98 )
+Seat 5: Stolpaj ( $1.14 )
+Seat 6: nicksky1 ( $1.23 )
+Seat 9: devdema ( $1.31 )
+Seat 10: fuzzy103222 ( $0.65 )
+DennisFJ90 posts small blind [$0.01]
+Stolpaj posts big blind [$0.02]
+** Dealing down cards **
+nicksky1 folds
+devdema calls [$0.02]
+fuzzy103222 raises [$0.04]
+wologor folds
+DennisFJ90 folds
+Stolpaj folds
+devdema calls [$0.02]
+** Dealing flop ** [ 8c, Qh, 6c ]
+devdema checks
+fuzzy103222 bets [$0.02]
+devdema calls [$0.02]
+** Dealing turn ** [ Kh ]
+devdema checks
+fuzzy103222 checks
+** Dealing river ** [ Qc ]
+devdema checks
+fuzzy103222 checks
+** Summary **
+devdema shows [ 5h, 4h ]
+fuzzy103222 shows [ 6s, As ]
+fuzzy103222 collected [ $0.15 ]
+
+
+#Game No : 553715948
+***** 888poker Hand History for Game 553715948 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:21:31
+Table Indaiatuba 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 2: wologor ( $0.61 )
+Seat 4: DennisFJ90 ( $0.97 )
+Seat 5: Stolpaj ( $1.12 )
+Seat 6: nicksky1 ( $1.23 )
+Seat 9: devdema ( $1.25 )
+Seat 10: fuzzy103222 ( $0.74 )
+Stolpaj posts small blind [$0.01]
+nicksky1 posts big blind [$0.02]
+** Dealing down cards **
+devdema calls [$0.02]
+fuzzy103222 folds
+wologor calls [$0.02]
+DennisFJ90 folds
+Stolpaj folds
+nicksky1 checks
+** Dealing flop ** [ 7d, 6s, 9c ]
+nicksky1 checks
+devdema checks
+wologor checks
+** Dealing turn ** [ 8s ]
+nicksky1 checks
+devdema checks
+wologor bets [$0.04]
+nicksky1 calls [$0.04]
+devdema calls [$0.04]
+** Dealing river ** [ Ts ]
+nicksky1 bets [$0.04]
+devdema raises [$0.08]
+wologor folds
+nicksky1 raises [$0.08]
+devdema calls [$0.04]
+** Summary **
+nicksky1 shows [ Jc, Qc ]
+devdema mucks [ Jd, Kd ]
+nicksky1 collected [ $0.41 ]
+
+
+#Game No : 553716011
+***** 888poker Hand History for Game 553716011 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:22:14
+Table Indaiatuba 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 2: wologor ( $0.55 )
+Seat 4: DennisFJ90 ( $0.97 )
+Seat 5: Stolpaj ( $1.11 )
+Seat 6: nicksky1 ( $1.46 )
+Seat 9: devdema ( $1.07 )
+Seat 10: fuzzy103222 ( $0.74 )
+nicksky1 posts small blind [$0.01]
+devdema posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+wologor calls [$0.04]
+DennisFJ90 folds
+Stolpaj folds
+nicksky1 folds
+devdema calls [$0.02]
+** Dealing flop ** [ 5d, 2d, 9s ]
+devdema checks
+fuzzy103222 bets [$0.02]
+wologor calls [$0.02]
+devdema calls [$0.02]
+** Dealing turn ** [ Kd ]
+devdema checks
+fuzzy103222 bets [$0.04]
+wologor folds
+devdema folds
+** Summary **
+fuzzy103222 collected [ $0.19 ]
+
+
+#Game No : 553716047
+***** 888poker Hand History for Game 553716047 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:22:42
+Table Indaiatuba 10 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 2: wologor ( $0.49 )
+Seat 4: DennisFJ90 ( $0.97 )
+Seat 5: Stolpaj ( $1.11 )
+Seat 6: nicksky1 ( $1.45 )
+Seat 9: devdema ( $1.01 )
+Seat 10: fuzzy103222 ( $0.87 )
+devdema posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+wologor folds
+DennisFJ90 calls [$0.02]
+Stolpaj calls [$0.02]
+nicksky1 folds
+devdema calls [$0.01]
+fuzzy103222 checks
+** Dealing flop ** [ Jd, 9s, Qd ]
+devdema bets [$0.02]
+fuzzy103222 calls [$0.02]
+DennisFJ90 calls [$0.02]
+Stolpaj raises [$0.04]
+devdema raises [$0.04]
+fuzzy103222 folds
+DennisFJ90 calls [$0.04]
+Stolpaj raises [$0.04]
+devdema calls [$0.02]
+DennisFJ90 calls [$0.02]
+** Dealing turn ** [ Qc ]
+devdema bets [$0.04]
+DennisFJ90 calls [$0.04]
+Stolpaj calls [$0.04]
+** Dealing river ** [ 5s ]
+devdema bets [$0.04]
+DennisFJ90 calls [$0.04]
+Stolpaj calls [$0.04]
+** Summary **
+devdema shows [ 3d, 9d ]
+DennisFJ90 shows [ Jc, 9c ]
+Stolpaj shows [ 8s, Td ]
+Stolpaj collected [ $0.56 ]
+
+
+#Game No : 553716110
+***** 888poker Hand History for Game 553716110 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:23:30
+Table Indaiatuba 10 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 2: wologor ( $0.49 )
+Seat 4: DennisFJ90 ( $0.79 )
+Seat 5: Stolpaj ( $1.49 )
+Seat 6: nicksky1 ( $1.45 )
+Seat 9: devdema ( $0.83 )
+Seat 10: fuzzy103222 ( $0.83 )
+fuzzy103222 posts small blind [$0.01]
+wologor posts big blind [$0.02]
+** Dealing down cards **
+DennisFJ90 folds
+Stolpaj calls [$0.02]
+nicksky1 folds
+devdema folds
+fuzzy103222 folds
+wologor raises [$0.02]
+Stolpaj calls [$0.02]
+** Dealing flop ** [ 6d, 6c, Kd ]
+wologor bets [$0.02]
+Stolpaj folds
+** Summary **
+wologor collected [ $0.09 ]
+
+
+#Game No : 553716140
+***** 888poker Hand History for Game 553716140 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:23:52
+Table Indaiatuba 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 2: wologor ( $0.54 )
+Seat 4: DennisFJ90 ( $0.79 )
+Seat 5: Stolpaj ( $1.45 )
+Seat 6: nicksky1 ( $1.45 )
+Seat 10: fuzzy103222 ( $0.82 )
+wologor posts small blind [$0.01]
+DennisFJ90 posts big blind [$0.02]
+** Dealing down cards **
+Stolpaj calls [$0.02]
+nicksky1 folds
+fuzzy103222 raises [$0.04]
+wologor calls [$0.03]
+DennisFJ90 calls [$0.02]
+Stolpaj calls [$0.02]
+** Dealing flop ** [ Qc, Td, 8h ]
+wologor bets [$0.02]
+DennisFJ90 raises [$0.04]
+Stolpaj folds
+fuzzy103222 folds
+wologor raises [$0.04]
+DennisFJ90 calls [$0.02]
+** Dealing turn ** [ 6c ]
+wologor bets [$0.04]
+DennisFJ90 calls [$0.04]
+** Dealing river ** [ 7s ]
+wologor bets [$0.04]
+DennisFJ90 raises [$0.08]
+wologor raises [$0.08]
+DennisFJ90 calls [$0.04]
+** Summary **
+wologor shows [ Jd, 9d ]
+DennisFJ90 mucks [ 8s, Qs ]
+wologor collected [ $0.57 ]
+
+
+#Game No : 553716232
+***** 888poker Hand History for Game 553716232 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:24:55
+Table Indaiatuba 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: wologor ( $0.85 )
+Seat 4: DennisFJ90 ( $0.53 )
+Seat 5: Stolpaj ( $1.41 )
+Seat 6: nicksky1 ( $1.45 )
+Seat 10: fuzzy103222 ( $0.78 )
+DennisFJ90 posts small blind [$0.01]
+Stolpaj posts big blind [$0.02]
+** Dealing down cards **
+nicksky1 calls [$0.02]
+fuzzy103222 raises [$0.04]
+wologor folds
+DennisFJ90 folds
+Stolpaj folds
+nicksky1 calls [$0.02]
+** Dealing flop ** [ 7h, 7d, Jd ]
+nicksky1 checks
+fuzzy103222 bets [$0.02]
+nicksky1 calls [$0.02]
+** Dealing turn ** [ Qd ]
+nicksky1 checks
+fuzzy103222 checks
+** Dealing river ** [ Ad ]
+nicksky1 checks
+fuzzy103222 checks
+** Summary **
+nicksky1 shows [ Ks, Kc ]
+fuzzy103222 mucks [ 5c, 5s ]
+nicksky1 collected [ $0.15 ]
+
+
+#Game No : 553716271
+***** 888poker Hand History for Game 553716271 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:25:21
+Table Indaiatuba 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 2: wologor ( $0.85 )
+Seat 3: Scarstream19 ( $0.40 )
+Seat 4: DennisFJ90 ( $0.52 )
+Seat 5: Stolpaj ( $1.39 )
+Seat 6: nicksky1 ( $1.54 )
+Seat 10: fuzzy103222 ( $0.72 )
+Stolpaj posts small blind [$0.01]
+nicksky1 posts big blind [$0.02]
+Scarstream19 posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+wologor folds
+Scarstream19 calls [$0.02]
+DennisFJ90 calls [$0.04]
+Stolpaj raises [$0.05]
+nicksky1 calls [$0.04]
+fuzzy103222 calls [$0.02]
+Scarstream19 calls [$0.02]
+DennisFJ90 calls [$0.02]
+** Dealing flop ** [ 5s, 8h, Kc ]
+Stolpaj checks
+nicksky1 checks
+fuzzy103222 bets [$0.02]
+Scarstream19 folds
+DennisFJ90 calls [$0.02]
+Stolpaj raises [$0.04]
+nicksky1 folds
+fuzzy103222 calls [$0.02]
+DennisFJ90 calls [$0.02]
+** Dealing turn ** [ Ts ]
+Stolpaj bets [$0.04]
+fuzzy103222 calls [$0.04]
+DennisFJ90 calls [$0.04]
+** Dealing river ** [ Jd ]
+Stolpaj bets [$0.04]
+fuzzy103222 folds
+DennisFJ90 calls [$0.04]
+** Summary **
+Stolpaj shows [ Ks, Kh ]
+DennisFJ90 mucks [ Qc, 7c ]
+Stolpaj collected [ $0.59 ]
+
+
+#Game No : 553716349
+***** 888poker Hand History for Game 553716349 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:26:17
+Table Indaiatuba 10 Max (Real Money)
+Seat 5 is the button
+Total number of players : 6
+Seat 2: wologor ( $0.85 )
+Seat 3: Scarstream19 ( $0.34 )
+Seat 4: DennisFJ90 ( $0.34 )
+Seat 5: Stolpaj ( $1.80 )
+Seat 6: nicksky1 ( $1.48 )
+Seat 10: fuzzy103222 ( $0.58 )
+nicksky1 posts small blind [$0.01]
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+wologor folds
+Scarstream19 calls [$0.02]
+DennisFJ90 folds
+Stolpaj raises [$0.04]
+nicksky1 calls [$0.03]
+fuzzy103222 calls [$0.02]
+Scarstream19 calls [$0.02]
+** Dealing flop ** [ 5s, Jh, 6h ]
+nicksky1 checks
+fuzzy103222 checks
+Scarstream19 checks
+Stolpaj bets [$0.02]
+nicksky1 folds
+fuzzy103222 folds
+Scarstream19 folds
+** Summary **
+Stolpaj collected [ $0.16 ]
+
+
+#Game No : 553716557
+***** 888poker Hand History for Game 553716557 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:28:57
+Table Indaiatuba 10 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: apxap ( $0.91 )
+Seat 2: wologor ( $0.81 )
+Seat 4: DennisFJ90 ( $0.44 )
+Seat 5: Stolpaj ( $1.78 )
+Seat 10: fuzzy103222 ( $0.38 )
+DennisFJ90 posts small blind [$0.01]
+Stolpaj folds
+fuzzy103222 posts big blind [$0.02]
+** Dealing down cards **
+apxap folds
+wologor calls [$0.02]
+DennisFJ90 calls [$0.01]
+fuzzy103222 raises [$0.02]
+wologor calls [$0.02]
+DennisFJ90 folds
+** Dealing flop ** [ Kc, Td, Tc ]
+fuzzy103222 bets [$0.02]
+wologor folds
+** Summary **
+fuzzy103222 did not show his hand
+fuzzy103222 collected [ $0.10 ]
+
+
+#Game No : 553716607
+***** 888poker Hand History for Game 553716607 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:29:31
+Table Indaiatuba 10 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: apxap ( $0.91 )
+Seat 2: wologor ( $0.77 )
+Seat 4: DennisFJ90 ( $0.42 )
+Seat 10: fuzzy103222 ( $0.44 )
+fuzzy103222 posts small blind [$0.01]
+apxap posts big blind [$0.02]
+** Dealing down cards **
+wologor calls [$0.02]
+DennisFJ90 folds
+fuzzy103222 calls [$0.01]
+apxap checks
+** Dealing flop ** [ Js, 9d, Kd ]
+fuzzy103222 checks
+apxap bets [$0.02]
+wologor calls [$0.02]
+fuzzy103222 folds
+** Dealing turn ** [ As ]
+apxap checks
+wologor bets [$0.04]
+apxap calls [$0.04]
+** Dealing river ** [ 5s ]
+apxap checks
+wologor checks
+** Summary **
+apxap shows [ 6s, Kh ]
+wologor shows [ 8d, Ah ]
+wologor collected [ $0.18 ]
+
+
+#Game No : 553716654
+***** 888poker Hand History for Game 553716654 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:30:07
+Table Indaiatuba 10 Max (Real Money)
+Seat 10 is the button
+Total number of players : 4
+Seat 1: apxap ( $0.83 )
+Seat 2: wologor ( $0.87 )
+Seat 4: DennisFJ90 ( $0.42 )
+Seat 10: fuzzy103222 ( $0.42 )
+apxap posts small blind [$0.01]
+wologor posts big blind [$0.02]
+** Dealing down cards **
+DennisFJ90 folds
+fuzzy103222 raises [$0.04]
+apxap folds
+wologor folds
+** Summary **
+fuzzy103222 did not show his hand
+fuzzy103222 collected [ $0.05 ]
+
+
+#Game No : 553716667
+***** 888poker Hand History for Game 553716667 *****
+$0.01/$0.02 Blinds Fix Limit Holdem - *** 05 09 2016 22:30:19
+Table Indaiatuba 10 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: apxap ( $0.82 )
+Seat 2: wologor ( $0.85 )
+Seat 4: DennisFJ90 ( $0.42 )
+Seat 10: fuzzy103222 ( $0.45 )
+wologor posts small blind [$0.01]
+DennisFJ90 posts big blind [$0.02]
+** Dealing down cards **
+fuzzy103222 raises [$0.04]
+apxap folds
+wologor calls [$0.03]
+DennisFJ90 folds
+** Dealing flop ** [ Th, Kh, 7s ]
+wologor bets [$0.02]
+fuzzy103222 folds
+** Summary **
+wologor did not show his hand
+wologor collected [ $0.10 ]
+
+

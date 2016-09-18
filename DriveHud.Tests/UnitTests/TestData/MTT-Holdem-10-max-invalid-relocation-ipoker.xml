@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<session sessioncode="7777777">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL</gametype>
+    <tablename>Table #68, $50 Freeroll</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2016-08-16 20:48:41</startdate>
+    <currency>USD</currency>
+    <nickname>gricenkoav</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <tournamentname>$50 Freeroll</tournamentname>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="10725877">
+    <general>
+      <startdate>2016-08-16 20:48:41</startdate>
+      <players>
+        <player seat="2" name="monster" chips="3785" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="3" name="CWP1970" chips="2336" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="4" name="rokhd" chips="1050" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="5" name="AlexReid" chips="2890" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="6" name="gricenkoav" chips="2220" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="7" name="KindaSorta?" chips="1455" dealer="0" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="8" name="skip" chips="1857" dealer="1" win="0" bet="60" rebuy="0" addon="0" />
+        <player seat="9" name="colmbnekti" chips="2605" dealer="0" win="0" bet="30" rebuy="0" addon="0" />
+        <player seat="10" name="mathmagics" chips="1962" dealer="0" win="210" bet="60" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="colmbnekti" type="1" sum="30" cards="" />
+      <action no="2" player="mathmagics" type="2" sum="60" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="monster">X X</cards>
+      <cards type="Pocket" player="CWP1970">X X</cards>
+      <cards type="Pocket" player="rokhd">X X</cards>
+      <cards type="Pocket" player="AlexReid">X X</cards>
+      <cards type="Pocket" player="gricenkoav">D8 C3</cards>
+      <cards type="Pocket" player="KindaSorta?">X X</cards>
+      <cards type="Pocket" player="skip">X X</cards>
+      <cards type="Pocket" player="colmbnekti">X X</cards>
+      <cards type="Pocket" player="mathmagics">D10 SQ</cards>
+      <action no="3" player="monster" type="0" sum="0" cards="" />
+      <action no="4" player="CWP1970" type="0" sum="0" cards="" />
+      <action no="5" player="rokhd" type="0" sum="0" cards="" />
+      <action no="6" player="AlexReid" type="0" sum="0" cards="" />
+      <action no="7" player="gricenkoav" type="0" sum="0" cards="" />
+      <action no="8" player="KindaSorta?" type="3" sum="60" cards="" />
+      <action no="9" player="skip" type="3" sum="60" cards="" />
+      <action no="10" player="colmbnekti" type="0" sum="0" cards="" />
+      <action no="11" player="mathmagics" type="4" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">H4 C5 H2</cards>
+      <action no="12" player="mathmagics" type="4" sum="0" cards="" />
+      <action no="13" player="KindaSorta?" type="4" sum="0" cards="" />
+      <action no="14" player="skip" type="4" sum="0" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">H5</cards>
+      <action no="15" player="mathmagics" type="4" sum="0" cards="" />
+      <action no="16" player="KindaSorta?" type="4" sum="0" cards="" />
+      <action no="17" player="skip" type="4" sum="0" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">D4</cards>
+      <action no="18" player="mathmagics" type="4" sum="0" cards="" />
+      <action no="19" player="KindaSorta?" type="4" sum="0" cards="" />
+      <action no="20" player="skip" type="4" sum="0" cards="" />
+    </round>
+  </game>
+</session>

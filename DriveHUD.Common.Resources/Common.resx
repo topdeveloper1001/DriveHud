@@ -1,0 +1,614 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Common_3Bet" xml:space="preserve">
+    <value>3Bet</value>
+  </data>
+  <data name="Common_3Bet4Bet" xml:space="preserve">
+    <value>3Bet / 4Bet</value>
+  </data>
+  <data name="Common_4Bet" xml:space="preserve">
+    <value>4Bet</value>
+  </data>
+  <data name="Common_5Bet" xml:space="preserve">
+    <value>5Bet</value>
+  </data>
+  <data name="Common_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Common_ApplicationCompany" xml:space="preserve">
+    <value>Ace Poker Solutions</value>
+  </data>
+  <data name="Common_ApplicationTitle" xml:space="preserve">
+    <value>DriveHUD - {0} - {1}</value>
+  </data>
+  <data name="Common_Apply" xml:space="preserve">
+    <value>Apply</value>
+  </data>
+  <data name="Common_AutoGenerateHand" xml:space="preserve">
+    <value>Auto generate opponent hand  ranges</value>
+  </data>
+  <data name="Common_Bet" xml:space="preserve">
+    <value>Bet</value>
+  </data>
+  <data name="Common_BuyIn" xml:space="preserve">
+    <value>Buy-in</value>
+  </data>
+  <data name="Common_Calculate" xml:space="preserve">
+    <value>Calculate</value>
+  </data>
+  <data name="Common_CalculateBluffPercent" xml:space="preserve">
+    <value>Calculate Bluff%</value>
+  </data>
+  <data name="Common_CalculateEquity" xml:space="preserve">
+    <value>Calculate Equity</value>
+  </data>
+  <data name="Common_Call" xml:space="preserve">
+    <value>Call</value>
+  </data>
+  <data name="Common_Caller" xml:space="preserve">
+    <value>Caller</value>
+  </data>
+  <data name="Common_Callers" xml:space="preserve">
+    <value>Callers</value>
+  </data>
+  <data name="Common_CallingRange" xml:space="preserve">
+    <value>Calling  Range</value>
+  </data>
+  <data name="Common_CallingRange_Blinds" xml:space="preserve">
+    <value>Players that are in the blinds, against an open raise form</value>
+  </data>
+  <data name="Common_CallingRange_NotBlinds" xml:space="preserve">
+    <value>Players that are not in the blinds, against an open raise form</value>
+  </data>
+  <data name="Common_Cards" xml:space="preserve">
+    <value>Cards</value>
+  </data>
+  <data name="Common_Check" xml:space="preserve">
+    <value>Check</value>
+  </data>
+  <data name="Common_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="Common_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Common_CustomLikelihood" xml:space="preserve">
+    <value>Custom Likelihood</value>
+    <comment>Equity calculator  popup caption</comment>
+  </data>
+  <data name="Common_DataExported" xml:space="preserve">
+    <value>Data was exported and copied to your clipboard.</value>
+  </data>
+  <data name="Common_DriveHUD" xml:space="preserve">
+    <value>Use Drive HUD</value>
+  </data>
+  <data name="Common_ECBluffPopupCaption" xml:space="preserve">
+    <value>Calculate break even bluff percentage</value>
+    <comment>Equity calculator bluff popup header</comment>
+  </data>
+  <data name="Common_EquityCalculator" xml:space="preserve">
+    <value>Equity Calculator</value>
+    <comment>Equity calculator header</comment>
+  </data>
+  <data name="Common_ExportData" xml:space="preserve">
+    <value>Export Data</value>
+  </data>
+  <data name="Common_Export_Both" xml:space="preserve">
+    <value>Equity Calculation + Hand History</value>
+  </data>
+  <data name="Common_Export_EC" xml:space="preserve">
+    <value>Equity Calculation Only</value>
+  </data>
+  <data name="Common_Export_HH" xml:space="preserve">
+    <value>Hand History Only</value>
+  </data>
+  <data name="Common_FastFilter" xml:space="preserve">
+    <value>Fast Filter</value>
+  </data>
+  <data name="Common_Filters" xml:space="preserve">
+    <value>Filters</value>
+  </data>
+  <data name="Common_Flop" xml:space="preserve">
+    <value>Flop</value>
+  </data>
+  <data name="Common_Fold" xml:space="preserve">
+    <value>Fold</value>
+  </data>
+  <data name="Common_GameType" xml:space="preserve">
+    <value>Game Type</value>
+  </data>
+  <data name="Common_HoleCards" xml:space="preserve">
+    <value>Hole Cards</value>
+  </data>
+  <data name="Common_HudLayout_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_HudLayout_DeleteLabel" xml:space="preserve">
+    <value>Delete HUD layout:</value>
+  </data>
+  <data name="Common_HudLayout_InputLabel" xml:space="preserve">
+    <value>Enter layout's name:</value>
+  </data>
+  <data name="Common_HudLayout_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_HudLayout_SelectLabel" xml:space="preserve">
+    <value>Select HUD layout:</value>
+  </data>
+  <data name="Common_HudPlayerType_AddNewStat" xml:space="preserve">
+    <value>Add New Stat</value>
+  </data>
+  <data name="Common_HudPlayerType_CreateNew" xml:space="preserve">
+    <value>Create New</value>
+  </data>
+  <data name="Common_HudPlayerType_DisplayPlayerIcon" xml:space="preserve">
+    <value>Display Player Icon</value>
+  </data>
+  <data name="Common_HudPlayerType_EnablePlayerProfile" xml:space="preserve">
+    <value>Enable Player Profile</value>
+  </data>
+  <data name="Common_HudPlayerType_High" xml:space="preserve">
+    <value>High</value>
+  </data>
+  <data name="Common_HudPlayerType_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Common_HudPlayerType_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Common_HudPlayerType_Low" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="Common_HudPlayerType_MinSample" xml:space="preserve">
+    <value>Min.Sample</value>
+  </data>
+  <data name="Common_HudPlayerType_PlayerName" xml:space="preserve">
+    <value>Player Name</value>
+  </data>
+  <data name="Common_HudPlayerType_PlayerType" xml:space="preserve">
+    <value>Player Type</value>
+  </data>
+  <data name="Common_HudPlayerType_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common_HudPlayerType_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Common_HudPlayerType_StatsEditPlayer" xml:space="preserve">
+    <value>Stats - Edit Player</value>
+  </data>
+  <data name="Common_Hud_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Common_Hud_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Common_Hud_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Common_Hud_Load" xml:space="preserve">
+    <value>Load</value>
+  </data>
+  <data name="Common_Hud_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Common_Hud_SaveAs" xml:space="preserve">
+    <value>Save as...</value>
+  </data>
+  <data name="Common_LimpedPot" xml:space="preserve">
+    <value>Limped Pot</value>
+  </data>
+  <data name="Common_Limper" xml:space="preserve">
+    <value>Limper</value>
+  </data>
+  <data name="Common_Limpers" xml:space="preserve">
+    <value>Limpers</value>
+  </data>
+  <data name="Common_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_OpenRaise" xml:space="preserve">
+    <value>Open Raise</value>
+  </data>
+  <data name="Common_Percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
+  <data name="Common_Place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="Common_PlainHUD" xml:space="preserve">
+    <value>Use Plain HUD</value>
+  </data>
+  <data name="Common_PokerSite" xml:space="preserve">
+    <value>Poker Site</value>
+  </data>
+  <data name="Common_Position" xml:space="preserve">
+    <value>Position</value>
+  </data>
+  <data name="Common_Pot" xml:space="preserve">
+    <value>Pot</value>
+  </data>
+  <data name="Common_Preflop" xml:space="preserve">
+    <value>Preflop</value>
+  </data>
+  <data name="Common_Raise" xml:space="preserve">
+    <value>Raise</value>
+  </data>
+  <data name="Common_Raiser" xml:space="preserve">
+    <value>Raiser</value>
+  </data>
+  <data name="Common_Raisers" xml:space="preserve">
+    <value>Raisers</value>
+  </data>
+  <data name="Common_Rake" xml:space="preserve">
+    <value>Rake</value>
+  </data>
+  <data name="Common_Range" xml:space="preserve">
+    <value>Range</value>
+  </data>
+  <data name="Common_Ranges_All" xml:space="preserve">
+    <value>All Pairs</value>
+    <comment>Equity calculator popup button</comment>
+  </data>
+  <data name="Common_Ranges_AltLeft" xml:space="preserve">
+    <value>Alt + LeftClick = Add all hands in that row</value>
+    <comment>Equity calculator popup instruction</comment>
+  </data>
+  <data name="Common_Ranges_CtrlLeft" xml:space="preserve">
+    <value>Ctrl + LeftClick = Add all hands in  X and Y rows</value>
+    <comment>Equity calculator popup instruction</comment>
+  </data>
+  <data name="Common_Ranges_DoubleClick" xml:space="preserve">
+    <value>Double click = Remove hand</value>
+    <comment>Equity calculator popup instruction</comment>
+  </data>
+  <data name="Common_Ranges_HoldDown" xml:space="preserve">
+    <value>Hold down mouse = Add multiple hands your mouse over</value>
+    <comment>Equity calculator popup instruction</comment>
+  </data>
+  <data name="Common_Ranges_OffSuited" xml:space="preserve">
+    <value>Off Suited Connectors</value>
+    <comment>Equity calculator popup button</comment>
+  </data>
+  <data name="Common_Ranges_OffSuited1Gappers" xml:space="preserve">
+    <value>Off Suited 1 Gappers</value>
+  </data>
+  <data name="Common_Ranges_Predef" xml:space="preserve">
+    <value>Pre-defined Ranges</value>
+    <comment>Equity calculator popup button</comment>
+  </data>
+  <data name="Common_Ranges_Suited" xml:space="preserve">
+    <value>Suited Connectors</value>
+    <comment>Equity calculator popup button</comment>
+  </data>
+  <data name="Common_Ranges_Suited1Gappers" xml:space="preserve">
+    <value>Suited 1 Gappers</value>
+  </data>
+  <data name="Common_Ranges_SuitsFor" xml:space="preserve">
+    <value>Suits for </value>
+    <comment>Equity calculator popup caption</comment>
+  </data>
+  <data name="Common_Ranges_Top19_5" xml:space="preserve">
+    <value>Top 19.5% of range</value>
+  </data>
+  <data name="Common_Ranges_Top4_7" xml:space="preserve">
+    <value>Top 4.7% of range</value>
+  </data>
+  <data name="Common_Ranges_Unselect" xml:space="preserve">
+    <value>Click to unselect combo</value>
+    <comment>Equity calculator popup caption</comment>
+  </data>
+  <data name="Common_RegistrationView_Back" xml:space="preserve">
+    <value>Back</value>
+  </data>
+  <data name="Common_RegistrationView_Buy" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="Common_RegistrationView_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_RegistrationView_DaysLeft" xml:space="preserve">
+    <value>{0} day(s) left:</value>
+  </data>
+  <data name="Common_RegistrationView_Email" xml:space="preserve">
+    <value>Email:</value>
+  </data>
+  <data name="Common_RegistrationView_GreetingText" xml:space="preserve">
+    <value>SMART - INTUITIVE - BEAUTIFUL
+Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes with a fully functional 30 day trial. When you are ready to purchase, you can click BUY from the button below in order to  purchase a registered copy of DriveHUD. When you are ready to register, please click the Register button below.</value>
+  </data>
+  <data name="Common_RegistrationView_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Common_RegistrationView_Register" xml:space="preserve">
+    <value>Register</value>
+  </data>
+  <data name="Common_RegistrationView_RegisterText" xml:space="preserve">
+    <value>Please enter the following data to register your version of DriveHUD:</value>
+  </data>
+  <data name="Common_RegistrationView_Renew" xml:space="preserve">
+    <value>Renew</value>
+  </data>
+  <data name="Common_RegistrationView_Serial" xml:space="preserve">
+    <value>Serial:</value>
+  </data>
+  <data name="Common_RegistrationView_TextOnPicture" xml:space="preserve">
+    <value>Text on picture:</value>
+  </data>
+  <data name="Common_RegistrationView_Title" xml:space="preserve">
+    <value>DriveHUD Registration</value>
+  </data>
+  <data name="Common_RegistrationView_Trial" xml:space="preserve">
+    <value>Trial</value>
+  </data>
+  <data name="Common_RegistrationView_TrialRegisterText" xml:space="preserve">
+    <value>Please enter the following data to activate your trial period:</value>
+  </data>
+  <data name="Common_ReplayHand" xml:space="preserve">
+    <value>Replay Hand</value>
+  </data>
+  <data name="Common_Rebuy" xml:space="preserve">
+    <value>Rebuy</value>
+  </data>
+  <data name="Common_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common_ResetAll" xml:space="preserve">
+    <value>Reset All</value>
+  </data>
+  <data name="Common_Results" xml:space="preserve">
+    <value>Results</value>
+  </data>
+  <data name="Common_River" xml:space="preserve">
+    <value>River</value>
+  </data>
+  <data name="Common_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Common_Select" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="Common_SelectNone" xml:space="preserve">
+    <value>Select None</value>
+  </data>
+  <data name="Common_ShowdownHands" xml:space="preserve">
+    <value>Showdown Hands</value>
+  </data>
+  <data name="Common_Speed" xml:space="preserve">
+    <value>Speed</value>
+  </data>
+  <data name="Common_StackSize" xml:space="preserve">
+    <value>Stack Size</value>
+  </data>
+  <data name="Common_Stats" xml:space="preserve">
+    <value>Stats</value>
+  </data>
+  <data name="Common_StopCalculation" xml:space="preserve">
+    <value>Stop Calculation</value>
+  </data>
+  <data name="Common_StoppingCalculation" xml:space="preserve">
+    <value>Stopping...</value>
+  </data>
+  <data name="Common_Table6Max" xml:space="preserve">
+    <value>6-max</value>
+  </data>
+  <data name="Common_TableFullRing" xml:space="preserve">
+    <value>Full Ring</value>
+  </data>
+  <data name="Common_Tournaments" xml:space="preserve">
+    <value>Tournaments</value>
+  </data>
+  <data name="Common_Turn" xml:space="preserve">
+    <value>Turn</value>
+  </data>
+  <data name="Common_Unopened" xml:space="preserve">
+    <value>Unopened</value>
+  </data>
+  <data name="Common_WonAmount" xml:space="preserve">
+    <value>Won Amount</value>
+  </data>
+  <data name="Common_RegistrationView_Activate" xml:space="preserve">
+    <value>Activate</value>
+  </data>
+  <data name="Common_RegistrationView_CouldNotBeActivated" xml:space="preserve">
+    <value>Could not activate license. Please try again or contact support.</value>
+  </data>
+  <data name="Common_RegistrationView_InvalidSerial" xml:space="preserve">
+    <value>Could not register software. Invalid serial number. Please enter valid serial or contact support.</value>
+  </data>
+  <data name="Common_RegistrationView_LicenseError" xml:space="preserve">
+    <value>Couldn't register software. Unexpected error occured. Please contact support.</value>
+  </data>
+  <data name="Common_RegistrationView_NoConnection" xml:space="preserve">
+    <value>Could not connect to license server. Please check your internet connection.</value>
+  </data>
+  <data name="Common_BuyLink" xml:space="preserve">
+    <value>http://drivehud.com/pricing</value>
+  </data>
+  <data name="Common_RegistrationView_TrialExpiredText" xml:space="preserve">
+    <value>You trial period has over. Please register your version of DriveHUD.</value>
+  </data>
+  <data name="Common_RegistrationView_ExpiredText" xml:space="preserve">
+    <value>Your license has expired. Please renew.</value>
+  </data>
+  <data name="Common_RegistrationView_ExpiringLicenseTitle" xml:space="preserve">
+    <value>{0}: {1} day(s) left</value>
+  </data>
+  <data name="Common_RegistrationView_ExpiringSoonText" xml:space="preserve">
+    <value>Your license(s) are expiring soon. Please renew.</value>
+  </data>
+  <data name="Common_HudTrackConditions_AveragePotSize" xml:space="preserve">
+    <value>Avg.Pot Size</value>
+  </data>
+  <data name="Common_HudTrackConditions_TrackConditions" xml:space="preserve">
+    <value>Track Conditions:</value>
+  </data>
+  <data name="Common_UpdateCaption" xml:space="preserve">
+    <value>DriveHUD Updater</value>
+  </data>
+  <data name="Common_UpdateQuestion" xml:space="preserve">
+    <value>Update is available. Do you want to download it?</value>
+  </data>
+  <data name="Common_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Common_Edit" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="Common_Remove" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="Common_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Common_Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Common_Main_Trial" xml:space="preserve">
+    <value>(Trial)</value>
+  </data>
+  <data name="Common_Main_Upgrade" xml:space="preserve">
+    <value>UPGRADE</value>
+  </data>
+  <data name="Common_Main_Version" xml:space="preserve">
+    <value>Version: {0}</value>
+  </data>
+  <data name="Common_Main_Purchase" xml:space="preserve">
+    <value>PURCHASE</value>
+  </data>
+  <data name="Common_PreferredSeating" xml:space="preserve">
+    <value>Preferred Seating</value>
+  </data>
+  <data name="Common_Holdem" xml:space="preserve">
+    <value>Holdem</value>
+  </data>
+  <data name="Common_Omaha" xml:space="preserve">
+    <value>Omaha</value>
+  </data>
+  <data name="Common_Off" xml:space="preserve">
+    <value>Off</value>
+  </data>
+  <data name="Common_On" xml:space="preserve">
+    <value>On</value>
+  </data>
+  <data name="Common_TournamentType" xml:space="preserve">
+    <value>Tournament Type</value>
+  </data>
+</root>

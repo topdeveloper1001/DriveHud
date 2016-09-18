@@ -1,0 +1,286 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:src="clr-namespace:DriveHUD.Updater">
+    
+    <Style x:Key="MainWindow" TargetType="{x:Type src:WindowBase}">        
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="TextOptions.TextFormattingMode" Value="Display" />
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="WindowStyle" Value="None" />
+        <Setter Property="ResizeMode" Value="NoResize" />
+        <Setter Property="MinHeight" Value="150" />
+        <Setter Property="MinWidth" Value="250" />
+        <Setter Property="AllowsTransparency" Value="True" />        
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type src:WindowBase}">
+                    <Grid>
+                        <Thumb DockPanel.Dock="Top" Name="topThumb" VerticalAlignment="Top" Margin="14,0" Height="6" Opacity="0" Panel.ZIndex="10" Cursor="SizeNS" />
+                        <Thumb DockPanel.Dock="Left" Name="leftThumb" HorizontalAlignment="Left" Margin="0,14" Width="6" Opacity="0" Panel.ZIndex="10" Cursor="SizeWE" />
+                        <Thumb DockPanel.Dock="Right" Name="rightThumb" HorizontalAlignment="Right" Margin="0,14" Width="6" Opacity="0"  Panel.ZIndex="10" Cursor="SizeWE" />
+                        <Thumb DockPanel.Dock="Bottom" Name="btmThumb" VerticalAlignment="Bottom" Margin="14,0" Height="6" Opacity="0" Panel.ZIndex="10" Cursor="SizeNS" />
+                        <DockPanel>
+                            <DockPanel x:Name="MWTitleBar" DockPanel.Dock="Top" Height="30">
+                                <Border DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  CornerRadius="7,7,0,0" BorderBrush="#848484" BorderThickness="1,1,1,0">
+                                    <Border.Background>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#505152" Offset="0.0" />
+                                            <GradientStop Color="#36393c" Offset="0.16" />
+                                            <GradientStop Color="#2a2d31" Offset="0.17" />
+                                            <GradientStop Color="#5d5e60" Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </Border.Background>
+                                    <DockPanel Width="auto" VerticalAlignment="Center">
+                                        <Canvas DockPanel.Dock="Right">
+                                            <StackPanel Orientation="Horizontal" Canvas.Right="5" Canvas.Top="-5">
+                                                <Button x:Name="btMWMinimize" Visibility="{TemplateBinding MinimizeButton}" Style="{DynamicResource MinimizeButton}"  />
+                                                <Button x:Name="btMWMaximize" Visibility="{TemplateBinding MaximizeButton}" Style="{DynamicResource MaximizeButton}" />
+                                                <Button x:Name="btMWClose" Style="{DynamicResource CloseButton}" />
+                                            </StackPanel>
+                                        </Canvas>
+                                        <TextBlock Margin="0,0,0,0" VerticalAlignment="Center" Foreground="#a8aaad" FontFamily="Arial" HorizontalAlignment="Center" FontSize="13" FontWeight="Bold" Text="{TemplateBinding Title}"  />
+                                    </DockPanel>
+                                </Border>
+                            </DockPanel>
+
+                            <Border DockPanel.Dock="Bottom" CornerRadius="0,0,7,7" BorderBrush="#848484" BorderThickness="1,0,1,1">
+                                <Border.Background>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#505152" Offset="0.0" />
+                                        <GradientStop Color="#36393c" Offset="0.16" />
+                                        <GradientStop Color="#2a2d31" Offset="0.17" />
+                                        <GradientStop Color="#5d5e60" Offset="1.0" />
+                                    </LinearGradientBrush>
+                                </Border.Background>
+                                <DockPanel>
+                                    <StatusBar Height="30" Background="Transparent">                    
+                                        <StatusBarItem VerticalAlignment="Top" HorizontalAlignment="Right" Padding="0,0,0,0">
+                                            <Canvas Margin="0,10,0,0" Height="20" Width="20">
+                                                <Thumb Canvas.Right="0" Canvas.Bottom="0" Width="20" Height="20" Name="thumbResize" BorderThickness="0" Opacity="100" Cursor="SizeNWSE">
+                                                    <Thumb.Template>
+                                                        <ControlTemplate>
+                                                            <Canvas Width="20" Height="20">
+                                                                <Rectangle Panel.ZIndex="2" Canvas.Left="14" Canvas.Top="14" Width="2" Height="2" Fill="#455d80"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="1" Canvas.Left="15" Canvas.Top="15" Width="2" Height="2" Fill="#efefef"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="2" Canvas.Left="14" Canvas.Top="10" Width="2" Height="2" Fill="#455d80"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="1" Canvas.Left="15" Canvas.Top="11" Width="2" Height="2" Fill="#efefef"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="2" Canvas.Left="14" Canvas.Top="6" Width="2" Height="2" Fill="#455d80"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="1" Canvas.Left="15" Canvas.Top="7" Width="2" Height="2" Fill="#efefef"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="2" Canvas.Left="10" Canvas.Top="14" Width="2" Height="2" Fill="#455d80"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="1" Canvas.Left="11" Canvas.Top="15" Width="2" Height="2" Fill="#efefef"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="2" Canvas.Left="6" Canvas.Top="14" Width="2" Height="2" Fill="#455d80"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="1" Canvas.Left="7" Canvas.Top="15" Width="2" Height="2" Fill="#efefef"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="2" Canvas.Left="10" Canvas.Top="10" Width="2" Height="2" Fill="#455d80"></Rectangle>
+                                                                <Rectangle Panel.ZIndex="1" Canvas.Left="11" Canvas.Top="11" Width="2" Height="2" Fill="#efefef"></Rectangle>
+                                                            </Canvas>
+                                                        </ControlTemplate>
+                                                    </Thumb.Template>
+                                                </Thumb>
+                                            </Canvas>
+                                        </StatusBarItem>
+                                    </StatusBar>
+                                </DockPanel>
+                            </Border>
+                            <DockPanel>
+                                <Border Background="#303134" BorderBrush="#848484" BorderThickness="1,1,1,1">
+                                    <DockPanel Margin="3">
+                                        <ContentPresenter Content="{TemplateBinding Content}" Margin="{TemplateBinding Margin}" />
+                                    </DockPanel>
+                                </Border>
+                            </DockPanel>
+                        </DockPanel>                      
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="MinimizeButton" TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" Width="25" CornerRadius="1" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" BorderThickness="1,1,1,1">
+                        <Canvas Width="23" Height="23">
+                            <Rectangle Name="MainFrame" Width="23" Height="23" Fill="Transparent" />
+                            <Line Stroke="#656565" StrokeThickness="1" X1="8" X2="15" Y1="13" Y2="13"   />
+                            <Line Stroke="#829ab9" StrokeThickness="1" X1="8" X2="15" Y1="14" Y2="14"  />
+                            <Line Stroke="#f8f9fa" StrokeThickness="1" X1="8" X2="15" Y1="15" Y2="15"  />
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#a7c7f1" />
+                            <Setter TargetName="MainFrame" Property="Fill" >
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                        <GradientStop Color="#f7faff" Offset="0"/>
+                                        <GradientStop Color="#d2e4fe" Offset="0.45"/>
+                                        <GradientStop Color="#dae8fd" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MaximizeButton" TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" Width="25" CornerRadius="1" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" BorderThickness="1,1,1,1">
+                        <Canvas Width="23" Height="23">
+                            <Rectangle Name="MainFrame" Width="23" Height="23" Fill="Transparent" />
+                            <Line Stroke="#656565" StrokeThickness="1" X1="7" X2="16" Y1="9" Y2="9"   />
+                            <Line Stroke="#7a8da7" StrokeThickness="1" X1="7" X2="16" Y1="10" Y2="10"   />
+                            <Line Stroke="#7d92ae" StrokeThickness="1" X1="7" X2="16" Y1="11" Y2="11"   />
+                            <Line Stroke="#8097b5" StrokeThickness="1" X1="7" X2="8" Y1="12" Y2="12"   />
+                            <Line Stroke="#f8f9fa" StrokeThickness="1" X1="8" X2="15" Y1="12" Y2="12"   />
+                            <Line Stroke="#8097b5" StrokeThickness="1" X1="15" X2="16" Y1="12" Y2="12"   />
+                            <Line Stroke="#849dbe" StrokeThickness="1" X1="7" X2="8" Y1="13" Y2="13"   />
+                            <Line Stroke="#849dbe" StrokeThickness="1" X1="15" X2="16" Y1="13" Y2="13"   />
+                            <Line Stroke="#87a2c5" StrokeThickness="1" X1="7" X2="8" Y1="14" Y2="14"   />
+                            <Line Stroke="#87a2c5" StrokeThickness="1" X1="15" X2="16" Y1="14" Y2="14"   />
+                            <Line Stroke="#8aa6cc" StrokeThickness="1" X1="7" X2="16" Y1="15" Y2="15"  />
+                            <Line Stroke="#f8f9fa" StrokeThickness="1" X1="7" X2="16" Y1="16" Y2="16"  />
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#a7c7f1" />
+                            <Setter TargetName="MainFrame" Property="Fill" >
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                        <GradientStop Color="#f7faff" Offset="0"/>
+                                        <GradientStop Color="#d2e4fe" Offset="0.45"/>
+                                        <GradientStop Color="#dae8fd" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="MaximizeButtonSel" TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" Width="25" CornerRadius="1" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" BorderThickness="1,1,1,1">
+                        <Canvas Width="23" Height="23">
+                            <Rectangle Name="MainFrame" Width="23" Height="23" Fill="Transparent" />
+                            <Line Stroke="#656565" StrokeThickness="1" X1="7" X2="14" Y1="9" Y2="9"   />
+                            <Line Stroke="#7a8da7" StrokeThickness="1" X1="7" X2="14" Y1="10" Y2="10"   />
+                            <Line Stroke="#8097b5" StrokeThickness="1" X1="7" X2="8" Y1="11" Y2="11"   />
+                            <Line Stroke="#f8f9fa" StrokeThickness="1" X1="8" X2="13" Y1="11" Y2="11"   />
+                            <Line Stroke="#8097b5" StrokeThickness="1" X1="13" X2="14" Y1="11" Y2="11"   />
+                            <Line Stroke="#849dbe" StrokeThickness="1" X1="7" X2="8" Y1="12" Y2="12"   />
+                            <Line Stroke="#849dbe" StrokeThickness="1" X1="13" X2="14" Y1="12" Y2="12"   />
+                            <Line Stroke="#87a2c5" StrokeThickness="1" X1="7" X2="8" Y1="13" Y2="13"   />
+                            <Line Stroke="#87a2c5" StrokeThickness="1" X1="13" X2="14" Y1="13" Y2="13"   />
+                            <Line Stroke="#8aa6cc" StrokeThickness="1" X1="7" X2="14" Y1="14" Y2="14"  />
+                            <Line Stroke="#f8f9fa" StrokeThickness="1" X1="7" X2="14" Y1="15" Y2="15"  />
+
+                            <Line Stroke="#656565" StrokeThickness="1" X1="9" X2="16" Y1="8" Y2="8"   />
+                            <Line Stroke="#7a8da7" StrokeThickness="1" X1="14" X2="16" Y1="9" Y2="9"   />
+
+                            <Line Stroke="#f8f9fa" StrokeThickness="1" X1="14" X2="15" Y1="10" Y2="10"   />
+                            <Line Stroke="#8097b5" StrokeThickness="1" X1="15" X2="16" Y1="10" Y2="10"   />
+
+                            <Line Stroke="#849dbe" StrokeThickness="1" X1="15" X2="16" Y1="11" Y2="11"   />
+
+                            <Line Stroke="#87a2c5" StrokeThickness="1" X1="15" X2="16" Y1="12" Y2="12"   />
+                            <Line Stroke="#8aa6cc" StrokeThickness="1" X1="14" X2="16" Y1="13" Y2="13"  />
+                            <Line Stroke="#f8f9fa" StrokeThickness="1" X1="15" X2="16" Y1="14" Y2="14"  />
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#a7c7f1" />
+                            <Setter TargetName="MainFrame" Property="Fill" >
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                        <GradientStop Color="#f7faff" Offset="0"/>
+                                        <GradientStop Color="#d2e4fe" Offset="0.45"/>
+                                        <GradientStop Color="#dae8fd" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="CloseButton" TargetType="Button">
+        <Setter Property="OverridesDefaultStyle" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border Name="border" Width="25" CornerRadius="1" Height="25" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="Transparent" BorderThickness="1,1,1,1">
+                        <Canvas Width="23" Height="23">
+                            <Rectangle Name="MainFrame" Width="23" Height="23" Fill="Transparent" />
+                            <Line Stroke="#878787" StrokeThickness="1" X1="7" X2="10" Y1="8" Y2="8"   />
+                            <Line Stroke="#878787" StrokeThickness="1" X1="13" X2="16" Y1="8" Y2="8"   />
+
+                            <Line Stroke="#70767f" StrokeThickness="1" X1="8" X2="10" Y1="9" Y2="9"   />
+                            <Line Stroke="#878787" StrokeThickness="1" X1="10" X2="11" Y1="9" Y2="9"   />
+                            <Line Stroke="#878787" StrokeThickness="1" X1="12" X2="13" Y1="9" Y2="9"   />
+                            <Line Stroke="#70767f" StrokeThickness="1" X1="13" X2="15" Y1="9" Y2="9"   />
+
+                            <Line Stroke="#838181" StrokeThickness="1" X1="9" X2="11" Y1="10" Y2="10"   />
+                            <Line Stroke="#878787" StrokeThickness="1" X1="11" X2="12" Y1="10" Y2="10"   />
+                            <Line Stroke="#838181" StrokeThickness="1" X1="12" X2="14" Y1="10" Y2="10"   />
+
+                            <Line Stroke="#868e99" StrokeThickness="1" X1="10" X2="13" Y1="11" Y2="11"   />
+                            <Line Stroke="#808994" StrokeThickness="1" X1="10" X2="13" Y1="12" Y2="12"   />
+
+                            <Line Stroke="#8b929b" StrokeThickness="1" X1="9" X2="14" Y1="13" Y2="13"   />
+
+                            <Line Stroke="#959fad" StrokeThickness="1" X1="8" X2="11" Y1="14" Y2="14"   />
+                            <Line Stroke="#939393" StrokeThickness="1" X1="11" X2="12" Y1="14" Y2="14"   />
+                            <Line Stroke="#959fad" StrokeThickness="1" X1="12" X2="15" Y1="14" Y2="14"   />
+
+                            <Line Stroke="#979797" StrokeThickness="1" X1="7" X2="10" Y1="15" Y2="15"   />
+                            <Line Stroke="#807f7f" StrokeThickness="1" X1="10" X2="11" Y1="15" Y2="15"   />
+                            <Line Stroke="#807f7f" StrokeThickness="1" X1="12" X2="13" Y1="15" Y2="15"   />
+                            <Line Stroke="#979797" StrokeThickness="1" X1="13" X2="16" Y1="15" Y2="15"   />
+
+                            <Line Stroke="#807f7f" StrokeThickness="1" X1="6" X2="10" Y1="16" Y2="16"   />
+                            <Line Stroke="#807f7f" StrokeThickness="1" X1="13" X2="17" Y1="16" Y2="16"   />
+                        </Canvas>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="BorderBrush" Value="#848484" />
+                            <Setter TargetName="MainFrame" Property="Fill" >
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1" >
+                                        <GradientStop Color="#5f5f5f" Offset="0"/>
+                                        <GradientStop Color="#48484a" Offset="0.45"/>
+                                        <GradientStop Color="#3e3e3e" Offset="1"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="#ffffff" />
+    </Style>
+    
+    
+</ResourceDictionary>

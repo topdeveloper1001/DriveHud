@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<session sessioncode="6224237471">  
+			<general>  
+	    	<mode>real</mode>
+	      		<gametype>Holdem NL</gametype>  
+	          <tablename>‘Turbo’ €10 Double Up, 824222067</tablename>
+	          <tournamentcurrency></tournamentcurrency>  
+	          <duration>00:21</duration>  
+	          <gamecount>34</gamecount>  
+	          <startdate>2014-03-25 17:41:09</startdate>  
+	          <currency>EUR</currency>  
+	          <nickname>moonbaseone</nickname>  
+	          <bets>3,075</bets>  
+	          <wins>4,520</wins>  
+	          <chipsin>0</chipsin>
+			  		<chipsout>2,945</chipsout>
+			  		<ipoints>12.15</ipoints>
+        		<statuspoints>12.15</statuspoints>
+			  		<awardpoints>12.15</awardpoints>
+	          <tournamentname>‘Turbo’ €10 Double Up</tournamentname><place>1</place><buyin>€9.10+€0.90</buyin> <totalbuyin>€10.00</totalbuyin> <ipoints>12.15</ipoints> <win>€0.00</win> <statuspoints>12.15</statuspoints> <awardpoints>12.15</awardpoints>  
+	    </general>  
+	    <game gamecode="5601264972">
+		 <general>
+		  <startdate>2014-03-25 17:41:09</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,500" dealer="1" win="0" bet="180" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,500" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,500" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,500" dealer="0" win="590" bet="340" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="10" cards="[cards]"/><action no="2" player="ttr139202772" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="6" player="bofeyvic" type="3" sum="80" cards=""/><cards type="Pocket" player="moonbaseone">D3 H4</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="8" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="3" player="Teenalady" type="23" sum="40" cards=""/><action no="9" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">HQ SQ</cards><action no="4" player="Strik3rPo4ition" type="23" sum="80" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 C6 D4</cards><action no="11" player="bofeyvic" type="3" sum="100" cards=""/><action no="10" player="Strik3rPo4ition" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards><action no="13" player="bofeyvic" type="0" sum="0" cards=""/><action no="12" player="Strik3rPo4ition" type="5" sum="160" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265233">
+		 <general>
+		  <startdate>2014-03-25 17:41:51</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,320" dealer="0" win="620" bet="380" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,480" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,750" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,500" dealer="0" win="0" bet="160" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ttr139202772" type="1" sum="10" cards="[cards]"/><action no="2" player="Teenalady" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="5" player="bofeyvic" type="3" sum="60" cards=""/><cards type="Pocket" player="moonbaseone">S6 S3</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="7" player="ttr139202772" type="3" sum="50" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="8" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="23" sum="60" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C3 C5 S5</cards><action no="11" player="bofeyvic" type="3" sum="100" cards=""/><action no="9" player="ttr139202772" type="4" sum="0" cards=""/><action no="12" player="ttr139202772" type="0" sum="0" cards=""/><action no="10" player="DONCorleoneXX" type="5" sum="100" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">D3</cards><action no="14" player="bofeyvic" type="5" sum="220" cards=""/><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="15" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265561">
+		 <general>
+		  <startdate>2014-03-25 17:42:46</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,560" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,420" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,440" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,750" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,340" dealer="0" win="90" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Teenalady" type="1" sum="10" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="4" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C6 D10</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="6" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="7" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="23" sum="60" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601265668">
+		 <general>
+		  <startdate>2014-03-25 17:43:06</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,560" dealer="0" win="260" bet="255" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,430" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,730" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,370" dealer="0" win="260" bet="255" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="10" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">S5 CA</cards><action no="3" player="bofeyvic" type="3" sum="20" cards=""/><cards type="Pocket" player="moonbaseone">DK H10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="5" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="6" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">HA H4</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">SA H7 DQ</cards><action no="10" player="bofeyvic" type="5" sum="20" cards=""/><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="11" player="DONCorleoneXX" type="3" sum="20" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HQ</cards><action no="13" player="bofeyvic" type="5" sum="40" cards=""/><action no="12" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="14" player="DONCorleoneXX" type="3" sum="40" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">DA</cards><action no="16" player="bofeyvic" type="5" sum="60" cards=""/><action no="18" player="bofeyvic" type="3" sum="115" cards=""/><action no="15" player="DONCorleoneXX" type="4" sum="0" cards=""/><action no="17" player="DONCorleoneXX" type="23" sum="175" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277719">
+		 <general>
+		  <startdate>2014-03-25 17:44:28</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,565" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,420" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,430" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,720" dealer="1" win="70" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,375" dealer="0" win="0" bet="10" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bofeyvic" type="2" sum="20" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="1" sum="10" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="8" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CJ HQ</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="4" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="5" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="23" sum="40" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601277815">
+		 <general>
+		  <startdate>2014-03-25 17:44:48</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,545" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,490" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,420" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,430" dealer="0" win="1,500" bet="1,430" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,750" dealer="0" win="1,820" bet="1,750" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,365" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bofeyvic" type="1" sum="10" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="7" player="bofeyvic" type="3" sum="50" cards=""/><cards type="Pocket" player="moonbaseone">D7 C10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="3" player="ttr139202772" type="23" sum="40" cards=""/><action no="9" player="ttr139202772" type="3" sum="20" cards=""/><cards type="Pocket" player="Teenalady">SA DK</cards><action no="4" player="Teenalady" type="23" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">SK CA</cards><action no="5" player="Strik3rPo4ition" type="3" sum="60" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK C2 H10</cards><action no="10" player="bofeyvic" type="4" sum="0" cards=""/><action no="14" player="bofeyvic" type="0" sum="0" cards=""/><action no="11" player="ttr139202772" type="4" sum="0" cards=""/><action no="15" player="ttr139202772" type="0" sum="0" cards=""/><action no="12" player="Teenalady" type="5" sum="260" cards=""/><action no="13" player="Strik3rPo4ition" type="3" sum="260" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">S4</cards><action no="16" player="Teenalady" type="5" sum="780" cards=""/><action no="18" player="Teenalady" type="7" sum="330" cards=""/><action no="17" player="Strik3rPo4ition" type="7" sum="1,430" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">C4</cards>
+	</round>
+	
+		</game><game gamecode="5601278135">
+		 <general>
+		  <startdate>2014-03-25 17:45:54</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,485" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,470" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,360" dealer="0" win="1,040" bet="770" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,500" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,365" dealer="0" win="0" bet="250" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="20" cards="[cards]"/><action no="2" player="ttr139202772" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="6" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S6 H5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="8" player="ttr139202772" type="3" sum="80" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="3" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C10 S9 SK</cards><action no="9" player="ttr139202772" type="4" sum="0" cards=""/><action no="11" player="ttr139202772" type="3" sum="130" cards=""/><action no="10" player="DONCorleoneXX" type="5" sum="130" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CA</cards><action no="12" player="ttr139202772" type="4" sum="0" cards=""/><action no="13" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">SQ</cards><action no="14" player="ttr139202772" type="5" sum="520" cards=""/><action no="15" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278485">
+		 <general>
+		  <startdate>2014-03-25 17:46:59</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,450" dealer="1" win="160" bet="100" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,630" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,500" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,115" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ttr139202772" type="1" sum="20" cards="[cards]"/><action no="2" player="Teenalady" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="5" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK SA</cards><action no="6" player="moonbaseone" type="23" sum="100" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="7" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="8" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278590">
+		 <general>
+		  <startdate>2014-03-25 17:47:19</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,610" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,460" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,820" dealer="0" win="60" bet="40" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,115" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Teenalady" type="1" sum="20" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="4" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C6 HK</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="6" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="7" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601278785">
+		 <general>
+		  <startdate>2014-03-25 17:47:52</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,485" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,610" dealer="0" win="260" bet="160" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,440" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,840" dealer="0" win="0" bet="20" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,115" dealer="0" win="0" bet="80" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="20" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="40" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="3" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 S5</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="5" player="ttr139202772" type="3" sum="40" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="6" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CA D2 SJ</cards><action no="10" player="ttr139202772" type="4" sum="0" cards=""/><action no="9" player="DONCorleoneXX" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">CQ</cards><action no="12" player="ttr139202772" type="23" sum="120" cards=""/><action no="11" player="DONCorleoneXX" type="5" sum="40" cards=""/><action no="13" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601279129">
+		 <general>
+		  <startdate>2014-03-25 17:48:53</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="1,485" dealer="0" win="1,960" bet="960" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,710" dealer="0" win="0" bet="960" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,820" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="1,035" dealer="0" win="0" bet="40" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bofeyvic" type="2" sum="40" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="1" sum="20" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">CA DA</cards><action no="8" player="bofeyvic" type="23" sum="160" cards=""/><cards type="Pocket" player="moonbaseone">C3 H5</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">SK SJ</cards><action no="4" player="ttr139202772" type="3" sum="40" cards=""/><action no="9" player="ttr139202772" type="3" sum="120" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="5" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="3" sum="20" cards=""/><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CQ DJ D4</cards><action no="11" player="bofeyvic" type="5" sum="160" cards=""/><action no="12" player="ttr139202772" type="3" sum="160" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">C7</cards><action no="13" player="bofeyvic" type="5" sum="240" cards=""/><action no="14" player="ttr139202772" type="3" sum="240" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H3</cards><action no="15" player="bofeyvic" type="5" sum="400" cards=""/><action no="16" player="ttr139202772" type="3" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292513">
+		 <general>
+		  <startdate>2014-03-25 17:50:03</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,485" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="750" dealer="0" win="210" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="995" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bofeyvic" type="1" sum="30" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="7" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ S10</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="3" player="ttr139202772" type="23" sum="120" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="4" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292633">
+		 <general>
+		  <startdate>2014-03-25 17:50:25</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,455" dealer="1" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,450" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="840" dealer="0" win="780" bet="510" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,440" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="995" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="30" cards="[cards]"/><action no="2" player="ttr139202772" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="6" player="bofeyvic" type="3" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">H6 H2</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="8" player="ttr139202772" type="3" sum="60" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="3" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="5" player="DONCorleoneXX" type="23" sum="120" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">DK D9 D10</cards><action no="11" player="bofeyvic" type="0" sum="0" cards=""/><action no="9" player="ttr139202772" type="5" sum="390" cards=""/><action no="10" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601292918">
+		 <general>
+		  <startdate>2014-03-25 17:51:19</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,335" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,420" dealer="1" win="240" bet="150" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,110" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,440" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,820" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="875" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ttr139202772" type="1" sum="30" cards="[cards]"/><action no="2" player="Teenalady" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="5" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">DK HA</cards><action no="6" player="moonbaseone" type="23" sum="150" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="7" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="8" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="4" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293127">
+		 <general>
+		  <startdate>2014-03-25 17:52:02</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,335" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,380" dealer="0" win="480" bet="360" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,820" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="875" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Teenalady" type="1" sum="30" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="4" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C3 C5</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="6" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="7" player="Teenalady" type="23" sum="120" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="8" player="Strik3rPo4ition" type="3" sum="60" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="3" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H4 C2 DJ</cards><action no="9" player="Teenalady" type="5" sum="240" cards=""/><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293258">
+		 <general>
+		  <startdate>2014-03-25 17:52:25</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,335" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,080" dealer="0" win="840" bet="540" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,500" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,700" dealer="0" win="0" bet="120" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="875" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Strik3rPo4ition" type="1" sum="30" cards="[cards]"/><action no="2" player="DONCorleoneXX" type="2" sum="60" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="3" player="bofeyvic" type="23" sum="120" cards=""/><cards type="Pocket" player="moonbaseone">D4 S7</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="5" player="ttr139202772" type="3" sum="120" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="6" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="3" sum="90" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="8" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H3 S4 H10</cards><action no="10" player="bofeyvic" type="4" sum="0" cards=""/><action no="13" player="bofeyvic" type="0" sum="0" cards=""/><action no="11" player="ttr139202772" type="5" sum="420" cards=""/><action no="9" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="12" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293457">
+		 <general>
+		  <startdate>2014-03-25 17:53:01</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,215" dealer="0" win="0" bet="60" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,500" dealer="0" win="300" bet="210" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,580" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="815" dealer="0" win="0" bet="30" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bofeyvic" type="2" sum="60" cards="[cards]"/><action no="1" player="DONCorleoneXX" type="1" sum="30" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="8" player="bofeyvic" type="4" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 D9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="4" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="5" player="Teenalady" type="3" sum="60" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="7" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">H9 HA D3</cards><action no="9" player="bofeyvic" type="4" sum="0" cards=""/><action no="11" player="bofeyvic" type="0" sum="0" cards=""/><action no="10" player="Teenalady" type="5" sum="150" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293741">
+		 <general>
+		  <startdate>2014-03-25 17:53:57</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,155" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,510" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,380" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,590" dealer="0" win="350" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,580" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="785" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bofeyvic" type="1" sum="50" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="7" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H6 D6</cards><action no="8" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="3" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="4" player="Teenalady" type="23" sum="200" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="0" sum="0" cards=""/><cards type="Pocket" player="DONCorleoneXX">X X</cards><action no="6" player="DONCorleoneXX" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601293916">
+		 <general>
+		  <startdate>2014-03-25 17:54:31</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,105" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,410" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,380" dealer="0" win="0" bet="100" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,740" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,580" dealer="0" win="1,720" bet="785" rebuy="0" addon="0" reg_code="-"/><player seat="10" name="DONCorleoneXX" chips="785" dealer="0" win="0" bet="785" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="50" cards="[cards]"/><action no="2" player="ttr139202772" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="6" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">C7 DQ</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="8" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="3" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">CQ DK</cards><action no="4" player="Strik3rPo4ition" type="23" sum="200" cards=""/><action no="9" player="Strik3rPo4ition" type="3" sum="585" cards=""/><cards type="Pocket" player="DONCorleoneXX">H10 SA</cards><action no="5" player="DONCorleoneXX" type="23" sum="785" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">D2 S10 S4</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SQ</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D3</cards>
+	</round>
+	
+		</game><game gamecode="5601305735">
+		 <general>
+		  <startdate>2014-03-25 17:55:05</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,105" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,280" dealer="0" win="0" bet="200" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,740" dealer="0" win="800" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="2,515" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ttr139202772" type="1" sum="50" cards="[cards]"/><action no="2" player="Teenalady" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="4" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 H8</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="6" player="ttr139202772" type="23" sum="200" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="7" player="Teenalady" type="3" sum="100" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">CK HQ D9</cards><action no="8" player="ttr139202772" type="4" sum="0" cards=""/><action no="10" player="ttr139202772" type="0" sum="0" cards=""/><action no="9" player="Teenalady" type="5" sum="400" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601305978">
+		 <general>
+		  <startdate>2014-03-25 17:56:06</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,105" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,080" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,940" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="2,515" dealer="0" win="150" bet="100" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="Teenalady" type="1" sum="50" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="3" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK C3</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="5" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">X X</cards><action no="6" player="Teenalady" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards>
+	</round>
+	
+		</game><game gamecode="5601306075">
+		 <general>
+		  <startdate>2014-03-25 17:56:31</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="2,105" dealer="0" win="3,940" bet="2,000" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="6" name="Teenalady" chips="1,890" dealer="1" win="0" bet="1,890" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="2,565" dealer="0" win="0" bet="50" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bofeyvic" type="2" sum="100" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="50" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">H3 S9</cards><action no="7" player="bofeyvic" type="3" sum="100" cards=""/><cards type="Pocket" player="moonbaseone">HA S6</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="4" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Teenalady">C10 SA</cards><action no="5" player="Teenalady" type="23" sum="200" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C7 H8 H10</cards><action no="8" player="bofeyvic" type="4" sum="0" cards=""/><action no="10" player="bofeyvic" type="3" sum="450" cards=""/><action no="9" player="Teenalady" type="5" sum="450" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">HJ</cards><action no="11" player="bofeyvic" type="5" sum="1,350" cards=""/><action no="12" player="Teenalady" type="7" sum="1,240" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">CA</cards>
+	</round>
+	
+		</game><game gamecode="5601306224">
+		 <general>
+		  <startdate>2014-03-25 17:57:11</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="4,045" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,360" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,080" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="2,515" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bofeyvic" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="5" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK S7</cards><cards type="Pocket" player="ttr139202772">X X</cards><action no="3" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306348">
+		 <general>
+		  <startdate>2014-03-25 17:57:40</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,970" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,435" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,080" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="2,515" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="ttr139202772" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="4" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H5 DK</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306411">
+		 <general>
+		  <startdate>2014-03-25 17:57:55</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,970" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,360" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,155" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="2,515" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ttr139202772" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="3" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">H4 D10</cards><action no="4" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="5" player="ttr139202772" type="23" sum="300" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306520">
+		 <general>
+		  <startdate>2014-03-25 17:58:23</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,970" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,360" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="1,305" dealer="1" win="2,205" bet="1,305" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="2,365" dealer="0" win="0" bet="450" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bofeyvic" type="2" sum="150" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="6" player="bofeyvic" type="3" sum="300" cards=""/><cards type="Pocket" player="moonbaseone">S4 C9</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="4" player="ttr139202772" type="23" sum="450" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="3" sum="375" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 S3 H3</cards><action no="8" player="bofeyvic" type="4" sum="0" cards=""/><action no="11" player="bofeyvic" type="0" sum="0" cards=""/><action no="9" player="ttr139202772" type="5" sum="855" cards=""/><action no="7" player="Strik3rPo4ition" type="4" sum="0" cards=""/><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306688">
+		 <general>
+		  <startdate>2014-03-25 17:59:06</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,520" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,360" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="2,205" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,915" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bofeyvic" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="5" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SK HJ</cards><cards type="Pocket" player="ttr139202772">X X</cards><action no="3" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306749">
+		 <general>
+		  <startdate>2014-03-25 17:59:22</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,445" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,435" dealer="0" win="0" bet="75" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="2,205" dealer="0" win="225" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,915" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="moonbaseone" type="1" sum="75" cards="[cards]"/><action no="2" player="ttr139202772" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="4" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">SJ S10</cards><action no="5" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="3" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601306894">
+		 <general>
+		  <startdate>2014-03-25 17:59:57</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,445" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="1,360" dealer="1" win="2,870" bet="1,360" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="2,280" dealer="0" win="920" bet="2,280" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,915" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="ttr139202772" type="1" sum="75" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="3" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">CA H8</cards><action no="4" player="moonbaseone" type="23" sum="1,360" cards=""/><cards type="Pocket" player="ttr139202772">SA SQ</cards><action no="5" player="ttr139202772" type="7" sum="2,205" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="6" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">C6 C8 S5</cards>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">H10</cards>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">D2</cards>
+	</round>
+	
+		</game><game gamecode="5601306994">
+		 <general>
+		  <startdate>2014-03-25 18:00:21</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,445" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="2,870" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="920" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,765" dealer="0" win="450" bet="300" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bofeyvic" type="2" sum="150" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="1" sum="75" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="6" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">S9 H3</cards><action no="3" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="4" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="5" player="Strik3rPo4ition" type="23" sum="300" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601307075">
+		 <general>
+		  <startdate>2014-03-25 18:00:39</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,295" dealer="0" win="750" bet="600" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="2,870" dealer="0" win="0" bet="150" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="920" dealer="0" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,915" dealer="1" win="0" bet="0" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="1" player="bofeyvic" type="1" sum="75" cards="[cards]"/><action no="2" player="moonbaseone" type="2" sum="150" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="5" player="bofeyvic" type="23" sum="600" cards=""/><cards type="Pocket" player="moonbaseone">D2 CA</cards><action no="6" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="3" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="4" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601307248">
+		 <general>
+		  <startdate>2014-03-25 18:01:18</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,445" dealer="1" win="1,400" bet="1,025" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="2,720" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="920" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,915" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="4" player="bofeyvic" type="15" sum="25" cards="[cards]"/><action no="1" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="5" player="moonbaseone" type="1" sum="100" cards="[cards]"/><action no="2" player="ttr139202772" type="15" sum="25" cards="[cards]"/><action no="6" player="ttr139202772" type="2" sum="200" cards="[cards]"/><action no="3" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="8" player="bofeyvic" type="23" sum="1,000" cards=""/><cards type="Pocket" player="moonbaseone">CJ H10</cards><action no="9" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="10" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="7" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601329779">
+		 <general>
+		  <startdate>2014-03-25 18:01:48</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,820" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="2,595" dealer="1" win="800" bet="425" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="695" dealer="0" win="0" bet="125" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,890" dealer="0" win="0" bet="225" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="3" player="bofeyvic" type="15" sum="25" cards="[cards]"/><action no="4" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="1" player="ttr139202772" type="15" sum="25" cards="[cards]"/><action no="5" player="ttr139202772" type="1" sum="100" cards="[cards]"/><action no="2" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="6" player="Strik3rPo4ition" type="2" sum="200" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">X X</cards><action no="7" player="bofeyvic" type="0" sum="0" cards=""/><cards type="Pocket" player="moonbaseone">D7 DA</cards><action no="8" player="moonbaseone" type="23" sum="400" cards=""/><cards type="Pocket" player="ttr139202772">X X</cards><action no="9" player="ttr139202772" type="0" sum="0" cards=""/><cards type="Pocket" player="Strik3rPo4ition">X X</cards><action no="10" player="Strik3rPo4ition" type="0" sum="0" cards=""/>
+	</round>
+	
+		</game><game gamecode="5601329884">
+		 <general>
+		  <startdate>2014-03-25 18:02:09</startdate>		  
+		  <players>
+		   <player seat="1" name="bofeyvic" chips="3,795" dealer="0" win="0" bet="570" rebuy="0" addon="0" reg_code="-"/><player seat="3" name="moonbaseone" chips="2,970" dealer="0" win="0" bet="25" rebuy="0" addon="0" reg_code="6224237471"/><player seat="5" name="ttr139202772" chips="570" dealer="1" win="0" bet="570" rebuy="0" addon="0" reg_code="-"/><player seat="8" name="Strik3rPo4ition" chips="1,665" dealer="0" win="1,735" bet="570" rebuy="0" addon="0" reg_code="-"/>
+		  </players>
+		 </general>
+		 <round no="0">
+	 <action no="2" player="bofeyvic" type="15" sum="25" cards="[cards]"/><action no="6" player="bofeyvic" type="2" sum="200" cards="[cards]"/><action no="3" player="moonbaseone" type="15" sum="25" cards="[cards]"/><action no="4" player="ttr139202772" type="15" sum="25" cards="[cards]"/><action no="1" player="Strik3rPo4ition" type="15" sum="25" cards="[cards]"/><action no="5" player="Strik3rPo4ition" type="1" sum="100" cards="[cards]"/>
+	</round>
+	<round no="1">
+	 <cards type="Pocket" player="bofeyvic">H3 S7</cards><action no="10" player="bofeyvic" type="3" sum="345" cards=""/><cards type="Pocket" player="moonbaseone">C8 S5</cards><action no="7" player="moonbaseone" type="0" sum="0" cards=""/><cards type="Pocket" player="ttr139202772">D5 C5</cards><action no="8" player="ttr139202772" type="23" sum="545" cards=""/><cards type="Pocket" player="Strik3rPo4ition">D9 CK</cards><action no="9" player="Strik3rPo4ition" type="3" sum="445" cards=""/>
+	</round>
+	<round no="2">
+	 <cards type="Flop" player="">S8 DJ S9</cards><action no="12" player="bofeyvic" type="4" sum="0" cards=""/><action no="11" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="3">
+	 <cards type="Turn" player="">SJ</cards><action no="14" player="bofeyvic" type="4" sum="0" cards=""/><action no="13" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	<round no="4">
+	 <cards type="River" player="">H8</cards><action no="16" player="bofeyvic" type="4" sum="0" cards=""/><action no="15" player="Strik3rPo4ition" type="4" sum="0" cards=""/>
+	</round>
+	
+		</game>  
+	</session>

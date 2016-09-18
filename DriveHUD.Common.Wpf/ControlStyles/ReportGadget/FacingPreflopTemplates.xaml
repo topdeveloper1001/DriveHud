@@ -1,0 +1,197 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:templateSelectors="clr-namespace:DriveHUD.Common.Wpf.DataTemplateSelectors"
+                    xmlns:enums="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
+                    xmlns:ResX="clr-namespace:DriveHUD.Common.Wpf.ResX">
+
+    <Style x:Key="FacingPreflopStyle" TargetType="{x:Type Border}">
+        <Setter Property="Padding" Value="10 0" />
+        <Setter Property="Height" Value="25" />
+        <Setter Property="Width" Value="90" />
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="CornerRadius" Value="2"/>
+    </Style>
+    <Style x:Key="LimpersPreflopStyle" BasedOn="{StaticResource ResourceKey=FacingPreflopStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFAD620C" Offset="0"/>
+                    <GradientStop Color="#FFF5AD15" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="RaisersPreflopStyle" BasedOn="{StaticResource ResourceKey=FacingPreflopStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF96261E" Offset="0"/>
+                    <GradientStop Color="#FFCB4635" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ThreeBetPreflopStyle" BasedOn="{StaticResource ResourceKey=FacingPreflopStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF6C0B05" Offset="0"/>
+                    <GradientStop Color="#FFD81C05" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FourBetPreflopStyle" BasedOn="{StaticResource ResourceKey=FacingPreflopStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF720700" Offset="0"/>
+                    <GradientStop Color="Red" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="FiveBetPreflopStyle" BasedOn="{StaticResource ResourceKey=FacingPreflopStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF640D07" Offset="0"/>
+                    <GradientStop Color="#FFAA2110" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="CallersPreflopStyle" BasedOn="{StaticResource ResourceKey=FacingPreflopStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF156632" Offset="0"/>
+                    <GradientStop Color="#FF2DBB6F" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="UnopenedPreflopStyle" BasedOn="{StaticResource ResourceKey=FacingPreflopStyle}" TargetType="{x:Type Border}">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF2C3233" Offset="0"/>
+                    <GradientStop Color="#FF949FA0" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <DataTemplate x:Key="UnopenedPreflopTemplate">
+        <Border Style="{StaticResource UnopenedPreflopStyle}">
+            <TextBlock Text="{ResX:ResX Key=Common_Unopened}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SingleLimperPreflopTemplate">
+        <Border Style="{StaticResource LimpersPreflopStyle}">
+            <Grid HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="1 " HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    <TextBlock Text="{ResX:ResX Key=Common_Limper}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MultipleLimpersPreflopTemplate">
+        <Border Style="{StaticResource LimpersPreflopStyle}">
+            <Grid HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="2+ " HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    <TextBlock Text="{ResX:ResX Key=Common_Limpers}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="SingleRaiserPreflopTemplate">
+        <Border Style="{StaticResource RaisersPreflopStyle}">
+            <Grid HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="1 " HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    <TextBlock Text="{ResX:ResX Key=Common_Raiser}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="RaiserCallerPreflopTemplate">
+        <StackPanel Orientation="Horizontal">
+            <Border Style="{StaticResource RaisersPreflopStyle}" Width="Auto" >
+                <TextBlock Text="{ResX:ResX Key=Common_Raiser}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            </Border>
+            <TextBlock Text=" + " HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            <Border Style="{StaticResource CallersPreflopStyle}" Width="Auto" >
+                <TextBlock Text="{ResX:ResX Key=Common_Caller}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+            </Border>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="MultipleCallersPreflopTemplate">
+        <Border Style="{StaticResource CallersPreflopStyle}">
+            <Grid HorizontalAlignment="Center">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Text="2+ " HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                    <TextBlock Text="{ResX:ResX Key=Common_Callers}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="ThreeBetPreflopTemplate">
+        <Border Style="{StaticResource ThreeBetPreflopStyle}">
+            <TextBlock Text="{ResX:ResX Key=Common_3Bet}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FourBetPreflopTemplate">
+        <Border Style="{StaticResource FourBetPreflopStyle}">
+            <TextBlock Text="{ResX:ResX Key=Common_4Bet}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="FiveBetPreflopTemplate">
+        <Border Style="{StaticResource FiveBetPreflopStyle}">
+            <TextBlock Text="{ResX:ResX Key=Common_5Bet}" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White"/>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate x:Key="NonePreflopTemplate">
+        <TextBlock/>
+    </DataTemplate>
+
+    <templateSelectors:FacingPreflopTemplateSelector x:Key="PreflopTemplateSelector">
+        <templateSelectors:FacingPreflopTemplateSelector.Templates>
+            <templateSelectors:TemplateCollection>
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.Unopened}" 
+                                                    DataTemplate="{StaticResource UnopenedPreflopTemplate}"/>
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.Limper}"
+                                                    DataTemplate="{StaticResource SingleLimperPreflopTemplate}" />
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.MultipleLimpers}"
+                                                    DataTemplate="{StaticResource MultipleLimpersPreflopTemplate}" />
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.Raiser}"
+                                                    DataTemplate="{StaticResource SingleRaiserPreflopTemplate}" />
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.RaiserAndCaller}"
+                                                    DataTemplate="{StaticResource RaiserCallerPreflopTemplate}" />
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.MultipleCallers}"
+                                                    DataTemplate="{StaticResource MultipleCallersPreflopTemplate}" />
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.ThreeBet}"
+                                                    DataTemplate="{StaticResource ThreeBetPreflopTemplate}" />
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.FourBet}"
+                                                    DataTemplate="{StaticResource FourBetPreflopTemplate}" />
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.FiveBet}"
+                                                    DataTemplate="{StaticResource FiveBetPreflopTemplate}" />
+                <templateSelectors:Template Value="{x:Static enums:EnumFacingPreflop.None}"
+                                                    DataTemplate="{StaticResource NonePreflopTemplate}" />
+            </templateSelectors:TemplateCollection>
+        </templateSelectors:FacingPreflopTemplateSelector.Templates>
+    </templateSelectors:FacingPreflopTemplateSelector>
+
+</ResourceDictionary>

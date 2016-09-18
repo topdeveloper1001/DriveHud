@@ -1,0 +1,626 @@
+#Game No : 934141344
+***** 888poker Hand History for Game 934141344 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 21:51:22
+Table Marburg 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 4: Nuts72o ( $100 )
+Seat 6: skdekedari ( $1,173 )
+Seat 7: Sword62 ( $100 )
+Sword62 posts small blind [$10]
+Nuts72o posts big blind [$20]
+** Dealing down cards **
+skdekedari folds
+Sword62 raises [$90]
+Nuts72o calls [$80]
+** Dealing flop ** [ 2s, 2h, 3h ]
+** Dealing turn ** [ 2c ]
+** Dealing river ** [ 7d ]
+** Summary **
+Nuts72o shows [ Ks, Ad ]
+Sword62 shows [ Tc, Qh ]
+Nuts72o collected [ $197.50 ]
+
+
+#Game No : 934141523
+***** 888poker Hand History for Game 934141523 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 21:51:46
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 4: Nuts72o ( $197.50 )
+Seat 6: skdekedari ( $1,173 )
+Seat 7: Sword62 ( $100 )
+Nuts72o posts small blind [$10]
+skdekedari posts big blind [$20]
+** Dealing down cards **
+Sword62 folds
+Nuts72o raises [$30]
+skdekedari folds
+** Summary **
+Nuts72o did not show his hand
+Nuts72o collected [ $40 ]
+
+
+#Game No : 934141614
+***** 888poker Hand History for Game 934141614 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 21:51:57
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 4: Nuts72o ( $217.50 )
+Seat 6: skdekedari ( $1,153 )
+Seat 7: Sword62 ( $100 )
+skdekedari posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+Nuts72o raises [$40]
+skdekedari folds
+Sword62 folds
+** Summary **
+Nuts72o did not show his hand
+Nuts72o collected [ $50 ]
+
+
+#Game No : 934141798
+***** 888poker Hand History for Game 934141798 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 21:52:22
+Table Marburg 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 4: Nuts72o ( $247.50 )
+Seat 6: skdekedari ( $1,143 )
+Seat 7: Sword62 ( $80 )
+Sword62 posts small blind [$10]
+Nuts72o posts big blind [$20]
+** Dealing down cards **
+skdekedari raises [$1,143]
+Sword62 folds
+Nuts72o calls [$227.50]
+** Dealing flop ** [ 6h, Ah, 5s ]
+** Dealing turn ** [ 6c ]
+** Dealing river ** [ Kc ]
+** Summary **
+Nuts72o shows [ As, 8h ]
+skdekedari shows [ 8d, 9d ]
+Nuts72o collected [ $502.50 ]
+
+
+#Game No : 934142017
+***** 888poker Hand History for Game 934142017 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 21:52:50
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 4: Nuts72o ( $502.50 )
+Seat 6: skdekedari ( $895.50 )
+Seat 7: Sword62 ( $70 )
+Nuts72o posts small blind [$10]
+skdekedari posts big blind [$20]
+** Dealing down cards **
+Sword62 raises [$70]
+Nuts72o calls [$60]
+skdekedari folds
+** Dealing flop ** [ 4d, 3h, 2d ]
+** Dealing turn ** [ 6d ]
+** Dealing river ** [ 8c ]
+** Summary **
+Nuts72o shows [ Qs, Tc ]
+Sword62 shows [ Jh, Js ]
+Sword62 collected [ $157.50 ]
+
+
+#Game No : 934142185
+***** 888poker Hand History for Game 934142185 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 21:53:13
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 4: Nuts72o ( $432.50 )
+Seat 6: skdekedari ( $875.50 )
+Seat 7: Sword62 ( $157.50 )
+skdekedari posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+Nuts72o folds
+skdekedari folds
+** Summary **
+Sword62 did not show his hand
+Sword62 collected [ $30 ]
+
+
+#Game No : 934142261
+***** 888poker Hand History for Game 934142261 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 21:53:22
+Table Marburg 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 3
+Seat 4: Nuts72o ( $432.50 )
+Seat 6: skdekedari ( $865.50 )
+Seat 7: Sword62 ( $167.50 )
+Sword62 posts small blind [$10]
+Nuts72o posts big blind [$20]
+** Dealing down cards **
+skdekedari folds
+Sword62 raises [$157.50]
+Nuts72o folds
+** Summary **
+Sword62 did not show his hand
+Sword62 collected [ $40 ]
+
+
+#Game No : 934175234
+***** 888poker Hand History for Game 934175234 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:17:19
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: MikeHatesYou ( $662 )
+Seat 4: OutFlopMe ( $100 )
+Seat 7: Sword62 ( $238 )
+MikeHatesYou posts small blind [$10]
+OutFlopMe posts big blind [$20]
+** Dealing down cards **
+Sword62 folds
+MikeHatesYou raises [$652]
+OutFlopMe folds
+** Summary **
+MikeHatesYou collected [ $40 ]
+
+
+#Game No : 934175328
+***** 888poker Hand History for Game 934175328 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:17:39
+Table Marburg 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 3
+Seat 2: MikeHatesYou ( $682 )
+Seat 4: OutFlopMe ( $100 )
+Seat 7: Sword62 ( $238 )
+OutFlopMe posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+MikeHatesYou raises [$40]
+OutFlopMe folds
+Sword62 folds
+** Summary **
+MikeHatesYou collected [ $50 ]
+
+
+#Game No : 934175412
+***** 888poker Hand History for Game 934175412 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:17:55
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 4
+Seat 1: sharkzhou ( $100 )
+Seat 2: MikeHatesYou ( $712 )
+Seat 4: OutFlopMe ( $100 )
+Seat 7: Sword62 ( $218 )
+Sword62 posts small blind [$10]
+sharkzhou posts big blind [$20]
+** Dealing down cards **
+MikeHatesYou raises [$40]
+OutFlopMe folds
+Sword62 folds
+sharkzhou raises [$80]
+MikeHatesYou calls [$60]
+** Dealing flop ** [ Jc, Kh, 4d ]
+** Dealing turn ** [ 9s ]
+** Dealing river ** [ 6d ]
+** Summary **
+sharkzhou shows [ 2c, Ah ]
+MikeHatesYou shows [ Kd, 5d ]
+MikeHatesYou collected [ $206 ]
+
+
+#Game No : 934175579
+***** 888poker Hand History for Game 934175579 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:18:23
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: sharkzhou ( $100 )
+Seat 2: MikeHatesYou ( $818 )
+Seat 4: OutFlopMe ( $100 )
+Seat 7: Sword62 ( $208 )
+sharkzhou posts small blind [$10]
+MikeHatesYou folds
+OutFlopMe posts big blind [$20]
+** Dealing down cards **
+Sword62 raises [$208]
+sharkzhou folds
+OutFlopMe calls [$80]
+** Dealing flop ** [ Ad, 6d, Ah ]
+** Dealing turn ** [ 8d ]
+** Dealing river ** [ 9d ]
+** Summary **
+OutFlopMe shows [ Qd, As ]
+Sword62 shows [ Tc, 8c ]
+OutFlopMe collected [ $207.50 ]
+
+
+#Game No : 934175707
+***** 888poker Hand History for Game 934175707 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:18:46
+Table Marburg 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $90 )
+Seat 4: OutFlopMe ( $207.50 )
+Seat 7: Sword62 ( $108 )
+OutFlopMe posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+sharkzhou raises [$90]
+OutFlopMe folds
+Sword62 folds
+** Summary **
+sharkzhou did not show his hand
+sharkzhou collected [ $50 ]
+
+
+#Game No : 934175784
+***** 888poker Hand History for Game 934175784 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:19:01
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $120 )
+Seat 4: OutFlopMe ( $197.50 )
+Seat 7: Sword62 ( $88 )
+Sword62 posts small blind [$10]
+sharkzhou posts big blind [$20]
+** Dealing down cards **
+OutFlopMe folds
+Sword62 raises [$78]
+sharkzhou calls [$68]
+** Dealing flop ** [ 7s, 8s, 3c ]
+** Dealing turn ** [ Jd ]
+** Dealing river ** [ Th ]
+** Summary **
+sharkzhou shows [ Qd, 6h ]
+Sword62 shows [ Ac, 9d ]
+Sword62 collected [ $173.50 ]
+
+
+#Game No : 934176003
+***** 888poker Hand History for Game 934176003 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:19:41
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $100 )
+Seat 4: OutFlopMe ( $197.50 )
+Seat 7: Sword62 ( $173.50 )
+sharkzhou posts small blind [$10]
+OutFlopMe posts big blind [$20]
+** Dealing down cards **
+Sword62 folds
+sharkzhou raises [$90]
+OutFlopMe folds
+** Summary **
+sharkzhou did not show his hand
+sharkzhou collected [ $40 ]
+
+
+#Game No : 934176073
+***** 888poker Hand History for Game 934176073 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:19:54
+Table Marburg 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $120 )
+Seat 4: OutFlopMe ( $177.50 )
+Seat 7: Sword62 ( $173.50 )
+OutFlopMe posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+sharkzhou folds
+OutFlopMe raises [$167.50]
+Sword62 folds
+** Summary **
+OutFlopMe did not show his hand
+OutFlopMe collected [ $40 ]
+
+
+#Game No : 934176140
+***** 888poker Hand History for Game 934176140 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:20:06
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $120 )
+Seat 4: OutFlopMe ( $197.50 )
+Seat 7: Sword62 ( $153.50 )
+Sword62 posts small blind [$10]
+sharkzhou posts big blind [$20]
+** Dealing down cards **
+OutFlopMe folds
+Sword62 raises [$143.50]
+sharkzhou calls [$100]
+** Dealing flop ** [ Kd, 4c, 9s ]
+** Dealing turn ** [ Jc ]
+** Dealing river ** [ 8h ]
+** Summary **
+sharkzhou shows [ Td, Ad ]
+Sword62 shows [ Ac, 2s ]
+sharkzhou collected [ $237.50 ]
+
+
+#Game No : 934176251
+***** 888poker Hand History for Game 934176251 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:20:28
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $237.50 )
+Seat 4: OutFlopMe ( $197.50 )
+Seat 7: Sword62 ( $33.50 )
+sharkzhou posts small blind [$10]
+OutFlopMe posts big blind [$20]
+** Dealing down cards **
+Sword62 raises [$33.50]
+sharkzhou folds
+OutFlopMe calls [$13.50]
+** Dealing flop ** [ Ks, 7s, 3h ]
+** Dealing turn ** [ 9s ]
+** Dealing river ** [ 8h ]
+** Summary **
+OutFlopMe shows [ 9d, 4d ]
+Sword62 shows [ 2c, Kh ]
+Sword62 collected [ $74.50 ]
+
+
+#Game No : 934176418
+***** 888poker Hand History for Game 934176418 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:20:59
+Table Marburg 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $227.50 )
+Seat 4: OutFlopMe ( $164 )
+Seat 7: Sword62 ( $74.50 )
+OutFlopMe posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+sharkzhou folds
+OutFlopMe raises [$154]
+Sword62 calls [$54.50]
+** Dealing flop ** [ 6c, 2s, 7h ]
+** Dealing turn ** [ Kc ]
+** Dealing river ** [ 2h ]
+** Summary **
+OutFlopMe shows [ Qh, 4s ]
+Sword62 shows [ 5h, 8s ]
+OutFlopMe collected [ $146.50 ]
+
+
+#Game No : 934176592
+***** 888poker Hand History for Game 934176592 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:21:31
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $227.50 )
+Seat 4: OutFlopMe ( $236 )
+Seat 7: Sword62 ( $100 )
+Sword62 posts small blind [$10]
+sharkzhou posts big blind [$20]
+** Dealing down cards **
+OutFlopMe folds
+Sword62 raises [$90]
+sharkzhou folds
+** Summary **
+Sword62 did not show his hand
+Sword62 collected [ $40 ]
+
+
+#Game No : 934176668
+***** 888poker Hand History for Game 934176668 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:21:45
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $207.50 )
+Seat 4: OutFlopMe ( $236 )
+Seat 7: Sword62 ( $120 )
+sharkzhou posts small blind [$10]
+OutFlopMe posts big blind [$20]
+** Dealing down cards **
+Sword62 raises [$120]
+sharkzhou folds
+OutFlopMe folds
+** Summary **
+Sword62 did not show his hand
+Sword62 collected [ $50 ]
+
+
+#Game No : 934176759
+***** 888poker Hand History for Game 934176759 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:22:00
+Table Marburg 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $197.50 )
+Seat 4: OutFlopMe ( $216 )
+Seat 7: Sword62 ( $150 )
+OutFlopMe posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+sharkzhou folds
+OutFlopMe raises [$206]
+Sword62 folds
+** Summary **
+OutFlopMe did not show his hand
+OutFlopMe collected [ $40 ]
+
+
+#Game No : 934176838
+***** 888poker Hand History for Game 934176838 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:22:13
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $197.50 )
+Seat 4: OutFlopMe ( $236 )
+Seat 7: Sword62 ( $130 )
+Sword62 posts small blind [$10]
+sharkzhou posts big blind [$20]
+** Dealing down cards **
+OutFlopMe folds
+Sword62 raises [$120]
+sharkzhou folds
+** Summary **
+Sword62 did not show his hand
+Sword62 collected [ $40 ]
+
+
+#Game No : 934176954
+***** 888poker Hand History for Game 934176954 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:22:34
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $177.50 )
+Seat 4: OutFlopMe ( $236 )
+Seat 7: Sword62 ( $150 )
+sharkzhou posts small blind [$10]
+OutFlopMe posts big blind [$20]
+** Dealing down cards **
+Sword62 raises [$150]
+sharkzhou folds
+OutFlopMe folds
+** Summary **
+Sword62 did not show his hand
+Sword62 collected [ $50 ]
+
+
+#Game No : 934177013
+***** 888poker Hand History for Game 934177013 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:22:44
+Table Marburg 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $167.50 )
+Seat 4: OutFlopMe ( $216 )
+Seat 7: Sword62 ( $180 )
+OutFlopMe posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+sharkzhou folds
+OutFlopMe raises [$206]
+Sword62 folds
+** Summary **
+OutFlopMe did not show his hand
+OutFlopMe collected [ $40 ]
+
+
+#Game No : 934177093
+***** 888poker Hand History for Game 934177093 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:23:00
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $167.50 )
+Seat 4: OutFlopMe ( $236 )
+Seat 7: Sword62 ( $160 )
+Sword62 posts small blind [$10]
+sharkzhou posts big blind [$20]
+** Dealing down cards **
+OutFlopMe raises [$236]
+Sword62 folds
+sharkzhou folds
+** Summary **
+OutFlopMe did not show his hand
+OutFlopMe collected [ $50 ]
+
+
+#Game No : 934177180
+***** 888poker Hand History for Game 934177180 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:23:17
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $147.50 )
+Seat 4: OutFlopMe ( $266 )
+Seat 7: Sword62 ( $150 )
+sharkzhou posts small blind [$10]
+OutFlopMe posts big blind [$20]
+** Dealing down cards **
+Sword62 raises [$150]
+sharkzhou folds
+OutFlopMe folds
+** Summary **
+Sword62 did not show his hand
+Sword62 collected [ $50 ]
+
+
+#Game No : 934177262
+***** 888poker Hand History for Game 934177262 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:23:32
+Table Marburg 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $137.50 )
+Seat 4: OutFlopMe ( $246 )
+Seat 7: Sword62 ( $180 )
+OutFlopMe posts small blind [$10]
+Sword62 posts big blind [$20]
+** Dealing down cards **
+sharkzhou folds
+OutFlopMe raises [$236]
+Sword62 folds
+** Summary **
+OutFlopMe did not show his hand
+OutFlopMe collected [ $40 ]
+
+
+#Game No : 934177346
+***** 888poker Hand History for Game 934177346 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:23:47
+Table Marburg 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $137.50 )
+Seat 4: OutFlopMe ( $266 )
+Seat 7: Sword62 ( $160 )
+Sword62 posts small blind [$10]
+sharkzhou posts big blind [$20]
+** Dealing down cards **
+OutFlopMe raises [$266]
+Sword62 folds
+sharkzhou calls [$117.50]
+** Dealing flop ** [ Ts, As, 3d ]
+** Dealing turn ** [ 6s ]
+** Dealing river ** [ 9h ]
+** Summary **
+sharkzhou shows [ 7d, Kh ]
+OutFlopMe shows [ Ks, Js ]
+OutFlopMe collected [ $282.50 ]
+
+
+#Game No : 934177541
+***** 888poker Hand History for Game 934177541 *****
+$10/$20 Blinds No Limit Holdem - *** 07 09 2016 23:24:21
+Table Marburg 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 1: sharkzhou ( $100 )
+Seat 4: OutFlopMe ( $411 )
+Seat 7: Sword62 ( $150 )
+sharkzhou posts small blind [$10]
+OutFlopMe posts big blind [$20]
+** Dealing down cards **
+Sword62 folds
+sharkzhou raises [$90]
+OutFlopMe calls [$80]
+** Dealing flop ** [ 6d, Js, 6s ]
+** Dealing turn ** [ Kd ]
+** Dealing river ** [ 7s ]
+** Summary **
+sharkzhou shows [ 4h, Qc ]
+OutFlopMe shows [ 7c, Ac ]
+OutFlopMe collected [ $197.50 ]
+
+

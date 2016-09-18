@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="5964791124">  
+	<general>  
+		<mode>real</mode>
+		<gametype>Holdem SL $0.02/$0.05</gametype>  
+		<tablename>Speed Hold'em 1, 5964791124</tablename>
+		<tablecurrency>USD</tablecurrency>  
+		<duration>00:07</duration>  
+		<gamecount>4</gamecount>  
+		<startdate>2012-12-07 14:01:41</startdate>  
+		<currency>GBP</currency>  
+		<nickname>WhiteRiderT</nickname>  
+		<bets>$0.25</bets>  
+		<wins>$0</wins>  
+		<chipsin>$1</chipsin>
+		<chipsout>$0.75</chipsout>
+		<ipoints>0.17</ipoints>
+		<statuspoints>0.17</statuspoints>
+		<awardpoints>0.17</awardpoints>
+		<is_asian>0</is_asian>
+
+	</general>  
+	<game gamecode="3546977549">
+		<general>
+			<startdate>2012-12-07 14:01:41</startdate>		  
+			<players>
+				<player seat="1" name="nufnuf77" chips="$7.40" dealer="0" win="$0" bet="$0.05" rebuy="0" addon="0"/>
+				<player seat="3" name="WhiteRiderT" chips="$1" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="5" name="curacek" chips="$3.19" dealer="0" win="$0.21" bet="$0.14" rebuy="0" addon="0"/>
+				<player seat="6" name="dzanbb" chips="$18.21" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="8" name="HefiNebBastet" chips="$5.65" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="10" name="PrinsLola" chips="$4.98" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="nufnuf77" type="2" sum="$0.05" cards="[cards]"/>
+			<action no="1" player="PrinsLola" type="1" sum="$0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="nufnuf77">X X</cards>
+			<action no="8" player="nufnuf77" type="4" sum="$0" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">H5 C4</cards>
+			<action no="3" player="WhiteRiderT" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="curacek">X X</cards>
+			<action no="4" player="curacek" type="3" sum="$0.05" cards=""/>
+			<cards type="Pocket" player="dzanbb">X X</cards>
+			<action no="5" player="dzanbb" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="HefiNebBastet">X X</cards>
+			<action no="6" player="HefiNebBastet" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="PrinsLola">X X</cards>
+			<action no="7" player="PrinsLola" type="0" sum="$0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">D3 D10 H3</cards>
+			<action no="9" player="nufnuf77" type="4" sum="$0" cards=""/>
+			<action no="11" player="nufnuf77" type="0" sum="$0" cards=""/>
+			<action no="10" player="curacek" type="5" sum="$0.09" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3546977639">
+		<general>
+			<startdate>2012-12-07 14:01:47</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="$0.80" dealer="0" win="$0" bet="$0.20" rebuy="0" addon="0"/>
+				<player seat="3" name="HefiNebBastet" chips="$5.73" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="5" name="Q2Elena" chips="$5.07" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="6" name="PsyAZ" chips="$0.86" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="8" name="Hudini166" chips="$5.18" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="10" name="NewKidPokerK" chips="$5.98" dealer="0" win="$0.58" bet="$0.40" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="WhiteRiderT" type="2" sum="$0.05" cards="[cards]"/>
+			<action no="1" player="NewKidPokerK" type="1" sum="$0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">S7 S6</cards>
+			<action no="8" player="WhiteRiderT" type="3" sum="$0.05" cards=""/>
+			<cards type="Pocket" player="HefiNebBastet">X X</cards>
+			<action no="3" player="HefiNebBastet" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="Q2Elena">X X</cards>
+			<action no="4" player="Q2Elena" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="PsyAZ">X X</cards>
+			<action no="5" player="PsyAZ" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="Hudini166">X X</cards>
+			<action no="6" player="Hudini166" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="NewKidPokerK">X X</cards>
+			<action no="7" player="NewKidPokerK" type="23" sum="$0.10" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H9 CA H8</cards>
+			<action no="10" player="WhiteRiderT" type="3" sum="$0.10" cards=""/>
+			<action no="9" player="NewKidPokerK" type="5" sum="$0.10" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H7</cards>
+			<action no="12" player="WhiteRiderT" type="0" sum="$0" cards=""/>
+			<action no="11" player="NewKidPokerK" type="5" sum="$0.20" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3546978270">
+		<general>
+			<startdate>2012-12-07 14:02:19</startdate>		  
+			<players>
+				<player seat="1" name="WhiteRiderT" chips="$0.75" dealer="0" win="$0" bet="$0.05" rebuy="0" addon="0"/>
+				<player seat="3" name="b4BysH4rK" chips="$1.63" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="5" name="georginho1" chips="$11.23" dealer="0" win="$0" bet="$0.15" rebuy="0" addon="0"/>
+				<player seat="6" name="dzy23" chips="$0.23" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="8" name="AleX78RX" chips="$0.69" dealer="1" win="$0.56" bet="$0.35" rebuy="0" addon="0"/>
+				<player seat="10" name="5863AM" chips="$1.87" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="WhiteRiderT" type="2" sum="$0.05" cards="[cards]"/>
+			<action no="1" player="5863AM" type="1" sum="$0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="WhiteRiderT">H3 DJ</cards>
+			<action no="8" player="WhiteRiderT" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="b4BysH4rK">X X</cards>
+			<action no="3" player="b4BysH4rK" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="georginho1">X X</cards>
+			<action no="4" player="georginho1" type="3" sum="$0.05" cards=""/>
+			<action no="9" player="georginho1" type="3" sum="$0.10" cards=""/>
+			<cards type="Pocket" player="dzy23">X X</cards>
+			<action no="5" player="dzy23" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="AleX78RX">X X</cards>
+			<action no="6" player="AleX78RX" type="23" sum="$0.15" cards=""/>
+			<cards type="Pocket" player="5863AM">X X</cards>
+			<action no="7" player="5863AM" type="0" sum="$0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">H8 S3 DQ</cards>
+			<action no="10" player="georginho1" type="4" sum="$0" cards=""/>
+			<action no="12" player="georginho1" type="0" sum="$0" cards=""/>
+			<action no="11" player="AleX78RX" type="5" sum="$0.20" cards=""/>
+		</round>
+
+	</game>
+	<game gamecode="3546978444">
+		<general>
+			<startdate>2012-12-07 14:02:28</startdate>		  
+			<players>
+				<player seat="1" name="DirtyHerrie2" chips="$0" dealer="0" win="$1.89" bet="$1.16" rebuy="0" addon="0"/>
+				<player seat="3" name="KingLBJ" chips="$1.95" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="5" name="alwaysSmile" chips="$5.02" dealer="0" win="$0" bet="$0.79" rebuy="0" addon="0"/>
+				<player seat="6" name="WhiteRiderT" chips="$0.75" dealer="0" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="8" name="BuTaMuH1" chips="$5.34" dealer="1" win="$0" bet="$0" rebuy="0" addon="0"/>
+				<player seat="10" name="dzanbb" chips="$18.24" dealer="0" win="$0" bet="$0.02" rebuy="0" addon="0"/>
+			</players>
+		</general>
+		<round no="0">
+			<action no="2" player="DirtyHerrie2" type="2" sum="$0.05" cards="[cards]"/>
+			<action no="1" player="dzanbb" type="1" sum="$0.02" cards="[cards]"/>
+		</round>
+		<round no="1">
+			<cards type="Pocket" player="DirtyHerrie2">X X</cards>
+			<action no="8" player="DirtyHerrie2" type="3" sum="$0.10" cards=""/>
+			<cards type="Pocket" player="KingLBJ">X X</cards>
+			<action no="3" player="KingLBJ" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="alwaysSmile">X X</cards>
+			<action no="4" player="alwaysSmile" type="23" sum="$0.15" cards=""/>
+			<cards type="Pocket" player="WhiteRiderT">SJ H2</cards>
+			<action no="5" player="WhiteRiderT" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="BuTaMuH1">X X</cards>
+			<action no="6" player="BuTaMuH1" type="0" sum="$0" cards=""/>
+			<cards type="Pocket" player="dzanbb">X X</cards>
+			<action no="7" player="dzanbb" type="0" sum="$0" cards=""/>
+		</round>
+		<round no="2">
+			<cards type="Flop" player="">C2 D7 S10</cards>
+			<action no="9" player="DirtyHerrie2" type="4" sum="$0" cards=""/>
+			<action no="11" player="DirtyHerrie2" type="3" sum="$0.16" cards=""/>
+			<action no="10" player="alwaysSmile" type="5" sum="$0.16" cards=""/>
+		</round>
+		<round no="3">
+			<cards type="Turn" player="">H7</cards>
+			<action no="12" player="DirtyHerrie2" type="4" sum="$0" cards=""/>			
+			<action no="13" player="alwaysSmile" type="5" sum="$0.48" cards=""/>
+			<action no="14" player="DirtyHerrie2" type="7" sum="$0.85" cards=""/>
+			<action no="15" player="alwaysSmile" type="0" sum="$0" cards=""/>
+		</round>
+
+	</game>  
+</session>

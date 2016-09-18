@@ -1,0 +1,39 @@
+﻿<Window x:Class="DriveHUD.Application.Views.Popups.PlayerNoteView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Player Note"
+        FontFamily="./Fonts/#Open Sans"
+        Height="195"
+        Width="350"
+        Icon ="/images/drivehud.ico"
+        ResizeMode="NoResize"
+        Foreground="#7D7F84"
+        Background="#1F2124"
+        WindowStartupLocation="CenterScreen" 
+        Topmost="True">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Grid.Column="0"  HorizontalAlignment="Left" Text="Note Text:" Margin="5" />
+
+        <TextBox  
+            Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="5"
+            MaxLength="1000"
+            TextWrapping="Wrap"
+            AcceptsReturn="True"
+            BorderThickness="1" 
+            VerticalContentAlignment="Stretch"
+            Text="{Binding Path=Note, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+            HorizontalContentAlignment="Stretch" />
+
+        <Button Command="{Binding SaveCommand}" Margin="5" Grid.Row="2"  Grid.Column="0" Grid.ColumnSpan="2" Style="{StaticResource ButtonStyle}"  Content="Save" HorizontalAlignment="Right"/>
+    </Grid>
+</Window>
