@@ -41,9 +41,13 @@ namespace DriveHUD.Application.ViewModels.Registration
         private RegistrationState state;
 
         private string serverUrl = string.Empty;
+        private DeployLXLicensingServer server;
 
         public RegistrationViewModel(bool showRegister)
         {
+            server = new DeployLXLicensingServer();
+            server.CookieContainer = new CookieContainer();
+
             licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
 
             title = CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_Title");
@@ -60,9 +64,9 @@ namespace DriveHUD.Application.ViewModels.Registration
         }
 
         private void Initialize()
-        {            
+        {
             licenses = new ObservableCollection<LicenseInfoViewModel>(licenseService.LicenseInfos.Where(x => x.IsRegistered && !x.IsTrial).Select(x => new LicenseInfoViewModel(x)));
-            
+
             if (!licenseService.IsRegistered)
             {
                 if (licenseService.IsTrialExpired)
@@ -121,8 +125,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
         private void InitializeCaptcha()
         {
-            var server = new DeployLXLicensingServer();
-
             byte[] imageData = new byte[0];
 
             try
@@ -810,8 +812,6 @@ namespace DriveHUD.Application.ViewModels.Registration
 
         private void RegisterTrial()
         {
-            var server = new DeployLXLicensingServer();
-
             if (!string.IsNullOrWhiteSpace(serverUrl))
             {
                 server.Url = serverUrl;

@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using System;
 using System.IO;
 using System.Security.Cryptography;
@@ -44,7 +45,7 @@ namespace DriveHUD.Common.Security
         public static bool ValidateFileHash(string file, string hash)
         {
             if (!File.Exists(file) || string.IsNullOrWhiteSpace(hash))
-            {
+            {            
                 return false;
             }
 
@@ -52,7 +53,7 @@ namespace DriveHUD.Common.Security
 
             try
             {
-                using (var fs = new FileStream(file, FileMode.Open))
+                using (var fs = new FileStream(file, FileMode.Open, FileAccess.Read))
                 {
                     var sha1CryptoProvider = new SHA1CryptoServiceProvider();
 
@@ -67,11 +68,11 @@ namespace DriveHUD.Common.Security
 
                     fileHash = sb.ToString();
 
-                    System.Diagnostics.Debug.WriteLine(fileHash);
+                    System.Diagnostics.Debug.WriteLine("{0} - {1}", file, fileHash);                    
                 }
             }
             catch
-            {
+            {                
                 return false;
             }
 

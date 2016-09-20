@@ -4,7 +4,7 @@
      xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
 
   <?ifndef ProductVersion?>
-  <?define ProductVersion = "1.0.3.512" ?>
+  <?define ProductVersion = "1.0.3.514" ?>
   <?endif ?>
 
   <?ifndef ProductName?>
@@ -27,7 +27,7 @@
           Manufacturer="$(var.Manufacturer)"
           Copyright="(c) All rights reserved."
           DisableModify="yes"
-          IconSourceFile="$(var.DriveHUD.Application.TargetDir)..\..\images\drivehud.ico"
+          IconSourceFile="..\DriveHUD.Application\images\drivehud.ico"
           UpgradeCode="d57055f7-9cf4-4582-a873-d606ac3ab658">
 
     <bal:Condition  Message="This software can only be installed on Windows Vista and higher.">
@@ -49,7 +49,7 @@
       Not ProductSHMInstalled
     </bal:Condition>-->
 
-    <Variable Name="EXECUTABLE" bal:Overridable='yes' Value='"$(var.DriveHUD.Application.TargetFileName)"'/>
+    <Variable Name="EXECUTABLE" bal:Overridable='yes' Value='"DriveHUD.Application.exe"'/>
     <Variable Name="RELATIVEEXECUTABLEPATH" bal:Overridable='yes' Value='"$(var.ProductName)"'/>
 
     

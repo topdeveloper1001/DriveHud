@@ -48,6 +48,7 @@ namespace DriveHUD.Application
         internal static ISplashScreen SplashScreen;
         private ManualResetEvent ResetSplashCreated;
         private Thread SplashThread;
+        private const string binDirectory = "bin";
 
         public App()
         {
@@ -123,16 +124,21 @@ namespace DriveHUD.Application
 
         private void ValidateLicenseAssemblies()
         {
-            var assemblies = new string[] { "DHCReg.dll", "DHHReg.dll", "DHOReg.dll" };
-            var assembliesHashes = new string[] { "80f3233c02e7c5db0b553f86c4a6b6dd4681ce56", "5e0ffd7140673cbb3056cd533b095afbf92f0e4a", "e32a976e761508c5d7edca70c886e51582d5d91e" };
-            var assemblySizes = new int[] { 45568, 45568, 43008 };
+            var assemblies = new string[] { "DeployLX.Licensing.v5.dll", "DHCReg.dll", "DHHReg.dll", "DHOReg.dll" };
+            var assembliesHashes = new string[] { "c1d67b8e8d38540630872e9d4e44450ce2944700", "c51e7793a37670b2c2966ddf45ab28e55f7958ae", "0c716338d6bc1a74dcc51207811f8d37e04009c3", "6873f7f5c5fe8f0c5ef8f470e2669ebf8aa2d1ef" };
+            var assemblySizes = new int[] { 1032192, 44032, 43520, 44032 };
 
             for (var i = 0; i < assemblies.Length; i++)
             {
                 var assemblyInfo = new FileInfo(assemblies[i]);
 
-                var isValid = SecurityUtils.ValidateFileHash(assemblies[i], assembliesHashes[i]) && assemblyInfo.Length == assemblySizes[i];
+                if (!assemblyInfo.Exists)
+                {
+                    assemblyInfo = new FileInfo(Path.Combine(binDirectory, assemblies[i]));
+                }               
 
+                var isValid = SecurityUtils.ValidateFileHash(assemblyInfo.FullName, assembliesHashes[i]) && assemblyInfo.Length == assemblySizes[i];
+               
                 if (!isValid)
                 {
                     LogProvider.Log.Error("Application could not be initialized");
