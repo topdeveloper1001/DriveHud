@@ -8,9 +8,17 @@ namespace DriveHUD.Common.Resources
 {
     public static class ResourceStrings
     {
-        public static string AppDataFolder = "Main_AppDataFolder";
         public static string DataExportedMessageResourceString = "Common_DataExported";
         public static string ReplayerHeaderResourceString = "Main_ReplayerHeader";
+
+        #region SystemSettings
+
+        public static string AppDataFolder = "SystemSettings_AppDataFolder";
+        public static string DefaultPlayersFolderName = "SystemSettings_DefaultPlayersFolderName";
+        public static string HeroName = "SystemSettings_HeroName";
+        public static string ActivePlayerFileName = "SystemSettings_ActivePlayerFileName";
+
+        #endregion
 
         #region Context Menu
         public static string HandTagForReview = "Enum_HandTag_ForReview";

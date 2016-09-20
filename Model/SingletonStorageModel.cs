@@ -51,7 +51,7 @@ namespace Model
 
         public void TryLoadHeroPlayer()
         {
-            var heroName = CommonResourceManager.Instance.GetResourceString("SystemSettings_HeroName");
+            var heroName = CommonResourceManager.Instance.GetResourceString(ResourceStrings.HeroName);
             if (PlayerCollection.Contains(heroName))
             {
                 PlayerSelectedItem = PlayerCollection.FirstOrDefault(x => x == heroName);

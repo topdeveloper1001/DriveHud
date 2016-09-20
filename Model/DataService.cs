@@ -1,4 +1,5 @@
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
@@ -422,6 +423,32 @@ namespace Model
 
         }
 
+        public string GetActivePlayer()
+        {
+            string result = string.Empty;
+            string dataPath = StringFormatter.GetActivePlayerFilePath();
+            if (File.Exists(dataPath))
+            {
+                result = File.ReadAllText(dataPath);
+            }
+
+            return result;
+        }
+
+        public void SaveActivePlayer(string playerName)
+        {
+            try
+            {
+                string dataPath = StringFormatter.GetActivePlayerFilePath();
+             
+                File.WriteAllText(dataPath, playerName);
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(ex);
+            }
+        }
+
         private string[] GetPlayerFiles(string playerName)
         {
             if (string.IsNullOrWhiteSpace(playerName))
@@ -438,5 +465,6 @@ namespace Model
 
             return Directory.GetFiles(playerDirectory, "*.stat");
         }
+
     }
 }
