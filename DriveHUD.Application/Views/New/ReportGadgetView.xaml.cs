@@ -69,6 +69,7 @@ namespace DriveHUD.Application.Views
 
                 reportGadgetViewModel.PropertyChanged += ReportGadgetViewModel_PropertyChanged;
                 LoadData();
+                ReportUpdate();
             };
         }
 
