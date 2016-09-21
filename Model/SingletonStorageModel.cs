@@ -30,6 +30,25 @@ namespace Model
 
         #region Methods
 
+        /// <summary>
+        /// Select player with name specified if exists
+        /// </summary>
+        /// <param name="playerName">Player Name</param>
+        /// <param name="loadHeroIfMissing">True if need to select HERO in case when player with specified name does not exist</param>
+        public void TryLoadActivePlayer(string playerName, bool loadHeroIfMissing)
+        {
+            if (PlayerCollection.Contains(playerName))
+            {
+                PlayerSelectedItem = PlayerCollection.FirstOrDefault(x => x == playerName);
+                return;
+            }
+
+            if (loadHeroIfMissing)
+            {
+                TryLoadHeroPlayer();
+            }
+        }
+
         public void TryLoadHeroPlayer()
         {
             var heroName = CommonResourceManager.Instance.GetResourceString("SystemSettings_HeroName");
