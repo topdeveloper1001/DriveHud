@@ -49,6 +49,12 @@ namespace DriveHUD.Application.Security
 
             var registeredLicenses = licenseService.LicenseInfos.Where(x => x.IsRegistered).ToArray();
 
+            // if any license is not trial
+            if (registeredLicenses.Any(x => !x.IsTrial))
+            {
+                registeredLicenses = registeredLicenses.Where(x => !x.IsTrial).ToArray();
+            }
+
             var gameTypes = registeredLicenses.SelectMany(x => ConvertLicenseType(x.LicenseType)).Distinct().ToArray();
 
             userSession = new UserSession
