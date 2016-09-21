@@ -2,10 +2,6 @@
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
-using Model.Data;
-using DriveHUD.Entities;
-using Model.Enums;
-using Model.Filters;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;

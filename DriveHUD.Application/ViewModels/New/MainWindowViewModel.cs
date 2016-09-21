@@ -97,6 +97,8 @@ namespace DriveHUD.Application.ViewModels
             StorageModel.PropertyChanged += StorageModel_PropertyChanged;
 
             ProgressViewModel = new ProgressViewModel();
+
+            StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
         }
 
         private void InitializeBindings()
@@ -187,11 +189,14 @@ namespace DriveHUD.Application.ViewModels
             UpdateCurrentView();
         }
 
-        private void HandleSettingsChangedEvent(EventArgs args)
+        private void HandleSettingsChangedEvent(SettingsUpdatedEventArgs args)
         {
-            StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-            StorageModel.PlayerCollection = new ObservableCollection<string>(dataService.GetPlayersList());
-
+            if (args.IsUpdatePlayersCollection)
+            {
+                StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
+                StorageModel.PlayerCollection = new ObservableCollection<string>(dataService.GetPlayersList());
+                StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
+            }
         }
 
         private void UpdateCurrentView(EventArgs args)
@@ -337,7 +342,7 @@ namespace DriveHUD.Application.ViewModels
                 playerHudContent.HudElement.PlayerName = playerName;
                 playerHudContent.HudElement.PokerSiteId = (short)site;
                 playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
-                playerHudContent.HudElement.SessionHands = sessionData.TotalHands;
+                playerHudContent.HudElement.TotalHands = item.TotalHands;
 
                 var sessionMoney = sessionStatisticCollection.FirstOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                 playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
@@ -406,6 +411,7 @@ namespace DriveHUD.Application.ViewModels
                         statInfo.StatInfoToolTipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
                         foreach (var tooltip in statInfo.StatInfoToolTipCollection)
                         {
+                            AssignStatInfoValues(item, tooltip.CategoryStat);
                             foreach (var stat in tooltip.StatsCollection)
                             {
                                 AssignStatInfoValues(item, stat);
@@ -665,6 +671,7 @@ namespace DriveHUD.Application.ViewModels
 
             IsTrial = licenseService.IsTrial;
             IsUpgradable = licenseService.IsUpgradable;
+            UpdateHeader();
         }
 
         private void Purchase()
@@ -713,7 +720,17 @@ namespace DriveHUD.Application.ViewModels
             get
             {
                 var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
-                var licenseStrings = licenseService.LicenseInfos.Where(x => x.IsRegistered).Select(x => x.License.Edition);
+                IEnumerable<string> licenseStrings;
+
+                if (licenseService.LicenseInfos.Any(x => x.IsRegistered && !x.IsTrial))
+                {
+                    licenseStrings = licenseService.LicenseInfos.Where(x => x.IsRegistered && !x.IsTrial).Select(x => x.License.Edition);
+                }
+                else
+                {
+                    licenseStrings = licenseService.LicenseInfos.Where(x => x.IsRegistered).Select(x => x.License.Edition);
+                }
+
                 return string.Format(CommonResourceManager.Instance.GetResourceString("Common_ApplicationTitle"), App.Version, string.Join(" & ", licenseStrings));
             }
         }
@@ -943,8 +960,7 @@ namespace DriveHUD.Application.ViewModels
         {
             HudViewModel.Stop();
             importerSessionCacheService.End();
-
-            ReportGadgetViewModel.LayoutSave_IsRequired = true;
+            dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem);
 
             // flush betonline cash
             var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
