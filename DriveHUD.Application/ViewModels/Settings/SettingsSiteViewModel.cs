@@ -3,6 +3,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Model;
+using Model.Enums;
 using Model.Settings;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,19 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.TigerGaming, "Tigergaming" },
                 { EnumPokerSites.SportsBetting, "Sportbetting.ag" }
             };
+
+            TableTypeDictionary = new Dictionary<EnumTableType, string>()
+            {
+                { EnumTableType.HU, "2-max" },
+                { EnumTableType.Three, "3-max" },
+                { EnumTableType.Four, "4-max" },
+                { EnumTableType.Six, "6-max" },
+                { EnumTableType.Eight, "8-max" },
+                { EnumTableType.Nine, "9-max" },
+                { EnumTableType.Ten, "10-max" }
+            };
+
+            SelectedTableType = TableTypeDictionary.FirstOrDefault().Key;
         }
 
         public void InitializeCommands()
@@ -48,7 +62,9 @@ namespace DriveHUD.Application.ViewModels.Settings
         #region Properties
 
         private Dictionary<EnumPokerSites, string> _pokerSitesDictionary;
+        private Dictionary<EnumTableType, string> _tableTypeDictionary;
         private EnumPokerSites _selectedSiteType;
+        private EnumTableType _selectedTableType;
         private SiteModel _selectedSite;
         private string _selectedHandHistoryLocation;
 
@@ -61,13 +77,33 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
+        public Dictionary<EnumTableType, string> TableTypeDictionary
+        {
+            get { return _tableTypeDictionary; }
+            set
+            {
+                SetProperty(ref _tableTypeDictionary, value);
+            }
+        }
+
         public EnumPokerSites SelectedSiteType
         {
             get { return _selectedSiteType; }
             set
             {
                 SelectedSite = SettingsModel?.SitesModelList.FirstOrDefault(x => x.PokerSite == value);
+                SelectedTableType = TableTypeDictionary.FirstOrDefault().Key;
+
                 SetProperty(ref _selectedSiteType, value);
+            }
+        }
+
+        public EnumTableType SelectedTableType
+        {
+            get { return _selectedTableType; }
+            set
+            {
+                SetProperty(ref _selectedTableType, value);
             }
         }
 

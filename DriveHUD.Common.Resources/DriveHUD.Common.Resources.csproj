@@ -672,7 +672,22 @@
     <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-OH-BOL-S.xml" />
     <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-OH-BOL-T.xml" />
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> 
+  <ItemGroup>
+    <Resource Include="images\settings\pokerstars-10max.png" />
+    <Resource Include="images\settings\10max.png" />
+    <Resource Include="images\settings\2max.png" />
+    <Resource Include="images\settings\3max.png" />
+    <Resource Include="images\settings\4max.png" />
+    <Resource Include="images\settings\6max.png" />
+    <Resource Include="images\settings\8max.png" />
+    <Resource Include="images\settings\pokerstars-9max.png" />
+    <Resource Include="images\settings\bovada-6max.png" />
+    <Resource Include="images\settings\bovada-9max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\settings\Player.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>
   </PropertyGroup>

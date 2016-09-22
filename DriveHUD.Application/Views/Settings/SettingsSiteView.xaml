@@ -26,12 +26,12 @@
         </Style>
 
         <Style x:Key="PokerSiteRadDiagramStyle" TargetType="telerik:RadDiagram">
-            <Setter Property="AllowCopy" Value="False" />
+            <!--<Setter Property="AllowCopy" Value="False" />
             <Setter Property="AllowCut" Value="False" />
             <Setter Property="AllowDelete" Value="False" />
             <Setter Property="AllowPaste" Value="False" />
             <Setter Property="IsConnectorsManipulationEnabled" Value="False" />
-            <Setter Property="IsEditable" Value="False" />
+            <Setter Property="IsEditable" Value="False" />-->
             <Setter Property="IsBackgroundSurfaceVisible" Value="True" />
             <Setter Property="IsSnapToGridEnabled" Value="False" />
             <Setter Property="IsSnapToItemsEnabled" Value="False"/>
@@ -68,8 +68,9 @@
 
         <Separator Margin="5 15" />
 
-        <control:ComboBoxEx HorizontalAlignment="Center" Width="230" ItemsSource="{Binding PokerSitesDictionary}"
+        <control:ComboBoxEx HorizontalAlignment="Center" Width="230" 
                             DisplayMemberPath="Value"
+                            ItemsSource="{Binding PokerSitesDictionary}"
                             SelectedValue="{Binding SelectedSiteType}"
                             SelectedValuePath="Key">
             <control:ComboBoxEx.Style>
@@ -160,25 +161,12 @@
                     </telerik:RadDiagram>
 
                     <control:ComboBoxEx HorizontalAlignment="Center"
-                                    VerticalAlignment="Top"
-                                    Width="150" Style="{StaticResource PokersiteComboboxStyle}">
-                        <ComboBox.Items>
-                            <sys:String>
-                                2MAX
-                            </sys:String>
-                            <sys:String>
-                                6MAX
-                            </sys:String>
-                            <sys:String>
-                                8MAX
-                            </sys:String>
-                            <sys:String>
-                                9MAX
-                            </sys:String>
-                            <sys:String>
-                                10MAX
-                            </sys:String>
-                        </ComboBox.Items>
+                                        VerticalAlignment="Top"
+                                        Width="150" Style="{StaticResource PokersiteComboboxStyle}"
+                                        DisplayMemberPath="Value"
+                                        ItemsSource="{Binding TableTypeDictionary}"
+                                        SelectedValue="{Binding SelectedTableType}"
+                                        SelectedValuePath="Key">
                     </control:ComboBoxEx>
                 </Grid>
             </Border>
