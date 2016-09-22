@@ -2,9 +2,11 @@
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Enums;
 using Model.Settings;
+using Model.Site;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -37,18 +39,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.SportsBetting, "Sportbetting.ag" }
             };
 
-            TableTypeDictionary = new Dictionary<EnumTableType, string>()
-            {
-                { EnumTableType.HU, "2-max" },
-                { EnumTableType.Three, "3-max" },
-                { EnumTableType.Four, "4-max" },
-                { EnumTableType.Six, "6-max" },
-                { EnumTableType.Eight, "8-max" },
-                { EnumTableType.Nine, "9-max" },
-                { EnumTableType.Ten, "10-max" }
-            };
-
-            SelectedTableType = TableTypeDictionary.FirstOrDefault().Key;
+            //
         }
 
         public void InitializeCommands()
@@ -91,8 +82,8 @@ namespace DriveHUD.Application.ViewModels.Settings
             get { return _selectedSiteType; }
             set
             {
+                UpdateTableTypeDictionary(value);
                 SelectedSite = SettingsModel?.SitesModelList.FirstOrDefault(x => x.PokerSite == value);
-                SelectedTableType = TableTypeDictionary.FirstOrDefault().Key;
 
                 SetProperty(ref _selectedSiteType, value);
             }
@@ -171,6 +162,20 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         #region Infrastructure
 
+        private void UpdateTableTypeDictionary(EnumPokerSites pokerSite)
+        {
+            try
+            {
+                var configuration = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(pokerSite);
+                TableTypeDictionary = configuration.TableTypes.ToDictionary(x => x, x => GetTableTypeString(x));
+                SelectedTableType = TableTypeDictionary.FirstOrDefault().Key;
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, $"Failed to load configuration for {pokerSite}.", ex);
+            }
+        }
+
         private void SelectDirectory(object obj)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
@@ -219,6 +224,11 @@ namespace DriveHUD.Application.ViewModels.Settings
         private void AutoDetectHandHistoryLocation(object obj)
         {
 
+        }
+
+        private string GetTableTypeString(EnumTableType tableType)
+        {
+            return $"{(byte)tableType}-max";
         }
 
         #endregion

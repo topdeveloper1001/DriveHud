@@ -27,6 +27,9 @@ namespace DriveHUD.Application.TableConfigurators
         private readonly Point tablePosition = new Point(48.0, 50.0);
         private readonly Point activeIndicatorRelativePosition = new Point(10, 33);
 
+        protected abstract Dictionary<int, double[,]> PredefinedPlayerPositions { get; }
+
+
         public void ConfigureTable(RadDiagram diagram, SiteModel viewModel, EnumTableType tableType)
         {
             diagram.Clear();
@@ -44,8 +47,64 @@ namespace DriveHUD.Application.TableConfigurators
 
             diagram.AddShape(table);
 
-          //  CreatePlayerLabels(diagram, viewModel, seats);
+            CreatePlayerLabels(diagram, (int)tableType);
         }
+
+        private void CreatePlayerLabels(RadDiagram diagram, int seats)
+        {
+            var positions = PredefinedPlayerPositions[seats];
+
+
+            for (int i = 0; i < seats; i++)
+            {
+                RadDiagramShape player = new RadDiagramShape()
+                {
+                    Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundPlayerImage))),
+                    Height = PLAYER_HEIGHT,
+                    Width = PLAYER_WIDTH,
+                    StrokeThickness = 0,
+                    BorderThickness = new Thickness(0),
+                    ToolTip = i,
+                    //IsResizingEnabled = false,
+                    //IsRotationEnabled = false,
+                    //IsDraggingEnabled = false,
+                    //IsManipulationEnabled = false,
+                    //IsManipulationAdornerVisible = false,
+                    //IsHitTestVisible = true,
+                    FontSize = 13,
+                };
+                player.X = positions[i, 0];
+                player.Y = positions[i, 1];
+
+                var indicator = AddActiveIndicator(player);
+
+                diagram.AddShape(player);
+                diagram.AddShape(indicator);
+            }
+        }
+
+        private RadDiagramShape AddActiveIndicator(RadDiagramShape player)
+        {
+            RadDiagramShape indicator = new RadDiagramShape()
+            {
+                Height = ACTIVE_INDICATOR_HEIGHT,
+                Width = ACTIVE_INDICATOR_WIDTH,
+                StrokeThickness = 0,
+                BorderThickness = new Thickness(0),
+                IsResizingEnabled = false,
+                IsRotationEnabled = false,
+                IsDraggingEnabled = false,
+                IsManipulationEnabled = false,
+                IsManipulationAdornerVisible = false,
+                IsHitTestVisible = true,
+                FontSize = 13,
+                X = player.X + activeIndicatorRelativePosition.X,
+                Y = player.Y + activeIndicatorRelativePosition.Y
+            };
+
+            return indicator;
+        }
+
 
         protected abstract string GetBackgroundImage(EnumTableType tableType);
     }

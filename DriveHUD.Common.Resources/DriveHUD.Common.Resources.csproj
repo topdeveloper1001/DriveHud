@@ -680,12 +680,14 @@
     <Resource Include="images\settings\4max.png" />
     <Resource Include="images\settings\6max.png" />
     <Resource Include="images\settings\8max.png" />
-    <Resource Include="images\settings\pokerstars-9max.png" />
     <Resource Include="images\settings\bovada-6max.png" />
     <Resource Include="images\settings\bovada-9max.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\settings\Player.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\settings\pokerstars-9max.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
