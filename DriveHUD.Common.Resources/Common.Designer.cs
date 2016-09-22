@@ -142,6 +142,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Auto Detect.
+        /// </summary>
+        internal static string Common_AutoDetect {
+            get {
+                return ResourceManager.GetString("Common_AutoDetect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Auto generate opponent hand  ranges.
         /// </summary>
         internal static string Common_AutoGenerateHand {
@@ -318,6 +327,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_DataExported {
             get {
                 return ResourceManager.GetString("Common_DataExported", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete.
+        /// </summary>
+        internal static string Common_Delete {
+            get {
+                return ResourceManager.GetString("Common_Delete", resourceCulture);
             }
         }
         

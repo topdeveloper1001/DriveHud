@@ -1,9 +1,12 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
 using Model;
 using Model.Settings;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -19,14 +22,72 @@ namespace DriveHUD.Application.ViewModels.Settings
         public SettingsSiteViewModel(string name) : base(name)
         {
             Initialize();
+            InitializeCommands();
         }
 
         public void Initialize()
         {
+            PokerSitesDictionary = new Dictionary<EnumPokerSites, string>()
+            {
+                { EnumPokerSites.Bovada, "Bodog / Ignition" },
+                { EnumPokerSites.BetOnline, "BetOnline" },
+                { EnumPokerSites.PokerStars, "Pokerstars" },
+                { EnumPokerSites.TigerGaming, "Tigergaming" },
+                { EnumPokerSites.SportsBetting, "Sportbetting.ag" }
+            };
+        }
+
+        public void InitializeCommands()
+        {
             SelectDirectoryCommand = new RelayCommand(SelectDirectory);
+            AddHandHistoryLocationCommand = new RelayCommand(AddHandHistoryLocation);
+            DeleteHandHistoryLocationCommand = new RelayCommand(DeleteHandHistoryLocation);
+            AutoDetectHandHistoryLocationCommand = new RelayCommand(AutoDetectHandHistoryLocation);
         }
 
         #region Properties
+
+        private Dictionary<EnumPokerSites, string> _pokerSitesDictionary;
+        private EnumPokerSites _selectedSiteType;
+        private SiteModel _selectedSite;
+        private string _selectedHandHistoryLocation;
+
+        public Dictionary<EnumPokerSites, string> PokerSitesDictionary
+        {
+            get { return _pokerSitesDictionary; }
+            set
+            {
+                SetProperty(ref _pokerSitesDictionary, value);
+            }
+        }
+
+        public EnumPokerSites SelectedSiteType
+        {
+            get { return _selectedSiteType; }
+            set
+            {
+                SelectedSite = SettingsModel?.SitesModelList.FirstOrDefault(x => x.PokerSite == value);
+                SetProperty(ref _selectedSiteType, value);
+            }
+        }
+
+        public SiteModel SelectedSite
+        {
+            get { return _selectedSite; }
+            set
+            {
+                SetProperty(ref _selectedSite, value);
+            }
+        }
+
+        public string SelectedHandHistoryLocation
+        {
+            get { return _selectedHandHistoryLocation; }
+            set
+            {
+                SetProperty(ref _selectedHandHistoryLocation, value);
+            }
+        }
 
         public bool IsCustomProcessedDataLocationEnabled
         {
@@ -66,36 +127,13 @@ namespace DriveHUD.Application.ViewModels.Settings
         #region ICommand
 
         public ICommand SelectDirectoryCommand { get; set; }
+        public ICommand AddHandHistoryLocationCommand { get; set; }
+        public ICommand DeleteHandHistoryLocationCommand { get; set; }
+        public ICommand AutoDetectHandHistoryLocationCommand { get; set; }
 
         #endregion
 
         #region Infrastructure
-
-        /// <summary>
-        /// Checks if it is possible to write to the directory specified
-        /// </summary>
-        /// <param name="dirPath"></param>
-        /// <param name="throwIfFails"></param>
-        /// <returns></returns>
-        private bool IsDirectoryWritable(string dirPath, bool throwIfFails = false)
-        {
-            try
-            {
-                using (FileStream fs = File.Create(Path.Combine(dirPath, Path.GetRandomFileName()), 1, FileOptions.DeleteOnClose))
-                { }
-                return true;
-            }
-            catch (Exception ex)
-            {
-                LogProvider.Log.Error(this, $"Can't write to the directory {dirPath}", ex);
-
-                if (throwIfFails)
-                    throw;
-                else
-                    return false;
-            }
-        }
-
 
         private void SelectDirectory(object obj)
         {
@@ -105,7 +143,7 @@ namespace DriveHUD.Application.ViewModels.Settings
 
             if (result == DialogResult.OK)
             {
-                if (IsDirectoryWritable(dialog.SelectedPath))
+                if (FileHelper.IsDirectoryWritable(dialog.SelectedPath))
                 {
                     CustomProcessedDataLocation = dialog.SelectedPath;
                 }
@@ -114,6 +152,36 @@ namespace DriveHUD.Application.ViewModels.Settings
                     System.Windows.MessageBox.Show("Unable to write to the directory specified");
                 }
             }
+
+        }
+
+        private void AddHandHistoryLocation(object obj)
+        {
+            FolderBrowserDialog dialog = new FolderBrowserDialog();
+
+            var result = dialog.ShowDialog(new Form { TopMost = true });
+
+            if (result == DialogResult.OK)
+            {
+                if (SelectedSite.HandHistoryLocationList == null)
+                {
+                    SelectedSite.HandHistoryLocationList = new ObservableCollection<string>();
+                }
+
+                SelectedSite.HandHistoryLocationList.Add(dialog.SelectedPath);
+            }
+        }
+
+        private void DeleteHandHistoryLocation(object obj)
+        {
+            if (SelectedHandHistoryLocation != null)
+            {
+                SelectedSite.HandHistoryLocationList.Remove(SelectedHandHistoryLocation);
+            }
+        }
+
+        private void AutoDetectHandHistoryLocation(object obj)
+        {
 
         }
 

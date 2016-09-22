@@ -23,7 +23,7 @@ namespace Model.Settings
         [XmlElement("Database")]
         public DatabaseSettings DatabaseSettings { get; set; }
 
-        [XmlElement("ReferredSeat")]
+        [XmlElement("PreferredSeat")]
         public PreferredSeatSettingsModel PreferredSeatSettings { get; set; }
 
         [XmlElement("SiteSettings")]

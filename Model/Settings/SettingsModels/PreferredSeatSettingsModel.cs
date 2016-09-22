@@ -31,7 +31,6 @@ namespace Model.Settings
     {
         private EnumTableType _tableType;
         private EnumPokerSites _pokerSite;
-        private EnumGameType _gameType;
         private bool _isPreferredSeatEnabled = false;
         private int _preferredSeat = -1;
 

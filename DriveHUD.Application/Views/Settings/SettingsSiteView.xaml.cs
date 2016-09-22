@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DriveHUD.Application.TableConfigurators;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace DriveHUD.Application.Views.Settings
         public SettingsSiteView()
         {
             InitializeComponent();
+
+            Configurator.ConfigureTable(diagram, new ViewModels.FilterStandardViewModel(), 6);
+        }
+
+        private IFilterTableConfigurator Configurator
+        {
+            get { return new FilterBaseTableConfigurator(); }
+        }
+
+        private void OnDiagramViewportChanged(object sender, Telerik.Windows.Diagrams.Core.PropertyEventArgs<Rect> e)
+        {
+            diagram.BringIntoView(new Rect(1, 1, e.NewValue.Width, e.NewValue.Height), false);
         }
     }
 }
