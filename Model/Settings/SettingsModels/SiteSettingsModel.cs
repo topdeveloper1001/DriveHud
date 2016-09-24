@@ -26,20 +26,12 @@ namespace Model.Settings
             IsCustomProcessedDataLocationEnabled = false;
             CustomProcessedDataLocation = StringFormatter.GetAppDataFolderPath();
 
-
             var sites = new EnumPokerSites[] { EnumPokerSites.Bovada, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars };
-            var sitesModelList = new List<SiteModel>();
-            foreach (var site in sites)
+            SitesModelList = sites.Select(x => new SiteModel
             {
-                sitesModelList.Add(new SiteModel()
-                {
-                    PokerSite = site,
-                    HandHistoryLocationList = new ObservableCollection<string>()
-                });
-            }
-
-            SitesModelList = sitesModelList.ToArray();
-
+                PokerSite = x,
+                HandHistoryLocationList = new ObservableCollection<string>()
+            }).ToArray();
         }
 
         public override object Clone()

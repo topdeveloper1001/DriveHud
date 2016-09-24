@@ -38,8 +38,6 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.TigerGaming, "Tigergaming" },
                 { EnumPokerSites.SportsBetting, "Sportbetting.ag" }
             };
-
-            //
         }
 
         public void InitializeCommands()
@@ -57,6 +55,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         private EnumPokerSites _selectedSiteType;
         private EnumTableType _selectedTableType;
         private SiteModel _selectedSite;
+        private SiteViewModel _siteViewModel;
         private string _selectedHandHistoryLocation;
 
         public Dictionary<EnumPokerSites, string> PokerSitesDictionary
@@ -104,6 +103,16 @@ namespace DriveHUD.Application.ViewModels.Settings
             set
             {
                 SetProperty(ref _selectedSite, value);
+                SelectedSiteViewModel = new SiteViewModel(SelectedSite);
+            }
+        }
+
+        public SiteViewModel SelectedSiteViewModel
+        {
+            get { return _siteViewModel; }
+            set
+            {
+                SetProperty(ref _siteViewModel, value);
             }
         }
 
@@ -223,7 +232,7 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         private void AutoDetectHandHistoryLocation(object obj)
         {
-
+            throw new NotImplementedException();
         }
 
         private string GetTableTypeString(EnumTableType tableType)
@@ -232,6 +241,38 @@ namespace DriveHUD.Application.ViewModels.Settings
         }
 
         #endregion
+    }
+
+    public class SiteViewModel : BaseViewModel
+    {
+        private readonly SiteModel SiteModel;
+
+        public SiteViewModel(SiteModel siteModel)
+        {
+            this.SiteModel = siteModel;
+        }
+
+        private int _preferredSeat;
+        private bool _isPreferredSeatEnabled;
+
+        public int PreferredSeat
+        {
+            get { return _preferredSeat; }
+            set
+            {
+                SetProperty(ref _preferredSeat, value);
+            }
+        }
+
+        public bool IsPreferredSeatEnabled
+        {
+            get { return _isPreferredSeatEnabled; }
+            set
+            {
+                SetProperty(ref _isPreferredSeatEnabled, value);
+            }
+        }
 
     }
+
 }

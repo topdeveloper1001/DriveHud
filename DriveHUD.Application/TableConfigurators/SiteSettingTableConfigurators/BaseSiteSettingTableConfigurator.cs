@@ -10,6 +10,12 @@ using System.Windows.Navigation;
 using System.Windows.Media.Imaging;
 using System.Windows.Media;
 using System.Windows;
+using System.Windows.Input;
+using DriveHUD.Application.ViewModels.Settings;
+using System.Windows.Data;
+using DriveHUD.Common.Reflection;
+using DriveHUD.Application.ValueConverters;
+using DriveHUD.Common.Wpf.Converters;
 
 namespace DriveHUD.Application.TableConfigurators
 {
@@ -30,7 +36,7 @@ namespace DriveHUD.Application.TableConfigurators
         protected abstract Dictionary<int, double[,]> PredefinedPlayerPositions { get; }
 
 
-        public void ConfigureTable(RadDiagram diagram, SiteModel viewModel, EnumTableType tableType)
+        public void ConfigureTable(RadDiagram diagram, SettingsSiteViewModel viewModel, EnumTableType tableType)
         {
             diagram.Clear();
 
@@ -47,13 +53,12 @@ namespace DriveHUD.Application.TableConfigurators
 
             diagram.AddShape(table);
 
-            CreatePlayerLabels(diagram, (int)tableType);
+            CreatePlayerLabels(diagram, viewModel, (int)tableType);
         }
 
-        private void CreatePlayerLabels(RadDiagram diagram, int seats)
+        private void CreatePlayerLabels(RadDiagram diagram, SettingsSiteViewModel viewModel, int seats)
         {
             var positions = PredefinedPlayerPositions[seats];
-
 
             for (int i = 0; i < seats; i++)
             {
@@ -65,25 +70,31 @@ namespace DriveHUD.Application.TableConfigurators
                     StrokeThickness = 0,
                     BorderThickness = new Thickness(0),
                     ToolTip = i,
-                    //IsResizingEnabled = false,
-                    //IsRotationEnabled = false,
-                    //IsDraggingEnabled = false,
-                    //IsManipulationEnabled = false,
-                    //IsManipulationAdornerVisible = false,
-                    //IsHitTestVisible = true,
+                    IsResizingEnabled = false,
+                    IsRotationEnabled = false,
+                    IsDraggingEnabled = false,
+                    IsManipulationEnabled = false,
+                    IsManipulationAdornerVisible = false,
+                    IsHitTestVisible = true,
                     FontSize = 13,
+                    DataContext = viewModel.SelectedSiteViewModel,
+                    Tag = i + 1,
+                    Cursor = Cursors.Hand
                 };
                 player.X = positions[i, 0];
                 player.Y = positions[i, 1];
 
-                var indicator = AddActiveIndicator(player);
+                var indicator = AddActiveIndicator(player, viewModel, i + 1);
+
+                player.MouseLeftButtonUp += PlayerControl_MouseLeftButtonUp;
+                indicator.MouseLeftButtonUp += PlayerControl_MouseLeftButtonUp;
 
                 diagram.AddShape(player);
                 diagram.AddShape(indicator);
             }
         }
 
-        private RadDiagramShape AddActiveIndicator(RadDiagramShape player)
+        private RadDiagramShape AddActiveIndicator(RadDiagramShape player, SettingsSiteViewModel viewModel, int seat)
         {
             RadDiagramShape indicator = new RadDiagramShape()
             {
@@ -99,10 +110,40 @@ namespace DriveHUD.Application.TableConfigurators
                 IsHitTestVisible = true,
                 FontSize = 13,
                 X = player.X + activeIndicatorRelativePosition.X,
-                Y = player.Y + activeIndicatorRelativePosition.Y
+                Y = player.Y + activeIndicatorRelativePosition.Y,
+                DataContext = viewModel.SelectedSiteViewModel,
+                Tag = seat,
+                Cursor = Cursors.Hand
             };
 
+            BindingOperations.ClearBinding(indicator, RadDiagramShape.BackgroundProperty);
+            Binding backgroundBinding = new Binding() { Path = new PropertyPath(ReflectionHelper.GetPath<SiteViewModel>(o => o.PreferredSeat)), Mode = BindingMode.TwoWay, Converter = new ParameterBooleanToBrushConverter(), ConverterParameter = seat };
+            indicator.SetBinding(RadDiagramShape.BackgroundProperty, backgroundBinding);
+
             return indicator;
+        }
+
+        private void PlayerControl_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
+        {
+            var indicator = (sender as RadDiagramShape);
+            if (indicator != null)
+            {
+                int seat = -1;
+                var viewModel = indicator.DataContext as SiteViewModel;
+                if (int.TryParse(indicator.Tag.ToString(), out seat) && (viewModel != null))
+                {
+                    if (viewModel.PreferredSeat != seat)
+                    {
+                        viewModel.PreferredSeat = seat;
+                        viewModel.IsPreferredSeatEnabled = true;
+                    }
+                    else
+                    {
+                        viewModel.PreferredSeat = -1;
+                        viewModel.IsPreferredSeatEnabled = false;
+                    }
+                }
+            }
         }
 
 

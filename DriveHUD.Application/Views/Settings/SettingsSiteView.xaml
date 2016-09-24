@@ -26,12 +26,12 @@
         </Style>
 
         <Style x:Key="PokerSiteRadDiagramStyle" TargetType="telerik:RadDiagram">
-            <!--<Setter Property="AllowCopy" Value="False" />
+            <Setter Property="AllowCopy" Value="False" />
             <Setter Property="AllowCut" Value="False" />
             <Setter Property="AllowDelete" Value="False" />
             <Setter Property="AllowPaste" Value="False" />
             <Setter Property="IsConnectorsManipulationEnabled" Value="False" />
-            <Setter Property="IsEditable" Value="False" />-->
+            <Setter Property="IsEditable" Value="False" />
             <Setter Property="IsBackgroundSurfaceVisible" Value="True" />
             <Setter Property="IsSnapToGridEnabled" Value="False" />
             <Setter Property="IsSnapToItemsEnabled" Value="False"/>

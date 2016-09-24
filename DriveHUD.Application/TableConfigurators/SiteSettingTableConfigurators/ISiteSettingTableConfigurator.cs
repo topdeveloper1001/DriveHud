@@ -1,4 +1,5 @@
-﻿using Model.Enums;
+﻿using DriveHUD.Application.ViewModels.Settings;
+using Model.Enums;
 using Model.Settings;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,6 @@ namespace DriveHUD.Application.TableConfigurators
 {
     internal interface ISiteSettingTableConfigurator
     {
-        void ConfigureTable(RadDiagram diagram, SiteModel viewModel, EnumTableType tableType);
+        void ConfigureTable(RadDiagram diagram, SettingsSiteViewModel viewModel, EnumTableType tableType);
     }
 }

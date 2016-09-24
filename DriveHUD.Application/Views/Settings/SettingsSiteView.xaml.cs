@@ -38,7 +38,7 @@ namespace DriveHUD.Application.Views.Settings
                 ViewModel.PropertyChanged -= ViewModel_PropertyChanged;
                 ViewModel.PropertyChanged += ViewModel_PropertyChanged;
 
-                Configurator?.ConfigureTable(diagram, ViewModel.SelectedSite, ViewModel.SelectedTableType);
+                Configurator?.ConfigureTable(diagram, ViewModel, ViewModel.SelectedTableType);
             };
         }
 
@@ -47,7 +47,7 @@ namespace DriveHUD.Application.Views.Settings
             if (e.PropertyName == nameof(SettingsSiteViewModel.SelectedSiteType)
                 || e.PropertyName == nameof(SettingsSiteViewModel.SelectedTableType))
             {
-                Configurator?.ConfigureTable(diagram, ViewModel.SelectedSite, ViewModel.SelectedTableType);
+                Configurator?.ConfigureTable(diagram, ViewModel, ViewModel.SelectedTableType);
             }
         }
 
