@@ -39,5 +39,11 @@ namespace Model.Site
         TimeSpan TimeZoneOffset { get; set; }
 
         #endregion
+
+        #region Methods
+
+        string[] GetHandHistoryFolders();
+
+        #endregion
     }
 }

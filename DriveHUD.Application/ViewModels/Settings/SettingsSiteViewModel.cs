@@ -66,6 +66,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         private SiteModel _selectedSite;
         private SiteViewModel _siteViewModel;
         private string _selectedHandHistoryLocation;
+        private bool _isPreferredSeatingVisible;
 
         public Dictionary<EnumPokerSites, string> PokerSitesDictionary
         {
@@ -92,6 +93,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             {
                 UpdateTableTypeDictionary(value);
                 UpdateSelectedSite(value);
+                IsPreferredSeatingVisible = (value != EnumPokerSites.BetOnline);
 
                 SetProperty(ref _selectedSiteType, value);
             }
@@ -168,6 +170,15 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
         }
 
+        public bool IsPreferredSeatingVisible
+        {
+            get { return _isPreferredSeatingVisible; }
+            set
+            {
+                SetProperty(ref _isPreferredSeatingVisible, value);
+            }
+        }
+
         #endregion
 
         #region ICommand
@@ -228,7 +239,10 @@ namespace DriveHUD.Application.ViewModels.Settings
                     SelectedSite.HandHistoryLocationList = new ObservableCollection<string>();
                 }
 
-                SelectedSite.HandHistoryLocationList.Add(dialog.SelectedPath);
+                if (!SelectedSite.HandHistoryLocationList.Any(x => x == dialog.SelectedPath))
+                {
+                    SelectedSite.HandHistoryLocationList.Add(dialog.SelectedPath);
+                }
             }
         }
 
@@ -242,7 +256,8 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         private void AutoDetectHandHistoryLocation(object obj)
         {
-            throw new NotImplementedException();
+            var folders = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(SelectedSiteType).GetHandHistoryFolders();
+            SelectedSite.HandHistoryLocationList.AddRange(folders.Except(SelectedSite.HandHistoryLocationList));
         }
 
         private string GetTableTypeString(EnumTableType tableType)

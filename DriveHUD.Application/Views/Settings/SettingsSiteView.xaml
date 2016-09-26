@@ -8,9 +8,11 @@
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              mc:Ignorable="d" 
              xmlns:control="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
              d:DesignHeight="600" d:DesignWidth="660.625">
 
     <UserControl.Resources>
+        
         <Style x:Key="PokersiteComboboxStyle" TargetType="{x:Type control:ComboBoxEx}" BasedOn="{StaticResource {x:Type control:ComboBoxEx}}">
             <Setter Property="Margin" Value="0 5 0 0"/>
             <Setter Property="MinWidth" Value="30"/>
@@ -146,9 +148,11 @@
 
             <Separator Margin="5 15" />
 
-            <TextBlock Text="Preferred Seating:" Style="{StaticResource Title_H1}" />
+            <TextBlock Text="Preferred Seating:" Style="{StaticResource Title_H1}" 
+                       Visibility="{Binding IsPreferredSeatingVisible, Converter={StaticResource BoolToVisibilityConverter}}" />
 
-            <Border CornerRadius="2" Margin="5" Background="{StaticResource BackgroundBrush3}" Height="275">
+            <Border CornerRadius="2" Margin="5" Background="{StaticResource BackgroundBrush3}" Height="275" 
+                    Visibility="{Binding IsPreferredSeatingVisible, Converter={StaticResource BoolToVisibilityConverter}}">
                 <Grid>
                     <telerik:RadDiagram x:Name="diagram"
 									BorderThickness="0" AllowDrop="False"

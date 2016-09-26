@@ -17,6 +17,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System.Linq;
 using DriveHUD.Entities;
+using System.IO;
 
 namespace Model.Site
 {
@@ -80,6 +81,11 @@ namespace Model.Site
         {
             get;
             set;
+        }
+
+        public string[] GetHandHistoryFolders()
+        {
+            return new string[] { };
         }
     }
 }
