@@ -55,7 +55,7 @@ namespace DriveHUD.Application.ViewModels
             model.RelativePosition = RelativePosition;
             model.StartPosition = StartPosition;
             model.HudElements = new ObservableCollection<HudElementViewModel>(HudElements.Select(x => x.Clone()));
-            model.TableSeatAreaCollection = new ObservableCollection<ITableSeatArea>(); //ignore
+            model.TableSeatAreaCollection = new ObservableCollection<ITableSeatArea>();
 
             return model;
         }

@@ -17,6 +17,7 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using System.Linq;
 using DriveHUD.Entities;
+using System.IO;
 
 namespace Model.Site
 {
@@ -64,8 +65,8 @@ namespace Model.Site
         {
             get
             {
-                var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().PreferredSeatSettings.PrefferedSeats;
-                var filteredSeatsList = preferredSeats.Where(x => x.IsPreferredSeatEnabled && x.PokerSite == Site && x.PreferredSeat != -1);
+                var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().SiteSettings.SitesModelList.FirstOrDefault(x=> x.PokerSite == Site)?.PrefferedSeats;
+                var filteredSeatsList = preferredSeats?.Where(x => x.IsPreferredSeatEnabled && x.PreferredSeat != -1);
                 var seatsDictonary = new Dictionary<int, int>();
                 foreach(var preferredSeat in filteredSeatsList)
                 {
@@ -80,6 +81,11 @@ namespace Model.Site
         {
             get;
             set;
+        }
+
+        public string[] GetHandHistoryFolders()
+        {
+            return new string[] { };
         }
     }
 }

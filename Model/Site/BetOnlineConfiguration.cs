@@ -14,6 +14,7 @@ using System;
 using System.Collections.Generic;
 using Model.Enums;
 using DriveHUD.Entities;
+using System.IO;
 
 namespace Model.Site
 {
@@ -76,6 +77,11 @@ namespace Model.Site
         {
             get;
             set;
+        }
+
+        public string[] GetHandHistoryFolders()
+        {
+            return new string[] { };
         }
     }
 }

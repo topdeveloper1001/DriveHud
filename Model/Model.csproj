@@ -220,7 +220,6 @@
     <Compile Include="Settings\SettingsModels\GeneralSettingsModel.cs" />
     <Compile Include="Settings\ISettingsService.cs" />
     <Compile Include="Settings\ISettingsBase.cs" />
-    <Compile Include="Settings\SettingsModels\PreferredSeatSettingsModel.cs" />
     <Compile Include="Settings\SettingsModels\RakeBackSettingsModel.cs" />
     <Compile Include="Settings\SettingsModels\SiteSettingsModel.cs" />
     <Compile Include="Settings\SettingsService.cs" />
@@ -273,7 +272,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target> 
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

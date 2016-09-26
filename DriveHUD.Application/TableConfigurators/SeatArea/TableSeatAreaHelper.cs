@@ -20,13 +20,12 @@ namespace DriveHUD.Application.TableConfigurators
         public static PreferredSeatModel GetSeatSetting(EnumTableType tableType, EnumPokerSites pokerSite)
         {
             var settings = settingsService.GetSettings();
-            var preferredSettings = settings.PreferredSeatSettings;
+            var preferredSettings = settings.SiteSettings.SitesModelList.FirstOrDefault(x=> x.PokerSite == pokerSite);
 
-            var currentSeatSetting = preferredSettings.PrefferedSeats.FirstOrDefault(x => x.PokerSite == pokerSite
-                                                                                        && x.TableType == tableType);
+            var currentSeatSetting = preferredSettings?.PrefferedSeats?.FirstOrDefault(x => x.TableType == tableType);
             if (currentSeatSetting == null)
             {
-                return new PreferredSeatModel() { IsPreferredSeatEnabled = false, PreferredSeat = -1, PokerSite = pokerSite, TableType = tableType };
+                return new PreferredSeatModel() { IsPreferredSeatEnabled = false, PreferredSeat = -1, TableType = tableType };
             }
 
             return currentSeatSetting;
@@ -35,13 +34,12 @@ namespace DriveHUD.Application.TableConfigurators
         public static void SetPrefferedSeatSetting(int seat, EnumTableType tableType, EnumPokerSites pokerSite)
         {
             var settings = settingsService.GetSettings();
-            var preferredSettings = settings.PreferredSeatSettings;
+            var preferredSettings = settings.SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == pokerSite); ;
 
-            var currentSeatSetting = preferredSettings.PrefferedSeats.FirstOrDefault(x => x.PokerSite == pokerSite
-                                                                                       && x.TableType == tableType);
+            var currentSeatSetting = preferredSettings?.PrefferedSeats?.FirstOrDefault(x => x.TableType == tableType);
             if (currentSeatSetting == null)
             {
-                currentSeatSetting = new PreferredSeatModel() { IsPreferredSeatEnabled = false, PreferredSeat = -1, PokerSite = pokerSite, TableType = tableType };
+                currentSeatSetting = new PreferredSeatModel() { IsPreferredSeatEnabled = false, PreferredSeat = -1, TableType = tableType };
                 preferredSettings.PrefferedSeats.Add(currentSeatSetting);
             }
 

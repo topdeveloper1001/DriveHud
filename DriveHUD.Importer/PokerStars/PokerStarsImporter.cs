@@ -20,6 +20,8 @@ using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Utils.Extensions;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
+using Model.Settings;
+using Model.Site;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
@@ -216,13 +218,19 @@ namespace DriveHUD.Importers.PokerStars
         // Get directories with hand histories
         protected virtual DirectoryInfo[] GetHandHistoryFolders()
         {
-            var localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            var siteSettings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings()
+                .SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite.ToString() == this.Site);
 
-            var possibleFolders = new string[] { "PokerStars", "PokerStars.EU" };
-
-            var dirs = (from possibleFolder in possibleFolders
-                        let folder = Path.Combine(localApplicationData, possibleFolder, "HandHistory")
-                        select new DirectoryInfo(folder)).ToArray();
+            DirectoryInfo[] dirs;
+            if (siteSettings != null && siteSettings.HandHistoryLocationList != null && siteSettings.HandHistoryLocationList.Any())
+            {
+                dirs = siteSettings.HandHistoryLocationList.Select(x => new DirectoryInfo(x)).ToArray();
+            }
+            else
+            {
+                var site = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(Site);
+                dirs = site.GetHandHistoryFolders().Select(x => new DirectoryInfo(x)).ToArray();
+            }
 
             return dirs;
         }

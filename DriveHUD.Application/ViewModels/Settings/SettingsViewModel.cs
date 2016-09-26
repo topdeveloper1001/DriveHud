@@ -44,6 +44,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             if (model != null & model is T)
             {
                 SettingsModel = (T)model;
+                OnPropertyChanged();
             }
         }
 

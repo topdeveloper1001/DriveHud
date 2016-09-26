@@ -293,6 +293,11 @@
       <DependentUpon>SplashWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BovadaSiteSettingTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\CommonSiteSettingTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\PokerStarsSiteSettingTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\ISiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\PokerStarsTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\BovadaTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\CommonTableSeatAreaConfigurator.cs" />
@@ -1053,7 +1058,7 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
-  </Target> 
+  </Target>
   <PropertyGroup>
     <PostBuildEvent>
     </PostBuildEvent>
