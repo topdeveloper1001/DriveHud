@@ -56,9 +56,13 @@ namespace DriveHUD.Application.Views.Settings
             get
             {
                 ISiteSettingTableConfigurator configurator = null;
+
                 try
                 {
-                    configurator = ServiceLocator.Current.GetInstance<ISiteSettingTableConfigurator>(ViewModel.SelectedSiteType.ToString());
+                    if (ViewModel != null)
+                    {
+                        configurator = ServiceLocator.Current.GetInstance<ISiteSettingTableConfigurator>(ViewModel.SelectedSiteType.ToString());
+                    }
                 }
                 catch (ActivationException) when (ViewModel.SelectedSiteType == Entities.EnumPokerSites.Unknown)
                 {

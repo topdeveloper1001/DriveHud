@@ -197,6 +197,11 @@ namespace DriveHUD.Application.ViewModels
                 StorageModel.PlayerCollection = new ObservableCollection<string>(dataService.GetPlayersList());
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
+
+            if(CurrentViewModelType == EnumViewModelType.HudViewModel)
+            {
+                HudViewModel.RefreshHudTable();
+            }
         }
 
         private void UpdateCurrentView(EventArgs args)

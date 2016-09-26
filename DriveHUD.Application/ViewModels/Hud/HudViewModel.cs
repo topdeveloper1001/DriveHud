@@ -77,7 +77,7 @@ namespace DriveHUD.Application.ViewModels
             InitializeStatInfoCollection();
             InitializeStatInfoCollectionObserved();
 
-            InitializePlayerCollection();            
+            InitializePlayerCollection();
 
             gameTypes = Enum.GetValues(typeof(EnumGameType)).Cast<EnumGameType>().Select(x => new EnumGameTypeWrapper(x)).ToList();
             gameType = gameTypes.FirstOrDefault(x => x.GameType == EnumGameType.CashHoldem);
@@ -177,7 +177,7 @@ namespace DriveHUD.Application.ViewModels
             var hudTableLayoutMenuItems = new List<IDropDownMenuItem>();
 
             foreach (var configuration in configurations)
-            {             
+            {
                 var hudTableLayoutMenuItem = new HudTableLayoutMenuItem
                 {
                     Header = CommonResourceManager.Instance.GetEnumResource(configuration.Site)
@@ -612,7 +612,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref isStarted, value);
             }
-        }     
+        }
 
         private HudType hudType;
 
@@ -1172,17 +1172,16 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdateSeatSetting(bool isPreferredSeatEnabled)
         {
-            var settings = settingsService.GetSettings();
-            var preferredSettings = settings.PreferredSeatSettings;
-
             var pokerSite = CurrentTableLayout.HudTableLayout.Site;
             var tableType = CurrentTableLayout.HudTableLayout.TableType;
 
-            var currentSeatSetting = preferredSettings.PrefferedSeats.FirstOrDefault(x => x.PokerSite == pokerSite
-                                                                                        && x.TableType == tableType);
+            var settings = settingsService.GetSettings();
+            var preferredSettings = settings.SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == pokerSite);
+
+            var currentSeatSetting = preferredSettings?.PrefferedSeats?.FirstOrDefault(x => x.TableType == tableType);
             if (currentSeatSetting == null)
             {
-                currentSeatSetting = new PreferredSeatModel() { PokerSite = pokerSite, TableType = tableType, IsPreferredSeatEnabled = isPreferredSeatEnabled, PreferredSeat = -1 };
+                currentSeatSetting = new PreferredSeatModel() { TableType = tableType, IsPreferredSeatEnabled = isPreferredSeatEnabled, PreferredSeat = -1 };
                 preferredSettings.PrefferedSeats.Add(currentSeatSetting);
             }
 
@@ -1247,6 +1246,11 @@ namespace DriveHUD.Application.ViewModels
 
                 IsPreferredSeatingEnabled = false;
             });
+        }
+
+        internal void RefreshHudTable()
+        {
+            this.RaisePropertyChanged(nameof(CurrentTableLayout));
         }
 
         #endregion

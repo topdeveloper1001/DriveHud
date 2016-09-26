@@ -38,6 +38,8 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.TigerGaming, "Tigergaming" },
                 { EnumPokerSites.SportsBetting, "Sportbetting.ag" }
             };
+
+            SelectedSiteViewModel = new SiteViewModel();
         }
 
         public void InitializeCommands()
@@ -46,6 +48,13 @@ namespace DriveHUD.Application.ViewModels.Settings
             AddHandHistoryLocationCommand = new RelayCommand(AddHandHistoryLocation);
             DeleteHandHistoryLocationCommand = new RelayCommand(DeleteHandHistoryLocation);
             AutoDetectHandHistoryLocationCommand = new RelayCommand(AutoDetectHandHistoryLocation);
+        }
+
+        public override void SetSettingsModel(ISettingsBase model)
+        {
+            base.SetSettingsModel(model);
+
+            UpdateSelectedSite(SelectedSiteType);
         }
 
         #region Properties
@@ -82,7 +91,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             set
             {
                 UpdateTableTypeDictionary(value);
-                SelectedSite = SettingsModel?.SitesModelList.FirstOrDefault(x => x.PokerSite == value);
+                UpdateSelectedSite(value);
 
                 SetProperty(ref _selectedSiteType, value);
             }
@@ -94,6 +103,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             set
             {
                 SetProperty(ref _selectedTableType, value);
+                SetCurrentSeatModel();
             }
         }
 
@@ -103,7 +113,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             set
             {
                 SetProperty(ref _selectedSite, value);
-                SelectedSiteViewModel = new SiteViewModel(SelectedSite);
+                SetCurrentSeatModel();
             }
         }
 
@@ -240,39 +250,51 @@ namespace DriveHUD.Application.ViewModels.Settings
             return $"{(byte)tableType}-max";
         }
 
+        private void SetCurrentSeatModel()
+        {
+            if (SelectedSite == null)
+            {
+                return;
+            }
+
+            var seatModel = SelectedSite.PrefferedSeats.FirstOrDefault(x => x.TableType == SelectedTableType);
+            if (seatModel == null)
+            {
+                seatModel = new PreferredSeatModel() { IsPreferredSeatEnabled = false, PreferredSeat = -1, TableType = SelectedTableType };
+                SelectedSite.PrefferedSeats.Add(seatModel);
+            }
+
+            SelectedSiteViewModel.SelectedSeatModel = seatModel;
+        }
+
+        private void UpdateSelectedSite(EnumPokerSites pokerSite)
+        {
+            SelectedSite = SettingsModel?.SitesModelList.FirstOrDefault(x => x.PokerSite == pokerSite);
+        }
+
         #endregion
     }
 
     public class SiteViewModel : BaseViewModel
     {
-        private readonly SiteModel SiteModel;
+        private PreferredSeatModel _selectedSeatModel;
 
-        public SiteViewModel(SiteModel siteModel)
+        public PreferredSeatModel SelectedSeatModel
         {
-            this.SiteModel = siteModel;
-        }
-
-        private int _preferredSeat;
-        private bool _isPreferredSeatEnabled;
-
-        public int PreferredSeat
-        {
-            get { return _preferredSeat; }
+            get
+            {
+                return _selectedSeatModel;
+            }
             set
             {
-                SetProperty(ref _preferredSeat, value);
+                SetProperty(ref _selectedSeatModel, value);
             }
         }
 
-        public bool IsPreferredSeatEnabled
+        public void RaisePropertyChanged()
         {
-            get { return _isPreferredSeatEnabled; }
-            set
-            {
-                SetProperty(ref _isPreferredSeatEnabled, value);
-            }
+            OnPropertyChanged(nameof(SelectedSeatModel));
         }
-
     }
 
 }

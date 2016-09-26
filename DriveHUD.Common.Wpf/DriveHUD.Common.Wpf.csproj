@@ -112,7 +112,9 @@
     <Compile Include="Converters\EnumToVisiblityConverter.cs" />
     <Compile Include="Converters\MarkupExtensionConverterBase.cs" />
     <Compile Include="Converters\MRatioConverters.cs" />
+    <Compile Include="Converters\MultiBooleanAndConverter.cs" />
     <Compile Include="Converters\MultiBooleanOrConveter.cs" />
+    <Compile Include="Converters\MultiBooleanAndToBrushConverter.cs" />
     <Compile Include="Converters\ObjectToTypeConverter.cs" />
     <Compile Include="Converters\ParameterBooleanToBrushConverter.cs" />
     <Compile Include="Converters\StaticResourceConverter.cs" />

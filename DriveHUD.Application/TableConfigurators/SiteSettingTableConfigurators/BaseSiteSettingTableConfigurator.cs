@@ -117,7 +117,16 @@ namespace DriveHUD.Application.TableConfigurators
             };
 
             BindingOperations.ClearBinding(indicator, RadDiagramShape.BackgroundProperty);
-            Binding backgroundBinding = new Binding() { Path = new PropertyPath(ReflectionHelper.GetPath<SiteViewModel>(o => o.PreferredSeat)), Mode = BindingMode.TwoWay, Converter = new ParameterBooleanToBrushConverter(), ConverterParameter = seat };
+
+            MultiBinding backgroundBinding = new MultiBinding();
+            backgroundBinding.Converter = new MultiBooleanAndToBrushConverter();
+
+            Binding seatBinding = new Binding() { Path = new PropertyPath(ReflectionHelper.GetPath<SiteViewModel>(o => o.SelectedSeatModel.PreferredSeat)), Mode = BindingMode.TwoWay, Converter = new ParameterToBoolConverter(), ConverterParameter = seat };
+            Binding enabledBinding = new Binding() { Path = new PropertyPath(ReflectionHelper.GetPath<SiteViewModel>(o => o.SelectedSeatModel.IsPreferredSeatEnabled)) };
+
+            backgroundBinding.Bindings.Add(seatBinding);
+            backgroundBinding.Bindings.Add(enabledBinding);
+
             indicator.SetBinding(RadDiagramShape.BackgroundProperty, backgroundBinding);
 
             return indicator;
@@ -132,16 +141,18 @@ namespace DriveHUD.Application.TableConfigurators
                 var viewModel = indicator.DataContext as SiteViewModel;
                 if (int.TryParse(indicator.Tag.ToString(), out seat) && (viewModel != null))
                 {
-                    if (viewModel.PreferredSeat != seat)
+                    if (viewModel.SelectedSeatModel.PreferredSeat != seat || !viewModel.SelectedSeatModel.IsPreferredSeatEnabled)
                     {
-                        viewModel.PreferredSeat = seat;
-                        viewModel.IsPreferredSeatEnabled = true;
+                        viewModel.SelectedSeatModel.PreferredSeat = seat;
+                        viewModel.SelectedSeatModel.IsPreferredSeatEnabled = true;
                     }
                     else
                     {
-                        viewModel.PreferredSeat = -1;
-                        viewModel.IsPreferredSeatEnabled = false;
+                        viewModel.SelectedSeatModel.PreferredSeat = -1;
+                        viewModel.SelectedSeatModel.IsPreferredSeatEnabled = false;
                     }
+
+                    viewModel.RaisePropertyChanged();
                 }
             }
         }

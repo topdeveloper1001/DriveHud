@@ -1,4 +1,5 @@
 ﻿using DriveHUD.Entities;
+using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,8 +13,13 @@ namespace Model.Settings
     [Serializable]
     public class SiteSettingsModel : SettingsBase
     {
+        [XmlAttribute]
         public bool IsCustomProcessedDataLocationEnabled { get; set; }
+
+        [XmlAttribute]
         public string CustomProcessedDataLocation { get; set; }
+
+        [XmlArray]
         public SiteModel[] SitesModelList { get; set; }
 
         public SiteSettingsModel()
@@ -46,43 +52,77 @@ namespace Model.Settings
     [Serializable]
     public class SiteModel : SettingsBase
     {
-        private EnumPokerSites _pokerSite;
-        private ObservableCollection<string> _handHistoryLocationList;
+        public SiteModel()
+        {
+            PrefferedSeats = new List<PreferredSeatModel>();
+        }
 
         [XmlAttribute]
-        public EnumPokerSites PokerSite
-        {
-            get
-            {
-                return _pokerSite;
-            }
-
-            set
-            {
-                _pokerSite = value;
-            }
-        }
+        public EnumPokerSites PokerSite { get; set; }
 
         [XmlArray]
-        public ObservableCollection<string> HandHistoryLocationList
-        {
-            get
-            {
-                return _handHistoryLocationList;
-            }
+        public ObservableCollection<string> HandHistoryLocationList { get; set; }
 
-            set
-            {
-                _handHistoryLocationList = value;
-            }
-        }
+        [XmlArray]
+        public List<PreferredSeatModel> PrefferedSeats { get; set; }
 
         public override object Clone()
         {
             var model = (SiteModel)this.MemberwiseClone();
             model.HandHistoryLocationList = new ObservableCollection<string>(this.HandHistoryLocationList);
+            model.PrefferedSeats = PrefferedSeats.Where(x => x != null).Select(x => (PreferredSeatModel)x.Clone()).ToList();
 
             return model;
+        }
+    }
+
+    [Serializable]
+    public class PreferredSeatModel : SettingsBase
+    {
+        private EnumTableType _tableType;
+        private bool _isPreferredSeatEnabled = false;
+        private int _preferredSeat = -1;
+
+        [XmlAttribute]
+        public EnumTableType TableType
+        {
+            get
+            {
+                return _tableType;
+            }
+
+            set
+            {
+                _tableType = value;
+            }
+        }
+
+        [XmlAttribute]
+        public bool IsPreferredSeatEnabled
+        {
+            get
+            {
+                return _isPreferredSeatEnabled;
+            }
+
+            set
+            {
+                _isPreferredSeatEnabled = value;
+            }
+        }
+
+        [XmlAttribute]
+        public int PreferredSeat
+        {
+            get
+            {
+                return _preferredSeat;
+            }
+
+            set
+            {
+                _preferredSeat = value;
+            }
         }
     }
 }
