@@ -92,6 +92,8 @@ namespace DriveHUD.ViewModels
                     return GetVPIPToolTip();
                 case Model.Enums.Stat.S3Bet:
                     return GetThreeBetToolTip();
+                case Model.Enums.Stat.AGG:
+                    return GetAggressionToolTip();
                 default:
                     return null;
             }
@@ -175,6 +177,25 @@ namespace DriveHUD.ViewModels
             threeBet.CardsList = new StatInfoToolTipCardsList() { ListSize = 4, PropertyName = nameof(HudIndicators.ThreeBetCardsList) };
 
             list.Add(threeBet);
+
+            return list;
+        }
+
+        private static ObservableCollection<StatInfoToolTip> GetAggressionToolTip()
+        {
+            var list = new ObservableCollection<StatInfoToolTip>();
+            var aggPr = new StatInfoToolTip();
+
+            aggPr.CategoryName = "TOTAL";
+            aggPr.CategoryStat = new StatInfo() { Stat = Model.Enums.Stat.AGG, PropertyName = nameof(HudIndicators.AggPr) };
+            aggPr.StatsCollection = new ObservableCollection<StatInfo>()
+            {
+                new StatInfo() { Stat = Model.Enums.Stat.FlopAGG, PropertyName = nameof(HudIndicators.FlopAgg) },
+                new StatInfo() { Stat = Model.Enums.Stat.TurnAGG, PropertyName = nameof(HudIndicators.TurnAgg) },
+                new StatInfo() { Stat = Model.Enums.Stat.RiverAGG, PropertyName = nameof(HudIndicators.RiverAgg) },
+            };
+
+            list.Add(aggPr);
 
             return list;
         }

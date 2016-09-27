@@ -616,8 +616,6 @@ namespace Model.Data
             }
         }
 
-       
-
         #region Unopened Pot
 
         public virtual decimal UO_PFR_EP
