@@ -354,7 +354,7 @@ namespace DriveHUD.Application.ViewModels
                     ? new ObservableCollection<decimal>()
                     : new ObservableCollection<decimal>(sessionMoney);
 
-                var cardsCollection = sessionStatisticCollection.FirstOrDefault(x => x.CardsList != null)?.CardsList;
+                var cardsCollection = sessionStatisticCollection.SingleOrDefault(x => x.CardsList != null)?.CardsList;
                 playerHudContent.HudElement.CardsCollection = cardsCollection == null
                     ? new ObservableCollection<string>()
                     : new ObservableCollection<string>(cardsCollection);
@@ -414,15 +414,26 @@ namespace DriveHUD.Application.ViewModels
                     var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
                     if (tooltipCollection != null)
                     {
-                        statInfo.StatInfoToolTipCollection = tooltipCollection;
-                        foreach (var tooltip in statInfo.StatInfoToolTipCollection)
+                        foreach (var tooltip in tooltipCollection)
                         {
                             AssignStatInfoValues(item, tooltip.CategoryStat);
                             foreach (var stat in tooltip.StatsCollection)
                             {
                                 AssignStatInfoValues(item, stat);
                             }
+
+                            if (tooltip.CardsList == null)
+                            {
+                                continue;
+                            }
+
+                            var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
+                            if (listObj != null)
+                            {
+                                tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
+                            }
                         }
+                        statInfo.StatInfoToolTipCollection = tooltipCollection;
                     }
 
                     playerHudContent.HudElement.StatInfoCollection.Add(statInfo);

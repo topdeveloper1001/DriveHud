@@ -138,7 +138,7 @@ namespace DriveHUD.Importers
                             if (x.SessionCode == session)
                             {
                                 PlayerStatisticCalculator.CalculateTotalPotValues(x);
-                                InitSessionCardsCollection(x);
+                                InitSessionCardsCollections(x);
                                 InitSessionMoneyWonCollection(x);
                             }
                         });
@@ -160,7 +160,7 @@ namespace DriveHUD.Importers
                 }
                 else
                 {
-                    InitSessionCardsCollection(stats);
+                    InitSessionCardsCollections(stats);
                     InitSessionMoneyWonCollection(stats);
                     playerData.Add(stats);
                 }
@@ -303,7 +303,7 @@ namespace DriveHUD.Importers
             return sessionData;
         }
 
-        private void InitSessionCardsCollection(Playerstatistic stats)
+        private void InitSessionCardsCollections(Playerstatistic stats)
         {
             if (stats.CardsList == null)
             {
@@ -311,6 +311,15 @@ namespace DriveHUD.Importers
                 if (!string.IsNullOrWhiteSpace(stats.Cards))
                 {
                     stats.CardsList.Add(stats.Cards);
+                }
+            }
+
+            if (stats.ThreeBetCardsList == null)
+            {
+                stats.ThreeBetCardsList = new Common.Utils.FixedSizeList<string>(4);
+                if(!string.IsNullOrWhiteSpace(stats.Cards) && stats.Didthreebet != 0)
+                {
+                    stats.ThreeBetCardsList.Add(stats.Cards);
                 }
             }
         }

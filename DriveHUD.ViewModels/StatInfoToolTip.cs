@@ -1,6 +1,5 @@
 ﻿using DriveHUD.Common.Annotations;
 using DriveHUD.Common.Reflection;
-using DriveHUD.Common.Utils;
 using Model.Data;
 using System;
 using System.Collections.Generic;
@@ -32,8 +31,6 @@ namespace DriveHUD.ViewModels
 
         private StatInfo _categoryStat;
 
-        private FixedSizeList<string> _cardsList;
-
         public StatInfo CategoryStat
         {
             get { return _categoryStat; }
@@ -59,12 +56,10 @@ namespace DriveHUD.ViewModels
             }
         }
 
-        public FixedSizeList<string> CardsList
+        public StatInfoToolTipCardsList _cardsList;
+        public StatInfoToolTipCardsList CardsList
         {
-            get
-            {
-                return _cardsList;
-            }
+            get { return _cardsList; }
             set
             {
                 _cardsList = value;
@@ -177,6 +172,8 @@ namespace DriveHUD.ViewModels
                 new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_BB, PropertyName = nameof(HudIndicators.ThreeBet_BB) },
             };
 
+            threeBet.CardsList = new StatInfoToolTipCardsList() { ListSize = 4, PropertyName = nameof(HudIndicators.ThreeBetCardsList) };
+
             list.Add(threeBet);
 
             return list;
@@ -184,4 +181,26 @@ namespace DriveHUD.ViewModels
 
         #endregion
     }
+
+    public class StatInfoToolTipCardsList : INotifyPropertyChanged
+    {
+        public int ListSize { get; set; }
+
+        public string PropertyName { get; set; }
+
+        public ObservableCollection<string> Cards { get; set; }
+
+        #region Events
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        [NotifyPropertyChangedInvocator]
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+        #endregion
+    }
+
 }

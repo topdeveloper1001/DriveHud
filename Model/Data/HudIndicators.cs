@@ -1318,6 +1318,18 @@ namespace Model.Data
 
         #endregion
 
+        #region CardsLists
+
+        public virtual IEnumerable<string> ThreeBetCardsList
+        {
+            get
+            {
+                return Statistcs.SingleOrDefault(x => x.ThreeBetCardsList != null)?.ThreeBetCardsList;
+            }
+        }
+
+        #endregion
+
         protected decimal GetPercentage(decimal? actual, decimal? possible)
         {
             if (TotalHands == 0)

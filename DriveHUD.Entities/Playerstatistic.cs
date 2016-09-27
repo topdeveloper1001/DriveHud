@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace DriveHUD.Entities
 {
@@ -523,9 +524,15 @@ namespace DriveHUD.Entities
 
         #endregion
 
-        public virtual decimal TotalPot { get; set; }
+        #region Cards Lists
 
         public virtual FixedSizeList<string> CardsList { get; set; }
+
+        public virtual FixedSizeList<string> ThreeBetCardsList { get; set; }
+
+        #endregion
+
+        public virtual decimal TotalPot { get; set; }
 
         public virtual IList<decimal> MoneyWonCollection { get; set; }
 
@@ -800,6 +807,11 @@ namespace DriveHUD.Entities
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
                 CardsList.Add(a.Cards);
+            }
+
+            if (ThreeBetCardsList != null && !string.IsNullOrWhiteSpace(a.Cards) && a.Didthreebet != 0)
+            {
+                ThreeBetCardsList.Add(a.Cards);
             }
 
             if (MoneyWonCollection != null)
