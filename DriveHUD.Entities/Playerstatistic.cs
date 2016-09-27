@@ -509,6 +509,27 @@ namespace DriveHUD.Entities
         [ProtoMember(191)]
         public virtual decimal StackInBBs { get; set; }
 
+        [ProtoMember(192)]
+        public virtual decimal AggressiveFlop { get; set; }
+
+        [ProtoMember(193)]
+        public virtual int TotalbetsFlop { get; set; }
+
+        [ProtoMember(194)]
+        public virtual int TotalbetsTurn { get; set; }
+
+        [ProtoMember(195)]
+        public virtual int TotalbetsRiver { get; set; }
+
+        [ProtoMember(196)]
+        public virtual int TotalcallsFlop { get; set; }
+
+        [ProtoMember(197)]
+        public virtual int TotalcallsTurn { get; set; }
+
+        [ProtoMember(198)]
+        public virtual int TotalcallsRiver { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session 
@@ -804,6 +825,14 @@ namespace DriveHUD.Entities
             LimpFolded += a.LimpFolded;
             LimpReraised += a.LimpReraised;
 
+            TotalbetsFlop += a.TotalbetsFlop;
+            TotalbetsTurn += a.TotalbetsTurn;
+            TotalbetsRiver += a.TotalbetsRiver;
+
+            TotalcallsFlop += a.TotalcallsFlop;
+            TotalcallsTurn += a.TotalcallsTurn;
+            TotalcallsRiver += a.TotalcallsRiver;
+
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
                 CardsList.Add(a.Cards);
@@ -1056,6 +1085,14 @@ namespace DriveHUD.Entities
             r.LimpFolded = a.LimpFolded + b.LimpFolded;
             r.LimpReraised = a.LimpReraised + b.LimpReraised;
 
+            r.TotalbetsFlop = a.TotalbetsFlop + b.TotalbetsFlop;
+            r.TotalbetsTurn = a.TotalbetsTurn + b.TotalbetsTurn;
+            r.TotalbetsRiver = a.TotalbetsRiver + b.TotalbetsRiver;
+
+            r.TotalcallsFlop = a.TotalcallsFlop + b.TotalcallsFlop;
+            r.TotalcallsTurn = a.TotalcallsTurn + b.TotalcallsTurn;
+            r.TotalcallsRiver = a.TotalcallsRiver + b.TotalcallsRiver;
+
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);
             r.PositionVPIP = PositionalStat.Sum(a.PositionVPIP, b.PositionVPIP);
@@ -1162,7 +1199,6 @@ namespace DriveHUD.Entities
         public int BN { get; set; } = 0;
         public int SB { get; set; } = 0;
         public int BB { get; set; } = 0;
-
 
         public static PositionalStat Sum(PositionalStat a, PositionalStat b)
         {

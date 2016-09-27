@@ -54,6 +54,14 @@ namespace Model
             int bet = playerHandActions.Count(handAction => handAction.IsBet() && (int)handAction.Street > 1);
             int raises = playerHandActions.Count(handAction => handAction.IsRaise() && (int)handAction.Street > 1);
 
+            stat.TotalbetsFlop = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise) && handAction.Street == Street.Flop);
+            stat.TotalbetsTurn = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise) && handAction.Street == Street.Turn);
+            stat.TotalbetsRiver = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise) && handAction.Street == Street.River);
+
+            stat.TotalcallsFlop = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.Flop);
+            stat.TotalcallsTurn = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.Turn);
+            stat.TotalcallsRiver = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.River);
+
             bool sawShowDown = playerHandActions.All(x => x.HandActionType != HandActionType.FOLD);
             bool playerFolded = !sawShowDown;
 
