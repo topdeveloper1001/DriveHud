@@ -85,7 +85,7 @@ namespace Model.Mapping
             Map(x => x.Totalaggressivepostflopstreetsseen).Column("\"TotalAggressivePostflopStreetsSeen\"").Not.Nullable();
             Map(x => x.Totalbets).Column("\"TotalBets\"").Not.Nullable();
             Map(x => x.Totalcalls).Column("\"TotalCalls\"").Not.Nullable();
-            Map(x => x.Totalpostflopstreetsseen).Column("\"TotalPostflopStreetsSeen\"").Not.Nullable();
+            Map(x => x.Totalpostflopstreetsplayed).Column("\"TotalPostflopStreetsSeen\"").Not.Nullable();
             Map(x => x.Turncallippassonflopcb).Column("\"TurnCallIpPassOnFlopCb\"").Not.Nullable();
             Map(x => x.Turncontinuationbetmade).Column("\"TurnContinuationBetMade\"").Not.Nullable();
             Map(x => x.Turncontinuationbetpossible).Column("\"TurnContinuationBetPossible\"").Not.Nullable();

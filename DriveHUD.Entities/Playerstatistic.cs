@@ -29,7 +29,7 @@ namespace DriveHUD.Entities
         [Required, ProtoMember(1)]
         public virtual int Wonhand { get; set; }
         [Required, ProtoMember(2)]
-        public virtual int Totalpostflopstreetsseen { get; set; }
+        public virtual int Totalpostflopstreetsplayed { get; set; }
         [Required, ProtoMember(3)]
         public virtual int Bigblindstealdefended { get; set; }
         [Required, ProtoMember(4)]
@@ -510,25 +510,31 @@ namespace DriveHUD.Entities
         public virtual decimal StackInBBs { get; set; }
 
         [ProtoMember(192)]
-        public virtual decimal AggressiveFlop { get; set; }
-
-        [ProtoMember(193)]
         public virtual int TotalbetsFlop { get; set; }
 
-        [ProtoMember(194)]
+        [ProtoMember(193)]
         public virtual int TotalbetsTurn { get; set; }
 
-        [ProtoMember(195)]
+        [ProtoMember(194)]
         public virtual int TotalbetsRiver { get; set; }
 
-        [ProtoMember(196)]
+        [ProtoMember(195)]
         public virtual int TotalcallsFlop { get; set; }
 
-        [ProtoMember(197)]
+        [ProtoMember(196)]
         public virtual int TotalcallsTurn { get; set; }
 
-        [ProtoMember(198)]
+        [ProtoMember(197)]
         public virtual int TotalcallsRiver { get; set; }
+
+        [ProtoMember(198)]
+        public virtual int TotalPlayedFlop { get; set; }
+
+        [ProtoMember(199)]
+        public virtual int TotalPlayedTurn { get; set; }
+
+        [ProtoMember(200)]
+        public virtual int TotalPlayedRiver { get; set; }
 
         #region Additional properties (not for serialization)
 
@@ -668,7 +674,7 @@ namespace DriveHUD.Entities
             Totalhands += a.Totalhands;
             Totalbets += a.Totalbets;
             Totalcalls += a.Totalcalls;
-            Totalpostflopstreetsseen += a.Totalpostflopstreetsseen;
+            Totalpostflopstreetsplayed += a.Totalpostflopstreetsplayed;
             Totalamountwonincents += a.Totalamountwonincents;
             Totalrakeincents += a.Totalrakeincents;
             Totalaggressivepostflopstreetsseen += a.Totalaggressivepostflopstreetsseen;
@@ -833,6 +839,10 @@ namespace DriveHUD.Entities
             TotalcallsTurn += a.TotalcallsTurn;
             TotalcallsRiver += a.TotalcallsRiver;
 
+            TotalPlayedFlop += a.TotalPlayedFlop;
+            TotalPlayedTurn += a.TotalPlayedTurn;
+            TotalPlayedRiver += a.TotalPlayedRiver;
+
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
                 CardsList.Add(a.Cards);
@@ -927,7 +937,7 @@ namespace DriveHUD.Entities
             r.Totalhands = a.Totalhands + b.Totalhands;
             r.Totalbets = a.Totalbets + b.Totalbets;
             r.Totalcalls = a.Totalcalls + b.Totalcalls;
-            r.Totalpostflopstreetsseen = a.Totalpostflopstreetsseen + b.Totalpostflopstreetsseen;
+            r.Totalpostflopstreetsplayed = a.Totalpostflopstreetsplayed + b.Totalpostflopstreetsplayed;
             r.Totalamountwonincents = a.Totalamountwonincents + b.Totalamountwonincents;
             r.Totalaggressivepostflopstreetsseen = a.Totalaggressivepostflopstreetsseen + b.Totalaggressivepostflopstreetsseen;
             r.Totalrakeincents = a.Totalrakeincents + b.Totalrakeincents;
@@ -1092,6 +1102,10 @@ namespace DriveHUD.Entities
             r.TotalcallsFlop = a.TotalcallsFlop + b.TotalcallsFlop;
             r.TotalcallsTurn = a.TotalcallsTurn + b.TotalcallsTurn;
             r.TotalcallsRiver = a.TotalcallsRiver + b.TotalcallsRiver;
+
+            r.TotalPlayedFlop = a.TotalPlayedFlop + b.TotalPlayedFlop;
+            r.TotalPlayedTurn = a.TotalPlayedTurn + b.TotalPlayedTurn;
+            r.TotalPlayedRiver = a.TotalPlayedRiver + b.TotalPlayedRiver;
 
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);

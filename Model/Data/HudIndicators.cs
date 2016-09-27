@@ -235,7 +235,7 @@ namespace Model.Data
                 {
                     Value = AggPr,
                     Occured = Source.Totalbets,
-                    CouldOccured = Source.Totalpostflopstreetsseen
+                    CouldOccured = Source.Totalpostflopstreetsplayed
                 };
             }
         }
@@ -248,7 +248,7 @@ namespace Model.Data
                 {
                     Value = TrueAggression,
                     Occured = Source.TotalAggressiveBets,
-                    CouldOccured = Source.Totalpostflopstreetsseen - Source.Flopcontinuationbetmade
+                    CouldOccured = Source.Totalpostflopstreetsplayed - Source.Flopcontinuationbetmade
                 };
             }
         }
@@ -286,8 +286,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = FlopAgg,
-                    Occured = Source.Flopcontinuationbetmade,
-                    CouldOccured = Source.Calledflopcontinuationbet
+                    Occured = Source.TotalbetsFlop,
+                    CouldOccured = Source.Sawflop
                 };
             }
         }
@@ -299,8 +299,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = TurnAgg,
-                    Occured = Source.Turncontinuationbetmade,
-                    CouldOccured = Source.Calledturncontinuationbet
+                    Occured = Source.TotalbetsTurn,
+                    CouldOccured = Source.SawTurn
                 };
             }
         }
@@ -312,8 +312,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RiverAgg,
-                    Occured = Source.Turncontinuationbetmade,
-                    CouldOccured = Source.Calledturncontinuationbet
+                    Occured = Source.TotalbetsRiver,
+                    CouldOccured = Source.SawRiver
                 };
             }
         }
