@@ -1,5 +1,6 @@
 ﻿using DriveHUD.Common.Annotations;
 using DriveHUD.Common.Reflection;
+using DriveHUD.Common.Utils;
 using Model.Data;
 using System;
 using System.Collections.Generic;
@@ -31,6 +32,8 @@ namespace DriveHUD.ViewModels
 
         private StatInfo _categoryStat;
 
+        private FixedSizeList<string> _cardsList;
+
         public StatInfo CategoryStat
         {
             get { return _categoryStat; }
@@ -56,6 +59,19 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        public FixedSizeList<string> CardsList
+        {
+            get
+            {
+                return _cardsList;
+            }
+            set
+            {
+                _cardsList = value;
+                OnPropertyChanged(nameof(CardsList));
+            }
+        }
+
         #region Events
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -68,10 +84,8 @@ namespace DriveHUD.ViewModels
 
         #endregion
 
-
         // This is test feature so no UI is present. Implemented temporary methods to fill with data
         #region Static Methods
-
 
         public static ObservableCollection<StatInfoToolTip> GetToolTipCollection(Model.Enums.Stat stat)
         {
@@ -81,6 +95,8 @@ namespace DriveHUD.ViewModels
                     return GetPFRToolTip();
                 case Model.Enums.Stat.VPIP:
                     return GetVPIPToolTip();
+                case Model.Enums.Stat.S3Bet:
+                    return GetThreeBetToolTip();
                 default:
                     return null;
             }
@@ -140,6 +156,28 @@ namespace DriveHUD.ViewModels
             };
 
             list.Add(pfr);
+
+            return list;
+        }
+
+        private static ObservableCollection<StatInfoToolTip> GetThreeBetToolTip()
+        {
+            var list = new ObservableCollection<StatInfoToolTip>();
+            var threeBet = new StatInfoToolTip();
+
+            threeBet.CategoryName = "TOTAL";
+            threeBet.CategoryStat = new StatInfo() { Stat = Model.Enums.Stat.S3Bet, PropertyName = nameof(HudIndicators.ThreeBet) };
+            threeBet.StatsCollection = new ObservableCollection<StatInfo>()
+            {
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_EP, PropertyName = nameof(HudIndicators.ThreeBet_EP) },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_MP, PropertyName = nameof(HudIndicators.ThreeBet_MP) },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_CO, PropertyName = nameof(HudIndicators.ThreeBet_CO) },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_BN, PropertyName = nameof(HudIndicators.ThreeBet_BN) },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_SB, PropertyName = nameof(HudIndicators.ThreeBet_SB) },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_BB, PropertyName = nameof(HudIndicators.ThreeBet_BB) },
+            };
+
+            list.Add(threeBet);
 
             return list;
         }

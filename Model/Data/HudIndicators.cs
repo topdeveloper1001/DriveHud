@@ -1211,6 +1211,111 @@ namespace Model.Data
 
         #endregion
 
+        #region 3Bet
+
+        public virtual decimal ThreeBet_EP
+        {
+            get
+            {
+                return GetPercentage(Source.PositionDidThreeBet?.EP, Source.PositionCouldColdCall?.EP);
+            }
+        }
+        public virtual decimal ThreeBet_MP
+        {
+            get { return GetPercentage(Source.PositionDidThreeBet?.MP, Source.PositionCouldThreeBet?.MP); }
+        }
+        public virtual decimal ThreeBet_CO
+        {
+            get { return GetPercentage(Source.PositionDidThreeBet?.CO, Source.PositionCouldThreeBet?.CO); }
+        }
+        public virtual decimal ThreeBet_BN
+        {
+            get { return GetPercentage(Source.PositionDidThreeBet?.BN, Source.PositionCouldThreeBet?.BN); }
+        }
+        public virtual decimal ThreeBet_SB
+        {
+            get { return GetPercentage(Source.PositionDidThreeBet?.SB, Source.PositionCouldThreeBet?.SB); }
+        }
+        public virtual decimal ThreeBet_BB
+        {
+            get { return GetPercentage(Source.PositionDidThreeBet?.BB, Source.PositionCouldThreeBet?.BB); }
+        }
+
+        public virtual StatDto ThreeBet_EPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBet_EP,
+                    Occured = Source.PositionDidThreeBet?.EP ?? 0,
+                    CouldOccured = Source.PositionCouldThreeBet?.EP ?? 0
+                };
+            }
+        }
+        public virtual StatDto ThreeBet_MPObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBet_MP,
+                    Occured = Source.PositionDidThreeBet?.MP ?? 0,
+                    CouldOccured = Source.PositionCouldThreeBet?.MP ?? 0
+                };
+            }
+        }
+        public virtual StatDto ThreeBet_COObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBet_CO,
+                    Occured = Source.PositionDidThreeBet?.CO ?? 0,
+                    CouldOccured = Source.PositionCouldThreeBet?.CO ?? 0
+                };
+            }
+        }
+        public virtual StatDto ThreeBet_BNObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBet_BN,
+                    Occured = Source.PositionDidThreeBet?.BN ?? 0,
+                    CouldOccured = Source.PositionCouldThreeBet?.BN ?? 0
+                };
+            }
+        }
+        public virtual StatDto ThreeBet_SBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBet_SB,
+                    Occured = Source.PositionDidThreeBet?.SB ?? 0,
+                    CouldOccured = Source.PositionCouldThreeBet?.SB ?? 0
+                };
+            }
+        }
+        public virtual StatDto ThreeBet_BBObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = ThreeBet_BB,
+                    Occured = Source.PositionDidThreeBet?.BB ?? 0,
+                    CouldOccured = Source.PositionCouldThreeBet?.BB ?? 0
+                };
+            }
+        }
+
+        #endregion
+
         #endregion
 
         protected decimal GetPercentage(decimal? actual, decimal? possible)

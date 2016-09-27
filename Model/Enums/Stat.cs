@@ -97,6 +97,12 @@ namespace Model.Enums
         ColdCall_SB,
         ColdCall_BB,
         MRatio,
-        BBs
+        BBs,
+        ThreeBet_EP,
+        ThreeBet_MP,
+        ThreeBet_CO,
+        ThreeBet_BN,
+        ThreeBet_SB,
+        ThreeBet_BB
     }
 }

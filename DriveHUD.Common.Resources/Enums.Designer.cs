@@ -1006,6 +1006,60 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to 3-Bet BB%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_BB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_BB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet BN%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_BN {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_BN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet CO%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_CO {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_CO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet EP%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_EP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_EP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet MP%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_MP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet SB%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_SB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_SB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 3-Bet vs. Steal.
         /// </summary>
         internal static string Enum_Stat_ThreeBetVsSteal {

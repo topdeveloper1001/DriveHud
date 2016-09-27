@@ -198,7 +198,7 @@ namespace DriveHUD.Application.ViewModels
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
-            if(CurrentViewModelType == EnumViewModelType.HudViewModel)
+            if (CurrentViewModelType == EnumViewModelType.HudViewModel)
             {
                 HudViewModel.RefreshHudTable();
             }
@@ -411,9 +411,10 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     // temporary
-                    if (statInfo.Stat == Stat.PFR || statInfo.Stat == Stat.VPIP)
+                    var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
+                    if (tooltipCollection != null)
                     {
-                        statInfo.StatInfoToolTipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
+                        statInfo.StatInfoToolTipCollection = tooltipCollection;
                         foreach (var tooltip in statInfo.StatInfoToolTipCollection)
                         {
                             AssignStatInfoValues(item, tooltip.CategoryStat);

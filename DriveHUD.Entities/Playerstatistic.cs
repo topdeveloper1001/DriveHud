@@ -518,6 +518,8 @@ namespace DriveHUD.Entities
         public virtual PositionalStat PositionVPIP { get; set; }
         public virtual PositionalStat PositionDidColdCall { get; set; }
         public virtual PositionalStat PositionCouldColdCall { get; set; }
+        public virtual PositionalStat PositionDidThreeBet { get; set; }
+        public virtual PositionalStat PositionCouldThreeBet { get; set; }
 
         #endregion
 
@@ -810,6 +812,8 @@ namespace DriveHUD.Entities
             PositionVPIP = PositionalStat.Sum(PositionVPIP, a.PositionVPIP);
             PositionDidColdCall = PositionalStat.Sum(PositionDidColdCall, a.PositionDidColdCall);
             PositionCouldColdCall = PositionalStat.Sum(PositionCouldColdCall, a.PositionCouldColdCall);
+            PositionDidThreeBet = PositionalStat.Sum(PositionDidThreeBet, a.PositionDidThreeBet);
+            PositionCouldThreeBet = PositionalStat.Sum(PositionCouldThreeBet, a.PositionCouldThreeBet);
 
             MRatio = a.MRatio;
             StackInBBs = a.StackInBBs;
@@ -1045,6 +1049,8 @@ namespace DriveHUD.Entities
             r.PositionVPIP = PositionalStat.Sum(a.PositionVPIP, b.PositionVPIP);
             r.PositionDidColdCall = PositionalStat.Sum(a.PositionDidColdCall, b.PositionDidColdCall);
             r.PositionCouldColdCall = PositionalStat.Sum(a.PositionCouldColdCall, b.PositionCouldColdCall);
+            r.PositionDidThreeBet = PositionalStat.Sum(a.PositionDidThreeBet, b.PositionDidThreeBet);
+            r.PositionCouldThreeBet = PositionalStat.Sum(a.PositionCouldThreeBet, b.PositionCouldThreeBet);
 
             r.MRatio = b.MRatio;
             r.StackInBBs = b.StackInBBs;
@@ -1167,6 +1173,40 @@ namespace DriveHUD.Entities
                 SB = a.SB + b.SB,
                 BB = a.BB + b.BB,
             };
+        }
+
+        public void SetPositionalStat(EnumPosition position, int value)
+        {
+            switch (position)
+            {
+                case EnumPosition.BTN:
+                    BN = value;
+                    break;
+                case EnumPosition.SB:
+                    SB = value;
+                    break;
+                case EnumPosition.BB:
+                    BB = value;
+                    break;
+                case EnumPosition.CO:
+                    CO = value;
+                    break;
+                case EnumPosition.MP3:
+                case EnumPosition.MP2:
+                case EnumPosition.MP1:
+                case EnumPosition.MP:
+                    MP = value;
+                    break;
+                case EnumPosition.UTG:
+                case EnumPosition.UTG_1:
+                case EnumPosition.UTG_2:
+                case EnumPosition.EP:
+                    EP = value;
+                    break;
+                case EnumPosition.Undefined:
+                default:
+                    break;
+            }
         }
     }
 

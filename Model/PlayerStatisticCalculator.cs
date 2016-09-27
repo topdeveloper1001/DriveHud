@@ -588,51 +588,23 @@ namespace Model
                 stat.PositionCouldColdCall = new PositionalStat();
             }
 
-            switch (stat.PositionString)
+            if (stat.PositionDidThreeBet == null)
             {
-                case "EP":
-                    stat.PositionTotal.EP = 1;
-                    stat.PositionUnoppened.EP = unopened;
-                    stat.PositionVPIP.EP = stat.Vpiphands;
-                    stat.PositionDidColdCall.EP = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.EP = stat.Couldcoldcall;
-                    return;
-                case "MP":
-                    stat.PositionTotal.MP = 1;
-                    stat.PositionUnoppened.MP = unopened;
-                    stat.PositionVPIP.MP = stat.Vpiphands;
-                    stat.PositionDidColdCall.MP = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.MP = stat.Couldcoldcall;
-                    return;
-                case "CO":
-                    stat.PositionTotal.CO = 1;
-                    stat.PositionUnoppened.CO = unopened;
-                    stat.PositionVPIP.CO = stat.Vpiphands;
-                    stat.PositionDidColdCall.CO = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.CO = stat.Couldcoldcall;
-                    return;
-                case "SB":
-                    stat.PositionTotal.SB = 1;
-                    stat.PositionUnoppened.SB = unopened;
-                    stat.PositionVPIP.SB = stat.Vpiphands;
-                    stat.PositionDidColdCall.SB = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.SB = stat.Couldcoldcall;
-                    return;
-                case "BTN":
-                    stat.PositionTotal.BN = 1;
-                    stat.PositionUnoppened.BN = unopened;
-                    stat.PositionVPIP.BN = stat.Vpiphands;
-                    stat.PositionDidColdCall.BN = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.BN = stat.Couldcoldcall;
-                    return;
-                case "BB":
-                    stat.PositionTotal.BB = 1;
-                    stat.PositionUnoppened.BB = unopened;
-                    stat.PositionVPIP.BB = stat.Vpiphands;
-                    stat.PositionDidColdCall.BB = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.BB = stat.Couldcoldcall;
-                    return;
+                stat.PositionDidThreeBet = new PositionalStat();
             }
+
+            if (stat.PositionCouldThreeBet == null)
+            {
+                stat.PositionCouldThreeBet = new PositionalStat();
+            }
+
+            stat.PositionTotal.SetPositionalStat(stat.Position, 1);
+            stat.PositionUnoppened.SetPositionalStat(stat.Position, unopened);
+            stat.PositionVPIP.SetPositionalStat(stat.Position, stat.Vpiphands);
+            stat.PositionDidColdCall.SetPositionalStat(stat.Position, stat.Didcoldcall);
+            stat.PositionCouldColdCall.SetPositionalStat(stat.Position, stat.Couldcoldcall);
+            stat.PositionDidThreeBet.SetPositionalStat(stat.Position, stat.Didthreebet);
+            stat.PositionCouldThreeBet.SetPositionalStat(stat.Position, stat.Couldthreebet);
 
         }
 
