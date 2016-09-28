@@ -69,7 +69,6 @@ namespace DriveHUD.Application.TableConfigurators
                     Width = PLAYER_WIDTH,
                     StrokeThickness = 0,
                     BorderThickness = new Thickness(0),
-                    ToolTip = i,
                     IsResizingEnabled = false,
                     IsRotationEnabled = false,
                     IsDraggingEnabled = false,

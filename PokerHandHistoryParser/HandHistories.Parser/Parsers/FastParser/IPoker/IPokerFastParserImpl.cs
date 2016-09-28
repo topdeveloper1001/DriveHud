@@ -30,7 +30,7 @@ using DriveHUD.Entities;
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
     internal sealed class IPokerFastParserImpl : HandHistoryParserFastImpl
-    {       
+    {
         public override EnumPokerSites SiteName
         {
             get
@@ -56,6 +56,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         }
 
         public override bool RequiresAllInDetection
+        {
+            get
+            {
+                return true;
+            }
+        }
+
+        public override bool RequiresAllInUpdates
         {
             get
             {
