@@ -276,6 +276,16 @@ namespace Model
 
             #endregion
 
+            #region Donk Bet
+
+            Condition donkBet = new Condition();
+            if (pfrOcurred && !pfr)
+            {
+                CalculateDonkBet(donkBet, parsedHand.HandActions, player);
+            }
+
+            #endregion
+
             var nomSmallPot = parsedHand.TotalPot > 5 * parsedHand.GameDescription.Limit.BigBlind;
             var largePot = parsedHand.TotalPot > 40 * parsedHand.GameDescription.Limit.BigBlind;
 
@@ -357,8 +367,8 @@ namespace Model
             stat.Pfrhands = pfr ? 1 : 0;
             stat.Vpiphands = vpip ? 1 : 0;
 
-            stat.DidDonkBet = pfrOcurred && !pfr && betOnFlop ? 1 : 0;
-            stat.CouldDonkBet = pfrOcurred && !pfr ? 1 : 0;
+            stat.DidDonkBet = donkBet.Made ? 1 : 0;
+            stat.CouldDonkBet = donkBet.Possible ? 1 : 0;
 
             stat.Didthreebet = threeBet.Made ? 1 : 0;
             stat.DidThreeBetIp = threeBet.Made && flopInPosition ? 1 : 0;
@@ -1331,6 +1341,35 @@ namespace Model
             }
 
             return null;
+        }
+
+        private static void CalculateDonkBet(Condition donkBet, IList<HandAction> actions, string player)
+        {
+            var raisers = actions.PreFlopWhere(x => x.IsRaise());
+            if (raisers.Any(x => x.PlayerName == player) || !raisers.Any())
+            {
+                return;
+            }
+
+            foreach (var action in actions.Street(Street.Flop))
+            {
+                if (raisers.Any(x => x.PlayerName == action.PlayerName))
+                {
+                    return;
+                }
+
+                if (action.PlayerName == player)
+                {
+                    donkBet.Possible = true;
+                    donkBet.Made = action.IsBet();
+                }
+
+                // somebody else did a donk bet
+                if (action.IsBet())
+                {
+                    return;
+                }
+            }
         }
 
         #endregion
