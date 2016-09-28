@@ -38,11 +38,6 @@ namespace Model.HandAnalyzers
                     result = analyzers.FirstOrDefault(combination => combination.Analyze(playerCards, boardCards)) ?? new StubAnalyzer();
                 }
 
-                if (result is StubAnalyzer)
-                {
-                    LogProvider.Log.Warn(this, String.Format("Wasn't able to analyze the hand: Player cards = {0}; Board Cards = {1}", string.Join("", playerCards.Select(c => c.CardStringValue)), boardCards.ToString()));
-                }
-
                 return result;
             }
             catch (Exception ex)
