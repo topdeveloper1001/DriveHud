@@ -18,7 +18,7 @@
         <Style x:Key="HudToolTipTextBlockStyle" BasedOn="{StaticResource Title_H2}"  TargetType="{x:Type TextBlock}">
             <Setter Property="FontWeight" Value="Bold" />
         </Style>
-        
+
         <Style x:Key="MeterBorderStyle" TargetType="{x:Type Border}">
             <Setter Property="Width" Value="12" />
             <Setter Property="Height" Value="6" />
@@ -45,8 +45,8 @@
                             <!-- Block 1 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#c92a39"
-                                BorderBrush="#ff3c52"
+                                Background="{Binding StatInfoMeter.BackgroundBrush[0]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[0]}"
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=1}"
                                 CornerRadius="1,0,0,1"
                                 />
@@ -54,72 +54,72 @@
                             <!-- Block 2 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#c94939"
-                                BorderBrush="#ff6952"                    
+                                Background="{Binding StatInfoMeter.BackgroundBrush[1]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[1]}"                  
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=2}"
                                 />
 
                             <!-- Block 3 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#c96939"
-                                BorderBrush="#ff9652"                    
+                                Background="{Binding StatInfoMeter.BackgroundBrush[2]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[2]}"                   
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=3}"
                                 />
 
                             <!-- Block 4 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#c98d39"
-                                BorderBrush="#ffca52"                    
+                                Background="{Binding StatInfoMeter.BackgroundBrush[3]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[3]}"                  
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=4}"
                                 />
 
                             <!-- Block 5 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#c9ac39"
-                                BorderBrush="#fff652"         
+                                Background="{Binding StatInfoMeter.BackgroundBrush[4]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[4]}"
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=5}"
                                 />
 
                             <!-- Block 6 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#c9db39"
-                                BorderBrush="#ffff52"        
+                                Background="{Binding StatInfoMeter.BackgroundBrush[5]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[5]}"
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=6}"
                                 />
 
                             <!-- Block 7 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#bbdb39"
-                                BorderBrush="#ffff52"       
+                                Background="{Binding StatInfoMeter.BackgroundBrush[6]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[6]}"
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=7}"
                                 />
 
                             <!-- Block 8 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#a1d23c"
-                                BorderBrush="#bde962"     
+                                Background="{Binding StatInfoMeter.BackgroundBrush[7]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[7]}"
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=8}"
                                 />
 
                             <!-- Block 9 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#73c343"
-                                BorderBrush="#99e06e"        
+                                Background="{Binding StatInfoMeter.BackgroundBrush[8]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[8]}"
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=9}"
                                 />
 
                             <!-- Block 10 -->
                             <Border
                                 Style="{StaticResource MeterBorderStyle}"
-                                Background="#51b848"
-                                BorderBrush="#b7d87b"
+                                Background="{Binding StatInfoMeter.BackgroundBrush[9]}"
+                                BorderBrush="{Binding StatInfoMeter.BorderBrush[9]}"
                                 CornerRadius="0,1,1,0"
                                 Visibility="{Binding CurrentValue, Converter={dh:TrackConditionsScoreToVisibilityConverter Divider=10, HiddenVisibility=Hidden}, ConverterParameter=10}"
                                 />
@@ -182,11 +182,11 @@
                                 </Grid.ColumnDefinitions>
 
 
-                            <!-- Use separate items controls in order to properly size columns -->
-                            <ItemsControl Grid.Column="0" ItemsSource="{Binding StatsCollection}" ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock 
+                                <!-- Use separate items controls in order to properly size columns -->
+                                <ItemsControl Grid.Column="0" ItemsSource="{Binding StatsCollection}" ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock 
                                             Style="{StaticResource HudToolTipTextBlockStyle}" 
                                             Foreground="White" 
                                             Height="16" VerticalAlignment="Center"
@@ -207,10 +207,10 @@
                                     </ItemsControl.ItemTemplate>
                                 </ItemsControl>
 
-                            <ItemsControl Grid.Column="2" ItemsSource="{Binding StatsCollection}" ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <TextBlock
+                                <ItemsControl Grid.Column="2" ItemsSource="{Binding StatsCollection}" ItemsPanel="{StaticResource ToolTipItemsPanelTemplate}">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate>
+                                            <TextBlock
                                             Style="{StaticResource HudToolTipTextBlockStyle}" 
                                             Margin="3"
                                             Height="16" VerticalAlignment="Center"

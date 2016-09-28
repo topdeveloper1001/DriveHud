@@ -109,24 +109,24 @@ namespace DriveHUD.ViewModels
             vpip.CategoryStat = new StatInfo() { Stat = Model.Enums.Stat.VPIP, PropertyName = nameof(HudIndicators.VPIP) };
             vpip.StatsCollection = new ObservableCollection<StatInfo>()
             {
-                new StatInfo() { Stat = Model.Enums.Stat.VPIP_EP, PropertyName = nameof(HudIndicators.VPIP_EP) },
-                new StatInfo() { Stat = Model.Enums.Stat.VPIP_MP, PropertyName = nameof(HudIndicators.VPIP_MP) },
-                new StatInfo() { Stat = Model.Enums.Stat.VPIP_CO, PropertyName = nameof(HudIndicators.VPIP_CO) },
-                new StatInfo() { Stat = Model.Enums.Stat.VPIP_BN, PropertyName = nameof(HudIndicators.VPIP_BN) },
-                new StatInfo() { Stat = Model.Enums.Stat.VPIP_SB, PropertyName = nameof(HudIndicators.VPIP_SB) },
-                new StatInfo() { Stat = Model.Enums.Stat.VPIP_BB, PropertyName = nameof(HudIndicators.VPIP_BB) },
+                new StatInfo() { Stat = Model.Enums.Stat.VPIP_EP, PropertyName = nameof(HudIndicators.VPIP_EP), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.VPIP_MP, PropertyName = nameof(HudIndicators.VPIP_MP), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.VPIP_CO, PropertyName = nameof(HudIndicators.VPIP_CO), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.VPIP_BN, PropertyName = nameof(HudIndicators.VPIP_BN), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.VPIP_SB, PropertyName = nameof(HudIndicators.VPIP_SB), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.VPIP_BB, PropertyName = nameof(HudIndicators.VPIP_BB), StatInfoMeter = new StatiInfoMeterModel() },
             };
 
             coldCall.CategoryName = "COLD CALL";
             coldCall.CategoryStat = new StatInfo { Stat = Model.Enums.Stat.ColdCall, PropertyName = nameof(HudIndicators.ColdCall) };
             coldCall.StatsCollection = new ObservableCollection<StatInfo>()
             {
-                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_EP, PropertyName = nameof(HudIndicators.ColdCall_EP) },
-                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_MP, PropertyName = nameof(HudIndicators.ColdCall_MP) },
-                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_CO, PropertyName = nameof(HudIndicators.ColdCall_CO) },
-                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_BN, PropertyName = nameof(HudIndicators.ColdCall_BN) },
-                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_SB, PropertyName = nameof(HudIndicators.ColdCall_SB) },
-                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_BB, PropertyName = nameof(HudIndicators.ColdCall_BB) },
+                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_EP, PropertyName = nameof(HudIndicators.ColdCall_EP), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_MP, PropertyName = nameof(HudIndicators.ColdCall_MP), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_CO, PropertyName = nameof(HudIndicators.ColdCall_CO), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_BN, PropertyName = nameof(HudIndicators.ColdCall_BN), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_SB, PropertyName = nameof(HudIndicators.ColdCall_SB), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ColdCall_BB, PropertyName = nameof(HudIndicators.ColdCall_BB), StatInfoMeter = new StatiInfoMeterModel() },
             };
 
             list.Add(vpip);
@@ -144,12 +144,12 @@ namespace DriveHUD.ViewModels
             pfr.CategoryStat = new StatInfo() { Stat = Model.Enums.Stat.PFR, PropertyName = nameof(HudIndicators.PFR) };
             pfr.StatsCollection = new ObservableCollection<StatInfo>()
             {
-                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_EP, PropertyName = nameof(HudIndicators.UO_PFR_EP) },
-                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_MP, PropertyName = nameof(HudIndicators.UO_PFR_MP) },
-                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_CO, PropertyName = nameof(HudIndicators.UO_PFR_CO) },
-                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_BN, PropertyName = nameof(HudIndicators.UO_PFR_BN) },
-                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_SB, PropertyName = nameof(HudIndicators.UO_PFR_SB) },
-                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_BB, PropertyName = nameof(HudIndicators.UO_PFR_BB) },
+                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_EP, PropertyName = nameof(HudIndicators.UO_PFR_EP), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_MP, PropertyName = nameof(HudIndicators.UO_PFR_MP), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_CO, PropertyName = nameof(HudIndicators.UO_PFR_CO), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_BN, PropertyName = nameof(HudIndicators.UO_PFR_BN), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_SB, PropertyName = nameof(HudIndicators.UO_PFR_SB), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_BB, PropertyName = nameof(HudIndicators.UO_PFR_BB), StatInfoMeter = new StatiInfoMeterModel() },
             };
 
             list.Add(pfr);
@@ -166,12 +166,12 @@ namespace DriveHUD.ViewModels
             threeBet.CategoryStat = new StatInfo() { Stat = Model.Enums.Stat.S3Bet, PropertyName = nameof(HudIndicators.ThreeBet) };
             threeBet.StatsCollection = new ObservableCollection<StatInfo>()
             {
-                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_EP, PropertyName = nameof(HudIndicators.ThreeBet_EP) },
-                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_MP, PropertyName = nameof(HudIndicators.ThreeBet_MP) },
-                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_CO, PropertyName = nameof(HudIndicators.ThreeBet_CO) },
-                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_BN, PropertyName = nameof(HudIndicators.ThreeBet_BN) },
-                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_SB, PropertyName = nameof(HudIndicators.ThreeBet_SB) },
-                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_BB, PropertyName = nameof(HudIndicators.ThreeBet_BB) },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_EP, PropertyName = nameof(HudIndicators.ThreeBet_EP), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_MP, PropertyName = nameof(HudIndicators.ThreeBet_MP), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_CO, PropertyName = nameof(HudIndicators.ThreeBet_CO), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_BN, PropertyName = nameof(HudIndicators.ThreeBet_BN), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_SB, PropertyName = nameof(HudIndicators.ThreeBet_SB), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.ThreeBet_BB, PropertyName = nameof(HudIndicators.ThreeBet_BB), StatInfoMeter = new StatiInfoMeterModel() },
             };
 
             threeBet.CardsList = new StatInfoToolTipCardsList() { ListSize = 4, PropertyName = nameof(HudIndicators.ThreeBetCardsList) };
@@ -188,12 +188,17 @@ namespace DriveHUD.ViewModels
 
             aggPr.CategoryName = "TOTAL";
             aggPr.CategoryStat = new StatInfo() { Stat = Model.Enums.Stat.AGG, PropertyName = nameof(HudIndicators.AggPr) };
+
+            var recentAggMeterColor = new StatiInfoMeterModel();
+            recentAggMeterColor.UpdateBackgroundBrushes("#FF28F0DD", "#FF28C3F0", "#FF289EF0", "#FF2868F0", "#FF283AF0", "#FF3812E4", "#FF3812E4", "#FF7B12E4", "#FFD112E4", "#FFE412A1");
+            recentAggMeterColor.UpdateBorderBrushes("#FF59FDED", "#FF48D9F0", "#FF48ABF0", "#FF4885F0", "#FF4857F0", "#FF5B2DF5", "#FF5B2DF5", "#FF882DF5", "#FFDA2DF5", "#FFF52DD1");
+
             aggPr.StatsCollection = new ObservableCollection<StatInfo>()
             {
-                new StatInfo() { Stat = Model.Enums.Stat.FlopAGG, PropertyName = nameof(HudIndicators.FlopAgg) },
-                new StatInfo() { Stat = Model.Enums.Stat.TurnAGG, PropertyName = nameof(HudIndicators.TurnAgg) },
-                new StatInfo() { Stat = Model.Enums.Stat.RiverAGG, PropertyName = nameof(HudIndicators.RiverAgg) },
-                new StatInfo() { Stat = Model.Enums.Stat.RecentAgg, PropertyName = nameof(HudIndicators.RecentAggPr) },
+                new StatInfo() { Stat = Model.Enums.Stat.FlopAGG, PropertyName = nameof(HudIndicators.FlopAgg), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.TurnAGG, PropertyName = nameof(HudIndicators.TurnAgg), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.RiverAGG, PropertyName = nameof(HudIndicators.RiverAgg), StatInfoMeter = new StatiInfoMeterModel() },
+                new StatInfo() { Stat = Model.Enums.Stat.RecentAgg, PropertyName = nameof(HudIndicators.RecentAggPr), StatInfoMeter = recentAggMeterColor },
             };
 
             list.Add(aggPr);
