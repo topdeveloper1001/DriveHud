@@ -75,13 +75,13 @@ namespace DriveHUD.Application.TableConfigurators
 
         private RadDiagramShape table;
 
-        private IHudLayoutsService hudLayoutsSevice;
+        private IHudLayoutsService hudLayoutsService;
         private IDataService dataService;
         #endregion
 
         public ReplayerTableConfigurator()
         {
-            hudLayoutsSevice = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
         }
 
@@ -430,7 +430,7 @@ namespace DriveHUD.Application.TableConfigurators
         private IList<StatInfo> GetHudStats()
         {
             var result = new List<StatInfo>();
-            var layouts = hudLayoutsSevice.GetNotEmptyStatsLayout();
+            var layouts = hudLayoutsService.GetNotEmptyStatsLayout();
             if (layouts == null || layouts.Count() == 0)
             {
                 return result;

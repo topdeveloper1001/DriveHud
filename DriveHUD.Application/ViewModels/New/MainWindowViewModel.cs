@@ -198,7 +198,7 @@ namespace DriveHUD.Application.ViewModels
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
-            if(CurrentViewModelType == EnumViewModelType.HudViewModel)
+            if (CurrentViewModelType == EnumViewModelType.HudViewModel)
             {
                 HudViewModel.RefreshHudTable();
             }
@@ -349,12 +349,12 @@ namespace DriveHUD.Application.ViewModels
                 playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
                 playerHudContent.HudElement.TotalHands = item.TotalHands;
 
-                var sessionMoney = sessionStatisticCollection.FirstOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
+                var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                 playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
                     ? new ObservableCollection<decimal>()
                     : new ObservableCollection<decimal>(sessionMoney);
 
-                var cardsCollection = sessionStatisticCollection.FirstOrDefault(x => x.CardsList != null)?.CardsList;
+                var cardsCollection = sessionStatisticCollection.SingleOrDefault(x => x.CardsList != null)?.CardsList;
                 playerHudContent.HudElement.CardsCollection = cardsCollection == null
                     ? new ObservableCollection<string>()
                     : new ObservableCollection<string>(cardsCollection);
@@ -411,17 +411,29 @@ namespace DriveHUD.Application.ViewModels
                     }
 
                     // temporary
-                    if (statInfo.Stat == Stat.PFR || statInfo.Stat == Stat.VPIP)
+                    var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
+                    if (tooltipCollection != null)
                     {
-                        statInfo.StatInfoToolTipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
-                        foreach (var tooltip in statInfo.StatInfoToolTipCollection)
+                        foreach (var tooltip in tooltipCollection)
                         {
                             AssignStatInfoValues(item, tooltip.CategoryStat);
                             foreach (var stat in tooltip.StatsCollection)
                             {
                                 AssignStatInfoValues(item, stat);
                             }
+
+                            if (tooltip.CardsList == null)
+                            {
+                                continue;
+                            }
+
+                            var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
+                            if (listObj != null)
+                            {
+                                tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
+                            }
                         }
+                        statInfo.StatInfoToolTipCollection = tooltipCollection;
                     }
 
                     playerHudContent.HudElement.StatInfoCollection.Add(statInfo);

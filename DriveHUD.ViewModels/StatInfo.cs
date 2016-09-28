@@ -482,6 +482,7 @@ namespace DriveHUD.ViewModels
         [NonSerialized]
         private StatDto statDto;
 
+        [XmlIgnore]
         public StatDto StatDto
         {
             get
@@ -495,6 +496,9 @@ namespace DriveHUD.ViewModels
                 OnPropertyChanged();
             }
         }
+
+        [XmlIgnore]
+        public StatInfoMeterModel StatInfoMeter { get; set; }
 
         #endregion
 

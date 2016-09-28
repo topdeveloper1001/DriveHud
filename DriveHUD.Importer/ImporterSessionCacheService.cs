@@ -138,8 +138,8 @@ namespace DriveHUD.Importers
                             if (x.SessionCode == session)
                             {
                                 PlayerStatisticCalculator.CalculateTotalPotValues(x);
-                                InitSessionCardsCollection(x);
-                                InitSessionMoneyWonCollection(x);
+                                InitSessionCardsCollections(x);
+                                InitSessionStatCollections(x);
                             }
                         });
 
@@ -160,8 +160,8 @@ namespace DriveHUD.Importers
                 }
                 else
                 {
-                    InitSessionCardsCollection(stats);
-                    InitSessionMoneyWonCollection(stats);
+                    InitSessionCardsCollections(stats);
+                    InitSessionStatCollections(stats);
                     playerData.Add(stats);
                 }
             }
@@ -303,7 +303,7 @@ namespace DriveHUD.Importers
             return sessionData;
         }
 
-        private void InitSessionCardsCollection(Playerstatistic stats)
+        private void InitSessionCardsCollections(Playerstatistic stats)
         {
             if (stats.CardsList == null)
             {
@@ -313,14 +313,29 @@ namespace DriveHUD.Importers
                     stats.CardsList.Add(stats.Cards);
                 }
             }
+
+            if (stats.ThreeBetCardsList == null)
+            {
+                stats.ThreeBetCardsList = new Common.Utils.FixedSizeList<string>(4);
+                if (!string.IsNullOrWhiteSpace(stats.Cards) && stats.Didthreebet != 0)
+                {
+                    stats.ThreeBetCardsList.Add(stats.Cards);
+                }
+            }
         }
 
-        private void InitSessionMoneyWonCollection(Playerstatistic stats)
+        private void InitSessionStatCollections(Playerstatistic stats)
         {
             if (stats.MoneyWonCollection == null)
             {
                 stats.MoneyWonCollection = new List<decimal>();
                 stats.MoneyWonCollection.Add(stats.NetWon);
+            }
+
+            if (stats.RecentAggList == null)
+            {
+                stats.RecentAggList = new Common.Utils.FixedSizeList<Tuple<int, int>>(10);
+                stats.RecentAggList.Add(new Tuple<int, int>(stats.Totalbets, stats.Totalpostflopstreetsplayed));
             }
         }
     }

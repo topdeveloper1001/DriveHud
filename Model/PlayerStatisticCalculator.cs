@@ -50,22 +50,32 @@ namespace Model
 
             var playerHandActions = parsedHand.HandActions.Where(x => x.PlayerName == player).ToArray();
 
-            int call = playerHandActions.Count(handAction => handAction.IsCall() && (int)handAction.Street > 1);
-            int bet = playerHandActions.Count(handAction => handAction.IsBet() && (int)handAction.Street > 1);
-            int raises = playerHandActions.Count(handAction => handAction.IsRaise() && (int)handAction.Street > 1);
+            int call = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street > Street.Preflop);
+            int bet = playerHandActions.Count(handAction => handAction.IsBet() && handAction.Street > Street.Preflop);
+            int raises = playerHandActions.Count(handAction => handAction.IsRaise() && handAction.Street > Street.Preflop);
+
+            stat.TotalbetsFlop = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.Flop);
+            stat.TotalbetsTurn = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.Turn);
+            stat.TotalbetsRiver = playerHandActions.Count(handAction => (handAction.IsBet() || handAction.IsRaise()) && handAction.Street == Street.River);
+
+            stat.TotalcallsFlop = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.Flop);
+            stat.TotalcallsTurn = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.Turn);
+            stat.TotalcallsRiver = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.River);
 
             bool sawShowDown = playerHandActions.All(x => x.HandActionType != HandActionType.FOLD);
             bool playerFolded = !sawShowDown;
 
-            var wasAllInAction = parsedHand.HandActions.Any(x => x.IsAllInAction);
+            bool wasRiver = CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.River);
+            bool wasTurn = wasRiver || CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.Turn);
+            bool wasFlop = wasTurn || CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.Flop);
 
-            bool wasRiver = wasAllInAction || parsedHand.River.Any();
-            bool wasTurn = wasAllInAction || parsedHand.Turn.Any();
-            bool wasFlop = wasAllInAction || parsedHand.Flop.Any();
+            bool playedRiver = playerHandActions.Any(x => x.Street == Street.River);
+            bool playedTurn = playedRiver || playerHandActions.Any(x => x.Street == Street.Turn);
+            bool playedFlop = playedTurn || playerHandActions.Any(x => x.Street == Street.Flop);
 
-            bool sawFlop = IsSawStreet(player, wasFlop, Street.Flop, parsedHand);
-            bool sawTurn = IsSawStreet(player, wasTurn, Street.Turn, parsedHand);
-            bool sawRiver = IsSawStreet(player, wasRiver, Street.River, parsedHand);
+            bool sawFlop = playedFlop || IsSawStreet(player, wasFlop, Street.Flop, parsedHand);
+            bool sawTurn = playedTurn || IsSawStreet(player, wasTurn, Street.Turn, parsedHand);
+            bool sawRiver = playedRiver || IsSawStreet(player, wasRiver, Street.River, parsedHand);
 
             bool won = playerHandActions.Any(handAction => handAction.HandActionType == HandActionType.WINS);
 
@@ -266,6 +276,16 @@ namespace Model
 
             #endregion
 
+            #region Donk Bet
+
+            Condition donkBet = new Condition();
+            if (pfrOcurred && !pfr)
+            {
+                CalculateDonkBet(donkBet, parsedHand.HandActions, player);
+            }
+
+            #endregion
+
             var nomSmallPot = parsedHand.TotalPot > 5 * parsedHand.GameDescription.Limit.BigBlind;
             var largePot = parsedHand.TotalPot > 40 * parsedHand.GameDescription.Limit.BigBlind;
 
@@ -325,10 +345,14 @@ namespace Model
             stat.Sawnonsmallshowdownlimpedflop = sawShowDown && nomSmallPot && limped ? 1 : 0;
             stat.Sawlargeshowdown = sawShowDown && largePot ? 1 : 0;
             stat.Sawlargeshowdownlimpedflop = sawShowDown && largePot && limped ? 1 : 0;
-            stat.Sawflop = sawFlop ? 1 : 0;
 
+            stat.Sawflop = sawFlop ? 1 : 0;
             stat.SawTurn = sawTurn ? 1 : 0;
             stat.SawRiver = sawRiver ? 1 : 0;
+
+            stat.PlayedFlop = playedFlop ? 1 : 0;
+            stat.PlayedTurn = playedTurn ? 1 : 0;
+            stat.PlayedRiver = playedRiver ? 1 : 0;
 
             stat.Wonshowdown = wonShowdonw ? 1 : 0;
             stat.Wonnonsmallshowdown = wonShowdonw && nomSmallPot ? 1 : 0;
@@ -343,8 +367,8 @@ namespace Model
             stat.Pfrhands = pfr ? 1 : 0;
             stat.Vpiphands = vpip ? 1 : 0;
 
-            stat.DidDonkBet = pfrOcurred && !pfr && betOnFlop ? 1 : 0;
-            stat.CouldDonkBet = pfrOcurred && !pfr ? 1 : 0;
+            stat.DidDonkBet = donkBet.Made ? 1 : 0;
+            stat.CouldDonkBet = donkBet.Possible ? 1 : 0;
 
             stat.Didthreebet = threeBet.Made ? 1 : 0;
             stat.DidThreeBetIp = threeBet.Made && flopInPosition ? 1 : 0;
@@ -358,7 +382,7 @@ namespace Model
             stat.Totalhands = 1;
             stat.Totalcalls = call;
             stat.Totalbets = bet + raises;
-            stat.Totalpostflopstreetsseen = (sawFlop ? 1 : 0) + (sawTurn ? 1 : 0) + (sawRiver ? 1 : 0);
+            stat.Totalpostflopstreetsplayed = (playedFlop ? 1 : 0) + (playedTurn ? 1 : 0) + (playedRiver ? 1 : 0);
             stat.Totalaggressivepostflopstreetsseen = (aggresiveFlop ? 1 : 0) + (aggresiveRiver ? 1 : 0) + (aggresiveTurn ? 1 : 0);
             stat.Totalamountwonincents = (int)(netWon * 100);
 
@@ -530,8 +554,8 @@ namespace Model
 
             stat.TotalAggressiveBets = flopTrueAggressionBets + turnTrueAggressionBets + riverTrueAggressionBets;
 
-            stat.FacedHandsUpOnFlop = sawFlop && (numberOfActivePlayerOfFlop == 2) ? 1 : 0;
-            stat.FacedMultiWayOnFlop = sawFlop && (numberOfActivePlayerOfFlop > 2) ? 1 : 0;
+            stat.FacedHandsUpOnFlop = playedFlop && (numberOfActivePlayerOfFlop == 2) ? 1 : 0;
+            stat.FacedMultiWayOnFlop = playedFlop && (numberOfActivePlayerOfFlop > 2) ? 1 : 0;
 
             stat.StackInBBs = stat.StartingStack / stat.BigBlind;
             stat.MRatio = CalculateMRatio(stat);
@@ -588,51 +612,23 @@ namespace Model
                 stat.PositionCouldColdCall = new PositionalStat();
             }
 
-            switch (stat.PositionString)
+            if (stat.PositionDidThreeBet == null)
             {
-                case "EP":
-                    stat.PositionTotal.EP = 1;
-                    stat.PositionUnoppened.EP = unopened;
-                    stat.PositionVPIP.EP = stat.Vpiphands;
-                    stat.PositionDidColdCall.EP = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.EP = stat.Couldcoldcall;
-                    return;
-                case "MP":
-                    stat.PositionTotal.MP = 1;
-                    stat.PositionUnoppened.MP = unopened;
-                    stat.PositionVPIP.MP = stat.Vpiphands;
-                    stat.PositionDidColdCall.MP = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.MP = stat.Couldcoldcall;
-                    return;
-                case "CO":
-                    stat.PositionTotal.CO = 1;
-                    stat.PositionUnoppened.CO = unopened;
-                    stat.PositionVPIP.CO = stat.Vpiphands;
-                    stat.PositionDidColdCall.CO = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.CO = stat.Couldcoldcall;
-                    return;
-                case "SB":
-                    stat.PositionTotal.SB = 1;
-                    stat.PositionUnoppened.SB = unopened;
-                    stat.PositionVPIP.SB = stat.Vpiphands;
-                    stat.PositionDidColdCall.SB = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.SB = stat.Couldcoldcall;
-                    return;
-                case "BTN":
-                    stat.PositionTotal.BN = 1;
-                    stat.PositionUnoppened.BN = unopened;
-                    stat.PositionVPIP.BN = stat.Vpiphands;
-                    stat.PositionDidColdCall.BN = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.BN = stat.Couldcoldcall;
-                    return;
-                case "BB":
-                    stat.PositionTotal.BB = 1;
-                    stat.PositionUnoppened.BB = unopened;
-                    stat.PositionVPIP.BB = stat.Vpiphands;
-                    stat.PositionDidColdCall.BB = stat.Didcoldcall;
-                    stat.PositionCouldColdCall.BB = stat.Couldcoldcall;
-                    return;
+                stat.PositionDidThreeBet = new PositionalStat();
             }
+
+            if (stat.PositionCouldThreeBet == null)
+            {
+                stat.PositionCouldThreeBet = new PositionalStat();
+            }
+
+            stat.PositionTotal.SetPositionalStat(stat.Position, 1);
+            stat.PositionUnoppened.SetPositionalStat(stat.Position, unopened);
+            stat.PositionVPIP.SetPositionalStat(stat.Position, stat.Vpiphands);
+            stat.PositionDidColdCall.SetPositionalStat(stat.Position, stat.Didcoldcall);
+            stat.PositionCouldColdCall.SetPositionalStat(stat.Position, stat.Couldcoldcall);
+            stat.PositionDidThreeBet.SetPositionalStat(stat.Position, stat.Didthreebet);
+            stat.PositionCouldThreeBet.SetPositionalStat(stat.Position, stat.Couldthreebet);
 
         }
 
@@ -697,14 +693,14 @@ namespace Model
 
         private static bool IsSawStreet(string player, bool wasStreet, Street street, HandHistory parsedHand)
         {
-            bool isWasAllIn = parsedHand.HandActions.Any(x => x.IsAllInAction && x.PlayerName == player);
-            if (isWasAllIn)
-            {
-                return isWasAllIn && wasStreet;
-            }
             HandAction foldAction = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.FOLD && x.PlayerName == player);
-            int foldActionNumber = foldAction == null ? parsedHand.HandActions.Max(x => x.ActionNumber) : foldAction.ActionNumber;
-            return parsedHand.HandActions.Any(handAction => handAction.PlayerName == player && (handAction.Street == street) && (handAction.ActionNumber <= foldActionNumber)) && wasStreet;
+
+            if (foldAction == null)
+            {
+                return wasStreet;
+            }
+
+            return (foldAction.Street >= street) && wasStreet;
         }
 
         private static void CalculateUnopenedPot(Playerstatistic stat, HandHistory parsedHand)
@@ -1345,6 +1341,35 @@ namespace Model
             }
 
             return null;
+        }
+
+        private static void CalculateDonkBet(Condition donkBet, IList<HandAction> actions, string player)
+        {
+            var raisers = actions.PreFlopWhere(x => x.IsRaise());
+            if (raisers.Any(x => x.PlayerName == player) || !raisers.Any())
+            {
+                return;
+            }
+
+            foreach (var action in actions.Street(Street.Flop))
+            {
+                if (raisers.Any(x => x.PlayerName == action.PlayerName))
+                {
+                    return;
+                }
+
+                if (action.PlayerName == player)
+                {
+                    donkBet.Possible = true;
+                    donkBet.Made = action.IsBet();
+                }
+
+                // somebody else did a donk bet
+                if (action.IsBet())
+                {
+                    return;
+                }
+            }
         }
 
         #endregion

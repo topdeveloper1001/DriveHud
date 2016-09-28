@@ -835,6 +835,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Recent AGG%.
+        /// </summary>
+        internal static string Enum_Stat_RecentAgg {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RecentAgg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to River AGG%.
         /// </summary>
         internal static string Enum_Stat_RiverAGG {
@@ -1002,6 +1011,60 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_Steal {
             get {
                 return ResourceManager.GetString("Enum_Stat_Steal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet BB%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_BB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_BB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet BN%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_BN {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_BN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet CO%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_CO {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_CO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet EP%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_EP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_EP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet MP%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_MP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_MP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 3-Bet SB%.
+        /// </summary>
+        internal static string Enum_Stat_ThreeBet_SB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_ThreeBet_SB", resourceCulture);
             }
         }
         
