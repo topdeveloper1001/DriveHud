@@ -12,14 +12,88 @@
 
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
+using HandHistories.Objects.Players;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace HandHistories.Parser.Utils.AllInAction
+namespace HandHistories.Parser.Utils
 {
     internal static class AllInActionHelper
     {
+        /// <summary>
+        /// Some sites (like IPoker) don't specifically identify All-In calls/raises. In these cases we need to parse the actions 
+        /// and reclassify certain actions as all-in
+        /// </summary>
+        internal static List<HandAction> IdentifyAllInActions(PlayerList playerList, List<HandAction> handActions)
+        {
+            Dictionary<string, decimal> playerStackRemaining = new Dictionary<string, decimal>();
+
+            foreach (Player player in playerList)
+            {
+                playerStackRemaining.Add(player.PlayerName, player.StartingStack);
+            }
+
+            List<HandAction> identifiedActions = new List<HandAction>(handActions.Count);
+
+            foreach (HandAction action in handActions)
+            {
+                //Negative amounts represent putting money into the pot - ignore actions which aren't negative
+                if (action.Amount >= 0)
+                {
+                    identifiedActions.Add(action);
+                    continue;
+                }
+
+                //Skip actions which have already been identified
+                if (action is AllInAction)
+                {
+                    identifiedActions.Add(action);
+                    continue;
+                }
+
+                //Update the remaining stack with our action's amount
+                playerStackRemaining[action.PlayerName] += action.Amount;
+
+                if (playerStackRemaining[action.PlayerName] == 0)
+                {
+                    //This was a bet/raise/call for our remaining chips - we are all in
+                    AllInAction allInAction = new AllInAction(action.PlayerName, action.Amount, action.Street, true);
+                    identifiedActions.Add(allInAction);
+                }
+                else
+                {
+                    identifiedActions.Add(action);
+                }
+            }
+
+            return identifiedActions;
+        }
+
+        /// <summary>
+        /// Some sites (like IPoker) dont specify if allins are CALL/BET/RAISE so we we fix that after parsing actions.
+        /// We do that by assigning HandAction.HandActionType with HandActionType.ALL_IN
+        /// </summary>
+        internal static List<HandAction> UpdateAllInActions(List<HandAction> handActions)
+        {
+            List<HandAction> identifiedActions = new List<HandAction>(handActions.Count);
+            foreach (HandAction action in handActions)
+            {
+                if (action is AllInAction)
+                {
+                    HandActionType actionType = GetAllInActionType(action.PlayerName, action.Amount, action.Street, identifiedActions);
+
+                    identifiedActions.Add(new AllInAction(action.PlayerName, action.Amount, action.Street, actionType == HandActionType.RAISE, actionType));
+                }
+                else
+                {
+                    identifiedActions.Add(action);
+                }
+            }
+
+            return identifiedActions;
+        }
+
         /// <summary>
         /// Gets the ActionType for an unadjusted action amount
         /// </summary>
@@ -28,7 +102,7 @@ namespace HandHistories.Parser.Utils.AllInAction
         /// <param name="street"></param>
         /// <param name="actions"></param>
         /// <returns></returns>
-        public static HandActionType GetAllInActionType(string playerName, decimal amount, Street street, List<HandAction> actions)
+        internal static HandActionType GetAllInActionType(string playerName, decimal amount, Street street, List<HandAction> actions)
         {
             var streetActions = actions.Street(street);
 
@@ -37,8 +111,26 @@ namespace HandHistories.Parser.Utils.AllInAction
                 return HandActionType.BET;
             }
 
+            Dictionary<string, decimal> PutInPot = new Dictionary<string, decimal>();
 
-            if (Math.Abs(amount) <= Math.Abs(actions.Min(p => p.Amount)))
+            foreach (var action in streetActions)
+            {
+                if (!PutInPot.ContainsKey(action.PlayerName))
+                {
+                    PutInPot.Add(action.PlayerName, action.Amount);
+                }
+                else
+                {
+                    PutInPot[action.PlayerName] += action.Amount;
+                }
+            }
+
+            var contributed = Math.Abs(amount);
+            if (PutInPot.ContainsKey(playerName))
+            {
+                contributed += Math.Abs(PutInPot[playerName]);
+            }
+            if (contributed <= Math.Abs(PutInPot.Min(p => p.Value)))
             {
                 return HandActionType.CALL;
             }
@@ -46,17 +138,6 @@ namespace HandHistories.Parser.Utils.AllInAction
             {
                 return HandActionType.RAISE;
             }
-        }
-
-        /// <summary>
-        /// Gets the adjusted amount for a Call-AllIn action
-        /// </summary>
-        /// <param name="amount">The Call Action AMount</param>
-        /// <param name="playerActions">The calling players previous actions</param>
-        /// <returns>the adjusted call size</returns>
-        public static decimal GetAdjustedCallAllInAmount(decimal amount, IEnumerable<HandAction> playerActions)
-        {
-            return amount - Math.Abs(playerActions.Min(p => p.Amount));
         }
     }
 }

@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="SystemSettings_ActivePlayerFileName" xml:space="preserve">
+    <value>CurrentPlayer.txt</value>
+  </data>
   <data name="SystemSettings_AddActivationLink" xml:space="preserve">
     <value>http://drivehud.com</value>
+  </data>
+  <data name="SystemSettings_AppDataFolder" xml:space="preserve">
+    <value>DriveHUD</value>
+  </data>
+  <data name="SystemSettings_DefaultPlayersFolderName" xml:space="preserve">
+    <value>Players</value>
   </data>
   <data name="SystemSettings_ForumsLink" xml:space="preserve">
     <value>http://drivehud.com/blog/forums/</value>

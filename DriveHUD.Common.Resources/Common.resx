@@ -611,4 +611,10 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_TournamentType" xml:space="preserve">
     <value>Tournament Type</value>
   </data>
+  <data name="Common_AutoDetect" xml:space="preserve">
+    <value>Auto Detect</value>
+  </data>
+  <data name="Common_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
 </root>

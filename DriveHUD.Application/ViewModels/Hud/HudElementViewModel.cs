@@ -265,7 +265,7 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Total hands for current session
         /// </summary>
-        public decimal? SessionHands
+        public decimal? TotalHands
         {
             get { return sessionHands; }
             set

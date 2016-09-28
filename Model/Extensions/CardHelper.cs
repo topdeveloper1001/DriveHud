@@ -71,7 +71,7 @@ namespace Model.Extensions
         public static Hand FindBestHand(IEnumerable<string> pockets, string board)
         {
             var list = new List<Hand>();
-            foreach(var item in pockets)
+            foreach (var item in pockets)
             {
                 list.Add(new HoldemHand.Hand(item, board));
             }
@@ -124,7 +124,24 @@ namespace Model.Extensions
                 return false;
             }
 
-            var count = BoardCards.FromCards(boardCards).Count();
+            return IsStreetAvailable(BoardCards.FromCards(boardCards), street);
+        }
+
+        /// <summary>
+        /// Determines if board contains enough cards to display specified street
+        /// </summary>
+        /// <param name="boardCards"></param>
+        /// <param name="street"></param>
+        /// <returns></returns>
+        public static bool IsStreetAvailable(BoardCards boardCards, Street street)
+        {
+            if (boardCards == null)
+            {
+                return false;
+            }
+
+
+            var count = boardCards.Count();
 
             switch (street)
             {

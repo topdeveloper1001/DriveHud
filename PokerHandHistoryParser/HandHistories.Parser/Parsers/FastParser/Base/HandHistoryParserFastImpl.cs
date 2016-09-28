@@ -19,6 +19,7 @@ using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.Exceptions;
+using HandHistories.Parser.Utils;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -44,6 +45,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         }
 
         public virtual bool RequiresAllInDetection
+        {
+            get { return false; }
+        }
+
+        public virtual bool RequiresAllInUpdates
         {
             get { return false; }
         }
@@ -219,7 +225,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                 if (RequiresAllInDetection)
                 {
-                    handHistory.HandActions = IdentifyAllInActions(handLines, handHistory.HandActions);
+                    handHistory.HandActions = AllInActionHelper.IdentifyAllInActions(ParsePlayers(handLines), handHistory.HandActions);
+                }
+
+                if (RequiresAllInUpdates)
+                {
+                    handHistory.HandActions = AllInActionHelper.UpdateAllInActions(handHistory.HandActions);
                 }
 
                 // not sure !
@@ -487,7 +498,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 }
                 if (RequiresAllInDetection)
                 {
-                    handActions = IdentifyAllInActions(handLines, handActions);
+                    handActions = AllInActionHelper.IdentifyAllInActions(ParsePlayers(handLines), handActions);
+                }
+                if (RequiresAllInUpdates)
+                {
+                    handActions = AllInActionHelper.UpdateAllInActions(handActions);
                 }
 
                 return handActions;
@@ -500,57 +515,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
         // We pass the game-type in as it can change the actions and parsing logic
         protected abstract List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown);
-
-        /// <summary>
-        /// Some sites (like IPoker) don't specifically identify All-In calls/raises. In these cases we need to parse the actions 
-        /// and reclassify certain actions as all-in
-        /// </summary>
-        protected List<HandAction> IdentifyAllInActions(string[] handLines, List<HandAction> handActions)
-        {
-            PlayerList playerList = ParsePlayers(handLines);
-
-            Dictionary<string, decimal> playerStackRemaining = new Dictionary<string, decimal>();
-
-            foreach (Player player in playerList)
-            {
-                playerStackRemaining.Add(player.PlayerName, player.StartingStack);
-            }
-
-            List<HandAction> identifiedActions = new List<HandAction>(handActions.Count);
-
-            foreach (HandAction action in handActions)
-            {
-                //Negative amounts represent putting money into the pot - ignore actions which aren't negative
-                if (action.Amount >= 0)
-                {
-                    identifiedActions.Add(action);
-                    continue;
-                }
-
-                //Skip actions which have already been identified
-                if (action is AllInAction)
-                {
-                    identifiedActions.Add(action);
-                    continue;
-                }
-
-                //Update the remaining stack with our action's amount
-                playerStackRemaining[action.PlayerName] += action.Amount;
-
-                if (playerStackRemaining[action.PlayerName] == 0)
-                {
-                    //This was a bet/raise/call for our remaining chips - we are all in
-                    AllInAction allInAction = new AllInAction(action.PlayerName, action.Amount, action.Street, true);
-                    identifiedActions.Add(allInAction);
-                }
-                else
-                {
-                    identifiedActions.Add(action);
-                }
-            }
-
-            return identifiedActions;
-        }
 
         /// <summary>
         /// Sometimes hand actions are listed out of order, but with an order number or time stamp (this happens on IPoker).

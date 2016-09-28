@@ -503,4 +503,25 @@
   <data name="Enum_EnumPokerSites_TigerGaming" xml:space="preserve">
     <value>TigerGaming</value>
   </data>
+  <data name="Enum_Stat_ThreeBet_BB" xml:space="preserve">
+    <value>3-Bet BB%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBet_BN" xml:space="preserve">
+    <value>3-Bet BN%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBet_CO" xml:space="preserve">
+    <value>3-Bet CO%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBet_EP" xml:space="preserve">
+    <value>3-Bet EP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBet_MP" xml:space="preserve">
+    <value>3-Bet MP%</value>
+  </data>
+  <data name="Enum_Stat_ThreeBet_SB" xml:space="preserve">
+    <value>3-Bet SB%</value>
+  </data>
+  <data name="Enum_Stat_RecentAgg" xml:space="preserve">
+    <value>Recent AGG%</value>
+  </data>
 </root>

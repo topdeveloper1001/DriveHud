@@ -220,7 +220,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Totalbets, Source.Totalpostflopstreetsseen);
+                return GetPercentage(Source.Totalbets, Source.Totalpostflopstreetsplayed);
             }
         }
 
@@ -228,7 +228,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.TotalAggressiveBets, Source.Totalpostflopstreetsseen - Source.Flopcontinuationbetmade);
+                return GetPercentage(Source.TotalAggressiveBets, Source.Totalpostflopstreetsplayed - Source.Flopcontinuationbetmade);
             }
         }
 
@@ -299,7 +299,7 @@ namespace Model.Data
         {
             get
             {
-                return GetDevisionResult(Source.Flopcontinuationbetmade, Source.Calledflopcontinuationbet);
+                return GetPercentage(Source.TotalbetsFlop, Source.PlayedFlop);
             }
         }
 
@@ -307,7 +307,7 @@ namespace Model.Data
         {
             get
             {
-                return GetDevisionResult(Source.Turncontinuationbetmade, Source.Calledturncontinuationbet);
+                return GetPercentage(Source.TotalbetsTurn, Source.PlayedTurn);
             }
         }
 
@@ -315,7 +315,7 @@ namespace Model.Data
         {
             get
             {
-                return GetDevisionResult(Source.Turncontinuationbetmade, Source.Calledturncontinuationbet);
+                return GetPercentage(Source.TotalbetsRiver, Source.PlayedRiver);
             }
         }
 
@@ -615,7 +615,6 @@ namespace Model.Data
                 return Source.StackInBBs;
             }
         }
-
 
         #region Unopened Pot
 

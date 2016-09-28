@@ -16,6 +16,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Linq;
 
 namespace DriveHUD.Entities
 {
@@ -28,7 +29,7 @@ namespace DriveHUD.Entities
         [Required, ProtoMember(1)]
         public virtual int Wonhand { get; set; }
         [Required, ProtoMember(2)]
-        public virtual int Totalpostflopstreetsseen { get; set; }
+        public virtual int Totalpostflopstreetsplayed { get; set; }
         [Required, ProtoMember(3)]
         public virtual int Bigblindstealdefended { get; set; }
         [Required, ProtoMember(4)]
@@ -508,6 +509,33 @@ namespace DriveHUD.Entities
         [ProtoMember(191)]
         public virtual decimal StackInBBs { get; set; }
 
+        [ProtoMember(192)]
+        public virtual int TotalbetsFlop { get; set; }
+
+        [ProtoMember(193)]
+        public virtual int TotalbetsTurn { get; set; }
+
+        [ProtoMember(194)]
+        public virtual int TotalbetsRiver { get; set; }
+
+        [ProtoMember(195)]
+        public virtual int TotalcallsFlop { get; set; }
+
+        [ProtoMember(196)]
+        public virtual int TotalcallsTurn { get; set; }
+
+        [ProtoMember(197)]
+        public virtual int TotalcallsRiver { get; set; }
+
+        [ProtoMember(198)]
+        public virtual int PlayedFlop { get; set; }
+
+        [ProtoMember(199)]
+        public virtual int PlayedTurn { get; set; }
+
+        [ProtoMember(200)]
+        public virtual int PlayedRiver { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session 
@@ -518,14 +546,25 @@ namespace DriveHUD.Entities
         public virtual PositionalStat PositionVPIP { get; set; }
         public virtual PositionalStat PositionDidColdCall { get; set; }
         public virtual PositionalStat PositionCouldColdCall { get; set; }
+        public virtual PositionalStat PositionDidThreeBet { get; set; }
+        public virtual PositionalStat PositionCouldThreeBet { get; set; }
+
+        #endregion
+
+        #region Session Only Collections
+
+        public virtual FixedSizeList<string> CardsList { get; set; }
+
+        public virtual FixedSizeList<string> ThreeBetCardsList { get; set; }
+
+        public virtual FixedSizeList<Tuple<int, int>> RecentAggList { get; set; }
+
+        public virtual IList<decimal> MoneyWonCollection { get; set; }
 
         #endregion
 
         public virtual decimal TotalPot { get; set; }
 
-        public virtual FixedSizeList<string> CardsList { get; set; }
-
-        public virtual IList<decimal> MoneyWonCollection { get; set; }
 
         public virtual decimal TotalPotInBB { get; set; }
 
@@ -638,7 +677,7 @@ namespace DriveHUD.Entities
             Totalhands += a.Totalhands;
             Totalbets += a.Totalbets;
             Totalcalls += a.Totalcalls;
-            Totalpostflopstreetsseen += a.Totalpostflopstreetsseen;
+            Totalpostflopstreetsplayed += a.Totalpostflopstreetsplayed;
             Totalamountwonincents += a.Totalamountwonincents;
             Totalrakeincents += a.Totalrakeincents;
             Totalaggressivepostflopstreetsseen += a.Totalaggressivepostflopstreetsseen;
@@ -795,9 +834,26 @@ namespace DriveHUD.Entities
             LimpFolded += a.LimpFolded;
             LimpReraised += a.LimpReraised;
 
+            TotalbetsFlop += a.TotalbetsFlop;
+            TotalbetsTurn += a.TotalbetsTurn;
+            TotalbetsRiver += a.TotalbetsRiver;
+
+            TotalcallsFlop += a.TotalcallsFlop;
+            TotalcallsTurn += a.TotalcallsTurn;
+            TotalcallsRiver += a.TotalcallsRiver;
+
+            PlayedFlop += a.PlayedFlop;
+            PlayedTurn += a.PlayedTurn;
+            PlayedRiver += a.PlayedRiver;
+
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
                 CardsList.Add(a.Cards);
+            }
+
+            if (ThreeBetCardsList != null && !string.IsNullOrWhiteSpace(a.Cards) && a.Didthreebet != 0)
+            {
+                ThreeBetCardsList.Add(a.Cards);
             }
 
             if (MoneyWonCollection != null)
@@ -805,11 +861,18 @@ namespace DriveHUD.Entities
                 MoneyWonCollection.Add(a.NetWon);
             }
 
+            if (RecentAggList != null)
+            {
+                RecentAggList.Add(new Tuple<int, int>(a.Totalbets, a.Totalpostflopstreetsplayed));
+            }
+
             PositionUnoppened = PositionalStat.Sum(PositionUnoppened, a.PositionUnoppened);
             PositionTotal = PositionalStat.Sum(PositionTotal, a.PositionTotal);
             PositionVPIP = PositionalStat.Sum(PositionVPIP, a.PositionVPIP);
             PositionDidColdCall = PositionalStat.Sum(PositionDidColdCall, a.PositionDidColdCall);
             PositionCouldColdCall = PositionalStat.Sum(PositionCouldColdCall, a.PositionCouldColdCall);
+            PositionDidThreeBet = PositionalStat.Sum(PositionDidThreeBet, a.PositionDidThreeBet);
+            PositionCouldThreeBet = PositionalStat.Sum(PositionCouldThreeBet, a.PositionCouldThreeBet);
 
             MRatio = a.MRatio;
             StackInBBs = a.StackInBBs;
@@ -882,7 +945,7 @@ namespace DriveHUD.Entities
             r.Totalhands = a.Totalhands + b.Totalhands;
             r.Totalbets = a.Totalbets + b.Totalbets;
             r.Totalcalls = a.Totalcalls + b.Totalcalls;
-            r.Totalpostflopstreetsseen = a.Totalpostflopstreetsseen + b.Totalpostflopstreetsseen;
+            r.Totalpostflopstreetsplayed = a.Totalpostflopstreetsplayed + b.Totalpostflopstreetsplayed;
             r.Totalamountwonincents = a.Totalamountwonincents + b.Totalamountwonincents;
             r.Totalaggressivepostflopstreetsseen = a.Totalaggressivepostflopstreetsseen + b.Totalaggressivepostflopstreetsseen;
             r.Totalrakeincents = a.Totalrakeincents + b.Totalrakeincents;
@@ -1040,11 +1103,25 @@ namespace DriveHUD.Entities
             r.LimpFolded = a.LimpFolded + b.LimpFolded;
             r.LimpReraised = a.LimpReraised + b.LimpReraised;
 
+            r.TotalbetsFlop = a.TotalbetsFlop + b.TotalbetsFlop;
+            r.TotalbetsTurn = a.TotalbetsTurn + b.TotalbetsTurn;
+            r.TotalbetsRiver = a.TotalbetsRiver + b.TotalbetsRiver;
+
+            r.TotalcallsFlop = a.TotalcallsFlop + b.TotalcallsFlop;
+            r.TotalcallsTurn = a.TotalcallsTurn + b.TotalcallsTurn;
+            r.TotalcallsRiver = a.TotalcallsRiver + b.TotalcallsRiver;
+
+            r.PlayedFlop = a.PlayedFlop + b.PlayedFlop;
+            r.PlayedTurn = a.PlayedTurn + b.PlayedTurn;
+            r.PlayedRiver = a.PlayedRiver + b.PlayedRiver;
+
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);
             r.PositionVPIP = PositionalStat.Sum(a.PositionVPIP, b.PositionVPIP);
             r.PositionDidColdCall = PositionalStat.Sum(a.PositionDidColdCall, b.PositionDidColdCall);
             r.PositionCouldColdCall = PositionalStat.Sum(a.PositionCouldColdCall, b.PositionCouldColdCall);
+            r.PositionDidThreeBet = PositionalStat.Sum(a.PositionDidThreeBet, b.PositionDidThreeBet);
+            r.PositionCouldThreeBet = PositionalStat.Sum(a.PositionCouldThreeBet, b.PositionCouldThreeBet);
 
             r.MRatio = b.MRatio;
             r.StackInBBs = b.StackInBBs;
@@ -1145,7 +1222,6 @@ namespace DriveHUD.Entities
         public int SB { get; set; } = 0;
         public int BB { get; set; } = 0;
 
-
         public static PositionalStat Sum(PositionalStat a, PositionalStat b)
         {
             if (a == null)
@@ -1167,6 +1243,40 @@ namespace DriveHUD.Entities
                 SB = a.SB + b.SB,
                 BB = a.BB + b.BB,
             };
+        }
+
+        public void SetPositionalStat(EnumPosition position, int value)
+        {
+            switch (position)
+            {
+                case EnumPosition.BTN:
+                    BN = value;
+                    break;
+                case EnumPosition.SB:
+                    SB = value;
+                    break;
+                case EnumPosition.BB:
+                    BB = value;
+                    break;
+                case EnumPosition.CO:
+                    CO = value;
+                    break;
+                case EnumPosition.MP3:
+                case EnumPosition.MP2:
+                case EnumPosition.MP1:
+                case EnumPosition.MP:
+                    MP = value;
+                    break;
+                case EnumPosition.UTG:
+                case EnumPosition.UTG_1:
+                case EnumPosition.UTG_2:
+                case EnumPosition.EP:
+                    EP = value;
+                    break;
+                case EnumPosition.Undefined:
+                default:
+                    break;
+            }
         }
     }
 

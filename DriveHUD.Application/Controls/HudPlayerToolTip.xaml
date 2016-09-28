@@ -134,9 +134,9 @@
                             <TextBlock  HorizontalAlignment="Center" Foreground="White">
                                 <TextBlock.Style>
                                     <Style TargetType="TextBlock" BasedOn="{StaticResource Title_H2}">
-                                        <Setter Property="Text" Value="{Binding SessionHands, StringFormat={}{0:0.00}}" />
+                                        <Setter Property="Text" Value="{Binding TotalHands, StringFormat={}{0:0}}" />
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding SessionHands}" Value="{x:Null}">
+                                            <DataTrigger Binding="{Binding TotalHands}" Value="{x:Null}">
                                                 <Setter Property="Text" Value="Total Hands" />
                                             </DataTrigger>
                                         </Style.Triggers>

@@ -69,6 +69,14 @@ namespace DriveHUD.Application.Views
 
                 reportGadgetViewModel.PropertyChanged += ReportGadgetViewModel_PropertyChanged;
                 LoadData();
+                ReportUpdate();
+            };
+
+            this.Unloaded += (_o, _e) =>
+            {
+                GridLayoutSave(GridViewKnownHands, "HandGridLayout.data");
+
+                ReportLayoutSave();
             };
         }
 
@@ -232,20 +240,11 @@ namespace DriveHUD.Application.Views
                 ReportLayoutSave();
                 ReportUpdate();
             }
-
-            if (e.PropertyName == nameof(ReportGadgetViewModel.LayoutSave_IsRequired) && reportGadgetViewModel.LayoutSave_IsRequired)
-            {
-                SaveData();
-
-                reportGadgetViewModel.LayoutSave_IsRequired = false;
-            }
         }
 
         public void LoadData()
         {
             GridLayoutLoad(GridViewKnownHands, "HandGridLayout.data");
-
-            reportGadgetViewModel.CurrentPlayerLoad();
         }
 
         private void ReportLayoutLoad()
@@ -276,7 +275,7 @@ namespace DriveHUD.Application.Views
                 GridViewReport.Columns.Clear();
                 reportGadgetViewModel.ReportCollection.Clear();
 
-                foreach(var item in await reportCollection)
+                foreach (var item in await reportCollection)
                 {
                     reportGadgetViewModel.ReportCollection.Add(item);
                 }
@@ -313,15 +312,6 @@ namespace DriveHUD.Application.Views
             ReportLayoutLoad();
         }
 
-        public void SaveData()
-        {
-            GridLayoutSave(GridViewKnownHands, "HandGridLayout.data");
-
-            ReportLayoutSave();
-
-            CurrentPlayerLogged();
-        }
-
         private void GridLayoutSave(RadGridView gridView, string fileName)
         {
             PersistenceManager manager = new PersistenceManager();
@@ -349,23 +339,6 @@ namespace DriveHUD.Application.Views
             catch (FileNotFoundException)
             {
                 // If there is no file proceed normally;
-            }
-        }
-
-        private void CurrentPlayerLogged()
-        {
-            try
-            {
-                string dataPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DriveHUD", "CurrentPlayer.txt");
-                if (File.Exists(dataPath))
-                {
-                    File.Delete(dataPath);
-                }
-                File.WriteAllText(dataPath, reportGadgetViewModel.StorageModel.PlayerSelectedItem);
-            }
-            catch (Exception)
-            {
-                throw;
             }
         }
 

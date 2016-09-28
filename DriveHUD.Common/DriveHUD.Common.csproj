@@ -96,6 +96,7 @@
     <Compile Include="Utils\BrowserHelper.cs" />
     <Compile Include="Utils\CurrencyConverter.cs" />
     <Compile Include="Utils\DateTimeHelper.cs" />
+    <Compile Include="Utils\FileHelper.cs" />
     <Compile Include="Utils\FixedSizeList.cs" />
     <Compile Include="Utils\IniFileHelpers.cs" />
     <Compile Include="Utils\ObjectCopier.cs" />
@@ -123,7 +124,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" /> 
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

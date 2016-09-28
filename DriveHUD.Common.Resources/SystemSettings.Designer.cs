@@ -61,11 +61,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to CurrentPlayer.txt.
+        /// </summary>
+        internal static string SystemSettings_ActivePlayerFileName {
+            get {
+                return ResourceManager.GetString("SystemSettings_ActivePlayerFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com.
         /// </summary>
         internal static string SystemSettings_AddActivationLink {
             get {
                 return ResourceManager.GetString("SystemSettings_AddActivationLink", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD.
+        /// </summary>
+        internal static string SystemSettings_AppDataFolder {
+            get {
+                return ResourceManager.GetString("SystemSettings_AppDataFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Players.
+        /// </summary>
+        internal static string SystemSettings_DefaultPlayersFolderName {
+            get {
+                return ResourceManager.GetString("SystemSettings_DefaultPlayersFolderName", resourceCulture);
             }
         }
         

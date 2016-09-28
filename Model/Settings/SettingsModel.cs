@@ -23,9 +23,6 @@ namespace Model.Settings
         [XmlElement("Database")]
         public DatabaseSettings DatabaseSettings { get; set; }
 
-        [XmlElement("ReferredSeat")]
-        public PreferredSeatSettingsModel PreferredSeatSettings { get; set; }
-
         [XmlElement("SiteSettings")]
         public SiteSettingsModel SiteSettings { get; set; }
 
@@ -40,7 +37,6 @@ namespace Model.Settings
             CurrencySettings = new CurrencySettingsModel();
             RakeBackSettings = new RakeBackSettingsModel();
             DatabaseSettings = new DatabaseSettings();
-            PreferredSeatSettings = new PreferredSeatSettingsModel();
             SiteSettings = new SiteSettingsModel();
         }
 
@@ -51,7 +47,6 @@ namespace Model.Settings
             model.CurrencySettings = (CurrencySettingsModel)this.CurrencySettings.Clone();
             model.RakeBackSettings = (RakeBackSettingsModel)this.RakeBackSettings.Clone();
             model.DatabaseSettings = (DatabaseSettings)this.DatabaseSettings.Clone();
-            model.PreferredSeatSettings = (PreferredSeatSettingsModel)this.PreferredSeatSettings.Clone();
             model.SiteSettings = (SiteSettingsModel)this.SiteSettings.Clone();
 
             return model;

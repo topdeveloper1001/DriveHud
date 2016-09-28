@@ -21,6 +21,7 @@ using DriveHUD.Common.Resources;
 using Model.Settings;
 using Prism.Events;
 using Model.Events;
+using Model.Interfaces;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
 {
@@ -30,6 +31,12 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         {
             get { return ServiceLocator.Current.GetInstance<ISettingsService>(); }
         }
+
+        private IDataService _dataService
+        {
+            get { return ServiceLocator.Current.GetInstance<IDataService>(); }
+        }
+
         private SettingsModel _settingsModel;
 
         #region Constructor
@@ -89,8 +96,20 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         private void Apply(object obj)
         {
+            var oldSettings = _settingsService.GetSettings();
+            var isUpdatePlayersRequired = oldSettings?.SiteSettings.IsCustomProcessedDataLocationEnabled != _settingsModel?.SiteSettings.IsCustomProcessedDataLocationEnabled
+                || (oldSettings?.SiteSettings.CustomProcessedDataLocation != _settingsModel?.SiteSettings.CustomProcessedDataLocation
+                    && (_settingsModel?.SiteSettings.IsCustomProcessedDataLocationEnabled ?? false));
+
+            if (isUpdatePlayersRequired)
+            {
+                _dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem);
+            }
+
             _settingsService.SaveSettings(_settingsModel);
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<SettingsUpdatedEvent>().Publish(new SettingsUpdatedEventArgs());
+
+            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<SettingsUpdatedEvent>()
+                .Publish(new SettingsUpdatedEventArgs() { IsUpdatePlayersCollection = isUpdatePlayersRequired });
         }
 
         private void OK(object obj)
