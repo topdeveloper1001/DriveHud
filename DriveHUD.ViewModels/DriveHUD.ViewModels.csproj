@@ -158,7 +158,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="RangeSelector\PreDefinedRangesViewModel.cs" />
-    <Compile Include="StatiInfoMeterModel.cs" />
+    <Compile Include="StatInfoMeterModel.cs" />
     <Compile Include="StatInfo.cs" />
     <Compile Include="StatInfoBreak.cs" />
     <Compile Include="StatInfoCollection.cs" />

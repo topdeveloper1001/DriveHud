@@ -498,7 +498,7 @@ namespace DriveHUD.ViewModels
         }
 
         [XmlIgnore]
-        public StatiInfoMeterModel StatInfoMeter { get; set; }
+        public StatInfoMeterModel StatInfoMeter { get; set; }
 
         #endregion
 

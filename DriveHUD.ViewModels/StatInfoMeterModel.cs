@@ -10,14 +10,14 @@ using System.Windows.Media;
 
 namespace DriveHUD.ViewModels
 {
-    public class StatiInfoMeterModel : INotifyPropertyChanged
+    public class StatInfoMeterModel : INotifyPropertyChanged
     {
         private const int ARRAY_SIZE = 10;
 
         public SolidColorBrush[] BackgroundBrush { get; private set; }
         public SolidColorBrush[] BorderBrush { get; private set; }
 
-        public StatiInfoMeterModel()
+        public StatInfoMeterModel()
         {
             InitializeWithDefaultValues();
         }
