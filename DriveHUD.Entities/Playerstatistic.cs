@@ -528,13 +528,13 @@ namespace DriveHUD.Entities
         public virtual int TotalcallsRiver { get; set; }
 
         [ProtoMember(198)]
-        public virtual int TotalPlayedFlop { get; set; }
+        public virtual int PlayedFlop { get; set; }
 
         [ProtoMember(199)]
-        public virtual int TotalPlayedTurn { get; set; }
+        public virtual int PlayedTurn { get; set; }
 
         [ProtoMember(200)]
-        public virtual int TotalPlayedRiver { get; set; }
+        public virtual int PlayedRiver { get; set; }
 
         #region Additional properties (not for serialization)
 
@@ -839,9 +839,9 @@ namespace DriveHUD.Entities
             TotalcallsTurn += a.TotalcallsTurn;
             TotalcallsRiver += a.TotalcallsRiver;
 
-            TotalPlayedFlop += a.TotalPlayedFlop;
-            TotalPlayedTurn += a.TotalPlayedTurn;
-            TotalPlayedRiver += a.TotalPlayedRiver;
+            PlayedFlop += a.PlayedFlop;
+            PlayedTurn += a.PlayedTurn;
+            PlayedRiver += a.PlayedRiver;
 
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
@@ -1103,9 +1103,9 @@ namespace DriveHUD.Entities
             r.TotalcallsTurn = a.TotalcallsTurn + b.TotalcallsTurn;
             r.TotalcallsRiver = a.TotalcallsRiver + b.TotalcallsRiver;
 
-            r.TotalPlayedFlop = a.TotalPlayedFlop + b.TotalPlayedFlop;
-            r.TotalPlayedTurn = a.TotalPlayedTurn + b.TotalPlayedTurn;
-            r.TotalPlayedRiver = a.TotalPlayedRiver + b.TotalPlayedRiver;
+            r.PlayedFlop = a.PlayedFlop + b.PlayedFlop;
+            r.PlayedTurn = a.PlayedTurn + b.PlayedTurn;
+            r.PlayedRiver = a.PlayedRiver + b.PlayedRiver;
 
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);

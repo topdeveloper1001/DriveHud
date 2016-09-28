@@ -287,7 +287,7 @@ namespace Model.Data
                 {
                     Value = FlopAgg,
                     Occured = Source.TotalbetsFlop,
-                    CouldOccured = Source.Sawflop
+                    CouldOccured = Source.PlayedFlop
                 };
             }
         }
@@ -300,7 +300,7 @@ namespace Model.Data
                 {
                     Value = TurnAgg,
                     Occured = Source.TotalbetsTurn,
-                    CouldOccured = Source.SawTurn
+                    CouldOccured = Source.PlayedTurn
                 };
             }
         }
@@ -313,7 +313,7 @@ namespace Model.Data
                 {
                     Value = RiverAgg,
                     Occured = Source.TotalbetsRiver,
-                    CouldOccured = Source.SawRiver
+                    CouldOccured = Source.PlayedRiver
                 };
             }
         }

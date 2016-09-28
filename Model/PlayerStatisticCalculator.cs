@@ -340,9 +340,9 @@ namespace Model
             stat.SawTurn = sawTurn ? 1 : 0;
             stat.SawRiver = sawRiver ? 1 : 0;
 
-            stat.TotalPlayedFlop = playedFlop ? 1 : 0;
-            stat.TotalPlayedTurn = playedTurn ? 1 : 0;
-            stat.TotalPlayedRiver = playedRiver ? 1 : 0;
+            stat.PlayedFlop = playedFlop ? 1 : 0;
+            stat.PlayedTurn = playedTurn ? 1 : 0;
+            stat.PlayedRiver = playedRiver ? 1 : 0;
 
             stat.Wonshowdown = wonShowdonw ? 1 : 0;
             stat.Wonnonsmallshowdown = wonShowdonw && nomSmallPot ? 1 : 0;
