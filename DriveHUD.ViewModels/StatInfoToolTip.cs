@@ -193,6 +193,7 @@ namespace DriveHUD.ViewModels
                 new StatInfo() { Stat = Model.Enums.Stat.FlopAGG, PropertyName = nameof(HudIndicators.FlopAgg) },
                 new StatInfo() { Stat = Model.Enums.Stat.TurnAGG, PropertyName = nameof(HudIndicators.TurnAgg) },
                 new StatInfo() { Stat = Model.Enums.Stat.RiverAGG, PropertyName = nameof(HudIndicators.RiverAgg) },
+                new StatInfo() { Stat = Model.Enums.Stat.RecentAgg, PropertyName = nameof(HudIndicators.RecentAggPr) },
             };
 
             list.Add(aggPr);

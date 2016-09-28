@@ -139,7 +139,7 @@ namespace DriveHUD.Importers
                             {
                                 PlayerStatisticCalculator.CalculateTotalPotValues(x);
                                 InitSessionCardsCollections(x);
-                                InitSessionMoneyWonCollection(x);
+                                InitSessionStatCollections(x);
                             }
                         });
 
@@ -161,7 +161,7 @@ namespace DriveHUD.Importers
                 else
                 {
                     InitSessionCardsCollections(stats);
-                    InitSessionMoneyWonCollection(stats);
+                    InitSessionStatCollections(stats);
                     playerData.Add(stats);
                 }
             }
@@ -317,19 +317,25 @@ namespace DriveHUD.Importers
             if (stats.ThreeBetCardsList == null)
             {
                 stats.ThreeBetCardsList = new Common.Utils.FixedSizeList<string>(4);
-                if(!string.IsNullOrWhiteSpace(stats.Cards) && stats.Didthreebet != 0)
+                if (!string.IsNullOrWhiteSpace(stats.Cards) && stats.Didthreebet != 0)
                 {
                     stats.ThreeBetCardsList.Add(stats.Cards);
                 }
             }
         }
 
-        private void InitSessionMoneyWonCollection(Playerstatistic stats)
+        private void InitSessionStatCollections(Playerstatistic stats)
         {
             if (stats.MoneyWonCollection == null)
             {
                 stats.MoneyWonCollection = new List<decimal>();
                 stats.MoneyWonCollection.Add(stats.NetWon);
+            }
+
+            if (stats.RecentAggList == null)
+            {
+                stats.RecentAggList = new Common.Utils.FixedSizeList<Tuple<int, int>>(10);
+                stats.RecentAggList.Add(new Tuple<int, int>(stats.Totalbets, stats.Totalpostflopstreetsplayed));
             }
         }
     }

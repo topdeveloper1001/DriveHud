@@ -103,6 +103,7 @@ namespace Model.Enums
         ThreeBet_CO,
         ThreeBet_BN,
         ThreeBet_SB,
-        ThreeBet_BB
+        ThreeBet_BB,
+        RecentAgg
     }
 }

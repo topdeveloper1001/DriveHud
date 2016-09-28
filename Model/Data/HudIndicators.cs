@@ -1318,6 +1318,8 @@ namespace Model.Data
 
         #endregion
 
+        #region Session only
+
         #region CardsLists
 
         public virtual IEnumerable<string> ThreeBetCardsList
@@ -1329,6 +1331,34 @@ namespace Model.Data
         }
 
         #endregion
+
+
+        public virtual decimal RecentAggPr
+        {
+            get
+            {
+                var occured = Statistcs.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item1);
+                var couldOccured = Statistcs.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item2);
+
+                return GetPercentage(occured, couldOccured);
+            }
+        }
+
+        public virtual StatDto RecentAggPrObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RecentAggPr,
+                    Occured = Statistcs.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item1) ?? 0,
+                    CouldOccured = Statistcs.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item2) ?? 0
+                };
+            }
+        }
+
+        #endregion
+
 
         protected decimal GetPercentage(decimal? actual, decimal? possible)
         {

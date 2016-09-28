@@ -551,17 +551,20 @@ namespace DriveHUD.Entities
 
         #endregion
 
-        #region Cards Lists
+        #region Session Only Collections
 
         public virtual FixedSizeList<string> CardsList { get; set; }
 
         public virtual FixedSizeList<string> ThreeBetCardsList { get; set; }
 
+        public virtual FixedSizeList<Tuple<int, int>> RecentAggList { get; set; }
+
+        public virtual IList<decimal> MoneyWonCollection { get; set; }
+
         #endregion
 
         public virtual decimal TotalPot { get; set; }
 
-        public virtual IList<decimal> MoneyWonCollection { get; set; }
 
         public virtual decimal TotalPotInBB { get; set; }
 
@@ -856,6 +859,11 @@ namespace DriveHUD.Entities
             if (MoneyWonCollection != null)
             {
                 MoneyWonCollection.Add(a.NetWon);
+            }
+
+            if (RecentAggList != null)
+            {
+                RecentAggList.Add(new Tuple<int, int>(a.Totalbets, a.Totalpostflopstreetsplayed));
             }
 
             PositionUnoppened = PositionalStat.Sum(PositionUnoppened, a.PositionUnoppened);

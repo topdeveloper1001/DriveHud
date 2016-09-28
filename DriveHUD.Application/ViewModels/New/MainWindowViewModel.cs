@@ -349,7 +349,7 @@ namespace DriveHUD.Application.ViewModels
                 playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
                 playerHudContent.HudElement.TotalHands = item.TotalHands;
 
-                var sessionMoney = sessionStatisticCollection.FirstOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
+                var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                 playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
                     ? new ObservableCollection<decimal>()
                     : new ObservableCollection<decimal>(sessionMoney);

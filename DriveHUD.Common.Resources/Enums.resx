@@ -521,4 +521,7 @@
   <data name="Enum_Stat_ThreeBet_SB" xml:space="preserve">
     <value>3-Bet SB%</value>
   </data>
+  <data name="Enum_Stat_RecentAgg" xml:space="preserve">
+    <value>Recent AGG%</value>
+  </data>
 </root>

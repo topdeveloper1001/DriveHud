@@ -835,6 +835,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Recent AGG%.
+        /// </summary>
+        internal static string Enum_Stat_RecentAgg {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RecentAgg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to River AGG%.
         /// </summary>
         internal static string Enum_Stat_RiverAGG {
