@@ -182,20 +182,6 @@ namespace DriveHUD.Application.ViewModels
 
         #region Methods
 
-        internal void CurrentPlayerLoad()
-        {
-            string dataPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "DriveHUD", "CurrentPlayer.txt");
-            if (File.Exists(dataPath))
-            {
-                StorageModel.PlayerSelectedItem = File.ReadAllText(dataPath);
-            }
-
-            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem))
-            {
-                StorageModel.TryLoadHeroPlayer();
-            }
-        }
-
         internal void UpdateReport(object obj = null)
         {
             App.Current.Dispatcher.Invoke(() =>
@@ -293,8 +279,6 @@ namespace DriveHUD.Application.ViewModels
         public InteractionRequest<PopupBaseNotification> PopupRequest { get; set; }
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
-
-        private bool _layoutSave_IsRequired;
         private bool _isShowTournamentData = false;
 
         private RangeObservableCollection<Indicators> _reportCollection;
@@ -342,16 +326,6 @@ namespace DriveHUD.Application.ViewModels
         public bool IsShowCashData
         {
             get { return !_isShowTournamentData; }
-        }
-
-        public bool LayoutSave_IsRequired
-        {
-            get { return _layoutSave_IsRequired; }
-            set
-            {
-                _layoutSave_IsRequired = value;
-                OnPropertyChanged();
-            }
         }
 
         public RangeObservableCollection<Indicators> ReportCollection

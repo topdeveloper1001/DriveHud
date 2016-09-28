@@ -5,24 +5,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace Model.Site
 {
     public class PokerStarsConfiguration : ISiteConfiguration
-    {        
+    {
         public PokerStarsConfiguration()
         {
             prefferedSeat = new Dictionary<int, int>();
 
             tableTypes = new EnumTableType[]
             {
-                EnumTableType.HU,                
+                EnumTableType.HU,
                 EnumTableType.Four,
                 EnumTableType.Six,
                 EnumTableType.Eight,
                 EnumTableType.Nine,
                 EnumTableType.Ten
-            };            
+            };
         }
 
         public EnumPokerSites Site
@@ -63,6 +64,19 @@ namespace Model.Site
         {
             get;
             set;
+        }
+
+        public string[] GetHandHistoryFolders()
+        {
+            var localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+
+            var possibleFolders = new string[] { "PokerStars", "PokerStars.EU" };
+
+            var dirs = (from possibleFolder in possibleFolders
+                        let folder = Path.Combine(localApplicationData, possibleFolder, "HandHistory")
+                        select folder).ToArray();
+
+            return dirs;
         }
     }
 }

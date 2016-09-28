@@ -58,5 +58,9 @@ namespace Model.Interfaces
         /// <param name="statistic">Statistic to delete</param>
         void DeletePlayerStatisticFromFile(Playerstatistic statistic);
 
+        string GetActivePlayer();
+
+        void SaveActivePlayer(string playerName);
+
     }
 }

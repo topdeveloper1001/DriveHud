@@ -130,19 +130,17 @@ namespace DriveHUD.Importers
                     {
                         playerData = dataService.GetPlayerStatisticFromFile(playerName);
 
-                        var sessionPlayerData = playerData.Where(x => x.SessionCode == session);
-
-                        sessionPlayerData.ForEach(x =>
-                        {
-                            InitSessionCardsCollection(x);
-                            InitSessionMoneyWonCollection(x);
-                        });
-
-                        // initialize session data
                         playerData.ForEach(x =>
                         {
-                            PlayerStatisticCalculator.CalculateTotalPotValues(x);
-                            PlayerStatisticCalculator.CalculatePositionalData(x);                       
+                            // we don't have this data in the db so update it after loading from file
+                            PlayerStatisticCalculator.CalculatePositionalData(x);
+
+                            if (x.SessionCode == session)
+                            {
+                                PlayerStatisticCalculator.CalculateTotalPotValues(x);
+                                InitSessionCardsCollection(x);
+                                InitSessionMoneyWonCollection(x);
+                            }
                         });
 
                         skipAdding = true;

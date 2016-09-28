@@ -29,6 +29,18 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        private StatInfo _categoryStat;
+
+        public StatInfo CategoryStat
+        {
+            get { return _categoryStat; }
+            set
+            {
+                _categoryStat = value;
+                OnPropertyChanged(nameof(CategoryStat));
+            }
+        }
+
         private ObservableCollection<StatInfo> _statsCollection;
 
         public ObservableCollection<StatInfo> StatsCollection
@@ -81,6 +93,7 @@ namespace DriveHUD.ViewModels
             var coldCall = new StatInfoToolTip();
 
             vpip.CategoryName = "TOTAL";
+            vpip.CategoryStat = new StatInfo() { Stat = Model.Enums.Stat.VPIP, PropertyName = nameof(HudIndicators.VPIP) };
             vpip.StatsCollection = new ObservableCollection<StatInfo>()
             {
                 new StatInfo() { Stat = Model.Enums.Stat.VPIP_EP, PropertyName = nameof(HudIndicators.VPIP_EP) },
@@ -92,6 +105,7 @@ namespace DriveHUD.ViewModels
             };
 
             coldCall.CategoryName = "COLD CALL";
+            coldCall.CategoryStat = new StatInfo { Stat = Model.Enums.Stat.ColdCall, PropertyName = nameof(HudIndicators.ColdCall) };
             coldCall.StatsCollection = new ObservableCollection<StatInfo>()
             {
                 new StatInfo() { Stat = Model.Enums.Stat.ColdCall_EP, PropertyName = nameof(HudIndicators.ColdCall_EP) },
@@ -114,6 +128,7 @@ namespace DriveHUD.ViewModels
             var pfr = new StatInfoToolTip();
 
             pfr.CategoryName = "UNOPENED";
+            pfr.CategoryStat = new StatInfo() { Stat = Model.Enums.Stat.PFR, PropertyName = nameof(HudIndicators.PFR) };
             pfr.StatsCollection = new ObservableCollection<StatInfo>()
             {
                 new StatInfo() { Stat = Model.Enums.Stat.UO_PFR_EP, PropertyName = nameof(HudIndicators.UO_PFR_EP) },

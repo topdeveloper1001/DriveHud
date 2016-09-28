@@ -112,8 +112,11 @@
     <Compile Include="Converters\EnumToVisiblityConverter.cs" />
     <Compile Include="Converters\MarkupExtensionConverterBase.cs" />
     <Compile Include="Converters\MRatioConverters.cs" />
+    <Compile Include="Converters\MultiBooleanAndConverter.cs" />
     <Compile Include="Converters\MultiBooleanOrConveter.cs" />
+    <Compile Include="Converters\MultiBooleanAndToBrushConverter.cs" />
     <Compile Include="Converters\ObjectToTypeConverter.cs" />
+    <Compile Include="Converters\ParameterBooleanToBrushConverter.cs" />
     <Compile Include="Converters\StaticResourceConverter.cs" />
     <Compile Include="Converters\StringIsEmptyToBoolConverter.cs" />
     <Compile Include="Converters\StringToImageSourceConverter.cs" />
@@ -242,7 +245,7 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />  
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

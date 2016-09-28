@@ -61,15 +61,6 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DriveHUD.
-        /// </summary>
-        internal static string Main_AppDataFolder {
-            get {
-                return ResourceManager.GetString("Main_AppDataFolder", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to All.
         /// </summary>
         internal static string Main_ContextMenu_All {

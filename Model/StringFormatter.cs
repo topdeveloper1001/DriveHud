@@ -37,7 +37,12 @@ namespace Model
                 path = GetAppDataFolderPath();
             }
 
-            return Path.Combine(path, "Players");
+            return Path.Combine(path, CommonResourceManager.Instance.GetResourceString(ResourceStrings.DefaultPlayersFolderName));
+        }
+
+        public static string GetActivePlayerFilePath()
+        {
+            return Path.Combine(GetProcessedDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.ActivePlayerFileName));
         }
 
         public static string ActionLineSeparator = "-";
