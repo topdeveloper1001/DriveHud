@@ -33,7 +33,7 @@ namespace Model.Mapping
             Map(x => x.Totalamountwonincents).Column("\"TotalWon\"").Not.Nullable();
             Map(x => x.Totalrakeincents).Column("\"TotalRake\"").Not.Nullable();
             Map(x => x.Totalbbswon).Column("\"TotalWonBB\"").Not.Nullable();
-            Map(x => x.Bigblindstealattempted).Column("\"BigBlindStealAttempted\"").Not.Nullable();
+            Map(x => x.Bigblindstealfaced).Column("\"BigBlindStealAttempted\"").Not.Nullable();
             Map(x => x.Bigblindstealdefended).Column("\"BigBlindStealDefended\"").Not.Nullable();
             Map(x => x.Bigblindstealreraised).Column("\"BigBlindStealReraised\"").Not.Nullable();
             Map(x => x.Calledflopcontinuationbet).Column("\"CalledFlopContinuationBet\"").Not.Nullable();
@@ -79,7 +79,7 @@ namespace Model.Mapping
             Map(x => x.Sawnonsmallshowdown).Column("\"SawNonSmallShowdown\"").Not.Nullable();
             Map(x => x.Sawnonsmallshowdownlimpedflop).Column("\"SawNonSmallShowdownLimpedFlop\"").Not.Nullable();
             Map(x => x.Sawshowdown).Column("\"SawShowdown\"").Not.Nullable();
-            Map(x => x.Smallblindstealattempted).Column("\"SmallBlindStealAttempted\"").Not.Nullable();
+            Map(x => x.Smallblindstealfaced).Column("\"SmallBlindStealAttempted\"").Not.Nullable();
             Map(x => x.Smallblindstealdefended).Column("\"SmallBlindStealDefended\"").Not.Nullable();
             Map(x => x.Smallblindstealreraised).Column("\"SmallBlindStealReraised\"").Not.Nullable();
             Map(x => x.Totalaggressivepostflopstreetsseen).Column("\"TotalAggressivePostflopStreetsSeen\"").Not.Nullable();

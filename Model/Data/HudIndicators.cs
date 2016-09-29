@@ -170,7 +170,7 @@ namespace Model.Data
                 {
                     Value = BlindsReraiseSteal,
                     Occured = Source.Bigblindstealreraised + Source.Smallblindstealreraised,
-                    CouldOccured = Source.Bigblindstealattempted + Source.Smallblindstealattempted
+                    CouldOccured = Source.Bigblindstealfaced + Source.Smallblindstealfaced
                 };
             }
         }
@@ -183,7 +183,7 @@ namespace Model.Data
                 {
                     Value = BlindsFoldSteal,
                     Occured = Source.Bigblindstealfolded + Source.Smallblindstealfolded,
-                    CouldOccured = Source.Bigblindstealattempted + Source.Smallblindstealattempted
+                    CouldOccured = Source.Bigblindstealfaced + Source.Smallblindstealfaced
                 };
             }
         }
