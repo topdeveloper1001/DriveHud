@@ -109,7 +109,9 @@ namespace DriveHUD.Application
 
                     ((RadWindow)this.Shell).Activated += MainWindow_Activated;
 
+                    ((RadWindow)this.Shell).IsTopmost = true;
                     ((RadWindow)this.Shell).Show();
+                    ((RadWindow)this.Shell).IsTopmost = false;
 
                     App.SplashScreen.CloseSplashScreen();
 
