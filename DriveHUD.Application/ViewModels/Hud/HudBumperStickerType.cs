@@ -34,7 +34,6 @@ namespace DriveHUD.Application.ViewModels
 
             MinSample = MinSampleDefault;
             EnableBumperSticker = true;
-            DisplayBumperSticker = true;
             SelectedColor = DefaultColor;
 
             stats = new ObservableCollection<BaseHudRangeStat>()
@@ -95,20 +94,6 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref enableBumperSticker, value);
-            }
-        }
-
-        private bool displayBumperSticker;
-
-        public bool DisplayBumperSticker
-        {
-            get
-            {
-                return displayBumperSticker;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref displayBumperSticker, value);
             }
         }
 

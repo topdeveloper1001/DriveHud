@@ -623,4 +623,13 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_BumperSticker_StickerName" xml:space="preserve">
     <value>Sticker Name</value>
   </data>
+  <data name="Common_BumperSticker_EditSticker" xml:space="preserve">
+    <value>Edit Sticker</value>
+  </data>
+  <data name="Common_BumperSticker_EnableSticker" xml:space="preserve">
+    <value>Enable Sticker</value>
+  </data>
+  <data name="Common_BumperSticker_StickerType" xml:space="preserve">
+    <value>Sticker Type</value>
+  </data>
 </root>

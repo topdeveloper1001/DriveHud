@@ -1184,16 +1184,15 @@ namespace DriveHUD.Application.ViewModels
             var stickersTypesToMerge = (from stickerType in hudStickersSettingsViewModel.BumperStickers
                                         join currentStickerType in CurrentLayout.HudBumperStickerTypes on stickerType.Name equals currentStickerType.Name into stgj
                                         from stgrouped in stgj.DefaultIfEmpty()
-                                        where stgrouped == null
+                                        where stgrouped != null
                                         select new { CurrentStickerType = stickerType, StickerType = stgrouped }).ToArray();
-
-            System.Diagnostics.Debug.WriteLine(stickersTypesToMerge.First().StickerType);
 
             stickersTypesToMerge.ForEach(st =>
             {
                 st.CurrentStickerType.MinSample = st.StickerType.MinSample;
                 st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
-                st.CurrentStickerType.DisplayBumperSticker = st.StickerType.DisplayBumperSticker;
+                st.CurrentStickerType.SelectedColor = st.StickerType.SelectedColor;
+                st.CurrentStickerType.Name = st.StickerType.Name;
 
                 var statsToMerge = (from currentStat in st.CurrentStickerType.Stats
                                     join stat in st.StickerType.Stats on currentStat.Stat equals stat.Stat into gj

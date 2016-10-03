@@ -145,6 +145,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                                 x.Image = GetImageLink(x.ImageAlias);
                             }
                         });
+
+                        // set default bumper stickers if they are missing
+                        hudLayouts.Layouts.Where(x => x.HudBumperStickerTypes.Count == 0).ForEach(x => x.HudBumperStickerTypes = CreateDefaultBumperStickers());
                     }
                 }
             }
@@ -723,6 +726,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                     x.Image = GetImageLink(x.ImageAlias);
                 });
 
+                if (importedHudLayout.HudBumperStickerTypes == null || importedHudLayout.HudBumperStickerTypes.Count == 0)
+                {
+                    importedHudLayout.HudBumperStickerTypes = CreateDefaultBumperStickers();
+                }
+
                 var counter = 1;
 
                 while (layouts.Any(x => x.Name.Equals(importedHudLayout.Name)))
@@ -1029,18 +1037,6 @@ namespace DriveHUD.Application.ViewModels.Hud
                         new ObservableCollection<BaseHudRangeStat>()
                         {
                             new BaseHudRangeStat { Stat = Stat.UO_PFR_EP, Low = 20, High = 100 },
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Sticky Fish",
-                    SelectedColor = Colors.ForestGreen,
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 35, High = 100 },
-                            new BaseHudRangeStat { Stat = Stat.FoldToCBet, Low = 0, High = 40 },
-                            new BaseHudRangeStat { Stat = Stat.WTSD, Low = 29, High = 100 },
                         }
                 },
                 new HudBumperStickerType(true)

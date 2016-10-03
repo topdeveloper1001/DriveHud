@@ -85,7 +85,7 @@
             </Setter>
         </Style>
 
-        <Style x:Key="PlayerTypeListBoxItemStyle" TargetType="{x:Type ListBoxItem}">
+        <Style x:Key="StickerTypeListBoxItemStyle" TargetType="{x:Type ListBoxItem}">
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type ListBoxItem}">
@@ -281,7 +281,7 @@
             </Grid>
         </DataTemplate>
 
-        <Style x:Key="PlayerNameTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+        <Style x:Key="StickerNameTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="FontSize" Value="12px" />
             <Setter Property="Width" Value="155" />
@@ -424,7 +424,7 @@
             <TextBlock 
                 Grid.Row="0"
                 Grid.Column="0"
-                Text="{ResX Key=Common_HudPlayerType_PlayerType}"  
+                Text="{ResX Key=Common_BumperSticker_StickerType}"  
                 Margin="0,5,0,0"
                 Style="{StaticResource TextBlockStyle}"                
                 />
@@ -451,7 +451,7 @@
                     BorderThickness="0" 
                     Margin="0,1,0,0"
                     Padding="0,0,0,5"
-                    ItemContainerStyle="{StaticResource PlayerTypeListBoxItemStyle}" 
+                    ItemContainerStyle="{StaticResource StickerTypeListBoxItemStyle}" 
                     Background="{StaticResource DarkBackground}" 
                     Height="330">
                     <ListBox.ItemTemplate>
@@ -471,7 +471,7 @@
                                     BorderBrush="{Binding SelectedColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
                                     Background="{Binding SelectedColor, Converter={dh:ColorToSolidBrushConverter}}">
                                     <TextBlock Text="{Binding Label}"
-                                               FontSize="8" Margin="3 1" 
+                                               FontSize="8" Margin="0" FontWeight="DemiBold"
                                                HorizontalAlignment="Center" VerticalAlignment="Center" 
                                                Foreground="{Binding SelectedColor, Converter={dh:BackgroundToForegroundColorConverter}}"/>
                                 </Border>
@@ -493,7 +493,7 @@
 
                 <TextBlock 
                     DockPanel.Dock="Left"                    
-                    Text="{ResX Key=Common_HudPlayerType_StatsEditPlayer}"  
+                    Text="{ResX Key=Common_BumperSticker_EditSticker}"  
                     Margin="0,5,0,0"
                     Style="{StaticResource TextBlockStyle}"                
                     />
@@ -637,7 +637,7 @@
                         >
 
                         <TextBox                                                   
-                            Style="{StaticResource PlayerNameTextBoxStyle}"  
+                            Style="{StaticResource StickerNameTextBoxStyle}"  
                             Text="{Binding SelectedBumperSticker.Name, UpdateSourceTrigger=PropertyChanged}"
                             MaxLength="20"                            
                             />
@@ -696,15 +696,8 @@
                     <StackPanel Orientation="Horizontal">
 
                         <CheckBox
-                            Content="{ResX Key=Common_HudPlayerType_EnablePlayerProfile}"
-                            IsChecked="{Binding SelectedBumperSticker.EnablePlayerProfile}"
-                            Style="{StaticResource BottomCheckBoxStyle}"
-                            />
-
-                        <CheckBox
-                            Content="{ResX Key=Common_HudPlayerType_DisplayPlayerIcon}"
-                            Margin="20,2,2,2"
-                            IsChecked="{Binding SelectedBumperSticker.DisplayPlayerIcon}"
+                            Content="{ResX Key=Common_BumperSticker_EnableSticker}"
+                            IsChecked="{Binding SelectedBumperSticker.EnableBumperSticker}"
                             Style="{StaticResource BottomCheckBoxStyle}"
                             />
 
