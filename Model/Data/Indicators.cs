@@ -189,7 +189,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Wonshowdown, Source.Sawflop);
+                return GetPercentage(Source.Wonhandwhensawflop, Source.Sawflop);
             }
         }
 
@@ -299,7 +299,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.TotalbetsFlop, Source.PlayedFlop);
+                return GetPercentage(Source.TotalbetsFlop, Source.FlopAggPossible);
             }
         }
 
@@ -307,7 +307,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.TotalbetsTurn, Source.PlayedTurn);
+                return GetPercentage(Source.TotalbetsTurn, Source.TurnAggPossible);
             }
         }
 
@@ -315,7 +315,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.TotalbetsRiver, Source.PlayedRiver);
+                return GetPercentage(Source.TotalbetsRiver, Source.RiverAggPossible);
             }
         }
 
