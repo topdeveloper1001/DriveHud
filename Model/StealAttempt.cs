@@ -12,5 +12,7 @@
         public bool Raised { get; set; }
 
         public bool Folded { get; set; }
+
+        public bool Faced { get; set; }
     }
 }
