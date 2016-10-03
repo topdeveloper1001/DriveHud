@@ -1,0 +1,431 @@
+﻿PokerStars Hand #158765263529:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:21:53 ET
+Table 'Dabih' 6-max Seat #4 is the button
+Seat 1: sayhey48 ($7.89 in chips)
+Seat 3: wylie_c_184 ($18.81 in chips)
+Seat 4: TnurgMB ($6.01 in chips)
+Seat 5: fred0763 ($7.62 in chips)
+fred0763: posts small blind $0.05
+HoldTheBabyy: is sitting out
+sayhey48: posts big blind $0.10
+*** HOLE CARDS ***
+izzy2940 leaves the table
+wylie_c_184: calls $0.10
+TnurgMB: folds
+I = Gamblor joins the table at seat #2
+fred0763: calls $0.05
+sayhey48: checks
+*** FLOP *** [5c 8c 4s]
+fred0763: checks
+sayhey48: bets $0.30
+HoldTheBabyy leaves the table
+wylie_c_184: calls $0.30
+tapouttazz9 joins the table at seat #6
+fred0763: folds
+*** TURN *** [5c 8c 4s] [6h]
+sayhey48: bets $0.40
+wylie_c_184: calls $0.40
+*** RIVER *** [5c 8c 4s 6h] [Qd]
+sayhey48: bets $0.80
+wylie_c_184: calls $0.80
+*** SHOW DOWN ***
+sayhey48: shows [7c 8s] (a straight, Four to Eight)
+wylie_c_184: mucks hand
+sayhey48 collected $3.14 from pot
+*** SUMMARY ***
+Total pot $3.30 | Rake $0.16
+Board [5c 8c 4s 6h Qd]
+Seat 1: sayhey48 (big blind) showed [7c 8s] and won ($3.14) with a straight, Four to Eight
+Seat 3: wylie_c_184 mucked
+Seat 4: TnurgMB (button) folded before Flop (didn't bet)
+Seat 5: fred0763 (small blind) folded on the Flop
+
+
+PokerStars Hand #158765263949:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:23:20 ET
+Table 'Dabih' 6-max Seat #5 is the button
+Seat 1: sayhey48 ($9.43 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($17.21 in chips)
+Seat 4: TnurgMB ($6.01 in chips)
+Seat 5: fred0763 ($7.52 in chips)
+tapouttazz9 will be allowed to play after the button
+sayhey48: posts small blind $0.05
+I = Gamblor: posts big blind $0.10
+*** HOLE CARDS ***
+wylie_c_184: folds
+TnurgMB: folds
+fred0763: calls $0.10
+sayhey48: folds
+I = Gamblor: checks
+*** FLOP *** [3h 6c Js]
+I = Gamblor: checks
+fred0763: bets $0.10
+I = Gamblor: folds
+Uncalled bet ($0.10) returned to fred0763
+fred0763 collected $0.24 from pot
+fred0763: doesn't show hand
+*** SUMMARY ***
+Total pot $0.25 | Rake $0.01
+Board [3h 6c Js]
+Seat 1: sayhey48 (small blind) folded before Flop
+Seat 2: I = Gamblor (big blind) folded on the Flop
+Seat 3: wylie_c_184 folded before Flop (didn't bet)
+Seat 4: TnurgMB folded before Flop (didn't bet)
+Seat 5: fred0763 (button) collected ($0.24)
+
+
+PokerStars Hand #158765264039:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:23:41 ET
+Table 'Dabih' 6-max Seat #1 is the button
+Seat 1: sayhey48 ($9.38 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($17.21 in chips)
+Seat 4: TnurgMB ($6.01 in chips)
+Seat 5: fred0763 ($7.66 in chips)
+I = Gamblor: posts small blind $0.05
+wylie_c_184: posts big blind $0.10
+tapouttazz9: sits out
+*** HOLE CARDS ***
+TnurgMB: folds
+fred0763: calls $0.10
+sayhey48: folds
+I = Gamblor: folds
+wylie_c_184: checks
+*** FLOP *** [8d 5c As]
+wylie_c_184: checks
+fred0763: checks
+*** TURN *** [8d 5c As] [7h]
+wylie_c_184: bets $0.20
+fred0763: folds
+Uncalled bet ($0.20) returned to wylie_c_184
+wylie_c_184 collected $0.24 from pot
+wylie_c_184: doesn't show hand
+*** SUMMARY ***
+Total pot $0.25 | Rake $0.01
+Board [8d 5c As 7h]
+Seat 1: sayhey48 (button) folded before Flop (didn't bet)
+Seat 2: I = Gamblor (small blind) folded before Flop
+Seat 3: wylie_c_184 (big blind) collected ($0.24)
+Seat 4: TnurgMB folded before Flop (didn't bet)
+Seat 5: fred0763 folded on the Turn
+
+
+PokerStars Hand #158765264180:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:24:10 ET
+Table 'Dabih' 6-max Seat #2 is the button
+Seat 1: sayhey48 ($9.38 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($17.35 in chips)
+Seat 4: TnurgMB ($6.01 in chips)
+Seat 5: fred0763 ($7.56 in chips)
+wylie_c_184: posts small blind $0.05
+TnurgMB: posts big blind $0.10
+tapouttazz9: sits out
+*** HOLE CARDS ***
+fred0763: calls $0.10
+sayhey48: raises $0.30 to $0.40
+I = Gamblor: folds
+wylie_c_184: folds
+TnurgMB: folds
+fred0763: calls $0.30
+*** FLOP *** [4d 7h 2d]
+fred0763: checks
+sayhey48: bets $0.45
+fred0763: calls $0.45
+*** TURN *** [4d 7h 2d] [7c]
+fred0763: checks
+sayhey48: checks
+*** RIVER *** [4d 7h 2d 7c] [Ks]
+fred0763: bets $1.76
+sayhey48: folds
+Uncalled bet ($1.76) returned to fred0763
+fred0763 collected $1.76 from pot
+fred0763: doesn't show hand
+*** SUMMARY ***
+Total pot $1.85 | Rake $0.09
+Board [4d 7h 2d 7c Ks]
+Seat 1: sayhey48 folded on the River
+Seat 2: I = Gamblor (button) folded before Flop (didn't bet)
+Seat 3: wylie_c_184 (small blind) folded before Flop
+Seat 4: TnurgMB (big blind) folded before Flop
+Seat 5: fred0763 collected ($1.76)
+
+
+PokerStars Hand #158765264393:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:24:52 ET
+Table 'Dabih' 6-max Seat #3 is the button
+Seat 1: sayhey48 ($8.53 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($17.30 in chips)
+Seat 4: TnurgMB ($5.91 in chips)
+Seat 5: fred0763 ($8.47 in chips)
+TnurgMB: posts small blind $0.05
+fred0763: posts big blind $0.10
+tapouttazz9: sits out
+*** HOLE CARDS ***
+sayhey48: folds
+I = Gamblor: raises $0.25 to $0.35
+wylie_c_184: raises $0.55 to $0.90
+TnurgMB: folds
+fred0763: calls $0.80
+I = Gamblor: folds
+*** FLOP *** [8d 8c Js]
+fred0763: checks
+wylie_c_184: bets $1.90
+fred0763: folds
+Uncalled bet ($1.90) returned to wylie_c_184
+wylie_c_184 collected $2.09 from pot
+*** SUMMARY ***
+Total pot $2.20 | Rake $0.11
+Board [8d 8c Js]
+Seat 1: sayhey48 folded before Flop (didn't bet)
+Seat 2: I = Gamblor folded before Flop
+Seat 3: wylie_c_184 (button) collected ($2.09)
+Seat 4: TnurgMB (small blind) folded before Flop
+Seat 5: fred0763 (big blind) folded on the Flop
+
+
+PokerStars Hand #158765264596:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:25:34 ET
+Table 'Dabih' 6-max Seat #4 is the button
+Seat 1: sayhey48 ($8.53 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($18.49 in chips)
+Seat 4: TnurgMB ($5.86 in chips)
+Seat 5: fred0763 ($7.57 in chips)
+Seat 6: tapouttazz9 ($10 in chips)
+fred0763: posts small blind $0.05
+tapouttazz9: posts big blind $0.10
+*** HOLE CARDS ***
+Dealt to tapouttazz9 [Jh 9s]
+sayhey48: folds
+I = Gamblor: folds
+wylie_c_184: folds
+TnurgMB: raises $0.20 to $0.30
+fred0763: calls $0.25
+tapouttazz9: calls $0.20
+*** FLOP *** [9c 6h 2c]
+fred0763: checks
+tapouttazz9: bets $0.20
+TnurgMB: raises $0.63 to $0.83
+fred0763: folds
+tapouttazz9: calls $0.63
+*** TURN *** [9c 6h 2c] [9h]
+tapouttazz9: checks
+TnurgMB: bets $1.21
+tapouttazz9: raises $2.49 to $3.70
+TnurgMB: folds
+Uncalled bet ($2.49) returned to tapouttazz9
+tapouttazz9 collected $4.73 from pot
+*** SUMMARY ***
+Total pot $4.98 | Rake $0.25
+Board [9c 6h 2c 9h]
+Seat 1: sayhey48 folded before Flop (didn't bet)
+Seat 2: I = Gamblor folded before Flop (didn't bet)
+Seat 3: wylie_c_184 folded before Flop (didn't bet)
+Seat 4: TnurgMB (button) folded on the Turn
+Seat 5: fred0763 (small blind) folded on the Flop
+Seat 6: tapouttazz9 (big blind) collected ($4.73)
+
+
+PokerStars Hand #158765265003:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:27:04 ET
+Table 'Dabih' 6-max Seat #5 is the button
+Seat 1: sayhey48 ($8.53 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($18.49 in chips)
+Seat 4: TnurgMB ($3.52 in chips)
+Seat 5: fred0763 ($7.27 in chips)
+Seat 6: tapouttazz9 ($12.39 in chips)
+tapouttazz9: posts small blind $0.05
+sayhey48: posts big blind $0.10
+*** HOLE CARDS ***
+Dealt to tapouttazz9 [7c Td]
+I = Gamblor: folds
+wylie_c_184: raises $0.20 to $0.30
+TnurgMB: folds
+fred0763: calls $0.30
+tapouttazz9: folds
+sayhey48: calls $0.20
+*** FLOP *** [2c 2s 5c]
+sayhey48: checks
+wylie_c_184: checks
+fred0763: checks
+*** TURN *** [2c 2s 5c] [Ah]
+sayhey48: checks
+wylie_c_184: checks
+fred0763: checks
+*** RIVER *** [2c 2s 5c Ah] [Th]
+sayhey48: checks
+wylie_c_184: bets $0.90
+fred0763: folds
+sayhey48: folds
+Uncalled bet ($0.90) returned to wylie_c_184
+wylie_c_184 collected $0.90 from pot
+wylie_c_184: doesn't show hand
+*** SUMMARY ***
+Total pot $0.95 | Rake $0.05
+Board [2c 2s 5c Ah Th]
+Seat 1: sayhey48 (big blind) folded on the River
+Seat 2: I = Gamblor folded before Flop (didn't bet)
+Seat 3: wylie_c_184 collected ($0.90)
+Seat 4: TnurgMB folded before Flop (didn't bet)
+Seat 5: fred0763 (button) folded on the River
+Seat 6: tapouttazz9 (small blind) folded before Flop
+
+
+PokerStars Hand #158765265215:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:27:52 ET
+Table 'Dabih' 6-max Seat #6 is the button
+Seat 1: sayhey48 ($8.23 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($19.09 in chips)
+Seat 4: TnurgMB ($3.52 in chips)
+Seat 5: fred0763 ($6.97 in chips)
+Seat 6: tapouttazz9 ($12.34 in chips)
+sayhey48: posts small blind $0.05
+I = Gamblor: posts big blind $0.10
+*** HOLE CARDS ***
+Dealt to tapouttazz9 [Kc 2s]
+wylie_c_184: folds
+TnurgMB: calls $0.10
+fred0763: folds
+tapouttazz9: folds
+sayhey48: folds
+I = Gamblor: checks
+*** FLOP *** [5h 3d Kh]
+I = Gamblor: checks
+TnurgMB: bets $0.10
+I = Gamblor: folds
+Uncalled bet ($0.10) returned to TnurgMB
+TnurgMB collected $0.24 from pot
+*** SUMMARY ***
+Total pot $0.25 | Rake $0.01
+Board [5h 3d Kh]
+Seat 1: sayhey48 (small blind) folded before Flop
+Seat 2: I = Gamblor (big blind) folded on the Flop
+Seat 3: wylie_c_184 folded before Flop (didn't bet)
+Seat 4: TnurgMB collected ($0.24)
+Seat 5: fred0763 folded before Flop (didn't bet)
+Seat 6: tapouttazz9 (button) folded before Flop (didn't bet)
+
+
+PokerStars Hand #158765265288:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:28:13 ET
+Table 'Dabih' 6-max Seat #1 is the button
+Seat 1: sayhey48 ($8.18 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($19.09 in chips)
+Seat 4: TnurgMB ($3.66 in chips)
+Seat 5: fred0763 ($6.97 in chips)
+Seat 6: tapouttazz9 ($12.34 in chips)
+I = Gamblor: posts small blind $0.05
+wylie_c_184: posts big blind $0.10
+*** HOLE CARDS ***
+Dealt to tapouttazz9 [6h 3c]
+TnurgMB: folds
+fred0763: folds
+tapouttazz9: folds
+sayhey48: folds
+I = Gamblor: folds
+Uncalled bet ($0.05) returned to wylie_c_184
+wylie_c_184 collected $0.10 from pot
+wylie_c_184: doesn't show hand
+*** SUMMARY ***
+Total pot $0.10 | Rake $0
+Seat 1: sayhey48 (button) folded before Flop (didn't bet)
+Seat 2: I = Gamblor (small blind) folded before Flop
+Seat 3: wylie_c_184 (big blind) collected ($0.10)
+Seat 4: TnurgMB folded before Flop (didn't bet)
+Seat 5: fred0763 folded before Flop (didn't bet)
+Seat 6: tapouttazz9 folded before Flop (didn't bet)
+
+
+PokerStars Hand #158765265345:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:28:25 ET
+Table 'Dabih' 6-max Seat #2 is the button
+Seat 1: sayhey48 ($8.18 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($19.14 in chips)
+Seat 4: TnurgMB ($3.66 in chips)
+Seat 5: fred0763 ($6.97 in chips)
+Seat 6: tapouttazz9 ($12.34 in chips)
+wylie_c_184: posts small blind $0.05
+TnurgMB: posts big blind $0.10
+*** HOLE CARDS ***
+Dealt to tapouttazz9 [9d 9c]
+fred0763: calls $0.10
+tapouttazz9: raises $0.20 to $0.30
+sayhey48: folds
+I = Gamblor: folds
+wylie_c_184: folds
+TnurgMB: calls $0.20
+fred0763: calls $0.20
+*** FLOP *** [7h Ad 6c]
+TnurgMB: checks
+fred0763: checks
+tapouttazz9: bets $0.45
+TnurgMB: calls $0.45
+fred0763: calls $0.45
+*** TURN *** [7h Ad 6c] [Qd]
+TnurgMB: checks
+fred0763: checks
+tapouttazz9: checks
+*** RIVER *** [7h Ad 6c Qd] [3s]
+TnurgMB: checks
+fred0763: checks
+tapouttazz9: checks
+*** SHOW DOWN ***
+TnurgMB: shows [4s 5h] (a straight, Three to Seven)
+fred0763: mucks hand
+tapouttazz9: mucks hand
+TnurgMB collected $2.18 from pot
+*** SUMMARY ***
+Total pot $2.30 | Rake $0.12
+Board [7h Ad 6c Qd 3s]
+Seat 1: sayhey48 folded before Flop (didn't bet)
+Seat 2: I = Gamblor (button) folded before Flop (didn't bet)
+Seat 3: wylie_c_184 (small blind) folded before Flop
+Seat 4: TnurgMB (big blind) showed [4s 5h] and won ($2.18) with a straight, Three to Seven
+Seat 5: fred0763 mucked [Kd 3d]
+Seat 6: tapouttazz9 mucked [9d 9c]
+
+
+PokerStars Hand #158765265554:  Hold'em No Limit ($0.05/$0.10 USD) - 2016/09/28 19:29:17 ET
+Table 'Dabih' 6-max Seat #3 is the button
+Seat 1: sayhey48 ($8.18 in chips)
+Seat 2: I = Gamblor ($10 in chips)
+Seat 3: wylie_c_184 ($19.09 in chips)
+Seat 4: TnurgMB ($5.09 in chips)
+Seat 5: fred0763 ($6.22 in chips)
+Seat 6: tapouttazz9 ($11.59 in chips)
+TnurgMB: posts small blind $0.05
+fred0763: posts big blind $0.10
+*** HOLE CARDS ***
+Dealt to tapouttazz9 [Ah Jd]
+tapouttazz9: raises $0.20 to $0.30
+sayhey48: calls $0.30
+I = Gamblor: folds
+wylie_c_184: folds
+TnurgMB: folds
+fred0763: calls $0.20
+*** FLOP *** [4c 4h 7d]
+fred0763: bets $0.90
+tapouttazz9: raises $1.20 to $2.10
+sayhey48: folds
+fred0763: calls $1.20
+*** TURN *** [4c 4h 7d] [5c]
+fred0763: checks
+tapouttazz9: bets $2.44
+fred0763: calls $2.44
+*** RIVER *** [4c 4h 7d 5c] [As]
+fred0763: checks
+tapouttazz9: bets $6.75 and is all-in
+fred0763: calls $1.38 and is all-in
+Uncalled bet ($5.37) returned to tapouttazz9
+*** SHOW DOWN ***
+tapouttazz9: shows [Ah Jd] (two pair, Aces and Fours)
+fred0763: shows [Qd 7h] (two pair, Sevens and Fours)
+tapouttazz9 collected $12.15 from pot
+*** SUMMARY ***
+Total pot $12.79 | Rake $0.64
+Board [4c 4h 7d 5c As]
+Seat 1: sayhey48 folded on the Flop
+Seat 2: I = Gamblor folded before Flop (didn't bet)
+Seat 3: wylie_c_184 (button) folded before Flop (didn't bet)
+Seat 4: TnurgMB (small blind) folded before Flop
+Seat 5: fred0763 (big blind) showed [Qd 7h] and lost with two pair, Sevens and Fours
+Seat 6: tapouttazz9 showed [Ah Jd] and won ($12.15) with two pair, Aces and Fours
+
+

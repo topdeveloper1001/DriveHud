@@ -179,6 +179,7 @@
     <Compile Include="FunctionalTests\Hud\HudPositionTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
@@ -311,6 +312,7 @@
   <ItemGroup>
     <Folder Include="IntegrationTests\Parsers\IPoker\TestData\" />
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
+    <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

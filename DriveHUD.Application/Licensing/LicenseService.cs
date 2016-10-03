@@ -131,7 +131,10 @@ namespace DriveHUD.Application.Licensing
                     licenseInfo.Serial = serial;
                 }
 
-                licenseInfos.Add(licenseInfo);
+                if (!licenseInfo.IsTrial || licenseInfos.All(x => !x.IsTrial))
+                {
+                    licenseInfos.Add(licenseInfo);
+                }
             }
 
             isInitialized = true;
@@ -167,14 +170,18 @@ namespace DriveHUD.Application.Licensing
                 licenseManager.ResetCacheForLicense(license);
             }
 
-            licenseInfos.Remove(licenseInfo);
+            if (licenseInfo != null)
+            {
+                licenseInfos.Remove(licenseInfo);
+            }
 
             var requestInfo = new LicenseValidationRequestInfo
             {
                 DontShowForms = true,
                 SerialNumbers = new string[] { serial },
                 SaveExternalSerials = true,
-                DisableTrials = true
+                DisableTrials = true,
+                DisableCache = true
             };
 
             requestInfo.AdditionalServerProperties.Add("email", email);

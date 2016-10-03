@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Pacific888FastParserTests.cs" company="Ace Poker Solutions">
+// <copyright file="PokerStarsFastParserTests.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using HandHistories.Parser.Parsers.FastParser._888;
+using HandHistories.Parser.Parsers.FastParser.PokerStars;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -20,12 +20,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
+namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 {
     [TestFixture]
-    class Pacific888FastParserTests
+    class PokerStarsFastParserTests
     {
-        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\Pacific\TestData";
+        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\PokerStars\TestData";
 
         [Test]
         public void ParsingDoesNotThrowExceptions()
@@ -34,7 +34,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
             var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
 
-            var parser = new Poker888FastParserImpl();
+            var parser = new PokerStarsFastParserImpl();
 
             var succeded = 0;
             var total = 0;
