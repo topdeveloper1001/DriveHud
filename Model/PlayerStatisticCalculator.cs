@@ -62,8 +62,12 @@ namespace Model
             stat.TotalcallsTurn = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.Turn);
             stat.TotalcallsRiver = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.River);
 
-            bool sawShowDown = playerHandActions.All(x => x.HandActionType != HandActionType.FOLD);
-            bool playerFolded = !sawShowDown;
+            bool playerFolded = playerHandActions.Any(x => x.IsFold);
+            bool sawShowDown = !playerFolded &&
+                parsedHand.HandActions
+                .GroupBy(x => x.PlayerName)
+                .Where(x => x.Key != player)
+                .Any(x => x.All(p => !p.IsFold));
 
             bool wasRiver = CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.River);
             bool wasTurn = wasRiver || CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.Turn);
@@ -73,31 +77,15 @@ namespace Model
             bool playedTurn = playedRiver || playerHandActions.Any(x => x.Street == Street.Turn);
             bool playedFlop = playedTurn || playerHandActions.Any(x => x.Street == Street.Flop);
 
-            bool sawFlop = playedFlop || IsSawStreet(player, wasFlop, Street.Flop, parsedHand);
-            bool sawTurn = playedTurn || IsSawStreet(player, wasTurn, Street.Turn, parsedHand);
-            bool sawRiver = playedRiver || IsSawStreet(player, wasRiver, Street.River, parsedHand);
+            bool won = playerHandActions.Any(handAction => handAction.IsWinningsAction);
 
-            bool won = playerHandActions.Any(handAction => handAction.HandActionType == HandActionType.WINS);
-
-            bool wonShowdonw = false;
-
-            if (sawShowDown)
-            {
-                if (wasRiver)
-                {
-                    wonShowdonw = won;
-                }
-                else
-                {
-                    sawShowDown = false;
-                }
-            }
+            bool wonShowdown = sawShowDown && won;
 
             decimal netWon = playerHandActions.Sum(x => x.Amount);
 
-            bool wonFlop = sawFlop && won;
-            bool wonTurn = sawTurn && won;
-            bool wonRiver = sawRiver && won;
+            bool wonFlop = playedFlop && won;
+            bool wonTurn = playedTurn && won;
+            bool wonRiver = playedRiver && won;
 
             bool vpip = playerHandActions.PreFlopAny(handAction => handAction.IsRaise() || handAction.IsCall());
             bool pfr = playerHandActions.PreFlopAny(handAction => handAction.IsRaise());
@@ -263,7 +251,7 @@ namespace Model
             #region Check river on bx line
 
             Condition checkRiverOnBxLine = new Condition();
-            if (sawRiver)
+            if (playedRiver)
             {
                 CalculateCheckRiverOnBxLine(checkRiverOnBxLine, parsedHand, player);
             }
@@ -346,19 +334,19 @@ namespace Model
             stat.Sawlargeshowdown = sawShowDown && largePot ? 1 : 0;
             stat.Sawlargeshowdownlimpedflop = sawShowDown && largePot && limped ? 1 : 0;
 
-            stat.Sawflop = sawFlop ? 1 : 0;
-            stat.SawTurn = sawTurn ? 1 : 0;
-            stat.SawRiver = sawRiver ? 1 : 0;
+            stat.Sawflop = playedFlop ? 1 : 0;
+            stat.SawTurn = playedTurn ? 1 : 0;
+            stat.SawRiver = playedRiver ? 1 : 0;
 
-            stat.PlayedFlop = playedFlop ? 1 : 0;
-            stat.PlayedTurn = playedTurn ? 1 : 0;
-            stat.PlayedRiver = playedRiver ? 1 : 0;
+            stat.FlopAggPossible = playedFlop ? 1 : 0;
+            stat.TurnAggPossible = playedTurn ? 1 : 0;
+            stat.RiverAggPossible = playedRiver ? 1 : 0;
 
-            stat.Wonshowdown = wonShowdonw ? 1 : 0;
-            stat.Wonnonsmallshowdown = wonShowdonw && nomSmallPot ? 1 : 0;
-            stat.Wonnonsmallshowdownlimpedflop = wonShowdonw && nomSmallPot && limped ? 1 : 0;
-            stat.Wonlargeshowdown = wonShowdonw && largePot ? 1 : 0;
-            stat.Wonlargeshowdownlimpedflop = wonShowdonw && largePot && limped ? 1 : 0;
+            stat.Wonshowdown = wonShowdown ? 1 : 0;
+            stat.Wonnonsmallshowdown = wonShowdown && nomSmallPot ? 1 : 0;
+            stat.Wonnonsmallshowdownlimpedflop = wonShowdown && nomSmallPot && limped ? 1 : 0;
+            stat.Wonlargeshowdown = wonShowdown && largePot ? 1 : 0;
+            stat.Wonlargeshowdownlimpedflop = wonShowdown && largePot && limped ? 1 : 0;
             stat.Wonhand = won ? 1 : 0;
             stat.Wonhandwhensawflop = wonFlop ? 1 : 0;
             stat.Wonhandwhensawturn = wonTurn ? 1 : 0;
@@ -467,7 +455,7 @@ namespace Model
             stat.DidColdCallOop = coldCall.Made && !preflopInPosition ? 1 : 0;
 
             stat.DidDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && betOnTurn ? 1 : 0;
-            stat.CouldDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && sawTurn ? 1 : 0;
+            stat.CouldDelayedTurnCBet = flopCBet.Possible && !flopCBet.Made && playedTurn ? 1 : 0;
 
             stat.PlayedFloatFlop = isFloatFlop ? 1 : 0;
 
@@ -482,7 +470,7 @@ namespace Model
             stat.WasTurn = wasTurn ? 1 : 0;
             stat.WasRiver = wasRiver ? 1 : 0;
 
-            stat.DidBluffedRiver = sawRiver && isBluffRiver ? 1 : 0;
+            stat.DidBluffedRiver = playedRiver && isBluffRiver ? 1 : 0;
 
             stat.DidCheckFlop = isCheckedFlop ? 1 : 0;
 
@@ -689,18 +677,6 @@ namespace Model
 
             return !HoldemHand.Hand.IsFlushDraw(hand.MaskValue, 0UL)
                 && !HoldemHand.Hand.IsStraightDraw(hand.MaskValue, 0UL);
-        }
-
-        private static bool IsSawStreet(string player, bool wasStreet, Street street, HandHistory parsedHand)
-        {
-            HandAction foldAction = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.FOLD && x.PlayerName == player);
-
-            if (foldAction == null)
-            {
-                return wasStreet;
-            }
-
-            return (foldAction.Street >= street) && wasStreet;
         }
 
         private static void CalculateUnopenedPot(Playerstatistic stat, HandHistory parsedHand)

@@ -527,14 +527,15 @@ namespace DriveHUD.Entities
         [ProtoMember(197)]
         public virtual int TotalcallsRiver { get; set; }
 
+        // Since aggression by street was added later need  separate SawStreet stats for it 
         [ProtoMember(198)]
-        public virtual int PlayedFlop { get; set; }
+        public virtual int FlopAggPossible { get; set; }
 
         [ProtoMember(199)]
-        public virtual int PlayedTurn { get; set; }
+        public virtual int TurnAggPossible { get; set; }
 
         [ProtoMember(200)]
-        public virtual int PlayedRiver { get; set; }
+        public virtual int RiverAggPossible { get; set; }
 
         #region Additional properties (not for serialization)
 
@@ -842,9 +843,9 @@ namespace DriveHUD.Entities
             TotalcallsTurn += a.TotalcallsTurn;
             TotalcallsRiver += a.TotalcallsRiver;
 
-            PlayedFlop += a.PlayedFlop;
-            PlayedTurn += a.PlayedTurn;
-            PlayedRiver += a.PlayedRiver;
+            FlopAggPossible += a.FlopAggPossible;
+            TurnAggPossible += a.TurnAggPossible;
+            RiverAggPossible += a.RiverAggPossible;
 
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
@@ -1111,9 +1112,9 @@ namespace DriveHUD.Entities
             r.TotalcallsTurn = a.TotalcallsTurn + b.TotalcallsTurn;
             r.TotalcallsRiver = a.TotalcallsRiver + b.TotalcallsRiver;
 
-            r.PlayedFlop = a.PlayedFlop + b.PlayedFlop;
-            r.PlayedTurn = a.PlayedTurn + b.PlayedTurn;
-            r.PlayedRiver = a.PlayedRiver + b.PlayedRiver;
+            r.FlopAggPossible = a.FlopAggPossible + b.FlopAggPossible;
+            r.TurnAggPossible = a.TurnAggPossible + b.TurnAggPossible;
+            r.RiverAggPossible = a.RiverAggPossible + b.RiverAggPossible;
 
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);

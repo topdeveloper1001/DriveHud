@@ -208,7 +208,7 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = WWSF,
-                    Occured = Source.Wonshowdown,
+                    Occured = Source.Wonhandwhensawflop,
                     CouldOccured = Source.Sawflop
                 };
             }
@@ -287,7 +287,7 @@ namespace Model.Data
                 {
                     Value = FlopAgg,
                     Occured = Source.TotalbetsFlop,
-                    CouldOccured = Source.PlayedFlop
+                    CouldOccured = Source.FlopAggPossible
                 };
             }
         }
@@ -300,7 +300,7 @@ namespace Model.Data
                 {
                     Value = TurnAgg,
                     Occured = Source.TotalbetsTurn,
-                    CouldOccured = Source.PlayedTurn
+                    CouldOccured = Source.TurnAggPossible
                 };
             }
         }
@@ -313,7 +313,7 @@ namespace Model.Data
                 {
                     Value = RiverAgg,
                     Occured = Source.TotalbetsRiver,
-                    CouldOccured = Source.PlayedRiver
+                    CouldOccured = Source.RiverAggPossible
                 };
             }
         }
