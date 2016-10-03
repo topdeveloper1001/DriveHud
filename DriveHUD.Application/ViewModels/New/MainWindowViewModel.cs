@@ -111,8 +111,8 @@ namespace DriveHUD.Application.ViewModels
             ImportFromFileCommand = new RelayCommand(ImportFromFile);
             ImportFromDirectoryCommand = new RelayCommand(ImportFromDirectory);
             SupportCommand = new RelayCommand(ShowSupportView);
-            StartHudCommand = new RelayCommand(() => StartHud(true));
-            StopHudCommand = new RelayCommand(StopHud);
+            StartHudCommand = new RelayCommand(() => StartHud(false));
+            StopHudCommand = new RelayCommand(() => StopHud(false));
             HideEquityCalculatorCommand = new RelayCommand(HideEquityCalculator);
             SettingsCommand = new RelayCommand(OpenSettingsMenu);
             UpgradeCommand = new RelayCommand(Upgrade);
@@ -158,9 +158,12 @@ namespace DriveHUD.Application.ViewModels
             importerSessionCacheService.Begin();
         }
 
-        internal void StopHud()
+        internal void StopHud(bool switchViewModel = false)
         {
-            SwitchViewModel(EnumViewModelType.HudViewModel);
+            if (switchViewModel)
+            {
+                SwitchViewModel(EnumViewModelType.HudViewModel);
+            }
             HudViewModel.Stop();
 
             importerSessionCacheService.End();

@@ -88,6 +88,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Edit Note.
+        /// </summary>
+        internal static string Main_ContextMenu_EditNote {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_EditNote", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Tournament.
         /// </summary>
         internal static string Main_ContextMenu_EditTournament {
