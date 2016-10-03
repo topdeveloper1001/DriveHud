@@ -101,7 +101,7 @@ namespace DriveHUD.Entities
         [Required, ProtoMember(37)]
         public virtual short BbgroupId { get; set; }
         [Required, ProtoMember(38)]
-        public virtual int Bigblindstealattempted { get; set; }
+        public virtual int Bigblindstealfaced { get; set; }
         [Required, ProtoMember(39)]
         public virtual int Turnraiseippassonflopcb { get; set; }
         [Required, ProtoMember(40)]
@@ -111,7 +111,7 @@ namespace DriveHUD.Entities
         [Required, ProtoMember(42)]
         public virtual int Couldthreebet { get; set; }
         [Required, ProtoMember(43)]
-        public virtual int Smallblindstealattempted { get; set; }
+        public virtual int Smallblindstealfaced { get; set; }
         [Required, ProtoMember(44)]
         public virtual int Sawnonsmallshowdown { get; set; }
         [Required, ProtoMember(45)]
@@ -536,6 +536,9 @@ namespace DriveHUD.Entities
         [ProtoMember(200)]
         public virtual int PlayedRiver { get; set; }
 
+        [ProtoMember(201)]
+        public virtual int Smallblindstealattempted { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session 
@@ -706,11 +709,12 @@ namespace DriveHUD.Entities
             Calledrivercontinuationbet += a.Calledrivercontinuationbet;
             Raisedrivercontinuationbet += a.Raisedrivercontinuationbet;
 
-            Bigblindstealattempted += a.Bigblindstealattempted;
+            Bigblindstealfaced += a.Bigblindstealfaced;
             Bigblindstealdefended += a.Bigblindstealdefended;
             Bigblindstealreraised += a.Bigblindstealreraised;
             Bigblindstealfolded += a.Bigblindstealfolded;
             Smallblindstealattempted += a.Smallblindstealattempted;
+            Smallblindstealfaced += a.Smallblindstealfaced;
             Smallblindstealdefended += a.Smallblindstealdefended;
             Smallblindstealfolded += a.Smallblindstealfolded;
             Smallblindstealreraised += a.Smallblindstealreraised;
@@ -974,11 +978,12 @@ namespace DriveHUD.Entities
             r.Calledrivercontinuationbet = a.Calledrivercontinuationbet + b.Calledrivercontinuationbet;
             r.Raisedrivercontinuationbet = a.Raisedrivercontinuationbet + b.Raisedrivercontinuationbet;
 
-            r.Bigblindstealattempted = a.Bigblindstealattempted + b.Bigblindstealattempted;
+            r.Bigblindstealfaced = a.Bigblindstealfaced + b.Bigblindstealfaced;
             r.Bigblindstealdefended = a.Bigblindstealdefended + b.Bigblindstealdefended;
             r.Bigblindstealreraised = a.Bigblindstealreraised + b.Bigblindstealreraised;
             r.Bigblindstealfolded = a.Bigblindstealfolded + b.Bigblindstealfolded;
             r.Smallblindstealattempted = a.Smallblindstealattempted + b.Smallblindstealattempted;
+            r.Smallblindstealfaced = a.Smallblindstealfaced + b.Smallblindstealfaced;
             r.Smallblindstealdefended = a.Smallblindstealdefended + b.Smallblindstealdefended;
             r.Smallblindstealfolded = a.Smallblindstealfolded + b.Smallblindstealfolded;
             r.Smallblindstealreraised = a.Smallblindstealreraised + b.Smallblindstealreraised;

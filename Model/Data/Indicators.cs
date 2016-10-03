@@ -161,7 +161,7 @@ namespace Model.Data
         {
             get
             {
-                var possible = Source.Bigblindstealattempted + Source.Smallblindstealattempted;
+                var possible = Source.Bigblindstealfaced + Source.Smallblindstealfaced;
                 var made = Source.Bigblindstealreraised + Source.Smallblindstealreraised;
                 return GetPercentage(made, possible);
             }
@@ -171,7 +171,7 @@ namespace Model.Data
         {
             get
             {
-                var possible = Source.Bigblindstealattempted + Source.Smallblindstealattempted;
+                var possible = Source.Bigblindstealfaced + Source.Smallblindstealfaced;
                 var made = Source.Bigblindstealfolded + Source.Smallblindstealfolded;
                 return GetPercentage(made, possible);
             }
