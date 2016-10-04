@@ -608,7 +608,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             foreach (var item in hudElements)
             {
-                item.Stickers = new ObservableCollection<HudBumperStickerType>(layout.HudBumperStickerTypes.Where(x => IsInRange(item, x.Stats)));
+                item.Stickers = new ObservableCollection<HudBumperStickerType>(
+                    layout.HudBumperStickerTypes
+                    .Where(x => (hudElementsTotalHands[item] >= x.MinSample) 
+                                && x.EnableBumperSticker 
+                                && IsInRange(item, x.Stats)));
             }
         }
 

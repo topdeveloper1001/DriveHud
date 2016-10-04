@@ -1199,11 +1199,11 @@ namespace DriveHUD.Application.ViewModels
             }
 
             // merge data to current layout (currently we do not expect new stats or deleted stats)
-            var stickersTypesToMerge = (from stickerType in hudStickersSettingsViewModel.BumperStickers
-                                        join currentStickerType in CurrentLayout.HudBumperStickerTypes on stickerType.Name equals currentStickerType.Name into stgj
+            var stickersTypesToMerge = (from currentStickerType in CurrentLayout.HudBumperStickerTypes
+                                        join stickerType in hudStickersSettingsViewModel.BumperStickers on currentStickerType.Name equals stickerType.Name into stgj
                                         from stgrouped in stgj.DefaultIfEmpty()
                                         where stgrouped != null
-                                        select new { CurrentStickerType = stickerType, StickerType = stgrouped }).ToArray();
+                                        select new { CurrentStickerType = currentStickerType, StickerType = stgrouped }).ToArray();
 
             stickersTypesToMerge.ForEach(st =>
             {
