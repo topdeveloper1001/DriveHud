@@ -34,6 +34,36 @@ namespace DriveHud.Tests.UnitTests
         private const int LayoutId = -1625850552;
 
         [Test]
+        public void TestSetStickerOneAndDoneIsSet()
+        {
+            var hudLayoutService = CreateHudLayoutsService();
+            var hudElements = CreateHudElements();
+
+            hudElements[0].SetStatValue(Stat.CBet, 60);
+            hudElements[0].SetStatValue(Stat.DoubleBarrel, 20);
+
+            hudLayoutService.SetStickers(hudElements, LayoutId);
+
+            Assert.That(hudElements[0].Stickers[0].Label, Is.EqualTo("OD"));
+        }
+
+        [Test]
+        public void TestSetStickerODAndWTYAreSet()
+        {
+            var hudLayoutService = CreateHudLayoutsService();
+            var hudElements = CreateHudElements();
+
+            hudElements[0].SetStatValue(Stat.CBet, 60);
+            hudElements[0].SetStatValue(Stat.DoubleBarrel, 20);
+            hudElements[0].SetStatValue(Stat.UO_PFR_EP, 21);
+
+            hudLayoutService.SetStickers(hudElements, LayoutId);
+
+            Assert.That(hudElements[0].Stickers[0].Label, Is.EqualTo("OD"));
+            Assert.That(hudElements[0].Stickers[1].Label, Is.EqualTo("WTE"));
+        }
+
+        [Test]
         public void TestSetPlayerTypeIconNitIsSet()
         {
             var hudLayoutService = CreateHudLayoutsService();
@@ -272,7 +302,9 @@ namespace DriveHud.Tests.UnitTests
                 new StatInfo { Stat = Stat.ColdCallSB, Caption = "Cold Call SB%" },
                 new StatInfo { Stat = Stat.ColdCallBB, Caption = "Cold Call BB%" },
                 new StatInfo { Stat = Stat.S3BetIP, Caption = "3-BET IP%" },
-                new StatInfo { Stat = Stat.S3BetOOP, Caption = "3-BET OOP%" }
+                new StatInfo { Stat = Stat.S3BetOOP, Caption = "3-BET OOP%" },
+                new StatInfo { Stat = Stat.DoubleBarrel, Caption = "Double Barrel" },
+                new StatInfo { Stat = Stat.UO_PFR_EP, Caption = "UO PFR EP" }
             };
 
             stats.ForEach(x => x.Initialize());

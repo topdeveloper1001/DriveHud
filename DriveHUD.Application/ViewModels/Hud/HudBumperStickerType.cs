@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
+using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -136,6 +137,18 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref stats, value);
+            }
+        }
+
+        private bool isActive;
+
+        [XmlIgnore]
+        public bool IsActive
+        {
+            get { return isActive; }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref isActive, value);
             }
         }
 

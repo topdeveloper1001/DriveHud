@@ -227,6 +227,8 @@ namespace DriveHUD.Application.ViewModels
             // Make a collection of StatInfo
             StatInfoCollection = new ReactiveList<StatInfo>
             {
+                new StatInfo { IsListed = false, GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.UO_PFR_EP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.UO_PFR_EP)},
+
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.VPIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.VPIP) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PFR, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFR)},
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.S3Bet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBet) },
@@ -503,6 +505,22 @@ namespace DriveHUD.Application.ViewModels
 
                 collectionViewSource.SortDescriptions.Add(new System.ComponentModel.SortDescription("GroupName", System.ComponentModel.ListSortDirection.Ascending));
                 collectionViewSource.SortDescriptions.Add(new System.ComponentModel.SortDescription("Caption", System.ComponentModel.ListSortDirection.Ascending));
+
+                collectionViewSource.Filter = (item) =>
+                {
+                    var stat = item as StatInfo;
+                    if (stat == null)
+                        return false;
+
+                    return stat.IsListed && !stat.IsDuplicateSelected;
+                };
+
+                var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
+                if (statFiltering.CanChangeLiveFiltering)
+                {
+                    statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsDuplicateSelected));
+                    statFiltering.IsLiveFiltering = true;
+                }
 
                 StatInfoCollectionView = collectionViewSource;
             }

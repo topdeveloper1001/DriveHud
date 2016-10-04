@@ -25,6 +25,8 @@ namespace DriveHUD.ViewModels
         {
             // default stat format 
             format = "{0:0.0}";
+            // list stat by default
+            isListed = true;
             // initialize collection
             SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>();
             // initialize defaults
@@ -476,6 +478,21 @@ namespace DriveHUD.ViewModels
                 if (value == isDuplicateSelected) return;
                 isDuplicateSelected = value;
                 OnPropertyChanged();
+            }
+        }
+
+        [NonSerialized]
+        private bool isListed;
+
+        [XmlIgnore]
+        public bool IsListed
+        {
+            get { return isListed;  }
+            set
+            {
+                if (value == isListed) return;
+                isListed = value;
+                OnPropertyChanged(nameof(IsListed));
             }
         }
 

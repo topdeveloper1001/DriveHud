@@ -98,6 +98,13 @@ namespace DriveHUD.Application.ViewModels
         void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, int layoutId);
 
         /// <summary>
+        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// </summary>
+        /// <param name="hudElements">Hud elements</param>
+        /// <param name="layoutId">Layout</param>
+        void SetStickers(IEnumerable<HudElementViewModel> hudElements, int layoutId);
+
+        /// <summary>
         /// Get path to image directory
         /// </summary>
         /// <returns>Path to image directory</returns>

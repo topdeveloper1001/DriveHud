@@ -424,6 +424,18 @@ namespace DriveHUD.Application.ViewModels
         }
 
         [NonSerialized]
+        private ObservableCollection<HudBumperStickerType> stickers;
+
+        public ObservableCollection<HudBumperStickerType> Stickers
+        {
+            get { return stickers; }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref stickers, value);
+            }
+        }
+
+        [NonSerialized]
         private string playerIcon;
 
         [XmlIgnore]

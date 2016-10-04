@@ -587,6 +587,31 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// </summary>
+        /// <param name="hudElements">Hud elements</param>
+        /// <param name="layoutId">Layout</param>
+        public void SetStickers(IEnumerable<HudElementViewModel> hudElements, int layoutId)
+        {
+            var layout = Layouts.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.IsDefault);
+
+            if (layout == null)
+            {
+                return;
+            }
+
+            var hudElementsTotalHands = (from hudElement in hudElements
+                                         from stat in hudElement.StatInfoCollection
+                                         where stat.Stat == Stat.TotalHands
+                                         select new { HudElement = hudElement, TotalHands = stat.CurrentValue }).ToDictionary(x => x.HudElement, x => x.TotalHands);
+
+            foreach (var item in hudElements)
+            {
+                item.Stickers = new ObservableCollection<HudBumperStickerType>(layout.HudBumperStickerTypes.Where(x => IsInRange(item, x.Stats)));
+            }
+        }
+
         private class MatchRatio
         {
             public HudPlayerType PlayerType { get; set; }
@@ -657,6 +682,33 @@ namespace DriveHUD.Application.ViewModels.Hud
                                select new { Ratio = matchRatio, InRange = inRange, IsStatDefined = isStatDefined, ExtraMatchRatio = extraMatchRatio }).ToArray();
 
             return new Tuple<bool, decimal, decimal>(matchRatios.All(x => x.InRange) && matchRatios.Any(x => x.IsStatDefined), matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
+        }
+
+        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats)
+        {
+            if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
+                return false;
+
+            foreach (var rangeStat in rangeStats)
+            {
+                if (!rangeStat.High.HasValue && !rangeStat.Low.HasValue)
+                    continue;
+
+                var stat = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == rangeStat.Stat);
+
+                if (stat == null)
+                    return false;
+
+                var high = rangeStat.High.HasValue ? rangeStat.High.Value : 100;
+                var low = rangeStat.Low.HasValue ? rangeStat.Low.Value : -1;
+
+                if (stat.CurrentValue < low || stat.CurrentValue > high)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
 
         private decimal GetStatAverageValue(HudPlayerTypeStat stat)

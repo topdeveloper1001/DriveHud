@@ -280,7 +280,7 @@ namespace DriveHUD.Application.ViewModels
 
             var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
 
-            var hudLayoutsSevice = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
             var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
@@ -364,7 +364,7 @@ namespace DriveHUD.Application.ViewModels
 
                 var doNotAddPlayer = false;
 
-                var activeLayout = hudLayoutsSevice.GetActiveLayout(tableKey);
+                var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
 
                 if (activeLayout == null)
                 {
@@ -455,7 +455,8 @@ namespace DriveHUD.Application.ViewModels
             if (HudViewModel.HudTableViewModelDictionary.ContainsKey(tableKey))
             {
                 var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                hudLayoutsSevice.SetPlayerTypeIcon(hudElements, tableKey);
+                hudLayoutsService.SetPlayerTypeIcon(hudElements, tableKey);
+                hudLayoutsService.SetStickers(hudElements, tableKey);
 
                 Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
                 {
