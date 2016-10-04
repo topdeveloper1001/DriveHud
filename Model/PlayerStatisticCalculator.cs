@@ -1027,7 +1027,6 @@ namespace Model
 
         private static void CalculateSqueeze(Condition squeeze, IList<HandAction> preflops, string player)
         {
-
             string squeezeStarter = null;
             bool wasSqueezeRaise = false, wasSqueezeCall = false;
             foreach (var action in preflops)
@@ -1037,6 +1036,9 @@ namespace Model
                     if (wasSqueezeCall)
                     {
                         if (action.PlayerName == squeezeStarter)
+                            return;
+
+                        if (action.PlayerName != player && action.IsRaise())
                             return;
 
                         if (action.PlayerName != player)
