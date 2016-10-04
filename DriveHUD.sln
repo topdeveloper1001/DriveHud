@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.23107.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{92F8B855-AF92-4969-8882-CE8FD3797CF0}"
 EndProject
@@ -49,8 +49,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.Updater", "DriveHUD.Updater\DriveHUD.Updater.csproj", "{FC6DFBC0-B19B-40D5-8CCA-D9349D9F2C5E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.Updater.Core", "DriveHUD.Updater.Core\DriveHUD.Updater.Core.csproj", "{3D9ADA75-8138-460A-B150-1FD6FAD0769C}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.DBMigrator", "DriveHUD.DBMigrator\DriveHUD.DBMigrator.csproj", "{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.Entities", "DriveHUD.Entities\DriveHUD.Entities.csproj", "{D009A701-ADD8-4C10-8EB1-C241BDD9B3C1}"
 EndProject
@@ -256,18 +254,6 @@ Global
 		{3D9ADA75-8138-460A-B150-1FD6FAD0769C}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3D9ADA75-8138-460A-B150-1FD6FAD0769C}.Release|x86.ActiveCfg = Release|Any CPU
 		{3D9ADA75-8138-460A-B150-1FD6FAD0769C}.Release|x86.Build.0 = Release|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Debug|x86.Build.0 = Debug|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Release|x86.ActiveCfg = Release|Any CPU
-		{B70F9B90-60E7-4AF5-A164-F0A3CEF6CC33}.Release|x86.Build.0 = Release|Any CPU
 		{D009A701-ADD8-4C10-8EB1-C241BDD9B3C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D009A701-ADD8-4C10-8EB1-C241BDD9B3C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D009A701-ADD8-4C10-8EB1-C241BDD9B3C1}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
