@@ -68,6 +68,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     LogProvider.Log.Error(ex);
                 }
             }
+            else
+            {
+                LogProvider.Log.Info($"File {layoutsFile} not found.");
+            }
+
+            LogProvider.Log.Info("Migration #2 executed.");
         }
 
         public override void Down()
