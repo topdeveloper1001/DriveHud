@@ -620,40 +620,53 @@
 
                 </StackPanel>
 
-                <StackPanel
+                <Grid
                     Grid.Row="1"
                     Grid.Column="2"
-                    Orientation="Vertical"
                     VerticalAlignment="Bottom">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-                    <TextBlock                        
+                    <TextBlock  
+                        Grid.Row="0" Grid.Column="0"
                         Text="{ResX Key=Common_BumperSticker_StickerName}"  
                         Margin="0,0,0,2"
                         Style="{StaticResource TextBlockStyle}"                
                         />
 
-                    <StackPanel
-                        Orientation="Horizontal"                        
-                        >
+                    <TextBox      
+                        Grid.Row="1" Grid.Column="0"
+                        Style="{StaticResource StickerNameTextBoxStyle}"  
+                        Text="{Binding SelectedBumperSticker.Name, UpdateSourceTrigger=PropertyChanged}"
+                        MaxLength="20"                            
+                        />
 
-                        <TextBox                                                   
-                            Style="{StaticResource StickerNameTextBoxStyle}"  
-                            Text="{Binding SelectedBumperSticker.Name, UpdateSourceTrigger=PropertyChanged}"
-                            MaxLength="20"                            
-                            />
+                    <Button         
+                        Grid.Row="0" Grid.Column="1"
+                        Content="{ResX Key=Common_HudPlayerType_AddNewStat}"                          
+                        Margin="5,0,0,2"
+                        Width="110"
+                        Height="25"
+                        IsEnabled="False"
+                        Style="{StaticResource IconButtonStyle}"
+                        />
 
-                        <Button                         
-                            Content="{ResX Key=Common_HudPlayerType_AddNewStat}"                          
-                            Margin="5,0,0,0"
-                            Width="110"
-                            Height="25"
-                            IsEnabled="False"
-                            Style="{StaticResource IconButtonStyle}"
-                            />
+                    <Button         
+                        Grid.Row="1" Grid.Column="1"
+                        Content="Add Filter"                          
+                        Margin="5,0,0,0"
+                        Width="110"
+                        Height="25"
+                        Style="{StaticResource IconButtonStyle}"
+                        />
 
-                    </StackPanel>
-
-                </StackPanel>
+                </Grid>
 
                 <TextBlock    
                     Grid.Row="3"

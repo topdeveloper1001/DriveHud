@@ -26,8 +26,6 @@ namespace DriveHUD.Application.Views.PopupContainers
     {
         public PopupContainerFiltersView()
         {
-            DataContext = new PopupContainerFiltersViewModel();
-
             InitializeComponent();
         }
 
@@ -43,7 +41,7 @@ namespace DriveHUD.Application.Views.PopupContainers
 
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
-            (DataContext as PopupContainerFiltersViewModel).RestoreDefaultFiltersState();
+            (DataContext as PopupContainerBaseFilterViewModel).RestoreDefaultFiltersState_Command.Execute(null);
         }
     }
 }

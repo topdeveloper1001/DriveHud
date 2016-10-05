@@ -336,6 +336,7 @@
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\New\AppsViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
+    <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerBaseNotificationViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerSupportViewModel.cs" />
     <Compile Include="ViewModels\Hud\PokerStarsHudPanelService.cs" />
@@ -475,7 +476,7 @@
     <Compile Include="ViewModels\New\DashboardViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerCardSelectorViewModelNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerCardSelectorViewModel.cs" />
-    <Compile Include="ViewModels\PopupContainers\PopupContainerFiltersViewModel.cs" />
+    <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerFiltersViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudViewModel.cs" />
     <Compile Include="ViewModels\New\MainWindowViewModel.cs" />
     <Compile Include="ViewModels\New\ReportGadgetViewModel.cs" />
