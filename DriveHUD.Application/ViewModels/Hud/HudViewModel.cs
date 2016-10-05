@@ -1331,7 +1331,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        // temporary 
         private void DisablePreferredSeatBetOnline()
         {
             App.Current.Dispatcher.BeginInvoke((Action)delegate

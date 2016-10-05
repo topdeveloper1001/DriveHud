@@ -140,18 +140,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private bool isActive;
-
-        [XmlIgnore]
-        public bool IsActive
-        {
-            get { return isActive; }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref isActive, value);
-            }
-        }
-
         /// <summary>
         /// Property is used to initialize massive arrays of HudPlayerType with defaults stat list without creation empty stats
         /// Only stats which needs to be initialized with data must be set 

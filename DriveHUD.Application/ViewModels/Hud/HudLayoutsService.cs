@@ -145,9 +145,6 @@ namespace DriveHUD.Application.ViewModels.Hud
                                 x.Image = GetImageLink(x.ImageAlias);
                             }
                         });
-
-                        // set default bumper stickers if they are missing
-                        hudLayouts.Layouts.Where(x => x.HudBumperStickerTypes.Count == 0).ForEach(x => x.HudBumperStickerTypes = CreateDefaultBumperStickers());
                     }
                 }
             }
@@ -781,11 +778,6 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     x.Image = GetImageLink(x.ImageAlias);
                 });
-
-                if (importedHudLayout.HudBumperStickerTypes == null || importedHudLayout.HudBumperStickerTypes.Count == 0)
-                {
-                    importedHudLayout.HudBumperStickerTypes = CreateDefaultBumperStickers();
-                }
 
                 var counter = 1;
 
