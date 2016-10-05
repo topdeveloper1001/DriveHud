@@ -11,9 +11,9 @@ using System.Collections.ObjectModel;
 
 namespace Model.Filters
 {
-    public class FilterModelManagerService : IFilterModelManagerService, INotifyPropertyChanged
+    public class MainFilterModelManagerService : IFilterModelManagerService, INotifyPropertyChanged
     {
-        public FilterModelManagerService()
+        public MainFilterModelManagerService()
         {
             Initialize();
         }

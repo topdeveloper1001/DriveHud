@@ -8,9 +8,39 @@
              xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
+             xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
+             xmlns:prism="http://www.codeplex.com/prism"
+             xmlns:vp="clr-namespace:DriveHUD.Application.Views.PopupContainers"
+             xmlns:vmp="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              mc:Ignorable="d" 
              d:DesignHeight="439.726" d:DesignWidth="669.863">
 
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding Path=PopupFiltersRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction IsModal="True">
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style TargetType="{x:Type telerik:RadWindow}">
+                        <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
+                        <Setter Property="Background" Value="{StaticResource BackgroundBrush1}" />
+                        <Setter Property="Height" Value="750" />
+                        <Setter Property="ResizeMode" Value="CanResize" />
+                        <Setter Property="MaxWidth" Value="1000" />
+                        <Setter Property="IconTemplate" Value="{StaticResource IconTemplate}"/>
+                        <Setter Property="WindowStartupLocation" Value="CenterScreen" />
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+                <infra:PopupTelerikWindowAction.WindowContent>
+                    <vp:PopupContainerFiltersView>
+                        <vp:PopupContainerFiltersView.DataContext>
+                            <vmp:PopupContainerBumperStickerFiltersViewModel />
+                        </vp:PopupContainerFiltersView.DataContext>
+                    </vp:PopupContainerFiltersView>
+                </infra:PopupTelerikWindowAction.WindowContent>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+    
     <UserControl.Resources>
 
         <!-- TODO: move those colors to global dict -->
@@ -663,6 +693,7 @@
                         Margin="5,0,0,0"
                         Width="110"
                         Height="25"
+                        Command="{Binding FilterCommand}"
                         Style="{StaticResource IconButtonStyle}"
                         />
 

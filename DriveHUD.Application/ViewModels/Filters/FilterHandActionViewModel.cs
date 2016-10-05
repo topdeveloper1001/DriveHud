@@ -11,7 +11,7 @@ namespace DriveHUD.Application.ViewModels
 {
     public class FilterHandActionViewModel : FilterViewModel<FilterHandActionModel>
     {
-        internal FilterHandActionViewModel() : base(EnumViewModelType.FilterHandActionViewModel)
+        internal FilterHandActionViewModel(IFilterModelManagerService service) : base(EnumViewModelType.FilterHandActionViewModel, service)
         {
         }
     }

@@ -28,9 +28,11 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         protected abstract string FilterFileExtension { get; }
 
-        protected IFilterModelManagerService FilterModelManager
+        protected abstract FilterServices FilterService { get; }
+
+        public IFilterModelManagerService FilterModelManager
         {
-            get { return ServiceLocator.Current.GetInstance<IFilterModelManagerService>(); }
+            get { return ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterService.ToString()); }
         }
 
         #endregion
@@ -77,8 +79,12 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                     this.FilterViewSelectedItem = this.FilterViewCollection.ElementAt(0);
                 }
             }
+            else
+            {
+                this.FilterViewSelectedItem = this.FilterViewCollection.ElementAt(0);
+            }
 
-            CurrentlyBuiltFilter = new BuiltFilterModel();
+            CurrentlyBuiltFilter = new BuiltFilterModel(FilterModelManager);
             CurrentlyBuiltFilter.BindFilterSectionCollection();
         }
 

@@ -67,7 +67,7 @@ namespace DriveHUD.Application.ViewModels
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
-            filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>();
+            filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
 
             synchronizationContext = _synchronizationContext;
 
@@ -932,7 +932,7 @@ namespace DriveHUD.Application.ViewModels
 
             if (type.FilterType == EnumFilterDropDown.FilterCreate)
             {
-                var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>().FilterTupleCollection.FirstOrDefault();
+                var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
                 PopupFiltersRequestExecute(filterTuple);
                 return;
             }

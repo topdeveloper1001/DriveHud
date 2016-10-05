@@ -42,7 +42,13 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
     {
         protected override string FilterFileExtension
         {
+            // drivehud filter
             get { return ".df"; }
+        }
+
+        protected override FilterServices FilterService
+        {
+            get { return FilterServices.Main; }
         }
 
         #region Constructor
@@ -66,13 +72,13 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                 (
                     new List<IFilterView>()
                     {
-                        new FilterBoardTextureView(),
-                        new FilterHandActionView(),
-                        new FilterHandValueView(),
-                        new FilterQuickView(),
-                        new FilterStandardView(),
-                        new FilterDateView(),
-                        new FilterHandGridView(),
+                        new FilterBoardTextureView(FilterModelManager),
+                        new FilterHandActionView(FilterModelManager),
+                        new FilterHandValueView(FilterModelManager),
+                        new FilterQuickView(FilterModelManager),
+                        new FilterStandardView(FilterModelManager),
+                        new FilterDateView(FilterModelManager),
+                        new FilterHandGridView(FilterModelManager),
                     });
         }
 

@@ -1,5 +1,8 @@
-﻿using DriveHUD.Common;
+﻿using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
+using DriveHUD.Common;
 using Microsoft.Practices.ServiceLocation;
+using Model.Filters;
+using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -14,7 +17,6 @@ namespace DriveHUD.Application.ViewModels
     public class HudBumperStickersSettingsViewModel : BaseRangeTypePopupViewModel
     {
         private readonly HudBumperStickersSettingsViewModelInfo viewModelInfo;
-        private readonly IHudLayoutsService hudLayoutService;
 
         public HudBumperStickersSettingsViewModel(HudBumperStickersSettingsViewModelInfo viewModelInfo) : base()
         {
@@ -22,13 +24,13 @@ namespace DriveHUD.Application.ViewModels
 
             this.viewModelInfo = viewModelInfo;
 
-            hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-
             Initialize();
         }
 
         private void Initialize()
         {
+            PopupFiltersRequest = new InteractionRequest<PopupContainerFiltersViewModelNotification>();
+
             bumperStickers = new ObservableCollection<HudBumperStickerType>(viewModelInfo.BumperStickers);
             selectedBumperSticker = bumperStickers.FirstOrDefault();
         }
@@ -42,6 +44,9 @@ namespace DriveHUD.Application.ViewModels
 
             PickerSelectColorCommand = ReactiveCommand.Create();
             PickerSelectColorCommand.Subscribe(x => IsColorPickerPopupOpened = false);
+
+            FilterCommand = ReactiveCommand.Create();
+            FilterCommand.Subscribe(x => PopupFiltersRequestExecute(null));
         }
 
         #region Commands
@@ -50,9 +55,13 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> PickerSelectColorCommand { get; private set; }
 
+        public ReactiveCommand<object> FilterCommand { get; private set; }
+
         #endregion
 
         #region Properties
+
+        public InteractionRequest<PopupContainerFiltersViewModelNotification> PopupFiltersRequest { get; private set; }
 
         private bool isColorPickerPopupOpened;
 
@@ -136,6 +145,17 @@ namespace DriveHUD.Application.ViewModels
         private void SelectColor(object statInfoValueRange)
         {
             IsColorPickerPopupOpened = true;
+        }
+
+        private void PopupFiltersRequestExecute(FilterTuple filterTuple)
+        {
+            PopupContainerFiltersViewModelNotification notification = new PopupContainerFiltersViewModelNotification();
+
+            notification.Title = "Filters";
+            notification.FilterTuple = filterTuple;
+
+            this.PopupFiltersRequest.Raise(notification,
+                returned => { });
         }
 
         #endregion

@@ -13,10 +13,6 @@
              xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
              d:DesignHeight="720.65" d:DesignWidth="873.287">
 
-    <UserControl.DataContext>
-        <vm:FilterHoleCardsViewModel />
-    </UserControl.DataContext>
-
     <i:Interaction.Triggers>
         <prism:InteractionRequestTrigger SourceObject="{Binding PreDefinedRangesRequest, Mode=OneWay}">
             <popup:PopupTelerikWindowAction IsModal="True">
