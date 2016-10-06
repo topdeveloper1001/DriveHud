@@ -93,6 +93,14 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         #region Methods
 
+        protected override void InitializeData(FilterTuple filterTupleStartup)
+        {
+            base.InitializeData(filterTupleStartup);
+
+            CurrentlyBuiltFilter = new BuiltFilterModel(FilterService);
+            CurrentlyBuiltFilter.BindFilterSectionCollection();
+        }
+
         private void UpdateFilter(UpdateFilterRequestEventArgs obj)
         {
             InitializeViewModel(null);

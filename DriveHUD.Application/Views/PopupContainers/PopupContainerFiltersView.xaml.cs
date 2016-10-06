@@ -36,7 +36,7 @@ namespace DriveHUD.Application.Views.PopupContainers
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-            (DataContext as PopupContainerFiltersViewModel).Ok_CommandClick.Execute(null);
+            (DataContext as PopupContainerBaseFilterViewModel).Ok_CommandClick.Execute(null);
         }
 
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)

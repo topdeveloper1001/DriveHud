@@ -245,7 +245,7 @@ namespace Model.Filters
 
         #endregion
 
-            #region Reset Filter
+        #region Reset Filter
         public void ResetTableRingCollection()
         {
             ResetTableRingCollection(EnumTableType.Six);
@@ -674,6 +674,7 @@ namespace Model.Filters
                 this.value = value;
             }
         }
+
     }
 
     [Serializable]

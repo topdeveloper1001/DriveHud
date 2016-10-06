@@ -64,7 +64,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             InitializeData(filterTupleStartup);
         }
 
-        private void InitializeData(FilterTuple filterTupleStartup)
+        protected virtual void InitializeData(FilterTuple filterTupleStartup)
         {
             if (filterTupleStartup != null)
             {
@@ -83,9 +83,6 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             {
                 this.FilterViewSelectedItem = this.FilterViewCollection.ElementAt(0);
             }
-
-            CurrentlyBuiltFilter = new BuiltFilterModel(FilterModelManager);
-            CurrentlyBuiltFilter.BindFilterSectionCollection();
         }
 
         #endregion
@@ -307,7 +304,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         public Action FinishInteraction { get; set; }
 
-        public INotification Notification
+        public virtual INotification Notification
         {
             get { return this._notification; }
             set

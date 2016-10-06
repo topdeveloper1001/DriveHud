@@ -40,7 +40,7 @@
             </infra:PopupTelerikWindowAction>
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
-    
+
     <UserControl.Resources>
 
         <!-- TODO: move those colors to global dict -->
@@ -557,62 +557,63 @@
 
             </DockPanel>
 
-            <Grid
-                Background="{StaticResource DarkBackground}"
-                Margin="0,0,0,10"
-                Grid.Column="2"
-                Grid.Row="1">
-                <Grid.Style>
-                    <Style TargetType="Grid">
-                        <Style.Triggers>
-                            <DataTrigger Binding="{Binding SelectedBumperSticker}" Value="{x:Null}">
-                                <Setter Property="Visibility" Value="Hidden"/>
-                            </DataTrigger>
-                        </Style.Triggers>
-                    </Style>
-                </Grid.Style>
+            <ScrollViewer Grid.Column="2"
+                          Grid.Row="1">
+                <Grid
+                    Background="{StaticResource DarkBackground}"
+                    Margin="0,0,0,10">
+                    <Grid.Style>
+                        <Style TargetType="Grid">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding SelectedBumperSticker}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Hidden"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Grid.Style>
 
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                    <RowDefinition Height="10" />
-                    <RowDefinition Height="18" />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition Height="10" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="18" />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="151" />
-                    <ColumnDefinition Width="15" />
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="151" />
+                        <ColumnDefinition Width="15" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
 
-                <ItemsControl
-                    Grid.ColumnSpan="3"
-                    Grid.Column="0"
-                    Grid.Row="0"                    
-                    ItemsSource="{Binding SelectedBumperSticker.Stats}"
-                    Style="{StaticResource StatsListViewStyle}"                    
-                    ItemTemplate="{StaticResource StatDataTemplate}"
-                    Height="228"
-                    Background="Transparent"                            
-                    >
-                </ItemsControl>
+                    <ItemsControl
+                        Grid.ColumnSpan="3"
+                        Grid.Column="0"
+                        Grid.Row="0"                    
+                        ItemsSource="{Binding SelectedBumperSticker.Stats}"
+                        Style="{StaticResource StatsListViewStyle}"                    
+                        ItemTemplate="{StaticResource StatDataTemplate}"
+                        Height="228"
+                        Background="Transparent"                            
+                         >
+                    </ItemsControl>
 
-                <StackPanel
-                    Grid.Row="1"
-                    Grid.Column="0"
-                    Orientation="Horizontal"
-                    VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center">
+                    <StackPanel
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Orientation="Horizontal"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center">
 
-                    <!-- Color -->
-                    <Border 
-                        Margin="8,0,0,0"
-                        CornerRadius="1"
-                        Width="40"
-                        Height="40"
-                        Background="{StaticResource ButtonBackground}">
-                        <Border
+                        <!-- Color -->
+                        <Border 
+                            Margin="8,0,0,0"
+                            CornerRadius="1"
+                            Width="40"
+                            Height="40"
+                            Background="{StaticResource ButtonBackground}">
+                            <Border
                                 Width="20" 
                                 Height="20"
                                 BorderThickness="2"
@@ -620,134 +621,169 @@
                                 Cursor="Hand"
                                 Background="{Binding SelectedBumperSticker.SelectedColor, Converter={dh:ColorToSolidBrushConverter}}"/>
 
-                    </Border>
+                        </Border>
 
-                    <Border
+                        <Border
                             Margin="8,0,0,0"
                             CornerRadius="1"
                             Width="40"
                             Height="40"
                             Background="{StaticResource ButtonBackground}">
-                        <Button
+                            <Button
                             Command="{Binding DataContext.SelectColorCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
                             CommandParameter="{Binding}"
                             Background="{StaticResource ButtonBackground}">
-                            <Button.ContentTemplate>
-                                <DataTemplate>
-                                    <Border Width="20" Height="20" Background="{StaticResource EyeDropperBrush}" />
-                                </DataTemplate>
-                            </Button.ContentTemplate>
-                        </Button>
-                    </Border>
+                                <Button.ContentTemplate>
+                                    <DataTemplate>
+                                        <Border Width="20" Height="20" Background="{StaticResource EyeDropperBrush}" />
+                                    </DataTemplate>
+                                </Button.ContentTemplate>
+                            </Button>
+                        </Border>
 
-                    <!--<Button                         
-                            Content="{ResX Key=Common_BumperStickers_SelectColor}"                          
-                            Margin="5,0,0,5"
-                            Command="{Binding DataContext.SelectColorCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
-                            CommandParameter="{Binding}"
+                    </StackPanel>
+
+                    <Grid
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        VerticalAlignment="Bottom">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+
+                        <TextBlock  
+                            Grid.Row="0" Grid.Column="0"
+                            Text="{ResX Key=Common_BumperSticker_StickerName}"  
+                            Margin="0,0,0,2"
+                            Style="{StaticResource TextBlockStyle}"                
+                            />
+
+                        <TextBox      
+                            Grid.Row="1" Grid.Column="0"
+                            Style="{StaticResource StickerNameTextBoxStyle}"  
+                            Text="{Binding SelectedBumperSticker.Name, UpdateSourceTrigger=PropertyChanged}"
+                            MaxLength="20"                            
+                            />
+
+                        <Button         
+                            Grid.Row="0" Grid.Column="1"
+                            Content="{ResX Key=Common_HudPlayerType_AddNewStat}"                          
+                            Margin="5,0,0,2"
+                            Width="110"
+                            Height="25"
+                            IsEnabled="False"
                             Style="{StaticResource IconButtonStyle}"
-                            />-->
+                            />
 
-                </StackPanel>
+                        <Button         
+                            Grid.Row="1" Grid.Column="1"
+                            Content="{ResX Common_BumperSticker_AddFilter}"                          
+                            Margin="5,0,0,0"
+                            Width="110"
+                            Height="25"
+                            Command="{Binding FilterCommand}"
+                            Style="{StaticResource IconButtonStyle}"
+                            />
 
-                <Grid
-                    Grid.Row="1"
-                    Grid.Column="2"
-                    VerticalAlignment="Bottom">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="Auto" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto" />
-                        <RowDefinition Height="Auto" />
-                    </Grid.RowDefinitions>
+                    </Grid>
 
-                    <TextBlock  
-                        Grid.Row="0" Grid.Column="0"
-                        Text="{ResX Key=Common_BumperSticker_StickerName}"  
-                        Margin="0,0,0,2"
+                    <ItemsControl Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Background="{StaticResource BackgroundBrush1}"
+                        ItemsSource="{Binding Path=SelectedBumperSticker.BuiltFilter.FilterSectionCollection}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border ToolTip="{Binding Path=Name}" Height="30" Width="100" Background="{StaticResource BackgroundBrush3}" Margin="3" Visibility="{Binding Path=IsActive, Mode=TwoWay, Converter={StaticResource BoolToVisibilityConverter}}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="24" />
+                                        </Grid.ColumnDefinitions>
+                                        <TextBlock Grid.Column="0" Margin="5" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap">
+                                           <Run Text="{Binding Path=Name}"/>
+                                        </TextBlock>
+                                        <TextBlock Grid.Column="1" Text="&#215;" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5 0 5 5" FontSize="20">
+                                            <TextBlock.Foreground>
+                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                                    <LinearGradientBrush.GradientStops>
+                                                        <GradientStopCollection>
+                                                            <GradientStop Color="#4568b4" />
+                                                            <GradientStop Color="#3f60b6" Offset="1.0" />
+                                                        </GradientStopCollection>
+                                                    </LinearGradientBrush.GradientStops>
+                                                </LinearGradientBrush>
+                                            </TextBlock.Foreground>
+                                            <TextBlock.InputBindings>
+                                                <MouseBinding MouseAction="LeftClick"
+                                                  Command="{Binding Path=DataContext.ButtonFilterModelSectionRemoveCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                  CommandParameter="{Binding}"/>
+                                            </TextBlock.InputBindings>
+                                        </TextBlock>
+                                    </Grid>
+                                </Border>
+
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel IsItemsHost="True"/>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                    </ItemsControl>
+
+                    <TextBlock    
+                        Grid.Row="4"
+                        Grid.Column="0"
+                        Margin="15,0,0,0"
+                        Text="{ResX Key=Common_HudPlayerType_MinSample}"                          
                         Style="{StaticResource TextBlockStyle}"                
                         />
 
-                    <TextBox      
-                        Grid.Row="1" Grid.Column="0"
-                        Style="{StaticResource StickerNameTextBoxStyle}"  
-                        Text="{Binding SelectedBumperSticker.Name, UpdateSourceTrigger=PropertyChanged}"
-                        MaxLength="20"                            
-                        />
-
-                    <Button         
-                        Grid.Row="0" Grid.Column="1"
-                        Content="{ResX Key=Common_HudPlayerType_AddNewStat}"                          
-                        Margin="5,0,0,2"
-                        Width="110"
+                    <telerik:RadMaskedNumericInput    
+                        Grid.Row="5"
+                        Grid.Column="0"
+                        AutoFillNumberGroupSeparators="False"
+                        Style="{StaticResource NumericTextBoxStyle}"
+                        Width="136"    
+                        FormatString="N0" 
+                        Mask=""
+                        Margin="15,0,0,0"
+                        VerticalAlignment="Top"                    
+                        FontSize="12px"
                         Height="25"
-                        IsEnabled="False"
-                        Style="{StaticResource IconButtonStyle}"
+                        Culture="en-US"         
+                        maskedInput:MaskedInputExtensions.Minimum="1"
+                        maskedInput:MaskedInputExtensions.Maximum="999"
+                        Value="{Binding SelectedBumperSticker.MinSample, Mode=TwoWay}"                            
+                        TextMode="PlainText"
                         />
 
-                    <Button         
-                        Grid.Row="1" Grid.Column="1"
-                        Content="Add Filter"                          
-                        Margin="5,0,0,0"
-                        Width="110"
-                        Height="25"
-                        Command="{Binding FilterCommand}"
-                        Style="{StaticResource IconButtonStyle}"
-                        />
+                    <Border
+                        Grid.Row="5"
+                        Grid.Column="3"                    
+                        BorderBrush="{StaticResource ButtonBackground}"
+                        BorderThickness="1"
+                        CornerRadius="2"
+                        Height="25"     
+                        Margin="0,0,15,0"
+                        VerticalAlignment="Top"
+                        >
 
+                        <StackPanel Orientation="Horizontal">
+
+                            <CheckBox
+                                Content="{ResX Key=Common_BumperSticker_EnableSticker}"
+                                IsChecked="{Binding SelectedBumperSticker.EnableBumperSticker}"
+                                Style="{StaticResource BottomCheckBoxStyle}"
+                                />
+
+                        </StackPanel>
+                    </Border>
                 </Grid>
-
-                <TextBlock    
-                    Grid.Row="3"
-                    Grid.Column="0"
-                    Margin="15,0,0,0"
-                    Text="{ResX Key=Common_HudPlayerType_MinSample}"                          
-                    Style="{StaticResource TextBlockStyle}"                
-                    />
-
-                <telerik:RadMaskedNumericInput    
-                    Grid.Row="4"
-                    Grid.Column="0"
-                    AutoFillNumberGroupSeparators="False"
-                    Style="{StaticResource NumericTextBoxStyle}"
-                    Width="136"    
-                    FormatString="N0" 
-                    Mask=""
-                    Margin="15,0,0,0"
-                    VerticalAlignment="Top"                    
-                    FontSize="12px"
-                    Height="25"
-                    Culture="en-US"         
-                    maskedInput:MaskedInputExtensions.Minimum="1"
-                    maskedInput:MaskedInputExtensions.Maximum="999"
-                    Value="{Binding SelectedBumperSticker.MinSample, Mode=TwoWay}"                            
-                    TextMode="PlainText"
-                    />
-
-                <Border
-                    Grid.Row="4"
-                    Grid.Column="3"                    
-                    BorderBrush="{StaticResource ButtonBackground}"
-                    BorderThickness="1"
-                    CornerRadius="2"
-                    Height="25"     
-                    Margin="0,0,15,0"
-                    VerticalAlignment="Top"
-                    >
-
-                    <StackPanel Orientation="Horizontal">
-
-                        <CheckBox
-                            Content="{ResX Key=Common_BumperSticker_EnableSticker}"
-                            IsChecked="{Binding SelectedBumperSticker.EnableBumperSticker}"
-                            Style="{StaticResource BottomCheckBoxStyle}"
-                            />
-
-                    </StackPanel>
-                </Border>
-            </Grid>
+            </ScrollViewer>
         </Grid>
 
         <dh:NonTopmostPopup             

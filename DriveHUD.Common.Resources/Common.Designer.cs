@@ -169,6 +169,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Filter.
+        /// </summary>
+        internal static string Common_BumperSticker_AddFilter {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_AddFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Sticker.
         /// </summary>
         internal static string Common_BumperSticker_EditSticker {

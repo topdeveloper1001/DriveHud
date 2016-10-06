@@ -1,5 +1,7 @@
 ﻿using DriveHUD.Common.Linq;
+using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
+using Model.Filters;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
@@ -36,6 +38,7 @@ namespace DriveHUD.Application.ViewModels
             MinSample = MinSampleDefault;
             EnableBumperSticker = true;
             SelectedColor = DefaultColor;
+            //   BuiltFilter = new BuiltFilterModel(FilterServices.Stickers);
 
             stats = new ObservableCollection<BaseHudRangeStat>()
             {
@@ -137,6 +140,28 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref stats, value);
+            }
+        }
+
+        private BuiltFilterModel builtFilter;
+
+        public BuiltFilterModel BuiltFilter
+        {
+            get { return builtFilter; }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref builtFilter, value);
+            }
+        }
+
+        private ObservableCollection<IFilterModel> filterModelCollection;
+
+        public ObservableCollection<IFilterModel> FilterModelCollection
+        {
+            get { return filterModelCollection; }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref filterModelCollection, value);
             }
         }
 

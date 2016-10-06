@@ -17,6 +17,7 @@ namespace Model.Filters
     public class BuiltFilterModel : INotifyPropertyChanged
     {
         #region  Properties
+
         private IFilterModelManagerService FilterModelManager { get; set; }
 
         private FilterStandardModel StandardModel
@@ -70,11 +71,14 @@ namespace Model.Filters
                 OnPropertyChanged();
             }
         }
+
         #endregion
 
-        public BuiltFilterModel(IFilterModelManagerService service)
+        public BuiltFilterModel() { }
+
+        public BuiltFilterModel(FilterServices service)
         {
-            this.FilterModelManager = service;
+            this.FilterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(service.ToString());
 
             Initialize();
         }
@@ -112,6 +116,7 @@ namespace Model.Filters
         }
 
         #region Methods   
+
         public void BindFilterSectionCollection()
         {
             #region Standard Filter actions
@@ -306,6 +311,16 @@ namespace Model.Filters
                     break;
             }
         }
+
+        public BuiltFilterModel Clone()
+        {
+            var model = new BuiltFilterModel();
+
+            model.FilterSectionCollection = new ObservableCollection<FilterSectionItem>(this.FilterSectionCollection.Select(x => (FilterSectionItem)x.Clone()));
+
+            return model;
+        }
+
         #endregion
 
         #region Built Filter Collection Setters
