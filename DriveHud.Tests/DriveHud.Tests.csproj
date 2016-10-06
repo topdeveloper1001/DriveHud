@@ -257,6 +257,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>IsEqualBuilder.tt</DependentUpon>
     </Content>
+    <Content Include="UnitTests\TestData\888PokerHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\CashHand-10-max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

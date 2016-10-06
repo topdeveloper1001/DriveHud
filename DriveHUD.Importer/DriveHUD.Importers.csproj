@@ -190,6 +190,8 @@
     <Compile Include="Loggers\IFileImporterLogger.cs" />
     <Compile Include="Loggers\LogServices.cs" />
     <Compile Include="Loggers\PokerClientLogger.cs" />
+    <Compile Include="Pacific888\IPacific888Importer.cs" />
+    <Compile Include="Pacific888\Pacific888Importer.cs" />
     <Compile Include="PokerCatcher.cs" />
     <Compile Include="PokerClientDataManagerInfo.cs" />
     <Compile Include="PokerClientLoggerConfiguration.cs" />
@@ -237,7 +239,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup />
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />  
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

@@ -57,11 +57,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            rawHandHistories = rawHandHistories.Replace("\r", "");
-
-            //This was causing an OOM exception so used LazyStringSplit
-            //List<string> splitUpHands = rawHandHistories.Split(new char[] {'▄'}, StringSplitOptions.RemoveEmptyEntries).ToList();
-            //return splitUpHands.Where(s => s.Equals("\r\n") == false);
+            rawHandHistories = rawHandHistories.Replace("\r", "");       
 
             return rawHandHistories.LazyStringSplit("\n\n").Where(s => string.IsNullOrWhiteSpace(s) == false && s.Equals("\r\n") == false);
         }
@@ -452,7 +448,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
                 int seat = int.Parse(handLine.Substring(5, colonIndex - 5));
                 string playerName = handLine.Substring(colonIndex + 2, openParenIndex - colonIndex - 3);
-                decimal amount = ParseAmount(handLine.Substring(openParenIndex + 3, handLine.Length - openParenIndex - 3 - 2));
+                decimal amount = ParseAmount(handLine.Substring(openParenIndex + 2, handLine.Length - openParenIndex - 3 - 1).Trim());
 
                 playerList.Add(new Player(playerName, amount, seat));
             }

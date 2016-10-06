@@ -1,0 +1,2115 @@
+#Game No : 912672152
+***** 888poker Hand History for Game 912672152 *****
+10/20 Blinds No Limit Holdem - *** 04 10 2016 16:03:53
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 6 is the button
+Total number of players : 10
+Seat 1: dzimasavin ( 1,000 )
+Seat 2: szymon24 ( 1,000 )
+Seat 3: Perbi44 ( 1,000 )
+Seat 4: lici67 ( 1,000 )
+Seat 5: ggermanoll ( 1,000 )
+Seat 6: COANDA ( 1,000 )
+Seat 7: pokerprojon ( 1,000 )
+Seat 8: Peon_84 ( 1,000 )
+Seat 9: kali198234 ( 1,000 )
+Seat 10: pokuzar14 ( 1,000 )
+pokerprojon posts small blind [10]
+Peon_84 posts big blind [20]
+** Dealing down cards **
+Dealt to Peon_84 [ Js, 6d ]
+kali198234 folds
+pokuzar14 calls [20]
+dzimasavin raises [1,000]
+szymon24 folds
+Perbi44 folds
+lici67 folds
+ggermanoll calls [1,000]
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+pokuzar14 folds
+** Dealing flop ** [ Ah, Ks, Ac ]
+** Dealing turn ** [ 5d ]
+** Dealing river ** [ 6c ]
+** Summary **
+dzimasavin shows [ 9d, Jc ]
+ggermanoll shows [ 8s, 8c ]
+ggermanoll collected [ 2,050 ]
+
+
+
+#Game No : 912672181
+***** 888poker Hand History for Game 912672181 *****
+10/20 Blinds No Limit Holdem - *** 04 10 2016 16:05:01
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 7 is the button
+Total number of players : 9
+Seat 2: szymon24 ( 1,000 )
+Seat 3: Perbi44 ( 1,000 )
+Seat 4: lici67 ( 1,000 )
+Seat 5: ggermanoll ( 2,050 )
+Seat 6: COANDA ( 1,000 )
+Seat 7: pokerprojon ( 990 )
+Seat 8: Peon_84 ( 980 )
+Seat 9: kali198234 ( 1,000 )
+Seat 10: pokuzar14 ( 980 )
+Peon_84 posts small blind [10]
+kali198234 posts big blind [20]
+** Dealing down cards **
+Dealt to Peon_84 [ 6c, 8s ]
+pokuzar14 folds
+szymon24 folds
+Perbi44 folds
+lici67 folds
+ggermanoll folds
+COANDA calls [20]
+pokerprojon folds
+Peon_84 folds
+kali198234 checks
+** Dealing flop ** [ Td, Th, 7h ]
+kali198234 checks
+COANDA checks
+** Dealing turn ** [ Kd ]
+kali198234 checks
+COANDA bets [20]
+kali198234 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 50 ]
+
+
+
+#Game No : 912672200
+***** 888poker Hand History for Game 912672200 *****
+10/20 Blinds No Limit Holdem - *** 04 10 2016 16:05:39
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 9
+Seat 2: szymon24 ( 1,000 )
+Seat 3: Perbi44 ( 1,000 )
+Seat 4: lici67 ( 1,000 )
+Seat 5: ggermanoll ( 2,050 )
+Seat 6: COANDA ( 1,030 )
+Seat 7: pokerprojon ( 990 )
+Seat 8: Peon_84 ( 970 )
+Seat 9: kali198234 ( 980 )
+Seat 10: pokuzar14 ( 980 )
+kali198234 posts small blind [10]
+pokuzar14 posts big blind [20]
+** Dealing down cards **
+Dealt to Peon_84 [ 4h, 9c ]
+szymon24 calls [20]
+Perbi44 folds
+lici67 raises [40]
+ggermanoll raises [170]
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 folds
+szymon24 calls [150]
+lici67 calls [130]
+** Dealing flop ** [ 6h, 2c, 7c ]
+szymon24 checks
+lici67 bets [20]
+ggermanoll raises [600]
+szymon24 folds
+lici67 raises [810]
+ggermanoll calls [230]
+** Dealing turn ** [ Js ]
+** Dealing river ** [ Kc ]
+** Summary **
+lici67 shows [ Ah, Kd ]
+ggermanoll shows [ 4s, 4d ]
+lici67 collected [ 2,200 ]
+
+
+
+#Game No : 912672221
+***** 888poker Hand History for Game 912672221 *****
+10/20 Blinds No Limit Holdem - *** 04 10 2016 16:06:27
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 9 is the button
+Total number of players : 9
+Seat 2: szymon24 ( 830 )
+Seat 3: Perbi44 ( 1,000 )
+Seat 4: lici67 ( 2,200 )
+Seat 5: ggermanoll ( 1,050 )
+Seat 6: COANDA ( 1,030 )
+Seat 7: pokerprojon ( 990 )
+Seat 8: Peon_84 ( 970 )
+Seat 9: kali198234 ( 970 )
+Seat 10: pokuzar14 ( 960 )
+pokuzar14 posts small blind [10]
+szymon24 posts big blind [20]
+** Dealing down cards **
+Dealt to Peon_84 [ Ac, Kd ]
+Perbi44 folds
+lici67 folds
+ggermanoll calls [20]
+COANDA calls [20]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 folds
+szymon24 checks
+** Dealing flop ** [ 2h, Ts, Qc ]
+szymon24 checks
+ggermanoll checks
+COANDA bets [70]
+szymon24 folds
+ggermanoll folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 70 ]
+
+
+
+#Game No : 912672228
+***** 888poker Hand History for Game 912672228 *****
+10/20 Blinds No Limit Holdem - *** 04 10 2016 16:07:01
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 10 is the button
+Total number of players : 8
+Seat 2: szymon24 ( 810 )
+Seat 4: lici67 ( 2,200 )
+Seat 5: ggermanoll ( 1,030 )
+Seat 6: COANDA ( 1,080 )
+Seat 7: pokerprojon ( 990 )
+Seat 8: Peon_84 ( 970 )
+Seat 9: kali198234 ( 970 )
+Seat 10: pokuzar14 ( 950 )
+szymon24 posts small blind [10]
+lici67 posts big blind [20]
+** Dealing down cards **
+Dealt to Peon_84 [ 5h, 7d ]
+ggermanoll folds
+COANDA calls [20]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 folds
+szymon24 calls [10]
+lici67 checks
+** Dealing flop ** [ 2s, Kc, Qs ]
+szymon24 checks
+lici67 bets [20]
+COANDA folds
+szymon24 calls [20]
+** Dealing turn ** [ 8h ]
+szymon24 checks
+lici67 checks
+** Dealing river ** [ Qc ]
+szymon24 bets [770]
+lici67 folds
+** Summary **
+szymon24 did not show his hand
+szymon24 collected [ 100 ]
+
+
+
+#Game No : 912672237
+***** 888poker Hand History for Game 912672237 *****
+10/20 Blinds No Limit Holdem - *** 04 10 2016 16:07:50
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 2 is the button
+Total number of players : 8
+Seat 2: szymon24 ( 870 )
+Seat 4: lici67 ( 2,160 )
+Seat 5: ggermanoll ( 1,030 )
+Seat 6: COANDA ( 1,060 )
+Seat 7: pokerprojon ( 990 )
+Seat 8: Peon_84 ( 970 )
+Seat 9: kali198234 ( 970 )
+Seat 10: pokuzar14 ( 950 )
+lici67 posts small blind [10]
+ggermanoll posts big blind [20]
+** Dealing down cards **
+Dealt to Peon_84 [ Ac, 5c ]
+COANDA calls [20]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [20]
+szymon24 folds
+lici67 calls [10]
+ggermanoll raises [1,010]
+COANDA calls [1,010]
+pokuzar14 folds
+lici67 folds
+** Dealing flop ** [ 4s, As, 6h ]
+** Dealing turn ** [ Tc ]
+** Dealing river ** [ 2h ]
+** Summary **
+ggermanoll shows [ 9d, 9h ]
+COANDA shows [ Ad, Ks ]
+COANDA collected [ 2,100 ]
+
+
+
+#Game No : 912672260
+***** 888poker Hand History for Game 912672260 *****
+15/30 Blinds No Limit Holdem - *** 04 10 2016 16:09:05
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 870 )
+Seat 4: lici67 ( 2,140 )
+Seat 6: COANDA ( 2,130 )
+Seat 7: pokerprojon ( 990 )
+Seat 8: Peon_84 ( 970 )
+Seat 9: kali198234 ( 970 )
+Seat 10: pokuzar14 ( 930 )
+COANDA posts big blind [30]
+** Dealing down cards **
+Dealt to Peon_84 [ 6h, Jh ]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [30]
+szymon24 raises [870]
+lici67 folds
+COANDA folds
+pokuzar14 folds
+** Summary **
+szymon24 did not show his hand
+szymon24 collected [ 90 ]
+
+
+
+#Game No : 912672265
+***** 888poker Hand History for Game 912672265 *****
+15/30 Blinds No Limit Holdem - *** 04 10 2016 16:09:41
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 930 )
+Seat 4: lici67 ( 2,140 )
+Seat 6: COANDA ( 2,100 )
+Seat 7: pokerprojon ( 990 )
+Seat 8: Peon_84 ( 970 )
+Seat 9: kali198234 ( 970 )
+Seat 10: pokuzar14 ( 900 )
+COANDA posts small blind [15]
+pokerprojon posts big blind [30]
+** Dealing down cards **
+Dealt to Peon_84 [ 7h, 5s ]
+Peon_84 folds
+kali198234 folds
+pokuzar14 folds
+szymon24 calls [30]
+lici67 folds
+COANDA calls [15]
+pokerprojon checks
+** Dealing flop ** [ 8d, 4s, Ts ]
+COANDA checks
+pokerprojon checks
+szymon24 checks
+** Dealing turn ** [ Td ]
+COANDA checks
+pokerprojon checks
+szymon24 bets [30]
+COANDA calls [30]
+pokerprojon folds
+** Dealing river ** [ Ah ]
+COANDA checks
+szymon24 checks
+** Summary **
+COANDA shows [ Kc, Jd ]
+szymon24 shows [ 8s, Ks ]
+szymon24 collected [ 150 ]
+
+
+
+#Game No : 912672283
+***** 888poker Hand History for Game 912672283 *****
+15/30 Blinds No Limit Holdem - *** 04 10 2016 16:10:33
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 6 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 1,020 )
+Seat 4: lici67 ( 2,140 )
+Seat 6: COANDA ( 2,040 )
+Seat 7: pokerprojon ( 960 )
+Seat 8: Peon_84 ( 970 )
+Seat 9: kali198234 ( 970 )
+Seat 10: pokuzar14 ( 900 )
+pokerprojon posts small blind [15]
+Peon_84 posts big blind [30]
+** Dealing down cards **
+Dealt to Peon_84 [ 8s, Ts ]
+kali198234 folds
+pokuzar14 folds
+szymon24 calls [30]
+lici67 folds
+COANDA folds
+pokerprojon folds
+Peon_84 checks
+** Dealing flop ** [ 2d, 3s, 2c ]
+Peon_84 checks
+szymon24 checks
+** Dealing turn ** [ 9s ]
+Peon_84 checks
+szymon24 bets [30]
+Peon_84 folds
+** Summary **
+szymon24 did not show his hand
+szymon24 collected [ 75 ]
+
+
+
+#Game No : 912672285
+***** 888poker Hand History for Game 912672285 *****
+15/30 Blinds No Limit Holdem - *** 04 10 2016 16:10:46
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 7 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 1,065 )
+Seat 4: lici67 ( 2,140 )
+Seat 6: COANDA ( 2,040 )
+Seat 7: pokerprojon ( 945 )
+Seat 8: Peon_84 ( 940 )
+Seat 9: kali198234 ( 970 )
+Seat 10: pokuzar14 ( 900 )
+Peon_84 posts small blind [15]
+kali198234 posts big blind [30]
+** Dealing down cards **
+Dealt to Peon_84 [ 8c, 3h ]
+pokuzar14 calls [30]
+szymon24 folds
+lici67 folds
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 checks
+** Dealing flop ** [ Kh, Ks, 4d ]
+kali198234 checks
+pokuzar14 checks
+** Dealing turn ** [ 9s ]
+kali198234 checks
+pokuzar14 checks
+** Dealing river ** [ 2s ]
+kali198234 checks
+pokuzar14 checks
+** Summary **
+kali198234 shows [ 2c, Qs ]
+pokuzar14 shows [ Js, Ts ]
+pokuzar14 collected [ 75 ]
+
+
+
+#Game No : 912672300
+***** 888poker Hand History for Game 912672300 *****
+15/30 Blinds No Limit Holdem - *** 04 10 2016 16:11:46
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 1,065 )
+Seat 4: lici67 ( 2,140 )
+Seat 6: COANDA ( 2,040 )
+Seat 7: pokerprojon ( 945 )
+Seat 8: Peon_84 ( 925 )
+Seat 9: kali198234 ( 940 )
+Seat 10: pokuzar14 ( 945 )
+kali198234 posts small blind [15]
+pokuzar14 posts big blind [30]
+** Dealing down cards **
+Dealt to Peon_84 [ As, Qc ]
+szymon24 folds
+lici67 folds
+COANDA calls [30]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 checks
+** Dealing flop ** [ 8s, 3h, 5s ]
+pokuzar14 checks
+COANDA bets [30]
+pokuzar14 calls [30]
+** Dealing turn ** [ 8c ]
+pokuzar14 checks
+COANDA checks
+** Dealing river ** [ Ah ]
+pokuzar14 checks
+COANDA checks
+** Summary **
+pokuzar14 shows [ 9s, Td ]
+COANDA shows [ Ks, 7c ]
+COANDA collected [ 135 ]
+
+
+
+#Game No : 912672313
+***** 888poker Hand History for Game 912672313 *****
+15/30 Blinds No Limit Holdem - *** 04 10 2016 16:12:40
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 9 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 1,065 )
+Seat 4: lici67 ( 2,140 )
+Seat 6: COANDA ( 2,115 )
+Seat 7: pokerprojon ( 945 )
+Seat 8: Peon_84 ( 925 )
+Seat 9: kali198234 ( 925 )
+Seat 10: pokuzar14 ( 885 )
+pokuzar14 posts small blind [15]
+szymon24 posts big blind [30]
+** Dealing down cards **
+Dealt to Peon_84 [ Jd, 3c ]
+lici67 folds
+COANDA calls [30]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [15]
+szymon24 checks
+** Dealing flop ** [ 8s, 6s, 8h ]
+pokuzar14 checks
+szymon24 checks
+COANDA checks
+** Dealing turn ** [ 3d ]
+pokuzar14 checks
+szymon24 checks
+COANDA checks
+** Dealing river ** [ 5h ]
+pokuzar14 checks
+szymon24 checks
+COANDA checks
+** Summary **
+pokuzar14 shows [ Kh, 4h ]
+szymon24 mucks [ 4s, 9d ]
+COANDA mucks [ 7s, 2s ]
+pokuzar14 collected [ 90 ]
+
+
+
+#Game No : 912672328
+***** 888poker Hand History for Game 912672328 *****
+15/30 Blinds No Limit Holdem - *** 04 10 2016 16:13:33
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 10 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 1,035 )
+Seat 4: lici67 ( 2,140 )
+Seat 6: COANDA ( 2,085 )
+Seat 7: pokerprojon ( 945 )
+Seat 8: Peon_84 ( 925 )
+Seat 9: kali198234 ( 925 )
+Seat 10: pokuzar14 ( 945 )
+szymon24 posts small blind [15]
+lici67 posts big blind [30]
+** Dealing down cards **
+Dealt to Peon_84 [ Ts, 5s ]
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [30]
+szymon24 calls [15]
+lici67 raises [30]
+pokuzar14 calls [30]
+szymon24 calls [30]
+** Dealing flop ** [ As, Qc, 5h ]
+szymon24 checks
+lici67 bets [90]
+pokuzar14 calls [90]
+szymon24 calls [90]
+** Dealing turn ** [ 4c ]
+szymon24 checks
+lici67 bets [30]
+pokuzar14 calls [30]
+szymon24 calls [30]
+** Dealing river ** [ Qh ]
+szymon24 bets [855]
+lici67 calls [855]
+pokuzar14 folds
+** Summary **
+szymon24 shows [ Ks, Qd ]
+lici67 shows [ 3d, Ah ]
+szymon24 collected [ 2,250 ]
+
+
+
+#Game No : 912672339
+***** 888poker Hand History for Game 912672339 *****
+25/50 Blinds No Limit Holdem - *** 04 10 2016 16:14:25
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 2 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,250 )
+Seat 4: lici67 ( 1,105 )
+Seat 6: COANDA ( 2,085 )
+Seat 7: pokerprojon ( 945 )
+Seat 8: Peon_84 ( 925 )
+Seat 9: kali198234 ( 925 )
+Seat 10: pokuzar14 ( 765 )
+lici67 posts small blind [25]
+COANDA posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ Kh, 6s ]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [50]
+szymon24 folds
+lici67 calls [25]
+COANDA checks
+** Dealing flop ** [ 6d, Qh, 2d ]
+lici67 checks
+COANDA checks
+pokuzar14 checks
+** Dealing turn ** [ Qd ]
+lici67 checks
+COANDA checks
+pokuzar14 bets [50]
+lici67 folds
+COANDA folds
+** Summary **
+pokuzar14 did not show his hand
+pokuzar14 collected [ 150 ]
+
+
+
+#Game No : 912672353
+***** 888poker Hand History for Game 912672353 *****
+25/50 Blinds No Limit Holdem - *** 04 10 2016 16:14:57
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,250 )
+Seat 4: lici67 ( 1,055 )
+Seat 6: COANDA ( 2,035 )
+Seat 7: pokerprojon ( 945 )
+Seat 8: Peon_84 ( 925 )
+Seat 9: kali198234 ( 925 )
+Seat 10: pokuzar14 ( 865 )
+COANDA posts small blind [25]
+pokerprojon posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ Ac, 2d ]
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [50]
+szymon24 calls [50]
+lici67 folds
+COANDA folds
+pokerprojon checks
+** Dealing flop ** [ Qs, Qc, 6s ]
+pokerprojon checks
+pokuzar14 checks
+szymon24 bets [50]
+pokerprojon folds
+pokuzar14 calls [50]
+** Dealing turn ** [ 4c ]
+pokuzar14 checks
+szymon24 bets [50]
+pokuzar14 calls [50]
+** Dealing river ** [ Qd ]
+pokuzar14 checks
+szymon24 bets [50]
+pokuzar14 calls [50]
+** Summary **
+szymon24 shows [ Qh, Jh ]
+pokuzar14 mucks [ 2s, Jc ]
+szymon24 collected [ 475 ]
+
+
+
+#Game No : 912672364
+***** 888poker Hand History for Game 912672364 *****
+25/50 Blinds No Limit Holdem - *** 04 10 2016 16:15:39
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 6 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,525 )
+Seat 4: lici67 ( 1,055 )
+Seat 6: COANDA ( 2,010 )
+Seat 7: pokerprojon ( 895 )
+Seat 8: Peon_84 ( 925 )
+Seat 9: kali198234 ( 925 )
+Seat 10: pokuzar14 ( 665 )
+pokerprojon posts small blind [25]
+Peon_84 posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ 7s, 5h ]
+kali198234 folds
+pokuzar14 calls [50]
+szymon24 folds
+lici67 calls [50]
+COANDA calls [50]
+pokerprojon folds
+Peon_84 checks
+** Dealing flop ** [ Ah, Ac, Qs ]
+Peon_84 checks
+pokuzar14 checks
+lici67 checks
+COANDA bets [50]
+Peon_84 folds
+pokuzar14 calls [50]
+lici67 folds
+** Dealing turn ** [ Ts ]
+pokuzar14 checks
+COANDA bets [162]
+pokuzar14 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 325 ]
+
+
+
+#Game No : 912672372
+***** 888poker Hand History for Game 912672372 *****
+25/50 Blinds No Limit Holdem - *** 04 10 2016 16:16:07
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 7 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,525 )
+Seat 4: lici67 ( 1,005 )
+Seat 6: COANDA ( 2,235 )
+Seat 7: pokerprojon ( 870 )
+Seat 8: Peon_84 ( 875 )
+Seat 9: kali198234 ( 925 )
+Seat 10: pokuzar14 ( 565 )
+Peon_84 posts small blind [25]
+kali198234 posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ 3h, 5d ]
+pokuzar14 calls [50]
+szymon24 calls [50]
+lici67 folds
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 checks
+** Dealing flop ** [ 5s, Qc, 8c ]
+kali198234 checks
+pokuzar14 checks
+szymon24 checks
+** Dealing turn ** [ Js ]
+kali198234 checks
+pokuzar14 checks
+szymon24 checks
+** Dealing river ** [ Ad ]
+kali198234 checks
+pokuzar14 checks
+szymon24 checks
+** Summary **
+kali198234 shows [ 8h, 7s ]
+pokuzar14 shows [ 8d, Kc ]
+szymon24 mucks [ Kd, 9d ]
+pokuzar14 collected [ 175 ]
+
+
+
+#Game No : 912672380
+***** 888poker Hand History for Game 912672380 *****
+25/50 Blinds No Limit Holdem - *** 04 10 2016 16:16:43
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,475 )
+Seat 4: lici67 ( 1,005 )
+Seat 6: COANDA ( 2,235 )
+Seat 7: pokerprojon ( 870 )
+Seat 8: Peon_84 ( 850 )
+Seat 9: kali198234 ( 875 )
+Seat 10: pokuzar14 ( 690 )
+kali198234 posts small blind [25]
+pokuzar14 posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ 7c, Ac ]
+szymon24 folds
+lici67 folds
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+** Summary **
+pokuzar14 did not show his hand
+pokuzar14 collected [ 75 ]
+
+
+
+#Game No : 912672383
+***** 888poker Hand History for Game 912672383 *****
+25/50 Blinds No Limit Holdem - *** 04 10 2016 16:16:55
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 9 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,475 )
+Seat 4: lici67 ( 1,005 )
+Seat 6: COANDA ( 2,235 )
+Seat 7: pokerprojon ( 870 )
+Seat 8: Peon_84 ( 850 )
+Seat 9: kali198234 ( 850 )
+Seat 10: pokuzar14 ( 715 )
+pokuzar14 posts small blind [25]
+szymon24 posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ 7s, 9h ]
+lici67 calls [50]
+COANDA calls [50]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [25]
+szymon24 checks
+** Dealing flop ** [ Js, 3c, Qh ]
+pokuzar14 checks
+szymon24 checks
+lici67 bets [50]
+COANDA folds
+pokuzar14 calls [50]
+szymon24 folds
+** Dealing turn ** [ 8d ]
+pokuzar14 checks
+lici67 bets [50]
+pokuzar14 calls [50]
+** Dealing river ** [ 6c ]
+pokuzar14 checks
+lici67 bets [400]
+pokuzar14 folds
+** Summary **
+lici67 did not show his hand
+lici67 collected [ 400 ]
+
+
+
+#Game No : 912672398
+***** 888poker Hand History for Game 912672398 *****
+25/50 Blinds No Limit Holdem - *** 04 10 2016 16:17:46
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 10 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,425 )
+Seat 4: lici67 ( 1,255 )
+Seat 6: COANDA ( 2,185 )
+Seat 7: pokerprojon ( 870 )
+Seat 8: Peon_84 ( 850 )
+Seat 9: kali198234 ( 850 )
+Seat 10: pokuzar14 ( 565 )
+szymon24 posts small blind [25]
+lici67 posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ 6c, Kc ]
+COANDA calls [50]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [50]
+szymon24 folds
+lici67 checks
+** Dealing flop ** [ Td, Jh, Jd ]
+lici67 bets [50]
+COANDA calls [50]
+pokuzar14 calls [50]
+** Dealing turn ** [ 5d ]
+lici67 bets [50]
+COANDA calls [50]
+pokuzar14 calls [50]
+** Dealing river ** [ Qh ]
+lici67 checks
+COANDA checks
+pokuzar14 checks
+** Summary **
+lici67 shows [ Ac, Ts ]
+COANDA mucks [ Ad, 8s ]
+pokuzar14 mucks [ 7s, 9c ]
+lici67 collected [ 475 ]
+
+
+
+#Game No : 912672414
+***** 888poker Hand History for Game 912672414 *****
+25/50 Blinds No Limit Holdem - *** 04 10 2016 16:18:38
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 2 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,400 )
+Seat 4: lici67 ( 1,580 )
+Seat 6: COANDA ( 2,035 )
+Seat 7: pokerprojon ( 870 )
+Seat 8: Peon_84 ( 850 )
+Seat 9: kali198234 ( 850 )
+Seat 10: pokuzar14 ( 415 )
+lici67 posts small blind [25]
+COANDA posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ Kh, As ]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [50]
+szymon24 calls [50]
+lici67 folds
+COANDA checks
+** Dealing flop ** [ Ks, 8c, 3h ]
+COANDA checks
+pokuzar14 checks
+szymon24 bets [50]
+COANDA folds
+pokuzar14 calls [50]
+** Dealing turn ** [ 3s ]
+pokuzar14 checks
+szymon24 bets [50]
+pokuzar14 folds
+** Summary **
+szymon24 did not show his hand
+szymon24 collected [ 275 ]
+
+
+
+#Game No : 912672438
+***** 888poker Hand History for Game 912672438 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:19:16
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,575 )
+Seat 4: lici67 ( 1,555 )
+Seat 6: COANDA ( 1,985 )
+Seat 7: pokerprojon ( 870 )
+Seat 8: Peon_84 ( 850 )
+Seat 9: kali198234 ( 850 )
+Seat 10: pokuzar14 ( 315 )
+COANDA posts small blind [50]
+pokerprojon posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 8h, 6c ]
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [100]
+szymon24 folds
+lici67 folds
+COANDA calls [50]
+pokerprojon checks
+** Dealing flop ** [ Qd, Ks, 3d ]
+COANDA bets [100]
+pokerprojon folds
+pokuzar14 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 300 ]
+
+
+
+#Game No : 912672444
+***** 888poker Hand History for Game 912672444 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:19:34
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 6 is the button
+Total number of players : 7
+Seat 2: szymon24 ( 2,575 )
+Seat 4: lici67 ( 1,555 )
+Seat 6: COANDA ( 2,185 )
+Seat 7: pokerprojon ( 770 )
+Seat 8: Peon_84 ( 850 )
+Seat 9: kali198234 ( 850 )
+Seat 10: pokuzar14 ( 215 )
+pokerprojon posts small blind [50]
+Peon_84 posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 9c, 4c ]
+kali198234 folds
+pokuzar14 calls [100]
+szymon24 folds
+lici67 folds
+COANDA folds
+pokerprojon folds
+Peon_84 checks
+** Dealing flop ** [ Ad, Tc, As ]
+Peon_84 checks
+pokuzar14 checks
+** Dealing turn ** [ Ts ]
+Peon_84 checks
+pokuzar14 checks
+** Dealing river ** [ 5s ]
+Peon_84 checks
+pokuzar14 bets [115]
+Peon_84 folds
+** Summary **
+pokuzar14 did not show his hand
+pokuzar14 collected [ 250 ]
+
+
+
+#Game No : 912672457
+***** 888poker Hand History for Game 912672457 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:20:10
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 7 is the button
+Total number of players : 6
+Seat 4: lici67 ( 1,555 )
+Seat 6: COANDA ( 2,185 )
+Seat 7: pokerprojon ( 720 )
+Seat 8: Peon_84 ( 750 )
+Seat 9: kali198234 ( 850 )
+Seat 10: pokuzar14 ( 365 )
+Peon_84 posts small blind [50]
+kali198234 posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 8c, Kc ]
+pokuzar14 calls [100]
+lici67 folds
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 checks
+** Dealing flop ** [ Js, Kd, Jh ]
+kali198234 checks
+pokuzar14 checks
+** Dealing turn ** [ 7h ]
+kali198234 checks
+pokuzar14 checks
+** Dealing river ** [ Th ]
+kali198234 checks
+pokuzar14 checks
+** Summary **
+kali198234 shows [ 8s, 2s ]
+pokuzar14 shows [ 8h, 4d ]
+pokuzar14 collected [ 125 ]
+kali198234 collected [ 125 ]
+
+
+
+#Game No : 912672468
+***** 888poker Hand History for Game 912672468 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:20:44
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 6
+Seat 4: lici67 ( 1,555 )
+Seat 6: COANDA ( 2,185 )
+Seat 7: pokerprojon ( 720 )
+Seat 8: Peon_84 ( 700 )
+Seat 9: kali198234 ( 875 )
+Seat 10: pokuzar14 ( 390 )
+kali198234 posts small blind [50]
+pokuzar14 posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ Kh, Jd ]
+lici67 folds
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+** Summary **
+pokuzar14 did not show his hand
+pokuzar14 collected [ 150 ]
+
+
+
+#Game No : 912672470
+***** 888poker Hand History for Game 912672470 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:20:52
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 4: lici67 ( 1,555 )
+Seat 6: COANDA ( 2,185 )
+Seat 7: pokerprojon ( 720 )
+Seat 8: Peon_84 ( 700 )
+Seat 9: kali198234 ( 825 )
+Seat 10: pokuzar14 ( 440 )
+pokuzar14 posts small blind [50]
+lici67 posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 6c, Qd ]
+COANDA calls [100]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [50]
+lici67 checks
+** Dealing flop ** [ Ad, 7d, Th ]
+pokuzar14 checks
+lici67 bets [100]
+COANDA folds
+pokuzar14 calls [100]
+** Dealing turn ** [ 9c ]
+pokuzar14 checks
+lici67 checks
+** Dealing river ** [ As ]
+pokuzar14 checks
+lici67 checks
+** Summary **
+pokuzar14 shows [ 6d, 4d ]
+lici67 shows [ 4h, Td ]
+lici67 collected [ 500 ]
+
+
+
+#Game No : 912672482
+***** 888poker Hand History for Game 912672482 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:21:32
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 10 is the button
+Total number of players : 6
+Seat 4: lici67 ( 1,855 )
+Seat 6: COANDA ( 2,085 )
+Seat 7: pokerprojon ( 720 )
+Seat 8: Peon_84 ( 700 )
+Seat 9: kali198234 ( 825 )
+Seat 10: pokuzar14 ( 240 )
+lici67 posts small blind [50]
+COANDA posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 9d, Qh ]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [100]
+lici67 folds
+COANDA checks
+** Dealing flop ** [ Ah, 7d, 7c ]
+COANDA checks
+pokuzar14 checks
+** Dealing turn ** [ 6s ]
+COANDA bets [100]
+pokuzar14 raises [140]
+COANDA calls [40]
+** Dealing river ** [ Td ]
+** Summary **
+COANDA shows [ 4h, 6c ]
+pokuzar14 shows [ 2h, 6d ]
+COANDA collected [ 265 ]
+pokuzar14 collected [ 265 ]
+
+
+
+#Game No : 912672497
+***** 888poker Hand History for Game 912672497 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:22:01
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 4: lici67 ( 1,805 )
+Seat 6: COANDA ( 2,110 )
+Seat 7: pokerprojon ( 720 )
+Seat 8: Peon_84 ( 700 )
+Seat 9: kali198234 ( 825 )
+Seat 10: pokuzar14 ( 265 )
+COANDA posts small blind [50]
+pokerprojon posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 6h, As ]
+Peon_84 folds
+kali198234 folds
+pokuzar14 calls [100]
+lici67 folds
+COANDA calls [50]
+pokerprojon checks
+** Dealing flop ** [ Ts, 2c, 9d ]
+COANDA checks
+pokerprojon checks
+pokuzar14 checks
+** Dealing turn ** [ 3h ]
+COANDA checks
+pokerprojon checks
+pokuzar14 checks
+** Dealing river ** [ 7h ]
+COANDA bets [100]
+pokerprojon folds
+pokuzar14 raises [165]
+COANDA calls [65]
+** Summary **
+COANDA shows [ 7s, Qs ]
+pokuzar14 shows [ Qh, Kh ]
+COANDA collected [ 630 ]
+
+
+
+#Game No : 912672515
+***** 888poker Hand History for Game 912672515 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:22:39
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 4: lici67 ( 1,805 )
+Seat 6: COANDA ( 2,475 )
+Seat 7: pokerprojon ( 620 )
+Seat 8: Peon_84 ( 700 )
+Seat 9: kali198234 ( 825 )
+pokerprojon posts small blind [50]
+Peon_84 posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 3c, Ks ]
+kali198234 folds
+lici67 folds
+COANDA calls [100]
+pokerprojon folds
+Peon_84 checks
+** Dealing flop ** [ 9d, 6c, Jh ]
+Peon_84 checks
+COANDA checks
+** Dealing turn ** [ 3d ]
+Peon_84 checks
+COANDA bets [100]
+Peon_84 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 250 ]
+
+
+
+#Game No : 912672521
+***** 888poker Hand History for Game 912672521 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:22:58
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 4: lici67 ( 1,805 )
+Seat 6: COANDA ( 2,625 )
+Seat 7: pokerprojon ( 570 )
+Seat 8: Peon_84 ( 600 )
+Seat 9: kali198234 ( 825 )
+Peon_84 posts small blind [50]
+kali198234 posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 7d, Qc ]
+lici67 calls [100]
+COANDA calls [100]
+pokerprojon folds
+Peon_84 folds
+kali198234 checks
+** Dealing flop ** [ Qd, Qs, 3c ]
+kali198234 checks
+lici67 checks
+COANDA bets [100]
+kali198234 folds
+lici67 calls [100]
+** Dealing turn ** [ 5h ]
+lici67 checks
+COANDA bets [100]
+lici67 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 550 ]
+
+
+
+#Game No : 912672542
+***** 888poker Hand History for Game 912672542 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:23:39
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 4: lici67 ( 1,605 )
+Seat 6: COANDA ( 2,975 )
+Seat 7: pokerprojon ( 570 )
+Seat 8: Peon_84 ( 550 )
+Seat 9: kali198234 ( 725 )
+kali198234 posts small blind [50]
+lici67 posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ Th, 9h ]
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+** Summary **
+lici67 did not show his hand
+lici67 collected [ 150 ]
+
+
+
+#Game No : 912672546
+***** 888poker Hand History for Game 912672546 *****
+50/100 Blinds No Limit Holdem - *** 04 10 2016 16:23:47
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 4: lici67 ( 1,655 )
+Seat 6: COANDA ( 2,975 )
+Seat 7: pokerprojon ( 570 )
+Seat 8: Peon_84 ( 550 )
+Seat 9: kali198234 ( 675 )
+lici67 posts small blind [50]
+COANDA posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ Ac, 6s ]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+lici67 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 150 ]
+
+
+
+#Game No : 912672552
+***** 888poker Hand History for Game 912672552 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:23:55
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 4: lici67 ( 1,605 )
+Seat 6: COANDA ( 3,025 )
+Seat 7: pokerprojon ( 570 )
+Seat 8: Peon_84 ( 550 )
+Seat 9: kali198234 ( 675 )
+COANDA posts small blind [75]
+pokerprojon posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ Ad, 8h ]
+Peon_84 folds
+kali198234 folds
+lici67 calls [150]
+COANDA calls [75]
+pokerprojon checks
+** Dealing flop ** [ 7d, 4s, Kc ]
+COANDA checks
+pokerprojon checks
+lici67 checks
+** Dealing turn ** [ 9s ]
+COANDA bets [150]
+pokerprojon folds
+lici67 calls [150]
+** Dealing river ** [ 7c ]
+COANDA checks
+lici67 checks
+** Summary **
+COANDA shows [ 3c, Jd ]
+lici67 shows [ Ac, 2h ]
+lici67 collected [ 750 ]
+
+
+
+#Game No : 912672564
+***** 888poker Hand History for Game 912672564 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:24:21
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 4: lici67 ( 2,055 )
+Seat 6: COANDA ( 2,725 )
+Seat 7: pokerprojon ( 420 )
+Seat 8: Peon_84 ( 550 )
+Seat 9: kali198234 ( 675 )
+pokerprojon posts small blind [75]
+Peon_84 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 5h, 2d ]
+kali198234 folds
+lici67 folds
+COANDA calls [150]
+pokerprojon folds
+Peon_84 checks
+** Dealing flop ** [ As, 8s, Ac ]
+Peon_84 checks
+COANDA bets [150]
+Peon_84 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 375 ]
+
+
+
+#Game No : 912672571
+***** 888poker Hand History for Game 912672571 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:24:35
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 4: lici67 ( 2,055 )
+Seat 6: COANDA ( 2,950 )
+Seat 7: pokerprojon ( 345 )
+Seat 8: Peon_84 ( 400 )
+Seat 9: kali198234 ( 675 )
+Peon_84 posts small blind [75]
+kali198234 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 5s, Jd ]
+lici67 folds
+COANDA calls [150]
+pokerprojon folds
+Peon_84 folds
+kali198234 checks
+** Dealing flop ** [ 3h, Qh, 9d ]
+kali198234 checks
+COANDA bets [150]
+kali198234 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 375 ]
+
+
+
+#Game No : 912672579
+***** 888poker Hand History for Game 912672579 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:24:47
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 4: lici67 ( 2,055 )
+Seat 6: COANDA ( 3,175 )
+Seat 7: pokerprojon ( 345 )
+Seat 8: Peon_84 ( 325 )
+Seat 9: kali198234 ( 525 )
+kali198234 posts small blind [75]
+lici67 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 7s, Ts ]
+COANDA calls [150]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+lici67 checks
+** Dealing flop ** [ 2d, 9d, 3c ]
+lici67 checks
+COANDA bets [375]
+lici67 folds
+** Summary **
+COANDA did not show his hand
+COANDA collected [ 375 ]
+
+
+
+#Game No : 912672589
+***** 888poker Hand History for Game 912672589 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:25:09
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 4: lici67 ( 1,905 )
+Seat 6: COANDA ( 3,400 )
+Seat 7: pokerprojon ( 345 )
+Seat 8: Peon_84 ( 325 )
+Seat 9: kali198234 ( 450 )
+lici67 posts small blind [75]
+COANDA posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 5c, 6d ]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+lici67 raises [225]
+COANDA calls [150]
+** Dealing flop ** [ Jh, Jd, 9c ]
+lici67 bets [150]
+COANDA calls [150]
+** Dealing turn ** [ 4s ]
+lici67 checks
+COANDA bets [150]
+lici67 calls [150]
+** Dealing river ** [ Qc ]
+lici67 checks
+COANDA checks
+** Summary **
+lici67 shows [ Ac, Ks ]
+COANDA shows [ Ad, Kh ]
+COANDA collected [ 600 ]
+lici67 collected [ 600 ]
+
+
+
+#Game No : 912672598
+***** 888poker Hand History for Game 912672598 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:25:34
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 4: lici67 ( 1,905 )
+Seat 6: COANDA ( 3,400 )
+Seat 7: pokerprojon ( 345 )
+Seat 8: Peon_84 ( 325 )
+Seat 9: kali198234 ( 450 )
+COANDA posts small blind [75]
+pokerprojon posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ Tc, 6h ]
+Peon_84 folds
+kali198234 folds
+lici67 raises [300]
+COANDA calls [225]
+pokerprojon folds
+** Dealing flop ** [ 2s, Jd, 5c ]
+COANDA checks
+lici67 bets [150]
+COANDA calls [150]
+** Dealing turn ** [ Qd ]
+COANDA checks
+lici67 checks
+** Dealing river ** [ 9d ]
+COANDA checks
+lici67 checks
+** Summary **
+COANDA shows [ 8c, Ac ]
+lici67 shows [ 4c, 4s ]
+lici67 collected [ 1,050 ]
+
+
+
+#Game No : 912672615
+***** 888poker Hand History for Game 912672615 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:26:05
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 4: lici67 ( 2,505 )
+Seat 6: COANDA ( 2,950 )
+Seat 7: pokerprojon ( 195 )
+Seat 8: Peon_84 ( 325 )
+Seat 9: kali198234 ( 450 )
+pokerprojon posts small blind [75]
+Peon_84 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 9s, Ah ]
+kali198234 folds
+lici67 calls [150]
+COANDA calls [150]
+pokerprojon folds
+Peon_84 checks
+** Dealing flop ** [ Td, As, Qd ]
+Peon_84 checks
+lici67 bets [150]
+COANDA calls [150]
+Peon_84 folds
+** Dealing turn ** [ 3s ]
+lici67 checks
+COANDA bets [150]
+lici67 calls [150]
+** Dealing river ** [ 7h ]
+lici67 bets [150]
+COANDA calls [150]
+** Summary **
+lici67 shows [ 7s, Qs ]
+COANDA mucks [ Kc, 3c ]
+lici67 collected [ 1,425 ]
+
+
+
+#Game No : 912672622
+***** 888poker Hand History for Game 912672622 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:26:37
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 7 is the button
+Total number of players : 10
+Seat 1: szymon24 ( 2,625 )
+Seat 2: arman2101 ( 8,260 )
+Seat 3: ericTOPCATI4 ( 325 )
+Seat 4: lici67 ( 3,330 )
+Seat 5: Tamplier18 ( 1,925 )
+Seat 6: COANDA ( 2,350 )
+Seat 7: pokerprojon ( 120 )
+Seat 8: Peon_84 ( 175 )
+Seat 9: kali198234 ( 450 )
+Seat 10: Perbi44 ( 440 )
+Peon_84 posts small blind [75]
+kali198234 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 5c, Kh ]
+Perbi44 folds
+szymon24 calls [150]
+arman2101 raises [300]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 folds
+COANDA calls [300]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+szymon24 calls [150]
+** Dealing flop ** [ 9h, Ts, 6s ]
+szymon24 checks
+arman2101 checks
+COANDA checks
+** Dealing turn ** [ 3c ]
+szymon24 checks
+arman2101 bets [1,125]
+COANDA folds
+szymon24 folds
+** Summary **
+arman2101 did not show his hand
+arman2101 collected [ 1,125 ]
+
+
+
+#Game No : 912672636
+***** 888poker Hand History for Game 912672636 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:27:18
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 10
+Seat 1: szymon24 ( 2,325 )
+Seat 2: arman2101 ( 9,085 )
+Seat 3: ericTOPCATI4 ( 325 )
+Seat 4: lici67 ( 3,330 )
+Seat 5: Tamplier18 ( 1,925 )
+Seat 6: COANDA ( 2,050 )
+Seat 7: pokerprojon ( 120 )
+Seat 8: Peon_84 ( 100 )
+Seat 9: kali198234 ( 300 )
+Seat 10: Perbi44 ( 440 )
+kali198234 posts small blind [75]
+Perbi44 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 2d, 9h ]
+szymon24 folds
+arman2101 calls [150]
+ericTOPCATI4 folds
+lici67 calls [150]
+Tamplier18 folds
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+Perbi44 checks
+** Dealing flop ** [ 7s, 5h, Ks ]
+Perbi44 checks
+arman2101 checks
+lici67 checks
+** Dealing turn ** [ 5c ]
+Perbi44 checks
+arman2101 checks
+lici67 checks
+** Dealing river ** [ 2s ]
+Perbi44 checks
+arman2101 checks
+lici67 bets [150]
+Perbi44 folds
+arman2101 calls [150]
+** Summary **
+lici67 shows [ As, Qs ]
+arman2101 mucks [ Jc, Qh ]
+lici67 collected [ 825 ]
+
+
+
+#Game No : 912672642
+***** 888poker Hand History for Game 912672642 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:27:44
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 9 is the button
+Total number of players : 10
+Seat 1: szymon24 ( 2,325 )
+Seat 2: arman2101 ( 8,785 )
+Seat 3: ericTOPCATI4 ( 325 )
+Seat 4: lici67 ( 3,855 )
+Seat 5: Tamplier18 ( 1,925 )
+Seat 6: COANDA ( 2,050 )
+Seat 7: pokerprojon ( 120 )
+Seat 8: Peon_84 ( 100 )
+Seat 9: kali198234 ( 225 )
+Seat 10: Perbi44 ( 290 )
+Perbi44 posts small blind [75]
+szymon24 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 3c, Th ]
+arman2101 folds
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 folds
+COANDA folds
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+Perbi44 folds
+** Summary **
+szymon24 did not show his hand
+szymon24 collected [ 225 ]
+
+
+
+#Game No : 912672645
+***** 888poker Hand History for Game 912672645 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:27:56
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 10 is the button
+Total number of players : 10
+Seat 1: szymon24 ( 2,400 )
+Seat 2: arman2101 ( 8,785 )
+Seat 3: ericTOPCATI4 ( 325 )
+Seat 4: lici67 ( 3,855 )
+Seat 5: Tamplier18 ( 1,925 )
+Seat 6: COANDA ( 2,050 )
+Seat 7: pokerprojon ( 120 )
+Seat 8: Peon_84 ( 100 )
+Seat 9: kali198234 ( 225 )
+Seat 10: Perbi44 ( 215 )
+szymon24 posts small blind [75]
+arman2101 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 2h, Tc ]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 folds
+COANDA calls [150]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+Perbi44 folds
+szymon24 calls [75]
+arman2101 checks
+** Dealing flop ** [ 4d, Ts, 5d ]
+szymon24 checks
+arman2101 bets [450]
+COANDA folds
+szymon24 folds
+** Summary **
+arman2101 did not show his hand
+arman2101 collected [ 450 ]
+
+
+
+#Game No : 912672651
+***** 888poker Hand History for Game 912672651 *****
+75/150 Blinds No Limit Holdem - *** 04 10 2016 16:28:29
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 1 is the button
+Total number of players : 10
+Seat 1: szymon24 ( 2,250 )
+Seat 2: arman2101 ( 9,085 )
+Seat 3: ericTOPCATI4 ( 325 )
+Seat 4: lici67 ( 3,855 )
+Seat 5: Tamplier18 ( 1,925 )
+Seat 6: COANDA ( 1,900 )
+Seat 7: pokerprojon ( 120 )
+Seat 8: Peon_84 ( 100 )
+Seat 9: kali198234 ( 225 )
+Seat 10: Perbi44 ( 215 )
+arman2101 posts small blind [75]
+ericTOPCATI4 posts big blind [150]
+** Dealing down cards **
+Dealt to Peon_84 [ 6s, 9s ]
+lici67 folds
+Tamplier18 raises [1,925]
+COANDA calls [1,900]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+Perbi44 folds
+szymon24 folds
+arman2101 folds
+ericTOPCATI4 folds
+** Dealing flop ** [ 6d, 7d, Th ]
+** Dealing turn ** [ 6c ]
+** Dealing river ** [ 9d ]
+** Summary **
+Tamplier18 shows [ Ac, As ]
+COANDA shows [ Kd, Kh ]
+Tamplier18 collected [ 4,025 ]
+
+
+
+#Game No : 912672661
+***** 888poker Hand History for Game 912672661 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:28:55
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 2 is the button
+Total number of players : 9
+Seat 1: szymon24 ( 2,250 )
+Seat 2: arman2101 ( 9,010 )
+Seat 3: ericTOPCATI4 ( 175 )
+Seat 4: lici67 ( 3,855 )
+Seat 5: Tamplier18 ( 4,050 )
+Seat 7: pokerprojon ( 120 )
+Seat 8: Peon_84 ( 100 )
+Seat 9: kali198234 ( 225 )
+Seat 10: Perbi44 ( 215 )
+ericTOPCATI4 posts small blind [100]
+lici67 posts big blind [200]
+** Dealing down cards **
+Dealt to Peon_84 [ Qs, 2s ]
+Tamplier18 folds
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+Perbi44 folds
+szymon24 calls [200]
+arman2101 folds
+ericTOPCATI4 folds
+lici67 checks
+** Dealing flop ** [ Qc, Ad, 3s ]
+lici67 checks
+szymon24 bets [200]
+lici67 folds
+** Summary **
+szymon24 did not show his hand
+szymon24 collected [ 500 ]
+
+
+
+#Game No : 912672667
+***** 888poker Hand History for Game 912672667 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:29:13
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 3 is the button
+Total number of players : 9
+Seat 1: szymon24 ( 2,550 )
+Seat 2: arman2101 ( 9,010 )
+Seat 3: ericTOPCATI4 ( 75 )
+Seat 4: lici67 ( 3,655 )
+Seat 5: Tamplier18 ( 4,050 )
+Seat 7: pokerprojon ( 120 )
+Seat 8: Peon_84 ( 100 )
+Seat 9: kali198234 ( 225 )
+Seat 10: Perbi44 ( 215 )
+lici67 posts small blind [100]
+Tamplier18 posts big blind [200]
+** Dealing down cards **
+Dealt to Peon_84 [ As, 3h ]
+pokerprojon folds
+Peon_84 folds
+kali198234 folds
+Perbi44 folds
+szymon24 folds
+arman2101 folds
+ericTOPCATI4 folds
+lici67 calls [100]
+Tamplier18 checks
+** Dealing flop ** [ Tc, 7d, 8h ]
+lici67 checks
+Tamplier18 bets [200]
+lici67 folds
+** Summary **
+Tamplier18 did not show his hand
+Tamplier18 collected [ 400 ]
+
+
+
+#Game No : 912672673
+***** 888poker Hand History for Game 912672673 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:29:40
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 9
+Seat 1: szymon24 ( 2,550 )
+Seat 2: arman2101 ( 9,010 )
+Seat 3: ericTOPCATI4 ( 75 )
+Seat 4: lici67 ( 3,455 )
+Seat 5: Tamplier18 ( 4,250 )
+Seat 7: pokerprojon ( 120 )
+Seat 8: Peon_84 ( 100 )
+Seat 9: kali198234 ( 225 )
+Seat 10: Perbi44 ( 215 )
+Tamplier18 posts small blind [100]
+pokerprojon posts big blind [120]
+** Dealing down cards **
+Dealt to Peon_84 [ 3c, 4h ]
+Peon_84 folds
+kali198234 folds
+Perbi44 folds
+szymon24 folds
+arman2101 calls [200]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 calls [100]
+** Dealing flop ** [ 8d, 6c, 5d ]
+Tamplier18 bets [200]
+arman2101 calls [200]
+** Dealing turn ** [ 9c ]
+Tamplier18 checks
+arman2101 bets [920]
+Tamplier18 folds
+** Dealing river ** [ 6h ]
+** Summary **
+arman2101 shows [ Jc, 7s ]
+pokerprojon shows [ Ac, 5s ]
+arman2101 collected [ 360 ]
+arman2101 collected [ 1,480 ]
+
+
+
+#Game No : 912672682
+***** 888poker Hand History for Game 912672682 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:30:12
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 5 is the button
+Total number of players : 8
+Seat 1: szymon24 ( 2,550 )
+Seat 2: arman2101 ( 9,530 )
+Seat 3: ericTOPCATI4 ( 75 )
+Seat 4: lici67 ( 3,455 )
+Seat 5: Tamplier18 ( 3,850 )
+Seat 8: Peon_84 ( 100 )
+Seat 9: kali198234 ( 225 )
+Seat 10: Perbi44 ( 215 )
+Peon_84 posts big blind [100]
+** Dealing down cards **
+Dealt to Peon_84 [ 9s, Qh ]
+kali198234 folds
+Perbi44 folds
+szymon24 folds
+arman2101 calls [200]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 calls [200]
+** Dealing flop ** [ Js, Tc, Qs ]
+arman2101 bets [9,330]
+Tamplier18 calls [3,650]
+** Dealing turn ** [ 6s ]
+** Dealing river ** [ 3c ]
+** Summary **
+arman2101 shows [ 5d, Qd ]
+Tamplier18 shows [ 9h, Qc ]
+Peon_84 shows [ 9s, Qh ]
+Peon_84 collected [ 150 ]
+Tamplier18 collected [ 150 ]
+Tamplier18 collected [ 7,500 ]
+arman2101 collected [ 5,680 ]
+
+
+
+#Game No : 912672692
+***** 888poker Hand History for Game 912672692 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:30:47
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 5 is the button
+Total number of players : 8
+Seat 1: szymon24 ( 2,550 )
+Seat 2: arman2101 ( 5,680 )
+Seat 3: ericTOPCATI4 ( 75 )
+Seat 4: lici67 ( 3,455 )
+Seat 5: Tamplier18 ( 7,650 )
+Seat 8: Peon_84 ( 150 )
+Seat 9: kali198234 ( 225 )
+Seat 10: Perbi44 ( 215 )
+Peon_84 posts small blind [100]
+kali198234 posts big blind [200]
+** Dealing down cards **
+Dealt to Peon_84 [ 7h, 2h ]
+Perbi44 folds
+szymon24 folds
+arman2101 raises [400]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 folds
+Peon_84 folds
+kali198234 folds
+** Summary **
+arman2101 did not show his hand
+arman2101 collected [ 500 ]
+
+
+
+#Game No : 912672699
+***** 888poker Hand History for Game 912672699 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:31:01
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 8
+Seat 1: szymon24 ( 2,550 )
+Seat 2: arman2101 ( 5,980 )
+Seat 3: ericTOPCATI4 ( 75 )
+Seat 4: lici67 ( 3,455 )
+Seat 5: Tamplier18 ( 7,650 )
+Seat 8: Peon_84 ( 50 )
+Seat 9: kali198234 ( 25 )
+Seat 10: Perbi44 ( 215 )
+kali198234 posts small blind [25]
+Perbi44 posts big blind [200]
+** Dealing down cards **
+Dealt to Peon_84 [ 5h, 7c ]
+szymon24 folds
+arman2101 raises [625]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 folds
+Peon_84 folds
+Perbi44 folds
+** Dealing flop ** [ 9h, 2s, Jh ]
+** Dealing turn ** [ 4h ]
+** Dealing river ** [ Kh ]
+** Summary **
+arman2101 shows [ Jc, Js ]
+kali198234 shows [ 4c, 8s ]
+arman2101 collected [ 75 ]
+arman2101 collected [ 350 ]
+
+
+
+#Game No : 912672709
+***** 888poker Hand History for Game 912672709 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:31:34
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 7
+Seat 1: szymon24 ( 2,550 )
+Seat 2: arman2101 ( 6,205 )
+Seat 3: ericTOPCATI4 ( 75 )
+Seat 4: lici67 ( 3,455 )
+Seat 5: Tamplier18 ( 7,650 )
+Seat 8: Peon_84 ( 50 )
+Seat 10: Perbi44 ( 15 )
+Perbi44 posts small blind [15]
+szymon24 posts big blind [200]
+** Dealing down cards **
+Dealt to Peon_84 [ 7h, Ah ]
+arman2101 raises [6,205]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 folds
+Peon_84 folds
+szymon24 calls [2,350]
+** Dealing flop ** [ 6s, 2c, 8h ]
+** Dealing turn ** [ 6h ]
+** Dealing river ** [ 5h ]
+** Summary **
+szymon24 shows [ Ad, Qd ]
+arman2101 shows [ Kh, Ac ]
+Perbi44 shows [ Qc, As ]
+arman2101 collected [ 45 ]
+arman2101 collected [ 5,070 ]
+
+
+
+#Game No : 912672722
+***** 888poker Hand History for Game 912672722 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:32:08
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 2: arman2101 ( 8,770 )
+Seat 3: ericTOPCATI4 ( 75 )
+Seat 4: lici67 ( 3,455 )
+Seat 5: Tamplier18 ( 7,650 )
+Seat 8: Peon_84 ( 50 )
+arman2101 posts big blind [200]
+** Dealing down cards **
+Dealt to Peon_84 [ 2c, 6c ]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 calls [200]
+Peon_84 folds
+arman2101 checks
+** Dealing flop ** [ 8s, Ad, 2d ]
+arman2101 checks
+Tamplier18 bets [400]
+arman2101 calls [400]
+** Dealing turn ** [ 9c ]
+arman2101 checks
+Tamplier18 bets [400]
+arman2101 calls [400]
+** Dealing river ** [ Tc ]
+arman2101 checks
+Tamplier18 checks
+** Summary **
+arman2101 shows [ 3c, 5d ]
+Tamplier18 shows [ 3h, 3d ]
+Tamplier18 collected [ 2,000 ]
+
+
+
+#Game No : 912672732
+***** 888poker Hand History for Game 912672732 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:32:46
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 8 is the button
+Total number of players : 5
+Seat 2: arman2101 ( 7,770 )
+Seat 3: ericTOPCATI4 ( 75 )
+Seat 4: lici67 ( 3,455 )
+Seat 5: Tamplier18 ( 8,650 )
+Seat 8: Peon_84 ( 50 )
+arman2101 posts small blind [100]
+ericTOPCATI4 posts big blind [75]
+** Dealing down cards **
+Dealt to Peon_84 [ 9d, 2s ]
+lici67 folds
+Tamplier18 folds
+Peon_84 folds
+** Dealing flop ** [ 3c, Jh, 7h ]
+** Dealing turn ** [ 3d ]
+** Dealing river ** [ 2c ]
+** Summary **
+arman2101 shows [ 6h, 2d ]
+ericTOPCATI4 shows [ Qs, Jd ]
+ericTOPCATI4 collected [ 150 ]
+arman2101 collected [ 25 ]
+
+
+
+#Game No : 912672740
+***** 888poker Hand History for Game 912672740 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:33:07
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 2: arman2101 ( 7,695 )
+Seat 3: ericTOPCATI4 ( 150 )
+Seat 4: lici67 ( 3,455 )
+Seat 5: Tamplier18 ( 8,650 )
+Seat 8: Peon_84 ( 50 )
+ericTOPCATI4 posts small blind [100]
+lici67 posts big blind [200]
+** Dealing down cards **
+Dealt to Peon_84 [ 9s, Jh ]
+Tamplier18 folds
+Peon_84 folds
+arman2101 raises [7,695]
+ericTOPCATI4 folds
+lici67 folds
+** Summary **
+arman2101 did not show his hand
+arman2101 collected [ 500 ]
+
+
+
+#Game No : 912672751
+***** 888poker Hand History for Game 912672751 *****
+100/200 Blinds No Limit Holdem - *** 04 10 2016 16:33:21
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 3 is the button
+Total number of players : 5
+Seat 2: arman2101 ( 7,995 )
+Seat 3: ericTOPCATI4 ( 50 )
+Seat 4: lici67 ( 3,255 )
+Seat 5: Tamplier18 ( 8,650 )
+Seat 8: Peon_84 ( 50 )
+lici67 posts small blind [100]
+Tamplier18 posts big blind [200]
+** Dealing down cards **
+Dealt to Peon_84 [ Td, 7s ]
+Peon_84 folds
+arman2101 raises [400]
+ericTOPCATI4 folds
+lici67 folds
+Tamplier18 calls [200]
+** Dealing flop ** [ As, 8h, 3s ]
+Tamplier18 checks
+arman2101 bets [900]
+Tamplier18 calls [900]
+** Dealing turn ** [ 4d ]
+Tamplier18 checks
+arman2101 bets [2,700]
+Tamplier18 calls [2,700]
+** Dealing river ** [ Ah ]
+Tamplier18 folds
+** Summary **
+arman2101 did not show his hand
+arman2101 collected [ 8,100 ]
+
+
+
+#Game No : 912672759
+***** 888poker Hand History for Game 912672759 *****
+150/300 Blinds No Limit Holdem - *** 04 10 2016 16:34:00
+Tournament #32989692 210 + 20 - Table #2 10 Max (Play Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 2: arman2101 ( 12,095 )
+Seat 3: ericTOPCATI4 ( 50 )
+Seat 4: lici67 ( 3,155 )
+Seat 5: Tamplier18 ( 4,650 )
+Seat 8: Peon_84 ( 50 )
+Tamplier18 posts small blind [150]
+Peon_84 posts big blind [50]
+** Dealing down cards **
+Dealt to Peon_84 [ 2s, Ts ]
+arman2101 folds
+ericTOPCATI4 folds
+lici67 folds
+** Dealing flop ** [ Js, 8c, 7h ]
+** Dealing turn ** [ 3s ]
+** Dealing river ** [ 6c ]
+** Summary **
+Tamplier18 shows [ 5s, 4h ]
+Peon_84 shows [ 2s, Ts ]
+Tamplier18 collected [ 100 ]
+Tamplier18 collected [ 100 ]
+
+
+

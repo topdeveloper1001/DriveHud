@@ -1,0 +1,509 @@
+#Game No : 436399080
+***** 888poker Hand History for Game 436399080 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:27:15
+Table Embu 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $1,000 )
+Seat 2: samothraki ( $1,000 )
+Seat 4: D1emm ( $1,000 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 9: telperion ( $1,000 )
+samothraki posts small blind [$100]
+D1emm posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+telperion folds
+I_AM_MASHINE folds
+samothraki folds
+** Summary **
+D1emm collected [ $300 ]
+
+
+#Game No : 436399103
+***** 888poker Hand History for Game 436399103 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:27:40
+Table Embu 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $1,000 )
+Seat 2: samothraki ( $900 )
+Seat 4: D1emm ( $1,100 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 9: telperion ( $1,000 )
+D1emm posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+telperion folds
+I_AM_MASHINE folds
+samothraki folds
+D1emm raises [$1,000]
+Kikakukka folds
+** Summary **
+D1emm collected [ $400 ]
+
+
+#Game No : 436399117
+***** 888poker Hand History for Game 436399117 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:27:52
+Table Embu 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $1,000 )
+Seat 2: samothraki ( $900 )
+Seat 4: D1emm ( $1,300 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 9: telperion ( $1,000 )
+Kikakukka posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+I_AM_MASHINE raises [$1,000]
+samothraki calls [$900]
+D1emm folds
+Kikakukka folds
+telperion calls [$800]
+** Dealing flop ** [ 5d, 9c, Js ]
+** Dealing turn ** [ 6h ]
+** Dealing river ** [ 8h ]
+** Summary **
+I_AM_MASHINE shows [ 7d, Kd ]
+samothraki shows [ Ts, Ks ]
+telperion shows [ 7c, 7s ]
+I_AM_MASHINE collected [ $1,397.50 ]
+telperion collected [ $1,397.50 ]
+I_AM_MASHINE collected [ $100 ]
+telperion collected [ $100 ]
+
+
+#Game No : 436399174
+***** 888poker Hand History for Game 436399174 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:28:52
+Table Embu 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 4
+Seat 1: I_AM_MASHINE ( $1,497.50 )
+Seat 4: D1emm ( $1,300 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 9: telperion ( $1,497.50 )
+telperion posts small blind [$100]
+I_AM_MASHINE posts big blind [$200]
+** Dealing down cards **
+D1emm folds
+Kikakukka raises [$1,000]
+telperion folds
+I_AM_MASHINE calls [$800]
+** Dealing flop ** [ Jc, Td, 6d ]
+** Dealing turn ** [ 4c ]
+** Dealing river ** [ 2h ]
+** Summary **
+I_AM_MASHINE shows [ Js, Kh ]
+Kikakukka shows [ Jd, Ad ]
+Kikakukka collected [ $2,095 ]
+
+
+#Game No : 436399205
+***** 888poker Hand History for Game 436399205 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:29:19
+Table Embu 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 4
+Seat 1: I_AM_MASHINE ( $1,000 )
+Seat 4: D1emm ( $1,300 )
+Seat 6: Kikakukka ( $2,095 )
+Seat 9: telperion ( $1,397.50 )
+I_AM_MASHINE posts small blind [$100]
+D1emm posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+telperion folds
+I_AM_MASHINE raises [$900]
+D1emm calls [$800]
+** Dealing flop ** [ 4s, 3s, 4h ]
+** Dealing turn ** [ Ad ]
+** Dealing river ** [ Qh ]
+** Summary **
+I_AM_MASHINE shows [ 5d, 6d ]
+D1emm shows [ 9h, Qs ]
+D1emm collected [ $1,995 ]
+
+
+#Game No : 436399233
+***** 888poker Hand History for Game 436399233 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:29:46
+Table Embu 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 4
+Seat 1: I_AM_MASHINE ( $1,000 )
+Seat 4: D1emm ( $2,295 )
+Seat 6: Kikakukka ( $2,095 )
+Seat 9: telperion ( $1,397.50 )
+D1emm posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+telperion raises [$1,397.50]
+I_AM_MASHINE folds
+D1emm raises [$2,195]
+Kikakukka folds
+** Dealing flop ** [ 3d, Ah, 8h ]
+** Dealing turn ** [ 4d ]
+** Dealing river ** [ 3c ]
+** Summary **
+D1emm shows [ 5c, 5d ]
+telperion shows [ 8c, 9c ]
+telperion collected [ $2,990 ]
+
+
+#Game No : 436399257
+***** 888poker Hand History for Game 436399257 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:30:07
+Table Embu 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $1,000 )
+Seat 4: D1emm ( $1,000 )
+Seat 6: Kikakukka ( $1,895 )
+Seat 7: Sopirty ( $1,000 )
+Seat 9: telperion ( $2,990 )
+Kikakukka posts small blind [$100]
+Sopirty posts big blind [$200]
+** Dealing down cards **
+telperion folds
+I_AM_MASHINE raises [$1,000]
+D1emm folds
+Kikakukka folds
+Sopirty folds
+** Summary **
+I_AM_MASHINE collected [ $500 ]
+
+
+#Game No : 436399280
+***** 888poker Hand History for Game 436399280 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:30:28
+Table Embu 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: I_AM_MASHINE ( $1,300 )
+Seat 2: samothraki ( $1,000 )
+Seat 4: D1emm ( $1,000 )
+Seat 6: Kikakukka ( $1,795 )
+Seat 7: Sopirty ( $1,000 )
+Seat 9: telperion ( $2,990 )
+Sopirty posts small blind [$100]
+** Dealing down cards **
+telperion folds
+I_AM_MASHINE folds
+samothraki folds
+D1emm folds
+Kikakukka folds
+** Summary **
+Sopirty did not show his hand
+Sopirty collected [ $100 ]
+
+
+#Game No : 436399310
+***** 888poker Hand History for Game 436399310 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:30:53
+Table Embu 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 3
+Seat 2: samothraki ( $1,000 )
+Seat 6: Kikakukka ( $1,795 )
+Seat 7: Sopirty ( $1,000 )
+Sopirty posts small blind [$100]
+** Dealing down cards **
+samothraki folds
+Kikakukka folds
+** Summary **
+Sopirty collected [ $100 ]
+
+
+#Game No : 436399377
+***** 888poker Hand History for Game 436399377 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:32:00
+Table Embu 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $1,300 )
+Seat 4: D1emm ( $1,000 )
+Seat 6: Kikakukka ( $1,795 )
+Seat 7: Sopirty ( $1,000 )
+Seat 9: telperion ( $2,990 )
+telperion posts small blind [$100]
+I_AM_MASHINE posts big blind [$200]
+** Dealing down cards **
+D1emm folds
+Kikakukka raises [$1,795]
+Sopirty folds
+telperion folds
+I_AM_MASHINE calls [$1,100]
+** Dealing flop ** [ Kc, 9s, 7h ]
+** Dealing turn ** [ 3c ]
+** Dealing river ** [ Ad ]
+** Summary **
+I_AM_MASHINE shows [ Ah, 7d ]
+Kikakukka shows [ 8d, 8s ]
+I_AM_MASHINE collected [ $2,695 ]
+
+
+#Game No : 436399421
+***** 888poker Hand History for Game 436399421 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:32:40
+Table Embu 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 6
+Seat 1: I_AM_MASHINE ( $2,695 )
+Seat 2: samothraki ( $1,000 )
+Seat 4: D1emm ( $1,000 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 7: Sopirty ( $1,000 )
+Seat 9: telperion ( $2,890 )
+I_AM_MASHINE posts small blind [$100]
+samothraki posts big blind [$200]
+** Dealing down cards **
+D1emm folds
+Kikakukka folds
+Sopirty raises [$1,000]
+telperion folds
+I_AM_MASHINE folds
+samothraki calls [$800]
+** Dealing flop ** [ Ad, 5c, 2c ]
+** Dealing turn ** [ Jh ]
+** Dealing river ** [ 3h ]
+** Summary **
+samothraki shows [ Qs, Td ]
+Sopirty shows [ Qh, Ts ]
+Sopirty collected [ $1,047.50 ]
+samothraki collected [ $1,047.50 ]
+
+
+#Game No : 436399461
+***** 888poker Hand History for Game 436399461 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:33:14
+Table Embu 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: I_AM_MASHINE ( $2,595 )
+Seat 2: samothraki ( $1,047.50 )
+Seat 4: D1emm ( $1,000 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 7: Sopirty ( $1,047.50 )
+Seat 9: telperion ( $2,890 )
+samothraki posts small blind [$100]
+D1emm folds
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+Sopirty raises [$1,047.50]
+telperion raises [$2,890]
+I_AM_MASHINE folds
+samothraki folds
+Kikakukka folds
+** Dealing flop ** [ 5c, Tc, 2h ]
+** Dealing turn ** [ 9d ]
+** Dealing river ** [ Qh ]
+** Summary **
+Sopirty shows [ 3h, 3s ]
+telperion shows [ Jd, Ah ]
+Sopirty collected [ $2,390 ]
+telperion collected [ $1,842.50 ]
+
+
+#Game No : 436399514
+***** 888poker Hand History for Game 436399514 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:33:58
+Table Embu 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $2,595 )
+Seat 2: samothraki ( $947.50 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 7: Sopirty ( $2,390 )
+Seat 9: telperion ( $1,842.50 )
+Kikakukka posts small blind [$100]
+Sopirty posts big blind [$200]
+** Dealing down cards **
+telperion folds
+I_AM_MASHINE folds
+samothraki folds
+Kikakukka raises [$900]
+Sopirty folds
+** Summary **
+Kikakukka collected [ $400 ]
+
+
+#Game No : 436399534
+***** 888poker Hand History for Game 436399534 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:34:20
+Table Embu 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $2,595 )
+Seat 2: samothraki ( $947.50 )
+Seat 6: Kikakukka ( $1,200 )
+Seat 7: Sopirty ( $2,190 )
+Seat 9: telperion ( $1,842.50 )
+Sopirty posts small blind [$100]
+telperion posts big blind [$200]
+** Dealing down cards **
+I_AM_MASHINE folds
+samothraki raises [$947.50]
+Kikakukka folds
+Sopirty folds
+telperion folds
+** Summary **
+samothraki collected [ $500 ]
+
+
+#Game No : 436399560
+***** 888poker Hand History for Game 436399560 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:34:43
+Table Embu 6 Max (Real Money)
+Seat 7 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $2,595 )
+Seat 2: samothraki ( $1,247.50 )
+Seat 6: Kikakukka ( $1,200 )
+Seat 7: Sopirty ( $2,090 )
+Seat 9: telperion ( $1,642.50 )
+telperion posts small blind [$100]
+I_AM_MASHINE posts big blind [$200]
+** Dealing down cards **
+samothraki folds
+Kikakukka raises [$1,200]
+Sopirty folds
+telperion raises [$1,542.50]
+I_AM_MASHINE folds
+** Dealing flop ** [ 6h, 3c, As ]
+** Dealing turn ** [ Ah ]
+** Dealing river ** [ 6s ]
+** Summary **
+Kikakukka shows [ Jh, Qc ]
+telperion shows [ Qs, Qd ]
+telperion collected [ $2,595 ]
+
+
+#Game No : 436399595
+***** 888poker Hand History for Game 436399595 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:35:19
+Table Embu 6 Max (Real Money)
+Seat 9 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $2,395 )
+Seat 2: samothraki ( $1,247.50 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 7: Sopirty ( $2,090 )
+Seat 9: telperion ( $3,037.50 )
+I_AM_MASHINE posts small blind [$100]
+samothraki posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+Sopirty folds
+telperion raises [$3,037.50]
+I_AM_MASHINE folds
+samothraki folds
+** Summary **
+telperion collected [ $500 ]
+
+
+#Game No : 436399611
+***** 888poker Hand History for Game 436399611 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:35:40
+Table Embu 6 Max (Real Money)
+Seat 1 is the button
+Total number of players : 6
+Seat 1: I_AM_MASHINE ( $2,295 )
+Seat 2: samothraki ( $1,047.50 )
+Seat 4: D1emm ( $1,000 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 7: Sopirty ( $2,090 )
+Seat 9: telperion ( $3,337.50 )
+samothraki posts small blind [$100]
+D1emm posts big blind [$200]
+** Dealing down cards **
+Kikakukka folds
+Sopirty raises [$2,090]
+telperion folds
+I_AM_MASHINE folds
+samothraki folds
+D1emm folds
+** Summary **
+Sopirty did not show his hand
+Sopirty collected [ $500 ]
+
+
+#Game No : 436399624
+***** 888poker Hand History for Game 436399624 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:35:54
+Table Embu 6 Max (Real Money)
+Seat 2 is the button
+Total number of players : 6
+Seat 1: I_AM_MASHINE ( $2,295 )
+Seat 2: samothraki ( $947.50 )
+Seat 4: D1emm ( $1,000 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 7: Sopirty ( $2,390 )
+Seat 9: telperion ( $3,337.50 )
+D1emm posts small blind [$100]
+Kikakukka posts big blind [$200]
+** Dealing down cards **
+Sopirty folds
+telperion folds
+I_AM_MASHINE folds
+samothraki folds
+D1emm raises [$900]
+Kikakukka calls [$800]
+** Dealing flop ** [ As, Ad, 8c ]
+** Dealing turn ** [ 7d ]
+** Dealing river ** [ 5s ]
+** Summary **
+D1emm shows [ Td, Ah ]
+Kikakukka shows [ 4s, Js ]
+D1emm collected [ $1,995 ]
+
+
+#Game No : 436399658
+***** 888poker Hand History for Game 436399658 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:36:23
+Table Embu 6 Max (Real Money)
+Seat 4 is the button
+Total number of players : 6
+Seat 1: I_AM_MASHINE ( $2,295 )
+Seat 2: samothraki ( $947.50 )
+Seat 4: D1emm ( $1,995 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 7: Sopirty ( $2,390 )
+Seat 9: telperion ( $3,337.50 )
+Kikakukka posts small blind [$100]
+Sopirty posts big blind [$200]
+** Dealing down cards **
+telperion folds
+I_AM_MASHINE folds
+samothraki folds
+D1emm raises [$1,995]
+Kikakukka folds
+Sopirty folds
+** Summary **
+D1emm did not show his hand
+D1emm collected [ $500 ]
+
+
+#Game No : 436399704
+***** 888poker Hand History for Game 436399704 *****
+$100/$200 Blinds No Limit Holdem - *** 04 09 2016 23:36:58
+Table Embu 6 Max (Real Money)
+Seat 6 is the button
+Total number of players : 5
+Seat 1: I_AM_MASHINE ( $2,295 )
+Seat 2: samothraki ( $1,000 )
+Seat 4: D1emm ( $2,295 )
+Seat 6: Kikakukka ( $1,000 )
+Seat 7: Sopirty ( $2,190 )
+Sopirty posts small blind [$100]
+** Dealing down cards **
+I_AM_MASHINE folds
+samothraki folds
+D1emm folds
+Kikakukka folds
+** Summary **
+Sopirty collected [ $100 ]
+
+
