@@ -143,6 +143,7 @@
     <Compile Include="Filters\FilterHandGridModel.cs" />
     <Compile Include="Filters\FilterHelpers.cs" />
     <Compile Include="Filters\FilterHoleCardsModel.cs" />
+    <Compile Include="Filters\IFilterModelCollection.cs" />
     <Compile Include="Filters\MainFilterModelManagerService.cs" />
     <Compile Include="Filters\FilterOmahaHandGridModel.cs" />
     <Compile Include="Filters\FilterStandardModel.cs" />

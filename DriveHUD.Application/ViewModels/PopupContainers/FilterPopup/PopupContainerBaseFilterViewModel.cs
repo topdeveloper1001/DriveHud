@@ -64,7 +64,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             InitializeData(filterTupleStartup);
         }
 
-        protected virtual void InitializeData(FilterTuple filterTupleStartup)
+        private void InitializeData(FilterTuple filterTupleStartup)
         {
             if (filterTupleStartup != null)
             {
@@ -83,6 +83,9 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             {
                 this.FilterViewSelectedItem = this.FilterViewCollection.ElementAt(0);
             }
+
+            CurrentlyBuiltFilter = new BuiltFilterModel(FilterService);
+            CurrentlyBuiltFilter.BindFilterSectionCollection();
         }
 
         #endregion

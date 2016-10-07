@@ -38,7 +38,6 @@ namespace DriveHUD.Application.ViewModels
             MinSample = MinSampleDefault;
             EnableBumperSticker = true;
             SelectedColor = DefaultColor;
-            //   BuiltFilter = new BuiltFilterModel(FilterServices.Stickers);
 
             stats = new ObservableCollection<BaseHudRangeStat>()
             {
@@ -154,9 +153,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private ObservableCollection<IFilterModel> filterModelCollection;
+        private IFilterModelCollection filterModelCollection;
 
-        public ObservableCollection<IFilterModel> FilterModelCollection
+        public IFilterModelCollection FilterModelCollection
         {
             get { return filterModelCollection; }
             set

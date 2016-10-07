@@ -8,6 +8,7 @@ using Model.Enums;
 using DriveHUD.Common.Annotations;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using DriveHUD.Common.Linq;
 
 namespace Model.Filters
 {
@@ -25,18 +26,25 @@ namespace Model.Filters
                     new FilterTuple() { Name = "Quick Filters", ModelType = EnumFilterModelType.FilterQuickModel, ViewModelType = EnumViewModelType.FilterQuickViewModel, },
                 });
 
-            this.FilterModelCollection = new ObservableCollection<IFilterModel>(
-                new ObservableCollection<IFilterModel>
-                {
-                    new FilterHoleCardsModel() { Id = Guid.Parse("{064EA6DE-BCD0-40EE-9EB8-31BB1B97873C}"), Name = "Hole Cards" },
-                    new FilterHandValueModel() { Id = Guid.Parse("{A5665500-35E9-40FF-AEFE-27FDD6826437}"), Name = "Hand Value" },
-                    new FilterBoardTextureModel() { Id = Guid.Parse("{6138140D-D950-4AB9-B2B1-00380FAFC179}"), Name = "Board Texture" },
-                    new FilterHandActionModel() { Id = Guid.Parse("{01C28033-1A53-40AD-B10B-B6F85DB4AC92}"), Name = "Hand Action" },
-                    new FilterQuickModel() { Id = Guid.Parse("{D8AE4CE4-7FFE-4D68-B99E-4DCED4EE8812}"), Name = "Quick Filters" },
-                    new FilterDateModel() { Id = Guid.Parse("{059B6D32-14C9-42EC-82DF-5E67AF5B6A9F}"), Name = "Date Filter" },
-                    new FilterOmahaHandGridModel() { Id = Guid.Parse("{ABFBCA7F-8DB7-437F-8DEE-A26C5EADF6B3}"), Name = "Omaha Hand Grid" },
-                    new FilterHandGridModel() { Id = Guid.Parse("{95C3B90B-A7C3-4988-9F39-16CE09399D61}"), Name = "Hand Grid" },
-                });
+            this.FilterModelCollection = GetFilterModelsList();
+        }
+
+        public ObservableCollection<IFilterModel> GetFilterModelsList()
+        {
+            var list = new ObservableCollection<IFilterModel>
+            {
+                new FilterHoleCardsModel() { Id = Guid.Parse("{064EA6DE-BCD0-40EE-9EB8-31BB1B97873C}"), Name = "Hole Cards" },
+                new FilterHandValueModel() { Id = Guid.Parse("{A5665500-35E9-40FF-AEFE-27FDD6826437}"), Name = "Hand Value" },
+                new FilterBoardTextureModel() { Id = Guid.Parse("{6138140D-D950-4AB9-B2B1-00380FAFC179}"), Name = "Board Texture" },
+                new FilterHandActionModel() { Id = Guid.Parse("{01C28033-1A53-40AD-B10B-B6F85DB4AC92}"), Name = "Hand Action" },
+                new FilterQuickModel() { Id = Guid.Parse("{D8AE4CE4-7FFE-4D68-B99E-4DCED4EE8812}"), Name = "Quick Filters" },
+                new FilterOmahaHandGridModel() { Id = Guid.Parse("{ABFBCA7F-8DB7-437F-8DEE-A26C5EADF6B3}"), Name = "Omaha Hand Grid" },
+                new FilterHandGridModel() { Id = Guid.Parse("{95C3B90B-A7C3-4988-9F39-16CE09399D61}"), Name = "Hand Grid" },
+            };
+
+            list.ForEach(x => x.Initialize());
+
+            return list;
         }
 
         private ObservableCollection<IFilterModel> _filterModelCollection;
@@ -88,6 +96,7 @@ namespace Model.Filters
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
+
         #endregion
     }
 }

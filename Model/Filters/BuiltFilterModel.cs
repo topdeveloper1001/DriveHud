@@ -642,6 +642,11 @@ namespace Model.Filters
 
         private void SetDateItems()
         {
+            if (DateModel == null)
+            {
+                return;
+            }
+
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.Date).FirstOrDefault();
             switch (DateModel.DateFilterType)
             {
@@ -673,7 +678,7 @@ namespace Model.Filters
 
         private void RemoveDateItem()
         {
-            DateModel.ResetFilter();
+            DateModel?.ResetFilter();
         }
 
         #endregion

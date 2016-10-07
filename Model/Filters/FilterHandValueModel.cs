@@ -21,7 +21,10 @@ namespace Model.Filters
         {
             this.Name = "Hand Value";
             this.Type = EnumFilterModelType.FilterHandValueModel;
+        }
 
+        public void Initialize()
+        {
             FilterSectionFastFilterInitialize();
             FilterSectionFlopHandValuesInitialize();
             FilterSectionTurnHandValuesInitialize();
@@ -313,7 +316,7 @@ namespace Model.Filters
 
         public void LoadFilter(IFilterModel filter)
         {
-            if(filter is FilterHandValueModel)
+            if (filter is FilterHandValueModel)
             {
                 var filterToLoad = filter as FilterHandValueModel;
 
@@ -686,6 +689,8 @@ namespace Model.Filters
     public class FastFilterItem : FilterTriStateBase
     {
         public static Action OnTriState;
+
+        public FastFilterItem() : this(EnumTriState.Any) { }
 
         public FastFilterItem(EnumTriState param = EnumTriState.Any) : base(param)
         {

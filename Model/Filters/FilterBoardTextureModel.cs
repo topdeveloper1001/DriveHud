@@ -12,9 +12,11 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace Model.Filters
 {
+
     [Serializable]
     public class FilterBoardTextureModel : FilterBaseEntity, IFilterModel
     {
@@ -23,7 +25,10 @@ namespace Model.Filters
         {
             this.Name = "Board Texture";
             this.Type = EnumFilterModelType.FilterBoardTextureModel;
+        }
 
+        public void Initialize()
+        {
             FilterSectionCardItemsCollectionsInitialize();
             FilterSectionFlopBoardTextureCollectionInitialize();
             FilterSectionTurnBoardTextureCollectionInitialize();
@@ -530,6 +535,8 @@ namespace Model.Filters
         }
     }
 
+    [XmlInclude(typeof(HighCardBoardTextureItem))]
+    [XmlInclude(typeof(StraightBoardTextureItem))]
     [Serializable]
     public class BoardTextureItem : FilterBaseEntity
     {
@@ -654,12 +661,14 @@ namespace Model.Filters
             SelectedNumber = NumericList.First();
         }
 
+        [XmlIgnore]
         public Dictionary<EnumEquality, string> EqualityList
         {
             get { return _equalityList; }
             set { _equalityList = value; }
         }
 
+        [XmlIgnore]
         public IEnumerable<int> NumericList
         {
             get { return _numericList; }
@@ -671,8 +680,8 @@ namespace Model.Filters
             get { return _selectedSign; }
             set
             {
-                if (value.Equals(_selectedSign)) return;
-                _selectedSign = value;
+                if (value.Key == _selectedSign.Key) return;
+                _selectedSign = EqualityList.FirstOrDefault(x => x.Key == value.Key);
                 OnPropertyChanged();
 
                 if (OnChanged != null) OnChanged.Invoke(TargetStreet);

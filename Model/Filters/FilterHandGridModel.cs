@@ -34,5 +34,9 @@ namespace Model.Filters
         public void ResetFilter()
         {
         }
+
+        public void Initialize()
+        {
+        }
     }
 }

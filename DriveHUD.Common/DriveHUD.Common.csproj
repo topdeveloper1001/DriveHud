@@ -103,6 +103,7 @@
     <Compile Include="Utils\PredicateBuilder.cs" />
     <Compile Include="Utils\RandomProvider.cs" />
     <Compile Include="Utils\RangeObservableCollection.cs" />
+    <Compile Include="Utils\SerializableTuple.cs" />
     <Compile Include="Utils\SmtpClientHelper.cs" />
     <Compile Include="Utils\Utils.cs" />
     <Compile Include="WinApi\AllocationType.cs" />

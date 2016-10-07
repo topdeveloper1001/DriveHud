@@ -1,6 +1,7 @@
 ﻿using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using DriveHUD.Common;
 using Microsoft.Practices.ServiceLocation;
+using Model.Enums;
 using Model.Filters;
 using Prism.Interactivity.InteractionRequest;
 using ReactiveUI;
@@ -47,9 +48,14 @@ namespace DriveHUD.Application.ViewModels
 
             FilterCommand = ReactiveCommand.Create();
             FilterCommand.Subscribe(x => PopupFiltersRequestExecute(null));
+
+            ButtonFilterModelSectionRemoveCommand = ReactiveCommand.Create();
+            ButtonFilterModelSectionRemoveCommand.Subscribe(x => ButtonFilterModelSectionRemove(x));
         }
 
         #region Commands
+
+        public ReactiveCommand<object> ButtonFilterModelSectionRemoveCommand { get; private set; }
 
         public ReactiveCommand<object> SelectColorCommand { get; private set; }
 
@@ -147,12 +153,28 @@ namespace DriveHUD.Application.ViewModels
             IsColorPickerPopupOpened = true;
         }
 
+        private void ButtonFilterModelSectionRemove(object x)
+        {
+        }
+
         private void PopupFiltersRequestExecute(FilterTuple filterTuple)
         {
-            PopupContainerFiltersViewModelNotification notification = new PopupContainerFiltersViewModelNotification();
+            PopupContainerStickersFiltersViewModelNotification notification = new PopupContainerStickersFiltersViewModelNotification();
+
+            if (SelectedBumperSticker.BuiltFilter == null)
+            {
+                SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(Model.Enums.FilterServices.Stickers);
+            }
+
+            if (SelectedBumperSticker.FilterModelCollection == null || !SelectedBumperSticker.FilterModelCollection.Any())
+            {
+                var service = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Stickers.ToString());
+                SelectedBumperSticker.FilterModelCollection = new IFilterModelCollection(service.GetFilterModelsList());
+            }
 
             notification.Title = "Filters";
             notification.FilterTuple = filterTuple;
+            notification.Sticker = SelectedBumperSticker;
 
             this.PopupFiltersRequest.Raise(notification,
                 returned => { });

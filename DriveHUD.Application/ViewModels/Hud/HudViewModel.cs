@@ -41,6 +41,7 @@ using DriveHUD.Importers.BetOnline;
 using DriveHUD.Entities;
 using DriveHUD.Application.Controls;
 using System.ComponentModel;
+using Model.Filters;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -1211,6 +1212,16 @@ namespace DriveHUD.Application.ViewModels
                 st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
                 st.CurrentStickerType.SelectedColor = st.StickerType.SelectedColor;
                 st.CurrentStickerType.Name = st.StickerType.Name;
+
+                if (st.StickerType.BuiltFilter != null)
+                {
+                    st.CurrentStickerType.BuiltFilter = st.StickerType.BuiltFilter.Clone();
+                }
+
+                if (st.StickerType.FilterModelCollection != null)
+                {
+                    st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection(st.StickerType.FilterModelCollection.Select(x => (IFilterModel)x.Clone()));
+                }
 
                 var statsToMerge = (from currentStat in st.CurrentStickerType.Stats
                                     join stat in st.StickerType.Stats on currentStat.Stat equals stat.Stat into gj
