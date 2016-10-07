@@ -12,7 +12,7 @@
 
 namespace DriveHUD.Importers.Loggers
 {
-    public enum LogServices
+    internal enum LogServices
     {
         Base,        
         BetOnlineTournament     

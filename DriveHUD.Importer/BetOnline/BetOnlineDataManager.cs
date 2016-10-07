@@ -25,7 +25,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public class BetOnlineDataManager : BetOnlineBaseDataManager, IBetOnlineDataManager
+    internal class BetOnlineDataManager : BetOnlineBaseDataManager, IBetOnlineDataManager
     {
         private IPokerClientEncryptedLogger logger;
         private bool isLoggingEnabled;

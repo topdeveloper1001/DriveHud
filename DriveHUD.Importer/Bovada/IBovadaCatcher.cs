@@ -15,7 +15,7 @@ namespace DriveHUD.Importers.Bovada
     /// <summary>
     /// Interface of Bovada catcher
     /// </summary>
-    public interface IBovadaCatcher : IBackgroundProcess
+    internal interface IBovadaCatcher : IBackgroundProcess
     {
     }
 }

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IPokerCatcher.cs" company="Ace Poker Solutions">
+// <copyright file="IPacific888Importer.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -9,12 +9,10 @@
 // provided with the relevant materials.
 // </copyright>
 //----------------------------------------------------------------------
-namespace DriveHUD.Importers
+
+namespace DriveHUD.Importers.Pacific888
 {
-    /// <summary>
-    /// Base catcher interface 
-    /// </summary>
-    internal interface IPokerCatcher : IBackgroundProcess
+    internal interface IPacific888Importer : IAutoImporter
     {
     }
 }

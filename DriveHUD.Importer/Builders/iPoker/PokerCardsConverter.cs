@@ -8,7 +8,7 @@ namespace DriveHUD.Importers.Builders.iPoker
     /// <summary>
     /// iPoker cards converter
     /// </summary>
-    public class PokerCardsConverter : ICardsConverter
+    internal class PokerCardsConverter : ICardsConverter
     {
         public string Convert(string cards)
         {

@@ -16,7 +16,7 @@ using System.IO;
 
 namespace DriveHUD.Importers.Loggers
 {
-    public class FileImporterLogger : IFileImporterLogger
+    internal class FileImporterLogger : IFileImporterLogger
     {
         private const string logFolder = "Logs\\Import";
         private const string logFileNamePattern = "bad-hand-{0}.txt";

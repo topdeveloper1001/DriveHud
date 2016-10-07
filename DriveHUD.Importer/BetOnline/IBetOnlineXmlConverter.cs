@@ -12,7 +12,7 @@
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public interface IBetOnlineXmlConverter
+    internal interface IBetOnlineXmlConverter
     {
         ConvertedResult Convert(string xml);
     }

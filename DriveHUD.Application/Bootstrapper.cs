@@ -84,8 +84,7 @@ namespace DriveHUD.Application
             var tournamentCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
             tournamentCacheService.Initialize();
 
-            // register importers
-            ConfigureImporters();
+            ImporterBootstrapper.ConfigureImporterService();
 
             configViewModel = new ConfigurePostgresqlServerViewModel();
             configViewModel.AfterConnectAction += ShowMainWindow;
@@ -184,39 +183,17 @@ namespace DriveHUD.Application
 
             Container.RegisterType<SingletonStorageModel>(new ContainerControlledLifetimeManager());
 
-            RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
-            RegisterTypeIfMissing(typeof(IBovadaCatcher), typeof(BovadaCatcher), false);
-            RegisterTypeIfMissing(typeof(IBovadaDataManager), typeof(BovadaDataManager), false);
-            RegisterTypeIfMissing(typeof(IBovadaImporter), typeof(BovadaImporter), false);
-            RegisterTypeIfMissing(typeof(IBetOnlineCatcher), typeof(BetOnlineCatcher), false);
-            RegisterTypeIfMissing(typeof(IBetOnlineDataManager), typeof(BetOnlineDataManager), false);
-            RegisterTypeIfMissing(typeof(IBetOnlineImporter), typeof(BetOnlineImporter), false);
-            RegisterTypeIfMissing(typeof(IBetOnlineTableService), typeof(BetOnlineTableService), true);
-            RegisterTypeIfMissing(typeof(IBetOnlineTournamentImporter), typeof(BetOnlineTournamentImporter), false);
-            RegisterTypeIfMissing(typeof(IBetOnlineTournamentManager), typeof(BetOnlineTournamentManager), false);
-            RegisterTypeIfMissing(typeof(IBetOnlineXmlConverter), typeof(BetOnlineXmlToIPokerXmlConverter), false);
-            RegisterTypeIfMissing(typeof(IPokerStarsImporter), typeof(PokerStarsImporter), false);
-            RegisterTypeIfMissing(typeof(ICardsConverter), typeof(PokerCardsConverter), false);
-            RegisterTypeIfMissing(typeof(ITournamentsCacheService), typeof(TournamentsCacheService), true);
             RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);
-            RegisterTypeIfMissing(typeof(IImporterService), typeof(ImporterService), true);
             RegisterTypeIfMissing(typeof(IParser), typeof(BovadaParser), false);
-            RegisterTypeIfMissing(typeof(IPokerClientEncryptedLogger), typeof(PokerClientLogger), false);
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
-            RegisterTypeIfMissing(typeof(IFileImporter), typeof(FileImporter), false);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
-            RegisterTypeIfMissing(typeof(IImporterSessionCacheService), typeof(ImporterSessionCacheService), true);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
             RegisterTypeIfMissing(typeof(IHudElementViewModelCreator), typeof(HudElementViewModelCreator), false);
             RegisterTypeIfMissing(typeof(IHudPanelService), typeof(HudPanelService), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
             RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
-            RegisterTypeIfMissing(typeof(IFileImporterLogger), typeof(FileImporterLogger), false);
-
-            // Loggers
-            Container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
-            Container.RegisterType<IPokerClientEncryptedLogger, BetOnlineTournamentLogger>(LogServices.BetOnlineTournament.ToString());
+            RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
 
             // Filters Save/Load service
             Container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
@@ -272,17 +249,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.SportsBetting.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PokerStarsSiteSettingTableConfigurator>(EnumPokerSites.PokerStars.ToString());
 
-        }
-
-        private void ConfigureImporters()
-        {
-            var importerService = ServiceLocator.Current.GetInstance<IImporterService>();
-            importerService.Register<IBovadaCatcher>();
-            importerService.Register<IBovadaImporter>();
-            importerService.Register<IBetOnlineCatcher>();
-            importerService.Register<IBetOnlineImporter>();
-            importerService.Register<IBetOnlineTournamentImporter>();
-            importerService.Register<IPokerStarsImporter>();
+            ImporterBootstrapper.ConfigureImporter(Container);
         }
     }
 }

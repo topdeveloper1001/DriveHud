@@ -40,7 +40,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Implementation of file importer
     /// </summary>
-    public class FileImporter : IFileImporter
+    internal class FileImporter : IFileImporter
     {
         private readonly string[] importingExtensions = new[] { "txt", "xml" };
 

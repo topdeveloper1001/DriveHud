@@ -20,7 +20,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Importer service
     /// </summary>
-    public class ImporterService : IImporterService
+    internal class ImporterService : IImporterInternalService
     {
         private List<IBackgroundProcess> importers = new List<IBackgroundProcess>();
 

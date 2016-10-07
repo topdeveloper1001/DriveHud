@@ -15,7 +15,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Import hands service
     /// </summary>
-    public interface IAutoImporter : IBackgroundProcess
+    internal interface IAutoImporter : IBackgroundProcess
     {
         /// <summary>
         /// Importer site (PS, iPoker, Bovada, etc.)

@@ -15,7 +15,7 @@ namespace DriveHUD.Importers.BetOnline
     /// <summary>
     /// Interface of betonline importer
     /// </summary>
-    public interface IBetOnlineImporter : IAutoImporter
+    internal interface IBetOnlineImporter : IAutoImporter
     {
     }
 }

@@ -9,7 +9,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Initializing info of poker client data manager
     /// </summary>
-    public class PokerClientDataManagerInfo
+    internal class PokerClientDataManagerInfo
     {
         public IPokerClientEncryptedLogger Logger
         {

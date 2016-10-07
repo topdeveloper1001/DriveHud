@@ -14,7 +14,7 @@ using DriveHUD.Importers;
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public interface IBetOnlineCatcher : IBackgroundProcess
+    internal interface IBetOnlineCatcher : IBackgroundProcess
     {
     }
 }
