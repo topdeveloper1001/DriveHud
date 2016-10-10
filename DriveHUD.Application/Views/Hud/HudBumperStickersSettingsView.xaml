@@ -311,6 +311,52 @@
             </Grid>
         </DataTemplate>
 
+        <Style x:Key="FilterItemsControlStyle" TargetType="{x:Type ItemsControl}">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="Margin" Value="20 0 0 0" />
+            <Setter Property="ItemTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <Border ToolTip="{Binding Path=Name}" Height="30" Width="100" Background="{StaticResource BackgroundBrush3}" Margin="3" Visibility="{Binding Path=IsActive, Mode=TwoWay, Converter={StaticResource BoolToVisibilityConverter}}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="24" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Grid.Column="0" Margin="5" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap">
+                                           <Run Text="{Binding Path=Name}"/>
+                                </TextBlock>
+                                <TextBlock Grid.Column="1" Text="&#215;" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5 0 5 5" FontSize="20">
+                                    <TextBlock.Foreground>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <LinearGradientBrush.GradientStops>
+                                                <GradientStopCollection>
+                                                    <GradientStop Color="#4568b4" />
+                                                    <GradientStop Color="#3f60b6" Offset="1.0" />
+                                                </GradientStopCollection>
+                                            </LinearGradientBrush.GradientStops>
+                                        </LinearGradientBrush>
+                                    </TextBlock.Foreground>
+                                    <TextBlock.InputBindings>
+                                        <MouseBinding MouseAction="LeftClick"
+                                                  Command="{Binding Path=DataContext.ButtonFilterModelSectionRemoveCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
+                                                  CommandParameter="{Binding}"/>
+                                    </TextBlock.InputBindings>
+                                </TextBlock>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <WrapPanel IsItemsHost="True"/>
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
         <Style x:Key="StickerNameTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
             <Setter Property="BorderThickness" Value="0" />
             <Setter Property="FontSize" Value="12px" />
@@ -558,7 +604,9 @@
             </DockPanel>
 
             <ScrollViewer Grid.Column="2"
-                          Grid.Row="1">
+                          Grid.Row="1"
+                          VerticalAlignment="Top"
+                          Height="360">
                 <Grid
                     Background="{StaticResource DarkBackground}"
                     Margin="0,0,0,10">
@@ -692,47 +740,12 @@
 
                     </Grid>
 
-                    <ItemsControl Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" Background="{StaticResource BackgroundBrush1}"
-                        ItemsSource="{Binding Path=SelectedBumperSticker.BuiltFilter.FilterSectionCollection}">
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <Border ToolTip="{Binding Path=Name}" Height="30" Width="100" Background="{StaticResource BackgroundBrush3}" Margin="3" Visibility="{Binding Path=IsActive, Mode=TwoWay, Converter={StaticResource BoolToVisibilityConverter}}">
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="24" />
-                                        </Grid.ColumnDefinitions>
-                                        <TextBlock Grid.Column="0" Margin="5" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" TextWrapping="NoWrap">
-                                           <Run Text="{Binding Path=Name}"/>
-                                        </TextBlock>
-                                        <TextBlock Grid.Column="1" Text="&#215;" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5 0 5 5" FontSize="20">
-                                            <TextBlock.Foreground>
-                                                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
-                                                    <LinearGradientBrush.GradientStops>
-                                                        <GradientStopCollection>
-                                                            <GradientStop Color="#4568b4" />
-                                                            <GradientStop Color="#3f60b6" Offset="1.0" />
-                                                        </GradientStopCollection>
-                                                    </LinearGradientBrush.GradientStops>
-                                                </LinearGradientBrush>
-                                            </TextBlock.Foreground>
-                                            <TextBlock.InputBindings>
-                                                <MouseBinding MouseAction="LeftClick"
-                                                  Command="{Binding Path=DataContext.ButtonFilterModelSectionRemoveCommand, RelativeSource={RelativeSource AncestorType=ItemsControl}}"
-                                                  CommandParameter="{Binding}"/>
-                                            </TextBlock.InputBindings>
-                                        </TextBlock>
-                                    </Grid>
-                                </Border>
-
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                        <ItemsControl.ItemsPanel>
-                            <ItemsPanelTemplate>
-                                <WrapPanel IsItemsHost="True"/>
-                            </ItemsPanelTemplate>
-                        </ItemsControl.ItemsPanel>
-                    </ItemsControl>
+                    <ItemsControl 
+                        Grid.ColumnSpan="3"
+                        Grid.Column="0"
+                        Grid.Row="3"    
+                        Style="{StaticResource FilterItemsControlStyle}"
+                        ItemsSource="{Binding Path=SelectedBumperSticker.BuiltFilter.FilterSectionCollection}"/>
 
                     <TextBlock    
                         Grid.Row="4"
@@ -768,7 +781,7 @@
                         BorderThickness="1"
                         CornerRadius="2"
                         Height="25"     
-                        Margin="0,0,15,0"
+                        Margin="0,0,15,10"
                         VerticalAlignment="Top"
                         >
 
