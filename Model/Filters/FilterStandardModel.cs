@@ -25,6 +25,8 @@ namespace Model.Filters
 
             this.PlayerCountMinAvailable = playerCountMinAvailable;
             this.PlayerCountMaxAvailable = playerCountMaxAvailable;
+
+            FilterSectionPlayersBetweenCollectionInitialize();
         }
 
         public void Initialize()
@@ -34,7 +36,6 @@ namespace Model.Filters
             FilterSectionPreFlopActionCollectionInitialize();
             FilterSectionCurrencyCollectionInitialize();
             FilterSectionTableRingCollectionInitialize();
-            FilterSectionPlayersBetweenCollectionInitialize();
         }
 
         #endregion
@@ -165,8 +166,10 @@ namespace Model.Filters
 
         public void FilterSectionPlayersBetweenCollectionInitialize()
         {
-            this.PlayerCountMinSelectedItem = this.PlayerCountMinAvailable;
-            this.PlayerCountMaxSelectedItem = this.PlayerCountMaxAvailable;
+            _playerCountMinSelectedItem = this.PlayerCountMinAvailable;
+            _playerCountMaxSelectedItem = this.PlayerCountMaxAvailable;
+
+            PlayerCountListSet();
         }
 
         public void UpdateFilterSectionStakeLevelCollection(IList<Gametypes> gameTypes)

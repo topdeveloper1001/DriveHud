@@ -12,6 +12,7 @@ using System.Collections.ObjectModel;
 using DriveHUD.Common.Linq;
 using Model.OmahaHoleCardsAnalyzers;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace Model.Filters
 {
@@ -210,10 +211,11 @@ namespace Model.Filters
     [Serializable]
     public class OnePairHandGridItem : OmahaHandGridItem
     {
-        private SerializableTuple<string, string> _selectedRank;
-        private List<SerializableTuple<string, string>> _ranksList;
-
-        public SerializableTuple<string, string> SelectedRank
+        private Tuple<string, string> _selectedRank;
+        private List<Tuple<string, string>> _ranksList;
+        
+        [XmlIgnore]
+        public Tuple<string, string> SelectedRank
         {
             get { return _selectedRank; }
             set
@@ -227,7 +229,7 @@ namespace Model.Filters
         }
 
         [XmlIgnore]
-        public List<SerializableTuple<string, string>> RanksList
+        public List<Tuple<string, string>> RanksList
         {
             get { return _ranksList; }
             set
@@ -236,13 +238,27 @@ namespace Model.Filters
             }
         }
 
+        [JsonIgnore]
+        public object[] SelectedRankStub
+        {
+            get { return new object[] { SelectedRank.Item1, SelectedRank.Item2 }; }
+            set
+            {
+                var item = value as object[];
+                if (item != null && item.Length == 2)
+                {
+                    SelectedRank = RanksList.FirstOrDefault(x => x.Item1 == (item.FirstOrDefault() as string));
+                }
+            }
+        }
+
         public OnePairHandGridItem()
         {
-            RanksList = new List<SerializableTuple<string, string>>();
-            RanksList.Add(new SerializableTuple<string, string>("Any", string.Empty));
+            RanksList = new List<Tuple<string, string>>();
+            RanksList.Add(new Tuple<string, string>("Any", string.Empty));
             foreach (var item in HandHistories.Objects.Cards.Card.PossibleRanksHighCardFirst.Reverse())
             {
-                RanksList.Add(new SerializableTuple<string, string>(item, item));
+                RanksList.Add(new Tuple<string, string>(item, item));
             }
 
             SelectedRank = RanksList.First();
@@ -257,10 +273,11 @@ namespace Model.Filters
     [Serializable]
     public class WrapsAndRundownsHandGridItem : OmahaHandGridItem
     {
-        private SerializableTuple<string, int> _selectedGap;
-        private List<SerializableTuple<string, int>> _gapsList;
+        private Tuple<string, int> _selectedGap;
+        private List<Tuple<string, int>> _gapsList;
 
-        public SerializableTuple<string, int> SelectedGap
+        [XmlIgnore]
+        public Tuple<string, int> SelectedGap
         {
             get { return _selectedGap; }
             set
@@ -274,21 +291,35 @@ namespace Model.Filters
         }
 
         [XmlIgnore]
-        public List<SerializableTuple<string, int>> GapsList
+        public List<Tuple<string, int>> GapsList
         {
             get { return _gapsList; }
             set { _gapsList = value; }
         }
 
+        [JsonIgnore]
+        public object[] SelectedGapStub
+        {
+            get { return new object[] { SelectedGap.Item1, SelectedGap.Item2 }; }
+            set
+            {
+                var item = value as object[];
+                if (item != null && item.Length == 2)
+                {
+                    SelectedGap = GapsList.FirstOrDefault(x => x.Item1 == (item.FirstOrDefault() as string));
+                }
+            }
+        }
+
         public WrapsAndRundownsHandGridItem()
         {
-            GapsList = new List<SerializableTuple<string, int>>()
+            GapsList = new List<Tuple<string, int>>()
             {
-                new SerializableTuple<string, int>("Zero Gaps", 0),
-                new SerializableTuple<string, int>("One Gap", 1),
-                new SerializableTuple<string, int>("Two Gaps", 2),
-                new SerializableTuple<string, int>("Three Gaps", 3),
-                new SerializableTuple<string, int>("Four Gaps", 4),
+                new Tuple<string, int>("Zero Gaps", 0),
+                new Tuple<string, int>("One Gap", 1),
+                new Tuple<string, int>("Two Gaps", 2),
+                new Tuple<string, int>("Three Gaps", 3),
+                new Tuple<string, int>("Four Gaps", 4),
             };
 
             SelectedGap = GapsList.FirstOrDefault();

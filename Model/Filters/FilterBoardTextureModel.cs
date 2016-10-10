@@ -13,6 +13,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace Model.Filters
 {
@@ -617,7 +618,6 @@ namespace Model.Filters
             get { return _selectedRank; }
             set
             {
-                if (value == _selectedRank) return;
                 _selectedRank = value;
                 OnPropertyChanged();
 
@@ -675,16 +675,30 @@ namespace Model.Filters
             set { _numericList = value; }
         }
 
+        [XmlIgnore]
         public KeyValuePair<EnumEquality, string> SelectedSign
         {
             get { return _selectedSign; }
             set
             {
-                if (value.Key == _selectedSign.Key) return;
                 _selectedSign = EqualityList.FirstOrDefault(x => x.Key == value.Key);
                 OnPropertyChanged();
 
                 if (OnChanged != null) OnChanged.Invoke(TargetStreet);
+            }
+        }
+
+        [JsonIgnore]
+        public object[] SelectedSignStub
+        {
+            get { return new object[] { SelectedSign.Key, SelectedSign.Value }; }
+            set
+            {
+                var item = value as object[];
+                if (item != null && item.Length == 2)
+                {
+                    SelectedSign = EqualityList.FirstOrDefault(x => x.Key == (EnumEquality)(item.FirstOrDefault()));
+                }
             }
         }
 
