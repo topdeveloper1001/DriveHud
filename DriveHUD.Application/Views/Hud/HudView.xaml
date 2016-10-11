@@ -611,10 +611,8 @@
                                      Command="{Binding PlayerTypeStatsCommand}"
                                     />
 
-                                <!--<Button 
-                                    Style="{StaticResource TagButton}" Margin="20,0,0,0" 
-                                    />-->
                                 <Button
+                                    Style="{StaticResource TagButton}"
                                     Command="{Binding BumperStickersCommand}" Margin="20,0,0,0"
                                     />
 

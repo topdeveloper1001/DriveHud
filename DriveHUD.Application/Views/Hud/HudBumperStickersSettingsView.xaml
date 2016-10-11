@@ -534,7 +534,7 @@
                         <DataTemplate>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="45" />
+                                    <ColumnDefinition Width="Auto" MinWidth="30" />
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
 
@@ -542,7 +542,7 @@
                                     Grid.Column="0"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
-                                    Margin="8,0,0,0"
+                                    Margin="2,0,0,0"
                                     BorderThickness="1"
                                     BorderBrush="{Binding SelectedColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
                                     Background="{Binding SelectedColor, Converter={dh:ColorToSolidBrushConverter}}">
