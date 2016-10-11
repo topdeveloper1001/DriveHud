@@ -353,16 +353,6 @@ namespace DriveHUD.Application.ViewModels
                 playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
                 playerHudContent.HudElement.TotalHands = item.TotalHands;
 
-                if (lastHandStatistic != null)
-                {
-                    var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, tableKey);
-
-                    if (stickers.Any())
-                    {
-                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerName, stickers.ToDictionary(x => x, x => lastHandStatistic));
-                    }
-                }
-
                 var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                 playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
                     ? new ObservableCollection<decimal>()
@@ -453,7 +443,17 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
                 }
 
-                hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerName), tableKey);
+                if (lastHandStatistic != null)
+                {
+                    var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, tableKey);
+
+                    if (stickers.Any())
+                    {
+                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerName, stickers.ToDictionary(x => x, x => lastHandStatistic));
+                    }
+
+                    hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerName), tableKey);
+                }
 
                 if (!doNotAddPlayer)
                 {

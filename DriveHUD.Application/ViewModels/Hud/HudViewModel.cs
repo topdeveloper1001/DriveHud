@@ -1211,6 +1211,7 @@ namespace DriveHUD.Application.ViewModels
                 st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
                 st.CurrentStickerType.SelectedColor = st.StickerType.SelectedColor;
                 st.CurrentStickerType.Name = st.StickerType.Name;
+                st.CurrentStickerType.Description = st.StickerType.Description;
 
                 if (st.StickerType.FilterModelCollection != null)
                 {
@@ -1244,6 +1245,8 @@ namespace DriveHUD.Application.ViewModels
             {
                 CurrentLayout.HudBumperStickerTypes.Add(st.AddedPlayerType);
             });
+
+            CurrentLayout.HudBumperStickerTypes.ForEach(x => x.InitializeFilterPredicate());
 
             ClosePopup();
         }

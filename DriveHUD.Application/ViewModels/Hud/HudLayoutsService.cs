@@ -605,7 +605,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return new List<string>();
             }
 
-            return layout.HudBumperStickerTypes?.Where(x => x.FilterPredicate == null || new Entities.Playerstatistic[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any()).Select(x => x.Name).ToList();
+            return layout.HudBumperStickerTypes?.Where(x => x.FilterPredicate != null && new Entities.Playerstatistic[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any()).Select(x => x.Name).ToList();
         }
 
         /// <summary>
@@ -630,7 +630,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 var statistics = new Model.Data.HudIndicators(new Entities.Playerstatistic[] { stickersStatistics[sticker.Name] });
-                if (statistics == null || statistics.TotalHands < sticker.MinSample)
+                if (statistics == null || statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
                 {
                     continue;
                 }

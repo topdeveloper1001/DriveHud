@@ -80,7 +80,7 @@
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
                             <Border
-                                    ToolTip="{Binding Name}"
+                                    ToolTip="{Binding ToolTip}"
                                     Grid.Column="0"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"

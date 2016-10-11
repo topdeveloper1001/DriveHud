@@ -72,6 +72,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref name, value);
                 Label = GenerateLabel(Name);
+                UpdateToolTip();
             }
         }
 
@@ -86,6 +87,29 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref label, value);
+            }
+        }
+
+        private string description;
+
+        public string Description
+        {
+            get { return description; }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref description, value);
+                UpdateToolTip();
+            }
+        }
+
+        private string toolTip;
+
+        public string ToolTip
+        {
+            get { return toolTip; }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref toolTip, value);
             }
         }
 
@@ -208,6 +232,18 @@ namespace DriveHUD.Application.ViewModels
             return string.Join(string.Empty, labels);
         }
 
+        private void UpdateToolTip()
+        {
+            if (string.IsNullOrWhiteSpace(Description))
+            {
+                ToolTip = Name;
+            }
+            else
+            {
+                ToolTip = $"{Name} | {Description}";
+            }
+        }
+
         /// <summary>
         /// Clone object
         /// </summary>
@@ -232,15 +268,12 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            if (BuiltFilter != null && BuiltFilter.FilterSectionCollection.Any(x => x.IsActive))
+            foreach (var filter in FilterModelCollection)
             {
-                foreach (var filter in FilterModelCollection)
+                var filterPredicate = filter.GetFilterPredicate();
+                if (filterPredicate != null)
                 {
-                    var filterPredicate = filter.GetFilterPredicate();
-                    if (filterPredicate != null)
-                    {
-                        FilterPredicate = FilterPredicate.And(filterPredicate);
-                    }
+                    FilterPredicate = FilterPredicate.And(filterPredicate);
                 }
             }
         }

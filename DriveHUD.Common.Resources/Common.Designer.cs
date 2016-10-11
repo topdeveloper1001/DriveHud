@@ -178,6 +178,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string Common_BumperSticker_Description {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit Sticker.
         /// </summary>
         internal static string Common_BumperSticker_EditSticker {

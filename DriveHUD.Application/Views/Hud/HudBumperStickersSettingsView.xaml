@@ -378,7 +378,7 @@
                 </Setter.Value>
             </Setter>
         </Style>
-
+        
         <Style x:Key="BottomCheckBoxStyle" TargetType="{x:Type CheckBox}">
             <Setter Property="SnapsToDevicePixels" Value="true" />
             <Setter Property="Foreground" Value="{StaticResource ActiveTextForeground}" />
@@ -624,6 +624,7 @@
                         <RowDefinition />
                         <RowDefinition />
                         <RowDefinition Height="10" />
+                        <RowDefinition />
                         <RowDefinition Height="Auto" />
                         <RowDefinition Height="18" />
                         <RowDefinition />
@@ -740,15 +741,37 @@
 
                     </Grid>
 
+                    <StackPanel Grid.ColumnSpan="3"
+                                Grid.Column="0"
+                                Grid.Row="3"
+                                Margin="18,0,0,0"
+                                Orientation="Vertical">
+
+                        <TextBlock  
+                            Text="{ResX Key=Common_BumperSticker_Description}"  
+                            Margin="0,0,0,2"
+                            Style="{StaticResource TextBlockStyle}"  
+                            HorizontalAlignment="Left"
+                            />
+
+                        <TextBox      
+                            Style="{StaticResource StickerNameTextBoxStyle}"  
+                            Text="{Binding SelectedBumperSticker.Description, UpdateSourceTrigger=PropertyChanged}"
+                            Margin="2 0 18 2"
+                            MaxLength="100"
+                            Width="Auto"
+                            />
+                    </StackPanel>
+
                     <ItemsControl 
                         Grid.ColumnSpan="3"
                         Grid.Column="0"
-                        Grid.Row="3"    
+                        Grid.Row="4"    
                         Style="{StaticResource FilterItemsControlStyle}"
                         ItemsSource="{Binding Path=SelectedBumperSticker.BuiltFilter.FilterSectionCollection}"/>
 
                     <TextBlock    
-                        Grid.Row="4"
+                        Grid.Row="5"
                         Grid.Column="0"
                         Margin="15,0,0,0"
                         Text="{ResX Key=Common_HudPlayerType_MinSample}"                          
@@ -756,7 +779,7 @@
                         />
 
                     <telerik:RadMaskedNumericInput    
-                        Grid.Row="5"
+                        Grid.Row="6"
                         Grid.Column="0"
                         AutoFillNumberGroupSeparators="False"
                         Style="{StaticResource NumericTextBoxStyle}"
@@ -775,7 +798,7 @@
                         />
 
                     <Border
-                        Grid.Row="5"
+                        Grid.Row="6"
                         Grid.Column="3"                    
                         BorderBrush="{StaticResource ButtonBackground}"
                         BorderThickness="1"
