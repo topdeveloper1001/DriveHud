@@ -20,17 +20,24 @@ namespace Model.Filters
 
         public void ReadXml(XmlReader reader)
         {
-            reader.ReadStartElement("FilterModelCollection");
-            while (reader.IsStartElement("IFilterModel"))
+            if (!reader.IsEmptyElement)
             {
-                Type type = Type.GetType(reader.GetAttribute("AssemblyQualifiedName"));
-                XmlSerializer serial = new XmlSerializer(type);
+                reader.ReadStartElement("FilterModelCollection");
+                while (reader.IsStartElement("IFilterModel"))
+                {
+                    Type type = Type.GetType(reader.GetAttribute("AssemblyQualifiedName"));
+                    XmlSerializer serial = new XmlSerializer(type);
 
-                reader.ReadStartElement("IFilterModel");
-                this.Add((IFilterModel)serial.Deserialize(reader));
+                    reader.ReadStartElement("IFilterModel");
+                    this.Add((IFilterModel)serial.Deserialize(reader));
+                    reader.ReadEndElement();
+                }
                 reader.ReadEndElement();
             }
-            reader.ReadEndElement();
+            else
+            {
+                reader.Skip();
+            }
         }
 
         public void WriteXml(XmlWriter writer)

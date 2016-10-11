@@ -147,7 +147,6 @@ namespace DriveHUD.Application.ViewModels
 
         private BuiltFilterModel builtFilter;
 
-        [XmlIgnore]
         public BuiltFilterModel BuiltFilter
         {
             get { return builtFilter; }
