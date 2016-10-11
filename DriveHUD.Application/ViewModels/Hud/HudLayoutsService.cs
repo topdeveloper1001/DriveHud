@@ -1070,6 +1070,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                      Name = "One and Done",
                      SelectedColor = Colors.OrangeRed,
+                     Description = "C-bets at a high% on the flop, but then rarely double barrels.",
                      StatsToMerge =
                          new ObservableCollection<BaseHudRangeStat>()
                          {
@@ -1081,6 +1082,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                      Name = "Pre-Flop Reg",
                      SelectedColor = Colors.Orange,
+                     Description = "Plays an aggressive pre-flop game, but doesn’t play well post flop.",
                      StatsToMerge =
                          new ObservableCollection<BaseHudRangeStat>()
                          {
@@ -1094,6 +1096,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     Name = "Barrelling",
                     SelectedColor = Colors.Yellow,
+                    Description = "Double and triple barrels a high percentage of the time.",
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
@@ -1109,6 +1112,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     Name = "3 For Free",
                     SelectedColor = Colors.GreenYellow,
+                    Description = "3-Bets too much, and folds to a 3-bet too often.",
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
@@ -1120,6 +1124,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     Name = "Way Too Early",
                     SelectedColor = Colors.Green,
+                    Description = "Open raises to wide of a range in early pre-flop positions.",
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
@@ -1130,6 +1135,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     Name = "Sticky Fish",
                     SelectedColor = Colors.Blue,
+                    Description = "Fishy player who can’t fold post flop if they get any piece of the board.",
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
@@ -1142,6 +1148,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     Name = "Yummy Fish",
                     SelectedColor = Colors.DarkBlue,
+                    Description = "Plays too many hands pre-flop and isn’t aggressive post flop.",
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
