@@ -1593,6 +1593,8 @@
         <HudBumperStickerType>
           <Name>One and Done</Name>
           <Label>OD</Label>
+          <Description>C-bets at a high% on the flop, but then rarely double barrels.</Description>
+          <ToolTip>One and Done | C-bets at a high% on the flop, but then rarely double barrels.</ToolTip>
           <EnableBumperSticker>true</EnableBumperSticker>
           <MinSample>15</MinSample>
           <SelectedColor>
@@ -1662,10 +1664,13 @@
               <Stat>UO_PFR_EP</Stat>
             </BaseHudRangeStat>
           </Stats>
+          <FilterModelCollection />
         </HudBumperStickerType>
         <HudBumperStickerType>
           <Name>Pre-Flop Reg</Name>
           <Label>PFR</Label>
+          <Description>Plays an aggressive pre-flop game, but doesn’t play well post flop.</Description>
+          <ToolTip>Pre-Flop Reg | Plays an aggressive pre-flop game, but doesn’t play well post flop.</ToolTip>
           <EnableBumperSticker>true</EnableBumperSticker>
           <MinSample>15</MinSample>
           <SelectedColor>
@@ -1735,10 +1740,13 @@
               <Stat>UO_PFR_EP</Stat>
             </BaseHudRangeStat>
           </Stats>
+          <FilterModelCollection />
         </HudBumperStickerType>
         <HudBumperStickerType>
           <Name>Barrelling</Name>
           <Label>B</Label>
+          <Description>Double and triple barrels a high percentage of the time.</Description>
+          <ToolTip>Barrelling | Double and triple barrels a high percentage of the time.</ToolTip>
           <EnableBumperSticker>true</EnableBumperSticker>
           <MinSample>15</MinSample>
           <SelectedColor>
@@ -1808,10 +1816,13 @@
               <Stat>UO_PFR_EP</Stat>
             </BaseHudRangeStat>
           </Stats>
+          <FilterModelCollection />
         </HudBumperStickerType>
         <HudBumperStickerType>
           <Name>3 For Free</Name>
           <Label>3FF</Label>
+          <Description>3-Bets too much, and folds to a 3-bet too often.</Description>
+          <ToolTip>3 For Free | 3-Bets too much, and folds to a 3-bet too often.</ToolTip>
           <EnableBumperSticker>true</EnableBumperSticker>
           <MinSample>15</MinSample>
           <SelectedColor>
@@ -1881,10 +1892,13 @@
               <Stat>UO_PFR_EP</Stat>
             </BaseHudRangeStat>
           </Stats>
+          <FilterModelCollection />
         </HudBumperStickerType>
         <HudBumperStickerType>
           <Name>Way Too Early</Name>
           <Label>WTE</Label>
+          <Description>Open raises to wide of a range in early pre-flop positions.</Description>
+          <ToolTip>Way Too Early | Open raises to wide of a range in early pre-flop positions.</ToolTip>
           <EnableBumperSticker>true</EnableBumperSticker>
           <MinSample>15</MinSample>
           <SelectedColor>
@@ -1954,10 +1968,13 @@
               <Stat>UO_PFR_EP</Stat>
             </BaseHudRangeStat>
           </Stats>
+          <FilterModelCollection />
         </HudBumperStickerType>
         <HudBumperStickerType>
           <Name>Sticky Fish</Name>
           <Label>SF</Label>
+          <Description>Fishy player who can’t fold post flop if they get any piece of the board.</Description>
+          <ToolTip>Sticky Fish | Fishy player who can’t fold post flop if they get any piece of the board.</ToolTip>
           <EnableBumperSticker>true</EnableBumperSticker>
           <MinSample>15</MinSample>
           <SelectedColor>
@@ -2027,10 +2044,13 @@
               <Stat>UO_PFR_EP</Stat>
             </BaseHudRangeStat>
           </Stats>
+          <FilterModelCollection />
         </HudBumperStickerType>
         <HudBumperStickerType>
           <Name>Yummy Fish</Name>
           <Label>YF</Label>
+          <Description>Plays too many hands pre-flop and isn’t aggressive post flop.</Description>
+          <ToolTip>Yummy Fish | Plays too many hands pre-flop and isn’t aggressive post flop.</ToolTip>
           <EnableBumperSticker>true</EnableBumperSticker>
           <MinSample>15</MinSample>
           <SelectedColor>
@@ -2100,6 +2120,7 @@
               <Stat>UO_PFR_EP</Stat>
             </BaseHudRangeStat>
           </Stats>
+          <FilterModelCollection />
         </HudBumperStickerType>
       </HudBumperStickerTypes>
       <HudPositions>
