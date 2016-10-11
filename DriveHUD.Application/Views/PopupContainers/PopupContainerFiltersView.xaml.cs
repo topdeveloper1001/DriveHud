@@ -31,7 +31,7 @@ namespace DriveHUD.Application.Views.PopupContainers
 
         private void Apply_Click(object sender, RoutedEventArgs e)
         {
-            (DataContext as PopupContainerFiltersViewModel).Apply_CommandClick.Execute(null);
+            (DataContext as PopupContainerBaseFilterViewModel).Apply_CommandClick.Execute(null);
         }
 
         private void OK_Click(object sender, RoutedEventArgs e)

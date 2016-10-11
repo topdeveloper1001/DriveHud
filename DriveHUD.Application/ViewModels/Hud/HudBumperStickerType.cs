@@ -147,6 +147,7 @@ namespace DriveHUD.Application.ViewModels
 
         private BuiltFilterModel builtFilter;
 
+        [XmlIgnore]
         public BuiltFilterModel BuiltFilter
         {
             get { return builtFilter; }
@@ -216,6 +217,10 @@ namespace DriveHUD.Application.ViewModels
         {
             var clone = (HudBumperStickerType)MemberwiseClone();
             clone.Stats = new ObservableCollection<BaseHudRangeStat>(clone.Stats.Select(x => (BaseHudRangeStat)x.Clone()));
+            clone.FilterModelCollection = FilterModelCollection != null && FilterModelCollection.Any()
+                ? new IFilterModelCollection(FilterModelCollection?.Select(x => (IFilterModel)x.Clone()))
+                : new IFilterModelCollection();
+
             return clone;
         }
 

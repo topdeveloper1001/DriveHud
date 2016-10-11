@@ -19,6 +19,14 @@ namespace DriveHUD.Application.ViewModels
     {
         private readonly HudBumperStickersSettingsViewModelInfo viewModelInfo;
 
+        private IFilterModelManagerService Service
+        {
+            get
+            {
+                return ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Stickers.ToString());
+            }
+        }
+
         public HudBumperStickersSettingsViewModel(HudBumperStickersSettingsViewModelInfo viewModelInfo) : base()
         {
             Check.ArgumentNotNull(() => viewModelInfo);
@@ -32,8 +40,8 @@ namespace DriveHUD.Application.ViewModels
         {
             PopupFiltersRequest = new InteractionRequest<PopupContainerFiltersViewModelNotification>();
 
-            bumperStickers = new ObservableCollection<HudBumperStickerType>(viewModelInfo.BumperStickers);
-            selectedBumperSticker = bumperStickers.FirstOrDefault();
+            BumperStickers = new ObservableCollection<HudBumperStickerType>(viewModelInfo.BumperStickers);
+            SelectedBumperSticker = bumperStickers.FirstOrDefault();
         }
 
         protected override void InitializeCommands()
@@ -108,6 +116,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref selectedBumperSticker, value);
+                InitializeSelectedBumperSticker();
             }
         }
 
@@ -155,30 +164,47 @@ namespace DriveHUD.Application.ViewModels
 
         private void ButtonFilterModelSectionRemove(object x)
         {
+            if (SelectedBumperSticker == null || SelectedBumperSticker.BuiltFilter == null)
+            {
+                return;
+            }
+
+            if (x is FilterSectionItem)
+            {
+                SelectedBumperSticker.BuiltFilter.RemoveBuiltFilterItem(x as FilterSectionItem);
+                FilterHelpers.CopyFilterModelCollection(Service.FilterModelCollection, SelectedBumperSticker?.FilterModelCollection);
+            }
+        }
+
+        private void InitializeSelectedBumperSticker()
+        {
+            SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(Model.Enums.FilterServices.Stickers);
+            SelectedBumperSticker.BuiltFilter.BindFilterSectionCollection();
+
+            if (SelectedBumperSticker.FilterModelCollection == null || !SelectedBumperSticker.FilterModelCollection.Any())
+            {
+                SelectedBumperSticker.FilterModelCollection = new IFilterModelCollection(Service.GetFilterModelsList());
+            }
+
+            FilterHelpers.CopyFilterModelCollection(SelectedBumperSticker?.FilterModelCollection, Service.FilterModelCollection);
         }
 
         private void PopupFiltersRequestExecute(FilterTuple filterTuple)
         {
             PopupContainerStickersFiltersViewModelNotification notification = new PopupContainerStickersFiltersViewModelNotification();
 
-            if (SelectedBumperSticker.BuiltFilter == null)
-            {
-                SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(Model.Enums.FilterServices.Stickers);
-            }
-
-            if (SelectedBumperSticker.FilterModelCollection == null || !SelectedBumperSticker.FilterModelCollection.Any())
-            {
-                var service = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Stickers.ToString());
-                SelectedBumperSticker.FilterModelCollection = new IFilterModelCollection(service.GetFilterModelsList());
-            }
-
             notification.Title = "Filters";
             notification.FilterTuple = filterTuple;
             notification.Sticker = SelectedBumperSticker;
 
             this.PopupFiltersRequest.Raise(notification,
-                returned => { });
+                returned =>
+                {
+                    SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(Model.Enums.FilterServices.Stickers);
+                    SelectedBumperSticker.BuiltFilter.BindFilterSectionCollection();
+                });
         }
+
 
         #endregion
     }

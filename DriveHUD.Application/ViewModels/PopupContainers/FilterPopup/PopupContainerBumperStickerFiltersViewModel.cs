@@ -71,21 +71,9 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             }
 
             Sticker.BuiltFilter = CurrentlyBuiltFilter.Clone();
-            CopyFilterModelCollection(FilterModelManager.FilterModelCollection, Sticker.FilterModelCollection);
+            FilterHelpers.CopyFilterModelCollection(FilterModelManager.FilterModelCollection, Sticker.FilterModelCollection);
 
             Sticker.FilterPredicate = GetCurrentFilter();
-        }
-
-        private void CopyFilterModelCollection(ObservableCollection<IFilterModel> from, ObservableCollection<IFilterModel> to)
-        {
-            foreach (var filter in to)
-            {
-                var filterToCopy = from.FirstOrDefault(x => x.GetType() == filter.GetType());
-                if (filterToCopy != null)
-                {
-                    filter.LoadFilter(filterToCopy);
-                }
-            }
         }
 
         #endregion
@@ -102,7 +90,6 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             }
         }
 
-
         public override INotification Notification
         {
             get { return base.Notification; }
@@ -112,7 +99,6 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                 if (notification != null && notification.Sticker != null)
                 {
                     this.Sticker = notification.Sticker;
-                    CopyFilterModelCollection(Sticker.FilterModelCollection, FilterModelManager.FilterModelCollection);
                 }
 
                 base.Notification = value;

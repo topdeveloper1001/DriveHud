@@ -1211,16 +1211,14 @@ namespace DriveHUD.Application.ViewModels
                 st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
                 st.CurrentStickerType.SelectedColor = st.StickerType.SelectedColor;
                 st.CurrentStickerType.Name = st.StickerType.Name;
-                st.CurrentStickerType.FilterModelCollection = st.StickerType.FilterModelCollection;
-
-                if (st.StickerType.BuiltFilter != null)
-                {
-                    st.CurrentStickerType.BuiltFilter = st.StickerType.BuiltFilter.Clone();
-                }
 
                 if (st.StickerType.FilterModelCollection != null)
                 {
                     st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection(st.StickerType.FilterModelCollection.Select(x => (IFilterModel)x.Clone()));
+                }
+                else
+                {
+                    st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection();
                 }
 
                 var statsToMerge = (from currentStat in st.CurrentStickerType.Stats
