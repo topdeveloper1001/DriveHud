@@ -73,7 +73,7 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             Sticker.BuiltFilter = CurrentlyBuiltFilter.Clone();
             CopyFilterModelCollection(FilterModelManager.FilterModelCollection, Sticker.FilterModelCollection);
 
-            // var currentFilter = GetCurrentFilter();
+            Sticker.FilterPredicate = GetCurrentFilter();
         }
 
         private void CopyFilterModelCollection(ObservableCollection<IFilterModel> from, ObservableCollection<IFilterModel> to)

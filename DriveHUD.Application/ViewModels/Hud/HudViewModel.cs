@@ -604,7 +604,6 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                /* temporary disable for bet online */
                 if (HudTableViewModelCurrent.TableLayout.Site == EnumPokerSites.BetOnline)
                 {
                     if (value)
@@ -1212,6 +1211,7 @@ namespace DriveHUD.Application.ViewModels
                 st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
                 st.CurrentStickerType.SelectedColor = st.StickerType.SelectedColor;
                 st.CurrentStickerType.Name = st.StickerType.Name;
+                st.CurrentStickerType.FilterModelCollection = st.StickerType.FilterModelCollection;
 
                 if (st.StickerType.BuiltFilter != null)
                 {

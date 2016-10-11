@@ -11,6 +11,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Media;
 using System.Xml.Serialization;
+using DriveHUD.Entities;
+using System.Linq.Expressions;
+using DriveHUD.Common.Utils;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -164,6 +167,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        [XmlIgnore]
+        public Expression<Func<Playerstatistic, bool>> FilterPredicate { get; internal set; } = null;
+
         /// <summary>
         /// Property is used to initialize massive arrays of HudPlayerType with defaults stat list without creation empty stats
         /// Only stats which needs to be initialized with data must be set 
@@ -213,5 +219,26 @@ namespace DriveHUD.Application.ViewModels
             return clone;
         }
 
+        internal void InitializeFilterPredicate()
+        {
+            FilterPredicate = PredicateBuilder.True<Playerstatistic>();
+
+            if (FilterModelCollection == null)
+            {
+                return;
+            }
+
+            if (BuiltFilter != null && BuiltFilter.FilterSectionCollection.Any(x => x.IsActive))
+            {
+                foreach (var filter in FilterModelCollection)
+                {
+                    var filterPredicate = filter.GetFilterPredicate();
+                    if (filterPredicate != null)
+                    {
+                        FilterPredicate = FilterPredicate.And(filterPredicate);
+                    }
+                }
+            }
+        }
     }
 }

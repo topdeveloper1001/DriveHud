@@ -145,6 +145,14 @@ namespace DriveHUD.Application.ViewModels.Hud
                                 x.Image = GetImageLink(x.ImageAlias);
                             }
                         });
+
+                        hudLayouts.Layouts.Where(x => x.HudPlayerTypes != null).SelectMany(x => x.HudBumperStickerTypes).ForEach(x =>
+                          {
+                              if (x != null)
+                              {
+                                  x.InitializeFilterPredicate();
+                              }
+                          });
                     }
                 }
             }
@@ -589,27 +597,48 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudElements">Hud elements</param>
         /// <param name="layoutId">Layout</param>
-        public void SetStickers(IEnumerable<HudElementViewModel> hudElements, int layoutId)
+        public IList<string> GetValidStickers(Entities.Playerstatistic statistic, int layoutId)
         {
             var layout = Layouts.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.IsDefault);
+            if (layout == null || statistic == null)
+            {
+                return new List<string>();
+            }
 
-            if (layout == null)
+            return layout.HudBumperStickerTypes?.Where(x => x.FilterPredicate == null || new Entities.Playerstatistic[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any()).Select(x => x.Name).ToList();
+        }
+
+        /// <summary>
+        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// </summary>
+        /// <param name="hudElements">Hud elements</param>
+        /// <param name="layoutId">Layout</param>
+        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Entities.Playerstatistic> stickersStatistics, int layoutId)
+        {
+            hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
+            var layout = Layouts.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.IsDefault);
+            if (layout == null || stickersStatistics == null)
             {
                 return;
             }
 
-            var hudElementsTotalHands = (from hudElement in hudElements
-                                         from stat in hudElement.StatInfoCollection
-                                         where stat.Stat == Stat.TotalHands
-                                         select new { HudElement = hudElement, TotalHands = stat.CurrentValue }).ToDictionary(x => x.HudElement, x => x.TotalHands);
-
-            foreach (var item in hudElements)
+            foreach (var sticker in layout.HudBumperStickerTypes.Where(x => x.EnableBumperSticker))
             {
-                item.Stickers = new ObservableCollection<HudBumperStickerType>(
-                    layout.HudBumperStickerTypes
-                    .Where(x => (hudElementsTotalHands[item] >= x.MinSample) 
-                                && x.EnableBumperSticker 
-                                && IsInRange(item, x.Stats)));
+                if (!stickersStatistics.ContainsKey(sticker.Name))
+                {
+                    continue;
+                }
+
+                var statistics = new Model.Data.HudIndicators(new Entities.Playerstatistic[] { stickersStatistics[sticker.Name] });
+                if (statistics == null || statistics.TotalHands < sticker.MinSample)
+                {
+                    continue;
+                }
+
+                if (IsInRange(hudElement, sticker.Stats, statistics))
+                {
+                    hudElement.Stickers.Add(sticker);
+                }
             }
         }
 
@@ -685,7 +714,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             return new Tuple<bool, decimal, decimal>(matchRatios.All(x => x.InRange) && matchRatios.Any(x => x.IsStatDefined), matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
         }
 
-        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats)
+        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats, Model.Data.HudIndicators source)
         {
             if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
                 return false;
@@ -700,10 +729,15 @@ namespace DriveHUD.Application.ViewModels.Hud
                 if (stat == null)
                     return false;
 
+                var currentStat = new StatInfo();
+                currentStat.PropertyName = stat.PropertyName;
+                currentStat.AssignStatInfoValues(source);
+
                 var high = rangeStat.High.HasValue ? rangeStat.High.Value : 100;
                 var low = rangeStat.Low.HasValue ? rangeStat.Low.Value : -1;
 
-                if (stat.CurrentValue < low || stat.CurrentValue > high)
+
+                if (currentStat.CurrentValue < low || currentStat.CurrentValue > high)
                 {
                     return false;
                 }
@@ -777,6 +811,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                 importedHudLayout.HudPlayerTypes.ForEach(x =>
                 {
                     x.Image = GetImageLink(x.ImageAlias);
+                });
+
+                importedHudLayout.HudBumperStickerTypes.ForEach(x =>
+                {
+                    x.InitializeFilterPredicate();
                 });
 
                 var counter = 1;
