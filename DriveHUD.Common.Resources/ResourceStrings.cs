@@ -31,6 +31,7 @@ namespace DriveHUD.Common.Resources
         public static string TwoPlustTwoResourceString = "Enum_HandExport_TwoPlusTwo";
         public static string CardsChatResourceString = "Enum_HandExport_CardsChat";
         public static string PokerStrategyString = "Enum_HandExport_PokerStrategy";
+        public static string RawHandHistoryString = "Enum_HandExport_RawHandHistory";
         public static string ExportHandResourceString = "Main_ContextMenu_ExportHand";
 
         public static string MakeNote = "Main_ContextMenu_MakeNote";

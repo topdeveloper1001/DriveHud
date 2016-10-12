@@ -304,6 +304,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Raw Hand History.
+        /// </summary>
+        internal static string Enum_HandExport_RawHandHistory {
+            get {
+                return ResourceManager.GetString("Enum_HandExport_RawHandHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to 2+2.
         /// </summary>
         internal static string Enum_HandExport_TwoPlusTwo {

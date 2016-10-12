@@ -524,4 +524,7 @@
   <data name="Enum_Stat_RecentAgg" xml:space="preserve">
     <value>Recent AGG%</value>
   </data>
+  <data name="Enum_HandExport_RawHandHistory" xml:space="preserve">
+    <value>Raw Hand History</value>
+  </data>
 </root>
