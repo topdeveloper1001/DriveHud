@@ -178,6 +178,9 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeSelectedBumperSticker()
         {
+            if (SelectedBumperSticker == null)
+                return;
+
             SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(Model.Enums.FilterServices.Stickers);
             SelectedBumperSticker.BuiltFilter.BindFilterSectionCollection();
 
