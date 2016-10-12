@@ -68,7 +68,9 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void Initialize()
         {
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<PreferredSeatChangedEvent>().Subscribe(OnPreferredSeatChanged);
+            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<PreferredSeatChangedEvent>().Subscribe(OnPreferredSeatChanged);
+            eventAggregator.GetEvent<UpdateHudEvent>().Subscribe(OnUpdateHudRaised);
 
             hudLayoutsSevice = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
@@ -1263,6 +1265,19 @@ namespace DriveHUD.Application.ViewModels
         internal void RefreshHudTable()
         {
             this.RaisePropertyChanged(nameof(CurrentTableLayout));
+        }
+
+
+        private void OnUpdateHudRaised(UpdateHudEventArgs obj)
+        {
+            if (obj == null)
+                return;
+
+            HudTableViewModelCurrent.HudElements.ForEach(x =>
+            {
+                x.Height = obj.Height;
+                x.Width = obj.Width;
+            });
         }
 
         #endregion
