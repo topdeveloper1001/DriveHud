@@ -68,7 +68,9 @@ namespace DriveHUD.Application.ViewModels
         /// </summary>
         private void Initialize()
         {
-            ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<PreferredSeatChangedEvent>().Subscribe(OnPreferredSeatChanged);
+            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            eventAggregator.GetEvent<PreferredSeatChangedEvent>().Subscribe(OnPreferredSeatChanged);
+            eventAggregator.GetEvent<UpdateHudEvent>().Subscribe(OnUpdateHudRaised);
 
             hudLayoutsSevice = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
@@ -420,8 +422,16 @@ namespace DriveHUD.Application.ViewModels
                                                     if (PreviewHudElementViewModel != null)
                                                     {
                                                         PreviewHudElementViewModel.StatInfoCollection.Clear();
-                                                        PreviewHudElementViewModel.StatInfoCollection.AddRange(hudElements);
+                                                        PreviewHudElementViewModel.StatInfoCollection.AddRange(hudElements.Select(stat => stat.Clone()));
                                                         PreviewHudElementViewModel.UpdateMainStats();
+
+                                                        Random r = new Random();
+
+                                                        foreach (var stat in PreviewHudElementViewModel.StatInfoCollection)
+                                                        {
+                                                            stat.CurrentValue = r.Next(0, 100);
+                                                            stat.Caption = string.Format(stat.Format, stat.CurrentValue);
+                                                        }
                                                     }
 
                                                     if (!isUpdatingLayout)
@@ -1058,6 +1068,10 @@ namespace DriveHUD.Application.ViewModels
             foreach (var mergeItem in statInfoToMerge)
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
+
+                var previewStat = PreviewHudElementViewModel.StatInfoCollection.FirstOrDefault(x => x.Stat == mergeItem.NewItem.Stat);
+                previewStat?.Merge(mergeItem.NewItem);
+                previewStat?.UpdateColor();
             }
 
             ClosePopup();
@@ -1251,6 +1265,19 @@ namespace DriveHUD.Application.ViewModels
         internal void RefreshHudTable()
         {
             this.RaisePropertyChanged(nameof(CurrentTableLayout));
+        }
+
+
+        private void OnUpdateHudRaised(UpdateHudEventArgs obj)
+        {
+            if (obj == null)
+                return;
+
+            HudTableViewModelCurrent.HudElements.ForEach(x =>
+            {
+                x.Height = obj.Height;
+                x.Width = obj.Width;
+            });
         }
 
         #endregion

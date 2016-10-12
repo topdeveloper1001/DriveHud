@@ -616,6 +616,11 @@ namespace DriveHUD.ViewModels
             SettingsAppearanceValueRangeCollection = statInfo.SettingsAppearanceValueRangeCollection;
         }
 
+        public void UpdateColor()
+        {
+            ValueSetColor(this.CurrentValue);
+        }
+
         #endregion
 
         #region Events
