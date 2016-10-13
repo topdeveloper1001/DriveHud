@@ -21,7 +21,10 @@ namespace Model.Filters
         {
             this.Name = "Quick Filters";
             this.Type = EnumFilterModelType.FilterQuickModel;
+        }
 
+        public void Initialize()
+        {
             FilterSectionQuickFilterInitialize();
         }
 
@@ -217,6 +220,8 @@ namespace Model.Filters
     public class QuickFilterItem : FilterTriStateBase
     {
         public static Action OnTriState;
+
+        public QuickFilterItem() : this(EnumTriState.Any) { }
 
         public QuickFilterItem(EnumTriState param = EnumTriState.Any) : base(param)
         {

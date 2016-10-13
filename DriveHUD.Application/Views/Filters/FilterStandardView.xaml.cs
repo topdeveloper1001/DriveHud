@@ -17,16 +17,17 @@ using DriveHUD.Application.ViewModels;
 using Telerik.Windows.Diagrams.Core;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels.Filters;
+using Model.Filters;
 
 namespace DriveHUD.Application.Views
 {
     public partial class FilterStandardView : UserControl, IFilterView
     {
-        public FilterStandardView()
+        public FilterStandardView(IFilterModelManagerService service)
         {
             InitializeComponent();
 
-            this.DataContext = new FilterStandardViewModel();
+            this.DataContext = new FilterStandardViewModel(service);
             Configurator.ConfigureTable(diagram, viewModel, 6);
         }
 

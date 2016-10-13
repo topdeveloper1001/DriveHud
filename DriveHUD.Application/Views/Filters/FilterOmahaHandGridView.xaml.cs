@@ -1,5 +1,6 @@
 ﻿using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Filters;
+using Model.Filters;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,11 +23,11 @@ namespace DriveHUD.Application.Views
     /// </summary>
     public partial class FilterOmahaHandGridView : UserControl, IFilterView
     {
-        public FilterOmahaHandGridView()
+        public FilterOmahaHandGridView(IFilterModelManagerService service)
         {
             InitializeComponent();
 
-            this.DataContext = new FilterOmahaHandGridViewModel();
+            this.DataContext = new FilterOmahaHandGridViewModel(service);
         }
 
         public IFilterViewModel ViewModel

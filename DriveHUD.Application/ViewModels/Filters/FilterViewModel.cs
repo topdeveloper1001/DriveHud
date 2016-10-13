@@ -12,14 +12,12 @@ namespace DriveHUD.Application.ViewModels
 {
     public abstract class FilterViewModel<T> : BaseViewModel, IFilterViewModel where T : FilterBaseEntity, IFilterModel
     {
-        protected IFilterModelManagerService FilterModelManager
-        {
-            get { return ServiceLocator.Current.GetInstance<IFilterModelManagerService>(); }
-        }
+        protected IFilterModelManagerService FilterModelManager { get; private set; }
 
-        internal FilterViewModel(EnumViewModelType viewModelType)
+        internal FilterViewModel(EnumViewModelType viewModelType, IFilterModelManagerService service)
         {
             this.Type = viewModelType;
+            this.FilterModelManager = service;
 
             InitializeFilterModel();
         }

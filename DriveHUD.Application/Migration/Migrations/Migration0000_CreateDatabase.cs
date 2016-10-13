@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DriveHUD.DBMigrator.Migrations
+namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(0)]
     public class Migration0000_CreateDatabase : Migration
@@ -22,7 +22,7 @@ namespace DriveHUD.DBMigrator.Migrations
         // use sql syntax to avoid compatibility issues
         public override void Up()
         {
-            LogProvider.Log.Info("Running migration #0");
+            LogProvider.Log.Info("Prepearing migration #0");
 
             #region HandNotes
             if (!Schema.Table(handNotesTable).Exists())
@@ -108,7 +108,7 @@ namespace DriveHUD.DBMigrator.Migrations
             } 
             #endregion
 
-            LogProvider.Log.Info("Migration #0 executed");
+            LogProvider.Log.Info("Migration #0 start executing");
         }
 
         public override void Down()

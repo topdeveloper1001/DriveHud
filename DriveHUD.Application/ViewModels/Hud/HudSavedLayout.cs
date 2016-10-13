@@ -60,6 +60,8 @@ namespace DriveHUD.Application.ViewModels
 
         public List<HudPlayerType> HudPlayerTypes { get; set; }
 
+        public List<HudBumperStickerType> HudBumperStickerTypes { get; set; }
+
         public List<HudSavedPosition> HudPositions { get; set; }
 
         public HudSavedLayout Clone()
@@ -78,6 +80,7 @@ namespace DriveHUD.Application.ViewModels
                 return x.Clone();
             }));
             clone.HudPlayerTypes = new List<HudPlayerType>(HudPlayerTypes.Select(x => x.Clone()));
+            clone.HudBumperStickerTypes = new List<HudBumperStickerType>(HudBumperStickerTypes.Select(x => x.Clone()));
             clone.HudPositions = new List<HudSavedPosition>(HudPositions.Select(x => x.Clone()));
 
             return clone;

@@ -21,8 +21,13 @@ namespace Model.Filters
             this.Name = "Hole Cards";
             this.Type = EnumFilterModelType.FilterHoleCards;
 
+        }
+
+        public void Initialize()
+        {
             FilterSectionHoleCardsInitialize();
         }
+
         #endregion
 
         #region Methods

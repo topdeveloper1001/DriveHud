@@ -44,10 +44,10 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        internal FilterHandGridViewModel() : base(Model.Enums.EnumViewModelType.FilterHandGridViewModel)
+        internal FilterHandGridViewModel(IFilterModelManagerService service) : base(Model.Enums.EnumViewModelType.FilterHandGridViewModel, service)
         {
-            FilterHoleCards = new FilterHoleCardsView();
-            FilterOmahaHandGrid = new FilterOmahaHandGridView();
+            FilterHoleCards = new FilterHoleCardsView(service);
+            FilterOmahaHandGrid = new FilterOmahaHandGridView(service);
 
             SwitchView();
         }

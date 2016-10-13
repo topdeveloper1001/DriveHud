@@ -11,6 +11,8 @@ using Model.Enums;
 using System.Collections.ObjectModel;
 using DriveHUD.Common.Linq;
 using Model.OmahaHoleCardsAnalyzers;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace Model.Filters
 {
@@ -22,7 +24,10 @@ namespace Model.Filters
         {
             this.Name = "Omaha Hand Grid";
             this.Type = EnumFilterModelType.FilterOmahaHandGrid;
+        }
 
+        public void Initialize()
+        {
             FilterSectionHandGridCollectionInitialize();
         }
         #endregion
@@ -87,6 +92,7 @@ namespace Model.Filters
                 ResetHandGridCollectionTo(filterToLoad.HandGridCollection);
             }
         }
+
         #endregion
 
         #region Reset Filters
@@ -156,6 +162,9 @@ namespace Model.Filters
         #endregion
     }
 
+    [XmlInclude(typeof(HoleCardStructureHandGridItem))]
+    [XmlInclude(typeof(WrapsAndRundownsHandGridItem))]
+    [XmlInclude(typeof(OnePairHandGridItem))]
     [Serializable]
     public class OmahaHandGridItem : FilterBaseEntity
     {
@@ -204,26 +213,42 @@ namespace Model.Filters
     {
         private Tuple<string, string> _selectedRank;
         private List<Tuple<string, string>> _ranksList;
-
+        
+        [XmlIgnore]
         public Tuple<string, string> SelectedRank
         {
             get { return _selectedRank; }
             set
             {
-                if (value == _selectedRank) return;
-                _selectedRank = value;
+                if (value?.Item1 == _selectedRank?.Item1) return;
+                _selectedRank = RanksList.FirstOrDefault(x => x.Item1 == value.Item1);
                 OnPropertyChanged();
 
                 if (OnChanged != null) OnChanged.Invoke();
             }
         }
 
+        [XmlIgnore]
         public List<Tuple<string, string>> RanksList
         {
             get { return _ranksList; }
             set
             {
                 _ranksList = value;
+            }
+        }
+
+        [JsonIgnore]
+        public object[] SelectedRankStub
+        {
+            get { return new object[] { SelectedRank.Item1, SelectedRank.Item2 }; }
+            set
+            {
+                var item = value as object[];
+                if (item != null && item.Length == 2)
+                {
+                    SelectedRank = RanksList.FirstOrDefault(x => x.Item1 == (item.FirstOrDefault() as string));
+                }
             }
         }
 
@@ -251,23 +276,39 @@ namespace Model.Filters
         private Tuple<string, int> _selectedGap;
         private List<Tuple<string, int>> _gapsList;
 
+        [XmlIgnore]
         public Tuple<string, int> SelectedGap
         {
             get { return _selectedGap; }
             set
             {
-                if (value == _selectedGap) return;
-                _selectedGap = value;
+                if (value?.Item1 == _selectedGap?.Item1) return;
+                _selectedGap = GapsList.FirstOrDefault(x => x.Item1 == value.Item1);
                 OnPropertyChanged();
 
                 if (OnChanged != null) OnChanged.Invoke();
             }
         }
 
+        [XmlIgnore]
         public List<Tuple<string, int>> GapsList
         {
             get { return _gapsList; }
             set { _gapsList = value; }
+        }
+
+        [JsonIgnore]
+        public object[] SelectedGapStub
+        {
+            get { return new object[] { SelectedGap.Item1, SelectedGap.Item2 }; }
+            set
+            {
+                var item = value as object[];
+                if (item != null && item.Length == 2)
+                {
+                    SelectedGap = GapsList.FirstOrDefault(x => x.Item1 == (item.FirstOrDefault() as string));
+                }
+            }
         }
 
         public WrapsAndRundownsHandGridItem()

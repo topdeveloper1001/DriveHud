@@ -26,7 +26,7 @@ namespace DriveHUD.Application.ViewModels
         public ICommand SelectClubsCommand { get; set; }
         #endregion
 
-        internal FilterBoardTextureViewModel() : base(EnumViewModelType.FilterBoardTextureViewModel)
+        internal FilterBoardTextureViewModel(IFilterModelManagerService service) : base(EnumViewModelType.FilterBoardTextureViewModel, service)
         {
             Initialize();
         }

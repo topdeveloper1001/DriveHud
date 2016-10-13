@@ -41,6 +41,7 @@ using DriveHUD.Importers.BetOnline;
 using DriveHUD.Entities;
 using DriveHUD.Application.Controls;
 using System.ComponentModel;
+using Model.Filters;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -230,6 +231,8 @@ namespace DriveHUD.Application.ViewModels
             // Make a collection of StatInfo
             StatInfoCollection = new ReactiveList<StatInfo>
             {
+                new StatInfo { IsListed = false, GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.UO_PFR_EP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.UO_PFR_EP)},
+
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.VPIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.VPIP) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PFR, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFR)},
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.S3Bet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBet) },
@@ -379,6 +382,9 @@ namespace DriveHUD.Application.ViewModels
 
             PlayerTypeStatsCommand = ReactiveCommand.Create();
             PlayerTypeStatsCommand.Subscribe(x => OpenPlayerTypeStats(x as StatInfo));
+
+            BumperStickersCommand = ReactiveCommand.Create();
+            BumperStickersCommand.Subscribe(x => OpenBumperStickers(x as StatInfo));
 
             SelectHudCommand = ReactiveCommand.Create();
             SelectHudCommand.Subscribe(x => HudType = (HudType == HudType.Plain) ? HudType.Default : HudType.Plain);
@@ -530,6 +536,22 @@ namespace DriveHUD.Application.ViewModels
                 collectionViewSource.SortDescriptions.Add(new System.ComponentModel.SortDescription("GroupName", System.ComponentModel.ListSortDirection.Ascending));
                 collectionViewSource.SortDescriptions.Add(new System.ComponentModel.SortDescription("Caption", System.ComponentModel.ListSortDirection.Ascending));
 
+                collectionViewSource.Filter = (item) =>
+                {
+                    var stat = item as StatInfo;
+                    if (stat == null)
+                        return false;
+
+                    return stat.IsListed && !stat.IsDuplicateSelected;
+                };
+
+                var statFiltering = collectionViewSource as ICollectionViewLiveShaping;
+                if (statFiltering.CanChangeLiveFiltering)
+                {
+                    statFiltering.LiveFilteringProperties.Add(nameof(StatInfo.IsDuplicateSelected));
+                    statFiltering.IsLiveFiltering = true;
+                }
+
                 StatInfoCollectionView = collectionViewSource;
             }
         }
@@ -611,7 +633,6 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                /* temporary disable for bet online */
                 if (HudTableViewModelCurrent.TableLayout.Site == EnumPokerSites.BetOnline)
                 {
                     if (value)
@@ -788,6 +809,8 @@ namespace DriveHUD.Application.ViewModels
         public ReactiveCommand<object> SettingsStatInfoCommand { get; private set; }
 
         public ReactiveCommand<object> PlayerTypeStatsCommand { get; private set; }
+
+        public ReactiveCommand<object> BumperStickersCommand { get; private set; }
 
         public ReactiveCommand<object> SelectHudCommand { get; private set; }
 
@@ -1120,6 +1143,29 @@ namespace DriveHUD.Application.ViewModels
         }
 
         /// <summary>
+        /// Open pop-up and initialize bumper stickers
+        /// </summary>
+        /// <param name="selectedStatInfo"></param>
+        private void OpenBumperStickers(StatInfo selectedStatInfo)
+        {
+            if (StatInfoObserveCollection.Count == 0 ||
+               CurrentLayout == null || CurrentLayout.HudPlayerTypes == null)
+            {
+                return;
+            }
+
+            var hudBumperStickersSettingsViewModelInfo = new HudBumperStickersSettingsViewModelInfo
+            {
+                BumperStickers = CurrentLayout.HudBumperStickerTypes.Select(x => x.Clone()),
+                Save = BumperStickerSave
+            };
+
+            var hudBumperStickersViewModel = new HudBumperStickersSettingsViewModel(hudBumperStickersSettingsViewModelInfo);
+
+            OpenPopup(hudBumperStickersViewModel);
+        }
+
+        /// <summary>
         /// Save player type data from pop-up
         /// </summary>
         private void PlayerTypeSave()
@@ -1168,6 +1214,72 @@ namespace DriveHUD.Application.ViewModels
             {
                 CurrentLayout.HudPlayerTypes.Add(pt.AddedPlayerType);
             });
+
+            ClosePopup();
+        }
+
+        /// <summary>
+        /// Save bumper sticker data from pop-up
+        /// </summary>
+        private void BumperStickerSave()
+        {
+            var hudStickersSettingsViewModel = PopupViewModel as HudBumperStickersSettingsViewModel;
+
+            if (hudStickersSettingsViewModel == null)
+            {
+                ClosePopup();
+                return;
+            }
+
+            // merge data to current layout (currently we do not expect new stats or deleted stats)
+            var stickersTypesToMerge = (from currentStickerType in CurrentLayout.HudBumperStickerTypes
+                                        join stickerType in hudStickersSettingsViewModel.BumperStickers on currentStickerType.Name equals stickerType.Name into stgj
+                                        from stgrouped in stgj.DefaultIfEmpty()
+                                        where stgrouped != null
+                                        select new { CurrentStickerType = currentStickerType, StickerType = stgrouped }).ToArray();
+
+            stickersTypesToMerge.ForEach(st =>
+            {
+                st.CurrentStickerType.MinSample = st.StickerType.MinSample;
+                st.CurrentStickerType.EnableBumperSticker = st.StickerType.EnableBumperSticker;
+                st.CurrentStickerType.SelectedColor = st.StickerType.SelectedColor;
+                st.CurrentStickerType.Name = st.StickerType.Name;
+                st.CurrentStickerType.Description = st.StickerType.Description;
+
+                if (st.StickerType.FilterModelCollection != null)
+                {
+                    st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection(st.StickerType.FilterModelCollection.Select(x => (IFilterModel)x.Clone()));
+                }
+                else
+                {
+                    st.CurrentStickerType.FilterModelCollection = new IFilterModelCollection();
+                }
+
+                var statsToMerge = (from currentStat in st.CurrentStickerType.Stats
+                                    join stat in st.StickerType.Stats on currentStat.Stat equals stat.Stat into gj
+                                    from grouped in gj.DefaultIfEmpty()
+                                    where grouped != null
+                                    select new { CurrentStat = currentStat, Stat = grouped }).ToArray();
+
+                statsToMerge.ForEach(s =>
+                {
+                    s.CurrentStat.Low = s.Stat.Low;
+                    s.CurrentStat.High = s.Stat.High;
+                });
+            });
+
+            var stickerTypesToAdd = (from stickerType in hudStickersSettingsViewModel.BumperStickers
+                                     join currentStickerType in CurrentLayout.HudBumperStickerTypes on stickerType.Name equals currentStickerType.Name into stgj
+                                     from stgrouped in stgj.DefaultIfEmpty()
+                                     where stgrouped == null
+                                     select new { AddedPlayerType = stickerType }).ToArray();
+
+            stickerTypesToAdd.ForEach(st =>
+            {
+                CurrentLayout.HudBumperStickerTypes.Add(st.AddedPlayerType);
+            });
+
+            CurrentLayout.HudBumperStickerTypes.ForEach(x => x.InitializeFilterPredicate());
 
             ClosePopup();
         }
@@ -1264,7 +1376,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        // temporary 
         private void DisablePreferredSeatBetOnline()
         {
             App.Current.Dispatcher.BeginInvoke((Action)delegate
