@@ -606,7 +606,7 @@
             <ScrollViewer Grid.Column="2"
                           Grid.Row="1"
                           VerticalAlignment="Top"
-                          Height="360">
+                          Height="435">
                 <Grid
                     Background="{StaticResource DarkBackground}"
                     Margin="0,0,0,10">

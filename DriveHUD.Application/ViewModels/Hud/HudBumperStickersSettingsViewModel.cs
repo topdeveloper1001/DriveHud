@@ -55,7 +55,7 @@ namespace DriveHUD.Application.ViewModels
             PickerSelectColorCommand.Subscribe(x => IsColorPickerPopupOpened = false);
 
             FilterCommand = ReactiveCommand.Create();
-            FilterCommand.Subscribe(x => PopupFiltersRequestExecute(null));
+            FilterCommand.Subscribe(x => PopupFiltersRequestExecute(Service.FilterTupleCollection.FirstOrDefault(f => f.ModelType == EnumFilterModelType.FilterHandGridModel)));
 
             ButtonFilterModelSectionRemoveCommand = ReactiveCommand.Create();
             ButtonFilterModelSectionRemoveCommand.Subscribe(x => ButtonFilterModelSectionRemove(x));
@@ -178,6 +178,9 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeSelectedBumperSticker()
         {
+            if (SelectedBumperSticker == null)
+                return;
+
             SelectedBumperSticker.BuiltFilter = new BuiltFilterModel(Model.Enums.FilterServices.Stickers);
             SelectedBumperSticker.BuiltFilter.BindFilterSectionCollection();
 
