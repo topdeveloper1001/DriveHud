@@ -557,4 +557,7 @@
   <data name="Enum_Stat_RaiseCBet" xml:space="preserve">
     <value>Raise C-Bet%</value>
   </data>
+  <data name="Enum_HudViewType_Plain" xml:space="preserve">
+    <value>Plain HUD</value>
+  </data>
 </root>

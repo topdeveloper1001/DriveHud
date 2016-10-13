@@ -91,6 +91,7 @@ namespace DriveHUD.Application.ViewModels
 
             hudViewTypes = new ObservableCollection<HudViewType>(Enum.GetValues(typeof(HudViewType)).Cast<HudViewType>());
             hudViewType = HudViewType.Vertical;
+            lastDHHudViewType = HudViewType.Vertical;
 
             PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100 };
 
@@ -387,7 +388,21 @@ namespace DriveHUD.Application.ViewModels
             BumperStickersCommand.Subscribe(x => OpenBumperStickers(x as StatInfo));
 
             SelectHudCommand = ReactiveCommand.Create();
-            SelectHudCommand.Subscribe(x => HudType = (HudType == HudType.Plain) ? HudType.Default : HudType.Plain);
+            SelectHudCommand.Subscribe(x => SwitchHudType());
+        }
+
+        private void SwitchHudType()
+        {
+            if (HudType == HudType.Plain)
+            {
+                HudType = HudType.Default;
+                HudViewType = lastDHHudViewType;
+            }
+            else
+            {
+                HudType = HudType.Plain;
+                HudViewType = HudViewType.Plain;
+            }
         }
 
         private void InitializeObservables()
@@ -410,6 +425,16 @@ namespace DriveHUD.Application.ViewModels
             this.ObservableForProperty(x => x.HudViewType).Select(x => true)
                 .Subscribe(x =>
                 {
+                    if (HudViewType == HudViewType.Plain)
+                    {
+                        HudType = HudType.Plain;
+                        return;
+                    }
+                    else
+                    {
+                        HudType = HudType.Default;
+                    }
+
                     var isVertical = HudViewType == HudViewType.Vertical;
 
                     foreach (var hudTableViewModel in hudTableViewModelDictionary.Values)
@@ -679,6 +704,8 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        private HudViewType lastDHHudViewType;
+
         private HudViewType hudViewType;
 
         public HudViewType HudViewType
@@ -689,6 +716,10 @@ namespace DriveHUD.Application.ViewModels
             }
             set
             {
+                if (value == HudViewType.Plain)
+                {
+                    lastDHHudViewType = HudViewType;
+                }
                 this.RaiseAndSetIfChanged(ref hudViewType, value);
             }
         }

@@ -376,6 +376,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Plain HUD.
+        /// </summary>
+        internal static string Enum_HudViewType_Plain {
+            get {
+                return ResourceManager.GetString("Enum_HudViewType_Plain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to DriveHUD VERT.
         /// </summary>
         internal static string Enum_HudViewType_Vertical {
