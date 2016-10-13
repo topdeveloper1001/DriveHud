@@ -642,6 +642,25 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Save bumper stickers for layout specified
+        /// </summary>
+        public void SaveBumperStickers(HudSavedLayout hudLayout)
+        {
+            if (hudLayout == null || baseHudLayouts == null)
+            {
+                return;
+            }
+
+            var layout = baseHudLayouts.Layouts.FirstOrDefault(x => x.LayoutId == hudLayout.LayoutId && x.Name == hudLayout.Name);
+
+            if (layout != null)
+            {
+                layout.HudBumperStickerTypes = new List<HudBumperStickerType>(hudLayout.HudBumperStickerTypes.Select(x => x.Clone()));
+                InternalSave();
+            }
+        }
+
         private class MatchRatio
         {
             public HudPlayerType PlayerType { get; set; }

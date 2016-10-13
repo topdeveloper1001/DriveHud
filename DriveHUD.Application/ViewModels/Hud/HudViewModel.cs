@@ -1281,6 +1281,8 @@ namespace DriveHUD.Application.ViewModels
 
             CurrentLayout.HudBumperStickerTypes.ForEach(x => x.InitializeFilterPredicate());
 
+            hudLayoutsSevice.SaveBumperStickers(CurrentLayout);
+
             ClosePopup();
         }
 

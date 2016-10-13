@@ -113,6 +113,11 @@ namespace DriveHUD.Application.ViewModels
         void SetStickers(HudElementViewModel hudElement, IDictionary<string, Entities.Playerstatistic> stickersStatistics, int layoutId);
 
         /// <summary>
+        /// Save bumper stickers for layout specified
+        /// </summary>
+        void SaveBumperStickers(HudSavedLayout hudLayout);
+
+        /// <summary>
         /// Get path to image directory
         /// </summary>
         /// <returns>Path to image directory</returns>
