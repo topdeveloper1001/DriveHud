@@ -520,6 +520,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C-Bet 4-Bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_CBetInFourBetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CBetInFourBetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C-Bet in 3-Bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_CBetInThreeBetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CBetInThreeBetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C-Bet IP%.
         /// </summary>
         internal static string Enum_Stat_CBetIP {
@@ -709,6 +727,51 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to C-Bet Monotone Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FlopCBetMonotone {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopCBetMonotone", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C-Bet MW Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FlopCBetMW {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopCBetMW", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C-Bet Rag Flop%.
+        /// </summary>
+        internal static string Enum_Stat_FlopCBetRag {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopCBetRag", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C-Bet vs 1 Opp%.
+        /// </summary>
+        internal static string Enum_Stat_FlopCBetVsOneOpp {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopCBetVsOneOpp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to C-Bet vs 2 Opp%.
+        /// </summary>
+        internal static string Enum_Stat_FlopCBetVsTwoOpp {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FlopCBetVsTwoOpp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Flop Check-Raise%.
         /// </summary>
         internal static string Enum_Stat_FlopCheckRaise {
@@ -741,6 +804,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_FoldToCBet {
             get {
                 return ResourceManager.GetString("Enum_Stat_FoldToCBet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to C-Bet 4-Bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToCBetFromFourBetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToCBetFromFourBetPot", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fold to C-Bet 3-Bet Pot%.
+        /// </summary>
+        internal static string Enum_Stat_FoldToCBetFromThreeBetPot {
+            get {
+                return ResourceManager.GetString("Enum_Stat_FoldToCBetFromThreeBetPot", resourceCulture);
             }
         }
         
@@ -804,6 +885,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_PFR {
             get {
                 return ResourceManager.GetString("Enum_Stat_PFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Raise C-Bet%.
+        /// </summary>
+        internal static string Enum_Stat_RaiseCBet {
+            get {
+                return ResourceManager.GetString("Enum_Stat_RaiseCBet", resourceCulture);
             }
         }
         

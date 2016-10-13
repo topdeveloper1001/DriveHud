@@ -89,7 +89,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.DidThreeBetIp, Source.Couldthreebet);
+                return GetPercentage(Source.DidThreeBetIp, Source.CouldThreeBetIp);
             }
         }
 
@@ -97,7 +97,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.DidThreeBetOop, Source.Couldthreebet);
+                return GetPercentage(Source.DidThreeBetOop, Source.CouldThreeBetOop);
             }
         }
 
@@ -138,6 +138,78 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.Turncontinuationbetmade, Source.Turncontinuationbetpossible);
+            }
+        }
+
+        public virtual decimal FlopCBetInThreeBetPot
+        {
+            get
+            {
+                return GetPercentage(Source.FlopContinuationBetInThreeBetPotMade, Source.FlopContinuationBetInThreeBetPotPossible);
+            }
+        }
+
+        public virtual decimal FlopCBetInFourBetPot
+        {
+            get
+            {
+                return GetPercentage(Source.FlopContinuationBetInFourBetPotMade, Source.FlopContinuationBetInFourBetPotPossible);
+            }
+        }
+
+        public virtual decimal FlopCBetVsOneOpp
+        {
+            get
+            {
+                return GetPercentage(Source.FlopContinuationBetVsOneOpponentMade, Source.FlopContinuationBetVsOneOpponentPossible);
+            }
+        }
+
+        public virtual decimal FlopCBetVsTwoOpp
+        {
+            get
+            {
+                return GetPercentage(Source.FlopContinuationBetVsTwoOpponentsMade, Source.FlopContinuationBetVsTwoOpponentsPossible);
+            }
+        }
+
+        public virtual decimal FlopCBetMW
+        {
+            get
+            {
+                return GetPercentage(Source.MultiWayFlopContinuationBetMade, Source.MultiWayFlopContinuationBetPossible);
+            }
+        }
+
+        public virtual decimal FlopCBetMonotone
+        {
+            get
+            {
+                return GetPercentage(Source.FlopContinuationBetMonotonePotMade, Source.FlopContinuationBetMonotonePotPossible);
+            }
+        }
+
+        public virtual decimal FlopCBetRag
+        {
+            get
+            {
+                return GetPercentage(Source.FlopContinuationBetRagPotMade, Source.FlopContinuationBetRagPotPossible);
+            }
+        }
+
+        public virtual decimal FoldFlopCBetFromThreeBetPot
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToFlopContinuationBetFromThreeBetPot, Source.FacingFlopContinuationBetFromThreeBetPot);
+            }
+        }
+
+        public virtual decimal FoldFlopCBetFromFourBetPot
+        {
+            get
+            {
+                return GetPercentage(Source.FoldedToFlopContinuationBetFromFourBetPot, Source.FacingFlopContinuationBetFromFourBetPot);
             }
         }
 
@@ -327,6 +399,14 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal RaiseCBet
+        {
+            get
+            {
+                return GetPercentage(Source.Raisedflopcontinuationbet, Source.Facingflopcontinuationbet);
+            }
+        }
+
         public virtual decimal FoldToFourBet
         {
             get
@@ -452,7 +532,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Flopcontinuationipbetmade, Source.Flopcontinuationbetpossible);
+                return GetPercentage(Source.Flopcontinuationipbetmade, Source.Flopcontinuationipbetpossible);
             }
         }
 
@@ -460,7 +540,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.Flopcontinuationoopbetmade, Source.Flopcontinuationbetpossible);
+                return GetPercentage(Source.Flopcontinuationoopbetmade, Source.Flopcontinuationoopbetpossible);
             }
         }
 
