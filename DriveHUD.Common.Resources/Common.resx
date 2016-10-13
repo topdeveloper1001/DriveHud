@@ -630,7 +630,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>Enable Sticker</value>
   </data>
   <data name="Common_BumperSticker_StickerType" xml:space="preserve">
-    <value>Sticker Type</value>
+    <value>Bumper Sticker Type</value>
   </data>
   <data name="Common_BumperSticker_AddFilter" xml:space="preserve">
     <value>Add Filter</value>

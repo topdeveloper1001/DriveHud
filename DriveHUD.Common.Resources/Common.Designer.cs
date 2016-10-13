@@ -214,7 +214,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Sticker Type.
+        ///   Looks up a localized string similar to Bumper Sticker Type.
         /// </summary>
         internal static string Common_BumperSticker_StickerType {
             get {
