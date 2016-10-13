@@ -10,7 +10,7 @@ namespace DriveHUD.Application.ViewModels
 {
     public class FilterOmahaHandGridViewModel : FilterViewModel<FilterOmahaHandGridModel>
     {
-        internal FilterOmahaHandGridViewModel() : base(EnumViewModelType.FilterOmahaHandGridViewModel)
+        internal FilterOmahaHandGridViewModel(IFilterModelManagerService service) : base(EnumViewModelType.FilterOmahaHandGridViewModel, service)
         {
         }
     }

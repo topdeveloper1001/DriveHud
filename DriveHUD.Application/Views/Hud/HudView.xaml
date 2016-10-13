@@ -106,6 +106,10 @@
             <hud:HudPlayerSettingsView />
         </DataTemplate>
 
+        <DataTemplate DataType="{x:Type vm:HudBumperStickersSettingsViewModel}">
+            <hud:HudBumperStickersSettingsView />
+        </DataTemplate>
+
         <DrawingBrush x:Key="ColorButtonBackground" Stretch="Uniform">
             <DrawingBrush.Drawing>
                 <DrawingGroup>
@@ -607,9 +611,10 @@
                                      Command="{Binding PlayerTypeStatsCommand}"
                                     />
 
-                                <!--<Button 
-                                    Style="{StaticResource TagButton}" Margin="20,0,0,0" 
-                                    />-->
+                                <Button
+                                    Style="{StaticResource TagButton}"
+                                    Command="{Binding BumperStickersCommand}" Margin="20,0,0,0"
+                                    />
 
                             </StackPanel>
                         </Grid>

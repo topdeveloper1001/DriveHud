@@ -35,5 +35,30 @@ namespace DriveHud.Tests.UnitTests
             statInfo.Caption = string.Format(statInfo.Format, value);
             statInfo.CurrentValue = value;
         }
+
+        public static void SetStatValue(this HudElementViewModel hudElement, Stat stat, string propertyName, decimal value)
+        {
+            if (hudElement == null)
+            {
+                return;
+            }
+
+            var statInfo = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == stat);
+
+            if (statInfo == null)
+            {
+                return;
+            }
+
+            statInfo.Caption = string.Format(statInfo.Format, value);
+            statInfo.CurrentValue = value;
+
+            if (string.IsNullOrWhiteSpace(propertyName))
+            {
+                return;
+            }
+
+            statInfo.PropertyName = propertyName;
+        }
     }
 }

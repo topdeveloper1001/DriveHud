@@ -11,7 +11,7 @@ namespace DriveHUD.Application.ViewModels
 {
     public class FilterDateViewModel : FilterViewModel<FilterDateModel>
     {
-        internal FilterDateViewModel() : base(EnumViewModelType.FilteDateViewModel)
+        internal FilterDateViewModel(IFilterModelManagerService service) : base(EnumViewModelType.FilteDateViewModel, service)
         {
         }
     }

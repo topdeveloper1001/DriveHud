@@ -13,7 +13,7 @@ namespace DriveHUD.Application.ViewModels
 {
     public class FilterHandValueViewModel : FilterViewModel<FilterHandValueModel>
     {
-        internal FilterHandValueViewModel() : base(EnumViewModelType.FilterHandValueViewModel)
+        internal FilterHandValueViewModel(IFilterModelManagerService service) : base(EnumViewModelType.FilterHandValueViewModel, service)
         {
             InitializeBindings();
         }

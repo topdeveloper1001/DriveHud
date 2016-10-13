@@ -852,7 +852,11 @@
                     <system:Boolean>True</system:Boolean>
                 </infra:PopupTelerikWindowAction.CenterOverAssociatedObject>
                 <infra:PopupTelerikWindowAction.WindowContent>
-                    <vp:PopupContainerFiltersView/>
+                    <vp:PopupContainerFiltersView>
+                        <vp:PopupContainerFiltersView.DataContext>
+                            <vmp:PopupContainerFiltersViewModel />
+                        </vp:PopupContainerFiltersView.DataContext>
+                    </vp:PopupContainerFiltersView>
                 </infra:PopupTelerikWindowAction.WindowContent>
             </infra:PopupTelerikWindowAction>
         </prism:InteractionRequestTrigger>

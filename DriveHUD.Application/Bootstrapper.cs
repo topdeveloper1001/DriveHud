@@ -14,6 +14,7 @@ using DHCRegistration;
 using DHHRegistration;
 using DHORegistration;
 using DriveHUD.Application.Licensing;
+using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.Security;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels;
@@ -213,6 +214,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
             RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
             RegisterTypeIfMissing(typeof(IFileImporterLogger), typeof(FileImporterLogger), false);
+            RegisterTypeIfMissing(typeof(IMigrationService), typeof(MigrationService.MigrationService), false);
 
             // Loggers
             Container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
@@ -220,7 +222,8 @@ namespace DriveHUD.Application
 
             // Filters Save/Load service
             Container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
-            Container.RegisterType<IFilterModelManagerService, FilterModelManagerService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IFilterModelManagerService, MainFilterModelManagerService>(FilterServices.Main.ToString(), new ContainerControlledLifetimeManager());
+            Container.RegisterType<IFilterModelManagerService, StickersFilterModelManagerService>(FilterServices.Stickers.ToString(), new ContainerControlledLifetimeManager());
 
             // Sites configurations
             Container.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Bovada.ToString());

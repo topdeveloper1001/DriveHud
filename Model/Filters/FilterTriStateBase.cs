@@ -12,6 +12,8 @@ namespace Model.Filters
     [Serializable]
     public class FilterTriStateBase : FilterBaseEntity
     {
+        public FilterTriStateBase() : this(EnumTriState.Any) { }
+
         public FilterTriStateBase(EnumTriState param = EnumTriState.Any)
         {
             this.TriStateCollection = new ObservableCollection<TriStateItem>
@@ -56,7 +58,7 @@ namespace Model.Filters
         /// </summary>
         public void TriStateSwap()
         {
-            int index = this.TriStateCollection.IndexOf(this.TriStateCollection.FirstOrDefault(x=> x.TriState ==  this.TriStateSelectedItem.TriState));
+            int index = this.TriStateCollection.IndexOf(this.TriStateCollection.FirstOrDefault(x => x.TriState == this.TriStateSelectedItem.TriState));
             this.TriStateSelectedItem = index == this.TriStateCollection.Count() - 1 ? this.TriStateCollection.ElementAt(0) : this.TriStateCollection.ElementAt(index + 1);
         }
 

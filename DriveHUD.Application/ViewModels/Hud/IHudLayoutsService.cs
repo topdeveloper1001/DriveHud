@@ -98,6 +98,21 @@ namespace DriveHUD.Application.ViewModels
         void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, int layoutId);
 
         /// <summary>
+        /// Checks if specified hand is valid for sticker calculations
+        /// </summary>
+        /// <param name="statistic">Statistic to validate</param>
+        /// <param name="layoutId">Layout</param>
+        /// <returns>List of sticker names for which specified statistic is valid</returns>
+        IList<string> GetValidStickers(Entities.Playerstatistic statistic, int layoutId);
+
+        /// <summary>
+        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// </summary>
+        /// <param name="hudElements">Hud elements</param>
+        /// <param name="layoutId">Layout</param>
+        void SetStickers(HudElementViewModel hudElement, IDictionary<string, Entities.Playerstatistic> stickersStatistics, int layoutId);
+
+        /// <summary>
         /// Get path to image directory
         /// </summary>
         /// <returns>Path to image directory</returns>

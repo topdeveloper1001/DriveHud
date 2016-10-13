@@ -169,6 +169,69 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Filter.
+        /// </summary>
+        internal static string Common_BumperSticker_AddFilter {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_AddFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Description.
+        /// </summary>
+        internal static string Common_BumperSticker_Description {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Sticker.
+        /// </summary>
+        internal static string Common_BumperSticker_EditSticker {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_EditSticker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable Sticker.
+        /// </summary>
+        internal static string Common_BumperSticker_EnableSticker {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_EnableSticker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sticker Name.
+        /// </summary>
+        internal static string Common_BumperSticker_StickerName {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_StickerName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sticker Type.
+        /// </summary>
+        internal static string Common_BumperSticker_StickerType {
+            get {
+                return ResourceManager.GetString("Common_BumperSticker_StickerType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Color.
+        /// </summary>
+        internal static string Common_BumperStickers_SelectColor {
+            get {
+                return ResourceManager.GetString("Common_BumperStickers_SelectColor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Buy-in.
         /// </summary>
         internal static string Common_BuyIn {

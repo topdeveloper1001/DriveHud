@@ -15,14 +15,15 @@ using System.Windows.Shapes;
 
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Filters;
+using Model.Filters;
 
 namespace DriveHUD.Application.Views
 {
     public partial class FilterHoleCardsView : UserControl, IFilterView
     {
-        public FilterHoleCardsView()
+        public FilterHoleCardsView(IFilterModelManagerService service)
         {
-            this.DataContext = new FilterHoleCardsViewModel();
+            this.DataContext = new FilterHoleCardsViewModel(service);
 
             InitializeComponent();
         }

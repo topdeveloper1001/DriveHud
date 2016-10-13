@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DriveHUD.DBMigrator.Migrations
+namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(1)]
     public class Migration0001_CreateTablePlayerNotes : Migration
@@ -15,7 +15,7 @@ namespace DriveHUD.DBMigrator.Migrations
 
         public override void Up()
         {
-            LogProvider.Log.Info("Running migration #1");
+            LogProvider.Log.Info("Prepearing migration #1");
 
             if (!Schema.Table(tableName).Exists())
             {
@@ -34,7 +34,7 @@ namespace DriveHUD.DBMigrator.Migrations
                 LogProvider.Log.Info($"Table {tableName} already exists.");
             }
 
-            LogProvider.Log.Info("Migration #1 executed");
+            LogProvider.Log.Info("Migration #1 start executing");
         }
 
         public override void Down()

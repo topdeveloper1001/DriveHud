@@ -25,6 +25,7 @@ using DriveHUD.Common.Resources;
 using System.Diagnostics;
 using DriveHUD.Common;
 using Model;
+using System.Windows.Media;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -144,6 +145,14 @@ namespace DriveHUD.Application.ViewModels.Hud
                                 x.Image = GetImageLink(x.ImageAlias);
                             }
                         });
+
+                        hudLayouts.Layouts.Where(x => x.HudPlayerTypes != null).SelectMany(x => x.HudBumperStickerTypes).ForEach(x =>
+                          {
+                              if (x != null)
+                              {
+                                  x.InitializeFilterPredicate();
+                              }
+                          });
                     }
                 }
             }
@@ -341,6 +350,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         Name = DefaultHudName,
                         LayoutId = x.LayoutId,
                         HudPlayerTypes = CreateDefaultPlayerTypes(x.HudTable.TableLayout.TableType),
+                        HudBumperStickerTypes = CreateDefaultBumperStickers(),
                         HudPositions = x.HudTable.HudElements.Select(y => new HudSavedPosition
                         {
                             Height = y.Height,
@@ -381,7 +391,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     LayoutId = hudData.LayoutId,
                     Name = hudData.Name,
-                    HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableLayout.TableType)
+                    HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableLayout.TableType),
+                    HudBumperStickerTypes = CreateDefaultBumperStickers(),
                 };
 
                 Layouts.Layouts.Add(layout);
@@ -581,6 +592,56 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        /// <summary>
+        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// </summary>
+        /// <param name="hudElements">Hud elements</param>
+        /// <param name="layoutId">Layout</param>
+        public IList<string> GetValidStickers(Entities.Playerstatistic statistic, int layoutId)
+        {
+            var layout = Layouts.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.IsDefault);
+            if (layout == null || statistic == null)
+            {
+                return new List<string>();
+            }
+
+            return layout.HudBumperStickerTypes?.Where(x => x.FilterPredicate != null && new Entities.Playerstatistic[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any()).Select(x => x.Name).ToList();
+        }
+
+        /// <summary>
+        /// Set stickers for hud elements based on stats and bumper sticker settings
+        /// </summary>
+        /// <param name="hudElements">Hud elements</param>
+        /// <param name="layoutId">Layout</param>
+        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Entities.Playerstatistic> stickersStatistics, int layoutId)
+        {
+            hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
+            var layout = Layouts.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.IsDefault);
+            if (layout == null || stickersStatistics == null)
+            {
+                return;
+            }
+
+            foreach (var sticker in layout.HudBumperStickerTypes.Where(x => x.EnableBumperSticker))
+            {
+                if (!stickersStatistics.ContainsKey(sticker.Name))
+                {
+                    continue;
+                }
+
+                var statistics = new Model.Data.HudIndicators(new Entities.Playerstatistic[] { stickersStatistics[sticker.Name] });
+                if (statistics == null || statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
+                {
+                    continue;
+                }
+
+                if (IsInRange(hudElement, sticker.Stats, statistics))
+                {
+                    hudElement.Stickers.Add(sticker);
+                }
+            }
+        }
+
         private class MatchRatio
         {
             public HudPlayerType PlayerType { get; set; }
@@ -653,6 +714,38 @@ namespace DriveHUD.Application.ViewModels.Hud
             return new Tuple<bool, decimal, decimal>(matchRatios.All(x => x.InRange) && matchRatios.Any(x => x.IsStatDefined), matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
         }
 
+        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats, Model.Data.HudIndicators source)
+        {
+            if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
+                return false;
+
+            foreach (var rangeStat in rangeStats)
+            {
+                if (!rangeStat.High.HasValue && !rangeStat.Low.HasValue)
+                    continue;
+
+                var stat = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == rangeStat.Stat);
+
+                if (stat == null)
+                    return false;
+
+                var currentStat = new StatInfo();
+                currentStat.PropertyName = stat.PropertyName;
+                currentStat.AssignStatInfoValues(source);
+
+                var high = rangeStat.High.HasValue ? rangeStat.High.Value : 100;
+                var low = rangeStat.Low.HasValue ? rangeStat.Low.Value : -1;
+
+
+                if (currentStat.CurrentValue < low || currentStat.CurrentValue > high)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         private decimal GetStatAverageValue(HudPlayerTypeStat stat)
         {
             var low = stat.Low.HasValue ? stat.Low.Value : 0;
@@ -718,6 +811,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                 importedHudLayout.HudPlayerTypes.ForEach(x =>
                 {
                     x.Image = GetImageLink(x.ImageAlias);
+                });
+
+                importedHudLayout.HudBumperStickerTypes.ForEach(x =>
+                {
+                    x.InitializeFilterPredicate();
                 });
 
                 var counter = 1;
@@ -962,6 +1060,107 @@ namespace DriveHUD.Application.ViewModels.Hud
             };
 
             return hudPlayerTypes;
+        }
+
+        private List<HudBumperStickerType> CreateDefaultBumperStickers()
+        {
+            var bumperStickers = new List<HudBumperStickerType>()
+            {
+                new HudBumperStickerType(true)
+                {
+                     Name = "One and Done",
+                     SelectedColor = Colors.OrangeRed,
+                     Description = "C-bets at a high% on the flop, but then rarely double barrels.",
+                     StatsToMerge =
+                         new ObservableCollection<BaseHudRangeStat>()
+                         {
+                             new BaseHudRangeStat { Stat = Stat.CBet, Low = 55, High = 100 },
+                             new BaseHudRangeStat { Stat = Stat.DoubleBarrel, Low = 0, High = 35 },
+                         }
+                },
+                new HudBumperStickerType(true)
+                {
+                     Name = "Pre-Flop Reg",
+                     SelectedColor = Colors.Orange,
+                     Description = "Plays an aggressive pre-flop game, but doesn’t play well post flop.",
+                     StatsToMerge =
+                         new ObservableCollection<BaseHudRangeStat>()
+                         {
+                             new BaseHudRangeStat { Stat = Stat.VPIP, Low = 19, High = 26 },
+                             new BaseHudRangeStat { Stat = Stat.PFR, Low = 15, High = 23 },
+                             new BaseHudRangeStat { Stat = Stat.S3Bet, Low = 8, High = 100 },
+                             new BaseHudRangeStat { Stat = Stat.WWSF, Low = 0, High = 42 },
+                         }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Barrelling",
+                    SelectedColor = Colors.Yellow,
+                    Description = "Double and triple barrels a high percentage of the time.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 20, High = 30 },
+                            new BaseHudRangeStat { Stat = Stat.PFR, Low = 17, High = 28 },
+                            new BaseHudRangeStat { Stat = Stat.AGG, Low = 40, High = 49 },
+                            new BaseHudRangeStat { Stat = Stat.CBet, Low = 65, High = 80 },
+                            new BaseHudRangeStat { Stat = Stat.WWSF, Low = 44, High = 53 },
+                            new BaseHudRangeStat { Stat = Stat.DoubleBarrel, Low = 46, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "3 For Free",
+                    SelectedColor = Colors.GreenYellow,
+                    Description = "3-Bets too much, and folds to a 3-bet too often.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.S3Bet, Low = 8.8m, High = 100 },
+                            new BaseHudRangeStat { Stat = Stat.FoldTo3Bet, Low = 66, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Way Too Early",
+                    SelectedColor = Colors.Green,
+                    Description = "Open raises to wide of a range in early pre-flop positions.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.UO_PFR_EP, Low = 20, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Sticky Fish",
+                    SelectedColor = Colors.Blue,
+                    Description = "Fishy player who can’t fold post flop if they get any piece of the board.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 35, High = 100 },
+                            new BaseHudRangeStat { Stat = Stat.FoldToCBet, Low = 0, High = 40 },
+                            new BaseHudRangeStat { Stat = Stat.WTSD, Low = 29, High = 100 },
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Yummy Fish",
+                    SelectedColor = Colors.DarkBlue,
+                    Description = "Plays too many hands pre-flop and isn’t aggressive post flop.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 40, High = 100 },
+                            new BaseHudRangeStat { Stat = Stat.FoldToCBet, Low = 0, High = 6 },
+                            new BaseHudRangeStat { Stat = Stat.AGG, Low = 0, High = 34 },
+                        }
+                },
+
+            };
+
+            return bumperStickers;
         }
 
         /// <summary>

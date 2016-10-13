@@ -15,12 +15,12 @@ using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using DriveHUD.Common.Log;
 using Model;
-using DriveHUD.DBMigrator;
 using System.Linq;
 using DriveHUD.Common.Resources;
 using Prism.Interactivity.InteractionRequest;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using System.Windows.Threading;
+using DriveHUD.Application.MigrationService;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -485,11 +485,11 @@ namespace DriveHUD.Application.ViewModels
 
         private void RunMigrator(string connectionString)
         {
-            LogProvider.Log.Debug("Run Database Migrator");
+            LogProvider.Log.Debug("Run Migrator");
 
-            Runner.MigrateToLatest(connectionString);
+            ServiceLocator.Current.GetInstance<IMigrationService>().MigrateToLatest(connectionString);
 
-            LogProvider.Log.Debug("Database is up to date");
+            LogProvider.Log.Debug("DH is up to date");
         }
     }
 }

@@ -25,6 +25,8 @@ namespace DriveHUD.ViewModels
         {
             // default stat format 
             format = "{0:0.0}";
+            // list stat by default
+            isListed = true;
             // initialize collection
             SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>();
             // initialize defaults
@@ -480,6 +482,21 @@ namespace DriveHUD.ViewModels
         }
 
         [NonSerialized]
+        private bool isListed;
+
+        [XmlIgnore]
+        public bool IsListed
+        {
+            get { return isListed; }
+            set
+            {
+                if (value == isListed) return;
+                isListed = value;
+                OnPropertyChanged(nameof(IsListed));
+            }
+        }
+
+        [NonSerialized]
         private StatDto statDto;
 
         [XmlIgnore]
@@ -614,6 +631,33 @@ namespace DriveHUD.ViewModels
             SettingsAppearanceFontUnderline = statInfo.SettingsAppearanceFontUnderline;
             SettingsAppearanceFontUnderline_IsChecked = statInfo.SettingsAppearanceFontUnderline_IsChecked;
             SettingsAppearanceValueRangeCollection = statInfo.SettingsAppearanceValueRangeCollection;
+        }
+
+        public void AssignStatInfoValues(HudIndicators source)
+        {
+            var propName = string.Format("{0}{1}", PropertyName, "Object");
+
+            object propValue;
+
+            if (source.HasProperty(propName))
+            {
+                propValue = ReflectionHelper.GetPropertyValue(source, propName);
+
+                var statDto = propValue as StatDto;
+
+                if (statDto != null)
+                {
+                    propValue = statDto.Value;
+                    StatDto = statDto;
+                }
+            }
+            else
+            {
+                propValue = ReflectionHelper.GetPropertyValue(source, PropertyName);
+            }
+
+            Caption = string.Format(Format, propValue);
+            CurrentValue = Convert.ToDecimal(propValue);
         }
 
         #endregion

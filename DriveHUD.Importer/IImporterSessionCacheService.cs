@@ -53,7 +53,7 @@ namespace DriveHUD.Importers
         /// <param name="session">Active session</param>
         /// <param name="playerName">Player which stats has to be saved</param>
         /// <param name="stats">Player stats</param>
-        void AddOrUpdatePlayerStats(string session, string playerName, Playerstatistic stats, bool isHero);          
+        void AddOrUpdatePlayerStats(string session, string playerName, Playerstatistic stats, bool isHero);
 
         /// <summary>
         /// Store hand history record in cache
@@ -75,5 +75,29 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <returns>List of records from cache</returns>
         IList<HandHistoryRecord> GetAllRecords();
+
+        /// <summary>
+        /// Gets statistic of the player's last hand
+        /// </summary>
+        /// <param name="session">Session</param>
+        /// <param name="playerName">Player name</param>
+        /// <returns><see cref="Playerstatistic"/> of the last hand in session</returns>
+        Playerstatistic GetPlayersLastHandStatistics(string session, string playerName);
+
+        /// <summary>
+        /// Store stickers-related statistics in cache
+        /// </summary>
+        /// <param name="session">Session</param>
+        /// <param name="playerName">Player name</param>
+        /// <param name="stickersStats">Dictionary of statistic accessed by sticker name</param>
+        void AddOrUpdatePlayerStickerStats(string session, string playerName, IDictionary<string, Playerstatistic> stickersStats);
+
+        /// <summary>
+        /// Gets collection of player statistics that are used for Bumper Stickers calculations
+        /// </summary>
+        /// <param name="session">Session</param>
+        /// <param name="playerName">Player name</param>
+        /// <returns>Dictionary of sticker-related statistics accessed by sticker name</returns>
+        Dictionary<string, Playerstatistic> GetPlayersStickersStatistics(string session, string playerName);
     }
 }
