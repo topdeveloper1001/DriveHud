@@ -222,6 +222,7 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfoGroup { Name = "Turn" },
                 new StatInfoGroup { Name = "River" },
                 new StatInfoGroup { Name = "Tournament" },
+                new StatInfoGroup { Name = "Continuation Bet" },
                 new StatInfoGroup { Name = "Limp" },
                 new StatInfoGroup { Name = "Advanced Stats" },
             };
@@ -272,7 +273,6 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallInSB) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.ColdCallBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ColdCallInBB) },
 
-
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetIP) },
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetOOP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetOOP) },
 
@@ -282,12 +282,16 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInSB) },
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.S3BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetInBB) },
                 new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.ThreeBetVsSteal, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.ThreeBetVsSteal) },
+                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.CBetInThreeBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetInThreeBetPot) },
+                new StatInfo { GroupName = "3", StatInfoGroup = statInfoGroups[2], Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FoldFlopCBetFromThreeBetPot) },
 
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetMP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInMP) },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetCO, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInCO) },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetBTN, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBTN) },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetSB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInSB) },
                 new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.S4BetBB, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FourBetInBB) },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.CBetInFourBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetInFourBetPot) },
+                new StatInfo { GroupName = "4", StatInfoGroup = statInfoGroups[3], Stat = Stat.FoldToCBetFromFourBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FoldFlopCBetFromFourBetPot) },
 
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.WWSF, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.WSWSF) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FlopCheckRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopCheckRaise) },
@@ -311,15 +315,30 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.MRatio, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.MRatio) },
                 new StatInfo { GroupName = "8", StatInfoGroup = statInfoGroups[7], Stat = Stat.BBs, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.StackInBBs) },
 
-                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.Limp, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimp) },
-                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.LimpCall, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpCall) },
-                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.LimpFold, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpFold) },
-                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.LimpReraise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpReraise) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.CBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopCBet) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.FoldToCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FoldCBet) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.CBetIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CBetIP) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.CBetOOP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CBetOOP) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.CBetInThreeBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetInThreeBetPot) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.CBetInFourBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetInFourBetPot) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.FlopCBetVsOneOpp, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetVsOneOpp) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.FlopCBetVsTwoOpp, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetVsTwoOpp) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.FlopCBetMW, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetMW) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.FlopCBetMonotone, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetMonotone) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.FlopCBetRag, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FlopCBetRag) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.FoldToCBetFromThreeBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FoldFlopCBetFromThreeBetPot) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.FoldToCBetFromFourBetPot, PropertyName = ReflectionHelper.GetPath<Indicators>(x=> x.FoldFlopCBetFromFourBetPot) },
+                new StatInfo { GroupName = "9", StatInfoGroup = statInfoGroups[8], Stat = Stat.RaiseCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseCBet) },
 
-                new StatInfo { GroupName = "10", StatInfoGroup = statInfoGroups[9], Stat = Stat.RaiseFrequencyFactor, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseFrequencyFactor) },
-                new StatInfo { GroupName = "10", StatInfoGroup = statInfoGroups[9], Stat = Stat.TrueAggression, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TrueAggression) },
-                new StatInfo { GroupName = "10", StatInfoGroup = statInfoGroups[9], Stat = Stat.DonkBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DonkBet) },
-                new StatInfo { GroupName = "10", StatInfoGroup = statInfoGroups[9], Stat = Stat.DelayedTurnCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidDelayedTurnCBet) },
+                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.Limp, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimp) },
+                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.LimpCall, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpCall) },
+                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.LimpFold, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpFold) },
+                new StatInfo { GroupName = "91", StatInfoGroup = statInfoGroups[9], Stat = Stat.LimpReraise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidLimpReraise) },
+
+                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.RaiseFrequencyFactor, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseFrequencyFactor) },
+                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.TrueAggression, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TrueAggression) },
+                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.DonkBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DonkBet) },
+                new StatInfo { GroupName = "92", StatInfoGroup = statInfoGroups[10], Stat = Stat.DelayedTurnCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidDelayedTurnCBet) },
             };
 
             // initialize stat info
