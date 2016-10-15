@@ -33,7 +33,7 @@ namespace DriveHUD.Importers.Bovada
         public string handnumber { get; set; }
 
         /// <summary>
-        /// Url of table page (contains usefull information)
+        /// Url of table page (contains useful information)
         /// </summary>
         public string url { get; set; }
 
