@@ -63,11 +63,6 @@ namespace Model
             stat.TotalcallsRiver = playerHandActions.Count(handAction => handAction.IsCall() && handAction.Street == Street.River);
 
             bool playerFolded = playerHandActions.Any(x => x.IsFold);
-            bool sawShowDown = !playerFolded &&
-                parsedHand.HandActions
-                .GroupBy(x => x.PlayerName)
-                .Where(x => x.Key != player)
-                .Any(x => x.All(p => !p.IsFold));
 
             bool wasRiver = CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.River);
             bool wasTurn = wasRiver || CardHelper.IsStreetAvailable(parsedHand.CommunityCards, Street.Turn);
@@ -78,6 +73,12 @@ namespace Model
             bool playedFlop = playedTurn || playerHandActions.Any(x => x.Street == Street.Flop);
 
             bool won = playerHandActions.Any(handAction => handAction.IsWinningsAction);
+
+            bool sawShowDown = !playerFolded &&
+                parsedHand.HandActions
+                .GroupBy(x => x.PlayerName)
+                .Where(x => x.Key != player)
+                .Any(x => x.All(p => !p.IsFold)) && playedFlop;
 
             bool wonShowdown = sawShowDown && won;
 
@@ -1391,8 +1392,8 @@ namespace Model
             if (actions.Any(x => x.IsBlinds))
             {
                 // in case we have 2 or more bb
-                actions = actions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND) 
-                    ? actions.Skip(2).ToList() 
+                actions = actions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND)
+                    ? actions.Skip(2).ToList()
                     : actions.Skip(1).ToList();
             }
 
