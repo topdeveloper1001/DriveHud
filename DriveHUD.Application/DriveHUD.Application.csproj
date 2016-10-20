@@ -589,6 +589,9 @@
       <DependentUpon>FilterStandardView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Registration\RegistrationViewNotification.cs" />
+    <Compile Include="Views\Replayer\ReplayerHudPanel.xaml.cs">
+      <DependentUpon>ReplayerHudPanel.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Replayer\ReplayerView.xaml.cs">
       <DependentUpon>ReplayerView.xaml</DependentUpon>
     </Compile>
@@ -914,6 +917,10 @@
     <Page Include="Views\Filters\FilterStandardView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Replayer\ReplayerHudPanel.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\Replayer\ReplayerView.xaml">
       <SubType>Designer</SubType>
