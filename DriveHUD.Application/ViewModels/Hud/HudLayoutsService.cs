@@ -189,12 +189,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             return defaultLayout;
         }
 
-        public IEnumerable<HudSavedLayout> GetNotEmptyStatsLayout()
-        {
-            /* Replayer doesn't have an ability to select hud stats so display whatever is selected in the hud for now */
-            return hudLayouts.Layouts.Where(x => x.HudStats.Count > 0);
-        }
-
         public void SetLayoutActive(HudSavedLayout layout)
         {
             if (layout == null)
