@@ -25,6 +25,9 @@ using DriveHUD.Common.Utils;
 using System.Collections.ObjectModel;
 using DriveHUD.Common.Log;
 using Model;
+using Telerik.Windows;
+using Model.Interfaces;
+using DriveHUD.Common.Ifrastructure;
 
 namespace DriveHUD.Application.Views.Replayer
 {
@@ -126,6 +129,26 @@ namespace DriveHUD.Application.Views.Replayer
         private void CloseCommandHandler(object sender, ExecutedRoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void GeneralExportItem_Click(object sender, Telerik.Windows.RadRoutedEventArgs e)
+        {
+            if (ViewModel?.CurrentGame != null)
+            {
+                Clipboard.SetText(ViewModel.CurrentGame.FullHandHistoryText);
+                String hh = ExportFunctions.ConvertHHToForumFormat(ViewModel.CurrentGame);
+                Clipboard.SetText(hh);
+                ViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
+            }
+        }
+
+        private void RawExportItem_Click(object sender, RadRoutedEventArgs e)
+        {
+            if (ViewModel?.CurrentGame != null)
+            {
+                Clipboard.SetText(ViewModel.CurrentGame.FullHandHistoryText);
+                ViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
+            }
         }
     }
 }

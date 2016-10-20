@@ -32,6 +32,8 @@ using System.Diagnostics;
 using DriveHUD.Application.Controls;
 using DriveHUD.Application.Views.Replayer;
 using DriveHUD.Entities;
+using DriveHUD.Application.ViewModels.Popups;
+using DriveHUD.Application.Views.Popups;
 
 namespace DriveHUD.Application.TableConfigurators
 {
@@ -224,7 +226,7 @@ namespace DriveHUD.Application.TableConfigurators
             return label;
         }
 
-        private static ReplayerHudPanel CreateHudPanel(ReplayerViewModel viewModel, int zeroBasedSeatNumber)
+        private ReplayerHudPanel CreateHudPanel(ReplayerViewModel viewModel, int zeroBasedSeatNumber)
         {
             var player = viewModel.PlayersCollection[zeroBasedSeatNumber];
 
@@ -236,7 +238,48 @@ namespace DriveHUD.Application.TableConfigurators
             panel.Height = double.NaN;
             panel.Width = 150;
 
+            player.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(player.Name, viewModel.CurrentHand.PokersiteId)?.Note ?? string.Empty);
+
+            var contextMenu = CreateContextMenu(viewModel.CurrentHand.PokersiteId, player.Name, player);
+            contextMenu.EventName = "MouseRightButtonUp";
+
+            RadContextMenu.SetContextMenu(panel, contextMenu);
+
             return panel;
+        }
+
+        private RadContextMenu CreateContextMenu(short pokerSiteId, string playerName, ReplayerPlayerViewModel datacontext)
+        {
+            RadContextMenu radMenu = new RadContextMenu();
+
+            var item = new RadMenuItem();
+
+            var binding = new Binding(nameof(ReplayerPlayerViewModel.NoteMenuItemText)) { Source = datacontext, Mode = BindingMode.OneWay };
+            item.SetBinding(RadMenuItem.HeaderProperty, binding);
+
+            item.Click += (s, e) =>
+            {
+                PlayerNoteViewModel viewModel = new PlayerNoteViewModel(pokerSiteId, playerName);
+                var frm = new PlayerNoteView(viewModel);
+                frm.ShowDialog();
+
+                if (viewModel.PlayerNoteEntity == null)
+                {
+                    return;
+                }
+
+                var clickedItem = s as FrameworkElement;
+                if (clickedItem == null || !(clickedItem.DataContext is ReplayerPlayerViewModel))
+                {
+                    return;
+                }
+
+                var hudElement = clickedItem.DataContext as ReplayerPlayerViewModel;
+                hudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(viewModel.Note);
+            };
+            radMenu.Items.Add(item);
+
+            return radMenu;
         }
 
         private void LoadPlayerHudStats(ReplayerPlayerViewModel replayerPlayer, ReplayerViewModel replayerViewModel, IList<StatInfo> statInfoCollection, IDataService dataService)
@@ -251,7 +294,7 @@ namespace DriveHUD.Application.TableConfigurators
                 var statList = new List<StatInfo>();
                 foreach (var selectedStatInfo in statInfoCollection)
                 {
-                    if(selectedStatInfo is StatInfoBreak)
+                    if (selectedStatInfo is StatInfoBreak)
                     {
                         replayerPlayer.StatInfoCollection.Add((selectedStatInfo as StatInfoBreak).Clone());
                         continue;
