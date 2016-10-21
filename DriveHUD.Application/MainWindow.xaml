@@ -1080,7 +1080,13 @@
                                      DisplayMemberPath="Name"
                                      ItemsSource="{Binding StorageModel.PlayerCollection, Mode=OneWay}"
                                      Style="{StaticResource RadComboBoxStyle1}"
-                                     ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}"/>
+                                     ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}">
+                    <telerik:RadComboBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <VirtualizingStackPanel />
+                        </ItemsPanelTemplate>
+                    </telerik:RadComboBox.ItemsPanel>
+                </telerik:RadComboBox>
                 <telerik:RadRibbonDropDownButton Foreground="White" VerticalAlignment="Stretch" Text="Import"  Margin="0"  Width="100"  Background="{StaticResource BackgroundBrush3}" BorderBrush="{StaticResource BackgroundBrush3}" Style="{StaticResource RadRibbonDropDownButtonStyle1}" >
                     <telerik:RadRibbonDropDownButton.DropDownContent>
                         <telerik:RadContextMenu BorderThickness="0"
