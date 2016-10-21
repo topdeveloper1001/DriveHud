@@ -286,7 +286,7 @@ namespace DriveHUD.Application.TableConfigurators
         {
             replayerPlayer.StatInfoCollection.Clear();
 
-            var statisticCollection = dataService.GetPlayerStatisticFromFile(replayerPlayer.Name);
+            var statisticCollection = dataService.GetPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId);
             var hudIndicators = new HudIndicators(statisticCollection);
 
             if (hudIndicators != null)
@@ -518,7 +518,7 @@ namespace DriveHUD.Application.TableConfigurators
             bool isMtt = false;
             if (description.IsTournament)
             {
-                var tournament = dataService.GetTournament(description.Tournament.TournamentId, playerName);
+                var tournament = dataService.GetTournament(description.Tournament.TournamentId, playerName, (short)description.Site);
                 TournamentsTags tag = TournamentsTags.STT;
                 if (tournament != null && Enum.TryParse(tournament.Tourneytagscsv, out tag))
                 {

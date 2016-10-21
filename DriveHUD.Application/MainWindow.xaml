@@ -433,26 +433,31 @@
                             <Border Background="{TemplateBinding Background}" Grid.ColumnSpan="2" CornerRadius="1" IsHitTestVisible="False" Margin="1"/>
                             <Border x:Name="Border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Grid.ColumnSpan="2" CornerRadius="1" IsHitTestVisible="False"/>
                             <Border x:Name="MouseOverVisual" BorderBrush="{StaticResource BackgroundBrush4}" BorderThickness="{TemplateBinding BorderThickness}" Grid.ColumnSpan="2" CornerRadius="1" IsHitTestVisible="False" Opacity="0" Visibility="Collapsed"/>
-                            <TextBox x:Name="PART_EditableTextBox"  Foreground="{TemplateBinding Foreground}" Grid.Column="0" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsReadOnly="{TemplateBinding IsReadOnly}" Margin="1,1,0,1" Padding="{TemplateBinding Padding}" VerticalAlignment="Stretch" VerticalContentAlignment="Center">
-                                <TextBox.Style>
-                                    <Style TargetType="{x:Type TextBox}">
-                                        <Setter Property="BorderThickness" Value="0"/>
-                                        <Setter Property="BorderBrush" Value="Transparent"/>
-                                        <Setter Property="Background" Value="Transparent"/>
-                                    </Style>
-                                </TextBox.Style>
-                                <TextBox.Template>
-                                    <ControlTemplate TargetType="{x:Type TextBox}">
-                                        <Grid>
-                                            <ScrollViewer x:Name="PART_ContentHost" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" IsTabStop="False" Padding="{TemplateBinding Padding}" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch">
-                                                <telerik:StyleManager.Theme>
-                                                    <telerik:Office_BlackTheme/>
-                                                </telerik:StyleManager.Theme>
-                                            </ScrollViewer>
-                                        </Grid>
-                                    </ControlTemplate>
-                                </TextBox.Template>
-                            </TextBox>
+                            <Grid>
+                                <TextBox x:Name="PART_EditableTextBox"  Foreground="{TemplateBinding Foreground}" Grid.Column="0" HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}" IsReadOnly="{TemplateBinding IsReadOnly}" Margin="1,1,0,1" Padding="{TemplateBinding Padding}" VerticalAlignment="Stretch" VerticalContentAlignment="Center">
+                                    <TextBox.Style>
+                                        <Style TargetType="{x:Type TextBox}">
+                                            <Setter Property="BorderThickness" Value="0"/>
+                                            <Setter Property="BorderBrush" Value="Transparent"/>
+                                            <Setter Property="Background" Value="Transparent"/>
+                                        </Style>
+                                    </TextBox.Style>
+                                    <TextBox.Template>
+                                        <ControlTemplate TargetType="{x:Type TextBox}">
+                                            <Grid>
+                                                <ScrollViewer x:Name="PART_ContentHost" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" IsTabStop="False" Padding="{TemplateBinding Padding}" VerticalScrollBarVisibility="Auto" VerticalContentAlignment="Stretch">
+                                                    <telerik:StyleManager.Theme>
+                                                        <telerik:Office_BlackTheme/>
+                                                    </telerik:StyleManager.Theme>
+                                                </ScrollViewer>
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </TextBox.Template>
+                                </TextBox>
+                                <TextBlock Text="{Binding Path=StorageModel.PlayerSelectedItem.PokerSite}" HorizontalAlignment="Right"
+                                           Margin="0 0 5 0"
+                                           Style="{StaticResource Title_H2}"/>
+                            </Grid>
                             <Border x:Name="FocusVisual" BorderBrush="{StaticResource BackgroundBrush4}" BorderThickness="{TemplateBinding BorderThickness}" Grid.ColumnSpan="2" CornerRadius="1" IsHitTestVisible="False" Visibility="Collapsed">
                                 <Border BorderBrush="Transparent" BorderThickness="{TemplateBinding BorderThickness}" CornerRadius="0"/>
                             </Border>
@@ -756,7 +761,12 @@
         							</Border.Background>-->
                                     <Border BorderBrush="White" BorderThickness="0" CornerRadius="0"/>
                                 </Border>
-                                <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                <Grid>
+                                    <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{Binding Name}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    <TextBlock Text="{Binding Path=PokerSite}" HorizontalAlignment="Right"
+                                           Margin="0 0 5 0"
+                                           Style="{StaticResource Title_H2}"/>
+                                </Grid>
                             </Grid>
                         </Border>
                     </ControlTemplate>
@@ -991,7 +1001,7 @@
                              IsChecked="{Binding Path=AppsViewModel.IsActive}"
                              Command="{Binding Path=RadioGroupTab_CommandClick}"
                              CommandParameter="{x:Static enums:EnumViewModelType.AppsViewModel}">
-                    
+
                 </RadioButton>
 
             </StackPanel>
@@ -1067,6 +1077,7 @@
                                      Foreground="White" BorderThickness="0"
                                      Background="{StaticResource BackgroundBrush2}"
                                      SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                     DisplayMemberPath="Name"
                                      ItemsSource="{Binding StorageModel.PlayerCollection, Mode=OneWay}"
                                      Style="{StaticResource RadComboBoxStyle1}"
                                      ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}"/>

@@ -8,33 +8,33 @@ namespace Model.Interfaces
 {
     public interface IDataService
     {
-        IList<Playerstatistic> GetPlayerStatistic(string playerName);
+        IList<Playerstatistic> GetPlayerStatistic(string playerName, short pokersiteId);
 
-        IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName);
+        IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId);
 
-        Indicators GetPlayerIndicator(string playerName);
+        Indicators GetPlayerIndicator(string playerName, short pokersiteId);
 
-        IList<HandHistoryRecord> GetPlayerHandRecords(string playerName);
+        IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId);
 
         Players GetPlayer(string playerName, short pokersiteId);
 
-        IList<Gametypes> GetPlayerGameTypes(string playerName);
+        IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId);
 
-        IList<Tournaments> GetPlayerTournaments(string playerName);
+        IList<Tournaments> GetPlayerTournaments(string playerName, short pokersiteId);
 
-        Tournaments GetTournament(string tournamentId, string playerName);
+        Tournaments GetTournament(string tournamentId, string playerName, short pokersiteId);
 
-        HandHistory GetGame(long gameNumber);
+        HandHistory GetGame(long gameNumber, short pokersiteId);
 
-        Handnotes GetHandNote(long gameNumber);
+        Handnotes GetHandNote(long gameNumber, short pokersiteId);
 
         Playernotes GetPlayerNote(string playerName, short pokersiteId);
 
-        IList<Handnotes> GetHandNotes(IEnumerable<long> gameNumbers);
+        IList<Handnotes> GetHandNotes(IEnumerable<long> gameNumbers, short pokersiteId);
 
-        IList<Handnotes> GetHandNotes();
+        IList<Handnotes> GetHandNotes(short pokersiteId);
 
-        Handhistory GetHandHistory(long gameNumber);
+        Handhistory GetHandHistory(long gameNumber, short pokersiteId);
 
         void Purge();
 
@@ -46,9 +46,9 @@ namespace Model.Interfaces
 
         void Store(Tournaments tournament);
 
-        Stream OpenStorageStream(string filename,FileMode mode);
+        Stream OpenStorageStream(string filename, FileMode mode);
 
-        IList<string> GetPlayersList();
+        IList<PlayerCollectionItem> GetPlayersList();
 
         void RemoveAppData();
 
@@ -58,9 +58,9 @@ namespace Model.Interfaces
         /// <param name="statistic">Statistic to delete</param>
         void DeletePlayerStatisticFromFile(Playerstatistic statistic);
 
-        string GetActivePlayer();
+        PlayerCollectionItem GetActivePlayer();
 
-        void SaveActivePlayer(string playerName);
+        void SaveActivePlayer(string playerName, short pokersiteId);
 
     }
 }

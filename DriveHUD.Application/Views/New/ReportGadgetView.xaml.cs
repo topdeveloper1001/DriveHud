@@ -215,7 +215,7 @@ namespace DriveHUD.Application.Views
                 var playerStatistics = item.DataContext as ComparableCardsStatistic;
                 if (playerStatistics != null)
                 {
-                    var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame((playerStatistics.Statistic.GameNumber));
+                    var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(playerStatistics.Statistic.GameNumber, (short)playerStatistics.Statistic.PokersiteId);
                     String hh = ExportFunctions.ConvertHHToForumFormat(handHistory);
                     Clipboard.SetText(hh);
                     reportGadgetViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
@@ -231,7 +231,7 @@ namespace DriveHUD.Application.Views
                 var playerStatistics = item.DataContext as ComparableCardsStatistic;
                 if (playerStatistics != null)
                 {
-                    var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame((playerStatistics.Statistic.GameNumber));
+                    var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(playerStatistics.Statistic.GameNumber, (short)playerStatistics.Statistic.PokersiteId);
                     Clipboard.SetText(handHistory.FullHandHistoryText);
                     reportGadgetViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
                 }

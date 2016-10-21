@@ -92,7 +92,7 @@ namespace DriveHUD.Application.ViewModels
             SwitchViewModel(EnumViewModelType.DashboardViewModel);
 
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-            StorageModel.PlayerCollection = new ObservableCollection<string>(dataService.GetPlayersList());
+            StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
 
             StorageModel.PropertyChanged += StorageModel_PropertyChanged;
 
@@ -175,7 +175,7 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Load()
         {
-            var statistics = dataService.GetPlayerStatisticFromFile(StorageModel.PlayerSelectedItem);
+            var statistics = dataService.GetPlayerStatisticFromFile(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
             AddHandTags(statistics);
 
             if (statistics != null)
@@ -197,7 +197,7 @@ namespace DriveHUD.Application.ViewModels
             if (args.IsUpdatePlayersCollection)
             {
                 StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-                StorageModel.PlayerCollection = new ObservableCollection<string>(dataService.GetPlayersList());
+                StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
@@ -233,7 +233,7 @@ namespace DriveHUD.Application.ViewModels
         {
             UpdatePlayerList();
 
-            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem))
+            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
             {
                 App.Current.Dispatcher.Invoke(() =>
                 {
@@ -287,6 +287,7 @@ namespace DriveHUD.Application.ViewModels
             for (int i = 1; i <= maxSeats; i++)
             {
                 var playerName = string.Empty;
+                var playerCollectionItem = new PlayerCollectionItem();
                 var seatNumber = 0;
 
                 foreach (var player in players)
@@ -297,6 +298,7 @@ namespace DriveHUD.Application.ViewModels
                         {
                             playerName = player.PlayerName;
                             seatNumber = player.SeatNumber;
+                            playerCollectionItem = new PlayerCollectionItem { Name = player.PlayerName, PokerSite = site };
                         }
 
                         break;
@@ -314,8 +316,8 @@ namespace DriveHUD.Application.ViewModels
                     SeatNumber = seatNumber
                 };
 
-                var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerName);
-                var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerName);
+                var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
+                var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerCollectionItem);
                 var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);
 
                 var item = new HudIndicators(statisticCollection);
@@ -449,10 +451,10 @@ namespace DriveHUD.Application.ViewModels
 
                     if (stickers.Any())
                     {
-                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerName, stickers.ToDictionary(x => x, x => lastHandStatistic));
+                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerCollectionItem, stickers.ToDictionary(x => x, x => lastHandStatistic));
                     }
 
-                    hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerName), tableKey);
+                    hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerCollectionItem), tableKey);
                 }
 
                 if (!doNotAddPlayer)
@@ -651,7 +653,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void AddHandTags(IList<Playerstatistic> statistics)
         {
-            var notes = dataService.GetHandNotes();
+            var notes = dataService.GetHandNotes((short)StorageModel.PlayerSelectedItem.PokerSite);
 
             var statisticsForUpdate = (from note in notes
                                        join statistic in statistics on note.Gamenumber equals statistic.GameNumber
@@ -966,7 +968,7 @@ namespace DriveHUD.Application.ViewModels
         {
             HudViewModel.Stop();
             importerSessionCacheService.End();
-            dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem);
+            dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
 
             // flush betonline cash
             var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();

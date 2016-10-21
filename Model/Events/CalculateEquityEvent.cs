@@ -10,15 +10,17 @@ namespace Model.Events
     {
         public long GameNumber { get; set; }
         public bool IsEmptyRequest { get; set; }
+        public short PokersiteId { get; set; }
 
         public RequestEquityCalculatorEventArgs()
         {
             this.IsEmptyRequest = true;
         }
 
-        public RequestEquityCalculatorEventArgs(long gameNumber)
+        public RequestEquityCalculatorEventArgs(long gameNumber, short pokersiteId)
         {
             this.GameNumber = gameNumber;
+            this.PokersiteId = pokersiteId;
         }
     }
 
