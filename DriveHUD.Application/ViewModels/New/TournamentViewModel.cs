@@ -276,7 +276,7 @@ namespace DriveHUD.Application.ViewModels
 
             SetSerieData(ChartSeriesCollection, ChartSeriesDisplayRange);
 
-            var playerTournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(this.StorageModel.PlayerSelectedItem);
+            var playerTournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
             MTTWon = 0;
             STTWon = 0;
             TotalMTT = 0;

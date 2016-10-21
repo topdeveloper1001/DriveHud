@@ -33,13 +33,13 @@ namespace Model
         /// <summary>
         /// Select player with name specified if exists
         /// </summary>
-        /// <param name="playerName">Player Name</param>
+        /// <param name="player">Player</param>
         /// <param name="loadHeroIfMissing">True if need to select HERO in case when player with specified name does not exist</param>
-        public void TryLoadActivePlayer(string playerName, bool loadHeroIfMissing)
+        public void TryLoadActivePlayer(PlayerCollectionItem player, bool loadHeroIfMissing)
         {
-            if (PlayerCollection.Contains(playerName))
+            if (PlayerCollection.Contains(player))
             {
-                PlayerSelectedItem = PlayerCollection.FirstOrDefault(x => x == playerName);
+                PlayerSelectedItem = PlayerCollection.FirstOrDefault(x => x == player);
                 return;
             }
 
@@ -52,9 +52,9 @@ namespace Model
         public void TryLoadHeroPlayer()
         {
             var heroName = CommonResourceManager.Instance.GetResourceString(ResourceStrings.HeroName);
-            if (PlayerCollection.Contains(heroName))
+            if (PlayerCollection.Any(x => x.Name == heroName))
             {
-                PlayerSelectedItem = PlayerCollection.FirstOrDefault(x => x == heroName);
+                PlayerSelectedItem = PlayerCollection.Where(x => x.Name == heroName).OrderBy(x => x.PokerSite).FirstOrDefault();
             }
         }
 
@@ -98,8 +98,8 @@ namespace Model
         public static SingletonStorageModel Instance { get { return lazy.Value; } }
 
         private RangeObservableCollection<Playerstatistic> _statisticCollection;
-        private ObservableCollection<string> _playerCollection;
-        private string _playerSelectedItem;
+        private ObservableCollection<PlayerCollectionItem> _playerCollection;
+        private PlayerCollectionItem _playerSelectedItem;
 
         private Expression<Func<Playerstatistic, bool>> _filterPredicate = PredicateBuilder.True<Playerstatistic>();
 
@@ -124,7 +124,7 @@ namespace Model
             }
         }
 
-        public ObservableCollection<string> PlayerCollection
+        public ObservableCollection<PlayerCollectionItem> PlayerCollection
         {
             get { return _playerCollection; }
             set
@@ -134,7 +134,7 @@ namespace Model
             }
         }
 
-        public string PlayerSelectedItem
+        public PlayerCollectionItem PlayerSelectedItem
         {
             get { return _playerSelectedItem; }
             set

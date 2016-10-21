@@ -103,7 +103,8 @@ namespace DriveHUD.Application.ViewModels
         {
             if (obj is Playerstatistic)
             {
-                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<RequestEquityCalculatorEvent>().Publish(new RequestEquityCalculatorEventArgs((obj as Playerstatistic).GameNumber));
+                var stat = obj as Playerstatistic;
+                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<RequestEquityCalculatorEvent>().Publish(new RequestEquityCalculatorEventArgs(stat.GameNumber, (short)stat.PokersiteId));
             }
             else
             {
@@ -173,7 +174,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 var tournament = obj as TournamentReportRecord;
                 EditTournamentViewModel viewModel = new EditTournamentViewModel();
-                viewModel.LoadTournament(tournament.PlayerName, tournament.TournamentId);
+                viewModel.LoadTournament(tournament.PlayerName, tournament.TournamentId, (short)tournament.Source.PokersiteId);
                 var frm = Activator.CreateInstance(typeof(EditTournamentView), viewModel);
                 ((dynamic)frm).ShowDialog();
             }

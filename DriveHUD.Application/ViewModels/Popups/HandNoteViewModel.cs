@@ -56,7 +56,7 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.gameNumber = value;
-                handNoteEntity = dataService.GetHandNote(this.gameNumber);
+                handNoteEntity = dataService.GetHandNote(this.gameNumber, this.pokersiteId);
                 if (handNoteEntity != null)
                 {
                     Note = handNoteEntity.Note;

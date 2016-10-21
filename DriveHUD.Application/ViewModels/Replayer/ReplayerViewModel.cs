@@ -406,7 +406,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void LoadGame(ReplayerDataModel value)
         {
-            CurrentGame = value == null ? null : _dataService.GetGame(value.GameNumber);
+            CurrentGame = value == null ? null : _dataService.GetGame(value.GameNumber, value.PokersiteId);
 
             Update();
         }
