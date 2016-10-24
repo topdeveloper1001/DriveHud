@@ -23,6 +23,7 @@ using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
@@ -95,11 +96,14 @@ namespace DriveHUD.Application
 
         private void ShowMainWindow()
         {
+            LogProvider.Log.Info($"Screen: {Utils.GetScreenResolution()}");
+            LogProvider.Log.Info($"Dpi: {Utils.GetCurrentDpi()}");
+
             if (ConfigurePostgresqlServerViewModel.IsConnected)
             {
                 if (IsUninstall())
                 {
-                    LogProvider.Log.Debug(this, "Uninstalling all user's data...");
+                    LogProvider.Log.Info(this, "Uninstalling all user's data...");
                     DataRemoverViewModel dr = new DataRemoverViewModel();
                     dr.UninstallCommand.Execute(null);
                 }
@@ -157,7 +161,7 @@ namespace DriveHUD.Application
             string[] args = Environment.GetCommandLineArgs();
             foreach (string arg in args.Skip(1))
             {
-                LogProvider.Log.Debug(this, string.Format("Argument found {0}", arg));
+                LogProvider.Log.Info(this, string.Format("Argument found {0}", arg));
                 if (arg == "-uninstall")
                 {
                     return true;
