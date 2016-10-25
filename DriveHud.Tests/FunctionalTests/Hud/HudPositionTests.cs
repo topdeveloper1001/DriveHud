@@ -32,8 +32,8 @@ namespace DriveHud.Tests.FunctionalTests.Hud
             container.RegisterType<IHudPanelService, BovadaHudPanelService>();
             container.RegisterType<IHudLayoutsService, HudLayoutsServiceStub>(new ContainerControlledLifetimeManager());
             container.RegisterType<IImporterService, ImporterService>();
-            container.RegisterType<ITableConfigurator, BovadaRichTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Bovada, HudType.Default));
-            container.RegisterType<ITableConfigurator, BovadaTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Bovada, HudType.Plain));
+            container.RegisterType<ITableConfigurator, BovadaRichTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Default));
+            container.RegisterType<ITableConfigurator, BovadaTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Plain));
             container.RegisterType<ITableConfigurator, CommonTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Unknown, HudType.Plain));
             container.RegisterType<IEventAggregator, EventAggregator>();
 

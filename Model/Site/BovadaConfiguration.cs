@@ -41,7 +41,7 @@ namespace Model.Site
         {
             get
             {
-                return EnumPokerSites.Bovada;
+                return EnumPokerSites.Ignition;
             }
         }
 
@@ -65,10 +65,16 @@ namespace Model.Site
         {
             get
             {
-                var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().SiteSettings.SitesModelList.FirstOrDefault(x=> x.PokerSite == Site)?.PrefferedSeats;
+                var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == Site)?.PrefferedSeats;
                 var filteredSeatsList = preferredSeats?.Where(x => x.IsPreferredSeatEnabled && x.PreferredSeat != -1);
                 var seatsDictonary = new Dictionary<int, int>();
-                foreach(var preferredSeat in filteredSeatsList)
+
+                if (filteredSeatsList == null)
+                {
+                    return seatsDictonary;
+                }
+
+                foreach (var preferredSeat in filteredSeatsList)
                 {
                     seatsDictonary.Add((int)preferredSeat.TableType, preferredSeat.PreferredSeat);
                 }

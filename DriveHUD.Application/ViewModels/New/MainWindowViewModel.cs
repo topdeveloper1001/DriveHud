@@ -274,7 +274,7 @@ namespace DriveHUD.Application.ViewModels
             var ht = new HudLayout
             {
                 WindowId = gameInfo.WindowHandle,
-                HudType = site == EnumPokerSites.Bovada ? HudViewModel.HudType : HudType.Plain,
+                HudType = site == EnumPokerSites.Ignition ? HudViewModel.HudType : HudType.Plain,
                 TableType = gameInfo.TableType
             };
 

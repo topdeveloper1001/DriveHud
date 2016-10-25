@@ -116,7 +116,7 @@ namespace DriveHUD.Application.TableConfigurators
                 else
                 {
                     // Load default
-                    statInfoCollection = GetHudStats(EnumPokerSites.Bovada, EnumGameType.CashHoldem, EnumTableType.Six);
+                    statInfoCollection = GetHudStats(EnumPokerSites.Ignition, EnumGameType.CashHoldem, EnumTableType.Six);
 
                     if (statInfoCollection != null && statInfoCollection.Any())
                     {
@@ -496,10 +496,10 @@ namespace DriveHUD.Application.TableConfigurators
             switch (site)
             {
                 case EnumPokerSites.Unknown:
-                case EnumPokerSites.Bovada:
-                case EnumPokerSites.IPoker:
                 case EnumPokerSites.Ignition:
-                    return EnumPokerSites.Bovada;
+                case EnumPokerSites.IPoker:
+                case EnumPokerSites.Bovada:
+                    return EnumPokerSites.Ignition;
                 case EnumPokerSites.Bodog:
                 case EnumPokerSites.BetOnline:
                     return EnumPokerSites.BetOnline;
