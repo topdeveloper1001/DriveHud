@@ -1345,7 +1345,7 @@ namespace DriveHUD.Entities
                 tiltMeterValue += 2;
             }
 
-            if (source.TiltMeterTemporaryHistory.Count > 13)
+            if (source.TiltMeterTemporaryHistory.Count > 17)
             {
                 source.TiltMeterTemporaryHistory.Dequeue();
             }
