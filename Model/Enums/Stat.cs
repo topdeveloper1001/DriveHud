@@ -10,8 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using ProtoBuf;
+
 namespace Model.Enums
-{
+{    
     /// <summary>
     /// All Stats
     /// </summary>

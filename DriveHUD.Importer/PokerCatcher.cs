@@ -27,7 +27,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
 {
-    public abstract class PokerCatcher : IPokerCatcher
+    internal abstract class PokerCatcher : IPokerCatcher
     {
         protected bool isRunning;
 

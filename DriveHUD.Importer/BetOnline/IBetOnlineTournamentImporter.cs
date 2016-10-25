@@ -15,7 +15,7 @@ namespace DriveHUD.Importers.BetOnline
     /// <summary>
     /// Interface for betonline tournament importer   
     /// </summary>
-    public interface IBetOnlineTournamentImporter : IBackgroundProcess
+    internal interface IBetOnlineTournamentImporter : IBackgroundProcess
     {
     }
 }

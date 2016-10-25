@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Utils;
@@ -24,7 +25,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Interop;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.HUD
 {
     /// <summary>
     /// This class is responsible for drawing om Bovada table. It listens Win Events and manages size, position changes and also window close event

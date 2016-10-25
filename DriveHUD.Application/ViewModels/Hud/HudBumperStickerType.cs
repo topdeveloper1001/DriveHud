@@ -14,13 +14,14 @@ using System.Xml.Serialization;
 using DriveHUD.Entities;
 using System.Linq.Expressions;
 using DriveHUD.Common.Utils;
+using ProtoBuf;
 
 namespace DriveHUD.Application.ViewModels
 {
     /// <summary>
     /// Bumper sticker type 
     /// </summary>
-    [Serializable]
+    [Serializable, ProtoContract]
     public class HudBumperStickerType : ReactiveObject
     {
         private const int MinSampleDefault = 100;
@@ -62,6 +63,7 @@ namespace DriveHUD.Application.ViewModels
 
         private string name;
 
+        [ProtoMember(1)]
         public string Name
         {
             get
@@ -78,6 +80,7 @@ namespace DriveHUD.Application.ViewModels
 
         private string label;
 
+        [ProtoMember(2)]
         public string Label
         {
             get
@@ -92,6 +95,7 @@ namespace DriveHUD.Application.ViewModels
 
         private string description;
 
+        [ProtoMember(3)]
         public string Description
         {
             get { return description; }
@@ -104,6 +108,7 @@ namespace DriveHUD.Application.ViewModels
 
         private string toolTip;
 
+        [ProtoMember(4)]
         public string ToolTip
         {
             get { return toolTip; }
@@ -115,6 +120,7 @@ namespace DriveHUD.Application.ViewModels
 
         private bool enableBumperSticker;
 
+        [ProtoMember(5)]
         public bool EnableBumperSticker
         {
             get
@@ -129,6 +135,7 @@ namespace DriveHUD.Application.ViewModels
 
         private int minSample;
 
+        [ProtoMember(6)]
         public int MinSample
         {
             get
@@ -143,6 +150,7 @@ namespace DriveHUD.Application.ViewModels
 
         private Color selectedColor;
 
+        [ProtoMember(7)]
         public Color SelectedColor
         {
             get
@@ -157,6 +165,7 @@ namespace DriveHUD.Application.ViewModels
 
         private ObservableCollection<BaseHudRangeStat> stats;
 
+        [ProtoMember(8)]
         public ObservableCollection<BaseHudRangeStat> Stats
         {
             get
@@ -170,7 +179,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         private BuiltFilterModel builtFilter;
-
+        
         public BuiltFilterModel BuiltFilter
         {
             get { return builtFilter; }
@@ -181,7 +190,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         private IFilterModelCollection filterModelCollection;
-
+        
         public IFilterModelCollection FilterModelCollection
         {
             get { return filterModelCollection; }

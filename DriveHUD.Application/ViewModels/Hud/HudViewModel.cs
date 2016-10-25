@@ -42,6 +42,7 @@ using DriveHUD.Entities;
 using DriveHUD.Application.Controls;
 using System.ComponentModel;
 using Model.Filters;
+using DriveHUD.Application.HudServices;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -855,6 +856,9 @@ namespace DriveHUD.Application.ViewModels
         {
             importerService.StartImport();
 
+            var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
+            hudTransmitter.Initialize();
+
             IsStarted = true;
         }
 
@@ -867,7 +871,8 @@ namespace DriveHUD.Application.ViewModels
             var tableService = ServiceLocator.Current.GetInstance<IBetOnlineTableService>();
             tableService.Reset();
 
-            HudPainter.ReleaseHook();
+            var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
+            hudTransmitter.Dispose();
         }
 
         private void OpenDataSave()

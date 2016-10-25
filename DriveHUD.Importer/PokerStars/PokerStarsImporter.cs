@@ -33,7 +33,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.PokerStars
 {
-    public class PokerStarsImporter : BaseImporter, IPokerStarsImporter
+    internal class PokerStarsImporter : BaseImporter, IPokerStarsImporter
     {
         private Dictionary<string, CapturedFile> capturedFiles;
         private HashSet<string> filesToSkip;

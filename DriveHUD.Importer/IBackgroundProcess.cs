@@ -17,7 +17,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Base background process
     /// </summary>
-    public interface IBackgroundProcess : IDisposable
+    internal interface IBackgroundProcess : IDisposable
     {
         /// <summary>
         /// Process has been stopped

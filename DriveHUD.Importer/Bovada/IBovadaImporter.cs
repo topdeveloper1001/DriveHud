@@ -15,7 +15,7 @@ namespace DriveHUD.Importers.Bovada
     /// <summary>
     /// Interface of bovada importer
     /// </summary>
-    public interface IBovadaImporter : IAutoImporter
+    internal interface IBovadaImporter : IAutoImporter
     {
     }
 }

@@ -25,12 +25,6 @@ namespace DriveHUD.Importers
         /// <summary>
         /// Stop import
         /// </summary>
-        void StopImport();
-
-        /// <summary>
-        /// Register importer
-        /// </summary>
-        /// <typeparam name="T">Importer interface</typeparam>
-        IImporterService Register<T>() where T : IBackgroundProcess;
+        void StopImport();     
     }
 }

@@ -132,16 +132,20 @@
     <Reference Include="Npgsql">
       <HintPath>..\dependencies\Npgsql.dll</HintPath>
     </Reference>
-    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+    <Reference Include="Prism, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.2.0\lib\net45\Prism.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Prism.Unity.Wpf, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Unity.6.1.1\lib\net45\Prism.Unity.Wpf.dll</HintPath>
+    <Reference Include="Prism.Unity.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Unity.6.2.0\lib\net45\Prism.Unity.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Prism.Wpf, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Wpf.6.1.0\lib\net45\Prism.Wpf.dll</HintPath>
+    <Reference Include="Prism.Wpf, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\Prism.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ReactiveUI, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -182,7 +186,10 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows" />
     <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -284,6 +291,8 @@
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HudServices\HudTransmitter.cs" />
+    <Compile Include="HudServices\IHudTransmitter.cs" />
     <Compile Include="Licensing\DeployLXLicensingServer.cs" />
     <Compile Include="Licensing\ILicenseInfo.cs" />
     <Compile Include="Licensing\LicenseCouldNotActivateException.cs" />
@@ -300,12 +309,16 @@
     <Compile Include="Migration\Migrations\Migration0001_CreateTablePlayerNotes.cs" />
     <Compile Include="Migration\Migrations\Migration0002_NonDB_DefaultLayoutsAddBumperStickers.cs" />
     <Compile Include="Security\DHTReg.cs" />
+    <Compile Include="Security\SessionService.cs" />
     <Compile Include="SingleInstance.cs" />
     <Compile Include="SplashScreen\ISplashScreen.cs" />
     <Compile Include="SplashScreen\SplashWindow.xaml.cs">
       <DependentUpon>SplashWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="Surrogates\ColorDto.cs" />
+    <Compile Include="Surrogates\SolidColorBrushDto.cs" />
+    <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BovadaSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\CommonSiteSettingTableConfigurator.cs" />
@@ -318,6 +331,7 @@
     <Compile Include="TableConfigurators\SeatArea\ITableSeatArea.cs" />
     <Compile Include="TableConfigurators\SeatArea\TableSeatArea.cs" />
     <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
+    <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
@@ -378,7 +392,6 @@
     <Compile Include="Views\Registration\RegistrationView.xaml.cs">
       <DependentUpon>RegistrationView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Security\SessionService.cs" />
     <Compile Include="Security\UserSession.cs" />
     <Compile Include="TableConfigurators\CommonRichTableConfiguration.cs" />
     <Compile Include="ViewModels\Hud\HudTableLayout.cs" />
@@ -485,7 +498,6 @@
     <Compile Include="ViewModels\Popups\HandNoteViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudLayout.cs" />
-    <Compile Include="ViewModels\Hud\HudPainter.cs" />
     <Compile Include="ViewModels\Hud\HudTableViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerFiltersViewModelNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerSettingsViewModel.cs" />

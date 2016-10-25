@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProtoBuf;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -41,10 +42,14 @@ namespace Model.Enums
         StatInfoPlayerType,
     }
 
+    [ProtoContract]
     public enum EnumStatInfoValueRangeType
     {
+        [ProtoEnum]
         MoreThan,
+        [ProtoEnum]
         Between,
+        [ProtoEnum]
         LessThan,
     }
 

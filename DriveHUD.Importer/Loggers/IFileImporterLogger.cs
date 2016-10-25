@@ -15,7 +15,7 @@ namespace DriveHUD.Importers.Loggers
     /// <summary>
     /// Logger for saving bad hand history files
     /// </summary>
-    public interface IFileImporterLogger
+    internal interface IFileImporterLogger
     {
         void Log(string text);
     }

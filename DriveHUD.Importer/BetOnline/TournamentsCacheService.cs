@@ -21,7 +21,7 @@ using DriveHUD.Common.Log;
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public class TournamentsCacheService : ITournamentsCacheService
+    internal class TournamentsCacheService : ITournamentsCacheService
     {
         private const string cacheFolder = "data";
         private const string cacheFile = "bol.dat";

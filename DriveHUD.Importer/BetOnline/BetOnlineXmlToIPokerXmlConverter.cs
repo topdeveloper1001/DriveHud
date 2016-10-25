@@ -31,7 +31,7 @@ namespace DriveHUD.Importers.BetOnline
     /// <summary>
     /// Class to convert BetOnline xml to iPoker xml
     /// </summary>
-    public class BetOnlineXmlToIPokerXmlConverter : IBetOnlineXmlConverter
+    internal class BetOnlineXmlToIPokerXmlConverter : IBetOnlineXmlConverter
     {
         private XElement tableDetails;
         private XElement gameState;

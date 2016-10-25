@@ -17,7 +17,7 @@ namespace DriveHUD.Importers.Bovada
     /// <summary>
     /// Imports hands from Bovada/Bodog poker clients
     /// </summary>
-    public class BovadaImporter : PokerClientImporter, IBovadaImporter
+    internal class BovadaImporter : PokerClientImporter, IBovadaImporter
     {
         private const uint bufferSize = 4096;
 

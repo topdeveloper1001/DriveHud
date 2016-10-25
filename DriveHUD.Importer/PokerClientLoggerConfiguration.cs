@@ -15,7 +15,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Logger configuration
     /// </summary>
-    public class PokerClientLoggerConfiguration
+    internal class PokerClientLoggerConfiguration
     {
         public string LogDirectory { get; set; }
 

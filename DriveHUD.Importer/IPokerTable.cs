@@ -19,7 +19,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Interface of poker client table 
     /// </summary>
-    public interface IPokerTable
+    internal interface IPokerTable
     {
         uint Uid { get; }
 

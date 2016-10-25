@@ -9,9 +9,11 @@ using System.Xml.Serialization;
 using DriveHUD.Common.Annotations;
 using Model.Enums;
 using DriveHUD.Common.Resources;
+using ProtoBuf;
 
 namespace DriveHUD.ViewModels
 {
+    [ProtoContract]
     [Serializable]
     public class StatInfoOptionValueRange : INotifyPropertyChanged
     {
@@ -30,6 +32,7 @@ namespace DriveHUD.ViewModels
         private EnumStatInfoValueRangeType _valueRangeType = EnumStatInfoValueRangeType.LessThan;
         private Color _color;
 
+        [ProtoMember(1)]
         public Guid Id
         {
             get { return _id; }
@@ -41,6 +44,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(2)]
         public bool IsEditable
         {
             get { return _isEditable; }
@@ -53,6 +57,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(3)]
         public bool IsChecked
         {
             get { return _isChecked; }
@@ -65,6 +70,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(4)]
         public int SortOrder
         {
             get { return _sortOrder; }
@@ -77,6 +83,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(5)]
         public decimal Value
         {
             get { return _value; }
@@ -88,6 +95,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(6)]
         public bool Value_IsValid
         {
             get { return _value_IsValid; }
@@ -99,6 +107,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(7)]
         public EnumStatInfoValueRangeType ValueRangeType
         {
             get { return _valueRangeType; }
@@ -119,6 +128,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(8)]
         public Color Color
         {
             get { return _color; }

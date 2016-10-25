@@ -484,7 +484,7 @@ namespace DriveHUD.Application
         #endregion
     }
 
-    static public class ProgramInfo
+    public static class ProgramInfo
     {
         static public string AssemblyGuid
         {

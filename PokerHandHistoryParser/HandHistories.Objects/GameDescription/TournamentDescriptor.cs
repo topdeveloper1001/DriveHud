@@ -3,8 +3,7 @@ using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.GameDescription
 {
-    [Serializable]
-    [DataContract]
+    [Serializable]   
     public class TournamentDescriptor
     {
         public string TournamentId { get; set; }

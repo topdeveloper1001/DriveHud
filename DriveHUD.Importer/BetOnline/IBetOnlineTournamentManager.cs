@@ -12,7 +12,7 @@
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public interface IBetOnlineTournamentManager : IPokerClientDataManager
+    internal interface IBetOnlineTournamentManager : IPokerClientDataManager
     {
     }
 }

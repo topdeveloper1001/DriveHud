@@ -121,8 +121,12 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="Prism, Version=6.1.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
-      <HintPath>..\packages\Prism.Core.6.1.0\lib\net45\Prism.dll</HintPath>
+    <Reference Include="Prism, Version=6.2.0.0, Culture=neutral, PublicKeyToken=91a96d2a154366d8, processorArchitecture=MSIL">
+      <HintPath>..\packages\Prism.Core.6.2.0\lib\net45\Prism.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="ReactiveUI, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -191,6 +195,7 @@
     <Compile Include="UnitTests\Helpers\DbConfiguration.cs" />
     <Compile Include="UnitTests\Helpers\PT4Repository.cs" />
     <Compile Include="UnitTests\HudLayoutsExtensions.cs" />
+    <Compile Include="UnitTests\HudLayoutsSerialization.cs" />
     <Compile Include="UnitTests\HudLayoutsServiceTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
@@ -252,6 +257,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>IsEqualBuilder.tt</DependentUpon>
+    </Content>
+    <Content Include="UnitTests\TestData\888PokerHands.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\CashHand-10-max-ipoker.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

@@ -12,17 +12,19 @@
 
 using System;
 using ReactiveUI;
+using ProtoBuf;
 
 namespace DriveHUD.ViewModels
 {
     /// <summary>
     /// Class of group of stats
-    /// </summary>
-    [Serializable]
+    /// </summary>    
+    [Serializable, ProtoContract]
     public class StatInfoGroup : ReactiveObject
     {
         private string name;
 
+        [ProtoMember(1)]
         public string Name
         {
             get

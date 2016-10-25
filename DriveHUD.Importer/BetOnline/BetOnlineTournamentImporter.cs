@@ -15,7 +15,7 @@ using Microsoft.Practices.ServiceLocation;
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public class BetOnlineTournamentImporter : PokerClientImporter, IBetOnlineTournamentImporter
+    internal class BetOnlineTournamentImporter : PokerClientImporter, IBetOnlineTournamentImporter
     {
         private const string site = "BetOnline";
 
