@@ -135,11 +135,12 @@ namespace DriveHUD.Importers
                             // we don't have this data in the db so update it after loading from file
                             PlayerStatisticCalculator.CalculatePositionalData(x);
 
-                            if (x.SessionCode == session)
+                            if (x.GameNumber == stats.GameNumber)
                             {
                                 PlayerStatisticCalculator.CalculateTotalPotValues(x);
                                 InitSessionCardsCollections(x);
                                 InitSessionStatCollections(x);
+                                x.SessionCode = session;
                             }
                         });
 

@@ -470,7 +470,6 @@ namespace DriveHUD.Entities
         [ProtoMember(182)]
         public virtual int FacedMultiWayOnFlop { get; set; }
 
-        [ProtoMember(183)]
         public virtual string SessionCode { get; set; }
 
         [ProtoMember(184)]
