@@ -96,7 +96,7 @@ namespace DriveHUD.Application.ViewModels
             SwitchViewModel(EnumViewModelType.DashboardViewModel);
 
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-            StorageModel.PlayerCollection = new ObservableCollection<string>(dataService.GetPlayersList());
+            StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
 
             StorageModel.PropertyChanged += StorageModel_PropertyChanged;
 
@@ -179,7 +179,7 @@ namespace DriveHUD.Application.ViewModels
 
         internal void Load()
         {
-            var statistics = dataService.GetPlayerStatisticFromFile(StorageModel.PlayerSelectedItem);
+            var statistics = dataService.GetPlayerStatisticFromFile(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
             AddHandTags(statistics);
 
             if (statistics != null)
@@ -201,7 +201,7 @@ namespace DriveHUD.Application.ViewModels
             if (args.IsUpdatePlayersCollection)
             {
                 StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
-                StorageModel.PlayerCollection = new ObservableCollection<string>(dataService.GetPlayersList());
+                StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
                 StorageModel.TryLoadActivePlayer(dataService.GetActivePlayer(), loadHeroIfMissing: true);
             }
 
@@ -237,7 +237,7 @@ namespace DriveHUD.Application.ViewModels
         {
             UpdatePlayerList();
 
-            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem))
+            if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
             {
                 App.Current.Dispatcher.Invoke(() =>
                 {
@@ -251,260 +251,269 @@ namespace DriveHUD.Application.ViewModels
 
         private void OnDataImported(DataImportedEventArgs e)
         {
-            var sw = new Stopwatch();
-
-            sw.Start();
-
-            RefreshData();
-
-            var refreshTime = sw.ElapsedMilliseconds;
-
-            Debug.WriteLine("RefreshData {0} ms", refreshTime);
-
-            sw.Restart();
-
-            var report = ReportGadgetViewModel.ReportCollection.FirstOrDefault();
-
-            if (report != null)
+            try
             {
-                ReportGadgetViewModel.ReportSelectedItem = report;
-            }
+                var sw = new Stopwatch();
 
-            var players = e.Players;
-            var gameInfo = e.GameInfo;
-            var maxSeats = (int)gameInfo.TableType;
-            var site = e.GameInfo.PokerSite;
+                sw.Start();
 
-            var ht = new HudLayout
-            {
-                WindowId = gameInfo.WindowHandle,
-                HudType = site == EnumPokerSites.Bovada ? HudViewModel.HudType : HudType.Plain,
-                TableType = gameInfo.TableType
-            };
+                RefreshData();
 
-            var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
+                var refreshTime = sw.ElapsedMilliseconds;
 
-            var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+                Debug.WriteLine("RefreshData {0} ms", refreshTime);
 
-            var trackConditionsMeterData = new HudTrackConditionsMeterData();
+                sw.Restart();
 
-            for (int i = 1; i <= maxSeats; i++)
-            {
-                var playerName = string.Empty;
-                var seatNumber = 0;
+                var report = ReportGadgetViewModel.ReportCollection.FirstOrDefault();
 
-                foreach (var player in players)
+                if (report != null)
                 {
-                    if (player.SeatNumber == i)
-                    {
-                        if (!string.IsNullOrEmpty(player.PlayerName))
-                        {
-                            playerName = player.PlayerName;
-                            seatNumber = player.SeatNumber;
-                        }
-
-                        break;
-                    }
+                    ReportGadgetViewModel.ReportSelectedItem = report;
                 }
 
-                if (string.IsNullOrEmpty(playerName))
-                {
-                    continue;
-                }
+                var players = e.Players;
+                var gameInfo = e.GameInfo;
+                var maxSeats = (int)gameInfo.TableType;
+                var site = e.GameInfo.PokerSite;
 
-                var playerHudContent = new PlayerHudContent
+                var ht = new HudLayout
                 {
-                    Name = playerName,
-                    SeatNumber = seatNumber
+                    WindowId = gameInfo.WindowHandle,
+                    HudType = site == EnumPokerSites.Bovada ? HudViewModel.HudType : HudType.Plain,
+                    TableType = gameInfo.TableType
                 };
 
-                var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerName);
-                var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerName);
-                var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);
+                var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
 
-                var item = new HudIndicators(statisticCollection);
-                var sessionData = new HudIndicators(sessionStatisticCollection);
+                var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-                trackConditionsMeterData.VPIP += sessionData.VPIP;
-                trackConditionsMeterData.ThreeBet += sessionData.ThreeBet;
+                var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
-                if (sessionData.TotalHands > trackConditionsMeterData.TotalHands)
+                for (int i = 1; i <= maxSeats; i++)
                 {
-                    trackConditionsMeterData.TotalHands = sessionData.TotalHands;
+                    var playerName = string.Empty;
+                    var playerCollectionItem = new PlayerCollectionItem();
+                    var seatNumber = 0;
 
-                    if (e.GameInfo.GameFormat == GameFormat.MTT || e.GameInfo.GameFormat == GameFormat.SnG)
+                    foreach (var player in players)
                     {
-                        trackConditionsMeterData.TotalPotSize = sessionData.Source.TotalPotInBB;
+                        if (player.SeatNumber == i)
+                        {
+                            if (!string.IsNullOrEmpty(player.PlayerName))
+                            {
+                                playerName = player.PlayerName;
+                                seatNumber = player.SeatNumber;
+                                playerCollectionItem = new PlayerCollectionItem { Name = player.PlayerName, PokerSite = site };
+                            }
+
+                            break;
+                        }
                     }
-                    else
+
+                    if (string.IsNullOrEmpty(playerName))
                     {
-                        trackConditionsMeterData.TotalPotSize = sessionData.Source.TotalPot;
+                        continue;
                     }
-                }
 
-                var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
+                    var playerHudContent = new PlayerHudContent
+                    {
+                        Name = playerName,
+                        SeatNumber = seatNumber
+                    };
 
-                playerHudContent.HudElement = hudElementCreator.Create(tableKey, HudViewModel, seatNumber, ht.HudType);
+                    var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
+                    var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerCollectionItem);
+                    var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);
 
-                if (playerHudContent.HudElement == null)
-                {
-                    continue;
-                }
+                    var item = new HudIndicators(statisticCollection);
+                    var sessionData = new HudIndicators(sessionStatisticCollection);
 
-                playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
-                playerHudContent.HudElement.PlayerName = playerName;
-                playerHudContent.HudElement.PokerSiteId = (short)site;
-                playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
-                playerHudContent.HudElement.TotalHands = item.TotalHands;
+                    trackConditionsMeterData.VPIP += sessionData.VPIP;
+                    trackConditionsMeterData.ThreeBet += sessionData.ThreeBet;
 
-                var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
-                playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
-                    ? new ObservableCollection<decimal>()
-                    : new ObservableCollection<decimal>(sessionMoney);
+                    if (sessionData.TotalHands > trackConditionsMeterData.TotalHands)
+                    {
+                        trackConditionsMeterData.TotalHands = sessionData.TotalHands;
 
-                var cardsCollection = sessionStatisticCollection.SingleOrDefault(x => x.CardsList != null)?.CardsList;
-                playerHudContent.HudElement.CardsCollection = cardsCollection == null
-                    ? new ObservableCollection<string>()
-                    : new ObservableCollection<string>(cardsCollection);
+                        if (e.GameInfo.GameFormat == GameFormat.MTT || e.GameInfo.GameFormat == GameFormat.SnG)
+                        {
+                            trackConditionsMeterData.TotalPotSize = sessionData.Source.TotalPotInBB;
+                        }
+                        else
+                        {
+                            trackConditionsMeterData.TotalPotSize = sessionData.Source.TotalPot;
+                        }
+                    }
 
-                var doNotAddPlayer = false;
+                    var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
 
-                var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
+                    playerHudContent.HudElement = hudElementCreator.Create(tableKey, HudViewModel, seatNumber, ht.HudType);
 
-                if (activeLayout == null)
-                {
-                    LogProvider.Log.Error("Could not find active layout");
-                    return;
-                }
+                    if (playerHudContent.HudElement == null)
+                    {
+                        continue;
+                    }
 
-                // create new array to prevent Collection was modified exception
-                var activeLayoutHudStats = activeLayout.HudStats.ToArray();
+                    playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
+                    playerHudContent.HudElement.PlayerName = playerName;
+                    playerHudContent.HudElement.PokerSiteId = (short)site;
+                    playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
+                    playerHudContent.HudElement.TotalHands = item.TotalHands;
 
-                var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
-                                        .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
-                                        {
-                                            var statInfoBreak = x as StatInfoBreak;
+                    var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
+                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
+                        ? new ObservableCollection<decimal>()
+                        : new ObservableCollection<decimal>(sessionMoney);
 
-                                            if (statInfoBreak != null)
+                    var cardsCollection = sessionStatisticCollection.SingleOrDefault(x => x.CardsList != null)?.CardsList;
+                    playerHudContent.HudElement.CardsCollection = cardsCollection == null
+                        ? new ObservableCollection<string>()
+                        : new ObservableCollection<string>(cardsCollection);
+
+                    var doNotAddPlayer = false;
+
+                    var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
+
+                    if (activeLayout == null)
+                    {
+                        LogProvider.Log.Error("Could not find active layout");
+                        return;
+                    }
+
+                    // create new array to prevent Collection was modified exception
+                    var activeLayoutHudStats = activeLayout.HudStats.ToArray();
+
+                    var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
+                                            .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
                                             {
-                                                return statInfoBreak.Clone();
-                                            }
+                                                var statInfoBreak = x as StatInfoBreak;
 
-                                            return x.Clone();
-                                        }).ToArray();
+                                                if (statInfoBreak != null)
+                                                {
+                                                    return statInfoBreak.Clone();
+                                                }
 
-                statsExceptActive.ForEach(x => x.IsNotVisible = true);
+                                                return x.Clone();
+                                            }).ToArray();
 
-                var allStats = activeLayoutHudStats.Select(x =>
-                {
-                    var statInfoBreak = x as StatInfoBreak;
+                    statsExceptActive.ForEach(x => x.IsNotVisible = true);
 
-                    if (statInfoBreak != null)
+                    var allStats = activeLayoutHudStats.Select(x =>
                     {
-                        return statInfoBreak.Clone();
-                    }
+                        var statInfoBreak = x as StatInfoBreak;
 
-                    return x.Clone();
-                }).Concat(statsExceptActive);
-
-                foreach (var statInfo in allStats)
-                {
-                    if (!string.IsNullOrEmpty(statInfo.PropertyName))
-                    {
-                        statInfo.AssignStatInfoValues(item);
-                    }
-                    else if (!(statInfo is StatInfoBreak))
-                    {
-                        doNotAddPlayer = true;
-                    }
-
-                    // temporary
-                    var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
-                    if (tooltipCollection != null)
-                    {
-                        foreach (var tooltip in tooltipCollection)
+                        if (statInfoBreak != null)
                         {
-                            tooltip.CategoryStat.AssignStatInfoValues(item);
-                            foreach (var stat in tooltip.StatsCollection)
-                            {
-                                stat.AssignStatInfoValues(item);
-                            }
-
-                            if (tooltip.CardsList == null)
-                            {
-                                continue;
-                            }
-
-                            var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
-                            if (listObj != null)
-                            {
-                                tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
-                            }
+                            return statInfoBreak.Clone();
                         }
-                        statInfo.StatInfoToolTipCollection = tooltipCollection;
-                    }
 
-                    playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
-                }
+                        return x.Clone();
+                    }).Concat(statsExceptActive);
 
-                if (lastHandStatistic != null)
-                {
-                    var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, tableKey);
-
-                    if (stickers.Any())
+                    foreach (var statInfo in allStats)
                     {
-                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerName, stickers.ToDictionary(x => x, x => lastHandStatistic));
+                        if (!string.IsNullOrEmpty(statInfo.PropertyName))
+                        {
+                            statInfo.AssignStatInfoValues(item);
+                        }
+                        else if (!(statInfo is StatInfoBreak))
+                        {
+                            doNotAddPlayer = true;
+                        }
+
+                        // temporary
+                        var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
+                        if (tooltipCollection != null)
+                        {
+                            foreach (var tooltip in tooltipCollection)
+                            {
+                                tooltip.CategoryStat.AssignStatInfoValues(item);
+                                foreach (var stat in tooltip.StatsCollection)
+                                {
+                                    stat.AssignStatInfoValues(item);
+                                }
+
+                                if (tooltip.CardsList == null)
+                                {
+                                    continue;
+                                }
+
+                                var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
+                                if (listObj != null)
+                                {
+                                    tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
+                                }
+                            }
+                            statInfo.StatInfoToolTipCollection = tooltipCollection;
+                        }
+
+                        playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
                     }
 
-                    hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerName), tableKey);
+                    if (lastHandStatistic != null)
+                    {
+                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, tableKey);
+
+                        if (stickers.Any())
+                        {
+                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerCollectionItem, stickers.ToDictionary(x => x, x => lastHandStatistic));
+                        }
+
+                        hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerCollectionItem), tableKey);
+                    }
+
+                    if (!doNotAddPlayer)
+                    {
+                        ht.ListHUDPlayer.Add(playerHudContent);
+                    }
                 }
 
-                if (!doNotAddPlayer)
+                sw.Stop();
+
+                Debug.WriteLine("Hand has been imported for {0} ms", sw.ElapsedMilliseconds + refreshTime);
+
+                if (HudViewModel.HudTableViewModelDictionary.ContainsKey(tableKey))
                 {
-                    ht.ListHUDPlayer.Add(playerHudContent);
+                    var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
+                    hudLayoutsService.SetPlayerTypeIcon(hudElements, tableKey);
+
+                    Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
+                    {
+                        return y != 0 ? x / y : 0;
+                    };
+
+                    var trackConditionsInfo = new HudTrackConditionsViewModelInfo
+                    {
+                        AveragePot = getDevisionResult(trackConditionsMeterData.TotalPotSize, trackConditionsMeterData.TotalHands),
+                        VPIP = getDevisionResult(trackConditionsMeterData.VPIP, players.Count),
+                        ThreeBet = getDevisionResult(trackConditionsMeterData.ThreeBet, players.Count),
+                        TableType = gameInfo.TableType,
+                        BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
+                    };
+
+                    ht.HudTrackConditionsMeter = trackConditionsInfo;
+
+                    ht.TableHud = HudViewModel.HudTableViewModelDictionary[tableKey].Clone();
+
+                    byte[] serialized;
+
+                    using (var msTestString = new MemoryStream())
+                    {
+                        Serializer.Serialize(msTestString, ht);
+                        serialized = msTestString.ToArray();
+                    }
+
+                    var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
+                    hudTransmitter.Send(serialized);
                 }
             }
-
-            sw.Stop();
-
-            Debug.WriteLine("Hand has been imported for {0} ms", sw.ElapsedMilliseconds + refreshTime);
-
-            if (HudViewModel.HudTableViewModelDictionary.ContainsKey(tableKey))
+            catch (Exception ex)
             {
-                var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                hudLayoutsService.SetPlayerTypeIcon(hudElements, tableKey);
-
-                Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
-                {
-                    return y != 0 ? x / y : 0;
-                };
-
-                var trackConditionsInfo = new HudTrackConditionsViewModelInfo
-                {
-                    AveragePot = getDevisionResult(trackConditionsMeterData.TotalPotSize, trackConditionsMeterData.TotalHands),
-                    VPIP = getDevisionResult(trackConditionsMeterData.VPIP, players.Count),
-                    ThreeBet = getDevisionResult(trackConditionsMeterData.ThreeBet, players.Count),
-                    TableType = gameInfo.TableType,
-                    BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
-                };
-
-                ht.HudTrackConditionsMeter = trackConditionsInfo;
-
-                ht.TableHud = HudViewModel.HudTableViewModelDictionary[tableKey].Clone();
-
-                byte[] serialized;
-
-                using (var msTestString = new MemoryStream())
-                {
-                    Serializer.Serialize(msTestString, ht);
-                    serialized = msTestString.ToArray();
-                }                
-            
-                var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
-                hudTransmitter.Send(serialized);           
+                LogProvider.Log.Error(this, "Importing failed", ex);
             }
         }
-                
+
         internal async void ImportFromFile()
         {
             var openFileDialog = new Microsoft.Win32.OpenFileDialog();
@@ -661,7 +670,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void AddHandTags(IList<Playerstatistic> statistics)
         {
-            var notes = dataService.GetHandNotes();
+            var notes = dataService.GetHandNotes((short)StorageModel.PlayerSelectedItem.PokerSite);
 
             var statisticsForUpdate = (from note in notes
                                        join statistic in statistics on note.Gamenumber equals statistic.GameNumber
@@ -976,7 +985,7 @@ namespace DriveHUD.Application.ViewModels
         {
             HudViewModel.Stop();
             importerSessionCacheService.End();
-            dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem);
+            dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
 
             // flush betonline cash
             var tournamentsCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();

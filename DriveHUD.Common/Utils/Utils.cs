@@ -13,8 +13,11 @@
 using DeployLX.Licensing.v5;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Globalization;
 using System.Text.RegularExpressions;
+using System.Windows;
+using System.Windows.Forms;
 
 namespace DriveHUD.Common.Utils
 {
@@ -137,6 +140,37 @@ namespace DriveHUD.Common.Utils
             }
 
             return errorCodes;
+        }
+
+        /// <summary>
+        /// Gets primary screen resolution
+        /// </summary>
+        /// <returns>Screen resolution</returns>
+        public static SizeF GetScreenResolution()
+        {
+            return new SizeF
+            {
+                Width = (float)SystemParameters.PrimaryScreenWidth,
+                Height = (float)SystemParameters.PrimaryScreenHeight
+            };
+        }
+
+        /// <summary>
+        /// Get screen dpi
+        /// </summary>
+        /// <returns>Screen dpi</returns>
+        public static SizeF GetCurrentDpi()
+        {
+            using (Form form = new Form())
+            using (Graphics g = form.CreateGraphics())
+            {
+                var result = new SizeF()
+                {
+                    Width = g.DpiX,
+                    Height = g.DpiY
+                };
+                return result;
+            }
         }
     }
 }

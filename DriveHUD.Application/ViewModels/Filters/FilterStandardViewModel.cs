@@ -22,7 +22,7 @@ namespace DriveHUD.Application.ViewModels
         public override void InitializeFilterModel()
         {
             var player = StorageModel.PlayerSelectedItem;
-            var gameTypes = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerGameTypes(player);
+            var gameTypes = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerGameTypes(player.Name, (short)player.PokerSite);
 
             this.FilterModel = (FilterStandardModel)FilterModelManager.FilterModelCollection.Where(x => x.GetType().Equals(typeof(FilterStandardModel))).FirstOrDefault();
             this.FilterModel.UpdateFilterSectionStakeLevelCollection(gameTypes);

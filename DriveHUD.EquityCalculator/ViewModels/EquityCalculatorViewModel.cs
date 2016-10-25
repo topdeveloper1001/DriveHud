@@ -285,7 +285,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     return;
                 }
 
-                _currentHandHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(obj.GameNumber);
+                _currentHandHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(obj.GameNumber, obj.PokersiteId);
                 if (_currentHandHistory == null)
                     return;
 
@@ -297,7 +297,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                        _currentHandHistory
                             .HandActions.Any(a=> (a.HandActionType == HandActionType.FOLD) 
                                                 && (a.PlayerName == x.PlayerName)) 
-                    && (x.PlayerName != this.StorageModel.PlayerSelectedItem)
+                    && (x.PlayerName != this.StorageModel.PlayerSelectedItem.Name)
                     && (x.PlayerName != strongestOpponent));
             }
             catch (ArgumentOutOfRangeException ex)

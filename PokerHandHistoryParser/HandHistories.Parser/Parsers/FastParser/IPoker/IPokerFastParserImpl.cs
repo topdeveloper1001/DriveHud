@@ -405,6 +405,9 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
              * NLH <gametype>Holdem PL $2/$4</gametype>    
              * FL  <gametype>Holdem L $2/$4</gametype>
              * PLO <gametype>Omaha PL $0.50/$1</gametype>
+             * PLO8 <gametype>Omaha Hi-Lo PL $0.05/$0.10</gametype>
+             * NLO8 <gametype>Omaha Hi-Lo NL $2/$4</gametype>
+             * FLO8 <gametype>Omaha Hi-Lo Limit $2/$4</gametype>
              */
 
             string gameTypeLine = GetGameTypeLineFromHandLines(handLines);
@@ -414,6 +417,36 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             if (gameTypeChar == 'O')
             {
+                char hiLoChar = gameTypeLine[16];
+                if (hiLoChar == 'H')
+                {
+                    //HiLo
+                    var omahaTypeChar = gameTypeLine[22];
+                    switch (omahaTypeChar)
+                    {
+                        case 'P':
+                            return GameType.PotLimitOmahaHiLo;
+                        case 'N':
+                            return GameType.NoLimitOmahaHiLo;
+                        case 'L':
+                            return GameType.FixedLimitOmahaHiLo;
+                    }
+                }
+                else
+                {
+                    //Hi
+                    var omahaTypeChar = hiLoChar;
+                    switch (omahaTypeChar)
+                    {
+                        case 'P':
+                            return GameType.PotLimitOmaha;
+                        case 'N':
+                            return GameType.NoLimitOmaha;
+                        case 'L':
+                            return GameType.FixedLimitOmaha;
+                    }
+                }
+
                 return GameType.PotLimitOmaha;
             }
 

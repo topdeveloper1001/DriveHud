@@ -130,10 +130,5 @@ namespace DriveHUD.Application.ViewModels
         /// <returns>Full path to image</returns>
         string GetImageLink(string image);
 
-        /// <summary>
-        /// Get collection of layouts that have any stats selected
-        /// </summary>
-        /// <returns></returns>
-        IEnumerable<HudSavedLayout> GetNotEmptyStatsLayout();
     }
 }

@@ -24,7 +24,7 @@ namespace DriveHUD.Application.ViewModels
     [Serializable, ProtoContract]
     public class HudBumperStickerType : ReactiveObject
     {
-        private const int MinSampleDefault = 50;
+        private const int MinSampleDefault = 100;
         private readonly Color DefaultColor = Colors.OrangeRed;
         private readonly string[] StringsToExcludeFromLabels = new string[] { "and", "&" };
 

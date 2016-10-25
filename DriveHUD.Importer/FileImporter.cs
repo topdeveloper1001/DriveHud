@@ -156,7 +156,7 @@ namespace DriveHUD.Importers
                 gameInfo = new GameInfo
                 {
                     PokerSite = handHistoryParserFactory.LastSelected
-                };                
+                };
             }
 
 
@@ -353,7 +353,7 @@ namespace DriveHUD.Importers
                                 // Calculate stats for every player (to do - vector analyze)
                                 var playersToSelect = handHistory.Players.Select(x => x.Playername).ToList();
 
-                                var existingPlayers = session.Query<Players>().Where(x => playersToSelect.Contains(x.Playername)).ToList();
+                                var existingPlayers = session.Query<Players>().Where(x => playersToSelect.Contains(x.Playername) && x.PokersiteId == handHistory.HandHistory.PokersiteId).ToList();
 
                                 // join new players with existing
                                 var players = (from handHistoryPlayer in handHistory.Players
@@ -385,7 +385,7 @@ namespace DriveHUD.Importers
                                         var isHero = handHistory.Source.Hero != null ? handHistory.Source.Hero.PlayerName.Equals(existingPlayer.Playername) : false;
 
                                         playerStatCopy.SessionCode = importerSession;
-                                        importSessionCacheService.AddOrUpdatePlayerStats(importerSession, existingPlayer.Playername, playerStatCopy, isHero);
+                                        importSessionCacheService.AddOrUpdatePlayerStats(importerSession, new PlayerCollectionItem { Name = existingPlayer.Playername, PokerSite = (EnumPokerSites)existingPlayer.PokersiteId }, playerStatCopy, isHero);
 
                                         var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 
@@ -402,7 +402,7 @@ namespace DriveHUD.Importers
                                         // get all existing data for that tournament
                                         if (tournamentsData == null)
                                         {
-                                            tournamentsData = session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId).ToList();
+                                            tournamentsData = session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId && x.SiteId == handHistory.HandHistory.PokersiteId).ToList();
                                         }
 
                                         var tournaments = CreateTournaments(handHistory, existingPlayer);
@@ -472,7 +472,7 @@ namespace DriveHUD.Importers
                 }
 
                 playerStat.SessionCode = session;
-       
+
                 dataService.Store(playerStat);
 
                 return playerStat;

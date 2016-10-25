@@ -118,9 +118,6 @@
       <Component Id="HandHistories.Parser.dll" Guid="{B399D6FC-3E00-4C42-A9BC-8FD2C2F719B3}">
         <File Id="HandHistories.Parser.dll" KeyPath="yes" Source="$(var.BuildDirectory)\HandHistories.Parser.dll" />
       </Component>
-      <Component Id="DriveHUD.DBMigrator.dll" Guid="{6A447C59-73B8-465E-8736-DFDEB8AB7673}">
-        <File Id="DriveHUD.DBMigrator.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.DBMigrator.dll" />
-      </Component>
     </DirectoryRef>
 
     <DirectoryRef Id="BIN">
@@ -403,7 +400,6 @@
       <ComponentRef Id="Model.dll" />
       <ComponentRef Id="HandHistories.Objects.dll" />
       <ComponentRef Id="HandHistories.Parser.dll" />
-      <ComponentRef Id="DriveHUD.DBMigrator.dll"/>
       <ComponentRef Id="DHCReg.dll" />
       <ComponentRef Id="DHHReg.dll" />
       <ComponentRef Id="DHOReg.dll" />
