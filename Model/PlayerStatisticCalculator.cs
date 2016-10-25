@@ -822,7 +822,7 @@ namespace Model
             stealers.Add(parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName);
 
             bool wasSteal = false;
-            foreach (var action in parsedHand.PreFlop)
+            foreach (var action in parsedHand.PreFlop.Where(x => !x.IsBlinds))
             {
                 if (wasSteal)
                 {
@@ -854,7 +854,7 @@ namespace Model
                         continue;
                     }
 
-                    if (action.IsRaise())
+                    if (!action.IsFold)
                     {
                         return;
                     }
@@ -875,7 +875,7 @@ namespace Model
                 return;
             }
 
-            foreach (var action in parsedHand.PreFlop)
+            foreach (var action in parsedHand.PreFlop.Where(x => !x.IsBlinds))
             {
                 if (action.PlayerName == player)
                 {
@@ -884,7 +884,7 @@ namespace Model
                     return;
                 }
 
-                if (action.IsRaise())
+                if (!action.IsFold)
                 {
                     return;
                 }
@@ -905,7 +905,7 @@ namespace Model
             stealers.Add(parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName);
 
             bool wasSteal = false;
-            foreach (var action in parsedHand.PreFlop)
+            foreach (var action in parsedHand.PreFlop.Where(x => !x.IsBlinds))
             {
                 if (wasSteal)
                 {
@@ -932,7 +932,7 @@ namespace Model
                         continue;
                     }
 
-                    if (action.IsRaise())
+                    if (!action.IsFold)
                     {
                         return;
                     }
@@ -951,13 +951,14 @@ namespace Model
             bool isThreeBetVsStealPossible = false;
             string stealer = string.Empty;
             int stealerIndex = -1;
-            for (int i = 0; i < parsedHand.PreFlop.Count(); i++)
+            var preflops = parsedHand.PreFlop.Where(x => !x.IsBlinds);
+            for (int i = 0; i < preflops.Count(); i++)
             {
-                var action = parsedHand.PreFlop.ElementAt(i);
+                var action = preflops.ElementAt(i);
 
                 if (isThreeBetVsStealPossible)
                 {
-                    Calculate3Bet(threeBetVsSteal, parsedHand.PreFlop.Skip(stealerIndex).ToList(), player, stealer);
+                    Calculate3Bet(threeBetVsSteal, preflops.Skip(stealerIndex).ToList(), player, stealer);
                 }
                 else
                 {
@@ -968,7 +969,7 @@ namespace Model
                         stealerIndex = i;
                     }
 
-                    if (action.IsRaise())
+                    if (!action.IsFold)
                     {
                         return;
                     }
@@ -1366,17 +1367,12 @@ namespace Model
         {
             if (hand.Players.Count == 2)
                 return null;
+
             var players = hand.Players.ToList();
-            var smallBlind = hand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND);
-            if (smallBlind != null)
-                players.Remove(players.FirstOrDefault(x => x.PlayerName == smallBlind.PlayerName));
+            var button = players.FirstOrDefault(x => x.SeatNumber == hand.DealerButtonPosition);
+            var co = hand.HandActions.Select(h => h.PlayerName).Distinct().Where(x => x != button?.PlayerName).LastOrDefault();
 
-            var buttonPlayer = hand.Players.FirstOrDefault(x => x.SeatNumber == hand.DealerButtonPosition);
-            int buttonIndex = buttonPlayer != null ? players.IndexOf(buttonPlayer) : 0;
-
-            int cutoffIndex = (buttonIndex == 0 ? players.Count : buttonIndex) - 1;
-
-            return players[cutoffIndex];
+            return hand.Players.FirstOrDefault(x => x.PlayerName == co);
         }
 
         private static Player GetDealerPlayer(HandHistory hand)
