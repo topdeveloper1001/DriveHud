@@ -57,6 +57,11 @@ namespace DriveHUD.Importers
         private const int ProcessSearchingTimeout = 5000;
 
         /// <summary>
+        /// Timeout 
+        /// </summary>
+        private const int EjectDllTimeout = 2000;
+
+        /// <summary>
         /// True if Dll is injected
         /// </summary>
         protected bool isInjected;
@@ -262,6 +267,7 @@ namespace DriveHUD.Importers
                 LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Found already injected dll in \"{0}\" processes. Dll will be ejected.", ProcessName));
 
                 EjectDll(injectedDllProcessAddress);
+                Task.Delay(EjectDllTimeout).Wait();
             }
 
             // pointer to allocated memory of lib path string
