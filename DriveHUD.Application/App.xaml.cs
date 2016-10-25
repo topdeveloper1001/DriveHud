@@ -35,6 +35,7 @@ using Model.Settings;
 using Model;
 using DriveHUD.Application.SplashScreen;
 using System.Threading;
+using DriveHUD.Application.HudServices;
 
 namespace DriveHUD.Application
 {
@@ -135,10 +136,10 @@ namespace DriveHUD.Application
                 if (!assemblyInfo.Exists)
                 {
                     assemblyInfo = new FileInfo(Path.Combine(binDirectory, assemblies[i]));
-                }               
+                }
 
                 var isValid = SecurityUtils.ValidateFileHash(assemblyInfo.FullName, assembliesHashes[i]) && assemblyInfo.Length == assemblySizes[i];
-               
+
                 if (!isValid)
                 {
                     LogProvider.Log.Error("Application could not be initialized");
@@ -186,6 +187,9 @@ namespace DriveHUD.Application
             {
                 importService.StopImport();
             }
+
+            var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
+            hudTransmitter.Dispose();
         }
 
         private Dictionary<string, X509Certificate2> dynamicAssemblyCertificates = new Dictionary<string, X509Certificate2>();

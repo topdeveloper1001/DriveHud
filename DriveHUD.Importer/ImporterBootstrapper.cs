@@ -50,10 +50,11 @@ namespace DriveHUD.Importers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>();
             container.RegisterType<IImporterSessionCacheService, ImporterSessionCacheService>(new ContainerControlledLifetimeManager());
             container.RegisterType<IFileImporter, FileImporter>();
+            container.RegisterType<IFileImporterLogger, FileImporterLogger>();
 
             // Loggers
             container.RegisterType<IPokerClientEncryptedLogger, PokerClientLogger>(LogServices.Base.ToString());
-            container.RegisterType<IPokerClientEncryptedLogger, BetOnlineTournamentLogger>(LogServices.BetOnlineTournament.ToString());         
+            container.RegisterType<IPokerClientEncryptedLogger, BetOnlineTournamentLogger>(LogServices.BetOnlineTournament.ToString());
         }
 
         public static void ConfigureImporterService()

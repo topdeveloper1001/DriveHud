@@ -1,6 +1,7 @@
 ﻿using DriveHUD.Common.Annotations;
 using DriveHUD.Common.Reflection;
 using Model.Data;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,10 +13,12 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.ViewModels
 {
+    [ProtoContract]
     public class StatInfoToolTip : INotifyPropertyChanged
     {
         private string _categoryName;
 
+        [ProtoMember(1)]
         public string CategoryName
         {
             get
@@ -31,6 +34,7 @@ namespace DriveHUD.ViewModels
 
         private StatInfo _categoryStat;
 
+        [ProtoMember(2)]
         public StatInfo CategoryStat
         {
             get { return _categoryStat; }
@@ -43,6 +47,7 @@ namespace DriveHUD.ViewModels
 
         private ObservableCollection<StatInfo> _statsCollection;
 
+        [ProtoMember(3)]
         public ObservableCollection<StatInfo> StatsCollection
         {
             get
@@ -57,6 +62,8 @@ namespace DriveHUD.ViewModels
         }
 
         public StatInfoToolTipCardsList _cardsList;
+
+        [ProtoMember(4)]
         public StatInfoToolTipCardsList CardsList
         {
             get { return _cardsList; }
@@ -209,12 +216,16 @@ namespace DriveHUD.ViewModels
         #endregion
     }
 
+    [ProtoContract]
     public class StatInfoToolTipCardsList : INotifyPropertyChanged
     {
+        [ProtoMember(1)]
         public int ListSize { get; set; }
 
+        [ProtoMember(2)]
         public string PropertyName { get; set; }
 
+        [ProtoMember(3)]
         public ObservableCollection<string> Cards { get; set; }
 
         #region Events

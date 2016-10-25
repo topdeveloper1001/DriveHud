@@ -20,71 +20,7 @@ namespace DriveHUD.Application.ViewModels
     /// Hud player type stat range
     /// </summary>
     [Serializable]
-    public class HudPlayerTypeStat : ReactiveObject
+    public class HudPlayerTypeStat : BaseHudRangeStat
     {
-        #region Properties
-
-        private decimal? low;
-
-        public decimal? Low
-        {
-            get
-            {
-                return low;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref low, value);
-                SwapLowHigh();
-            }
-        }
-
-        private decimal? high;
-
-        public decimal? High
-        {
-            get
-            {
-                return high;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref high, value);
-                SwapLowHigh();
-            }
-        }
-
-        private Stat stat;
-
-        public Stat Stat
-        {
-            get
-            {
-                return stat;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref stat, value);
-            }
-        }
-
-        #endregion
-
-        public HudPlayerTypeStat Clone()
-        {
-            return (HudPlayerTypeStat)MemberwiseClone();
-        }
-
-        private void SwapLowHigh()
-        {
-            if (!Low.HasValue || !High.HasValue || (Low <= High))
-            {
-                return;
-            }
-
-            var temp = Low;
-            Low = High;
-            High = temp;
-        }
     }
 }

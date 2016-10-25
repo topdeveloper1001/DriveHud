@@ -11,6 +11,8 @@ namespace Model.Filters
 
         void ResetFilter();
 
+        void Initialize();
+
         void LoadFilter(IFilterModel filter);
 
         EnumFilterModelType Type { get; set; }

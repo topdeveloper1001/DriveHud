@@ -15,14 +15,15 @@ using System.Windows.Shapes;
 
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Filters;
+using Model.Filters;
 
 namespace DriveHUD.Application.Views
 {
     public partial class FilterBoardTextureView : UserControl, IFilterView
     {
-        public FilterBoardTextureView()
+        public FilterBoardTextureView(IFilterModelManagerService service)
         {
-            this.DataContext = new FilterBoardTextureViewModel();
+            this.DataContext = new FilterBoardTextureViewModel(service);
 
             InitializeComponent();
         }

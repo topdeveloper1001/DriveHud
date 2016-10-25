@@ -3,6 +3,7 @@ using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Resources;
 using Model.Data;
 using Model.Enums;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -17,6 +18,8 @@ namespace DriveHUD.ViewModels
 {
     [XmlInclude(typeof(StatInfoBreak))]
     [Serializable]
+    [ProtoContract]
+    [ProtoInclude(29, typeof(StatInfoBreak))]
     public class StatInfo : INotifyPropertyChanged
     {
         private const string totalHandFormat = "{0:0}";
@@ -25,6 +28,8 @@ namespace DriveHUD.ViewModels
         {
             // default stat format 
             format = "{0:0.0}";
+            // list stat by default
+            isListed = true;
             // initialize collection
             SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>();
             // initialize defaults
@@ -34,7 +39,8 @@ namespace DriveHUD.ViewModels
         public void Reset()
         {
             _currentValue = -1;
-            _settingsAppearanceFontFamily = Fonts.SystemFontFamilies.Where(x => x.Source == "Segoe UI").FirstOrDefault();
+            _settingAppearanceFontSource = "Segoe UI";
+            _settingsAppearanceFontFamily = Fonts.SystemFontFamilies.Where(x => x.Source == _settingAppearanceFontSource).FirstOrDefault();
             _currentColor = Colors.Gray;
             _settingsAppearanceFontSize = 10;
             _settingsAppearanceFontBold = FontWeights.Normal;
@@ -56,6 +62,7 @@ namespace DriveHUD.ViewModels
         #region Properties
 
         private Guid _id = Guid.NewGuid();
+
         private string _caption;
 
         private StatInfoGroup _statInfoGroup;
@@ -66,6 +73,7 @@ namespace DriveHUD.ViewModels
         private Color _currentColor;
         private decimal _currentValue;
 
+        private string _settingAppearanceFontSource;
         private FontFamily _settingsAppearanceFontFamily;
         private int _settingsAppearanceFontSize;
         private FontWeight _settingsAppearanceFontBold;
@@ -75,8 +83,7 @@ namespace DriveHUD.ViewModels
         private TextDecorationCollection _settingsAppearanceFontUnderline;
         private bool _settingsAppearanceFontUnderline_IsChecked;
 
-        private ObservableCollection<StatInfoOptionValueRange> _settingsAppearanceValueRangeCollection;
-        private StatInfoOptionValueRange _settingsAppearanceValueRangeSelectedItem;
+        private ObservableCollection<StatInfoOptionValueRange> _settingsAppearanceValueRangeCollection;        
 
         private bool _settings_IsAvailable;
         private bool _settingsAppearance_IsChecked;
@@ -84,6 +91,7 @@ namespace DriveHUD.ViewModels
 
         private ObservableCollection<StatInfoToolTip> _statInfoTooltipCollection;
 
+        [ProtoMember(1)]
         public Guid Id
         {
             get { return _id; }
@@ -95,6 +103,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(2)]
         public string Caption
         {
             get
@@ -114,6 +123,7 @@ namespace DriveHUD.ViewModels
 
         private bool isCaptionHidden;
 
+        [ProtoMember(3)]
         [XmlIgnore]
         public bool IsCaptionHidden
         {
@@ -143,6 +153,7 @@ namespace DriveHUD.ViewModels
 
         private Stat stat;
 
+        [ProtoMember(4)]
         public Stat Stat
         {
             get
@@ -165,6 +176,7 @@ namespace DriveHUD.ViewModels
         [NonSerialized]
         private string format;
 
+        [ProtoMember(5)]
         [XmlIgnore]
         public string Format
         {
@@ -185,6 +197,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(6)]
         public StatInfoGroup StatInfoGroup
         {
             get { return _statInfoGroup; }
@@ -196,6 +209,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(7)]
         public string GroupName
         {
             get
@@ -211,6 +225,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(8)]
         public string Category
         {
             get { return _category; }
@@ -222,6 +237,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(9)]
         public string PropertyName
         {
             get { return _propertyName; }
@@ -233,6 +249,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(10)]
         public Color CurrentColor
         {
             get { return _currentColor; }
@@ -244,6 +261,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(11), DefaultValue(-1)]
         public decimal CurrentValue
         {
             get { return _currentValue; }
@@ -257,6 +275,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(12)]
         public bool Settings_IsAvailable
         {
             get { return _settings_IsAvailable; }
@@ -268,6 +287,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(13)]
         public bool SettingsAppearance_IsChecked
         {
             get { return _settingsAppearance_IsChecked; }
@@ -281,6 +301,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(14)]
         public bool SettingsPlayerType_IsChecked
         {
             get { return _settingsPlayerType_IsChecked; }
@@ -294,6 +315,27 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(15)]
+        public string SettingsAppearanceFontSource
+        {
+            get
+            {
+                return _settingAppearanceFontSource;
+            }
+            set
+            {
+                if (_settingAppearanceFontSource == value)
+                {
+                    return;
+                }
+
+                _settingAppearanceFontSource = value;
+                OnPropertyChanged();
+
+                SettingsAppearanceFontFamily = Fonts.SystemFontFamilies.Where(x => x.Source == _settingAppearanceFontSource).FirstOrDefault();
+            }
+        }
+
         [XmlIgnore]
         public FontFamily SettingsAppearanceFontFamily
         {
@@ -303,9 +345,15 @@ namespace DriveHUD.ViewModels
                 if (value == _settingsAppearanceFontFamily) return;
                 _settingsAppearanceFontFamily = value;
                 OnPropertyChanged();
+
+                if (_settingsAppearanceFontFamily != null && _settingsAppearanceFontFamily.Source != _settingAppearanceFontSource)
+                {
+                    _settingAppearanceFontSource = _settingsAppearanceFontFamily.Source;
+                }
             }
         }
 
+        [ProtoMember(16)]
         public int SettingsAppearanceFontSize
         {
             get { return _settingsAppearanceFontSize; }
@@ -328,6 +376,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(17)]
         public bool SettingsAppearanceFontBold_IsChecked
         {
             get { return _settingsAppearanceFontBold_IsChecked; }
@@ -352,6 +401,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(18)]
         public bool SettingsAppearanceFontItalic_IsChecked
         {
             get { return _settingsAppearanceFontItalic_IsChecked; }
@@ -376,6 +426,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(19)]
         public bool SettingsAppearanceFontUnderline_IsChecked
         {
             get { return _settingsAppearanceFontUnderline_IsChecked; }
@@ -389,6 +440,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
+        [ProtoMember(20)]
         public ObservableCollection<StatInfoOptionValueRange> SettingsAppearanceValueRangeCollection
         {
             get { return _settingsAppearanceValueRangeCollection; }
@@ -405,6 +457,7 @@ namespace DriveHUD.ViewModels
             get { return StatInfoToolTipCollection != null && StatInfoToolTipCollection.Any(); }
         }
 
+        [ProtoMember(21)]
         public ObservableCollection<StatInfoToolTip> StatInfoToolTipCollection
         {
             get
@@ -420,6 +473,8 @@ namespace DriveHUD.ViewModels
         }
 
         private int minSample = 1;
+
+        [ProtoMember(22), DefaultValue(1)]
         public int MinSample
         {
             get { return minSample; }
@@ -432,6 +487,8 @@ namespace DriveHUD.ViewModels
         }
 
         private string label;
+
+        [ProtoMember(23)]
         public string Label
         {
             get { return label; }
@@ -447,6 +504,7 @@ namespace DriveHUD.ViewModels
         private bool isNotVisible;
 
         [XmlIgnore]
+        [ProtoMember(24)]
         public bool IsNotVisible
         {
             get
@@ -465,6 +523,7 @@ namespace DriveHUD.ViewModels
         private bool isDuplicateSelected;
 
         [XmlIgnore]
+        [ProtoMember(25)]
         public bool IsDuplicateSelected
         {
             get
@@ -480,9 +539,26 @@ namespace DriveHUD.ViewModels
         }
 
         [NonSerialized]
+        private bool isListed;
+
+        [XmlIgnore]
+        [ProtoMember(26)]
+        public bool IsListed
+        {
+            get { return isListed; }
+            set
+            {
+                if (value == isListed) return;
+                isListed = value;
+                OnPropertyChanged(nameof(IsListed));
+            }
+        }
+
+        [NonSerialized]
         private StatDto statDto;
 
         [XmlIgnore]
+        [ProtoMember(27)]
         public StatDto StatDto
         {
             get
@@ -498,6 +574,7 @@ namespace DriveHUD.ViewModels
         }
 
         [XmlIgnore]
+        [ProtoMember(28)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
 
         #endregion
@@ -616,6 +693,37 @@ namespace DriveHUD.ViewModels
             SettingsAppearanceValueRangeCollection = statInfo.SettingsAppearanceValueRangeCollection;
         }
 
+        public void AssignStatInfoValues(HudIndicators source)
+        {
+            var propName = string.Format("{0}{1}", PropertyName, "Object");
+
+            object propValue;
+
+            if (source.HasProperty(propName))
+            {
+                propValue = ReflectionHelper.GetPropertyValue(source, propName);
+
+                var statDto = propValue as StatDto;
+
+                if (statDto != null)
+                {
+                    propValue = statDto.Value;
+                    StatDto = statDto;
+                }
+            }
+            else
+            {
+                propValue = ReflectionHelper.GetPropertyValue(source, PropertyName);
+            }
+
+            Caption = string.Format(Format, propValue);
+            CurrentValue = Convert.ToDecimal(propValue);
+        }
+
+        public void UpdateColor()
+        {
+            ValueSetColor(this.CurrentValue);
+        }
         #endregion
 
         #region Events

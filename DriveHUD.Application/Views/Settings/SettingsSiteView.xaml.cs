@@ -87,5 +87,9 @@ namespace DriveHUD.Application.Views.Settings
             diagram.BringIntoView(new Rect(1, 1, e.NewValue.Width, e.NewValue.Height), false);
         }
 
+        private void diagram_RequestBringIntoView(object sender, RequestBringIntoViewEventArgs e)
+        {
+            e.Handled = true;
+        }
     }
 }

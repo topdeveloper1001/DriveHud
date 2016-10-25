@@ -15,12 +15,14 @@ using DriveHUD.Common.Linq;
 using DriveHUD.ViewModels;
 using Model.Enums;
 using Model.Interfaces;
+using ProtoBuf;
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels
 {
+    [ProtoContract]
     public class HudLayout : ICleanable
     {
         public HudLayout()
@@ -42,29 +44,32 @@ namespace DriveHUD.Application.ViewModels
         public void Cleanup()
         {
             TableHud?.HudElements?.ForEach(x => x?.Cleanup());
-            TableHud.HudElements.Clear();
+            TableHud?.HudElements?.Clear();
             ListHUDPlayer?.ForEach(x => x?.HudElement?.Cleanup());
             ListHUDPlayer.Clear();
             HudStats?.ForEach(x => x?.Reset());
             HudStats.Clear();
         }
 
+        [ProtoMember(1)]
         public HudTableViewModel TableHud { get; set; }
 
+        [ProtoMember(2)]
         public List<StatInfo> HudStats { get; set; }
 
+        [ProtoMember(3)]
         public List<PlayerHudContent> ListHUDPlayer { get; set; }
 
-        [XmlIgnore]
+        [XmlIgnore, ProtoMember(4)]
         public HudTrackConditionsViewModelInfo HudTrackConditionsMeter { get; set; }
 
-        [XmlIgnore]
+        [XmlIgnore, ProtoMember(5)]
         public int WindowId { get; set; }
 
-        [XmlIgnore]
+        [XmlIgnore, ProtoMember(6)]
         public HudType HudType { get; set; }
 
-        [XmlIgnore]
+        [XmlIgnore, ProtoMember(7)]
         public EnumTableType TableType { get; set; }
     }
 }

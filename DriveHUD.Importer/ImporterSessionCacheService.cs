@@ -149,6 +149,15 @@ namespace DriveHUD.Importers
                     sessionData.StatisticByPlayer.Add(playerName, playerData);
                 }
 
+                if (sessionData.LastHandStatisticByPlayer.ContainsKey(playerName))
+                {
+                    sessionData.LastHandStatisticByPlayer[playerName] = stats.Copy();
+                }
+                else
+                {
+                    sessionData.LastHandStatisticByPlayer.Add(playerName, stats.Copy());
+                }
+
                 if (skipAdding)
                 {
                     return;
@@ -280,6 +289,120 @@ namespace DriveHUD.Importers
         }
 
         /// <summary>
+        /// Gets statistic of the player's last hand
+        /// </summary>
+        /// <param name="session">Session</param>
+        /// <param name="playerName">Player name</param>
+        /// <returns><see cref="Playerstatistic"/> of the last hand in session</returns>
+        public Playerstatistic GetPlayersLastHandStatistics(string session, string playerName)
+        {
+            if (!isStarted || string.IsNullOrWhiteSpace(session))
+            {
+                return null;
+            }
+
+            cacheLock.EnterReadLock();
+
+            try
+            {
+                if (cachedData.ContainsKey(session) && cachedData[session].LastHandStatisticByPlayer.ContainsKey(playerName))
+                {
+                    return cachedData[session].LastHandStatisticByPlayer[playerName].Copy();
+                }
+
+                return null;
+            }
+            finally
+            {
+                cacheLock.ExitReadLock();
+            }
+        }
+
+        /// <summary>
+        /// Store stickers-related statistics in cache
+        /// </summary>
+        /// <param name="session">Session</param>
+        /// <param name="playerName">Player name</param>
+        /// <param name="stickersStats">Dictionary of statistic accessed by sticker name</param>
+        public void AddOrUpdatePlayerStickerStats(string session, string playerName, IDictionary<string, Playerstatistic> stickersStats)
+        {
+            if (!isStarted || string.IsNullOrEmpty(session))
+            {
+                return;
+            }
+
+            cacheLock.EnterWriteLock();
+
+            try
+            {
+                var sessionData = GetSessionData(session);
+
+                if (sessionData == null)
+                {
+                    return;
+                }
+
+                Dictionary<string, Playerstatistic> playerStickersDictionary = null;
+
+                if (sessionData.StickersStatisticByPlayer.ContainsKey(playerName))
+                {
+                    playerStickersDictionary = sessionData.StickersStatisticByPlayer[playerName];
+                }
+                else
+                {
+                    playerStickersDictionary = new Dictionary<string, Playerstatistic>();
+                    sessionData.StickersStatisticByPlayer.Add(playerName, playerStickersDictionary);
+                }
+
+                foreach (var item in stickersStats)
+                {
+                    if (playerStickersDictionary.ContainsKey(item.Key))
+                    {
+                        playerStickersDictionary[item.Key].Add(item.Value);
+                    }
+                    else
+                    {
+                        playerStickersDictionary.Add(item.Key, item.Value.Copy());
+                    }
+                }
+            }
+            finally
+            {
+                cacheLock.ExitWriteLock();
+            }
+        }
+
+        /// <summary>
+        /// Gets collection of player statistics that are used for Bumper Stickers calculations
+        /// </summary>
+        /// <param name="session">Session</param>
+        /// <param name="playerName">Player name</param>
+        /// <returns>Dictionary of bumper stickers and related statistic</returns>
+        public Dictionary<string, Playerstatistic> GetPlayersStickersStatistics(string session, string playerName)
+        {
+            if (!isStarted || string.IsNullOrWhiteSpace(session))
+            {
+                return null;
+            }
+
+            cacheLock.EnterReadLock();
+
+            try
+            {
+                if (cachedData.ContainsKey(session) && cachedData[session].StickersStatisticByPlayer.ContainsKey(playerName))
+                {
+                    return cachedData[session].StickersStatisticByPlayer[playerName];
+                }
+
+                return null;
+            }
+            finally
+            {
+                cacheLock.ExitReadLock();
+            }
+        }
+
+        /// <summary>
         /// Get or add session data to cache for specified session (must be used inside write lock)
         /// </summary>
         /// <param name="session">Session</param>
@@ -301,6 +424,16 @@ namespace DriveHUD.Importers
             }
 
             return sessionData;
+        }
+
+        private SessionCacheData GetSessionData(string session)
+        {
+            if (!string.IsNullOrWhiteSpace(session) && cachedData.ContainsKey(session))
+            {
+                return cachedData[session];
+            }
+
+            return null;
         }
 
         private void InitSessionCardsCollections(Playerstatistic stats)
@@ -338,5 +471,6 @@ namespace DriveHUD.Importers
                 stats.RecentAggList.Add(new Tuple<int, int>(stats.Totalbets, stats.Totalpostflopstreetsplayed));
             }
         }
+
     }
 }

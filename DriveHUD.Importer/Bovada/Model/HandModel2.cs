@@ -13,6 +13,7 @@
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
 using DriveHUD.Entities;
+using DriveHUD.Importers.Helpers;
 using Model.Enums;
 using System;
 using System.Collections.Generic;
@@ -207,6 +208,8 @@ namespace DriveHUD.Importers.Bovada
             LinesCount = Commands.Count;
 
             var tableName = GetTableName(commands);
+
+            IsZonePoker = BovadaHelper.IsZonePoker(tableName);
 
             TableName = tableName;
             OriginalTableName = tableName;

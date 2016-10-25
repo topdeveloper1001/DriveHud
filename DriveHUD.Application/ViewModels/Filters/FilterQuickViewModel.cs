@@ -12,7 +12,7 @@ namespace DriveHUD.Application.ViewModels
 {
     public class FilterQuickViewModel : FilterViewModel<FilterQuickModel>
     {
-        internal FilterQuickViewModel() : base(EnumViewModelType.FilterQuickViewModel)
+        internal FilterQuickViewModel(IFilterModelManagerService service) : base(EnumViewModelType.FilterQuickViewModel, service)
         {
             InitializeBindings();
         }

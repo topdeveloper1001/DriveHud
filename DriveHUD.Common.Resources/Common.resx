@@ -617,4 +617,25 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Delete" xml:space="preserve">
     <value>Delete</value>
   </data>
+  <data name="Common_BumperStickers_SelectColor" xml:space="preserve">
+    <value>Select Color</value>
+  </data>
+  <data name="Common_BumperSticker_StickerName" xml:space="preserve">
+    <value>Sticker Name</value>
+  </data>
+  <data name="Common_BumperSticker_EditSticker" xml:space="preserve">
+    <value>Edit Sticker</value>
+  </data>
+  <data name="Common_BumperSticker_EnableSticker" xml:space="preserve">
+    <value>Enable Sticker</value>
+  </data>
+  <data name="Common_BumperSticker_StickerType" xml:space="preserve">
+    <value>Bumper Sticker Type</value>
+  </data>
+  <data name="Common_BumperSticker_AddFilter" xml:space="preserve">
+    <value>Add Filter</value>
+  </data>
+  <data name="Common_BumperSticker_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
 </root>

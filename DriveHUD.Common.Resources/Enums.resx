@@ -524,4 +524,40 @@
   <data name="Enum_Stat_RecentAgg" xml:space="preserve">
     <value>Recent AGG%</value>
   </data>
+  <data name="Enum_HandExport_RawHandHistory" xml:space="preserve">
+    <value>Raw Hand History</value>
+  </data>
+  <data name="Enum_Stat_CBetInFourBetPot" xml:space="preserve">
+    <value>C-Bet 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_CBetInThreeBetPot" xml:space="preserve">
+    <value>C-Bet in 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_FlopCBetMonotone" xml:space="preserve">
+    <value>C-Bet Monotone Pot%</value>
+  </data>
+  <data name="Enum_Stat_FlopCBetMW" xml:space="preserve">
+    <value>C-Bet MW Pot%</value>
+  </data>
+  <data name="Enum_Stat_FlopCBetRag" xml:space="preserve">
+    <value>C-Bet Rag Flop%</value>
+  </data>
+  <data name="Enum_Stat_FlopCBetVsOneOpp" xml:space="preserve">
+    <value>C-Bet vs 1 Opp%</value>
+  </data>
+  <data name="Enum_Stat_FlopCBetVsTwoOpp" xml:space="preserve">
+    <value>C-Bet vs 2 Opp%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCBetFromFourBetPot" xml:space="preserve">
+    <value>Fold to C-Bet 4-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_FoldToCBetFromThreeBetPot" xml:space="preserve">
+    <value>Fold to C-Bet 3-Bet Pot%</value>
+  </data>
+  <data name="Enum_Stat_RaiseCBet" xml:space="preserve">
+    <value>Raise C-Bet%</value>
+  </data>
+  <data name="Enum_HudViewType_Plain" xml:space="preserve">
+    <value>Plain HUD</value>
+  </data>
 </root>

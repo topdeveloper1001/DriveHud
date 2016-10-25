@@ -640,7 +640,7 @@ namespace DriveHUD.Importers.Bovada
                     var handModel = new HandModel2(commands.ToList());
 
                     // skip zone poker
-                    if (handModel.IsZonePoker)
+                    if (handModel.IsZonePoker || IsZonePokerTable)
                     {
                         return;
                     }

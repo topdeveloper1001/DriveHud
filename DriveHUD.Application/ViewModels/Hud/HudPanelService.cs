@@ -55,6 +55,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         public virtual FrameworkElement Create(HudElementViewModel hudElement, HudType hudType)
         {
             var contextMenu = CreateContextMenu(hudElement.PokerSiteId, hudElement.PlayerName, hudElement);
+            contextMenu.EventName = "MouseRightButtonUp";
 
             if (hudType == HudType.Plain)
             {

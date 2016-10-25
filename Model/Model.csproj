@@ -76,8 +76,8 @@
       <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\Prism.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="protobuf-net">
-      <HintPath>..\packages\protobuf-net.2.0.0.668\lib\net40\protobuf-net.dll</HintPath>
+    <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
+      <HintPath>..\packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -136,6 +136,7 @@
     <Compile Include="Events\PreferredSeatChangedEvent.cs" />
     <Compile Include="Events\SettingsUpdatedEvent.cs" />
     <Compile Include="Events\TournamentDataUpdatedEvent.cs" />
+    <Compile Include="Events\UpdateHudEvent.cs" />
     <Compile Include="Events\UpdateViewRequestedEvent.cs" />
     <Compile Include="Extensions\CardHelper.cs" />
     <Compile Include="Extensions\CurrencyHelper.cs" />
@@ -149,7 +150,8 @@
     <Compile Include="Filters\FilterHandGridModel.cs" />
     <Compile Include="Filters\FilterHelpers.cs" />
     <Compile Include="Filters\FilterHoleCardsModel.cs" />
-    <Compile Include="Filters\FilterModelManagerService.cs" />
+    <Compile Include="Filters\IFilterModelCollection.cs" />
+    <Compile Include="Filters\MainFilterModelManagerService.cs" />
     <Compile Include="Filters\FilterOmahaHandGridModel.cs" />
     <Compile Include="Filters\FilterStandardModel.cs" />
     <Compile Include="Filters\FilterBaseEntity.cs" />
@@ -163,6 +165,7 @@
     <Compile Include="Filters\IFilterDataService.cs" />
     <Compile Include="Filters\IFilterModel.cs" />
     <Compile Include="Filters\IFilterModelManagerService.cs" />
+    <Compile Include="Filters\StickersFilterModelManagerService.cs" />
     <Compile Include="HandAnalyzers\CustomAnalyzers.cs" />
     <Compile Include="HandAnalyzers\HandAnalyzer.cs" />
     <Compile Include="HandAnalyzers\FlushAnalyzers.cs" />

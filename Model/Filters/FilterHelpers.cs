@@ -81,5 +81,22 @@ namespace Model.Filters
 
             return collection.All(item => analyzers.First(a => a.GetRank() == item.HoleCards).Analyze(cardsList, item));
         }
+
+        public static void CopyFilterModelCollection(IEnumerable<IFilterModel> from, IEnumerable<IFilterModel> to)
+        {
+            if(from == null || to == null)
+            {
+                return;
+            }
+
+            foreach (var filter in to)
+            {
+                var filterToCopy = from.FirstOrDefault(x => x.GetType() == filter.GetType());
+                if (filterToCopy != null)
+                {
+                    filter.LoadFilter(filterToCopy);
+                }
+            }
+        }
     }
 }

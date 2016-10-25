@@ -10,8 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using ProtoBuf;
+
 namespace Model.Enums
-{
+{    
     /// <summary>
     /// All Stats
     /// </summary>
@@ -104,6 +106,16 @@ namespace Model.Enums
         ThreeBet_BN,
         ThreeBet_SB,
         ThreeBet_BB,
-        RecentAgg
+        RecentAgg,
+        RaiseCBet,
+        CBetInThreeBetPot,
+        CBetInFourBetPot,
+        FlopCBetVsOneOpp,
+        FlopCBetVsTwoOpp,
+        FlopCBetMW,
+        FlopCBetMonotone,
+        FlopCBetRag,
+        FoldToCBetFromThreeBetPot,
+        FoldToCBetFromFourBetPot
     }
 }

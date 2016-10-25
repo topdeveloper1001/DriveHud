@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.ViewModels;
+using ProtoBuf;
 using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
@@ -19,7 +20,7 @@ using System.Xml.Serialization;
 namespace DriveHUD.Application.ViewModels
 {
     [XmlInclude(typeof(StatInfoBreak))]
-    [Serializable]
+    [Serializable, ProtoContract]
     public class PlayerHudContent : ViewModelBase
     {
         public PlayerHudContent()
@@ -30,6 +31,7 @@ namespace DriveHUD.Application.ViewModels
 
         private string name;
 
+        [ProtoMember(1)]
         public string Name
         {
             get
@@ -44,6 +46,7 @@ namespace DriveHUD.Application.ViewModels
 
         private int seatNumber;
 
+        [ProtoMember(2)]
         public int SeatNumber
         {
             get
@@ -60,6 +63,7 @@ namespace DriveHUD.Application.ViewModels
         private HudElementViewModel hudElement;
 
         [XmlIgnore]
+        [ProtoMember(3)]
         public HudElementViewModel HudElement
         {
             get

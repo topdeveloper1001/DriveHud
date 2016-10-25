@@ -3,63 +3,60 @@ using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Extensions;
+using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Model.Filters
-{
+{    
     public class BuiltFilterModel : INotifyPropertyChanged
     {
         #region  Properties
-        private IFilterModelManagerService FilterModelManager
-        {
-            get { return ServiceLocator.Current.GetInstance<IFilterModelManagerService>(); }
-        }
+
+        private IFilterModelManagerService FilterModelManager { get; set; }
 
         private FilterStandardModel StandardModel
         {
-            get { return FilterModelManager.FilterModelCollection.OfType<FilterStandardModel>().First(); }
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterStandardModel>().FirstOrDefault(); }
         }
 
         private FilterHoleCardsModel HoleCardsModel
         {
-            get { return FilterModelManager.FilterModelCollection.OfType<FilterHoleCardsModel>().First(); }
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterHoleCardsModel>().FirstOrDefault(); }
         }
 
         private FilterOmahaHandGridModel OmahaHandGridModel
         {
-            get { return FilterModelManager.FilterModelCollection.OfType<FilterOmahaHandGridModel>().First(); }
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterOmahaHandGridModel>().FirstOrDefault(); }
         }
 
         private FilterHandValueModel HandValueModel
         {
-            get { return FilterModelManager.FilterModelCollection.OfType<FilterHandValueModel>().First(); }
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterHandValueModel>().FirstOrDefault(); }
         }
 
         private FilterBoardTextureModel BoardTextureModel
         {
-            get { return FilterModelManager.FilterModelCollection.OfType<FilterBoardTextureModel>().First(); }
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterBoardTextureModel>().FirstOrDefault(); }
         }
 
         private FilterHandActionModel HandActionModel
         {
-            get { return FilterModelManager.FilterModelCollection.OfType<FilterHandActionModel>().First(); }
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterHandActionModel>().FirstOrDefault(); }
         }
 
         private FilterDateModel DateModel
         {
-            get { return FilterModelManager.FilterModelCollection.OfType<FilterDateModel>().First(); }
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterDateModel>().FirstOrDefault(); }
         }
 
         private FilterQuickModel QuickFilterModel
         {
-            get { return FilterModelManager.FilterModelCollection.OfType<FilterQuickModel>().First(); }
+            get { return FilterModelManager.FilterModelCollection.OfType<FilterQuickModel>().FirstOrDefault(); }
         }
 
         private ObservableCollection<FilterSectionItem> _filterSectionCollection;
@@ -73,10 +70,15 @@ namespace Model.Filters
                 OnPropertyChanged();
             }
         }
+
         #endregion
 
-        public BuiltFilterModel()
+        public BuiltFilterModel() { }
+
+        public BuiltFilterModel(FilterServices service)
         {
+            this.FilterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(service.ToString());
+
             Initialize();
         }
 
@@ -113,6 +115,7 @@ namespace Model.Filters
         }
 
         #region Methods   
+
         public void BindFilterSectionCollection()
         {
             #region Standard Filter actions
@@ -228,7 +231,7 @@ namespace Model.Filters
             #region Omaha Hand Grid  Actions
             OmahaHandGridItem.OnChanged = () =>
             {
-               SetOmahaHandGridItems();
+                SetOmahaHandGridItems();
             };
 
             OmahaHandGridItem.OnChanged.Invoke();
@@ -307,6 +310,16 @@ namespace Model.Filters
                     break;
             }
         }
+
+        public BuiltFilterModel Clone()
+        {
+            var model = new BuiltFilterModel();
+
+            model.FilterSectionCollection = new ObservableCollection<FilterSectionItem>(this.FilterSectionCollection.Select(x => (FilterSectionItem)x.Clone()));
+
+            return model;
+        }
+
         #endregion
 
         #region Built Filter Collection Setters
@@ -314,6 +327,11 @@ namespace Model.Filters
         #region Stat Filters (Standard Filter)
         private void SetStatItems()
         {
+            if (StandardModel == null)
+            {
+                return;
+            }
+
             foreach (var triStateItem in StandardModel.StatCollection)
             {
                 var filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => !string.IsNullOrEmpty(x.Value) && x.Value == triStateItem.PropertyName);
@@ -351,7 +369,7 @@ namespace Model.Filters
                 return;
             }
             var filterItemValue = param.Value;
-            var statItem = StandardModel.StatCollection.FirstOrDefault(x => x.PropertyName == filterItemValue);
+            var statItem = StandardModel?.StatCollection.FirstOrDefault(x => x.PropertyName == filterItemValue);
             if (statItem != null)
             {
                 statItem.TriStateSet(EnumTriState.Any);
@@ -364,7 +382,7 @@ namespace Model.Filters
         private void SetStakeLevelItems()
         {
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.StakeLevel).FirstOrDefault();
-            var selectedStakeLevels = StandardModel.StakeLevelCollection.Where(x => x.IsChecked);
+            var selectedStakeLevels = StandardModel?.StakeLevelCollection.Where(x => x.IsChecked);
 
             if (selectedStakeLevels == null || !StandardModel.StakeLevelCollection.Any(x => !x.IsChecked))
             {
@@ -379,7 +397,7 @@ namespace Model.Filters
 
         private void RemoveStakeLevelItem()
         {
-            StandardModel.ResetStakeLevelCollection();
+            StandardModel?.ResetStakeLevelCollection();
         }
         #endregion
 
@@ -387,9 +405,9 @@ namespace Model.Filters
         private void SetPreFlopActionItems()
         {
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.PreFlopAction).FirstOrDefault();
-            var selectedPreFlopItems = StandardModel.PreFlopActionCollection.Where(x => x.IsChecked);
+            var selectedPreFlopItems = StandardModel?.PreFlopActionCollection.Where(x => x.IsChecked);
 
-            if (selectedPreFlopItems == null || !StandardModel.PreFlopActionCollection.Any(x => !x.IsChecked))
+            if (selectedPreFlopItems == null || StandardModel == null || !StandardModel.PreFlopActionCollection.Any(x => !x.IsChecked))
             {
                 filterSectionItem.IsActive = false;
                 return;
@@ -402,7 +420,7 @@ namespace Model.Filters
 
         private void RemovePreFlopActionItem()
         {
-            StandardModel.ResetPreFlopActionCollection();
+            StandardModel?.ResetPreFlopActionCollection();
         }
         #endregion
 
@@ -410,7 +428,7 @@ namespace Model.Filters
         private void SetCurrencyItems()
         {
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.Currency).FirstOrDefault();
-            var selectedCurrencyItems = StandardModel.CurrencyCollection.Where(x => x.IsChecked);
+            var selectedCurrencyItems = StandardModel?.CurrencyCollection.Where(x => x.IsChecked);
             if (selectedCurrencyItems == null || !StandardModel.CurrencyCollection.Any(x => !x.IsChecked))
             {
                 filterSectionItem.IsActive = false;
@@ -424,15 +442,18 @@ namespace Model.Filters
 
         private void RemoveCurrencyItem()
         {
-            StandardModel.ResetCurrencyCollection();
+            StandardModel?.ResetCurrencyCollection();
         }
         #endregion
 
         #region Table Ring (Standard Filter)
         private void SetTableRingItems()
         {
-            SetTableItem(this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableSixRing), StandardModel.Table6MaxCollection, "Position(6max)={0}");
-            SetTableItem(this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableNineRing), StandardModel.TableFullRingCollection, "Position(Full Ring)={0}");
+            if (StandardModel != null)
+            {
+                SetTableItem(this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableSixRing), StandardModel.Table6MaxCollection, "Position(6max)={0}");
+                SetTableItem(this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.TableNineRing), StandardModel.TableFullRingCollection, "Position(Full Ring)={0}");
+            }
         }
 
         private void SetTableItem(FilterSectionItem filterSectionItem, ObservableCollection<TableRingItem> collection, string formatString)
@@ -454,10 +475,10 @@ namespace Model.Filters
             switch (param.ItemType)
             {
                 case EnumFilterSectionItemType.TableSixRing:
-                    StandardModel.ResetTableRingCollection(EnumTableType.Six);
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Six);
                     break;
                 case EnumFilterSectionItemType.TableNineRing:
-                    StandardModel.ResetTableRingCollection(EnumTableType.Nine);
+                    StandardModel?.ResetTableRingCollection(EnumTableType.Nine);
                     break;
             }
         }
@@ -466,6 +487,11 @@ namespace Model.Filters
         #region Players Between Item (Standard Filter)
         private void SetPlayersBetweenItems()
         {
+            if (StandardModel == null)
+            {
+                return;
+            }
+
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.PlayersBetween).FirstOrDefault();
 
             filterSectionItem.Name = String.Format("Players={0}-{1}", StandardModel.PlayerCountMinSelectedItem, StandardModel.PlayerCountMaxSelectedItem);
@@ -474,7 +500,7 @@ namespace Model.Filters
 
         private void RemovePlayersBetweenItem()
         {
-            StandardModel.FilterSectionPlayersBetweenCollectionInitialize();
+            StandardModel?.FilterSectionPlayersBetweenCollectionInitialize();
         }
         #endregion
 
@@ -615,6 +641,11 @@ namespace Model.Filters
 
         private void SetDateItems()
         {
+            if (DateModel == null)
+            {
+                return;
+            }
+
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.Where(x => x.ItemType == EnumFilterSectionItemType.Date).FirstOrDefault();
             switch (DateModel.DateFilterType)
             {
@@ -646,7 +677,7 @@ namespace Model.Filters
 
         private void RemoveDateItem()
         {
-            DateModel.ResetFilter();
+            DateModel?.ResetFilter();
         }
 
         #endregion
@@ -845,7 +876,7 @@ namespace Model.Filters
             FilterSectionItem filterSectionItem = this.FilterSectionCollection.FirstOrDefault(x => x.ItemType == EnumFilterSectionItemType.OmahaHandGridItem);
 
             var selectedHandItems = OmahaHandGridModel.HandGridCollection.Where(x => x.IsChecked);
-            if(selectedHandItems == null || selectedHandItems.Count() == 0)
+            if (selectedHandItems == null || selectedHandItems.Count() == 0)
             {
                 filterSectionItem.IsActive = false;
                 return;

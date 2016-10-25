@@ -8,12 +8,13 @@ using System.ComponentModel;
 using DriveHUD.Common.Annotations;
 using System.Runtime.CompilerServices;
 using System.Collections.ObjectModel;
+using DriveHUD.Common.Linq;
 
 namespace Model.Filters
 {
-    public class FilterModelManagerService : IFilterModelManagerService, INotifyPropertyChanged
+    public class MainFilterModelManagerService : IFilterModelManagerService, INotifyPropertyChanged
     {
-        public FilterModelManagerService()
+        public MainFilterModelManagerService()
         {
             Initialize();
         }
@@ -42,9 +43,9 @@ namespace Model.Filters
             };
         }
 
-        private ObservableCollection<IFilterModel> GetFilterModelsList()
+        public ObservableCollection<IFilterModel> GetFilterModelsList()
         {
-            return new ObservableCollection<IFilterModel>
+            var list = new ObservableCollection<IFilterModel>
             {
                     new FilterStandardModel() { Id = Guid.Parse("00000000-0000-0000-0000-000000000000"), Name = "Standard Filters" },
                     new FilterHoleCardsModel() { Id = Guid.Parse("11111111-1111-1111-1111-111111111111"), Name = "Hole Cards" },
@@ -56,6 +57,10 @@ namespace Model.Filters
                     new FilterOmahaHandGridModel() { Id = Guid.Parse("77777777-7777-7777-7777-777777777777"), Name = "Omaha Hand Grid" },
                     new FilterHandGridModel() { Id = Guid.Parse("88888888-8888-8888-8888-888888888888"), Name = "Hand Grid" },
             };
+
+            list.ForEach(x => x.Initialize());
+
+            return list;
         }
 
         public void SetFilterType(EnumFilterType filterType)
@@ -76,7 +81,7 @@ namespace Model.Filters
         {
             EnumFilterType fromType = _enumFilterType;
 
-            for(int i = 0; i < _filterModelCollections.Count; i++)
+            for (int i = 0; i < _filterModelCollections.Count; i++)
             {
                 var key = _filterModelCollections.ElementAt(i).Key;
                 if (key == fromType)
@@ -87,7 +92,7 @@ namespace Model.Filters
                 var filterCollection = _filterModelCollections[key];
                 var fromCollection = _filterModelCollections[fromType];
 
-                for(int j = 0; j < filterCollection.Count; j++)
+                for (int j = 0; j < filterCollection.Count; j++)
                 {
                     var currentFilter = filterCollection[j];
                     var fromFilter = fromCollection.FirstOrDefault(x => x.Type == currentFilter.Type);
@@ -126,7 +131,7 @@ namespace Model.Filters
             get { return _filterModelCollections[_enumFilterType]; }
             set
             {
-                if(!_filterModelCollections.ContainsKey(_enumFilterType))
+                if (!_filterModelCollections.ContainsKey(_enumFilterType))
                 {
                     return;
                 }

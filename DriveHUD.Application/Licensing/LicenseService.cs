@@ -81,6 +81,11 @@ namespace DriveHUD.Application.Licensing
                     };
 
                     license = licenseManager.Validate(requestInfo);
+
+                    if (!license.IsTrial)
+                    {
+                        LogProvider.Log.Info(string.Format("Found license: {0}-*", license.SerialNumber.Substring(0, 4)));
+                    }
                 }
                 catch (NoLicenseException ex)
                 {

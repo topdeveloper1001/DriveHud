@@ -55,5 +55,15 @@ namespace DriveHUD.Importers.Helpers
 
             return EnumGameType.CashHoldem;
         }
+
+        internal static bool IsZonePoker(string tableName)
+        {
+            if (string.IsNullOrEmpty(tableName))
+            {
+                return false;
+            }
+
+            return tableName.ToUpper().Contains("ZONE POKER");
+        }
     }
 }

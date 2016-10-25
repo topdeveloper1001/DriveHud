@@ -13,8 +13,11 @@
 using DHCRegistration;
 using DHHRegistration;
 using DHORegistration;
+using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
+using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.Security;
+using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
@@ -36,6 +39,7 @@ using Model.Interfaces;
 using Model.Settings;
 using Model.Site;
 using Prism.Unity;
+using ProtoBuf.Meta;
 using System;
 using System.Linq;
 using System.Threading;
@@ -59,6 +63,8 @@ namespace DriveHUD.Application
 
         protected override void ConfigureModuleCatalog()
         {
+            RegisterRuntimeTypeModelTypes();
+
             base.ConfigureModuleCatalog();
             this.ModuleCatalog.AddModule(null);
         }
@@ -81,10 +87,10 @@ namespace DriveHUD.Application
             tournamentCacheService.Initialize();
 
             ImporterBootstrapper.ConfigureImporterService();
-
+       
             configViewModel = new ConfigurePostgresqlServerViewModel();
             configViewModel.AfterConnectAction += ShowMainWindow;
-            configViewModel.ConnectCommand.Execute(null);
+            configViewModel.ConnectCommand.Execute(null);        
         }
 
         private void ShowMainWindow()
@@ -173,6 +179,13 @@ namespace DriveHUD.Application
             }
         }
 
+        public static void RegisterRuntimeTypeModelTypes()
+        {
+            RuntimeTypeModel.Default.Add(typeof(System.Windows.Point), false).SetSurrogate(typeof(PointDto));
+            RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.Color), false).SetSurrogate(typeof(ColorDto));
+            RuntimeTypeModel.Default.Add(typeof(System.Windows.Media.SolidColorBrush), false).SetSurrogate(typeof(SolidColorBrushDto));
+        }
+
         protected override void ConfigureContainer()
         {
             base.ConfigureContainer();
@@ -190,10 +203,13 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
             RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
+            RegisterTypeIfMissing(typeof(IMigrationService), typeof(MigrationService.MigrationService), false);
+            RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
 
             // Filters Save/Load service
             Container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
-            Container.RegisterType<IFilterModelManagerService, FilterModelManagerService>(new ContainerControlledLifetimeManager());
+            Container.RegisterType<IFilterModelManagerService, MainFilterModelManagerService>(FilterServices.Main.ToString(), new ContainerControlledLifetimeManager());
+            Container.RegisterType<IFilterModelManagerService, StickersFilterModelManagerService>(FilterServices.Stickers.ToString(), new ContainerControlledLifetimeManager());
 
             // Sites configurations
             Container.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Bovada.ToString());
@@ -221,13 +237,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ITableConfigurator, PokerStarsTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Plain));
 
             // HUD panel services
-            Container.RegisterType<IHudPanelService, HudPanelService>();
-            Container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Bovada.ToString());
-            Container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Bodog.ToString());
-            Container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.BetOnline.ToString());
-            Container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.SportsBetting.ToString());
-            Container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.TigerGaming.ToString());
-            Container.RegisterType<IHudPanelService, PokerStarsHudPanelService>(EnumPokerSites.PokerStars.ToString());
+            UnityServicesBootstrapper.ConfigureContainer(Container);
 
             // Licenses
             Container.RegisterType<ILicenseManager, DHTReg>(LicenseType.Trial.ToString());

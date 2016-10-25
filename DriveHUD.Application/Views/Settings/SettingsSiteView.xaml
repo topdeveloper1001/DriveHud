@@ -159,7 +159,8 @@
                                     HorizontalContentAlignment="Center"
                                     VerticalContentAlignment="Center"
 									ViewportChanged="OnDiagramViewportChanged"
-									Style="{StaticResource PokerSiteRadDiagramStyle}"
+                                    RequestBringIntoView="diagram_RequestBringIntoView"
+                                    Style="{StaticResource PokerSiteRadDiagramStyle}"
                                     IsBackgroundSurfaceVisible="False">
 
                     </telerik:RadDiagram>

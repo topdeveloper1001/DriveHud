@@ -216,7 +216,7 @@ namespace DriveHUD.Application.ViewModels
         public HudPlayerType Clone()
         {
             var clone = (HudPlayerType)MemberwiseClone();
-            clone.Stats = new ObservableCollection<HudPlayerTypeStat>(clone.Stats.Select(x => x.Clone()));
+            clone.Stats = new ObservableCollection<HudPlayerTypeStat>(clone.Stats.Select(x => (HudPlayerTypeStat)x.Clone()));
             return clone;
         }
     }

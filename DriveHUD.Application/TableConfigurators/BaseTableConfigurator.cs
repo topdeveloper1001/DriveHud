@@ -14,6 +14,8 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Common;
 using DriveHUD.Entities;
 using Model.Enums;
+using Model.Events;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -99,8 +101,25 @@ namespace DriveHUD.Application.TableConfigurators
             var widthBinding = new Binding(nameof(HudElementViewModel.Width)) { Source = viewModel, Mode = BindingMode.TwoWay };
             label.SetBinding(FrameworkElement.WidthProperty, widthBinding);
 
-            //var heightBinding = new Binding("Height") { Source = viewModel, Mode = BindingMode.TwoWay };
-            //label.SetBinding(FrameworkElement.HeightProperty, heightBinding);
+            RadContextMenu contextMenu = new RadContextMenu();
+            RadMenuItem item = new RadMenuItem();
+
+            item.Header = "Apply Size to All";
+            item.Click += (s, e) =>
+            {
+                var clickedItem = s as FrameworkElement;
+                if (clickedItem == null || !(clickedItem.DataContext is HudElementViewModel))
+                {
+                    return;
+                }
+
+                var datacontext = clickedItem.DataContext as HudElementViewModel;
+
+                Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<UpdateHudEvent>().Publish(new UpdateHudEventArgs(datacontext.Height, datacontext.Width));
+            };
+
+            contextMenu.Items.Add(item);
+            RadContextMenu.SetContextMenu(label, contextMenu);
 
             label.Height = double.NaN;
 

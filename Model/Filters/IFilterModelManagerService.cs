@@ -30,5 +30,11 @@ namespace Model.Filters
         /// </summary>
         /// <returns></returns>
         Dictionary<EnumFilterType, ObservableCollection<IFilterModel>> GetFilterModelDictionary();
+
+        /// <summary>
+        /// Getnerates the new default filter model list
+        /// </summary>
+        /// <returns></returns>
+        ObservableCollection<IFilterModel> GetFilterModelsList();
     }
 }

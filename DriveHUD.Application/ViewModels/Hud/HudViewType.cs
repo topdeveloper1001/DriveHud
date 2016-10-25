@@ -9,6 +9,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     public enum HudViewType
     {
         Horizontal,
-        Vertical
+        Vertical,
+        Plain
     }
 }

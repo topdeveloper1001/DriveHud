@@ -66,7 +66,7 @@ namespace DriveHUD.Application.ViewModels
 
         #endregion
 
-        internal FilterHoleCardsViewModel() : base(EnumViewModelType.FilterHoleCardsViewModel)
+        internal FilterHoleCardsViewModel(IFilterModelManagerService service) : base(EnumViewModelType.FilterHoleCardsViewModel, service)
         {
             Init();
         }

@@ -12,9 +12,12 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
 
 namespace Model.Filters
 {
+
     [Serializable]
     public class FilterBoardTextureModel : FilterBaseEntity, IFilterModel
     {
@@ -23,7 +26,10 @@ namespace Model.Filters
         {
             this.Name = "Board Texture";
             this.Type = EnumFilterModelType.FilterBoardTextureModel;
+        }
 
+        public void Initialize()
+        {
             FilterSectionCardItemsCollectionsInitialize();
             FilterSectionFlopBoardTextureCollectionInitialize();
             FilterSectionTurnBoardTextureCollectionInitialize();
@@ -530,6 +536,8 @@ namespace Model.Filters
         }
     }
 
+    [XmlInclude(typeof(HighCardBoardTextureItem))]
+    [XmlInclude(typeof(StraightBoardTextureItem))]
     [Serializable]
     public class BoardTextureItem : FilterBaseEntity
     {
@@ -610,7 +618,6 @@ namespace Model.Filters
             get { return _selectedRank; }
             set
             {
-                if (value == _selectedRank) return;
                 _selectedRank = value;
                 OnPropertyChanged();
 
@@ -654,28 +661,44 @@ namespace Model.Filters
             SelectedNumber = NumericList.First();
         }
 
+        [XmlIgnore]
         public Dictionary<EnumEquality, string> EqualityList
         {
             get { return _equalityList; }
             set { _equalityList = value; }
         }
 
+        [XmlIgnore]
         public IEnumerable<int> NumericList
         {
             get { return _numericList; }
             set { _numericList = value; }
         }
 
+        [XmlIgnore]
         public KeyValuePair<EnumEquality, string> SelectedSign
         {
             get { return _selectedSign; }
             set
             {
-                if (value.Equals(_selectedSign)) return;
-                _selectedSign = value;
+                _selectedSign = EqualityList.FirstOrDefault(x => x.Key == value.Key);
                 OnPropertyChanged();
 
                 if (OnChanged != null) OnChanged.Invoke(TargetStreet);
+            }
+        }
+
+        [JsonIgnore]
+        public object[] SelectedSignStub
+        {
+            get { return new object[] { SelectedSign.Key, SelectedSign.Value }; }
+            set
+            {
+                var item = value as object[];
+                if (item != null && item.Length == 2)
+                {
+                    SelectedSign = EqualityList.FirstOrDefault(x => x.Key == (EnumEquality)(item.FirstOrDefault()));
+                }
             }
         }
 

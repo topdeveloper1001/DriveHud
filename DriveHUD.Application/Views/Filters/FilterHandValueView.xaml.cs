@@ -15,14 +15,15 @@ using System.Windows.Shapes;
 
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Filters;
+using Model.Filters;
 
 namespace DriveHUD.Application.Views
 {
     public partial class FilterHandValueView : UserControl, IFilterView
     {
-        public FilterHandValueView()
+        public FilterHandValueView(IFilterModelManagerService service)
         {
-            this.DataContext = new FilterHandValueViewModel();
+            this.DataContext = new FilterHandValueViewModel(service);
 
             InitializeComponent();
         }

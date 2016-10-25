@@ -77,7 +77,14 @@ namespace DriveHUD.Importers.BetOnline
                     }
 
 #if DEBUG
-                    File.AppendAllText(string.Format("stream\\{0}-stream.xml", convertedResult.TableName), xml);
+                    var streamFolder = "stream";
+
+                    if (!Directory.Exists(streamFolder))
+                    {
+                        Directory.CreateDirectory(streamFolder);
+                    }
+
+                    File.AppendAllText(string.Format("{0}\\{1}-stream.xml", streamFolder, convertedResult.TableName), xml);
 #endif                    
 
                     ImportResult(convertedResult);

@@ -5,6 +5,7 @@ using Prism.Mvvm;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model;
+using Newtonsoft.Json;
 
 namespace DriveHUD.Common.Infrastructure.Base
 {
@@ -15,7 +16,7 @@ namespace DriveHUD.Common.Infrastructure.Base
         private Guid _id = Guid.NewGuid();
         private EnumViewModelType _type = EnumViewModelType.NotDefined;
         private bool _isActive;
-
+      
         public SingletonStorageModel StorageModel
         {
             get { return ServiceLocator.Current.TryResolve<SingletonStorageModel>(); }

@@ -15,11 +15,9 @@ using DriveHUD.Application.Views;
 using DriveHUD.Common.WinApi;
 using ManagedWinapi.Windows;
 using Microsoft.Practices.ServiceLocation;
-using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Interop;
@@ -29,7 +27,7 @@ namespace DriveHUD.Application.ViewModels
     /// <summary>
     /// This class is responsible for drawing om Bovada table. It listens Win Events and manages size, position changes and also window close event
     /// </summary>
-    internal static class HudPainter
+    public static class HudPainter
     {
         private static Dictionary<IntPtr, HudWindowItem> windows = new Dictionary<IntPtr, HudWindowItem>();
 

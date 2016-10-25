@@ -20,7 +20,10 @@ namespace Model.Filters
         {
             this.Name = "Date";
             this.Type = EnumFilterModelType.FilterDateModel;
+        }
 
+        public void Initialize()
+        {
             FirstDayOfWeek = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().GeneralSettings.StartDayOfWeek;
         }
 

@@ -1,21 +1,72 @@
 ﻿using DriveHUD.Common.Annotations;
+using ProtoBuf;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Media;
+using DriveHUD.Common.Linq;
 
 namespace DriveHUD.ViewModels
 {
+    [ProtoContract]
     public class StatInfoMeterModel : INotifyPropertyChanged
     {
         private const int ARRAY_SIZE = 10;
 
-        public SolidColorBrush[] BackgroundBrush { get; private set; }
-        public SolidColorBrush[] BorderBrush { get; private set; }
+        private SolidColorBrush[] backgroundBrush;
+
+        [ProtoMember(1, OverwriteList = true)]
+        public SolidColorBrush[] BackgroundBrush
+        {
+            get
+            {
+                return backgroundBrush;
+            }
+            set
+            {
+                if (backgroundBrush == value)
+                {
+                    return;
+                }
+
+                backgroundBrush = value;
+
+                if (backgroundBrush != null)
+                {
+                    backgroundBrush.ForEach(x => x.Freeze());
+                }
+
+                OnPropertyChanged();
+            }
+        }
+
+        private SolidColorBrush[] borderBrush;
+
+        [ProtoMember(2, OverwriteList = true)]
+        public SolidColorBrush[] BorderBrush
+        {
+            get
+            {
+                return borderBrush;
+            }
+            set
+            {
+                if (borderBrush == value)
+                {
+                    return;
+                }
+
+                borderBrush = value;
+
+                if (borderBrush != null)
+                {
+                    borderBrush.ForEach(x => x.Freeze());
+                }
+
+                OnPropertyChanged();
+            }
+        }
 
         public StatInfoMeterModel()
         {
