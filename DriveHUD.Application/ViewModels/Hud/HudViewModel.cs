@@ -95,6 +95,7 @@ namespace DriveHUD.Application.ViewModels
             lastDHHudViewType = HudViewType.Vertical;
 
             PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100 };
+            PreviewHudElementViewModel.IsVertical = true;
 
             InitializeCommands();
             InitializeObservables();
@@ -473,16 +474,24 @@ namespace DriveHUD.Application.ViewModels
                                                     if (PreviewHudElementViewModel != null)
                                                     {
                                                         PreviewHudElementViewModel.StatInfoCollection.Clear();
-                                                        PreviewHudElementViewModel.StatInfoCollection.AddRange(hudElements.Select(stat => stat.Clone()));
-                                                        PreviewHudElementViewModel.UpdateMainStats();
 
                                                         Random r = new Random();
 
-                                                        foreach (var stat in PreviewHudElementViewModel.StatInfoCollection)
+                                                        for (int i = 0; i < hudElements.Count; i++)
                                                         {
+                                                            if (hudElements[i] is StatInfoBreak)
+                                                            {
+                                                                PreviewHudElementViewModel.StatInfoCollection.Add((hudElements[i] as StatInfoBreak).Clone());
+                                                                continue;
+                                                            }
+
+                                                            var stat = hudElements[i].Clone();
                                                             stat.CurrentValue = r.Next(0, 100);
                                                             stat.Caption = string.Format(stat.Format, stat.CurrentValue);
+                                                            PreviewHudElementViewModel.StatInfoCollection.Add(stat);
                                                         }
+
+                                                        PreviewHudElementViewModel.UpdateMainStats();
                                                     }
 
                                                     if (!isUpdatingLayout)

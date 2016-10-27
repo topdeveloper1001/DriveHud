@@ -38,8 +38,6 @@ namespace DriveHUD.Application.ViewModels
         public HudElementViewModel()
         {
             statInfoCollection = new ObservableCollection<StatInfo>();
-
-            Init();
         }
 
         public HudElementViewModel(IEnumerable<StatInfo> statInfos)
