@@ -1,0 +1,758 @@
+#Game No : 841896912
+***** 888poker Hand History for Game 841896912 *****
+$125/$250 Blinds No Limit Holdem - *** 26 10 2016 19:59:58
+Tournament #89426293 $0.01 - Table #2 9 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: leandro5678 ( $1,000 )
+Seat 3: allanboy15 ( $9,925 )
+Seat 4: Peon_84 ( $1,000 )
+Seat 5: Serzhirik ( $1,000 )
+Seat 9: Bakermansam ( $1,000 )
+Seat 10: Bibar888 ( $6,750 )
+Bibar888 posts ante [$30]
+Bakermansam posts ante [$30]
+Serzhirik posts ante [$30]
+allanboy15 posts ante [$30]
+Peon_84 posts ante [$30]
+leandro5678 posts ante [$30]
+Bakermansam posts big blind [$250]
+** Dealing down cards **
+Dealt to Peon_84 [ 5c, Qd ]
+Bibar888 folds
+leandro5678 raises [$750]
+allanboy15 folds
+Peon_84 folds
+Serzhirik folds
+Bakermansam calls [$500]
+** Dealing flop ** [ 7s, 2d, 8s ]
+Bakermansam bets [$220]
+leandro5678 calls [$220]
+** Dealing turn ** [ Kh ]
+** Dealing river ** [ Qs ]
+** Summary **
+leandro5678 shows [ 7c, As ]
+Bakermansam shows [ 4h, 7h ]
+leandro5678 collected [ $2,120 ]
+
+
+
+#Game No : 841897203
+***** 888poker Hand History for Game 841897203 *****
+$125/$250 Blinds No Limit Holdem - *** 26 10 2016 20:01:09
+Tournament #89426293 $0.01 - Table #21 9 Max (Real Money)
+Seat 6 is the button
+Total number of players : 8
+Seat 1: kazik_61 ( $2,840 )
+Seat 2: yombastick ( $4,115 )
+Seat 3: yarni214 ( $465 )
+Seat 4: salakytta ( $1,000 )
+Seat 5: artbossss ( $1,000 )
+Seat 6: vzimin ( $845 )
+Seat 9: Cheynoa ( $2,045 )
+Seat 10: biasig ( $1,535 )
+artbossss posts ante [$30]
+vzimin posts ante [$30]
+Cheynoa posts ante [$30]
+biasig posts ante [$30]
+kazik_61 posts ante [$30]
+yombastick posts ante [$30]
+yarni214 posts ante [$30]
+salakytta posts ante [$30]
+Cheynoa posts big blind [$250]
+** Dealing down cards **
+biasig folds
+kazik_61 raises [$2,810]
+yombastick raises [$4,085]
+yarni214 folds
+salakytta folds
+artbossss calls [$970]
+vzimin folds
+Cheynoa folds
+** Dealing flop ** [ 5s, 6h, 8d ]
+** Dealing turn ** [ 7c ]
+** Dealing river ** [ Qd ]
+** Summary **
+kazik_61 shows [ Ac, Ah ]
+yombastick shows [ 4h, Ad ]
+artbossss shows [ 6c, 6d ]
+yombastick collected [ $3,400 ]
+yombastick collected [ $3,680 ]
+
+
+
+#Game No : 841897449
+***** 888poker Hand History for Game 841897449 *****
+$150/$300 Blinds No Limit Holdem - *** 26 10 2016 20:01:56
+Tournament #89426293 $0.01 - Table #21 9 Max (Real Money)
+Seat 7 is the button
+Total number of players : 7
+Seat 2: yombastick ( $8,355 )
+Seat 3: yarni214 ( $435 )
+Seat 4: salakytta ( $970 )
+Seat 5: artbossss ( $1,000 )
+Seat 6: vzimin ( $815 )
+Seat 9: Cheynoa ( $1,765 )
+Seat 10: biasig ( $1,505 )
+artbossss posts ante [$40]
+vzimin posts ante [$40]
+Cheynoa posts ante [$40]
+biasig posts ante [$40]
+yombastick posts ante [$40]
+yarni214 posts ante [$40]
+salakytta posts ante [$40]
+Cheynoa posts small blind [$150]
+biasig posts big blind [$300]
+** Dealing down cards **
+yombastick raises [$900]
+yarni214 folds
+salakytta folds
+artbossss raises [$960]
+vzimin folds
+Cheynoa folds
+biasig folds
+yombastick calls [$60]
+** Dealing flop ** [ 8c, 8d, 6h ]
+** Dealing turn ** [ As ]
+** Dealing river ** [ 8s ]
+** Summary **
+yombastick shows [ Kd, Kc ]
+artbossss shows [ 4s, 6s ]
+yombastick collected [ $2,650 ]
+
+
+
+#Game No : 841897825
+***** 888poker Hand History for Game 841897825 *****
+$150/$300 Blinds No Limit Holdem - *** 26 10 2016 20:03:12
+Tournament #89426293 $0.01 - Table #21 9 Max (Real Money)
+Seat 9 is the button
+Total number of players : 9
+Seat 1: JihlavaPunx ( $1,000 )
+Seat 2: yombastick ( $10,005 )
+Seat 3: yarni214 ( $395 )
+Seat 4: salakytta ( $930 )
+Seat 5: artbossss ( $1,000 )
+Seat 6: vzimin ( $775 )
+Seat 7: Peon_84 ( $970 )
+Seat 9: Cheynoa ( $1,575 )
+Seat 10: biasig ( $1,165 )
+artbossss posts ante [$40]
+vzimin posts ante [$40]
+Cheynoa posts ante [$40]
+biasig posts ante [$40]
+yombastick posts ante [$40]
+yarni214 posts ante [$40]
+salakytta posts ante [$40]
+Peon_84 posts ante [$40]
+JihlavaPunx posts ante [$40]
+biasig posts small blind [$150]
+JihlavaPunx posts big blind [$300]
+** Dealing down cards **
+Dealt to Peon_84 [ 6c, 9d ]
+yombastick raises [$600]
+yarni214 folds
+salakytta raises [$890]
+artbossss folds
+vzimin folds
+Peon_84 folds
+Cheynoa calls [$890]
+biasig raises [$975]
+JihlavaPunx calls [$660]
+yombastick calls [$525]
+Cheynoa calls [$235]
+** Dealing flop ** [ 4h, Jd, 2h ]
+yombastick checks
+Cheynoa checks
+** Dealing turn ** [ Qc ]
+yombastick checks
+Cheynoa checks
+** Dealing river ** [ 8h ]
+yombastick checks
+Cheynoa bets [$300]
+yombastick calls [$300]
+** Summary **
+Cheynoa shows [ Qh, Ah ]
+biasig shows [ Ks, Qs ]
+JihlavaPunx shows [ Kh, As ]
+yombastick mucks [ Kd, Ad ]
+salakytta shows [ 7c, 6s ]
+Cheynoa collected [ $4,810 ]
+Cheynoa collected [ $280 ]
+Cheynoa collected [ $495 ]
+Cheynoa collected [ $600 ]
+
+
+
+#Game No : 841898199
+***** 888poker Hand History for Game 841898199 *****
+$200/$400 Blinds No Limit Holdem - *** 26 10 2016 20:04:25
+Tournament #89426293 $0.01 - Table #21 9 Max (Real Money)
+Seat 10 is the button
+Total number of players : 8
+Seat 2: yombastick ( $8,540 )
+Seat 3: yarni214 ( $355 )
+Seat 4: ahmadkobeiss ( $920 )
+Seat 5: artbossss ( $960 )
+Seat 6: vzimin ( $735 )
+Seat 7: Peon_84 ( $930 )
+Seat 9: Cheynoa ( $6,295 )
+Seat 10: biasig ( $2,000 )
+artbossss posts ante [$50]
+vzimin posts ante [$50]
+Cheynoa posts ante [$50]
+biasig posts ante [$50]
+yombastick posts ante [$50]
+yarni214 posts ante [$50]
+Peon_84 posts ante [$50]
+ahmadkobeiss posts ante [$50]
+yombastick posts big blind [$400]
+** Dealing down cards **
+Dealt to Peon_84 [ Jh, Qc ]
+yarni214 folds
+ahmadkobeiss folds
+artbossss raises [$910]
+vzimin calls [$685]
+Peon_84 folds
+Cheynoa folds
+biasig raises [$1,950]
+yombastick folds
+** Dealing flop ** [ 9h, Ac, 5s ]
+** Dealing turn ** [ 6c ]
+** Dealing river ** [ 5d ]
+** Summary **
+artbossss shows [ 8c, Ad ]
+vzimin shows [ Jd, Th ]
+biasig shows [ Js, Tc ]
+artbossss collected [ $2,855 ]
+artbossss collected [ $450 ]
+
+
+
+#Game No : 841898403
+***** 888poker Hand History for Game 841898403 *****
+$200/$400 Blinds No Limit Holdem - *** 26 10 2016 20:05:09
+Tournament #89426293 $0.01 - Table #21 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 8
+Seat 2: yombastick ( $8,090 )
+Seat 3: yarni214 ( $305 )
+Seat 4: ahmadkobeiss ( $870 )
+Seat 5: artbossss ( $3,305 )
+Seat 6: alwayschec1 ( $1,450 )
+Seat 7: Peon_84 ( $880 )
+Seat 9: Cheynoa ( $6,245 )
+Seat 10: biasig ( $1,040 )
+artbossss posts ante [$50]
+Cheynoa posts ante [$50]
+biasig posts ante [$50]
+yombastick posts ante [$50]
+yarni214 posts ante [$50]
+Peon_84 posts ante [$50]
+ahmadkobeiss posts ante [$50]
+alwayschec1 posts ante [$50]
+yombastick posts small blind [$200]
+yarni214 posts big blind [$255]
+** Dealing down cards **
+Dealt to Peon_84 [ Kd, 3d ]
+ahmadkobeiss folds
+artbossss folds
+alwayschec1 raises [$1,400]
+Peon_84 folds
+Cheynoa folds
+biasig folds
+yombastick calls [$1,200]
+** Dealing flop ** [ 9c, 2s, Kh ]
+** Dealing turn ** [ Ks ]
+** Dealing river ** [ Js ]
+** Summary **
+yombastick shows [ 9d, 5d ]
+yarni214 shows [ 5h, 6c ]
+alwayschec1 shows [ 2h, Ah ]
+yombastick collected [ $1,165 ]
+yombastick collected [ $2,290 ]
+
+
+
+#Game No : 841898632
+***** 888poker Hand History for Game 841898632 *****
+$200/$400 Blinds No Limit Holdem - *** 26 10 2016 20:05:57
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 7
+Seat 3: igorbalanin ( $3,300 )
+Seat 4: Tacha85. ( $1,950 )
+Seat 5: GARBUZOVS ( $1,890 )
+Seat 6: DetWinger ( $950 )
+Seat 7: Janek71 ( $8,275 )
+Seat 9: josuesempre ( $3,860 )
+Seat 10: oldtard ( $1,950 )
+oldtard posts ante [$50]
+DetWinger posts ante [$50]
+Tacha85. posts ante [$50]
+igorbalanin posts ante [$50]
+Janek71 posts ante [$50]
+josuesempre posts ante [$50]
+GARBUZOVS posts ante [$50]
+igorbalanin posts small blind [$200]
+Tacha85. posts big blind [$400]
+** Dealing down cards **
+GARBUZOVS folds
+DetWinger folds
+Janek71 folds
+josuesempre folds
+oldtard folds
+igorbalanin folds
+** Summary **
+Tacha85. collected [ $950 ]
+
+
+
+#Game No : 841898776
+***** 888poker Hand History for Game 841898776 *****
+$200/$400 Blinds No Limit Holdem - *** 26 10 2016 20:06:31
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 9
+Seat 1: Peon_84 ( $830 )
+Seat 2: Hadi1950 ( $4,155 )
+Seat 3: igorbalanin ( $3,050 )
+Seat 4: Tacha85. ( $2,450 )
+Seat 5: GARBUZOVS ( $1,840 )
+Seat 6: DetWinger ( $900 )
+Seat 7: Janek71 ( $8,225 )
+Seat 9: josuesempre ( $3,810 )
+Seat 10: oldtard ( $1,900 )
+oldtard posts ante [$50]
+DetWinger posts ante [$50]
+Tacha85. posts ante [$50]
+igorbalanin posts ante [$50]
+Janek71 posts ante [$50]
+josuesempre posts ante [$50]
+GARBUZOVS posts ante [$50]
+Hadi1950 posts ante [$50]
+Peon_84 posts ante [$50]
+Tacha85. posts small blind [$200]
+GARBUZOVS posts big blind [$400]
+** Dealing down cards **
+Dealt to Peon_84 [ 4h, 5h ]
+DetWinger raises [$800]
+Janek71 folds
+josuesempre folds
+oldtard folds
+Peon_84 folds
+Hadi1950 folds
+igorbalanin folds
+Tacha85. folds
+GARBUZOVS calls [$400]
+** Dealing flop ** [ 9d, Jc, 8h ]
+GARBUZOVS checks
+DetWinger bets [$50]
+GARBUZOVS calls [$50]
+** Dealing turn ** [ 3d ]
+** Dealing river ** [ Kd ]
+** Summary **
+GARBUZOVS shows [ Qs, 6s ]
+DetWinger shows [ Ac, Ah ]
+DetWinger collected [ $2,350 ]
+
+
+
+#Game No : 841899076
+***** 888poker Hand History for Game 841899076 *****
+$250/$500 Blinds No Limit Holdem - *** 26 10 2016 20:07:46
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 4 is the button
+Total number of players : 9
+Seat 1: Peon_84 ( $780 )
+Seat 2: Hadi1950 ( $4,105 )
+Seat 3: igorbalanin ( $3,000 )
+Seat 4: Tacha85. ( $2,200 )
+Seat 5: GARBUZOVS ( $940 )
+Seat 6: DetWinger ( $2,350 )
+Seat 7: Janek71 ( $8,175 )
+Seat 9: josuesempre ( $3,760 )
+Seat 10: oldtard ( $1,850 )
+oldtard posts ante [$60]
+DetWinger posts ante [$60]
+Tacha85. posts ante [$60]
+igorbalanin posts ante [$60]
+Janek71 posts ante [$60]
+josuesempre posts ante [$60]
+GARBUZOVS posts ante [$60]
+Hadi1950 posts ante [$60]
+Peon_84 posts ante [$60]
+GARBUZOVS posts small blind [$250]
+DetWinger posts big blind [$500]
+** Dealing down cards **
+Dealt to Peon_84 [ Td, 5h ]
+Janek71 calls [$500]
+josuesempre folds
+oldtard raises [$1,790]
+Peon_84 folds
+Hadi1950 folds
+igorbalanin folds
+Tacha85. folds
+GARBUZOVS folds
+DetWinger calls [$1,290]
+Janek71 calls [$1,290]
+** Dealing flop ** [ 6d, Qh, 4h ]
+DetWinger bets [$500]
+Janek71 calls [$500]
+** Dealing turn ** [ 3c ]
+** Dealing river ** [ 3d ]
+** Summary **
+DetWinger shows [ Ks, 7d ]
+Janek71 shows [ 5c, As ]
+oldtard shows [ Kh, Ad ]
+oldtard collected [ $6,160 ]
+Janek71 collected [ $1,000 ]
+
+
+
+#Game No : 841899711
+***** 888poker Hand History for Game 841899711 *****
+$300/$600 Blinds No Limit Holdem - *** 26 10 2016 20:10:56
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 6 is the button
+Total number of players : 7
+Seat 1:  ( $720 )
+Seat 3:  ( $2,940 )
+Seat 4:  ( $2,140 )
+Seat 5:  ( $630 )
+Seat 7:  ( $6,825 )
+Seat 9:  ( $3,700 )
+Seat 10:  ( $6,160 )
+ posts ante [$70]
+ posts ante [$70]
+ posts ante [$70]
+ posts ante [$70]
+ posts ante [$70]
+ posts ante [$70]
+ posts ante [$70]
+ posts small blind [$300]
+ posts big blind [$600]
+** Dealing down cards **
+Dealt to  [ 7h, Qc ]
+ folds
+ calls [$590]
+ folds
+ folds
+ folds
+ folds
+** Dealing flop ** [ 7c, 9d, Tc ]
+** Dealing turn ** [ 4c ]
+** Dealing river ** [ 6d ]
+** Summary **
+ shows [ 7h, Qc ]
+ shows [ Qs, 5d ]
+ collected [ $1,970 ]
+ collected [ $10 ]
+
+
+
+#Game No : 841900026
+***** 888poker Hand History for Game 841900026 *****
+$300/$600 Blinds No Limit Holdem - *** 26 10 2016 20:11:45
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 7 is the button
+Total number of players : 9
+Seat 1: Peon_84 ( $1,970 )
+Seat 2: Rodger1000 ( $15,730 )
+Seat 3: igorbalanin ( $2,810 )
+Seat 4: Tacha85. ( $2,010 )
+Seat 5: GARBUZOVS ( $2,120 )
+Seat 6: koleachebota ( $1,610 )
+Seat 7: Janek71 ( $9,240 )
+Seat 9: josuesempre ( $2,980 )
+Seat 10: oldtard ( $6,030 )
+oldtard posts ante [$70]
+Tacha85. posts ante [$70]
+igorbalanin posts ante [$70]
+Janek71 posts ante [$70]
+josuesempre posts ante [$70]
+GARBUZOVS posts ante [$70]
+Peon_84 posts ante [$70]
+koleachebota posts ante [$70]
+Rodger1000 posts ante [$70]
+josuesempre posts small blind [$300]
+oldtard posts big blind [$600]
+** Dealing down cards **
+Dealt to Peon_84 [ Jc, 6d ]
+Peon_84 folds
+Rodger1000 calls [$600]
+igorbalanin folds
+Tacha85. folds
+GARBUZOVS folds
+koleachebota folds
+Janek71 folds
+josuesempre calls [$300]
+oldtard checks
+** Dealing flop ** [ 4s, 9h, Kd ]
+josuesempre checks
+oldtard checks
+Rodger1000 checks
+** Dealing turn ** [ 6h ]
+josuesempre checks
+oldtard checks
+Rodger1000 checks
+** Dealing river ** [ 2h ]
+josuesempre checks
+oldtard checks
+Rodger1000 checks
+** Summary **
+josuesempre shows [ Ah, 8d ]
+oldtard shows [ 9s, 7h ]
+Rodger1000 mucks [ 6s, 8s ]
+oldtard collected [ $2,430 ]
+
+
+
+#Game No : 841900342
+***** 888poker Hand History for Game 841900342 *****
+$300/$600 Blinds No Limit Holdem - *** 26 10 2016 20:13:06
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 9 is the button
+Total number of players : 9
+Seat 1: Peon_84 ( $1,900 )
+Seat 2: Rodger1000 ( $15,060 )
+Seat 3: igorbalanin ( $2,740 )
+Seat 4: Tacha85. ( $1,940 )
+Seat 5: GARBUZOVS ( $2,050 )
+Seat 6: koleachebota ( $1,540 )
+Seat 7: Janek71 ( $9,170 )
+Seat 9: josuesempre ( $2,310 )
+Seat 10: oldtard ( $7,790 )
+oldtard posts ante [$70]
+Tacha85. posts ante [$70]
+igorbalanin posts ante [$70]
+Janek71 posts ante [$70]
+josuesempre posts ante [$70]
+GARBUZOVS posts ante [$70]
+Peon_84 posts ante [$70]
+koleachebota posts ante [$70]
+Rodger1000 posts ante [$70]
+oldtard posts small blind [$300]
+Peon_84 posts big blind [$600]
+** Dealing down cards **
+Dealt to Peon_84 [ 6c, 4c ]
+Rodger1000 folds
+igorbalanin folds
+Tacha85. folds
+GARBUZOVS raises [$1,980]
+koleachebota calls [$1,470]
+Janek71 folds
+josuesempre folds
+oldtard folds
+Peon_84 folds
+** Dealing flop ** [ 2s, 3c, 6h ]
+** Dealing turn ** [ Kd ]
+** Dealing river ** [ 4h ]
+** Summary **
+GARBUZOVS shows [ 8d, 8s ]
+koleachebota shows [ 7s, Td ]
+GARBUZOVS collected [ $4,470 ]
+
+
+
+#Game No : 841900563
+***** 888poker Hand History for Game 841900563 *****
+$350/$700 Blinds No Limit Holdem - *** 26 10 2016 20:14:04
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 10 is the button
+Total number of players : 8
+Seat 1: Peon_84 ( $1,230 )
+Seat 2: Rodger1000 ( $14,990 )
+Seat 3: igorbalanin ( $2,670 )
+Seat 4: Tacha85. ( $1,870 )
+Seat 5: GARBUZOVS ( $4,980 )
+Seat 7: Janek71 ( $9,100 )
+Seat 9: josuesempre ( $2,240 )
+Seat 10: oldtard ( $7,420 )
+oldtard posts ante [$85]
+Tacha85. posts ante [$85]
+igorbalanin posts ante [$85]
+Janek71 posts ante [$85]
+josuesempre posts ante [$85]
+GARBUZOVS posts ante [$85]
+Peon_84 posts ante [$85]
+Rodger1000 posts ante [$85]
+Peon_84 posts small blind [$350]
+Rodger1000 posts big blind [$700]
+** Dealing down cards **
+Dealt to Peon_84 [ Ts, 7h ]
+igorbalanin calls [$700]
+Tacha85. folds
+GARBUZOVS folds
+Janek71 calls [$700]
+josuesempre folds
+oldtard folds
+Peon_84 raises [$795]
+Rodger1000 calls [$445]
+igorbalanin calls [$445]
+Janek71 calls [$445]
+** Dealing flop ** [ 8s, 3s, 6c ]
+Rodger1000 bets [$700]
+igorbalanin folds
+Janek71 calls [$700]
+** Dealing turn ** [ 3d ]
+Rodger1000 bets [$700]
+Janek71 calls [$700]
+** Dealing river ** [ 9s ]
+Rodger1000 checks
+Janek71 checks
+** Summary **
+Rodger1000 shows [ 5h, 2s ]
+Janek71 shows [ Qd, Ks ]
+Peon_84 shows [ Ts, 7h ]
+Peon_84 collected [ $5,260 ]
+Janek71 collected [ $2,800 ]
+
+
+
+#Game No : 841900894
+***** 888poker Hand History for Game 841900894 *****
+$350/$700 Blinds No Limit Holdem - *** 26 10 2016 20:15:32
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 9
+Seat 1: Peon_84 ( $5,260 )
+Seat 2: Rodger1000 ( $12,360 )
+Seat 3: igorbalanin ( $1,440 )
+Seat 4: Tacha85. ( $1,785 )
+Seat 5: GARBUZOVS ( $4,895 )
+Seat 6: VIKK174 ( $6,074 )
+Seat 7: Janek71 ( $9,270 )
+Seat 9: josuesempre ( $2,155 )
+Seat 10: oldtard ( $7,335 )
+oldtard posts ante [$85]
+Tacha85. posts ante [$85]
+igorbalanin posts ante [$85]
+Janek71 posts ante [$85]
+josuesempre posts ante [$85]
+GARBUZOVS posts ante [$85]
+Peon_84 posts ante [$85]
+Rodger1000 posts ante [$85]
+VIKK174 posts ante [$85]
+Rodger1000 posts small blind [$350]
+igorbalanin posts big blind [$700]
+** Dealing down cards **
+Dealt to Peon_84 [ 6s, Qh ]
+Tacha85. folds
+GARBUZOVS raises [$4,810]
+VIKK174 folds
+Janek71 folds
+josuesempre folds
+oldtard folds
+Peon_84 folds
+Rodger1000 folds
+igorbalanin calls [$655]
+** Dealing flop ** [ 3s, Kd, 5c ]
+** Dealing turn ** [ 7h ]
+** Dealing river ** [ Qs ]
+** Summary **
+igorbalanin shows [ Ah, 8h ]
+GARBUZOVS shows [ Ad, Ts ]
+GARBUZOVS collected [ $3,825 ]
+
+
+
+#Game No : 841901073
+***** 888poker Hand History for Game 841901073 *****
+$400/$800 Blinds No Limit Holdem - *** 26 10 2016 20:16:22
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 2 is the button
+Total number of players : 8
+Seat 1: Peon_84 ( $5,175 )
+Seat 2: Rodger1000 ( $11,925 )
+Seat 4: Tacha85. ( $1,700 )
+Seat 5: GARBUZOVS ( $7,280 )
+Seat 6: VIKK174 ( $5,989 )
+Seat 7: Janek71 ( $9,185 )
+Seat 9: josuesempre ( $2,070 )
+Seat 10: oldtard ( $7,250 )
+oldtard posts ante [$100]
+Tacha85. posts ante [$100]
+Janek71 posts ante [$100]
+josuesempre posts ante [$100]
+GARBUZOVS posts ante [$100]
+Peon_84 posts ante [$100]
+Rodger1000 posts ante [$100]
+VIKK174 posts ante [$100]
+Tacha85. posts big blind [$800]
+** Dealing down cards **
+Dealt to Peon_84 [ 3h, Js ]
+GARBUZOVS folds
+VIKK174 folds
+Janek71 calls [$800]
+josuesempre folds
+oldtard folds
+Peon_84 folds
+Rodger1000 calls [$800]
+Tacha85. checks
+** Dealing flop ** [ Jh, 3c, 5d ]
+Tacha85. checks
+Janek71 checks
+Rodger1000 checks
+** Dealing turn ** [ 4s ]
+Tacha85. checks
+Janek71 checks
+Rodger1000 checks
+** Dealing river ** [ Qs ]
+Tacha85. checks
+Janek71 bets [$800]
+Rodger1000 calls [$800]
+Tacha85. folds
+** Summary **
+Janek71 shows [ Kd, Qd ]
+Rodger1000 mucks [ 8h, Qc ]
+Janek71 collected [ $4,800 ]
+
+
+
+#Game No : 841901477
+***** 888poker Hand History for Game 841901477 *****
+$400/$800 Blinds No Limit Holdem - *** 26 10 2016 20:18:08
+Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 8
+Seat 1: Peon_84 ( $5,075 )
+Seat 2: Rodger1000 ( $10,225 )
+Seat 4: Tacha85. ( $800 )
+Seat 5: GARBUZOVS ( $7,180 )
+Seat 6: VIKK174 ( $5,889 )
+Seat 7: Janek71 ( $12,285 )
+Seat 9: josuesempre ( $1,970 )
+Seat 10: oldtard ( $7,150 )
+oldtard posts ante [$100]
+Tacha85. posts ante [$100]
+Janek71 posts ante [$100]
+josuesempre posts ante [$100]
+GARBUZOVS posts ante [$100]
+Peon_84 posts ante [$100]
+Rodger1000 posts ante [$100]
+VIKK174 posts ante [$100]
+Tacha85. posts small blind [$400]
+GARBUZOVS posts big blind [$800]
+** Dealing down cards **
+Dealt to Peon_84 [ 7h, 7s ]
+VIKK174 folds
+Janek71 folds
+josuesempre folds
+oldtard folds
+Peon_84 calls [$800]
+Rodger1000 folds
+Tacha85. folds
+GARBUZOVS checks
+** Dealing flop ** [ Qc, Ad, 3c ]
+GARBUZOVS checks
+Peon_84 checks
+** Dealing turn ** [ As ]
+GARBUZOVS checks
+Peon_84 bets [$800]
+GARBUZOVS folds
+** Summary **
+Peon_84 collected [ $2,800 ]
+
+
+
