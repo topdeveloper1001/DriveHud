@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DriveHUD.Application.ViewModels;
+using Model.Filters;
 
 namespace DriveHUD.Application.Views
 {
@@ -22,11 +23,11 @@ namespace DriveHUD.Application.Views
     /// </summary>
     public partial class FilterDateView : UserControl, IFilterView
     {
-        public FilterDateView()
+        public FilterDateView(IFilterModelManagerService service)
         {
             InitializeComponent();
 
-            this.DataContext = new FilterDateViewModel();
+            this.DataContext = new FilterDateViewModel(service);
         }
 
         public IFilterViewModel ViewModel

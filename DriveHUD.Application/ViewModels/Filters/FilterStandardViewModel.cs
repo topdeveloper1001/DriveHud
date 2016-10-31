@@ -14,7 +14,7 @@ namespace DriveHUD.Application.ViewModels
 {
     public class FilterStandardViewModel : FilterViewModel<FilterStandardModel>
     {
-        internal FilterStandardViewModel() : base(EnumViewModelType.FilterStandardViewModel)
+        internal FilterStandardViewModel(IFilterModelManagerService service) : base(EnumViewModelType.FilterStandardViewModel, service)
         {
             InitializeBindings();
         }

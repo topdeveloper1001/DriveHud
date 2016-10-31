@@ -26,24 +26,22 @@ namespace DriveHUD.Application.Views.PopupContainers
     {
         public PopupContainerFiltersView()
         {
-            DataContext = new PopupContainerFiltersViewModel();
-
             InitializeComponent();
         }
 
         private void Apply_Click(object sender, RoutedEventArgs e)
         {
-            (DataContext as PopupContainerFiltersViewModel).Apply_CommandClick.Execute(null);
+            (DataContext as PopupContainerBaseFilterViewModel).Apply_CommandClick.Execute(null);
         }
 
         private void OK_Click(object sender, RoutedEventArgs e)
         {
-            (DataContext as PopupContainerFiltersViewModel).Ok_CommandClick.Execute(null);
+            (DataContext as PopupContainerBaseFilterViewModel).Ok_CommandClick.Execute(null);
         }
 
         private void UserControl_Unloaded(object sender, RoutedEventArgs e)
         {
-            (DataContext as PopupContainerFiltersViewModel).RestoreDefaultFiltersState();
+            (DataContext as PopupContainerBaseFilterViewModel).RestoreDefaultFiltersState_Command.Execute(null);
         }
     }
 }

@@ -495,9 +495,36 @@
                     </WrapPanel>
                     <Path Style="{StaticResource PlayerNotePathStyle}" 
                           HorizontalAlignment="Right" VerticalAlignment="Top" 
-                          Width="12" Margin="0 0 -6 0"
+                          Width="20" Margin="0 -10 -10 0"
                           Stretch="Uniform" Fill="{StaticResource ForegroundBrush}"
                           Visibility="{Binding IsNoteIconVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                    <ItemsControl ItemsSource="{Binding Stickers}"  Margin="0 -10 0 0">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <WrapPanel Orientation="Horizontal" IsItemsHost="True" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <Border
+                                    ToolTip="{Binding ToolTip}"
+                                    Grid.Column="0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    Margin="2,0,0,0"
+                                    Padding="1 0"
+                                    BorderThickness="1"
+                                    BorderBrush="{Binding SelectedColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
+                                    Background="{Binding SelectedColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                    <TextBlock Text="{Binding Label}"
+                                               FontSize="8" Margin="0" FontWeight="DemiBold"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                               Foreground="{Binding SelectedColor, Converter={dh:BackgroundToForegroundColorConverter}}"/>
+                                </Border>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
                 </Grid>
             </Border>
 

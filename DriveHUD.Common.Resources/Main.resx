@@ -126,6 +126,9 @@
   <data name="Main_ContextMenu_DeleteHand" xml:space="preserve">
     <value>Delete Hand</value>
   </data>
+  <data name="Main_ContextMenu_EditNote" xml:space="preserve">
+    <value>Edit Note</value>
+  </data>
   <data name="Main_ContextMenu_EditTournament" xml:space="preserve">
     <value>Edit Tournament</value>
   </data>

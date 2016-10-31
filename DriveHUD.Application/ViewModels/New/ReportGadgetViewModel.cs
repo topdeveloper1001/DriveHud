@@ -192,7 +192,7 @@ namespace DriveHUD.Application.ViewModels
                 }
                 else
                 {
-                    OnPropertyChanged("ReportSelectedItemStat");
+                    OnPropertyChanged(nameof(ReportGadgetViewModel.ReportSelectedItemStat));
                 }
             });
 
@@ -242,12 +242,12 @@ namespace DriveHUD.Application.ViewModels
         {
             if (isTournament)
             {
-                ReportSelectedItemStat = EnumReports.TournamentResults;
+                _reportSelectedItemStat = EnumReports.TournamentResults;
                 _invisibleSelectedItemStat = EnumReports.OverAll;
             }
             else
             {
-                ReportSelectedItemStat = EnumReports.OverAll;
+                _reportSelectedItemStat = EnumReports.OverAll;
                 _invisibleSelectedItemStat = EnumReports.TournamentResults;
             }
         }
@@ -258,7 +258,7 @@ namespace DriveHUD.Application.ViewModels
             _invisibleSelectedItemStat = ReportSelectedItemStat;
             if (temp != EnumReports.None)
             {
-                ReportSelectedItemStat = temp;
+                _reportSelectedItemStat = temp;
             }
         }
 

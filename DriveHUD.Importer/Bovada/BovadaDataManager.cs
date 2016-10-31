@@ -79,6 +79,7 @@ namespace DriveHUD.Importers.Bovada
                 }
 
                 var tableUid = BovadaConverters.ConvertHexStringToUint32(catcherDataObject.uid);
+                TryMergeTables(tableUid, catcherDataObject.handle);
 
                 if (!openedTables.ContainsKey(tableUid))
                 {
@@ -92,6 +93,31 @@ namespace DriveHUD.Importers.Bovada
             catch (Exception ex)
             {
                 LogProvider.Log.Error(this, "Stream data has wrong format", ex);
+            }
+        }
+
+        /// <summary>
+        /// Merge tables with same handle
+        /// </summary>
+        /// <param name="tableUid">Key to merge into</param>
+        /// <param name="handleText"></param>
+        private void TryMergeTables(uint tableUid, string handleText)
+        {
+            // it is possible to have more than 1 table with same handle, because of disconnection
+            if (string.IsNullOrEmpty(handleText) || handleText.Equals("0xFFFFFFFF"))
+            {
+                return;
+            }
+
+            var handle = BovadaConverters.ConvertHexStringToInt32(handleText);
+
+            var tablesToMerge = openedTables.Where(x => x.Value.WindowHandle.ToInt32() == handle && x.Key != tableUid);
+
+            if (tablesToMerge.Any())
+            {
+                var mergeTable = tablesToMerge.Last();
+                openedTables.Remove(mergeTable.Key);
+                openedTables[tableUid] = mergeTable.Value;
             }
         }
 

@@ -15,14 +15,15 @@ using System.Windows.Shapes;
 
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Filters;
+using Model.Filters;
 
 namespace DriveHUD.Application.Views
 {
     public partial class FilterQuickView : UserControl, IFilterView
     {
-        public FilterQuickView()
+        public FilterQuickView(IFilterModelManagerService service)
         {
-            this.DataContext = new FilterQuickViewModel();
+            this.DataContext = new FilterQuickViewModel(service);
 
             InitializeComponent();
         }

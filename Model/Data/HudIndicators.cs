@@ -66,7 +66,7 @@ namespace Model.Data
                 {
                     Value = ThreeBetIP,
                     Occured = Source.DidThreeBetIp,
-                    CouldOccured = Source.Couldthreebet
+                    CouldOccured = Source.CouldThreeBetIp
                 };
             }
         }
@@ -79,7 +79,7 @@ namespace Model.Data
                 {
                     Value = ThreeBetOOP,
                     Occured = Source.DidThreeBetOop,
-                    CouldOccured = Source.Couldthreebet
+                    CouldOccured = Source.CouldThreeBetOop
                 };
             }
         }
@@ -132,6 +132,124 @@ namespace Model.Data
                     Value = TurnCBet,
                     Occured = Source.Turncontinuationbetmade,
                     CouldOccured = Source.Turncontinuationbetpossible
+                };
+            }
+        }
+
+        public virtual StatDto FlopCBetInThreeBetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCBetInThreeBetPot,
+                    Occured = Source.FlopContinuationBetInThreeBetPotMade,
+                    CouldOccured = Source.FlopContinuationBetInThreeBetPotPossible
+                };
+
+            }
+        }
+
+        public virtual StatDto FlopCBetInFourBetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCBetInFourBetPot,
+                    Occured = Source.FlopContinuationBetInFourBetPotMade,
+                    CouldOccured = Source.FlopContinuationBetInFourBetPotPossible
+                };
+            }
+        }
+
+        public virtual StatDto FlopCBetVsOneOppObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCBetVsOneOpp,
+                    Occured = Source.FlopContinuationBetVsOneOpponentMade,
+                    CouldOccured = Source.FlopContinuationBetVsOneOpponentPossible
+                };
+            }
+        }
+
+        public virtual StatDto FlopCBetVsTwoOppObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCBetVsTwoOpp,
+                    Occured = Source.FlopContinuationBetVsTwoOpponentsMade,
+                    CouldOccured = Source.FlopContinuationBetVsTwoOpponentsPossible
+                };
+            }
+        }
+
+        public virtual StatDto FlopCBetMWObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCBetMW,
+                    Occured = Source.MultiWayFlopContinuationBetMade,
+                    CouldOccured = Source.MultiWayFlopContinuationBetPossible
+                };
+            }
+        }
+
+        public virtual StatDto FlopCBetMonotoneObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCBetMonotone,
+                    Occured = Source.FlopContinuationBetMonotonePotMade,
+                    CouldOccured = Source.FlopContinuationBetMonotonePotPossible
+                };
+            }
+        }
+
+        public virtual StatDto FlopCBetRagObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FlopCBetRag,
+                    Occured = Source.FlopContinuationBetRagPotMade,
+                    CouldOccured = Source.FlopContinuationBetRagPotPossible
+                };
+            }
+        }
+
+        public virtual StatDto FoldFlopCBetFromThreeBetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldFlopCBetFromThreeBetPot,
+                    Occured = Source.FoldedToFlopContinuationBetFromThreeBetPot,
+                    CouldOccured = Source.FoldedToFlopContinuationBetFromFourBetPot,
+                };
+            }
+        }
+
+        public virtual StatDto FoldFlopCBetFromFourBetPotObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = FoldFlopCBetFromFourBetPot,
+                    Occured = Source.FoldedToFlopContinuationBetFromFourBetPot,
+                    CouldOccured = Source.FoldedToFlopContinuationBetFromFourBetPot,
                 };
             }
         }
@@ -208,7 +326,7 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = WWSF,
-                    Occured = Source.Wonshowdown,
+                    Occured = Source.Wonhandwhensawflop,
                     CouldOccured = Source.Sawflop
                 };
             }
@@ -287,7 +405,7 @@ namespace Model.Data
                 {
                     Value = FlopAgg,
                     Occured = Source.TotalbetsFlop,
-                    CouldOccured = Source.PlayedFlop
+                    CouldOccured = Source.FlopAggPossible
                 };
             }
         }
@@ -300,7 +418,7 @@ namespace Model.Data
                 {
                     Value = TurnAgg,
                     Occured = Source.TotalbetsTurn,
-                    CouldOccured = Source.PlayedTurn
+                    CouldOccured = Source.TurnAggPossible
                 };
             }
         }
@@ -313,7 +431,7 @@ namespace Model.Data
                 {
                     Value = RiverAgg,
                     Occured = Source.TotalbetsRiver,
-                    CouldOccured = Source.PlayedRiver
+                    CouldOccured = Source.RiverAggPossible
                 };
             }
         }
@@ -326,6 +444,19 @@ namespace Model.Data
                 {
                     Value = FoldCBet,
                     Occured = Source.Foldedtoflopcontinuationbet,
+                    CouldOccured = Source.Facingflopcontinuationbet
+                };
+            }
+        }
+
+        public virtual StatDto RaiseCBetObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = RaiseCBet,
+                    Occured = Source.Raisedflopcontinuationbet,
                     CouldOccured = Source.Facingflopcontinuationbet
                 };
             }
@@ -534,7 +665,7 @@ namespace Model.Data
                 {
                     Value = CBetIP,
                     Occured = Source.Flopcontinuationipbetmade,
-                    CouldOccured = Source.Flopcontinuationbetpossible
+                    CouldOccured = Source.Flopcontinuationipbetpossible
                 };
             }
         }
@@ -547,7 +678,7 @@ namespace Model.Data
                 {
                     Value = CBetOOP,
                     Occured = Source.Flopcontinuationoopbetmade,
-                    CouldOccured = Source.Flopcontinuationbetpossible
+                    CouldOccured = Source.Flopcontinuationoopbetpossible
                 };
             }
         }

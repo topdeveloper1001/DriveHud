@@ -26,12 +26,16 @@ namespace Model.Filters
             this.PlayerCountMinAvailable = playerCountMinAvailable;
             this.PlayerCountMaxAvailable = playerCountMaxAvailable;
 
+            FilterSectionPlayersBetweenCollectionInitialize();
+        }
+
+        public void Initialize()
+        {
             FilterSectionStatCollectionInitialize();
             FilterSectionStakeLevelCollectionInitialize();
             FilterSectionPreFlopActionCollectionInitialize();
             FilterSectionCurrencyCollectionInitialize();
             FilterSectionTableRingCollectionInitialize();
-            FilterSectionPlayersBetweenCollectionInitialize();
         }
 
         #endregion
@@ -162,15 +166,17 @@ namespace Model.Filters
 
         public void FilterSectionPlayersBetweenCollectionInitialize()
         {
-            this.PlayerCountMinSelectedItem = this.PlayerCountMinAvailable;
-            this.PlayerCountMaxSelectedItem = this.PlayerCountMaxAvailable;
+            _playerCountMinSelectedItem = this.PlayerCountMinAvailable;
+            _playerCountMaxSelectedItem = this.PlayerCountMaxAvailable;
+
+            PlayerCountListSet();
         }
 
         public void UpdateFilterSectionStakeLevelCollection(IList<Gametypes> gameTypes)
         {
             bool isModified = false;
             List<StakeLevelItem> gameTypesList = new List<StakeLevelItem>();
-            foreach (var gameType in gameTypes.Where(x=> !x.Istourney))
+            foreach (var gameType in gameTypes.Where(x => !x.Istourney))
             {
                 var limit = Limit.FromSmallBlindBigBlind(gameType.Smallblindincents / 100m, gameType.Bigblindincents / 100m, (Currency)gameType.CurrencytypeId);
                 var gtString = String.Format("{0}{1}{2}", limit.GetCurrencySymbol(), Math.Abs(limit.BigBlind), GameTypeUtils.GetShortName((GameType)gameType.PokergametypeId));
@@ -229,7 +235,7 @@ namespace Model.Filters
 
         public void LoadFilter(IFilterModel filter)
         {
-            if(filter is FilterStandardModel)
+            if (filter is FilterStandardModel)
             {
                 var filterToLoad = filter as FilterStandardModel;
 
@@ -245,7 +251,7 @@ namespace Model.Filters
 
         #endregion
 
-            #region Reset Filter
+        #region Reset Filter
         public void ResetTableRingCollection()
         {
             ResetTableRingCollection(EnumTableType.Six);
@@ -438,7 +444,7 @@ namespace Model.Filters
         private Expression<Func<Playerstatistic, bool>> GetStatsPredicate()
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
-            foreach (var stat in StatCollection.Where(x=> x.TriStateSelectedItem.TriState != EnumTriState.Any))
+            foreach (var stat in StatCollection.Where(x => x.TriStateSelectedItem.TriState != EnumTriState.Any))
             {
                 Playerstatistic empty = new Playerstatistic();
                 var propValue = ReflectionHelper.GetMemberValue(empty, stat.PropertyName);
@@ -849,6 +855,8 @@ namespace Model.Filters
     public class StatItem : FilterTriStateBase
     {
         public static Action OnTriState;
+
+        public StatItem() : this(EnumTriState.Any) { }
 
         public StatItem(EnumTriState param = EnumTriState.Any) : base(param)
         {

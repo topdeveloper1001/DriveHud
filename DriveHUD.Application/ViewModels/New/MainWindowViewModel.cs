@@ -67,7 +67,7 @@ namespace DriveHUD.Application.ViewModels
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
-            filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>();
+            filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
 
             synchronizationContext = _synchronizationContext;
 
@@ -111,8 +111,8 @@ namespace DriveHUD.Application.ViewModels
             ImportFromFileCommand = new RelayCommand(ImportFromFile);
             ImportFromDirectoryCommand = new RelayCommand(ImportFromDirectory);
             SupportCommand = new RelayCommand(ShowSupportView);
-            StartHudCommand = new RelayCommand(() => StartHud(true));
-            StopHudCommand = new RelayCommand(StopHud);
+            StartHudCommand = new RelayCommand(() => StartHud(false));
+            StopHudCommand = new RelayCommand(() => StopHud(false));
             HideEquityCalculatorCommand = new RelayCommand(HideEquityCalculator);
             SettingsCommand = new RelayCommand(OpenSettingsMenu);
             UpgradeCommand = new RelayCommand(Upgrade);
@@ -158,9 +158,12 @@ namespace DriveHUD.Application.ViewModels
             importerSessionCacheService.Begin();
         }
 
-        internal void StopHud()
+        internal void StopHud(bool switchViewModel = false)
         {
-            SwitchViewModel(EnumViewModelType.HudViewModel);
+            if (switchViewModel)
+            {
+                SwitchViewModel(EnumViewModelType.HudViewModel);
+            }
             HudViewModel.Stop();
 
             importerSessionCacheService.End();
@@ -277,7 +280,7 @@ namespace DriveHUD.Application.ViewModels
 
             var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
 
-            var hudLayoutsSevice = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
             var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
@@ -312,6 +315,7 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerName);
+                var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerName);
                 var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);
 
                 var item = new HudIndicators(statisticCollection);
@@ -361,7 +365,7 @@ namespace DriveHUD.Application.ViewModels
 
                 var doNotAddPlayer = false;
 
-                var activeLayout = hudLayoutsSevice.GetActiveLayout(tableKey);
+                var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
 
                 if (activeLayout == null)
                 {
@@ -403,7 +407,7 @@ namespace DriveHUD.Application.ViewModels
                 {
                     if (!string.IsNullOrEmpty(statInfo.PropertyName))
                     {
-                        AssignStatInfoValues(item, statInfo);
+                        statInfo.AssignStatInfoValues(item);
                     }
                     else if (!(statInfo is StatInfoBreak))
                     {
@@ -416,10 +420,10 @@ namespace DriveHUD.Application.ViewModels
                     {
                         foreach (var tooltip in tooltipCollection)
                         {
-                            AssignStatInfoValues(item, tooltip.CategoryStat);
+                            tooltip.CategoryStat.AssignStatInfoValues(item);
                             foreach (var stat in tooltip.StatsCollection)
                             {
-                                AssignStatInfoValues(item, stat);
+                                stat.AssignStatInfoValues(item);
                             }
 
                             if (tooltip.CardsList == null)
@@ -439,6 +443,18 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
                 }
 
+                if (lastHandStatistic != null)
+                {
+                    var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, tableKey);
+
+                    if (stickers.Any())
+                    {
+                        importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerName, stickers.ToDictionary(x => x, x => lastHandStatistic));
+                    }
+
+                    hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerName), tableKey);
+                }
+
                 if (!doNotAddPlayer)
                 {
                     ht.ListHUDPlayer.Add(playerHudContent);
@@ -452,7 +468,7 @@ namespace DriveHUD.Application.ViewModels
             if (HudViewModel.HudTableViewModelDictionary.ContainsKey(tableKey))
             {
                 var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                hudLayoutsSevice.SetPlayerTypeIcon(hudElements, tableKey);
+                hudLayoutsService.SetPlayerTypeIcon(hudElements, tableKey);
 
                 Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
                 {
@@ -477,33 +493,6 @@ namespace DriveHUD.Application.ViewModels
                     HudPainter.UpdateHud(ht);
                 });
             }
-        }
-
-        private static void AssignStatInfoValues(HudIndicators source, StatInfo statInfo)
-        {
-            var propName = string.Format("{0}{1}", statInfo.PropertyName, "Object");
-
-            object propValue;
-
-            if (source.HasProperty(propName))
-            {
-                propValue = ReflectionHelper.GetPropertyValue(source, propName);
-
-                var statDto = propValue as StatDto;
-
-                if (statDto != null)
-                {
-                    propValue = statDto.Value;
-                    statInfo.StatDto = statDto;
-                }
-            }
-            else
-            {
-                propValue = ReflectionHelper.GetPropertyValue(source, statInfo.PropertyName);
-            }
-
-            statInfo.Caption = string.Format(statInfo.Format, propValue);
-            statInfo.CurrentValue = Convert.ToDecimal(propValue);
         }
 
         internal async void ImportFromFile()
@@ -928,7 +917,7 @@ namespace DriveHUD.Application.ViewModels
 
             if (type.FilterType == EnumFilterDropDown.FilterCreate)
             {
-                var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>().FilterTupleCollection.FirstOrDefault();
+                var filterTuple = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString()).FilterTupleCollection.FirstOrDefault();
                 PopupFiltersRequestExecute(filterTuple);
                 return;
             }

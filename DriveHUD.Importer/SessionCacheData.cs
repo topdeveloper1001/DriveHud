@@ -22,11 +22,15 @@ namespace DriveHUD.Importers
     internal class SessionCacheData
     {
         private readonly Dictionary<string, IList<Playerstatistic>> statisticByPlayer;
+        private readonly Dictionary<string, Playerstatistic> lastHandStatisticByPlayer;
+        private readonly Dictionary<string, Dictionary<string, Playerstatistic>> stickersStatisticByPlayer;
         private readonly List<HandHistoryRecord> records;
 
         public SessionCacheData()
         {
             statisticByPlayer = new Dictionary<string, IList<Playerstatistic>>();
+            lastHandStatisticByPlayer = new Dictionary<string, Playerstatistic>();
+            stickersStatisticByPlayer = new Dictionary<string, Dictionary<string, Playerstatistic>>();
             records = new List<HandHistoryRecord>();
         }
 
@@ -35,6 +39,22 @@ namespace DriveHUD.Importers
             get
             {
                 return statisticByPlayer;
+            }
+        }
+
+        public  Dictionary<string, Playerstatistic> LastHandStatisticByPlayer
+        {
+            get
+            {
+                return lastHandStatisticByPlayer;
+            }
+        }
+
+        public Dictionary<string, Dictionary<string, Playerstatistic>> StickersStatisticByPlayer
+        {
+            get
+            {
+                return stickersStatisticByPlayer;
             }
         }
 

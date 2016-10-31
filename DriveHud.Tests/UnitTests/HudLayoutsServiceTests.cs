@@ -14,6 +14,7 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Reflection;
+using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Model.Data;
 using Model.Enums;
@@ -32,6 +33,58 @@ namespace DriveHud.Tests.UnitTests
     public class HudLayoutsServiceTests
     {
         private const int LayoutId = -1625850552;
+
+        [Test]
+        public void TestSetStickerOneAndDoneIsSet()
+        {
+            var hudLayoutService = CreateHudLayoutsService();
+            var hudElements = CreateHudElements();
+            var stat = new Playerstatistic();
+
+            stat.Flopcontinuationbetmade = 60;
+            stat.Flopcontinuationbetpossible = 100;
+
+            stat.Turncontinuationbetmade = 20;
+            stat.Turncontinuationbetpossible = 100;
+
+            stat.Totalhands = 20;
+
+            hudElements[0].SetStatValue(Stat.CBet, nameof(Indicators.FlopCBet), 90);
+            hudElements[0].SetStatValue(Stat.DoubleBarrel, nameof(Indicators.TurnCBet), 90);
+
+            hudLayoutService.SetStickers(hudElements.FirstOrDefault(), new Dictionary<string, Playerstatistic>() { { "One and Done", stat } }, LayoutId);
+
+            Assert.That(hudElements[0].Stickers[0].Label, Is.EqualTo("OD"));
+        }
+
+        [Test]
+        public void TestSetStickerODAndWTYAreSet()
+        {
+            var hudLayoutService = CreateHudLayoutsService();
+            var hudElements = CreateHudElements();
+
+            var stat = new Playerstatistic();
+
+            stat.Flopcontinuationbetmade = 60;
+            stat.Flopcontinuationbetpossible = 100;
+
+            stat.Turncontinuationbetmade = 20;
+            stat.Turncontinuationbetpossible = 100;
+
+            stat.UO_PFR_EP = 21;
+            stat.PositionUnoppened = new PositionalStat() { EP = 100 };
+
+            stat.Totalhands = 20;
+
+            hudElements[0].SetStatValue(Stat.CBet, nameof(Indicators.FlopCBet), 60);
+            hudElements[0].SetStatValue(Stat.DoubleBarrel, nameof(Indicators.TurnCBet), 20);
+            hudElements[0].SetStatValue(Stat.UO_PFR_EP, nameof(Indicators.UO_PFR_EP), 21);
+
+            hudLayoutService.SetStickers(hudElements.FirstOrDefault(), new Dictionary<string, Playerstatistic>() { { "One and Done", stat }, { "Way Too Early", stat } }, LayoutId);
+
+            Assert.That(hudElements[0].Stickers[0].Label, Is.EqualTo("OD"));
+            Assert.That(hudElements[0].Stickers[1].Label, Is.EqualTo("WTE"));
+        }
 
         [Test]
         public void TestSetPlayerTypeIconNitIsSet()
@@ -200,7 +253,7 @@ namespace DriveHud.Tests.UnitTests
 
             Assert.That(hudElements[0].PlayerIcon, Is.EqualTo("Fish.png"));
             Assert.That(hudElements[1].PlayerIcon, Is.EqualTo("Nit.png"));
-        }        
+        }
 
         #region Infrastructure
 
@@ -209,7 +262,7 @@ namespace DriveHud.Tests.UnitTests
             var hudLayoutService = new HudLayoutsServiceStub();
 
             var hudTables = new Dictionary<int, HudTableViewModel>();
-          //  hudTables.Add(LayoutId, new HudTableViewModel { HudElements = new ObservableCollection<HudElementViewModel>(), TableType = tableType });
+            //  hudTables.Add(LayoutId, new HudTableViewModel { HudElements = new ObservableCollection<HudElementViewModel>(), TableType = tableType });
 
             hudLayoutService.SaveDefaults(hudTables);
 
@@ -272,7 +325,9 @@ namespace DriveHud.Tests.UnitTests
                 new StatInfo { Stat = Stat.ColdCallSB, Caption = "Cold Call SB%" },
                 new StatInfo { Stat = Stat.ColdCallBB, Caption = "Cold Call BB%" },
                 new StatInfo { Stat = Stat.S3BetIP, Caption = "3-BET IP%" },
-                new StatInfo { Stat = Stat.S3BetOOP, Caption = "3-BET OOP%" }
+                new StatInfo { Stat = Stat.S3BetOOP, Caption = "3-BET OOP%" },
+                new StatInfo { Stat = Stat.DoubleBarrel, Caption = "Double Barrel" },
+                new StatInfo { Stat = Stat.UO_PFR_EP, Caption = "UO PFR EP" }
             };
 
             stats.ForEach(x => x.Initialize());

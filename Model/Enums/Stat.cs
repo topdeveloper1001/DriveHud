@@ -104,6 +104,16 @@ namespace Model.Enums
         ThreeBet_BN,
         ThreeBet_SB,
         ThreeBet_BB,
-        RecentAgg
+        RecentAgg,
+        RaiseCBet,
+        CBetInThreeBetPot,
+        CBetInFourBetPot,
+        FlopCBetVsOneOpp,
+        FlopCBetVsTwoOpp,
+        FlopCBetMW,
+        FlopCBetMonotone,
+        FlopCBetRag,
+        FoldToCBetFromThreeBetPot,
+        FoldToCBetFromFourBetPot
     }
 }

@@ -130,6 +130,7 @@
     <Compile Include="Events\PreferredSeatChangedEvent.cs" />
     <Compile Include="Events\SettingsUpdatedEvent.cs" />
     <Compile Include="Events\TournamentDataUpdatedEvent.cs" />
+    <Compile Include="Events\UpdateHudEvent.cs" />
     <Compile Include="Events\UpdateViewRequestedEvent.cs" />
     <Compile Include="Extensions\CardHelper.cs" />
     <Compile Include="Extensions\CurrencyHelper.cs" />
@@ -143,7 +144,8 @@
     <Compile Include="Filters\FilterHandGridModel.cs" />
     <Compile Include="Filters\FilterHelpers.cs" />
     <Compile Include="Filters\FilterHoleCardsModel.cs" />
-    <Compile Include="Filters\FilterModelManagerService.cs" />
+    <Compile Include="Filters\IFilterModelCollection.cs" />
+    <Compile Include="Filters\MainFilterModelManagerService.cs" />
     <Compile Include="Filters\FilterOmahaHandGridModel.cs" />
     <Compile Include="Filters\FilterStandardModel.cs" />
     <Compile Include="Filters\FilterBaseEntity.cs" />
@@ -157,6 +159,7 @@
     <Compile Include="Filters\IFilterDataService.cs" />
     <Compile Include="Filters\IFilterModel.cs" />
     <Compile Include="Filters\IFilterModelManagerService.cs" />
+    <Compile Include="Filters\StickersFilterModelManagerService.cs" />
     <Compile Include="HandAnalyzers\CustomAnalyzers.cs" />
     <Compile Include="HandAnalyzers\HandAnalyzer.cs" />
     <Compile Include="HandAnalyzers\FlushAnalyzers.cs" />

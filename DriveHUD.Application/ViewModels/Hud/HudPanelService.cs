@@ -24,6 +24,7 @@ using Telerik.Windows.Controls;
 using DriveHUD.Application.Views.Popups;
 using DriveHUD.Application.ViewModels.Popups;
 using DriveHUD.Common.Resources;
+using System.Windows.Data;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -53,7 +54,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <returns>HUD panel</returns>
         public virtual FrameworkElement Create(HudElementViewModel hudElement, HudType hudType)
         {
-            var contextMenu = CreateContextMenu(hudElement.PokerSiteId, hudElement.PlayerName);
+            var contextMenu = CreateContextMenu(hudElement.PokerSiteId, hudElement.PlayerName, hudElement);
+            contextMenu.EventName = "MouseRightButtonUp";
 
             if (hudType == HudType.Plain)
             {
@@ -100,10 +102,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             return handle;
         }
 
-        private RadContextMenu CreateContextMenu(short pokerSiteId, string playerName)
+        private RadContextMenu CreateContextMenu(short pokerSiteId, string playerName, HudElementViewModel datacontext)
         {
             RadContextMenu radMenu = new RadContextMenu();
-            var item = new RadMenuItem() { Header = CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote) };
+
+            var item = new RadMenuItem();
+
+            var binding = new Binding(nameof(HudElementViewModel.NoteMenuItemText)) { Source = datacontext, Mode = BindingMode.OneWay };
+            item.SetBinding(RadMenuItem.HeaderProperty, binding);
+
             item.Click += (s, e) =>
             {
                 PlayerNoteViewModel viewModel = new PlayerNoteViewModel(pokerSiteId, playerName);

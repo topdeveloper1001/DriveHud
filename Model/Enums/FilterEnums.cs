@@ -121,4 +121,10 @@ namespace Model.Enums
         Tournament,
     }
 
+    public enum FilterServices
+    {
+        Main,
+        Stickers
+    }
+
 }

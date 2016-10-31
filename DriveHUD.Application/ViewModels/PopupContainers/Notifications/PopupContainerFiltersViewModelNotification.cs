@@ -27,5 +27,13 @@ namespace DriveHUD.Application.ViewModels.PopupContainers.Notifications
 
         public FilterTuple FilterTuple { get; set; }
     }
+
+    public class PopupContainerStickersFiltersViewModelNotification : PopupContainerFiltersViewModelNotification
+    {
+        public HudBumperStickerType Sticker { get; set; }
+
+        public PopupContainerStickersFiltersViewModelNotification()
+        { }
+    }
 }
 

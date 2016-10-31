@@ -179,7 +179,7 @@
     <Compile Include="FunctionalTests\Hud\HudPositionTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
@@ -243,9 +243,6 @@
       <LastGenOutput>IsEqualBuilder.txt</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="UnitTests\TestData\Bovada\bovada-MTT-moving.log">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
@@ -311,6 +308,8 @@
   <ItemGroup>
     <Folder Include="IntegrationTests\Parsers\IPoker\TestData\" />
     <Folder Include="IntegrationTests\Parsers\Pacific\TestData\" />
+    <Folder Include="IntegrationTests\Parsers\PokerStars\TestData\" />
+    <Folder Include="UnitTests\TestData\Bovada\" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

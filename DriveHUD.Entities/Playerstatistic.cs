@@ -320,12 +320,6 @@ namespace DriveHUD.Entities
         [ProtoMember(128)]
         public virtual short PokergametypeId { get; set; }
 
-        [ProtoMember(129)]
-        public virtual int Flopcontinuationipbetmade { get; set; }
-
-        [ProtoMember(130)]
-        public virtual int Flopcontinuationoopbetmade { get; set; }
-
         [ProtoMember(131)]
         public virtual int DidThreeBetInMp { get; set; }
 
@@ -370,12 +364,6 @@ namespace DriveHUD.Entities
 
         [ProtoMember(145)]
         public virtual int DidColdCallInBb { get; set; }
-
-        [ProtoMember(146)]
-        public virtual int DidThreeBetIp { get; set; }
-
-        [ProtoMember(147)]
-        public virtual int DidThreeBetOop { get; set; }
 
         [ProtoMember(148)]
         public virtual int DidDonkBet { get; set; }
@@ -527,17 +515,108 @@ namespace DriveHUD.Entities
         [ProtoMember(197)]
         public virtual int TotalcallsRiver { get; set; }
 
+        // Since aggression by street was added later need  separate SawStreet stats for it 
         [ProtoMember(198)]
-        public virtual int PlayedFlop { get; set; }
+        public virtual int FlopAggPossible { get; set; }
 
         [ProtoMember(199)]
-        public virtual int PlayedTurn { get; set; }
+        public virtual int TurnAggPossible { get; set; }
 
         [ProtoMember(200)]
-        public virtual int PlayedRiver { get; set; }
+        public virtual int RiverAggPossible { get; set; }
 
         [ProtoMember(201)]
         public virtual int Smallblindstealattempted { get; set; }
+
+        [ProtoMember(202)]
+        public virtual int FlopContinuationBetInThreeBetPotPossible { get; set; }
+
+        [ProtoMember(203)]
+        public virtual int FlopContinuationBetInThreeBetPotMade { get; set; }
+
+        [ProtoMember(204)]
+        public virtual int FlopContinuationBetInFourBetPotPossible { get; set; }
+
+        [ProtoMember(205)]
+        public virtual int FlopContinuationBetInFourBetPotMade { get; set; }
+
+        [ProtoMember(206)]
+        public virtual int FlopContinuationBetVsOneOpponentPossible { get; set; }
+
+        [ProtoMember(207)]
+        public virtual int FlopContinuationBetVsOneOpponentMade { get; set; }
+
+        [ProtoMember(208)]
+        public virtual int FlopContinuationBetVsTwoOpponentsPossible { get; set; }
+
+        [ProtoMember(209)]
+        public virtual int FlopContinuationBetVsTwoOpponentsMade { get; set; }
+
+        [ProtoMember(210)]
+        public virtual int MultiWayFlopContinuationBetPossible { get; set; }
+
+        [ProtoMember(211)]
+        public virtual int MultiWayFlopContinuationBetMade { get; set; }
+
+        [ProtoMember(212)]
+        public virtual int FlopContinuationBetMonotonePotPossible { get; set; }
+
+        [ProtoMember(213)]
+        public virtual int FlopContinuationBetMonotonePotMade { get; set; }
+
+        [ProtoMember(214)]
+        public virtual int FlopContinuationBetRagPotPossible { get; set; }
+
+        [ProtoMember(215)]
+        public virtual int FlopContinuationBetRagPotMade { get; set; }
+
+        [ProtoMember(216)]
+        public virtual int FacingFlopContinuationBetFromThreeBetPot { get; set; }
+
+        [ProtoMember(217)]
+        public virtual int FoldedToFlopContinuationBetFromThreeBetPot { get; set; }
+
+        [ProtoMember(218)]
+        public virtual int CalledFlopContinuationBetFromThreeBetPot { get; set; }
+
+        [ProtoMember(219)]
+        public virtual int RaisedFlopContinuationBetFromThreeBetPot { get; set; }
+
+        [ProtoMember(220)]
+        public virtual int FacingFlopContinuationBetFromFourBetPot { get; set; }
+
+        [ProtoMember(221)]
+        public virtual int FoldedToFlopContinuationBetFromFourBetPot { get; set; }
+
+        [ProtoMember(222)]
+        public virtual int CalledFlopContinuationBetFromFourBetPot { get; set; }
+
+        [ProtoMember(223)]
+        public virtual int RaisedFlopContinuationBetFromFourBetPot { get; set; }
+
+        [ProtoMember(224)]
+        public virtual int DidThreeBetIp { get; set; }
+
+        [ProtoMember(225)]
+        public virtual int CouldThreeBetIp { get; set; }
+
+        [ProtoMember(226)]
+        public virtual int DidThreeBetOop { get; set; }
+
+        [ProtoMember(227)]
+        public virtual int CouldThreeBetOop { get; set; }
+
+        [ProtoMember(228)]
+        public virtual int Flopcontinuationipbetmade { get; set; }
+
+        [ProtoMember(229)]
+        public virtual int Flopcontinuationipbetpossible { get; set; }
+
+        [ProtoMember(230)]
+        public virtual int Flopcontinuationoopbetmade { get; set; }
+
+        [ProtoMember(231)]
+        public virtual int Flopcontinuationoopbetpossible { get; set; }
 
         #region Additional properties (not for serialization)
 
@@ -670,7 +749,9 @@ namespace DriveHUD.Entities
             Couldthreebet += a.Couldthreebet;
             Didthreebet += a.Didthreebet;
             DidThreeBetIp += a.DidThreeBetIp;
+            CouldThreeBetIp += a.CouldThreeBetIp;
             DidThreeBetOop += a.DidThreeBetOop;
+            CouldThreeBetOop += a.CouldThreeBetOop;
             Facedthreebetpreflop += a.Facedthreebetpreflop;
             Foldedtothreebetpreflop += a.Foldedtothreebetpreflop;
             Calledthreebetpreflop += a.Calledthreebetpreflop;
@@ -688,7 +769,24 @@ namespace DriveHUD.Entities
             Flopcontinuationbetpossible += a.Flopcontinuationbetpossible;
             Flopcontinuationbetmade += a.Flopcontinuationbetmade;
             Flopcontinuationipbetmade += a.Flopcontinuationipbetmade;
+            Flopcontinuationipbetpossible += a.Flopcontinuationipbetpossible;
             Flopcontinuationoopbetmade += a.Flopcontinuationoopbetmade;
+            Flopcontinuationoopbetpossible += a.Flopcontinuationoopbetpossible;
+            FlopContinuationBetInThreeBetPotPossible += a.FlopContinuationBetInThreeBetPotPossible;
+            FlopContinuationBetInThreeBetPotMade += a.FlopContinuationBetInThreeBetPotMade;
+            FlopContinuationBetInFourBetPotPossible += a.FlopContinuationBetInFourBetPotPossible;
+            FlopContinuationBetInFourBetPotMade += a.FlopContinuationBetInFourBetPotMade;
+            FlopContinuationBetVsOneOpponentPossible += a.FlopContinuationBetVsOneOpponentPossible;
+            FlopContinuationBetVsOneOpponentMade += a.FlopContinuationBetVsOneOpponentMade;
+            FlopContinuationBetVsTwoOpponentsPossible += a.FlopContinuationBetVsTwoOpponentsPossible;
+            FlopContinuationBetVsTwoOpponentsMade += a.FlopContinuationBetVsTwoOpponentsMade;
+            MultiWayFlopContinuationBetPossible += a.MultiWayFlopContinuationBetPossible;
+            MultiWayFlopContinuationBetMade += a.MultiWayFlopContinuationBetMade;
+            FlopContinuationBetMonotonePotPossible += a.FlopContinuationBetMonotonePotPossible;
+            FlopContinuationBetMonotonePotMade += a.FlopContinuationBetMonotonePotMade;
+            FlopContinuationBetRagPotPossible += a.FlopContinuationBetRagPotPossible;
+            FlopContinuationBetRagPotMade += a.FlopContinuationBetRagPotMade;
+
             Turncontinuationbetpossible += a.Turncontinuationbetpossible;
             Turncontinuationbetmade += a.Turncontinuationbetmade;
             Rivercontinuationbetpossible += a.Rivercontinuationbetpossible;
@@ -700,6 +798,17 @@ namespace DriveHUD.Entities
             Foldedtoflopcontinuationbet += a.Foldedtoflopcontinuationbet;
             Calledflopcontinuationbet += a.Calledflopcontinuationbet;
             Raisedflopcontinuationbet += a.Raisedflopcontinuationbet;
+
+            FacingFlopContinuationBetFromThreeBetPot += a.FacingFlopContinuationBetFromThreeBetPot;
+            FoldedToFlopContinuationBetFromThreeBetPot += a.FoldedToFlopContinuationBetFromThreeBetPot;
+            CalledFlopContinuationBetFromThreeBetPot += a.CalledFlopContinuationBetFromThreeBetPot;
+            RaisedFlopContinuationBetFromThreeBetPot += a.RaisedFlopContinuationBetFromThreeBetPot;
+
+            FacingFlopContinuationBetFromFourBetPot += a.FacingFlopContinuationBetFromFourBetPot;
+            FoldedToFlopContinuationBetFromFourBetPot += a.FoldedToFlopContinuationBetFromFourBetPot;
+            CalledFlopContinuationBetFromFourBetPot += a.CalledFlopContinuationBetFromFourBetPot;
+            RaisedFlopContinuationBetFromFourBetPot += a.RaisedFlopContinuationBetFromFourBetPot;
+
             Facingturncontinuationbet += a.Facingturncontinuationbet;
             Foldedtoturncontinuationbet += a.Foldedtoturncontinuationbet;
             Calledturncontinuationbet += a.Calledturncontinuationbet;
@@ -846,9 +955,9 @@ namespace DriveHUD.Entities
             TotalcallsTurn += a.TotalcallsTurn;
             TotalcallsRiver += a.TotalcallsRiver;
 
-            PlayedFlop += a.PlayedFlop;
-            PlayedTurn += a.PlayedTurn;
-            PlayedRiver += a.PlayedRiver;
+            FlopAggPossible += a.FlopAggPossible;
+            TurnAggPossible += a.TurnAggPossible;
+            RiverAggPossible += a.RiverAggPossible;
 
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
@@ -939,7 +1048,9 @@ namespace DriveHUD.Entities
             r.Couldthreebet = a.Couldthreebet + b.Couldthreebet;
             r.Didthreebet = a.Didthreebet + b.Didthreebet;
             r.DidThreeBetIp = a.DidThreeBetIp + b.DidThreeBetIp;
+            r.CouldThreeBetIp = a.CouldThreeBetIp + b.CouldThreeBetIp;
             r.DidThreeBetOop = a.DidThreeBetOop + b.DidThreeBetOop;
+            r.CouldThreeBetOop = a.CouldThreeBetOop + b.CouldThreeBetOop;
             r.Facedthreebetpreflop = a.Facedthreebetpreflop + b.Facedthreebetpreflop;
             r.Foldedtothreebetpreflop = a.Foldedtothreebetpreflop + b.Foldedtothreebetpreflop;
             r.Calledthreebetpreflop = a.Calledthreebetpreflop + b.Calledthreebetpreflop;
@@ -957,7 +1068,24 @@ namespace DriveHUD.Entities
             r.Flopcontinuationbetpossible = a.Flopcontinuationbetpossible + b.Flopcontinuationbetpossible;
             r.Flopcontinuationbetmade = a.Flopcontinuationbetmade + b.Flopcontinuationbetmade;
             r.Flopcontinuationipbetmade = a.Flopcontinuationipbetmade + b.Flopcontinuationipbetmade;
+            r.Flopcontinuationipbetpossible = a.Flopcontinuationipbetpossible + b.Flopcontinuationipbetpossible;
             r.Flopcontinuationoopbetmade = a.Flopcontinuationoopbetmade + b.Flopcontinuationoopbetmade;
+            r.Flopcontinuationoopbetpossible = a.Flopcontinuationoopbetpossible + b.Flopcontinuationoopbetpossible;
+            r.FlopContinuationBetInThreeBetPotMade = a.FlopContinuationBetInThreeBetPotMade + b.FlopContinuationBetInThreeBetPotMade;
+            r.FlopContinuationBetInThreeBetPotPossible = a.FlopContinuationBetInThreeBetPotPossible + b.FlopContinuationBetInThreeBetPotPossible;
+            r.FlopContinuationBetInFourBetPotMade = a.FlopContinuationBetInFourBetPotMade + b.FlopContinuationBetInFourBetPotMade;
+            r.FlopContinuationBetInFourBetPotPossible = a.FlopContinuationBetInFourBetPotPossible + b.FlopContinuationBetInFourBetPotPossible;
+            r.FlopContinuationBetVsOneOpponentMade = a.FlopContinuationBetVsOneOpponentMade + b.FlopContinuationBetVsOneOpponentMade;
+            r.FlopContinuationBetVsOneOpponentPossible = a.FlopContinuationBetVsOneOpponentPossible + b.FlopContinuationBetVsOneOpponentPossible;
+            r.FlopContinuationBetVsTwoOpponentsMade = a.FlopContinuationBetVsTwoOpponentsMade + b.FlopContinuationBetVsTwoOpponentsMade;
+            r.FlopContinuationBetVsTwoOpponentsPossible = a.FlopContinuationBetVsTwoOpponentsPossible + b.FlopContinuationBetVsTwoOpponentsPossible;
+            r.MultiWayFlopContinuationBetMade = a.MultiWayFlopContinuationBetMade + b.MultiWayFlopContinuationBetMade;
+            r.MultiWayFlopContinuationBetPossible = a.MultiWayFlopContinuationBetPossible + b.MultiWayFlopContinuationBetPossible;
+            r.FlopContinuationBetMonotonePotMade = a.FlopContinuationBetMonotonePotMade + b.FlopContinuationBetMonotonePotMade;
+            r.FlopContinuationBetMonotonePotPossible = a.FlopContinuationBetMonotonePotPossible + b.FlopContinuationBetMonotonePotPossible;
+            r.FlopContinuationBetRagPotMade = a.FlopContinuationBetRagPotMade + b.FlopContinuationBetRagPotMade;
+            r.FlopContinuationBetRagPotPossible = a.FlopContinuationBetRagPotPossible + b.FlopContinuationBetRagPotPossible;
+
             r.Turncontinuationbetpossible = a.Turncontinuationbetpossible + b.Turncontinuationbetpossible;
             r.Turncontinuationbetmade = a.Turncontinuationbetmade + b.Turncontinuationbetmade;
             r.Rivercontinuationbetpossible = a.Rivercontinuationbetpossible + b.Rivercontinuationbetpossible;
@@ -969,6 +1097,17 @@ namespace DriveHUD.Entities
             r.Foldedtoflopcontinuationbet = a.Foldedtoflopcontinuationbet + b.Foldedtoflopcontinuationbet;
             r.Calledflopcontinuationbet = a.Calledflopcontinuationbet + b.Calledflopcontinuationbet;
             r.Raisedflopcontinuationbet = a.Raisedflopcontinuationbet + b.Raisedflopcontinuationbet;
+
+            r.FacingFlopContinuationBetFromThreeBetPot = a.FacingFlopContinuationBetFromThreeBetPot + b.FacingFlopContinuationBetFromThreeBetPot;
+            r.FoldedToFlopContinuationBetFromThreeBetPot = a.FoldedToFlopContinuationBetFromThreeBetPot + b.FoldedToFlopContinuationBetFromThreeBetPot;
+            r.CalledFlopContinuationBetFromThreeBetPot = a.CalledFlopContinuationBetFromThreeBetPot + b.CalledFlopContinuationBetFromThreeBetPot;
+            r.RaisedFlopContinuationBetFromThreeBetPot = a.RaisedFlopContinuationBetFromThreeBetPot + b.RaisedFlopContinuationBetFromThreeBetPot;
+
+            r.FacingFlopContinuationBetFromFourBetPot = a.FacingFlopContinuationBetFromFourBetPot + b.FacingFlopContinuationBetFromFourBetPot;
+            r.FoldedToFlopContinuationBetFromFourBetPot = a.FoldedToFlopContinuationBetFromFourBetPot + b.FoldedToFlopContinuationBetFromFourBetPot;
+            r.CalledFlopContinuationBetFromFourBetPot = a.CalledFlopContinuationBetFromFourBetPot + b.CalledFlopContinuationBetFromFourBetPot;
+            r.RaisedFlopContinuationBetFromFourBetPot = a.RaisedFlopContinuationBetFromFourBetPot + b.RaisedFlopContinuationBetFromFourBetPot;
+
             r.Facingturncontinuationbet = a.Facingturncontinuationbet + b.Facingturncontinuationbet;
             r.Foldedtoturncontinuationbet = a.Foldedtoturncontinuationbet + b.Foldedtoturncontinuationbet;
             r.Calledturncontinuationbet = a.Calledturncontinuationbet + b.Calledturncontinuationbet;
@@ -1116,9 +1255,9 @@ namespace DriveHUD.Entities
             r.TotalcallsTurn = a.TotalcallsTurn + b.TotalcallsTurn;
             r.TotalcallsRiver = a.TotalcallsRiver + b.TotalcallsRiver;
 
-            r.PlayedFlop = a.PlayedFlop + b.PlayedFlop;
-            r.PlayedTurn = a.PlayedTurn + b.PlayedTurn;
-            r.PlayedRiver = a.PlayedRiver + b.PlayedRiver;
+            r.FlopAggPossible = a.FlopAggPossible + b.FlopAggPossible;
+            r.TurnAggPossible = a.TurnAggPossible + b.TurnAggPossible;
+            r.RiverAggPossible = a.RiverAggPossible + b.RiverAggPossible;
 
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);

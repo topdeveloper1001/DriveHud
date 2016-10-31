@@ -688,11 +688,11 @@ namespace DriveHUD.Importers.Builders.iPoker
                 smallBlindToWrite = BovadaConverters.ConvertBBtoSB(bigBlindToWrite);
             }
 
-            var smallBlind = (handModel.GameLimit != GameLimit.NL) ?
+            var smallBlind = (handModel.GameLimit == GameLimit.FL) ?
                                      BovadaConverters.ConvertDecimalToString(GetLimitStake(smallBlindToWrite)) :
                                      BovadaConverters.ConvertDecimalToString(smallBlindToWrite);
 
-            var bigBlind = (handModel.GameLimit != GameLimit.NL) ?
+            var bigBlind = (handModel.GameLimit == GameLimit.FL) ?
                                 BovadaConverters.ConvertDecimalToString(GetLimitStake(bigBlindToWrite)) :
                                 BovadaConverters.ConvertDecimalToString(bigBlindToWrite);
 

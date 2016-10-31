@@ -22,6 +22,7 @@ using System.Linq.Expressions;
 using System.Collections.Specialized;
 using Model.Enums;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Resources;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -51,7 +52,7 @@ namespace DriveHUD.Application.ViewModels
             IsVertical = true;
         }
 
-        public void  UpdateMainStats()
+        public void UpdateMainStats()
         {
             RaisePropertyChanged(() => Stat1);
             RaisePropertyChanged(() => Stat2);
@@ -257,6 +258,20 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 this.RaiseAndSetIfChanged(ref isNoteIconVisible, value);
+                this.RaisePropertyChanged(nameof(NoteMenuItemText));
+            }
+        }
+
+        /// <summary>
+        /// Note menu item name in the Context menu
+        /// </summary>
+        public string NoteMenuItemText
+        {
+            get
+            {
+                return isNoteIconVisible
+                    ? CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditNote)
+                    : CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote);
             }
         }
 
@@ -405,6 +420,18 @@ namespace DriveHUD.Application.ViewModels
             private set
             {
                 this.RaiseAndSetIfChanged(ref statInfoCollection, value);
+            }
+        }
+
+        [NonSerialized]
+        private ObservableCollection<HudBumperStickerType> stickers;
+
+        public ObservableCollection<HudBumperStickerType> Stickers
+        {
+            get { return stickers; }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref stickers, value);
             }
         }
 

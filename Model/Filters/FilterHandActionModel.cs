@@ -19,7 +19,10 @@ namespace Model.Filters
         {
             this.Name = "Hand Action";
             this.Type = EnumFilterModelType.FilterHandActionModel;
+        }
 
+        public void Initialize()
+        {
             FilterPreflopItemsInitialize();
             FilterFlopItemsInitialize();
             FilterTurnItemsInitialize();
