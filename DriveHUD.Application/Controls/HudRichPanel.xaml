@@ -10,6 +10,7 @@
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              xmlns:control="clr-namespace:DriveHUD.Application.Controls"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:m="clr-namespace:DriveHUD.Application.ViewModels.Hud"
              mc:Ignorable="d"                   
              d:DesignHeight="300" d:DesignWidth="300">
 
@@ -18,6 +19,12 @@
     </UserControl.DataContext>-->
 
     <UserControl.Resources>
+
+        <!-- BoolToVisibilityConverter inverts value in case if parameter is present -->
+        <dh:ValueConverterGroup x:Key="InvertedEnumToVisibilityConverter">
+            <dh:EnumBoolConverter/>
+            <dh:BoolToVisibilityConverter/>
+        </dh:ValueConverterGroup>
 
         <sys:Single x:Key="BrightnessAdjustmentParameter">0.4</sys:Single>
 
@@ -338,7 +345,7 @@
 
         <Grid VerticalAlignment="Center">
 
-            <Border VerticalAlignment="Top" HorizontalAlignment="Left" MinHeight="64" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}}">
+            <Border VerticalAlignment="Top" HorizontalAlignment="Left" MinHeight="64" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding HudViewType, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static m:HudViewType.Vertical_1}}">
                 <Grid>
                     <WrapPanel Margin="3,0,0,3" VerticalAlignment="Top" Orientation="Horizontal">
                         <i:Interaction.Behaviors>
@@ -530,7 +537,7 @@
 
                 </Border>
 
-                <Border Grid.Row="3" Grid.Column="0" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}">
+                <Border Grid.Row="3" Grid.Column="0" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding HudViewType, Converter={StaticResource InvertedEnumToVisibilityConverter}, ConverterParameter={x:Static m:HudViewType.Vertical_1}}">
                     <Grid>
                         <WrapPanel Margin="3,0,0,3" VerticalAlignment="Top" Orientation="Vertical">
                             <i:Interaction.Behaviors>

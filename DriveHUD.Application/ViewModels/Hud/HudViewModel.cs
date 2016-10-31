@@ -91,11 +91,11 @@ namespace DriveHUD.Application.ViewModels
             HudType = HudType.Default;
 
             hudViewTypes = new ObservableCollection<HudViewType>(Enum.GetValues(typeof(HudViewType)).Cast<HudViewType>());
-            hudViewType = HudViewType.Vertical;
-            lastDHHudViewType = HudViewType.Vertical;
+            hudViewType = HudViewType.Vertical_1;
+            lastDHHudViewType = HudViewType.Vertical_1;
 
             PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100 };
-            PreviewHudElementViewModel.IsVertical = true;
+            PreviewHudElementViewModel.HudViewType = HudViewType.Vertical_1;
 
             InitializeCommands();
             InitializeObservables();
@@ -437,14 +437,12 @@ namespace DriveHUD.Application.ViewModels
                         HudType = HudType.Default;
                     }
 
-                    var isVertical = HudViewType == HudViewType.Vertical;
-
                     foreach (var hudTableViewModel in hudTableViewModelDictionary.Values)
                     {
-                        hudTableViewModel.HudElements.ForEach(h => h.IsVertical = isVertical);
+                        hudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
                     }
 
-                    previewHudElementViewModel.IsVertical = isVertical;
+                    previewHudElementViewModel.HudViewType = HudViewType;
                 });
 
             Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
