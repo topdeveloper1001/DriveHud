@@ -1,0 +1,40 @@
+﻿#Game No : 835785469
+***** 888poker Hand History for Game 835785469 *****
+$10/$20 Blinds No Limit Holdem - *** 27 10 2016 18:03:49
+Tournament #89473760 $0.45 + $0.05 - Table #3 9 Max (Real Money)
+Seat 4 is the button
+Total number of players : 9
+Seat 1: vovanmokin ( $2,000 )
+Seat 2: Peon_84 ( $2,000 )
+Seat 3: VikramaA ( $2,000 )
+Seat 4: xoxa222 ( $2,000 )
+Seat 5: wmckeever32 ( $2,000 )
+Seat 6: KostiaPi ( $2,000 )
+Seat 7: KoSTiN_SerJ ( $2,000 )
+Seat 9: BonStor ( $2,000 )
+Seat 10: Drago33D ( $2,000 )
+vovanmokin posts ante [$2]
+BonStor posts ante [$2]
+VikramaA posts ante [$2]
+Drago33D posts ante [$2]
+xoxa222 posts ante [$2]
+KoSTiN_SerJ posts ante [$2]
+Peon_84 posts ante [$2]
+wmckeever32 posts ante [$2]
+KostiaPi posts ante [$2]
+wmckeever32 posts small blind [$10]
+KostiaPi posts big blind [$20]
+** Dealing down cards **
+Dealt to Peon_84 [ 5s, 9s ]
+KoSTiN_SerJ folds
+BonStor folds
+Drago33D folds
+vovanmokin raises [$1,998]
+Peon_84 folds
+VikramaA folds
+xoxa222 folds
+wmckeever32 folds
+KostiaPi folds
+** Summary **
+vovanmokin did not show his hand
+vovanmokin collected [ $68 ]

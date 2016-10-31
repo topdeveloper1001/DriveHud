@@ -57,7 +57,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            rawHandHistories = rawHandHistories.Replace("\r", "");       
+            rawHandHistories = rawHandHistories.Replace("\r", "");
 
             return rawHandHistories.LazyStringSplit("\n\n").Where(s => string.IsNullOrWhiteSpace(s) == false && s.Equals("\r\n") == false);
         }
@@ -86,6 +86,11 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
+            if (handLines[3].StartsWith("Tournament", StringComparison.InvariantCultureIgnoreCase))
+            {
+                return PokerFormat.Tournament;
+            }
+
             return PokerFormat.CashGame;
         }
 
@@ -93,7 +98,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         protected override long ParseHandId(string[] handLines)
         {
             return long.Parse(HandIdRegex.Match(handLines[0]).Value);
-        }     
+        }
 
         private static readonly Regex TableNameRegex = new Regex(@"(?<=Table ).*$", RegexOptions.Compiled);
         protected override string ParseTableName(string[] handLines)
@@ -365,6 +370,13 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                             handActions.Add(new HandAction(playerName, HandActionType.POSTS, amount, currentStreet));
                             continue;
                         }
+                        else if (action.Equals("ts ante", StringComparison.Ordinal)) // ante
+                        {
+                            string playerName = handLine.Substring(0, openSquareIndex - 12);
+                            amount = ParseAmount(amountString);
+                            handActions.Add(new HandAction(playerName, HandActionType.ANTE, amount, currentStreet));
+                            continue;
+                        }
                     }
 
                     amount = ParseAmount(amountString);
@@ -442,7 +454,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             for (int i = 0; i < seatCount; i++)
             {
                 string handLine = handLines[6 + i];
-    
+
                 int colonIndex = handLine.IndexOf(':');
                 int openParenIndex = handLine.IndexOf('(');
 
@@ -465,7 +477,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
                 if (handLine.EndsWith("]") &&
                     char.IsDigit(handLine[handLine.Length - 3]) == false)
-                {         
+                {
                     int openSquareIndex = handLine.IndexOf('[');
 
                     string cards = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
@@ -521,16 +533,29 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         protected override string ParseHeroName(string[] handlines, PlayerList playerList)
         {
             const string DealText = "Dealt to ";
+
             for (int i = 0; i < handlines.Length; i++)
             {
                 if (handlines[i][0] == 'D' && handlines[i].StartsWith(DealText))
                 {
                     string line = handlines[i];
-                    int startindex = DealText.Length;
-                    int endindex = line.LastIndexOf('[') - 1;
-                    return line.Substring(startindex, endindex - startindex);
+
+                    int startIndex = line.IndexOf('[');
+
+                    var heroName = line.Substring(9, startIndex - 10);
+
+                    if (playerList != null && playerList[heroName] != null && playerList[heroName].HoleCards == null)
+                    {
+                        var cards = line.Substring(startIndex + 1, line.Length - startIndex - 2)
+                                    .Replace("[", string.Empty).Replace("]", string.Empty).Replace(",", " ");
+
+                        playerList[heroName].HoleCards = HoleCards.FromCards(cards);
+                    }
+
+                    return heroName;
                 }
             }
+
             return null;
         }
 
@@ -623,11 +648,18 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                 handActions.Add(handActionToAdd);
 
             return handActions;
-        }    
+        }
 
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
-            return new TournamentDescriptor();
+            var line = handLines[3];
+
+            var tournamentDescriptor = new TournamentDescriptor
+            {
+                 
+            };
+
+            return tournamentDescriptor
         }
     }
 }

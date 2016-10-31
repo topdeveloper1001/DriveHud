@@ -63,7 +63,7 @@ namespace DriveHUD.HUD.Services
                 {
                     if (!pipeClient.IsConnected)
                     {
-                        Task.Delay(delay);
+                        Task.Delay(delay).Wait();
                         continue;
                     }
 
@@ -79,7 +79,7 @@ namespace DriveHUD.HUD.Services
                                 while (true)
                                 {
                                     var read = pipeClient.Read(buffer, 0, buffer.Length);
-                                  
+
                                     ms.Write(buffer, 0, read);
 
                                     if (read < buffer.Length)
@@ -110,16 +110,14 @@ namespace DriveHUD.HUD.Services
                     catch (Exception e)
                     {
                         LogProvider.Log.Error(this, "HUD service failed to read data", e);
-                    }
-
-                    Task.Delay(delay);
+                    }                    
                 }
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "HUD service failed to establish connection", e);
             }
-           
+
             LogProvider.Log.Info("HUD service has been stopped");
         }
 
