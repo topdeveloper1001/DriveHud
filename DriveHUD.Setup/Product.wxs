@@ -15,6 +15,9 @@
              Keywords="$(var.ProductName),Installer,MSI" />
     <MediaTemplate EmbedCab="yes" />
 
+    <!-- Ignore file version during upgrade -->
+    <Property Id="REINSTALLMODE" Value="amus" />
+
     <MajorUpgrade
       Schedule="afterInstallExecute"
       DowngradeErrorMessage="A newer version of [ProductName] is already installed."/>
