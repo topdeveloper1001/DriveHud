@@ -98,10 +98,14 @@ namespace DriveHUD.Application.TableConfigurators
             var positionBinding = new Binding(nameof(HudElementViewModel.Position)) { Source = viewModel, Mode = BindingMode.TwoWay };
             label.SetBinding(RadDiagramItem.PositionProperty, positionBinding);
 
-            if (!viewModel.IsVertical || viewModel.HudType == HudType.Plain)
+            if (viewModel.HudType == HudType.Plain)
             {
                 var widthBinding = new Binding(nameof(HudElementViewModel.Width)) { Source = viewModel, Mode = BindingMode.TwoWay };
                 label.SetBinding(FrameworkElement.WidthProperty, widthBinding);
+            }
+            else
+            {
+                label.Width = double.NaN;
             }
 
             label.Height = double.NaN;

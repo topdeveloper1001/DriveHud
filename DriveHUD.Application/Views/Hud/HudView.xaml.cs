@@ -59,9 +59,10 @@ namespace DriveHUD.Application.Views
                 return;
             }
 
-            if (e.PropertyName == ReflectionHelper.GetPath<HudViewModel>(o => o.CurrentTableLayout) ||
-                        e.PropertyName == ReflectionHelper.GetPath<HudViewModel>(o => o.HudType) ||
-                            e.PropertyName == ReflectionHelper.GetPath<HudViewModel>(o => o.GameType))
+            if (e.PropertyName == nameof(HudViewModel.CurrentTableLayout) ||
+                        e.PropertyName == nameof(HudViewModel.HudType) ||
+                            e.PropertyName == nameof(HudViewModel.GameType) ||
+                                e.PropertyName == nameof(HudViewModel.HudViewType))
             {
                 var tableType = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
                                     ViewModel.CurrentTableLayout.HudTableLayout.TableType : EnumTableType.Six;
