@@ -81,7 +81,7 @@ namespace DriveHUD.Application.Views
             get
             {
                 var site = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
-                                ViewModel.CurrentTableLayout.HudTableLayout.Site : EnumPokerSites.Bovada;
+                                ViewModel.CurrentTableLayout.HudTableLayout.Site : EnumPokerSites.Ignition;
                 return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(TableConfiguratorHelper.GetServiceName(site, ViewModel.HudType));
             }
         }

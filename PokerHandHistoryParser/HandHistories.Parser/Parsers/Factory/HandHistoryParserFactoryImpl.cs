@@ -49,8 +49,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new PokerStarsFastParserImpl(siteName);
                 case EnumPokerSites.IPoker:
                 case EnumPokerSites.Bodog:
-                case EnumPokerSites.Bovada:
                 case EnumPokerSites.Ignition:
+                case EnumPokerSites.Bovada:
                 case EnumPokerSites.BetOnline:
                 case EnumPokerSites.SportsBetting:
                 case EnumPokerSites.TigerGaming:

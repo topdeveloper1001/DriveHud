@@ -54,6 +54,7 @@ $session = @{
   Candle = 'C:\Program Files (x86)\WiX Toolset v3.10\bin\candle.exe'
   Light = 'C:\Program Files (x86)\WiX Toolset v3.10\bin\Light.exe'
   MSBuild = 'c:\Program Files (x86)\MSBuild\14.0\Bin\msbuild.exe'
+  Nuget = '.\.nuget\Nuget.exe'
   Git = 'c:\Program Files\Git\bin\git.exe'
   Mode = $Mode
   Solution = Join-Path $BaseDir $Solution  
@@ -72,6 +73,7 @@ $session = @{
 Import-Module BuildRunner-Log
 Import-Module BuildRunner-Versioning
 Import-Module BuildRunner-MSBuild
+Import-Module BuildRunner-Nuget
 Import-Module BuildRunner-Obfuscate
 Import-Module BuildRunner-Sign
 
@@ -130,6 +132,11 @@ try
        throw "Installer wix not found '$($session.InstallerWix)'"
    }
 
+   if(-Not (Test-Path($session.Nuget)))
+   {
+       throw "Nuget not found '$($session.Nuget)'"
+   }
+
    if(Test-Path($session.Source))
    {
        Write-LogInfo 'SETUP' 'Clearing source directory'
@@ -139,6 +146,9 @@ try
    # setup version
    Set-Version($session)  
    
+   # nuget
+   Use-Nuget $session $session.Solution 'nuget.log'
+
    # msbuild
    Use-MSBuild $session $session.Solution 'msbuild.log'
 

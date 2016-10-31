@@ -470,7 +470,6 @@ namespace DriveHUD.Entities
         [ProtoMember(182)]
         public virtual int FacedMultiWayOnFlop { get; set; }
 
-        [ProtoMember(183)]
         public virtual string SessionCode { get; set; }
 
         [ProtoMember(184)]
@@ -1345,7 +1344,7 @@ namespace DriveHUD.Entities
                 tiltMeterValue += 2;
             }
 
-            if (source.TiltMeterTemporaryHistory.Count > 13)
+            if (source.TiltMeterTemporaryHistory.Count > 17)
             {
                 source.TiltMeterTemporaryHistory.Dequeue();
             }

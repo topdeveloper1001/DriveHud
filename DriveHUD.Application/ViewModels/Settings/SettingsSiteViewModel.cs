@@ -32,7 +32,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             PokerSitesDictionary = new Dictionary<EnumPokerSites, string>()
             {
-                { EnumPokerSites.Bovada, "Bodog / Ignition" },
+                { EnumPokerSites.Ignition, "Bodog / Ignition" },
                 { EnumPokerSites.BetOnline, "BetOnline" },
                 { EnumPokerSites.PokerStars, "Pokerstars" },
                 { EnumPokerSites.TigerGaming, "Tigergaming" },

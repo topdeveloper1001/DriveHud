@@ -58,10 +58,10 @@ namespace DriveHUD.Importers
             {
                 case EnumPokerSites.Unknown:
                     break;
+                case EnumPokerSites.Ignition:
                 case EnumPokerSites.Bovada:
                 case EnumPokerSites.IPoker:
                     return isBeginner ? BovadaBeginnerSnGWinningsMultiplierDictionary : BovadaSnGWinningsMultiplierDictionary;
-                case EnumPokerSites.Ignition:
                 case EnumPokerSites.Bodog:
                 case EnumPokerSites.BetOnline:
                     return BetOnlineSnGWinningsMultiplierDictionary;

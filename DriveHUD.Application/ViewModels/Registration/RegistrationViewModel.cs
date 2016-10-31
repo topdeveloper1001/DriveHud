@@ -31,6 +31,7 @@ using DriveHUD.Common.Log;
 using System.Diagnostics;
 using System.Collections.ObjectModel;
 using DriveHUD.Importers;
+using DriveHUD.Common.Wpf.Actions;
 
 namespace DriveHUD.Application.ViewModels.Registration
 {
@@ -43,12 +44,16 @@ namespace DriveHUD.Application.ViewModels.Registration
         private string serverUrl = string.Empty;
         private DeployLXLicensingServer server;
 
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
+
         public RegistrationViewModel(bool showRegister)
         {
             server = new DeployLXLicensingServer();
             server.CookieContainer = new CookieContainer();
 
             licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
+            NotificationRequest = new InteractionRequest<INotification>();
 
             title = CommonResourceManager.Instance.GetResourceString("Common_RegistrationView_Title");
 
@@ -887,6 +892,14 @@ namespace DriveHUD.Application.ViewModels.Registration
 
             var sessionsService = ServiceLocator.Current.GetInstance<ISessionService>();
             sessionsService.Initialize();
+
+            this.NotificationRequest.Raise(
+                 new PopupActionNotification
+                 {
+                     Content = "Thank you. DriveHUD has been successfully registered!",
+                     Title = Title,
+                 },
+                 n => { });
 
             return true;
         }

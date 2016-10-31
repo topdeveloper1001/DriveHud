@@ -164,6 +164,11 @@ namespace DriveHUD.Application.Licensing
 
             var licenseType = GetTypeFromSerial(serial);
 
+            if (!licenseType.HasValue)
+            {
+                throw new DHBusinessException(new NonLocalizableString("Serial is not defined."));
+            }
+
             var licenseManager = ServiceLocator.Current.GetInstance<ILicenseManager>(licenseType.ToString());
 
             var licenseInfo = licenseInfos.FirstOrDefault(x => x.LicenseType == licenseType);
@@ -243,7 +248,7 @@ namespace DriveHUD.Application.Licensing
             }
             finally
             {
-                licenseInfo = new LicenseInfo(license, licenseType);
+                licenseInfo = new LicenseInfo(license, licenseType.Value);
                 licenseInfos.Add(licenseInfo);
 
                 UpdateExpirationDates(new[] { licenseInfo });
@@ -429,7 +434,7 @@ namespace DriveHUD.Application.Licensing
         /// </summary>
         /// <param name="serial">Serial number</param>
         /// <returns>Type of license</returns>
-        private LicenseType GetTypeFromSerial(string serial)
+        private LicenseType? GetTypeFromSerial(string serial)
         {
             if (serial.StartsWith("DHH", StringComparison.InvariantCulture))
             {
@@ -451,7 +456,7 @@ namespace DriveHUD.Application.Licensing
                 return LicenseType.Combo;
             }
 
-            return LicenseType.Trial;
+            return null;
         }
     }
 }
