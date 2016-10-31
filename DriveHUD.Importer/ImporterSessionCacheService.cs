@@ -66,9 +66,9 @@ namespace DriveHUD.Importers
         /// Get player stats
         /// </summary>
         /// <param name="session">Active session</param>
-        /// <param name="playerName">Specified player</param>
+        /// <param name="player">Specified player</param>
         /// <returns>Player stats</returns>
-        public IList<Playerstatistic> GetPlayerStats(string session, string playerName)
+        public IList<Playerstatistic> GetPlayerStats(string session, PlayerCollectionItem player)
         {
             if (!isStarted)
             {
@@ -79,9 +79,9 @@ namespace DriveHUD.Importers
 
             try
             {
-                if (cachedData.ContainsKey(session) && cachedData[session].StatisticByPlayer.ContainsKey(playerName))
+                if (cachedData.ContainsKey(session) && cachedData[session].StatisticByPlayer.ContainsKey(player))
                 {
-                    return cachedData[session].StatisticByPlayer[playerName].ToList();
+                    return cachedData[session].StatisticByPlayer[player].ToList();
                 }
 
                 return new List<Playerstatistic>();
@@ -96,9 +96,9 @@ namespace DriveHUD.Importers
         /// Add specified player data or update it if data already exists
         /// </summary>
         /// <param name="session">Active session</param>
-        /// <param name="playerName">Specified player</param>
+        /// <param name="player">Specified player</param>
         /// <param name="stats">Player stats</param>
-        public void AddOrUpdatePlayerStats(string session, string playerName, Playerstatistic stats, bool isHero)
+        public void AddOrUpdatePlayerStats(string session, PlayerCollectionItem player, Playerstatistic stats, bool isHero)
         {
             if (!isStarted || string.IsNullOrEmpty(session))
             {
@@ -115,9 +115,9 @@ namespace DriveHUD.Importers
 
                 bool skipAdding = false;
 
-                if (sessionData.StatisticByPlayer.ContainsKey(playerName))
+                if (sessionData.StatisticByPlayer.ContainsKey(player))
                 {
-                    playerData = sessionData.StatisticByPlayer[playerName];
+                    playerData = sessionData.StatisticByPlayer[player];
                 }
                 else
                 {
@@ -128,34 +128,35 @@ namespace DriveHUD.Importers
                     }
                     else
                     {
-                        playerData = dataService.GetPlayerStatisticFromFile(playerName);
+                        playerData = dataService.GetPlayerStatisticFromFile(player.Name, (short)player.PokerSite);
 
                         playerData.ForEach(x =>
                         {
                             // we don't have this data in the db so update it after loading from file
                             PlayerStatisticCalculator.CalculatePositionalData(x);
 
-                            if (x.SessionCode == session)
+                            if (x.GameNumber == stats.GameNumber)
                             {
                                 PlayerStatisticCalculator.CalculateTotalPotValues(x);
                                 InitSessionCardsCollections(x);
                                 InitSessionStatCollections(x);
+                                x.SessionCode = session;
                             }
                         });
 
                         skipAdding = true;
                     }
 
-                    sessionData.StatisticByPlayer.Add(playerName, playerData);
+                    sessionData.StatisticByPlayer.Add(player, playerData);
                 }
 
-                if (sessionData.LastHandStatisticByPlayer.ContainsKey(playerName))
+                if (sessionData.LastHandStatisticByPlayer.ContainsKey(player))
                 {
-                    sessionData.LastHandStatisticByPlayer[playerName] = stats.Copy();
+                    sessionData.LastHandStatisticByPlayer[player] = stats.Copy();
                 }
                 else
                 {
-                    sessionData.LastHandStatisticByPlayer.Add(playerName, stats.Copy());
+                    sessionData.LastHandStatisticByPlayer.Add(player, stats.Copy());
                 }
 
                 if (skipAdding)
@@ -292,9 +293,9 @@ namespace DriveHUD.Importers
         /// Gets statistic of the player's last hand
         /// </summary>
         /// <param name="session">Session</param>
-        /// <param name="playerName">Player name</param>
+        /// <param name="player">Player name</param>
         /// <returns><see cref="Playerstatistic"/> of the last hand in session</returns>
-        public Playerstatistic GetPlayersLastHandStatistics(string session, string playerName)
+        public Playerstatistic GetPlayersLastHandStatistics(string session, PlayerCollectionItem player)
         {
             if (!isStarted || string.IsNullOrWhiteSpace(session))
             {
@@ -305,9 +306,9 @@ namespace DriveHUD.Importers
 
             try
             {
-                if (cachedData.ContainsKey(session) && cachedData[session].LastHandStatisticByPlayer.ContainsKey(playerName))
+                if (cachedData.ContainsKey(session) && cachedData[session].LastHandStatisticByPlayer.ContainsKey(player))
                 {
-                    return cachedData[session].LastHandStatisticByPlayer[playerName].Copy();
+                    return cachedData[session].LastHandStatisticByPlayer[player].Copy();
                 }
 
                 return null;
@@ -322,9 +323,9 @@ namespace DriveHUD.Importers
         /// Store stickers-related statistics in cache
         /// </summary>
         /// <param name="session">Session</param>
-        /// <param name="playerName">Player name</param>
+        /// <param name="player">Player name</param>
         /// <param name="stickersStats">Dictionary of statistic accessed by sticker name</param>
-        public void AddOrUpdatePlayerStickerStats(string session, string playerName, IDictionary<string, Playerstatistic> stickersStats)
+        public void AddOrUpdatePlayerStickerStats(string session, PlayerCollectionItem player, IDictionary<string, Playerstatistic> stickersStats)
         {
             if (!isStarted || string.IsNullOrEmpty(session))
             {
@@ -344,14 +345,14 @@ namespace DriveHUD.Importers
 
                 Dictionary<string, Playerstatistic> playerStickersDictionary = null;
 
-                if (sessionData.StickersStatisticByPlayer.ContainsKey(playerName))
+                if (sessionData.StickersStatisticByPlayer.ContainsKey(player))
                 {
-                    playerStickersDictionary = sessionData.StickersStatisticByPlayer[playerName];
+                    playerStickersDictionary = sessionData.StickersStatisticByPlayer[player];
                 }
                 else
                 {
                     playerStickersDictionary = new Dictionary<string, Playerstatistic>();
-                    sessionData.StickersStatisticByPlayer.Add(playerName, playerStickersDictionary);
+                    sessionData.StickersStatisticByPlayer.Add(player, playerStickersDictionary);
                 }
 
                 foreach (var item in stickersStats)
@@ -378,7 +379,7 @@ namespace DriveHUD.Importers
         /// <param name="session">Session</param>
         /// <param name="playerName">Player name</param>
         /// <returns>Dictionary of bumper stickers and related statistic</returns>
-        public Dictionary<string, Playerstatistic> GetPlayersStickersStatistics(string session, string playerName)
+        public Dictionary<string, Playerstatistic> GetPlayersStickersStatistics(string session, PlayerCollectionItem player)
         {
             if (!isStarted || string.IsNullOrWhiteSpace(session))
             {
@@ -389,9 +390,9 @@ namespace DriveHUD.Importers
 
             try
             {
-                if (cachedData.ContainsKey(session) && cachedData[session].StickersStatisticByPlayer.ContainsKey(playerName))
+                if (cachedData.ContainsKey(session) && cachedData[session].StickersStatisticByPlayer.ContainsKey(player))
                 {
-                    return cachedData[session].StickersStatisticByPlayer[playerName];
+                    return cachedData[session].StickersStatisticByPlayer[player];
                 }
 
                 return null;

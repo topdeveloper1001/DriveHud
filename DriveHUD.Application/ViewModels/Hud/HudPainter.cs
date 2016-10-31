@@ -12,14 +12,14 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
+using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using ManagedWinapi.Windows;
 using Microsoft.Practices.ServiceLocation;
-using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
+using System.Drawing;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Interop;
@@ -185,13 +185,22 @@ namespace DriveHUD.Application.ViewModels
 
             GetWindowRect(windowHandle, out rect);
 
-            window.Top = rect.Top;
-            window.Left = rect.Left;
-            window.Height = rect.Height;
-            window.Width = rect.Width;
+            SizeF dpi = Utils.GetCurrentDpi();
+
+            SizeF scale = new SizeF()
+            {
+                Width = 96f / dpi.Width,
+                Height = 96f / dpi.Height
+            };
+
+            window.Top = rect.Top * scale.Height;
+            window.Left = rect.Left * scale.Width;
+            window.Height = rect.Height * scale.Height;
+            window.Width = rect.Width * scale.Width;
 
             window.Update();
-        }      
+        }
+
 
         public static void ReleaseHook()
         {
@@ -251,10 +260,18 @@ namespace DriveHUD.Application.ViewModels
 
             GetWindowRect(windowItem.Handle, out rect);
 
-            windowItem.Window.Top = rect.Top;
-            windowItem.Window.Left = rect.Left;
-            windowItem.Window.Height = rect.Height;
-            windowItem.Window.Width = rect.Width;
+            SizeF dpi = Utils.GetCurrentDpi();
+
+            SizeF scale = new SizeF()
+            {
+                Width = 96f / dpi.Width,
+                Height = 96f / dpi.Height
+            };
+
+            windowItem.Window.Top = rect.Top * scale.Height;
+            windowItem.Window.Left = rect.Left * scale.Width;
+            windowItem.Window.Height = rect.Height * scale.Height;
+            windowItem.Window.Width = rect.Width * scale.Width;
 
             windowItem.Window.Update();
         }

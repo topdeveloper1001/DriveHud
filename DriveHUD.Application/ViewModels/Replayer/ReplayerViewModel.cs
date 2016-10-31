@@ -23,6 +23,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.Windows.Threading;
+using Prism.Interactivity.InteractionRequest;
+using DriveHUD.Common.Wpf.Actions;
+using DriveHUD.Common.Resources;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
@@ -48,6 +51,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void Initialize()
         {
+            this.NotificationRequest = new InteractionRequest<INotification>();
+
             ToEndCommand = new RelayCommand(ToEnd);
             NextStepCommand = new RelayCommand(NextStep);
             PrevStepCommand = new RelayCommand(PrevStep);
@@ -59,6 +64,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             TwitterOAuthCommand = new RelayCommand(TwitterOAuthCommandHandler);
             FacebookOAuthCommand = new RelayCommand(FacebookOAuthCommandHandler);
             HandNoteCommand = new RelayCommand(HandNoteShow);
+            ShowSupportForumsCommand = new RelayCommand(ShowSupportForums);
 
             HandNoteType = typeof(HandNoteView);
             FacebookOAuthType = typeof(Social.FacebookOAuth);
@@ -400,9 +406,20 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void LoadGame(ReplayerDataModel value)
         {
-            CurrentGame = value == null ? null : _dataService.GetGame(value.GameNumber);
+            CurrentGame = value == null ? null : _dataService.GetGame(value.GameNumber, value.PokersiteId);
 
             Update();
+        }
+
+        internal void RaiseNotification(string content, string title)
+        {
+            this.NotificationRequest.Raise(
+                    new PopupActionNotification
+                    {
+                        Content = content,
+                        Title = title,
+                    },
+                    n => { });
         }
 
         #endregion
@@ -500,6 +517,10 @@ namespace DriveHUD.Application.ViewModels.Replayer
             ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<HandNoteUpdatedEvent>().Publish(new HandNoteUpdatedEventArgs(CurrentHand.GameNumber, CurrentHand.Statistic.PlayerName));
         }
 
+        private void ShowSupportForums(object obj)
+        {
+            Process.Start(BrowserHelper.GetDefaultBrowserPath(), CommonResourceManager.Instance.GetResourceString("SystemSettings_ForumsLink"));
+        }
         #endregion
 
         #region ICommand
@@ -513,6 +534,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         public ICommand TwitterOAuthCommand { get; set; }
         public ICommand FacebookOAuthCommand { get; set; }
         public ICommand HandNoteCommand { get; set; }
+        public ICommand ShowSupportForumsCommand { get; set; }
         #endregion
 
         #region Properties
@@ -535,6 +557,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
         internal Type FacebookOAuthType { get; set; }
         internal Type TwitterOAuthType { get; set; }
         internal Type HandNoteType { get; set; }
+
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         public ReplayerDataModel CurrentHand
         {

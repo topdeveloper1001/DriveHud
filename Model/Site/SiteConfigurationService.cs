@@ -37,7 +37,7 @@ namespace Model.Site
         /// </summary>
         public void Initialize()
         {
-            var sites = new EnumPokerSites[] { EnumPokerSites.Bovada, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars };
+            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars };
 
             foreach (EnumPokerSites site in sites)
             {
@@ -63,7 +63,8 @@ namespace Model.Site
             switch (site)
             {
                 case "Bovada":
-                    return Get(EnumPokerSites.Bovada);
+                case "Ignition":
+                    return Get(EnumPokerSites.Ignition);
                 case "BetOnline":
                     return Get(EnumPokerSites.BetOnline);
                 case "PokerStars":

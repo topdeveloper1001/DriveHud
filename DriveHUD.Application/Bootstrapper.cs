@@ -23,6 +23,7 @@ using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
@@ -95,11 +96,14 @@ namespace DriveHUD.Application
 
         private void ShowMainWindow()
         {
+            LogProvider.Log.Info($"Screen: {Utils.GetScreenResolution()}");
+            LogProvider.Log.Info($"Dpi: {Utils.GetCurrentDpi()}");
+
             if (ConfigurePostgresqlServerViewModel.IsConnected)
             {
                 if (IsUninstall())
                 {
-                    LogProvider.Log.Debug(this, "Uninstalling all user's data...");
+                    LogProvider.Log.Info(this, "Uninstalling all user's data...");
                     DataRemoverViewModel dr = new DataRemoverViewModel();
                     dr.UninstallCommand.Execute(null);
                 }
@@ -157,7 +161,7 @@ namespace DriveHUD.Application
             string[] args = Environment.GetCommandLineArgs();
             foreach (string arg in args.Skip(1))
             {
-                LogProvider.Log.Debug(this, string.Format("Argument found {0}", arg));
+                LogProvider.Log.Info(this, string.Format("Argument found {0}", arg));
                 if (arg == "-uninstall")
                 {
                     return true;
@@ -226,7 +230,7 @@ namespace DriveHUD.Application
             Container.RegisterType<IFilterModelManagerService, StickersFilterModelManagerService>(FilterServices.Stickers.ToString(), new ContainerControlledLifetimeManager());
 
             // Sites configurations
-            Container.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Bovada.ToString());
+            Container.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
             Container.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
             Container.RegisterType<ISiteConfiguration, TigerGamingConfiguration>(EnumPokerSites.TigerGaming.ToString());
             Container.RegisterType<ISiteConfiguration, SportsBettingConfiguration>(EnumPokerSites.SportsBetting.ToString());
@@ -235,8 +239,8 @@ namespace DriveHUD.Application
             // HUD table configurators
 
             // Bovada
-            Container.RegisterType<ITableConfigurator, BovadaRichTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Bovada, HudType.Default));
-            Container.RegisterType<ITableConfigurator, BovadaTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Bovada, HudType.Plain));
+            Container.RegisterType<ITableConfigurator, BovadaRichTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Default));
+            Container.RegisterType<ITableConfigurator, BovadaTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Plain));
 
             // BetOnline
             Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BetOnline, HudType.Default));
@@ -252,7 +256,7 @@ namespace DriveHUD.Application
 
             // HUD panel services
             Container.RegisterType<IHudPanelService, HudPanelService>();
-            Container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Bovada.ToString());
+            Container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Ignition.ToString());
             Container.RegisterType<IHudPanelService, BovadaHudPanelService>(EnumPokerSites.Bodog.ToString());
             Container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.BetOnline.ToString());
             Container.RegisterType<IHudPanelService, BetOnlineHudPanelService>(EnumPokerSites.SportsBetting.ToString());
@@ -269,7 +273,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
 
             // Settings Table Configurators
-            Container.RegisterType<ISiteSettingTableConfigurator, BovadaSiteSettingTableConfigurator>(EnumPokerSites.Bovada.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, BovadaSiteSettingTableConfigurator>(EnumPokerSites.Ignition.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.BetOnline.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.TigerGaming.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.SportsBetting.ToString());

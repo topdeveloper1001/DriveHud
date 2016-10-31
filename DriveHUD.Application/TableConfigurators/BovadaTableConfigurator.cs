@@ -37,7 +37,7 @@ namespace DriveHUD.Application.TableConfigurators
 
         public override EnumPokerSites Type
         {
-            get { return EnumPokerSites.Bovada; }
+            get { return EnumPokerSites.Ignition; }
         }
 
         public override HudType HudType

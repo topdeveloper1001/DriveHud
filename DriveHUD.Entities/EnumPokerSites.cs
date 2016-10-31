@@ -15,9 +15,9 @@ namespace DriveHUD.Entities
     public enum EnumPokerSites : short
     {
         Unknown = 0,
-        Bovada = 1,
+        Ignition = 1,
         IPoker = 2,
-        Ignition = 3,
+        Bovada = 3,
         Bodog = 4,
         BetOnline = 5,
         SportsBetting = 6,

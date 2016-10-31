@@ -30,6 +30,10 @@ using Microsoft.Practices.ServiceLocation;
 using System.Threading;
 using System.Diagnostics;
 using DriveHUD.Application.Controls;
+using DriveHUD.Application.Views.Replayer;
+using DriveHUD.Entities;
+using DriveHUD.Application.ViewModels.Popups;
+using DriveHUD.Application.Views.Popups;
 
 namespace DriveHUD.Application.TableConfigurators
 {
@@ -102,10 +106,22 @@ namespace DriveHUD.Application.TableConfigurators
                 CreateTotalPotValueLabel(diagram, viewModel);
                 PlaceTableCardPanels(diagram, viewModel);
 
-                var statInfoCollection = GetHudStats();
+                var currentGame = viewModel.CurrentGame;
+                var statInfoCollection = GetHudStats(GetPokerSite(currentGame.GameDescription.Site), GetGameType(currentGame.GameDescription, viewModel.CurrentHand.Statistic.PlayerName), (EnumTableType)currentGame.GameDescription.SeatType.MaxPlayers);
+
                 if (statInfoCollection != null && statInfoCollection.Any())
                 {
                     viewModel.PlayersCollection.ForEach(x => LoadPlayerHudStats(x, viewModel, statInfoCollection, dataService));
+                }
+                else
+                {
+                    // Load default
+                    statInfoCollection = GetHudStats(EnumPokerSites.Ignition, EnumGameType.CashHoldem, EnumTableType.Six);
+
+                    if (statInfoCollection != null && statInfoCollection.Any())
+                    {
+                        viewModel.PlayersCollection.ForEach(x => LoadPlayerHudStats(x, viewModel, statInfoCollection, dataService));
+                    }
                 }
             }
             catch (Exception e)
@@ -156,7 +172,7 @@ namespace DriveHUD.Application.TableConfigurators
 
                 AddPotPlayerLabel(diagram, viewModel.PlayersCollection[i], predefinedChipsPositions[seats][i, 0], predefinedChipsPositions[seats][i, 1]);
 
-                HudPanel panel = CreateHudPanel(viewModel, i);
+                ReplayerHudPanel panel = CreateHudPanel(viewModel, i);
 
                 var hudOffsetX = (PLAYER_WIDTH - 150) / 2;
                 var hudOffsetY = PLAYER_HEIGHT - 10;
@@ -210,53 +226,85 @@ namespace DriveHUD.Application.TableConfigurators
             return label;
         }
 
-        private static HudPanel CreateHudPanel(ReplayerViewModel viewModel, int zeroBasedSeatNumber)
+        private ReplayerHudPanel CreateHudPanel(ReplayerViewModel viewModel, int zeroBasedSeatNumber)
         {
             var player = viewModel.PlayersCollection[zeroBasedSeatNumber];
 
-            HudPanel panel = new HudPanel
+            ReplayerHudPanel panel = new ReplayerHudPanel
             {
                 DataContext = player
             };
 
-            panel.Height = 50;
+            panel.Height = double.NaN;
             panel.Width = 150;
 
+            player.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(player.Name, viewModel.CurrentHand.PokersiteId)?.Note ?? string.Empty);
+
+            var contextMenu = CreateContextMenu(viewModel.CurrentHand.PokersiteId, player.Name, player);
+            contextMenu.EventName = "MouseRightButtonUp";
+
+            RadContextMenu.SetContextMenu(panel, contextMenu);
+
             return panel;
+        }
+
+        private RadContextMenu CreateContextMenu(short pokerSiteId, string playerName, ReplayerPlayerViewModel datacontext)
+        {
+            RadContextMenu radMenu = new RadContextMenu();
+
+            var item = new RadMenuItem();
+
+            var binding = new Binding(nameof(ReplayerPlayerViewModel.NoteMenuItemText)) { Source = datacontext, Mode = BindingMode.OneWay };
+            item.SetBinding(RadMenuItem.HeaderProperty, binding);
+
+            item.Click += (s, e) =>
+            {
+                PlayerNoteViewModel viewModel = new PlayerNoteViewModel(pokerSiteId, playerName);
+                var frm = new PlayerNoteView(viewModel);
+                frm.ShowDialog();
+
+                if (viewModel.PlayerNoteEntity == null)
+                {
+                    return;
+                }
+
+                var clickedItem = s as FrameworkElement;
+                if (clickedItem == null || !(clickedItem.DataContext is ReplayerPlayerViewModel))
+                {
+                    return;
+                }
+
+                var hudElement = clickedItem.DataContext as ReplayerPlayerViewModel;
+                hudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(viewModel.Note);
+            };
+            radMenu.Items.Add(item);
+
+            return radMenu;
         }
 
         private void LoadPlayerHudStats(ReplayerPlayerViewModel replayerPlayer, ReplayerViewModel replayerViewModel, IList<StatInfo> statInfoCollection, IDataService dataService)
         {
             replayerPlayer.StatInfoCollection.Clear();
 
-            var statisticCollection = dataService.GetPlayerIndicator(replayerPlayer.Name);
-            var curGame = statisticCollection.Statistcs.FirstOrDefault(x => x.GameNumber == replayerViewModel.CurrentHand.GameNumber);
+            var statisticCollection = dataService.GetPlayerStatisticFromFile(replayerPlayer.Name, replayerViewModel.CurrentHand.PokersiteId);
+            var hudIndicators = new HudIndicators(statisticCollection);
 
-            if (curGame == null)
-            {
-                return;
-            }
-
-            IEnumerable<Indicators> report;
-            if (curGame.IsTourney)
-            {
-                report = new TournamentOverAllReportCreator().Create(statisticCollection.Statistcs.Where(x => x.TournamentId == curGame.TournamentId).ToList());
-            }
-            else
-            {
-                report = new OverAllReportCreator().Create(statisticCollection.Statistcs);
-            }
-
-            if (report != null && report.Count() > 0)
+            if (hudIndicators != null)
             {
                 var statList = new List<StatInfo>();
                 foreach (var selectedStatInfo in statInfoCollection)
                 {
+                    if (selectedStatInfo is StatInfoBreak)
+                    {
+                        replayerPlayer.StatInfoCollection.Add((selectedStatInfo as StatInfoBreak).Clone());
+                        continue;
+                    }
+
                     var statInfo = selectedStatInfo.Clone();
 
-                    if (report.Count() > 0 && !string.IsNullOrEmpty(selectedStatInfo.PropertyName))
+                    if (!string.IsNullOrWhiteSpace(statInfo.PropertyName))
                     {
-                        statInfo.Caption = string.Format(statInfo.Format, ReflectionHelper.GetPropertyValue(report.ElementAt(0), statInfo.PropertyName));
+                        statInfo.AssignStatInfoValues(hudIndicators);
                     }
 
                     replayerPlayer.StatInfoCollection.Add(statInfo);
@@ -282,10 +330,10 @@ namespace DriveHUD.Application.TableConfigurators
 
                 if (cardsCount == 4)
                 {
-                    double offset = card.Width / 2;
-                    var start = playerLabel.X - offset;
+                    double offset = card.Width / 4;
+                    var start = playerLabel.X - offset + 2;
                     var width = playerLabel.Width + offset;
-                    card.X = start + i * width / 4;
+                    card.X = start + i * width / 5;
                 }
                 else if (cardsCount == 2)
                 {
@@ -427,27 +475,82 @@ namespace DriveHUD.Application.TableConfigurators
             return EnumReplayerTableType.Ten;
         }
 
-        private IList<StatInfo> GetHudStats()
+        private IList<StatInfo> GetHudStats(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
             var result = new List<StatInfo>();
-            var layouts = hudLayoutsService.GetNotEmptyStatsLayout();
-            if (layouts == null || layouts.Count() == 0)
-            {
-                return result;
-            }
 
-            var activeLayout = layouts.FirstOrDefault(x => x.HudPositions.Count() == (int)CurrentCapacity);
+            var tableKey = HudViewModel.GetHash(pokerSite, gameType, tableType);
+
+            var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
             if (activeLayout == null)
             {
-                activeLayout = layouts.FirstOrDefault();
+                LogProvider.Log.Error("Could not find active layout");
+                return null;
             }
 
-            if (activeLayout == null)
+            return activeLayout.HudStats.ToArray();
+        }
+
+        private EnumPokerSites GetPokerSite(EnumPokerSites site)
+        {
+            switch (site)
             {
-                return result;
+                case EnumPokerSites.Unknown:
+                case EnumPokerSites.Ignition:
+                case EnumPokerSites.IPoker:
+                case EnumPokerSites.Bovada:
+                    return EnumPokerSites.Ignition;
+                case EnumPokerSites.Bodog:
+                case EnumPokerSites.BetOnline:
+                    return EnumPokerSites.BetOnline;
+                case EnumPokerSites.SportsBetting:
+                case EnumPokerSites.PokerStars:
+                case EnumPokerSites.Poker888:
+                case EnumPokerSites.TigerGaming:
+                default:
+                    return site;
+            }
+        }
+
+        private EnumGameType GetGameType(GameDescriptor description, string playerName)
+        {
+            bool isCash = !description.IsTournament;
+            bool isMtt = false;
+            if (description.IsTournament)
+            {
+                var tournament = dataService.GetTournament(description.Tournament.TournamentId, playerName, (short)description.Site);
+                TournamentsTags tag = TournamentsTags.STT;
+                if (tournament != null && Enum.TryParse(tournament.Tourneytagscsv, out tag))
+                {
+                    isMtt = tag == TournamentsTags.MTT;
+                }
             }
 
-            return activeLayout.HudStats;
+            switch (description.GameType)
+            {
+                case GameType.NoLimitHoldem:
+                case GameType.FixedLimitHoldem:
+                case GameType.PotLimitHoldem:
+                case GameType.CapNoLimitHoldem:
+                case GameType.SpreadLimitHoldem:
+                    return isCash ? EnumGameType.CashHoldem :
+                           isMtt ? EnumGameType.MTTHoldem : EnumGameType.SNGHoldem;
+
+                case GameType.PotLimitOmaha:
+                case GameType.PotLimitOmahaHiLo:
+                case GameType.CapPotLimitOmaha:
+                case GameType.FixedLimitOmahaHiLo:
+                case GameType.FixedLimitOmaha:
+                case GameType.NoLimitOmahaHiLo:
+                case GameType.NoLimitOmaha:
+                case GameType.FiveCardPotLimitOmaha:
+                case GameType.FiveCardPotLimitOmahaHiLo:
+                    return isCash ? EnumGameType.CashOmaha :
+                           isMtt ? EnumGameType.MTTOmaha : EnumGameType.SNGOmaha;
+                default:
+                    break;
+            }
+            return EnumGameType.CashHoldem;
         }
     }
 }

@@ -42,9 +42,9 @@ namespace DriveHUD.Application.ViewModels
             };
         }
 
-        public void LoadTournament(string playerName, string tournamentId)
+        public void LoadTournament(string playerName, string tournamentId, short pokerId)
         {
-            TournamentEntity = _dataService.GetTournament(tournamentId, playerName);
+            TournamentEntity = _dataService.GetTournament(tournamentId, playerName, pokerId);
             BuyIn = TournamentEntity.Buyinincents / 100m;
             Place = TournamentEntity.Finishposition;
             WonAmount = TournamentEntity.Winningsincents / 100m;

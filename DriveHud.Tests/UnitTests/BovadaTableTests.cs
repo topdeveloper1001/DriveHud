@@ -45,7 +45,7 @@ namespace DriveHud.Tests.UnitTests
             unityContainer.RegisterType<ICardsConverter, PokerCardsConverter>();
             unityContainer.RegisterType<ITournamentsCacheService, TournamentsCacheService>();
             unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, BovadaConfigurationStub>(EnumPokerSites.Bovada.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, BovadaConfigurationStub>(EnumPokerSites.Ignition.ToString());
             unityContainer.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
             unityContainer.RegisterType<ISiteConfiguration, TigerGamingConfiguration>(EnumPokerSites.TigerGaming.ToString());
             unityContainer.RegisterType<ISiteConfiguration, SportsBettingConfiguration>(EnumPokerSites.SportsBetting.ToString());

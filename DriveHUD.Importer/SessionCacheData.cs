@@ -21,20 +21,20 @@ namespace DriveHUD.Importers
     /// </summary>
     internal class SessionCacheData
     {
-        private readonly Dictionary<string, IList<Playerstatistic>> statisticByPlayer;
-        private readonly Dictionary<string, Playerstatistic> lastHandStatisticByPlayer;
-        private readonly Dictionary<string, Dictionary<string, Playerstatistic>> stickersStatisticByPlayer;
+        private readonly Dictionary<PlayerCollectionItem, IList<Playerstatistic>> statisticByPlayer;
+        private readonly Dictionary<PlayerCollectionItem, Playerstatistic> lastHandStatisticByPlayer;
+        private readonly Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>> stickersStatisticByPlayer;
         private readonly List<HandHistoryRecord> records;
 
         public SessionCacheData()
         {
-            statisticByPlayer = new Dictionary<string, IList<Playerstatistic>>();
-            lastHandStatisticByPlayer = new Dictionary<string, Playerstatistic>();
-            stickersStatisticByPlayer = new Dictionary<string, Dictionary<string, Playerstatistic>>();
+            statisticByPlayer = new Dictionary<PlayerCollectionItem, IList<Playerstatistic>>();
+            lastHandStatisticByPlayer = new Dictionary<PlayerCollectionItem, Playerstatistic>();
+            stickersStatisticByPlayer = new Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>>();
             records = new List<HandHistoryRecord>();
         }
 
-        public Dictionary<string, IList<Playerstatistic>> StatisticByPlayer
+        public Dictionary<PlayerCollectionItem, IList<Playerstatistic>> StatisticByPlayer
         {
             get
             {
@@ -42,7 +42,7 @@ namespace DriveHUD.Importers
             }
         }
 
-        public  Dictionary<string, Playerstatistic> LastHandStatisticByPlayer
+        public  Dictionary<PlayerCollectionItem, Playerstatistic> LastHandStatisticByPlayer
         {
             get
             {
@@ -50,7 +50,7 @@ namespace DriveHUD.Importers
             }
         }
 
-        public Dictionary<string, Dictionary<string, Playerstatistic>> StickersStatisticByPlayer
+        public Dictionary<PlayerCollectionItem, Dictionary<string, Playerstatistic>> StickersStatisticByPlayer
         {
             get
             {

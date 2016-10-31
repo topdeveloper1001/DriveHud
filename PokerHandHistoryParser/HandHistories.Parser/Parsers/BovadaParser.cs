@@ -32,7 +32,7 @@ namespace HandHistories.Parser.Parsers
                 GametypeId = (int)parsedHand.GameDescription.GameType,
                 Handtimestamp = parsedHand.DateOfHandUtc,
                 HandhistoryVal = parsedHand.FullHandHistoryText,
-                PokersiteId = (int)EnumPokerSites.Bovada,
+                PokersiteId = (int)EnumPokerSites.Ignition,
             };
 
             if (parsedHand.GameDescription.Tournament != null)
@@ -54,7 +54,7 @@ namespace HandHistories.Parser.Parsers
             var players = parsedHand.Players.Select(player => new Players
             {
                 Playername = player.PlayerName,
-                PokersiteId = (int)EnumPokerSites.Bovada
+                PokersiteId = (int)EnumPokerSites.Ignition
             }).ToList();
 
             pResult.HandHistory = hh;

@@ -1,6 +1,7 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.ViewModels;
 using HandHistories.Objects.Cards;
 using System;
@@ -118,6 +119,8 @@ namespace DriveHUD.Application.ViewModels.Replayer
             to.ActionString = from.ActionString;
 
             to.CurrentStreet = from.CurrentStreet;
+
+            to.IsNoteIconVisible = from.IsNoteIconVisible;
         }
 
         #region Properties
@@ -238,9 +241,32 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set { SetProperty(ref _statInfoCollection, value); }
         }
 
+        private bool isNoteIconVisible;
+
+        /// <summary>
+        /// Determine if note icon is visible
+        /// </summary>
         public bool IsNoteIconVisible
         {
-            get { return false; }
+            get { return isNoteIconVisible; }
+            set
+            {
+                SetProperty(ref isNoteIconVisible, value);
+                OnPropertyChanged(nameof(NoteMenuItemText));
+            }
+        }
+
+        /// <summary>
+        /// Note menu item name in the Context menu
+        /// </summary>
+        public string NoteMenuItemText
+        {
+            get
+            {
+                return isNoteIconVisible
+                    ? CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditNote)
+                    : CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote);
+            }
         }
 
         #endregion

@@ -640,7 +640,7 @@ namespace DriveHUD.Importers.Bovada
                     var handModel = new HandModel2(commands.ToList());
 
                     // skip zone poker
-                    if (handModel.IsZonePoker)
+                    if (handModel.IsZonePoker || IsZonePokerTable)
                     {
                         return;
                     }
@@ -671,7 +671,7 @@ namespace DriveHUD.Importers.Bovada
                     {
                         GameType = handModel.GameType,
                         GameFormat = handModel.GameFormat,
-                        PokerSite = EnumPokerSites.Bovada,
+                        PokerSite = EnumPokerSites.Ignition,
                         TableType = (EnumTableType)MaxSeat,
                         Session = WindowHandle.ToInt32().ToString(),
                         WindowHandle = WindowHandle.ToInt32()

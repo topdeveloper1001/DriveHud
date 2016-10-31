@@ -15,8 +15,19 @@
              Header="Replayer"
              Width="1100" Height="755"
              WindowStartupLocation="CenterScreen"
+             xmlns:prism="http://www.codeplex.com/prism"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
              Foreground="#7D7F84"
              Background="#1F2124" Closed="RadWindow_Closed">
+
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding NotificationRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction IsModal="True" 
+                                            WindowStyle="{StaticResource NotificationWindowStyle}" 
+                                            WindowContent="{StaticResource NotificationWindowContentTemplate}" />
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
 
     <telerik:RadWindow.CommandBindings>
         <CommandBinding Command="ApplicationCommands.Close"
@@ -78,29 +89,51 @@
         </controls:ComboBoxEx>
 
         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="3" Grid.Row="0" application:MarginSetter.Margin="10 0 0 0" Grid.ColumnSpan="2" Width="246">
-            <Button Width="40" Command="{Binding TwitterOAuthCommand}">
-                <Path Visibility="Visible" Data="{StaticResource TwitterPath}">
-                    <Path.Fill>
-                        <SolidColorBrush Color="{StaticResource BackgroundBrushColor4}" />
-                    </Path.Fill>
-                </Path>
-            </Button>
 
-            <Button Width="40">
-                <!-- Command="ApplicationCommands.Close"  Command="{Binding ExitCommand}" -->
-                <Path Visibility="Visible" Data="{StaticResource ExitPath}">
-                    <Path.Fill>
-                        <SolidColorBrush Color="{StaticResource BackgroundBrushColor4}" />
-                    </Path.Fill>
-                </Path>
-            </Button>
-            <Button Width="40">
+            <telerik:RadRibbonDropDownButton Width="40"
+                                             Background="{StaticResource BackgroundBrush2}"
+                                             HorizontalContentAlignment="Center"
+                                             VerticalContentAlignment="Center"
+                                             Style="{StaticResource RadRibbonDropDownButtonNoArrowStyle}" >
+                <telerik:RadRibbonDropDownButton.Content>
+                    <Path Visibility="Visible" Data="{StaticResource DiscussionPath}" >
+                        <Path.Fill>
+                            <SolidColorBrush Color="{StaticResource BackgroundBrushColor4}" />
+                        </Path.Fill>
+                    </Path>
+                </telerik:RadRibbonDropDownButton.Content>
+                <telerik:RadRibbonDropDownButton.DropDownContent>
+                    <telerik:RadContextMenu BorderThickness="0"
+                                                Background="{StaticResource BackgroundBrush3}"
+                                                Style="{StaticResource RadContextMenuStyle1}">
+                        <telerik:RadContextMenu.Resources>
+                            <Style TargetType="telerik:RadMenuItem" BasedOn="{StaticResource RadMenuItemStyle1}">
+                                <Setter Property="IconColumnWidth" Value="2" />
+                            </Style>
+                        </telerik:RadContextMenu.Resources>
+
+                        <telerik:RadMenuItem Header="{ResX Enum_HandExport_TwoPlusTwo}" Click="GeneralExportItem_Click" />
+                        <telerik:RadMenuItem Header="{ResX Enum_HandExport_CardsChat}" Click="GeneralExportItem_Click" />
+                        <telerik:RadMenuItem Header="{ResX Enum_HandExport_PokerStrategy}" Click="GeneralExportItem_Click" />
+                        <telerik:RadMenuItem Header="{ResX Enum_HandExport_RawHandHistory}" Click="RawExportItem_Click" />
+                    </telerik:RadContextMenu>
+                </telerik:RadRibbonDropDownButton.DropDownContent>
+            </telerik:RadRibbonDropDownButton>
+
+            <Button Width="40" Command="{Binding ShowSupportForumsCommand}">
                 <!-- Command="{Binding PurgeCommand}" -->
                 <Grid Height="25" Width="25">
                     <Path Data="{StaticResource PurgePath_1}" Fill="#FFFFFFFF" Margin="3.979,3.183,4.774,3.979" Stretch="Fill"/>
                     <Path Data="{StaticResource PurgePath_2}" Fill="#FF9B9B9B" Stretch="Fill"/>
 
                 </Grid>
+            </Button>
+            <Button Width="40" Command="{Binding TwitterOAuthCommand}">
+                <Path Visibility="Visible" Data="{StaticResource TwitterPath}">
+                    <Path.Fill>
+                        <SolidColorBrush Color="{StaticResource BackgroundBrushColor4}" />
+                    </Path.Fill>
+                </Path>
             </Button>
             <Button Width="40" Command="{Binding FacebookOAuthCommand}">
                 <Path Visibility="Visible" Data="{StaticResource FacebookPath}">
