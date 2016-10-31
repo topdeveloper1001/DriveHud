@@ -756,7 +756,7 @@ namespace Model.Data
         {
             get
             {
-                return GetPercentage(Source.TiltMeterPermanent + Source.TiltMeterTemporaryHistory.Sum(), 14);
+                return GetPercentage(Source.TiltMeterPermanent + Source.TiltMeterTemporaryHistory.Sum(), 18);
             }
         }
 

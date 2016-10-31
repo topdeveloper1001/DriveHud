@@ -374,13 +374,23 @@ namespace Model
                 {
                     var group = hh.ToList().GroupBy(x => x.Playername);
 
-                    group.Where(x => x != null && x.Count() == 1).ForEach(x => result.Add(new PlayerCollectionItem { Name = x.Key, PokerSite = (EnumPokerSites)x.FirstOrDefault().PokersiteId }));
+                    foreach (var pg in group)
+                    {
+                        if (!pg.Any())
+                        {
+                            continue;
+                        }
 
-                    group.Where(x => x != null && x.Count() > 1).ForEach(x =>
-                      {
-                          var stats = GetPlayerStatisticFromFile(x.Key, null);
-                          stats.Select(s => s.PokersiteId).Distinct().ForEach(s => result.Add(new PlayerCollectionItem { Name = x.Key, PokerSite = (EnumPokerSites)s }));
-                      });
+                        if (pg.Count() == 1)
+                        {
+                            result.Add(new PlayerCollectionItem { Name = pg.Key, PokerSite = (EnumPokerSites)pg.FirstOrDefault()?.PokersiteId });
+                        }
+                        else
+                        {
+                            var stats = GetPlayerStatisticFromFile(pg.Key, null);
+                            stats.Select(s => s.PokersiteId).Distinct().ForEach(s => result.Add(new PlayerCollectionItem { Name = pg.Key, PokerSite = (EnumPokerSites)s }));
+                        }
+                    }
                 }
             }
 

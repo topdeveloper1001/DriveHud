@@ -277,12 +277,12 @@ namespace DriveHUD.Application.ViewModels
                 var maxSeats = (int)gameInfo.TableType;
                 var site = e.GameInfo.PokerSite;
 
-                var ht = new HudLayout
-                {
-                    WindowId = gameInfo.WindowHandle,
-                    HudType = site == EnumPokerSites.Bovada ? HudViewModel.HudType : HudType.Plain,
-                    TableType = gameInfo.TableType
-                };
+            var ht = new HudLayout
+            {
+                WindowId = gameInfo.WindowHandle,
+                HudType = site == EnumPokerSites.Ignition ? HudViewModel.HudType : HudType.Plain,
+                TableType = gameInfo.TableType
+            };
 
                 var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
 

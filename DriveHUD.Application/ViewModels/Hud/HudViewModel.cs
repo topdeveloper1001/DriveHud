@@ -206,7 +206,7 @@ namespace DriveHUD.Application.ViewModels
             tableLayouts = new ObservableCollection<IDropDownMenuItem>(hudTableLayoutMenuItems);
 
             currentTableLayout = hudTableLayoutMenuItems.SelectMany(x => x.Items).OfType<HudTableLayoutMenuItem>().
-                                   FirstOrDefault(x => x.HudTableLayout != null && x.HudTableLayout.Site == EnumPokerSites.Bovada && x.HudTableLayout.TableType == EnumTableType.Six);
+                                   FirstOrDefault(x => x.HudTableLayout != null && x.HudTableLayout.Site == EnumPokerSites.Ignition && x.HudTableLayout.TableType == EnumTableType.Six);
         }
 
         /// <summary>
@@ -696,7 +696,7 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return CurrentTableLayout?.HudTableLayout.Site == EnumPokerSites.Bovada ? hudType : HudType.Plain;
+                return CurrentTableLayout?.HudTableLayout.Site == EnumPokerSites.Ignition ? hudType : HudType.Plain;
             }
             set
             {
@@ -1336,7 +1336,7 @@ namespace DriveHUD.Application.ViewModels
 
             LogProvider.Log.Error("hudTableLayout is not defined. Using defaults values");
 
-            return GetHash(EnumPokerSites.Bovada, gameType, EnumTableType.Six);
+            return GetHash(EnumPokerSites.Ignition, gameType, EnumTableType.Six);
         }
 
         public static int GetHash(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)

@@ -20,7 +20,7 @@ namespace Model
 
         public override int GetHashCode()
         {
-            return Name.GetHashCode() ^ PokerSite.GetHashCode();
+            return Name?.GetHashCode() ?? 0 ^ PokerSite.GetHashCode();
         }
 
         public static bool operator ==(PlayerCollectionItem x, PlayerCollectionItem y)

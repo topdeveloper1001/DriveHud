@@ -60,7 +60,7 @@ namespace DriveHud.Tests
             unityContainer.RegisterType<ITournamentsCacheService, TournamentsCacheService>();
             unityContainer.RegisterType<IBetOnlineTableService, TableServiceStub>();
             unityContainer.RegisterType<ISiteConfiguration, BetOnlineConfiguration>(EnumPokerSites.BetOnline.ToString());
-            unityContainer.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Bovada.ToString());
+            unityContainer.RegisterType<ISiteConfiguration, BovadaConfiguration>(EnumPokerSites.Ignition.ToString());
             unityContainer.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
             unityContainer.RegisterType<ISiteConfigurationService, SiteConfigurationService>(new ContainerControlledLifetimeManager());
 
