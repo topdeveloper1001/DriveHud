@@ -659,7 +659,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                  
             };
 
-            return tournamentDescriptor
+            return tournamentDescriptor;
         }
     }
 }

@@ -1238,39 +1238,43 @@ namespace Model
 
         private static void CalculateLimpBet(ConditionalBet limp, IList<HandAction> preflops, string player)
         {
-            if (preflops.Where(x => x.IsBlinds).Any(x => x.PlayerName == player))
-            {
-                return;
-            }
+            var bb = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.BIG_BLIND)?.PlayerName;
+            bool isOpenLimp = true;
+            bool isLimpersPresent = false;
 
             foreach (var action in preflops.Where(x => !x.IsBlinds))
             {
-                if (limp.Made)
+                if (!string.IsNullOrEmpty(bb) && action.PlayerName == bb)
                 {
-                    if (action.PlayerName == player)
-                    {
-                        limp.CheckAction(action);
-                        return;
-                    }
-                    continue;
+                    return;
                 }
 
                 if (action.PlayerName == player)
                 {
                     limp.Possible = true;
-                    if (action.IsCall())
+                    if (action.IsCall()
+                        || action.IsCheck) // in case if  we  have  2 or more  BB
                     {
                         limp.Made = true;
                     }
-                    else
+
+                    if (!isOpenLimp && isLimpersPresent)
                     {
-                        return;
+                        limp.CheckAction(action);
                     }
+
+                    return;
                 }
 
                 if (action.IsRaise())
                 {
                     return;
+                }
+
+                isOpenLimp = false;
+                if (!isLimpersPresent)
+                {
+                    isLimpersPresent = action.IsCall() || action.IsCheck;
                 }
             }
         }
@@ -1320,9 +1324,8 @@ namespace Model
             var firstPlayerAction = preflops.Where(x => !x.IsBlinds).FirstOrDefault(x => x.PlayerName == player);
             if (firstPlayerAction != null && firstPlayerAction.IsRaise())
             {
-                var blinds = preflops.Where(x => x.IsBlinds).Select(x => x.PlayerName).Distinct();
                 var limpers = preflops.Take(preflops.IndexOf(firstPlayerAction)).Where(x => !x.IsBlinds);
-                if (limpers.Any() && !limpers.Any(x => x.IsRaise()) && limpers.Any(x => x.IsCall() && !blinds.Contains(x.PlayerName)))
+                if (!limpers.Any(x => x.IsRaise()) && limpers.Any(x => x.IsCall() || x.IsCheck))
                 {
                     return true;
                 }
