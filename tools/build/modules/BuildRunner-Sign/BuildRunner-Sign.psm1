@@ -10,15 +10,15 @@ Import-Module BuildRunner-Log
 
 $ModuleName = 'SIGN'
 
-function Use-Sign($session)
+function Use-Sign($session, $source, $signingIncludeFilter, $signingExcludeFilter)
 {
     Write-LogInfo $ModuleName 'Signing assemblies...'   
 
     $assemblies = @()
 
-    $session.SigningIncludeFilter -split ',' | ForEach-Object {
-        $filteredAssemblies = Get-ChildItem -Path $session.Source -Filter $_ -Recurse | ForEach-Object {
-            if(-Not $_.FullName.Contains($session.SigningExcludeFilter))
+    $signingIncludeFilter -split ',' | ForEach-Object {
+        $filteredAssemblies = Get-ChildItem -Path $source -Filter $_ -Recurse | ForEach-Object {
+            if(-Not $_.FullName.Contains($signingExcludeFilter))
             {
                $assemblies += $_.FullName
             }        

@@ -13,18 +13,28 @@ param
     [string] $Mode = 'Release',
 
     [string] $Source = 'DriveHUD.Application\bin',
+	
+	[string] $MsiSource = 'DriveHUD.Setup\bin',
+	
+	[string] $WixSource = 'DriveHUD.Bootstrapper\bin',
 
     [string] $Solution = 'DriveHUD.sln',       
     
-    [string] $InstallerWix = 'DriveHUD.Bootstrapper\DriveHUD.Bootstrapper.wixproj',    
+    [string] $InstallerWix = 'DriveHUD.Bootstrapper\DriveHUD.Bootstrapper.wixproj',
+
+    [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
     [string] $Version = '1.0.3',
 
-    [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll',
+    [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll',
 
     [string] $ObfuscatorExcludeFilter = 'vshost',
 
     [string] $SigningIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll,CapPipedB.dll,CapPipedI.dll',
+	
+	[string] $MsiName = 'DriveHUD.msi',
+	
+	[string] $WixName = 'DriveHUD-install.exe',
 
     [string] $SigningExcludeFilter = 'vshost',
 
@@ -49,20 +59,26 @@ Set-Location $script:BaseDir
 $session = @{
   BaseDir = $BaseDir
   Source = Join-Path $BaseDir (Join-Path $Source $Mode)
+  MsiSource = Join-Path $BaseDir (Join-Path $MsiSource $Mode)
+  WixSource = Join-Path $BaseDir (Join-Path $WixSource $Mode)
   Obfuscator = 'c:\Program Files (x86)\Eziriz\.NET Reactor\dotNET_Reactor.Console.exe'
   SignTool = 'c:\Program Files (x86)\Windows Kits\10\bin\x64\signtool.exe'
   Candle = 'C:\Program Files (x86)\WiX Toolset v3.10\bin\candle.exe'
   Light = 'C:\Program Files (x86)\WiX Toolset v3.10\bin\Light.exe'
+  Insignia = 'C:\Program Files (x86)\WiX Toolset v3.10\bin\insignia.exe'
   MSBuild = 'c:\Program Files (x86)\MSBuild\14.0\Bin\msbuild.exe'
   Nuget = '.\.nuget\Nuget.exe'
   Git = 'c:\Program Files\Git\bin\git.exe'
   Mode = $Mode
   Solution = Join-Path $BaseDir $Solution  
+  InstallerMSI = Join-Path $BaseDir $InstallerMSI
   InstallerWix = Join-Path $BaseDir $InstallerWix
   Version = $Version
   ObfuscatorIncludeFilter = $ObfuscatorIncludeFilter
   ObfuscatorExcludeFilter = $ObfuscatorExcludeFilter
   SigningIncludeFilter = $SigningIncludeFilter
+  MsiName = $MsiName
+  WixName = $WixName
   SigningExcludeFilter = $SigningExcludeFilter 
   SigningCertificate = Join-Path $BaseDir $SigningCertificate
   SigningPassword= $SigningPassword
@@ -76,6 +92,7 @@ Import-Module BuildRunner-MSBuild
 Import-Module BuildRunner-Nuget
 Import-Module BuildRunner-Obfuscate
 Import-Module BuildRunner-Sign
+Import-Module BuildRunner-SignWixBundle
 
 # setup logging
 if ($LogLevel)
@@ -131,6 +148,11 @@ try
    {
        throw "Installer wix not found '$($session.InstallerWix)'"
    }
+   
+   if(-Not (Test-Path($session.InstallerMSI)))
+   {
+		throw "InstallerMSI not found '$($session.InstallerMSI)'"
+   }
 
    if(-Not (Test-Path($session.Nuget)))
    {
@@ -141,6 +163,18 @@ try
    {
        Write-LogInfo 'SETUP' 'Clearing source directory'
        Remove-Item -Path $session.Source -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+   }
+   
+   if(Test-Path($session.MsiSource))
+   {
+       Write-LogInfo 'SETUP' 'Clearing MSI source directory'
+       Remove-Item -Path $session.MsiSource -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
+   }
+   
+   if(Test-Path($session.WixSource))
+   {
+       Write-LogInfo 'SETUP' 'Clearing MSI source directory'
+       Remove-Item -Path $session.WixSource -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
    }
 
    # setup version
@@ -156,11 +190,20 @@ try
    Use-Obfuscator($session)
 
    # sign
-   Use-Sign($session)
+   Use-Sign $session $session.Source $session.SigningIncludeFilter $session.SigningExcludeFilter
+   
+   # build msi installer 
+   Use-MSbuild $session $session.InstallerMSI 'msbuild_msi.log'
+   
+   # sign msi installer
+   Use-Sign $session $session.MsiSource $session.MsiName $session.SigningExcludeFilter
 
    # build wix installer   
-   Use-MSBuild $session $session.InstallerWix 'msbuild_installer.log'      
+   Use-MSbuild $session $session.InstallerWix 'msbuild_installer.log'      
 
+   # sign wix installer
+   Use-SignWixBundle($session)
+   
    Write-LogInfo 'SETUP' 'Done.'
 }
 catch
@@ -178,4 +221,5 @@ finally
     Remove-Module BuildRunner-MSBuild
     Remove-Module BuildRunner-Obfuscate
     Remove-Module BuildRunner-Sign
+	Remove-Module BuildRunner-SignWixBundle
 }
