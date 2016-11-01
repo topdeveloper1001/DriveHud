@@ -543,7 +543,7 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
     <value>http://drivehud.com/pricing</value>
   </data>
   <data name="Common_RegistrationView_TrialExpiredText" xml:space="preserve">
-    <value>You trial period has over. Please register your version of DriveHUD.</value>
+    <value>You trial period is over. Please register your version of DriveHUD.</value>
   </data>
   <data name="Common_RegistrationView_ExpiredText" xml:space="preserve">
     <value>Your license has expired. Please renew.</value>
