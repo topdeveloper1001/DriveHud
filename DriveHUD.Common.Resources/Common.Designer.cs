@@ -1340,7 +1340,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to You trial period has over. Please register your version of DriveHUD..
+        ///   Looks up a localized string similar to You trial period is over. Please register your version of DriveHUD..
         /// </summary>
         internal static string Common_RegistrationView_TrialExpiredText {
             get {
