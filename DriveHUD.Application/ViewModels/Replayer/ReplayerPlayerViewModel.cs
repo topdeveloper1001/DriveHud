@@ -10,6 +10,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace DriveHUD.Application.ViewModels.Replayer
 {
@@ -145,13 +146,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set
             {
                 SetProperty(ref _name, value);
-                ChipsContainer.ChipsShape.Name = "chips_" + SafeNameString;
             }
-        }
-
-        public string SafeNameString
-        {
-            get { return "a" + Name.Replace(" ", "").Replace(".", "").Replace("$", ""); }
         }
 
         public bool IsFinished
@@ -220,7 +215,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         public string DisplayString
         {
-            get { return string.IsNullOrEmpty(ActionString) ? Name : ActionString; }
+            get { return string.IsNullOrEmpty(ActionString) ? HttpUtility.HtmlDecode(Name) : ActionString; }
         }
 
         public ReplayerChipsContainer ChipsContainer
