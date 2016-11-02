@@ -1241,7 +1241,7 @@ namespace DriveHUD.Entities
 
             r.LimpPossible = a.LimpPossible + b.LimpPossible;
             r.LimpMade = a.LimpMade + b.LimpMade;
-            r.LimpFaced = a.LimpFaced + b.LimpMade;
+            r.LimpFaced = a.LimpFaced + b.LimpFaced;
             r.LimpCalled = a.LimpCalled + b.LimpCalled;
             r.LimpFolded = a.LimpFolded + b.LimpFolded;
             r.LimpReraised = a.LimpReraised + b.LimpReraised;

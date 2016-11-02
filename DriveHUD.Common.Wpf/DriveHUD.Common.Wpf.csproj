@@ -133,6 +133,7 @@
     <Compile Include="Converters\TiltMeterToVisibilityConverter.cs" />
     <Compile Include="Converters\TrackConditionsScoreToColorConverter.cs" />
     <Compile Include="Converters\TrackConditionsScoreToVisibilityConverter.cs" />
+    <Compile Include="Converters\ValueConverterGroup.cs" />
     <Compile Include="DataTemplateSelectors\BoardTextureTemplateSelector.cs" />
     <Compile Include="DataTemplateSelectors\DynamicTemplateSelector.cs" />
     <Compile Include="DataTemplateSelectors\FacingPreflopTemplateSelector.cs" />

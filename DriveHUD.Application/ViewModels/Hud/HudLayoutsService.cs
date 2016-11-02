@@ -100,7 +100,25 @@ namespace DriveHUD.Application.ViewModels.Hud
             "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-BOL-S.xml",
             "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BOL-S.xml",
             "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BOL-T.xml"
+            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BOL-T.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-PS.xml", 
+            "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-FR-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-MTT-Basic-PS.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-SNG-Basic-PS.xml"
         };
 
         protected HudSavedLayouts hudLayouts;

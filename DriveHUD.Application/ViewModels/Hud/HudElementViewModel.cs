@@ -38,8 +38,6 @@ namespace DriveHUD.Application.ViewModels
         public HudElementViewModel()
         {
             statInfoCollection = new ObservableCollection<StatInfo>();
-
-            Init();
         }
 
         public HudElementViewModel(IEnumerable<StatInfo> statInfos)
@@ -51,7 +49,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void Init()
         {
-            IsVertical = true;
+            HudViewType = HudViewType.Vertical_1;
         }
 
         public void UpdateMainStats()
@@ -225,7 +223,23 @@ namespace DriveHUD.Application.ViewModels
         }
 
         [ProtoMember(10)]
-        private bool isVertical;
+        private HudViewType hudViewType;
+
+        /// <summary>
+        /// Determines rich Hud type
+        /// </summary>
+        public HudViewType HudViewType
+        {
+            get
+            {
+                return hudViewType;
+            }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref hudViewType, value);
+                this.RaisePropertyChanged(nameof(IsVertical));
+            }
+        }
 
         /// <summary>
         /// Determines if rich Hud is vertical
@@ -234,11 +248,8 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return isVertical;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref isVertical, value);
+                return HudViewType == HudViewType.Vertical_1
+                    || HudViewType == HudViewType.Vertical_2;
             }
         }
 

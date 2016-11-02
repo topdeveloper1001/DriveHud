@@ -98,8 +98,17 @@ namespace DriveHUD.Application.TableConfigurators
             var positionBinding = new Binding(nameof(HudElementViewModel.Position)) { Source = viewModel, Mode = BindingMode.TwoWay };
             label.SetBinding(RadDiagramItem.PositionProperty, positionBinding);
 
-            var widthBinding = new Binding(nameof(HudElementViewModel.Width)) { Source = viewModel, Mode = BindingMode.TwoWay };
-            label.SetBinding(FrameworkElement.WidthProperty, widthBinding);
+            if (viewModel.HudType == HudType.Plain)
+            {
+                var widthBinding = new Binding(nameof(HudElementViewModel.Width)) { Source = viewModel, Mode = BindingMode.TwoWay };
+                label.SetBinding(FrameworkElement.WidthProperty, widthBinding);
+            }
+            else
+            {
+                label.Width = double.NaN;
+            }
+
+            label.Height = double.NaN;
 
             RadContextMenu contextMenu = new RadContextMenu();
             RadMenuItem item = new RadMenuItem();
@@ -120,8 +129,6 @@ namespace DriveHUD.Application.TableConfigurators
 
             contextMenu.Items.Add(item);
             RadContextMenu.SetContextMenu(label, contextMenu);
-
-            label.Height = double.NaN;
 
             return label;
         }

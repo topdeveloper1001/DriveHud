@@ -210,8 +210,8 @@
   <data name="Enum_HudViewType_Horizontal" xml:space="preserve">
     <value>DriveHUD HORZ</value>
   </data>
-  <data name="Enum_HudViewType_Vertical" xml:space="preserve">
-    <value>DriveHUD VERT</value>
+  <data name="Enum_HudViewType_Vertical_1" xml:space="preserve">
+    <value>DriveHUD VERT 1</value>
   </data>
   <data name="Enum_Likelihood_Custom" xml:space="preserve">
     <value>Custom</value>
@@ -559,5 +559,8 @@
   </data>
   <data name="Enum_HudViewType_Plain" xml:space="preserve">
     <value>Plain HUD</value>
+  </data>
+  <data name="Enum_HudViewType_Vertical_2" xml:space="preserve">
+    <value>DriveHUD VERT 2</value>
   </data>
 </root>

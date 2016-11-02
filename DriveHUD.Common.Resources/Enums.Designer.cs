@@ -385,11 +385,20 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DriveHUD VERT.
+        ///   Looks up a localized string similar to DriveHUD VERT 1.
         /// </summary>
-        internal static string Enum_HudViewType_Vertical {
+        internal static string Enum_HudViewType_Vertical_1 {
             get {
-                return ResourceManager.GetString("Enum_HudViewType_Vertical", resourceCulture);
+                return ResourceManager.GetString("Enum_HudViewType_Vertical_1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD VERT 2.
+        /// </summary>
+        internal static string Enum_HudViewType_Vertical_2 {
+            get {
+                return ResourceManager.GetString("Enum_HudViewType_Vertical_2", resourceCulture);
             }
         }
         

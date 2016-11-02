@@ -18,8 +18,8 @@
   <?ifndef Manufacturer?>
   <?define Manufacturer = "Ace Poker Solutions" ?>
   <?endif ?>
-
-
+  
+  
   <Bundle Name="$(var.ProductName)"
           Version="$(var.ProductVersion)"
           HelpUrl="$(var.ProductUrl)"
@@ -52,12 +52,12 @@
     <Variable Name="EXECUTABLE" bal:Overridable='yes' Value='"DriveHUD.Application.exe"'/>
     <Variable Name="RELATIVEEXECUTABLEPATH" bal:Overridable='yes' Value='"$(var.ProductName)"'/>
 
-    
+
     <Chain>
       <PackageGroupRef Id="NetFx45Web"/>
       <PackageGroupRef Id="POSTGRESQL"/>
       <RollbackBoundary/>
-      <MsiPackage Id="DriveHUD" Compressed="yes" SourceFile="$(var.DriveHUD.Setup.TargetPath)" Vital="yes">
+      <MsiPackage Id="DriveHUD" Compressed="yes" SourceFile="..\DriveHUD.Setup\bin\Release\DriveHUD.msi" Vital="yes">
         <MsiProperty Name="MANUFACTURERDIR" Value="[MANUFACTURERDIR]"/>
         <MsiProperty Name="INSTALLDESKTOPSHORTCUT" Value="[INSTALLDESKTOPSHORTCUT]"/>
         <MsiProperty Name="INSTALLPROGRAMMENUSHORTCUT" Value="[INSTALLPROGRAMMENUSHORTCUT]"/>
@@ -65,7 +65,7 @@
       </MsiPackage>
     </Chain>
   </Bundle>
-  
+
   <!-- POSTGRESQL -->
   <Fragment>
     <util:RegistrySearch Id ="PostgresqlPath_x64"

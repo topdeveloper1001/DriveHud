@@ -68,7 +68,11 @@ namespace DriveHUD.Common.Security
 
                     fileHash = sb.ToString();
 
-                    System.Diagnostics.Debug.WriteLine("{0} - {1}", file, fileHash);                    
+#if DEBUG
+
+                    System.Diagnostics.Debug.WriteLine("{0} - {1}", file, fileHash);
+
+#endif
                 }
             }
             catch
