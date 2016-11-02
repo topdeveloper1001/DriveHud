@@ -654,12 +654,36 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         {
             var line = handLines[3];
 
+            //Tournament #89426293 $0.01 - Table #2 9 Max (Real Money)
+
+            var regex = new Regex(@"Tournament #(?<tournament_id>[^\s]+) (?<buyin>[^-]+) - Table #(?<tablenum>\d+) (?<tabletype>[^\(]+) \((?<money>[^\)]+)\)");
+
+            var match = regex.Match(line);
+
+            if (!match.Success)
+            {
+                return null;
+            }
+
+            var buyinText = match.Groups["buyin"].Value;
+
+            var splittedBuyin = buyinText.Split('+');
+
+            var prizePool = decimal.Parse(splittedBuyin[0], NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+
+            var rake = splittedBuyin.Length > 1 ? decimal.Parse(splittedBuyin[1], NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo) : 0m;
+
+            var currency = match.Groups["money"].Value.Contains("Real Money") ? Currency.USD : Currency.PlayMoney;
+
             var tournamentDescriptor = new TournamentDescriptor
             {
-                 
+                TournamentId = match.Groups["tournament_id"].Value,
+                BuyIn = Buyin.FromBuyinRake(prizePool, rake, currency),
+                  
+
             };
 
-            return tournamentDescriptor
+            return tournamentDescriptor;
         }
     }
 }
