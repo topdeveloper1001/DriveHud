@@ -95,7 +95,7 @@ namespace DriveHUD.Application.HudServices
         {
             if (!File.Exists(hudClientFileName))
             {
-                throw new FileNotFoundException(string.Format("{0} not found."));
+                throw new FileNotFoundException(string.Format("{0} not found.", hudClientFileName));
             }
 
             var hudClient = new Process();

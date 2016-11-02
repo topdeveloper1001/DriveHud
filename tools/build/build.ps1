@@ -173,7 +173,7 @@ try
    
    if(Test-Path($session.WixSource))
    {
-       Write-LogInfo 'SETUP' 'Clearing MSI source directory'
+       Write-LogInfo 'SETUP' 'Clearing Wix source directory'
        Remove-Item -Path $session.WixSource -Recurse -Force -ErrorAction SilentlyContinue | Out-Null
    }
 
