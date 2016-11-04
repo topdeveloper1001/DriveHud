@@ -1,0 +1,39 @@
+﻿Game started at: 2016/11/2 0:3:31
+Game ID: 765368106 0.50/1 (PRR) Ki-Lin - 2 (Omaha)
+Seat 4 is the button
+Seat 2: AlwaysBeeNice (19.79).
+Seat 3: To0_NaSty (91.77).
+Seat 4: Djonky2012 (226.24).
+Player AlwaysBeeNice has small blind (0.50)
+Player To0_NaSty has big blind (1)
+Player AlwaysBeeNice received a card.
+Player AlwaysBeeNice received a card.
+Player AlwaysBeeNice received a card.
+Player AlwaysBeeNice received a card.
+Player To0_NaSty received a card.
+Player To0_NaSty received a card.
+Player To0_NaSty received a card.
+Player To0_NaSty received a card.
+Player Djonky2012 received a card.
+Player Djonky2012 received a card.
+Player Djonky2012 received a card.
+Player Djonky2012 received a card.
+Player Djonky2012 raises (2)
+Player AlwaysBeeNice raises (5.50)
+Player To0_NaSty calls (5)
+Player Djonky2012 calls (4)
+*** FLOP ***: [Kd 10h Qc]
+Player AlwaysBeeNice is timed out.
+Player AlwaysBeeNice checks
+Player To0_NaSty bets (8)
+Player Djonky2012 folds
+Player AlwaysBeeNice folds
+Uncalled bet (8) returned to To0_NaSty
+Player To0_NaSty mucks cards
+------ Summary ------
+Pot: 17.10. Rake 0.82. JP fee 0.08
+Board: [Kd 10h Qc]
+Player AlwaysBeeNice does not show cards.Bets: 6. Collects: 0. Loses: 6.
+*Player To0_NaSty mucks (does not show cards). Bets: 6. Collects: 17.10. Wins: 11.10.
+Player Djonky2012 does not show cards.Bets: 6. Collects: 0. Loses: 6.
+Game ended at: 2016/11/2 0:4:16

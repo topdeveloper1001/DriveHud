@@ -185,6 +185,7 @@
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithRake.txt" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\WinningPokerNetworkFastParserTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />
@@ -244,6 +245,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Players\SittingOut.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PlayMoney-River-Hero.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO-0.50-1-USD-Flop.txt" />
     <None Include="IsEqualBuilder.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IsEqualBuilder.txt</LastGenOutput>
@@ -255,6 +260,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-River.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Flop.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-NoBoard.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-25-50-USD-Turn.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\CancelledHand.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\InValidHand_1.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\InValidHand_2.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\ValidHand_1.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\ValidHand_2.txt" />
     <Content Include="IsEqualBuilder.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

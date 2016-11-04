@@ -23,6 +23,7 @@ namespace DriveHUD.Entities
         SportsBetting = 6,
         PokerStars = 7,
         Poker888 = 8,
-        TigerGaming = 9
+        TigerGaming = 9,
+        WinningPoker = 10
     }
 }
