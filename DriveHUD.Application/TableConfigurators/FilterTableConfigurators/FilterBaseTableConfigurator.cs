@@ -37,7 +37,7 @@ namespace DriveHUD.Application.TableConfigurators
         private readonly Dictionary<int, double[,]> predefinedPlayerPositions = new Dictionary<int, double[,]>()
         {
             {  6, new double[,] { { 120, 220 }, { 50, 125 }, { 120, 30 }, { 330, 30 }, { 400, 125 }, { 330, 220 } } },
-            {  9, new double[,] { { 120, 220 }, { 45, 160}, { 45, 90 }, { 120, 30 }, { 330, 30 }, { 405, 90 }, { 405, 160 },  { 225, 220 }, { 330, 220 } } }
+            {  9, new double[,] { { 120, 220 }, { 45, 160}, { 45, 90 }, { 120, 30 }, { 330, 30 }, { 405, 90 }, { 405, 160 }, { 330, 220 }, { 225, 220 } } }
         };
 
 
