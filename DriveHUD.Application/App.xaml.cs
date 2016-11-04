@@ -126,8 +126,8 @@ namespace DriveHUD.Application
         private void ValidateLicenseAssemblies()
         {
             var assemblies = new string[] { "DeployLX.Licensing.v5.dll", "DHCReg.dll", "DHHReg.dll", "DHOReg.dll" };
-            var assembliesHashes = new string[] { "c1d67b8e8d38540630872e9d4e44450ce2944700", "c51e7793a37670b2c2966ddf45ab28e55f7958ae", "0c716338d6bc1a74dcc51207811f8d37e04009c3", "52b2be782a01616f57df130a4e58cd696ad4fdb0" };
-            var assemblySizes = new int[] { 1032192, 44032, 43520, 44544 };
+            var assembliesHashes = new string[] { "c1d67b8e8d38540630872e9d4e44450ce2944700", "116feeffcb937ffbc5f05699bb47c8addbc64971", "665e82b44cbc23807eef69da6077330f38946132", "6be7864e860cb09df8f2eaea9a1eb24cb2af39a8" };
+            var assemblySizes = new int[] { 1032192, 47104, 48128, 47616 };
 
             for (var i = 0; i < assemblies.Length; i++)
             {
