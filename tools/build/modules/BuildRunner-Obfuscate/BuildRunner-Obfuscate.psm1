@@ -22,20 +22,20 @@ function Use-Obfuscator($session)
         $filteredAssemblies = Get-ChildItem -Path $session.Source -Filter $_ -Recurse | ForEach-Object {
             if(-Not $_.FullName.Contains($session.ObfuscatorExcludeFilter))
             {
-               $assemblies += $_.FullName
+               $assemblies += $_
             }        
         }
     }
 
     $assembliesArg = $assemblies -join ' '
-
+    
     foreach($assembly in $assemblies)
-    {
+    {        
         $args = @(
             '-file',
-            $assembly,
+            $assembly.FullName,
             '-targetfile',
-            $assembly,
+            $assembly.FullName,
             '-suppressildasm',
             '1',
             '-stringencryption',
@@ -43,6 +43,14 @@ function Use-Obfuscator($session)
             '-obfuscation',
             '1'                             
         )
+
+        if($session.ObfuscatorStrongNamedAssemblies.Contains($assembly.Name))
+        {
+            $args += '-snkeypair' 
+            $args += $session.StrongNameKey
+            $args += '-snpassword'
+            $args += $session.StrongNamePassword
+        }
 
         Write-LogInfo $ModuleName "Executing: $($session.Obfuscator) $args"
 

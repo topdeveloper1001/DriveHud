@@ -20,7 +20,7 @@ namespace DHORegistration
     /// Omaha license manager
     /// </summary>
     [LicenseProvider(typeof(SecureLicenseManager))]
-    internal class DHOReg : ILicenseManager
+    public class DHOReg : ILicenseManager
     {
         public void ResetCacheForLicense(SecureLicense license)
         {

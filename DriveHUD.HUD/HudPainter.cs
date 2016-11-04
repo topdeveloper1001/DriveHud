@@ -13,6 +13,7 @@
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using ManagedWinapi.Windows;
@@ -246,6 +247,12 @@ namespace DriveHUD.HUD
             var window = windows[hwnd];
             windows.Remove(hwnd);
             window.Window.Close();
+
+            LogProvider.Log.Info(string.Format("Memory used before collection: {0:N0}", GC.GetTotalMemory(false)));
+
+            GC.Collect();
+
+            LogProvider.Log.Info(string.Format("Memory used after collection: {0:N0}", GC.GetTotalMemory(false)));
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)

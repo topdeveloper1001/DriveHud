@@ -26,7 +26,9 @@ param
     
     [string] $Version = '1.0.3',
 
-    [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll,HandHistories.Objects.dll',
+    [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
+
+    [string] $ObfuscatorStrongNamedAssemblies = 'DriveHUD.Common.dll',
 
     [string] $ObfuscatorExcludeFilter = 'vshost',
 
@@ -41,6 +43,10 @@ param
     [string] $SigningCertificate = 'Certificates/APSCertificate.pfx',
 
     [string] $SigningPassword = 'backup',
+
+    [string] $StrongNameKey = 'Certificates/lic-assemb-sign.pfx',
+
+    [string] $StrongNamePassword = 'backup1',
     
     [ValidateSet('Debug', 'Info', 'Notice', 'Warning', 'Error')]
     [string] $LogLevel = 'Debug',
@@ -76,12 +82,15 @@ $session = @{
   Version = $Version
   ObfuscatorIncludeFilter = $ObfuscatorIncludeFilter
   ObfuscatorExcludeFilter = $ObfuscatorExcludeFilter
+  ObfuscatorStrongNamedAssemblies = $ObfuscatorStrongNamedAssemblies
   SigningIncludeFilter = $SigningIncludeFilter
   MsiName = $MsiName
   WixName = $WixName
   SigningExcludeFilter = $SigningExcludeFilter 
   SigningCertificate = Join-Path $BaseDir $SigningCertificate
   SigningPassword= $SigningPassword
+  StrongNameKey = Join-Path $BaseDir $StrongNameKey
+  StrongNamePassword = $StrongNamePassword
   StartRevision = $StartRevision
   WixExtensions = 'dependencies\Wix\WixUIExtension.dll,dependencies\Wix\WixNetFxExtension.dll'
 }
