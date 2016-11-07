@@ -762,7 +762,7 @@
                                     <Border BorderBrush="White" BorderThickness="0" CornerRadius="0"/>
                                 </Border>
                                 <Grid>
-                                    <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{Binding Name}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                                    <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{Binding DecodedName}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
                                     <TextBlock Text="{Binding Path=PokerSite}" HorizontalAlignment="Right"
                                            Margin="0 0 5 0"
                                            Style="{StaticResource Title_H2}"/>
@@ -1077,7 +1077,7 @@
                                      Foreground="White" BorderThickness="0"
                                      Background="{StaticResource BackgroundBrush2}"
                                      SelectedItem="{Binding StorageModel.PlayerSelectedItem, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                                     DisplayMemberPath="Name"
+                                     DisplayMemberPath="DecodedName"
                                      ItemsSource="{Binding StorageModel.PlayerCollection, Mode=OneWay}"
                                      Style="{StaticResource RadComboBoxStyle1}"
                                      ItemContainerStyle="{StaticResource RadComboBoxItemStyle1}">

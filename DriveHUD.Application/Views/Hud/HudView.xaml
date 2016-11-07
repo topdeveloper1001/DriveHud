@@ -335,7 +335,6 @@
                                      SelectedValue="{Binding HudViewType}"      
                                      ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"                                      
                                      ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     IsEnabled="{Binding HudType, Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static m:HudType.Default}}"
                                      Visibility="{Binding CurrentTableLayout.HudTableLayout.Site, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
                                      ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}">
                     <comboboxControl:ComboBoxEx.ItemTemplate>

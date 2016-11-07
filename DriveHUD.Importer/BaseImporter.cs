@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
 {
-    public abstract class BaseImporter : IBackgroundProcess
+    internal abstract class BaseImporter : IBackgroundProcess
     {
         protected bool isRunning;
 

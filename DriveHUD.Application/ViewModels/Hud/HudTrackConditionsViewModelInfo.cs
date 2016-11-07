@@ -11,24 +11,26 @@
 //----------------------------------------------------------------------
 
 using Model.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using ProtoBuf;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
+    [ProtoContract]
     public class HudTrackConditionsViewModelInfo
     {
+        [ProtoMember(1)]
         public decimal AveragePot { get; set; }
 
+        [ProtoMember(2)]
         public decimal VPIP { get; set; }
 
+        [ProtoMember(3)]
         public decimal ThreeBet { get; set; }
 
+        [ProtoMember(4)]
         public EnumTableType TableType { get; set; }
 
+        [ProtoMember(5)]
         public int BuyInNL { get; set; }
     }
 }

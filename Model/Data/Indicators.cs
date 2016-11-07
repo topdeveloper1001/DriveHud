@@ -54,8 +54,11 @@ namespace Model.Data
         {
             get
             {
-                decimal totalhands = Statistcs.Count() / (decimal)100;
-                decimal netwon = Statistcs.Sum(x => GetDevisionResult(x.NetWon, x.BigBlind));
+                // to prevent errors - collection was modified
+                var statistic = Statistcs.ToArray();
+
+                decimal totalhands = statistic.Count() / (decimal)100;
+                decimal netwon = statistic.Sum(x => GetDevisionResult(x.NetWon, x.BigBlind));
 
                 return Math.Round(GetDevisionResult(netwon, totalhands), 2);
             }

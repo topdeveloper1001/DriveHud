@@ -10,6 +10,7 @@
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
              xmlns:control="clr-namespace:DriveHUD.Application.Controls"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:m="clr-namespace:DriveHUD.Application.ViewModels.Hud"
              mc:Ignorable="d"                   
              d:DesignHeight="300" d:DesignWidth="300">
 
@@ -18,6 +19,12 @@
     </UserControl.DataContext>-->
 
     <UserControl.Resources>
+
+        <!-- BoolToVisibilityConverter inverts value in case if parameter is present -->
+        <dh:ValueConverterGroup x:Key="InvertedEnumToVisibilityConverter">
+            <dh:EnumBoolConverter/>
+            <dh:BoolToVisibilityConverter/>
+        </dh:ValueConverterGroup>
 
         <sys:Single x:Key="BrightnessAdjustmentParameter">0.4</sys:Single>
 
@@ -288,13 +295,13 @@
             <Setter Property="FontFamily" Value="pack://application:,,,/Fonts/#Helsinki" />
             <Setter Property="HorizontalAlignment" Value="Center" />
             <Setter Property="Padding" Value="3,0,0,0" />
-           
+
             <Style.Triggers>
                 <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=DataContext.IsVertical}" Value="True">
                     <Setter Property="Padding" Value="0" />
                     <Setter Property="Width" Value="23" />
                 </DataTrigger>
-                
+
                 <DataTrigger Binding="{Binding IsStatInfoToolTipAvailable}" Value="True">
                     <Setter Property="telerik:RadToolTipService.InitialShowDelay" Value="1" />
                     <Setter Property="telerik:RadToolTipService.ShowDuration" Value="60000" />
@@ -309,11 +316,11 @@
                         </Setter.Value>
                     </Setter>
                 </DataTrigger>
-                
+
                 <DataTrigger Binding="{Binding IsStatInfoToolTipAvailable}" Value="False" >
                     <Setter Property="ToolTip" Value="{Binding ToolTip}" />
                 </DataTrigger>
-                
+
             </Style.Triggers>
         </Style>
 
@@ -336,161 +343,13 @@
 
     <Viewbox x:Name="vbMain" Stretch="Uniform">
 
-        <Grid Width="144" VerticalAlignment="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="62" />
-                <RowDefinition Height="27" />
-                <RowDefinition Height="26" />
-                <RowDefinition Height="Auto" MinHeight="20" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="144" />
-            </Grid.ColumnDefinitions>
+        <Grid VerticalAlignment="Center">
 
-            <Grid Grid.Row="1" Grid.Column="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="27" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition />
-                </Grid.ColumnDefinitions>
-
-                <Border Grid.Row="0" Style="{StaticResource TopLeftBorderStyle}" Padding="0">
-                    <Border Style="{StaticResource InnerGlowBorderStyle}">
-                        <StackPanel VerticalAlignment="Bottom">
-                            <Border Style="{StaticResource Level5BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=5}" />
-                            <Border Style="{StaticResource Level4BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=4}" />
-                            <Border Style="{StaticResource Level3BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=3}" />
-                            <Border Style="{StaticResource Level2BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=2}" />
-                            <Border Style="{StaticResource Level1BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=1}" />
-                        </StackPanel>
-                    </Border>
-                </Border>
-
-                <Border Style="{StaticResource IconBorderStyle}">
-                    <Border Style="{StaticResource IconInnerGlowBorderStyle}">
-                        <Image Width="22" Height="22">
-                            <Image.Style>
-                                <Style TargetType="{x:Type Image}" BasedOn="{StaticResource ImageTooltip}">
-                                    <Style.Triggers>
-                                        <DataTrigger Binding="{Binding IsDefaultImage}" Value="true">
-                                            <Setter Property="Source">
-                                                <Setter.Value>
-                                                    <DrawingImage>
-                                                        <DrawingImage.Drawing>
-                                                            <DrawingGroup>
-                                                                <DrawingGroup.Children>
-                                                                    <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 190.197,-0.395996C 85.3227,-0.395996 0,84.9267 0,189.801C 0,294.677 85.3227,380 190.197,380C 295.073,380 380.396,294.677 380.396,189.801C 380.396,84.9267 295.073,-0.395996 190.197,-0.395996 Z M 190.197,348C 102.969,348 32,277.031 32,189.801C 32,102.573 102.969,31.604 190.197,31.604C 277.427,31.604 348.396,102.573 348.396,189.801C 348.396,277.031 277.427,348 190.197,348 Z "/>
-                                                                    <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 190.197,71.016C 152.245,71.016 121.369,101.896 121.369,139.844C 121.369,148.683 128.531,155.844 137.369,155.844C 146.203,155.844 153.369,148.683 153.369,139.844C 153.369,119.536 169.891,103.016 190.197,103.016C 210.505,103.016 227.027,119.536 227.027,139.844C 227.027,160.151 210.505,176.672 190.197,176.672C 181.36,176.672 174.197,183.839 174.197,192.672L 174.197,228.849C 174.197,237.688 181.36,244.849 190.197,244.849C 199.031,244.849 206.197,237.688 206.197,228.849L 206.197,206.797C 236.459,199.568 259.027,172.292 259.027,139.844C 259.027,101.896 228.151,71.016 190.197,71.016 Z "/>
-                                                                    <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 212.593,283.229C 212.593,295.599 202.568,305.631 190.197,305.631C 177.828,305.631 167.797,295.599 167.797,283.229C 167.797,270.859 177.828,260.833 190.197,260.833C 202.568,260.833 212.593,270.859 212.593,283.229 Z "/>
-                                                                </DrawingGroup.Children>
-                                                            </DrawingGroup>
-                                                        </DrawingImage.Drawing>
-                                                    </DrawingImage>
-                                                </Setter.Value>
-                                            </Setter>
-                                        </DataTrigger>
-                                        <DataTrigger Binding="{Binding IsDefaultImage}" Value="false">
-                                            <Setter Property="Source" Value="{Binding PlayerIcon, Converter={dh:StringToImageSourceConverter}}" />
-                                        </DataTrigger>
-                                    </Style.Triggers>
-                                </Style>
-                            </Image.Style>
-                        </Image>
-                    </Border>
-                </Border>
-
-            </Grid>
-
-            <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource MiddleBorderStyle}" Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}">
-                <Border Grid.Row="1" Style="{StaticResource CentralBorderStyle}">
-
-                    <StackPanel Orientation="Horizontal">
-
-                        <Border 
-                            DataContext="{Binding Stat1}"
-                            Style="{StaticResource StatFirstBorderStyle}"
-                            BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
-                            Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}" >
-                            <TextBlock 
-                                Text="{Binding Caption}" 
-                                Style="{StaticResource StatTextBlockStyle}" 
-                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
-                                />
-                        </Border>
-
-                        <Border 
-                            DataContext="{Binding Stat2}"
-                            Style="{StaticResource StatSecondBorderStyle}" 
-                            BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
-                            Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
-                            <TextBlock 
-                                Text="{Binding Caption}" 
-                                Style="{StaticResource StatTextBlockStyle}" 
-                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
-                                />
-                        </Border>
-
-                        <Border 
-                            DataContext="{Binding Stat3}"
-                            Style="{StaticResource StatThirdBorderStyle}" 
-                            BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
-                            Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
-                            <TextBlock 
-                                Text="{Binding Caption}" 
-                                Style="{StaticResource StatTextBlockStyle}" 
-                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
-                                />
-                        </Border>
-
-                        <Border 
-                            DataContext="{Binding Stat4}"
-                            Style="{StaticResource StatFourthBorderStyle}" 
-                            BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
-                            Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
-                            <TextBlock 
-                                Text="{Binding Caption}" 
-                                Style="{StaticResource StatTextBlockStyle}" 
-                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
-                                />
-                        </Border>
-
-                        <!-- For debugging in blend   -->
-                        <!--<Border Style="{StaticResource StatFirstBorderStyle}"
-                            BorderBrush="{StaticResource StatFirstBorderBrush}" 
-                            Background="{StaticResource StatFirstBackgroundBrush}" >
-                            <TextBlock Text="28%" FontSize="8" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="White" />
-                        </Border>
-
-                        <Border Style="{StaticResource StatSecondBorderStyle}" 
-                            BorderBrush="{StaticResource StatSecondBorderBrush}" 
-                            Background="{StaticResource StatSecondBackgroundBrush}" >
-                            <TextBlock Text="10%" FontSize="8" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="White" />
-                        </Border>
-
-                        <Border Style="{StaticResource StatThirdBorderStyle}" 
-                            BorderBrush="{StaticResource StatThirdBorderBrush}" 
-                            Background="{StaticResource StatThirdBackgroundBrush}" >
-                            <TextBlock Text="35%" FontSize="8" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="White" />
-                        </Border>
-
-                        <Border Style="{StaticResource StatFourthBorderStyle}" 
-                           BorderBrush="{StaticResource StatFourthBorderBrush}" 
-                            Background="{StaticResource StatFourthBackgroundBrush}" >
-                            <TextBlock Text="60%" FontSize="8" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="White" />
-                        </Border>-->
-
-                    </StackPanel>
-
-                </Border>
-
-            </Border>
-
-            <Border Grid.Row="3" Grid.Column="0" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}">
+            <Border VerticalAlignment="Top" HorizontalAlignment="Left" MinHeight="64" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding HudViewType, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static m:HudViewType.Vertical_1}}">
                 <Grid>
-                    <WrapPanel Margin="3,0,0,3" VerticalAlignment="Top" Orientation="Vertical">
+                    <WrapPanel Margin="3,0,0,3" VerticalAlignment="Top" Orientation="Horizontal">
                         <i:Interaction.Behaviors>
-                            <hud:HudStatsBehavior StatInfoSource="{Binding StatInfoCollection}" IsMainStatsPanelEnabled="True" />
+                            <hud:HudStatsBehavior IsVertical="True" StatInfoSource="{Binding StatInfoCollection}" IsMainStatsPanelEnabled="True" />
                         </i:Interaction.Behaviors>
                     </WrapPanel>
                     <Path Style="{StaticResource PlayerNotePathStyle}" 
@@ -528,63 +387,256 @@
                 </Grid>
             </Border>
 
-            <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource VerticalBorderStyle}" Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}}">
-                <Border Style="{StaticResource InnerGlowVerticalBorderStyle}">
-                    <StackPanel Orientation="Vertical">
+            <Grid Width="144" HorizontalAlignment="Left" VerticalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="62" />
+                    <RowDefinition Height="27" />
+                    <RowDefinition Height="26" />
+                    <RowDefinition Height="Auto" MinHeight="20" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="144" />
+                </Grid.ColumnDefinitions>
 
-                        <Border 
+                <Grid Grid.Row="1" Grid.Column="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="27" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Border Grid.Row="0" Style="{StaticResource TopLeftBorderStyle}" Padding="0">
+                        <Border Style="{StaticResource InnerGlowBorderStyle}">
+                            <StackPanel VerticalAlignment="Bottom">
+                                <Border Style="{StaticResource Level5BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=5}" />
+                                <Border Style="{StaticResource Level4BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=4}" />
+                                <Border Style="{StaticResource Level3BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=3}" />
+                                <Border Style="{StaticResource Level2BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=2}" />
+                                <Border Style="{StaticResource Level1BorderStyle}" Visibility="{Binding TiltMeter, Converter={dh:TiltMeterToVisibilityConverter}, ConverterParameter=1}" />
+                            </StackPanel>
+                        </Border>
+                    </Border>
+
+                    <Border Style="{StaticResource IconBorderStyle}">
+                        <Border Style="{StaticResource IconInnerGlowBorderStyle}">
+                            <Image Width="22" Height="22">
+                                <Image.Style>
+                                    <Style TargetType="{x:Type Image}" BasedOn="{StaticResource ImageTooltip}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding IsDefaultImage}" Value="true">
+                                                <Setter Property="Source">
+                                                    <Setter.Value>
+                                                        <DrawingImage>
+                                                            <DrawingImage.Drawing>
+                                                                <DrawingGroup>
+                                                                    <DrawingGroup.Children>
+                                                                        <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 190.197,-0.395996C 85.3227,-0.395996 0,84.9267 0,189.801C 0,294.677 85.3227,380 190.197,380C 295.073,380 380.396,294.677 380.396,189.801C 380.396,84.9267 295.073,-0.395996 190.197,-0.395996 Z M 190.197,348C 102.969,348 32,277.031 32,189.801C 32,102.573 102.969,31.604 190.197,31.604C 277.427,31.604 348.396,102.573 348.396,189.801C 348.396,277.031 277.427,348 190.197,348 Z "/>
+                                                                        <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 190.197,71.016C 152.245,71.016 121.369,101.896 121.369,139.844C 121.369,148.683 128.531,155.844 137.369,155.844C 146.203,155.844 153.369,148.683 153.369,139.844C 153.369,119.536 169.891,103.016 190.197,103.016C 210.505,103.016 227.027,119.536 227.027,139.844C 227.027,160.151 210.505,176.672 190.197,176.672C 181.36,176.672 174.197,183.839 174.197,192.672L 174.197,228.849C 174.197,237.688 181.36,244.849 190.197,244.849C 199.031,244.849 206.197,237.688 206.197,228.849L 206.197,206.797C 236.459,199.568 259.027,172.292 259.027,139.844C 259.027,101.896 228.151,71.016 190.197,71.016 Z "/>
+                                                                        <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 212.593,283.229C 212.593,295.599 202.568,305.631 190.197,305.631C 177.828,305.631 167.797,295.599 167.797,283.229C 167.797,270.859 177.828,260.833 190.197,260.833C 202.568,260.833 212.593,270.859 212.593,283.229 Z "/>
+                                                                    </DrawingGroup.Children>
+                                                                </DrawingGroup>
+                                                            </DrawingImage.Drawing>
+                                                        </DrawingImage>
+                                                    </Setter.Value>
+                                                </Setter>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding IsDefaultImage}" Value="false">
+                                                <Setter Property="Source" Value="{Binding PlayerIcon, Converter={dh:StringToImageSourceConverter}}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Image.Style>
+                            </Image>
+                        </Border>
+                    </Border>
+
+                </Grid>
+
+                <Border Grid.Row="2" Grid.Column="0" Style="{StaticResource MiddleBorderStyle}" Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}, ConverterParameter=1}">
+                    <Border Grid.Row="1" Style="{StaticResource CentralBorderStyle}">
+
+                        <StackPanel Orientation="Horizontal">
+
+                            <Border 
+                            DataContext="{Binding Stat1}"
+                            Style="{StaticResource StatFirstBorderStyle}"
+                            BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
+                            Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}" >
+                                <TextBlock 
+                                Text="{Binding Caption}" 
+                                Style="{StaticResource StatTextBlockStyle}" 
+                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
+                                />
+                            </Border>
+
+                            <Border 
+                            DataContext="{Binding Stat2}"
+                            Style="{StaticResource StatSecondBorderStyle}" 
+                            BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
+                            Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock 
+                                Text="{Binding Caption}" 
+                                Style="{StaticResource StatTextBlockStyle}" 
+                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
+                                />
+                            </Border>
+
+                            <Border 
+                            DataContext="{Binding Stat3}"
+                            Style="{StaticResource StatThirdBorderStyle}" 
+                            BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
+                            Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock 
+                                Text="{Binding Caption}" 
+                                Style="{StaticResource StatTextBlockStyle}" 
+                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
+                                />
+                            </Border>
+
+                            <Border 
+                            DataContext="{Binding Stat4}"
+                            Style="{StaticResource StatFourthBorderStyle}" 
+                            BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
+                            Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                <TextBlock 
+                                Text="{Binding Caption}" 
+                                Style="{StaticResource StatTextBlockStyle}" 
+                                Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
+                                />
+                            </Border>
+
+                            <!-- For debugging in blend   -->
+                            <!--<Border Style="{StaticResource StatFirstBorderStyle}"
+                            BorderBrush="{StaticResource StatFirstBorderBrush}" 
+                            Background="{StaticResource StatFirstBackgroundBrush}" >
+                            <TextBlock Text="28%" FontSize="8" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="White" />
+                        </Border>
+
+                        <Border Style="{StaticResource StatSecondBorderStyle}" 
+                            BorderBrush="{StaticResource StatSecondBorderBrush}" 
+                            Background="{StaticResource StatSecondBackgroundBrush}" >
+                            <TextBlock Text="10%" FontSize="8" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="White" />
+                        </Border>
+
+                        <Border Style="{StaticResource StatThirdBorderStyle}" 
+                            BorderBrush="{StaticResource StatThirdBorderBrush}" 
+                            Background="{StaticResource StatThirdBackgroundBrush}" >
+                            <TextBlock Text="35%" FontSize="8" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="White" />
+                        </Border>
+
+                        <Border Style="{StaticResource StatFourthBorderStyle}" 
+                           BorderBrush="{StaticResource StatFourthBorderBrush}" 
+                            Background="{StaticResource StatFourthBackgroundBrush}" >
+                            <TextBlock Text="60%" FontSize="8" HorizontalAlignment="Center" Margin="0,0,0,0" Foreground="White" />
+                        </Border>-->
+
+                        </StackPanel>
+
+                    </Border>
+
+                </Border>
+
+                <Border Grid.Row="3" Grid.Column="0" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding HudViewType, Converter={StaticResource InvertedEnumToVisibilityConverter}, ConverterParameter={x:Static m:HudViewType.Vertical_1}}">
+                    <Grid>
+                        <WrapPanel Margin="3,0,0,3" VerticalAlignment="Top" Orientation="Vertical">
+                            <i:Interaction.Behaviors>
+                                <hud:HudStatsBehavior StatInfoSource="{Binding StatInfoCollection}" IsMainStatsPanelEnabled="True" />
+                            </i:Interaction.Behaviors>
+                        </WrapPanel>
+                        <Path Style="{StaticResource PlayerNotePathStyle}" 
+                          HorizontalAlignment="Right" VerticalAlignment="Top" 
+                          Width="20" Margin="0 -10 -10 0"
+                          Stretch="Uniform" Fill="{StaticResource ForegroundBrush}"
+                          Visibility="{Binding IsNoteIconVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+
+                        <ItemsControl ItemsSource="{Binding Stickers}"  Margin="0 -10 0 0">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Horizontal" IsItemsHost="True" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate>
+                                    <Border
+                                    ToolTip="{Binding ToolTip}"
+                                    Grid.Column="0"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Left"
+                                    Margin="2,0,0,0"
+                                    Padding="1 0"
+                                    BorderThickness="1"
+                                    BorderBrush="{Binding SelectedColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
+                                    Background="{Binding SelectedColor, Converter={dh:ColorToSolidBrushConverter}}">
+                                        <TextBlock Text="{Binding Label}"
+                                               FontSize="8" Margin="0" FontWeight="DemiBold"
+                                               HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                               Foreground="{Binding SelectedColor, Converter={dh:BackgroundToForegroundColorConverter}}"/>
+                                    </Border>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="0" Grid.Column="0" Style="{StaticResource VerticalBorderStyle}" Visibility="{Binding IsVertical, Converter={dh:BoolToVisibilityConverter}}">
+                    <Border Style="{StaticResource InnerGlowVerticalBorderStyle}">
+                        <StackPanel Orientation="Vertical">
+
+                            <Border 
                             DataContext="{Binding Stat1}"
                             Style="{StaticResource StatFirstVerticalBorderStyle}"
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}" >
-                            <TextBlock 
+                                <TextBlock 
                                 Text="{Binding Caption}" 
                                 Style="{StaticResource StatTextBlockStyle}" 
                                 Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
                                 />
-                        </Border>
+                            </Border>
 
-                        <Border 
+                            <Border 
                             DataContext="{Binding Stat2}"
                             Style="{StaticResource StatSecondVerticalBorderStyle}" 
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
-                            <TextBlock 
+                                <TextBlock 
                                 Text="{Binding Caption}" 
                                 Style="{StaticResource StatTextBlockStyle}" 
                                 Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
                                 />
-                        </Border>
+                            </Border>
 
-                        <Border 
+                            <Border 
                             DataContext="{Binding Stat3}"
                             Style="{StaticResource StatThirdVerticalBorderStyle}" 
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
-                            <TextBlock 
+                                <TextBlock 
                                 Text="{Binding Caption}" 
                                 Style="{StaticResource StatTextBlockStyle}" 
                                 Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
                                 />
-                        </Border>
+                            </Border>
 
-                        <Border 
+                            <Border 
                             DataContext="{Binding Stat4}"
                             Style="{StaticResource StatFourthVerticalBorderStyle}" 
                             BorderBrush="{Binding CurrentColor, Converter={dh:ColorBrightnessToSolidBrushConverter}, ConverterParameter={StaticResource BrightnessAdjustmentParameter}}" 
                             Background="{Binding CurrentColor, Converter={dh:ColorToSolidBrushConverter}}">
-                            <TextBlock 
+                                <TextBlock 
                                 Text="{Binding Caption}" 
                                 Style="{StaticResource StatTextBlockStyle}" 
                                 Foreground="{Binding CurrentColor, Converter={dh:BackgroundToForegroundColorConverter}}"
                                 />
-                        </Border>
+                            </Border>
 
-                    </StackPanel>
+                        </StackPanel>
+                    </Border>
+
                 </Border>
 
-            </Border>
-
+            </Grid>
         </Grid>
 
     </Viewbox>

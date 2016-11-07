@@ -30,7 +30,7 @@ namespace DriveHUD.Importers.Bovada
     /// <summary>
     /// Class for inject catching DLL in Bovada or Bodog processes
     /// </summary>
-    public class BovadaCatcher : PokerCatcher, IBovadaCatcher
+    internal class BovadaCatcher : PokerCatcher, IBovadaCatcher
     {
         /// <summary>
         /// Dll to be injected

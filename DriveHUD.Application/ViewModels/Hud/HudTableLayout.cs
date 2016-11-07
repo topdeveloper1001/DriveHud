@@ -12,17 +12,21 @@
 
 using DriveHUD.Entities;
 using Model.Enums;
+using ProtoBuf;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
+    [ProtoContract]
     public class HudTableLayout
     {
+        [ProtoMember(1)]
         public EnumPokerSites Site
         {
             get;
             set;
         }
 
+        [ProtoMember(2)]
         public EnumTableType TableType
         {
             get;

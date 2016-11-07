@@ -25,7 +25,7 @@ using DriveHUD.Entities;
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public class BetOnlineTableService : IBetOnlineTableService
+    internal class BetOnlineTableService : IBetOnlineTableService
     {
         private Process pokerClientProcess;
 

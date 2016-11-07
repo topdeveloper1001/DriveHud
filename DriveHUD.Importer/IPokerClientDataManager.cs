@@ -17,7 +17,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Interface of poker client data manager
     /// </summary>
-    public interface IPokerClientDataManager : IDisposable
+    internal interface IPokerClientDataManager : IDisposable
     {
         /// <summary>
         /// Initialize data manager

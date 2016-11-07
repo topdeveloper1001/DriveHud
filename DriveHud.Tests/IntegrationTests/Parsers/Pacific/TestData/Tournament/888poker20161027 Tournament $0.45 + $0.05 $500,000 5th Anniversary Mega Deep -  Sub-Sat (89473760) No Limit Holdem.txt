@@ -1,0 +1,816 @@
+#Game No : 835785469
+***** 888poker Hand History for Game 835785469 *****
+$10/$20 Blinds No Limit Holdem - *** 27 10 2016 18:03:49
+Tournament #89473760 $0.45 + $0.05 - Table #3 9 Max (Real Money)
+Seat 4 is the button
+Total number of players : 9
+Seat 1: vovanmokin ( $2,000 )
+Seat 2: Peon_84 ( $2,000 )
+Seat 3: VikramaA ( $2,000 )
+Seat 4: xoxa222 ( $2,000 )
+Seat 5: wmckeever32 ( $2,000 )
+Seat 6: KostiaPi ( $2,000 )
+Seat 7: KoSTiN_SerJ ( $2,000 )
+Seat 9: BonStor ( $2,000 )
+Seat 10: Drago33D ( $2,000 )
+vovanmokin posts ante [$2]
+BonStor posts ante [$2]
+VikramaA posts ante [$2]
+Drago33D posts ante [$2]
+xoxa222 posts ante [$2]
+KoSTiN_SerJ posts ante [$2]
+Peon_84 posts ante [$2]
+wmckeever32 posts ante [$2]
+KostiaPi posts ante [$2]
+wmckeever32 posts small blind [$10]
+KostiaPi posts big blind [$20]
+** Dealing down cards **
+Dealt to Peon_84 [ 5s, 9s ]
+KoSTiN_SerJ folds
+BonStor folds
+Drago33D folds
+vovanmokin raises [$1,998]
+Peon_84 folds
+VikramaA folds
+xoxa222 folds
+wmckeever32 folds
+KostiaPi folds
+** Summary **
+vovanmokin did not show his hand
+vovanmokin collected [ $68 ]
+
+
+
+#Game No : 835785643
+***** 888poker Hand History for Game 835785643 *****
+$10/$20 Blinds No Limit Holdem - *** 27 10 2016 18:04:43
+Tournament #89473760 $0.45 + $0.05 - Table #3 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 9
+Seat 1: vovanmokin ( $2,046 )
+Seat 2: Peon_84 ( $1,998 )
+Seat 3: VikramaA ( $1,998 )
+Seat 4: xoxa222 ( $1,998 )
+Seat 5: wmckeever32 ( $1,988 )
+Seat 6: KostiaPi ( $1,978 )
+Seat 7: KoSTiN_SerJ ( $1,998 )
+Seat 9: BonStor ( $1,998 )
+Seat 10: Drago33D ( $1,998 )
+vovanmokin posts ante [$2]
+BonStor posts ante [$2]
+VikramaA posts ante [$2]
+Drago33D posts ante [$2]
+xoxa222 posts ante [$2]
+KoSTiN_SerJ posts ante [$2]
+Peon_84 posts ante [$2]
+wmckeever32 posts ante [$2]
+KostiaPi posts ante [$2]
+KostiaPi posts small blind [$10]
+KoSTiN_SerJ posts big blind [$20]
+** Dealing down cards **
+Dealt to Peon_84 [ 6d, 3d ]
+BonStor raises [$1,996]
+Drago33D folds
+vovanmokin raises [$2,044]
+Peon_84 folds
+VikramaA folds
+xoxa222 calls [$1,996]
+wmckeever32 folds
+KostiaPi folds
+KoSTiN_SerJ folds
+** Dealing flop ** [ Ac, 3s, Jc ]
+** Dealing turn ** [ 4s ]
+** Dealing river ** [ 8c ]
+** Summary **
+vovanmokin shows [ Kc, 6c ]
+xoxa222 shows [ Td, Ks ]
+BonStor shows [ 3c, 6h ]
+vovanmokin collected [ $6,036 ]
+
+
+
+#Game No : 835785471
+***** 888poker Hand History for Game 835785471 *****
+$10/$20 Blinds No Limit Holdem - *** 27 10 2016 18:05:25
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 8
+Seat 1:  ( $2,046 )
+Seat 2:  ( $1,998 )
+Seat 3:  ( $1,998 )
+Seat 4:  ( $1,998 )
+Seat 6:  ( $1,978 )
+Seat 7:  ( $1,998 )
+Seat 9:  ( $1,998 )
+Seat 10:  ( $1,998 )
+ posts ante [$2]
+ posts ante [$2]
+ posts ante [$2]
+ posts ante [$2]
+ posts ante [$2]
+ posts ante [$2]
+ posts ante [$2]
+ posts ante [$2]
+ posts small blind [$10]
+ posts big blind [$20]
+** Dealing down cards **
+ folds
+ calls [$20]
+ calls [$20]
+ folds
+ folds
+ calls [$20]
+ calls [$10]
+ checks
+** Dealing flop ** [ Js, 3c, Qh ]
+ checks
+ checks
+ checks
+ bets [$20]
+ calls [$20]
+ folds
+ folds
+ calls [$20]
+** Dealing turn ** [ 5h ]
+ checks
+ checks
+ bets [$20]
+ calls [$20]
+ calls [$20]
+** Dealing river ** [ 4c ]
+ checks
+ bets [$580]
+ folds
+ raises [$1,160]
+ raises [$1,160]
+ calls [$580]
+** Summary **
+ shows [ 2d, Ac ]
+ mucks [ 3d, Jc ]
+ collected [ $3,716 ]
+
+
+
+#Game No : 835785915
+***** 888poker Hand History for Game 835785915 *****
+$10/$20 Blinds No Limit Holdem - *** 27 10 2016 18:06:14
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 2 is the button
+Total number of players : 8
+Seat 1: Bratsk86 ( $1,938 )
+Seat 2: devanpy ( $1,978 )
+Seat 3: Whitehorse73 ( $1,978 )
+Seat 5: Peon_84 ( $1,996 )
+Seat 6: Gattuso8888 ( $198 )
+Seat 7: Vvvoooot ( $3,914 )
+Seat 9: Ksuha999 ( $1,998 )
+Seat 10: KUZIMA1975 ( $1,998 )
+Gattuso8888 posts ante [$2]
+Whitehorse73 posts ante [$2]
+Vvvoooot posts ante [$2]
+KUZIMA1975 posts ante [$2]
+Ksuha999 posts ante [$2]
+Bratsk86 posts ante [$2]
+devanpy posts ante [$2]
+Peon_84 posts ante [$2]
+Whitehorse73 posts small blind [$10]
+Peon_84 posts big blind [$20]
+** Dealing down cards **
+Dealt to Peon_84 [ As, 9s ]
+Gattuso8888 calls [$20]
+Vvvoooot calls [$20]
+Ksuha999 raises [$1,996]
+KUZIMA1975 folds
+Bratsk86 folds
+devanpy folds
+Whitehorse73 folds
+Peon_84 folds
+Gattuso8888 folds
+Vvvoooot folds
+** Summary **
+Ksuha999 did not show his hand
+Ksuha999 collected [ $106 ]
+
+
+
+#Game No : 835786026
+***** 888poker Hand History for Game 835786026 *****
+$10/$20 Blinds No Limit Holdem - *** 27 10 2016 18:06:49
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 8
+Seat 1: Bratsk86 ( $1,936 )
+Seat 2: devanpy ( $1,976 )
+Seat 3: Whitehorse73 ( $1,966 )
+Seat 5: Peon_84 ( $1,974 )
+Seat 6: Gattuso8888 ( $176 )
+Seat 7: Vvvoooot ( $3,892 )
+Seat 9: Ksuha999 ( $2,082 )
+Seat 10: KUZIMA1975 ( $1,996 )
+Gattuso8888 posts ante [$2]
+Whitehorse73 posts ante [$2]
+Vvvoooot posts ante [$2]
+KUZIMA1975 posts ante [$2]
+Ksuha999 posts ante [$2]
+Bratsk86 posts ante [$2]
+devanpy posts ante [$2]
+Peon_84 posts ante [$2]
+Peon_84 posts small blind [$10]
+Gattuso8888 posts big blind [$20]
+** Dealing down cards **
+Dealt to Peon_84 [ Qh, Ts ]
+Vvvoooot calls [$20]
+Ksuha999 folds
+KUZIMA1975 calls [$20]
+Bratsk86 calls [$20]
+devanpy raises [$40]
+Whitehorse73 calls [$40]
+Peon_84 calls [$30]
+Gattuso8888 calls [$20]
+Vvvoooot calls [$20]
+KUZIMA1975 calls [$20]
+Bratsk86 calls [$20]
+** Dealing flop ** [ 7d, As, Ks ]
+Peon_84 checks
+Gattuso8888 checks
+Vvvoooot checks
+KUZIMA1975 checks
+Bratsk86 checks
+devanpy bets [$148]
+Whitehorse73 folds
+Peon_84 folds
+Gattuso8888 folds
+Vvvoooot folds
+KUZIMA1975 folds
+Bratsk86 folds
+** Summary **
+devanpy collected [ $296 ]
+
+
+
+#Game No : 835786431
+***** 888poker Hand History for Game 835786431 *****
+$15/$30 Blinds No Limit Holdem - *** 27 10 2016 18:08:58
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 9
+Seat 1: Bratsk86 ( $1,894 )
+Seat 2: devanpy ( $2,230 )
+Seat 3: Whitehorse73 ( $1,924 )
+Seat 4: tinamr25 ( $2,000 )
+Seat 5: Peon_84 ( $1,932 )
+Seat 6: Gattuso8888 ( $134 )
+Seat 7: Vvvoooot ( $3,850 )
+Seat 9: mariola1408 ( $2,000 )
+Seat 10: KUZIMA1975 ( $1,954 )
+Gattuso8888 posts ante [$3]
+Whitehorse73 posts ante [$3]
+Vvvoooot posts ante [$3]
+KUZIMA1975 posts ante [$3]
+Bratsk86 posts ante [$3]
+devanpy posts ante [$3]
+Peon_84 posts ante [$3]
+tinamr25 posts ante [$3]
+mariola1408 posts ante [$3]
+Gattuso8888 posts small blind [$15]
+Vvvoooot posts big blind [$30]
+** Dealing down cards **
+Dealt to Peon_84 [ 3h, 6h ]
+mariola1408 calls [$30]
+KUZIMA1975 folds
+Bratsk86 calls [$30]
+devanpy folds
+Whitehorse73 calls [$30]
+tinamr25 calls [$30]
+Peon_84 folds
+Gattuso8888 raises [$116]
+Vvvoooot folds
+mariola1408 folds
+Bratsk86 calls [$101]
+Whitehorse73 calls [$101]
+tinamr25 calls [$101]
+** Dealing flop ** [ As, Ac, 7h ]
+Bratsk86 checks
+Whitehorse73 checks
+tinamr25 checks
+** Dealing turn ** [ Qh ]
+Bratsk86 checks
+Whitehorse73 checks
+tinamr25 checks
+** Dealing river ** [ 5h ]
+Bratsk86 checks
+Whitehorse73 checks
+tinamr25 checks
+** Summary **
+Bratsk86 shows [ 4d, 6d ]
+Whitehorse73 shows [ 9c, Js ]
+tinamr25 mucks [ 2s, Jd ]
+Gattuso8888 shows [ Qd, Tc ]
+Gattuso8888 collected [ $611 ]
+
+
+
+#Game No : 835786694
+***** 888poker Hand History for Game 835786694 *****
+$15/$30 Blinds No Limit Holdem - *** 27 10 2016 18:10:38
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 6 is the button
+Total number of players : 9
+Seat 1: Bratsk86 ( $1,760 )
+Seat 2: devanpy ( $2,227 )
+Seat 3: Whitehorse73 ( $1,790 )
+Seat 4: tinamr25 ( $1,866 )
+Seat 5: Peon_84 ( $1,929 )
+Seat 6: Gattuso8888 ( $611 )
+Seat 7: Vvvoooot ( $3,817 )
+Seat 9: mariola1408 ( $1,967 )
+Seat 10: KUZIMA1975 ( $1,951 )
+Gattuso8888 posts ante [$3]
+Whitehorse73 posts ante [$3]
+Vvvoooot posts ante [$3]
+KUZIMA1975 posts ante [$3]
+Bratsk86 posts ante [$3]
+devanpy posts ante [$3]
+Peon_84 posts ante [$3]
+tinamr25 posts ante [$3]
+mariola1408 posts ante [$3]
+Vvvoooot posts small blind [$15]
+mariola1408 posts big blind [$30]
+** Dealing down cards **
+Dealt to Peon_84 [ 9h, 8c ]
+KUZIMA1975 calls [$30]
+Bratsk86 folds
+devanpy folds
+Whitehorse73 raises [$787]
+tinamr25 folds
+Peon_84 folds
+Gattuso8888 calls [$608]
+Vvvoooot folds
+mariola1408 folds
+KUZIMA1975 calls [$757]
+** Dealing flop ** [ Qs, 2s, 5h ]
+KUZIMA1975 bets [$1,161]
+Whitehorse73 calls [$1,000]
+** Dealing turn ** [ 3s ]
+** Dealing river ** [ 9d ]
+** Summary **
+Whitehorse73 shows [ Js, 9s ]
+Gattuso8888 shows [ 2d, 3d ]
+KUZIMA1975 shows [ 7s, Ts ]
+Whitehorse73 collected [ $1,896 ]
+Whitehorse73 collected [ $2,358 ]
+
+
+
+#Game No : 835786918
+***** 888poker Hand History for Game 835786918 *****
+$15/$30 Blinds No Limit Holdem - *** 27 10 2016 18:11:57
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 7 is the button
+Total number of players : 8
+Seat 1: Bratsk86 ( $1,757 )
+Seat 2: devanpy ( $2,224 )
+Seat 3: Whitehorse73 ( $4,254 )
+Seat 4: tinamr25 ( $1,863 )
+Seat 5: Peon_84 ( $1,926 )
+Seat 7: Vvvoooot ( $3,799 )
+Seat 9: mariola1408 ( $1,934 )
+Seat 10: KUZIMA1975 ( $161 )
+Whitehorse73 posts ante [$3]
+Vvvoooot posts ante [$3]
+KUZIMA1975 posts ante [$3]
+Bratsk86 posts ante [$3]
+devanpy posts ante [$3]
+Peon_84 posts ante [$3]
+tinamr25 posts ante [$3]
+mariola1408 posts ante [$3]
+mariola1408 posts small blind [$15]
+KUZIMA1975 posts big blind [$30]
+** Dealing down cards **
+Dealt to Peon_84 [ Jd, 3h ]
+Bratsk86 calls [$30]
+devanpy folds
+Whitehorse73 calls [$30]
+tinamr25 raises [$60]
+Peon_84 folds
+Vvvoooot folds
+mariola1408 folds
+KUZIMA1975 folds
+Bratsk86 calls [$30]
+Whitehorse73 calls [$30]
+** Dealing flop ** [ Ks, 5c, 6s ]
+Bratsk86 checks
+Whitehorse73 checks
+tinamr25 bets [$30]
+Bratsk86 calls [$30]
+Whitehorse73 calls [$30]
+** Dealing turn ** [ 2c ]
+Bratsk86 checks
+Whitehorse73 checks
+tinamr25 bets [$30]
+Bratsk86 calls [$30]
+Whitehorse73 calls [$30]
+** Dealing river ** [ 9s ]
+Bratsk86 checks
+Whitehorse73 bets [$429]
+tinamr25 raises [$858]
+Bratsk86 folds
+Whitehorse73 calls [$429]
+** Summary **
+tinamr25 shows [ Kc, Jc ]
+Whitehorse73 mucks [ Th, Td ]
+tinamr25 collected [ $2,145 ]
+
+
+
+#Game No : 835787155
+***** 888poker Hand History for Game 835787155 *****
+$15/$30 Blinds No Limit Holdem - *** 27 10 2016 18:13:29
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 9 is the button
+Total number of players : 8
+Seat 1: Bratsk86 ( $1,634 )
+Seat 2: devanpy ( $2,221 )
+Seat 3: Whitehorse73 ( $3,273 )
+Seat 4: tinamr25 ( $3,027 )
+Seat 5: Peon_84 ( $1,923 )
+Seat 7: Vvvoooot ( $3,796 )
+Seat 9: mariola1408 ( $1,916 )
+Seat 10: KUZIMA1975 ( $128 )
+Whitehorse73 posts ante [$3]
+Vvvoooot posts ante [$3]
+KUZIMA1975 posts ante [$3]
+Bratsk86 posts ante [$3]
+devanpy posts ante [$3]
+Peon_84 posts ante [$3]
+tinamr25 posts ante [$3]
+mariola1408 posts ante [$3]
+KUZIMA1975 posts small blind [$15]
+Bratsk86 posts big blind [$30]
+** Dealing down cards **
+Dealt to Peon_84 [ Ts, Qd ]
+devanpy raises [$60]
+Whitehorse73 folds
+tinamr25 raises [$90]
+Peon_84 folds
+Vvvoooot folds
+mariola1408 calls [$90]
+KUZIMA1975 raises [$110]
+Bratsk86 folds
+devanpy calls [$65]
+tinamr25 raises [$70]
+mariola1408 calls [$70]
+devanpy calls [$35]
+** Dealing flop ** [ Kh, 5d, 6d ]
+devanpy checks
+tinamr25 bets [$30]
+mariola1408 calls [$30]
+devanpy calls [$30]
+** Dealing turn ** [ 5h ]
+devanpy checks
+tinamr25 bets [$30]
+mariola1408 calls [$30]
+devanpy folds
+** Dealing river ** [ 2c ]
+tinamr25 bets [$30]
+mariola1408 calls [$30]
+** Summary **
+tinamr25 shows [ Ah, Ad ]
+mariola1408 mucks [ Kd, Qc ]
+KUZIMA1975 shows [ 4d, 4h ]
+tinamr25 collected [ $554 ]
+tinamr25 collected [ $315 ]
+
+
+
+#Game No : 835787353
+***** 888poker Hand History for Game 835787353 *****
+$25/$50 Blinds No Limit Holdem - *** 27 10 2016 18:14:36
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 9 is the button
+Total number of players : 8
+Seat 1: Bratsk86 ( $1,601 )
+Seat 2: devanpy ( $2,028 )
+Seat 3: Whitehorse73 ( $3,270 )
+Seat 4: tinamr25 ( $3,643 )
+Seat 5: Peon_84 ( $1,920 )
+Seat 6: woodgoot ( $1,550 )
+Seat 7: Vvvoooot ( $3,793 )
+Seat 9: mariola1408 ( $1,663 )
+Whitehorse73 posts ante [$5]
+Vvvoooot posts ante [$5]
+Bratsk86 posts ante [$5]
+devanpy posts ante [$5]
+Peon_84 posts ante [$5]
+tinamr25 posts ante [$5]
+mariola1408 posts ante [$5]
+woodgoot posts ante [$5]
+Bratsk86 posts small blind [$25]
+devanpy posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 9s, Ad ]
+Whitehorse73 raises [$100]
+tinamr25 raises [$150]
+Peon_84 folds
+woodgoot calls [$150]
+Vvvoooot calls [$150]
+mariola1408 calls [$150]
+Bratsk86 calls [$125]
+devanpy folds
+Whitehorse73 calls [$50]
+** Dealing flop ** [ 4d, 5c, Kc ]
+Bratsk86 checks
+Whitehorse73 checks
+tinamr25 bets [$50]
+woodgoot raises [$450]
+Vvvoooot calls [$450]
+mariola1408 folds
+Bratsk86 folds
+Whitehorse73 folds
+tinamr25 calls [$400]
+** Dealing turn ** [ 7c ]
+tinamr25 checks
+woodgoot bets [$945]
+Vvvoooot calls [$945]
+tinamr25 folds
+** Dealing river ** [ 6s ]
+** Summary **
+woodgoot shows [ Qs, Kd ]
+Vvvoooot shows [ Ac, 9c ]
+Vvvoooot collected [ $4,230 ]
+
+
+
+#Game No : 835787649
+***** 888poker Hand History for Game 835787649 *****
+$25/$50 Blinds No Limit Holdem - *** 27 10 2016 18:16:10
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 8
+Seat 1: Bratsk86 ( $1,446 )
+Seat 2: devanpy ( $1,973 )
+Seat 3: Whitehorse73 ( $3,115 )
+Seat 4: tinamr25 ( $3,038 )
+Seat 5: Peon_84 ( $1,915 )
+Seat 7: Vvvoooot ( $6,473 )
+Seat 9: mariola1408 ( $1,508 )
+Seat 10: Vadimpro999 ( $4,105 )
+Whitehorse73 posts ante [$5]
+Vvvoooot posts ante [$5]
+Bratsk86 posts ante [$5]
+devanpy posts ante [$5]
+Peon_84 posts ante [$5]
+tinamr25 posts ante [$5]
+mariola1408 posts ante [$5]
+Vadimpro999 posts ante [$5]
+devanpy posts small blind [$25]
+Whitehorse73 posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ Jd, 2d ]
+tinamr25 raises [$100]
+Peon_84 folds
+Vvvoooot folds
+mariola1408 folds
+Vadimpro999 folds
+Bratsk86 folds
+devanpy calls [$75]
+Whitehorse73 calls [$50]
+** Dealing flop ** [ 5h, 2c, 3h ]
+devanpy checks
+Whitehorse73 bets [$900]
+tinamr25 raises [$1,800]
+devanpy folds
+Whitehorse73 raises [$2,110]
+tinamr25 calls [$1,133]
+** Dealing turn ** [ 2s ]
+** Dealing river ** [ 9h ]
+** Summary **
+Whitehorse73 shows [ 5s, Jc ]
+tinamr25 shows [ Ac, 3c ]
+Whitehorse73 collected [ $6,206 ]
+
+
+
+#Game No : 835787789
+***** 888poker Hand History for Game 835787789 *****
+$25/$50 Blinds No Limit Holdem - *** 27 10 2016 18:17:05
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 2 is the button
+Total number of players : 8
+Seat 1: Bratsk86 ( $1,441 )
+Seat 2: devanpy ( $1,868 )
+Seat 3: Whitehorse73 ( $6,283 )
+Seat 5: Peon_84 ( $1,910 )
+Seat 6: smirnova0211 ( $2,000 )
+Seat 7: Vvvoooot ( $6,468 )
+Seat 9: mariola1408 ( $1,503 )
+Seat 10: Vadimpro999 ( $4,100 )
+Whitehorse73 posts ante [$5]
+Vvvoooot posts ante [$5]
+Bratsk86 posts ante [$5]
+devanpy posts ante [$5]
+Peon_84 posts ante [$5]
+mariola1408 posts ante [$5]
+Vadimpro999 posts ante [$5]
+smirnova0211 posts ante [$5]
+Whitehorse73 posts small blind [$25]
+Peon_84 posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 3d, Qc ]
+smirnova0211 calls [$50]
+Vvvoooot folds
+mariola1408 calls [$50]
+Vadimpro999 calls [$50]
+Bratsk86 calls [$50]
+devanpy raises [$100]
+Whitehorse73 calls [$75]
+Peon_84 folds
+smirnova0211 calls [$50]
+mariola1408 calls [$50]
+Vadimpro999 calls [$50]
+Bratsk86 calls [$50]
+** Dealing flop ** [ 2c, Kh, Kc ]
+Whitehorse73 checks
+smirnova0211 checks
+mariola1408 checks
+Vadimpro999 checks
+Bratsk86 checks
+devanpy bets [$345]
+Whitehorse73 raises [$1,725]
+smirnova0211 folds
+mariola1408 folds
+Vadimpro999 folds
+Bratsk86 folds
+devanpy folds
+** Summary **
+Whitehorse73 collected [ $1,380 ]
+
+
+
+#Game No : 835788216
+***** 888poker Hand History for Game 835788216 *****
+$50/$100 Blinds No Limit Holdem - *** 27 10 2016 18:19:06
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 3 is the button
+Total number of players : 8
+Seat 1: Bratsk86 ( $1,336 )
+Seat 2: devanpy ( $1,418 )
+Seat 3: Whitehorse73 ( $7,213 )
+Seat 5: Peon_84 ( $1,855 )
+Seat 6: smirnova0211 ( $1,895 )
+Seat 7: kipha888 ( $2,000 )
+Seat 9: mariola1408 ( $1,398 )
+Seat 10: Vadimpro999 ( $3,995 )
+Whitehorse73 posts ante [$10]
+Bratsk86 posts ante [$10]
+devanpy posts ante [$10]
+Peon_84 posts ante [$10]
+mariola1408 posts ante [$10]
+Vadimpro999 posts ante [$10]
+smirnova0211 posts ante [$10]
+kipha888 posts ante [$10]
+Peon_84 posts small blind [$50]
+smirnova0211 posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ Ac, 8h ]
+kipha888 calls [$100]
+mariola1408 folds
+Vadimpro999 folds
+Bratsk86 folds
+devanpy folds
+Whitehorse73 calls [$100]
+Peon_84 calls [$50]
+smirnova0211 checks
+** Dealing flop ** [ Qh, 6s, Tc ]
+Peon_84 checks
+smirnova0211 checks
+kipha888 checks
+Whitehorse73 bets [$240]
+Peon_84 folds
+smirnova0211 folds
+kipha888 calls [$240]
+** Dealing turn ** [ 3s ]
+kipha888 checks
+Whitehorse73 bets [$100]
+kipha888 calls [$100]
+** Dealing river ** [ 5h ]
+kipha888 checks
+Whitehorse73 bets [$100]
+kipha888 calls [$100]
+** Summary **
+Whitehorse73 shows [ 7h, 6h ]
+kipha888 shows [ 8d, Td ]
+kipha888 collected [ $1,360 ]
+
+
+
+#Game No : 835788340
+***** 888poker Hand History for Game 835788340 *****
+$50/$100 Blinds No Limit Holdem - *** 27 10 2016 18:20:17
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 5 is the button
+Total number of players : 8
+Seat 1: Andycap83 ( $1,577 )
+Seat 3: Whitehorse73 ( $6,663 )
+Seat 4: k500oa159 ( $2,000 )
+Seat 5: Peon_84 ( $1,745 )
+Seat 6: smirnova0211 ( $1,785 )
+Seat 7: kipha888 ( $2,810 )
+Seat 9: mariola1408 ( $1,388 )
+Seat 10: Vadimpro999 ( $3,985 )
+Whitehorse73 posts ante [$10]
+Peon_84 posts ante [$10]
+mariola1408 posts ante [$10]
+Vadimpro999 posts ante [$10]
+smirnova0211 posts ante [$10]
+k500oa159 posts ante [$10]
+kipha888 posts ante [$10]
+Andycap83 posts ante [$10]
+smirnova0211 posts small blind [$50]
+kipha888 posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ 3d, Qc ]
+mariola1408 folds
+Vadimpro999 folds
+Andycap83 folds
+Whitehorse73 calls [$100]
+k500oa159 calls [$100]
+Peon_84 calls [$100]
+smirnova0211 calls [$50]
+kipha888 checks
+** Dealing flop ** [ 3h, 7c, 8c ]
+smirnova0211 checks
+kipha888 checks
+Whitehorse73 checks
+k500oa159 checks
+Peon_84 checks
+** Dealing turn ** [ 6c ]
+smirnova0211 bets [$100]
+kipha888 folds
+Whitehorse73 folds
+k500oa159 folds
+Peon_84 folds
+** Summary **
+smirnova0211 collected [ $580 ]
+
+
+
+#Game No : 835788537
+***** 888poker Hand History for Game 835788537 *****
+$50/$100 Blinds No Limit Holdem - *** 27 10 2016 18:21:41
+Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
+Seat 6 is the button
+Total number of players : 9
+Seat 1: Andycap83 ( $1,567 )
+Seat 2: RishaUa ( $895 )
+Seat 3: Whitehorse73 ( $6,553 )
+Seat 4: k500oa159 ( $1,890 )
+Seat 5: Peon_84 ( $1,635 )
+Seat 6: smirnova0211 ( $2,255 )
+Seat 7: kipha888 ( $2,700 )
+Seat 9: mariola1408 ( $1,378 )
+Seat 10: Vadimpro999 ( $3,975 )
+Whitehorse73 posts ante [$10]
+Peon_84 posts ante [$10]
+mariola1408 posts ante [$10]
+Vadimpro999 posts ante [$10]
+smirnova0211 posts ante [$10]
+k500oa159 posts ante [$10]
+kipha888 posts ante [$10]
+Andycap83 posts ante [$10]
+RishaUa posts ante [$10]
+kipha888 posts small blind [$50]
+mariola1408 posts big blind [$100]
+** Dealing down cards **
+Dealt to Peon_84 [ 9s, 9c ]
+Vadimpro999 calls [$100]
+Andycap83 calls [$100]
+RishaUa raises [$885]
+Whitehorse73 calls [$885]
+k500oa159 folds
+Peon_84 calls [$885]
+smirnova0211 folds
+kipha888 calls [$835]
+mariola1408 folds
+Vadimpro999 calls [$785]
+Andycap83 folds
+** Dealing flop ** [ 5s, 4c, Tc ]
+kipha888 checks
+Vadimpro999 checks
+Whitehorse73 bets [$3,536]
+Peon_84 calls [$740]
+kipha888 calls [$1,805]
+Vadimpro999 folds
+** Dealing turn ** [ 4d ]
+** Dealing river ** [ 7c ]
+** Summary **
+RishaUa shows [ Kc, Jh ]
+Whitehorse73 shows [ Th, Qs ]
+Peon_84 shows [ 9s, 9c ]
+kipha888 shows [ 2s, Ah ]
+Whitehorse73 collected [ $4,715 ]
+Whitehorse73 collected [ $2,220 ]
+Whitehorse73 collected [ $2,130 ]
+
+
+

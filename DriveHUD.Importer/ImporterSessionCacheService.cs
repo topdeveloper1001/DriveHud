@@ -27,7 +27,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Importer cache service which stores session data
     /// </summary>
-    public class ImporterSessionCacheService : IImporterSessionCacheService
+    internal class ImporterSessionCacheService : IImporterSessionCacheService
     {
         private ReaderWriterLockSlim cacheLock = new ReaderWriterLockSlim();
 

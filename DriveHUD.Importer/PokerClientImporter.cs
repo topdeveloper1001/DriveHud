@@ -26,7 +26,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Base class of importers which get data directly from poker clients
     /// </summary>
-    public abstract class PokerClientImporter : BaseImporter, IBackgroundProcess
+    internal abstract class PokerClientImporter : BaseImporter, IBackgroundProcess
     {       
         protected IPokerClientEncryptedLogger pokerClientLogger;
 

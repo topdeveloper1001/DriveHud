@@ -15,7 +15,7 @@ namespace DriveHUD.Importers.BetOnline
     /// <summary>
     /// Dummy logger for tournament data
     /// </summary>
-    public class BetOnlineTournamentLogger : IPokerClientEncryptedLogger
+    internal class BetOnlineTournamentLogger : IPokerClientEncryptedLogger
     {
         public void CleanLogs()
         {            

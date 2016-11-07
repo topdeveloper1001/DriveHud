@@ -27,7 +27,7 @@ namespace DriveHUD.Importers.Bovada
     /// <summary>
     /// Bovada data manager
     /// </summary>
-    public class BovadaDataManager : IBovadaDataManager
+    internal class BovadaDataManager : IBovadaDataManager
     {
         private IEventAggregator eventAggregator;
 

@@ -15,7 +15,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Interface for poker client loggers
     /// </summary>
-    public interface IPokerClientEncryptedLogger
+    internal interface IPokerClientEncryptedLogger
     {
         /// <summary>
         /// Initialize logger

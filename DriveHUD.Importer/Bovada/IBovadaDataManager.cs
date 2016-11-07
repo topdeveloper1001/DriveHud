@@ -15,7 +15,7 @@ namespace DriveHUD.Importers.Bovada
     /// <summary>
     /// Interface of Bovada data manager
     /// </summary>
-    public interface IBovadaDataManager : IPokerClientDataManager
+    internal interface IBovadaDataManager : IPokerClientDataManager
     {
     }
 }

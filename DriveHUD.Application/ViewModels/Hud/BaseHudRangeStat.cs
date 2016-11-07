@@ -1,19 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Enums;
+﻿using Model.Enums;
+using ProtoBuf;
 using ReactiveUI;
 
 namespace DriveHUD.Application.ViewModels
 {
+    [ProtoContract]
     public class BaseHudRangeStat : ReactiveObject, IHudRangeStat
     {
         #region Properties
 
         private decimal? low;
 
+        [ProtoMember(1)]
         public decimal? Low
         {
             get
@@ -29,6 +27,7 @@ namespace DriveHUD.Application.ViewModels
 
         private decimal? high;
 
+        [ProtoMember(2)]
         public decimal? High
         {
             get
@@ -44,6 +43,7 @@ namespace DriveHUD.Application.ViewModels
 
         private Stat stat;
 
+        [ProtoMember(3)]
         public Stat Stat
         {
             get

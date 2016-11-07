@@ -18,7 +18,7 @@ namespace DriveHUD.Importers.BetOnline
     /// <summary>
     /// Result of converting xml
     /// </summary>
-    public class ConvertedResult
+    internal class ConvertedResult
     {
         public string ConvertedXml { get; set; }
 

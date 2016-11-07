@@ -15,7 +15,7 @@ namespace DriveHUD.Importers.BetOnline
     /// <summary>
     /// Class for inject catching DLL in BetOnline processes
     /// </summary>
-    public class BetOnlineCatcher : PokerCatcher, IBetOnlineCatcher
+    internal class BetOnlineCatcher : PokerCatcher, IBetOnlineCatcher
     {
         /// Dll to be injected
         /// </summary>

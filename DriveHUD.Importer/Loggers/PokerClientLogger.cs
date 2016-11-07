@@ -19,7 +19,7 @@ using System.Linq;
 
 namespace DriveHUD.Importers.Loggers
 {
-    public class PokerClientLogger : IPokerClientEncryptedLogger
+    internal class PokerClientLogger : IPokerClientEncryptedLogger
     {
         private PokerClientLoggerConfiguration configuration;
 

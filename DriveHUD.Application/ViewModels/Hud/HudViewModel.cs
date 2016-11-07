@@ -42,6 +42,7 @@ using DriveHUD.Entities;
 using DriveHUD.Application.Controls;
 using System.ComponentModel;
 using Model.Filters;
+using DriveHUD.Application.HudServices;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -90,10 +91,11 @@ namespace DriveHUD.Application.ViewModels
             HudType = HudType.Default;
 
             hudViewTypes = new ObservableCollection<HudViewType>(Enum.GetValues(typeof(HudViewType)).Cast<HudViewType>());
-            hudViewType = HudViewType.Vertical;
-            lastDHHudViewType = HudViewType.Vertical;
+            hudViewType = HudViewType.Vertical_1;
+            lastDHHudViewType = HudViewType.Vertical_1;
 
             PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100 };
+            PreviewHudElementViewModel.HudViewType = HudViewType.Vertical_1;
 
             InitializeCommands();
             InitializeObservables();
@@ -435,14 +437,12 @@ namespace DriveHUD.Application.ViewModels
                         HudType = HudType.Default;
                     }
 
-                    var isVertical = HudViewType == HudViewType.Vertical;
-
                     foreach (var hudTableViewModel in hudTableViewModelDictionary.Values)
                     {
-                        hudTableViewModel.HudElements.ForEach(h => h.IsVertical = isVertical);
+                        hudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
                     }
 
-                    previewHudElementViewModel.IsVertical = isVertical;
+                    previewHudElementViewModel.HudViewType = HudViewType;
                 });
 
             Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
@@ -472,16 +472,24 @@ namespace DriveHUD.Application.ViewModels
                                                     if (PreviewHudElementViewModel != null)
                                                     {
                                                         PreviewHudElementViewModel.StatInfoCollection.Clear();
-                                                        PreviewHudElementViewModel.StatInfoCollection.AddRange(hudElements.Select(stat => stat.Clone()));
-                                                        PreviewHudElementViewModel.UpdateMainStats();
 
                                                         Random r = new Random();
 
-                                                        foreach (var stat in PreviewHudElementViewModel.StatInfoCollection)
+                                                        for (int i = 0; i < hudElements.Count; i++)
                                                         {
+                                                            if (hudElements[i] is StatInfoBreak)
+                                                            {
+                                                                PreviewHudElementViewModel.StatInfoCollection.Add((hudElements[i] as StatInfoBreak).Clone());
+                                                                continue;
+                                                            }
+
+                                                            var stat = hudElements[i].Clone();
                                                             stat.CurrentValue = r.Next(0, 100);
                                                             stat.Caption = string.Format(stat.Format, stat.CurrentValue);
+                                                            PreviewHudElementViewModel.StatInfoCollection.Add(stat);
                                                         }
+
+                                                        PreviewHudElementViewModel.UpdateMainStats();
                                                     }
 
                                                     if (!isUpdatingLayout)
@@ -855,6 +863,9 @@ namespace DriveHUD.Application.ViewModels
         {
             importerService.StartImport();
 
+            var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
+            hudTransmitter.Initialize();
+
             IsStarted = true;
         }
 
@@ -867,7 +878,8 @@ namespace DriveHUD.Application.ViewModels
             var tableService = ServiceLocator.Current.GetInstance<IBetOnlineTableService>();
             tableService.Reset();
 
-            HudPainter.ReleaseHook();
+            var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
+            hudTransmitter.Dispose();
         }
 
         private void OpenDataSave()

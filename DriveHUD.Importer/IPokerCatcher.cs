@@ -14,7 +14,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Base catcher interface 
     /// </summary>
-    public interface IPokerCatcher : IBackgroundProcess
+    internal interface IPokerCatcher : IBackgroundProcess
     {
     }
 }

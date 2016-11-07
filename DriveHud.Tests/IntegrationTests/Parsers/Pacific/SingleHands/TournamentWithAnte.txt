@@ -1,0 +1,36 @@
+﻿#Game No : 841896912
+***** 888poker Hand History for Game 841896912 *****
+$125/$250 Blinds No Limit Holdem - *** 26 10 2016 19:59:58
+Tournament #89426293 $0.01 - Table #2 9 Max (Real Money)
+Seat 6 is the button
+Total number of players : 6
+Seat 1: leandro5678 ( $1,000 )
+Seat 3: allanboy15 ( $9,925 )
+Seat 4: Peon_84 ( $1,000 )
+Seat 5: Serzhirik ( $1,000 )
+Seat 9: Bakermansam ( $1,000 )
+Seat 10: Bibar888 ( $6,750 )
+Bibar888 posts ante [$30]
+Bakermansam posts ante [$30]
+Serzhirik posts ante [$30]
+allanboy15 posts ante [$30]
+Peon_84 posts ante [$30]
+leandro5678 posts ante [$30]
+Bakermansam posts big blind [$250]
+** Dealing down cards **
+Dealt to Peon_84 [ 5c, Qd ]
+Bibar888 folds
+leandro5678 raises [$750]
+allanboy15 folds
+Peon_84 folds
+Serzhirik folds
+Bakermansam calls [$500]
+** Dealing flop ** [ 7s, 2d, 8s ]
+Bakermansam bets [$220]
+leandro5678 calls [$220]
+** Dealing turn ** [ Kh ]
+** Dealing river ** [ Qs ]
+** Summary **
+leandro5678 shows [ 7c, As ]
+Bakermansam shows [ 4h, 7h ]
+leandro5678 collected [ $2,120 ]

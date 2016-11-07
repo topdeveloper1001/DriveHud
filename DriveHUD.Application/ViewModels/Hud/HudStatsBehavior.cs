@@ -32,6 +32,17 @@ namespace DriveHUD.Application.ViewModels.Hud
 {
     public class HudStatsBehavior : Behavior<WrapPanel>
     {
+        private const double VERTICAL_PANEL_GAP = 32;
+        private const double TOTAL_PANEL_WIDTH = 144;
+
+        private static readonly DependencyProperty IsVerticalProperty = DependencyProperty.Register("IsVertical", typeof(bool), typeof(HudStatsBehavior), new PropertyMetadata(false));
+
+        public bool IsVertical
+        {
+            get { return (bool)GetValue(IsVerticalProperty); }
+            set { SetValue(IsVerticalProperty, value); }
+        }
+
         private static readonly DependencyProperty IsMainStatsPanelEnabledProperty = DependencyProperty.RegisterAttached("IsMainStatsPanelEnabled", typeof(bool), typeof(HudStatsBehavior), new PropertyMetadata(true));
 
         public bool IsMainStatsPanelEnabled
@@ -61,6 +72,15 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             base.OnAttached();
             AssociatedObject.Unloaded += AssociatedObject_Unloaded;
+            AssociatedObject.SizeChanged += AssociatedObject_SizeChanged;
+        }
+
+        private void AssociatedObject_SizeChanged(object sender, RoutedEventArgs e)
+        {
+            if (IsVertical)
+            {
+                ConfigureVerticalPanel();
+            }
         }
 
         protected override void OnDetaching()
@@ -140,56 +160,35 @@ namespace DriveHUD.Application.ViewModels.Hud
                 panel.Width = double.NaN;
                 panel.Height = double.NaN;
                 panel.Margin = new Thickness(2, 2, 2, 0);
+                panel.Orientation = IsVertical ? Orientation.Vertical : Orientation.Horizontal;
 
                 foreach (var statInfo in statInfoGroup)
                 {
-                    var block = new TextBlock
+                    TextBlock block = CreateStatBlock(statInfo);
+
+                    if (IsVertical)
                     {
-                        TextWrapping = System.Windows.TextWrapping.Wrap,
-                        Foreground = new SolidColorBrush(statInfo.CurrentColor),
-                        VerticalAlignment = VerticalAlignment.Bottom
-                    };
+                        Border border = new Border();
+                        border.Child = block;
 
-                    block.SetBinding(TextBlock.TextProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.Caption)) { Source = statInfo });
-                    block.SetBinding(TextBlock.ForegroundProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.CurrentColor)) { Source = statInfo, Converter = new ValueConverters.ColorToBrushConverter() });
-                    block.SetBinding(TextBlock.FontFamilyProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontFamily)) { Source = statInfo });
-                    block.SetBinding(TextBlock.FontSizeProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontSize)) { Source = statInfo });
-                    block.SetBinding(TextBlock.FontWeightProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontBold)) { Source = statInfo });
-                    block.SetBinding(TextBlock.FontStyleProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontItalic)) { Source = statInfo });
-                    block.SetBinding(TextBlock.TextDecorationsProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontUnderline)) { Source = statInfo });
+                        if (statInfo != statInfoGroup.Last())
+                        {
+                            border.BorderThickness = new Thickness(0, 0, 0, 1);
+                            border.Margin = new Thickness(0, 0, 5, 0);
+                            border.BorderBrush = Brushes.White;
+                        }
 
-                    if (statInfo.IsStatInfoToolTipAvailable)
-                    {
-                        FrameworkElementFactory fef = new FrameworkElementFactory(typeof(HudStatToolTip));
-                        var datacontextBinding = new Binding() { Source = statInfo };
-                        fef.SetBinding(FrameworkElement.DataContextProperty, datacontextBinding);
-
-                        var template = new DataTemplate();
-                        template.VisualTree = fef;
-                        template.Seal();
-
-                        var tooltip = new ToolTip();
-                        tooltip.BorderThickness = new Thickness(0, 0, 0, 0);
-                        tooltip.Background = new SolidColorBrush(Colors.Transparent);
-                        tooltip.ContentTemplate = template;
-
-                        ToolTipService.SetInitialShowDelay(block, 1);
-                        ToolTipService.SetShowDuration(block, 60000);
-                        ToolTipService.SetVerticalOffset(block, -5.0);
-                        ToolTipService.SetPlacement(block, System.Windows.Controls.Primitives.PlacementMode.Top);
-                        ToolTipService.SetToolTip(block, tooltip);                                        
+                        panel.Children.Add(border);
                     }
                     else
                     {
-                        block.SetBinding(TextBlock.ToolTipProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.ToolTip)) { Source = statInfo });
-                    }
+                        panel.Children.Add(block);
 
-                    panel.Children.Add(block);
-
-                    if (statInfo != statInfoGroup.Last())
-                    {
-                        TextBlock separator = new TextBlock { Text = " | ", Foreground = new SolidColorBrush(Colors.White), VerticalAlignment = VerticalAlignment.Center };
-                        panel.Children.Add(separator);
+                        if (statInfo != statInfoGroup.Last())
+                        {
+                            TextBlock separator = new TextBlock { Text = " | ", Foreground = new SolidColorBrush(Colors.White), VerticalAlignment = VerticalAlignment.Center };
+                            panel.Children.Add(separator);
+                        }
                     }
                 }
 
@@ -197,7 +196,82 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private static List<List<StatInfo>> Split(IList<StatInfo> source)
+        private void ConfigureVerticalPanel()
+        {
+            var vm = (AssociatedObject.DataContext as HudElementViewModel);
+            var border = AssociatedObject.ParentOfType<Border>();
+
+            if (vm == null || border == null)
+            {
+                return;
+            }
+
+            var topMargin = border.MinHeight < border.ActualHeight ? border.MinHeight - border.ActualHeight : 0d;
+
+            if (vm.IsRightOriented)
+            {
+                var width = border.ActualWidth;
+                if (width > VERTICAL_PANEL_GAP)
+                {
+                    var margin = VERTICAL_PANEL_GAP - width;
+                    border.Margin = new Thickness(margin, topMargin, Math.Abs(margin), Math.Abs(topMargin));
+                }
+            }
+            else
+            {
+                var margin = TOTAL_PANEL_WIDTH - VERTICAL_PANEL_GAP;
+
+                border.Margin = new Thickness(margin, topMargin, -margin, Math.Abs(topMargin));
+            }
+        }
+
+        private static TextBlock CreateStatBlock(StatInfo statInfo)
+        {
+            var block = new TextBlock
+            {
+                TextWrapping = System.Windows.TextWrapping.Wrap,
+                Foreground = new SolidColorBrush(statInfo.CurrentColor),
+                VerticalAlignment = VerticalAlignment.Bottom
+            };
+
+            block.SetBinding(TextBlock.TextProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.Caption)) { Source = statInfo });
+            block.SetBinding(TextBlock.ForegroundProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.CurrentColor)) { Source = statInfo, Converter = new ValueConverters.ColorToBrushConverter() });
+            block.SetBinding(TextBlock.FontFamilyProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontFamily)) { Source = statInfo });
+            block.SetBinding(TextBlock.FontSizeProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontSize)) { Source = statInfo });
+            block.SetBinding(TextBlock.FontWeightProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontBold)) { Source = statInfo });
+            block.SetBinding(TextBlock.FontStyleProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontItalic)) { Source = statInfo });
+            block.SetBinding(TextBlock.TextDecorationsProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontUnderline)) { Source = statInfo });
+
+            if (statInfo.IsStatInfoToolTipAvailable)
+            {
+                FrameworkElementFactory fef = new FrameworkElementFactory(typeof(HudStatToolTip));
+                var datacontextBinding = new Binding() { Source = statInfo };
+                fef.SetBinding(FrameworkElement.DataContextProperty, datacontextBinding);
+
+                var template = new DataTemplate();
+                template.VisualTree = fef;
+                template.Seal();
+
+                var tooltip = new ToolTip();
+                tooltip.BorderThickness = new Thickness(0, 0, 0, 0);
+                tooltip.Background = new SolidColorBrush(Colors.Transparent);
+                tooltip.ContentTemplate = template;
+
+                ToolTipService.SetInitialShowDelay(block, 1);
+                ToolTipService.SetShowDuration(block, 60000);
+                ToolTipService.SetVerticalOffset(block, -5.0);
+                ToolTipService.SetPlacement(block, System.Windows.Controls.Primitives.PlacementMode.Top);
+                ToolTipService.SetToolTip(block, tooltip);
+            }
+            else
+            {
+                block.SetBinding(TextBlock.ToolTipProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.ToolTip)) { Source = statInfo });
+            }
+
+            return block;
+        }
+
+        private List<List<StatInfo>> Split(IList<StatInfo> source)
         {
             var result = new List<List<StatInfo>>();
 
@@ -215,6 +289,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 result[i].Add(item);
+
+                if (result[i].Count == 4 && IsVertical)
+                {
+                    result.Add(new List<StatInfo>());
+                    i++;
+                }
             }
 
             return result;
@@ -237,6 +317,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 AssociatedObject.Unloaded -= AssociatedObject_Unloaded;
+                AssociatedObject.SizeChanged -= AssociatedObject_SizeChanged;
 
                 isCleanedup = true;
             }

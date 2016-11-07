@@ -18,7 +18,7 @@ using System.Text;
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public class BetOnlineBaseDataManager
+    internal class BetOnlineBaseDataManager
     {
         protected string Decrypt(string encryptedXml)
         {

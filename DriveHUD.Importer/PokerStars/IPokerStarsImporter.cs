@@ -12,7 +12,7 @@
 
 namespace DriveHUD.Importers.PokerStars
 {
-    public interface IPokerStarsImporter : IAutoImporter
+    internal interface IPokerStarsImporter : IAutoImporter
     {
     }
 }

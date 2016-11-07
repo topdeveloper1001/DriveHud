@@ -33,7 +33,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.PokerStars
 {
-    public class PokerStarsImporter : BaseImporter, IPokerStarsImporter
+    internal class PokerStarsImporter : BaseImporter, IPokerStarsImporter
     {
         private Dictionary<string, CapturedFile> capturedFiles;
         private HashSet<string> filesToSkip;
@@ -44,9 +44,9 @@ namespace DriveHUD.Importers.PokerStars
         private const string ProcessName = "PokerStars";
         private const int ReadingTimeout = 3000;
 
-        public PokerStarsImporter(IEventAggregator eventAggregator)
+        public PokerStarsImporter()
         {
-            this.eventAggregator = eventAggregator;
+            this.eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
             capturedFiles = new Dictionary<string, CapturedFile>();
             filesToSkip = new HashSet<string>();
         }

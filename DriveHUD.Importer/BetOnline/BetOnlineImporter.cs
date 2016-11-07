@@ -18,7 +18,7 @@ namespace DriveHUD.Importers.BetOnline
     /// <summary>
     /// Imports hands from BetOnline poker clients
     /// </summary>
-    public class BetOnlineImporter : PokerClientImporter, IBetOnlineImporter
+    internal class BetOnlineImporter : PokerClientImporter, IBetOnlineImporter
     {
         private const string site = "BetOnline";
 

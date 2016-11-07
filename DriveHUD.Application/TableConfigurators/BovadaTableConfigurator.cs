@@ -103,6 +103,7 @@ namespace DriveHUD.Application.TableConfigurators
                                 IsRightOriented = isRightOriented,
                                 TiltMeter = 100,
                                 HudType = HudType,
+                                HudViewType = ViewModels.Hud.HudViewType.Vertical_1,
                                 Position = new Point(hudElementPositionX, hudElementPositionY)
                             }).ToArray();
 

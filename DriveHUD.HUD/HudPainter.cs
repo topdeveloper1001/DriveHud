@@ -10,8 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.Views;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using ManagedWinapi.Windows;
@@ -24,7 +26,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Windows.Interop;
 
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.HUD
 {
     /// <summary>
     /// This class is responsible for drawing om Bovada table. It listens Win Events and manages size, position changes and also window close event
@@ -245,6 +247,12 @@ namespace DriveHUD.Application.ViewModels
             var window = windows[hwnd];
             windows.Remove(hwnd);
             window.Window.Close();
+
+            LogProvider.Log.Info(string.Format("Memory used before collection: {0:N0}", GC.GetTotalMemory(false)));
+
+            GC.Collect();
+
+            LogProvider.Log.Info(string.Format("Memory used after collection: {0:N0}", GC.GetTotalMemory(false)));
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)

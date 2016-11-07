@@ -40,7 +40,7 @@ namespace DriveHUD.Importers
     /// <summary>
     /// Implementation of file importer
     /// </summary>
-    public class FileImporter : IFileImporter
+    internal class FileImporter : IFileImporter
     {
         private readonly string[] importingExtensions = new[] { "txt", "xml" };
 
@@ -144,6 +144,7 @@ namespace DriveHUD.Importers
 
             IHandHistoryParser handHistoryParser;
 
+            // get suitable parser for specified hh
             if (gameInfo != null)
             {
                 handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser(gameInfo.PokerSite);
@@ -157,6 +158,7 @@ namespace DriveHUD.Importers
                     PokerSite = handHistoryParserFactory.LastSelected
                 };
             }
+
 
             try
             {
@@ -236,7 +238,6 @@ namespace DriveHUD.Importers
                 return null;
             }
 
-            // TODO: use real poker site id
             var pokerSiteId = gameInfo != null ? (short)gameInfo.PokerSite : (short)EnumPokerSites.IPoker;
 
             var handHistory = new Handhistory
