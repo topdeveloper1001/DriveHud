@@ -47,6 +47,12 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
+            if (handText.StartsWith("Game started", StringComparison.InvariantCultureIgnoreCase))
+            {
+                siteName = EnumPokerSites.WinningPoker;
+                return true;
+            }
+
             // xml file
             if (handText[0] == '<')
             {

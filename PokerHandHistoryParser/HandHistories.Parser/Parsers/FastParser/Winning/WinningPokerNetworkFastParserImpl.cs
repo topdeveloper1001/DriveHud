@@ -19,10 +19,16 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
     sealed class WinningPokerNetworkFastParserImpl : HandHistoryParserFastImpl
     {
         private const int GameIDStartIndex = 9;
+        private const int ActionPlayerNameStartIndex = 7;
 
         public override EnumPokerSites SiteName
         {
             get { return EnumPokerSites.WinningPoker; }
+        }
+
+        public override bool RequiresTotalPotCalculation
+        {
+            get { return true; }
         }
 
         public override bool IsValidHand(string[] handLines)
@@ -364,71 +370,71 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Skipping PlayerList
             int ActionsStart = GetActionStart(handLines);
 
-            ////Parsing Fixed Actions
-            //if (PlayerWithSpaces)
-            //{
-            //    ActionsStart = SkipSitOutLines(handLines, ActionsStart);
-            //    handActions.Add(ParseSmallBlindWithSpaces(handLines[ActionsStart++], playerList));
-            //    ActionsStart = SkipSitOutLines(handLines, ActionsStart);
-            //    handActions.Add(ParseBigBlindWithSpaces(handLines[ActionsStart++], playerList));
-            //}
-            //else
-            //{
-            //    ActionsStart = SkipSitOutLines(handLines, ActionsStart);
-            //    handActions.Add(ParseSmallBlind(handLines[ActionsStart++]));
-            //    ActionsStart = SkipSitOutLines(handLines, ActionsStart);
-            //    handActions.Add(ParseBigBlind(handLines[ActionsStart++]));
-            //}
+            //Parsing Fixed Actions
+            if (PlayerWithSpaces)
+            {
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
+                handActions.Add(ParseSmallBlindWithSpaces(handLines[ActionsStart++], playerList));
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
+                handActions.Add(ParseBigBlindWithSpaces(handLines[ActionsStart++], playerList));
+            }
+            else
+            {
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
+                handActions.Add(ParseSmallBlind(handLines[ActionsStart++]));
+                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
+                handActions.Add(ParseBigBlind(handLines[ActionsStart++]));
+            }
 
-            //ActionsStart = ParsePosts(handLines, handActions, ActionsStart);
+            ActionsStart = ParsePosts(handLines, handActions, ActionsStart);
 
-            ////Skipping all "received a card."
-            //ActionsStart = SkipDealer(handLines, ActionsStart);
+            //Skipping all "received a card."
+            ActionsStart = SkipDealer(handLines, ActionsStart);
 
-            ////ParseActions
-            //for (int i = ActionsStart; i < handLines.Length; i++)
-            //{
-            //    string actionLine = handLines[i];
-            //    if (actionLine[0] == 'P')
-            //    {
-            //        var action = ParseRegularAction(actionLine, currentStreet, playerList, handActions, PlayerWithSpaces);
-            //        if (action != null)
-            //        {
-            //            handActions.Add(action);
-            //        }
-            //    }
-            //    else if (actionLine[0] == '*')
-            //    {
-            //        //*** FLOP ***: [10s 9c 2c]
-            //        currentStreet = ParseNextStreet(actionLine);
-            //    }
-            //    else if (actionLine[0] == 'U')
-            //    {
-            //        const string UncalledBet = ") returned to ";
-            //        string playerName = actionLine.Substring(actionLine.IndexOf(UncalledBet, StringComparison.Ordinal) + UncalledBet.Length);
-            //        handActions.Add(new HandAction(playerName, HandActionType.UNCALLED_BET, ParseActionAmountBeforePlayer(actionLine), currentStreet));
-            //    }
-            //    else if (actionLine[0] == '-')
-            //    {
-            //        ActionsStart = i++;
-            //        break;
-            //    }
-            //}
+            //ParseActions
+            for (int i = ActionsStart; i < handLines.Length; i++)
+            {
+                string actionLine = handLines[i];
+                if (actionLine[0] == 'P')
+                {
+                    var action = ParseRegularAction(actionLine, currentStreet, playerList, handActions, PlayerWithSpaces);
+                    if (action != null)
+                    {
+                        handActions.Add(action);
+                    }
+                }
+                else if (actionLine[0] == '*')
+                {
+                    //*** FLOP ***: [10s 9c 2c]
+                    currentStreet = ParseNextStreet(actionLine);
+                }
+                else if (actionLine[0] == 'U')
+                {
+                    const string UncalledBet = ") returned to ";
+                    string playerName = actionLine.Substring(actionLine.IndexOf(UncalledBet, StringComparison.Ordinal) + UncalledBet.Length);
+                    handActions.Add(new HandAction(playerName, HandActionType.UNCALLED_BET, ParseActionAmountBeforePlayer(actionLine), currentStreet));
+                }
+                else if (actionLine[0] == '-')
+                {
+                    ActionsStart = i++;
+                    break;
+                }
+            }
 
-            ////expected Summary
-            ////------ Summary ------
-            ////Pot: 14.95. Rake 0.80
-            ////Board: [5c 8s 4h 10c 10s]
-            //for (int i = ActionsStart + 2; i < handLines.Length; i++)
-            //{
-            //    string actionLine = handLines[i];
-            //    //Parse winning action
-            //    if (actionLine[0] == '*')
-            //    {
-            //        var action = ParseWinningsAction(actionLine, playerList, PlayerWithSpaces);
-            //        handActions.Add(action);
-            //    }
-            //}
+            //expected Summary
+            //------ Summary ------
+            //Pot: 14.95. Rake 0.80
+            //Board: [5c 8s 4h 10c 10s]
+            for (int i = ActionsStart + 2; i < handLines.Length; i++)
+            {
+                string actionLine = handLines[i];
+                //Parse winning action
+                if (actionLine[0] == '*')
+                {
+                    var action = ParseWinningsAction(actionLine, playerList, PlayerWithSpaces);
+                    handActions.Add(action);
+                }
+            }
             return handActions;
         }
 
@@ -436,6 +442,285 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         {
             throw new NotImplementedException();
         }
+
+        private HandAction ParseRegularAction(string line, Street currentStreet, PlayerList playerList, List<HandAction> actions, bool PlayerWithSpaces)
+        {
+            string PlayerName = PlayerWithSpaces ?
+                GetPlayerNameWithSpaces(line, playerList) :
+                GetPlayerNameWithoutSpaces(line);
+
+            int actionIDIndex = ActionPlayerNameStartIndex + PlayerName.Length + 1;
+            char actionID = line[actionIDIndex];
+            switch (actionID)
+            {
+                //Player PersnicketyBeagle folds
+                case 'f':
+                    return new HandAction(PlayerName, HandActionType.FOLD, 0, currentStreet);
+                case 'r':
+                    return new HandAction(PlayerName, HandActionType.RAISE, ParseActionAmountAfterPlayer(line), currentStreet);
+                //checks or calls
+                case 'c':
+                    //Player butta21 calls (20)
+                    //Player jayslowplay caps (3.50)
+                    //Player STOPCRYINGB79 checks
+                    char actionID2 = line[actionIDIndex + 2];
+                    if (actionID2 == 'e')
+                    {
+                        return new HandAction(PlayerName, HandActionType.CHECK, 0, currentStreet);
+                    }
+                    else if (actionID2 == 'l')
+                    {
+                        return new HandAction(PlayerName, HandActionType.CALL, ParseActionAmountAfterPlayer(line), currentStreet);
+                    }
+                    else if (actionID2 == 'p')
+                    {
+                        //treat CAP as allin
+                        return new HandAction(PlayerName, HandActionType.ALL_IN, ParseActionAmountAfterPlayer(line), currentStreet);
+                    }
+                    else
+                    {
+                        throw new NotImplementedException("HandActionType: " + line);
+                    }
+                case 'b':
+                    if (currentStreet == Street.Preflop)
+                    {
+                        return new HandAction(PlayerName, HandActionType.RAISE, ParseActionAmountAfterPlayer(line), currentStreet);
+                    }
+                    else
+                    {
+                        return new HandAction(PlayerName, HandActionType.BET, ParseActionAmountAfterPlayer(line), currentStreet);
+                    }
+                //Player PersnicketyBeagle allin (383)
+                case 'a':
+                    var amount = ParseActionAmountAfterPlayer(line);
+                    var actionType = AllInActionHelper.GetAllInActionType(PlayerName, amount, currentStreet, actions);
+                    return new HandAction(PlayerName, actionType, amount, currentStreet, true);
+                case 'm'://Player PersnicketyBeagle mucks cards
+                case 'i'://Player ECU7184 is timed out.
+                    return null;
+            }
+            throw new HandActionException(line, "HandActionType: " + line);
+        }
+
+        private HandAction ParseWinningsAction(string line, PlayerList playerList, bool PlayerWithSpaces)
+        {
+            string playerName = PlayerWithSpaces ? GetWinnerNameWithSpaces(line, playerList) : GetWinnerNameWithoutSpaces(line);
+            int winAmountStartIndex = line.LastIndexOf("cts:", StringComparison.Ordinal) + 5;
+            int winAmountEndIndex = line.IndexOf(". ", winAmountStartIndex, StringComparison.Ordinal);
+            string winString = line.Substring(winAmountStartIndex, winAmountEndIndex - winAmountStartIndex);
+            decimal winAmount = winString.ParseAmount();
+            return new WinningsAction(playerName, HandActionType.WINS, winAmount, 0);
+        }
+
+        private int SkipSitOutLines(string[] handLines, int ActionsStart)
+        {
+            for (int i = ActionsStart; i < handLines.Length; i++)
+            {
+                string line = handLines[i];
+                if (line[line.Length - 1] == ')')
+                {
+                    return i;
+                }
+            }
+            throw new Exception("Did not find end of Sitout Lines");
+        }
+
+        private HandAction ParseSmallBlind(string bbPost)
+        {
+            int playerNameEndIndex = GetPlayerNameEndIndex(bbPost);
+            string PlayerName = bbPost.Substring(ActionPlayerNameStartIndex, playerNameEndIndex - ActionPlayerNameStartIndex);
+            return new HandAction(PlayerName, HandActionType.SMALL_BLIND, ParseActionAmountAfterPlayer(bbPost), Street.Preflop);
+        }
+
+        private HandAction ParseBigBlind(string bbPost)
+        {
+            int playerNameEndIndex = GetPlayerNameEndIndex(bbPost);
+            string PlayerName = bbPost.Substring(ActionPlayerNameStartIndex, playerNameEndIndex - ActionPlayerNameStartIndex);
+            return new HandAction(PlayerName, HandActionType.BIG_BLIND, ParseActionAmountAfterPlayer(bbPost), Street.Preflop);
+        }
+
+        private HandAction ParseSmallBlindWithSpaces(string sbPost, PlayerList players)
+        {
+            string PlayerName = GetPlayerNameWithSpaces(sbPost, players);
+            return new HandAction(PlayerName, HandActionType.SMALL_BLIND, ParseActionAmountAfterPlayer(sbPost), Street.Preflop);
+        }
+
+        private HandAction ParseBigBlindWithSpaces(string bbPost, PlayerList players)
+        {
+            string PlayerName = GetPlayerNameWithSpaces(bbPost, players);
+            return new HandAction(PlayerName, HandActionType.BIG_BLIND, ParseActionAmountAfterPlayer(bbPost), Street.Preflop);
+        }
+
+        private static Street ParseNextStreet(string actionLine)
+        {
+            //*** FLOP ***: [10s 9c 2c]
+            const int StreetIndex = 4;
+            switch (actionLine[StreetIndex])
+            {
+                case 'F':
+                    return Street.Flop;
+                case 'T':
+                    return Street.Turn;
+                case 'R':
+                    return Street.River;
+                default:
+                    throw new ArgumentException("Street: " + actionLine);
+            }
+        }
+
+        private string GetWinnerNameWithoutSpaces(string actionLine)
+        {
+            int playerNameEndIndex = actionLine.IndexOf(' ', ActionPlayerNameStartIndex + 1);
+            return actionLine.Substring(ActionPlayerNameStartIndex + 1, playerNameEndIndex - ActionPlayerNameStartIndex - 1);
+        }
+
+        private string GetWinnerNameWithSpaces(string actionLine, PlayerList playerList)
+        {
+            //Must choose the longest name if one name starts with an other name
+            int length = 0;
+            string result = null;
+            foreach (var player in playerList)
+            {
+                if (actionLine.StartsWith("*Player " + player.PlayerName, StringComparison.Ordinal) && player.PlayerName.Length > length)
+                {
+                    length = player.PlayerName.Length;
+                    result = player.PlayerName;
+                }
+            }
+            return result;
+        }
+
+        private string GetPlayerNameWithoutSpaces(string actionLine)
+        {
+            int endIndex = actionLine.IndexOf(' ', ActionPlayerNameStartIndex);
+            return actionLine.Substring(ActionPlayerNameStartIndex, endIndex - ActionPlayerNameStartIndex);
+        }
+
+        private string GetPlayerNameWithSpaces(string actionLine, PlayerList playerList)
+        {
+            //Must choose the longest name if one name starts with an other name
+            int length = 0;
+            string result = null;
+            foreach (var player in playerList)
+            {
+                if (actionLine.StartsWith("Player " + player.PlayerName, StringComparison.Ordinal) && player.PlayerName.Length > length)
+                {
+                    length = player.PlayerName.Length;
+                    result = player.PlayerName;
+                }
+            }
+            return result;
+        }
+
+        private int SkipDealer(string[] handLines, int ActionsStart)
+        {
+            for (int i = ActionsStart; i < handLines.Length; i++)
+            {
+                //Player LadyStack received a card.
+                string Line = handLines[i];
+                switch (handLines[i][Line.Length - 1])
+                {
+                    case 'B':
+                    case '.':
+                    case ']'://Player {playername} received card: [2h]
+                        continue;
+                    default:
+                        return i;
+                }
+            }
+            throw new ArgumentOutOfRangeException("handlines");
+        }
+
+        private int GetPlayerNameEndIndex(string handLine)
+        {
+            return handLine.IndexOf(' ', ActionPlayerNameStartIndex);
+        }
+
+        /// <summary>
+        /// The amount must be after the player name or it will fail when players have a parathesis in their name
+        /// </summary>
+        /// <param name="handLine"></param>
+        /// <returns></returns>
+        private decimal ParseActionAmountAfterPlayer(string handLine)
+        {
+            int endIndex = handLine.LastIndexOf(')');
+            int startIndex = handLine.LastIndexOf('(', endIndex) + 1;
+            string text = handLine.Substring(startIndex, endIndex - startIndex);
+            return text.ParseAmount();
+        }
+
+        /// <summary>
+        /// The amount must be before the player name or it will fail when players have a parathesis in their name
+        /// </summary>
+        /// <param name="handLine"></param>
+        /// <returns></returns>
+        private decimal ParseActionAmountBeforePlayer(string handLine)
+        {
+            int startIndex = handLine.IndexOf('(') + 1;
+            int endIndex = handLine.IndexOf(')', startIndex);
+            string text = handLine.Substring(startIndex, endIndex - startIndex);
+            return text.ParseAmount();
+        }
+
+        private int ParsePosts(string[] handLines, List<HandAction> actions, int ActionsStart)
+        {
+            for (int i = ActionsStart; i < handLines.Length; i++)
+            {
+                const int PlayerNameStartindex = 7;//"Player ".Length
+                string line = handLines[i];
+
+                char endChar = line[line.Length - 1];
+                bool deadBet = false;
+
+                switch (endChar)
+                {
+                    //Player bubblebubble wait BB
+                    case 'B':
+                        continue;//More posts can still occur
+
+                    //Player Aquasces1 received a card.
+                    case '.':
+                    //Player WP_Hero received card: [6d]
+                    case ']':
+                        //No more posts can occur when players start reciving cards
+                        return i;
+
+                    //Player TheKunttzz posts (0.25) as a dead bet
+                    //Player TheKunttzz posts (0.50)
+                    case 't':
+                        deadBet = true;
+                        break;
+
+                    //Player Aquasces1 has small blind (2)
+                    //Player COMON-JOE-JUG has big blind (4)
+                    //Player TheKunttzz posts (0.25)
+                    //Player TheKunttzz straddles (0.50)
+                    case ')':
+                        break;
+
+                    default:
+                        throw new HandActionException(line, "Unrecognized endChar \"" + endChar + "\"");
+                }
+
+                int playerNameEndIndex = line.IndexOf(" posts (", StringComparison.Ordinal);
+                if (playerNameEndIndex == -1)
+                {
+                    playerNameEndIndex = line.IndexOf(" straddle (", StringComparison.Ordinal);
+                }
+
+                string playerName = line.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
+                decimal Amount = ParseActionAmountAfterPlayer(line);
+
+                if (deadBet)
+                {
+                    Amount += ParseActionAmountAfterPlayer(handLines[++i]);
+                }
+
+                actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop));
+            }
+            throw new Exception("Did not find start of Dealing of cards");
+        }
+
 
         private int GetActionStart(string[] handLines)
         {

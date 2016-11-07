@@ -1,7 +1,7 @@
 ﻿Game started at: 2016/11/3 18:21:2
 Game ID: 766789047 20/40 $10 Freeroll - On Demand, Table 26 (Hold'em)
 Seat 2 is the button
-Seat 1: artgdev (1500).
+Seat 1: Hero (1500).
 Seat 2: Parkerherd (4540).
 Seat 4: BlueJeanie (95).
 Seat 5: undertgun (1395).
@@ -23,8 +23,8 @@ Player beefkabab received a card.
 Player beefkabab received a card.
 Player bubby04 received a card.
 Player bubby04 received a card.
-Player artgdev received card: [10s]
-Player artgdev received card: [10c]
+Player Hero received card: [10s]
+Player Hero received card: [10c]
 Player Parkerherd received a card.
 Player Parkerherd received a card.
 Player transitions allin (490)
@@ -32,18 +32,18 @@ Player 1DeadPhish folds
 Player beefkabab is timed out.
 Player beefkabab folds
 Player bubby04 folds
-Player artgdev raises (1000)
+Player Hero raises (1000)
 Player Parkerherd folds
 Player BlueJeanie folds
 Player undertgun folds
-Uncalled bet (510) returned to artgdev
+Uncalled bet (510) returned to Hero
 *** FLOP ***: [Jh 6s 3s]
 *** TURN ***: [Jh 6s 3s] [4s]
 *** RIVER ***: [Jh 6s 3s 4s] [Ac]
 ------ Summary ------
 Pot: 1040
 Board: [Jh 6s 3s 4s Ac]
-Player artgdev shows: One pair of 10s [10s 10c]. Bets: 490. Collects: 0. Loses: 490.
+Player Hero shows: One pair of 10s [10s 10c]. Bets: 490. Collects: 0. Loses: 490.
 Player Parkerherd does not show cards.Bets: 0. Collects: 0. Wins: 0.
 Player BlueJeanie does not show cards.Bets: 20. Collects: 0. Loses: 20.
 Player undertgun does not show cards.Bets: 40. Collects: 0. Loses: 40.
