@@ -110,7 +110,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BaseImporter.cs" />
+    <Compile Include="Base\BaseImporter.cs" />
+    <Compile Include="Base\FileBasedImporter.cs" />
     <Compile Include="BetOnline\BetOnlineBaseDataManager.cs" />
     <Compile Include="BetOnline\BetOnlineCatcher.cs" />
     <Compile Include="BetOnline\BetOnlineDataManager.cs" />
@@ -192,7 +193,6 @@
     <Compile Include="Builders\iPoker\StringExtensions.cs" />
     <Compile Include="DataImportedEvent.cs" />
     <Compile Include="DataImportedEventArgs.cs" />
-    <Compile Include="FileBasedImporter.cs" />
     <Compile Include="FileImporter.cs" />
     <Compile Include="GameInfo.cs" />
     <Compile Include="GameMatchInfo.cs" />
