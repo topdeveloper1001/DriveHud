@@ -93,8 +93,9 @@ namespace DriveHUD.Application.TableConfigurators
         {
             try
             {
-                if (viewModel == null)
+                if (viewModel == null || viewModel.CurrentGame == null)
                 {
+                    LogProvider.Log.Info("Cannot find handHistory");
                     return;
                 }
 
