@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace Model
 {
@@ -12,6 +13,14 @@ namespace Model
     {
         public string Name { get; set; }
         public EnumPokerSites PokerSite { get; set; }
+
+        public string DecodedName
+        {
+            get
+            {
+                return HttpUtility.HtmlDecode(Name);
+            }
+        }
 
         public override bool Equals(Object obj)
         {

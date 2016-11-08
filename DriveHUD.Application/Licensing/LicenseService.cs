@@ -157,7 +157,7 @@ namespace DriveHUD.Application.Licensing
         /// <param name="serial">Serial number</param>
         public bool Register(string serial, string email)
         {
-            if (string.IsNullOrWhiteSpace(serial))
+             if (string.IsNullOrWhiteSpace(serial))
             {
                 throw new DHBusinessException(new NonLocalizableString("Serial is not defined."));
             }

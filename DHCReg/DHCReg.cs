@@ -21,7 +21,7 @@ namespace DHCRegistration
     /// Combo license manager
     /// </summary>
     [LicenseProvider(typeof(SecureLicenseManager))]
-    internal class DHCReg : ILicenseManager
+    public class DHCReg : ILicenseManager
     {
         public void ResetCacheForLicense(SecureLicense license)
         {

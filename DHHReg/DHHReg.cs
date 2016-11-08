@@ -20,7 +20,7 @@ namespace DHHRegistration
     /// Holdem license manager
     /// </summary>
     [LicenseProvider(typeof(SecureLicenseManager))]
-    internal class DHHReg : ILicenseManager
+    public class DHHReg : ILicenseManager
     {
         public void ResetCacheForLicense(SecureLicense license)
         {

@@ -93,8 +93,9 @@ namespace DriveHUD.Application.TableConfigurators
         {
             try
             {
-                if (viewModel == null)
+                if (viewModel == null || viewModel.CurrentGame == null)
                 {
+                    LogProvider.Log.Info("Cannot find handHistory");
                     return;
                 }
 
@@ -325,7 +326,7 @@ namespace DriveHUD.Application.TableConfigurators
 
             for (int i = 0; i < cardsCount; i++)
             {
-                var card = CreateCardLabel(diagram, player.Cards[i], String.Format("card{0}_{1}", i, player.SafeNameString));
+                var card = CreateCardLabel(diagram, player.Cards[i]);
                 card.SetBinding(UIElement.VisibilityProperty, myBinding);
 
                 if (cardsCount == 4)
@@ -359,11 +360,10 @@ namespace DriveHUD.Application.TableConfigurators
             }
         }
 
-        private RadDiagramShape CreateCardLabel(RadDiagram diagram, ReplayerCardViewModel card, string name)
+        private RadDiagramShape CreateCardLabel(RadDiagram diagram, ReplayerCardViewModel card)
         {
             var label = new RadDiagramShape()
             {
-                Name = name,
                 Height = CARD_HEIGHT,
                 Width = CARD_WIDTH,
                 MaxHeight = CARD_HEIGHT,
@@ -395,7 +395,6 @@ namespace DriveHUD.Application.TableConfigurators
         {
             var button = new RadDiagramShape()
             {
-                Name = "Dealer_" + player.SafeNameString,
                 Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), DealerImage))),
                 Height = BUTTON_HEIGHT,
                 Width = BUTTON_WIDTH,
@@ -445,7 +444,7 @@ namespace DriveHUD.Application.TableConfigurators
 
             for (int i = 0; i < viewModel.CommunityCards.Count; i++)
             {
-                var card = CreateCardLabel(diagram, viewModel.CommunityCards[i], "board" + i.ToString());
+                var card = CreateCardLabel(diagram, viewModel.CommunityCards[i]);
 
                 Street cardStreet = i < 3 ? Street.Flop : i < 4 ? Street.Turn : Street.River;
                 Binding myBinding = new Binding(ReflectionHelper.GetPath<ViewModels.Replayer.ReplayerViewModel>(o => o.CurrentStreet)) { Source = viewModel, Mode = BindingMode.TwoWay, Converter = new StreetToVisibilityConverter(), ConverterParameter = cardStreet };
