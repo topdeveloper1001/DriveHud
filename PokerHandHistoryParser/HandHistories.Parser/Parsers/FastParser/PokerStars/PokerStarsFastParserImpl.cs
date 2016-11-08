@@ -273,7 +273,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             var tournamentDescriptor = new TournamentDescriptor
             {
-                TournamentId = tournamentId.ToString()
+                TournamentId = tournamentId.ToString(),
+                BuyIn = buyin
             };
 
             return tournamentDescriptor;

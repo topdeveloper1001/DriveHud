@@ -110,9 +110,11 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         }
 
         private static readonly Regex NumPlayersRegex = new Regex(@"(?<=Total number of players : )\d+", RegexOptions.Compiled);
+        private static readonly Regex SeatTypeRegex = new Regex(@"\d+ Max", RegexOptions.Compiled);
+
         protected override SeatType ParseSeatType(string[] handLines)
         {
-            int seatCount = Int32.Parse(NumPlayersRegex.Match(handLines[5]).Value);
+            int seatCount = Int32.Parse(SeatTypeRegex.Match(handLines[3]).Value.Replace(" Max", string.Empty));
 
             if (seatCount <= 2)
             {
@@ -170,41 +172,24 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             // the min buyin for standard table is > 30bb, so this should work in most cases
             // furthermore if on a regular table the average stack is < 17.5, the play is just like on a push fold table and vice versa
             bool isjackPotTable = handLines[2].Contains(" Jackpot table");
+            bool isPushOrFoldTable = handLines[3].Contains("Push or Fold");
 
-            var playerList = ParsePlayers(handLines);
-            var limit = ParseLimit(handLines);
-
-            var tableStack = 0m;
-            var playersBelow10bb = 0;
-            var playersAbove20bb = 0;
-            foreach (Player player in playerList)
-            {
-                tableStack += player.StartingStack;
-                if (player.StartingStack / limit.BigBlind == 5m) return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
-                if (player.StartingStack / limit.BigBlind <= 10m) playersBelow10bb++;
-                if (player.StartingStack / limit.BigBlind > 29m) playersAbove20bb++;
-
-                if (playersBelow10bb > 1) return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
-            }
-
-            if (playersAbove20bb == 0) return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
-
-            if (tableStack / limit.BigBlind / playerList.Count <= 17.5m)
+            if (isPushOrFoldTable)
             {
                 if (isjackPotTable)
                 {
                     return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold, TableTypeDescription.Jackpot);
                 }
+
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.PushFold);
             }
+
             if (isjackPotTable)
             {
                 return TableType.FromTableTypeDescriptions(TableTypeDescription.Jackpot);
             }
-            else
-            {
-                return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
-            }
+
+            return TableType.FromTableTypeDescriptions(TableTypeDescription.Regular);
         }
 
         protected override Limit ParseLimit(string[] handLines)
@@ -654,9 +639,32 @@ namespace HandHistories.Parser.Parsers.FastParser._888
         {
             var line = handLines[3];
 
+            //Tournament #89426293 $0.01 - Table #2 9 Max (Real Money)
+
+            var regex = new Regex(@"Tournament #(?<tournament_id>[^\s]+) (?<buyin>[^-]+) - Table #(?<tablenum>\d+) (?<tabletype>[^\(]+) \((?<money>[^\)]+)\)");
+
+            var match = regex.Match(line);
+
+            if (!match.Success)
+            {
+                return null;
+            }
+
+            var buyinText = match.Groups["buyin"].Value;
+
+            var splittedBuyin = buyinText.Split('+');
+
+            var prizePool = decimal.Parse(splittedBuyin[0], NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+
+            var rake = splittedBuyin.Length > 1 ? decimal.Parse(splittedBuyin[1], NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo) : 0m;
+
+            var currency = match.Groups["money"].Value.Contains("Real Money") ? Currency.USD : Currency.PlayMoney;
+
             var tournamentDescriptor = new TournamentDescriptor
             {
-                 
+                TournamentId = match.Groups["tournament_id"].Value,
+                BuyIn = Buyin.FromBuyinRake(prizePool, rake, currency),
+                TournamentName = string.Format("Tournament #{0}", match.Groups["tournament_id"].Value)
             };
 
             return tournamentDescriptor;
