@@ -10,26 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
-using DriveHUD.Common.Progress;
-using DriveHUD.Common.Utils;
-using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
-using HandHistories.Parser.Parsers;
-using HandHistories.Parser.Utils.Extensions;
-using Microsoft.Practices.ServiceLocation;
-using Model.Enums;
-using Model.Settings;
-using Model.Site;
-using Prism.Events;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.PokerStars
 {

@@ -289,7 +289,7 @@ namespace DriveHUD.Importers
 
                     if (!string.IsNullOrEmpty(title))
                     {
-                        if (Match(title, parsingResult.Source.TableName))
+                        if (Match(title, parsingResult))
                         {
                             return handle;
                         }

@@ -10,26 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
-using DriveHUD.Common.Progress;
-using DriveHUD.Common.Utils;
-using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using HandHistories.Parser.Parsers;
-using HandHistories.Parser.Utils.Extensions;
-using Microsoft.Practices.ServiceLocation;
-using Model.Enums;
-using Model.Settings;
-using Model.Site;
-using Prism.Events;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.Pacific888
 {
@@ -59,14 +41,24 @@ namespace DriveHUD.Importers.Pacific888
             }
         }
 
+        private const string tournamentPattern = "#{0} Table {1}";
+
         protected override bool Match(string title, ParsingResult parsingResult)
         {
-            if (string.IsNullOrWhiteSpace(title))
+            if (string.IsNullOrWhiteSpace(title) || parsingResult == null || !parsingResult.WasImported ||
+                parsingResult.Source == null || parsingResult.Source.GameDescription == null)
             {
                 return false;
             }
 
-            return true;
+            if (parsingResult.Source.GameDescription.IsTournament)
+            {
+                var tournamentTitle = string.Format(tournamentPattern, parsingResult.Source.GameDescription.Tournament.TournamentId, parsingResult.Source.TableName);
+
+                return title.Contains(tournamentTitle);
+            }
+
+            return title.Contains(parsingResult.Source.TableName);
         }
     }
 }

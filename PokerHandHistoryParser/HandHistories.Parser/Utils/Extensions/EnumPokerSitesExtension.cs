@@ -47,6 +47,12 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
+            if (handText.StartsWith("***** Cassava Tournament Summary *****", StringComparison.InvariantCultureIgnoreCase))
+            {
+                siteName = EnumPokerSites.Poker888;
+                return true;
+            }
+
             // xml file
             if (handText[0] == '<')
             {

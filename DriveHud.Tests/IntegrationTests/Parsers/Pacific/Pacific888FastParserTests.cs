@@ -187,7 +187,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", Currency.USD)]
-        public void BuyInIsParsedTest(string handHistoryFile, Currency currency)
+        public void BuyInCurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Tournament.BuyIn.Currency, Is.EqualTo(currency));
@@ -196,7 +196,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 0)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithRake.txt", 0.05)]
-        public void RakeIsParsedTest(string handHistoryFile, decimal rake)
+        public void BuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Tournament.BuyIn.Rake, Is.EqualTo(rake));
@@ -204,15 +204,142 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 89426293)]
-        public void TournmanetIdIsParsedTest(string handHistoryFile, long tournamentId)
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt", 89426293)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt", 34471039)]
+        public void TournamentIdIsParsedTest(string handHistoryFile, long tournamentId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Tournament.TournamentId, Is.EqualTo(tournamentId.ToString()));
         }
 
         [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt", 30)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt", 7)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-6max-SNG-0.10-201206.summary.txt", 3)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-FREE-MTT-$75Freeroll20120217-Summary.txt", 71)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-Freeroll-MTT-201205.russian.txt", 440)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-MTT-EUR-0.01-201206.freeroll.buyin.summary.txt", 93)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-PM-MTT-10-20120221-Summary.txt", 39)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 59)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3-201111.real.money.txt", 46)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-5-201111.cashed.txt", 7)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 3)]
+        public void TournamentSummaryPositionIsParsedTest(string handHistoryFile, int position)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.FinishPosition, Is.EqualTo(position));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt", 283)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt", 254)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-6max-SNG-0.10-201206.summary.txt", 6)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-FREE-MTT-$75Freeroll20120217-Summary.txt", 3854)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-Freeroll-MTT-201205.russian.txt", 2323)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-MTT-EUR-0.01-201206.freeroll.buyin.summary.txt", 664)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-PM-MTT-10-20120221-Summary.txt", 175)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 468)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3-201111.real.money.txt", 315)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-5-201111.cashed.txt", 254)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 6)]
+        public void TournamentSummaryTotalPlayersIsParsedTest(string handHistoryFile, int totalPlayers)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.TotalPlayers, Is.EqualTo(totalPlayers));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt", 50.8)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-6max-SNG-0.10-201206.summary.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-FREE-MTT-$75Freeroll20120217-Summary.txt", 0.3)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-Freeroll-MTT-201205.russian.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-MTT-EUR-0.01-201206.freeroll.buyin.summary.txt", 1.20)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-PM-MTT-10-20120221-Summary.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3-201111.real.money.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-5-201111.cashed.txt", 50.80)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 0)]
+        public void TournamentSummaryWinningIsParsedTest(string handHistoryFile, decimal winning)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.Winning, Is.EqualTo(winning));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 3.15)]
+        public void TournamentSummaryRebuyIsParsedTest(string handHistoryFile, decimal rebuy)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.Rebuy, Is.EqualTo(rebuy));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 3.15)]
+        public void TournamentSummaryAddonIsParsedTest(string handHistoryFile, decimal addon)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.Addon, Is.EqualTo(addon));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt", 0.01)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt", 5)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-6max-SNG-0.10-201206.summary.txt", 0.09)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-FREE-MTT-$75Freeroll20120217-Summary.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-Freeroll-MTT-201205.russian.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-MTT-EUR-0.01-201206.freeroll.buyin.summary.txt", 0.01)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-PM-MTT-10-20120221-Summary.txt", 10)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 3.15)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3-201111.real.money.txt", 3)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-5-201111.cashed.txt", 5)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 20)]
+        public void TournamentSummaryBuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, Is.EqualTo(buyin));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt", 0.5)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-6max-SNG-0.10-201206.summary.txt", 0.01)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-FREE-MTT-$75Freeroll20120217-Summary.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-Freeroll-MTT-201205.russian.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-MTT-EUR-0.01-201206.freeroll.buyin.summary.txt", 00)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-PM-MTT-10-20120221-Summary.txt", 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 0.35)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3-201111.real.money.txt", 0.3)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-5-201111.cashed.txt", 0.5)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 1)]
+        public void TournamentSummaryBuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.Rake, Is.EqualTo(rake));
+        }
+
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt", "Peon_84")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt", "Hero")]
+        public void TournamentSummaryHeroIsParsedTest(string handHistoryFile, string heroName)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.Hero.PlayerName, Is.EqualTo(heroName));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt", true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", false)]
+        public void TournamentSummaryIsParsedTest(string handHistoryFile, bool isSummary)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.IsSummary, Is.EqualTo(isSummary));
+        }
+
+        [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "Tournament #89426293")]
-        public void TournmanetNameIsParsedTest(string handHistoryFile, string tournamentName)
+        public void TournamentNameIsParsedTest(string handHistoryFile, string tournamentName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.GameDescription.Tournament.TournamentName, Is.EqualTo(tournamentName));
@@ -317,7 +444,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "leandro5678", -750, HandActionType.RAISE, Street.Preflop,  1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "leandro5678", -750, HandActionType.RAISE, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "Bakermansam", -250, HandActionType.BIG_BLIND, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "Bakermansam", -500, HandActionType.CALL, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "Bakermansam", -220, HandActionType.ALL_IN, Street.Flop, 1)]
