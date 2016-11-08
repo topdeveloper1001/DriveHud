@@ -25,11 +25,15 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
+using HandHistories.Objects.Hand;
+using DriveHUD.Common.Log;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
     sealed class Poker888FastParserImpl : HandHistoryParserFastImpl
     {
+        private const string tournamentSummaryHeader = "***** Cassava Tournament Summary *****";
+
         static readonly CultureInfo invariant = CultureInfo.InvariantCulture;
 
         public override EnumPokerSites SiteName
@@ -228,6 +232,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             isCancelled = false;
 
             var seatedPlayersLine = handLines[5];
+
             if (seatedPlayersLine[seatedPlayersLine.Length - 1] == '1')
             {
                 isCancelled = true;
@@ -637,9 +642,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
-            var line = handLines[3];
-
-            //Tournament #89426293 $0.01 - Table #2 9 Max (Real Money)
+            var line = handLines[3];         
 
             var regex = new Regex(@"Tournament #(?<tournament_id>[^\s]+) (?<buyin>[^-]+) - Table #(?<tablenum>\d+) (?<tabletype>[^\(]+) \((?<money>[^\)]+)\)");
 
@@ -668,6 +671,158 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             };
 
             return tournamentDescriptor;
+        }
+
+        protected override bool IsSummaryHand(string[] handLines)
+        {
+            return handLines.Length > 0 && handLines[0].StartsWith(tournamentSummaryHeader, StringComparison.InvariantCultureIgnoreCase);
+        }
+
+        private static readonly Regex SummaryFinishedRegex = new Regex(@"(?<player>.*) finished (?<position>\d+)/(?<total>\d+)(?: and won (?<won>.*))?", RegexOptions.Compiled);
+
+        protected override HandHistory ParseSummaryHand(string[] handLines, HandHistory handHistory)
+        {
+            var tournament = new TournamentDescriptor
+            {
+                Summary = string.Join(Environment.NewLine, handLines)
+            };
+
+            foreach (var handLine in handLines)
+            {
+                // parse tournament id
+                if (handLine.StartsWith("Tournament ID", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var indexOfColon = handLine.IndexOf(":");
+                    tournament.TournamentId = handLine.Substring(indexOfColon + 1).Trim();
+                }
+                else if (handLine.StartsWith("Buy-In", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var buyInText = ParseTournamentSummaryMoneyLine(handLine);
+
+                    var buyInSplit = buyInText.Split('+');
+
+                    decimal buyIn = 0;
+                    decimal rake = 0;
+                    Currency currency = Currency.USD;
+
+                    if (TryParseMoneyText(buyInSplit[0], out buyIn, out currency))
+                    {
+                        if (buyInSplit.Length > 1)
+                        {
+                            TryParseMoneyText(buyInSplit[1], out rake, out currency);
+                        }
+                    }
+
+                    tournament.BuyIn = Buyin.FromBuyinRake(buyIn, rake, currency);
+                }
+                else if (handLine.StartsWith("Rebuy", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var rebuyText = ParseTournamentSummaryMoneyLine(handLine);
+
+                    decimal rebuy = 0;
+                    Currency currency = Currency.USD;
+
+                    if (TryParseMoneyText(rebuyText, out rebuy, out currency))
+                    {
+                        tournament.Rebuy = rebuy;
+                    }
+                }
+                else if (handLine.StartsWith("Add-On", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var addonText = ParseTournamentSummaryMoneyLine(handLine);
+
+                    decimal addon = 0;
+                    Currency currency = Currency.USD;
+
+                    if (TryParseMoneyText(addonText, out addon, out currency))
+                    {
+                        tournament.Addon = addon;
+                    }
+                }
+                else if (handLine.Contains("finished"))
+                {
+                    var match = SummaryFinishedRegex.Match(handLine);
+
+                    if (!match.Success)
+                    {
+                        LogProvider.Log.Error(string.Format("'{0}' wasn't parsed", handLine));
+                        continue;
+                    }
+
+                    var playerName = match.Groups["player"].Value;
+                    var positionText = match.Groups["position"].Value;
+                    var totalPlayersText = match.Groups["total"].Value;
+                    var wonText = match.Groups["won"] != null ? match.Groups["won"].Value.Replace(",", ".").Trim() : string.Empty;
+
+                    handHistory.Hero = new Player(playerName, 0, 0);
+
+                    int position = 0;
+                    int totalPlayers = 0;
+                    decimal won = 0;
+                    Currency wonCurrency = Currency.USD;
+
+                    if (!int.TryParse(positionText, out position))
+                    {
+                        LogProvider.Log.Error(string.Format("'{0}' position wasn't parsed", handLine));
+                        continue;
+                    }
+
+                    if (!int.TryParse(totalPlayersText, out totalPlayers))
+                    {
+                        LogProvider.Log.Error(string.Format("'{0}' total players weren't parsed", handLine));
+                        continue;
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(wonText) && !TryParseMoneyText(wonText, out won, out wonCurrency))
+                    {
+                        LogProvider.Log.Error(string.Format("'{0}' won data wasn't parsed", handLine));
+                        continue;
+                    }
+
+                    tournament.FinishPosition = position;
+                    tournament.TotalPlayers = totalPlayers;
+                    tournament.Winning = won;
+                }
+            }
+
+            handHistory.GameDescription = new GameDescriptor(EnumPokerSites.Poker888,
+                GameType.Unknown,
+                null,
+                TableType.FromTableTypeDescriptions(),
+                SeatType.AllSeatType(),
+                tournament);
+
+            return handHistory;
+        }
+
+        private static readonly Regex MoneyRegex = new Regex(@"(?<currency1>[^\d]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\d]+)?", RegexOptions.Compiled);
+
+        private bool TryParseMoneyText(string moneyText, out decimal money, out Currency currency)
+        {
+            money = 0;
+            currency = Currency.USD;
+
+            var match = MoneyRegex.Match(moneyText);
+
+            if (!match.Success)
+            {
+                return false;
+            }
+
+            if (!decimal.TryParse(match.Groups["money"].Value, NumberStyles.Number, NumberFormatInfo, out money))
+            {
+                return false;
+            }
+
+            return true;
+        }
+
+        private string ParseTournamentSummaryMoneyLine(string line)
+        {
+            line = line.Replace(",", ".");
+            var indexOfColon = line.IndexOf(":");
+            var parsedText = line.Substring(indexOfColon + 1).Trim();
+            return parsedText;
         }
     }
 }
