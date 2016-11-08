@@ -240,6 +240,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Default));
             Container.RegisterType<ITableConfigurator, PokerStarsTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Plain));
 
+            // 888 poker
+
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);
 

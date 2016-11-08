@@ -207,7 +207,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         public void TournmanetIdIsParsedTest(string handHistoryFile, long tournamentId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            Assert.That(handHistory.GameDescription.Tournament.TournamentId, Is.EqualTo(tournamentId));
+            Assert.That(handHistory.GameDescription.Tournament.TournamentId, Is.EqualTo(tournamentId.ToString()));
         }
 
         [Test]
@@ -235,7 +235,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", false)]
         public void HeroIsLostIsParsedTest(string handHistoryFile, bool isLost)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -267,7 +267,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "Table #2")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "#2")]
         public void TableNameIsParsedTest(string handHistoryFile, string tableName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
