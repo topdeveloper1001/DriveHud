@@ -58,8 +58,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new IPokerFastParserImpl();
                 case EnumPokerSites.Poker888:
                     return new Poker888FastParserImpl();
-                case EnumPokerSites.WinningPoker:
-                    return new WinningPokerNetworkFastParserImpl();
+                case EnumPokerSites.AmericasCardroom:
+                    return new AmericasCardroomFastParserImpl();
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
             }

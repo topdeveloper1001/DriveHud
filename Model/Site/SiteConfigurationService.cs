@@ -37,7 +37,7 @@ namespace Model.Site
         /// </summary>
         public void Initialize()
         {
-            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars };
+            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars, EnumPokerSites.AmericasCardroom };
 
             foreach (EnumPokerSites site in sites)
             {
@@ -69,7 +69,8 @@ namespace Model.Site
                     return Get(EnumPokerSites.BetOnline);
                 case "PokerStars":
                     return Get(EnumPokerSites.PokerStars);
-
+                case "AmericasCardroom":
+                    return Get(EnumPokerSites.AmericasCardroom);
                 default:
                     throw new DHInternalException(new NonLocalizableString("Not supported site [{0}]", site));
 

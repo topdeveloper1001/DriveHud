@@ -16,14 +16,14 @@ using System.Threading.Tasks;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
-    sealed class WinningPokerNetworkFastParserImpl : HandHistoryParserFastImpl
+    sealed class AmericasCardroomFastParserImpl : HandHistoryParserFastImpl
     {
         private const int GameIDStartIndex = 9;
         private const int ActionPlayerNameStartIndex = 7;
 
         public override EnumPokerSites SiteName
         {
-            get { return EnumPokerSites.WinningPoker; }
+            get { return EnumPokerSites.AmericasCardroom; }
         }
 
         public override bool RequiresTotalPotCalculation

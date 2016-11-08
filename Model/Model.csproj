@@ -237,6 +237,7 @@
     <Compile Include="Settings\SettingsBase.cs" />
     <Compile Include="Settings\SettingsModel.cs" />
     <Compile Include="SingletonStorageModel.cs" />
+    <Compile Include="Site\AmericasCardroomConfiguration.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />
     <Compile Include="Site\TigerGamingConfiguration.cs" />
     <Compile Include="Site\BetOnlineConfiguration.cs" />

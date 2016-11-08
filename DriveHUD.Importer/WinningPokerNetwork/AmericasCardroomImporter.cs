@@ -7,19 +7,21 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.WinningPokerNetwork
 {
-    internal class AmericasCardroomImporter : BaseImporter, IWinningPokerNetworkImporter
+    internal class AmericasCardroomImporter : FileBasedImporter, IWinningPokerNetworkImporter
     {
         public override string Site
         {
-            get
-            {
-                return EnumPokerSites.AmericasCardroom.ToString();
-            }
+            get { return EnumPokerSites.AmericasCardroom.ToString(); }
         }
 
-        protected override void DoImport()
+        protected override string HandHistoryFilter
         {
-            throw new NotImplementedException();
+            get { return "*.txt"; }
+        }
+
+        protected override string ProcessName
+        {
+            get { return "AmericasCardroom"; }
         }
     }
 }

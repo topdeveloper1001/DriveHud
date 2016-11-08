@@ -181,7 +181,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
         private HandHistory ParseHandHistory(string handHistoryFile)
         {
-            var parser = new WinningPokerNetworkFastParserImpl();
+            var parser = new AmericasCardroomFastParserImpl();
 
             var handHistoryText = File.ReadAllText(handHistoryFile);
 
@@ -196,7 +196,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
         private IEnumerable<Player> GetParsedPlayers(string handHistoryFile)
         {
-            var parser = new WinningPokerNetworkFastParserImpl();
+            var parser = new AmericasCardroomFastParserImpl();
 
             var handHistoryText = File.ReadAllText(handHistoryFile);
 
