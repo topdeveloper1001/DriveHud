@@ -501,7 +501,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         [NonSerialized]
-        [ProtoMember(20)]
+        [ProtoMember(20, IsRequired = true)]
         private bool isDefaultImage = true;
 
         [XmlIgnore]
