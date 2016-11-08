@@ -410,47 +410,6 @@ Janek71 collected [ $1,000 ]
 
 
 
-#Game No : 841899711
-***** 888poker Hand History for Game 841899711 *****
-$300/$600 Blinds No Limit Holdem - *** 26 10 2016 20:10:56
-Tournament #89426293 $0.01 - Table #29 9 Max (Real Money)
-Seat 6 is the button
-Total number of players : 7
-Seat 1:  ( $720 )
-Seat 3:  ( $2,940 )
-Seat 4:  ( $2,140 )
-Seat 5:  ( $630 )
-Seat 7:  ( $6,825 )
-Seat 9:  ( $3,700 )
-Seat 10:  ( $6,160 )
- posts ante [$70]
- posts ante [$70]
- posts ante [$70]
- posts ante [$70]
- posts ante [$70]
- posts ante [$70]
- posts ante [$70]
- posts small blind [$300]
- posts big blind [$600]
-** Dealing down cards **
-Dealt to  [ 7h, Qc ]
- folds
- calls [$590]
- folds
- folds
- folds
- folds
-** Dealing flop ** [ 7c, 9d, Tc ]
-** Dealing turn ** [ 4c ]
-** Dealing river ** [ 6d ]
-** Summary **
- shows [ 7h, Qc ]
- shows [ Qs, 5d ]
- collected [ $1,970 ]
- collected [ $10 ]
-
-
-
 #Game No : 841900026
 ***** 888poker Hand History for Game 841900026 *****
 $300/$600 Blinds No Limit Holdem - *** 26 10 2016 20:11:45
