@@ -433,6 +433,12 @@ namespace Model.Filters
         {
             var predicate = PredicateBuilder.True<Playerstatistic>();
             var uncheckedActions = PreFlopActionCollection.Where(x => !x.IsChecked);
+
+            if (uncheckedActions.Any())
+            {
+                predicate = predicate.And(x => x.FacingPreflop != EnumFacingPreflop.None);
+            }
+
             foreach (var action in uncheckedActions)
             {
                 predicate = predicate.And(x => x.FacingPreflop != action.FacingPreflop);

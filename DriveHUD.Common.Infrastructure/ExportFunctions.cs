@@ -39,6 +39,12 @@ namespace DriveHUD.Common.Ifrastructure
         {
             try
             {
+                if (currentHandHistory == null)
+                {
+                    LogProvider.Log.Info("ConvertHHToForumFormat: Cannot find handHistory");
+                    return string.Empty;
+                }
+
                 HandHistories.Objects.Players.Player heroPlayer = null;
                 StringBuilder res = new StringBuilder();
                 String title = "NL Holdem $" + currentHandHistory.GameDescription.Limit.BigBlind + "(BB)";

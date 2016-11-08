@@ -56,6 +56,12 @@
       <Component Id="App.config">
         <File Id="App.config" Name="DriveHUD.Application.exe.config" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.Application.exe.config" />
       </Component>
+      <Component Id="DriveHUD.HUD.exe">
+        <File Id="DriveHUD.HUD.exe" Source="$(var.BuildDirectory)\DriveHUD.HUD.exe" KeyPath="yes" Checksum="yes"/>
+      </Component>
+      <Component Id="DriveHUD.HUD.exe.config">
+        <File Id="DriveHUD.HUD.exe.config" Name="DriveHUD.HUD.exe.config" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.HUD.exe.config" />
+      </Component>
       <Component Id="DHCReg.dll" Guid="{12B4DF2F-64B0-44A7-B449-B2FA41B5D7FA}">
         <File Id="DHCReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DHCReg.dll" />
       </Component>
@@ -392,6 +398,8 @@
       <ComponentRef Id="StartMenuShortcuts"/>
       <ComponentRef Id="DesktopShortcuts"/>
       <ComponentRef Id="DriveHUD.Application.exe" />
+      <ComponentRef Id="DriveHUD.HUD.exe" />
+      <ComponentRef Id="DriveHUD.HUD.exe.config"/>
       <ComponentRef Id="DriveHUD.ViewModels.dll" />
       <ComponentRef Id="DriveHUD.Common.dll" />
       <ComponentRef Id="DriveHUD.Common.Resources.dll" />
