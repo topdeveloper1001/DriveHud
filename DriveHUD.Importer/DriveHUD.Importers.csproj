@@ -231,6 +231,8 @@
     <Compile Include="SessionCacheData.cs" />
     <Compile Include="TournamentSettings.cs" />
     <Compile Include="TournamentsResolver.cs" />
+    <Compile Include="WinningPokerNetwork\AmericasCardroomImporter.cs" />
+    <Compile Include="WinningPokerNetwork\IWinningPokerNetworkImporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">

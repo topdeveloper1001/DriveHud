@@ -365,7 +365,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             Street currentStreet = Street.Preflop;
 
             PlayerList playerList = ParsePlayers(handLines);
-            bool PlayerWithSpaces = playerList.FirstOrDefault(p => p.PlayerName.Contains(" ")) != null;
+            bool PlayerWithSpaces = playerList.Any(p => p.PlayerName.Contains(" "));
 
             //Skipping PlayerList
             int ActionsStart = GetActionStart(handLines);

@@ -139,8 +139,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             Assert.AreEqual(expectedPlayers.Count, playerList.Count(), "Player List Count");
             Assert.AreEqual(string.Join(",", expectedPlayers), string.Join(",", playerList));
 
-            Assert.AreEqual(expectedPlayers.Count, handHistory.Players.Count, "Parsed HH Player List Count");
-            Assert.AreEqual(string.Join(",", expectedPlayers), string.Join(",", handHistory.Players));
+            Assert.AreEqual(expectedPlayers.Where(x=> !x.IsSittingOut).Count(), handHistory.Players.Count, "Parsed HH Player List Count");
+            Assert.AreEqual(string.Join(",", expectedPlayers.Where(x => !x.IsSittingOut)), string.Join(",", handHistory.Players));
         }
 
         [Test]
@@ -160,8 +160,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "1DeadPhish", 0, HandActionType.FOLD, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "Hero", -1000, HandActionType.RAISE, Street.Preflop, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt", "transitions", 1040, HandActionType.WINS, Street.Summary, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "01123581321", 0.20, HandActionType.BET, Street.Flop, 1)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "needmorefppp", 0.20, HandActionType.CALL, Street.Flop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "01123581321", -0.20, HandActionType.BET, Street.Flop, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt", "needmorefppp", -0.20, HandActionType.CALL, Street.Flop, 1)]
         public void ActionsAreParsedDetailedTest(string handHistoryFile, string playerName, decimal amount, HandActionType handActionType, Street street, int numberOfActions)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
