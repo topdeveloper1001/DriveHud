@@ -322,7 +322,7 @@ namespace DriveHUD.Importers
                 {
                     using (var transaction = session.BeginTransaction())
                     {
-                        List<Tournaments> tournamentsData = null;
+                        var tournamentsData = new List<Tournaments>();
 
                         for (var i = 0; i < parsingResult.Count; i++)
                         {
