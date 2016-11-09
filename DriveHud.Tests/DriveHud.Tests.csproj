@@ -258,6 +258,7 @@
     <None Include="app.config" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Players\SittingOut.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PlayMoney-River-Hero.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO-0.50-1-USD-Flop.txt" />
     <None Include="IsEqualBuilder.tt">

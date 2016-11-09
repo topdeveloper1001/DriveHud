@@ -63,11 +63,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Flop.txt", "2016/10/30 17:41:51")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt", "2016/11/8 23:44:41")]
         public void ParseDateTimeUtcTest(string handHistoryFile, string expectedDateTime)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal);
+            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture);
 
             Assert.AreEqual(handHistory.DateOfHandUtc, dateTime);
         }

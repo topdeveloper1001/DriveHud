@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.WinningPokerNetwork
 {
-    internal class AmericasCardroomImporter : FileBasedImporter, IWinningPokerNetworkImporter
+    internal class AmericasCardroomImporter : FileBasedImporter, IAmericasCardroomImporter
     {
         public override string Site
         {
@@ -22,6 +22,14 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         protected override string ProcessName
         {
             get { return "AmericasCardroom"; }
+        }
+
+        protected override Encoding ByteEncoder
+        {
+            get
+            {
+                return Encoding.Unicode;
+            }
         }
     }
 }

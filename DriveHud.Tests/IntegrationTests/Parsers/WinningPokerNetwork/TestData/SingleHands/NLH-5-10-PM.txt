@@ -1,0 +1,54 @@
+﻿Game started at: 2016/11/8 17:44:41
+Game ID: 770866919 5/10 PM Hold`em 5/10 6-max - 3 (Hold'em)
+Seat 4 is the button
+Seat 1: tsahik43 (660.34).
+Seat 2: api yikobi (786).
+Seat 4: artgdev (135).
+Seat 5: AresPrime (1543.33).
+Seat 6: pgawac (8884.34).
+Player AresPrime has small blind (5)
+Player pgawac has big blind (10)
+Player AresPrime received a card.
+Player AresPrime received a card.
+Player pgawac received a card.
+Player pgawac received a card.
+Player tsahik43 received a card.
+Player tsahik43 received a card.
+Player api yikobi received a card.
+Player api yikobi received a card.
+Player artgdev received card: [Ah]
+Player artgdev received card: [7c]
+Player tsahik43 calls (10)
+Player api yikobi calls (10)
+Player artgdev calls (10)
+Player AresPrime raises (15)
+Player pgawac calls (10)
+Player tsahik43 calls (10)
+Player api yikobi calls (10)
+Player artgdev calls (10)
+*** FLOP ***: [Ks 8c Ac]
+Player AresPrime checks
+Player pgawac checks
+Player tsahik43 checks
+Player api yikobi checks
+Player artgdev checks
+*** TURN ***: [Ks 8c Ac] [10h]
+Player AresPrime checks
+Player pgawac bets (140)
+Player tsahik43 folds
+Player api yikobi folds
+Player artgdev allin (115)
+Player AresPrime calls (140)
+*** RIVER ***: [Ks 8c Ac 10h] [5c]
+Player AresPrime checks
+Player pgawac checks
+Player AresPrime mucks cards
+------ Summary ------
+Pot: 492. Rake 3
+Board: [Ks 8c Ac 10h 5c]
+Player tsahik43 does not show cards.Bets: 20. Collects: 0. Loses: 20.
+Player api yikobi does not show cards.Bets: 20. Collects: 0. Loses: 20.
+*Player artgdev shows: One pair of As [Ah 7c]. Bets: 135. Collects: 221. Wins: 86.
+Player AresPrime mucks (does not show cards). Bets: 160. Collects: 0. Loses: 160.
+*Player pgawac shows: One pair of As [As 3c]. Bets: 160. Collects: 271. Wins: 111.
+Game ended at: 2016/11/8 17:45:47

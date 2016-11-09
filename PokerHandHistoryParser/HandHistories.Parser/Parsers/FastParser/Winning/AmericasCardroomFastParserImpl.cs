@@ -86,7 +86,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Game started at: 2014/3/8 22:1:43
             const int startindex = 17;
             string dataString = handLines[0].Substring(startindex);
-            DateTime time = DateTime.Parse(dataString, System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.AdjustToUniversal);
+            DateTime time = DateTime.Parse(dataString, System.Globalization.CultureInfo.CurrentCulture).ToUniversalTime();
             return time;
         }
 

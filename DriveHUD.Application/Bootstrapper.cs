@@ -88,10 +88,10 @@ namespace DriveHUD.Application
             tournamentCacheService.Initialize();
 
             ImporterBootstrapper.ConfigureImporterService();
-       
+
             configViewModel = new ConfigurePostgresqlServerViewModel();
             configViewModel.AfterConnectAction += ShowMainWindow;
-            configViewModel.ConnectCommand.Execute(null);        
+            configViewModel.ConnectCommand.Execute(null);
         }
 
         private void ShowMainWindow()
@@ -243,6 +243,10 @@ namespace DriveHUD.Application
 
             // 888 poker
 
+            // AmericasCardroom
+            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Default));
+            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Plain));
+
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);
 
@@ -261,6 +265,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.TigerGaming.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.SportsBetting.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PokerStarsSiteSettingTableConfigurator>(EnumPokerSites.PokerStars.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, AmericasCardroomSiteSettingTableConfigurator>(EnumPokerSites.AmericasCardroom.ToString());
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

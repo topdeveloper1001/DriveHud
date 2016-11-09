@@ -54,6 +54,11 @@ namespace DriveHUD.Importers
 
         protected abstract string HandHistoryFilter { get; }
 
+        protected virtual Encoding ByteEncoder
+        {
+            get { return Encoding.UTF8; }
+        }
+
         #endregion
 
         // Import data from PS HH
@@ -103,7 +108,7 @@ namespace DriveHUD.Importers
 
                         fs.Read(data, 0, data.Length);
 
-                        var handText = Encoding.UTF8.GetString(data);
+                        var handText = ByteEncoder.GetString(data);
 
                         // if file could not be parsed, mark it as invalid to prevent further processing 
                         if (cf.Value.GameInfo == null)

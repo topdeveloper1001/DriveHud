@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Importers.WinningPokerNetwork
 {
-    internal interface IWinningPokerNetworkImporter : IAutoImporter
+    internal interface IAmericasCardroomImporter : IAutoImporter
     {
     }
 }
