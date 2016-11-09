@@ -17,6 +17,7 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
 using HandHistories.Parser.Parsers;
+using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils.Extensions;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -57,6 +58,15 @@ namespace DriveHUD.Importers
         protected virtual Encoding ByteEncoder
         {
             get { return Encoding.UTF8; }
+        }
+
+        // Some sites (e.g. ACP) append the current action to file after it's happend instead of making the chunk update after the hand has been finished
+        /// <summary>
+        /// Indicates whether hand is added to the file after it's been completed or hand is updating after each action
+        /// </summary>
+        protected virtual bool IsChunkUpdate
+        {
+            get { return true; }
         }
 
         #endregion

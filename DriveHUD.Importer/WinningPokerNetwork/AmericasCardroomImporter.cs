@@ -26,10 +26,12 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         protected override Encoding ByteEncoder
         {
-            get
-            {
-                return Encoding.Unicode;
-            }
+            get { return Encoding.Unicode; }
+        }
+
+        protected override bool IsChunkUpdate
+        {
+            get { return false; }
         }
     }
 }

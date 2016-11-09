@@ -139,7 +139,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             Assert.AreEqual(expectedPlayers.Count, playerList.Count(), "Player List Count");
             Assert.AreEqual(string.Join(",", expectedPlayers), string.Join(",", playerList));
 
-            Assert.AreEqual(expectedPlayers.Where(x=> !x.IsSittingOut).Count(), handHistory.Players.Count, "Parsed HH Player List Count");
+            Assert.AreEqual(expectedPlayers.Where(x => !x.IsSittingOut).Count(), handHistory.Players.Count, "Parsed HH Player List Count");
             Assert.AreEqual(string.Join(",", expectedPlayers.Where(x => !x.IsSittingOut)), string.Join(",", handHistory.Players));
         }
 
@@ -177,6 +177,36 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var action = handHistory.HandActions.Where(x => x.Street == street && x.PlayerName.Equals(playerName) && x.HandActionType == handActionType && x.Amount == amount).FirstOrDefault();
 
             Assert.That(action?.IsAllIn, Is.EqualTo(isAllin));
+        }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max - 3 (Hold'em) - 2016-11-08.txt", 2, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max (Hold'em) - 2016-11-09.txt", 15, 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max (Hold'em) - 2016-11-09 - Unfinished.txt", 14, 1)]
+        public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)
+        {
+            var parser = new AmericasCardroomFastParserImpl();
+            int validHands = 0;
+            int invalidHands = 0;
+
+            var handHistoryText = File.ReadAllText(handHistoryFile);
+            var hands = parser.SplitUpMultipleHands(handHistoryText).ToArray();
+
+            foreach (var hand in hands)
+            {
+                try
+                {
+                    parser.ParseFullHandHistory(hand, true);
+                    validHands++;
+                }
+                catch(InvalidHandException)
+                {
+                    invalidHands++;
+                }
+            }
+
+            Assert.AreEqual(numberOfValidHands, validHands);
+            Assert.AreEqual(numberOfInvalidHands, invalidHands);
         }
 
         private HandHistory ParseHandHistory(string handHistoryFile)

@@ -256,6 +256,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09 - Unfinished.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max - 3 %28Hold%27em%29 - 2016-11-08.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Players\SittingOut.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PlayMoney-River-Hero.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt" />
