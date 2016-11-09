@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="PokerStarsConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="Poker888Configuration.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -19,16 +19,16 @@ using System.Linq;
 
 namespace Model.Site
 {
-    public class PokerStarsConfiguration : ISiteConfiguration
+    public class Poker888Configuration : ISiteConfiguration
     {
-        public PokerStarsConfiguration()
+        public Poker888Configuration()
         {
             prefferedSeat = new Dictionary<int, int>();
 
             tableTypes = new EnumTableType[]
             {
-                EnumTableType.HU,
-                EnumTableType.Four,
+                EnumTableType.HU,                
+                EnumTableType.Five,
                 EnumTableType.Six,
                 EnumTableType.Eight,
                 EnumTableType.Nine,
@@ -40,7 +40,7 @@ namespace Model.Site
         {
             get
             {
-                return EnumPokerSites.PokerStars;
+                return EnumPokerSites.Poker888;
             }
         }
 
@@ -78,12 +78,12 @@ namespace Model.Site
 
         public string[] GetHandHistoryFolders()
         {
-            var localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            var myDocumentData = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
 
-            var possibleFolders = new string[] { "PokerStars", "PokerStars.EU" };
+            var possibleFolders = new string[] { "888poker" };
 
             var dirs = (from possibleFolder in possibleFolders
-                        let folder = Path.Combine(localApplicationData, possibleFolder, "HandHistory")
+                        let folder = Path.Combine(myDocumentData, possibleFolder, "HandHistory")
                         select folder).ToArray();
 
             return dirs;

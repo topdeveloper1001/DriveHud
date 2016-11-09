@@ -563,4 +563,7 @@
   <data name="Enum_HudViewType_Vertical_2" xml:space="preserve">
     <value>DriveHUD VERT 2</value>
   </data>
+  <data name="Enum_EnumTableType_Five" xml:space="preserve">
+    <value>5-max</value>
+  </data>
 </root>
