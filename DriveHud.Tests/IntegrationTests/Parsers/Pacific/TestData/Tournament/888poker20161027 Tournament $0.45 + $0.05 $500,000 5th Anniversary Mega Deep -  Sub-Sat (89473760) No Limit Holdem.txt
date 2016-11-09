@@ -89,68 +89,6 @@ vovanmokin collected [ $6,036 ]
 
 
 
-#Game No : 835785471
-***** 888poker Hand History for Game 835785471 *****
-$10/$20 Blinds No Limit Holdem - *** 27 10 2016 18:05:25
-Tournament #89473760 $0.45 + $0.05 - Table #5 9 Max (Real Money)
-Seat 1 is the button
-Total number of players : 8
-Seat 1:  ( $2,046 )
-Seat 2:  ( $1,998 )
-Seat 3:  ( $1,998 )
-Seat 4:  ( $1,998 )
-Seat 6:  ( $1,978 )
-Seat 7:  ( $1,998 )
-Seat 9:  ( $1,998 )
-Seat 10:  ( $1,998 )
- posts ante [$2]
- posts ante [$2]
- posts ante [$2]
- posts ante [$2]
- posts ante [$2]
- posts ante [$2]
- posts ante [$2]
- posts ante [$2]
- posts small blind [$10]
- posts big blind [$20]
-** Dealing down cards **
- folds
- calls [$20]
- calls [$20]
- folds
- folds
- calls [$20]
- calls [$10]
- checks
-** Dealing flop ** [ Js, 3c, Qh ]
- checks
- checks
- checks
- bets [$20]
- calls [$20]
- folds
- folds
- calls [$20]
-** Dealing turn ** [ 5h ]
- checks
- checks
- bets [$20]
- calls [$20]
- calls [$20]
-** Dealing river ** [ 4c ]
- checks
- bets [$580]
- folds
- raises [$1,160]
- raises [$1,160]
- calls [$580]
-** Summary **
- shows [ 2d, Ac ]
- mucks [ 3d, Jc ]
- collected [ $3,716 ]
-
-
-
 #Game No : 835785915
 ***** 888poker Hand History for Game 835785915 *****
 $10/$20 Blinds No Limit Holdem - *** 27 10 2016 18:06:14

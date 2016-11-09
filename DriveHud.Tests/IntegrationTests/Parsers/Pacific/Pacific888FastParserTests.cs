@@ -31,9 +31,9 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
     [TestFixture]
     class Pacific888FastParserTests
     {
-        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\Pacific\TestData\Tournament";
+        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\Pacific\TestData";
 
-        //[Test]
+        [Test]
         public void ParsingDoesNotThrowExceptions()
         {
             var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
@@ -67,6 +67,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
                         if (!hash.Contains(handHistoryFile.FullName))
                         {
                             Debug.WriteLine(handHistoryFile.FullName);
+                            Debug.WriteLine(hand);
                         }
 
                         Assert.Fail(e.ToString());

@@ -24,9 +24,9 @@ namespace HandHistories.Objects.GameDescription
 
         public decimal Winning { get; set; }
 
-        public int FinishPosition { get; set; }
+        public short FinishPosition { get; set; }
 
-        public int TotalPlayers { get; set; }
+        public short TotalPlayers { get; set; }
 
         public DateTime StartDate { get; set; }
 
