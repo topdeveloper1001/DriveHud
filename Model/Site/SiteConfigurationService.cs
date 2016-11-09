@@ -12,7 +12,6 @@
 
 using DriveHUD.Common.Exceptions;
 using DriveHUD.Common.Resources;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Practices.ServiceLocation;
@@ -37,7 +36,16 @@ namespace Model.Site
         /// </summary>
         public void Initialize()
         {
-            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars, EnumPokerSites.AmericasCardroom };
+            var sites = new EnumPokerSites[]
+            {
+                EnumPokerSites.Ignition,
+                EnumPokerSites.BetOnline,
+                EnumPokerSites.TigerGaming,
+                EnumPokerSites.SportsBetting,
+                EnumPokerSites.PokerStars,
+                EnumPokerSites.Poker888,
+                EnumPokerSites.AmericasCardroom
+            };
 
             foreach (EnumPokerSites site in sites)
             {
@@ -67,11 +75,16 @@ namespace Model.Site
                     return Get(EnumPokerSites.Ignition);
                 case "BetOnline":
                     return Get(EnumPokerSites.BetOnline);
+                case "TigerGaming":
+                    return Get(EnumPokerSites.TigerGaming);
+                case "SportsBetting":
+                    return Get(EnumPokerSites.SportsBetting);
                 case "PokerStars":
                     return Get(EnumPokerSites.PokerStars);
+                case "Poker888":
+                    return Get(EnumPokerSites.Poker888);
                 case "AmericasCardroom":
-                    return Get(EnumPokerSites.AmericasCardroom);
-                default:
+                    return Get(EnumPokerSites.AmericasCardroom);                default:
                     throw new DHInternalException(new NonLocalizableString("Not supported site [{0}]", site));
 
             }

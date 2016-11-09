@@ -756,18 +756,18 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
                     handHistory.Hero = new Player(playerName, 0, 0);
 
-                    int position = 0;
-                    int totalPlayers = 0;
+                    short position = 0;
+                    short totalPlayers = 0;
                     decimal won = 0;
                     Currency wonCurrency = Currency.USD;
 
-                    if (!int.TryParse(positionText, out position))
+                    if (!short.TryParse(positionText, out position))
                     {
                         LogProvider.Log.Error(string.Format("'{0}' position wasn't parsed", handLine));
                         continue;
                     }
 
-                    if (!int.TryParse(totalPlayersText, out totalPlayers))
+                    if (!short.TryParse(totalPlayersText, out totalPlayers))
                     {
                         LogProvider.Log.Error(string.Format("'{0}' total players weren't parsed", handLine));
                         continue;
