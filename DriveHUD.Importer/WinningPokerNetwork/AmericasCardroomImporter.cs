@@ -29,7 +29,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             get { return Encoding.Unicode; }
         }
 
-        protected override bool IsChunkUpdate
+        protected override bool IsAppendingFullHand
         {
             get { return false; }
         }

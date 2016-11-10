@@ -62,9 +62,9 @@ namespace DriveHUD.Importers
 
         // Some sites (e.g. ACP) append the current action to file after it's happend instead of making the chunk update after the hand has been finished
         /// <summary>
-        /// Indicates whether hand is added to the file after it's been completed or hand is updating after each action
+        /// Indicates whether hand is added to the file after it's been fully completed (true) or hand is updating after each action (false)
         /// </summary>
-        protected virtual bool IsChunkUpdate
+        protected virtual bool IsAppendingFullHand
         {
             get { return true; }
         }
@@ -108,6 +108,13 @@ namespace DriveHUD.Importers
                     capturedFiles.ForEach(cf =>
                     {
                         var fs = cf.Value.FileStream;
+                        var initialPosition = fs.Position;
+
+                        // possible for ACR, since they remove partial data if table was closed before hand had been finished
+                        if (fs.Position > fs.Length)
+                        {
+                            fs.Seek(0, SeekOrigin.End);
+                        }
 
                         var data = new byte[fs.Length - fs.Position];
 
@@ -146,7 +153,15 @@ namespace DriveHUD.Importers
                             cf.Value.GameInfo = gameInfo;
                         }
 
-                        ImportHand(handText, cf.Value.GameInfo);
+                        bool isHandProcessed;
+
+                        ImportHand(handText, cf.Value.GameInfo, out isHandProcessed);
+
+                        if (!isHandProcessed)
+                        {
+                            // hand is not completed yet, return to initial position
+                            fs.Seek(initialPosition, SeekOrigin.Begin);
+                        }
                     });
 
                     // remove invalid files from captured
@@ -172,8 +187,10 @@ namespace DriveHUD.Importers
         }
 
         // Import hand
-        protected virtual void ImportHand(string handHistory, GameInfo gameInfo)
+        protected virtual void ImportHand(string handHistory, GameInfo gameInfo, out bool handProcessed)
         {
+            handProcessed = true;
+
             var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
             var progress = new DHProgress();
 
@@ -181,7 +198,14 @@ namespace DriveHUD.Importers
 
             try
             {
-                parsingResult = dbImporter.Import(handHistory, progress, gameInfo);
+                parsingResult = dbImporter.Import(handHistory, progress, gameInfo, !IsAppendingFullHand);
+            }
+            catch (InvalidHandException) when (!IsAppendingFullHand)
+            {
+                //hand is not finished yet
+                handProcessed = false;
+                Debug.WriteLine("Invalid Hand Detected");
+                return;
             }
             catch (Exception e)
             {

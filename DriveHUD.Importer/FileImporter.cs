@@ -22,6 +22,7 @@ using DriveHUD.Importers.Loggers;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
+using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -87,7 +88,7 @@ namespace DriveHUD.Importers
                 {
                     var text = File.ReadAllText(file.FullName);
 
-                    Import(text, progress, null);
+                    Import(text, progress, null, false);
                 }
                 catch (DHInternalException ex)
                 {
@@ -130,7 +131,7 @@ namespace DriveHUD.Importers
         /// <param name="text">Text to import</param>  
         /// <param name="progress">Progress object to report</param>     
         /// <param name="gameInfo">Game information</param>     
-        public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo)
+        public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo, bool rethrowInvalidHands)
         {
             Check.ArgumentNotNull(() => progress);
             Check.ArgumentNotNull(() => gameInfo);
@@ -182,6 +183,10 @@ namespace DriveHUD.Importers
 #endif            
 
                 return parsingResult;
+            }
+            catch (InvalidHandException) when (rethrowInvalidHands)
+            {
+                throw;
             }
             catch (Exception e)
             {

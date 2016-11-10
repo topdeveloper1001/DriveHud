@@ -179,10 +179,20 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             Assert.That(action?.IsAllIn, Is.EqualTo(isAllin));
         }
 
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855145.txt", 10)]
+        public void ParseAnteTest(string handHistoryFile, decimal ante)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Limit.Ante, Is.EqualTo(ante));
+        }
+
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max - 3 (Hold'em) - 2016-11-08.txt", 2, 1)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max (Hold'em) - 2016-11-09.txt", 15, 0)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max (Hold'em) - 2016-11-09 - Unfinished.txt", 14, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855119.txt", 28, 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855145.txt", 7, 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855146.txt", 1, 1)]
         public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)
         {
             var parser = new AmericasCardroomFastParserImpl();
@@ -217,7 +227,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
             var hands = parser.SplitUpMultipleHands(handHistoryText).ToArray();
 
-            var hand = hands.Single();
+            var hand = hands.First();
 
             var handHistory = parser.ParseFullHandHistory(hand, true);
 

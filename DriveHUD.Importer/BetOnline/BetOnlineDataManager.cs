@@ -108,7 +108,7 @@ namespace DriveHUD.Importers.BetOnline
 
             try
             {
-                dbImporter.Import(convertedResult.ConvertedXml, progress, convertedResult.GameInfo);
+                dbImporter.Import(convertedResult.ConvertedXml, progress, convertedResult.GameInfo, false);
             }
             catch (Exception e)
             {

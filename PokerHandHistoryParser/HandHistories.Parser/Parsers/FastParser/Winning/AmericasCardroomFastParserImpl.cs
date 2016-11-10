@@ -42,7 +42,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         public override bool IsValidOrCancelledHand(string[] handLines, out bool isCancelled)
         {
-            isCancelled = IsCancelledHand(handLines);
+            isCancelled = false;
+
+            try
+            {
+                isCancelled = IsCancelledHand(handLines);
+            }
+            catch (ArgumentException)
+            {
+                // hand is not full
+                return false;
+            }
+
             return IsValidHand(handLines);
         }
 
@@ -365,39 +376,45 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             Street currentStreet = Street.Preflop;
 
             PlayerList playerList = ParsePlayers(handLines);
-            bool PlayerWithSpaces = playerList.Any(p => p.PlayerName.Contains(" "));
+            bool playerWithSpaces = playerList.Any(p => p.PlayerName.Contains(" "));
 
             //Skipping PlayerList
-            int ActionsStart = GetActionStart(handLines);
+            int actionsStart = GetActionStart(handLines);
+
+            //Parse ante
+            while (IsAnteAction(actionsStart, handLines))
+            {
+                handActions.Add(ParseAnteAction(handLines[actionsStart++], playerList, playerWithSpaces));
+            }
 
             //Parsing Fixed Actions
-            if (PlayerWithSpaces)
+            if (playerWithSpaces)
             {
-                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
-                handActions.Add(ParseSmallBlindWithSpaces(handLines[ActionsStart++], playerList));
-                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
-                handActions.Add(ParseBigBlindWithSpaces(handLines[ActionsStart++], playerList));
+                actionsStart = SkipSitOutLines(handLines, actionsStart);
+                handActions.Add(ParseSmallBlindWithSpaces(handLines[actionsStart++], playerList));
+                actionsStart = SkipSitOutLines(handLines, actionsStart);
+                handActions.Add(ParseBigBlindWithSpaces(handLines[actionsStart++], playerList));
             }
             else
             {
-                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
-                handActions.Add(ParseSmallBlind(handLines[ActionsStart++]));
-                ActionsStart = SkipSitOutLines(handLines, ActionsStart);
-                handActions.Add(ParseBigBlind(handLines[ActionsStart++]));
+                actionsStart = SkipSitOutLines(handLines, actionsStart);
+                handActions.Add(ParseSmallBlind(handLines[actionsStart++]));
+                actionsStart = SkipSitOutLines(handLines, actionsStart);
+                handActions.Add(ParseBigBlind(handLines[actionsStart++]));
             }
 
-            ActionsStart = ParsePosts(handLines, handActions, ActionsStart);
+            actionsStart = ParsePosts(handLines, handActions, actionsStart);
 
             //Skipping all "received a card."
-            ActionsStart = SkipDealer(handLines, ActionsStart);
+            actionsStart = SkipDealer(handLines, actionsStart);
 
             //ParseActions
-            for (int i = ActionsStart; i < handLines.Length; i++)
+            for (int i = actionsStart; i < handLines.Length; i++)
             {
                 string actionLine = handLines[i];
                 if (actionLine[0] == 'P')
                 {
-                    var action = ParseRegularAction(actionLine, currentStreet, playerList, handActions, PlayerWithSpaces);
+                    var action = ParseRegularAction(actionLine, currentStreet, playerList, handActions, playerWithSpaces);
                     if (action != null)
                     {
                         handActions.Add(action);
@@ -416,7 +433,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 }
                 else if (actionLine[0] == '-')
                 {
-                    ActionsStart = i++;
+                    actionsStart = i++;
                     break;
                 }
             }
@@ -425,13 +442,13 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //------ Summary ------
             //Pot: 14.95. Rake 0.80
             //Board: [5c 8s 4h 10c 10s]
-            for (int i = ActionsStart + 2; i < handLines.Length; i++)
+            for (int i = actionsStart + 2; i < handLines.Length; i++)
             {
                 string actionLine = handLines[i];
                 //Parse winning action
                 if (actionLine[0] == '*')
                 {
-                    var action = ParseWinningsAction(actionLine, playerList, PlayerWithSpaces);
+                    var action = ParseWinningsAction(actionLine, playerList, playerWithSpaces);
                     handActions.Add(action);
                 }
             }
@@ -441,6 +458,32 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
             throw new NotImplementedException();
+        }
+
+        private bool IsAnteAction(int actionIndex, string[] handLines)
+        {
+            if (actionIndex >= handLines.Count() || handLines[actionIndex].LastOrDefault() != ')')
+                return false;
+
+            var amountStartIndex = handLines[actionIndex].LastIndexOf('(');
+            if (amountStartIndex > 0)
+            {
+                var anteString = handLines[actionIndex].Substring(amountStartIndex - 5, 4);
+                if (anteString == "ante")
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        private HandAction ParseAnteAction(string anteLine, PlayerList players, bool PlayerWithSpaces)
+        {
+            string PlayerName = PlayerWithSpaces
+                ? GetPlayerNameWithSpaces(anteLine, players)
+                : GetPlayerNameWithoutSpaces(anteLine);
+            return new HandAction(PlayerName, HandActionType.ANTE, ParseActionAmountAfterPlayer(anteLine), Street.Preflop);
         }
 
         private HandAction ParseRegularAction(string line, Street currentStreet, PlayerList playerList, List<HandAction> actions, bool PlayerWithSpaces)
@@ -598,7 +641,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         private string GetPlayerNameWithSpaces(string actionLine, PlayerList playerList)
         {
-            //Must choose the longest name if one name starts with an other name
+            //Must choose the longest name if one name starts with another name
             int length = 0;
             string result = null;
             foreach (var player in playerList)
