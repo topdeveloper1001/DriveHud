@@ -196,8 +196,7 @@ namespace DriveHUD.Application
 
             Container.RegisterType<SingletonStorageModel>(new ContainerControlledLifetimeManager());
 
-            RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);
-            RegisterTypeIfMissing(typeof(IParser), typeof(BovadaParser), false);
+            RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);            
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
