@@ -77,6 +77,7 @@
     <Compile Include="Utils\Extensions\EnumPokerSitesExtension.cs" />
     <Compile Include="Utils\Extensions\LazyStringSplitExtension.cs" />
     <Compile Include="Utils\FastParsing\FastParsing.cs" />
+    <Compile Include="Utils\FastParsing\ParserUtils.cs" />
     <Compile Include="Utils\Pot\PotCalculator.cs" />
     <Compile Include="Utils\Strings\StringExtensions.cs" />
     <Compile Include="Utils\Time\TimeZoneUtil.cs" />

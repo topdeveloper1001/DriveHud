@@ -40,6 +40,8 @@ namespace DriveHUD.Importers
             }
         }
 
-        public EnumTableType TableType { get; set; }        
+        public EnumTableType TableType { get; set; }
+
+        public HandHistories.Objects.GameDescription.TournamentSpeed? TournamentSpeed { get; set; }
     }
 }

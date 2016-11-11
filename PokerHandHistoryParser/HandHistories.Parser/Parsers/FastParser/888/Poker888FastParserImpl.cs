@@ -118,24 +118,14 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override SeatType ParseSeatType(string[] handLines)
         {
-            int seatCount = Int32.Parse(SeatTypeRegex.Match(handLines[3]).Value.Replace(" Max", string.Empty));
+            var seatCount = int.Parse(SeatTypeRegex.Match(handLines[3]).Value.Replace(" Max", string.Empty));
 
-            if (seatCount <= 2)
+            if (seatCount > 0 && seatCount < 10)
             {
-                return SeatType.FromMaxPlayers(2);
+                return SeatType.FromMaxPlayers(seatCount);
             }
-            else if (seatCount <= 6)
-            {
-                return SeatType.FromMaxPlayers(6);
-            }
-            else if (seatCount <= 9)
-            {
-                return SeatType.FromMaxPlayers(9);
-            }
-            else
-            {
-                return SeatType.FromMaxPlayers(10);
-            }
+
+            return SeatType.FromMaxPlayers(10);
         }
 
         private static readonly Regex GameTypeRegex = new Regex(@"(?<=Blinds ).*(?= - )", RegexOptions.Compiled);
@@ -214,7 +204,11 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             decimal lowLimit = ParseAmount(lowLimitString);
             decimal highLimit = ParseAmount(highLimitString);
 
-            return Limit.FromSmallBlindBigBlind(lowLimit, highLimit, Currency.USD);
+            string tableNameLine = handLines[3];
+
+            var currency = tableNameLine.IndexOf("Play Money", StringComparison.InvariantCultureIgnoreCase) > 0 ? Currency.PlayMoney : Currency.USD;
+
+            return Limit.FromSmallBlindBigBlind(lowLimit, highLimit, currency);
         }
 
         protected override Buyin ParseBuyin(string[] handLines)
@@ -642,7 +636,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
-            var line = handLines[3];         
+            var line = handLines[3];
 
             var regex = new Regex(@"Tournament #(?<tournament_id>[^\s]+) (?<buyin>[^-]+) - Table #(?<tablenum>\d+) (?<tabletype>[^\(]+) \((?<money>[^\)]+)\)");
 
@@ -667,6 +661,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             {
                 TournamentId = match.Groups["tournament_id"].Value,
                 BuyIn = Buyin.FromBuyinRake(prizePool, rake, currency),
+                Speed = TournamentSpeed.Regular,
                 TournamentName = string.Format("Tournament #{0}", match.Groups["tournament_id"].Value)
             };
 

@@ -727,6 +727,12 @@
     <EmbeddedResource Include="Layouts\DH-SNG-Basic-OH-PS.xml" />
     <EmbeddedResource Include="Layouts\DH-SNG-Basic-PS.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\settings\5max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\settings\empty-table.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>
