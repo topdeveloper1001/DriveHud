@@ -193,6 +193,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855119.txt", 28, 0)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855145.txt", 7, 0)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855146.txt", 1, 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855120.txt", 75, 0)]
         public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)
         {
             var parser = new AmericasCardroomFastParserImpl();
@@ -209,7 +210,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
                     parser.ParseFullHandHistory(hand, true);
                     validHands++;
                 }
-                catch(InvalidHandException)
+                catch (InvalidHandException)
                 {
                     invalidHands++;
                 }
@@ -218,6 +219,32 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             Assert.AreEqual(numberOfValidHands, validHands);
             Assert.AreEqual(numberOfInvalidHands, invalidHands);
         }
+
+
+        //[Test]
+        //public void ParseAllInAnte()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //[Test]
+        //public void ParseSmallBlindAllIn()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //[Test]
+        //public void ParseBigBlindAllIn()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //[Test]
+        //public void ParseMultipleBigBlinds()
+        //{
+        //    throw new NotImplementedException();
+        //}
+
 
         private HandHistory ParseHandHistory(string handHistoryFile)
         {

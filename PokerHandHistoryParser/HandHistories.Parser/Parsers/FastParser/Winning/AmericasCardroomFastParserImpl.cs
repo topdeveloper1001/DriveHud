@@ -381,28 +381,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //Skipping PlayerList
             int actionsStart = GetActionStart(handLines);
 
-            //Parse ante
-            while (IsAnteAction(actionsStart, handLines))
-            {
-                handActions.Add(ParseAnteAction(handLines[actionsStart++], playerList, playerWithSpaces));
-            }
-
-            //Parsing Fixed Actions
-            if (playerWithSpaces)
-            {
-                actionsStart = SkipSitOutLines(handLines, actionsStart);
-                handActions.Add(ParseSmallBlindWithSpaces(handLines[actionsStart++], playerList));
-                actionsStart = SkipSitOutLines(handLines, actionsStart);
-                handActions.Add(ParseBigBlindWithSpaces(handLines[actionsStart++], playerList));
-            }
-            else
-            {
-                actionsStart = SkipSitOutLines(handLines, actionsStart);
-                handActions.Add(ParseSmallBlind(handLines[actionsStart++]));
-                actionsStart = SkipSitOutLines(handLines, actionsStart);
-                handActions.Add(ParseBigBlind(handLines[actionsStart++]));
-            }
-
             actionsStart = ParsePosts(handLines, handActions, actionsStart);
 
             //Skipping all "received a card."
@@ -460,32 +438,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             throw new NotImplementedException();
         }
 
-        private bool IsAnteAction(int actionIndex, string[] handLines)
-        {
-            if (actionIndex >= handLines.Count() || handLines[actionIndex].LastOrDefault() != ')')
-                return false;
-
-            var amountStartIndex = handLines[actionIndex].LastIndexOf('(');
-            if (amountStartIndex > 0)
-            {
-                var anteString = handLines[actionIndex].Substring(amountStartIndex - 5, 4);
-                if (anteString == "ante")
-                {
-                    return true;
-                }
-            }
-
-            return false;
-        }
-
-        private HandAction ParseAnteAction(string anteLine, PlayerList players, bool PlayerWithSpaces)
-        {
-            string PlayerName = PlayerWithSpaces
-                ? GetPlayerNameWithSpaces(anteLine, players)
-                : GetPlayerNameWithoutSpaces(anteLine);
-            return new HandAction(PlayerName, HandActionType.ANTE, ParseActionAmountAfterPlayer(anteLine), Street.Preflop);
-        }
-
         private HandAction ParseRegularAction(string line, Street currentStreet, PlayerList playerList, List<HandAction> actions, bool PlayerWithSpaces)
         {
             string PlayerName = PlayerWithSpaces ?
@@ -518,7 +470,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     else if (actionID2 == 'p')
                     {
                         //treat CAP as allin
-                        return new HandAction(PlayerName, HandActionType.ALL_IN, ParseActionAmountAfterPlayer(line), currentStreet);
+                        var capAmount = ParseActionAmountAfterPlayer(line);
+                        var capAllinActionType = AllInActionHelper.GetAllInActionType(PlayerName, capAmount, currentStreet, actions);
+                        return new HandAction(PlayerName, capAllinActionType, capAmount, currentStreet, true);
                     }
                     else
                     {
@@ -730,10 +684,17 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
                     //Player TheKunttzz posts (0.25) as a dead bet
                     //Player TheKunttzz posts (0.50)
+                    //Player Hero sitting out
                     case 't':
+                        //if sitting out go to next action
+                        if (line.Substring(line.Length - 3, 3).Equals("out"))
+                            continue;//More posts can still occur
+
                         deadBet = true;
                         break;
 
+                    //Player impala327 allin(50)
+                    //Player marbleeye ante (50) 
                     //Player Aquasces1 has small blind (2)
                     //Player COMON-JOE-JUG has big blind (4)
                     //Player TheKunttzz posts (0.25)
@@ -745,10 +706,36 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                         throw new HandActionException(line, "Unrecognized endChar \"" + endChar + "\"");
                 }
 
+                HandActionType actionType = HandActionType.UNKNOWN;
+
                 int playerNameEndIndex = line.IndexOf(" posts (", StringComparison.Ordinal);
                 if (playerNameEndIndex == -1)
                 {
                     playerNameEndIndex = line.IndexOf(" straddle (", StringComparison.Ordinal);
+                }
+                if (playerNameEndIndex == -1)
+                {
+                    playerNameEndIndex = line.IndexOf(" allin (", StringComparison.Ordinal);
+                }
+
+                if (playerNameEndIndex != -1)
+                {
+                    actionType = HandActionType.POSTS;
+                }
+                else
+                {
+                    playerNameEndIndex = line.IndexOf(" has small blind (", StringComparison.Ordinal);
+                    actionType = HandActionType.SMALL_BLIND;
+                    if (playerNameEndIndex == -1)
+                    {
+                        playerNameEndIndex = line.IndexOf(" has big blind (", StringComparison.Ordinal);
+                        actionType = HandActionType.BIG_BLIND;
+                    }
+                    if (playerNameEndIndex == -1)
+                    {
+                        playerNameEndIndex = line.IndexOf(" ante (", StringComparison.Ordinal);
+                        actionType = HandActionType.ANTE;
+                    }
                 }
 
                 string playerName = line.Substring(PlayerNameStartindex, playerNameEndIndex - PlayerNameStartindex);
@@ -759,11 +746,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     Amount += ParseActionAmountAfterPlayer(handLines[++i]);
                 }
 
-                actions.Add(new HandAction(playerName, HandActionType.POSTS, Amount, Street.Preflop));
+                actions.Add(new HandAction(playerName, actionType, Amount, Street.Preflop));
             }
             throw new Exception("Did not find start of Dealing of cards");
         }
-
 
         private int GetActionStart(string[] handLines)
         {

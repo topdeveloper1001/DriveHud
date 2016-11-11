@@ -1386,7 +1386,10 @@ namespace Model
 
         private static Player GetInPositionPlayer(HandHistory hand, Street street)
         {
-            var actions = hand.HandActions.Street(street).Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)).ToList();
+            var actions = hand.HandActions.Street(street)
+                .Where(x => !string.IsNullOrWhiteSpace(x.PlayerName)
+                    && x.HandActionType != HandActionType.ANTE)
+                .ToList();
 
             if (actions.Any(x => x.IsBlinds))
             {

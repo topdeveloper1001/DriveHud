@@ -280,6 +280,7 @@
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-NoBoard.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-25-50-USD-Turn.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - %2410 Freeroll - On Demand\HH20161109 T6627313-G36855120.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20161109 T6626931-G36853412.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20161109 T6627135-G36854283.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - %2410 Freeroll - On Demand\HH20161109 T6627313-G36855119.txt" />
