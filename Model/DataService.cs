@@ -4,6 +4,7 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers;
+using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
 using Model.Interfaces;
@@ -161,18 +162,33 @@ namespace Model
             using (var session = ModelEntities.OpenSession())
             {
                 var hh = session.Query<Handhistory>().FirstOrDefault(x => x.Gamenumber == gameNumber && x.PokersiteId == pokersiteId);
-                if (hh == null)
-                    return null;
-                var result = ServiceLocator.Current.GetInstance<IParser>().ParseGame(hh.HandhistoryVal);
-                if (result == null)
-                    return null;
 
-                return result.Source;
+                if (hh == null)
+                {
+                    return null;
+                }
+
+                var handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
+
+                var handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser((EnumPokerSites)pokersiteId);
+
+                var result = handHistoryParser.ParseFullHandHistory(hh.HandhistoryVal);
+
+                if (result == null)
+                {
+                    return null;
+                }
+
+                return result;
             }
         }
 
         public IList<HandHistory> GetGames(IEnumerable<long> gameNumbers, short pokersiteId)
         {
+            var handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
+
+            var handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser((EnumPokerSites)pokersiteId);
+
             using (var session = ModelEntities.OpenSession())
             {
                 List<HandHistory> historyList = new List<HandHistory>();
@@ -182,11 +198,14 @@ namespace Model
 
                 foreach (var history in hh)
                 {
-                    var result = ServiceLocator.Current.GetInstance<IParser>().ParseGame(history.HandhistoryVal);
-                    if (result == null)
-                        continue;
+                    var result = handHistoryParser.ParseFullHandHistory(history.HandhistoryVal);
 
-                    historyList.Add(result.Source);
+                    if (result == null)
+                    {
+                        continue;
+                    }
+
+                    historyList.Add(result);
                 }
 
                 return historyList;
