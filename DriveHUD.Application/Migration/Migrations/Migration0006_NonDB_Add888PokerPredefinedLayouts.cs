@@ -13,7 +13,7 @@ using System.Xml.Serialization;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(6)]
-    public class Migration006_NonDB_Add888PokerPredefinedLayouts : Migration
+    public class Migration0006_NonDB_Add888PokerPredefinedLayouts : Migration
     {
         private string[] predefinedLayouts = new string[] {
             "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-888.xml",

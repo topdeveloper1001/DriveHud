@@ -308,7 +308,7 @@
     <Compile Include="Migration\Migrations\Migration0003_NonDB_PokersiteSettingsChangeBovadaToIgnition.cs" />
     <Compile Include="Migration\Migrations\Migration0004_NonDB_AddPokerStarsPredefinedLayouts.cs" />
     <Compile Include="Migration\Migrations\Migration0005_NonDB_Add888PokerSiteSettings.cs" />
-    <Compile Include="Migration\Migrations\Migration006_NonDB_Add888PokerPredefinedLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0006_NonDB_Add888PokerPredefinedLayouts.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="SingleInstance.cs" />
