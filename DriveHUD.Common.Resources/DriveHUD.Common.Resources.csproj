@@ -733,6 +733,56 @@
   <ItemGroup>
     <Resource Include="images\settings\empty-table.png" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-10max-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-MTT-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-MTT-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-SNG-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-10max-SNG-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-5max-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-5max-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-5max-MTT-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-5max-MTT-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-5max-SNG-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-5max-SNG-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-OH-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-888.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-OH-888.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>
