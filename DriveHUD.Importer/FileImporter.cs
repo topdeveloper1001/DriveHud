@@ -444,7 +444,7 @@ namespace DriveHUD.Importers
                             tournamentsData = session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId && x.SiteId == handHistory.HandHistory.PokersiteId).ToList();
                         }
 
-                        var tournaments = CreateTournaments(handHistory, existingPlayer);
+                        var tournaments = CreateTournaments(handHistory, existingPlayer, gameInfo);
 
                         if (gameInfo != null)
                         {
@@ -539,7 +539,7 @@ namespace DriveHUD.Importers
         /// <param name="parsingResult">Hand parsing data</param>
         /// <param name="player">Player</param>
         /// <returns></returns>
-        private Tournaments CreateTournaments(ParsingResult parsingResult, Players player)
+        private Tournaments CreateTournaments(ParsingResult parsingResult, Players player, GameInfo gameInfo)
         {
             var parsedHand = parsingResult.Source;
 
@@ -552,8 +552,8 @@ namespace DriveHUD.Importers
                 Tourneynumber = parsedHand.GameDescription.Tournament.TournamentId,
                 Rakeincents = Utils.ConvertToCents(parsedHand.GameDescription.Tournament.BuyIn.Rake),
                 Tourneytagscsv = string.Empty,
-                SiteId = (short)parsingResult.HandHistory.PokersiteId,
-                SpeedtypeId = (short)parsedHand.GameDescription.Tournament.Speed,
+                SiteId = parsingResult.HandHistory.PokersiteId,
+                SpeedtypeId = gameInfo.TournamentSpeed.HasValue ? (short)gameInfo.TournamentSpeed.Value : (short)parsedHand.GameDescription.Tournament.Speed,
                 PokergametypeId = (short)parsedHand.GameDescription.GameType,
             };
 

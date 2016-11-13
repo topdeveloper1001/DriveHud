@@ -1,5 +1,6 @@
 ﻿using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
@@ -35,6 +36,7 @@ namespace DriveHUD.Application.ViewModels.Settings
                 { EnumPokerSites.Ignition, "Bodog / Ignition" },
                 { EnumPokerSites.BetOnline, "BetOnline" },
                 { EnumPokerSites.PokerStars, "Pokerstars" },
+                { EnumPokerSites.Poker888, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Poker888) },
                 { EnumPokerSites.TigerGaming, "Tigergaming" },
                 { EnumPokerSites.SportsBetting, "Sportbetting.ag" }
             };
@@ -273,6 +275,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             }
 
             var seatModel = SelectedSite.PrefferedSeats.FirstOrDefault(x => x.TableType == SelectedTableType);
+
             if (seatModel == null)
             {
                 seatModel = new PreferredSeatModel() { IsPreferredSeatEnabled = false, PreferredSeat = -1, TableType = SelectedTableType };

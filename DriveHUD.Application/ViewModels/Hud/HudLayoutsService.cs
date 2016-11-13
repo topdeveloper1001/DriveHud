@@ -37,6 +37,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private const string pathToImages = @"data\PlayerTypes";
 
+        #region layouts
+
         private static readonly string[] predefinedLayouts = new string[] { "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-BOL.xml",
             "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-BOL.xml",
             "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-BOL.xml",
@@ -120,6 +122,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             "DriveHUD.Common.Resources.Layouts.DH-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-MTT-Basic-PS.xml",
             "DriveHUD.Common.Resources.Layouts.DH-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-SNG-Basic-PS.xml"
         };
+
+        #endregion
 
         protected HudSavedLayouts hudLayouts;
 

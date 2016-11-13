@@ -183,6 +183,9 @@
     <Compile Include="FunctionalTests\Hud\HudPositionTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 3 max - Play Money.txt" />
+    <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 4 max - Real Money.txt" />
+    <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 5 Max - Real Money.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\NLHE-6max-SNG-0.10-201206.summary.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\NLHE-FREE-MTT-%2475Freeroll20120217-Summary.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\NLHE-Freeroll-MTT-201205.russian.txt" />
@@ -195,7 +198,9 @@
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\Tournament - Summary.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithRake.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt" />
+    <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 Max - Real Money.txt" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
+    <Compile Include="LayoutCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
     <Compile Include="UnitTests\BoardTextureTests.cs" />

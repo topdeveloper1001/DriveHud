@@ -307,6 +307,8 @@
     <Compile Include="Migration\Migrations\Migration0002_NonDB_DefaultLayoutsAddBumperStickers.cs" />
     <Compile Include="Migration\Migrations\Migration0003_NonDB_PokersiteSettingsChangeBovadaToIgnition.cs" />
     <Compile Include="Migration\Migrations\Migration0004_NonDB_AddPokerStarsPredefinedLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0005_NonDB_Add888PokerSiteSettings.cs" />
+    <Compile Include="Migration\Migrations\Migration0006_NonDB_Add888PokerPredefinedLayouts.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="SingleInstance.cs" />
@@ -322,6 +324,7 @@
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BovadaSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\CommonSiteSettingTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\Poker888SiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\PokerStarsSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\ISiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\PokerStarsTableConfigurator.cs" />

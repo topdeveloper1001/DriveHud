@@ -1,4 +1,5 @@
 using DriveHUD.Common.Annotations;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Resources;
 using Model.Data;
@@ -83,7 +84,7 @@ namespace DriveHUD.ViewModels
         private TextDecorationCollection _settingsAppearanceFontUnderline;
         private bool _settingsAppearanceFontUnderline_IsChecked;
 
-        private ObservableCollection<StatInfoOptionValueRange> _settingsAppearanceValueRangeCollection;        
+        private ObservableCollection<StatInfoOptionValueRange> _settingsAppearanceValueRangeCollection;
 
         private bool _settings_IsAvailable;
         private bool _settingsAppearance_IsChecked;
@@ -695,6 +696,12 @@ namespace DriveHUD.ViewModels
 
         public void AssignStatInfoValues(HudIndicators source)
         {
+            if (string.IsNullOrEmpty(PropertyName))
+            {
+                LogProvider.Log.Error(string.Format("Couldn't find properyName for {0}", Stat));
+                return;
+            }
+
             var propName = string.Format("{0}{1}", PropertyName, "Object");
 
             object propValue;
