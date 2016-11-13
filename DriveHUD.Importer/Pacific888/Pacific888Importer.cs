@@ -11,7 +11,10 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
+using System.Collections.Generic;
 
 namespace DriveHUD.Importers.Pacific888
 {
@@ -60,5 +63,89 @@ namespace DriveHUD.Importers.Pacific888
 
             return title.Contains(parsingResult.Source.TableName);
         }
+
+        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        {
+            var playerList = handHistory.Players;
+
+            var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
+
+            if (seatConversions.ContainsKey(maxPlayers))
+            {
+                var newSeats = seatConversions[maxPlayers];
+
+                foreach (var player in playerList)
+                {
+                    if (newSeats.ContainsKey(player.SeatNumber))
+                    {
+                        player.SeatNumber = newSeats[player.SeatNumber];
+                    }
+                }
+            }
+
+            return playerList;
+        }
+
+        static Dictionary<int, Dictionary<int, int>> seatConversions = new Dictionary<int, Dictionary<int, int>>
+        {
+            [2] = new Dictionary<int, int>
+            {
+                [4] = 1,
+                [9] = 2
+            },
+            [3] = new Dictionary<int, int>
+            {
+                [4] = 1,
+                [7] = 2,
+                [10] = 3
+            },
+            [4] = new Dictionary<int, int>
+            {
+                [1] = 1,
+                [4] = 2,
+                [7] = 3,
+                [9] = 4
+            },
+            [5] = new Dictionary<int, int>
+            {
+                [2] = 1,
+                [4] = 2,
+                [6] = 3,
+                [8] = 4,
+                [10] = 5
+            },
+            [6] = new Dictionary<int, int>
+            {
+                [1] = 1,
+                [2] = 2,
+                [4] = 3,
+                [6] = 4,
+                [7] = 5,
+                [9] = 6
+            },
+            [8] = new Dictionary<int, int>
+            {
+                [1] = 1,
+                [2] = 2,
+                [3] = 3,
+                [5] = 4,
+                [6] = 5,
+                [7] = 6,
+                [8] = 7,
+                [10] = 8
+            },
+            [9] = new Dictionary<int, int>
+            {
+                [1] = 1,
+                [2] = 2,
+                [3] = 3,
+                [4] = 4,
+                [5] = 5,
+                [6] = 6,
+                [7] = 7,
+                [9] = 8,
+                [10] = 9
+            },
+        };
     }
 }

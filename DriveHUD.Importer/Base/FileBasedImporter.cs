@@ -16,9 +16,12 @@ using DriveHUD.Common.Progress;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Settings;
@@ -142,10 +145,13 @@ namespace DriveHUD.Importers
                                 return;
                             }
 
+                            var fileName = Path.GetFileNameWithoutExtension(cf.Key);                            
+
                             var gameInfo = new GameInfo
                             {
                                 PokerSite = siteName,
-                                Session = cf.Value.Session
+                                Session = cf.Value.Session,                         
+                                TournamentSpeed = ParserUtils.ParseTournamentSpeed(fileName) 
                             };
 
                             LogProvider.Log.Info(string.Format("Found '{0}' file.", cf.Key));
@@ -238,7 +244,7 @@ namespace DriveHUD.Importers
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} imported", result.HandHistory.Gamenumber));
 
-                var playerList = result.Source.Players;
+                var playerList = GetPlayerList(result.Source);
 
                 gameInfo.WindowHandle = FindWindow(result).ToInt32();
                 gameInfo.GameFormat = ParseGameFormat(result);
@@ -415,6 +421,11 @@ namespace DriveHUD.Importers
 
             var tableType = (EnumTableType)parsingResult.Source.GameDescription.SeatType.MaxPlayers;
             return tableType;
+        }
+
+        protected virtual PlayerList GetPlayerList(HandHistory handHistory)
+        {
+            return handHistory.Players;
         }
 
         protected class CapturedFile

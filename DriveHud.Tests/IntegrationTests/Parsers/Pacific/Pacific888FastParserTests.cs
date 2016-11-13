@@ -138,6 +138,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", Currency.USD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 3 max - Play Money.txt", Currency.PlayMoney)]
         public void CurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -154,6 +155,10 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 9)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 3 max - Play Money.txt", 3)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 4 max - Real Money.txt", 4)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 5 max - Real Money.txt", 5)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 max - Real Money.txt", 8)]
         public void SeatTypeMaxPlayersIsParsedTest(string handHistoryFile, int maxPlayers)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

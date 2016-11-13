@@ -1,0 +1,29 @@
+﻿#Game No : 684964113
+***** 888poker Hand History for Game 684964113 *****
+$25/$50 Blinds No Limit Holdem - *** 11 11 2016 18:40:24
+Tournament #90462072 $0.92 + $0.08 - Table #1 4 Max (Real Money)
+Seat 7 is the button
+Total number of players : 4
+Seat 1: sugil14 ( $1,500 )
+Seat 4: Peon_84 ( $1,500 )
+Seat 7: blindbet341 ( $1,500 )
+Seat 9: AK52025 ( $1,500 )
+blindbet341 posts ante [$5]
+AK52025 posts ante [$5]
+sugil14 posts ante [$5]
+Peon_84 posts ante [$5]
+AK52025 posts small blind [$25]
+sugil14 posts big blind [$50]
+** Dealing down cards **
+Dealt to Peon_84 [ 2c, Qc ]
+Peon_84 folds
+blindbet341 folds
+AK52025 calls [$25]
+sugil14 checks
+** Dealing flop ** [ Tc, Ks, 3s ]
+AK52025 checks
+sugil14 bets [$50]
+AK52025 folds
+** Summary **
+sugil14 did not show his hand
+sugil14 collected [ $120 ]

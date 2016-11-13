@@ -67,7 +67,7 @@ namespace DriveHUD.Application.TableConfigurators
                     Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundPlayerImage))),
                     Height = PLAYER_HEIGHT,
                     Width = PLAYER_WIDTH,
-                    StrokeThickness = 0,
+                    StrokeThickness = 0,                    
                     BorderThickness = new Thickness(0),
                     IsResizingEnabled = false,
                     IsRotationEnabled = false,

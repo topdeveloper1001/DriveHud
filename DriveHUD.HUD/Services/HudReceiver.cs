@@ -103,7 +103,7 @@ namespace DriveHUD.HUD.Services
 
                             System.Windows.Application.Current.Dispatcher.Invoke(() =>
                             {
-                                HudPainter.UpdateHud(hudLayout);
+                               HudPainter.UpdateHud(hudLayout);
                             });
                         }
                     }

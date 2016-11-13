@@ -22,7 +22,7 @@ namespace HandHistories.Objects.Players
         public decimal Bet { get; set; }
 
         [DataMember]
-        public int SeatNumber { get; private set; }
+        public int SeatNumber { get; set; }
 
         /// <summary>
         /// Hole cards will be null when there are no cards,
