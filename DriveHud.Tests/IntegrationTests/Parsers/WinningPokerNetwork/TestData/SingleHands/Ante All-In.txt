@@ -1,79 +1,62 @@
-Game started at: 2016/11/9 17:37:32
-Game ID: 771585108 200/400 $10 Freeroll - On Demand, Table 6 (Hold'em)
+Game started at: 2016/11/14 15:21:16
+Game ID: 775574000 75/150 $10 Freeroll - On Demand, Table 27 (Hold'em)
 Seat 4 is the button
-Seat 1: jlen561753 (19821).
-Seat 2: artgdev (27638).
-Seat 3: 1dln123 (23894).
-Seat 4: impala327 (50).
-Seat 5: omarsaya73 (3090).
-Seat 6: Klimty (4598).
-Seat 7: WesMarBor (8195).
-Seat 8: saltynutz (7715).
-Seat 9: marbleeye (3080).
-Player omarsaya73 ante (50)
-Player Klimty ante (50)
-Player WesMarBor ante (50)
-Player saltynutz ante (50)
-Player marbleeye ante (50)
-Player jlen561753 ante (50)
-Player artgdev ante (50)
-Player 1dln123 ante (50)
-Player impala327 allin (50)
-Player omarsaya73 has small blind (200)
-Player Klimty has big blind (400)
-Player omarsaya73 received a card.
-Player omarsaya73 received a card.
-Player Klimty received a card.
-Player Klimty received a card.
-Player WesMarBor received a card.
-Player WesMarBor received a card.
-Player saltynutz received a card.
-Player saltynutz received a card.
-Player marbleeye received a card.
-Player marbleeye received a card.
-Player jlen561753 received a card.
-Player jlen561753 received a card.
-Player artgdev received card: [6c]
-Player artgdev received card: [Qs]
-Player 1dln123 received a card.
-Player 1dln123 received a card.
-Player impala327 received a card.
-Player impala327 received a card.
-Player WesMarBor folds
-Player saltynutz calls (400)
-Player marbleeye folds
-Player jlen561753 folds
-Player artgdev folds
-Player 1dln123 calls (400)
-Player omarsaya73 folds
-Player Klimty checks
-*** FLOP ***: [Jh 6h 3s]
-Player Klimty checks
-Player saltynutz checks
-Player 1dln123 bets (400)
-Player Klimty calls (400)
-Player saltynutz calls (400)
-*** TURN ***: [Jh 6h 3s] [5c]
-Player Klimty checks
-Player saltynutz checks
-Player 1dln123 bets (400)
-Player Klimty calls (400)
-Player saltynutz folds
-*** RIVER ***: [Jh 6h 3s 5c] [9c]
-Player Klimty checks
-Player 1dln123 checks
-Player impala327 mucks cards
-Player Klimty mucks cards
+Seat 1: daretocall47 (4071).
+Seat 2: 49035 (660).
+Seat 3: WH33Lbarrel (3335).
+Seat 4: orgonox (7147).
+Seat 6: Jacob 7 (15832).
+Seat 7: nubsaww (1000).
+Seat 8: artgdev (5).
+Seat 9: cvfgt (13565).
+Player Jacob 7 ante (15)
+Player nubsaww ante (15)
+Player artgdev allin (5)
+Player cvfgt ante (15)
+Player daretocall47 ante (15)
+Player 49035 ante (15)
+Player WH33Lbarrel ante (15)
+Player orgonox ante (15)
+Player Jacob 7 has small blind (75)
+Player nubsaww has big blind (150)
+Player Jacob 7 received a card.
+Player Jacob 7 received a card.
+Player nubsaww received a card.
+Player nubsaww received a card.
+Player artgdev received card: [4s]
+Player artgdev received card: [Jd]
+Player cvfgt received a card.
+Player cvfgt received a card.
+Player daretocall47 received a card.
+Player daretocall47 received a card.
+Player 49035 received a card.
+Player 49035 received a card.
+Player WH33Lbarrel received a card.
+Player WH33Lbarrel received a card.
+Player orgonox received a card.
+Player orgonox received a card.
+Player cvfgt folds
+Player daretocall47 folds
+Player 49035 folds
+Player WH33Lbarrel folds
+Player orgonox raises (450)
+Player Jacob 7 calls (375)
+Player nubsaww folds
+*** FLOP ***: [Ad 9d 8h]
+Player Jacob 7 bets (387)
+Player orgonox folds
+Uncalled bet (387) returned to Jacob 7
+*** TURN ***: [Ad 9d 8h] [10c]
+*** RIVER ***: [Ad 9d 8h 10c] [5c]
 ------ Summary ------
-Pot: 3850
-Board: [Jh 6h 3s 5c 9c]
-Player jlen561753 does not show cards.Bets: 50. Collects: 0. Loses: 50.
-Player artgdev does not show cards.Bets: 50. Collects: 0. Loses: 50.
-*Player 1dln123 shows: One pair of 6s [7d 6d]. Bets: 1250. Collects: 3850. Wins: 2600.
-Player impala327 mucks (does not show cards). Bets: 50. Collects: 0. Loses: 50.
-Player omarsaya73 does not show cards.Bets: 250. Collects: 0. Loses: 250.
-Player Klimty mucks (does not show cards). Bets: 1250. Collects: 0. Loses: 1250.
-Player WesMarBor does not show cards.Bets: 50. Collects: 0. Loses: 50.
-Player saltynutz does not show cards.Bets: 850. Collects: 0. Loses: 850.
-Player marbleeye does not show cards.Bets: 50. Collects: 0. Loses: 50.
-Game ended at: 2016/11/9 17:38:39
+Pot: 1160
+Board: [Ad 9d 8h 10c 5c]
+Player daretocall47 does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Player 49035 does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Player WH33Lbarrel does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Player orgonox does not show cards.Bets: 465. Collects: 0. Loses: 465.
+*Player Jacob 7 shows: One pair of 9s [9h 3c]. Bets: 465. Collects: 1160. Wins: 695.
+Player nubsaww does not show cards.Bets: 165. Collects: 0. Loses: 165.
+Player artgdev shows: High card A [4s Jd]. Bets: 5. Collects: 0. Loses: 5.
+Player cvfgt does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Game ended at: 2016/11/14 15:22:27

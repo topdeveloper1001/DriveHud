@@ -225,14 +225,14 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\Ante All-In.txt", "impala327", EnumPosition.BTN)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\Ante All-In.txt", "artgdev", EnumPosition.EP)]
         public void ParseAllInAnte(string handHistoryFile, string playername, EnumPosition position)
         {
             var parsingResult = GetParsingResult(handHistoryFile);
 
             var calc = new PlayerStatisticCalculator();
             var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.AmericasCardroom, PlayerId = 1 });
-            Assert.That(stat.Position, Is.EqualTo(position));
+            Assert.That(stat.PositionString, Is.EqualTo(position.ToString()));
         }
 
         [Test]
