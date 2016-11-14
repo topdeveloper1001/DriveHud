@@ -1,11 +1,14 @@
-﻿using DriveHUD.Entities;
+﻿using DriveHUD.Common.Utils;
+using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
+using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Winning;
+using Model;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -221,30 +224,79 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
 
-        //[Test]
-        //public void ParseAllInAnte()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\Ante All-In.txt", "impala327", EnumPosition.BTN)]
+        public void ParseAllInAnte(string handHistoryFile, string playername, EnumPosition position)
+        {
+            var parsingResult = GetParsingResult(handHistoryFile);
 
-        //[Test]
-        //public void ParseSmallBlindAllIn()
-        //{
-        //    throw new NotImplementedException();
-        //}
+            var calc = new PlayerStatisticCalculator();
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.AmericasCardroom, PlayerId = 1 });
+            Assert.That(stat.Position, Is.EqualTo(position));
+        }
 
-        //[Test]
-        //public void ParseBigBlindAllIn()
-        //{
-        //    throw new NotImplementedException();
-        //}
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\BB All-In.txt", "artgdev")]
+        public void ParseBigBlindAllIn(string handHistoryFile, string playername)
+        {
+            var parsingResult = GetParsingResult(handHistoryFile);
 
-        //[Test]
-        //public void ParseMultipleBigBlinds()
-        //{
-        //    throw new NotImplementedException();
-        //}
+            var calc = new PlayerStatisticCalculator();
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.AmericasCardroom, PlayerId = 1 });
+            Assert.That(stat.Position, Is.EqualTo(EnumPosition.BB));
+        }
 
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\SB All-In.txt", "artgdev")]
+        public void ParseSmallBlindAllIn(string handHistoryFile, string playername)
+        {
+            var parsingResult = GetParsingResult(handHistoryFile);
+
+            var calc = new PlayerStatisticCalculator();
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.AmericasCardroom, PlayerId = 1 });
+            Assert.That(stat.Position, Is.EqualTo(EnumPosition.SB));
+        }
+
+        private ParsingResult GetParsingResult(string handHistoryFile)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+
+            var pokersiteId = (short)EnumPokerSites.AmericasCardroom;
+            var hh = new Handhistory
+            {
+                Gamenumber = handHistory.HandId,
+                GametypeId = (int)handHistory.GameDescription.GameType,
+                Handtimestamp = handHistory.DateOfHandUtc,
+                HandhistoryVal = handHistory.FullHandHistoryText,
+                PokersiteId = pokersiteId,
+                Tourneynumber = string.Empty
+            };
+
+            var gameType = new Gametypes
+            {
+                Anteincents = Utils.ConvertToCents(handHistory.GameDescription.Limit.Ante),
+                Bigblindincents = Utils.ConvertToCents(handHistory.GameDescription.Limit.BigBlind),
+                CurrencytypeId = (short)handHistory.GameDescription.Limit.Currency,
+                Istourney = handHistory.GameDescription.IsTournament,
+                PokergametypeId = (short)(handHistory.GameDescription.GameType),
+                Smallblindincents = Utils.ConvertToCents(handHistory.GameDescription.Limit.SmallBlind),
+                Tablesize = (short)handHistory.GameDescription.SeatType.MaxPlayers
+            };
+
+            var players = handHistory.Players.Select(player => new Players
+            {
+                Playername = player.PlayerName,
+                PokersiteId = pokersiteId
+            }).ToList();
+
+            return new ParsingResult
+            {
+                HandHistory = hh,
+                Players = players,
+                GameType = gameType,
+                Source = handHistory
+            };
+        }
 
         private HandHistory ParseHandHistory(string handHistoryFile)
         {

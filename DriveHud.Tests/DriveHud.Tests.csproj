@@ -265,6 +265,8 @@
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max - 3 %28Hold%27em%29 - 2016-11-08.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Players\SittingOut.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\Ante All-In.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\BB All-In.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PlayMoney-River-Hero.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt" />
@@ -285,6 +287,7 @@
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-NoBoard.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-0.05-0.10-USD-Turn.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO8-25-50-USD-Turn.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\SB All-In.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - %2410 Freeroll - On Demand\HH20161109 T6627313-G36855120.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20161109 T6626931-G36853412.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\HH20161109 T6627135-G36854283.txt" />

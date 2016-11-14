@@ -1,0 +1,79 @@
+Game started at: 2016/11/9 17:37:32
+Game ID: 771585108 200/400 $10 Freeroll - On Demand, Table 6 (Hold'em)
+Seat 4 is the button
+Seat 1: jlen561753 (19821).
+Seat 2: artgdev (27638).
+Seat 3: 1dln123 (23894).
+Seat 4: impala327 (50).
+Seat 5: omarsaya73 (3090).
+Seat 6: Klimty (4598).
+Seat 7: WesMarBor (8195).
+Seat 8: saltynutz (7715).
+Seat 9: marbleeye (3080).
+Player omarsaya73 ante (50)
+Player Klimty ante (50)
+Player WesMarBor ante (50)
+Player saltynutz ante (50)
+Player marbleeye ante (50)
+Player jlen561753 ante (50)
+Player artgdev ante (50)
+Player 1dln123 ante (50)
+Player impala327 allin (50)
+Player omarsaya73 has small blind (200)
+Player Klimty has big blind (400)
+Player omarsaya73 received a card.
+Player omarsaya73 received a card.
+Player Klimty received a card.
+Player Klimty received a card.
+Player WesMarBor received a card.
+Player WesMarBor received a card.
+Player saltynutz received a card.
+Player saltynutz received a card.
+Player marbleeye received a card.
+Player marbleeye received a card.
+Player jlen561753 received a card.
+Player jlen561753 received a card.
+Player artgdev received card: [6c]
+Player artgdev received card: [Qs]
+Player 1dln123 received a card.
+Player 1dln123 received a card.
+Player impala327 received a card.
+Player impala327 received a card.
+Player WesMarBor folds
+Player saltynutz calls (400)
+Player marbleeye folds
+Player jlen561753 folds
+Player artgdev folds
+Player 1dln123 calls (400)
+Player omarsaya73 folds
+Player Klimty checks
+*** FLOP ***: [Jh 6h 3s]
+Player Klimty checks
+Player saltynutz checks
+Player 1dln123 bets (400)
+Player Klimty calls (400)
+Player saltynutz calls (400)
+*** TURN ***: [Jh 6h 3s] [5c]
+Player Klimty checks
+Player saltynutz checks
+Player 1dln123 bets (400)
+Player Klimty calls (400)
+Player saltynutz folds
+*** RIVER ***: [Jh 6h 3s 5c] [9c]
+Player Klimty checks
+Player 1dln123 checks
+Player impala327 mucks cards
+Player Klimty mucks cards
+------ Summary ------
+Pot: 3850
+Board: [Jh 6h 3s 5c 9c]
+Player jlen561753 does not show cards.Bets: 50. Collects: 0. Loses: 50.
+Player artgdev does not show cards.Bets: 50. Collects: 0. Loses: 50.
+*Player 1dln123 shows: One pair of 6s [7d 6d]. Bets: 1250. Collects: 3850. Wins: 2600.
+Player impala327 mucks (does not show cards). Bets: 50. Collects: 0. Loses: 50.
+Player omarsaya73 does not show cards.Bets: 250. Collects: 0. Loses: 250.
+Player Klimty mucks (does not show cards). Bets: 1250. Collects: 0. Loses: 1250.
+Player WesMarBor does not show cards.Bets: 50. Collects: 0. Loses: 50.
+Player saltynutz does not show cards.Bets: 850. Collects: 0. Loses: 850.
+Player marbleeye does not show cards.Bets: 50. Collects: 0. Loses: 50.
+Game ended at: 2016/11/9 17:38:39

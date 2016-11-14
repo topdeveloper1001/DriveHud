@@ -1,4 +1,5 @@
-﻿using DriveHUD.Entities;
+﻿using DriveHUD.Common.Log;
+using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
@@ -376,12 +377,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             Street currentStreet = Street.Preflop;
 
             PlayerList playerList = ParsePlayers(handLines);
+            int dealerPosition = ParseDealerPosition(handLines);
             bool playerWithSpaces = playerList.Any(p => p.PlayerName.Contains(" "));
 
             //Skipping PlayerList
             int actionsStart = GetActionStart(handLines);
 
             actionsStart = ParsePosts(handLines, handActions, actionsStart);
+
+            if (handActions.Any(x => x.HandActionType == HandActionType.ALL_IN))
+            {
+                AdjustAllIn(handActions);
+            }
 
             //Skipping all "received a card."
             actionsStart = SkipDealer(handLines, actionsStart);
@@ -431,6 +438,121 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 }
             }
             return handActions;
+        }
+
+        // at this point we should have only blinds/posts/antes
+        private void AdjustAllIn(List<HandAction> handActions)
+        {
+            var isSmallBlindDefined = handActions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND);
+            var isBigBlindDefined = handActions.Any(x => x.HandActionType == HandActionType.BIG_BLIND);
+
+            var predictedSBPlayer = handActions.ElementAtOrDefault(0)?.PlayerName;
+            var predictedBBPlayer = handActions.ElementAtOrDefault(1)?.PlayerName;
+
+            if (!isBigBlindDefined)
+            {
+                if (isSmallBlindDefined)
+                {
+                    // actions start from sb (if present)
+                    if (!string.IsNullOrWhiteSpace(predictedBBPlayer))
+                    {
+                        var lastBBAction = handActions.LastOrDefault(x => x.HandActionType == HandActionType.ALL_IN
+                                            && x.PlayerName == predictedBBPlayer);
+
+                        isBigBlindDefined = OverrideActionType(lastBBAction, HandActionType.BIG_BLIND, handActions);
+                    }
+                }
+                else
+                {
+                    // if only one action -> bb
+                    if (!string.IsNullOrWhiteSpace(predictedSBPlayer) && !string.IsNullOrWhiteSpace(predictedBBPlayer))
+                    {
+                        if (handActions.Any(x => x.HandActionType == HandActionType.ALL_IN && x.PlayerName == predictedSBPlayer))
+                        {
+                            if (handActions.Any(x => x.HandActionType == HandActionType.ALL_IN && x.PlayerName == predictedBBPlayer))
+                            {
+                                // if first 2 players have all-in -> we have small + big
+                                var lastSBAction = handActions.LastOrDefault(x => x.HandActionType == HandActionType.ALL_IN
+                                            && x.PlayerName == predictedSBPlayer);
+                                var lastBBAction = handActions.LastOrDefault(x => x.HandActionType == HandActionType.ALL_IN
+                                            && x.PlayerName == predictedBBPlayer);
+
+                                isSmallBlindDefined = OverrideActionType(lastSBAction, HandActionType.SMALL_BLIND, handActions);
+                                isBigBlindDefined = OverrideActionType(lastBBAction, HandActionType.BIG_BLIND, handActions);
+                            }
+                            else
+                            {
+                                // if only first all-in and no bb -> first action is bb, no small
+                                var lastBBAction = handActions.LastOrDefault(x => x.HandActionType == HandActionType.ALL_IN
+                                               && x.PlayerName == predictedSBPlayer);
+                                isBigBlindDefined = OverrideActionType(lastBBAction, HandActionType.BIG_BLIND, handActions);
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (!isSmallBlindDefined)
+            {
+                // if bb defined and it's the second player, then 1st player is sb
+                if (isBigBlindDefined && handActions.FirstOrDefault(x => x.HandActionType == HandActionType.BIG_BLIND)?.PlayerName == predictedBBPlayer)
+                {
+                    var lastSBAction = handActions.LastOrDefault(x => x.HandActionType == HandActionType.ALL_IN
+                                            && x.PlayerName == predictedSBPlayer);
+                    isSmallBlindDefined = OverrideActionType(lastSBAction, HandActionType.SMALL_BLIND, handActions);
+                }
+                // game without SB, at this point we should have BB already
+                else if (!isBigBlindDefined)
+                {
+                    //shouldn't be possible
+                    LogProvider.Log.Warn($"Cannot parse blinds for: {Environment.NewLine}" +
+                        string.Join(Environment.NewLine, handActions));
+                }
+            }
+
+            // if any ante or any 2 actions with same playername - we have ante
+            bool isAnteGame = handActions.Any(x => x.HandActionType == HandActionType.ANTE)
+                || handActions.GroupBy(x => x.PlayerName).Any(x => x.Count() > 1);
+
+            if (isAnteGame)
+            {
+                var processedPlayers = new List<string>();
+                for (int i = 0; i < handActions.Count; i++)
+                {
+                    var action = handActions[i];
+                    if (processedPlayers.Contains(action.PlayerName))
+                    {
+                        break;
+                    }
+                    // first player's all-in is ante
+                    if (action.HandActionType == HandActionType.ALL_IN)
+                    {
+                        handActions[i] = new HandAction(action.PlayerName, HandActionType.ANTE, action.Amount, action.Street);
+                    }
+                }
+            }
+
+            // other All-In's are Posts action (straddle, dead bet etc.)
+            for (int i = 0; i < handActions.Count; i++)
+            {
+                var action = handActions[i];
+                if (action.HandActionType == HandActionType.ALL_IN)
+                {
+                    handActions[i] = new HandAction(action.PlayerName, HandActionType.POSTS, action.Amount, action.Street);
+                }
+            }
+        }
+
+        private bool OverrideActionType(HandAction actionToOverride, HandActionType newHandActionType, List<HandAction> source)
+        {
+            if (actionToOverride != null)
+            {
+                var indexOfBB = source.IndexOf(actionToOverride);
+                source[indexOfBB] = new HandAction(actionToOverride.PlayerName, newHandActionType, actionToOverride.Amount, actionToOverride.Street);
+                return true;
+            }
+
+            return false;
         }
 
         protected override TournamentDescriptor ParseTournament(string[] handLines)
@@ -713,10 +835,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 {
                     playerNameEndIndex = line.IndexOf(" straddle (", StringComparison.Ordinal);
                 }
-                if (playerNameEndIndex == -1)
-                {
-                    playerNameEndIndex = line.IndexOf(" allin (", StringComparison.Ordinal);
-                }
 
                 if (playerNameEndIndex != -1)
                 {
@@ -735,6 +853,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     {
                         playerNameEndIndex = line.IndexOf(" ante (", StringComparison.Ordinal);
                         actionType = HandActionType.ANTE;
+                    }
+                    if (playerNameEndIndex == -1)
+                    {
+                        playerNameEndIndex = line.IndexOf(" allin (", StringComparison.Ordinal);
+                        actionType = HandActionType.ALL_IN;
                     }
                 }
 
