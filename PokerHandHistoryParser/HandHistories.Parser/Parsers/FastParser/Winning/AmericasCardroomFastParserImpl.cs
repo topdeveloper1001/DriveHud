@@ -10,6 +10,7 @@ using HandHistories.Parser.Utils;
 using HandHistories.Parser.Utils.Extensions;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -21,6 +22,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
     {
         private const int GameIDStartIndex = 9;
         private const int ActionPlayerNameStartIndex = 7;
+        private const int SummaryGameTypeStartIndex = 10;
+
+        private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
+        {
+            NegativeSign = "-",
+            CurrencyDecimalSeparator = ".",
+            CurrencyGroupSeparator = ",",
+            CurrencySymbol = "$"
+        };
 
         public override EnumPokerSites SiteName
         {
@@ -56,6 +66,14 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             }
 
             return IsValidHand(handLines);
+        }
+
+        private static readonly Regex HandSplitRegex = new Regex("Game started at: ", RegexOptions.Compiled);
+        public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
+        {
+            return HandSplitRegex.Split(rawHandHistories)
+                            .Where(s => string.IsNullOrWhiteSpace(s) == false && s.Length > 30)
+                            .Select(s => "Game started at: " + s.Trim('\r', '\n'));
         }
 
         protected override Buyin ParseBuyin(string[] handLines)
@@ -95,10 +113,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override DateTime ParseDateUtc(string[] handLines)
         {
-            //Game started at: 2014/3/8 22:1:43
+            //Game started at: 2014/3/8 22:1:43 
+            //Game started at: 2014/3/8 22:1:43 *** Summary
             const int startindex = 17;
-            string dataString = handLines[0].Substring(startindex);
-            DateTime time = DateTime.Parse(dataString, System.Globalization.CultureInfo.CurrentCulture).ToUniversalTime();
+            string dateString = handLines[0].Substring(startindex);
+
+            int summaryStringStartIndex = dateString.LastIndexOf(" ***");
+            if (summaryStringStartIndex != -1)
+            {
+                dateString = dateString.Remove(summaryStringStartIndex);
+            }
+
+            DateTime time = DateTime.Parse(dateString, System.Globalization.CultureInfo.CurrentCulture).ToUniversalTime();
             return time;
         }
 
@@ -113,17 +139,35 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override GameType ParseGameType(string[] handLines)
         {
-            //TODO: parse gametype
             string line = handLines[1];
             int startIndex = line.LastIndexOf('(');
             string game = line.Substring(startIndex);
+
+            string gameType = string.Empty;
+
+            // if summary is present
+            string summary = GetSummaryString(handLines);
+            if (!string.IsNullOrWhiteSpace(summary))
+            {
+                //GameType: NL
+                //GameType: FL
+                //GameType: PL
+                gameType = summary.Substring(SummaryGameTypeStartIndex, 2);
+            }
+
             switch (game)
             {
                 case "(Hold'em)":
+                    if (gameType.Equals("FL")) { return GameType.FixedLimitHoldem; }
+                    if (gameType.Equals("PL")) { return GameType.PotLimitHoldem; }
                     return GameType.NoLimitHoldem;
                 case "(Omaha)":
+                    if (gameType.Equals("FL")) { return GameType.FixedLimitOmaha; }
+                    if (gameType.Equals("NL")) { return GameType.NoLimitOmaha; }
                     return GameType.PotLimitOmaha;
                 case "(Omaha HiLow)":
+                    if (gameType.Equals("FL")) { return GameType.FixedLimitOmahaHiLo; }
+                    if (gameType.Equals("NL")) { return GameType.NoLimitOmahaHiLo; }
                     return GameType.PotLimitOmahaHiLo;
                 default:
                     throw new UnrecognizedGameTypeException(line, "GameType: " + game);
@@ -162,7 +206,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             int splitIndex = limitText.IndexOf('/');
             decimal smallBlind = decimal.Parse(limitText.Remove(splitIndex), System.Globalization.CultureInfo.InvariantCulture);
             decimal bigBlind = decimal.Parse(limitText.Substring(splitIndex + 1), System.Globalization.CultureInfo.InvariantCulture);
-            Limit limit = Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, Currency.USD);
+            var currency = handLines[1].Contains("PM ") || handLines[1].Contains("Play Money ") ? Currency.PlayMoney : Currency.USD;
+            Limit limit = Limit.FromSmallBlindBigBlind(smallBlind, bigBlind, currency);
             return limit;
         }
 
@@ -323,7 +368,12 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override PokerFormat ParsePokerFormat(string[] handLines)
         {
-            // TODO: parse poker format
+            //Game ID: 775559540 30 / 60 $10 Freeroll - On Demand, Table 27(Hold'em)
+            if (handLines[1].Contains("Table "))
+            {
+                return PokerFormat.Tournament;
+            }
+
             return PokerFormat.CashGame;
         }
 
@@ -355,7 +405,6 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override TableType ParseTableType(string[] handLines)
         {
-            // TODO: usage?
             List<TableTypeDescription> descriptions = new List<TableTypeDescription>();
             if (handLines[1].Contains("(JP)"))
             {
@@ -366,7 +415,9 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 descriptions.Add(TableTypeDescription.Cap);
             }
 
-            return TableType.FromTableTypeDescriptions(descriptions.ToArray());
+            return descriptions.Count == 0
+                ? TableType.FromTableTypeDescriptions(TableTypeDescription.Regular)
+                : TableType.FromTableTypeDescriptions(descriptions.ToArray());
         }
 
         protected override List<HandAction> ParseHandActions(string[] handLines, GameType gameType = GameType.Unknown)
@@ -557,7 +608,55 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
-            throw new NotImplementedException();
+            //TournamentId: 213213123, TournamentBuyIn: 0.65$, TournamentSpeed: HyperTurbo
+            var tournamentString = GetSummaryString(handLines);
+
+            var regex = new Regex(@"TournamentId: (?<tournament_id>[^\s]+), TournamentBuyIn: (?<buyin>[^-]+), TournamentSpeed: (?<speed>[^\(]+)");
+
+            var match = regex.Match(tournamentString);
+
+            if (!match.Success)
+            {
+                LogProvider.Log.Warn($"Tournament summary wasn't found: {handLines[1]}");
+                return new TournamentDescriptor()
+                {
+                    BuyIn = Buyin.AllBuyin(),
+                    TournamentName = "Undefined Tournament",
+                    TournamentId = ""
+                };
+            }
+
+            var tournamentName = RemoveTableNumber(ParseTableName(handLines));
+            var buyIn = decimal.Parse(match.Groups["buyin"].Value, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+
+            TournamentSpeed speed = TournamentSpeed.Regular;
+            Enum.TryParse(match.Groups["speed"].Value, out speed);
+
+            var tournamentDescriptor = new TournamentDescriptor
+            {
+                TournamentId = match.Groups["tournament_id"].Value,
+                BuyIn = Buyin.FromBuyinRake(buyIn, 0m, Currency.USD),
+                Speed = speed,
+                TournamentName = $"{tournamentName} #{match.Groups["tournament_id"].Value}"
+            };
+
+            return tournamentDescriptor;
+        }
+
+        private string RemoveTableNumber(string tableName)
+        {
+            if (string.IsNullOrWhiteSpace(tableName))
+            {
+                return tableName;
+            }
+
+            var tableNumberStartIndex = tableName.LastIndexOf(", Table");
+            if (tableNumberStartIndex == -1)
+            {
+                return tableName;
+            }
+
+            return tableName.Remove(tableNumberStartIndex);
         }
 
         private HandAction ParseRegularAction(string line, Street currentStreet, PlayerList playerList, List<HandAction> actions, bool PlayerWithSpaces)
@@ -902,5 +1001,17 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             return true;
         }
 
+        private string GetSummaryString(string[] handLines)
+        {
+            const string SummaryPattern = "*** Summary: ";
+
+            string line = handLines[0];
+            int startIndex = line.LastIndexOf(SummaryPattern, StringComparison.Ordinal);
+            if (startIndex == -1)
+            {
+                return string.Empty;
+            }
+            return line.Substring(startIndex + SummaryPattern.Count());
+        }
     }
 }

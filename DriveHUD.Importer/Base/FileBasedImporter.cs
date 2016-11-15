@@ -58,18 +58,9 @@ namespace DriveHUD.Importers
 
         protected abstract string HandHistoryFilter { get; }
 
-        protected virtual Encoding ByteEncoder
+        protected virtual Encoding HandHistoryFileEncoding
         {
             get { return Encoding.UTF8; }
-        }
-
-        // Some sites (e.g. ACP) append the current action to file after it's happend instead of making the chunk update after the hand has been finished
-        /// <summary>
-        /// Indicates whether hand is added to the file after it's been fully completed (true) or hand is updating after each action (false)
-        /// </summary>
-        protected virtual bool IsAppendingFullHand
-        {
-            get { return true; }
         }
 
         #endregion
@@ -128,7 +119,7 @@ namespace DriveHUD.Importers
 
                         fs.Read(data, 0, data.Length);
 
-                        var handText = ByteEncoder.GetString(data);
+                        var handText = HandHistoryFileEncoding.GetString(data);
 
                         // if file could not be parsed, mark it as invalid to prevent further processing 
                         if (cf.Value.GameInfo == null)
@@ -204,14 +195,7 @@ namespace DriveHUD.Importers
 
             try
             {
-                parsingResult = dbImporter.Import(handHistory, progress, gameInfo, !IsAppendingFullHand);
-            }
-            catch (InvalidHandException) when (!IsAppendingFullHand)
-            {
-                //hand is not finished yet
-                handProcessed = false;
-                Debug.WriteLine("Invalid Hand Detected");
-                return;
+                parsingResult = dbImporter.Import(handHistory, progress, gameInfo, false);
             }
             catch (Exception e)
             {

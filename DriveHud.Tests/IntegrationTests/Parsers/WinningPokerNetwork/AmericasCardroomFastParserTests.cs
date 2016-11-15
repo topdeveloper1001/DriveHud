@@ -17,12 +17,13 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 {
     [TestFixture]
-    class WinningPokerNetworkFastParserTests
+    class AmericasCardroomFastParserTests
     {
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\CancelledHand.txt", true)]
@@ -256,6 +257,19 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.AmericasCardroom, PlayerId = 1 });
             Assert.That(stat.Position, Is.EqualTo(EnumPosition.SB));
         }
+
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary.txt", GameType.PotLimitHoldem, "6626931", 1.01, TournamentSpeed.HyperTurbo)]
+        public void ParseTournamentSummaryTest(string handHistoryFile, GameType gameType, string tournamentId, decimal tournamentBuyIn, TournamentSpeed speed)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+
+            Assert.IsTrue(handHistory.GameDescription.IsTournament);
+            Assert.AreEqual(handHistory.GameDescription.Tournament.TournamentId, tournamentId);
+            Assert.AreEqual(handHistory.GameDescription.GameType, gameType);
+            Assert.AreEqual(handHistory.GameDescription.Tournament.Speed, speed);
+        }
+
 
         private ParsingResult GetParsingResult(string handHistoryFile)
         {
