@@ -301,6 +301,7 @@
     <Compile Include="Licensing\LicenseSubType.cs" />
     <Compile Include="Licensing\LicenseType.cs" />
     <Compile Include="Migration\IMigrationService.cs" />
+    <Compile Include="Migration\Migrations\Migration0007_NonDB_ChangeDefaultCustomProcessedDataLocation.cs" />
     <Compile Include="Migration\MigrationService.cs" />
     <Compile Include="Migration\Migrations\Migration0000_CreateDatabase.cs" />
     <Compile Include="Migration\Migrations\Migration0001_CreateTablePlayerNotes.cs" />

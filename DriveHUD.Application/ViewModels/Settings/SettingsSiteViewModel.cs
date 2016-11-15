@@ -159,7 +159,7 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             get
             {
-                return SettingsModel?.CustomProcessedDataLocation ?? StringFormatter.GetAppDataFolderPath();
+                return SettingsModel?.CustomProcessedDataLocation ?? StringFormatter.GetProcessedDataFolderPath();
             }
 
             set
