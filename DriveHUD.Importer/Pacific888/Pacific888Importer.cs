@@ -11,10 +11,14 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Entities;
+using DriveHUD.Importers.Helpers;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Importers.Pacific888
 {
@@ -70,6 +74,8 @@ namespace DriveHUD.Importers.Pacific888
 
             var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
 
+            var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
+
             if (seatConversions.ContainsKey(maxPlayers))
             {
                 var newSeats = seatConversions[maxPlayers];
@@ -78,9 +84,33 @@ namespace DriveHUD.Importers.Pacific888
                 {
                     if (newSeats.ContainsKey(player.SeatNumber))
                     {
+                        if (player.SeatNumber == heroSeat)
+                        {
+                            heroSeat = newSeats[player.SeatNumber];
+                        }
+
                         player.SeatNumber = newSeats[player.SeatNumber];
                     }
                 }
+            }
+
+            if (heroSeat != 0)
+            {
+                var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
+                                        SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.Poker888)?.PrefferedSeats;
+
+                var prefferedSeat = preferredSeats.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
+
+                if (prefferedSeat != null)
+                {
+                    var shift = (prefferedSeat.PreferredSeat - heroSeat) % maxPlayers;
+
+                    foreach (var player in playerList)
+                    {
+                        player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
+                    }
+                }
+
             }
 
             return playerList;

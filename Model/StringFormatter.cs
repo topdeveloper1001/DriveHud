@@ -26,23 +26,17 @@ namespace Model
 
         public static string GetProcessedDataFolderPath()
         {
-            string path = string.Empty;
+            return Path.Combine(SettingsService.GetSettings().SiteSettings.CustomProcessedDataLocation);
+        }
 
-            if (SettingsService.GetSettings().SiteSettings.IsCustomProcessedDataLocationEnabled)
-            {
-                path = SettingsService.GetSettings().SiteSettings.CustomProcessedDataLocation;
-            }
-            else
-            {
-                path = GetAppDataFolderPath();
-            }
-
-            return Path.Combine(path, CommonResourceManager.Instance.GetResourceString(ResourceStrings.DefaultPlayersFolderName));
+        public static string GetPlayersDataFolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.DefaultPlayersFolderName));
         }
 
         public static string GetActivePlayerFilePath()
         {
-            return Path.Combine(GetProcessedDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.ActivePlayerFileName));
+            return Path.Combine(GetPlayersDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.ActivePlayerFileName));
         }
 
         public static string ActionLineSeparator = "-";
