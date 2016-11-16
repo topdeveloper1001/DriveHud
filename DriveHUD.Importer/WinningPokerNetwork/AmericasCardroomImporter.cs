@@ -203,8 +203,12 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 {
                     handHistory = handHistory.Insert(newLineIndex, summaryText);
                 }
+                else
+                {
+                    newLineIndex = indexGameStarted + 1;
+                }
 
-                indexGameStarted = handHistory.IndexOf(GameIdSearchPatter);
+                indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern, newLineIndex );
             }
 
             LogProvider.Log.Debug(handHistory);
