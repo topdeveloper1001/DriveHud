@@ -34,6 +34,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 namespace DriveHUD.Importers
 {
     internal abstract class FileBasedImporter : BaseImporter
@@ -41,7 +42,6 @@ namespace DriveHUD.Importers
         protected Dictionary<string, CapturedFile> capturedFiles;
         protected HashSet<string> filesToSkip;
         protected IEventAggregator eventAggregator;
-        protected Process pokerClientProcess;
 
         protected const int ReadingTimeout = 3000;
 
@@ -136,13 +136,13 @@ namespace DriveHUD.Importers
                                 return;
                             }
 
-                            var fileName = Path.GetFileNameWithoutExtension(cf.Key);                            
+                            var fileName = Path.GetFileNameWithoutExtension(cf.Key);
 
                             var gameInfo = new GameInfo
                             {
                                 PokerSite = siteName,
-                                Session = cf.Value.Session,                         
-                                TournamentSpeed = ParserUtils.ParseTournamentSpeed(fileName) 
+                                Session = cf.Value.Session,
+                                TournamentSpeed = ParserUtils.ParseTournamentSpeed(fileName)
                             };
 
                             LogProvider.Log.Info(string.Format("Found '{0}' file.", cf.Key));
@@ -291,25 +291,20 @@ namespace DriveHUD.Importers
         {
             try
             {
-                if (pokerClientProcess == null || pokerClientProcess.HasExited)
-                {
-                    pokerClientProcess = GetPokerClientProcess();
-
-                    if (pokerClientProcess == null)
-                    {
-                        return IntPtr.Zero;
-                    }
-                }
+                var pokerClientProcesses = GetPokerClientProcesses();
 
                 var handles = new List<IntPtr>();
 
-                foreach (ProcessThread thread in pokerClientProcess.Threads)
+                foreach (var pokerClientProcess in pokerClientProcesses)
                 {
-                    WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
+                    foreach (ProcessThread thread in pokerClientProcess.Threads)
                     {
-                        handles.Add(hWnd);
-                        return true;
-                    }, IntPtr.Zero);
+                        WinApi.EnumThreadWindows(thread.Id, (hWnd, lParam) =>
+                        {
+                            handles.Add(hWnd);
+                            return true;
+                        }, IntPtr.Zero);
+                    }
                 }
 
                 foreach (var handle in handles)
@@ -327,7 +322,7 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Could not find PokerStars table", e);
+                LogProvider.Log.Error(this, $"Could not find {Site} table", e);
             }
 
             return IntPtr.Zero;
@@ -362,13 +357,13 @@ namespace DriveHUD.Importers
         /// Get client process
         /// </summary>
         /// <returns>Client process if exist, otherwise - null</returns>
-        protected virtual Process GetPokerClientProcess()
+        protected virtual Process[] GetPokerClientProcesses()
         {
             var processes = Process.GetProcesses();
 
-            var pokerClientProcess = processes.FirstOrDefault(x => x.ProcessName.Equals(ProcessName));
+            var pokerClientProcesses = processes.Where(x => x.ProcessName.Equals(ProcessName)).ToArray();
 
-            return pokerClientProcess;
+            return pokerClientProcesses;
         }
 
         protected virtual Bovada.GameType ParseGameType(ParsingResult parsingResult)

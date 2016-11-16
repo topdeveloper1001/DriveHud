@@ -257,7 +257,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void OnDataImported(DataImportedEventArgs e)
         {
-            LogProvider.Log.Info(string.Format("Memory before sending data to HUD: {0:N0}", GC.GetTotalMemory(false)));
+            //LogProvider.Log.Info(string.Format("Memory before sending data to HUD: {0:N0}", GC.GetTotalMemory(false)));
 
             try
             {
@@ -524,7 +524,7 @@ namespace DriveHUD.Application.ViewModels
                 LogProvider.Log.Error(this, "Importing failed", ex);
             }
 
-            LogProvider.Log.Info(string.Format("Memory after sending data to HUD: {0:N0}", GC.GetTotalMemory(false)));
+            // LogProvider.Log.Info(string.Format("Memory after sending data to HUD: {0:N0}", GC.GetTotalMemory(false)));
         }
 
         internal async void ImportFromFile()
