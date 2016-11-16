@@ -691,7 +691,7 @@ namespace DriveHUD.Importers.Bovada
 
                 try
                 {
-                    dbImporter.Import(handHistory, progress, gameInfo, false);
+                    dbImporter.Import(handHistory, progress, gameInfo);
                 }
                 catch (Exception e)
                 {

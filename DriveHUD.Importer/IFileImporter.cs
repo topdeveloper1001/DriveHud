@@ -53,7 +53,7 @@ namespace DriveHUD.Importers
         /// <param name="progress">Progress object to report</param>           
         /// <param name="gameInfo">Game information</param> 
         /// <param name="rethrowInvalidHand">Rethrow invalid hands flag</param>
-        IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo, bool rethrowInvalidHands);
+        IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo);
 
         #endregion
     }

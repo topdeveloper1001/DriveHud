@@ -622,7 +622,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 {
                     BuyIn = Buyin.AllBuyin(),
                     TournamentName = "Undefined Tournament",
-                    TournamentId = ""
+                    TournamentId = "0"
                 };
             }
 

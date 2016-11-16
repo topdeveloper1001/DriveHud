@@ -102,24 +102,12 @@ namespace DriveHUD.Importers
                     capturedFiles.ForEach(cf =>
                     {
                         var fs = cf.Value.FileStream;
-                        var initialPosition = fs.Position;
 
-                        // possible for ACR, since they remove partial data if table was closed before hand had been finished
-                        if (fs.Position > fs.Length)
-                        {
-                            fs.Seek(0, SeekOrigin.End);
-                        }
-
-                        var data = new byte[fs.Length - fs.Position];
-
-                        if (data.Length == 0)
+                        var handText = GetHandTextFromStream(fs);
+                        if (string.IsNullOrEmpty(handText))
                         {
                             return;
                         }
-
-                        fs.Read(data, 0, data.Length);
-
-                        var handText = HandHistoryFileEncoding.GetString(data);
 
                         // if file could not be parsed, mark it as invalid to prevent further processing 
                         if (cf.Value.GameInfo == null)
@@ -150,15 +138,7 @@ namespace DriveHUD.Importers
                             cf.Value.GameInfo = gameInfo;
                         }
 
-                        bool isHandProcessed;
-
-                        ImportHand(handText, cf.Value.GameInfo, out isHandProcessed);
-
-                        if (!isHandProcessed)
-                        {
-                            // hand is not completed yet, return to initial position
-                            fs.Seek(initialPosition, SeekOrigin.Begin);
-                        }
+                        ProcessHand(handText, cf.Value.GameInfo);
                     });
 
                     // remove invalid files from captured
@@ -184,10 +164,8 @@ namespace DriveHUD.Importers
         }
 
         // Import hand
-        protected virtual void ImportHand(string handHistory, GameInfo gameInfo, out bool handProcessed)
+        protected virtual void ProcessHand(string handHistory, GameInfo gameInfo)
         {
-            handProcessed = true;
-
             var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
             var progress = new DHProgress();
 
@@ -195,7 +173,7 @@ namespace DriveHUD.Importers
 
             try
             {
-                parsingResult = dbImporter.Import(handHistory, progress, gameInfo, false);
+                parsingResult = ImportHand(handHistory, gameInfo, dbImporter, progress);
             }
             catch (Exception e)
             {
@@ -239,6 +217,25 @@ namespace DriveHUD.Importers
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }
+        }
+
+        protected virtual string GetHandTextFromStream(Stream fs)
+        {
+            var data = new byte[fs.Length - fs.Position];
+
+            if (data.Length == 0)
+            {
+                return string.Empty;
+            }
+
+            fs.Read(data, 0, data.Length);
+
+            return HandHistoryFileEncoding.GetString(data);
+        }
+
+        protected virtual IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter dbImporter, DHProgress progress)
+        {
+            return dbImporter.Import(handHistory, progress, gameInfo);
         }
 
         // Get directories with hand histories

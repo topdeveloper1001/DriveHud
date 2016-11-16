@@ -14,6 +14,9 @@ using DriveHUD.Common.WinApi;
 using System.Diagnostics;
 using HandHistories.Objects.GameDescription;
 using System.Globalization;
+using System.IO;
+using DriveHUD.Common.Extensions;
+using HandHistories.Parser.Utils.FastParsing;
 
 namespace DriveHUD.Importers.WinningPokerNetwork
 {
@@ -47,72 +50,66 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             CurrencySymbol = "$"
         };
 
-        // Import hand
-        protected override void ImportHand(string handHistory, GameInfo gameInfo, out bool handProcessed)
+        protected override IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter dbImporter, DHProgress progress)
         {
-            handProcessed = true;
+            // client window contains some additional information about the game, so add it to the HH if possible
+            bool isWindowFound;
+            handHistory = AddAdditionalData(handHistory, out isWindowFound);
 
-            var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
-            var progress = new DHProgress();
-
-            IEnumerable<ParsingResult> parsingResult = null;
-
-            try
+            // import only hands that we can find the open window for (until we find another way of processing tournaments)
+            if (isWindowFound)
             {
-                // client window contains some additional information about the game, so add it to the HH if possible
-                handHistory = AddAdditionalData(handHistory);
-
                 // ACP appends the current action to file right after it was performed instead of making the chunk update after the hand had been finished
-                parsingResult = dbImporter.Import(handHistory, progress, gameInfo, true);
-            }
-            catch (InvalidHandException)
-            {
-                //hand is not finished yet
-                handProcessed = false;
-                return;
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, string.Format("Hand(s) has not been imported"), e);
+                return dbImporter.Import(handHistory, progress, gameInfo);
             }
 
-            if (parsingResult == null)
+            return null;
+        }
+
+        private const string HandEndedPattern = "Game ended at: ";
+        protected override string GetHandTextFromStream(Stream fs)
+        {
+            // possible for ACR, since they remove partial data if table was closed before hand had been finished
+            if (fs.Position > fs.Length)
             {
-                return;
+                fs.Seek(0, SeekOrigin.End);
+                return string.Empty;
             }
 
-            foreach (var result in parsingResult)
+            if (fs.Position == fs.Length)
             {
-                if (result.HandHistory == null)
+                return string.Empty;
+            }
+
+            StringBuilder builder = new StringBuilder();
+
+            long lastHandEndedPosition = fs.Position;
+
+            using (var streamReader = new StreamReader(fs, HandHistoryFileEncoding, false, 1024, true))
+            {
+                StringBuilder tempStringBuilder = new StringBuilder();
+
+                while (!streamReader.EndOfStream)
                 {
-                    continue;
+                    var line = streamReader.ReadLine();
+                    tempStringBuilder.AppendLine(line);
+
+                    if (line.StartsWith(HandEndedPattern))
+                    {
+                        lastHandEndedPosition = streamReader.GetPosition();
+
+                        builder.Append(tempStringBuilder.ToString());
+                        tempStringBuilder.Clear();
+                    }
                 }
 
-                if (result.IsDuplicate)
+                if (lastHandEndedPosition != fs.Position && lastHandEndedPosition < fs.Length)
                 {
-                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate.", result.HandHistory.Gamenumber));
-                    continue;
+                    streamReader.SetPosition(lastHandEndedPosition);
                 }
-
-                if (!result.WasImported)
-                {
-                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported.", result.HandHistory.Gamenumber));
-                    continue;
-                }
-
-                LogProvider.Log.Info(this, string.Format("Hand {0} imported", result.HandHistory.Gamenumber));
-
-                var playerList = GetPlayerList(result.Source);
-
-                gameInfo.WindowHandle = FindWindow(result).ToInt32();
-                gameInfo.GameFormat = ParseGameFormat(result);
-                gameInfo.GameType = ParseGameType(result);
-                gameInfo.TableType = ParseTableType(result);
-
-                var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo);
-
-                eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }
+
+            return builder.ToString();
         }
 
         protected override bool Match(string title, ParsingResult parsingResult)
@@ -136,8 +133,9 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         private const string GameStartedSearchPattern = "Game started at:";
         private const string GameIdSearchPatter = "Game ID:";
-        private string AddAdditionalData(string handHistory)
+        private string AddAdditionalData(string handHistory, out bool isWindowFound)
         {
+            isWindowFound = false;
             if (string.IsNullOrWhiteSpace(handHistory))
             {
                 return handHistory;
@@ -169,6 +167,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 if (window != IntPtr.Zero)
                 {
                     windowTitleText = WinApi.GetWindowText(window);
+                    isWindowFound = true;
                 }
             }
 
@@ -186,7 +185,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             if (!string.IsNullOrWhiteSpace(tournamentNumber))
             {
                 var buyIn = GetTournamentBuyIn(windowTitleText);
-                var speed = GetTournamentSpeed(windowTitleText);
+                var speed = ParserUtils.ParseTournamentSpeed(windowTitleText);
 
                 summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {buyIn}, TournamentSpeed: {speed}";
             }
@@ -208,7 +207,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                     newLineIndex = indexGameStarted + 1;
                 }
 
-                indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern, newLineIndex );
+                indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern, newLineIndex);
             }
 
             LogProvider.Log.Debug(handHistory);
@@ -238,14 +237,19 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         private string GetTournamentNumber(string title)
         {
-            bool isTournament = title.Contains("Table ") && title.Last() == ')';
+            bool isTournament = title.Contains("Table ") && title.LastOrDefault() == ')';
 
             if (isTournament)
             {
                 var tournamentNumberStartIndex = title.LastIndexOf('(');
-                var tournamentNumberEndIndex = title.LastIndexOf(')', tournamentNumberStartIndex);
+                var tournamentNumberEndIndex = title.Length - 2;
 
-                return title.Substring(tournamentNumberStartIndex, tournamentNumberEndIndex);
+                if (tournamentNumberStartIndex == -1)
+                {
+                    return string.Empty;
+                }
+
+                return title.Substring(tournamentNumberStartIndex + 1, tournamentNumberEndIndex - tournamentNumberStartIndex);
             }
 
             return string.Empty;

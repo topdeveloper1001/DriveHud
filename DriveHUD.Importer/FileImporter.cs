@@ -88,7 +88,7 @@ namespace DriveHUD.Importers
                 {
                     var text = File.ReadAllText(file.FullName);
 
-                    Import(text, progress, null, false);
+                    Import(text, progress, null);
                 }
                 catch (DHInternalException ex)
                 {
@@ -131,7 +131,7 @@ namespace DriveHUD.Importers
         /// <param name="text">Text to import</param>  
         /// <param name="progress">Progress object to report</param>     
         /// <param name="gameInfo">Game information</param>     
-        public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo, bool rethrowInvalidHands)
+        public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo)
         {
             Check.ArgumentNotNull(() => progress);
             Check.ArgumentNotNull(() => gameInfo);
@@ -183,10 +183,6 @@ namespace DriveHUD.Importers
 #endif            
 
                 return parsingResult;
-            }
-            catch (InvalidHandException) when (rethrowInvalidHands)
-            {
-                throw;
             }
             catch (Exception e)
             {
@@ -446,7 +442,14 @@ namespace DriveHUD.Importers
                         // get all existing data for that tournament
                         if (tournamentsData == null)
                         {
-                            tournamentsData = session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId && x.SiteId == handHistory.HandHistory.PokersiteId).ToList();
+                            // this shouldn't be possible
+                            LogProvider.Log.Warn(this, "tournamentsData is null");
+                            continue;
+                        }
+
+                        if (tournamentsData.Count == 0)
+                        {
+                            tournamentsData.AddRange(session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId && x.SiteId == handHistory.HandHistory.PokersiteId).ToList());
                         }
 
                         var tournaments = CreateTournaments(handHistory, existingPlayer, gameInfo);
