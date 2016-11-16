@@ -9,6 +9,11 @@ using DriveHUD.Common.Progress;
 using Microsoft.Practices.ServiceLocation;
 using HandHistories.Parser.Parsers.Exceptions;
 using DriveHUD.Common.Log;
+using HandHistories.Parser.Parsers.Factory;
+using DriveHUD.Common.WinApi;
+using System.Diagnostics;
+using HandHistories.Objects.GameDescription;
+using System.Globalization;
 
 namespace DriveHUD.Importers.WinningPokerNetwork
 {
@@ -33,6 +38,14 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         {
             get { return Encoding.Unicode; }
         }
+
+        private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
+        {
+            NegativeSign = "-",
+            CurrencyDecimalSeparator = ".",
+            CurrencyGroupSeparator = ",",
+            CurrencySymbol = "$"
+        };
 
         // Import hand
         protected override void ImportHand(string handHistory, GameInfo gameInfo, out bool handProcessed)
@@ -113,29 +126,160 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
             var isTitleMatch = title.Contains(tableName);
 
-            if (isTitleMatch && parsingResult.GameType.Istourney && !string.IsNullOrWhiteSpace(parsingResult.HandHistory.Tourneynumber))
+            if (isTitleMatch && parsingResult.GameType != null && parsingResult.GameType.Istourney && !string.IsNullOrWhiteSpace(parsingResult.HandHistory.Tourneynumber))
             {
                 return title.Contains(parsingResult.HandHistory.Tourneynumber);
             }
 
             return isTitleMatch;
-
-            //// " - No Limit "
-            //// " - Fixed "
-            //// " - Pot Limit "
-            //return base.Match(title, parsingResult);
         }
 
+        private const string GameStartedSearchPattern = "Game started at:";
+        private const string GameIdSearchPatter = "Game ID:";
         private string AddAdditionalData(string handHistory)
         {
             if (string.IsNullOrWhiteSpace(handHistory))
             {
                 return handHistory;
             }
-            
-            
-            
+
+            var handHistoryParserFactory = ServiceLocator.Current.GetInstance<IHandHistoryParserFactory>();
+            var parser = handHistoryParserFactory.GetFullHandHistoryParser(handHistory);
+
+            var indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern);
+            var indexGameId = handHistory.IndexOf(GameIdSearchPatter);
+
+            string windowTitleText = string.Empty;
+            ParsingResult parsingResult = null;
+
+            if (indexGameStarted != -1 && indexGameId != -1)
+            {
+                string tableName = parser.ParseTableName(handHistory.Substring(indexGameStarted));
+                Debug.WriteLine($"TableName: {tableName}");
+
+                parsingResult = new ParsingResult()
+                {
+                    Source = new HandHistories.Objects.Hand.HandHistory()
+                    {
+                        TableName = tableName,
+                    },
+                };
+
+                IntPtr window = FindWindow(parsingResult);
+                if (window != IntPtr.Zero)
+                {
+                    windowTitleText = WinApi.GetWindowText(window);
+                }
+            }
+
+            if (parsingResult == null || string.IsNullOrEmpty(windowTitleText))
+            {
+                return handHistory;
+            }
+
+            // Get Data From windowTitleText
+
+            string summaryText = string.Empty;
+            var gameType = GetGameType(windowTitleText);
+            var tournamentNumber = GetTournamentNumber(windowTitleText);
+
+            if (!string.IsNullOrWhiteSpace(tournamentNumber))
+            {
+                var buyIn = GetTournamentBuyIn(windowTitleText);
+                var speed = GetTournamentSpeed(windowTitleText);
+
+                summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {buyIn}, TournamentSpeed: {speed}";
+            }
+            else
+            {
+                summaryText = $" *** Summary: GameType: {gameType}";
+            }
+
+            // add summary info to the handhistory file
+            while (indexGameStarted != -1)
+            {
+                var newLineIndex = handHistory.IndexOf(Environment.NewLine, indexGameStarted);
+                if (newLineIndex > 0)
+                {
+                    handHistory = handHistory.Insert(newLineIndex, summaryText);
+                }
+
+                indexGameStarted = handHistory.IndexOf(GameIdSearchPatter);
+            }
+
+            LogProvider.Log.Debug(handHistory);
+
             return handHistory;
+        }
+
+        private string GetGameType(string title)
+        {
+            if (title.Contains("No Limit"))
+            {
+                return "NL";
+            }
+
+            if (title.Contains("Pot Limit"))
+            {
+                return "PL";
+            }
+
+            if (title.Contains("Fixed"))
+            {
+                return "FL";
+            }
+
+            return "XX";
+        }
+
+        private string GetTournamentNumber(string title)
+        {
+            bool isTournament = title.Contains("Table ") && title.Last() == ')';
+
+            if (isTournament)
+            {
+                var tournamentNumberStartIndex = title.LastIndexOf('(');
+                var tournamentNumberEndIndex = title.LastIndexOf(')', tournamentNumberStartIndex);
+
+                return title.Substring(tournamentNumberStartIndex, tournamentNumberEndIndex);
+            }
+
+            return string.Empty;
+        }
+
+        private decimal GetTournamentBuyIn(string title)
+        {
+            if (string.IsNullOrWhiteSpace(title) || title.Contains("Freeroll"))
+            {
+                return 0m;
+            }
+
+            var endIndex = title.IndexOf(" -");
+            if (endIndex != -1)
+            {
+                var buyIn = 0m;
+                if (decimal.TryParse(title.Remove(endIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyIn))
+                {
+                    return buyIn;
+                }
+            }
+
+            return 0m;
+        }
+
+        private TournamentSpeed GetTournamentSpeed(string title)
+        {
+            if (title.Contains("Hyper Turbo"))
+            {
+                return TournamentSpeed.HyperTurbo;
+            }
+
+            if (title.Contains("Turbo"))
+            {
+                return TournamentSpeed.Turbo;
+            }
+
+            return TournamentSpeed.Regular;
         }
     }
 }
