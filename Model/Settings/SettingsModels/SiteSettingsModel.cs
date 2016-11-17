@@ -33,7 +33,7 @@ namespace Model.Settings
             IsCustomProcessedDataLocationEnabled = false;
             CustomProcessedDataLocation = Path.Combine(StringFormatter.GetAppDataFolderPath(), "ProcessedData");
 
-            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars, EnumPokerSites.Poker888 };
+            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars, EnumPokerSites.Poker888, EnumPokerSites.AmericasCardroom };
             SitesModelList = sites.Select(x => new SiteModel
             {
                 PokerSite = x,

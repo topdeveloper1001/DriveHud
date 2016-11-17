@@ -379,10 +379,20 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override SeatType ParseSeatType(string[] handLines)
         {
-            //TODO: add tests
-            int Players = ParsePlayers(handLines).Count;
-            SeatType seat = SeatType.FromMaxPlayers(Players, true);
-            return seat;
+            var Players = ParsePlayers(handLines);
+
+            SeatType? seatType = TryParseSeatTypeByName(handLines);
+
+            if (seatType.HasValue)
+            {
+                return seatType.Value;
+            }
+            else
+            {
+                var maxSeat = Players.Max(x => x.SeatNumber);
+
+                return SeatType.FromMaxPlayers(maxSeat, true);
+            }
         }
 
         protected override string ParseTableName(string[] handLines)
@@ -1012,6 +1022,28 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 return string.Empty;
             }
             return line.Substring(startIndex + SummaryPattern.Count());
+        }
+
+        private SeatType? TryParseSeatTypeByName(string[] handLines)
+        {
+            var line = handLines[1];
+
+            if (line.Contains("Jackpot"))
+            {
+                return SeatType.FromMaxPlayers(3);
+            }
+
+            if (line.Contains("4-Max"))
+            {
+                return SeatType.FromMaxPlayers(4);
+            }
+
+            if (line.Contains("8-Max"))
+            {
+                return SeatType.FromMaxPlayers(8);
+            }
+
+            return null;
         }
     }
 }

@@ -566,4 +566,7 @@
   <data name="Enum_EnumTableType_Five" xml:space="preserve">
     <value>5-max</value>
   </data>
+  <data name="Enum_EnumPokerSites_AmericasCardroom" xml:space="preserve">
+    <value>AmericasCardroom</value>
+  </data>
 </root>

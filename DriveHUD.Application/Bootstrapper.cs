@@ -19,6 +19,7 @@ using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.Security;
 using DriveHUD.Application.Surrogates;
 using DriveHUD.Application.TableConfigurators;
+using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
@@ -247,7 +248,7 @@ namespace DriveHUD.Application
 
             // AmericasCardroom
             Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Default));
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Plain));
+            Container.RegisterType<ITableConfigurator, AmericasCardroomTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Plain));
 
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);

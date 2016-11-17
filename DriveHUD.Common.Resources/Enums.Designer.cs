@@ -115,6 +115,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to AmericasCardroom.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_AmericasCardroom {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_AmericasCardroom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to BetOnline.
         /// </summary>
         internal static string Enum_EnumPokerSites_BetOnline {

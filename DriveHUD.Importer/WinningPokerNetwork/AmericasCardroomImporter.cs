@@ -153,7 +153,6 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             if (indexGameStarted != -1 && indexGameId != -1)
             {
                 string tableName = parser.ParseTableName(handHistory.Substring(indexGameStarted));
-                Debug.WriteLine($"TableName: {tableName}");
 
                 parsingResult = new ParsingResult()
                 {
@@ -209,9 +208,9 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
                 indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern, newLineIndex);
             }
-
+#if DEBUG
             LogProvider.Log.Debug(handHistory);
-
+#endif
             return handHistory;
         }
 
@@ -262,13 +261,28 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 return 0m;
             }
 
-            var endIndex = title.IndexOf(" -");
-            if (endIndex != -1)
+            if (title.Contains("Jackpot Poker"))
             {
-                var buyIn = 0m;
-                if (decimal.TryParse(title.Remove(endIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyIn))
+                var spaceIndex = title.IndexOf(' ');
+                if (spaceIndex != -1)
                 {
-                    return buyIn;
+                    var buyIn = 0m;
+                    if (decimal.TryParse(title.Remove(spaceIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyIn))
+                    {
+                        return buyIn;
+                    }
+                }
+            }
+            else
+            {
+                var endIndex = title.IndexOf(" -");
+                if (endIndex != -1)
+                {
+                    var buyIn = 0m;
+                    if (decimal.TryParse(title.Remove(endIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyIn))
+                    {
+                        return buyIn;
+                    }
                 }
             }
 

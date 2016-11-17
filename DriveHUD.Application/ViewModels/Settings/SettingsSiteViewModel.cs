@@ -33,12 +33,13 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             PokerSitesDictionary = new Dictionary<EnumPokerSites, string>()
             {
+                { EnumPokerSites.AmericasCardroom, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.AmericasCardroom) },
                 { EnumPokerSites.Ignition, "Bodog / Ignition" },
                 { EnumPokerSites.BetOnline, "BetOnline" },
                 { EnumPokerSites.PokerStars, "Pokerstars" },
                 { EnumPokerSites.Poker888, CommonResourceManager.Instance.GetEnumResource(EnumPokerSites.Poker888) },
                 { EnumPokerSites.TigerGaming, "Tigergaming" },
-                { EnumPokerSites.SportsBetting, "Sportbetting.ag" }
+                { EnumPokerSites.SportsBetting, "Sportbetting.ag" },
             };
 
             SelectedSiteViewModel = new SiteViewModel();
