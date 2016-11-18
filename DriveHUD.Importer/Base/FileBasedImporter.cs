@@ -19,6 +19,7 @@ using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
+using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Utils.Extensions;
 using HandHistories.Parser.Utils.FastParsing;
 using Microsoft.Practices.ServiceLocation;
@@ -56,6 +57,11 @@ namespace DriveHUD.Importers
         protected abstract string ProcessName { get; }
 
         protected abstract string HandHistoryFilter { get; }
+
+        protected virtual Encoding HandHistoryFileEncoding
+        {
+            get { return Encoding.UTF8; }
+        }
 
         #endregion
 
@@ -97,16 +103,11 @@ namespace DriveHUD.Importers
                     {
                         var fs = cf.Value.FileStream;
 
-                        var data = new byte[fs.Length - fs.Position];
-
-                        if (data.Length == 0)
+                        var handText = GetHandTextFromStream(fs);
+                        if (string.IsNullOrEmpty(handText))
                         {
                             return;
                         }
-
-                        fs.Read(data, 0, data.Length);
-
-                        var handText = Encoding.UTF8.GetString(data);
 
                         // if file could not be parsed, mark it as invalid to prevent further processing 
                         if (cf.Value.GameInfo == null)
@@ -137,7 +138,7 @@ namespace DriveHUD.Importers
                             cf.Value.GameInfo = gameInfo;
                         }
 
-                        ImportHand(handText, cf.Value.GameInfo);
+                        ProcessHand(handText, cf.Value.GameInfo);
                     });
 
                     // remove invalid files from captured
@@ -163,7 +164,7 @@ namespace DriveHUD.Importers
         }
 
         // Import hand
-        protected virtual void ImportHand(string handHistory, GameInfo gameInfo)
+        protected virtual void ProcessHand(string handHistory, GameInfo gameInfo)
         {
             var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
             var progress = new DHProgress();
@@ -172,7 +173,7 @@ namespace DriveHUD.Importers
 
             try
             {
-                parsingResult = dbImporter.Import(handHistory, progress, gameInfo);
+                parsingResult = ImportHand(handHistory, gameInfo, dbImporter, progress);
             }
             catch (Exception e)
             {
@@ -216,6 +217,25 @@ namespace DriveHUD.Importers
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
             }
+        }
+
+        protected virtual string GetHandTextFromStream(Stream fs)
+        {
+            var data = new byte[fs.Length - fs.Position];
+
+            if (data.Length == 0)
+            {
+                return string.Empty;
+            }
+
+            fs.Read(data, 0, data.Length);
+
+            return HandHistoryFileEncoding.GetString(data);
+        }
+
+        protected virtual IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter dbImporter, DHProgress progress)
+        {
+            return dbImporter.Import(handHistory, progress, gameInfo);
         }
 
         // Get directories with hand histories

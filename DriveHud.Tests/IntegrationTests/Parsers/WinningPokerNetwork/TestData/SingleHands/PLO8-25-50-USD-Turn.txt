@@ -1,0 +1,31 @@
+﻿Game started at: 2016/10/30 8:3:32
+Game ID: 763785106 25/50 (PRR) Vila (Short) (Omaha HiLow)
+Seat 4 is the button
+Seat 4: william1976 (3519.38).
+Seat 5: kidduke102 (4265.63).
+Player william1976 has small blind (25)
+Player kidduke102 has big blind (50)
+Player kidduke102 received a card.
+Player kidduke102 received a card.
+Player kidduke102 received a card.
+Player kidduke102 received a card.
+Player william1976 received a card.
+Player william1976 received a card.
+Player william1976 received a card.
+Player william1976 received a card.
+Player william1976 raises (75)
+Player kidduke102 calls (50)
+*** FLOP ***: [2h 10c 4c]
+Player kidduke102 checks
+Player william1976 checks
+*** TURN ***: [2h 10c 4c] [9c]
+Player kidduke102 bets (150)
+Player william1976 folds
+Uncalled bet (150) returned to kidduke102
+Player kidduke102 mucks cards
+------ Summary ------
+Pot: 198.75. Rake 1.21. JP fee 0.04
+Board: [2h 10c 4c 9c]
+Player william1976 does not show cards.Bets: 100. Collects: 0. Loses: 100.
+*Player kidduke102 mucks (does not show cards). Bets: 100. Collects: 198.75. Wins: 98.75.
+Game ended at: 2016/10/30 8:3:54

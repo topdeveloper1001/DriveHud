@@ -139,7 +139,7 @@ namespace DriveHud.Tests.UnitTests
             {
             }
 
-            public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo)
+            public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo, bool rethrowInvalidHands)
             {
                 var handXml = XDocument.Parse(text);
 

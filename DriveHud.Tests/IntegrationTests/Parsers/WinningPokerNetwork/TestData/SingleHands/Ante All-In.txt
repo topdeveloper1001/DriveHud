@@ -1,0 +1,62 @@
+Game started at: 2016/11/14 15:21:16
+Game ID: 775574000 75/150 $10 Freeroll - On Demand, Table 27 (Hold'em)
+Seat 4 is the button
+Seat 1: daretocall47 (4071).
+Seat 2: 49035 (660).
+Seat 3: WH33Lbarrel (3335).
+Seat 4: orgonox (7147).
+Seat 6: Jacob 7 (15832).
+Seat 7: nubsaww (1000).
+Seat 8: artgdev (5).
+Seat 9: cvfgt (13565).
+Player Jacob 7 ante (15)
+Player nubsaww ante (15)
+Player artgdev allin (5)
+Player cvfgt ante (15)
+Player daretocall47 ante (15)
+Player 49035 ante (15)
+Player WH33Lbarrel ante (15)
+Player orgonox ante (15)
+Player Jacob 7 has small blind (75)
+Player nubsaww has big blind (150)
+Player Jacob 7 received a card.
+Player Jacob 7 received a card.
+Player nubsaww received a card.
+Player nubsaww received a card.
+Player artgdev received card: [4s]
+Player artgdev received card: [Jd]
+Player cvfgt received a card.
+Player cvfgt received a card.
+Player daretocall47 received a card.
+Player daretocall47 received a card.
+Player 49035 received a card.
+Player 49035 received a card.
+Player WH33Lbarrel received a card.
+Player WH33Lbarrel received a card.
+Player orgonox received a card.
+Player orgonox received a card.
+Player cvfgt folds
+Player daretocall47 folds
+Player 49035 folds
+Player WH33Lbarrel folds
+Player orgonox raises (450)
+Player Jacob 7 calls (375)
+Player nubsaww folds
+*** FLOP ***: [Ad 9d 8h]
+Player Jacob 7 bets (387)
+Player orgonox folds
+Uncalled bet (387) returned to Jacob 7
+*** TURN ***: [Ad 9d 8h] [10c]
+*** RIVER ***: [Ad 9d 8h 10c] [5c]
+------ Summary ------
+Pot: 1160
+Board: [Ad 9d 8h 10c 5c]
+Player daretocall47 does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Player 49035 does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Player WH33Lbarrel does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Player orgonox does not show cards.Bets: 465. Collects: 0. Loses: 465.
+*Player Jacob 7 shows: One pair of 9s [9h 3c]. Bets: 465. Collects: 1160. Wins: 695.
+Player nubsaww does not show cards.Bets: 165. Collects: 0. Loses: 165.
+Player artgdev shows: High card A [4s Jd]. Bets: 5. Collects: 0. Loses: 5.
+Player cvfgt does not show cards.Bets: 15. Collects: 0. Loses: 15.
+Game ended at: 2016/11/14 15:22:27

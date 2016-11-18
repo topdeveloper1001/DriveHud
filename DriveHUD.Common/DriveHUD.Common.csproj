@@ -72,6 +72,7 @@
     <Compile Include="Extensions\DateTimeExtensions.cs" />
     <Compile Include="Extensions\ReaderWriterLockSlimExtensions.cs" />
     <Compile Include="Extensions\SerializationHelper.cs" />
+    <Compile Include="Extensions\StreamReaderExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Extensions\XmlExtensions.cs" />
     <Compile Include="Images\ImageHelper.cs" />
@@ -130,7 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>  
+  </ItemGroup>
   <ItemGroup>
     <None Include="..\Certificates\lic-assemb-sign.pfx" />
   </ItemGroup>

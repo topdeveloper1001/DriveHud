@@ -119,16 +119,17 @@ namespace Model.Importer
                 return EnumPosition.CO;
             }
 
-            var firstaPlayerAction = hand.HandActions.FirstOrDefault(x => !x.IsBlinds && x.PlayerName == stat.PlayerName);
-            if (firstaPlayerAction != null)
+            var firstPlayerAction = hand.HandActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
+            if (firstPlayerAction != null)
             {
-                int firstPlayerActionIndex = hand.HandActions.Where(x => !x.IsBlinds).ToList().IndexOf(firstaPlayerAction);
+                int firstPlayerActionIndex = hand.HandActions.ToList().IndexOf(firstPlayerAction) - hand.HandActions.Where(x=> x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND).Count();
 
                 /* Conver size in case if there are not 2 blind actions (only bb, multiple bb etc.) */
                 var blinds = hand.HandActions.Take(2);
-                int blindSize = (blinds.Any(x => x.HandActionType == HandActionType.SMALL_BLIND) ? 1 : 0) + (blinds.Any(x => x.HandActionType == HandActionType.BIG_BLIND) ? 1 : 0);
+                int blindSize = (hand.HandActions.Any(x => x.HandActionType == HandActionType.SMALL_BLIND && blinds.Any(b => b.PlayerName == x.PlayerName)) ? 1 : 0)
+                    + (hand.HandActions.Any(x => x.HandActionType == HandActionType.BIG_BLIND && blinds.Any(b => b.PlayerName == x.PlayerName)) ? 1 : 0);
 
-                int tableSize = hand.Players.Count() - blindSize + 2; // PositionList contains 2 blind positions
+                int tableSize = hand.Players.Where(p => !p.IsSittingOut).Count() - blindSize + 2; // PositionList contains 2 blind positions
                 var table = PositionList.FirstOrDefault(x => x.Count() == tableSize);
 
                 if (table != null && firstPlayerActionIndex >= 0 && firstPlayerActionIndex < table.Count())
@@ -136,6 +137,9 @@ namespace Model.Importer
                     return table[firstPlayerActionIndex];
                 }
             }
+
+            // determine position based on distance from dealer
+
 
             return EnumPosition.Undefined;
         }
@@ -277,6 +281,8 @@ namespace Model.Importer
                     return "Big Blind";
                 case HandActionType.ALL_IN:
                     return "All in";
+                case HandActionType.POSTS:
+                    return "Posts";
                 case HandActionType.WINS:
                 case HandActionType.WINS_SIDE_POT:
                 case HandActionType.WINS_THE_LOW:
