@@ -53,8 +53,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X + shifts[hudElement.Seat - 1, 0];
             var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y + shifts[hudElement.Seat - 1, 1];
 
-            Debug.WriteLine($"seat: {hudElement.Seat}; xPosition: {xPosition}; yPosition: {yPosition}");
-            Debug.WriteLine($"************************************************************************");
+            //Debug.WriteLine($"seat: {hudElement.Seat}; xPosition: {xPosition}; yPosition: {yPosition}");
+            //Debug.WriteLine($"************************************************************************");
 
             return new Tuple<double, double>(xPosition * window.XFraction, yPosition * window.YFraction);
         }
@@ -70,7 +70,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public override Tuple<double, double> GetInitialTrackConditionMeterPosition()
         {
-            return new Tuple<double, double>(220, 0);
+            return new Tuple<double, double>(250, 0);
         }
     }
 }

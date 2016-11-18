@@ -17,6 +17,10 @@ using System.Globalization;
 using System.IO;
 using DriveHUD.Common.Extensions;
 using HandHistories.Parser.Utils.FastParsing;
+using Model.Settings;
+using HandHistories.Objects.Players;
+using HandHistories.Objects.Hand;
+using DriveHUD.Importers.Helpers;
 
 namespace DriveHUD.Importers.WinningPokerNetwork
 {
@@ -64,6 +68,36 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             return null;
+        }
+
+        protected override PlayerList GetPlayerList(HandHistory handHistory)
+        {
+            var playerList = handHistory.Players;
+
+            var maxPlayers = handHistory.GameDescription.SeatType.MaxPlayers;
+
+            var heroSeat = handHistory.Hero != null ? handHistory.Hero.SeatNumber : 0;
+
+            if (heroSeat != 0)
+            {
+                var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
+                                        SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.AmericasCardroom)?.PrefferedSeats;
+
+                var prefferedSeat = preferredSeats.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
+
+                if (prefferedSeat != null)
+                {
+                    var shift = (prefferedSeat.PreferredSeat - heroSeat) % maxPlayers;
+
+                    foreach (var player in playerList)
+                    {
+                        player.SeatNumber = GeneralHelpers.ShiftPlayerSeat(player.SeatNumber, shift, maxPlayers);
+                    }
+                }
+
+            }
+
+            return playerList;
         }
 
         private const string HandEndedPattern = "Game ended at: ";
@@ -209,7 +243,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern, newLineIndex);
             }
 #if DEBUG
-            LogProvider.Log.Debug(handHistory);
+        //    LogProvider.Log.Debug(handHistory);
 #endif
             return handHistory;
         }
