@@ -1,0 +1,22 @@
+﻿#Game No : 461647957
+***** 888poker Hand History for Game 461647957 *****
+$0.25/$0.50 Blinds No Limit Holdem - *** 11 11 2016 17:02:54
+Table Maracanau 5 Max (Real Money)
+Seat 10 is the button
+Total number of players : 5
+Seat 2: phildogc ( $4 )
+Seat 4: Peon_84 ( $2.50 )
+Seat 6: NickshotWin ( $3.25 )
+Seat 8: dtpeyxbr1985 ( $7.72 )
+Seat 10: try2ruleme ( $2.50 )
+phildogc posts small blind [$0.25]
+Peon_84 posts big blind [$0.50]
+** Dealing down cards **
+Dealt to Peon_84 [ 8s, 3c ]
+NickshotWin folds
+dtpeyxbr1985 folds
+try2ruleme folds
+phildogc folds
+** Summary **
+Peon_84 did not show his hand
+Peon_84 collected [ $0.75 ]

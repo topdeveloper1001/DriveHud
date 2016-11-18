@@ -161,9 +161,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             {
                 string[] handLines = SplitHandsLines(handText);
 
+                // parse summary hand
+                if (IsSummaryHand(handLines))
+                {
+                    return ParseSummaryHand(handLines, handHistory);
+                }
+
                 bool isCancelled;
 
-                if (IsValidOrCancelledHand(handLines, out isCancelled) == false)
+                if (!IsValidOrCancelledHand(handLines, out isCancelled))
                 {
                     throw new InvalidHandException(handText ?? "NULL");
                 }
@@ -670,6 +676,16 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
             handHistory.GameDescription.Limit.SmallBlind = smallBlind;
             handHistory.GameDescription.Limit.BigBlind = bigBlind;
+        }
+
+        protected virtual bool IsSummaryHand(string[] handLines)
+        {
+            return false;
+        }
+
+        protected virtual HandHistory ParseSummaryHand(string[] handLines, HandHistory handHistory)
+        {
+            throw new NotImplementedException("Method not defined");
         }
     }
 }

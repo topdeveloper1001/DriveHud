@@ -25,6 +25,9 @@ namespace DriveHUD.Application.TableConfigurators
                 case EnumTableType.Four:
                     resultList = Get4MaxList();
                     break;
+                case EnumTableType.Five:
+                    resultList = Get5MaxList();
+                    break;
                 case EnumTableType.Six:
                     resultList = Get6MaxList();
                     break;
@@ -75,6 +78,18 @@ namespace DriveHUD.Application.TableConfigurators
                 new TableSeatArea(3, 140, 280, 160, 20, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
                 new TableSeatArea(4, 140, 280, 10, 20, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
 
+            };
+        }
+
+        private IEnumerable<ITableSeatArea> Get5MaxList()
+        {
+            return new List<ITableSeatArea>()
+            {
+                new TableSeatArea(1, 140, 280, 10, 310, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(2, 140, 280, 160, 310, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(3, 140, 280, 160, 20, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(4, 140, 280, 10, 20, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(5, 140, 280, 10, 20, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
             };
         }
 

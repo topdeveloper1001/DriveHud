@@ -307,6 +307,8 @@
     <Compile Include="Migration\Migrations\Migration0002_NonDB_DefaultLayoutsAddBumperStickers.cs" />
     <Compile Include="Migration\Migrations\Migration0003_NonDB_PokersiteSettingsChangeBovadaToIgnition.cs" />
     <Compile Include="Migration\Migrations\Migration0004_NonDB_AddPokerStarsPredefinedLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0005_NonDB_Add888PokerSiteSettings.cs" />
+    <Compile Include="Migration\Migrations\Migration0006_NonDB_Add888PokerPredefinedLayouts.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="SingleInstance.cs" />
@@ -318,9 +320,12 @@
     <Compile Include="Surrogates\ColorDto.cs" />
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
+    <Compile Include="TableConfigurators\Poker888TableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BovadaSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\CommonSiteSettingTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\Poker888SiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\PokerStarsSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\ISiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\PokerStarsTableConfigurator.cs" />
@@ -347,6 +352,7 @@
     <Compile Include="Controls\IDropDownMenuItem.cs" />
     <Compile Include="ViewModels\Hud\IHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
+    <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
     <Compile Include="ViewModels\New\AppsViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
@@ -1097,6 +1103,11 @@
   <PropertyGroup>
     <PostBuildEvent>
     </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PreBuildEvent>tasklist /fi "imagename eq DriveHUD.HUD.exe" | find ":" &gt; nul
+if errorlevel 1 taskkill /f /im "DriveHUD.HUD.exe"
+exit</PreBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

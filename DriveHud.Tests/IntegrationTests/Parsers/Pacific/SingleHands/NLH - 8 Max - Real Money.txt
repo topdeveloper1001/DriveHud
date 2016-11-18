@@ -1,0 +1,40 @@
+﻿#Game No : 840453451
+***** 888poker Hand History for Game 840453451 *****
+$10/$20 Blinds No Limit Holdem - *** 11 11 2016 00:05:50
+Tournament #90484509 $0.36 + $0.04 - Table #1 8 Max (Real Money)
+Seat 6 is the button
+Total number of players : 8
+Seat 1: Valdas_M ( $500 )
+Seat 2: werbol ( $500 )
+Seat 3: sych374 ( $500 )
+Seat 5: Tatyana2015 ( $500 )
+Seat 6: hamdijk ( $500 )
+Seat 7: Shukrik ( $500 )
+Seat 8: Peon_84 ( $500 )
+Seat 10: ducastilho ( $500 )
+Shukrik posts small blind [$10]
+Peon_84 posts big blind [$20]
+** Dealing down cards **
+Dealt to Peon_84 [ 2s, 4h ]
+ducastilho folds
+Valdas_M folds
+werbol folds
+sych374 raises [$40]
+Tatyana2015 folds
+hamdijk calls [$40]
+Shukrik folds
+Peon_84 folds
+** Dealing flop ** [ 8c, As, 3d ]
+sych374 bets [$20]
+hamdijk calls [$20]
+** Dealing turn ** [ Qc ]
+sych374 bets [$150]
+hamdijk calls [$150]
+** Dealing river ** [ 9s ]
+sych374 bets [$20]
+hamdijk raises [$120]
+sych374 calls [$100]
+** Summary **
+hamdijk shows [ 8d, Ad ]
+sych374 mucks [ Qs, 2d ]
+hamdijk collected [ $690 ]
