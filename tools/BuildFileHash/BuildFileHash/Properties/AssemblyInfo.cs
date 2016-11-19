@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DriveHUD.Entities")]
+[assembly: AssemblyTitle("BuildFileHash")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DriveHUD.Entities")]
+[assembly: AssemblyProduct("BuildFileHash")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d009a701-add8-4c10-8eb1-c241bdd9b3c1")]
+[assembly: Guid("38efbdca-2598-49b4-bc37-0fe6ddc4c1ea")]
 
 // Version information for an assembly consists of the following four values:
 //

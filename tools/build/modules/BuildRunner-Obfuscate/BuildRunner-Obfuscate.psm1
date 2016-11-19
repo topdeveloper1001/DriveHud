@@ -10,17 +10,17 @@ Import-Module BuildRunner-Log
 
 $ModuleName = 'OBFUSCATE'
 
-function Use-Obfuscator($session)
-{
-   Write-LogInfo $ModuleName "Obfuscating $($session.Source)..."
-   Write-LogInfo $ModuleName "Include filter: $($session.ObfuscatorIncludeFilter)"
-   Write-LogInfo $ModuleName "Exclude filter: $($session.ObfuscatorExcludeFilter)"
+function Use-Obfuscator($session, $source, $includeFilter, $excludeFilter, $strongNameAssemblies)
+{    
+   Write-LogInfo $ModuleName "Obfuscating $source..."
+   Write-LogInfo $ModuleName "Include filter: $includeFilter"
+   Write-LogInfo $ModuleName "Exclude filter: $excludeFilter"
 
     $assemblies = @()
 
-    $session.ObfuscatorIncludeFilter -split ',' | ForEach-Object {
-        $filteredAssemblies = Get-ChildItem -Path $session.Source -Filter $_ -Recurse | ForEach-Object {
-            if(-Not $_.FullName.Contains($session.ObfuscatorExcludeFilter))
+    $includeFilter -split ',' | ForEach-Object {
+        $filteredAssemblies = Get-ChildItem -Path $source -Filter $_ -Recurse | ForEach-Object {
+            if(-Not $_.FullName.Contains($excludeFilter))
             {
                $assemblies += $_
             }        
@@ -44,7 +44,7 @@ function Use-Obfuscator($session)
             '1'                             
         )
 
-        if($session.ObfuscatorStrongNamedAssemblies.Contains($assembly.Name))
+        if($strongNameAssemblies.Contains($assembly.Name))
         {
             $args += '-snkeypair' 
             $args += $session.StrongNameKey

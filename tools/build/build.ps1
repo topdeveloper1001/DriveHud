@@ -18,13 +18,13 @@ param
 	
 	[string] $WixSource = 'DriveHUD.Bootstrapper\bin',
 
-    [string] $Solution = 'DriveHUD.sln',       
+    [string] $Solution = 'DriveHUD.sln',                       
     
     [string] $InstallerWix = 'DriveHUD.Bootstrapper\DriveHUD.Bootstrapper.wixproj',
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.0.3',
+    [string] $Version = '1.0.4',
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
 
@@ -51,7 +51,27 @@ param
     [ValidateSet('Debug', 'Info', 'Notice', 'Warning', 'Error')]
     [string] $LogLevel = 'Debug',
 
-    [int] $StartRevision = 512
+    [int] $StartRevision = 512,
+
+    [string] $LicSolution = 'DriveHUDReg.sln',
+
+    [string] $LicSource = 'DHCReg\bin',
+
+    [string] $LicObfuscatorIncludeFilter = 'DH*Reg.dll',        
+
+    [string] $LicProjectsToUpdate = 'DriveHUD.Application\DriveHUD.Application.csproj',
+
+    [string] $LicCSFileToUpdate = 'DriveHUD.Application\App.xaml.cs',
+
+    [string] $LicOutputPath = 'dependencies',
+
+    [string] $HashToolSolution = 'tools\BuildFileHash\BuildFileHash.sln',
+
+    [string] $HashToolPath = 'tools\BuildFileHash\BuildFileHash\bin',
+
+    [string] $HashTool = 'BuildFileHash.exe',
+
+    [bool] $UpdateOnlyLic = $false
 )
 
 Set-StrictMode -Version Latest
@@ -93,6 +113,14 @@ $session = @{
   StrongNamePassword = $StrongNamePassword
   StartRevision = $StartRevision
   WixExtensions = 'dependencies\Wix\WixUIExtension.dll,dependencies\Wix\WixNetFxExtension.dll'
+  LicSolution = Join-Path $BaseDir $LicSolution
+  LicSource = Join-Path $BaseDir (Join-Path $LicSource $Mode)
+  LicObfuscatorIncludeFilter = $LicObfuscatorIncludeFilter      
+  LicProjectsToUpdate = Join-Path $BaseDir $LicProjectsToUpdate
+  LicCSFileToUpdate = Join-Path $BaseDir $LicCSFileToUpdate
+  LicOutputPath = Join-Path $BaseDir $LicOutputPath
+  HashToolSolution = Join-Path $BaseDir $HashToolSolution  
+  HashTool = Join-Path $BaseDir (Join-Path $HashToolPath (Join-Path $Mode $HashTool)) 
 }
 
 Import-Module BuildRunner-Log
@@ -102,6 +130,7 @@ Import-Module BuildRunner-Nuget
 Import-Module BuildRunner-Obfuscate
 Import-Module BuildRunner-Sign
 Import-Module BuildRunner-SignWixBundle
+Import-Module BuildRunner-LicUpdater
 
 # setup logging
 if ($LogLevel)
@@ -116,6 +145,16 @@ try
    if(-Not (Test-Path($session.Solution)))
    {
        throw "Solution not found '$($session.Solution)'"
+   } 
+
+   if(-Not (Test-Path($session.LicSolution)))
+   {
+       throw "Solution not found '$($session.LicSolution)'"
+   } 
+
+   if(-Not (Test-Path($session.HashToolSolution)))
+   {
+       throw "Solution not found '$($session.HashToolSolution)'"
    } 
 
    if(-Not (Test-Path($session.Obfuscator)))
@@ -188,15 +227,39 @@ try
 
    # setup version
    Set-Version($session)  
-   
+    
    # nuget
-   Use-Nuget $session $session.Solution 'nuget.log'
+   Use-Nuget $session $session.Solution 'nuget.log'   
+
+   # build hash tools
+   Use-MSBuild $session $session.HashToolSolution 'hashtool-msbuild.log'
+
+   # build lic dlls
+   Use-MSBuild $session $session.LicSolution 'lic-msbuild.log'
+
+   # obfuscate lic dlls
+   Use-Obfuscator $session $session.LicSource $session.LicObfuscatorIncludeFilter '' $session.LicObfuscatorIncludeFilter
+
+   # sign lic dlls
+   Use-Sign $session $session.LicSource $session.LicObfuscatorIncludeFilter ''
+
+   # copy lic dlls
+   Copy-Item -Path $session.LicSource -Destination $session.LicOutputPath -Filter $session.LicObfuscatorIncludeFilter -Force
+
+   # update license dll hashes and version in specified projects
+   Use-LicUpdater($session)
+
+   if($UpdateOnlyLic)
+   {
+        Write-LogInfo 'SETUP' 'Done.'
+        exit(0)
+   }
 
    # msbuild
    Use-MSBuild $session $session.Solution 'msbuild.log'
 
    # obfuscate
-   Use-Obfuscator($session)
+   Use-Obfuscator $session $session.Source $session.ObfuscatorIncludeFilter $session.ObfuscatorExcludeFilter $session.ObfuscatorStrongNamedAssemblies
 
    # sign
    Use-Sign $session $session.Source $session.SigningIncludeFilter $session.SigningExcludeFilter
@@ -229,6 +292,7 @@ finally
     Remove-Module BuildRunner-Versioning 
     Remove-Module BuildRunner-MSBuild
     Remove-Module BuildRunner-Obfuscate
+    Remove-Module BuildRunner-LicUpdater
     Remove-Module BuildRunner-Sign
 	Remove-Module BuildRunner-SignWixBundle
 }
