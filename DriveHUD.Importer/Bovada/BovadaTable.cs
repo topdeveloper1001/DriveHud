@@ -649,6 +649,8 @@ namespace DriveHUD.Importers.Bovada
                     handModel.GameLimit = GameLimit;
                     handModel.GameFormat = GameFormat;
 
+                    TryToFixCommunityCardsCommands(handModel);
+
                     if (handModel.CashOrTournament == CashOrTournament.Tournament && !TournamentsAndPlayers.Keys.Contains(handModel.TournamentNumber))
                     {
                         TournamentsAndPlayers.Add(handModel.TournamentNumber, new Dictionary<int, string>());
@@ -1359,6 +1361,45 @@ namespace DriveHUD.Importers.Bovada
 
                 AddCommand(CommandCodeEnum.PocketCards, pocketCard, preflopIndex + 1);
                 AddCommand(CommandCodeEnum.PocketCards, pocketCard, preflopIndex + 1);
+            }
+        }
+
+        private void TryToFixCommunityCardsCommands(HandModel2 handModel)
+        {
+            var communityCardsCommands = handModel.Commands.Where(x => x.CommandCodeEnum == CommandCodeEnum.CommunityCard).ToList();
+
+            if (communityCardsCommands.Count < 3)
+            {
+                return;
+            }
+
+            Action<List<Command>> removeCommunityCards = cmds =>
+            {
+                if (cmds == null)
+                {
+                    return;
+                }
+
+                var commandsToRemove = cmds.Where(x => x.CommandCodeEnum == CommandCodeEnum.CommunityCard).ToList();
+                commandsToRemove.ForEach(x => cmds.Remove(x));
+            };
+
+            removeCommunityCards(handModel.PreflopCommands);
+            removeCommunityCards(handModel.PostflopCommands);
+            removeCommunityCards(handModel.TurnCommands);
+            removeCommunityCards(handModel.RiverCommands);
+            removeCommunityCards(handModel.ShowDownCommands);
+
+            handModel.PostflopCommands.InsertRange(1, communityCardsCommands.Take(3));
+
+            if (communityCardsCommands.Count > 3 && handModel.TurnCommands != null)
+            {
+                handModel.TurnCommands.InsertRange(1, communityCardsCommands.Skip(3).Take(1));
+
+                if (communityCardsCommands.Count > 4 && handModel.RiverCommands != null)
+                {
+                    handModel.RiverCommands.InsertRange(1, communityCardsCommands.Skip(4).Take(1));
+                }
             }
         }
 

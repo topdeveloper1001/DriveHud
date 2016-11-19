@@ -10,7 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-
 using DriveHUD.Entities;
 using System.Collections.Generic;
 

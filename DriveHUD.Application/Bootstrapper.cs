@@ -196,8 +196,7 @@ namespace DriveHUD.Application
 
             Container.RegisterType<SingletonStorageModel>(new ContainerControlledLifetimeManager());
 
-            RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);
-            RegisterTypeIfMissing(typeof(IParser), typeof(BovadaParser), false);
+            RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);            
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
@@ -221,7 +220,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, TigerGamingConfiguration>(EnumPokerSites.TigerGaming.ToString());
             Container.RegisterType<ISiteConfiguration, SportsBettingConfiguration>(EnumPokerSites.SportsBetting.ToString());
             Container.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
-
+            Container.RegisterType<ISiteConfiguration, Poker888Configuration>(EnumPokerSites.Poker888.ToString());
+            
             // HUD table configurators
 
             // Bovada
@@ -239,6 +239,10 @@ namespace DriveHUD.Application
             // PokerStars
             Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Default));
             Container.RegisterType<ITableConfigurator, PokerStarsTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Plain));
+
+            // 888 poker            
+            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudType.Default));
+            Container.RegisterType<ITableConfigurator, Poker888TableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudType.Plain));
 
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);
@@ -258,6 +262,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.TigerGaming.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.SportsBetting.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PokerStarsSiteSettingTableConfigurator>(EnumPokerSites.PokerStars.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, Poker888SiteSettingTableConfigurator>(EnumPokerSites.Poker888.ToString());
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

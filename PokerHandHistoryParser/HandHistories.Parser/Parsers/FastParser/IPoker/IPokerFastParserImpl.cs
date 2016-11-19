@@ -996,7 +996,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
             Buyin buyin = null;
-            int finishPosition = 0;
+            short finishPosition = 0;
 
             string tournamentId = string.Empty;
             string tournamentInGameId = string.Empty;
@@ -1027,7 +1027,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 {
                     var placeText = GetTagValue(handLine);
 
-                    int.TryParse(placeText, out finishPosition);
+                    short.TryParse(placeText, out finishPosition);
                 }
 
                 if (handLine.StartsWith("<buyin", StringComparison.Ordinal))

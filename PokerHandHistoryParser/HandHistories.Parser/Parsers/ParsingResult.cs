@@ -52,5 +52,16 @@ namespace HandHistories.Parser.Parsers
         /// Flag if hand has already been imported
         /// </summary>
         public bool IsDuplicate { get; set; }
+
+        /// <summary>
+        /// Flag if result is just summary hand
+        /// </summary>
+        public bool IsSummary
+        {
+            get
+            {
+                return Source != null && Source.GameDescription != null && Source.GameDescription.IsTournament && Source.GameDescription.Tournament.IsSummary;
+            }
+        }
     }
 }
