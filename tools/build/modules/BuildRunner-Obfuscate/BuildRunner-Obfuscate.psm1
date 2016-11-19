@@ -7,24 +7,39 @@
 #>
 
 Import-Module BuildRunner-Log
+Import-Module BuildRunner-Tools
 
 $ModuleName = 'OBFUSCATE'
 
 function Use-Obfuscator($session, $source, $includeFilter, $excludeFilter, $strongNameAssemblies)
 {    
-   Write-LogInfo $ModuleName "Obfuscating $source..."
-   Write-LogInfo $ModuleName "Include filter: $includeFilter"
-   Write-LogInfo $ModuleName "Exclude filter: $excludeFilter"
+    Write-LogInfo $ModuleName "Obfuscating $source..."
+    Write-LogInfo $ModuleName "Include filter: $includeFilter"
+    Write-LogInfo $ModuleName "Exclude filter: $excludeFilter"
 
     $assemblies = @()
+    
+    [string[]]$includeFilters = $includeFilter -split ',' | ForEach-Object { Get-MatchPattern $_ }
+    [string[]]$excludeFilters = @()
+    [string[]]$strongAssembliesFilters =  $strongNameAssemblies -split ',' | ForEach-Object { Get-MatchPattern $_ }
+    
+    if(-Not [string]::IsNullOrWhiteSpace($excludeFilter))
+    {
+        $excludeFilters = $excludeFilter -split ',' | ForEach-Object { Get-MatchPattern $_ }        
+    }    
 
-    $includeFilter -split ',' | ForEach-Object {
-        $filteredAssemblies = Get-ChildItem -Path $source -Filter $_ -Recurse | ForEach-Object {
-            if(-Not $_.FullName.Contains($excludeFilter))
-            {
-               $assemblies += $_
-            }        
-        }
+    Get-ChildItem -Path $source -Recurse | ForEach-Object {
+
+        $doExclude = Get-IsFilterMatch $_.FullName $excludeFilters
+
+        if(-Not $doExclude) {
+
+            $doInclude = Get-IsFilterMatch $_.FullName $includeFilters
+
+            if($doInclude) {
+                $assemblies += $_
+            }            
+        }       
     }
 
     $assembliesArg = $assemblies -join ' '
@@ -44,7 +59,7 @@ function Use-Obfuscator($session, $source, $includeFilter, $excludeFilter, $stro
             '1'                             
         )
 
-        if($strongNameAssemblies.Contains($assembly.Name))
+        if(Get-IsFilterMatch $assembly.FullName $strongAssembliesFilters)
         {
             $args += '-snkeypair' 
             $args += $session.StrongNameKey

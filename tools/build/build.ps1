@@ -124,6 +124,7 @@ $session = @{
 }
 
 Import-Module BuildRunner-Log
+Import-Module BuildRunner-Tools
 Import-Module BuildRunner-Versioning
 Import-Module BuildRunner-MSBuild
 Import-Module BuildRunner-Nuget
@@ -238,17 +239,17 @@ try
    Use-MSBuild $session $session.LicSolution 'lic-msbuild.log'
 
    # obfuscate lic dlls
-   Use-Obfuscator $session $session.LicSource $session.LicObfuscatorIncludeFilter '' $session.LicObfuscatorIncludeFilter
+    Use-Obfuscator $session $session.LicSource $session.LicObfuscatorIncludeFilter '' $session.LicObfuscatorIncludeFilter
 
    # sign lic dlls
    Use-Sign $session $session.LicSource $session.LicObfuscatorIncludeFilter ''
 
    # copy lic dlls
-   Copy-Item -Path $session.LicSource -Destination $session.LicOutputPath -Filter $session.LicObfuscatorIncludeFilter -Force
+   &robocopy $session.LicSource $session.LicOutputPath $session.LicObfuscatorIncludeFilter /s | Out-Null
 
    # update license dll hashes and version in specified projects
    Use-LicUpdater($session)
-
+   
    if($UpdateOnlyLic)
    {
         Write-LogInfo 'SETUP' 'Done.'
@@ -289,6 +290,7 @@ finally
 {
     # remove all used modules (for debugging purpose)
     Remove-Module BuildRunner-Log           
+    Remove-Module BuildRunner-Tools
     Remove-Module BuildRunner-Versioning 
     Remove-Module BuildRunner-MSBuild
     Remove-Module BuildRunner-Obfuscate
