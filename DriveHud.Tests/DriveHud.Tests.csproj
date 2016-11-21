@@ -294,6 +294,8 @@
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - %2410 Freeroll - On Demand\HH20161109 T6627313-G36855119.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - %2410 Freeroll - On Demand\HH20161109 T6627313-G36855145.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - %2410 Freeroll - On Demand\HH20161109 T6627313-G36855146.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary3.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary2.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\TournamentHandWithSummary.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\CancelledHand.txt" />
     <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\InValidHand_1.txt" />
