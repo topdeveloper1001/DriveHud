@@ -1,0 +1,45 @@
+﻿PokerStars Hand #161248135942: Tournament #1724073465, $0.44+$0.06 USD Hold'em No Limit - Level I (10/20) - 2016/11/11 17:24:28 BRT [2016/11/11 14:24:28 ET]
+Table '1724073465 1' 9-max Seat #1 is the button
+Seat 1: Realdyralei (1500 in chips) 
+Seat 2: johntheslon (1500 in chips) 
+Seat 3: cbill_gr (1500 in chips) 
+Seat 4: prizrak play (1500 in chips) 
+Seat 5: wisg33 (1500 in chips) 
+Seat 6: leo.criv (1500 in chips) 
+Seat 7: walerson47 (1500 in chips) 
+Seat 8: Luiz F. 1977 (1500 in chips) 
+Seat 9: MaltoHumor (1500 in chips) 
+johntheslon: posts small blind 10
+cbill_gr: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [Ac Qs]
+prizrak play: folds 
+wisg33: raises 40 to 60
+leo.criv: calls 60
+walerson47: folds 
+Luiz F. 1977: folds 
+MaltoHumor: folds 
+Realdyralei: folds 
+johntheslon: folds 
+cbill_gr: folds 
+*** FLOP *** [Kc Jh 5d]
+wisg33: checks 
+leo.criv: checks 
+*** TURN *** [Kc Jh 5d] [8c]
+wisg33: checks 
+leo.criv: bets 75
+wisg33: folds 
+Uncalled bet (75) returned to leo.criv
+leo.criv collected 150 from pot
+*** SUMMARY ***
+Total pot 150 | Rake 0 
+Board [Kc Jh 5d 8c]
+Seat 1: Realdyralei (button) folded before Flop (didn't bet)
+Seat 2: johntheslon (small blind) folded before Flop
+Seat 3: cbill_gr (big blind) folded before Flop
+Seat 4: prizrak play folded before Flop (didn't bet)
+Seat 5: wisg33 folded on the Turn
+Seat 6: leo.criv collected (150)
+Seat 7: walerson47 folded before Flop (didn't bet)
+Seat 8: Luiz F. 1977 folded before Flop (didn't bet)
+Seat 9: MaltoHumor folded before Flop (didn't bet)

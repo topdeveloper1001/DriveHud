@@ -1,0 +1,1372 @@
+﻿PokerStars Hand #161586821586: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:42:19 BRT [2016/11/18 9:42:19 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (500 in chips) 
+Seat 2: faldei141 (500 in chips) 
+Seat 3: Ferbyman (500 in chips) 
+faldei141: posts small blind 10
+Ferbyman: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [Qs 8s]
+wisg33: folds 
+faldei141: raises 20 to 40
+Ferbyman: calls 20
+*** FLOP *** [5h 6d Jc]
+faldei141: bets 40
+Ferbyman: folds 
+Uncalled bet (40) returned to faldei141
+faldei141 collected 80 from pot
+faldei141: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [5h 6d Jc]
+Seat 1: wisg33 (button) folded before Flop (didn't bet)
+Seat 2: faldei141 (small blind) collected (80)
+Seat 3: Ferbyman (big blind) folded on the Flop
+
+
+
+PokerStars Hand #161586836529: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:42:42 BRT [2016/11/18 9:42:42 ET]
+Table '1731086040 1' 3-max Seat #2 is the button
+Seat 1: wisg33 (500 in chips) 
+Seat 2: faldei141 (540 in chips) 
+Seat 3: Ferbyman (460 in chips) 
+Ferbyman: posts small blind 10
+wisg33: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [7h 9s]
+faldei141: folds 
+Ferbyman: calls 10
+wisg33: checks 
+*** FLOP *** [3s 8h 5d]
+Ferbyman: bets 40
+wisg33: folds 
+Uncalled bet (40) returned to Ferbyman
+Ferbyman collected 40 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Board [3s 8h 5d]
+Seat 1: wisg33 (big blind) folded on the Flop
+Seat 2: faldei141 (button) folded before Flop (didn't bet)
+Seat 3: Ferbyman (small blind) collected (40)
+
+
+
+PokerStars Hand #161586850928: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:43:05 BRT [2016/11/18 9:43:05 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (480 in chips) 
+Seat 2: faldei141 (540 in chips) 
+Seat 3: Ferbyman (480 in chips) 
+wisg33: posts small blind 10
+faldei141: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [7d 9h]
+Ferbyman: calls 20
+wisg33: folds 
+faldei141: checks 
+*** FLOP *** [7h 6d 5c]
+faldei141: checks 
+Ferbyman: bets 50
+faldei141: calls 50
+*** TURN *** [7h 6d 5c] [5s]
+faldei141: checks 
+Ferbyman: bets 410 and is all-in
+faldei141: folds 
+Uncalled bet (410) returned to Ferbyman
+Ferbyman collected 150 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 150 | Rake 0 
+Board [7h 6d 5c 5s]
+Seat 1: wisg33 (small blind) folded before Flop
+Seat 2: faldei141 (big blind) folded on the Turn
+Seat 3: Ferbyman (button) collected (150)
+
+
+
+PokerStars Hand #161586864648: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:43:26 BRT [2016/11/18 9:43:26 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (470 in chips) 
+Seat 2: faldei141 (470 in chips) 
+Seat 3: Ferbyman (560 in chips) 
+faldei141: posts small blind 10
+Ferbyman: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [9c 2d]
+wisg33: folds 
+faldei141: raises 40 to 60
+Ferbyman: raises 500 to 560 and is all-in
+faldei141: folds [As]
+Uncalled bet (500) returned to Ferbyman
+Ferbyman collected 120 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Seat 1: wisg33 (button) folded before Flop (didn't bet)
+Seat 2: faldei141 (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (120)
+
+
+
+PokerStars Hand #161586871675: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:43:37 BRT [2016/11/18 9:43:37 ET]
+Table '1731086040 1' 3-max Seat #2 is the button
+Seat 1: wisg33 (470 in chips) 
+Seat 2: faldei141 (410 in chips) 
+Seat 3: Ferbyman (620 in chips) 
+Ferbyman: posts small blind 10
+wisg33: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [Qd Js]
+faldei141: folds 
+Ferbyman: calls 10
+wisg33: checks 
+*** FLOP *** [Jc 9c 4c]
+Ferbyman: checks 
+wisg33: bets 40
+Ferbyman: folds 
+Uncalled bet (40) returned to wisg33
+wisg33 collected 40 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Board [Jc 9c 4c]
+Seat 1: wisg33 (big blind) collected (40)
+Seat 2: faldei141 (button) folded before Flop (didn't bet)
+Seat 3: Ferbyman (small blind) folded on the Flop
+
+
+
+PokerStars Hand #161586880189: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:43:50 BRT [2016/11/18 9:43:50 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (490 in chips) 
+Seat 2: faldei141 (410 in chips) 
+Seat 3: Ferbyman (600 in chips) 
+wisg33: posts small blind 10
+faldei141: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [Ac 8c]
+Ferbyman: calls 20
+wisg33: calls 10
+faldei141: raises 60 to 80
+Ferbyman: folds 
+wisg33: calls 60
+*** FLOP *** [4c Ah 3s]
+wisg33: bets 410 and is all-in
+faldei141: folds 
+Uncalled bet (410) returned to wisg33
+wisg33 collected 180 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 180 | Rake 0 
+Board [4c Ah 3s]
+Seat 1: wisg33 (small blind) collected (180)
+Seat 2: faldei141 (big blind) folded on the Flop
+Seat 3: Ferbyman (button) folded before Flop
+
+
+
+PokerStars Hand #161586893533: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:44:11 BRT [2016/11/18 9:44:11 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (590 in chips) 
+Seat 2: faldei141 (330 in chips) 
+Seat 3: Ferbyman (580 in chips) 
+faldei141: posts small blind 10
+Ferbyman: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [Jc Ts]
+wisg33: folds 
+faldei141: calls 10
+Ferbyman: checks 
+*** FLOP *** [8d 8s Kh]
+faldei141: checks 
+Ferbyman: checks 
+*** TURN *** [8d 8s Kh] [Ad]
+faldei141: bets 40
+Ferbyman: folds 
+Uncalled bet (40) returned to faldei141
+faldei141 collected 40 from pot
+faldei141: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Board [8d 8s Kh Ad]
+Seat 1: wisg33 (button) folded before Flop (didn't bet)
+Seat 2: faldei141 (small blind) collected (40)
+Seat 3: Ferbyman (big blind) folded on the Turn
+
+
+
+PokerStars Hand #161586909899: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:44:37 BRT [2016/11/18 9:44:37 ET]
+Table '1731086040 1' 3-max Seat #2 is the button
+Seat 1: wisg33 (590 in chips) 
+Seat 2: faldei141 (350 in chips) 
+Seat 3: Ferbyman (560 in chips) 
+Ferbyman: posts small blind 10
+wisg33: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [2h Th]
+faldei141: folds 
+Ferbyman: calls 10
+wisg33: checks 
+*** FLOP *** [Jd 3c Ad]
+Ferbyman: checks 
+wisg33: checks 
+*** TURN *** [Jd 3c Ad] [6d]
+Ferbyman: checks 
+wisg33: checks 
+*** RIVER *** [Jd 3c Ad 6d] [6c]
+Ferbyman: checks 
+wisg33: checks 
+*** SHOW DOWN ***
+Ferbyman: shows [7h Qh] (a pair of Sixes)
+wisg33: mucks hand 
+Ferbyman collected 40 from pot
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Board [Jd 3c Ad 6d 6c]
+Seat 1: wisg33 (big blind) mucked [2h Th]
+Seat 2: faldei141 (button) folded before Flop (didn't bet)
+Seat 3: Ferbyman (small blind) showed [7h Qh] and won (40) with a pair of Sixes
+
+
+
+PokerStars Hand #161586926052: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:45:02 BRT [2016/11/18 9:45:02 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (570 in chips) 
+Seat 2: faldei141 (350 in chips) 
+Seat 3: Ferbyman (580 in chips) 
+wisg33: posts small blind 10
+faldei141: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [2c 5d]
+Ferbyman: folds 
+wisg33: folds 
+Uncalled bet (10) returned to faldei141
+faldei141 collected 20 from pot
+faldei141: doesn't show hand 
+*** SUMMARY ***
+Total pot 20 | Rake 0 
+Seat 1: wisg33 (small blind) folded before Flop
+Seat 2: faldei141 (big blind) collected (20)
+Seat 3: Ferbyman (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #161586928926: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level I (10/20) - 2016/11/18 12:45:06 BRT [2016/11/18 9:45:06 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (560 in chips) 
+Seat 2: faldei141 (360 in chips) 
+Seat 3: Ferbyman (580 in chips) 
+faldei141: posts small blind 10
+Ferbyman: posts big blind 20
+*** HOLE CARDS ***
+Dealt to wisg33 [Tc Qd]
+wisg33: calls 20
+faldei141: calls 10
+Ferbyman: checks 
+*** FLOP *** [Jd 4h 7s]
+faldei141: checks 
+Ferbyman: checks 
+wisg33: checks 
+*** TURN *** [Jd 4h 7s] [5c]
+faldei141: checks 
+Ferbyman: checks 
+wisg33: bets 40
+faldei141: folds 
+Ferbyman: calls 40
+*** RIVER *** [Jd 4h 7s 5c] [Ks]
+Ferbyman: checks 
+wisg33: checks 
+*** SHOW DOWN ***
+Ferbyman: shows [7h 9h] (a pair of Sevens)
+wisg33: mucks hand 
+Ferbyman collected 140 from pot
+*** SUMMARY ***
+Total pot 140 | Rake 0 
+Board [Jd 4h 7s 5c Ks]
+Seat 1: wisg33 (button) mucked [Tc Qd]
+Seat 2: faldei141 (small blind) folded on the Turn
+Seat 3: Ferbyman (big blind) showed [7h 9h] and won (140) with a pair of Sevens
+
+
+
+PokerStars Hand #161586954778: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level II (15/30) - 2016/11/18 12:45:47 BRT [2016/11/18 9:45:47 ET]
+Table '1731086040 1' 3-max Seat #2 is the button
+Seat 1: wisg33 (500 in chips) 
+Seat 2: faldei141 (340 in chips) 
+Seat 3: Ferbyman (660 in chips) 
+Ferbyman: posts small blind 15
+wisg33: posts big blind 30
+*** HOLE CARDS ***
+Dealt to wisg33 [5c Tc]
+faldei141: folds 
+Ferbyman: calls 15
+wisg33: checks 
+*** FLOP *** [7d 9d Kc]
+Ferbyman: checks 
+wisg33: checks 
+*** TURN *** [7d 9d Kc] [3c]
+Ferbyman: checks 
+wisg33: checks 
+*** RIVER *** [7d 9d Kc 3c] [Jh]
+Ferbyman: checks 
+wisg33: checks 
+*** SHOW DOWN ***
+Ferbyman: shows [8s 7c] (a pair of Sevens)
+wisg33: mucks hand 
+Ferbyman collected 60 from pot
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Board [7d 9d Kc 3c Jh]
+Seat 1: wisg33 (big blind) mucked [5c Tc]
+Seat 2: faldei141 (button) folded before Flop (didn't bet)
+Seat 3: Ferbyman (small blind) showed [8s 7c] and won (60) with a pair of Sevens
+
+
+
+PokerStars Hand #161586970006: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level II (15/30) - 2016/11/18 12:46:11 BRT [2016/11/18 9:46:11 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (470 in chips) 
+Seat 2: faldei141 (340 in chips) 
+Seat 3: Ferbyman (690 in chips) 
+wisg33: posts small blind 15
+faldei141: posts big blind 30
+*** HOLE CARDS ***
+Dealt to wisg33 [Th Kc]
+Ferbyman: folds 
+wisg33: raises 30 to 60
+faldei141: calls 30
+*** FLOP *** [Qc 6c 5d]
+wisg33: checks 
+faldei141: bets 90
+wisg33: folds 
+Uncalled bet (90) returned to faldei141
+faldei141 collected 120 from pot
+faldei141: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [Qc 6c 5d]
+Seat 1: wisg33 (small blind) folded on the Flop
+Seat 2: faldei141 (big blind) collected (120)
+Seat 3: Ferbyman (button) folded before Flop (didn't bet)
+
+
+
+PokerStars Hand #161586980077: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level II (15/30) - 2016/11/18 12:46:27 BRT [2016/11/18 9:46:27 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (410 in chips) 
+Seat 2: faldei141 (400 in chips) 
+Seat 3: Ferbyman (690 in chips) 
+faldei141: posts small blind 15
+Ferbyman: posts big blind 30
+*** HOLE CARDS ***
+Dealt to wisg33 [2d 6h]
+wisg33: folds 
+faldei141: calls 15
+Ferbyman: checks 
+*** FLOP *** [6d Ks Jh]
+faldei141: checks 
+Ferbyman: bets 60
+faldei141: folds 
+Uncalled bet (60) returned to Ferbyman
+Ferbyman collected 60 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Board [6d Ks Jh]
+Seat 1: wisg33 (button) folded before Flop (didn't bet)
+Seat 2: faldei141 (small blind) folded on the Flop
+Seat 3: Ferbyman (big blind) collected (60)
+
+
+
+PokerStars Hand #161586990249: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level II (15/30) - 2016/11/18 12:46:43 BRT [2016/11/18 9:46:43 ET]
+Table '1731086040 1' 3-max Seat #2 is the button
+Seat 1: wisg33 (410 in chips) 
+Seat 2: faldei141 (370 in chips) 
+Seat 3: Ferbyman (720 in chips) 
+Ferbyman: posts small blind 15
+wisg33: posts big blind 30
+*** HOLE CARDS ***
+Dealt to wisg33 [8h Td]
+faldei141: calls 30
+Ferbyman: calls 15
+wisg33: checks 
+*** FLOP *** [7h 3d 6d]
+Ferbyman: checks 
+wisg33: checks 
+faldei141: bets 40
+Ferbyman: folds 
+wisg33: folds 
+Uncalled bet (40) returned to faldei141
+faldei141 collected 90 from pot
+faldei141: doesn't show hand 
+*** SUMMARY ***
+Total pot 90 | Rake 0 
+Board [7h 3d 6d]
+Seat 1: wisg33 (big blind) folded on the Flop
+Seat 2: faldei141 (button) collected (90)
+Seat 3: Ferbyman (small blind) folded on the Flop
+
+
+
+PokerStars Hand #161587012664: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level II (15/30) - 2016/11/18 12:47:13 BRT [2016/11/18 9:47:13 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (380 in chips) 
+Seat 2: faldei141 (430 in chips) 
+Seat 3: Ferbyman (690 in chips) 
+wisg33: posts small blind 15
+faldei141: posts big blind 30
+*** HOLE CARDS ***
+Dealt to wisg33 [Th Jd]
+Ferbyman: calls 30
+wisg33: folds 
+faldei141: checks 
+*** FLOP *** [5h 2d 3c]
+faldei141: bets 30
+Ferbyman: folds 
+Uncalled bet (30) returned to faldei141
+faldei141 collected 75 from pot
+faldei141: doesn't show hand 
+*** SUMMARY ***
+Total pot 75 | Rake 0 
+Board [5h 2d 3c]
+Seat 1: wisg33 (small blind) folded before Flop
+Seat 2: faldei141 (big blind) collected (75)
+Seat 3: Ferbyman (button) folded on the Flop
+
+
+
+PokerStars Hand #161587023863: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level II (15/30) - 2016/11/18 12:47:24 BRT [2016/11/18 9:47:24 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (365 in chips) 
+Seat 2: faldei141 (475 in chips) 
+Seat 3: Ferbyman (660 in chips) 
+faldei141: posts small blind 15
+Ferbyman: posts big blind 30
+*** HOLE CARDS ***
+Dealt to wisg33 [Th Ks]
+wisg33: raises 30 to 60
+faldei141: calls 45
+Ferbyman: calls 30
+*** FLOP *** [6c 5c 7d]
+faldei141: checks 
+Ferbyman: bets 600 and is all-in
+wisg33: folds 
+faldei141: folds 
+Uncalled bet (600) returned to Ferbyman
+Ferbyman collected 180 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 180 | Rake 0 
+Board [6c 5c 7d]
+Seat 1: wisg33 (button) folded on the Flop
+Seat 2: faldei141 (small blind) folded on the Flop
+Seat 3: Ferbyman (big blind) collected (180)
+
+
+
+PokerStars Hand #161587041095: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level II (15/30) - 2016/11/18 12:47:40 BRT [2016/11/18 9:47:40 ET]
+Table '1731086040 1' 3-max Seat #2 is the button
+Seat 1: wisg33 (305 in chips) 
+Seat 2: faldei141 (415 in chips) 
+Seat 3: Ferbyman (780 in chips) 
+Ferbyman: posts small blind 15
+wisg33: posts big blind 30
+*** HOLE CARDS ***
+Dealt to wisg33 [8h 4d]
+faldei141: folds 
+Ferbyman: calls 15
+wisg33: checks 
+*** FLOP *** [9h 4h 3h]
+Ferbyman: checks 
+wisg33: checks 
+*** TURN *** [9h 4h 3h] [7s]
+Ferbyman: checks 
+wisg33: checks 
+*** RIVER *** [9h 4h 3h 7s] [9s]
+Ferbyman: checks 
+wisg33: bets 60
+Ferbyman: folds 
+Uncalled bet (60) returned to wisg33
+wisg33 collected 60 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Board [9h 4h 3h 7s 9s]
+Seat 1: wisg33 (big blind) collected (60)
+Seat 2: faldei141 (button) folded before Flop (didn't bet)
+Seat 3: Ferbyman (small blind) folded on the River
+
+
+
+PokerStars Hand #161587064139: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level II (15/30) - 2016/11/18 12:48:13 BRT [2016/11/18 9:48:13 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (335 in chips) 
+Seat 2: faldei141 (415 in chips) 
+Seat 3: Ferbyman (750 in chips) 
+wisg33: posts small blind 15
+faldei141: posts big blind 30
+*** HOLE CARDS ***
+Dealt to wisg33 [Kh Ks]
+Ferbyman: calls 30
+wisg33: calls 15
+faldei141: raises 60 to 90
+Ferbyman: calls 60
+wisg33: raises 90 to 180
+faldei141: calls 90
+Ferbyman: calls 90
+*** FLOP *** [Qd Qs 6c]
+wisg33: bets 155 and is all-in
+faldei141: calls 155
+Ferbyman: folds 
+*** TURN *** [Qd Qs 6c] [4c]
+*** RIVER *** [Qd Qs 6c 4c] [3c]
+*** SHOW DOWN ***
+wisg33: shows [Kh Ks] (two pair, Kings and Queens)
+faldei141: shows [5h As] (a pair of Queens)
+wisg33 collected 850 from pot
+*** SUMMARY ***
+Total pot 850 | Rake 0 
+Board [Qd Qs 6c 4c 3c]
+Seat 1: wisg33 (small blind) showed [Kh Ks] and won (850) with two pair, Kings and Queens
+Seat 2: faldei141 (big blind) showed [5h As] and lost with a pair of Queens
+Seat 3: Ferbyman (button) folded on the Flop
+
+
+
+PokerStars Hand #161587088393: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:48:51 BRT [2016/11/18 9:48:51 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (850 in chips) 
+Seat 2: faldei141 (80 in chips) 
+Seat 3: Ferbyman (570 in chips) 
+faldei141: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [5c 4h]
+wisg33: folds 
+faldei141: raises 40 to 80 and is all-in
+Ferbyman: calls 40
+*** FLOP *** [Jc 9d Th]
+*** TURN *** [Jc 9d Th] [Td]
+*** RIVER *** [Jc 9d Th Td] [Tc]
+*** SHOW DOWN ***
+faldei141: shows [6d Ad] (three of a kind, Tens)
+Ferbyman: shows [Ks Jh] (a full house, Tens full of Jacks)
+Ferbyman collected 160 from pot
+faldei141 finished the tournament in 3rd place
+*** SUMMARY ***
+Total pot 160 | Rake 0 
+Board [Jc 9d Th Td Tc]
+Seat 1: wisg33 (button) folded before Flop (didn't bet)
+Seat 2: faldei141 (small blind) showed [6d Ad] and lost with three of a kind, Tens
+Seat 3: Ferbyman (big blind) showed [Ks Jh] and won (160) with a full house, Tens full of Jacks
+
+
+
+PokerStars Hand #161587098862: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:49:07 BRT [2016/11/18 9:49:07 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (850 in chips) 
+Seat 3: Ferbyman (650 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [4h Qc]
+Ferbyman: raises 610 to 650 and is all-in
+wisg33: folds 
+Uncalled bet (610) returned to Ferbyman
+Ferbyman collected 80 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: wisg33 (big blind) folded before Flop
+Seat 3: Ferbyman (button) (small blind) collected (80)
+
+
+
+PokerStars Hand #161587103319: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:49:14 BRT [2016/11/18 9:49:14 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (810 in chips) 
+Seat 3: Ferbyman (690 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [Qc 9h]
+wisg33: raises 40 to 80
+Ferbyman: folds 
+Uncalled bet (40) returned to wisg33
+wisg33 collected 80 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: wisg33 (button) (small blind) collected (80)
+Seat 3: Ferbyman (big blind) folded before Flop
+
+
+
+PokerStars Hand #161587108454: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:49:22 BRT [2016/11/18 9:49:22 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (850 in chips) 
+Seat 3: Ferbyman (650 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [Kc Th]
+Ferbyman: calls 20
+wisg33: checks 
+*** FLOP *** [4s Tc 2c]
+wisg33: checks 
+Ferbyman: checks 
+*** TURN *** [4s Tc 2c] [5d]
+wisg33: bets 80
+Ferbyman: folds 
+Uncalled bet (80) returned to wisg33
+wisg33 collected 80 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [4s Tc 2c 5d]
+Seat 1: wisg33 (big blind) collected (80)
+Seat 3: Ferbyman (button) (small blind) folded on the Turn
+
+
+
+PokerStars Hand #161587120441: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:49:41 BRT [2016/11/18 9:49:41 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (890 in chips) 
+Seat 3: Ferbyman (610 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [4c 7d]
+wisg33: folds 
+Uncalled bet (20) returned to Ferbyman
+Ferbyman collected 40 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (40)
+
+
+
+PokerStars Hand #161587122779: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:49:45 BRT [2016/11/18 9:49:45 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (870 in chips) 
+Seat 3: Ferbyman (630 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [Qs 5h]
+Ferbyman: folds 
+Uncalled bet (20) returned to wisg33
+wisg33 collected 40 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: wisg33 (big blind) collected (40)
+Seat 3: Ferbyman (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #161587124896: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:49:48 BRT [2016/11/18 9:49:48 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (890 in chips) 
+Seat 3: Ferbyman (610 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [5h 6d]
+wisg33: folds 
+Uncalled bet (20) returned to Ferbyman
+Ferbyman collected 40 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (40)
+
+
+
+PokerStars Hand #161587127362: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:49:52 BRT [2016/11/18 9:49:52 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (870 in chips) 
+Seat 3: Ferbyman (630 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [2c 2s]
+Ferbyman: folds 
+Uncalled bet (20) returned to wisg33
+wisg33 collected 40 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: wisg33 (big blind) collected (40)
+Seat 3: Ferbyman (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #161587129649: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:49:56 BRT [2016/11/18 9:49:56 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (890 in chips) 
+Seat 3: Ferbyman (610 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [6s 5c]
+wisg33: folds 
+Uncalled bet (20) returned to Ferbyman
+Ferbyman collected 40 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (40)
+
+
+
+PokerStars Hand #161587132175: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:50:00 BRT [2016/11/18 9:50:00 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (870 in chips) 
+Seat 3: Ferbyman (630 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [9h 9c]
+Ferbyman: calls 20
+wisg33: raises 830 to 870 and is all-in
+Ferbyman: calls 590 and is all-in
+Uncalled bet (240) returned to wisg33
+*** FLOP *** [As Jh 8s]
+*** TURN *** [As Jh 8s] [5h]
+*** RIVER *** [As Jh 8s 5h] [Ah]
+*** SHOW DOWN ***
+wisg33: shows [9h 9c] (two pair, Aces and Nines)
+Ferbyman: shows [4s Ad] (three of a kind, Aces)
+Ferbyman collected 1260 from pot
+*** SUMMARY ***
+Total pot 1260 | Rake 0 
+Board [As Jh 8s 5h Ah]
+Seat 1: wisg33 (big blind) showed [9h 9c] and lost with two pair, Aces and Nines
+Seat 3: Ferbyman (button) (small blind) showed [4s Ad] and won (1260) with three of a kind, Aces
+
+
+
+PokerStars Hand #161587142396: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:50:16 BRT [2016/11/18 9:50:16 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (240 in chips) 
+Seat 3: Ferbyman (1260 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [7h Kd]
+wisg33: raises 200 to 240 and is all-in
+Ferbyman: folds 
+Uncalled bet (200) returned to wisg33
+wisg33 collected 80 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: wisg33 (button) (small blind) collected (80)
+Seat 3: Ferbyman (big blind) folded before Flop
+
+
+
+PokerStars Hand #161587147756: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:50:24 BRT [2016/11/18 9:50:24 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (280 in chips) 
+Seat 3: Ferbyman (1220 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [As 9s]
+Ferbyman: raises 1180 to 1220 and is all-in
+wisg33: calls 240 and is all-in
+Uncalled bet (940) returned to Ferbyman
+*** FLOP *** [Qh 5d Ks]
+*** TURN *** [Qh 5d Ks] [3s]
+*** RIVER *** [Qh 5d Ks 3s] [Ac]
+*** SHOW DOWN ***
+wisg33: shows [As 9s] (a pair of Aces)
+Ferbyman: shows [6s 7s] (high card Ace)
+wisg33 collected 560 from pot
+*** SUMMARY ***
+Total pot 560 | Rake 0 
+Board [Qh 5d Ks 3s Ac]
+Seat 1: wisg33 (big blind) showed [As 9s] and won (560) with a pair of Aces
+Seat 3: Ferbyman (button) (small blind) showed [6s 7s] and lost with high card Ace
+
+
+
+PokerStars Hand #161587156729: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:50:38 BRT [2016/11/18 9:50:38 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (560 in chips) 
+Seat 3: Ferbyman (940 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [Qc Js]
+wisg33: raises 40 to 80
+Ferbyman: folds 
+Uncalled bet (40) returned to wisg33
+wisg33 collected 80 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: wisg33 (button) (small blind) collected (80)
+Seat 3: Ferbyman (big blind) folded before Flop
+
+
+
+PokerStars Hand #161587161639: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:50:46 BRT [2016/11/18 9:50:46 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (600 in chips) 
+Seat 3: Ferbyman (900 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [Jc Ts]
+Ferbyman: raises 860 to 900 and is all-in
+wisg33: folds 
+Uncalled bet (860) returned to Ferbyman
+Ferbyman collected 80 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: wisg33 (big blind) folded before Flop
+Seat 3: Ferbyman (button) (small blind) collected (80)
+
+
+
+PokerStars Hand #161587164891: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:50:51 BRT [2016/11/18 9:50:51 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (560 in chips) 
+Seat 3: Ferbyman (940 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [6d Jc]
+wisg33: folds 
+Uncalled bet (20) returned to Ferbyman
+Ferbyman collected 40 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (40)
+
+
+
+PokerStars Hand #161587167267: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:50:55 BRT [2016/11/18 9:50:55 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (540 in chips) 
+Seat 3: Ferbyman (960 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [4h 7s]
+Ferbyman: calls 20
+wisg33: checks 
+*** FLOP *** [2c 3c 7h]
+wisg33: bets 500 and is all-in
+Ferbyman: folds 
+Uncalled bet (500) returned to wisg33
+wisg33 collected 80 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Board [2c 3c 7h]
+Seat 1: wisg33 (big blind) collected (80)
+Seat 3: Ferbyman (button) (small blind) folded on the Flop
+
+
+
+PokerStars Hand #161587176623: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:51:09 BRT [2016/11/18 9:51:09 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (580 in chips) 
+Seat 3: Ferbyman (920 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [Ks 5h]
+wisg33: raises 40 to 80
+Ferbyman: folds 
+Uncalled bet (40) returned to wisg33
+wisg33 collected 80 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 80 | Rake 0 
+Seat 1: wisg33 (button) (small blind) collected (80)
+Seat 3: Ferbyman (big blind) folded before Flop
+
+
+
+PokerStars Hand #161587180576: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:51:16 BRT [2016/11/18 9:51:16 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (620 in chips) 
+Seat 3: Ferbyman (880 in chips) 
+Ferbyman: posts small blind 20
+wisg33: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [2c 4h]
+Ferbyman: folds 
+Uncalled bet (20) returned to wisg33
+wisg33 collected 40 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: wisg33 (big blind) collected (40)
+Seat 3: Ferbyman (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #161587183208: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level III (20/40) - 2016/11/18 12:51:20 BRT [2016/11/18 9:51:20 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (640 in chips) 
+Seat 3: Ferbyman (860 in chips) 
+wisg33: posts small blind 20
+Ferbyman: posts big blind 40
+*** HOLE CARDS ***
+Dealt to wisg33 [7c 8c]
+wisg33: folds 
+Uncalled bet (20) returned to Ferbyman
+Ferbyman collected 40 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 40 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (40)
+
+
+
+PokerStars Hand #161587189338: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:51:29 BRT [2016/11/18 9:51:29 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (620 in chips) 
+Seat 3: Ferbyman (880 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [Kd 5h]
+Ferbyman: raises 820 to 880 and is all-in
+wisg33: folds 
+Uncalled bet (820) returned to Ferbyman
+Ferbyman collected 120 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Seat 1: wisg33 (big blind) folded before Flop
+Seat 3: Ferbyman (button) (small blind) collected (120)
+
+
+
+PokerStars Hand #161587196268: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:51:40 BRT [2016/11/18 9:51:40 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (560 in chips) 
+Seat 3: Ferbyman (940 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [3h 7c]
+wisg33: folds 
+Uncalled bet (30) returned to Ferbyman
+Ferbyman collected 60 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (60)
+
+
+
+PokerStars Hand #161587198800: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:51:44 BRT [2016/11/18 9:51:44 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (530 in chips) 
+Seat 3: Ferbyman (970 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [Ts Qc]
+Ferbyman: folds 
+Uncalled bet (30) returned to wisg33
+wisg33 collected 60 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (big blind) collected (60)
+Seat 3: Ferbyman (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #161587201295: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:51:48 BRT [2016/11/18 9:51:48 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (560 in chips) 
+Seat 3: Ferbyman (940 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [5c 7c]
+wisg33: folds 
+Uncalled bet (30) returned to Ferbyman
+Ferbyman collected 60 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (60)
+
+
+
+PokerStars Hand #161587203632: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:51:52 BRT [2016/11/18 9:51:52 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (530 in chips) 
+Seat 3: Ferbyman (970 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [Js 3h]
+Ferbyman: calls 30
+wisg33: checks 
+*** FLOP *** [Qc Ts Jd]
+wisg33: checks 
+Ferbyman: bets 120
+wisg33: folds 
+Uncalled bet (120) returned to Ferbyman
+Ferbyman collected 120 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [Qc Ts Jd]
+Seat 1: wisg33 (big blind) folded on the Flop
+Seat 3: Ferbyman (button) (small blind) collected (120)
+
+
+
+PokerStars Hand #161587215684: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:52:10 BRT [2016/11/18 9:52:10 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (470 in chips) 
+Seat 3: Ferbyman (1030 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [7h 4d]
+wisg33: folds 
+Uncalled bet (30) returned to Ferbyman
+Ferbyman collected 60 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (60)
+
+
+
+PokerStars Hand #161587218090: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:52:14 BRT [2016/11/18 9:52:14 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (440 in chips) 
+Seat 3: Ferbyman (1060 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [5c 7h]
+Ferbyman: folds 
+Uncalled bet (30) returned to wisg33
+wisg33 collected 60 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (big blind) collected (60)
+Seat 3: Ferbyman (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #161587221435: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:52:19 BRT [2016/11/18 9:52:19 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (470 in chips) 
+Seat 3: Ferbyman (1030 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [Kh Qs]
+wisg33: calls 30
+Ferbyman: checks 
+*** FLOP *** [5c Ad 8d]
+Ferbyman: checks 
+wisg33: bets 60
+Ferbyman: raises 910 to 970 and is all-in
+wisg33: folds 
+Uncalled bet (910) returned to Ferbyman
+Ferbyman collected 240 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 240 | Rake 0 
+Board [5c Ad 8d]
+Seat 1: wisg33 (button) (small blind) folded on the Flop
+Seat 3: Ferbyman (big blind) collected (240)
+
+
+
+PokerStars Hand #161587235231: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:52:41 BRT [2016/11/18 9:52:41 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (350 in chips) 
+Seat 3: Ferbyman (1150 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [Js 3h]
+Ferbyman: calls 30
+wisg33: checks 
+*** FLOP *** [6h 8d Jh]
+wisg33: checks 
+Ferbyman: checks 
+*** TURN *** [6h 8d Jh] [8s]
+wisg33: bets 60
+Ferbyman: folds 
+Uncalled bet (60) returned to wisg33
+wisg33 collected 120 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [6h 8d Jh 8s]
+Seat 1: wisg33 (big blind) collected (120)
+Seat 3: Ferbyman (button) (small blind) folded on the Turn
+
+
+
+PokerStars Hand #161587245958: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:52:57 BRT [2016/11/18 9:52:57 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (410 in chips) 
+Seat 3: Ferbyman (1090 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [3s 5c]
+wisg33: folds 
+Uncalled bet (30) returned to Ferbyman
+Ferbyman collected 60 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (60)
+
+
+
+PokerStars Hand #161587248232: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:53:01 BRT [2016/11/18 9:53:01 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (380 in chips) 
+Seat 3: Ferbyman (1120 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [Td 5d]
+Ferbyman: folds 
+Uncalled bet (30) returned to wisg33
+wisg33 collected 60 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (big blind) collected (60)
+Seat 3: Ferbyman (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #161587250382: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:53:04 BRT [2016/11/18 9:53:04 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (410 in chips) 
+Seat 3: Ferbyman (1090 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [8h Td]
+wisg33: folds 
+Uncalled bet (30) returned to Ferbyman
+Ferbyman collected 60 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (60)
+
+
+
+PokerStars Hand #161587252839: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:53:08 BRT [2016/11/18 9:53:08 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (380 in chips) 
+Seat 3: Ferbyman (1120 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [3s 5h]
+Ferbyman: calls 30
+wisg33: checks 
+*** FLOP *** [7s 5c 2s]
+wisg33: bets 320 and is all-in
+Ferbyman: folds 
+Uncalled bet (320) returned to wisg33
+wisg33 collected 120 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Board [7s 5c 2s]
+Seat 1: wisg33 (big blind) collected (120)
+Seat 3: Ferbyman (button) (small blind) folded on the Flop
+
+
+
+PokerStars Hand #161587260331: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:53:20 BRT [2016/11/18 9:53:20 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (440 in chips) 
+Seat 3: Ferbyman (1060 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [Kh Ac]
+wisg33: calls 30
+Ferbyman: raises 1000 to 1060 and is all-in
+wisg33: calls 380 and is all-in
+Uncalled bet (620) returned to Ferbyman
+*** FLOP *** [Qh Kc 7c]
+*** TURN *** [Qh Kc 7c] [5c]
+*** RIVER *** [Qh Kc 7c 5c] [6c]
+*** SHOW DOWN ***
+Ferbyman: shows [Ad Js] (high card Ace)
+wisg33: shows [Kh Ac] (a flush, Ace high)
+wisg33 collected 880 from pot
+*** SUMMARY ***
+Total pot 880 | Rake 0 
+Board [Qh Kc 7c 5c 6c]
+Seat 1: wisg33 (button) (small blind) showed [Kh Ac] and won (880) with a flush, Ace high
+Seat 3: Ferbyman (big blind) showed [Ad Js] and lost with high card Ace
+
+
+
+PokerStars Hand #161587270456: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:53:36 BRT [2016/11/18 9:53:36 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (880 in chips) 
+Seat 3: Ferbyman (620 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [8h 5h]
+Ferbyman: raises 560 to 620 and is all-in
+wisg33: folds 
+Uncalled bet (560) returned to Ferbyman
+Ferbyman collected 120 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 120 | Rake 0 
+Seat 1: wisg33 (big blind) folded before Flop
+Seat 3: Ferbyman (button) (small blind) collected (120)
+
+
+
+PokerStars Hand #161587274417: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:53:42 BRT [2016/11/18 9:53:42 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (820 in chips) 
+Seat 3: Ferbyman (680 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [2d 3c]
+wisg33: folds 
+Uncalled bet (30) returned to Ferbyman
+Ferbyman collected 60 from pot
+Ferbyman: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (button) (small blind) folded before Flop
+Seat 3: Ferbyman (big blind) collected (60)
+
+
+
+PokerStars Hand #161587277009: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:53:46 BRT [2016/11/18 9:53:46 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (790 in chips) 
+Seat 3: Ferbyman (710 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [7d 6h]
+Ferbyman: folds 
+Uncalled bet (30) returned to wisg33
+wisg33 collected 60 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (big blind) collected (60)
+Seat 3: Ferbyman (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #161587279249: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:53:50 BRT [2016/11/18 9:53:50 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (820 in chips) 
+Seat 3: Ferbyman (680 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [5d As]
+wisg33: raises 60 to 120
+Ferbyman: calls 60
+*** FLOP *** [Jh Ah 2h]
+Ferbyman: checks 
+wisg33: bets 120
+Ferbyman: folds 
+Uncalled bet (120) returned to wisg33
+wisg33 collected 240 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 240 | Rake 0 
+Board [Jh Ah 2h]
+Seat 1: wisg33 (button) (small blind) collected (240)
+Seat 3: Ferbyman (big blind) folded on the Flop
+
+
+
+PokerStars Hand #161587291045: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:54:08 BRT [2016/11/18 9:54:08 ET]
+Table '1731086040 1' 3-max Seat #3 is the button
+Seat 1: wisg33 (940 in chips) 
+Seat 3: Ferbyman (560 in chips) 
+Ferbyman: posts small blind 30
+wisg33: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [9h Jc]
+Ferbyman: folds 
+Uncalled bet (30) returned to wisg33
+wisg33 collected 60 from pot
+wisg33: doesn't show hand 
+*** SUMMARY ***
+Total pot 60 | Rake 0 
+Seat 1: wisg33 (big blind) collected (60)
+Seat 3: Ferbyman (button) (small blind) folded before Flop
+
+
+
+PokerStars Hand #161587294637: Tournament #1731086040, $0.23+$0.02 USD Hold'em No Limit - Level IV (30/60) - 2016/11/18 12:54:14 BRT [2016/11/18 9:54:14 ET]
+Table '1731086040 1' 3-max Seat #1 is the button
+Seat 1: wisg33 (970 in chips) 
+Seat 3: Ferbyman (530 in chips) 
+wisg33: posts small blind 30
+Ferbyman: posts big blind 60
+*** HOLE CARDS ***
+Dealt to wisg33 [Kc Kd]
+wisg33: calls 30
+Ferbyman: raises 470 to 530 and is all-in
+wisg33: calls 470
+*** FLOP *** [Ad Td 7s]
+*** TURN *** [Ad Td 7s] [Qs]
+*** RIVER *** [Ad Td 7s Qs] [Ks]
+*** SHOW DOWN ***
+Ferbyman: shows [Qd 8s] (a pair of Queens)
+wisg33: shows [Kc Kd] (three of a kind, Kings)
+wisg33 collected 1060 from pot
+Ferbyman finished the tournament in 2nd place
+wisg33 wins the tournament and receives $0.50 - congratulations!
+*** SUMMARY ***
+Total pot 1060 | Rake 0 
+Board [Ad Td 7s Qs Ks]
+Seat 1: wisg33 (button) (small blind) showed [Kc Kd] and won (1060) with three of a kind, Kings
+Seat 3: Ferbyman (big blind) showed [Qd 8s] and lost with a pair of Queens
+
+
+
