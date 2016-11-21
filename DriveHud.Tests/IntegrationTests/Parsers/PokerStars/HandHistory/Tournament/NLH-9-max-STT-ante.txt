@@ -1,0 +1,26 @@
+﻿PokerStars Hand #161250039313: Tournament #1724073465, $0.44+$0.06 USD Hold'em No Limit - Level VIII (150/300) - 2016/11/11 18:03:03 BRT [2016/11/11 15:03:03 ET]
+Table '1724073465 1' 9-max Seat #9 is the button
+Seat 1: Realdyralei (3492 in chips) 
+Seat 4: prizrak play (6394 in chips) 
+Seat 5: wisg33 (1410 in chips) 
+Seat 9: MaltoHumor (2204 in chips) 
+Realdyralei: posts the ante 25
+prizrak play: posts the ante 25
+wisg33: posts the ante 25
+MaltoHumor: posts the ante 25
+Realdyralei: posts small blind 150
+prizrak play: posts big blind 300
+*** HOLE CARDS ***
+Dealt to wisg33 [8h Qc]
+wisg33: folds 
+MaltoHumor: folds 
+Realdyralei: folds 
+Uncalled bet (150) returned to prizrak play
+prizrak play collected 400 from pot
+prizrak play: doesn't show hand 
+*** SUMMARY ***
+Total pot 400 | Rake 0 
+Seat 1: Realdyralei (small blind) folded before Flop
+Seat 4: prizrak play (big blind) collected (400)
+Seat 5: wisg33 folded before Flop (didn't bet)
+Seat 9: MaltoHumor (button) folded before Flop (didn't bet)
