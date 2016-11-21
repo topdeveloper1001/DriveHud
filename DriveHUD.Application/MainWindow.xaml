@@ -454,7 +454,7 @@
                                         </ControlTemplate>
                                     </TextBox.Template>
                                 </TextBox>
-                                <TextBlock Text="{Binding Path=StorageModel.PlayerSelectedItem.PokerSite}" HorizontalAlignment="Right"
+                                <TextBlock Text="{Binding Path=StorageModel.PlayerSelectedItem.PokerSite, Converter={dh:PokerSiteToShortStringConverter}}" HorizontalAlignment="Right"
                                            Margin="0 0 5 0"
                                            Style="{StaticResource Title_H2}"/>
                             </Grid>

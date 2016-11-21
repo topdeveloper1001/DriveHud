@@ -240,9 +240,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
                 indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern, newLineIndex);
             }
-#if DEBUG
-        //    LogProvider.Log.Debug(handHistory);
-#endif
+
             return handHistory;
         }
 
