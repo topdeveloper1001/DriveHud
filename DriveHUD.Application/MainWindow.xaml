@@ -763,7 +763,7 @@
                                 </Border>
                                 <Grid>
                                     <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{Binding DecodedName}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
-                                    <TextBlock Text="{Binding Path=PokerSite}" HorizontalAlignment="Right"
+                                    <TextBlock Text="{Binding Path=PokerSite, Converter={dh:PokerSiteToShortStringConverter}}" HorizontalAlignment="Right"
                                            Margin="0 0 5 0"
                                            Style="{StaticResource Title_H2}"/>
                                 </Grid>
