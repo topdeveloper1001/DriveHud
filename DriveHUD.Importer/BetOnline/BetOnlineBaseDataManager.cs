@@ -59,7 +59,11 @@ namespace DriveHUD.Importers.BetOnline
             }
             catch (Exception e)
             {
+#if DEBUG
+                LogProvider.Log.Error($"Could not recognize data: {encryptedXml}");
+#else
                 LogProvider.Log.Error("Could not recognize data");
+#endif            
                 throw e;
             }
         }

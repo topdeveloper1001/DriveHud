@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
@@ -33,6 +34,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
     internal sealed class PokerStarsFastParserImpl : HandHistoryParserFastImpl, IThreeStateParser
     {
         static readonly TimeZoneInfo PokerStarsTimeZone = TimeZoneInfo.FindSystemTimeZoneById("Eastern Standard Time");
+
+        private const string tournamentSummaryHeader = "PokerStars Tournament #";
 
         private int GameIdStartIndex = 17;
         private int TournamentIdStartindex = 43;
@@ -76,11 +79,16 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
         public override IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
-            var start = rawHandHistories[16] == '#' ? "PokerStars Game #" : "PokerStars Zoom Hand #";
+            var handLines = SplitHandsLines(rawHandHistories);
 
-            return HandSplitRegex.Split(rawHandHistories)
-                            .Where(s => string.IsNullOrWhiteSpace(s) == false && s.Length > 30)
-                            .Select(s => start + s.Trim('\r', 'n'));
+            if (IsSummaryHand(handLines))
+            {
+                return new[] { rawHandHistories };
+            }
+
+            rawHandHistories = rawHandHistories.Replace("\r", "");
+
+            return rawHandHistories.LazyStringSplit("\n\n").Where(s => string.IsNullOrWhiteSpace(s) == false && s.Equals("\r\n") == false);
         }
 
         public override IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
@@ -160,7 +168,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
             int second = FastInt.Parse(dateString, minuteStartIndex + 3);
 
-            DateTime dateTime = new DateTime(year, month, day, hour, minute, second); 
+            DateTime dateTime = new DateTime(year, month, day, hour, minute, second);
 
             DateTime converted = TimeZoneInfo.ConvertTimeToUtc(dateTime, PokerStarsTimeZone);
 
@@ -274,10 +282,145 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             var tournamentDescriptor = new TournamentDescriptor
             {
                 TournamentId = tournamentId.ToString(),
+                Speed = TournamentSpeed.Regular,
+                TournamentName = string.Format("Tournament #{0}", tournamentId),
                 BuyIn = buyin
             };
 
             return tournamentDescriptor;
+        }
+
+        protected override bool IsSummaryHand(string[] handLines)
+        {
+            return handLines.Length > 0 && handLines.Take(10).Any(x => x.StartsWith(tournamentSummaryHeader, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        private const string summaryYouFinishedInText = "You finished in ";
+        private static readonly Regex summaryPlayerDataRegex = new Regex(@"\d+:\s(?<player>.*)(\s\[\d+\])?\s\([^\)]+\),(\s(?<won>[^\(]+).*)?", RegexOptions.Compiled);
+
+        protected override HandHistory ParseSummaryHand(string[] handLines, HandHistory handHistory)
+        {
+            var tournament = new TournamentDescriptor
+            {
+                Summary = string.Join(Environment.NewLine, handLines)
+            };
+
+            var handLineIndex = 0;
+
+            foreach (var handLine in handLines)
+            {
+                handLineIndex++;
+
+                var tournamentIndex = handLine.IndexOf(tournamentSummaryHeader, StringComparison.InvariantCultureIgnoreCase);
+
+                // parse tournament id
+                if (tournamentIndex >= 0)
+                {
+                    var indexOfComma = handLine.IndexOf(",", tournamentIndex);
+                    tournament.TournamentId = handLine.Substring(tournamentIndex + tournamentSummaryHeader.Length, indexOfComma - tournamentIndex - tournamentSummaryHeader.Length);
+                    break;
+                }
+                else if (string.IsNullOrEmpty(tournament.TournamentId))
+                {
+                    continue;
+                }
+            }
+
+            if (string.IsNullOrEmpty(tournament.TournamentId))
+            {
+                return handHistory;
+            }
+
+            // parse place from the end
+            for (var i = handLines.Length - 1; i > 0; i--)
+            {
+                if (handLines[i].StartsWith(summaryYouFinishedInText, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var indexOfNextSpace = handLines[i].IndexOf(" ", summaryYouFinishedInText.Length);
+                    var placeText = handLines[i].Substring(summaryYouFinishedInText.Length, indexOfNextSpace - summaryYouFinishedInText.Length - 2);
+
+                    short place = 0;
+
+                    if (!short.TryParse(placeText, out place))
+                    {
+                        LogProvider.Log.Error(string.Format("'{0}' place wasn't parsed", handLines[i]));
+                        break;
+                    }
+
+                    tournament.FinishPosition = place;
+                    break;
+                }
+            }
+
+            // parse remaining data
+            foreach (var handLine in handLines.Skip(handLineIndex - 1))
+            {
+                // parse total players
+                if (tournament.TotalPlayers == 0 && handLine.IndexOf("players", StringComparison.InvariantCultureIgnoreCase) > 0)
+                {
+                    var totalPlayersText = new string(handLine.TakeWhile(x => x != ' ').ToArray());
+
+                    short totalPlayers = 0;
+
+                    if (!short.TryParse(totalPlayersText, out totalPlayers))
+                    {
+                        LogProvider.Log.Error(string.Format("'{0}' place wasn't parsed", handLine));
+                        continue;
+                    }
+
+                    tournament.TotalPlayers = totalPlayers;
+                }
+
+                if (handLine.StartsWith($"{tournament.FinishPosition}: ", StringComparison.InvariantCultureIgnoreCase))
+                {
+                    var match = summaryPlayerDataRegex.Match(handLine);
+
+                    if (!match.Success)
+                    {
+                        LogProvider.Log.Error(string.Format("'{0}' wasn't parsed", handLine));
+                        continue;
+                    }
+
+                    var playerName = match.Groups["player"].Value;
+                    var wonText = match.Groups["won"] != null ? match.Groups["won"].Value.Replace(",", ".").Trim() : string.Empty;
+
+                    decimal won = 0;
+                    Currency wonCurrency = Currency.USD;
+
+                    if (wonText.Count(x => x == '.') > 1)
+                    {
+                        var lastIndexOfDot = wonText.LastIndexOf(".");
+
+                        var indexOfDot = wonText.IndexOf(".");
+
+                        while (indexOfDot < lastIndexOfDot)
+                        {
+                            wonText = wonText.Remove(indexOfDot, 1);
+                            indexOfDot = wonText.IndexOf(".", indexOfDot);
+                            lastIndexOfDot--;
+                        }
+                    }
+
+                    if (!string.IsNullOrWhiteSpace(wonText) && !ParserUtils.TryParseMoneyText(wonText, out won, out wonCurrency))
+                    {
+                        LogProvider.Log.Error(string.Format("'{0}' won data wasn't parsed", handLine));
+                        continue;
+                    }
+
+                    handHistory.Hero = new Player(playerName, 0, 0);
+
+                    tournament.Winning = won;
+                }
+            }
+
+            handHistory.GameDescription = new GameDescriptor(EnumPokerSites.PokerStars,
+               GameType.Unknown,
+               null,
+               TableType.FromTableTypeDescriptions(),
+               SeatType.AllSeatType(),
+               tournament);
+
+            return handHistory;
         }
 
         protected override string ParseTableName(string[] handLines)

@@ -12,6 +12,8 @@
 
 using HandHistories.Objects.GameDescription;
 using System;
+using System.Globalization;
+using System.Text.RegularExpressions;
 
 namespace HandHistories.Parser.Utils.FastParsing
 {
@@ -35,6 +37,39 @@ namespace HandHistories.Parser.Utils.FastParsing
             }
 
             return TournamentSpeed.Regular;
+        }
+
+        private static readonly Regex MoneyRegex = new Regex(@"(?<currency1>[^\d]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\d]+)?", RegexOptions.Compiled);
+
+        public static bool TryParseMoneyText(string moneyText, out decimal money, out Currency currency, NumberFormatInfo numberFormatInfo = null)
+        {
+            if (numberFormatInfo == null)
+            {
+                numberFormatInfo = new NumberFormatInfo
+                {
+                    NegativeSign = "-",
+                    CurrencyDecimalSeparator = ".",
+                    CurrencyGroupSeparator = ",",
+                    CurrencySymbol = "$"
+                };
+            }
+
+            money = 0;
+            currency = Currency.USD;
+
+            var match = MoneyRegex.Match(moneyText);
+
+            if (!match.Success)
+            {
+                return false;
+            }
+
+            if (!decimal.TryParse(match.Groups["money"].Value, NumberStyles.Number, numberFormatInfo, out money))
+            {
+                return false;
+            }
+
+            return true;
         }
     }
 }

@@ -1,0 +1,28 @@
+﻿PokerStars Zoom Hand #161554037419:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:23:21 EET [2016/11/17 15:23:21 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: GaLac111 ($6.43 in chips) 
+Seat 2: psdm ($13.56 in chips) 
+Seat 3: braveslice ($5 in chips) 
+Seat 4: nivek109 ($2.57 in chips) 
+Seat 5: Covrig01234 ($5 in chips) 
+Seat 6: BUKH1968 ($3.49 in chips) 
+psdm: posts small blind $0.02
+braveslice: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [Tc Ah]
+nivek109: folds 
+Covrig01234: folds 
+BUKH1968: folds 
+GaLac111: folds 
+psdm: folds 
+Uncalled bet ($0.03) returned to braveslice
+braveslice collected $0.04 from pot
+braveslice: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.04 | Rake $0 
+Seat 1: GaLac111 (button) folded before Flop (didn't bet)
+Seat 2: psdm (small blind) folded before Flop
+Seat 3: braveslice (big blind) collected ($0.04)
+Seat 4: nivek109 folded before Flop (didn't bet)
+Seat 5: Covrig01234 folded before Flop (didn't bet)
+Seat 6: BUKH1968 folded before Flop (didn't bet)

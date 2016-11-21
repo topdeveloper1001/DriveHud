@@ -27,6 +27,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using HandHistories.Objects.Hand;
 using DriveHUD.Common.Log;
+using HandHistories.Parser.Utils.FastParsing;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
@@ -700,11 +701,11 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     decimal rake = 0;
                     Currency currency = Currency.USD;
 
-                    if (TryParseMoneyText(buyInSplit[0], out buyIn, out currency))
+                    if (ParserUtils.TryParseMoneyText(buyInSplit[0], out buyIn, out currency))
                     {
                         if (buyInSplit.Length > 1)
                         {
-                            TryParseMoneyText(buyInSplit[1], out rake, out currency);
+                            ParserUtils.TryParseMoneyText(buyInSplit[1], out rake, out currency);
                         }
                     }
 
@@ -717,7 +718,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     decimal rebuy = 0;
                     Currency currency = Currency.USD;
 
-                    if (TryParseMoneyText(rebuyText, out rebuy, out currency))
+                    if (ParserUtils.TryParseMoneyText(rebuyText, out rebuy, out currency))
                     {
                         tournament.Rebuy = rebuy;
                     }
@@ -729,7 +730,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     decimal addon = 0;
                     Currency currency = Currency.USD;
 
-                    if (TryParseMoneyText(addonText, out addon, out currency))
+                    if (ParserUtils.TryParseMoneyText(addonText, out addon, out currency))
                     {
                         tournament.Addon = addon;
                     }
@@ -768,7 +769,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         continue;
                     }
 
-                    if (!string.IsNullOrWhiteSpace(wonText) && !TryParseMoneyText(wonText, out won, out wonCurrency))
+                    if (!string.IsNullOrWhiteSpace(wonText) && !ParserUtils.TryParseMoneyText(wonText, out won, out wonCurrency))
                     {
                         LogProvider.Log.Error(string.Format("'{0}' won data wasn't parsed", handLine));
                         continue;
@@ -789,29 +790,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             return handHistory;
         }
-
-        private static readonly Regex MoneyRegex = new Regex(@"(?<currency1>[^\d]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\d]+)?", RegexOptions.Compiled);
-
-        private bool TryParseMoneyText(string moneyText, out decimal money, out Currency currency)
-        {
-            money = 0;
-            currency = Currency.USD;
-
-            var match = MoneyRegex.Match(moneyText);
-
-            if (!match.Success)
-            {
-                return false;
-            }
-
-            if (!decimal.TryParse(match.Groups["money"].Value, NumberStyles.Number, NumberFormatInfo, out money))
-            {
-                return false;
-            }
-
-            return true;
-        }
-
+     
         private string ParseTournamentSummaryMoneyLine(string line)
         {
             line = line.Replace(",", ".");

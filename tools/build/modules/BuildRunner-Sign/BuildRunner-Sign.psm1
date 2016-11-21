@@ -7,6 +7,7 @@
 #>
 
 Import-Module BuildRunner-Log
+Import-Module BuildRunner-Tools
 
 $ModuleName = 'SIGN'
 
@@ -16,13 +17,26 @@ function Use-Sign($session, $source, $signingIncludeFilter, $signingExcludeFilte
 
     $assemblies = @()
 
-    $signingIncludeFilter -split ',' | ForEach-Object {
-        $filteredAssemblies = Get-ChildItem -Path $source -Filter $_ -Recurse | ForEach-Object {
-            if(-Not $_.FullName.Contains($signingExcludeFilter))
-            {
-               $assemblies += $_.FullName
-            }        
-        }
+    [string[]]$includeFilters = $signingIncludeFilter -split ',' | ForEach-Object { Get-MatchPattern $_ }
+    [string[]]$excludeFilters = @()
+
+    if(-Not [string]::IsNullOrWhiteSpace($signingExcludeFilter))
+    {
+        $excludeFilters = $signingExcludeFilter -split ',' | ForEach-Object { Get-MatchPattern $_ }        
+    }    
+
+    Get-ChildItem -Path $source -Recurse | ForEach-Object {
+
+        $doExclude = Get-IsFilterMatch $_.FullName $excludeFilters
+
+        if(-Not $doExclude) {
+
+            $doInclude = Get-IsFilterMatch $_.FullName $includeFilters
+
+            if($doInclude) {
+                $assemblies += $_.FullName
+            }            
+        }       
     }
 
     $assembliesArg = $assemblies -join ' '
