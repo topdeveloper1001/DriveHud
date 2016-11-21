@@ -1,5 +1,5 @@
-﻿Game started at: 2016/11/9 15:42:34 *** Summary: GameType: PL, TournamentId: 6626931, TournamentBuyIn: 0
-Game ID: 771496238 20/40 $10 Freeroll - On Demand, Table 27 (Hold'em) 
+﻿Game started at: 2016/11/9 15:42:34 *** Summary: GameType: NL, TournamentId: 6626931, TournamentBuyIn: 3.30
+Game ID: 771496238 50/100 $3 Regular 9-Max, Table 1 (Hold'em) 
 Seat 3 is the button
 Seat 1: jmonday (3630).
 Seat 2: Donaldtrumpduck (1500).

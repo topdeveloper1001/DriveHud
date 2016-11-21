@@ -217,10 +217,8 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
             if (!string.IsNullOrWhiteSpace(tournamentNumber))
             {
-                var buyIn = GetTournamentBuyIn(windowTitleText);
-                var speed = ParserUtils.ParseTournamentSpeed(windowTitleText);
-
-                summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {buyIn}, TournamentSpeed: {speed}";
+                var totalBuyIn = GetTournamentBuyIn(windowTitleText);
+                summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {totalBuyIn}";
             }
             else
             {
@@ -242,9 +240,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
                 indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern, newLineIndex);
             }
-#if DEBUG
-        //    LogProvider.Log.Debug(handHistory);
-#endif
+
             return handHistory;
         }
 

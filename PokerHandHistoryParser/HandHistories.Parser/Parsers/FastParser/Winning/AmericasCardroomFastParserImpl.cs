@@ -8,6 +8,7 @@ using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils;
 using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Parser.Utils.FastParsing;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -20,6 +21,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
     sealed class AmericasCardroomFastParserImpl : HandHistoryParserFastImpl
     {
+        #region Fields
         private const int GameIDStartIndex = 9;
         private const int ActionPlayerNameStartIndex = 7;
         private const int SummaryGameTypeStartIndex = 10;
@@ -31,6 +33,63 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             CurrencyGroupSeparator = ",",
             CurrencySymbol = "$"
         };
+
+        /// <summary>
+        /// Key - (BuyIn + Rake), Value - Rake
+        /// </summary>
+        private static readonly Dictionary<decimal, decimal> PredefinedRakeDictionary = new Dictionary<decimal, decimal>()
+        {
+            { 0.11m, 0.01m },
+            { 0.28m, 0.03m },
+            { 0.53m, 0.03m },
+            { 0.55m, 0.05m },
+            { 0.66m, 0.06m },
+            { 1.1m, 0.1m },
+            { 2.1m, 0.1m },
+            { 2.2m, 0.2m },
+            { 2.75m, 0.25m },
+            { 3.15m, 0.15m },
+            { 3.20m, 0.2m },
+            { 3.30m, 0.3m },
+            { 4.40m, 0.4m },
+            { 5.50m, 0.5m },
+            { 6.30m, 0.3m },
+            { 6.60m, 0.6m },
+            { 7.35m, 0.35m },
+            { 7.50m, 0.5m },
+            { 7.70m, 0.7m },
+            { 8.40m, 0.4m },
+            { 8.80m, 0.8m },
+            { 10.30m, 0.3m },
+            { 10.50m, 0.5m },
+            { 10.75m, 0.75m },
+            { 11m, 1m },
+            { 11.50m, 0.50m },
+            { 12m, 1m },
+            { 13m, 1m },
+            { 13.20m, 1.2m },
+            { 16.50m, 1.5m },
+            { 21m, 1m },
+            { 22m, 2m },
+            { 23m, 1m },
+            { 26m, 2m },
+            { 26.25m, 1.2m },
+            { 27.50m, 2.5m },
+            { 30m, 2m },
+            { 33m, 3m },
+            { 44m, 4m },
+            { 55m, 5m },
+            { 66m, 6m },
+            { 82.5m, 7.5m },
+            { 88m, 8m },
+            { 109m, 9m },
+            { 160m, 10m },
+            { 215m, 15m },
+            { 320m, 20m },
+            { 530m, 30m },
+            { 540m, 40m },
+        };
+        #endregion
 
         public override EnumPokerSites SiteName
         {
@@ -621,7 +680,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             //TournamentId: 213213123, TournamentBuyIn: 0.65$, TournamentSpeed: HyperTurbo
             var tournamentString = GetSummaryString(handLines);
 
-            var regex = new Regex(@"TournamentId: (?<tournament_id>[^\s]+), TournamentBuyIn: (?<buyin>[^-]+), TournamentSpeed: (?<speed>[^\(]+)");
+            var regex = new Regex(@"TournamentId: (?<tournament_id>[^\s]+), TournamentBuyIn: (?<buyin>[^-]+)");
 
             var match = regex.Match(tournamentString);
 
@@ -638,16 +697,45 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
             var tournamentName = RemoveTableNumber(ParseTableName(handLines));
             var buyIn = decimal.Parse(match.Groups["buyin"].Value, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            var rake = 0m;
 
-            TournamentSpeed speed = TournamentSpeed.Regular;
-            Enum.TryParse(match.Groups["speed"].Value, out speed);
+            var speed = ParserUtils.ParseTournamentSpeed(tournamentName);
+            var seatType = SeatType.Parse(tournamentName);
+
+            // for majority of tournaments the buyIn is in the tournament name. 
+            // the buyIn from the summary line contains rake in it.
+            if (buyIn > 0)
+            {
+                var buyInStartIndex = tournamentName.IndexOf(NumberFormatInfo.CurrencySymbol);
+                var buyInEndIndex = tournamentName.IndexOf(' ', buyInStartIndex);
+
+                if (buyInStartIndex != -1 && buyInEndIndex != -1 && buyInEndIndex > buyInStartIndex)
+                {
+                    var buyInWithoutRake = 0m;
+                    if (decimal.TryParse(tournamentName.Substring(buyInStartIndex, buyInEndIndex - buyInStartIndex), NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo, out buyInWithoutRake))
+                    {
+                        if (buyIn > buyInWithoutRake)
+                        {
+                            rake = buyIn - buyInWithoutRake;
+                            buyIn = buyInWithoutRake;
+                        }
+                    }
+                }
+            }
+
+            // try to figure out rake and real buyIn values from predefined table
+            if (rake == 0m && buyIn > 0)
+            {
+                rake = GetPredefinedRake(buyIn);
+                buyIn = buyIn - rake;
+            }
 
             var tournamentDescriptor = new TournamentDescriptor
             {
                 TournamentId = match.Groups["tournament_id"].Value,
-                BuyIn = Buyin.FromBuyinRake(buyIn, 0m, Currency.USD),
+                BuyIn = Buyin.FromBuyinRake(buyIn, rake, Currency.USD),
                 Speed = speed,
-                TournamentName = $"{tournamentName} #{match.Groups["tournament_id"].Value}"
+                TournamentName = $"{tournamentName} #{match.Groups["tournament_id"].Value}",
             };
 
             return tournamentDescriptor;
@@ -1028,6 +1116,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
         {
             var line = handLines[1];
 
+            if (line.ToLower().Contains("heads-up"))
+            {
+                return SeatType.FromMaxPlayers(2);
+            }
+
             if (line.Contains("Jackpot"))
             {
                 return SeatType.FromMaxPlayers(3);
@@ -1038,12 +1131,31 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 return SeatType.FromMaxPlayers(4);
             }
 
+            if (line.Contains("6-Max"))
+            {
+                return SeatType.FromMaxPlayers(6);
+            }
+
             if (line.Contains("8-Max"))
             {
                 return SeatType.FromMaxPlayers(8);
             }
 
+            if (line.Contains("9-Max"))
+            {
+                return SeatType.FromMaxPlayers(9);
+            }
+
             return null;
+        }
+
+        private decimal GetPredefinedRake(decimal totalBuyIn)
+        {
+            if (PredefinedRakeDictionary.ContainsKey(totalBuyIn))
+            {
+                return PredefinedRakeDictionary[totalBuyIn];
+            }
+            return 0;
         }
     }
 }
