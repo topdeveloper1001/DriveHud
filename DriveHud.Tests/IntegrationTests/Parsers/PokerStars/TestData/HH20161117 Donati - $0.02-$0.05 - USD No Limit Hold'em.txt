@@ -1,0 +1,335 @@
+﻿PokerStars Zoom Hand #161554037419:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:23:21 EET [2016/11/17 15:23:21 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: GaLac111 ($6.43 in chips) 
+Seat 2: psdm ($13.56 in chips) 
+Seat 3: braveslice ($5 in chips) 
+Seat 4: nivek109 ($2.57 in chips) 
+Seat 5: Covrig01234 ($5 in chips) 
+Seat 6: BUKH1968 ($3.49 in chips) 
+psdm: posts small blind $0.02
+braveslice: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [Tc Ah]
+nivek109: folds 
+Covrig01234: folds 
+BUKH1968: folds 
+GaLac111: folds 
+psdm: folds 
+Uncalled bet ($0.03) returned to braveslice
+braveslice collected $0.04 from pot
+braveslice: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.04 | Rake $0 
+Seat 1: GaLac111 (button) folded before Flop (didn't bet)
+Seat 2: psdm (small blind) folded before Flop
+Seat 3: braveslice (big blind) collected ($0.04)
+Seat 4: nivek109 folded before Flop (didn't bet)
+Seat 5: Covrig01234 folded before Flop (didn't bet)
+Seat 6: BUKH1968 folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #161554046162:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:23:30 EET [2016/11/17 15:23:30 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: sin2016 ($5.12 in chips) 
+Seat 2: braveslice ($5.02 in chips) 
+Seat 3: Schelle011 ($6.03 in chips) 
+Seat 4: DonRazVan18 ($5.47 in chips) 
+Seat 5: mrkwai ($5.72 in chips) 
+Seat 6: Nickdas ($6.71 in chips) 
+braveslice: posts small blind $0.02
+Schelle011: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [5h 5c]
+DonRazVan18: folds 
+mrkwai: raises $0.10 to $0.15
+Nickdas: folds 
+sin2016: folds 
+braveslice: folds 
+Schelle011: folds 
+Uncalled bet ($0.10) returned to mrkwai
+mrkwai collected $0.12 from pot
+mrkwai: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.12 | Rake $0 
+Seat 1: sin2016 (button) folded before Flop (didn't bet)
+Seat 2: braveslice (small blind) folded before Flop
+Seat 3: Schelle011 (big blind) folded before Flop
+Seat 4: DonRazVan18 folded before Flop (didn't bet)
+Seat 5: mrkwai collected ($0.12)
+Seat 6: Nickdas folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #161554070631:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:23:55 EET [2016/11/17 15:23:55 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: radekpro ($7.58 in chips) 
+Seat 2: ptimar83 ($5.51 in chips) 
+Seat 3: vsosality ($6.75 in chips) 
+Seat 4: braveslice ($5 in chips) 
+Seat 5: =NutsFM= ($12.97 in chips) 
+Seat 6: Reniminator ($5.15 in chips) 
+ptimar83: posts small blind $0.02
+vsosality: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [4s Ah]
+braveslice: folds 
+=NutsFM=: folds 
+Reniminator: folds 
+radekpro: folds 
+ptimar83: folds 
+Uncalled bet ($0.03) returned to vsosality
+vsosality collected $0.04 from pot
+vsosality: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.04 | Rake $0 
+Seat 1: radekpro (button) folded before Flop (didn't bet)
+Seat 2: ptimar83 (small blind) folded before Flop
+Seat 3: vsosality (big blind) collected ($0.04)
+Seat 4: braveslice folded before Flop (didn't bet)
+Seat 5: =NutsFM= folded before Flop (didn't bet)
+Seat 6: Reniminator folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #161554074553:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:23:59 EET [2016/11/17 15:23:59 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: Friisbak ($5 in chips) 
+Seat 2: Jonashel ($5 in chips) 
+Seat 3: tega777 ($6.82 in chips) 
+Seat 4: donmigueto ($5.19 in chips) 
+Seat 5: braveslice ($5 in chips) 
+Seat 6: wizking19 ($6.32 in chips) 
+Jonashel: posts small blind $0.02
+tega777: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [Jd 3s]
+donmigueto: raises $0.15 to $0.20
+braveslice: folds 
+wizking19: folds 
+Friisbak: folds 
+Jonashel: folds 
+tega777: folds 
+Uncalled bet ($0.15) returned to donmigueto
+donmigueto collected $0.12 from pot
+donmigueto: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.12 | Rake $0 
+Seat 1: Friisbak (button) folded before Flop (didn't bet)
+Seat 2: Jonashel (small blind) folded before Flop
+Seat 3: tega777 (big blind) folded before Flop
+Seat 4: donmigueto collected ($0.12)
+Seat 5: braveslice folded before Flop (didn't bet)
+Seat 6: wizking19 folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #161554058865:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:23:43 EET [2016/11/17 15:23:43 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: muitolocoo ($5.07 in chips) 
+Seat 2: GaLac111 ($12.49 in chips) 
+Seat 3: ptimar83 ($5.56 in chips) 
+Seat 4: bakan34 ($5.24 in chips) 
+Seat 5: zachariax44 ($2.89 in chips) 
+Seat 6: braveslice ($5 in chips) 
+GaLac111: posts small blind $0.02
+ptimar83: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [6d 3h]
+bakan34: folds 
+zachariax44: raises $0.05 to $0.10
+braveslice: folds 
+muitolocoo: raises $0.35 to $0.45
+GaLac111: calls $0.43
+ptimar83: folds 
+zachariax44: calls $0.35
+*** FLOP *** [Ac 7s 6c]
+GaLac111: checks 
+zachariax44: checks 
+muitolocoo: checks 
+*** TURN *** [Ac 7s 6c] [8h]
+GaLac111: checks 
+zachariax44: bets $0.65
+muitolocoo: folds 
+GaLac111: calls $0.65
+*** RIVER *** [Ac 7s 6c 8h] [7d]
+GaLac111: checks 
+zachariax44: checks 
+*** SHOW DOWN ***
+GaLac111: shows [Kc Kh] (two pair, Kings and Sevens)
+zachariax44: shows [Ah Qs] (two pair, Aces and Sevens)
+zachariax44 collected $2.59 from pot
+*** SUMMARY ***
+Total pot $2.70 | Rake $0.11 
+Board [Ac 7s 6c 8h 7d]
+Seat 1: muitolocoo (button) folded on the Turn
+Seat 2: GaLac111 (small blind) showed [Kc Kh] and lost with two pair, Kings and Sevens
+Seat 3: ptimar83 (big blind) folded before Flop
+Seat 4: bakan34 folded before Flop (didn't bet)
+Seat 5: zachariax44 showed [Ah Qs] and won ($2.59) with two pair, Aces and Sevens
+Seat 6: braveslice folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #161554064828:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:23:49 EET [2016/11/17 15:23:49 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: braveslice ($5 in chips) 
+Seat 2: Dambouski Y ($7.13 in chips) 
+Seat 3: goras930219 ($19.88 in chips) 
+Seat 4: PlatinumEyes ($8.63 in chips) 
+Seat 5: KLESZCZ1234 ($5 in chips) 
+Seat 6: poppadom182 ($5 in chips) 
+Dambouski Y: posts small blind $0.02
+goras930219: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [2d 5c]
+PlatinumEyes: folds 
+KLESZCZ1234: folds 
+poppadom182: raises $0.10 to $0.15
+braveslice: folds 
+Dambouski Y: folds 
+goras930219: calls $0.10
+*** FLOP *** [5d Ts 4c]
+goras930219: checks 
+poppadom182: checks 
+*** TURN *** [5d Ts 4c] [6s]
+goras930219: checks 
+poppadom182: checks 
+*** RIVER *** [5d Ts 4c 6s] [4d]
+goras930219: checks 
+poppadom182: checks 
+*** SHOW DOWN ***
+goras930219: shows [Js 8d] (a pair of Fours)
+poppadom182: shows [Jh Ks] (a pair of Fours - King kicker)
+poppadom182 collected $0.31 from pot
+*** SUMMARY ***
+Total pot $0.32 | Rake $0.01 
+Board [5d Ts 4c 6s 4d]
+Seat 1: braveslice (button) folded before Flop (didn't bet)
+Seat 2: Dambouski Y (small blind) folded before Flop
+Seat 3: goras930219 (big blind) showed [Js 8d] and lost with a pair of Fours
+Seat 4: PlatinumEyes folded before Flop (didn't bet)
+Seat 5: KLESZCZ1234 folded before Flop (didn't bet)
+Seat 6: poppadom182 showed [Jh Ks] and won ($0.31) with a pair of Fours
+
+
+
+PokerStars Zoom Hand #161554101570:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:24:27 EET [2016/11/17 15:24:27 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: jacmal ($5 in chips) 
+Seat 2: braveslice ($5 in chips) 
+Seat 3: Basdenooije ($4.82 in chips) 
+Seat 4: angel4977 ($9.59 in chips) 
+Seat 5: xamerrr ($5 in chips) 
+Seat 6: Seleneious ($10.58 in chips) 
+braveslice: posts small blind $0.02
+Basdenooije: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [Qd 2c]
+angel4977: folds 
+xamerrr: folds 
+Seleneious: folds 
+jacmal: raises $0.07 to $0.12
+braveslice: folds 
+Basdenooije: folds 
+Uncalled bet ($0.07) returned to jacmal
+jacmal collected $0.12 from pot
+jacmal: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.12 | Rake $0 
+Seat 1: jacmal (button) collected ($0.12)
+Seat 2: braveslice (small blind) folded before Flop
+Seat 3: Basdenooije (big blind) folded before Flop
+Seat 4: angel4977 folded before Flop (didn't bet)
+Seat 5: xamerrr folded before Flop (didn't bet)
+Seat 6: Seleneious folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #161554091924:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:24:17 EET [2016/11/17 15:24:17 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: anta60 ($7.85 in chips) 
+Seat 2: Rezv-i-1 ($5.86 in chips) 
+Seat 3: braveslice ($5 in chips) 
+Seat 4: Sandrr77 ($6.61 in chips) 
+Seat 5: skrapas21 ($7.32 in chips) 
+Seat 6: bobchoibon ($4.39 in chips) 
+Rezv-i-1: posts small blind $0.02
+braveslice: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [6d Td]
+Sandrr77: folds 
+skrapas21: raises $0.12 to $0.17
+bobchoibon: folds 
+anta60: folds 
+Rezv-i-1: calls $0.15
+braveslice: folds 
+*** FLOP *** [9c Qh 9d]
+Rezv-i-1: checks 
+skrapas21: checks 
+*** TURN *** [9c Qh 9d] [Ks]
+Rezv-i-1: checks 
+skrapas21: checks 
+*** RIVER *** [9c Qh 9d Ks] [6c]
+Rezv-i-1: checks 
+skrapas21: bets $0.35
+Rezv-i-1: folds 
+Uncalled bet ($0.35) returned to skrapas21
+skrapas21 collected $0.37 from pot
+skrapas21: doesn't show hand 
+*** SUMMARY ***
+Total pot $0.39 | Rake $0.02 
+Board [9c Qh 9d Ks 6c]
+Seat 1: anta60 (button) folded before Flop (didn't bet)
+Seat 2: Rezv-i-1 (small blind) folded on the River
+Seat 3: braveslice (big blind) folded before Flop
+Seat 4: Sandrr77 folded before Flop (didn't bet)
+Seat 5: skrapas21 collected ($0.37)
+Seat 6: bobchoibon folded before Flop (didn't bet)
+
+
+
+PokerStars Zoom Hand #161554082231:  Hold'em No Limit ($0.02/$0.05) - 2016/11/17 22:24:07 EET [2016/11/17 15:24:07 ET]
+Table 'Donati' 6-max Seat #1 is the button
+Seat 1: braveslice ($5 in chips) 
+Seat 2: sakis0924 ($3.49 in chips) 
+Seat 3: sslim77 ($5 in chips) 
+Seat 4: fish72o ($7.12 in chips) 
+Seat 5: gutek77 ($5.17 in chips) 
+Seat 6: libaiwan ($5.22 in chips) 
+sakis0924: posts small blind $0.02
+sslim77: posts big blind $0.05
+*** HOLE CARDS ***
+Dealt to braveslice [4c Kc]
+fish72o: raises $0.10 to $0.15
+gutek77: folds 
+libaiwan: folds 
+braveslice: folds 
+sakis0924: calls $0.13
+sslim77: folds 
+*** FLOP *** [Ad 2h 4h]
+sakis0924: checks 
+fish72o: bets $0.17
+sakis0924: calls $0.17
+*** TURN *** [Ad 2h 4h] [Js]
+sakis0924: checks 
+fish72o: bets $0.38
+sakis0924: calls $0.38
+*** RIVER *** [Ad 2h 4h Js] [9h]
+sakis0924: bets $2.79 and is all-in
+fish72o: folds 
+Uncalled bet ($2.79) returned to sakis0924
+sakis0924 collected $1.39 from pot
+sakis0924: doesn't show hand 
+*** SUMMARY ***
+Total pot $1.45 | Rake $0.06 
+Board [Ad 2h 4h Js 9h]
+Seat 1: braveslice (button) folded before Flop (didn't bet)
+Seat 2: sakis0924 (small blind) collected ($1.39)
+Seat 3: sslim77 (big blind) folded before Flop
+Seat 4: fish72o folded on the River
+Seat 5: gutek77 folded before Flop (didn't bet)
+Seat 6: libaiwan folded before Flop (didn't bet)
+
+
+

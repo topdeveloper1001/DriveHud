@@ -56,14 +56,7 @@ namespace DriveHUD.Importers.BetOnline
                     }
 
                     var tournamentCacheService = ServiceLocator.Current.GetInstance<ITournamentsCacheService>();
-                    tournamentCacheService.Update(xml);
-
-#if DEBUG
-                    if (xml != null)
-                    {
-                        File.AppendAllText("stream\\tournament-stream.xml", xml);
-                    }
-#endif               
+                    tournamentCacheService.Update(xml);              
                 });
             }
             catch (Exception ex)

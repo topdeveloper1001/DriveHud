@@ -218,6 +218,7 @@
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
     <Compile Include="UnitTests\PokerStarsParserTests.cs" />
+    <Compile Include="UnitTests\StreamDecryptosTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>
