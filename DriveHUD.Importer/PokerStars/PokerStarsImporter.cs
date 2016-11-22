@@ -92,7 +92,7 @@ namespace DriveHUD.Importers.PokerStars
         protected override bool Match(string title, ParsingResult parsingResult)
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
-               parsingResult.Source == null || parsingResult.Source.GameDescription == null)
+               parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName))
             {
                 return false;
             }
