@@ -173,6 +173,11 @@ namespace DriveHUD.Importers
                 sw.Start();
 #endif
 
+                if (gameInfo.UpdateInfo != null && parsingResult.Count > 0)
+                {
+                    gameInfo.UpdateInfo(parsingResult[0], gameInfo);
+                }
+
                 InsertHands(parsingResult, progress, gameInfo);
 
 #if DEBUG

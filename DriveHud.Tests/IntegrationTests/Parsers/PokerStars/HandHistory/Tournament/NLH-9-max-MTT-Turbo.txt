@@ -1,0 +1,54 @@
+﻿PokerStars Hand #161783098324: Tournament #1735118766, $0.09+$0.01 USD Hold'em No Limit - Level III (20/40) - 2016/11/22 6:53:14 ET
+Table '1735118766 16' 9-max Seat #9 is the button
+Seat 1: Veraoka888 (2320 in chips) 
+Seat 2: Zhool1k (6040 in chips) 
+Seat 3: PkrGoddess00 (3440 in chips) 
+Seat 4: khalif_one (1305 in chips) 
+Seat 5: 38EGORKA38 (1420 in chips) 
+Seat 6: schroot43 (1260 in chips) 
+Seat 7: lakruivat (2795 in chips) 
+Seat 8: Gomes_bh (655 in chips) 
+Seat 9: Peon347 (1565 in chips) 
+Veraoka888: posts small blind 20
+Zhool1k: posts big blind 40
+*** HOLE CARDS ***
+Dealt to Peon347 [3d 7h]
+PkrGoddess00: folds 
+khalif_one: raises 45 to 85
+38EGORKA38: folds 
+schroot43: calls 85
+lakruivat: folds 
+Gomes_bh: folds 
+Peon347: folds 
+Veraoka888: calls 65
+Zhool1k: calls 45
+*** FLOP *** [Tc 5c 6s]
+Veraoka888: checks 
+Zhool1k: checks 
+khalif_one: bets 146
+schroot43: calls 146
+Veraoka888: calls 146
+Zhool1k: folds 
+*** TURN *** [Tc 5c 6s] [8h]
+Veraoka888: checks 
+khalif_one: bets 314
+schroot43: calls 314
+Veraoka888: calls 314
+*** RIVER *** [Tc 5c 6s 8h] [7s]
+Veraoka888: bets 1775 and is all-in
+khalif_one: folds 
+schroot43: folds 
+Uncalled bet (1775) returned to Veraoka888
+Veraoka888 collected 1720 from pot
+*** SUMMARY ***
+Total pot 1720 | Rake 0 
+Board [Tc 5c 6s 8h 7s]
+Seat 1: Veraoka888 (small blind) collected (1720)
+Seat 2: Zhool1k (big blind) folded on the Flop
+Seat 3: PkrGoddess00 folded before Flop (didn't bet)
+Seat 4: khalif_one folded on the River
+Seat 5: 38EGORKA38 folded before Flop (didn't bet)
+Seat 6: schroot43 folded on the River
+Seat 7: lakruivat folded before Flop (didn't bet)
+Seat 8: Gomes_bh folded before Flop (didn't bet)
+Seat 9: Peon347 (button) folded before Flop (didn't bet)
