@@ -13,7 +13,9 @@
 using DriveHUD.Entities;
 using DriveHUD.Importers.Bovada;
 using DriveHUD.Importers.Helpers;
+using HandHistories.Parser.Parsers;
 using Model.Enums;
+using System;
 
 namespace DriveHUD.Importers
 {
@@ -43,5 +45,7 @@ namespace DriveHUD.Importers
         public EnumTableType TableType { get; set; }
 
         public HandHistories.Objects.GameDescription.TournamentSpeed? TournamentSpeed { get; set; }
+
+        public Action<ParsingResult, GameInfo> UpdateInfo { get; set; }
     }
 }

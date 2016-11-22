@@ -208,7 +208,11 @@ namespace DriveHUD.Importers
 
                 var playerList = GetPlayerList(result.Source);
 
-                gameInfo.WindowHandle = FindWindow(result).ToInt32();
+                if (gameInfo.WindowHandle == 0)
+                {
+                    gameInfo.WindowHandle = FindWindow(result).ToInt32();
+                }
+
                 gameInfo.GameFormat = ParseGameFormat(result);
                 gameInfo.GameType = ParseGameType(result);
                 gameInfo.TableType = ParseTableType(result);
@@ -335,20 +339,7 @@ namespace DriveHUD.Importers
             return GameFormat.Cash;
         }
 
-        protected virtual bool Match(string title, ParsingResult parsingResult)
-        {
-            var tableName = parsingResult.Source.TableName;
-
-            if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(tableName))
-            {
-                return false;
-            }
-
-            var titleSplitted = title.Split('-');
-
-            return titleSplitted.Length > 2 &&
-                    titleSplitted[0].StartsWith(tableName.Trim(), StringComparison.InvariantCultureIgnoreCase);
-        }
+        protected abstract bool Match(string title, ParsingResult parsingResult);
 
         /// <summary>
         /// Get client process

@@ -21,7 +21,8 @@ namespace HandHistories.Parser.Utils.FastParsing
     {
         public static TournamentSpeed ParseTournamentSpeed(string input)
         {
-            if (input.IndexOf("Super Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            if (input.IndexOf("Super Turbo", StringComparison.InvariantCultureIgnoreCase) > 0 ||
+                  input.IndexOf("Hyper-Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
             {
                 return TournamentSpeed.SuperTurbo;
             }
