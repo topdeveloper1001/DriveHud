@@ -16,17 +16,12 @@ using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
-using Newtonsoft.Json;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 {
@@ -138,7 +133,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", Currency.USD)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", Currency.All)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt", Currency.USD)]
         public void CurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -254,38 +250,29 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
             Assert.That(handHistory.GameDescription.Tournament.Winning, Is.EqualTo(winning));
         }
 
-        //[Test]
-        //[TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 3.15)]
-        //public void TournamentSummaryRebuyIsParsedTest(string handHistoryFile, decimal rebuy)
-        //{
-        //    var handHistory = ParseHandHistory(handHistoryFile);
-        //    Assert.That(handHistory.GameDescription.Tournament.Rebuy, Is.EqualTo(rebuy));
-        //}
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-4max-MTT-USD-2-201305.shootout.txt", 2)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\8-Game-2max-STT-play-100-201306.homeGame.shootout.txt", 100)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLSD-MTT-USD-1000-50-201609.reentry.txt", 1000)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-MTT-FPP-100-201309.Finished.Super.Satellite.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-EUR-SnG-10-201101.Sample.txt", 9.04)]
+        public void TournamentSummaryBuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, Is.EqualTo(buyin));
+        }
 
-        //[Test]
-        //[TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-USD-MTT-3.15-201111.rebuys.addons.txt", 3.15)]
-        //public void TournamentSummaryAddonIsParsedTest(string handHistoryFile, decimal addon)
-        //{
-        //    var handHistory = ParseHandHistory(handHistoryFile);
-        //    Assert.That(handHistory.GameDescription.Tournament.Addon, Is.EqualTo(addon));
-        //}
-
-        //[Test]     
-        //[TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 20)]
-        //public void TournamentSummaryBuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
-        //{
-        //    var handHistory = ParseHandHistory(handHistoryFile);
-        //    Assert.That(handHistory.GameDescription.Tournament.BuyIn.PrizePoolValue, Is.EqualTo(buyin));
-        //}
-
-        //[Test]      
-        //[TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 1)]
-        //public void TournamentSummaryBuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
-        //{
-        //    var handHistory = ParseHandHistory(handHistoryFile);
-        //    Assert.That(handHistory.GameDescription.Tournament.BuyIn.Rake, Is.EqualTo(rake));
-        //}
-
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-4max-MTT-USD-2-201305.shootout.txt", 0.2)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\8-Game-2max-STT-play-100-201306.homeGame.shootout.txt", 9)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLSD-MTT-USD-1000-50-201609.reentry.txt", 50)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-MTT-FPP-100-201309.Finished.Super.Satellite.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-EUR-SnG-10-201101.Sample.txt", 0.96)]
+        public void TournamentSummaryBuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.BuyIn.Rake, Is.EqualTo(rake));
+        }
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-4max-MTT-USD-2-201305.shootout.txt", "Hero")]
@@ -298,14 +285,14 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
             Assert.That(handHistory.Hero.PlayerName, Is.EqualTo(heroName));
         }
 
-        //[Test]
-        //[TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\Tournament - Summary.txt", true)]
-        //[TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\SingleHands\TournamentWithAnte.txt", false)]
-        //public void TournamentSummaryIsParsedTest(string handHistoryFile, bool isSummary)
-        //{
-        //    var handHistory = ParseHandHistory(handHistoryFile);
-        //    Assert.That(handHistory.GameDescription.Tournament.IsSummary, Is.EqualTo(isSummary));
-        //}
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\Summary\NLHE-4max-MTT-USD-2-201305.shootout.txt", true)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", false)]
+        public void TournamentSummaryIsParsedTest(string handHistoryFile, bool isSummary)
+        {
+            var handHistory = ParseHandHistory(handHistoryFile);
+            Assert.That(handHistory.GameDescription.Tournament.IsSummary, Is.EqualTo(isSummary));
+        }
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt", "Tournament #1724073465")]

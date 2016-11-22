@@ -296,7 +296,8 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
         }
 
         private const string summaryYouFinishedInText = "You finished in ";
-        private static readonly Regex summaryPlayerDataRegex = new Regex(@"\d+:\s(?<player>.*)(\s\[\d+\])?\s\([^\)]+\),(\s(?<won>[^\(]+).*)?", RegexOptions.Compiled);
+        private const string summaryBuyInText = "Buy-In: ";
+        private static readonly Regex summaryPlayerDataRegex = new Regex(@"\d+:\s(?<player>.*[^\]]+)(\s\[\d+\])?\s\([^\)]+\),(\s(?<won>[^\(]+).*)?", RegexOptions.Compiled);
 
         protected override HandHistory ParseSummaryHand(string[] handLines, HandHistory handHistory)
         {
@@ -371,6 +372,42 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     tournament.TotalPlayers = totalPlayers;
                 }
 
+                // parse buyin
+                if (tournament.BuyIn == null && handLine.StartsWith(summaryBuyInText, StringComparison.InvariantCultureIgnoreCase))
+                {
+                    // Buy-In: $24.55/$2.45 USD
+                    // Buy-In: 250 SC
+                    var buyInText = handLine.Substring(summaryBuyInText.Length);
+
+                    var indexOfLastSpace = buyInText.LastIndexOf(' ');
+
+                    if (indexOfLastSpace > 0)
+                    {
+                        buyInText = buyInText.Substring(0, indexOfLastSpace);
+                    }
+
+                    var buyInTextSplit = buyInText.Split('/');
+
+                    if (buyInTextSplit.Length != 2)
+                    {
+                        tournament.BuyIn = Buyin.FromBuyinRake(0, 0, Currency.All);
+                        continue;
+                    }
+                    
+                    var currency = ParseCurrency(handLine, buyInText[0]);
+
+                    decimal buyIn = 0;
+                    decimal rake = 0;
+                    Currency tempCurrency;
+
+                    ParserUtils.TryParseMoneyText(buyInTextSplit[0], out buyIn, out tempCurrency, _numberFormatInfo);
+                    ParserUtils.TryParseMoneyText(buyInTextSplit[1], out rake, out tempCurrency, _numberFormatInfo);
+
+                    tournament.BuyIn = Buyin.FromBuyinRake(buyIn, rake, currency);
+                    continue;
+                }
+
+                // parse player info
                 if (handLine.StartsWith($"{tournament.FinishPosition}: ", StringComparison.InvariantCultureIgnoreCase))
                 {
                     var match = summaryPlayerDataRegex.Match(handLine);
