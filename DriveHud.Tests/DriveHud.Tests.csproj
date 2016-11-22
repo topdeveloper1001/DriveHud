@@ -273,6 +273,7 @@
   <ItemGroup>
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt" />
     <Content Include="IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt" />
+    <Content Include="IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-MTT-Turbo.txt" />
     <Content Include="IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-ante.txt" />
     <Content Include="IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt" />
     <Content Include="IntegrationTests\Parsers\PokerStars\Summary\8-Game-2max-STT-play-100-201306.homeGame.shootout.txt" />

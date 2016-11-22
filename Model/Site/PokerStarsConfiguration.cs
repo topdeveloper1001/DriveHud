@@ -21,6 +21,9 @@ namespace Model.Site
 {
     public class PokerStarsConfiguration : ISiteConfiguration
     {
+        private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ" };
+        private static readonly string[] HandHistoryFolders = new string[] { "HandHistory", "TournSummary" };
+
         public PokerStarsConfiguration()
         {
             prefferedSeat = new Dictionary<int, int>();
@@ -80,11 +83,12 @@ namespace Model.Site
         {
             var localApplicationData = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 
-            var possibleFolders = new string[] { "PokerStars", "PokerStars.EU" };
-
-            var dirs = (from possibleFolder in possibleFolders
-                        let folder = Path.Combine(localApplicationData, possibleFolder, "HandHistory")
-                        select folder).ToArray();
+            var dirs = (from possibleFolder in PossibleFolders
+                        from handHistoryFolder in HandHistoryFolders
+                        let folder = Path.Combine(localApplicationData, possibleFolder)
+                        let hhFolder = Path.Combine(folder, handHistoryFolder)
+                        where Directory.Exists(folder)
+                        select hhFolder).ToArray();
 
             return dirs;
         }
