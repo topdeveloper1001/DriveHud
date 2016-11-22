@@ -485,7 +485,7 @@ namespace DriveHUD.Importers
 
                 tournamentsData.ForEach(t =>
                 {
-                    if (t.PlayerName.Equals(handHistory.Source.Hero.PlayerName))
+                    if (handHistory.Source.Hero != null && t.PlayerName.Equals(handHistory.Source.Hero.PlayerName))
                     {
                         t.Winningsincents = Utils.ConvertToCents(tournamentDescription.Winning);
                         t.Finishposition = tournamentDescription.FinishPosition;
