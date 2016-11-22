@@ -1239,42 +1239,41 @@ namespace Model
         private static void CalculateLimpBet(ConditionalBet limp, IList<HandAction> preflops, string player)
         {
             var bb = preflops.FirstOrDefault(x => x.HandActionType == HandActionType.BIG_BLIND)?.PlayerName;
-            bool isOpenLimp = true;
-            bool isLimpersPresent = false;
+
+            if (!string.IsNullOrEmpty(bb) && bb == player) // can't limp on bb
+            {
+                return;
+            }
 
             foreach (var action in preflops.Where(x => !x.IsBlinds))
             {
-                if (!string.IsNullOrEmpty(bb) && action.PlayerName == bb)
-                {
-                    return;
-                }
-
                 if (action.PlayerName == player)
                 {
-                    limp.Possible = true;
-                    if (action.IsCall()
-                        || action.IsCheck) // in case if  we  have  2 or more  BB
+                    if (!limp.Made)
                     {
-                        limp.Made = true;
+                        limp.Possible = true;
+                        if (action.IsCall() || action.IsCheck)
+                        {
+                            limp.Made = true;
+                            continue;
+                        }
+                        else
+                        {
+                            return;
+                        }
                     }
-
-                    if (!isOpenLimp && isLimpersPresent)
+                    else
+                    // somebody raised after we had limped
                     {
                         limp.CheckAction(action);
+                        return;
                     }
-
-                    return;
                 }
 
-                if (action.IsRaise())
+                // somebody raised before we had a chance to limp
+                if (action.IsRaise() && !limp.Made)
                 {
                     return;
-                }
-
-                isOpenLimp = false;
-                if (!isLimpersPresent)
-                {
-                    isLimpersPresent = action.IsCall() || action.IsCheck;
                 }
             }
         }
