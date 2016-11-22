@@ -327,6 +327,7 @@
     <Compile Include="TableConfigurators\SeatArea\AmericasCardroomTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\AmericasCardroomTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\PokerStarsTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\AmericasCardroomSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BovadaSiteSettingTableConfigurator.cs" />

@@ -63,7 +63,6 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             // import only hands that we can find the open window for (until we find another way of processing tournaments)
             if (isWindowFound)
             {
-                // ACP appends the current action to file right after it was performed instead of making the chunk update after the hand had been finished
                 return dbImporter.Import(handHistory, progress, gameInfo);
             }
 
@@ -166,7 +165,6 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         }
 
         private const string GameStartedSearchPattern = "Game started at:";
-        private const string GameIdSearchPatter = "Game ID:";
         private string AddAdditionalData(string handHistory, out bool isWindowFound)
         {
             isWindowFound = false;
@@ -179,12 +177,11 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             var parser = handHistoryParserFactory.GetFullHandHistoryParser(handHistory);
 
             var indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern);
-            var indexGameId = handHistory.IndexOf(GameIdSearchPatter);
 
             string windowTitleText = string.Empty;
             ParsingResult parsingResult = null;
 
-            if (indexGameStarted != -1 && indexGameId != -1)
+            if (indexGameStarted != -1)
             {
                 string tableName = parser.ParseTableName(handHistory.Substring(indexGameStarted));
 
@@ -317,21 +314,6 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             return 0m;
-        }
-
-        private TournamentSpeed GetTournamentSpeed(string title)
-        {
-            if (title.Contains("Hyper Turbo"))
-            {
-                return TournamentSpeed.HyperTurbo;
-            }
-
-            if (title.Contains("Turbo"))
-            {
-                return TournamentSpeed.Turbo;
-            }
-
-            return TournamentSpeed.Regular;
         }
     }
 }

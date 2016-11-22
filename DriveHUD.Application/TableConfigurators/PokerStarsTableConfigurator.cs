@@ -10,16 +10,25 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.TableConfigurators.SeatArea;
 using DriveHUD.Entities;
 using System.Collections.Generic;
 
 namespace DriveHUD.Application.TableConfigurators
 {
-    internal class PokerStarsTableConfigurator : CommonTableConfigurator
+    internal class PokerStarsTableConfigurator : Poker888TableConfigurator
     {
         public override EnumPokerSites Type
         {
             get { return EnumPokerSites.PokerStars; }
+        }
+
+        protected override ITableSeatAreaConfigurator TableSeatAreaConfigurator
+        {
+            get
+            {
+                return new PokerStarsTableSeatAreaConfigurator();
+            }
         }
 
         protected override Dictionary<int, int[,]> GetPredefinedLabelPositions()
