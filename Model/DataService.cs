@@ -26,7 +26,7 @@ namespace Model
         private readonly string dataPath = StringFormatter.GetAppDataFolderPath();
         private string playersPath
         {
-            get { return StringFormatter.GetProcessedDataFolderPath(); }
+            get { return StringFormatter.GetPlayersDataFolderPath(); }
         }
 
         private static ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();

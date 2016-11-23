@@ -17,6 +17,7 @@ using HandHistories.Parser.Parsers.Base;
 using HandHistories.Parser.Parsers.FastParser._888;
 using HandHistories.Parser.Parsers.FastParser.IPoker;
 using HandHistories.Parser.Parsers.FastParser.PokerStars;
+using HandHistories.Parser.Parsers.FastParser.Winning;
 using HandHistories.Parser.Utils.Extensions;
 using System;
 
@@ -57,6 +58,8 @@ namespace HandHistories.Parser.Parsers.Factory
                     return new IPokerFastParserImpl();
                 case EnumPokerSites.Poker888:
                     return new Poker888FastParserImpl();
+                case EnumPokerSites.AmericasCardroom:
+                    return new AmericasCardroomFastParserImpl();
                 default:
                     throw new NotImplementedException("GetFullHandHistoryParser: No parser for " + siteName);
             }

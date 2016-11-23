@@ -53,6 +53,12 @@ namespace HandHistories.Parser.Utils.Extensions
                 return true;
             }
 
+            if (handText.StartsWith("Game started", StringComparison.InvariantCultureIgnoreCase))
+            {
+                siteName = EnumPokerSites.AmericasCardroom;
+                return true;
+            }
+
             // xml file
             if (handText[0] == '<')
             {

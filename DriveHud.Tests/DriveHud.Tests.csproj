@@ -200,6 +200,7 @@
     <Content Include="IntegrationTests\Parsers\Pacific\Summary\Tournament Win - Summary.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 Max - Real Money.txt" />
     <Compile Include="IntegrationTests\Parsers\PokerStars\PokerStarsFastParserTests.cs" />
+    <Compile Include="IntegrationTests\Parsers\WinningPokerNetwork\AmericasCardroomFastParserTests.cs" />
     <Compile Include="LayoutCreator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\BetOnlineXmlToIPokerConverterTests.cs" />
@@ -261,6 +262,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09 - Unfinished.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max - 3 %28Hold%27em%29 - 2016-11-08.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Cash\FixedLimitHoldem\5-10 PM Hold`em 5-10 6-max %28Hold%27em%29 - 2016-11-09.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\Players\SittingOut.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\Ante All-In.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\BB All-In.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PlayMoney-River-Hero.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-Tournament-All-In-Uncolled-Bet.txt" />
+    <Content Include="IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\PLO-0.50-1-USD-Flop.txt" />
     <None Include="IsEqualBuilder.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>IsEqualBuilder.txt</LastGenOutput>
@@ -272,19 +283,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\HandHistory\Cash\NLH-Zoom-6-max-0.02-0.05.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-MTT-Turbo.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT-ante.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\HandHistory\Tournament\NLH-9-max-STT.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\8-Game-2max-STT-play-100-201306.homeGame.shootout.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\MPLO-6max-MTT-USD-27-201605.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\NLHE-4max-MTT-USD-2-201305.shootout.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\NLHE-9max-MTT-USD-2.50-201305.KO.v1.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\NLHE-9max-SC-MTT-201512.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\NLHE-EUR-SnG-10-201101.Sample.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\NLHE-MTT-FPP-100-201309.Finished.Super.Satellite.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\NLHE-USD-HUSnG-10-201011.s0rrow.wins.txt" />
-    <Content Include="IntegrationTests\Parsers\PokerStars\Summary\NLSD-MTT-USD-1000-50-201609.reentry.txt" />
     <Content Include="IsEqualBuilder.txt">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

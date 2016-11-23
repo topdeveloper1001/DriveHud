@@ -1,0 +1,27 @@
+﻿Game started at: 2016/10/30 17:54:30
+Game ID: 764218440 0.05/0.10 (PRR) Dilong - 3 (Hold'em)
+Seat 5 is the button
+Seat 1: 01123581321 (11.16).
+Seat 5: needmorefppp (21.41).
+Player needmorefppp has small blind (0.05)
+Player 01123581321 has big blind (0.10)
+Player 01123581321 received a card.
+Player 01123581321 received a card.
+Player needmorefppp received a card.
+Player needmorefppp received a card.
+Player needmorefppp raises (0.15)
+Player 01123581321 calls (0.10)
+*** FLOP ***: [Ah 5h Js]
+Player 01123581321 bets (0.20)
+Player needmorefppp calls (0.20)
+*** TURN ***: [Ah 5h Js] [5d]
+Player 01123581321 bets (0.40)
+Player needmorefppp folds
+Uncalled bet (0.40) returned to 01123581321
+Player 01123581321 mucks cards
+------ Summary ------
+Pot: 0.76. Rake 0.04
+Board: [Ah 5h Js 5d]
+*Player 01123581321 mucks (does not show cards). Bets: 0.40. Collects: 0.76. Wins: 0.36.
+Player needmorefppp does not show cards.Bets: 0.40. Collects: 0. Loses: 0.40.
+Game ended at: 2016/10/30 17:55:19

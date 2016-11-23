@@ -783,6 +783,44 @@
     <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-888.xml" />
     <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-OH-888.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-MTT-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-2max-SNG-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-MTT-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-3max-SNG-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-MTT-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-4max-SNG-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-MTT-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-6max-SNG-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-MTT-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-8max-SNG-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-OH-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-ACR.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-OH-ACR.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

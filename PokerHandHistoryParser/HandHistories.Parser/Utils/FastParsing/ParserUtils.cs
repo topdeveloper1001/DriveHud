@@ -27,6 +27,11 @@ namespace HandHistories.Parser.Utils.FastParsing
                 return TournamentSpeed.SuperTurbo;
             }
 
+            if (input.IndexOf("Hyper Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            {
+                return TournamentSpeed.HyperTurbo;
+            }
+
             if (input.IndexOf("Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
             {
                 return TournamentSpeed.Turbo;

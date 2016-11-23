@@ -1,0 +1,60 @@
+﻿Game started at: 2016/11/9 15:42:34 *** Summary: GameType: PL, TournamentId: 6626931, TournamentBuyIn: 0
+Game ID: 771496238 20/40 $10 Freeroll - On Demand, Table 27 (Hold'em) 
+Seat 3 is the button
+Seat 1: jmonday (3630).
+Seat 2: Donaldtrumpduck (1500).
+Seat 3: StevenLewis (19800).
+Seat 4: JesusIsHere (1380).
+Seat 5: ersh (3120).
+Seat 6: Septor13 (2530).
+Seat 7: artgdev (1500).
+Seat 8: fajiste1 (1160).
+Seat 9: URINETROUBLE (1440).
+Player JesusIsHere has small blind (20)
+Player ersh has big blind (40)
+Player JesusIsHere received a card.
+Player JesusIsHere received a card.
+Player ersh received a card.
+Player ersh received a card.
+Player Septor13 received a card.
+Player Septor13 received a card.
+Player artgdev received card: [8s]
+Player artgdev received card: [Qd]
+Player fajiste1 received a card.
+Player fajiste1 received a card.
+Player URINETROUBLE received a card.
+Player URINETROUBLE received a card.
+Player jmonday received a card.
+Player jmonday received a card.
+Player Donaldtrumpduck received a card.
+Player Donaldtrumpduck received a card.
+Player StevenLewis received a card.
+Player StevenLewis received a card.
+Player Septor13 folds
+Player artgdev folds
+Player fajiste1 calls (40)
+Player URINETROUBLE calls (40)
+Player jmonday allin (3630)
+Player Donaldtrumpduck folds
+Player StevenLewis folds
+Player JesusIsHere folds
+Player ersh folds
+Player fajiste1 folds
+Player URINETROUBLE allin (1400)
+Uncalled bet (2190) returned to jmonday
+*** FLOP ***: [Qc 2h 10d]
+*** TURN ***: [Qc 2h 10d] [6d]
+*** RIVER ***: [Qc 2h 10d 6d] [5d]
+------ Summary ------
+Pot: 2980
+Board: [Qc 2h 10d 6d 5d]
+*Player jmonday shows: One pair of 6s [6s Kc]. Bets: 1440. Collects: 2980. Wins: 1540.
+Player Donaldtrumpduck does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player StevenLewis does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player JesusIsHere does not show cards.Bets: 20. Collects: 0. Loses: 20.
+Player ersh does not show cards.Bets: 40. Collects: 0. Loses: 40.
+Player Septor13 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player artgdev does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player fajiste1 does not show cards.Bets: 40. Collects: 0. Loses: 40.
+Player URINETROUBLE shows: High card A [As Kh]. Bets: 1440. Collects: 0. Loses: 1440.
+Game ended at: 2016/11/9 15:43:13

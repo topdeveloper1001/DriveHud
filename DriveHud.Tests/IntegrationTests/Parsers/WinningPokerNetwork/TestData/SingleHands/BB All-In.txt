@@ -1,0 +1,22 @@
+Game started at: 2016/11/13 11:7:19
+Game ID: 774521186 1/2 PM Hold`em 1/2 (Hold'em)
+Seat 4 is the button
+Seat 4: King_Akbar916 (74.56).
+Seat 5: artgdev (1.44).
+Player King_Akbar916 has small blind (1)
+Player artgdev allin (1.44)
+Player King_Akbar916 received a card.
+Player King_Akbar916 received a card.
+Player artgdev received card: [Js]
+Player artgdev received card: [Qs]
+Player King_Akbar916 calls (1)
+Uncalled bet (0.56) returned to King_Akbar916
+*** FLOP ***: [6h As 8c]
+*** TURN ***: [6h As 8c] [5h]
+*** RIVER ***: [6h As 8c 5h] [9h]
+------ Summary ------
+Pot: 2.74. Rake 0.14
+Board: [6h As 8c 5h 9h]
+*Player King_Akbar916 shows: Straight to 9 [7d Ad]. Bets: 1.44. Collects: 2.74. Wins: 1.30.
+Player artgdev shows: High card A [Js Qs]. Bets: 1.44. Collects: 0. Loses: 1.44.
+Game ended at: 2016/11/13 11:7:30

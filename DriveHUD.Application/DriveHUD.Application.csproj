@@ -301,6 +301,8 @@
     <Compile Include="Licensing\LicenseSubType.cs" />
     <Compile Include="Licensing\LicenseType.cs" />
     <Compile Include="Migration\IMigrationService.cs" />
+    <Compile Include="Migration\Migrations\Migration0009_NonDB_AddAmericasCardroomPredefinedLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0007_NonDB_ChangeDefaultCustomProcessedDataLocation.cs" />
     <Compile Include="Migration\MigrationService.cs" />
     <Compile Include="Migration\Migrations\Migration0000_CreateDatabase.cs" />
     <Compile Include="Migration\Migrations\Migration0001_CreateTablePlayerNotes.cs" />
@@ -309,6 +311,7 @@
     <Compile Include="Migration\Migrations\Migration0004_NonDB_AddPokerStarsPredefinedLayouts.cs" />
     <Compile Include="Migration\Migrations\Migration0005_NonDB_Add888PokerSiteSettings.cs" />
     <Compile Include="Migration\Migrations\Migration0006_NonDB_Add888PokerPredefinedLayouts.cs" />
+    <Compile Include="Migration\Migrations\Migration0008_NonDb_AddAmericasCardroomSiteSettings.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="SingleInstance.cs" />
@@ -321,7 +324,11 @@
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\Poker888TableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\AmericasCardroomTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\AmericasCardroomTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\PokerStarsTableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\AmericasCardroomSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BovadaSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\CommonSiteSettingTableConfigurator.cs" />
@@ -338,6 +345,7 @@
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
+    <Compile Include="ViewModels\Hud\AmericasCardroomHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
     <Compile Include="ViewModels\Hud\BetOnlineHudPanelService.cs" />

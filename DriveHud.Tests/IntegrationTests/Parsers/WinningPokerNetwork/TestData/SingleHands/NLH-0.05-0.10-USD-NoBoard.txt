@@ -1,0 +1,20 @@
+﻿Game started at: 2016/10/31 22:5:53
+Game ID: 764153469 0.05/0.10 (PRR) Dilong - 2 (Hold'em)
+Seat 6 is the button
+Seat 2: JamieZ (11.42).
+Seat 6: K_City (10).
+Player K_City has small blind (0.05)
+Player JamieZ has big blind (0.10)
+Player JamieZ received a card.
+Player JamieZ received a card.
+Player K_City received a card.
+Player K_City received a card.
+Player K_City raises (0.15)
+Player JamieZ folds
+Uncalled bet (0.10) returned to K_City
+Player K_City mucks cards
+------ Summary ------
+Pot: 0.20. Rake 0
+Player JamieZ does not show cards.Bets: 0.10. Collects: 0. Loses: 0.10.
+*Player K_City mucks (does not show cards). Bets: 0.10. Collects: 0.20. Wins: 0.10.
+Game ended at: 2016/10/31 22:6:5

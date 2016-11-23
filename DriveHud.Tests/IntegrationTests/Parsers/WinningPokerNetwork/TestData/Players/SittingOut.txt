@@ -1,0 +1,52 @@
+﻿Game started at: 2016/11/3 17:25:28
+Game ID: 766745288 5/10 PM Hold`em 5/10 6-max - 2 (Hold'em)
+Seat 3 is the button
+Seat 1: Sgtgeo (724.19).
+Seat 3: Cx Agent (854).
+Seat 4: JB 1226 NYC (10250.13).
+Seat 5: Hero (603).
+Seat 6: Lobo125 (817.92).
+Player JB 1226 NYC has small blind (5)
+Player Hero sitting out
+Player Lobo125 has big blind (10)
+Player JB 1226 NYC received a card.
+Player JB 1226 NYC received a card.
+Player Lobo125 received a card.
+Player Lobo125 received a card.
+Player Sgtgeo received a card.
+Player Sgtgeo received a card.
+Player Cx Agent received a card.
+Player Cx Agent received a card.
+Player Sgtgeo calls (10)
+Player Cx Agent calls (10)
+Player JB 1226 NYC calls (5)
+Player Lobo125 checks
+*** FLOP ***: [5h 2s Qh]
+Player JB 1226 NYC checks
+Player Lobo125 checks
+Player Sgtgeo checks
+Player Cx Agent checks
+*** TURN ***: [5h 2s Qh] [3s]
+Player JB 1226 NYC checks
+Player Lobo125 checks
+Player Sgtgeo checks
+Player Cx Agent bets (10)
+Player JB 1226 NYC calls (10)
+Player Lobo125 calls (10)
+Player Sgtgeo folds
+*** RIVER ***: [5h 2s Qh 3s] [9c]
+Player JB 1226 NYC checks
+Player Lobo125 checks
+Player Cx Agent bets (10)
+Player JB 1226 NYC folds
+Player Lobo125 calls (10)
+Player Lobo125 mucks cards
+------ Summary ------
+Pot: 87. Rake 3
+Board: [5h 2s Qh 3s 9c]
+Player Sgtgeo does not show cards.Bets: 10. Collects: 0. Loses: 10.
+*Player Cx Agent shows: Straight to 5 [10h 4s]. Bets: 30. Collects: 87. Wins: 57.
+Player JB 1226 NYC does not show cards.Bets: 20. Collects: 0. Loses: 20.
+Player Hero does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player Lobo125 mucks (does not show cards). Bets: 30. Collects: 0. Loses: 30.
+Game ended at: 2016/11/3 17:26:36

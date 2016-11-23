@@ -3,6 +3,7 @@ using Model.Enums;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,9 +31,9 @@ namespace Model.Settings
         private void SetDefaults()
         {
             IsCustomProcessedDataLocationEnabled = false;
-            CustomProcessedDataLocation = StringFormatter.GetAppDataFolderPath();
+            CustomProcessedDataLocation = Path.Combine(StringFormatter.GetAppDataFolderPath(), "ProcessedData");
 
-            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars, EnumPokerSites.Poker888 };
+            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars, EnumPokerSites.Poker888, EnumPokerSites.AmericasCardroom };
             SitesModelList = sites.Select(x => new SiteModel
             {
                 PokerSite = x,

@@ -555,7 +555,7 @@ namespace DriveHUD.Application.ViewModels
 
         internal async void ImportFromDirectory()
         {
-            var folderDialog = new FolderBrowserDialog { SelectedPath = "C:\\" };
+            var folderDialog = new FolderBrowserDialog();
 
             var result = folderDialog.ShowDialog();
 
@@ -564,7 +564,10 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            var filesToImport = Directory.GetFiles(folderDialog.SelectedPath, "*.xml", SearchOption.AllDirectories).Select(x => new FileInfo(x)).ToArray();
+            var _validExtensions = new HashSet<string> { ".txt", ".xml" };
+            var filesToImport = Directory.EnumerateFiles(folderDialog.SelectedPath, "*.*", SearchOption.AllDirectories)
+                .Where(f => _validExtensions.Contains(Path.GetExtension(f).ToLower()))
+                .Select(f => new FileInfo(f)).ToArray();
 
             if (filesToImport.Length == 0)
             {

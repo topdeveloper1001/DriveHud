@@ -16,6 +16,7 @@ namespace HandHistories.Objects.GameDescription
     {
         Regular = 1,
         Turbo = 2,
-        SuperTurbo = 3
+        SuperTurbo = 3,
+        HyperTurbo = 4,
     }
 }

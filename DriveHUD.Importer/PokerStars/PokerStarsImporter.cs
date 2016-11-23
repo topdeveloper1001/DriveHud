@@ -50,11 +50,11 @@ namespace DriveHUD.Importers.PokerStars
             }
         }
 
-        protected override void ImportHand(string handHistory, GameInfo gameInfo)
+        protected override void ProcessHand(string handHistory, GameInfo gameInfo)
         {
             gameInfo.UpdateInfo = UpdateGameInfo;
 
-            base.ImportHand(handHistory, gameInfo);
+            base.ProcessHand(handHistory, gameInfo);
         }
 
         protected override PlayerList GetPlayerList(HandHistory handHistory)
