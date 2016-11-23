@@ -126,6 +126,7 @@
     <Compile Include="Converters\MultiBooleanAndToBrushConverter.cs" />
     <Compile Include="Converters\ObjectToTypeConverter.cs" />
     <Compile Include="Converters\ParameterBooleanToBrushConverter.cs" />
+    <Compile Include="Converters\PokerSiteToShortStringConverter.cs" />
     <Compile Include="Converters\StaticResourceConverter.cs" />
     <Compile Include="Converters\StringIsEmptyToBoolConverter.cs" />
     <Compile Include="Converters\StringToImageSourceConverter.cs" />

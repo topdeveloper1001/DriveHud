@@ -63,8 +63,8 @@ namespace DriveHUD.Application.TableConfigurators
         {
             return new List<ITableSeatArea>()
             {
-                new TableSeatArea(1, 200, 460, 10, 70, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
-                new TableSeatArea(2, 200, 460, 200, 70, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(1, 200, 460, 65, 170, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(2, 200, 460, 300, 170, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
             };
         }
 
@@ -72,9 +72,9 @@ namespace DriveHUD.Application.TableConfigurators
         {
             return new List<ITableSeatArea>()
             {
-                new TableSeatArea(1, 100, 460, 10, 70, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
-                new TableSeatArea(2, 100, 270, 200, 310, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
-                new TableSeatArea(3, 100, 280, 200, 20, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(1, 150, 280, 200, 520, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(2, 150, 460, 350, 170, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(3, 150, 280, 200, 20, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
             };
         }
 

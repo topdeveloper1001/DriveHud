@@ -29,6 +29,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Linq;
+using System;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -140,6 +141,11 @@ namespace DriveHud.Tests.UnitTests
             }
 
             public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo)
+            {
+                throw new NotImplementedException();
+            }
+
+            public IEnumerable<ParsingResult> Import(string text, IDHProgress progress, GameInfo gameInfo, bool rethrowInvalidHands)
             {
                 var handXml = XDocument.Parse(text);
 

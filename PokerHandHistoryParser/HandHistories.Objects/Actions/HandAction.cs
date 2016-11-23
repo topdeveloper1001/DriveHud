@@ -231,7 +231,8 @@ namespace HandHistories.Objects.Actions
             {
                 return HandActionType == HandActionType.SMALL_BLIND ||
                        HandActionType == HandActionType.BIG_BLIND ||
-                       HandActionType == HandActionType.POSTS;
+                       HandActionType == HandActionType.POSTS ||
+                       HandActionType == HandActionType.ANTE;
             }
         }
 

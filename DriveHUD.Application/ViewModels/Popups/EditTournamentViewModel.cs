@@ -30,7 +30,7 @@ namespace DriveHUD.Application.ViewModels
 
             TournamentSpeedItems = new List<TournamentSpeed>()
             {
-                TournamentSpeed.Regular, TournamentSpeed.Turbo, TournamentSpeed.SuperTurbo
+                TournamentSpeed.Regular, TournamentSpeed.Turbo, TournamentSpeed.SuperTurbo, TournamentSpeed.HyperTurbo
             };
 
             var gametypes = Enum.GetValues(typeof(GameType)).Cast<GameType>().Where(x => x != GameType.Any && x != GameType.Unknown).ToList();

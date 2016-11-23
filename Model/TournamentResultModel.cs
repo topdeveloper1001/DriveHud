@@ -85,6 +85,9 @@ namespace Model
             resultList.Add(new TournamentResultModel() { Name = "$50,000 GT Satelite Step 3 #1", BuyinInCents = 333, Currency = Currency.USD, TotalPlayers = 6, Prizes = TournamentPrize.CreatePrizesArray(1815, 3) });
             resultList.Add(new TournamentResultModel() { Name = "$50,000 GT Satelite Step 4 #1", BuyinInCents = 1815, Currency = Currency.USD, TotalPlayers = 6, Prizes = TournamentPrize.CreatePrizesArray(9900) });
 
+            /* ACR */
+            resultList.Add(new TournamentResultModel() { Name = "$1K Cage Satelite 6-Max", BuyinInCents = 17500, Currency = Currency.USD, TotalPlayers = 6, Prizes = TournamentPrize.CreatePrizesArray(105000) });
+
             return resultList;
 
         }

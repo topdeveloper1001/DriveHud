@@ -1,0 +1,50 @@
+Game started at: 2016/11/10 9:50:49
+Game ID: 772085603 15/30 $10 Freeroll - On Demand, Table 2 (Hold'em)
+Seat 5 is the button
+Seat 2: fslam (1485).
+Seat 3: VancouverBro (1455).
+Seat 4: joake (4490).
+Seat 5: zybi (1515).
+Seat 6: artgdev (10).
+Seat 7: StevenLewis (1545).
+Seat 8: nvd82 (1500).
+Player artgdev allin (10)
+Player StevenLewis has big blind (30)
+Player StevenLewis received a card.
+Player StevenLewis received a card.
+Player nvd82 received a card.
+Player nvd82 received a card.
+Player fslam received a card.
+Player fslam received a card.
+Player VancouverBro received a card.
+Player VancouverBro received a card.
+Player joake received a card.
+Player joake received a card.
+Player zybi received a card.
+Player zybi received a card.
+Player artgdev received card: [Jd]
+Player artgdev received card: [9h]
+Player nvd82 folds
+Player fslam folds
+Player VancouverBro folds
+Player joake raises (120)
+Player zybi folds
+Player StevenLewis calls (90)
+*** FLOP ***: [4s Jh 5h]
+Player StevenLewis checks
+Player joake bets (167)
+Player StevenLewis folds
+Uncalled bet (167) returned to joake
+*** TURN ***: [4s Jh 5h] [6d]
+*** RIVER ***: [4s Jh 5h 6d] [5s]
+------ Summary ------
+Pot: 250
+Board: [4s Jh 5h 6d 5s]
+Player fslam does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player VancouverBro does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player joake shows: Two pairs. Qs and 5s [Qh Qs]. Bets: 120. Collects: 250. Wins: 130.
+Player zybi does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Player artgdev shows: Two pairs. Js and 5s [Jd 9h]. Bets: 10. Collects: 0. Loses: 10.
+Player StevenLewis does not show cards.Bets: 120. Collects: 0. Loses: 120.
+Player nvd82 does not show cards.Bets: 0. Collects: 0. Wins: 0.
+Game ended at: 2016/11/10 9:51:15

@@ -1,27 +1,13 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="PokerStarsTableSeatAreaConfigurator.cs" company="Ace Poker Solutions">
-// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
-// Unless otherwise noted, all materials contained in this Site are copyrights, 
-// trademarks, trade dress and/or other intellectual properties, owned, 
-// controlled or licensed by Ace Poker Solutions and may not be used without 
-// written consent except as provided in these terms and conditions or in the 
-// copyright notice (documents and software) or other proprietary notices 
-// provided with the relevant materials.
-// </copyright>
-//----------------------------------------------------------------------
-
-using DriveHUD.Common.Linq;
-using DriveHUD.Common.Log;
-using Model.Enums;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Media;
-using System.Windows.Shapes;
+using Model.Enums;
+using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 
-namespace DriveHUD.Application.TableConfigurators
+namespace DriveHUD.Application.TableConfigurators.SeatArea
 {
     internal class PokerStarsTableSeatAreaConfigurator : ITableSeatAreaConfigurator
     {
@@ -33,14 +19,8 @@ namespace DriveHUD.Application.TableConfigurators
                 case EnumTableType.HU:
                     resultList = GetHUList();
                     break;
-                case EnumTableType.Three:
-                    resultList = Get3MaxList();
-                    break;
                 case EnumTableType.Four:
                     resultList = Get4MaxList();
-                    break;
-                case EnumTableType.Five:
-                    resultList = Get5MaxList();
                     break;
                 case EnumTableType.Six:
                     resultList = Get6MaxList();
@@ -56,7 +36,7 @@ namespace DriveHUD.Application.TableConfigurators
                     break;
                 default:
                     resultList = new List<ITableSeatArea>();
-                    LogProvider.Log.Warn(String.Format("Cannot find predefined PS table seat areas for next table type: {0}", tableType));
+                    LogProvider.Log.Warn(String.Format("Cannot find predefined PokerStars table seat areas for next table type: {0}", tableType));
                     break;
             }
             resultList.ForEach(x => x.Initialize());
@@ -68,18 +48,8 @@ namespace DriveHUD.Application.TableConfigurators
         {
             return new List<ITableSeatArea>()
             {
-                new TableSeatArea(1, 200, 460, 10, 70, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
-                new TableSeatArea(2, 200, 460, 200, 70, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
-            };
-        }
-
-        private IEnumerable<ITableSeatArea> Get3MaxList()
-        {
-            return new List<ITableSeatArea>()
-            {
-                new TableSeatArea(1, 100, 460, 10, 70, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
-                new TableSeatArea(2, 100, 270, 200, 310, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
-                new TableSeatArea(3, 100, 280, 200, 20, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(1, 200, 460, 65, 170, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
+                new TableSeatArea(2, 200, 460, 300, 170, "M55,90.5 L-505,90.5 -505,195 55,195 z"),
             };
         }
 
@@ -95,43 +65,31 @@ namespace DriveHUD.Application.TableConfigurators
             };
         }
 
-        private IEnumerable<ITableSeatArea> Get5MaxList()
-        {
-            return new List<ITableSeatArea>()
-            {
-                new TableSeatArea(1, 284, 406, 0, 406, "M0,0L0,1 1,0.7 1,0z"),
-                new TableSeatArea(2, 368, 406, 200, 406, "M0,0.22L0.75,1 1,1 1,0z"),
-                new TableSeatArea(3, 284, 600, 284, 108, "M0,1L0.5,0 1,1z"),
-                new TableSeatArea(4, 368, 406, 200, 0, "M0,0L0,1 0.26,1 1,0.22z"),
-                new TableSeatArea(5, 284, 406, 0, 0, "M0,0L0,0.7 1,1 1,0z"),
-            };
-        }
-
         private IEnumerable<ITableSeatArea> Get6MaxList()
         {
             return new List<ITableSeatArea>()
             {
-                new TableSeatArea(1, 284, 406, 0, 406, "M0,0L0,1 1,0.4 1,0z"),
-                new TableSeatArea(2, 330, 406, 120, 406, "M0,0.5L1,1 1,0z"),
-                new TableSeatArea(3, 284, 406, 284, 406, "M0,0L0,1 1,1 1,0.6z"),
-                new TableSeatArea(4, 284, 406, 284, 0, "M0,0.6L0,1 1,1 1,0z" ),
-                new TableSeatArea(5, 330, 406, 120, 0, "M0,0L1,0.5 0,1z"),
-                new TableSeatArea(6, 284, 406, 0, 0, "M0,0L0,0.4 1,1 1,0z"),
-            };
+                new TableSeatArea(1, 137.5, 527.5, 45, 134, "M107.5,1 L206.5,131 471,130.5 571.5,-0.5 z"),
+                new TableSeatArea(2, 235.5, 239.833, 49, 550, "M306.48871,17.25673 L302.48871,249.25703 163.48888,249.25703 78.488976,149.2569 186.48885,18.256732 z"),
+                new TableSeatArea(3, 213.5, 233.833, 288, 554, "M289.04489,-1.7493764 L290.90316,256.61151 159.895,257.85363 79.060182,129.9153 159.895,-2.9914961 z"),
+                new TableSeatArea(4, 108.5, 478.833, 395, 160, "M306.48669,74.01589 L394.48704,208.1657 -64.335173,203.19718 16.069067,75.050585 z"),
+                new TableSeatArea(5, 209.5, 219.833, 290, 18, "M205.84095,-1.2508677 L287.33401,129.37623 201.17439,259.59177 68.507274,259.59219 69.840278,-0.42279462 z" ),
+                new TableSeatArea(6, 238.833, 229.167, 50, 10, "M190.00019,18.256731 L298.00038,149.7569 216.58357,251.25703 76.99998,251.25703 78.999981,18.256731 z"),
+           };
         }
 
         private IEnumerable<ITableSeatArea> Get8MaxList()
         {
             return new List<ITableSeatArea>()
             {
-                new TableSeatArea(1, 284, 406, 0, 406, "M0,0L0,1 1,0.25 1,0z"),
-                new TableSeatArea(2, 210, 406, 75, 406, "M0,1L1,1 1,0z"),
-                new TableSeatArea(3, 210, 406, 284, 406, "M0,0L1,1 1,0z"),
-                new TableSeatArea(4, 284, 406, 284, 406, "M0,0L0,1 1,1 1,0.75z"),
-                new TableSeatArea(5, 284, 406, 284, 0, "M0,0.75L0,1 1,1 1,0z"),
-                new TableSeatArea(6, 210, 406, 284, 0, "M0,0L0,1 1,0z"),
-                new TableSeatArea(7, 210, 406, 75, 0, "M0,0L0,1 1,1z"),
-                new TableSeatArea(8, 284, 406, 0, 0, "M0,0L0,0.25 1,1 1,0z"),
+                new TableSeatArea(1, 284, 162, 0, 325, "M0,0L0,0 0,0.85 0.5,1 1,0.85 1,0z"),
+                new TableSeatArea(2, 284, 406, 0, 406, "M0,1L1,0.45 1,0 0.20,0 0.2,0.85z"),
+                new TableSeatArea(3, 278, 398, 146, 411, "M1,0L1,1 0,0.5z"),
+                new TableSeatArea(4, 284, 406, 284, 406, "M0,0L0.15,0.3 0.24,1 1,1 1,0.55z"),
+                new TableSeatArea(5, 284, 162, 284, 340, "M0,1L1,1 0.77,0.3 0.4,0 0.08,0.31z"),
+                new TableSeatArea(6, 284, 406, 284, 0, "M0,0.55L0,1 0.83,1 0.87,0.3 1,0z"),
+                new TableSeatArea(7, 308, 400, 135, 0, "M0,0L0,1 1,0.5z"),
+                new TableSeatArea(8, 284, 406, 0, 0, "M0,0L0,0.45 1,1 0.8,0.85 0.8,0z"),
             };
         }
 
@@ -155,16 +113,16 @@ namespace DriveHUD.Application.TableConfigurators
         {
             return new List<ITableSeatArea>()
             {
-               new TableSeatArea(1, 284, 406, 0, 406, "M0.24,0L0.15,0.7 0,1 1,0.25 1,0z"),
-                new TableSeatArea(2, 210, 406, 75, 406, "M0,1L1,1 1,0z"),
-                new TableSeatArea(3, 210, 406, 284, 406, "M0,0L1,1 1,0z"),
-                new TableSeatArea(4, 284, 406, 284, 406, "M0,0L0.15,0.3 0.24,1 1,1 1,0.75z"),
-                new TableSeatArea(5, 284, 162, 284, 340, "M0,1L1,1 0.77,0.3 0.4,0 0.08,0.31z"),
-                new TableSeatArea(6, 284, 406, 284, 0, "M0,0.75L0,1 0.83,1 0.87,0.3 1,0z"),
-                new TableSeatArea(7, 210, 406, 284, 0, "M0,0L0,1 1,0z"),
-                new TableSeatArea(8, 210, 406, 75, 0, "M0,0L0,1 1,1z"),
-                new TableSeatArea(9, 284, 406, 0, 0, "M0,0L0,0.25 1,1 0.87,0.7 0.83,0z"),
-                new TableSeatArea(10, 284, 162, 0, 340, "M0,0L0.08,0.69 0.4,1 0.77,0.7 1,0z")
+                new TableSeatArea(1, 284, 406, 0, 406, "M0,0L0,1 1,0.20 1,0z"),
+                new TableSeatArea(2, 234, 406, 50, 406, "M0,1L1,0.75 1,0z"),
+                new TableSeatArea(3, 115, 406, 230, 406, "M1,0L1,1 0,0.5z"),
+                new TableSeatArea(4, 245, 406, 284, 406, "M0,0L1,0.3 1,1z"),
+                new TableSeatArea(5, 284, 406, 284, 406, "M1,0.85L1,1 0,1 0,0z"),
+                new TableSeatArea(6, 284, 406, 284, 0, "M0,0.85L0,1 1,1 1,0z"),
+                new TableSeatArea(7, 245, 406, 284, 0, "M0,0.3L0,1 1,0z"),
+                new TableSeatArea(8, 115, 406, 230, 0, "M0,0L0,1 1,0.5z"),
+                new TableSeatArea(9, 234, 406, 50, 0, "M0,0L0,0.75 1,1z"),
+                new TableSeatArea(10, 284, 406, 0, 0, "M0,0L0,0.20 1,1 1,0z")
             };
         }
     }

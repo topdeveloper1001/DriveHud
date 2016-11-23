@@ -22,6 +22,7 @@ using DriveHUD.Importers.Loggers;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Base;
+using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -446,7 +447,14 @@ namespace DriveHUD.Importers
                         // get all existing data for that tournament
                         if (tournamentsData == null)
                         {
-                            tournamentsData = session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId && x.SiteId == handHistory.HandHistory.PokersiteId).ToList();
+                            // this shouldn't be possible
+                            LogProvider.Log.Warn(this, "tournamentsData is null");
+                            continue;
+                        }
+
+                        if (tournamentsData.Count == 0)
+                        {
+                            tournamentsData.AddRange(session.Query<Tournaments>().Where(x => x.Tourneynumber == handHistory.Source.GameDescription.Tournament.TournamentId && x.SiteId == handHistory.HandHistory.PokersiteId).ToList());
                         }
 
                         var tournaments = CreateTournaments(handHistory, existingPlayer, gameInfo);

@@ -1,0 +1,44 @@
+﻿Game started at: 2016/11/3 14:18:54
+Game ID: 766615279 5/10 PM Hold`em 5/10 6-max - 2 (Hold'em)
+Seat 2 is the button
+Seat 2: GMac1951c! (2002).
+Seat 4: JB 1226 NYC (864).
+Seat 5: Hero (200).
+Seat 6: fuzzy nose1 (781.50).
+Player JB 1226 NYC has small blind (5)
+Player Hero has big blind (10)
+Player JB 1226 NYC received a card.
+Player JB 1226 NYC received a card.
+Player Hero received card: [3s]
+Player Hero received card: [9h]
+Player fuzzy nose1 received a card.
+Player fuzzy nose1 received a card.
+Player GMac1951c! received a card.
+Player GMac1951c! received a card.
+Player fuzzy nose1 calls (10)
+Player GMac1951c! folds
+Player JB 1226 NYC calls (5)
+Player Hero checks
+*** FLOP ***: [7d 8s 6s]
+Player JB 1226 NYC checks
+Player Hero bets (20)
+Player fuzzy nose1 calls (20)
+Player JB 1226 NYC calls (20)
+*** TURN ***: [7d 8s 6s] [8d]
+Player JB 1226 NYC checks
+Player Hero checks
+Player fuzzy nose1 checks
+*** RIVER ***: [7d 8s 6s 8d] [Qc]
+Player JB 1226 NYC checks
+Player Hero checks
+Player fuzzy nose1 checks
+Player Hero mucks cards
+Player fuzzy nose1 mucks cards
+------ Summary ------
+Pot: 88. Rake 2
+Board: [7d 8s 6s 8d Qc]
+Player GMac1951c! does not show cards.Bets: 0. Collects: 0. Wins: 0.
+*Player JB 1226 NYC shows: Three Of Kind of 8s [10h 8c]. Bets: 30. Collects: 88. Wins: 58.
+Player Hero mucks (does not show: [3s 9h]). Bets: 30. Collects: 0. Loses: 30.
+Player fuzzy nose1 mucks (does not show cards). Bets: 30. Collects: 0. Loses: 30.
+Game ended at: 2016/11/3 14:19:33
