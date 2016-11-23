@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Linq;
+
 namespace DriveHUD.Common.Extensions
 {
     public static class StringExtensions
@@ -17,6 +19,11 @@ namespace DriveHUD.Common.Extensions
         public static string RemoveEOL(this string text)
         {
             return text.Replace("\r", string.Empty).Replace("\n", string.Empty);
+        }
+
+        public static string RemoveWhitespace(this string text)
+        {
+            return new string(text.Where(c => !char.IsWhiteSpace(c)).ToArray());
         }
     }
 }

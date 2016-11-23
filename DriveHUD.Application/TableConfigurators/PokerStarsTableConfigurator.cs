@@ -10,8 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels;
 using DriveHUD.Entities;
+using Model.Enums;
 using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Controls;
+using System.Windows.Media;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.TableConfigurators
 {
@@ -20,6 +26,14 @@ namespace DriveHUD.Application.TableConfigurators
         public override EnumPokerSites Type
         {
             get { return EnumPokerSites.PokerStars; }
+        }
+
+        protected override ITableSeatAreaConfigurator TableSeatAreaConfigurator
+        {
+            get
+            {
+                return new PokerStarsTableSeatAreaConfigurator();
+            }
         }
 
         protected override Dictionary<int, int[,]> GetPredefinedLabelPositions()
@@ -52,6 +66,68 @@ namespace DriveHUD.Application.TableConfigurators
             };
 
             return predefinedPositions;
+        }
+
+        protected override void CreatePreferredSeatMarkers(RadDiagram diagram, HudTableViewModel hudTable, int seats)
+        {
+            var predefinedPositions = GetPredefinedLabelPositions();
+
+            if (!predefinedPositions.ContainsKey(seats))
+            {
+                return;
+            }
+
+            for (int i = 0; i < seats; i++)
+            {
+                var hudElementPositionX = predefinedPositions[seats][i, 0] + labelElementWidth;
+                var hudElementPositionY = predefinedPositions[seats][i, 1] - 35;
+                var datacontext = hudTable.TableSeatAreaCollection?.ElementAt(i);
+
+                var shape = new RadDiagramShape
+                {
+                    Height = 30,
+                    Width = 30,
+                    IsEnabled = true,
+                    SnapsToDevicePixels = true,
+                    X = hudElementPositionX,
+                    Y = hudElementPositionY,
+                    DataContext = datacontext,
+                    Template = App.Current.Resources["PreferredSeatControlTemplate"] as ControlTemplate,
+                };
+
+                diagram.Items.Add(shape);
+            }
+        }
+
+        protected override IEnumerable<ITableSeatArea> CreateSeatAreas(RadDiagram diagram, HudTableViewModel hudTable, int seats)
+        {
+            var seatAreas = TableSeatAreaConfigurator.GetTableSeatAreas((EnumTableType)seats);
+            var tableSeatSetting = TableSeatAreaHelpers.GetSeatSetting((EnumTableType)seats, Type);
+
+            foreach (var v in seatAreas)
+            {
+                v.StartPoint = new System.Windows.Point(0, 0);
+                v.PokerSite = Type;
+                v.TableType = (EnumTableType)seats;
+                v.SetContextMenuEnabled(tableSeatSetting.IsPreferredSeatEnabled);
+
+                v.SeatShape.BorderThickness = new System.Windows.Thickness(1);
+                v.SeatShape.BorderBrush = new SolidColorBrush(Colors.Red);
+
+                if (v.SeatNumber == tableSeatSetting.PreferredSeat)
+                {
+                    v.IsPreferredSeat = true;
+                }
+                else
+                {
+                    v.IsPreferredSeat = false;
+                }
+
+                diagram.AddShape(v.SeatShape);
+
+            }
+            hudTable.TableSeatAreaCollection = new System.Collections.ObjectModel.ObservableCollection<ITableSeatArea>(seatAreas);
+            return seatAreas;
         }
     }
 }

@@ -80,16 +80,34 @@ namespace DriveHUD.Importers
                     // add new files and lock them
                     newlyDetectedHandHistories.ForEach(hh =>
                     {
-                        var fs = File.Open(hh.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
-                        fs.Seek(0, SeekOrigin.Begin);
-
-                        var capturedFile = new CapturedFile
+                        if (!capturedFiles.ContainsKey(hh.FullName))
                         {
-                            FileStream = fs,
-                            Session = GenerateSession()
-                        };
+                            var fs = File.Open(hh.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
+                            fs.Seek(0, SeekOrigin.Begin);
 
-                        capturedFiles.Add(hh.FullName, capturedFile);
+                            Encoding encoding;
+
+                            try
+                            {
+                                encoding = EncodingDetector.DetectTextFileEncoding(fs, 0x10000);
+                            }
+                            catch (Exception ex)
+                            {
+                                LogProvider.Log.Error(this, $"Couldn't detect encoding of {hh.FullName}. UTF8 will be used.", ex);
+                                encoding = Encoding.UTF8;
+                            }
+
+                            fs.Seek(0, SeekOrigin.Begin);
+
+                            var capturedFile = new CapturedFile
+                            {
+                                FileStream = fs,
+                                Session = GenerateSession(),
+                                Encoding = encoding
+                            };
+
+                            capturedFiles.Add(hh.FullName, capturedFile);
+                        }
                     });
 
                     // try to parse file
@@ -106,7 +124,7 @@ namespace DriveHUD.Importers
 
                         fs.Read(data, 0, data.Length);
 
-                        var handText = Encoding.UTF8.GetString(data);
+                        var handText = cf.Value.Encoding.GetString(data);
 
                         // if file could not be parsed, mark it as invalid to prevent further processing 
                         if (cf.Value.GameInfo == null)
@@ -380,6 +398,8 @@ namespace DriveHUD.Importers
             public Stream FileStream { get; set; }
 
             public string Session { get; set; }
+
+            public Encoding Encoding { get; set; }
 
             public GameInfo GameInfo { get; set; }
         }

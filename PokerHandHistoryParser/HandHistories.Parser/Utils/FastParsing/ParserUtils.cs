@@ -10,9 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using HandHistories.Objects.GameDescription;
 using System;
 using System.Globalization;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace HandHistories.Parser.Utils.FastParsing
@@ -35,9 +38,9 @@ namespace HandHistories.Parser.Utils.FastParsing
             return TournamentSpeed.Regular;
         }
 
-        private static readonly Regex MoneyRegex = new Regex(@"(?<currency1>[^\d]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\d]+)?", RegexOptions.Compiled);
+        private static readonly Regex MoneyRegex = new Regex(@"^(?<currency1>[^\d]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\.\d]+)?$", RegexOptions.Compiled);
 
-        public static bool TryParseMoneyText(string moneyText, out decimal money, out Currency currency, NumberFormatInfo numberFormatInfo = null)
+        public static bool TryParseMoney(string moneyText, out decimal money, out Currency currency, NumberFormatInfo numberFormatInfo = null)
         {
             if (numberFormatInfo == null)
             {
@@ -60,10 +63,66 @@ namespace HandHistories.Parser.Utils.FastParsing
                 return false;
             }
 
-            if (!decimal.TryParse(match.Groups["money"].Value, NumberStyles.Number, numberFormatInfo, out money))
+            if (!decimal.TryParse(match.Groups["money"].Value, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, numberFormatInfo, out money))
             {
                 return false;
             }
+
+            return true;
+        }
+
+        /// <summary>
+        /// Parse money text into money value (we expect that only 2 number are allowed after decimal separator)
+        /// </summary>
+        /// <param name="moneyText"></param>
+        /// <returns></returns>
+        public static decimal ParseMoney(string moneyText)
+        {
+            var money = 0m;
+
+            if (!TryParseMoney(moneyText, out money))
+            {
+                throw new FormatException($"{moneyText} is not in the correct format");
+            }
+
+            return money;
+        }
+
+        public static bool TryParseMoney(string moneyText, out decimal money)
+        {
+            money = 0m;
+            moneyText = moneyText.RemoveWhitespace().Replace(",", ".");
+
+            var lastIndexOfDot = moneyText.LastIndexOf('.');
+
+            if (lastIndexOfDot > 0)
+            {
+                if ((moneyText.Length > (lastIndexOfDot + 3)) && char.IsNumber(moneyText[lastIndexOfDot + 3]))
+                {
+                    moneyText = moneyText.Replace(".", string.Empty);
+                }
+                else
+                {
+
+                    var indexOfDot = moneyText.IndexOf(".");
+
+                    while (indexOfDot < lastIndexOfDot)
+                    {
+                        moneyText = moneyText.Remove(indexOfDot, 1);
+                        indexOfDot = moneyText.IndexOf(".", indexOfDot);
+                        lastIndexOfDot--;
+                    }
+                }
+            }
+
+            var match = MoneyRegex.Match(moneyText);
+
+            if (!match.Success)
+            {
+                return false;
+            }
+
+            money = decimal.Parse(match.Groups["money"].Value, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, CultureInfo.InvariantCulture);
 
             return true;
         }

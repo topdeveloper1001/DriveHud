@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="Poker888TableSeatAreaConfigurator.cs" company="Ace Poker Solutions">
+// <copyright file="PokerStarsTableSeatAreaConfigurator.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,10 +15,15 @@ using DriveHUD.Common.Log;
 using Model.Enums;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Media;
+using System.Windows.Shapes;
 
 namespace DriveHUD.Application.TableConfigurators
 {
-    internal class Poker888TableSeatAreaConfigurator : ITableSeatAreaConfigurator
+    internal class PokerStarsTableSeatAreaConfigurator : ITableSeatAreaConfigurator
     {
         public IEnumerable<ITableSeatArea> GetTableSeatAreas(EnumTableType tableType)
         {
@@ -51,7 +56,7 @@ namespace DriveHUD.Application.TableConfigurators
                     break;
                 default:
                     resultList = new List<ITableSeatArea>();
-                    LogProvider.Log.Warn(String.Format("Cannot find predefined 888 table seat areas for next table type: {0}", tableType));
+                    LogProvider.Log.Warn(String.Format("Cannot find predefined PS table seat areas for next table type: {0}", tableType));
                     break;
             }
             resultList.ForEach(x => x.Initialize());

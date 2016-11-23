@@ -398,12 +398,12 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
 
                     decimal buyIn = 0;
                     decimal rake = 0;
-                    Currency tempCurrency;
+                    
 
-                    ParserUtils.TryParseMoneyText(buyInTextSplit[0], out buyIn, out tempCurrency, _numberFormatInfo);
-                    ParserUtils.TryParseMoneyText(buyInTextSplit[1], out rake, out tempCurrency, _numberFormatInfo);
+                    ParserUtils.TryParseMoney(buyInTextSplit[0], out buyIn);
+                    ParserUtils.TryParseMoney(buyInTextSplit[1], out rake);
 
-                    tournament.BuyIn = Buyin.FromBuyinRake(buyIn, rake, currency);
+                    tournament.BuyIn = Buyin.FromBuyinRake(buyIn, rake, Currency.USD);
                     continue;
                 }
 
@@ -421,8 +421,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                     var playerName = match.Groups["player"].Value;
                     var wonText = match.Groups["won"] != null ? match.Groups["won"].Value.Replace(",", ".").Trim() : string.Empty;
 
-                    decimal won = 0;
-                    Currency wonCurrency = Currency.USD;
+                    decimal won = 0;                    
 
                     if (wonText.Count(x => x == '.') > 1)
                     {
@@ -438,7 +437,7 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
                         }
                     }
 
-                    if (!string.IsNullOrWhiteSpace(wonText) && !ParserUtils.TryParseMoneyText(wonText, out won, out wonCurrency))
+                    if (!string.IsNullOrWhiteSpace(wonText) && !ParserUtils.TryParseMoney(wonText, out won))
                     {
                         LogProvider.Log.Error(string.Format("'{0}' won data wasn't parsed", handLine));
                         continue;
