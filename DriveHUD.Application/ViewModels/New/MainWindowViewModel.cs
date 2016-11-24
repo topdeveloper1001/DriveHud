@@ -47,6 +47,7 @@ using Newtonsoft.Json;
 using ProtoBuf;
 using System.Collections.Concurrent;
 using DriveHUD.Application.HudServices;
+using Model.Site;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -80,6 +81,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<DataImportedEvent>().Subscribe(OnDataImported, ThreadOption.BackgroundThread, false);
             eventAggregator.GetEvent<SettingsUpdatedEvent>().Subscribe(HandleSettingsChangedEvent);
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
+            eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
 
             InitializeFilters();
             InitializeData();
@@ -126,6 +128,7 @@ namespace DriveHUD.Application.ViewModels
             PopupFiltersRequest = new InteractionRequest<PopupContainerFiltersViewModelNotification>();
             PopupSupportRequest = new InteractionRequest<INotification>();
             RegistrationViewRequest = new InteractionRequest<INotification>();
+            NotificationRequest = new InteractionRequest<INotification>();
         }
 
         private void InitializeFilters()
@@ -1030,6 +1033,7 @@ namespace DriveHUD.Application.ViewModels
 
         public InteractionRequest<INotification> PopupSupportRequest { get; private set; }
         public InteractionRequest<INotification> RegistrationViewRequest { get; private set; }
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         private void PopupSettingsRequest_Execute(PubSubMessage pubSubMessage)
         {
@@ -1059,6 +1063,20 @@ namespace DriveHUD.Application.ViewModels
 
             this.PopupFiltersRequest.Raise(notification,
                 returned => { });
+        }
+
+        private void RaiseNotification(MainNotificationEventArgs obj)
+        {
+            if (obj == null)
+            {
+                return;
+            }
+
+            PopupActionNotification confirmation = new PopupActionNotification();
+            confirmation.Title = obj.Title;
+            confirmation.Content = obj.Message;
+
+            NotificationRequest.Raise(confirmation);
         }
 
         private class HudTrackConditionsMeterData

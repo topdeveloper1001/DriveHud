@@ -27,6 +27,11 @@ namespace Model.Site
         void Initialize();
 
         /// <summary>
+        /// Checks the Poker Sites Validity
+        /// </summary>
+        void ValidateSiteConfigurations();
+
+        /// <summary>
         /// Get site configuration
         /// </summary>
         /// <param name="site">Site name</param>

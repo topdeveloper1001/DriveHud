@@ -93,5 +93,9 @@ namespace Model.Site
         {
             return new string[] { };
         }
+
+        public void ValidateSiteConfiguration()
+        {
+        }
     }
 }

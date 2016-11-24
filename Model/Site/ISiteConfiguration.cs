@@ -44,6 +44,8 @@ namespace Model.Site
 
         string[] GetHandHistoryFolders();
 
+        void ValidateSiteConfiguration();
+
         #endregion
     }
 }

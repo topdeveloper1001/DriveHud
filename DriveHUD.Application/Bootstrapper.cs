@@ -143,6 +143,8 @@ namespace DriveHUD.Application
                     mainWindowViewModel.IsActive = true;
 
                     mainWindowViewModel.StartHud(false);
+
+                    ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
                 }
             }
             else

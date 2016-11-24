@@ -90,5 +90,9 @@ namespace Model.Site
 
             return dirs;
         }
+
+        public void ValidateSiteConfiguration()
+        {
+        }
     }
 }

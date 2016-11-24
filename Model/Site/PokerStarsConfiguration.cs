@@ -10,12 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
+using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
+using Model.Events;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Model.Site
 {
@@ -91,6 +98,68 @@ namespace Model.Site
                         select hhFolder).ToArray();
 
             return dirs;
+        }
+
+        /// <summary>
+        /// Checks if PokerStar's save hand history settings are enabled and if correct locale is set
+        /// </summary>
+        public void ValidateSiteConfiguration()
+        {
+            const string iniSection = "PipeOption";
+            const string iniKeyLocale = "Locale";
+            const string iniKeyHHLocale = "HHLocale";
+            const string iniKeyTSLocale = "TSLocale";
+            const string iniKeySaveMyHands = "SaveMyHands";
+            const string iniKeySaveMyTournSummaries = "SaveMyTournSummaries";
+
+            var dirs = GetHandHistoryFolders().Select(x => (new DirectoryInfo(x)).Parent).GroupBy(x => x.FullName).Select(x => x.First()).ToArray();
+            List<string> psClientsWithSettingsMismatch = new List<string>();
+
+            foreach (var dir in dirs.Where(d => d.Exists))
+            {
+                try
+                {
+                    var settingsFile = Path.Combine(dir.FullName, "user.ini");
+                    if (File.Exists(settingsFile))
+                    {
+                        LogProvider.Log.Info($"Getting PS settings from {settingsFile}");
+
+                        var localeSetting = IniFileHelpers.ReadValue(iniSection, iniKeyLocale, settingsFile);
+                        var hhLocaleSetting = IniFileHelpers.ReadValue(iniSection, iniKeyHHLocale, settingsFile);
+                        var tsLocaleSetting = IniFileHelpers.ReadValue(iniSection, iniKeyTSLocale, settingsFile);
+                        var hhEnabledSetting = IniFileHelpers.ReadValue(iniSection, iniKeySaveMyHands, settingsFile, "0");
+                        var tsEnabledSetting = IniFileHelpers.ReadValue(iniSection, iniKeySaveMyTournSummaries, settingsFile, "0");
+
+                        LogProvider.Log.Info($"Locale: {localeSetting}; HHLocale: {hhLocaleSetting}; TSLocale: {tsLocaleSetting}");
+
+                        bool localeSettingIsCorrect = localeSetting == "0";
+
+                        bool hhLanguageIsCorrect = string.IsNullOrWhiteSpace(hhLocaleSetting) ? localeSettingIsCorrect : hhLocaleSetting == "0";
+                        bool tsLanguageIsCorrect = string.IsNullOrWhiteSpace(tsLocaleSetting) ? localeSettingIsCorrect : tsLocaleSetting == "0";
+                        bool hhIsEnabled = hhEnabledSetting == "1";
+                        bool tsIsEnabled = tsEnabledSetting == "1";
+
+                        if (!hhLanguageIsCorrect || !tsLanguageIsCorrect || !hhIsEnabled || !tsIsEnabled)
+                        {
+                            psClientsWithSettingsMismatch.Add(dir.Name);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(this, "Error during reading of the PS settings", ex);
+                }
+            }
+
+            if (psClientsWithSettingsMismatch.Any())
+            {
+                var resultString = String.Format(CommonResourceManager.Instance.GetResourceString("Main_SiteSettingsMismatch_PokerStars"),
+                    string.Join(", ", psClientsWithSettingsMismatch));
+
+                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("Settings", resultString));
+
+                System.Diagnostics.Debug.WriteLine("resultString");
+            }
         }
     }
 }
