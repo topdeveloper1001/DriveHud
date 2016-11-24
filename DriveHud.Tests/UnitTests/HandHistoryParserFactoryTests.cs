@@ -34,41 +34,6 @@ namespace DriveHud.Tests.UnitTests
             var parser = handHistoryParserFactory.GetFullHandHistoryParser(handText);
 
             Assert.That(parser.SiteName, Is.EqualTo(expectedSite));
-        }
-
-        [Test]        
-        [TestCase("PokerStarsEncoding.txt", EnumPokerSites.PokerStars)]        
-        public void GetFullHandHistoryWithEncodingParserReturnsExpectedParser(string fileName, EnumPokerSites expectedSite)
-        {
-            var file = Path.Combine(testFolder, fileName);
-
-            if (!File.Exists(file))
-            {
-                throw new Exception(string.Format("Test file '{0}' doesn't exist", file));
-            }
-
-            using (var fs = File.Open(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
-            {
-                fs.Seek(0, SeekOrigin.Begin);
-
-                var data = new byte[fs.Length - fs.Position];
-                
-                if (data.Length == 0)
-                {
-                    return;
-                }
-
-                fs.Read(data, 0, data.Length);
-
-                var handText = Encoding.UTF8.GetString(data);
-
-                EnumPokerSites siteName;
-
-                var parseResult = EnumPokerSitesExtension.TryParse(handText, out siteName);
-
-                Assert.IsTrue(parseResult);                               
-                Assert.That(siteName, Is.EqualTo(expectedSite));
-            }
-        }
+        }      
     }
 }
