@@ -270,12 +270,19 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 {
                     if (players.Contains(player.PlayerName))
                     {
+                        var winningAction = handHistory.WinningActions.FirstOrDefault(x => x.PlayerName.Equals(player.PlayerName));
+
+                        if (winningAction != null)
+                        {
+                            player.Win = winningAction.Amount;
+                        }
+
                         continue;
                     }
 
                     handHistory.Players.Remove(player);
                 }
-
+       
                 return handHistory;
             }
             catch (Exception ex)

@@ -24,6 +24,7 @@ using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
@@ -82,6 +83,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 841896912)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 445357327)]        
         public void HandIdIsParsedTest(string handHistoryFile, long handId)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -90,6 +92,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", GameType.NoLimitHoldem)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", GameType.NoLimitHoldem)]
         public void GameTypeIsParsedTest(string handHistoryFile, GameType gameType)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -122,6 +125,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 250)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 0.02)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt", 0.02)]
         public void BigBlindIsParsedTest(string handHistoryFile, decimal bigBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -130,6 +135,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 125)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 0.01)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt", 0.01)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -139,6 +146,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", Currency.USD)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 3 max - Play Money.txt", Currency.PlayMoney)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", Currency.USD)]
         public void CurrencyIsParsedTest(string handHistoryFile, Currency currency)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -159,6 +167,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 4 max - Real Money.txt", 4)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 5 max - Real Money.txt", 5)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NLH - 8 max - Real Money.txt", 8)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 9)]
         public void SeatTypeMaxPlayersIsParsedTest(string handHistoryFile, int maxPlayers)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -376,7 +385,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "5cQd")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "5cQd")]        
         public void HeroHoleCardsIsParsedTest(string handHistoryFile, string holeCards)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -385,6 +394,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 1000)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 2)]
         public void HeroStartingStackIsParsedTest(string handHistoryFile, decimal startingStack)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -393,14 +403,16 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 0)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 0.06)]
         public void HeroWinIsParsedTest(string handHistoryFile, decimal win)
-        {
+        {        
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.Hero.Win, Is.EqualTo(win));
         }
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "#2")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", "Amersfoort")]
         public void TableNameIsParsedTest(string handHistoryFile, string tableName)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -409,6 +421,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 6)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 7)]
         public void PlayersCountIsParsedTest(string handHistoryFile, int playersCount)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -417,20 +430,20 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 6)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 9)]
         public void DealerButtonPositionIsParsedTest(string handHistoryFile, int dealerButtonPosition)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
             Assert.That(handHistory.DealerButtonPosition, Is.EqualTo(dealerButtonPosition));
         }
 
-        // need to decide how to handle dates
-        //[Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "2016/10/26 19:59:58")]
+        [Test]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", "2016/10/26 18:59:58")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", "2016/11/22 23:36:47")]
         public void DateOfHandUtcIsParsedTest(string handHistoryFile, string dateOfHand)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var dateTime = DateTime.Parse(dateOfHand, CultureInfo.InvariantCulture);
-            var dateTimeUtc = dateTime.ToUniversalTime();
+            var dateTimeUtc = DateTime.Parse(dateOfHand, CultureInfo.InvariantCulture);
             Assert.That(handHistory.DateOfHandUtc, Is.EqualTo(dateTimeUtc));
         }
 

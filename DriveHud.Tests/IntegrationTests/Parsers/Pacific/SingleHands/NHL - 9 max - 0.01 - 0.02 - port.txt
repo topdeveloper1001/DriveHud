@@ -1,0 +1,49 @@
+﻿#Game No : 445448920
+***** 888poker Hand History for Game 445448920 *****
+$0,01/$0,02 Blinds No Limit Holdem - *** 23 11 2016 20:32:45
+Table Caserta 9 Max (Real Money)
+Seat 1 is the button
+Total number of players : 9
+Seat 1: andreilb22 ( $1,73 )
+Seat 2: Zvunder ( $1,82 )
+Seat 3: Peon_84 ( $1,65 )
+Seat 4: kudbal ( $1,75 )
+Seat 5: anei1618 ( $2,29 )
+Seat 6: soorock ( $2 )
+Seat 7: StunerRU ( $2,89 )
+Seat 9: Kentyarik ( $2 )
+Seat 10: Intercro ( $1,98 )
+Zvunder posts small blind [$0,01]
+Peon_84 posts big blind [$0,02]
+Kentyarik posts big blind [$0,02]
+** Dealing down cards **
+Dealt to Peon_84 [ Qo, 4p ]
+kudbal folds
+anei1618 folds
+soorock folds
+StunerRU folds
+Kentyarik checks
+Intercro calls [$0,02]
+andreilb22 folds
+Zvunder calls [$0,01]
+Peon_84 checks
+** Dealing flop ** [ 5p, De, Qp ]
+Zvunder checks
+Peon_84 checks
+Kentyarik checks
+Intercro checks
+** Dealing turn ** [ Qe ]
+Zvunder checks
+Peon_84 checks
+Kentyarik checks
+Intercro checks
+** Dealing river ** [ Dc ]
+Zvunder checks
+Peon_84 bets [$0,08]
+Kentyarik folds
+Intercro folds
+Zvunder calls [$0,08]
+** Summary **
+Peon_84 shows [ Qo, 4p ]
+Zvunder mucks [ 7o, 5e ]
+Peon_84 collected [ $0,23 ]

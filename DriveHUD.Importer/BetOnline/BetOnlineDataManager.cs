@@ -57,7 +57,7 @@ namespace DriveHUD.Importers.BetOnline
         {
             try
             {
-                var encryptedXml = Encoding.ASCII.GetString(data).Replace("\0", string.Empty);
+                var encryptedXml = Encoding.UTF8.GetString(data).Replace("\0", string.Empty);
 
                 Task.Run(() =>
                 {

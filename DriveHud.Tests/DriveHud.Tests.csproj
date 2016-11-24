@@ -183,6 +183,8 @@
     <Compile Include="FunctionalTests\Hud\HudPositionTests.cs" />
     <Compile Include="IntegrationTests\Parsers\IPoker\IPokerFastParserTests.cs" />
     <Compile Include="IntegrationTests\Parsers\Pacific\Pacific888FastParserTests.cs" />
+    <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt" />
+    <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 3 max - Play Money.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 4 max - Real Money.txt" />
     <Content Include="IntegrationTests\Parsers\Pacific\SingleHands\NLH - 5 Max - Real Money.txt" />
@@ -215,10 +217,10 @@
     <Compile Include="UnitTests\HudLayoutsExtensions.cs" />
     <Compile Include="UnitTests\HudLayoutsSerialization.cs" />
     <Compile Include="UnitTests\HudLayoutsServiceTests.cs" />
+    <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
     <Compile Include="UnitTests\PokerStarsParserTests.cs" />
-    <Compile Include="UnitTests\StreamDecryptosTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>

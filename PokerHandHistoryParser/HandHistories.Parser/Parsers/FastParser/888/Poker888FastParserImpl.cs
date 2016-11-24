@@ -10,14 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
+using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers.Exceptions;
 using HandHistories.Parser.Parsers.FastParser.Base;
 using HandHistories.Parser.Utils.Extensions;
+using HandHistories.Parser.Utils.FastParsing;
 using HandHistories.Parser.Utils.Strings;
 using HandHistories.Parser.Utils.Time;
 using System;
@@ -25,9 +29,6 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text.RegularExpressions;
-using HandHistories.Objects.Hand;
-using DriveHUD.Common.Log;
-using HandHistories.Parser.Utils.FastParsing;
 
 namespace HandHistories.Parser.Parsers.FastParser._888
 {
@@ -193,7 +194,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             int LimitEndIndex = line.IndexOf(" Blinds", StringComparison.Ordinal);
             string limitString = line.Remove(LimitEndIndex)
-                .Replace(" ", "")
+                .RemoveWhitespace()
                 .Replace("$", "")
                 ;
 
@@ -294,12 +295,15 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     int openSquareIndex = handLine.LastIndexOf('[');
 
                     // winnings hands have numbers such as:
-                    //  OprahTiltfre collected [ $2,500 ]
-                    if (char.IsDigit(handLine[handLine.Length - 3]))
-                    {
-                        string amountString = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
-                        decimal amount = ParseAmount(amountString);
+                    // OprahTiltfre collected [ $2,500 ]
+                    // Peon_84 collected [ 0,06 $ ]
 
+                    string textInSquare = handLine.Substring(openSquareIndex + 1, handLine.Length - openSquareIndex - 1 - 1);
+
+                    decimal amount;
+
+                    if (ParserUtils.TryParseMoney(textInSquare, out amount))
+                    {
                         string playerName = handLine.Substring(0, openSquareIndex - 11);
 
                         handActions.Add(new WinningsAction(playerName, HandActionType.WINS, amount, 0));
@@ -307,6 +311,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     }
 
                     string action = handLine.Substring(openSquareIndex - 6, 5);
+
                     if (action.Equals("shows"))
                     {
                         string playerName = handLine.Substring(0, openSquareIndex - 7);
@@ -412,7 +417,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             foreach (var amount in splittedAmounts)
             {
-                result += decimal.Parse(amount, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+                result += ParserUtils.ParseMoney(amount);
             }
 
             return result;
@@ -466,7 +471,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     int openSquareIndex = handLine.IndexOf('[');
 
                     string cards = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
-                    HoleCards holeCards = HoleCards.FromCards(cards.Replace(",", "").Replace(" ", ""));
+                    HoleCards holeCards = HoleCards.FromCards(cards.Replace(",", string.Empty).RemoveWhitespace());
 
                     string playerName = handLine.Substring(0, openSquareIndex - 7);
 
@@ -509,7 +514,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
                 string cards = handLine.Substring(openSquareIndex + 2, handLine.Length - openSquareIndex - 2 - 2);
 
-                boardCards += cards.Replace(",", "").Replace(" ", "");
+                boardCards += cards.Replace(",", string.Empty).RemoveWhitespace();
             }
 
             return BoardCards.FromCards(boardCards);
@@ -652,9 +657,9 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             var splittedBuyin = buyinText.Split('+');
 
-            var prizePool = decimal.Parse(splittedBuyin[0], NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
+            var prizePool = ParserUtils.ParseMoney(splittedBuyin[0]);
 
-            var rake = splittedBuyin.Length > 1 ? decimal.Parse(splittedBuyin[1], NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo) : 0m;
+            var rake = splittedBuyin.Length > 1 ? ParserUtils.ParseMoney(splittedBuyin[1]) : 0m;
 
             var currency = match.Groups["money"].Value.Contains("Real Money") ? Currency.USD : Currency.PlayMoney;
 
@@ -701,11 +706,11 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     decimal rake = 0;
                     Currency currency = Currency.USD;
 
-                    if (ParserUtils.TryParseMoneyText(buyInSplit[0], out buyIn, out currency))
+                    if (ParserUtils.TryParseMoney(buyInSplit[0], out buyIn, out currency))
                     {
                         if (buyInSplit.Length > 1)
                         {
-                            ParserUtils.TryParseMoneyText(buyInSplit[1], out rake, out currency);
+                            ParserUtils.TryParseMoney(buyInSplit[1], out rake, out currency);
                         }
                     }
 
@@ -718,7 +723,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     decimal rebuy = 0;
                     Currency currency = Currency.USD;
 
-                    if (ParserUtils.TryParseMoneyText(rebuyText, out rebuy, out currency))
+                    if (ParserUtils.TryParseMoney(rebuyText, out rebuy, out currency))
                     {
                         tournament.Rebuy = rebuy;
                     }
@@ -730,7 +735,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                     decimal addon = 0;
                     Currency currency = Currency.USD;
 
-                    if (ParserUtils.TryParseMoneyText(addonText, out addon, out currency))
+                    if (ParserUtils.TryParseMoney(addonText, out addon, out currency))
                     {
                         tournament.Addon = addon;
                     }
@@ -769,7 +774,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
                         continue;
                     }
 
-                    if (!string.IsNullOrWhiteSpace(wonText) && !ParserUtils.TryParseMoneyText(wonText, out won, out wonCurrency))
+                    if (!string.IsNullOrWhiteSpace(wonText) && !ParserUtils.TryParseMoney(wonText, out won, out wonCurrency))
                     {
                         LogProvider.Log.Error(string.Format("'{0}' won data wasn't parsed", handLine));
                         continue;
@@ -790,7 +795,7 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             return handHistory;
         }
-     
+
         private string ParseTournamentSummaryMoneyLine(string line)
         {
             line = line.Replace(",", ".");

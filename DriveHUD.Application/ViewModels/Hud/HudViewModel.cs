@@ -861,11 +861,11 @@ namespace DriveHUD.Application.ViewModels
 
         public void Start()
         {
-            importerService.StartImport();
-
             var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
             hudTransmitter.Initialize();
 
+            importerService.StartImport();
+         
             IsStarted = true;
         }
 

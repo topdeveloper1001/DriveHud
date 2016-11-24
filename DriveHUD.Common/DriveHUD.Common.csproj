@@ -105,6 +105,7 @@
     <Compile Include="Utils\BrowserHelper.cs" />
     <Compile Include="Utils\CurrencyConverter.cs" />
     <Compile Include="Utils\DateTimeHelper.cs" />
+    <Compile Include="Utils\EncodingDetector.cs" />
     <Compile Include="Utils\FileHelper.cs" />
     <Compile Include="Utils\FixedSizeList.cs" />
     <Compile Include="Utils\IniFileHelpers.cs" />
