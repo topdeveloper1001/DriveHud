@@ -12,11 +12,14 @@
 
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Common.Log;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 using ProtoBuf;
 using System;
 using System.IO;
 using System.IO.Pipes;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHUD.HUD.Services
@@ -30,15 +33,15 @@ namespace DriveHUD.HUD.Services
         public void Initialize(string clientHandle)
         {
             try
-            {
+            {                
                 pipeClient = new AnonymousPipeClientStream(PipeDirection.In, clientHandle);
                 isInitialized = true;
 
-                LogProvider.Log.Info("HUD service has been initialized");
+                LogProvider.Log.Info(this, $"HUD service has been initialized [{clientHandle}]");
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "HUD service cannot be initialized", e);
+                LogProvider.Log.Error(this, $"HUD service cannot be initialized [{clientHandle}]", e);
             }
         }
 
@@ -46,7 +49,7 @@ namespace DriveHUD.HUD.Services
         {
             if (!isInitialized)
             {
-                LogProvider.Log.Error("HUD service hasn't been initialized");
+                LogProvider.Log.Error(this, "HUD service hasn't been initialized");
                 return;
             }
 
@@ -55,14 +58,21 @@ namespace DriveHUD.HUD.Services
 
         private void ReadData()
         {
-            LogProvider.Log.Info("Ready to read data");
+            LogProvider.Log.Info(this, "Ready to read data");
 
             try
             {
+                var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+
                 while (true)
                 {
                     if (!pipeClient.IsConnected)
                     {
+                        if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                        {
+                            LogProvider.Log.Info(this, "Pipe to DH isn't connected");
+                        }
+
                         Task.Delay(delay).Wait();
                         continue;
                     }
@@ -94,6 +104,22 @@ namespace DriveHUD.HUD.Services
 
                         if (data.Length > 0)
                         {
+                            if (data.Length < 10)
+                            {
+                                var syncData = Encoding.UTF8.GetString(data);
+
+                                if (syncData.Equals("SYNC"))
+                                {
+                                    LogProvider.Log.Info(this, $"Received sync command");
+                                }
+                                else
+                                {
+                                    LogProvider.Log.Info(this, $"Received unknown command");
+                                }
+
+                                continue;
+                            }
+
                             HudLayout hudLayout;
 
                             using (var afterStream = new MemoryStream(data))
@@ -101,16 +127,21 @@ namespace DriveHUD.HUD.Services
                                 hudLayout = Serializer.Deserialize<HudLayout>(afterStream);
                             }
 
+                            if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                            {
+                                LogProvider.Log.Info(this, $"Read {data.Length} bytes from DH [handle={hudLayout.WindowId}]");
+                            }
+
                             System.Windows.Application.Current.Dispatcher.Invoke(() =>
                             {
-                               HudPainter.UpdateHud(hudLayout);
+                                HudPainter.UpdateHud(hudLayout);
                             });
                         }
                     }
                     catch (Exception e)
                     {
                         LogProvider.Log.Error(this, "HUD service failed to read data", e);
-                    }                    
+                    }
                 }
             }
             catch (Exception e)
@@ -118,7 +149,7 @@ namespace DriveHUD.HUD.Services
                 LogProvider.Log.Error(this, "HUD service failed to establish connection", e);
             }
 
-            LogProvider.Log.Info("HUD service has been stopped");
+            LogProvider.Log.Info(this, "HUD service has been stopped");
         }
 
         public void Dispose()

@@ -40,12 +40,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         {
             get { return "AmericasCardroom"; }
         }
-
-        protected override Encoding HandHistoryFileEncoding
-        {
-            get { return Encoding.Unicode; }
-        }
-
+     
         private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
         {
             NegativeSign = "-",
@@ -100,7 +95,8 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         }
 
         private const string HandEndedPattern = "Game ended at: ";
-        protected override string GetHandTextFromStream(Stream fs)
+
+        protected override string GetHandTextFromStream(Stream fs, Encoding encoding)
         {
             // possible for ACR, since they remove partial data if table was closed before hand had been finished
             if (fs.Position > fs.Length)
@@ -118,7 +114,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
             long lastHandEndedPosition = fs.Position;
 
-            using (var streamReader = new StreamReader(fs, HandHistoryFileEncoding, false, 1024, true))
+            using (var streamReader = new StreamReader(fs, encoding, false, 1024, true))
             {
                 StringBuilder tempStringBuilder = new StringBuilder();
 

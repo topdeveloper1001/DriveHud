@@ -43,7 +43,7 @@ namespace DriveHUD.Importers.BetOnline
         {
             try
             {
-                var encryptedXml = Encoding.ASCII.GetString(data).Replace("\0", string.Empty);
+                var encryptedXml = Encoding.UTF8.GetString(data).Replace("\0", string.Empty);
        
                 // convert xml to iPoker xml in separate thread, then save it in hh file                
                 Task.Run(() =>
@@ -61,7 +61,7 @@ namespace DriveHUD.Importers.BetOnline
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(this, "Stream data has wrong format", ex);
+                LogProvider.Log.Error(this, "Stream (info) data has wrong format", ex);
             }
         }
 

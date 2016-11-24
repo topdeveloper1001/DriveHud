@@ -1,0 +1,45 @@
+﻿#Game No : 445357327
+***** 888poker Hand History for Game 445357327 *****
+0,01 $/0,02 $ Blinds No Limit Holdem - *** 22 11 2016 23:36:47
+Table Amersfoort 9 Max (Real Money)
+Seat 9 is the button
+Total number of players : 7
+Seat 1: RamonMX ( 2 $ )
+Seat 2: DmitriyTeut ( 0,99 $ )
+Seat 3: fixgoa ( 6,57 $ )
+Seat 4: Peon_84 ( 2 $ )
+Seat 6: Hendrixx14 ( 1,23 $ )
+Seat 7: Steveo237 ( 2,38 $ )
+Seat 9: NamThale ( 1,28 $ )
+RamonMX posts small blind [0,01 $]
+DmitriyTeut posts big blind [0,02 $]
+Peon_84 posts big blind [0,02 $]
+** Dealing down cards **
+Dealt to Peon_84 [ Qd, Kc ]
+fixgoa folds
+Peon_84 checks
+Hendrixx14 folds
+Steveo237 folds
+NamThale folds
+RamonMX calls [0,01 $]
+DmitriyTeut checks
+** Dealing flop ** [ 8h, As, 7d ]
+RamonMX checks
+DmitriyTeut checks
+Peon_84 checks
+** Dealing turn ** [ 9d ]
+RamonMX checks
+DmitriyTeut checks
+Peon_84 checks
+** Dealing river ** [ 2c ]
+RamonMX checks
+DmitriyTeut checks
+Peon_84 checks
+** Summary **
+RamonMX shows [ Qc, Jh ]
+DmitriyTeut mucks [ 6h, 4d ]
+Peon_84 shows [ Qd, Kc ]
+Peon_84 collected [ 0,06 $ ]
+
+
+

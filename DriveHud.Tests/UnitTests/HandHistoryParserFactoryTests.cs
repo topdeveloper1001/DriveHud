@@ -1,9 +1,11 @@
 ﻿using DriveHUD.Entities;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Parser.Parsers.Factory;
+using HandHistories.Parser.Utils.Extensions;
 using NUnit.Framework;
 using System;
 using System.IO;
+using System.Text;
 
 namespace DriveHud.Tests.UnitTests
 {
@@ -32,6 +34,6 @@ namespace DriveHud.Tests.UnitTests
             var parser = handHistoryParserFactory.GetFullHandHistoryParser(handText);
 
             Assert.That(parser.SiteName, Is.EqualTo(expectedSite));
-        }
+        }      
     }
 }

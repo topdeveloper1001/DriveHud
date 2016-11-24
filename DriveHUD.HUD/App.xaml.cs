@@ -44,7 +44,7 @@ namespace DriveHUD.HUD
 
             if (args.Length != 2)
             {
-                LogProvider.Log.Error("HUD was not properly started");
+                LogProvider.Log.Error(this, "HUD was not properly started");
                 Shutdown();
                 return;
             }
@@ -88,7 +88,7 @@ namespace DriveHUD.HUD
         {
             try
             {
-                LogProvider.Log.Error("Unexpected error", e.Exception);
+                LogProvider.Log.Error(this, "Unexpected error", e.Exception);
 
                 if (!Debugger.IsAttached)
                 {
