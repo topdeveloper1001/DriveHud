@@ -47,6 +47,7 @@ using Newtonsoft.Json;
 using ProtoBuf;
 using System.Collections.Concurrent;
 using DriveHUD.Application.HudServices;
+using DriveHUD.Common.WinApi;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -257,8 +258,6 @@ namespace DriveHUD.Application.ViewModels
 
         private void OnDataImported(DataImportedEventArgs e)
         {
-            //LogProvider.Log.Info(string.Format("Memory before sending data to HUD: {0:N0}", GC.GetTotalMemory(false)));
-
             try
             {
                 var sw = new Stopwatch();
@@ -385,7 +384,7 @@ namespace DriveHUD.Application.ViewModels
 
                     if (activeLayout == null)
                     {
-                        LogProvider.Log.Error("Could not find active layout");
+                        LogProvider.Log.Error(this, "Could not find active layout");
                         return;
                     }
 
@@ -515,16 +514,26 @@ namespace DriveHUD.Application.ViewModels
                         serialized = msTestString.ToArray();
                     }
 
+                    var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+
+                    if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                    {
+                        LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
+                    }
+
                     var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
                     hudTransmitter.Send(serialized);
+
+                    if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                    {
+                        LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
+                    }
                 }
             }
             catch (Exception ex)
             {
                 LogProvider.Log.Error(this, "Importing failed", ex);
             }
-
-            // LogProvider.Log.Info(string.Format("Memory after sending data to HUD: {0:N0}", GC.GetTotalMemory(false)));
         }
 
         internal async void ImportFromFile()

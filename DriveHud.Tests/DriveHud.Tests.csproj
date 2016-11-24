@@ -221,7 +221,6 @@
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
     <Compile Include="UnitTests\PokerStarsParserTests.cs" />
-    <Compile Include="UnitTests\StreamDecryptosTests.cs" />
     <Compile Include="UnitTests\TitlMeterTests.cs" />
     <Compile Include="UnitTests\UtilsTests.cs" />
   </ItemGroup>
@@ -337,9 +336,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\PokerStarsOmahaHiLo.txt">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="UnitTests\TestData\PokerStarsEncoding.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="UnitTests\TestData\SnGHand-8-max-ipoker.xml">

@@ -56,9 +56,7 @@ namespace DriveHUD.HUD
         private static IntPtr SetWinEventHook(uint eventId, WinEventDelegate callback, uint idProcess)
         {
             return SetWinEventHook(eventId, eventId, IntPtr.Zero, callback, idProcess, 0, WINEVENT_OUTOFCONTEXT);
-        }
-
-        public static HudLayout layout;
+        }        
 
         public static string GetText(IntPtr hWnd)
         {
@@ -128,7 +126,7 @@ namespace DriveHUD.HUD
 
         public static void UpdateHud(HudLayout hudLayout)
         {
-            LogProvider.Log.Info(string.Format("Memory used before updating HUD: {0:N0}", GC.GetTotalMemory(false)));
+            LogProvider.Log.Info(string.Format("Memory usage before updating HUD: {0:N0}", GC.GetTotalMemory(false)));
 
             if (hudLayout == null || hudLayout.TableHud == null || hudLayout.TableHud.TableLayout == null)
             {
@@ -147,7 +145,7 @@ namespace DriveHUD.HUD
                 windows[hwnd].Window.Init(hudLayout);
                 windows[hwnd].Window.Update();
 
-                LogProvider.Log.Info(string.Format("Memory after updating HUD: {0:N0}", GC.GetTotalMemory(false)));
+                LogProvider.Log.Info(string.Format("Memory usage after updating HUD: {0:N0}", GC.GetTotalMemory(false)));
 
                 return;
             }
@@ -206,7 +204,7 @@ namespace DriveHUD.HUD
 
             window.Update();
 
-            LogProvider.Log.Info(string.Format("Memory after updating HUD: {0:N0}", GC.GetTotalMemory(false)));
+            LogProvider.Log.Info(string.Format("Memory usage after updating HUD: {0:N0}", GC.GetTotalMemory(false)));
         }
 
         public static void ReleaseHook()
@@ -253,11 +251,11 @@ namespace DriveHUD.HUD
             windows.Remove(hwnd);
             window.Window.Close();
 
-            LogProvider.Log.Info(string.Format("Memory used before collection: {0:N0}", GC.GetTotalMemory(false)));
+            LogProvider.Log.Info(string.Format("Memory usage before freeing resources: {0:N0}", GC.GetTotalMemory(false)));
 
             GC.Collect();
 
-            LogProvider.Log.Info(string.Format("Memory used after collection: {0:N0}", GC.GetTotalMemory(false)));
+            LogProvider.Log.Info(string.Format("Memory usage after freeing resources: {0:N0}", GC.GetTotalMemory(false)));
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)

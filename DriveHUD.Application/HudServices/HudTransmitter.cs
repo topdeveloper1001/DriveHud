@@ -8,6 +8,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
 
 namespace DriveHUD.Application.HudServices
 {
@@ -17,12 +19,15 @@ namespace DriveHUD.Application.HudServices
         private Process hudClient;
         private AnonymousPipeServerStream pipeServer;
         private ReaderWriterLockSlim locker;
+        private SettingsModel settingsModel;
 
         private bool isInitialized;
 
         public void Initialize()
         {
-            LogProvider.Log.Info("Initializing HUD");
+            LogProvider.Log.Info(this, "Initializing HUD");
+
+            settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
             isInitialized = false;
             locker = new ReaderWriterLockSlim();
@@ -47,6 +52,11 @@ namespace DriveHUD.Application.HudServices
                 pipeServer.DisposeLocalCopyOfClientHandle();
 
                 isInitialized = true;
+
+                if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                {
+                    SendSync();
+                }
             }
             catch (Exception e)
             {
@@ -58,7 +68,7 @@ namespace DriveHUD.Application.HudServices
         {
             if (!isInitialized)
             {
-                LogProvider.Log.Error("HUD hasn't been initialized");
+                LogProvider.Log.Error(this, "HUD hasn't been initialized");
                 return;
             }
 
@@ -80,6 +90,10 @@ namespace DriveHUD.Application.HudServices
                         writer.Flush();
                     }
                 }
+                else
+                {
+                    LogProvider.Log.Warn(this, $"HUD data cannot be sent: PipeStatus={pipeServer.IsConnected}] HudStatus={!hudClient.HasExited}");
+                }
             }
             catch (Exception e)
             {
@@ -91,11 +105,26 @@ namespace DriveHUD.Application.HudServices
             }
         }
 
+        private void SendSync()
+        {
+            LogProvider.Log.Info(this, "Synchronizing HUD");
+
+            var syncCommand = Encoding.UTF8.GetBytes("SYNC");
+            SendInternal(syncCommand);
+
+            LogProvider.Log.Info(this, "HUD sync command has been sent");
+        }
+
         private Process BuildClientProcess(string clientHandle)
         {
             if (!File.Exists(hudClientFileName))
             {
                 throw new FileNotFoundException(string.Format("{0} not found.", hudClientFileName));
+            }
+            
+            if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+            {
+                LogProvider.Log.Info(this, $"Start HUD process with handle={clientHandle}");
             }
 
             var hudClient = new Process();
