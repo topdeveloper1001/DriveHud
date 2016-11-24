@@ -278,17 +278,30 @@ namespace DriveHUD.Importers
 
         protected virtual void Clean()
         {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+
+            var isMove = settings.SiteSettings.IsProcessedDataLocationEnabled;
+            var moveLocation = settings.SiteSettings.ProcessedDataLocation;
+
             foreach (var capturedFile in capturedFiles)
             {
                 capturedFile.Value.FileStream.Close();
 
-                try
+                if (isMove)
                 {
-                    File.Delete(capturedFile.Key);
-                }
-                catch
-                {
-                    LogProvider.Log.Warn(string.Format("File {0} could not be deleted", capturedFile.Key));
+                    try
+                    {
+                        if (!Directory.Exists(moveLocation))
+                        {
+                            Directory.CreateDirectory(moveLocation);
+                        }
+
+                        File.Move(capturedFile.Key, Path.Combine(moveLocation, new FileInfo(capturedFile.Key).Name));
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Warn(string.Format("File {0} could not be moved: {1}", capturedFile.Key, ex.Message));
+                    }
                 }
             }
 

@@ -144,13 +144,13 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             get
             {
-                return SettingsModel?.IsCustomProcessedDataLocationEnabled ?? false;
+                return SettingsModel?.IsProcessedDataLocationEnabled ?? false;
             }
             set
             {
-                if (SettingsModel != null && SettingsModel.IsCustomProcessedDataLocationEnabled != value)
+                if (SettingsModel != null && SettingsModel.IsProcessedDataLocationEnabled != value)
                 {
-                    SettingsModel.IsCustomProcessedDataLocationEnabled = value;
+                    SettingsModel.IsProcessedDataLocationEnabled = value;
                     OnPropertyChanged(nameof(IsCustomProcessedDataLocationEnabled));
                 }
             }
@@ -160,14 +160,14 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             get
             {
-                return SettingsModel?.CustomProcessedDataLocation ?? StringFormatter.GetProcessedDataFolderPath();
+                return SettingsModel?.ProcessedDataLocation ?? StringFormatter.GetProcessedDataFolderPath();
             }
 
             set
             {
-                if (SettingsModel != null && SettingsModel.CustomProcessedDataLocation != value)
+                if (SettingsModel != null && SettingsModel.ProcessedDataLocation != value)
                 {
-                    SettingsModel.CustomProcessedDataLocation = value;
+                    SettingsModel.ProcessedDataLocation = value;
                     OnPropertyChanged(nameof(CustomProcessedDataLocation));
                 }
             }

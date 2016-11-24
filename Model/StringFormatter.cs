@@ -26,7 +26,7 @@ namespace Model
 
         public static string GetProcessedDataFolderPath()
         {
-            return Path.Combine(SettingsService.GetSettings().SiteSettings.CustomProcessedDataLocation);
+            return Path.Combine(SettingsService.GetSettings().SiteSettings.ProcessedDataLocation);
         }
 
         public static string GetPlayersDataFolderPath()

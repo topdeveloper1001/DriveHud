@@ -97,9 +97,9 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         private void Apply(object obj)
         {
             var oldSettings = _settingsService.GetSettings();
-            var isUpdatePlayersRequired = oldSettings?.SiteSettings.IsCustomProcessedDataLocationEnabled != _settingsModel?.SiteSettings.IsCustomProcessedDataLocationEnabled
-                || (oldSettings?.SiteSettings.CustomProcessedDataLocation != _settingsModel?.SiteSettings.CustomProcessedDataLocation
-                    && (_settingsModel?.SiteSettings.IsCustomProcessedDataLocationEnabled ?? false));
+            var isUpdatePlayersRequired = oldSettings?.SiteSettings.IsProcessedDataLocationEnabled != _settingsModel?.SiteSettings.IsProcessedDataLocationEnabled
+                || (oldSettings?.SiteSettings.ProcessedDataLocation != _settingsModel?.SiteSettings.ProcessedDataLocation
+                    && (_settingsModel?.SiteSettings.IsProcessedDataLocationEnabled ?? false));
 
             if (isUpdatePlayersRequired)
             {
