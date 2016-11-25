@@ -26,6 +26,9 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 {
     internal class AmericasCardroomImporter : FileBasedImporter, IAmericasCardroomImporter
     {
+        private const string GameStartedSearchPattern = "Game started at:";
+        private const string HandEndedPattern = "Game ended at: ";
+
         public override string Site
         {
             get { return EnumPokerSites.AmericasCardroom.ToString(); }
@@ -40,7 +43,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         {
             get { return "AmericasCardroom"; }
         }
-     
+
         private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
         {
             NegativeSign = "-",
@@ -48,6 +51,28 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             CurrencyGroupSeparator = ",",
             CurrencySymbol = "$"
         };
+
+        // ACR creates separate file for each new table, so we need to restore session number for tournaments
+        protected override string GetSessionForFile(string fileName)
+        {
+            //HH20161125 T6748379-G37397187.txt, where T6748379 is tournament number
+            var file = Path.GetFileName(fileName);
+            var startIndex = file.IndexOf("T", StringComparison.Ordinal);
+            if (startIndex != -1)
+            {
+                var endIndex = file.IndexOf("-", StringComparison.Ordinal);
+                if (endIndex > startIndex)
+                {
+                    var tornamentNumber = file.Substring(startIndex, endIndex - startIndex);
+                    var session = capturedFiles.Keys.FirstOrDefault(x => x.Contains(tornamentNumber));
+                    if (!string.IsNullOrWhiteSpace(session))
+                    {
+                        return capturedFiles[session].Session;
+                    }
+                }
+            }
+            return base.GetSessionForFile(fileName);
+        }
 
         protected override IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter dbImporter, DHProgress progress)
         {
@@ -93,8 +118,6 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
             return playerList;
         }
-
-        private const string HandEndedPattern = "Game ended at: ";
 
         protected override string GetHandTextFromStream(Stream fs, Encoding encoding)
         {
@@ -160,7 +183,6 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return isTitleMatch;
         }
 
-        private const string GameStartedSearchPattern = "Game started at:";
         private string AddAdditionalData(string handHistory, out bool isWindowFound)
         {
             isWindowFound = false;

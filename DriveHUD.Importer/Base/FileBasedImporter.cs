@@ -103,7 +103,7 @@ namespace DriveHUD.Importers
                             var capturedFile = new CapturedFile
                             {
                                 FileStream = fs,
-                                Session = GenerateSession(),
+                                Session = GetSessionForFile(hh.FullName),
                                 Encoding = encoding
                             };
 
@@ -308,7 +308,7 @@ namespace DriveHUD.Importers
             capturedFiles.Clear();
         }
 
-        protected virtual string GenerateSession()
+        protected virtual string GetSessionForFile(string fileName)
         {
             var random = RandomProvider.GetThreadRandom();
             var session = random.Next(100000, 999999);
