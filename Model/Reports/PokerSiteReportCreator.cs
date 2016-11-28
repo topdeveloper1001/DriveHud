@@ -46,7 +46,7 @@ namespace Model.Reports
             var player = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
             var tournaments = ServiceLocator.Current.GetInstance<IDataService>().GetPlayerTournaments(player.Name, (short)player.PokerSite);
 
-            foreach (var group in tournaments.GroupBy(x=> x.SiteId))
+            foreach (var group in tournaments.GroupBy(x => x.SiteId))
             {
                 TournamentReportRecord stat = new TournamentReportRecord();
                 foreach (var playerstatistic in statistics.Where(x => x.IsTourney && group.Any(g => g.Tourneynumber == x.TournamentId)))
@@ -56,6 +56,7 @@ namespace Model.Reports
                 if (!stat.Statistcs.Any()) continue;
 
                 stat.SetWinning(group.Sum(x => x.Winningsincents));
+                stat.Started = group.Min(x => x.Firsthandtimestamp);
 
                 report.Add(stat);
             }

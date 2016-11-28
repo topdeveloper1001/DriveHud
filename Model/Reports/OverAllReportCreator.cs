@@ -38,7 +38,7 @@ namespace Model.Reports
             return report;
         }
     }
-    
+
     public class TournamentOverAllReportCreator : IReportCreator
     {
         public ObservableCollection<Indicators> Create(IList<Playerstatistic> statistics)
@@ -61,6 +61,8 @@ namespace Model.Reports
                 {
                     stat.AddStatistic(playerstatistic);
                 }
+
+                stat.Started = group.Min(x => x.Firsthandtimestamp);
 
                 stat.SetBuyIn(group.Key.Buyinincents);
                 stat.SetTotalBuyIn(group.Sum(x => x.Buyinincents));
