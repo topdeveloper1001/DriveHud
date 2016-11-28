@@ -666,11 +666,14 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                if (HudTableViewModelCurrent.TableLayout.Site == EnumPokerSites.BetOnline)
+                var currentSite = HudTableViewModelCurrent.TableLayout.Site;
+                if (currentSite == EnumPokerSites.BetOnline
+                    || currentSite == EnumPokerSites.TigerGaming
+                    || currentSite == EnumPokerSites.SportsBetting)
                 {
                     if (value)
                     {
-                        DisablePreferredSeatBetOnline();
+                        DisablePreferredSeat(currentSite.ToString());
                         return;
                     }
                 }
@@ -865,7 +868,7 @@ namespace DriveHUD.Application.ViewModels
             hudTransmitter.Initialize();
 
             importerService.StartImport();
-         
+
             IsStarted = true;
         }
 
@@ -1421,14 +1424,14 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void DisablePreferredSeatBetOnline()
+        private void DisablePreferredSeat(string site)
         {
             App.Current.Dispatcher.BeginInvoke((Action)delegate
             {
                 this.NotificationRequest.Raise(
                     new PopupActionNotification
                     {
-                        Content = "BetOnline does not currently support preferred seating.",
+                        Content = $"{site} does not currently support preferred seating.",
                         Title = "Preferred Seating",
                     },
                     n => { });

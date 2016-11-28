@@ -207,7 +207,7 @@ namespace DriveHUD.Application.TableConfigurators
 
             foreach (var v in seatAreas)
             {
-                v.StartPoint = new Point(hudTable.RelativePosition.X, hudTable.RelativePosition.Y);
+                v.StartPoint = new Point(0, 0);
                 v.PokerSite = Type;
                 v.TableType = (EnumTableType)seats;
                 v.SetContextMenuEnabled(tableSeatSetting.IsPreferredSeatEnabled);

@@ -96,7 +96,9 @@ namespace DriveHUD.Application.ViewModels.Settings
             {
                 UpdateTableTypeDictionary(value);
                 UpdateSelectedSite(value);
-                IsPreferredSeatingVisible = (value != EnumPokerSites.BetOnline);
+                IsPreferredSeatingVisible = (value != EnumPokerSites.BetOnline 
+                    && value != EnumPokerSites.SportsBetting 
+                    && value != EnumPokerSites.TigerGaming);
 
                 SetProperty(ref _selectedSiteType, value);
             }
