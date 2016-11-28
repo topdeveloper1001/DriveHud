@@ -135,14 +135,29 @@
   <data name="Main_ContextMenu_ExportHand" xml:space="preserve">
     <value>Export Hand</value>
   </data>
+  <data name="Main_ContextMenu_ExportLastHand" xml:space="preserve">
+    <value>Export Last Hand</value>
+  </data>
+  <data name="Main_ContextMenu_LoadHud" xml:space="preserve">
+    <value>Load HUD</value>
+  </data>
   <data name="Main_ContextMenu_MakeNote" xml:space="preserve">
     <value>Make Note</value>
   </data>
   <data name="Main_ContextMenu_ReplayHand" xml:space="preserve">
     <value>Replay Hand</value>
   </data>
+  <data name="Main_ContextMenu_ReplayLastHand" xml:space="preserve">
+    <value>Replay Last Hand</value>
+  </data>
+  <data name="Main_ContextMenu_SaveHudPosition" xml:space="preserve">
+    <value>Save HUD Position</value>
+  </data>
   <data name="Main_ContextMenu_TagHand" xml:space="preserve">
     <value>Tag Hand</value>
+  </data>
+  <data name="Main_ContextMenu_TagLastHand" xml:space="preserve">
+    <value>Tag Last Hand</value>
   </data>
   <data name="Main_ReplayerHeader" xml:space="preserve">
     <value>DriveHUD Replayer: {0} - {1}</value>
