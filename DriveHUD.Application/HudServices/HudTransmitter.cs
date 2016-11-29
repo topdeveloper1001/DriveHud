@@ -10,14 +10,20 @@ using System.Threading.Tasks;
 using System.Threading;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
+using DriveHUD.HUD.Service;
+using System.ServiceModel;
 
 namespace DriveHUD.Application.HudServices
 {
     internal class HudTransmitter : IHudTransmitter
     {
-        private string hudClientFileName = "DriveHUD.HUD.exe";
+        private const string hudClientFileName = "DriveHUD.HUD.exe";
+        private const double delayMS = 1000;
+
         private Process hudClient;
-        private AnonymousPipeServerStream pipeServer;
+        private DuplexChannelFactory<IHudNamedPipeBindingService> _namedPipeBindingFactory;
+        private IHudNamedPipeBindingService _namedPipeBindingProxy;
+
         private ReaderWriterLockSlim locker;
         private SettingsModel settingsModel;
 
@@ -46,21 +52,50 @@ namespace DriveHUD.Application.HudServices
                     existingClientProcess.Kill();
                 }
 
-                pipeServer = new AnonymousPipeServerStream(PipeDirection.Out, HandleInheritability.Inheritable);
-                hudClient = BuildClientProcess(pipeServer.GetClientHandleAsString());
+                hudClient = BuildClientProcess();
                 hudClient.Start();
-                pipeServer.DisposeLocalCopyOfClientHandle();
+                StartPipe();
 
                 isInitialized = true;
-
-                if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
-                {
-                    SendSync();
-                }
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "HUD cannot be initialized", e);
+            }
+        }
+
+        private void StartPipe()
+        {
+            // start named pipe
+            InstanceContext context = new InstanceContext(this);
+            _namedPipeBindingFactory = new DuplexChannelFactory<IHudNamedPipeBindingService>(context, "HudNamedPipeBindingServiceEndpoint");
+            _namedPipeBindingProxy = _namedPipeBindingFactory.CreateChannel();
+            ((IClientChannel)_namedPipeBindingProxy).Faulted += new EventHandler(Pipe_Faulted);
+            ((IClientChannel)_namedPipeBindingProxy).Opened += new EventHandler(Pipe_Opened);
+
+            while (!hudClient.HasExited)
+            {
+                try
+                {
+                    Task.Delay(TimeSpan.FromMilliseconds(delayMS)).Wait();
+
+                    ((IClientChannel)_namedPipeBindingProxy).Open();
+
+                    if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                    {
+                        LogProvider.Log.Info("Successfully connected to the HUD service.");
+                    }
+
+                    return;
+                }
+                catch (EndpointNotFoundException)
+                {
+                    // service hasn't been started yet
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(ex);
+                }
             }
         }
 
@@ -72,28 +107,10 @@ namespace DriveHUD.Application.HudServices
                 return;
             }
 
-            SendInternal(data);
-        }
-
-        private void SendInternal(byte[] data)
-        {
+            locker.EnterWriteLock();
             try
             {
-                locker.EnterWriteLock();
-
-                if (pipeServer.IsConnected && !hudClient.HasExited)
-                {
-                    using (var writer = new BinaryWriter(pipeServer, Encoding.UTF8, true))
-                    {
-                        pipeServer.WaitForPipeDrain();
-                        pipeServer.Write(data, 0, data.Length);
-                        writer.Flush();
-                    }
-                }
-                else
-                {
-                    LogProvider.Log.Warn(this, $"HUD data cannot be sent: PipeStatus={pipeServer.IsConnected}] HudStatus={!hudClient.HasExited}");
-                }
+                _namedPipeBindingProxy.UpdateHUD(data);
             }
             catch (Exception e)
             {
@@ -105,43 +122,73 @@ namespace DriveHUD.Application.HudServices
             }
         }
 
-        private void SendSync()
-        {
-            LogProvider.Log.Info(this, "Synchronizing HUD");
-
-            var syncCommand = Encoding.UTF8.GetBytes("SYNC");
-            SendInternal(syncCommand);
-
-            LogProvider.Log.Info(this, "HUD sync command has been sent");
-        }
-
-        private Process BuildClientProcess(string clientHandle)
+        private Process BuildClientProcess()
         {
             if (!File.Exists(hudClientFileName))
             {
                 throw new FileNotFoundException(string.Format("{0} not found.", hudClientFileName));
             }
-            
+
             if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
             {
-                LogProvider.Log.Info(this, $"Start HUD process with handle={clientHandle}");
+                LogProvider.Log.Info(this, $"Starting HUD process");
             }
 
             var hudClient = new Process();
             hudClient.StartInfo.FileName = hudClientFileName;
-            hudClient.StartInfo.Arguments = clientHandle;
             hudClient.StartInfo.UseShellExecute = false;
 
             return hudClient;
         }
 
+        #region EventHandlers
+
+        void Pipe_Opened(object sender, EventArgs e)
+        {
+            try
+            {
+                _namedPipeBindingProxy.ConnectCallbackChannel();
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error("Failed to setup the callback service", ex);
+            }
+        }
+
+        private void Pipe_Faulted(object sender, EventArgs e)
+        {
+            LogProvider.Log.Info("Pipe Faulted.");
+        }
+
+        #endregion
+
+        #region IHudNamedPipeBindingCallbackService
+
+        public void Message(string test)
+        {
+            LogProvider.Log.Info("Message received: " + test);
+        }
+
+        #endregion
+
+        #region IDisposable
+
         public void Dispose()
         {
             isInitialized = false;
 
-            if (pipeServer != null)
+            if (_namedPipeBindingFactory != null)
             {
-                pipeServer.Dispose();
+                if (_namedPipeBindingFactory.State == CommunicationState.Opened)
+                {
+                    _namedPipeBindingFactory.Close();
+                }
+
+                _namedPipeBindingFactory.Faulted -= Pipe_Faulted;
+                _namedPipeBindingFactory.Opened -= Pipe_Opened;
+
+                _namedPipeBindingFactory = null;
+                _namedPipeBindingProxy = null;
             }
 
             if (hudClient != null && !hudClient.HasExited)
@@ -149,5 +196,7 @@ namespace DriveHUD.Application.HudServices
                 hudClient.Kill();
             }
         }
+
+        #endregion
     }
 }

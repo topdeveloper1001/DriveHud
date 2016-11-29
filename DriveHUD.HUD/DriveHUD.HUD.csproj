@@ -13,6 +13,7 @@
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -79,6 +80,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -150,8 +153,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="HudPainter.cs" />
-    <Compile Include="Services\HudReceiver.cs" />
-    <Compile Include="Services\IHudReceiver.cs" />
+    <Compile Include="Services\HudNamedPipeBindingService.cs" />
+    <Compile Include="Services\IHudServiceHost.cs" />
+    <Compile Include="Services\HudServiceHost.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -218,6 +222,10 @@
       <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
       <Name>DriveHUD.Entities</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.HUD.Service\DriveHUD.HUD.Service.csproj">
+      <Project>{69df03d3-2fdb-45c1-991f-e3316d6c85bd}</Project>
+      <Name>DriveHUD.HUD.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Model\Model.csproj">
       <Project>{92f8b855-af92-4969-8882-ce8fd3797cf0}</Project>
       <Name>Model</Name>
@@ -228,6 +236,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="images\drivehud.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

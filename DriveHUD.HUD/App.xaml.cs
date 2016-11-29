@@ -40,18 +40,9 @@ namespace DriveHUD.HUD
             base.OnStartup(e);
             Initialize();
 
-            var args = Environment.GetCommandLineArgs();
-
-            if (args.Length != 2)
-            {
-                LogProvider.Log.Error(this, "HUD was not properly started");
-                Shutdown();
-                return;
-            }
-
-            var hudReceiver = ServiceLocator.Current.GetInstance<IHudReceiver>();
-            hudReceiver.Initialize(args[1]);
-            hudReceiver.Start();
+            var hudServiceHost = ServiceLocator.Current.GetInstance<IHudServiceHost>();
+            hudServiceHost.Initialize();
+            hudServiceHost.OpenHost();
         }
 
         public bool SignalExternalCommandLineArgs(IList<string> args)
@@ -69,7 +60,7 @@ namespace DriveHUD.HUD
 
             unityContainer = new UnityContainer();
 
-            unityContainer.RegisterType<IHudReceiver, HudReceiver>(new ContainerControlledLifetimeManager());
+            unityContainer.RegisterType<IHudServiceHost, HudServiceHost>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
 

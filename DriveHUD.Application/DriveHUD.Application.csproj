@@ -178,6 +178,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
@@ -1057,6 +1058,10 @@
     <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
       <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
       <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.HUD.Service\DriveHUD.HUD.Service.csproj">
+      <Project>{69DF03D3-2FDB-45C1-991F-E3316D6C85BD}</Project>
+      <Name>DriveHUD.HUD.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Importer\DriveHUD.Importers.csproj">
       <Project>{67ee116c-c86b-46aa-964a-f80cae372a8b}</Project>

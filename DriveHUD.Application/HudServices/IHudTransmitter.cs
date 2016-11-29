@@ -10,11 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.HUD.Service;
 using System;
 
 namespace DriveHUD.Application.HudServices
 {
-    public interface IHudTransmitter : IDisposable
+    public interface IHudTransmitter : IHudNamedPipeBindingCallbackService, IDisposable
     {
         void Initialize();
 
