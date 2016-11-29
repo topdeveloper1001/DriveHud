@@ -189,13 +189,13 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to DriveHUD found a potential settings problem for the following poker client(s): {0}
         ///
-        ///Please make so to:
+        ///Please make sure to:
         ///- Enable the &quot;Save My Hands History&quot; options setting in the poker client.
         ///- Enable the &quot;Save my Tournament Summaries&quot; options setting in the poker client.
         ///- &quot;English&quot; is selected as your language for Hand History formatting in the poker client.
         ///- &quot;English&quot; is selected as your language for Tournament Summaries formatting in the poker client.
         ///
-        ///For more infromation on  how to enable these settings, pl [rest of string was truncated]&quot;;.
+        ///For more infromation on  how to enable these settings,  [rest of string was truncated]&quot;;.
         /// </summary>
         internal static string Main_SiteSettingsMismatch_PokerStars {
             get {

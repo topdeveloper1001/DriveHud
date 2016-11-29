@@ -677,7 +677,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         protected override TournamentDescriptor ParseTournament(string[] handLines)
         {
-            //TournamentId: 213213123, TournamentBuyIn: 0.65$, TournamentSpeed: HyperTurbo
+            //TournamentId: 213213123, TournamentBuyIn: 0.65$
             var tournamentString = GetSummaryString(handLines);
 
             var regex = new Regex(@"TournamentId: (?<tournament_id>[^\s]+), TournamentBuyIn: (?<buyin>[^-]+)");
@@ -691,7 +691,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                 {
                     BuyIn = Buyin.AllBuyin(),
                     TournamentName = "Undefined Tournament",
-                    TournamentId = "0"
+                    TournamentId = "0",
+                    Speed = TournamentSpeed.Regular
                 };
             }
 
