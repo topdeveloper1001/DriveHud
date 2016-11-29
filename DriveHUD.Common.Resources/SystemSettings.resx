@@ -147,6 +147,9 @@
   <data name="SystemSettings_RenewLicenseLink" xml:space="preserve">
     <value>http://www.acepokersolutions.com/index.php?route=checkout/renewal&amp;code={0}</value>
   </data>
+  <data name="SystemSettings_SiteSetup_PokerStars" xml:space="preserve">
+    <value>http://drivehud.com/blog/manual/#document-21</value>
+  </data>
   <data name="SystemSettings_SupportEmail" xml:space="preserve">
     <value>support@drivehud.com</value>
   </data>

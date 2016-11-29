@@ -156,9 +156,9 @@ namespace Model.Site
                 var resultString = String.Format(CommonResourceManager.Instance.GetResourceString("Main_SiteSettingsMismatch_PokerStars"),
                     string.Join(", ", psClientsWithSettingsMismatch));
 
-                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("Settings", resultString));
+                var hyperLink = CommonResourceManager.Instance.GetResourceString("SystemSettings_SiteSetup_PokerStars");
 
-                System.Diagnostics.Debug.WriteLine("resultString");
+                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("Settings", resultString, hyperLink));
             }
         }
     }
