@@ -10,7 +10,7 @@ namespace DriveHUD.Importers.Builders.iPoker
     public class HandHistory
     {
         [XmlAttribute("sessioncode")]
-        public int SessionCode { get; set; }
+        public string SessionCode { get; set; }
 
         [XmlElement("general")]
         public General General { get; set; }

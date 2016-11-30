@@ -158,6 +158,13 @@ namespace DriveHUD.Application.ViewModels
         {
             LogProvider.Log.Info(string.Format("Memory before starting auto import: {0:N0}", GC.GetTotalMemory(false)));
 
+            int workerThreads;
+            int completionPortThreads;
+
+            ThreadPool.GetMaxThreads(out workerThreads, out completionPortThreads);
+
+            LogProvider.Log.Info($"Threads info: workerThreads: {workerThreads} completionPortThreads: {completionPortThreads} ");
+
             if (switchViewModel)
             {
                 SwitchViewModel(EnumViewModelType.HudViewModel);

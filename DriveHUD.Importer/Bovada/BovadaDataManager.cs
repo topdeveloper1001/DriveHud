@@ -157,7 +157,7 @@ namespace DriveHUD.Importers.Bovada
                 return null;
             }
 
-            var dataText = Encoding.ASCII.GetString(data).Replace("\0", string.Empty);
+            var dataText = Encoding.ASCII.GetString(data).Replace("\0", string.Empty).Replace("\\", string.Empty);
 
             // Log stream data
             if (logger != null && isLoggingEnabled)
