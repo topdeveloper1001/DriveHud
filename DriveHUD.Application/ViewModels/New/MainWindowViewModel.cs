@@ -375,8 +375,10 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
                     playerHudContent.HudElement.PlayerName = playerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
-                    playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
+                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
+                                                           string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
+                    
 
                     var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                     playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
