@@ -16,7 +16,7 @@ namespace DriveHUD.HUD.Service
         #region Call back connection manager
 
         [OperationContract(IsOneWay = true)]
-        void ConnectCallbackChannel();
+        void ConnectCallbackChannel(string name);
 
         #endregion
     }

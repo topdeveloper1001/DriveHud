@@ -18,7 +18,7 @@ namespace DriveHUD.HUD.Services
     {
         private static IHudNamedPipeBindingCallbackService _callback;
 
-        public void ConnectCallbackChannel()
+        public void ConnectCallbackChannel(string name)
         {
             if (_callback != null)
             {
@@ -28,6 +28,7 @@ namespace DriveHUD.HUD.Services
             try
             {
                 _callback = OperationContext.Current.GetCallbackChannel<IHudNamedPipeBindingCallbackService>();
+                LogProvider.Log.Info($"Registered a callback channel for {name}");
             }
             catch (Exception ex)
             {

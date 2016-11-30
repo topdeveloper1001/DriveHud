@@ -9,7 +9,7 @@ namespace DriveHUD.HUD.Service
 {
     public class HudNamedPipeBindingService : IHudNamedPipeBindingService
     {
-        public void ConnectCallbackChannel()
+        public void ConnectCallbackChannel(string name)
         {
             throw new NotImplementedException();
         }
