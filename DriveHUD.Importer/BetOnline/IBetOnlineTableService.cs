@@ -14,12 +14,10 @@ using DriveHUD.Entities;
 
 namespace DriveHUD.Importers.BetOnline
 {
-    public interface IBetOnlineTableService
+    internal interface IBetOnlineTableService : IBackgroundProcess
     {
-        int GetSessionCode(string tableId, out EnumPokerSites site);
+        int GetWindowHandle(ulong handId, out EnumPokerSites site);
 
-        string GetRandomPlayerName(string sessionCode, int seat);
-
-        void Reset();
+        string GetRandomPlayerName(string sessionCode, int seat);     
     }
 }

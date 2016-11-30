@@ -877,10 +877,7 @@ namespace DriveHUD.Application.ViewModels
             IsStarted = false;
 
             importerService.StopImport();
-
-            var tableService = ServiceLocator.Current.GetInstance<IBetOnlineTableService>();
-            tableService.Reset();
-
+     
             var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
             hudTransmitter.Dispose();
         }
