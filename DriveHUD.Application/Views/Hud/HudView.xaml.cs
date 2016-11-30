@@ -19,6 +19,7 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
+using System;
 
 namespace DriveHUD.Application.Views
 {
@@ -38,7 +39,7 @@ namespace DriveHUD.Application.Views
                     return;
                 }
 
-                ViewModel.PropertyChanged += ViewModel_PropertyChanged;
+                ViewModel.TableUpdate += ViewModel_TableUpdated;
 
                 var tableType = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
                                     ViewModel.CurrentTableLayout.HudTableLayout.TableType : EnumTableType.Six;
@@ -47,28 +48,22 @@ namespace DriveHUD.Application.Views
             };
         }
 
-        private void UpdatePreferredSeatingStateWithoutNotification()
-        {
-            ViewModel.UpdateSeatContextMenuState();
-        }
-
-        private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void ViewModel_TableUpdated(object sender, EventArgs e)
         {
             if (ViewModel == null)
             {
                 return;
             }
 
-            if (e.PropertyName == nameof(HudViewModel.CurrentTableLayout) ||
-                        e.PropertyName == nameof(HudViewModel.HudType) ||
-                            e.PropertyName == nameof(HudViewModel.GameType) ||
-                                e.PropertyName == nameof(HudViewModel.HudViewType))
-            {
-                var tableType = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
-                                    ViewModel.CurrentTableLayout.HudTableLayout.TableType : EnumTableType.Six;
-                Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int)tableType);
-                UpdatePreferredSeatingStateWithoutNotification();
-            }
+            var tableType = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
+                                   ViewModel.CurrentTableLayout.HudTableLayout.TableType : EnumTableType.Six;
+            Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int)tableType);
+            UpdatePreferredSeatingStateWithoutNotification();
+        }
+
+        private void UpdatePreferredSeatingStateWithoutNotification()
+        {
+            ViewModel.UpdateSeatContextMenuState();
         }
 
         private HudViewModel ViewModel

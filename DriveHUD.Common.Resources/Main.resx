@@ -163,10 +163,7 @@
     <value>DriveHUD found a potential settings problem for the following poker client(s): {0}
 
 Please make sure to:
-- Enable the "Save My Hands History" options setting in the poker client.
-- Enable the "Save my Tournament Summaries" options setting in the poker client.
-- "English" is selected as your language for Hand History formatting in the poker client.
-- "English" is selected as your language for Tournament Summaries formatting in the poker client.
+{1}
 
 For more infromation on  how to enable these settings, please see the following link:</value>
   </data>

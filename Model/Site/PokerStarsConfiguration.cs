@@ -22,6 +22,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Model.Site
@@ -115,6 +116,11 @@ namespace Model.Site
             var dirs = GetHandHistoryFolders().Select(x => (new DirectoryInfo(x)).Parent).GroupBy(x => x.FullName).Select(x => x.First()).ToArray();
             List<string> psClientsWithSettingsMismatch = new List<string>();
 
+            bool hhLanguageIsCorrect = true;
+            bool tsLanguageIsCorrect = true;
+            bool hhIsEnabled = true;
+            bool tsIsEnabled = true;
+
             foreach (var dir in dirs.Where(d => d.Exists))
             {
                 try
@@ -134,14 +140,19 @@ namespace Model.Site
 
                         bool localeSettingIsCorrect = localeSetting == "0";
 
-                        bool hhLanguageIsCorrect = string.IsNullOrWhiteSpace(hhLocaleSetting) ? localeSettingIsCorrect : hhLocaleSetting == "0";
-                        bool tsLanguageIsCorrect = string.IsNullOrWhiteSpace(tsLocaleSetting) ? localeSettingIsCorrect : tsLocaleSetting == "0";
-                        bool hhIsEnabled = hhEnabledSetting == "1";
-                        bool tsIsEnabled = tsEnabledSetting == "1";
+                        bool tempHHLanguageIsCorrect = string.IsNullOrWhiteSpace(hhLocaleSetting) ? localeSettingIsCorrect : hhLocaleSetting == "0";
+                        bool tempTSLanguageIsCorrect = string.IsNullOrWhiteSpace(tsLocaleSetting) ? localeSettingIsCorrect : tsLocaleSetting == "0";
+                        bool tempHHIsEnabled = hhEnabledSetting == "1";
+                        bool tempTSIsEnabled = tsEnabledSetting == "1";
 
-                        if (!hhLanguageIsCorrect || !tsLanguageIsCorrect || !hhIsEnabled || !tsIsEnabled)
+                        if (!tempHHLanguageIsCorrect || !tempTSLanguageIsCorrect || !tempHHIsEnabled || !tempTSIsEnabled)
                         {
                             psClientsWithSettingsMismatch.Add(dir.Name);
+
+                            hhLanguageIsCorrect = hhLanguageIsCorrect && tempHHLanguageIsCorrect;
+                            tsLanguageIsCorrect = tsLanguageIsCorrect && tempTSLanguageIsCorrect;
+                            hhIsEnabled = hhIsEnabled && tempHHIsEnabled;
+                            tsIsEnabled = tsIsEnabled && tempTSIsEnabled;
                         }
                     }
                 }
@@ -153,8 +164,28 @@ namespace Model.Site
 
             if (psClientsWithSettingsMismatch.Any())
             {
+                var stringBuilder = new StringBuilder();
+
+                //todo: move to resources
+                if (!hhIsEnabled)
+                {
+                    stringBuilder.AppendLine("- Enable the \"Save My Hands History\" options setting in the poker client.");
+                }
+                if (!tsIsEnabled)
+                {
+                    stringBuilder.AppendLine("- Enable the \"Save my Tournament Summaries\" options setting in the poker client.");
+                }
+                if (!hhLanguageIsCorrect)
+                {
+                    stringBuilder.AppendLine("- \"English\" is selected as your language for Hand History formatting in the poker client.");
+                }
+                if (!tsLanguageIsCorrect)
+                {
+                    stringBuilder.AppendLine("- \"English\" is selected as your language for Tournament Summaries formatting in the poker client.");
+                }
+
                 var resultString = String.Format(CommonResourceManager.Instance.GetResourceString("Main_SiteSettingsMismatch_PokerStars"),
-                    string.Join(", ", psClientsWithSettingsMismatch));
+                    string.Join(", ", psClientsWithSettingsMismatch), stringBuilder.ToString());
 
                 var hyperLink = CommonResourceManager.Instance.GetResourceString("SystemSettings_SiteSetup_PokerStars");
 
