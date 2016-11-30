@@ -151,6 +151,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to http://drivehud.com/blog/manual/#document-21.
+        /// </summary>
+        internal static string SystemSettings_SiteSetup_PokerStars {
+            get {
+                return ResourceManager.GetString("SystemSettings_SiteSetup_PokerStars", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to support@drivehud.com.
         /// </summary>
         internal static string SystemSettings_SupportEmail {

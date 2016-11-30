@@ -1091,6 +1091,7 @@ namespace DriveHUD.Application.ViewModels
             PopupActionNotification confirmation = new PopupActionNotification();
             confirmation.Title = obj.Title;
             confirmation.Content = obj.Message;
+            confirmation.HyperLinkText = obj.HyperLink;
 
             NotificationRequest.Raise(confirmation);
         }

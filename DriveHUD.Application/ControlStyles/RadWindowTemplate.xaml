@@ -463,7 +463,12 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <TextBlock Grid.Row="0" Text="{Binding Path=Content}" Margin="25" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap" Style="{StaticResource Title_H1}" />
+            <TextBlock Grid.Row="0" Margin="10 25" HorizontalAlignment="Stretch" VerticalAlignment="Center" TextWrapping="Wrap" Style="{StaticResource Title_H1}">
+                <Run Text="{Binding Path=Content}" />
+                <Hyperlink Command="{Binding OpenHyperLinkCommand}" IsEnabled="{Binding Path=IsHyperLinkPresent}">
+                    <Run Text="{Binding Path=HyperLinkText}" />
+                </Hyperlink>
+            </TextBlock>
             <Button Grid.Row="1" Content="{ResX Common_OK}" Command="{Binding CloseCommand}" Margin="0 0 25 10" Width="120" Height="30" HorizontalAlignment="Right">
             </Button>
         </Grid>

@@ -421,7 +421,7 @@ namespace DriveHUD.Application.ViewModels
 
                     UpdateActiveLayout();
 
-                    RaisePropertyChanged(() => HudType);
+                    TableUpdate?.Invoke(this, new EventArgs());
                 });
 
             this.ObservableForProperty(x => x.HudViewType).Select(x => true)
@@ -503,6 +503,7 @@ namespace DriveHUD.Application.ViewModels
         #region Properties
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
+        public event EventHandler TableUpdate;
 
         private bool isStarted;
 
@@ -912,7 +913,7 @@ namespace DriveHUD.Application.ViewModels
                 LayoutId = CurrentViewModelHash,
                 Name = hudSelectLayoutViewModel.Name,
                 HudTable = HudTableViewModelCurrent,
-                Stats = StatInfoObserveCollection
+                Stats = StatInfoObserveCollection,
             };
 
             var savedLayout = hudLayoutsSevice.SaveAs(hudData);
@@ -937,7 +938,7 @@ namespace DriveHUD.Application.ViewModels
                     LayoutId = currentLayout.LayoutId,
                     Name = currentLayout.Name,
                     HudTable = HudTableViewModelDictionary[currentLayout.LayoutId],
-                    Stats = StatInfoObserveCollection
+                    Stats = StatInfoObserveCollection,
                 };
 
                 hudLayoutsSevice.Export(hudData, saveFileDialog.FileName);
@@ -1053,7 +1054,7 @@ namespace DriveHUD.Application.ViewModels
                 LayoutId = currentLayout.LayoutId,
                 Name = currentLayout.Name,
                 HudTable = HudTableViewModelDictionary[currentLayout.LayoutId],
-                Stats = StatInfoObserveCollection
+                Stats = StatInfoObserveCollection,
             };
 
             hudLayoutsSevice.Save(hudData);
