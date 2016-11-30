@@ -10,6 +10,7 @@ using Microsoft.Practices.Unity;
 using Model;
 using Model.Interfaces;
 using Model.Settings;
+using Prism.Events;
 using ProtoBuf.Meta;
 using System;
 using System.Collections.Generic;
@@ -60,6 +61,7 @@ namespace DriveHUD.HUD
 
             unityContainer = new UnityContainer();
 
+            unityContainer.RegisterType<IEventAggregator, EventAggregator>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IHudServiceHost, HudServiceHost>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));

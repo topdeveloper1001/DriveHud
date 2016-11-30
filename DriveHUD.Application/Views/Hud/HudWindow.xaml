@@ -29,7 +29,7 @@
                         <telerik:RadMenuItem Header="{ResX Key=Enum_HandExport_PokerStrategy}"/>
                         <telerik:RadMenuItem Header="{ResX Key=Enum_HandExport_RawHandHistory}"/>
                     </telerik:RadMenuItem>
-                    <telerik:RadMenuItem Header="{ResX Main_ContextMenu_ReplayLastHand}" />
+                    <telerik:RadMenuItem Header="{ResX Main_ContextMenu_ReplayLastHand}" Click="ReplayLastHand_Click" />
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_SaveHudPosition}" />
                     <telerik:RadMenuItem x:Name="rmiLoadHud" Header="{ResX Main_ContextMenu_LoadHud}" />
                 </telerik:RadContextMenu>

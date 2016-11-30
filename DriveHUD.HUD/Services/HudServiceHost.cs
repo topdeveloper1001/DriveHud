@@ -1,6 +1,8 @@
 ﻿using DriveHUD.Common.Log;
 using Microsoft.Practices.ServiceLocation;
+using Model.Events.HudEvents;
 using Model.Settings;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -20,6 +22,8 @@ namespace DriveHUD.HUD.Services
         {
             try
             {
+                ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<HudCommandEvent>().Subscribe(OnHudCommandEvent);
+
                 _settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
                 _serviceHost = new ServiceHost(typeof(HudNamedPipeBindingService));
@@ -62,6 +66,14 @@ namespace DriveHUD.HUD.Services
         {
             LogProvider.Log.Info("Service Faulted.");
             ShutDown();
+        }
+
+        private void OnHudCommandEvent(HudCommandEventArgs obj)
+        {
+            if (obj != null)
+            {
+                HudNamedPipeBindingService.RaiseCommand(obj.WindowId, obj.HudCommand, obj.CommandObject);
+            }
         }
 
         private void ShutDown()

@@ -15,6 +15,8 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
+using Model.Events.HudEvents;
+using Prism.Events;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -169,7 +171,7 @@ namespace DriveHUD.Application.Views
                 }
 
                 var positions = hudPanelCreator.CalculatePositions(viewModel, this);
- 
+
 
                 Canvas.SetLeft(hudPanel, positions.Item1);
                 Canvas.SetTop(hudPanel, positions.Item2);
@@ -236,5 +238,21 @@ namespace DriveHUD.Application.Views
 
             return viewModel.Seat + (viewModel.HudType == HudType.Default ? 0 : 100);
         }
+
+        #region 
+
+        private void ReplayLastHand_Click(object sender, Telerik.Windows.RadRoutedEventArgs e)
+        {
+            var id = Layout?.WindowId;
+            if (id.HasValue)
+            {
+                ServiceLocator.Current.GetInstance<IEventAggregator>()
+                    .GetEvent<HudCommandEvent>()
+                    .Publish(new HudCommandEventArgs(id.Value, HUD.Service.EnumCommand.ReplayLastHand));
+            }
+
+        }
+
+        #endregion
     }
 }

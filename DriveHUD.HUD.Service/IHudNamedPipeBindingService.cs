@@ -24,6 +24,21 @@ namespace DriveHUD.HUD.Service
     public interface IHudNamedPipeBindingCallbackService
     {
         [OperationContract(IsOneWay = true)]
-        void Message(string test);
+        void ProcessHudCommand(int windowId, EnumCommand command, object obj);
     }
+
+    [DataContract]
+    public enum EnumCommand
+    {
+        [EnumMember]
+        TagLastHand,
+        [EnumMember]
+        ExportLastHand,
+        [EnumMember]
+        ReplayLastHand,
+        [EnumMember]
+        SaveHudPosition,
+    }
+
+
 }

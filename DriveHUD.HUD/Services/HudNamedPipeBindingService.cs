@@ -64,5 +64,10 @@ namespace DriveHUD.HUD.Services
                 LogProvider.Log.Error(this, "HUD service failed to read data", e);
             }
         }
+
+        internal static void RaiseCommand(int windowId, EnumCommand command, object obj)
+        {
+            _callback.ProcessHudCommand(windowId, command, obj);
+        }
     }
 }

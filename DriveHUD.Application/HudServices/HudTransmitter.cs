@@ -232,9 +232,9 @@ namespace DriveHUD.Application.HudServices
 
         #region IHudNamedPipeBindingCallbackService
 
-        public void Message(string test)
+        public void ProcessHudCommand(int windowId, EnumCommand command, object obj)
         {
-            LogProvider.Log.Info("Message received: " + test);
+            LogProvider.Log.Info(this, $"ProcessHudCommand: windowId: {windowId}, HudCommand: {command}, obj: {obj}");
         }
 
         #endregion
