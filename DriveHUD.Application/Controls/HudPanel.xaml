@@ -70,6 +70,7 @@
                       HorizontalAlignment="Right" VerticalAlignment="Top" 
                       Width="20" Margin="0 -10 -10 0"
                       Stretch="Uniform" Fill="{StaticResource ForegroundBrush}"
+                      ToolTip="{Binding NoteToolTip}"
                       Visibility="{Binding IsNoteIconVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <ItemsControl ItemsSource="{Binding Stickers}"  Margin="0 -10 0 0">
                     <ItemsControl.ItemsPanel>
