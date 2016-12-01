@@ -227,10 +227,10 @@ namespace DriveHUD.Importers
                 {
                     gameInfo.WindowHandle = FindWindow(result).ToInt32();
                 }
-
                 gameInfo.GameFormat = ParseGameFormat(result);
                 gameInfo.GameType = ParseGameType(result);
                 gameInfo.TableType = ParseTableType(result);
+                gameInfo.GameNumber = result.HandHistory.Gamenumber;
 
                 var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo);
 

@@ -235,6 +235,21 @@ namespace DriveHUD.Application.HudServices
         public void ProcessHudCommand(int windowId, EnumCommand command, object obj)
         {
             LogProvider.Log.Info(this, $"ProcessHudCommand: windowId: {windowId}, HudCommand: {command}, obj: {obj}");
+
+            switch (command)
+            {
+                case EnumCommand.TagLastHand:
+
+                    break;
+                case EnumCommand.ExportLastHand:
+                    break;
+                case EnumCommand.ReplayLastHand:
+                    break;
+                case EnumCommand.SaveHudPosition:
+                    break;
+                default:
+                    break;
+            }
         }
 
         #endregion

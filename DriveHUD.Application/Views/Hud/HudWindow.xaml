@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:ctrl="clr-namespace:DriveHUD.Application.Controls"
         xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
+        xmlns:enum="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
         ResizeMode="NoResize"
         WindowStyle="None"        
         ShowInTaskbar="False" 
@@ -18,10 +19,10 @@
             <telerik:RadContextMenu.ContextMenu>
                 <telerik:RadContextMenu>
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_TagLastHand}">
-                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandTag_ForReview}"/>
-                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandTag_Bluff}"/>
-                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandTag_HeroCall}"/>
-                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandTag_BigFold}"/>
+                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandTag_ForReview}" Tag="{x:Static enum:EnumHandTag.ForReview}" Click="TagHand_Click"/>
+                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandTag_Bluff}" Tag="{x:Static enum:EnumHandTag.Bluff}" Click="TagHand_Click"/>
+                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandTag_HeroCall}" Tag="{x:Static enum:EnumHandTag.HeroCall}" Click="TagHand_Click"/>
+                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandTag_BigFold}" Tag="{x:Static enum:EnumHandTag.BigFold}" Click="TagHand_Click"/>
                     </telerik:RadMenuItem>
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_ExportLastHand}">
                         <telerik:RadMenuItem Header="{ResX Key=Enum_HandExport_TwoPlusTwo}"/>

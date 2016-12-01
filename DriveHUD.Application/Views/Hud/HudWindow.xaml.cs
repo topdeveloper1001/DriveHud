@@ -13,14 +13,23 @@
 using DriveHUD.Application.Controls;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Events.HudEvents;
+using Model.Interfaces;
 using Prism.Events;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.Views
 {
@@ -29,6 +38,8 @@ namespace DriveHUD.Application.Views
     /// </summary>
     public partial class HudWindow : Window
     {
+        private ReaderWriterLockSlim readerWriterLock;
+
         private IHudPanelService hudPanelCreator;
 
         private Dictionary<int, Point> panelOffsets;
@@ -40,6 +51,7 @@ namespace DriveHUD.Application.Views
         {
             InitializeComponent();
 
+            readerWriterLock = new ReaderWriterLockSlim();
             panelOffsets = new Dictionary<int, Point>();
         }
 
@@ -61,60 +73,63 @@ namespace DriveHUD.Application.Views
 
         public void Init(HudLayout layout)
         {
-            Layout?.Cleanup();
-            Layout = layout;
-
-            if (layout != null && layout.TableHud != null && layout.TableHud.TableLayout != null)
+            using (var write = readerWriterLock.Write())
             {
-                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.TableHud.TableLayout.Site.ToString());
-            }
-            else
-            {
-                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>();
-            }
+                Layout?.Cleanup();
+                Layout = layout;
 
-            foreach (var panel in dgCanvas.Children.OfType<FrameworkElement>().ToList())
-            {
-                var hudElementViewModel = panel.DataContext as HudElementViewModel;
-
-                if (hudElementViewModel != null)
+                if (layout != null && layout.TableHud != null && layout.TableHud.TableLayout != null)
                 {
-                    panelOffsets[GetPanelOffsetsKey(hudElementViewModel)] = new Point(hudElementViewModel.OffsetX, hudElementViewModel.OffsetY);
-                }
-
-                var hudTrackConditionsViewModel = panel.DataContext as HudTrackConditionsViewModel;
-
-                if (hudTrackConditionsViewModel != null)
-                {
-                    trackerConditionsMeterPositionOffset = new Point(hudTrackConditionsViewModel.OffsetX, hudTrackConditionsViewModel.OffsetY);
-                }
-
-                dgCanvas.Children.Remove(panel);
-            }
-
-            foreach (var playerHudContent in Layout.ListHUDPlayer)
-            {
-                if (playerHudContent.HudElement == null || string.IsNullOrEmpty(playerHudContent.Name))
-                {
-                    continue;
-                }
-
-                if (!panelOffsets.ContainsKey(GetPanelOffsetsKey(playerHudContent.HudElement)))
-                {
-                    panelOffsets.Add(GetPanelOffsetsKey(playerHudContent.HudElement), new Point(0, 0));
+                    hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.TableHud.TableLayout.Site.ToString());
                 }
                 else
                 {
-                    playerHudContent.HudElement.OffsetX = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].X;
-                    playerHudContent.HudElement.OffsetY = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].Y;
+                    hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>();
                 }
 
-                var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudType);
+                foreach (var panel in dgCanvas.Children.OfType<FrameworkElement>().ToList())
+                {
+                    var hudElementViewModel = panel.DataContext as HudElementViewModel;
 
-                dgCanvas.Children.Add(panel);
+                    if (hudElementViewModel != null)
+                    {
+                        panelOffsets[GetPanelOffsetsKey(hudElementViewModel)] = new Point(hudElementViewModel.OffsetX, hudElementViewModel.OffsetY);
+                    }
+
+                    var hudTrackConditionsViewModel = panel.DataContext as HudTrackConditionsViewModel;
+
+                    if (hudTrackConditionsViewModel != null)
+                    {
+                        trackerConditionsMeterPositionOffset = new Point(hudTrackConditionsViewModel.OffsetX, hudTrackConditionsViewModel.OffsetY);
+                    }
+
+                    dgCanvas.Children.Remove(panel);
+                }
+
+                foreach (var playerHudContent in Layout.ListHUDPlayer)
+                {
+                    if (playerHudContent.HudElement == null || string.IsNullOrEmpty(playerHudContent.Name))
+                    {
+                        continue;
+                    }
+
+                    if (!panelOffsets.ContainsKey(GetPanelOffsetsKey(playerHudContent.HudElement)))
+                    {
+                        panelOffsets.Add(GetPanelOffsetsKey(playerHudContent.HudElement), new Point(0, 0));
+                    }
+                    else
+                    {
+                        playerHudContent.HudElement.OffsetX = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].X;
+                        playerHudContent.HudElement.OffsetY = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].Y;
+                    }
+
+                    var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudType);
+
+                    dgCanvas.Children.Add(panel);
+                }
+
+                BuildTrackConditionsMeter(layout.HudTrackConditionsMeter);
             }
-
-            BuildTrackConditionsMeter(layout.HudTrackConditionsMeter);
         }
 
         public void Update()
@@ -170,11 +185,13 @@ namespace DriveHUD.Application.Views
                     hudPanel.Width = viewModel.Width * XFraction;
                 }
 
-                var positions = hudPanelCreator.CalculatePositions(viewModel, this);
+                using (var readToken = readerWriterLock.Read())
+                {
+                    var positions = hudPanelCreator.CalculatePositions(viewModel, this);
 
-
-                Canvas.SetLeft(hudPanel, positions.Item1);
-                Canvas.SetTop(hudPanel, positions.Item2);
+                    Canvas.SetLeft(hudPanel, positions.Item1);
+                    Canvas.SetTop(hudPanel, positions.Item2);
+                }
             }
         }
 
@@ -250,7 +267,53 @@ namespace DriveHUD.Application.Views
                     .GetEvent<HudCommandEvent>()
                     .Publish(new HudCommandEventArgs(id.Value, HUD.Service.EnumCommand.ReplayLastHand));
             }
+        }
 
+        private async void TagHand_Click(object sender, Telerik.Windows.RadRoutedEventArgs e)
+        {
+            var menuItem = sender as RadMenuItem;
+            if (menuItem?.Tag == null)
+            {
+                return;
+            }
+
+            EnumHandTag tag = EnumHandTag.None;
+
+            if (!Enum.TryParse(menuItem.Tag.ToString(), out tag))
+            {
+                return;
+            }
+
+            await Task.Run(() =>
+            {
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
+                long gameNumber = 0;
+                short pokerSiteId = 0;
+
+                using (var readToken = readerWriterLock.Read())
+                {
+                    if (Layout == null)
+                    {
+                        return;
+                    }
+
+                    gameNumber = Layout.GameNumber;
+                    pokerSiteId = Layout.PokerSiteId;
+                }
+
+                var handNote = dataService.GetHandNote(gameNumber, pokerSiteId);
+                if (handNote == null)
+                {
+                    handNote = new Handnotes()
+                    {
+                        Gamenumber = gameNumber,
+                        PokersiteId = pokerSiteId
+                    };
+                }
+                handNote.CategoryId = (int)tag;
+                dataService.Store(handNote);
+            });
         }
 
         #endregion

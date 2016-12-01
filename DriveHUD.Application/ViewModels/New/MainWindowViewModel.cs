@@ -298,7 +298,9 @@ namespace DriveHUD.Application.ViewModels
                 {
                     WindowId = gameInfo.WindowHandle,
                     HudType = site == EnumPokerSites.Ignition ? HudViewModel.HudType : HudType.Plain,
-                    TableType = gameInfo.TableType
+                    TableType = gameInfo.TableType,
+                    PokerSiteId = (short)gameInfo.PokerSite,
+                    GameNumber = gameInfo.GameNumber,
                 };
 
                 var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);

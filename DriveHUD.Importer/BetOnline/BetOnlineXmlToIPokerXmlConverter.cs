@@ -282,6 +282,7 @@ namespace DriveHUD.Importers.BetOnline
 
             gameInfo.Session = sessionCode;
             gameInfo.WindowHandle = windowHandle;
+            gameInfo.GameNumber = (long)handNumber;
 
             if (site != EnumPokerSites.Unknown)
             {
