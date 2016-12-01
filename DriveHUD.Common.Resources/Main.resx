@@ -175,12 +175,11 @@
     <value>All</value>
   </data>
   <data name="Main_SiteSettingsMismatch_PokerStars" xml:space="preserve">
-    <value>DriveHUD found a mismatch in settings for next poker client(s): {0} 
+    <value>DriveHUD found a potential settings problem for the following poker client(s): {0}
 
-Please make sure that: 
-"Save My Hands History" option is enabled.
-"Save my Tournament Summaries" option is enabled.
-"English" is selected as your language for Hand Histories.
-"English" is selected as your language for Tournament Summaries.</value>
+Please make sure to:
+{1}
+
+For more infromation on  how to enable these settings, please see the following link:</value>
   </data>
 </root>

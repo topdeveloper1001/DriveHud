@@ -64,19 +64,33 @@ namespace DriveHUD.Application.Views
 
             this.DataContextChanged += (_o, _e) =>
             {
-                reportGadgetViewModel = (ReportGadgetViewModel)this.DataContext;
-                InitContextMenu();
+                try
+                {
+                    reportGadgetViewModel = (ReportGadgetViewModel)this.DataContext;
+                    InitContextMenu();
 
-                reportGadgetViewModel.PropertyChanged += ReportGadgetViewModel_PropertyChanged;
-                LoadData();
-                ReportUpdate();
+                    reportGadgetViewModel.PropertyChanged += ReportGadgetViewModel_PropertyChanged;
+                    LoadData();
+                    ReportUpdate();
+                }
+                catch (Exception ex)
+                {
+                    LogProvider.Log.Error(ex);
+                }
             };
 
             this.Unloaded += (_o, _e) =>
             {
-                GridLayoutSave(GridViewKnownHands, "HandGridLayout.data");
+                try
+                {
+                    GridLayoutSave(GridViewKnownHands, "HandGridLayout.data");
 
-                ReportLayoutSave();
+                    ReportLayoutSave();
+                }
+                catch(Exception ex)
+                {
+                    LogProvider.Log.Error(ex);
+                }
             };
         }
 
@@ -252,10 +266,17 @@ namespace DriveHUD.Application.Views
 
         private void ReportGadgetViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            if (e.PropertyName == nameof(ReportGadgetViewModel.ReportSelectedItemStat))
+            try
             {
-                ReportLayoutSave();
-                ReportUpdate();
+                if (e.PropertyName == nameof(ReportGadgetViewModel.ReportSelectedItemStat))
+                {
+                    ReportLayoutSave();
+                    ReportUpdate();
+                }
+            }
+            catch(Exception ex)
+            {
+                LogProvider.Log.Error(ex);
             }
         }
 

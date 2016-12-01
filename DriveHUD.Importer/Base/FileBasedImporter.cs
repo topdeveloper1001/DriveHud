@@ -16,6 +16,7 @@ using DriveHUD.Common.Progress;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
@@ -144,7 +145,7 @@ namespace DriveHUD.Importers
                             {
                                 PokerSite = siteName,
                                 Session = cf.Value.Session,
-                                TournamentSpeed = ParserUtils.ParseTournamentSpeed(fileName)
+                                TournamentSpeed = ParserUtils.ParseNullableTournamentSpeed(fileName, null),
                             };
 
                             LogProvider.Log.Info(string.Format("Found '{0}' file.", cf.Key));

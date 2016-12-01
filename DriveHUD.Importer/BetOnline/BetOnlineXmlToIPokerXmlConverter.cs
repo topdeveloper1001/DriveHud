@@ -54,6 +54,7 @@ namespace DriveHUD.Importers.BetOnline
         private GameInfo gameInfo;
 
         private int maxPlayers = 10;
+        private string sessionCode = string.Empty;
 
         public BetOnlineXmlToIPokerXmlConverter()
         {
@@ -97,6 +98,8 @@ namespace DriveHUD.Importers.BetOnline
                 {
                     PokerSite = EnumPokerSites.BetOnline
                 };
+
+                sessionCode = BuildSessionCode();
 
                 var handHistory = BuildHandHistory();
 
@@ -226,29 +229,65 @@ namespace DriveHUD.Importers.BetOnline
             return hasNewHand && hasEndHand;
         }
 
+        private string BuildSessionCode()
+        {
+            var sessionIdentifier = string.Empty;
+
+            if (isTournament)
+            {
+                var entryIdNode = tableDetails.GetFirstElement("TournamentTable").Attribute("entryId");
+
+                if (entryIdNode != null)
+                {
+                    sessionIdentifier = entryIdNode.Value;
+                }
+            }
+
+            if (string.IsNullOrEmpty(sessionIdentifier))
+            {
+                sessionIdentifier = tableDetails.Attribute("id").Value;
+            }
+
+            var identifierCleaned = sessionIdentifier.Replace("-", string.Empty);
+
+            long sessionCode;
+
+            if (long.TryParse(identifierCleaned, NumberStyles.HexNumber, CultureInfo.InvariantCulture, out sessionCode))
+            {
+                return sessionCode.ToString();
+            }
+
+            return string.Empty;
+        }
+
         /// <summary>
         /// Builds hand history object based on base xml 
         /// </summary>
         /// <returns>Hand history object</returns>
         private HandHistory BuildHandHistory()
         {
-            var tableId = isTournament ? GetTournamentName() : GetTableName();
+            var general = BuildGeneral();
+            var games = new List<Game> { BuildGame() };
+
+            var handNumber = games[0].GameCode;
 
             EnumPokerSites site;
 
-            var sessionCode = tableService.GetSessionCode(tableId, out site);
+            var windowHandle = tableService.GetWindowHandle(handNumber, out site);
 
-            gameInfo.Session = sessionCode.ToString();
-            gameInfo.WindowHandle = sessionCode;
+            if (string.IsNullOrEmpty(sessionCode))
+            {
+                sessionCode = windowHandle.ToString();
+            }
+
+            gameInfo.Session = sessionCode;
+            gameInfo.WindowHandle = windowHandle;
 
             if (site != EnumPokerSites.Unknown)
             {
                 gameInfo.PokerSite = site;
             }
-
-            var general = BuildGeneral();
-            var games = new List<Game> { BuildGame() };
-
+          
             var handHistory = new HandHistory
             {
                 SessionCode = sessionCode,

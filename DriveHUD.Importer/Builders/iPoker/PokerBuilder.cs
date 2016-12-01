@@ -630,7 +630,7 @@ namespace DriveHUD.Importers.Builders.iPoker
 
             var handHistory = new HandHistory
             {
-                SessionCode = handModel.Handle.ToInt32(),
+                SessionCode = handModel.Handle.ToInt32().ToString(),
                 General = general
             };
 
@@ -642,12 +642,7 @@ namespace DriveHUD.Importers.Builders.iPoker
             var gameTableType = GetGameTypeString(handModel.GameType, handModel.GameLimit);
 
             if (handModel.CashOrTournament != CashOrTournament.Tournament)
-            {
-                //if (handModel.GameType == GameType.Omaha)
-                //{
-                //    return GetOmahaGameTypeString(gameTableType);
-                //}
-
+            {           
                 return GetHoldemGameTypeString(gameTableType);
             }
 
