@@ -102,7 +102,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
                                         SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.AmericasCardroom)?.PrefferedSeats;
 
-                var prefferedSeat = preferredSeats.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
+                var prefferedSeat = preferredSeats?.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
 
                 if (prefferedSeat != null)
                 {

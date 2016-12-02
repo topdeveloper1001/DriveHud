@@ -99,7 +99,7 @@ namespace DriveHUD.Importers.Pacific888
                 var preferredSeats = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().
                                         SiteSettings.SitesModelList.FirstOrDefault(x => x.PokerSite == EnumPokerSites.Poker888)?.PrefferedSeats;
 
-                var prefferedSeat = preferredSeats.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
+                var prefferedSeat = preferredSeats?.FirstOrDefault(x => (int)x.TableType == maxPlayers && x.IsPreferredSeatEnabled);
 
                 if (prefferedSeat != null)
                 {
