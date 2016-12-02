@@ -126,7 +126,7 @@ namespace DriveHUD.HUD
 
         public static void UpdateHud(HudLayout hudLayout)
         {
-            LogProvider.Log.Info(string.Format("Memory usage before updating HUD: {0:N0}", GC.GetTotalMemory(false)));
+            // LogProvider.Log.Info(string.Format("Memory usage before updating HUD: {0:N0}", GC.GetTotalMemory(false)));
 
             if (hudLayout == null || hudLayout.TableHud == null || hudLayout.TableHud.TableLayout == null)
             {
@@ -204,7 +204,7 @@ namespace DriveHUD.HUD
 
             window.Update();
 
-            LogProvider.Log.Info(string.Format("Memory usage after updating HUD: {0:N0}", GC.GetTotalMemory(false)));
+            // LogProvider.Log.Info(string.Format("Memory usage after updating HUD: {0:N0}", GC.GetTotalMemory(false)));
         }
 
         public static void ReleaseHook()
@@ -249,9 +249,7 @@ namespace DriveHUD.HUD
 
             var window = windows[hwnd];
             windows.Remove(hwnd);
-            window.Window.Close();
-
-            LogProvider.Log.Info(string.Format("Memory usage before freeing resources: {0:N0}", GC.GetTotalMemory(false)));
+            window.Window.Close();            
 
             GC.Collect();
 
