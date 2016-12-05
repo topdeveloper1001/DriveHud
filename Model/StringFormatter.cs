@@ -26,7 +26,7 @@ namespace Model
 
         public static string GetProcessedDataFolderPath()
         {
-            return Path.Combine(SettingsService.GetSettings().SiteSettings.CustomProcessedDataLocation);
+            return Path.Combine(SettingsService.GetSettings().SiteSettings.ProcessedDataLocation);
         }
 
         public static string GetPlayersDataFolderPath()
@@ -59,7 +59,7 @@ namespace Model
 
         public static string GetConnectionString(string server, string port, string database, string user, string password)
         {
-            return string.Format("Server={0};Port={1};Database={2};User Id={3};Password={4};", server, port, database, user, password);
+            return string.Format("Server={0};Port={1};Database={2};User Id={3};Password={4};Persist Security Info=true;", server, port, database, user, password);
         }
     }
 }

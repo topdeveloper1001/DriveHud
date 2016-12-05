@@ -159,4 +159,12 @@
   <data name="Main_ReportGadgetView_LastAll" xml:space="preserve">
     <value>All</value>
   </data>
+  <data name="Main_SiteSettingsMismatch_PokerStars" xml:space="preserve">
+    <value>DriveHUD found a potential settings problem for the following poker client(s): {0}
+
+Please make sure to:
+{1}
+
+For more infromation on  how to enable these settings, please see the following link:</value>
+  </data>
 </root>

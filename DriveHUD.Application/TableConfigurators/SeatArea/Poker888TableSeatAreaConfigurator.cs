@@ -86,7 +86,6 @@ namespace DriveHUD.Application.TableConfigurators
                 new TableSeatArea(2, 568, 406, 0, 406, "M1,0L0,0.5 1,1z"),
                 new TableSeatArea(3, 284, 812, 284, 0, "M0,1L0.5,0 1,1z"),
                 new TableSeatArea(4, 568, 406, 0, 0, "M0,0L1,0.5 0,1z"),
-
             };
         }
 

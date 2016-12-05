@@ -75,6 +75,7 @@ namespace DriveHUD.Importers
             importerService.Register<IBetOnlineCatcher>();
             importerService.Register<IBetOnlineImporter>();
             importerService.Register<IBetOnlineTournamentImporter>();
+            importerService.Register<IBetOnlineTableService>();
             importerService.Register<IPokerStarsImporter>();
             importerService.Register<IAmericasCardroomImporter>();
             importerService.Register<IPacific888Importer>();

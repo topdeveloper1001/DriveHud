@@ -24,13 +24,13 @@ namespace HandHistories.Parser.Utils.FastParsing
     {
         public static TournamentSpeed ParseTournamentSpeed(string input)
         {
-            if (input.IndexOf("Super Turbo", StringComparison.InvariantCultureIgnoreCase) > 0 ||
-                  input.IndexOf("Hyper-Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            if (input.IndexOf("Super Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
             {
                 return TournamentSpeed.SuperTurbo;
             }
 
-            if (input.IndexOf("Hyper Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            if (input.IndexOf("Hyper Turbo", StringComparison.InvariantCultureIgnoreCase) > 0 ||
+                  input.IndexOf("Hyper-Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
             {
                 return TournamentSpeed.HyperTurbo;
             }
@@ -41,6 +41,27 @@ namespace HandHistories.Parser.Utils.FastParsing
             }
 
             return TournamentSpeed.Regular;
+        }
+
+        public static TournamentSpeed? ParseNullableTournamentSpeed(string input, TournamentSpeed? defaultValue = TournamentSpeed.Regular)
+        {
+            if (input.IndexOf("Super Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            {
+                return TournamentSpeed.SuperTurbo;
+            }
+
+            if (input.IndexOf("Hyper Turbo", StringComparison.InvariantCultureIgnoreCase) > 0 ||
+                  input.IndexOf("Hyper-Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            {
+                return TournamentSpeed.HyperTurbo;
+            }
+
+            if (input.IndexOf("Turbo", StringComparison.InvariantCultureIgnoreCase) > 0)
+            {
+                return TournamentSpeed.Turbo;
+            }
+
+            return defaultValue;
         }
 
         private static readonly Regex MoneyRegex = new Regex(@"^(?<currency1>[^\d]+)?\s?(?<money>\d+(?:\.\d+)?)\s?(?<currency2>[^\.\d]+)?$", RegexOptions.Compiled);

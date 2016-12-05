@@ -21,7 +21,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
 
-            settings.SiteSettings.CustomProcessedDataLocation = Path.Combine(StringFormatter.GetAppDataFolderPath(), "ProcessedData");
+            settings.SiteSettings.ProcessedDataLocation = Path.Combine(StringFormatter.GetAppDataFolderPath(), "ProcessedData");
 
             ServiceLocator.Current.GetInstance<ISettingsService>().SaveSettings(settings);
 

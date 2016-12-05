@@ -48,6 +48,7 @@ using ProtoBuf;
 using System.Collections.Concurrent;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Common.WinApi;
+using Model.Site;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -62,6 +63,8 @@ namespace DriveHUD.Application.ViewModels
         private IImporterSessionCacheService importerSessionCacheService;
 
         private IFilterModelManagerService filterModelManager;
+
+        private bool isAdvancedLoggingEnabled = false;
 
         #endregion
 
@@ -81,6 +84,7 @@ namespace DriveHUD.Application.ViewModels
             eventAggregator.GetEvent<DataImportedEvent>().Subscribe(OnDataImported, ThreadOption.BackgroundThread, false);
             eventAggregator.GetEvent<SettingsUpdatedEvent>().Subscribe(HandleSettingsChangedEvent);
             eventAggregator.GetEvent<UpdateViewRequestedEvent>().Subscribe(UpdateCurrentView);
+            eventAggregator.GetEvent<MainNotificationEvent>().Subscribe(RaiseNotification);
 
             InitializeFilters();
             InitializeData();
@@ -127,6 +131,7 @@ namespace DriveHUD.Application.ViewModels
             PopupFiltersRequest = new InteractionRequest<PopupContainerFiltersViewModelNotification>();
             PopupSupportRequest = new InteractionRequest<INotification>();
             RegistrationViewRequest = new InteractionRequest<INotification>();
+            NotificationRequest = new InteractionRequest<INotification>();
         }
 
         private void InitializeFilters()
@@ -154,6 +159,9 @@ namespace DriveHUD.Application.ViewModels
         internal void StartHud(bool switchViewModel = true)
         {
             LogProvider.Log.Info(string.Format("Memory before starting auto import: {0:N0}", GC.GetTotalMemory(false)));
+
+            var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            isAdvancedLoggingEnabled = settingsModel.GeneralSettings.IsAdvancedLoggingEnabled;
 
             if (switchViewModel)
             {
@@ -514,9 +522,7 @@ namespace DriveHUD.Application.ViewModels
                         serialized = msTestString.ToArray();
                     }
 
-                    var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
-
-                    if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                    if (isAdvancedLoggingEnabled)
                     {
                         LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
                     }
@@ -524,7 +530,7 @@ namespace DriveHUD.Application.ViewModels
                     var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
                     hudTransmitter.Send(serialized);
 
-                    if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                    if (isAdvancedLoggingEnabled)
                     {
                         LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                     }
@@ -1039,6 +1045,7 @@ namespace DriveHUD.Application.ViewModels
 
         public InteractionRequest<INotification> PopupSupportRequest { get; private set; }
         public InteractionRequest<INotification> RegistrationViewRequest { get; private set; }
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         private void PopupSettingsRequest_Execute(PubSubMessage pubSubMessage)
         {
@@ -1068,6 +1075,21 @@ namespace DriveHUD.Application.ViewModels
 
             this.PopupFiltersRequest.Raise(notification,
                 returned => { });
+        }
+
+        private void RaiseNotification(MainNotificationEventArgs obj)
+        {
+            if (obj == null)
+            {
+                return;
+            }
+
+            PopupActionNotification confirmation = new PopupActionNotification();
+            confirmation.Title = obj.Title;
+            confirmation.Content = obj.Message;
+            confirmation.HyperLinkText = obj.HyperLink;
+
+            NotificationRequest.Raise(confirmation);
         }
 
         private class HudTrackConditionsMeterData

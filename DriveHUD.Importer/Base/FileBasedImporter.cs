@@ -16,6 +16,7 @@ using DriveHUD.Common.Progress;
 using DriveHUD.Common.Utils;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
+using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Hand;
 using HandHistories.Objects.Players;
 using HandHistories.Parser.Parsers;
@@ -90,7 +91,7 @@ namespace DriveHUD.Importers
 
                             try
                             {
-                                encoding = EncodingDetector.DetectTextFileEncoding(fs, 0x10000);
+                                encoding = EncodingDetector.DetectTextFileEncoding(fs, 0x10000) ?? Encoding.UTF8;
                             }
                             catch (Exception ex)
                             {
@@ -103,7 +104,7 @@ namespace DriveHUD.Importers
                             var capturedFile = new CapturedFile
                             {
                                 FileStream = fs,
-                                Session = GenerateSession(),
+                                Session = GetSessionForFile(hh.FullName),
                                 Encoding = encoding
                             };
 
@@ -144,7 +145,7 @@ namespace DriveHUD.Importers
                             {
                                 PokerSite = siteName,
                                 Session = cf.Value.Session,
-                                TournamentSpeed = ParserUtils.ParseTournamentSpeed(fileName)
+                                TournamentSpeed = ParserUtils.ParseNullableTournamentSpeed(fileName, null),
                             };
 
                             LogProvider.Log.Info(string.Format("Found '{0}' file.", cf.Key));
@@ -278,24 +279,37 @@ namespace DriveHUD.Importers
 
         protected virtual void Clean()
         {
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+
+            var isMove = settings.SiteSettings.IsProcessedDataLocationEnabled;
+            var moveLocation = settings.SiteSettings.ProcessedDataLocation;
+
             foreach (var capturedFile in capturedFiles)
             {
                 capturedFile.Value.FileStream.Close();
 
-                try
+                if (isMove)
                 {
-                    File.Delete(capturedFile.Key);
-                }
-                catch
-                {
-                    LogProvider.Log.Warn(string.Format("File {0} could not be deleted", capturedFile.Key));
+                    try
+                    {
+                        if (!Directory.Exists(moveLocation))
+                        {
+                            Directory.CreateDirectory(moveLocation);
+                        }
+
+                        File.Move(capturedFile.Key, Path.Combine(moveLocation, new FileInfo(capturedFile.Key).Name));
+                    }
+                    catch (Exception ex)
+                    {
+                        LogProvider.Log.Warn(string.Format("File {0} could not be moved: {1}", capturedFile.Key, ex.Message));
+                    }
                 }
             }
 
             capturedFiles.Clear();
         }
 
-        protected virtual string GenerateSession()
+        protected virtual string GetSessionForFile(string fileName)
         {
             var random = RandomProvider.GetThreadRandom();
             var session = random.Next(100000, 999999);

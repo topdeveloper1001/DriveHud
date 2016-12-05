@@ -15,10 +15,10 @@ namespace Model.Settings
     public class SiteSettingsModel : SettingsBase
     {
         [XmlAttribute]
-        public bool IsCustomProcessedDataLocationEnabled { get; set; }
+        public bool IsProcessedDataLocationEnabled { get; set; }
 
         [XmlAttribute]
-        public string CustomProcessedDataLocation { get; set; }
+        public string ProcessedDataLocation { get; set; }
 
         [XmlArray]
         public SiteModel[] SitesModelList { get; set; }
@@ -30,8 +30,8 @@ namespace Model.Settings
 
         private void SetDefaults()
         {
-            IsCustomProcessedDataLocationEnabled = false;
-            CustomProcessedDataLocation = Path.Combine(StringFormatter.GetAppDataFolderPath(), "ProcessedData");
+            IsProcessedDataLocationEnabled = true;
+            ProcessedDataLocation = Path.Combine(StringFormatter.GetAppDataFolderPath(), "ProcessedData");
 
             var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars, EnumPokerSites.Poker888, EnumPokerSites.AmericasCardroom };
             SitesModelList = sites.Select(x => new SiteModel

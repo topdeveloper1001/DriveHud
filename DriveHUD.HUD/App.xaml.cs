@@ -5,6 +5,8 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Services;
+using log4net;
+using log4net.Core;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model;
@@ -48,7 +50,7 @@ namespace DriveHUD.HUD
                 Shutdown();
                 return;
             }
-
+       
             var hudReceiver = ServiceLocator.Current.GetInstance<IHudReceiver>();
             hudReceiver.Initialize(args[1]);
             hudReceiver.Start();

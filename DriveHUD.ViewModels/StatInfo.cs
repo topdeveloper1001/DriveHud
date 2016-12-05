@@ -438,6 +438,7 @@ namespace DriveHUD.ViewModels
                 OnPropertyChanged();
 
                 SettingsAppearanceFontUnderline = value ? new TextDecorationCollection(TextDecorations.Underline) : null;
+                SettingsAppearanceFontUnderline?.Freeze();
             }
         }
 

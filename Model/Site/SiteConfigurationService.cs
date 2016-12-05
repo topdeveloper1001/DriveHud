@@ -16,6 +16,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Entities;
+using System;
 
 namespace Model.Site
 {
@@ -58,6 +59,17 @@ namespace Model.Site
                 {
                     throw new DHInternalException(new NonLocalizableString("Not supported site [{0}]", site));
                 }
+            }
+        }
+
+        /// <summary>
+        /// Checks the Poker Sites Validity
+        /// </summary>
+        public void ValidateSiteConfigurations()
+        {
+            foreach (var configuration in configurations)
+            {
+                configuration.ValidateSiteConfiguration();
             }
         }
 

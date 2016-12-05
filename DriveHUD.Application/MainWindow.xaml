@@ -791,6 +791,20 @@
             <ia:CallMethodAction MethodName="MainWindow_PreviewClosed" TargetObject="{Binding}"/>
         </i:EventTrigger>
 
+        <prism:InteractionRequestTrigger SourceObject="{Binding NotificationRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction IsModal="True" 
+                                            WindowContent="{StaticResource NotificationWindowContentTemplate}">
+                <infra:PopupTelerikWindowAction.WindowStyle>
+                    <Style TargetType="{x:Type telerik:RadWindow}" BasedOn="{StaticResource NotificationWindowStyle}">
+                        <Setter Property="Width" Value="500" />
+                        <Setter Property="MinHeight" Value="200" />
+                        <Setter Property="Height" Value="Auto" />
+                        <Setter Property="ResizeMode" Value="CanResize" />
+                    </Style>
+                </infra:PopupTelerikWindowAction.WindowStyle>
+            </infra:PopupTelerikWindowAction>
+        </prism:InteractionRequestTrigger>
+
         <prism:InteractionRequestTrigger SourceObject="{Binding Path=PopupSupportRequest, Mode=OneWay}">
             <infra:PopupTelerikWindowAction>
                 <infra:PopupTelerikWindowAction.WindowStyle>

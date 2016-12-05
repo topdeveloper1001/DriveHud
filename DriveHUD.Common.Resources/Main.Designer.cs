@@ -185,5 +185,19 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Main_ReportGadgetView_LastAll", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD found a potential settings problem for the following poker client(s): {0}
+        ///
+        ///Please make sure to:
+        ///{1}
+        ///
+        ///For more infromation on  how to enable these settings, please see the following link:.
+        /// </summary>
+        internal static string Main_SiteSettingsMismatch_PokerStars {
+            get {
+                return ResourceManager.GetString("Main_SiteSettingsMismatch_PokerStars", resourceCulture);
+            }
+        }
     }
 }
