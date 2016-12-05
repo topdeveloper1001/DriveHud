@@ -15,6 +15,7 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
@@ -25,7 +26,7 @@ namespace DriveHUD.Application.Views
     /// <summary>
     /// Interaction logic for HudWindow.xaml
     /// </summary>
-    public partial class HudWindow : Window
+    public partial class HudWindow : Window, IDisposable
     {
         private IHudPanelService hudPanelCreator;
 
@@ -90,6 +91,8 @@ namespace DriveHUD.Application.Views
                 dgCanvas.Children.Remove(panel);
             }
 
+            dgCanvas.UpdateLayout();
+
             foreach (var playerHudContent in Layout.ListHUDPlayer)
             {
                 if (playerHudContent.HudElement == null || string.IsNullOrEmpty(playerHudContent.Name))
@@ -113,6 +116,23 @@ namespace DriveHUD.Application.Views
             }
 
             BuildTrackConditionsMeter(layout.HudTrackConditionsMeter);
+        }
+
+        public void Dispose()
+        {
+            if (dgCanvas != null && dgCanvas.Children != null)
+            {
+                foreach (var panel in dgCanvas.Children.OfType<FrameworkElement>().ToList())
+                {
+                    dgCanvas.Children.Remove(panel);
+                }
+
+                dgCanvas.UpdateLayout();
+            }
+
+            NameScope.GetNameScope(this).UnregisterName("dgCanvas");
+
+            GC.Collect();
         }
 
         public void Update()
@@ -169,7 +189,7 @@ namespace DriveHUD.Application.Views
                 }
 
                 var positions = hudPanelCreator.CalculatePositions(viewModel, this);
- 
+
 
                 Canvas.SetLeft(hudPanel, positions.Item1);
                 Canvas.SetTop(hudPanel, positions.Item2);

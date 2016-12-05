@@ -15,6 +15,8 @@ using log4net;
 using log4net.Config;
 using System.IO;
 using log4net.Util;
+using log4net.Repository.Hierarchy;
+using log4net.Core;
 
 namespace DriveHUD.Common.Log
 {
@@ -43,9 +45,9 @@ namespace DriveHUD.Common.Log
 
             XmlConfigurator.ConfigureAndWatch(new FileInfo(LogConfigPath));
 
-            mainLog = LogManager.GetLogger("MainLog");
+            mainLog = LogManager.GetLogger("MainLog");           
         }
-
+     
         /// <summary>
         /// Log class
         /// </summary>

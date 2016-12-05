@@ -125,9 +125,7 @@ namespace DriveHUD.HUD
         public static bool IsStarted { get; set; }
 
         public static void UpdateHud(HudLayout hudLayout)
-        {
-            // LogProvider.Log.Info(string.Format("Memory usage before updating HUD: {0:N0}", GC.GetTotalMemory(false)));
-
+        {            
             if (hudLayout == null || hudLayout.TableHud == null || hudLayout.TableHud.TableLayout == null)
             {
                 return;
@@ -143,9 +141,7 @@ namespace DriveHUD.HUD
             if (windows.ContainsKey(hwnd))
             {
                 windows[hwnd].Window.Init(hudLayout);
-                windows[hwnd].Window.Update();
-
-                LogProvider.Log.Info(string.Format("Memory usage after updating HUD: {0:N0}", GC.GetTotalMemory(false)));
+                windows[hwnd].Window.Update();                
 
                 return;
             }
@@ -165,7 +161,7 @@ namespace DriveHUD.HUD
 
             var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(hudLayout.TableHud.TableLayout.Site.ToString());
 
-            var window = new HudWindow();
+            var window = new HudWindow();            
             var windowHandle = hudPanelService.GetWindowHandle(hwnd);
 
             var windowItem = new HudWindowItem
@@ -203,8 +199,6 @@ namespace DriveHUD.HUD
             window.Width = rect.Width * scale.Width;
 
             window.Update();
-
-            // LogProvider.Log.Info(string.Format("Memory usage after updating HUD: {0:N0}", GC.GetTotalMemory(false)));
         }
 
         public static void ReleaseHook()
@@ -245,15 +239,14 @@ namespace DriveHUD.HUD
             }
 
             if (!windows.ContainsKey(hwnd))
+            {
                 return;
+            }
 
             var window = windows[hwnd];
-            windows.Remove(hwnd);
-            window.Window.Close();            
-
-            GC.Collect();
-
-            LogProvider.Log.Info(string.Format("Memory usage after freeing resources: {0:N0}", GC.GetTotalMemory(false)));
+            windows.Remove(hwnd);            
+            window.Window.Close();
+            window.Window.Dispose();            
         }
 
         private static void UpdateWindowOverlay(IntPtr handle)
