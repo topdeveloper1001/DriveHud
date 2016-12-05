@@ -33,7 +33,7 @@ namespace DriveHUD.HUD.Services
         public void Initialize(string clientHandle)
         {
             try
-            {                
+            {
                 pipeClient = new AnonymousPipeClientStream(PipeDirection.In, clientHandle);
                 isInitialized = true;
 
@@ -61,17 +61,12 @@ namespace DriveHUD.HUD.Services
             LogProvider.Log.Info(this, "Ready to read data");
 
             try
-            {
-                var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
-
+            {              
                 while (true)
                 {
                     if (!pipeClient.IsConnected)
                     {
-                        if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
-                        {
-                            LogProvider.Log.Info(this, "Pipe to DH isn't connected");
-                        }
+                        LogProvider.Log.Info(this, "Pipe to DH isn't connected");
 
                         Task.Delay(delay).Wait();
                         continue;
@@ -127,10 +122,7 @@ namespace DriveHUD.HUD.Services
                                 hudLayout = Serializer.Deserialize<HudLayout>(afterStream);
                             }
 
-                            if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
-                            {
-                                LogProvider.Log.Info(this, $"Read {data.Length} bytes from DH [handle={hudLayout.WindowId}]");
-                            }
+                            LogProvider.Log.Debug(this, $"Read {data.Length} bytes from DH [handle={hudLayout.WindowId}]");
 
                             System.Windows.Application.Current.Dispatcher.Invoke(() =>
                             {
