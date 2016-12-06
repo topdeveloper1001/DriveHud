@@ -73,13 +73,34 @@ namespace DriveHUD.Application.HudServices
         public void ReplayHand(long gameNumber, short pokerSiteId)
         {
             var currentlySelectedPlayer = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
-            var playerName = pokerSiteId == (short)currentlySelectedPlayer.PokerSite 
+            var playerName = pokerSiteId == (short)currentlySelectedPlayer.PokerSite
                 ? currentlySelectedPlayer.Name
                 : string.Empty;
 
             ServiceLocator.Current.GetInstance<IReplayerService>().ReplayHand(playerName, gameNumber, pokerSiteId, showHoleCards: true);
+        }
 
-            LogProvider.Log.Info("ReplayHand received");
+        public void LoadLayout(int layoutId, string layoutName)
+        {
+            LogProvider.Log.Info($"Load layout {layoutId} {layoutName}");
+
+            var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+
+            var hudToLoad = hudLayoutsService.Layouts.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.Name == layoutName);
+
+            if (hudToLoad == null)
+            {
+                LogProvider.Log.Info(this, $"Cannot find layout with id {layoutId} and name {layoutName}");
+                return;
+            }
+
+            if (hudToLoad.IsDefault)
+            {
+                LogProvider.Log.Info(this, $"Layout {layoutName} ({layoutId}) is already selected as default.");
+                return;
+            }
+
+            App.Current.Dispatcher.Invoke(() => hudLayoutsService.SetLayoutActive(hudToLoad));
         }
     }
 }

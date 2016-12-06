@@ -1,6 +1,7 @@
 ﻿using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Infrastructure.Base;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
@@ -10,6 +11,8 @@ using Model.Enums;
 using Model.Interfaces;
 using Prism.Interactivity.InteractionRequest;
 using System;
+using System.Collections.ObjectModel;
+using System.Linq;
 using System.Threading;
 using System.Windows.Input;
 
@@ -19,10 +22,9 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         private ReaderWriterLockSlim _readerWriterLock;
         private IDataService _dataService;
+        private int _layoutId;
         private long _gameNumber;
         private short _pokerSiteId;
-
-        public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         internal HudWindowViewModel()
         {
@@ -31,16 +33,40 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             NotificationRequest = new InteractionRequest<INotification>();
 
+            _layoutsCollection = new ObservableCollection<string>();
+
             ExportHandCommand = new RelayCommand(ExportHand);
             TagHandCommand = new RelayCommand(TagHand);
             ReplayLastHandCommand = new RelayCommand(ReplayLastHand);
+            LoadLayoutCommand = new RelayCommand(LoadLayout);
         }
+
+        #region Properties
+
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
+
+        private string _selectedLayout;
+        public string SelectedLayout
+        {
+            get { return _selectedLayout; }
+            set { SetProperty(ref _selectedLayout, value); }
+        }
+
+        private ObservableCollection<string> _layoutsCollection;
+        public ObservableCollection<string> LayoutsCollection
+        {
+            get { return _layoutsCollection; }
+            set { SetProperty(ref _layoutsCollection, value); }
+        }
+
+        #endregion
 
         #region ICommand
 
         public ICommand ExportHandCommand { get; set; }
         public ICommand TagHandCommand { get; set; }
         public ICommand ReplayLastHandCommand { get; set; }
+        public ICommand LoadLayoutCommand { get; set; }
 
         #endregion
 
@@ -52,8 +78,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 if (layout != null)
                 {
+                    _layoutId = layout.LayoutId;
                     _gameNumber = layout.GameNumber;
                     _pokerSiteId = layout.PokerSiteId;
+
+                    if (layout.AvailableLayouts != null)
+                    {
+                        LayoutsCollection = new ObservableCollection<string>(layout.AvailableLayouts);
+                        SelectedLayout = LayoutsCollection.FirstOrDefault(x => x == layout.LayoutName);
+                    }
                 }
             }
         }
@@ -113,6 +146,21 @@ namespace DriveHUD.Application.ViewModels.Hud
             using (var readToken = _readerWriterLock.Read())
             {
                 HudNamedPipeBindingService.RaiseReplayHand(_gameNumber, _pokerSiteId);
+            }
+        }
+
+        private void LoadLayout(object obj)
+        {
+            using (var readToken = _readerWriterLock.Read())
+            {
+                var layoutName = obj?.ToString();
+                if (string.IsNullOrWhiteSpace(layoutName))
+                {
+                    return;
+                }
+
+                HudNamedPipeBindingService.LoadLayout(_layoutId, layoutName);
+                RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
             }
         }
 

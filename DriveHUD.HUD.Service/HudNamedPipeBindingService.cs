@@ -23,6 +23,11 @@ namespace DriveHUD.HUD.Service
             _callback?.SaveHudLayout(hudLayout);
         }
 
+        public static void LoadLayout(int layoutId, string layoutName)
+        {
+            _callback?.LoadLayout(layoutId, layoutName);
+        }
+
         #endregion
 
         #region Interface

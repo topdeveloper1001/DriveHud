@@ -14,7 +14,8 @@
         ShowInTaskbar="False" 
         AllowsTransparency="True"
         Background="Transparent" 
-        HorizontalAlignment="Center">
+        HorizontalAlignment="Center"
+        x:Name="hudWindow">
 
     <Window.DataContext>
         <vm:HudWindowViewModel />
@@ -27,7 +28,7 @@
                                             WindowContent="{StaticResource NotificationWindowContentTemplate}" />
         </prism:InteractionRequestTrigger>
     </i:Interaction.Triggers>
-    
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="35" />
@@ -50,7 +51,15 @@
                     </telerik:RadMenuItem>
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_ReplayLastHand}" Command="{Binding ReplayLastHandCommand}" />
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_SaveHudPosition}" Click="SaveHudPositions_Click" />
-                    <telerik:RadMenuItem x:Name="rmiLoadHud" Header="{ResX Main_ContextMenu_LoadHud}" />
+                    <telerik:RadMenuItem Header="{ResX Main_ContextMenu_LoadHud}" ItemsSource="{Binding LayoutsCollection}">
+                        <telerik:RadMenuItem.ItemContainerStyle>
+                            <Style TargetType="telerik:RadMenuItem" BasedOn="{StaticResource {x:Type telerik:RadMenuItem}}">
+                                <Setter Property="Header" Value="{Binding}"/>
+                                <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type telerik:RadMenuItem}}, Path=DataContext.LoadLayoutCommand}" />
+                                <Setter Property="CommandParameter" Value="{Binding}" />
+                            </Style>
+                        </telerik:RadMenuItem.ItemContainerStyle>
+                    </telerik:RadMenuItem>
                 </telerik:RadContextMenu>
             </telerik:RadContextMenu.ContextMenu>
         </Image>

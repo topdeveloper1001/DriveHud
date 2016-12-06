@@ -24,14 +24,14 @@ namespace DriveHUD.HUD.Service
 
     public interface IHudNamedPipeBindingCallbackService
     {
-        //[OperationContract(IsOneWay = true)]
-        //void ProcessHudCommand(long gameNumber, short pokerSiteId, EnumCommand command, object obj);
-
         [OperationContract(IsOneWay = true)]
         void SaveHudLayout(HudLayoutContract hudLayout);
 
         [OperationContract(IsOneWay = true)]
         void ReplayHand(long gameNumber, short pokerSiteId);
+
+        [OperationContract(IsOneWay = true)]
+        void LoadLayout(int layoutId, string layoutName);
     }
 
     [DataContract]

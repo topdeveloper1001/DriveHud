@@ -80,5 +80,11 @@ namespace DriveHUD.Application.ViewModels
 
         [XmlIgnore, ProtoMember(10)]
         public int LayoutId { get; set; }
+
+        [XmlIgnore, ProtoMember(11)]
+        public string LayoutName { get; set; }
+
+        [XmlIgnore, ProtoMember(12)]
+        public IEnumerable<string> AvailableLayouts { get; set; }
     }
 }
