@@ -289,6 +289,7 @@
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HudServices\HudNamedPipeBindingCallbackService.cs" />
     <Compile Include="HudServices\HudTransmitter.cs" />
     <Compile Include="HudServices\IHudTransmitter.cs" />
     <Compile Include="Licensing\DeployLXLicensingServer.cs" />

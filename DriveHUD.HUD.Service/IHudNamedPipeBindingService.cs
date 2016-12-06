@@ -52,6 +52,9 @@ namespace DriveHUD.HUD.Service
 
         [DataMember]
         public Point Position { get; set; }
+
+        [DataMember]
+        public int HudType { get; set; }
     }
 
 }

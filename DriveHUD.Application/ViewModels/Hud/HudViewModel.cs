@@ -437,7 +437,7 @@ namespace DriveHUD.Application.ViewModels
                         HudType = HudType.Default;
                     }
 
-                    foreach (var hudTableViewModel in hudTableViewModelDictionary.Values)
+                    foreach (var hudTableViewModel in HudTableViewModelDictionary.Values)
                     {
                         hudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
                     }
@@ -514,8 +514,6 @@ namespace DriveHUD.Application.ViewModels
 
         private StatInfoObservableCollection<StatInfo> statInfoObserveCollection;
         private StatInfo statInfoObserveSelectedItem;
-
-        private Dictionary<int, HudTableViewModel> hudTableViewModelDictionary;
 
         private HudTableLayoutMenuItem currentTableLayout;
 
@@ -630,11 +628,11 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return hudTableViewModelDictionary;
+                return hudLayoutsSevice.HudTableViewModelDictionary;
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref hudTableViewModelDictionary, value);
+                hudLayoutsSevice.HudTableViewModelDictionary = value;
             }
         }
 

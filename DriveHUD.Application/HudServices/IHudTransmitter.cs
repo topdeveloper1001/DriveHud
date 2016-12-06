@@ -15,7 +15,7 @@ using System;
 
 namespace DriveHUD.Application.HudServices
 {
-    public interface IHudTransmitter : IHudNamedPipeBindingCallbackService, IDisposable
+    public interface IHudTransmitter : IDisposable
     {
         void Initialize();
 

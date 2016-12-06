@@ -23,6 +23,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows;
+using System.ComponentModel;
 
 namespace DriveHUD.Application.Views
 {
@@ -48,6 +49,7 @@ namespace DriveHUD.Application.Views
             InitializeComponent();
 
             panelOffsets = new Dictionary<int, Point>();
+            dgCanvas.DragEnded += DgCanvas_DragEnded;
         }
 
         public HudLayout Layout { get; set; }
@@ -273,7 +275,8 @@ namespace DriveHUD.Application.Views
                     hudLayout.HudPositions.Add(new HudPositionContract
                     {
                         Position = new Point(position.Item1, position.Item2),
-                        SeatNumber = hudPanel.Seat
+                        SeatNumber = hudPanel.Seat,
+                        HudType = (int)hudPanel.HudType
                     });
                 }
 
@@ -284,5 +287,17 @@ namespace DriveHUD.Application.Views
                 LogProvider.Log.Error(this, ex);
             }
         }
+
+        private void DgCanvas_DragEnded(object sender, EventArgs e)
+        {
+            this.Update();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            dgCanvas.DragEnded -= DgCanvas_DragEnded;
+            base.OnClosing(e);
+        }
+
     }
 }

@@ -28,6 +28,12 @@ namespace DriveHUD.Application.Controls
 
         #endregion
 
+        #region Events
+
+        public event EventHandler DragEnded;
+
+        #endregion
+
         #region Static Constructor 
 
         static DragCanvas()
@@ -377,6 +383,10 @@ namespace DriveHUD.Application.Controls
         protected override void OnPreviewMouseUp(MouseButtonEventArgs e)
         {
             base.OnPreviewMouseUp(e);
+            if (isDragInProgress)
+            {
+                DragEnded?.Invoke(this.ElementBeingDragged, new EventArgs());
+            }
             this.ElementBeingDragged = null;
         }
 

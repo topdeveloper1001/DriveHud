@@ -23,6 +23,7 @@ namespace DriveHUD.Application.HudServices
         private Process hudClient;
         private DuplexChannelFactory<IHudNamedPipeBindingService> _namedPipeBindingFactory;
         private IHudNamedPipeBindingService _namedPipeBindingProxy;
+        private IHudNamedPipeBindingCallbackService _callbackService;
 
         private Task _initializeTask;
         private CancellationTokenSource _cancellationTokenSource;
@@ -72,7 +73,9 @@ namespace DriveHUD.Application.HudServices
         private void StartPipe()
         {
             // create named pipe binding
-            InstanceContext context = new InstanceContext(this);
+            _callbackService = new HudNamedPipeBindingCallbackService();
+
+            InstanceContext context = new InstanceContext(_callbackService);
             _namedPipeBindingFactory = new DuplexChannelFactory<IHudNamedPipeBindingService>(context, "HudNamedPipeBindingServiceEndpoint");
             _namedPipeBindingProxy = _namedPipeBindingFactory?.CreateChannel();
             ((IClientChannel)_namedPipeBindingProxy).Faulted += new EventHandler(Pipe_Faulted);
@@ -220,26 +223,13 @@ namespace DriveHUD.Application.HudServices
 
                 _namedPipeBindingFactory = null;
                 _namedPipeBindingProxy = null;
+                _callbackService = null;
             }
 
             if (hudClient != null && !hudClient.HasExited)
             {
                 hudClient.Kill();
             }
-        }
-
-        #endregion
-
-        #region IHudNamedPipeBindingCallbackService
-
-        public void SaveHudLayout(HudLayoutContract hudLayout)
-        {
-            LogProvider.Log.Info("Save Hud Layout received");
-        }
-
-        public void ReplayHand(long gameNumber, short pokerSiteId)
-        {
-            LogProvider.Log.Info("ReplayHand received");
         }
 
         #endregion
