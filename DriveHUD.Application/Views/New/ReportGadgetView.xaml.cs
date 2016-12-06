@@ -304,10 +304,12 @@ namespace DriveHUD.Application.Views
 
                 var layout = ReportManager.GetReportLayout(reportType);
                 var creator = ReportManager.GetReportCreator(reportType);
-
                 if (layout == null || creator == null) return;
 
-                var reportCollection = GetReportCollectionAsync(creator);
+                var reportCollection = 
+                    //reportType == EnumReports.OpponentAnalysis?
+                    //GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredTopStatistic):
+                    GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
 
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
@@ -334,11 +336,11 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private Task<ObservableCollection<Indicators>> GetReportCollectionAsync(IReportCreator reportCreator)
+        private Task<ObservableCollection<Indicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics)
         {
             return Task.Run(() =>
             {
-                return reportCreator.Create(ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
+                return reportCreator.Create(playerstatistics);
             });
         }
 

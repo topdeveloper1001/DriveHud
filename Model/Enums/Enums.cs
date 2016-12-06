@@ -113,7 +113,8 @@ namespace Model.Enums
         TournamentPokerSite,
         PokerSite,
         TournamentShowdownHands,
-        ShowdownHands
+        ShowdownHands,
+        OpponentAnalysis
     }
 
     public enum EnumTableType : byte
