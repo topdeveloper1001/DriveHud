@@ -23,6 +23,7 @@ using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
+using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
@@ -207,6 +208,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IHudPanelService), typeof(HudPanelService), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
+            RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
             RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IMigrationService), typeof(MigrationService.MigrationService), false);

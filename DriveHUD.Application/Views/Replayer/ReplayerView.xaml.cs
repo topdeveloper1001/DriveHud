@@ -44,7 +44,7 @@ namespace DriveHUD.Application.Views.Replayer
 
             if (dataModelList == null || dataModelList.Count() == 0 || !dataModelList.Any(x => x.IsActive))
             {
-                throw new ArgumentException("Data model list should contain at leas one active value", "dataModelList");
+                throw new ArgumentException("Data model list should contain at least one active value", "dataModelList");
             }
             this._lastHandsCollection = dataModelList;
 

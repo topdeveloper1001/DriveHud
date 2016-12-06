@@ -4,6 +4,8 @@ using DriveHUD.Common.Log;
 using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Application.ViewModels;
 using System.Linq;
+using Model;
+using DriveHUD.Application.ViewModels.Replayer;
 
 namespace DriveHUD.Application.HudServices
 {
@@ -66,12 +68,17 @@ namespace DriveHUD.Application.HudServices
             };
 
             App.Current.Dispatcher.Invoke(() => hudLayoutsService.SaveAs(hudData));
-
-            LogProvider.Log.Info("Save Hud Layout received");
         }
 
         public void ReplayHand(long gameNumber, short pokerSiteId)
         {
+            var currentlySelectedPlayer = ServiceLocator.Current.GetInstance<SingletonStorageModel>().PlayerSelectedItem;
+            var playerName = pokerSiteId == (short)currentlySelectedPlayer.PokerSite 
+                ? currentlySelectedPlayer.Name
+                : string.Empty;
+
+            ServiceLocator.Current.GetInstance<IReplayerService>().ReplayHand(playerName, gameNumber, pokerSiteId, showHoleCards: true);
+
             LogProvider.Log.Info("ReplayHand received");
         }
     }
