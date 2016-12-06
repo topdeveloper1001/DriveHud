@@ -61,7 +61,7 @@ namespace DriveHUD.Common.Ifrastructure
 
                 if (isSetClipboard)
                 {
-                    Clipboard.SetText(handHistory.FullHandHistoryText);
+                    Clipboard.SetText(resultString);
                 }
             }
             catch(Exception ex)
