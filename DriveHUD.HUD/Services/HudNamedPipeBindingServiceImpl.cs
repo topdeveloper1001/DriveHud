@@ -14,11 +14,9 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.HUD.Services
 {
-    internal class HudNamedPipeBindingService : IHudNamedPipeBindingService
+    internal class HudNamedPipeBindingServiceImpl : HudNamedPipeBindingService
     {
-        private static IHudNamedPipeBindingCallbackService _callback;
-
-        public void ConnectCallbackChannel(string name)
+        public override void ConnectCallbackChannel(string name)
         {
             if (_callback != null)
             {
@@ -36,7 +34,7 @@ namespace DriveHUD.HUD.Services
             }
         }
 
-        public void UpdateHUD(byte[] data)
+        public override void UpdateHUD(byte[] data)
         {
             try
             {
@@ -63,11 +61,6 @@ namespace DriveHUD.HUD.Services
             {
                 LogProvider.Log.Error(this, "HUD service failed to read data", e);
             }
-        }
-
-        internal static void RaiseCommand(int windowId, EnumCommand command, object obj)
-        {
-            _callback.ProcessHudCommand(windowId, command, obj);
         }
     }
 }

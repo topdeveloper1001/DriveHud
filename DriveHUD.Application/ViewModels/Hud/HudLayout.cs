@@ -77,5 +77,8 @@ namespace DriveHUD.Application.ViewModels
 
         [XmlIgnore, ProtoMember(9)]
         public short PokerSiteId { get; set; }
+
+        [XmlIgnore, ProtoMember(10)]
+        public int LayoutId { get; set; }
     }
 }

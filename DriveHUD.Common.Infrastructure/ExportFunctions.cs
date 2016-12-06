@@ -9,13 +9,16 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using Model.Extensions;
 using DriveHUD.Common.Linq;
+using Model.Enums;
+using Microsoft.Practices.ServiceLocation;
+using Model.Interfaces;
+using System.Windows;
 
 namespace DriveHUD.Common.Ifrastructure
 {
     public static class ExportFunctions
     {
         private static List<String[]> positionNames = new List<string[]>();
-
 
         private static void InitPositionNames()
         {
@@ -34,6 +37,40 @@ namespace DriveHUD.Common.Ifrastructure
         }
 
         #region Export Functions
+
+        public static string ExportHand(long gamenumber, short pokerSiteId, EnumExportType exportType, bool isSetClipboard = false)
+        {
+            var resultString = string.Empty;
+
+            try
+            {
+                var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(gamenumber, pokerSiteId);
+
+                switch (exportType)
+                {
+                    case EnumExportType.TwoPlusTwo:
+                    case EnumExportType.CardsChat:
+                    case EnumExportType.PokerStrategy:
+                        resultString = ConvertHHToForumFormat(handHistory);
+                        break;
+                    case EnumExportType.Raw:
+                    default:
+                        resultString = handHistory.FullHandHistoryText;
+                        break;
+                }
+
+                if (isSetClipboard)
+                {
+                    Clipboard.SetText(handHistory.FullHandHistoryText);
+                }
+            }
+            catch(Exception ex)
+            {
+                LogProvider.Log.Error(ex);
+            }
+
+            return resultString;
+        }
 
         public static string ConvertHHToForumFormat(HandHistory currentHandHistory)
         {
@@ -161,7 +198,7 @@ namespace DriveHUD.Common.Ifrastructure
             return "";
         }
 
-        public static String SurroundWithColorIfInHand(string player, bool isInHand)
+        private static String SurroundWithColorIfInHand(string player, bool isInHand)
         {
             if (isInHand) return "[color=red]" + player + "[/color]";
             return player;
@@ -204,7 +241,7 @@ namespace DriveHUD.Common.Ifrastructure
             return sb.ToString();
         }
 
-        public static String ConvertCardToForumFormat(String card)
+        private static String ConvertCardToForumFormat(String card)
         {
             String suit = card[1] == 'h' ? "heart" : card[1] == 's' ? "spade" : card[1] == 'd' ? "diamond" : "club";
             return card[0] + ":" + suit + ":";

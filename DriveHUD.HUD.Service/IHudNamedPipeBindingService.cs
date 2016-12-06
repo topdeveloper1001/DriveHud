@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using System.Windows;
 
 namespace DriveHUD.HUD.Service
 {
@@ -13,7 +14,7 @@ namespace DriveHUD.HUD.Service
         [OperationContract(IsOneWay = true)]
         void UpdateHUD(byte[] data);
 
-        #region Call back connection manager
+        #region Callback connection manager
 
         [OperationContract(IsOneWay = true)]
         void ConnectCallbackChannel(string name);
@@ -23,22 +24,34 @@ namespace DriveHUD.HUD.Service
 
     public interface IHudNamedPipeBindingCallbackService
     {
+        //[OperationContract(IsOneWay = true)]
+        //void ProcessHudCommand(long gameNumber, short pokerSiteId, EnumCommand command, object obj);
+
         [OperationContract(IsOneWay = true)]
-        void ProcessHudCommand(int windowId, EnumCommand command, object obj);
+        void SaveHudLayout(HudLayoutContract hudLayout);
+
+        [OperationContract(IsOneWay = true)]
+        void ReplayHand(long gameNumber, short pokerSiteId);
     }
 
     [DataContract]
-    public enum EnumCommand
+    public class HudLayoutContract
     {
-        [EnumMember]
-        TagLastHand,
-        [EnumMember]
-        ExportLastHand,
-        [EnumMember]
-        ReplayLastHand,
-        [EnumMember]
-        SaveHudPosition,
+        [DataMember]
+        public int LayoutId { get; set; }
+
+        [DataMember]
+        public List<HudPositionContract> HudPositions { get; set; }
     }
 
+    [DataContract]
+    public class HudPositionContract
+    {
+        [DataMember]
+        public int SeatNumber { get; set; }
+
+        [DataMember]
+        public Point Position { get; set; }
+    }
 
 }

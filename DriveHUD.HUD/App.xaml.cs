@@ -5,6 +5,7 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Services;
+using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model;
@@ -65,6 +66,7 @@ namespace DriveHUD.HUD
             unityContainer.RegisterType<IHudServiceHost, HudServiceHost>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
+            unityContainer.RegisterType<IHandHistoryParserFactory, HandHistoryParserFactoryImpl>();
 
             UnityServicesBootstrapper.ConfigureContainer(unityContainer);
 

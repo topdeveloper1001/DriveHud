@@ -7,21 +7,30 @@ using System.Text;
 
 namespace DriveHUD.HUD.Service
 {
-    public class HudNamedPipeBindingService : IHudNamedPipeBindingService
+    public abstract class HudNamedPipeBindingService : IHudNamedPipeBindingService
     {
-        public void ConnectCallbackChannel(string name)
+        #region Callback
+
+        protected static IHudNamedPipeBindingCallbackService _callback;
+
+        public static void RaiseReplayHand(long gameNumber, short pokerSiteId)
         {
-            throw new NotImplementedException();
+            _callback?.ReplayHand(gameNumber, pokerSiteId);
         }
 
-        public void Disconnect()
+        public static void RaiseSaveHudLayout(HudLayoutContract hudLayout)
         {
-            throw new NotImplementedException();
+            _callback?.SaveHudLayout(hudLayout);
         }
 
-        public void UpdateHUD(byte[] data)
-        {
-            throw new NotImplementedException();
-        }
+        #endregion
+
+        #region Interface
+
+        public abstract void ConnectCallbackChannel(string name);
+
+        public abstract void UpdateHUD(byte[] data); 
+
+        #endregion
     }
 }

@@ -134,7 +134,6 @@
     <Compile Include="Events\FilterEvents\ResetFiltersEvent.cs" />
     <Compile Include="Events\FilterEvents\UpdateFilterRequestEvent.cs" />
     <Compile Include="Events\HandNoteUpdatedEvent.cs" />
-    <Compile Include="Events\HudEvents\HudCommandEvent.cs" />
     <Compile Include="Events\MainNotificationEvent.cs" />
     <Compile Include="Events\PreferredSeatChangedEvent.cs" />
     <Compile Include="Events\SettingsUpdatedEvent.cs" />

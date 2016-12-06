@@ -232,24 +232,14 @@ namespace DriveHUD.Application.HudServices
 
         #region IHudNamedPipeBindingCallbackService
 
-        public void ProcessHudCommand(int windowId, EnumCommand command, object obj)
+        public void SaveHudLayout(HudLayoutContract hudLayout)
         {
-            LogProvider.Log.Info(this, $"ProcessHudCommand: windowId: {windowId}, HudCommand: {command}, obj: {obj}");
+            LogProvider.Log.Info("Save Hud Layout received");
+        }
 
-            switch (command)
-            {
-                case EnumCommand.TagLastHand:
-
-                    break;
-                case EnumCommand.ExportLastHand:
-                    break;
-                case EnumCommand.ReplayLastHand:
-                    break;
-                case EnumCommand.SaveHudPosition:
-                    break;
-                default:
-                    break;
-            }
+        public void ReplayHand(long gameNumber, short pokerSiteId)
+        {
+            LogProvider.Log.Info("ReplayHand received");
         }
 
         #endregion

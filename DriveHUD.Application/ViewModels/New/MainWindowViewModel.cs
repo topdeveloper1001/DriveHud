@@ -294,6 +294,8 @@ namespace DriveHUD.Application.ViewModels
                 var maxSeats = (int)gameInfo.TableType;
                 var site = e.GameInfo.PokerSite;
 
+                var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
+
                 var ht = new HudLayout
                 {
                     WindowId = gameInfo.WindowHandle,
@@ -301,9 +303,8 @@ namespace DriveHUD.Application.ViewModels
                     TableType = gameInfo.TableType,
                     PokerSiteId = (short)gameInfo.PokerSite,
                     GameNumber = gameInfo.GameNumber,
+                    LayoutId = tableKey,
                 };
-
-                var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 

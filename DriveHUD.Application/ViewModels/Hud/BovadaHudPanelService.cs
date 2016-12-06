@@ -45,5 +45,30 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             return new Tuple<double, double>(offsetX * window.XFraction, offsetY * window.YFraction + additionOffsetY);
         }
+
+        /// <summary>
+        /// Converts offset values into position value
+        /// </summary>
+        /// <param name="hudElement">HUD element view model</param>
+        /// <param name="window">Overlay window</param>
+        /// <returns>Item1 - X, Item2 - Y</returns>
+        public override Tuple<double, double> GetOffsetPosition(HudElementViewModel hudElement, HudWindow window)
+        {
+            Check.ArgumentNotNull(() => hudElement);
+            Check.ArgumentNotNull(() => window);
+
+            var panelOffset = window.GetPanelOffset(hudElement);
+
+            // temporary workaround
+            var extraOffsetY = 27;
+
+            var offsetX = panelOffset.X != 0 ? panelOffset.X : (hudElement.Position.X);
+            var offsetY = panelOffset.Y != 0 ? panelOffset.Y + extraOffsetY : (hudElement.Position.Y);
+
+            // linear formula to adjust position on big sizes
+            var additionOffsetY = 35.4 * window.YFraction - 35.4;
+
+            return new Tuple<double, double>(offsetX, offsetY);
+        }
     }
 }

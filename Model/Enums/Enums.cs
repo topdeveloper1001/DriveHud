@@ -156,4 +156,12 @@ namespace Model.Enums
         Red,
         Yellow
     }
+
+    public enum EnumExportType
+    {
+        TwoPlusTwo,
+        CardsChat,
+        PokerStrategy,
+        Raw
+    }
 }

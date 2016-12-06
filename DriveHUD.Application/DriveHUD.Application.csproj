@@ -360,6 +360,7 @@
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\HudViewType.cs" />
     <Compile Include="Controls\IDropDownMenuItem.cs" />
+    <Compile Include="ViewModels\Hud\HudWindowViewModel.cs" />
     <Compile Include="ViewModels\Hud\IHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
