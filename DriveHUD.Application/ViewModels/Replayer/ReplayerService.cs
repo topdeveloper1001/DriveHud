@@ -96,7 +96,9 @@ namespace DriveHUD.Application.ViewModels.Replayer
             App.Current.Dispatcher.Invoke(() =>
             {
                 ReplayerView replayer = new ReplayerView(_replayerDataModelList, ReplayerHelpers.CreateSessionHandsList(statistics, currentStat), showHoleCards);
+                replayer.IsTopmost = true;
                 replayer.Show();
+                replayer.IsTopmost = false;
             });
         }
     }

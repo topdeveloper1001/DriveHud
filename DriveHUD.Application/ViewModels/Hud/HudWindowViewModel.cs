@@ -14,6 +14,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -125,7 +126,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-        private void ExportHand(object obj)
+        private async void ExportHand(object obj)
         {
             EnumExportType exportType = EnumExportType.Raw;
 
@@ -136,7 +137,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             using (var readToken = _readerWriterLock.Read())
             {
-                ExportFunctions.ExportHand(_gameNumber, _pokerSiteId, exportType, true);
+                await Task.Run(() => ExportFunctions.ExportHand(_gameNumber, _pokerSiteId, exportType, true));
                 RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
             }
         }

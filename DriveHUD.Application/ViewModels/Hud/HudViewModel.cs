@@ -1380,7 +1380,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void ShowSeatingInstruction()
         {
-            App.Current.Dispatcher.BeginInvoke((Action)delegate
+            System.Windows.Application.Current.Dispatcher.BeginInvoke((Action)delegate
             {
                 this.NotificationRequest.Raise(
                     new PopupActionNotification

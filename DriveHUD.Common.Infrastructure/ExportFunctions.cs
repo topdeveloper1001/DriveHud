@@ -1,18 +1,17 @@
 ﻿using DriveHUD.Common.Log;
 using HandHistories.Objects.Hand;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using Model.Extensions;
-using DriveHUD.Common.Linq;
 using Model.Enums;
 using Microsoft.Practices.ServiceLocation;
 using Model.Interfaces;
 using System.Windows;
+using System.Windows.Threading;
 
 namespace DriveHUD.Common.Ifrastructure
 {
@@ -61,10 +60,10 @@ namespace DriveHUD.Common.Ifrastructure
 
                 if (isSetClipboard)
                 {
-                    Clipboard.SetText(resultString);
+                    Application.Current.Dispatcher.Invoke(() => Clipboard.SetText(resultString));
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 LogProvider.Log.Error(ex);
             }
