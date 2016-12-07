@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <HudSavedLayouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layouts>
-    <HudSavedLayout Name="DriveHUD: 2-max MTT Basic" IsDefault="true" LayoutId="-246928267">
+    <HudSavedLayout Name="DriveHUD: 2-max MTT Basic " IsDefault="true" LayoutId="1130543192">
       <HudStats>
         <StatInfo>
           <Id>aa3fd88e-847d-413b-9f01-ff9f5647f4aa</Id>

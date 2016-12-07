@@ -162,8 +162,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-ACR.xml",
             "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-ACR.xml",
             "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-ACR.xml"
-        };
+            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-ACR.xml",
+            };
 
         #endregion
 

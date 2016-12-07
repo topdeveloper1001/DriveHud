@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <HudSavedLayouts xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Layouts>
-    <HudSavedLayout Name="DriveHUD: 2-max MTT Basic" IsDefault="true" LayoutId="-246928267">
+    <HudSavedLayout Name="DriveHUD: 8-max MTT Basic" IsDefault="true" LayoutId="1130543186">
       <HudStats>
         <StatInfo>
           <Id>aa3fd88e-847d-413b-9f01-ff9f5647f4aa</Id>
@@ -2136,8 +2136,8 @@
         </HudSavedPosition>
         <HudSavedPosition>
           <Position>
-            <X>316</X>
-            <Y>352</Y>
+            <X>493</X>
+            <Y>69</Y>
           </Position>
           <Width>144</Width>
           <Height>215</Height>
@@ -2146,12 +2146,102 @@
         </HudSavedPosition>
         <HudSavedPosition>
           <Position>
-            <X>343</X>
-            <Y>156</Y>
+            <X>662</X>
+            <Y>199</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>215</Height>
+          <Seat>3</Seat>
+          <HudType>Default</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>493</X>
+            <Y>334</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>215</Height>
+          <Seat>4</Seat>
+          <HudType>Default</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>316</X>
+            <Y>352</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>215</Height>
+          <Seat>5</Seat>
+          <HudType>Default</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>160</X>
+            <Y>334</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>215</Height>
+          <Seat>6</Seat>
+          <HudType>Default</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>-23</X>
+            <Y>199</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>215</Height>
+          <Seat>7</Seat>
+          <HudType>Default</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>158</X>
+            <Y>63</Y>
+          </Position>
+          <Width>144</Width>
+          <Height>215</Height>
+          <Seat>8</Seat>
+          <HudType>Default</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>340</X>
+            <Y>143</Y>
           </Position>
           <Width>135</Width>
           <Height>75</Height>
           <Seat>1</Seat>
+          <HudType>Plain</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>624</X>
+            <Y>249</Y>
+          </Position>
+          <Width>135</Width>
+          <Height>75</Height>
+          <Seat>2</Seat>
+          <HudType>Plain</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>624</X>
+            <Y>356</Y>
+          </Position>
+          <Width>135</Width>
+          <Height>75</Height>
+          <Seat>3</Seat>
+          <HudType>Plain</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>478</X>
+            <Y>447</Y>
+          </Position>
+          <Width>135</Width>
+          <Height>75</Height>
+          <Seat>4</Seat>
           <HudType>Plain</HudType>
         </HudSavedPosition>
         <HudSavedPosition>
@@ -2161,7 +2251,37 @@
           </Position>
           <Width>135</Width>
           <Height>75</Height>
-          <Seat>2</Seat>
+          <Seat>5</Seat>
+          <HudType>Plain</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>208</X>
+            <Y>447</Y>
+          </Position>
+          <Width>135</Width>
+          <Height>75</Height>
+          <Seat>6</Seat>
+          <HudType>Plain</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>60</X>
+            <Y>356</Y>
+          </Position>
+          <Width>135</Width>
+          <Height>75</Height>
+          <Seat>7</Seat>
+          <HudType>Plain</HudType>
+        </HudSavedPosition>
+        <HudSavedPosition>
+          <Position>
+            <X>60</X>
+            <Y>249</Y>
+          </Position>
+          <Width>135</Width>
+          <Height>75</Height>
+          <Seat>8</Seat>
           <HudType>Plain</HudType>
         </HudSavedPosition>
       </HudPositions>
