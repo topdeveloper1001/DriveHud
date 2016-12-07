@@ -97,18 +97,21 @@ namespace DriveHUD.Application.ViewModels.Hud
             HudNamedPipeBindingService.RaiseSaveHudLayout(hudTable);
         }
 
-        private void TagHand(object obj)
+        private async void TagHand(object obj)
         {
-            using (var readToken = _readerWriterLock.Read())
+            await Task.Run(() =>
             {
-                EnumHandTag tag = EnumHandTag.None;
-                if (obj == null || !Enum.TryParse(obj.ToString(), out tag))
+                using (var readToken = _readerWriterLock.Read())
                 {
-                    return;
-                }
+                    EnumHandTag tag = EnumHandTag.None;
+                    if (obj == null || !Enum.TryParse(obj.ToString(), out tag))
+                    {
+                        return;
+                    }
 
-                HudNamedPipeBindingService.TagHand(_gameNumber, _pokerSiteId, (int)tag);
-            }
+                    HudNamedPipeBindingService.TagHand(_gameNumber, _pokerSiteId, (int)tag);
+                }
+            });
         }
 
         private async void ExportHand(object obj)
@@ -120,45 +123,56 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            using (var readToken = _readerWriterLock.Read())
+            await Task.Run(() =>
             {
-                await Task.Run(() => ExportFunctions.ExportHand(_gameNumber, _pokerSiteId, exportType, true));
-                RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
-            }
-        }
-
-        private void ReplayLastHand(object obj)
-        {
-            using (var readToken = _readerWriterLock.Read())
-            {
-                HudNamedPipeBindingService.RaiseReplayHand(_gameNumber, _pokerSiteId);
-            }
-        }
-
-        private void LoadLayout(object obj)
-        {
-            using (var readToken = _readerWriterLock.Read())
-            {
-                var layoutName = obj?.ToString();
-                if (string.IsNullOrWhiteSpace(layoutName))
+                using (var readToken = _readerWriterLock.Read())
                 {
-                    return;
+                    ExportFunctions.ExportHand(_gameNumber, _pokerSiteId, exportType, true);
+                    RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
                 }
+            });
+        }
 
-                HudNamedPipeBindingService.LoadLayout(_layoutId, layoutName);
-                RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
-            }
+        private async void ReplayLastHand(object obj)
+        {
+            await Task.Run(() =>
+            {
+                using (var readToken = _readerWriterLock.Read())
+                {
+                    HudNamedPipeBindingService.RaiseReplayHand(_gameNumber, _pokerSiteId);
+                }
+            });
+        }
+
+        private async void LoadLayout(object obj)
+        {
+            await Task.Run(() =>
+            {
+                using (var readToken = _readerWriterLock.Read())
+                {
+                    var layoutName = obj?.ToString();
+                    if (string.IsNullOrWhiteSpace(layoutName))
+                    {
+                        return;
+                    }
+
+                    HudNamedPipeBindingService.LoadLayout(_layoutId, layoutName);
+                    RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
+                }
+            });
         }
 
         private void RaiseNotification(string content, string title)
         {
-            this.NotificationRequest.Raise(
-                    new PopupActionNotification
-                    {
-                        Content = content,
-                        Title = title,
-                    },
-                    n => { });
+            App.Current.Dispatcher.Invoke(() =>
+            {
+                this.NotificationRequest.Raise(
+                        new PopupActionNotification
+                        {
+                            Content = content,
+                            Title = title,
+                        });
+            });
         }
 
         #endregion
