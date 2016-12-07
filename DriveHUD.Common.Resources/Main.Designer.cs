@@ -115,6 +115,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Export Last Hand.
+        /// </summary>
+        internal static string Main_ContextMenu_ExportLastHand {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_ExportLastHand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Load HUD.
+        /// </summary>
+        internal static string Main_ContextMenu_LoadHud {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_LoadHud", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Make Note.
         /// </summary>
         internal static string Main_ContextMenu_MakeNote {
@@ -133,11 +151,38 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Replay Last Hand.
+        /// </summary>
+        internal static string Main_ContextMenu_ReplayLastHand {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_ReplayLastHand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save HUD Position.
+        /// </summary>
+        internal static string Main_ContextMenu_SaveHudPosition {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_SaveHudPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Tag Hand.
         /// </summary>
         internal static string Main_ContextMenu_TagHand {
             get {
                 return ResourceManager.GetString("Main_ContextMenu_TagHand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tag Last Hand.
+        /// </summary>
+        internal static string Main_ContextMenu_TagLastHand {
+            get {
+                return ResourceManager.GetString("Main_ContextMenu_TagLastHand", resourceCulture);
             }
         }
         

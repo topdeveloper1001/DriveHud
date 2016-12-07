@@ -5,13 +5,13 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Services;
-using log4net;
-using log4net.Core;
+using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
 using Model;
 using Model.Interfaces;
 using Model.Settings;
+using Prism.Events;
 using ProtoBuf.Meta;
 using System;
 using System.Collections.Generic;
@@ -42,18 +42,9 @@ namespace DriveHUD.HUD
             base.OnStartup(e);
             Initialize();
 
-            var args = Environment.GetCommandLineArgs();
-
-            if (args.Length != 2)
-            {
-                LogProvider.Log.Error(this, "HUD was not properly started");
-                Shutdown();
-                return;
-            }
-       
-            var hudReceiver = ServiceLocator.Current.GetInstance<IHudReceiver>();
-            hudReceiver.Initialize(args[1]);
-            hudReceiver.Start();
+            var hudServiceHost = ServiceLocator.Current.GetInstance<IHudServiceHost>();
+            hudServiceHost.Initialize();
+            hudServiceHost.OpenHost();
         }
 
         public bool SignalExternalCommandLineArgs(IList<string> args)
@@ -71,9 +62,11 @@ namespace DriveHUD.HUD
 
             unityContainer = new UnityContainer();
 
-            unityContainer.RegisterType<IHudReceiver, HudReceiver>(new ContainerControlledLifetimeManager());
+            unityContainer.RegisterType<IEventAggregator, EventAggregator>(new ContainerControlledLifetimeManager());
+            unityContainer.RegisterType<IHudServiceHost, HudServiceHost>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<IDataService, DataService>(new ContainerControlledLifetimeManager());
             unityContainer.RegisterType<ISettingsService, SettingsService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
+            unityContainer.RegisterType<IHandHistoryParserFactory, HandHistoryParserFactoryImpl>();
 
             UnityServicesBootstrapper.ConfigureContainer(unityContainer);
 

@@ -292,16 +292,30 @@ namespace DriveHUD.Application.ViewModels
                 var maxSeats = (int)gameInfo.TableType;
                 var site = e.GameInfo.PokerSite;
 
+                var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
+                var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+
+                var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
+
+                if (activeLayout == null)
+                {
+                    LogProvider.Log.Error(this, "Could not find active layout");
+                    return;
+                }
+
+                var availableLayouts = hudLayoutsService.Layouts.Layouts.Where(y => y.LayoutId == tableKey).Select(x => x.Name);
+
                 var ht = new HudLayout
                 {
                     WindowId = gameInfo.WindowHandle,
                     HudType = site == EnumPokerSites.Ignition ? HudViewModel.HudType : HudType.Plain,
-                    TableType = gameInfo.TableType
+                    TableType = gameInfo.TableType,
+                    PokerSiteId = (short)gameInfo.PokerSite,
+                    GameNumber = gameInfo.GameNumber,
+                    LayoutId = tableKey,
+                    LayoutName = activeLayout.Name,
+                    AvailableLayouts = availableLayouts
                 };
-
-                var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
-
-                var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
 
@@ -389,14 +403,6 @@ namespace DriveHUD.Application.ViewModels
                         : new ObservableCollection<string>(cardsCollection);
 
                     var doNotAddPlayer = false;
-
-                    var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
-
-                    if (activeLayout == null)
-                    {
-                        LogProvider.Log.Error(this, "Could not find active layout");
-                        return;
-                    }
 
                     // create new array to prevent Collection was modified exception
                     var activeLayoutHudStats = activeLayout.HudStats.ToArray();

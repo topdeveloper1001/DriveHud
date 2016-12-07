@@ -31,6 +31,21 @@ namespace DriveHud.Tests
 
         private class TableServiceStub : IBetOnlineTableService
         {
+            public bool IsRunning
+            {
+                get
+                {
+                    throw new NotImplementedException();
+                }
+            }
+
+            public event EventHandler ProcessStopped;
+
+            public void Dispose()
+            {
+                throw new NotImplementedException();
+            }
+
             public string GetRandomPlayerName(string sessionCode, int seat)
             {
                 return Utils.GenerateRandomPlayerName(seat);
@@ -42,12 +57,27 @@ namespace DriveHud.Tests
                 return SessionCode;
             }
 
+            public int GetWindowHandle(ulong handId, out EnumPokerSites site)
+            {
+                throw new NotImplementedException();
+            }
+
             public void Reset()
             {
             }
 
             public void ResetCache()
             {
+            }
+
+            public void Start()
+            {
+                throw new NotImplementedException();
+            }
+
+            public void Stop()
+            {
+                throw new NotImplementedException();
             }
         }
 

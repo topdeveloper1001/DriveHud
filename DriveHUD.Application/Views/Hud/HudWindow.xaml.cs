@@ -13,6 +13,8 @@
 using DriveHUD.Application.Controls;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Log;
+using DriveHUD.HUD.Service;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using System;
@@ -20,6 +22,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
+using Telerik.Windows;
+using System.ComponentModel;
 
 namespace DriveHUD.Application.Views
 {
@@ -35,11 +39,17 @@ namespace DriveHUD.Application.Views
         private Point? trackerConditionsMeterPosition;
         private Point trackerConditionsMeterPositionOffset;
 
+        private HudWindowViewModel ViewModel
+        {
+            get { return DataContext as HudWindowViewModel; }
+        }
+
         public HudWindow()
         {
             InitializeComponent();
 
             panelOffsets = new Dictionary<int, Point>();
+            dgCanvas.DragEnded += DgCanvas_DragEnded;
         }
 
         public HudLayout Layout { get; set; }
@@ -62,6 +72,7 @@ namespace DriveHUD.Application.Views
         {
             Layout?.Cleanup();
             Layout = layout;
+            ViewModel?.SetLayout(layout);
 
             if (layout != null && layout.TableHud != null && layout.TableHud.TableLayout != null)
             {
@@ -256,5 +267,57 @@ namespace DriveHUD.Application.Views
 
             return viewModel.Seat + (viewModel.HudType == HudType.Default ? 0 : 100);
         }
+
+        private void SaveHudPositions_Click(object sender, RadRoutedEventArgs e)
+        {
+            try
+            {
+                var layoutId = Layout?.LayoutId;
+
+                if (!layoutId.HasValue)
+                {
+                    return;
+                }
+
+                HudLayoutContract hudLayout = new HudLayoutContract();
+                hudLayout.LayoutId = layoutId.Value;
+                hudLayout.HudPositions = new List<HudPositionContract>();
+
+                var hudPanels = dgCanvas.Children.OfType<FrameworkElement>()
+                    .Where(x => x != null && !(x is TrackConditionsMeterView) && (x.DataContext is HudElementViewModel))
+                    .Select(x => (x.DataContext as HudElementViewModel).Clone())
+                    .ToList();
+
+                foreach (var hudPanel in hudPanels)
+                {
+                    var position = hudPanelCreator.GetOffsetPosition(hudPanel, this);
+
+                    hudLayout.HudPositions.Add(new HudPositionContract
+                    {
+                        Position = new Point(position.Item1, position.Item2),
+                        SeatNumber = hudPanel.Seat,
+                        HudType = (int)hudPanel.HudType
+                    });
+                }
+
+                ViewModel?.SaveHudPositions(hudLayout);
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, ex);
+            }
+        }
+
+        private void DgCanvas_DragEnded(object sender, EventArgs e)
+        {
+            this.Update();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            dgCanvas.DragEnded -= DgCanvas_DragEnded;
+            base.OnClosing(e);
+        }
+
     }
 }

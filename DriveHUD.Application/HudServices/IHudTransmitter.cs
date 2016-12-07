@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.HUD.Service;
 using System;
 
 namespace DriveHUD.Application.HudServices

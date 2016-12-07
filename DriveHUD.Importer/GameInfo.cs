@@ -28,6 +28,8 @@ namespace DriveHUD.Importers
 
         public int WindowHandle { get; set; }
 
+        public long GameNumber { get; set; }
+
         public EnumPokerSites PokerSite { get; set; }
 
         internal GameType GameType { get; set; }

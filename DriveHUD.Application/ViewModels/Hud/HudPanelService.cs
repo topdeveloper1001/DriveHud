@@ -48,6 +48,20 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Converts offset values into position value
+        /// </summary>
+        /// <param name="hudElement">HUD element view model</param>
+        /// <param name="window">Overlay window</param>
+        /// <returns>Item1 - X, Item2 - Y</returns>
+        public virtual Tuple<double, double> GetOffsetPosition(HudElementViewModel hudElement, HudWindow window)
+        {
+            Check.ArgumentNotNull(() => hudElement);
+            Check.ArgumentNotNull(() => window);
+
+            return new Tuple<double, double>(hudElement.Position.X, hudElement.Position.Y);
+        }
+
+        /// <summary>
         /// Create Hud Panel based on specified HUD element view model
         /// </summary>
         /// <param name="hudElement">HUD element view model</param>

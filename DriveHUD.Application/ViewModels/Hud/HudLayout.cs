@@ -71,5 +71,20 @@ namespace DriveHUD.Application.ViewModels
 
         [XmlIgnore, ProtoMember(7)]
         public EnumTableType TableType { get; set; }
+
+        [XmlIgnore, ProtoMember(8)]
+        public long GameNumber { get; set; }
+
+        [XmlIgnore, ProtoMember(9)]
+        public short PokerSiteId { get; set; }
+
+        [XmlIgnore, ProtoMember(10)]
+        public int LayoutId { get; set; }
+
+        [XmlIgnore, ProtoMember(11)]
+        public string LayoutName { get; set; }
+
+        [XmlIgnore, ProtoMember(12)]
+        public IEnumerable<string> AvailableLayouts { get; set; }
     }
 }

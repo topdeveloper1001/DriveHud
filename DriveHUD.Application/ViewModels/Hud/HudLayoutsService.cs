@@ -104,7 +104,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BOL-S.xml",
             "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BOL-T.xml",
             "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-PS.xml", 
+            "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-PS.xml",
             "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-PS.xml",
             "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-PS.xml",
             "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-PS.xml",
@@ -174,6 +174,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         private string settingsFolder;
 
         private string layoutsFile;
+
+        public Dictionary<int, HudTableViewModel> HudTableViewModelDictionary { get; set; }
 
         public HudLayoutsService()
         {

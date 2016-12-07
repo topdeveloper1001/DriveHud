@@ -671,6 +671,7 @@ namespace DriveHUD.Importers.Bovada
 
                     var gameInfo = new GameInfo
                     {
+                        GameNumber = (long)handModel.HandNumber,
                         GameType = handModel.GameType,
                         GameFormat = handModel.GameFormat,
                         PokerSite = EnumPokerSites.Ignition,
