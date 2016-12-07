@@ -29,7 +29,7 @@ namespace Model.Site
 {
     public class PokerStarsConfiguration : ISiteConfiguration
     {
-        private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ" };
+        private static readonly string[] PossibleFolders = new string[] { "PokerStars", "PokerStars.EU", "PokerStars.USNJ", "PokerStars.PT" };
         private static readonly string[] HandHistoryFolders = new string[] { "HandHistory", "TournSummary" };
 
         public PokerStarsConfiguration()
