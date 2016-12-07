@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 
 namespace DriveHUD.Importers.Bovada
@@ -27,7 +28,12 @@ namespace DriveHUD.Importers.Bovada
 
         private const string pipeName = @"\\.\pipe\BCCServer";
 
-        public override string Site
+        protected override EnumPokerSites Site
+        {
+            get { return EnumPokerSites.Ignition; }
+        }
+
+        public override string SiteString
         {
             get
             {

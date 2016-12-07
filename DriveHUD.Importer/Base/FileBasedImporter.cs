@@ -129,7 +129,7 @@ namespace DriveHUD.Importers
                         {
                             EnumPokerSites siteName;
 
-                            if (!EnumPokerSitesExtension.TryParse(handText, out siteName) && !filesToSkip.Contains(cf.Key))
+                            if (!TryGetPokerSiteName(handText, out siteName) && !filesToSkip.Contains(cf.Key))
                             {
                                 filesToSkip.Add(cf.Key);
                                 fs.Close();
@@ -169,13 +169,18 @@ namespace DriveHUD.Importers
                 }
                 catch (Exception e)
                 {
-                    LogProvider.Log.Error(this, string.Format("{0} auto-import failed", Site), e);
+                    LogProvider.Log.Error(this, string.Format("{0} auto-import failed", SiteString), e);
                 }
             }
 
             Clean();
 
             RaiseProcessStopped();
+        }
+
+        protected virtual bool TryGetPokerSiteName(string handText, out EnumPokerSites siteName)
+        {
+            return EnumPokerSitesExtension.TryParse(handText, out siteName);
         }
 
         // Import hand
@@ -261,7 +266,7 @@ namespace DriveHUD.Importers
         protected virtual DirectoryInfo[] GetHandHistoryFolders()
         {
             var siteSettings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings()
-                .SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite.ToString() == this.Site);
+                .SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite.ToString() == this.SiteString);
 
             DirectoryInfo[] dirs;
             if (siteSettings != null && siteSettings.HandHistoryLocationList != null && siteSettings.HandHistoryLocationList.Any())
@@ -270,7 +275,7 @@ namespace DriveHUD.Importers
             }
             else
             {
-                var site = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(Site);
+                var site = ServiceLocator.Current.GetInstance<ISiteConfigurationService>().Get(SiteString);
                 dirs = site.GetHandHistoryFolders().Select(x => new DirectoryInfo(x)).ToArray();
             }
 
@@ -351,7 +356,7 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not find {Site} table", e);
+                LogProvider.Log.Error(this, $"Could not find {SiteString} table", e);
             }
 
             return IntPtr.Zero;

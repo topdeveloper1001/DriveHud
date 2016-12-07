@@ -232,7 +232,10 @@
     <Compile Include="TournamentSettings.cs" />
     <Compile Include="TournamentsResolver.cs" />
     <Compile Include="WinningPokerNetwork\AmericasCardroomImporter.cs" />
+    <Compile Include="WinningPokerNetwork\BlackChipPokerImporter.cs" />
     <Compile Include="WinningPokerNetwork\IAmericasCardroomImporter.cs" />
+    <Compile Include="WinningPokerNetwork\IBlackChipPokerImporter.cs" />
+    <Compile Include="WinningPokerNetwork\WinningPokerNetworkFileBasedImporter.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">

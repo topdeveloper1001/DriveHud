@@ -27,8 +27,12 @@ namespace DriveHUD.Common.Wpf.Converters
                         return "BOL";
                     case EnumPokerSites.Poker888:
                         return "888";
+                    case EnumPokerSites.WinningPokerNetwork:
+                        return "WPN";
                     case EnumPokerSites.AmericasCardroom:
                         return "ACR";
+                    case EnumPokerSites.BlackChipPoker:
+                        return "BCP";
                     default:
                         break;
                 }

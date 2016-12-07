@@ -42,7 +42,7 @@ namespace Model.Site
             }
         }
 
-        public EnumPokerSites Site
+        public virtual EnumPokerSites Site
         {
             get
             {
@@ -66,7 +66,7 @@ namespace Model.Site
             set;
         }
 
-        public string[] GetHandHistoryFolders()
+        public virtual string[] GetHandHistoryFolders()
         {
             var folders = new string[]
             {

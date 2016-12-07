@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Application.TableConfigurators.SeatArea
 {
-    internal class AmericasCardroomTableSeatAreaConfigurator : ITableSeatAreaConfigurator
+    internal class WinningPokerNetworkTableSeatAreaConfigurator : ITableSeatAreaConfigurator
     {
         public IEnumerable<ITableSeatArea> GetTableSeatAreas(EnumTableType tableType)
         {

@@ -20,6 +20,6 @@ namespace DriveHUD.Importers
         /// <summary>
         /// Importer site (PS, iPoker, Bovada, etc.)
         /// </summary>
-        string Site { get; }
+        string SiteString { get; }
     }
 }
