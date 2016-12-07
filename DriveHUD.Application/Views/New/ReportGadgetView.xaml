@@ -692,8 +692,14 @@
                                  RowStyle="{StaticResource CustomSelectionIfSingleGridViewRowStyle}" 
                                  Sorting="GridViewReport_Sorting">
                     <telerik:RadContextMenu.ContextMenu>
-                        <telerik:RadContextMenu x:Name="GridViewReportMenu"
+                        <telerik:RadContextMenu x:Name="GridViewReportMenu" 
                                             ItemContainerStyle="{StaticResource GridMenuItemStyle}">
+                            <telerik:RadContextMenu.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <WrapPanel Orientation="Vertical"
+                                               MaxHeight="470" Background="#181A1D"/>
+                                </ItemsPanelTemplate>
+                            </telerik:RadContextMenu.ItemsPanel>
                         </telerik:RadContextMenu>
                     </telerik:RadContextMenu.ContextMenu>
                 </telerik:RadGridView>

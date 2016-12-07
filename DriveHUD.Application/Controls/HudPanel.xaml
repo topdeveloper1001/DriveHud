@@ -63,13 +63,14 @@
             <Grid>
                 <WrapPanel Margin="3,0,0,3" MinHeight="35" VerticalAlignment="Top" HorizontalAlignment="Stretch" Orientation="Vertical">
                     <i:Interaction.Behaviors>
-                        <hud:HudStatsBehavior x:Name="hudStats" StatInfoSource="{Binding StatInfoCollection}" IsMainStatsPanelEnabled="False" />
+                        <hud:HudStatsBehavior StatInfoSource="{Binding StatInfoCollection}" IsMainStatsPanelEnabled="False" />
                     </i:Interaction.Behaviors>
                 </WrapPanel>
                 <Path Style="{StaticResource PlayerNotePathStyle}" 
                       HorizontalAlignment="Right" VerticalAlignment="Top" 
                       Width="20" Margin="0 -10 -10 0"
                       Stretch="Uniform" Fill="{StaticResource ForegroundBrush}"
+                      ToolTip="{Binding NoteToolTip}"
                       Visibility="{Binding IsNoteIconVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <ItemsControl ItemsSource="{Binding Stickers}"  Margin="0 -10 0 0">
                     <ItemsControl.ItemsPanel>

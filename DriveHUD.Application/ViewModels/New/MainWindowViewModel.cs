@@ -64,6 +64,8 @@ namespace DriveHUD.Application.ViewModels
 
         private IFilterModelManagerService filterModelManager;
 
+        private bool isAdvancedLoggingEnabled = false;
+
         #endregion
 
         #region Constructor
@@ -158,12 +160,8 @@ namespace DriveHUD.Application.ViewModels
         {
             LogProvider.Log.Info(string.Format("Memory before starting auto import: {0:N0}", GC.GetTotalMemory(false)));
 
-            int workerThreads;
-            int completionPortThreads;
-
-            ThreadPool.GetMaxThreads(out workerThreads, out completionPortThreads);
-
-            LogProvider.Log.Info($"Threads info: workerThreads: {workerThreads} completionPortThreads: {completionPortThreads} ");
+            var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            isAdvancedLoggingEnabled = settingsModel.GeneralSettings.IsAdvancedLoggingEnabled;
 
             if (switchViewModel)
             {
@@ -389,8 +387,10 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
                     playerHudContent.HudElement.PlayerName = playerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
-                    playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
+                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
+                                                           string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
+                    
 
                     var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                     playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
@@ -530,9 +530,7 @@ namespace DriveHUD.Application.ViewModels
                         serialized = msTestString.ToArray();
                     }
 
-                    var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
-
-                    if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                    if (isAdvancedLoggingEnabled)
                     {
                         LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
                     }
@@ -540,7 +538,7 @@ namespace DriveHUD.Application.ViewModels
                     var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
                     hudTransmitter.Send(serialized);
 
-                    if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
+                    if (isAdvancedLoggingEnabled)
                     {
                         LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                     }

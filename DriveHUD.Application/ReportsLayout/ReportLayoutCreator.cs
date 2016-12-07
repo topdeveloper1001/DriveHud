@@ -22,7 +22,18 @@ namespace DriveHUD.Application.ReportsLayout
             return Add(name, member, new GridViewLength(0));
         }
 
+        protected virtual GridViewDataColumn Add(string name, string member, bool isVisible)
+        {
+            return Add(name, member, new GridViewLength(0), isVisible);
+        }
+
         protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width)
+        {
+            return Add(name, member, width, true);
+        }
+
+
+        protected virtual GridViewDataColumn Add(string name, string member, GridViewLength width, bool isVisible)
         {
             GridViewDataColumn column = new GridViewDataColumn
             {
@@ -30,6 +41,7 @@ namespace DriveHUD.Application.ReportsLayout
                 DataMemberBinding = new Binding(member),
                 Width = width.Value == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 UniqueName = member,
+                IsVisible = isVisible
             };
 
             return column;
@@ -37,10 +49,15 @@ namespace DriveHUD.Application.ReportsLayout
 
         protected virtual GridViewDataColumn AddFinancial(string name, string member)
         {
-            return AddFinancial(name, member, new GridViewLength(0));
+            return AddFinancial(name, member, new GridViewLength(0), true);
         }
 
-        protected virtual GridViewDataColumn AddFinancial(string name, string member, GridViewLength width)
+        protected virtual GridViewDataColumn AddFinancial(string name, string member, bool isVisible)
+        {
+            return AddFinancial(name, member, new GridViewLength(0), isVisible);
+        }
+
+        protected virtual GridViewDataColumn AddFinancial(string name, string member, GridViewLength width, bool isVisible)
         {
             FrameworkElementFactory fef = new FrameworkElementFactory(typeof(TextBlock));
             var bindingText = new Binding(member);
@@ -62,6 +79,7 @@ namespace DriveHUD.Application.ReportsLayout
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 CellTemplate = template,
                 UniqueName = member,
+                IsVisible = isVisible
             };
 
             return column;
@@ -69,10 +87,15 @@ namespace DriveHUD.Application.ReportsLayout
 
         protected virtual GridViewDataColumn AddPercentile(string name, string member)
         {
-            return AddPercentile(name, member, new GridViewLength(0));
+            return AddPercentile(name, member, new GridViewLength(0), true);
         }
 
-        protected virtual GridViewDataColumn AddPercentile(string name, string member, GridViewLength width)
+        protected virtual GridViewDataColumn AddPercentile(string name, string member, bool isVisible)
+        {
+            return AddPercentile(name, member, new GridViewLength(0), isVisible);
+        }
+
+        protected virtual GridViewDataColumn AddPercentile(string name, string member, GridViewLength width, bool isVisible)
         {
             FrameworkElementFactory fef = new FrameworkElementFactory(typeof(TextBlock));
             var bindingText = new Binding(member) { StringFormat = "{0:n1}"};
@@ -88,6 +111,7 @@ namespace DriveHUD.Application.ReportsLayout
                 Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
                 CellTemplate = template,
                 UniqueName = member,
+                IsVisible = isVisible
             };
 
             return column;

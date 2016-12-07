@@ -49,7 +49,7 @@ namespace DriveHUD.Application.ViewModels
             }
             catch (NpgsqlException ex)
             {
-                if (ex.Code == "3D000")
+                if (ex.ErrorCode == 0x3D000)
                 {
                     conn.Close();
                     LogProvider.Log.Debug("DB doesn't exist");

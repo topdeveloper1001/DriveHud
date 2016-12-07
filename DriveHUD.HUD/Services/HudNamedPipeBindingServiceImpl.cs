@@ -38,8 +38,6 @@ namespace DriveHUD.HUD.Services
         {
             try
             {
-                var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
-
                 HudLayout hudLayout;
 
                 using (var afterStream = new MemoryStream(data))
@@ -47,10 +45,7 @@ namespace DriveHUD.HUD.Services
                     hudLayout = Serializer.Deserialize<HudLayout>(afterStream);
                 }
 
-                if (settingsModel.GeneralSettings.IsAdvancedLoggingEnabled)
-                {
-                    LogProvider.Log.Info(this, $"Read {data.Length} bytes from DH [handle={hudLayout.WindowId}]");
-                }
+                LogProvider.Log.Debug(this, $"Read {data.Length} bytes from DH [handle={hudLayout.WindowId}]");
 
                 System.Windows.Application.Current.Dispatcher.Invoke(() =>
                 {

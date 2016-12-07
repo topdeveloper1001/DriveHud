@@ -143,7 +143,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 var hudElement = clickedItem.DataContext as HudElementViewModel;
-                hudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(viewModel.Note);
+                hudElement.NoteToolTip = viewModel.Note;
             };
             radMenu.Items.Add(item);
 
