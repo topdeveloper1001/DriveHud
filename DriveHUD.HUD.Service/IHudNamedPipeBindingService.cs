@@ -32,6 +32,9 @@ namespace DriveHUD.HUD.Service
 
         [OperationContract(IsOneWay = true)]
         void LoadLayout(int layoutId, string layoutName);
+
+        [OperationContract(IsOneWay = true)]
+        void TagHand(long gameNumber, short pokerSiteId, int tag);
     }
 
     [DataContract]

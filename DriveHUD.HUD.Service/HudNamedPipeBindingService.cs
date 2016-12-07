@@ -28,6 +28,11 @@ namespace DriveHUD.HUD.Service
             _callback?.LoadLayout(layoutId, layoutName);
         }
 
+        public static void TagHand(long gameNumber, short pokerSiteId, int tag)
+        {
+            _callback?.TagHand(gameNumber, pokerSiteId, tag);
+        }
+
         #endregion
 
         #region Interface

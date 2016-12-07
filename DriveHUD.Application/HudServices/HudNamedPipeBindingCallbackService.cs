@@ -6,6 +6,8 @@ using DriveHUD.Application.ViewModels;
 using System.Linq;
 using Model;
 using DriveHUD.Application.ViewModels.Replayer;
+using Model.Interfaces;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Application.HudServices
 {
@@ -101,6 +103,36 @@ namespace DriveHUD.Application.HudServices
             }
 
             App.Current.Dispatcher.Invoke(() => hudLayoutsService.SetLayoutActive(hudToLoad));
+        }
+
+        public void TagHand(long gameNumber, short pokerSiteId, int tag)
+        {
+            try
+            {
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+                var handNote = dataService.GetHandNote(gameNumber, pokerSiteId);
+                if (handNote == null)
+                {
+                    handNote = new Handnotes()
+                    {
+                        Gamenumber = gameNumber,
+                        PokersiteId = pokerSiteId
+                    };
+                }
+                handNote.HandTag = tag;
+                dataService.Store(handNote);
+
+                var storageModel = ServiceLocator.Current.GetInstance<SingletonStorageModel>();
+                var statistic = storageModel.StatisticCollection.FirstOrDefault(x => x.GameNumber == gameNumber && x.PokersiteId == pokerSiteId);
+                if (statistic != null)
+                {
+                    statistic.HandNote = handNote;
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, ex);
+            }
         }
     }
 }

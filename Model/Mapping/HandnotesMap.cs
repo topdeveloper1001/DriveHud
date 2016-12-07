@@ -19,7 +19,7 @@ namespace Model.Mapping
             Map(x => x.Gamenumber).Column("\"HandNumber\"").Not.Nullable();
             Map(x => x.Note).Column("\"Note\"");
             Map(x => x.PokersiteId).Column("\"PokerSiteId\"").Not.Nullable();
-            Map(x => x.CategoryId).Column("\"HandTag\"");
+            Map(x => x.HandTag).Column("\"HandTag\"");
         }
     }
 }

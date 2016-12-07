@@ -702,12 +702,12 @@ namespace DriveHUD.Entities
         {
             get
             {
-                if (HandNote == null || HandNote.CategoryId == null)
+                if (HandNote == null || HandNote.HandTag == null)
                 {
                     return EnumHandTag.None;
                 }
 
-                return (EnumHandTag)HandNote.CategoryId;
+                return (EnumHandTag)HandNote.HandTag;
             }
         }
 

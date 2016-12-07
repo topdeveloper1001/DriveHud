@@ -209,7 +209,7 @@ namespace DriveHUD.Application.Views
                     };
                     stat.HandNote = handNoteEntity;
                 }
-                handNoteEntity.CategoryId = (int)(item.Tag ?? 0);
+                handNoteEntity.HandTag = (int)(item.Tag ?? 0);
                 ServiceLocator.Current.GetInstance<IDataService>().Store(handNoteEntity);
 
                 if (reportGadgetViewModel.FilterTaggedHands_IsChecked)

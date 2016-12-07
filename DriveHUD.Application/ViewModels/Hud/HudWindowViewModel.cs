@@ -1,14 +1,11 @@
 ﻿using DriveHUD.Common.Extensions;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Infrastructure.Base;
-using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using DriveHUD.HUD.Service;
-using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
-using Model.Interfaces;
 using Prism.Interactivity.InteractionRequest;
 using System;
 using System.Collections.ObjectModel;
@@ -22,7 +19,6 @@ namespace DriveHUD.Application.ViewModels.Hud
     public class HudWindowViewModel : BaseViewModel
     {
         private ReaderWriterLockSlim _readerWriterLock;
-        private IDataService _dataService;
         private int _layoutId;
         private long _gameNumber;
         private short _pokerSiteId;
@@ -30,7 +26,6 @@ namespace DriveHUD.Application.ViewModels.Hud
         internal HudWindowViewModel()
         {
             _readerWriterLock = new ReaderWriterLockSlim();
-            _dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
             NotificationRequest = new InteractionRequest<INotification>();
 
@@ -104,25 +99,15 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private void TagHand(object obj)
         {
-            EnumHandTag tag = EnumHandTag.None;
-            if (obj == null || !Enum.TryParse(obj.ToString(), out tag))
-            {
-                return;
-            }
-
             using (var readToken = _readerWriterLock.Read())
             {
-                var handNote = _dataService.GetHandNote(_gameNumber, _pokerSiteId);
-                if (handNote == null)
+                EnumHandTag tag = EnumHandTag.None;
+                if (obj == null || !Enum.TryParse(obj.ToString(), out tag))
                 {
-                    handNote = new Handnotes()
-                    {
-                        Gamenumber = _gameNumber,
-                        PokersiteId = _pokerSiteId
-                    };
+                    return;
                 }
-                handNote.CategoryId = (int)tag;
-                _dataService.Store(handNote);
+
+                HudNamedPipeBindingService.TagHand(_gameNumber, _pokerSiteId, (int)tag);
             }
         }
 
