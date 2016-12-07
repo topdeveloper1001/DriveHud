@@ -163,7 +163,26 @@ namespace DriveHUD.Application.ViewModels.Hud
             "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-ACR.xml",
             "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-ACR.xml",
             "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-ACR.xml",
-            };
+            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-3max-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-BCP.xml"
+
+        };
 
         #endregion
 
