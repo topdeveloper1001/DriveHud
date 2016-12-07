@@ -33,7 +33,17 @@ namespace Model.Settings
             IsProcessedDataLocationEnabled = true;
             ProcessedDataLocation = Path.Combine(StringFormatter.GetAppDataFolderPath(), "ProcessedData");
 
-            var sites = new EnumPokerSites[] { EnumPokerSites.Ignition, EnumPokerSites.BetOnline, EnumPokerSites.TigerGaming, EnumPokerSites.SportsBetting, EnumPokerSites.PokerStars, EnumPokerSites.Poker888, EnumPokerSites.AmericasCardroom };
+            var sites = new EnumPokerSites[] {
+                EnumPokerSites.Ignition,
+                EnumPokerSites.BetOnline,
+                EnumPokerSites.TigerGaming,
+                EnumPokerSites.SportsBetting,
+                EnumPokerSites.PokerStars,
+                EnumPokerSites.Poker888,
+                EnumPokerSites.AmericasCardroom,
+                EnumPokerSites.BlackChipPoker,
+            };
+
             SitesModelList = sites.Select(x => new SiteModel
             {
                 PokerSite = x,
@@ -43,8 +53,18 @@ namespace Model.Settings
 
         public override object Clone()
         {
-            var model = (SiteSettingsModel)this.MemberwiseClone();
-            model.SitesModelList = this.SitesModelList.Select(x => (SiteModel)x.Clone()).ToArray();
+            var model = new SiteSettingsModel();
+            model.IsProcessedDataLocationEnabled = this.IsProcessedDataLocationEnabled;
+            model.ProcessedDataLocation = this.ProcessedDataLocation;
+
+            for (int i = 0; i < model.SitesModelList.Count(); i++)
+            {
+                var siteModel = this.SitesModelList.FirstOrDefault(x => x.PokerSite == model.SitesModelList[i].PokerSite);
+                if (siteModel != null)
+                {
+                    model.SitesModelList[i] = (SiteModel)siteModel.Clone();
+                }
+            }
 
             return model;
         }

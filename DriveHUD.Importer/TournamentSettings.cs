@@ -42,7 +42,7 @@ namespace DriveHUD.Importers
             { 10, new decimal[] { 0.5m, 0.3m, 0.2m } },
         };
 
-        private static readonly Dictionary<int, decimal[]> AmericasCardroomSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
+        private static readonly Dictionary<int, decimal[]> WinningPokerNetworkSnGWinningsMultiplierDictionary = new Dictionary<int, decimal[]>()
         {
             { 2, new decimal[] { 1m } },
             { 6, new decimal[] { 0.65m, 0.35m } },
@@ -72,8 +72,10 @@ namespace DriveHUD.Importers
                 case EnumPokerSites.Bodog:
                 case EnumPokerSites.BetOnline:
                     return BetOnlineSnGWinningsMultiplierDictionary;
+                case EnumPokerSites.WinningPokerNetwork:
                 case EnumPokerSites.AmericasCardroom:
-                    return AmericasCardroomSnGWinningsMultiplierDictionary;
+                case EnumPokerSites.BlackChipPoker:
+                    return WinningPokerNetworkSnGWinningsMultiplierDictionary;
                 case EnumPokerSites.SportsBetting:
                 default:
                     break;

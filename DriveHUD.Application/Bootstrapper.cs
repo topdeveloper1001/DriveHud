@@ -228,6 +228,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
             Container.RegisterType<ISiteConfiguration, Poker888Configuration>(EnumPokerSites.Poker888.ToString());
             Container.RegisterType<ISiteConfiguration, AmericasCardroomConfiguration>(EnumPokerSites.AmericasCardroom.ToString());
+            Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
 
             // HUD table configurators
 
@@ -255,6 +256,10 @@ namespace DriveHUD.Application
             Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Default));
             Container.RegisterType<ITableConfigurator, AmericasCardroomTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Plain));
 
+            // BlackChipPoker
+            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudType.Default));
+            Container.RegisterType<ITableConfigurator, BlackChipPokerTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudType.Plain));
+
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);
 
@@ -274,7 +279,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.SportsBetting.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PokerStarsSiteSettingTableConfigurator>(EnumPokerSites.PokerStars.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, Poker888SiteSettingTableConfigurator>(EnumPokerSites.Poker888.ToString());
-            Container.RegisterType<ISiteSettingTableConfigurator, AmericasCardroomSiteSettingTableConfigurator>(EnumPokerSites.AmericasCardroom.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.AmericasCardroom.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.BlackChipPoker.ToString());
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }
