@@ -238,6 +238,7 @@
     <Compile Include="Settings\SettingsBase.cs" />
     <Compile Include="Settings\SettingsModel.cs" />
     <Compile Include="SingletonStorageModel.cs" />
+    <Compile Include="Site\BlackChipPokerConfiguration.cs" />
     <Compile Include="Site\Poker888Configuration.cs" />
     <Compile Include="Site\AmericasCardroomConfiguration.cs" />
     <Compile Include="Site\SportsBettingConfiguration.cs" />

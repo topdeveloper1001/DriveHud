@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 {
     [TestFixture]
-    class AmericasCardroomFastParserTests
+    class WinningPokerNetworkFastParserTests
     {
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\CancelledHand.txt", true)]
@@ -200,7 +200,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\Tournament\6627313 - $10 Freeroll - On Demand\HH20161109 T6627313-G36855120.txt", 75, 0)]
         public void ParseMultipleHandsTest(string handHistoryFile, int numberOfValidHands, int numberOfInvalidHands)
         {
-            var parser = new AmericasCardroomFastParserImpl();
+            var parser = new WinningPokerNetworkFastParserImpl();
             int validHands = 0;
             int invalidHands = 0;
 
@@ -232,7 +232,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var parsingResult = GetParsingResult(handHistoryFile);
 
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.AmericasCardroom, PlayerId = 1 });
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
             Assert.That(stat.PositionString, Is.EqualTo(position.ToString()));
         }
 
@@ -243,7 +243,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var parsingResult = GetParsingResult(handHistoryFile);
 
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.AmericasCardroom, PlayerId = 1 });
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
             Assert.That(stat.Position, Is.EqualTo(EnumPosition.BB));
         }
 
@@ -254,7 +254,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
             var parsingResult = GetParsingResult(handHistoryFile);
 
             var calc = new PlayerStatisticCalculator();
-            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.AmericasCardroom, PlayerId = 1 });
+            var stat = calc.CalculateStatistic(parsingResult, new Players() { Playername = playername, PokersiteId = (short)EnumPokerSites.WinningPokerNetwork, PlayerId = 1 });
             Assert.That(stat.Position, Is.EqualTo(EnumPosition.SB));
         }
 
@@ -287,7 +287,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         {
             var handHistory = ParseHandHistory(handHistoryFile);
 
-            var pokersiteId = (short)EnumPokerSites.AmericasCardroom;
+            var pokersiteId = (short)EnumPokerSites.WinningPokerNetwork;
             var hh = new Handhistory
             {
                 Gamenumber = handHistory.HandId,
@@ -326,7 +326,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
         private HandHistory ParseHandHistory(string handHistoryFile)
         {
-            var parser = new AmericasCardroomFastParserImpl();
+            var parser = new WinningPokerNetworkFastParserImpl();
 
             var handHistoryText = File.ReadAllText(handHistoryFile);
 
@@ -341,7 +341,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
 
         private IEnumerable<Player> GetParsedPlayers(string handHistoryFile)
         {
-            var parser = new AmericasCardroomFastParserImpl();
+            var parser = new WinningPokerNetworkFastParserImpl();
 
             var handHistoryText = File.ReadAllText(handHistoryFile);
 

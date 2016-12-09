@@ -133,6 +133,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to BlackChipPoker.
+        /// </summary>
+        internal static string Enum_EnumPokerSites_BlackChipPoker {
+            get {
+                return ResourceManager.GetString("Enum_EnumPokerSites_BlackChipPoker", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bodog.
         /// </summary>
         internal static string Enum_EnumPokerSites_Bodog {

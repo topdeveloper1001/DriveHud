@@ -42,7 +42,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
             LogProvider.Log.Info("Running migration #4");
             try
             {
-                LoadPredefinedLayoutsForPS();
+                //LoadPredefinedLayoutsForPS();
             }
             catch (Exception e)
             {
@@ -55,6 +55,12 @@ namespace DriveHUD.Application.MigrationService.Migrations
         private void LoadPredefinedLayoutsForPS()
         {
             var layoutsService = new ViewModels.Hud.HudLayoutsService();
+
+            if (!layoutsService.Layouts.Layouts.Any())
+            {
+                return;
+            }
+
             var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
 
             var path = "tempfile.layouts";

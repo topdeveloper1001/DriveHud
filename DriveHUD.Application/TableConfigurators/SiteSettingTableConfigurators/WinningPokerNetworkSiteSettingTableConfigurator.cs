@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators
 {
-    internal class AmericasCardroomSiteSettingTableConfigurator : BaseSiteSettingTableConfigurator
+    internal class WinningPokerNetworkSiteSettingTableConfigurator : BaseSiteSettingTableConfigurator
     {
         private const string BackgroundTableImage = "/DriveHUD.Common.Resources;component/images/settings/empty-table.png";
 

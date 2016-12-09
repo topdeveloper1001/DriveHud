@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using DriveHUD.Importers.Loggers;
 using Microsoft.Practices.ServiceLocation;
 
@@ -25,7 +26,12 @@ namespace DriveHUD.Importers.BetOnline
 
         private const string pipeName = @"\\.\pipe\BOCServerInfo";
 
-        public override string Site
+        protected override EnumPokerSites Site
+        {
+            get { return EnumPokerSites.BetOnline; }
+        }
+
+        public override string SiteString
         {
             get
             {
