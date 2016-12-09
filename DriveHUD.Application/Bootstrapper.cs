@@ -91,9 +91,11 @@ namespace DriveHUD.Application
 
             ImporterBootstrapper.ConfigureImporterService();
 
-            configViewModel = new ConfigurePostgresqlServerViewModel();
-            configViewModel.AfterConnectAction += ShowMainWindow;
-            configViewModel.ConnectCommand.Execute(null);
+            //configViewModel = new ConfigurePostgresqlServerViewModel();
+            //configViewModel.AfterConnectAction += ShowMainWindow;
+            //configViewModel.ConnectCommand.Execute(null);
+
+            ShowMainWindow();
         }
 
         private void ShowMainWindow()
@@ -101,8 +103,8 @@ namespace DriveHUD.Application
             LogProvider.Log.Info($"Screen: {Utils.GetScreenResolution()}");
             LogProvider.Log.Info($"Dpi: {Utils.GetCurrentDpi()}");
 
-            if (ConfigurePostgresqlServerViewModel.IsConnected)
-            {
+            //if (ConfigurePostgresqlServerViewModel.IsConnected)
+            //{
                 if (IsUninstall())
                 {
                     LogProvider.Log.Info(this, "Uninstalling all user's data...");
@@ -147,18 +149,18 @@ namespace DriveHUD.Application
 
                     ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
                 }
-            }
-            else
-            {
-                if (configWindow == null)
-                {
-                    configWindow = new ConfigurePostgresqlServer(configViewModel);
-                }
+            //}
+            //else
+            //{
+            //    if (configWindow == null)
+            //    {
+            //        configWindow = new ConfigurePostgresqlServer(configViewModel);
+            //    }
 
-                configWindow.Show();
+            //    configWindow.Show();
 
-                App.SplashScreen.CloseSplashScreen();
-            }
+            //    App.SplashScreen.CloseSplashScreen();
+            //}
         }
 
         private bool IsUninstall()
@@ -201,7 +203,7 @@ namespace DriveHUD.Application
 
             Container.RegisterType<SingletonStorageModel>(new ContainerControlledLifetimeManager());
 
-            RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);            
+            RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);

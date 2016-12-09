@@ -380,14 +380,15 @@ namespace Model
         public IList<PlayerCollectionItem> GetPlayersList()
         {
             if (!Directory.Exists(playersPath))
+            {
                 Directory.CreateDirectory(playersPath);
+            }
 
-            var names = Directory.GetDirectories(playersPath).Select(x => new DirectoryInfo(x).Name).ToList();
             var result = new List<PlayerCollectionItem>();
 
             using (var session = ModelEntities.OpenSession())
             {
-                var hh = session.Query<Players>().Where(x => names.Contains(x.Playername));
+                var hh = session.Query<Players>().ToArray();
 
                 if (hh != null)
                 {

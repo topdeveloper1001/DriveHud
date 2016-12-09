@@ -168,23 +168,24 @@ namespace DriveHUD.Importers
 
                 var parsingResult = ParseHands(hands, handHistoryParser, gameInfo);
 
+                if (gameInfo.UpdateInfo != null && parsingResult.Count > 0)
+                {
+                    gameInfo.UpdateInfo(parsingResult[0], gameInfo);
+                }
+
 #if DEBUG
                 var sw = new Stopwatch();
 
                 sw.Start();
 #endif
 
-                if (gameInfo.UpdateInfo != null && parsingResult.Count > 0)
-                {
-                    gameInfo.UpdateInfo(parsingResult[0], gameInfo);
-                }
-
                 InsertHands(parsingResult, progress, gameInfo);
 
 #if DEBUG
                 sw.Stop();
 
-                Debug.WriteLine("Import for {0}ms", sw.ElapsedMilliseconds);
+                Debug.WriteLine("DB import for {0}ms", sw.ElapsedMilliseconds);
+                LogProvider.Log.Debug($"DB import for { sw.ElapsedMilliseconds}ms");
 #endif            
 
                 return parsingResult;

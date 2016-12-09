@@ -24,7 +24,7 @@ param
 
     [string] $InstallerMSI = 'DriveHUD.Setup\DriveHUD.Setup.wixproj',
     
-    [string] $Version = '1.0.5',
+    [string] $Version = '1.0.6',
 
     [string] $ObfuscatorIncludeFilter = 'DriveHUD.*.exe,DriveHUD.*dll,Model.dll,HandHistories.Parser.dll',
 
@@ -228,7 +228,7 @@ try
 
    # setup version
    Set-Version($session)  
-    
+       
    # nuget
    Use-Nuget $session $session.Solution 'nuget.log'   
 

@@ -250,8 +250,13 @@ namespace DriveHUD.Application.ViewModels
 
         private void RefreshData()
         {
+            var sw = new Stopwatch();
+            sw.Start();
             UpdatePlayerList();
+            sw.Stop();
 
+            LogProvider.Log.Debug($"RefreshData.UpdatePlayerList {sw.ElapsedMilliseconds} ms");
+         
             if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
             {
                 App.Current.Dispatcher.Invoke(() =>
@@ -260,8 +265,10 @@ namespace DriveHUD.Application.ViewModels
                 });
                 return;
             }
-
+            sw.Restart();
             UpdateCurrentView();
+            sw.Stop();
+            LogProvider.Log.Debug($"RefreshData.UpdateCurrentView {sw.ElapsedMilliseconds} ms");            
         }
 
         private void OnDataImported(DataImportedEventArgs e)
@@ -277,6 +284,7 @@ namespace DriveHUD.Application.ViewModels
                 var refreshTime = sw.ElapsedMilliseconds;
 
                 Debug.WriteLine("RefreshData {0} ms", refreshTime);
+                LogProvider.Log.Debug($"RefreshData { sw.ElapsedMilliseconds} ms");
 
                 sw.Restart();
 

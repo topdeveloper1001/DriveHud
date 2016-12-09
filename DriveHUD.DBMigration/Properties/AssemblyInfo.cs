@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("DriveHUD.Common")]
+[assembly: AssemblyTitle("DriveHUD.DBMigration")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("DriveHUD.Common")]
+[assembly: AssemblyProduct("DriveHUD.DBMigration")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("d7903448-ed88-4f04-9a16-7f9486c4291f")]
+[assembly: Guid("59331f9b-8484-4d0e-b832-8f19feaf04b9")]
 
 // Version information for an assembly consists of the following four values:
 //

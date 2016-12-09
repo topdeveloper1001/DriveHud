@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Model", "Model\Model.csproj", "{92F8B855-AF92-4969-8882-CE8FD3797CF0}"
 EndProject
@@ -53,6 +53,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.HUD", "DriveHUD.HUD\DriveHUD.HUD.csproj", "{DC22A64A-C2BF-40FD-A2E3-5A6B4C1B182E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.HUD.Service", "DriveHUD.HUD.Service\DriveHUD.HUD.Service.csproj", "{69DF03D3-2FDB-45C1-991F-E3316D6C85BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DriveHUD.DBMigration", "DriveHUD.DBMigration\DriveHUD.DBMigration.csproj", "{59331F9B-8484-4D0E-B832-8F19FEAF04B9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -283,6 +285,18 @@ Global
 		{69DF03D3-2FDB-45C1-991F-E3316D6C85BD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{69DF03D3-2FDB-45C1-991F-E3316D6C85BD}.Release|x86.ActiveCfg = Release|Any CPU
 		{69DF03D3-2FDB-45C1-991F-E3316D6C85BD}.Release|x86.Build.0 = Release|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Debug|x86.Build.0 = Debug|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Release|x86.ActiveCfg = Release|Any CPU
+		{59331F9B-8484-4D0E-B832-8F19FEAF04B9}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

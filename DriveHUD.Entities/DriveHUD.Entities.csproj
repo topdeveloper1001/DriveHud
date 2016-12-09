@@ -30,6 +30,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="FluentNHibernate, Version=2.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.2.0.1.0\lib\net40\FluentNHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.0.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="protobuf-net, Version=2.1.0.0, Culture=neutral, PublicKeyToken=257b51d87d2e4d67, processorArchitecture=MSIL">
       <HintPath>..\packages\protobuf-net.2.1.0\lib\net45\protobuf-net.dll</HintPath>
       <Private>True</Private>
@@ -54,6 +66,14 @@
     <Compile Include="Handhistory.cs" />
     <Compile Include="HandHistoryRecord.cs" />
     <Compile Include="Handnotes.cs" />
+    <Compile Include="Mappings\GametypesMap.cs" />
+    <Compile Include="Mappings\HandhistoryMap.cs" />
+    <Compile Include="Mappings\HandhistoryrecordMap.cs" />
+    <Compile Include="Mappings\HandnotesMap.cs" />
+    <Compile Include="Mappings\PlayernotesMap.cs" />
+    <Compile Include="Mappings\PlayersMap.cs" />
+    <Compile Include="Mappings\PlayerstatisticMap.cs" />
+    <Compile Include="Mappings\TournamentsMap.cs" />
     <Compile Include="PlayerNotes.cs" />
     <Compile Include="Players.cs" />
     <Compile Include="Playerstatistic.cs" />
