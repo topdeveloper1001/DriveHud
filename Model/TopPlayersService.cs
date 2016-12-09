@@ -21,6 +21,7 @@ namespace Model
         private CancellationTokenSource _cancellationTokenSource;
         private Task _updateTopTask;
         private decimal _minNetWon;
+        private Expression<Func<Playerstatistic, bool>> _currentFilter;
 
 
         public int TopCount { get; set; }
@@ -37,8 +38,11 @@ namespace Model
             _minNetWon = decimal.MinValue;
         }
 
-        private async void OnUpdateReport(Expression<Func<Playerstatistic, bool>> obj)
+        private async void OnUpdateReport(Expression<Func<Playerstatistic, bool>> filterPredicate)
         {
+            if (filterPredicate == _currentFilter)
+                return;
+            _currentFilter = filterPredicate;
             var previousCts = _cancellationTokenSource;
             var newCts = new CancellationTokenSource();
             _cancellationTokenSource = newCts;
@@ -55,7 +59,7 @@ namespace Model
                 }
             }
             newCts.Token.ThrowIfCancellationRequested();
-            _updateTopTask = UpdateTop(obj, newCts.Token);
+            _updateTopTask = UpdateTop(filterPredicate, newCts.Token);
             await _updateTopTask;
         }
 
