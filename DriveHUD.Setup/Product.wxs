@@ -118,6 +118,9 @@
       <Component Id="DriveHUD.Importers.dll" Guid="{C850656B-AE89-4DD6-8EB4-76B81DF6ACB0}">
         <File Id="DriveHUD.Importers.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.Importers.dll" />
       </Component>
+      <Component Id="DriveHUD.HUD.Service.dll" Guid="{88B7F75A-8018-4187-A199-993DF44153C0}">
+        <File Id="DriveHUD.HUD.Service.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.HUD.Service.dll" />
+      </Component>
       <Component Id="Model.dll" Guid="{87680A6E-E263-4CA5-BE3D-88F4999F8A1D}">
         <File Id="Model.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Model.dll" />
       </Component>
@@ -399,6 +402,7 @@
       <ComponentRef Id="DesktopShortcuts"/>
       <ComponentRef Id="DriveHUD.Application.exe" />
       <ComponentRef Id="DriveHUD.HUD.exe" />
+      <ComponentRef Id="DriveHUD.HUD.Service.dll" />
       <ComponentRef Id="DriveHUD.HUD.exe.config"/>
       <ComponentRef Id="DriveHUD.ViewModels.dll" />
       <ComponentRef Id="DriveHUD.Common.dll" />

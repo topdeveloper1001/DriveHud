@@ -15,7 +15,7 @@ using System.ServiceModel;
 
 namespace DriveHUD.Application.HudServices
 {
-    internal class HudTransmitter : IHudTransmitter
+    public class HudTransmitter : IHudTransmitter
     {
         private const string hudClientFileName = "DriveHUD.HUD.exe";
         private const double delayMS = 1000;
