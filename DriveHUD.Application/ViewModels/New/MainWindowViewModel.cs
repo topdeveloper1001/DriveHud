@@ -248,15 +248,15 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void RefreshData()
+        private void RefreshData(GameInfo gameInfo = null)
         {
             var sw = new Stopwatch();
             sw.Start();
-            UpdatePlayerList();
+            UpdatePlayerList(gameInfo);
             sw.Stop();
 
             LogProvider.Log.Debug($"RefreshData.UpdatePlayerList {sw.ElapsedMilliseconds} ms");
-         
+
             if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
             {
                 App.Current.Dispatcher.Invoke(() =>
@@ -268,7 +268,7 @@ namespace DriveHUD.Application.ViewModels
             sw.Restart();
             UpdateCurrentView();
             sw.Stop();
-            LogProvider.Log.Debug($"RefreshData.UpdateCurrentView {sw.ElapsedMilliseconds} ms");            
+            LogProvider.Log.Debug($"RefreshData.UpdateCurrentView {sw.ElapsedMilliseconds} ms");
         }
 
         private void OnDataImported(DataImportedEventArgs e)
@@ -398,7 +398,7 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
                                                            string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
-                    
+
 
                     var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                     playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
@@ -640,20 +640,13 @@ namespace DriveHUD.Application.ViewModels
             ReportGadgetViewModel.UpdateReport();
         }
 
-        private void UpdatePlayerList()
+        private void UpdatePlayerList(GameInfo gameInfo)
         {
-            var updatedPlayers = dataService.GetPlayersList();
+            var updatedPlayers = gameInfo != null ? gameInfo.AddedPlayers : dataService.GetPlayersList();
 
             foreach (var player in updatedPlayers)
             {
-                if (StorageModel.PlayerCollection.Contains(player))
-                {
-                    continue;
-                }
-
-                var playerCopy = player;
-
-                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(playerCopy));
+                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(player));
             }
         }
 

@@ -377,45 +377,139 @@ namespace Model
             }
         }
 
-        public IList<PlayerCollectionItem> GetPlayersList()
+        #region workaround for players collection (need to organize it better)
+
+        private List<PlayerCollectionItem> playerInternalCollection = null;
+
+        private ReaderWriterLockSlim playerCollectionLock = new ReaderWriterLockSlim();
+
+        public void AddPlayerToList(PlayerCollectionItem playerItem)
         {
-            if (!Directory.Exists(playersPath))
+            if (playerItem == null)
             {
-                Directory.CreateDirectory(playersPath);
+                return;
             }
 
-            var result = new List<PlayerCollectionItem>();
+            playerCollectionLock.EnterWriteLock();
 
-            using (var session = ModelEntities.OpenSession())
+            try
             {
-                var hh = session.Query<Players>().ToArray();
-
-                if (hh != null)
+                if (playerInternalCollection == null)
                 {
-                    var group = hh.ToList().GroupBy(x => x.Playername);
+                    playerInternalCollection = new List<PlayerCollectionItem>();
+                }
 
-                    foreach (var pg in group)
+                playerInternalCollection.Add(playerItem);
+            }
+            finally
+            {
+                playerCollectionLock.ExitWriteLock();
+            }
+        }
+
+        public void AddPlayerRangeToList(IEnumerable<PlayerCollectionItem> playerItems)
+        {
+            if (playerItems == null)
+            {
+                return;
+            }
+
+            playerCollectionLock.EnterWriteLock();
+
+            try
+            {
+                if (playerInternalCollection == null)
+                {
+                    playerInternalCollection = new List<PlayerCollectionItem>();
+                }
+
+                playerInternalCollection.AddRange(playerItems);
+            }
+            finally
+            {
+                playerCollectionLock.ExitWriteLock();
+            }
+        }
+
+        public IList<PlayerCollectionItem> GetPlayersList()
+        {
+            if (playerInternalCollection == null)
+            {
+                playerCollectionLock.EnterWriteLock();
+
+                if (playerInternalCollection == null)
+                {
+                    try
                     {
-                        if (!pg.Any())
-                        {
-                            continue;
-                        }
-
-                        if (pg.Count() == 1)
-                        {
-                            result.Add(new PlayerCollectionItem { Name = pg.Key, PokerSite = (EnumPokerSites)pg.FirstOrDefault()?.PokersiteId });
-                        }
-                        else
-                        {
-                            var stats = GetPlayerStatisticFromFile(pg.Key, null);
-                            stats.Select(s => s.PokersiteId).Distinct().ForEach(s => result.Add(new PlayerCollectionItem { Name = pg.Key, PokerSite = (EnumPokerSites)s }));
-                        }
+                        playerInternalCollection = GetPlayersListInternal();
+                    }
+                    finally
+                    {
+                        playerCollectionLock.ExitWriteLock();
                     }
                 }
             }
 
+            playerCollectionLock.EnterReadLock();
+
+            try
+            {
+                return new List<PlayerCollectionItem>(playerInternalCollection);
+            }
+            finally
+            {
+                playerCollectionLock.ExitReadLock();
+            }
+        }
+
+        private List<PlayerCollectionItem> GetPlayersListInternal()
+        {
+            var result = new List<PlayerCollectionItem>();
+
+            try
+            {
+                if (!Directory.Exists(playersPath))
+                {
+                    Directory.CreateDirectory(playersPath);
+                }
+
+                using (var session = ModelEntities.OpenSession())
+                {
+                    var hh = session.Query<Players>().ToArray();
+
+                    if (hh != null)
+                    {
+                        var group = hh.ToList().GroupBy(x => x.Playername);
+
+                        foreach (var pg in group)
+                        {
+                            if (!pg.Any())
+                            {
+                                continue;
+                            }
+
+                            if (pg.Count() == 1)
+                            {
+                                result.Add(new PlayerCollectionItem { Name = pg.Key, PokerSite = (EnumPokerSites)pg.FirstOrDefault()?.PokersiteId });
+                            }
+                            else
+                            {
+                                var stats = GetPlayerStatisticFromFile(pg.Key, null);
+                                stats.Select(s => s.PokersiteId).Distinct().ForEach(s => result.Add(new PlayerCollectionItem { Name = pg.Key, PokerSite = (EnumPokerSites)s }));
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't get player list", e);
+            }
+
             return result;
         }
+
+        #endregion
 
         public void RemoveAppData()
         {

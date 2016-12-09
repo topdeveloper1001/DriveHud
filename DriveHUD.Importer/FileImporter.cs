@@ -399,16 +399,31 @@ namespace DriveHUD.Importers
                 // Calculate stats for every player (to do - vector analyze)
                 var playersToSelect = handHistory.Players.Select(x => x.Playername).ToList();
 
-                var existingPlayers = session.Query<Players>().Where(x => playersToSelect.Contains(x.Playername) && x.PokersiteId == handHistory.HandHistory.PokersiteId).ToList();
+                var dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
+                var existingPlayers = session.Query<Players>().Where(x => playersToSelect.Contains(x.Playername) && x.PokersiteId == handHistory.HandHistory.PokersiteId).ToArray();
 
                 // join new players with existing
-                var players = (from handHistoryPlayer in handHistory.Players
-                               join existingPlayer in existingPlayers on handHistoryPlayer.Playername equals existingPlayer.Playername into gj
-                               from gjPlayer in gj.DefaultIfEmpty()
-                               let player = gjPlayer ?? handHistoryPlayer
-                               select player).ToArray();
+                var handPlayers = (from handHistoryPlayer in handHistory.Players
+                                   join existingPlayer in existingPlayers on handHistoryPlayer.Playername equals existingPlayer.Playername into gj
+                                   from gjPlayer in gj.DefaultIfEmpty()
+                                   let player = gjPlayer ?? handHistoryPlayer
+                                   let toAdd = gjPlayer == null
+                                   select new { Player = player, ToAdd = toAdd }).ToArray();
 
-                foreach (var existingPlayer in players)
+                var playersToAdd = (from handPlayer in handPlayers
+                                    where handPlayer.ToAdd
+                                    select new PlayerCollectionItem
+                                    {
+                                        Name = handPlayer.Player.Playername,
+                                        PokerSite = (EnumPokerSites)handHistory.HandHistory.PokersiteId
+                                    }).ToArray();
+
+                dataService.AddPlayerRangeToList(playersToAdd);
+
+                gameInfo.AddedPlayers = playersToAdd;
+
+                foreach (var existingPlayer in handPlayers.Select(x => x.Player).ToArray())
                 {
                     if (existingGameType.Istourney)
                     {
