@@ -50,6 +50,10 @@ namespace Model.Interfaces
 
         IList<PlayerCollectionItem> GetPlayersList();
 
+        void AddPlayerToList(PlayerCollectionItem playerItem);
+
+        void AddPlayerRangeToList(IEnumerable<PlayerCollectionItem> playerItems);
+
         void RemoveAppData();
 
         /// <summary>

@@ -248,9 +248,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void RefreshData()
+        private void RefreshData(GameInfo gameInfo = null)
         {
-            UpdatePlayerList();
+            UpdatePlayerList(gameInfo);
 
             if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
             {
@@ -390,7 +390,7 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
                                                            string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
-                    
+
 
                     var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                     playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
@@ -632,20 +632,13 @@ namespace DriveHUD.Application.ViewModels
             ReportGadgetViewModel.UpdateReport();
         }
 
-        private void UpdatePlayerList()
+        private void UpdatePlayerList(GameInfo gameInfo)
         {
-            var updatedPlayers = dataService.GetPlayersList();
+            var updatedPlayers = gameInfo != null && gameInfo.AddedPlayers != null ? gameInfo.AddedPlayers : dataService.GetPlayersList();
 
             foreach (var player in updatedPlayers)
             {
-                if (StorageModel.PlayerCollection.Contains(player))
-                {
-                    continue;
-                }
-
-                var playerCopy = player;
-
-                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(playerCopy));
+                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(player));
             }
         }
 
