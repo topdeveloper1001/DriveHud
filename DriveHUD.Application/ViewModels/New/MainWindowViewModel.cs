@@ -74,7 +74,6 @@ namespace DriveHUD.Application.ViewModels
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
-
             synchronizationContext = _synchronizationContext;
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -100,7 +99,6 @@ namespace DriveHUD.Application.ViewModels
 
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
             StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
-
             StorageModel.PropertyChanged += StorageModel_PropertyChanged;
 
             ProgressViewModel = new ProgressViewModel();

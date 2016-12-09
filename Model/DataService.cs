@@ -133,6 +133,15 @@ namespace Model
             }
         }
 
+        public IList<HandHistoryRecord> GetHandHistoryRecords()
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                return session.Query<HandHistoryRecord>().Fetch(x => x.Player).ToList();
+            }
+        }
+
+
         public IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId)
         {
             using (var session = ModelEntities.OpenSession())

@@ -20,7 +20,7 @@ namespace DriveHUD.Application.ReportsLayout
             Register<TimeLayoutCreator, TimeReportCreator>(Model.Enums.EnumReports.Time);
             Register<ShowdownHandsLayoutCreator, ShowdownHandsReportCreator>(Model.Enums.EnumReports.ShowdownHands);
             Register<PokerSiteLayoutCreator, PokerSiteReportCreator>(Model.Enums.EnumReports.PokerSite);
-
+            Register<OpponentAnalysisLayoutCreator, OpponentAnalysisReportCreator>(Model.Enums.EnumReports.OpponentAnalysis);
             /*  Tournaments Tab */
             Register<TournamentsResultLayoutCreator, TournamentOverAllReportCreator>(Model.Enums.EnumReports.TournamentResults);
             Register<TournamentsLayoutCreator, TournamentReportCreator>(Model.Enums.EnumReports.Tournaments);

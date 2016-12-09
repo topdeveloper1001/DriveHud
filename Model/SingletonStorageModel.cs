@@ -160,6 +160,7 @@ namespace Model
         }
 
         private IList<Playerstatistic> _filteredPlayerStatistic;
+        
         public IList<Playerstatistic> FilteredPlayerStatistic
         {
             set
@@ -171,6 +172,8 @@ namespace Model
                 return _filteredPlayerStatistic;
             }
         }
+
+        public IList<Playerstatistic> FilteredTopStatistic { get; set; }
 
         #endregion
 

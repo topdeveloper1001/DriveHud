@@ -52,13 +52,12 @@ namespace DriveHUD.Application.Views
         private Model.Enums.EnumReports reportCache;
         private RadContextMenu handsGridContextMenu;
         private RadContextMenu tournamentsGridContextMenu;
-
+        
         public ReportGadgetView()
         {
             InitializeComponent();
 
             ServiceProvider.RegisterPersistenceProvider<ICustomPropertyProvider>(typeof(RadGridView), new GridViewCustomPropertyProvider());
-
             GridViewReportMenu.ItemsSource = GridViewReport.Columns;
             GridViewKnownHandsMenu.ItemsSource = GridViewKnownHands.Columns;
 
@@ -295,10 +294,12 @@ namespace DriveHUD.Application.Views
             GridLayoutSave(GridViewReport, string.Format("{0}ReportLayout.data", reportCache));
         }
 
-        private async void ReportSet(Model.Enums.EnumReports reportType)
+        private async void ReportSet(EnumReports reportType)
         {
             try
             {
+                BusyIndicator.Visibility = Visibility.Visible;
+                GridViewReport.Visibility = Visibility.Collapsed;
                 // disable radio button panel to restrict changing the report type during loading
                 ReportRadioButtonPanel.IsEnabled = false;
 
@@ -306,11 +307,11 @@ namespace DriveHUD.Application.Views
                 var creator = ReportManager.GetReportCreator(reportType);
                 if (layout == null || creator == null) return;
 
-                var reportCollection = 
-                    //reportType == EnumReports.OpponentAnalysis?
-                    //GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredTopStatistic):
+                var reportCollection =
+                    reportType == EnumReports.OpponentAnalysis ?
+                    GetReportCollectionAsync(creator, await reportGadgetViewModel.GetTop()) :
                     GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
-
+                
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
                 reportGadgetViewModel.ReportCollection.Clear();
@@ -333,6 +334,8 @@ namespace DriveHUD.Application.Views
             finally
             {
                 ReportRadioButtonPanel.IsEnabled = true;
+                BusyIndicator.Visibility = Visibility.Collapsed;
+                GridViewReport.Visibility = Visibility.Visible;
             }
         }
 

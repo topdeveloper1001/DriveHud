@@ -13,7 +13,7 @@ namespace Model.Interfaces
         IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId);
 
         Indicators GetPlayerIndicator(string playerName, short pokersiteId);
-
+        IList<HandHistoryRecord> GetHandHistoryRecords();
         IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId);
 
         Players GetPlayer(string playerName, short pokersiteId);
@@ -61,6 +61,5 @@ namespace Model.Interfaces
         PlayerCollectionItem GetActivePlayer();
 
         void SaveActivePlayer(string playerName, short pokersiteId);
-
     }
 }
