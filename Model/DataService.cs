@@ -454,7 +454,7 @@ namespace Model
 
             try
             {
-                return new List<PlayerCollectionItem>(playerInternalCollection);
+                return new List<PlayerCollectionItem>(playerInternalCollection.OrderBy(x => x.Name));
             }
             finally
             {
