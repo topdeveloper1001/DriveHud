@@ -63,7 +63,7 @@
             <Grid>
                 <WrapPanel Margin="3,0,0,3" MinHeight="35" VerticalAlignment="Top" HorizontalAlignment="Stretch" Orientation="Vertical">
                     <i:Interaction.Behaviors>
-                        <hud:HudStatsBehavior x:Name="hudStats" StatInfoSource="{Binding StatInfoCollection}" IsMainStatsPanelEnabled="False" />
+                        <hud:HudStatsBehavior StatInfoSource="{Binding StatInfoCollection}" IsMainStatsPanelEnabled="False" />
                     </i:Interaction.Behaviors>
                 </WrapPanel>
                 <Path Style="{StaticResource PlayerNotePathStyle}" 

@@ -91,7 +91,7 @@ namespace DriveHUD.Importers
 
                             try
                             {
-                                encoding = EncodingDetector.DetectTextFileEncoding(fs, 0x10000);
+                                encoding = EncodingDetector.DetectTextFileEncoding(fs, 0x10000) ?? Encoding.UTF8;
                             }
                             catch (Exception ex)
                             {

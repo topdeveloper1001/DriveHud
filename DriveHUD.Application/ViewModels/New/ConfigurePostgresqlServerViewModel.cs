@@ -211,10 +211,11 @@ namespace DriveHUD.Application.ViewModels
             {
                 //  LogProvider.Log.Debug(string.Format("Server={0};Port={1};Database={2};User Id={3};Password={4};", Server, Port, database, User, Password));
 
-                conn = new NpgsqlConnection(connectionString);
+                conn = new NpgsqlConnection(connectionString);                                
 
                 LogProvider.Log.Debug("Connecting to a PostgreSQL database");
-                builder = new NpgsqlConnectionStringBuilder(conn.ConnectionString);
+                builder = new NpgsqlConnectionStringBuilder(conn.ConnectionString);               
+
                 conn.Open();
                 var version = DoWork(conn);
                 conn.Close();
@@ -227,7 +228,7 @@ namespace DriveHUD.Application.ViewModels
             catch (NpgsqlException ex)
             {
                 conn.Close();
-                if (ex.Code == "3D000")
+                if (ex.ErrorCode == 0x3D000)
                 {
                     LogProvider.Log.Debug("Database doesn't exist");
                     CreateDatabase(server, port, database, user, password);
@@ -271,8 +272,8 @@ namespace DriveHUD.Application.ViewModels
                         "Server={0};Port={1};User Id={2};Password={3};CommandTimeout={4};",
                         builder.Host,
                         builder.Port,
-                        builder.UserName,
-                        Encoding.UTF8.GetString(builder.PasswordAsByteArray), COMMAND_TIMEOUT));
+                        builder.Username,
+                        builder.Password, COMMAND_TIMEOUT));
             try
             {
                 CreateTable(conn);
@@ -318,7 +319,7 @@ namespace DriveHUD.Application.ViewModels
             NpgsqlCommand command =
                         new NpgsqlCommand(String.Format("CREATE DATABASE {0} WITH OWNER = \"{1}\" " +
                                                         "ENCODING = 'UTF8' " +
-                                                        "CONNECTION LIMIT = -1;", builder.Database, builder.UserName), conn);
+                                                        "CONNECTION LIMIT = -1;", builder.Database, builder.Username), conn);
             conn.Open();
             command.ExecuteNonQuery();
         }

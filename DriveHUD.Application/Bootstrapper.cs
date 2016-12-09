@@ -155,6 +155,7 @@ namespace DriveHUD.Application
                 }
 
                 configWindow.Show();
+
                 App.SplashScreen.CloseSplashScreen();
             }
         }
