@@ -11,7 +11,7 @@ using DriveHUD.Entities;
 
 namespace DriveHUD.Application.HudServices
 {
-    public class HudNamedPipeBindingCallbackService : IHudNamedPipeBindingCallbackService
+    internal class HudNamedPipeBindingCallbackService : IHudNamedPipeBindingCallbackService
     {
         public void SaveHudLayout(HudLayoutContract hudLayout)
         {
