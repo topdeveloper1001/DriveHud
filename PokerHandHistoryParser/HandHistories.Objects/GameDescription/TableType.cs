@@ -7,7 +7,6 @@ using System.Text.RegularExpressions;
 
 namespace HandHistories.Objects.GameDescription
 {
-    [DataContract]
     [Serializable]
     public struct TableType : IEnumerable<TableTypeDescription>
     {
@@ -23,7 +22,7 @@ namespace HandHistories.Objects.GameDescription
                     .Select(t => (TableTypeDescription)Enum.Parse(typeof(TableTypeDescription), t, true))
                     .Distinct()
                     .ToArray()
-                );           
+                );
         }
 
         public static TableType FromTableTypeDescriptions(params TableTypeDescription[] tableTypeDescriptions)
@@ -32,7 +31,6 @@ namespace HandHistories.Objects.GameDescription
         }
         #endregion
 
-        [DataMember]
         private readonly TableTypeDescription _tableTypeDescriptions;
 
         public TableType(params TableTypeDescription[] tableTypeDescriptions)
@@ -65,9 +63,17 @@ namespace HandHistories.Objects.GameDescription
 
         public IEnumerable<TableTypeDescription> GetTableTypeDescriptions()
         {
-            return _tableTypeDescriptions.ToString()
-                  .Split(new[] { ", " }, StringSplitOptions.None)
-                  .Select(v => (TableTypeDescription)Enum.Parse(typeof(TableTypeDescription), v));
+            var enumToCheck = new TableTypeDescription[]
+            {
+                TableTypeDescription.Regular, TableTypeDescription.Anonymous, TableTypeDescription.SuperSpeed, TableTypeDescription.Deep,
+                TableTypeDescription.Ante, TableTypeDescription.Cap, TableTypeDescription.Speed,
+                TableTypeDescription.Jackpot, TableTypeDescription.SevenDeuceGame, TableTypeDescription.FiftyBigBlindsMin,
+                TableTypeDescription.Shallow, TableTypeDescription.PushFold, TableTypeDescription.Zoom,
+                TableTypeDescription.Strobe,
+            };
+
+            var descriptions = _tableTypeDescriptions;
+            return enumToCheck.Where(x => descriptions.HasFlag(x));
         }
 
         public override string ToString()

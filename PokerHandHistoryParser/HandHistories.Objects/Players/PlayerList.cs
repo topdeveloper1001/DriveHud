@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.Players
 {
-    [DataContract]
+    [Serializable]
     public class PlayerList : IEnumerable<Player>
     {
         private List<Player> _players = new List<Player>(10); 

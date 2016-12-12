@@ -1,35 +1,37 @@
 using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
-    [DataContract]
+    [Serializable]
     public class BoardCards : CardGroup
     {
+        [XmlIgnore]
         public Street Street
         {
-           get
-           {
-               switch (Cards.Count)
-               {
-                   case 0:
-                       return Street.Preflop;
-                   case 3:
-                       return Street.Flop;
-                   case 4:
-                       return Street.Turn;
-                   case 5:
-                       return Street.River;
-                   default:
-                       throw new ArgumentException("Unknown number of board cards " + Cards.Count);
-               }
-           }
+            get
+            {
+                switch (Cards.Count)
+                {
+                    case 0:
+                        return Street.Preflop;
+                    case 3:
+                        return Street.Flop;
+                    case 4:
+                        return Street.Turn;
+                    case 5:
+                        return Street.River;
+                    default:
+                        throw new ArgumentException("Unknown number of board cards " + Cards.Count);
+                }
+            }
         }
 
         private BoardCards(params Card[] cards)
             : base(cards)
         {
-            
+
         }
 
         public static BoardCards ForPreflop()
@@ -58,7 +60,7 @@ namespace HandHistories.Objects.Cards
         }
 
         public static BoardCards FromCards(Card[] cards)
-        {            
+        {
             return new BoardCards(cards);
         }
 

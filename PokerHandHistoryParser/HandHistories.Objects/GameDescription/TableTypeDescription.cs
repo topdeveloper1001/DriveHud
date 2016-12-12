@@ -1,7 +1,9 @@
+using System;
 using System.Runtime.Serialization;
 
 namespace HandHistories.Objects.GameDescription
 {
+    [Flags]
     [DataContract]    
     public enum TableTypeDescription : uint
     {

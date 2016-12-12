@@ -74,7 +74,7 @@ namespace HandHistories.Objects.Cards
         }
 
         [DataContract]
-        enum CardEnum : byte
+        public enum CardEnum : byte
         {
             [EnumMember]
             Unknown = 0,

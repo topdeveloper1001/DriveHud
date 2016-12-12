@@ -3,13 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
-    [DataContract]
+    [Serializable]
     public abstract class CardGroup : IEnumerable<Card>
     {
-        [DataMember]
+        [XmlArray]
         protected readonly List<Card> Cards;
 
         protected CardGroup(params Card[] cards)
@@ -63,6 +64,11 @@ namespace HandHistories.Objects.Cards
             {
                 AddCard(card);
             }
+        }
+
+        public void Add(Card card)
+        {
+            this.AddCard(card);
         }
 
         public Card this[int i]

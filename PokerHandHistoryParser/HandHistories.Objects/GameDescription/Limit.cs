@@ -1,11 +1,11 @@
 using System;
 using System.Globalization;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.GameDescription
 {
     [Serializable]
-    [DataContract]
     public class Limit
     {
         private Limit()
@@ -50,19 +50,19 @@ namespace HandHistories.Objects.GameDescription
             return FromSmallBlindBigBlind(smallBlind, bigBlind, currency, isAnteTable, anteAmount);
         }
 
-        [DataMember]
+        [XmlElement]
         public Currency Currency { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public decimal SmallBlind { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public decimal BigBlind { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public bool IsAnteTable { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public decimal Ante { get; set; }
 
         public string GetCurrencySymbol()
