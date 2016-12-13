@@ -559,6 +559,111 @@
                 </Setter>
             </Style>
 
+            <Style x:Key="ScrollBarLineButton" TargetType="{x:Type RepeatButton}">
+                <Setter Property="SnapsToDevicePixels" Value="True" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Focusable" Value="false" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type RepeatButton}">
+                            <Border Name="Border" CornerRadius="2" Background="Transparent" BorderBrush="Transparent">
+                                <Path HorizontalAlignment="Center" VerticalAlignment="Center" 
+                                      Fill="{StaticResource HeaderButtonIconForeground_Normal}"
+                                      Data="{Binding Path=Content, RelativeSource={RelativeSource TemplatedParent}}"
+                                      Opacity="{Binding Path=Opacity, RelativeSource={RelativeSource TemplatedParent}}" />
+                            </Border>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsPressed" Value="true">
+                                    <Setter TargetName="Border" Property="Background" Value="{StaticResource ControlBackground_Pressed}" />
+                                </Trigger>
+                                <Trigger Property="IsEnabled" Value="false">
+                                    <Setter Property="Foreground" Value="{StaticResource DisabledForegroundColor}" />
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+            <Style x:Key="CustomListBoxItem" TargetType="{x:Type ListBoxItem}">
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="ListBoxItem">
+                            <Border  Name="Border" Padding="1" SnapsToDevicePixels="true">
+                                <ContentPresenter />
+                            </Border>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+
+            <Style x:Key="ListBoxWithAutoScrollHorizontal" TargetType="{x:Type ListBox}">
+                <Setter Property="SnapsToDevicePixels" Value="true" />
+                <Setter Property="OverridesDefaultStyle" Value="true" />
+                <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+                <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+                <Setter Property="ScrollViewer.CanContentScroll" Value="true" />
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="ItemContainerStyle" Value="{StaticResource CustomListBoxItem}" />
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate>
+                            <Grid>
+                                <ScrollViewer x:Name="scrollviewer">
+                                    <ScrollViewer.Template>
+                                        <ControlTemplate TargetType="{x:Type ScrollViewer}">
+                                            <Grid>
+                                                <ScrollBar x:Name="PART_HorizontalScrollBar" Orientation="Horizontal"
+                                                           Value="{TemplateBinding HorizontalOffset}" Maximum="{TemplateBinding ScrollableWidth}"
+                                                           ViewportSize="{TemplateBinding ViewportWidth}" Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                                           Height="{Binding Height, ElementName=Panel}">
+                                                    <ScrollBar.Template>
+                                                        <ControlTemplate>
+                                                            <Track x:Name="PART_Track">
+                                                                <Track.DecreaseRepeatButton>
+                                                                    <RepeatButton Command="ScrollBar.PageLeftCommand" Style="{StaticResource ScrollBarPageButton}" />
+                                                                </Track.DecreaseRepeatButton>
+                                                                <Track.IncreaseRepeatButton>
+                                                                    <RepeatButton Command="ScrollBar.PageRightCommand" Style="{StaticResource ScrollBarPageButton}" />
+                                                                </Track.IncreaseRepeatButton>
+                                                            </Track>
+                                                        </ControlTemplate>
+                                                    </ScrollBar.Template>
+                                                </ScrollBar>
+                                                <ScrollContentPresenter Margin="0,2" Height="Auto" VerticalAlignment="Center" />
+                                            </Grid>
+                                        </ControlTemplate>
+                                    </ScrollViewer.Template>
+                                    <ItemsPresenter />
+                                </ScrollViewer>
+                                <Grid x:Name="Panel" Margin="0,2">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <RepeatButton x:Name="LineLeftButton" Grid.Column="0" Width="20" Opacity="0.5" Visibility="Visible"
+                                                  Style="{StaticResource ScrollBarLineButton}" Content="M 8 0 L 8 32 L 0 16 Z"
+                                                  Command="{x:Static ScrollBar.LineLeftCommand}" CommandTarget="{Binding ElementName=scrollviewer}"
+                                                  ClickMode="Hover" />
+                                    <RepeatButton x:Name="LineRightButton" Grid.Column="2" Width="20" Opacity="0.5" Visibility="Visible"
+                                                  Style="{StaticResource ScrollBarLineButton}" Content="M 0 0 L 8 16 L 0 32 Z"
+                                                  Command="{x:Static ScrollBar.LineRightCommand}" CommandTarget="{Binding ElementName=scrollviewer}"
+                                                  ClickMode="Hover" />
+                                </Grid>
+                            </Grid>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+                <Setter Property="ItemsPanel">
+                    <Setter.Value>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -620,7 +725,12 @@
             <Rectangle Grid.ColumnSpan="3" Stretch="Fill" Grid.Row="1"  VerticalAlignment="Top" Height="1"  Fill="#4971c4"/>
             <Rectangle Grid.ColumnSpan="3" Grid.Row="3" Stretch="Fill" Fill="#232528"/>
 
-            <StackPanel x:Name="ReportRadioButtonPanel" Grid.Row="1" Grid.Column ="1" Orientation="Horizontal" Height="51">
+                <ListBox x:Name="ReportRadioButtonPanel"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         Height="51"
+                         Style="{StaticResource ListBoxWithAutoScrollHorizontal}">
+                    <ListBox.Items>
                 <!-- Cash Columns -->
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="OverAll" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OverAll}}"
@@ -647,6 +757,9 @@
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="Poker Site" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PokerSite}}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                <RadioButton Style="{StaticResource ReportRadioButton}" Content="Opponent Analysis" Width="150" Height="51"
+                             IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
+                             Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <!-- Tournament Columns -->
 
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Results}" Width="150" Height="51"
@@ -673,15 +786,15 @@
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_PokerSite}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentPokerSite}}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-            </StackPanel>
+                </ListBox.Items>
+            </ListBox>
 
             <Grid Grid.Column="1" Grid.Row="2">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                     <RowDefinition MinHeight="30" Height="Auto"/>
                 </Grid.RowDefinitions>
-
-                <telerik:RadGridView x:Name="GridViewReport"  IsReadOnly="True"
+               <telerik:RadGridView x:Name="GridViewReport"  IsReadOnly="True"
                                  Grid.Row="0" MaxHeight="260"
                                  VerticalAlignment="Stretch"
                                  RowHeight="40" SelectionMode="Single"
@@ -703,7 +816,28 @@
                         </telerik:RadContextMenu>
                     </telerik:RadContextMenu.ContextMenu>
                 </telerik:RadGridView>
-
+                <telerik:RadBusyIndicator Grid.Row="0" IsBusy="{Binding Path=IsBusy}" Background="{StaticResource BackgroundBrush}"
+                                          Visibility="{Binding Path=IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <telerik:RadBusyIndicator.OverlayStyle>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Fill" Value="Transparent"/>
+                            <Setter Property="Stroke" Value="Transparent"/>
+                        </Style>
+                    </telerik:RadBusyIndicator.OverlayStyle>
+                    <telerik:RadBusyIndicator.ProgressBarStyle>
+                        <Style TargetType="telerik:RadProgressBar">
+                            <Setter Property="Foreground" Value="{StaticResource BackgroundBlueBrush}"/>
+                            <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Maximum" Value="100"/>
+                            <Setter Property="IsTabStop" Value="False"/>
+                            <Setter Property="Margin" Value="0,0,0,-20"/>
+                        </Style>
+                    </telerik:RadBusyIndicator.ProgressBarStyle>
+                    <telerik:RadBusyIndicator.BusyContentTemplate>
+                        <ItemContainerTemplate/>
+                    </telerik:RadBusyIndicator.BusyContentTemplate>
+                </telerik:RadBusyIndicator>
                 <ItemsControl Grid.Row="1" Margin="5" Background="{StaticResource BackgroundBrush1}"
                       ItemsSource="{Binding Path=CurrentlyBuiltFilter.FilterSectionCollection}">
                     <ItemsControl.ItemTemplate>

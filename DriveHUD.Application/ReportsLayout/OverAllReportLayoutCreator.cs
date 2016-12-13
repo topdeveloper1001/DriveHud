@@ -41,13 +41,9 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddPercentile("Flop AGG%", nameof(Indicators.FlopAgg), false));
             gridView.Columns.Add(AddPercentile("Fold to 3-Bet%", nameof(Indicators.FoldToThreeBet), false));
             gridView.Columns.Add(AddPercentile("Fold to 4-Bet%", nameof(Indicators.FoldToFourBet), false));
-            //gridView.Columns.Add(AddPercentile("Fold to Steal%", nameof(Indicators.FoldS), false));?
             gridView.Columns.Add(AddPercentile("River AGG%", nameof(Indicators.RiverAgg), false));
             gridView.Columns.Add(AddPercentile("Squeeze%", nameof(Indicators.Squeeze), false));
-            //gridView.Columns.Add(AddPercentile("Steal%", nameof(Indicators.Steal), false));
             gridView.Columns.Add(AddPercentile("Turn AGG%", nameof(Indicators.TurnAgg), false));
-            //gridView.Columns.Add(AddPercentile("WTSD%", nameof(Indicators.WTSD), false));
-            //gridView.Columns.Add(AddPercentile("W$SD", nameof(Indicators.WSSD), false));
             gridView.Columns.Add(AddPercentile("3-Bet BB%", nameof(Indicators.ThreeBetInBB), false));
             gridView.Columns.Add(AddPercentile("3-Bet BTN%", nameof(Indicators.ThreeBetInBTN), false));
             gridView.Columns.Add(AddPercentile("3-Bet CO%", nameof(Indicators.ThreeBetInCO), false));

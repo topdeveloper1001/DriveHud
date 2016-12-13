@@ -1,13 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data;
 using System.Linq;
-using System.Threading;
-using System.Windows;
 using System.Windows.Input;
-using Telerik.Windows.Data;
 using Prism.Events;
-using Model;
 using Model.Data;
 using DriveHUD.Entities;
 using Model.Enums;
@@ -21,12 +16,12 @@ using Model.Extensions;
 using System.Linq.Expressions;
 using DriveHUD.Common.Utils;
 using Model.Filters;
-using DriveHUD.Common.Reflection;
 using DriveHUD.Application.Views;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
 using Prism.Interactivity.InteractionRequest;
 using DriveHUD.Common.Wpf.Actions;
-using System.IO;
+using System.Threading.Tasks;
+using Model.Events.FilterEvents;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -37,6 +32,8 @@ namespace DriveHUD.Application.ViewModels
     {
         #region Private Fields
         private EnumReports _invisibleSelectedItemStat;
+        private readonly IEventAggregator _eventAggregator;
+        private readonly ITopPlayersService _topPlayersService;
         #endregion
 
         #region ICommand
@@ -51,6 +48,8 @@ namespace DriveHUD.Application.ViewModels
 
         internal ReportGadgetViewModel()
         {
+            _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
+            _topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
             this.PopupRequest = new InteractionRequest<PopupBaseNotification>();
             this.NotificationRequest = new InteractionRequest<INotification>();
 
@@ -66,11 +65,23 @@ namespace DriveHUD.Application.ViewModels
             InitializeFilter();
             UpdateReport();
 
-            var eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
-            eventAggregator.GetEvent<RequestDisplayTournamentHands>().Subscribe(DisplayTournamentHands);
-            eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateBuiltFilter);
-            eventAggregator.GetEvent<HandNoteUpdatedEvent>().Subscribe(UpdateHandNote);
-            eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(UpdateReport);
+            _eventAggregator.GetEvent<RequestDisplayTournamentHands>().Subscribe(DisplayTournamentHands);
+            _eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateBuiltFilter);
+            _eventAggregator.GetEvent<HandNoteUpdatedEvent>().Subscribe(UpdateHandNote);
+            _eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(UpdateReport);
+            _eventAggregator.GetEvent<OpponentAnalysisBuildedEvent>().Subscribe(OnOpponentAnalysisBuilded, ThreadOption.UIThread);
+            _eventAggregator.GetEvent<OpponentAnalysisBuildingEvent>().Subscribe(OnOpponentAnalysisBuilding, ThreadOption.UIThread);
+        }
+
+        private void OnOpponentAnalysisBuilding()
+        {
+            IsBusy = true;
+        }
+
+        private void OnOpponentAnalysisBuilded()
+        {
+            IsBusy = false;
+            OnPropertyChanged(nameof(ReportSelectedItemStat));
         }
 
         private void InitializeFilter()
@@ -185,6 +196,7 @@ namespace DriveHUD.Application.ViewModels
 
         internal void UpdateReport(object obj = null)
         {
+            _eventAggregator.GetEvent<UpdateReportEvent>().Publish(StorageModel?.FilterPredicate);
             App.Current.Dispatcher.Invoke(() =>
             {
                 if (ReportSelectedItemStat == EnumReports.None)
@@ -273,6 +285,11 @@ namespace DriveHUD.Application.ViewModels
                     },
                     n => { });
         }
+
+        public async Task<IList<Playerstatistic>> GetTop()
+        {
+            return await _topPlayersService.GetTop();
+        }
         #endregion
 
         #region Properties
@@ -302,6 +319,7 @@ namespace DriveHUD.Application.ViewModels
         private EnumHandTag _filterHandTagSelectedItem;
 
         private BuiltFilterModel _currentlyBuiltFilter;
+        private bool _isBusy;
 
         public bool IsShowTournamentData
         {
@@ -472,6 +490,18 @@ namespace DriveHUD.Application.ViewModels
             set
             {
                 SetProperty(ref _currentlyBuiltFilter, value);
+            }
+        }
+
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                if ((value && ReportSelectedItemStat == EnumReports.OpponentAnalysis))
+                    SetProperty(ref _isBusy, true);
+                else
+                    SetProperty(ref _isBusy, false);
             }
         }
 
