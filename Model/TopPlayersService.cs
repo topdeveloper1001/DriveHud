@@ -98,8 +98,9 @@ namespace Model
                         if (
                             _topCollection.Any(
                                 x => x.PlayerName == player.PlayerName && x.PokersiteId == player.PokersiteId))
-                            if (player.Wins < _minNetWon && playerCount >= TopCount)
-                                break;
+                            break;
+                        if (player.Wins < _minNetWon && playerCount >= TopCount)
+                            break;
                         var stats =
                             _dataService.GetPlayerStatisticFromFile(player.PlayerName, player.PokersiteId)
                                 .AsQueryable()
