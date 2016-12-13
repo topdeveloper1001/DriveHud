@@ -53,6 +53,11 @@ namespace HandHistories.Parser.Parsers.FastParser._888
             get { return true; }
         }
 
+        public override bool RequiresBetWinAdjustment
+        {
+            get { return true; }
+        }
+
         private static readonly NumberFormatInfo NumberFormatInfo = new NumberFormatInfo
         {
             NegativeSign = "-",

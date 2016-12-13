@@ -7,10 +7,10 @@ Player 300thesedatrues ante (12)
 Player ohpleez4433011 ante (12) 
 Player ohpleez4433011 has small blind (60) 
 Player 300thesedatrues has big blind (120) 
-Player 300thesedatrues received a card. 
-Player 300thesedatrues received a card. 
-Player ohpleez4433011 received card: [Ac] 
-Player ohpleez4433011 received card: [2d] 
+Player 300thesedatrues received card: [Ac] 
+Player 300thesedatrues received card: [2d]
+Player ohpleez4433011 received a card.
+Player ohpleez4433011 received a card. 
 Player ohpleez4433011 allin (453) 
 Player 300thesedatrues calls (393) 
 *** FLOP ***: [4c Jc Qd] 
