@@ -98,42 +98,41 @@ namespace Model
                         if (
                             _topCollection.Any(
                                 x => x.PlayerName == player.PlayerName && x.PokersiteId == player.PokersiteId))
-                            break;
+                            continue;
                         if (player.Wins < _minNetWon && playerCount >= TopCount)
                             break;
-                        var stats =
+                        var allStats =
                             _dataService.GetPlayerStatisticFromFile(player.PlayerName, player.PokersiteId)
                                 .AsQueryable()
-                                .Where(x => !x.IsTourney)
-                                .Where(filterPredicate)
-                                .ToList();
+                                .Where(x => !x.IsTourney);
+                        var stats = allStats.Where(filterPredicate).ToList();
                         if (!stats.Any())
                             continue;
                         var netWon = stats.Sum(x => x.NetWon);
                         if (!_topCollection.Any() || playerCount < TopCount)
                         {
+                            if (netWon < _minNetWon || !_topCollection.Any())
+                                _minNetWon = netWon;
                             _topCollection.AddRange(stats);
-                            _minNetWon =
-                                _topCollection.GroupBy(x => new {x.PlayerId, x.PokersiteId})
-                                    .Select(x => x.Sum(p => p.NetWon))
-                                    .Min();
+                            //_minNetWon =
+                            //    _topCollection.GroupBy(x => new {x.PlayerId, x.PokersiteId})
+                            //        .Select(x => x.Sum(p => p.NetWon))
+                            //        .Min();
                             playerCount++;
                             continue;
                         }
                         if (netWon < _minNetWon)
                             continue;
                         var lower =
-                            _topCollection.GroupBy(x => new {x.PlayerId, x.PokersiteId})
+                            _topCollection.GroupBy(x => new {x.PlayerName, PokersiteId = (short) x.PokersiteId})
                                 .OrderBy(x => x.Sum(p => p.NetWon))
                                 .FirstOrDefault()?.Key;
                         if (lower == null)
                             continue;
-                        {
-                            _topCollection.RemoveByCondition(
-                                x => x.PlayerId == lower.PlayerId && x.PokersiteId == lower.PokersiteId);
-                            _topCollection.AddRange(stats);
-                            _minNetWon = netWon;
-                        }
+                        _topCollection.RemoveByCondition(
+                            x => x.PlayerName == lower.PlayerName && x.PokersiteId == lower.PokersiteId);
+                        _topCollection.AddRange(stats);
+                        _minNetWon = netWon;
                     }
                 }
                 catch (OperationCanceledException)
