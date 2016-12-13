@@ -50,6 +50,11 @@ namespace HandHistories.Parser.Parsers.FastParser.PokerStars
             get { return true; }
         }
 
+        public override bool RequiresBetWinAdjustment
+        {
+            get { return true; }
+        }
+
         private readonly EnumPokerSites _siteName;
 
         public override EnumPokerSites SiteName
