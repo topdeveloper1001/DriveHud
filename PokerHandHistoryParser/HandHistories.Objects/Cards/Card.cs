@@ -1,11 +1,12 @@
 using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
     //When Card is a struct it only allocates 1 byte on the stack instead of 4 Reference bytes and two strings on the heap
     //Combined with lookup tables and using enums we get a 20x speedup of parsing cards
-    [DataContract]
+    [Serializable]
     public partial struct Card
     {
         const int SuitCardMask = 0xF0;
@@ -28,6 +29,7 @@ namespace HandHistories.Objects.Cards
             }
         }
 
+        [XmlIgnore]
         public string Rank
         {
             get
@@ -37,6 +39,7 @@ namespace HandHistories.Objects.Cards
             }
         }
 
+        [XmlIgnore]
         public int RankNumericValue
         {
             get
@@ -45,6 +48,7 @@ namespace HandHistories.Objects.Cards
             }
         }
 
+        [XmlElement]
         public string Suit
         {
             get
@@ -54,11 +58,13 @@ namespace HandHistories.Objects.Cards
             }
         }
 
+        [XmlElement]
         public string CardStringValue
         {
             get { return _card.ToString().Substring(1); }
         }
 
+        [XmlIgnore]
         public bool isEmpty
         {
             get
@@ -68,8 +74,14 @@ namespace HandHistories.Objects.Cards
         }
         #endregion
 
-        [DataMember]
         private CardEnum _card;
+
+        [XmlAttribute(AttributeName = "Card")]
+        public CardEnum _Card
+        {
+            get { return _card; }
+            set { _card = value; }
+        }
 
         #region Constructors
         public Card(char rank, char suit)
@@ -116,7 +128,8 @@ namespace HandHistories.Objects.Cards
         }
         #endregion
 
-        public static string [] PossibleRanksHighCardFirst
+        [XmlIgnore]
+        public static string[] PossibleRanksHighCardFirst
         {
             get
             {
@@ -136,7 +149,7 @@ namespace HandHistories.Objects.Cards
                            "3",
                            "2"
                        };
-            }            
+            }
         }
 
         public static Card GetCardFromIntValue(int value)
@@ -149,7 +162,7 @@ namespace HandHistories.Objects.Cards
                 return new Card();
             }
 
-            var suit = (int) (value/13);
+            var suit = (int)(value / 13);
             var rank = value % 13;
 
             //suit starts at zero and SuitEnum starts at 1
@@ -157,7 +170,7 @@ namespace HandHistories.Objects.Cards
 
             //rank starts at zero and CardValueEnum starts at 2
             CardValueEnum rankValue = (CardValueEnum)rank + 2;
-            return new Card(suitValue, rankValue);                
+            return new Card(suitValue, rankValue);
         }
 
         public static Card Parse(string card)
@@ -167,10 +180,11 @@ namespace HandHistories.Objects.Cards
 
             return new Card(card[0], card[1]);
         }
-       
+
         /// <summary>
         /// 2c = 0, 3c = 1, ..., Ac = 12, ..., As = 51. Returns -1 if there was an error with the rank or suit values.
         /// </summary>
+        [XmlIgnore]
         public int CardIntValue
         {
             get
@@ -179,7 +193,7 @@ namespace HandHistories.Objects.Cards
                 int suitValue = ((int)suit >> 4) - 1;
 
                 // note minus 1 is so we can index by 0
-                return (suitValue*13) + rankValue - 2;
+                return (suitValue * 13) + rankValue - 2;
             }
         }
 

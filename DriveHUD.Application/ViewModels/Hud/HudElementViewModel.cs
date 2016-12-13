@@ -271,18 +271,26 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        [ProtoMember(12)]
-        private bool isNoteIconVisible;
 
         /// <summary>
         /// Determine if note icon is visible
         /// </summary>
         public bool IsNoteIconVisible
         {
-            get { return isNoteIconVisible; }
+            get { return !string.IsNullOrWhiteSpace(noteToolTip); }
+        }
+
+        [ProtoMember(12)]
+        private string noteToolTip;
+
+        public string NoteToolTip
+        {
+            get { return noteToolTip; }
             set
             {
-                this.RaiseAndSetIfChanged(ref isNoteIconVisible, value);
+                this.RaiseAndSetIfChanged(ref noteToolTip,
+                    value.Length > 50 ? string.Format("{0}...", value.Substring(0, 50)) : value);
+                this.RaisePropertyChanged(nameof(IsNoteIconVisible));
                 this.RaisePropertyChanged(nameof(NoteMenuItemText));
             }
         }
@@ -294,7 +302,7 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return isNoteIconVisible
+                return IsNoteIconVisible
                     ? CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditNote)
                     : CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote);
             }

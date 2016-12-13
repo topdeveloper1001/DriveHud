@@ -23,6 +23,7 @@ using DriveHUD.Application.TableConfigurators.SiteSettingTableConfigurators;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
+using DriveHUD.Application.ViewModels.Replayer;
 using DriveHUD.Application.Views;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
@@ -208,10 +209,12 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IHudPanelService), typeof(HudPanelService), false);
             RegisterTypeIfMissing(typeof(IHudLayoutsService), typeof(HudLayoutsService), true);
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
+            RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
             RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IMigrationService), typeof(MigrationService.MigrationService), false);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
+            RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
 
             // Filters Save/Load service
             Container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));
@@ -226,6 +229,7 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, PokerStarsConfiguration>(EnumPokerSites.PokerStars.ToString());
             Container.RegisterType<ISiteConfiguration, Poker888Configuration>(EnumPokerSites.Poker888.ToString());
             Container.RegisterType<ISiteConfiguration, AmericasCardroomConfiguration>(EnumPokerSites.AmericasCardroom.ToString());
+            Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
 
             // HUD table configurators
 
@@ -253,6 +257,10 @@ namespace DriveHUD.Application
             Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Default));
             Container.RegisterType<ITableConfigurator, AmericasCardroomTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Plain));
 
+            // BlackChipPoker
+            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudType.Default));
+            Container.RegisterType<ITableConfigurator, BlackChipPokerTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudType.Plain));
+
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);
 
@@ -272,7 +280,8 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteSettingTableConfigurator, CommonSiteSettingTableConfigurator>(EnumPokerSites.SportsBetting.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, PokerStarsSiteSettingTableConfigurator>(EnumPokerSites.PokerStars.ToString());
             Container.RegisterType<ISiteSettingTableConfigurator, Poker888SiteSettingTableConfigurator>(EnumPokerSites.Poker888.ToString());
-            Container.RegisterType<ISiteSettingTableConfigurator, AmericasCardroomSiteSettingTableConfigurator>(EnumPokerSites.AmericasCardroom.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.AmericasCardroom.ToString());
+            Container.RegisterType<ISiteSettingTableConfigurator, WinningPokerNetworkSiteSettingTableConfigurator>(EnumPokerSites.BlackChipPoker.ToString());
 
             ImporterBootstrapper.ConfigureImporter(Container);
         }

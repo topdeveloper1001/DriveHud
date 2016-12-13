@@ -24,6 +24,8 @@ namespace DriveHUD.Entities
         PokerStars = 7,
         Poker888 = 8,
         TigerGaming = 9,
-        AmericasCardroom = 10
+        AmericasCardroom = 10,
+        BlackChipPoker = 11,
+        WinningPokerNetwork = 12
     }
 }

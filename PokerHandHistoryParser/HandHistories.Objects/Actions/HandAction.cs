@@ -13,32 +13,34 @@
 using System;
 using System.Runtime.Serialization;
 using HandHistories.Objects.Cards;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Actions
 {
-    [DataContract]
-    [KnownType(typeof(WinningsAction))]
-    [KnownType(typeof(AllInAction))]
+    [Serializable]
+    [XmlInclude(typeof(WinningsAction))]
+    [XmlInclude(typeof(AllInAction))]
     public class HandAction
     {
-        [DataMember]
-        public string PlayerName { get; private set; }
+        [XmlAttribute]
+        public string PlayerName { get; set; }
 
-        [DataMember]
-        public HandActionType HandActionType { get; protected set; }
+        [XmlAttribute]
+        public HandActionType HandActionType { get; set; }
 
-        [DataMember]
-        public decimal Amount { get; private set; }
+        [XmlAttribute]
+        public decimal Amount { get; set; }
 
-        [DataMember]
-        public Street Street { get; private set; }
+        [XmlAttribute]
+        public Street Street { get; set; }
 
-        [DataMember]
+        [XmlIgnore]
         public int ActionNumber { get; set; }
 
-        [DataMember]
-        public bool IsAllIn { get; private set; }
+        [XmlAttribute]
+        public bool IsAllIn { get; set; }
 
+        [XmlIgnore]
         public bool IsCheck
         {
             get
@@ -47,12 +49,17 @@ namespace HandHistories.Objects.Actions
             }
         }
 
+        [XmlIgnore]
         public bool IsFold
         {
             get
             {
                 return HandActionType == HandActionType.FOLD;
             }
+        }
+
+        public HandAction()
+        {
         }
 
         public HandAction(string playerName,
@@ -180,6 +187,7 @@ namespace HandHistories.Objects.Actions
             throw new ArgumentException("GetAdjustedAmount: Unknown action " + type + " to have amount " + amount);
         }
 
+        [XmlIgnore]
         public bool IsRaise
         {
             get
@@ -189,6 +197,7 @@ namespace HandHistories.Objects.Actions
             }
         }
 
+        [XmlIgnore]
         public bool IsPreFlopRaise
         {
             get
@@ -198,11 +207,13 @@ namespace HandHistories.Objects.Actions
             }
         }
 
+        [XmlIgnore]
         public bool IsAllInAction
         {
             get { return HandActionType == HandActionType.ALL_IN; }
         }
 
+        [XmlIgnore]
         public bool IsWinningsAction
         {
             get
@@ -215,6 +226,7 @@ namespace HandHistories.Objects.Actions
             }
         }
 
+        [XmlIgnore]
         public bool IsAggressiveAction
         {
             get
@@ -225,6 +237,7 @@ namespace HandHistories.Objects.Actions
             }
         }
 
+        [XmlIgnore]
         public bool IsBlinds
         {
             get
@@ -236,6 +249,7 @@ namespace HandHistories.Objects.Actions
             }
         }
 
+        [XmlIgnore]
         public bool IsGameAction
         {
             get
@@ -253,6 +267,7 @@ namespace HandHistories.Objects.Actions
             }
         }
 
+        [XmlIgnore]
         public bool IsCall
         {
             get

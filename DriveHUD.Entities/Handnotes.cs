@@ -31,6 +31,6 @@ namespace DriveHUD.Entities
 
         public virtual int? DisplayOrder { get; set; }
 
-        public virtual int? CategoryId { get; set; }
+        public virtual int? HandTag { get; set; }
     }
 }

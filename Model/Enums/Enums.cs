@@ -113,7 +113,8 @@ namespace Model.Enums
         TournamentPokerSite,
         PokerSite,
         TournamentShowdownHands,
-        ShowdownHands
+        ShowdownHands,
+        OpponentAnalysis
     }
 
     public enum EnumTableType : byte
@@ -155,5 +156,13 @@ namespace Model.Enums
         Purple,
         Red,
         Yellow
+    }
+
+    public enum EnumExportType
+    {
+        TwoPlusTwo,
+        CardsChat,
+        PokerStrategy,
+        Raw
     }
 }

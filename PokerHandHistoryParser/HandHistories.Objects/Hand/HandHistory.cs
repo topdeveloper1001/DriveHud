@@ -5,9 +5,11 @@ using HandHistories.Objects.Actions;
 using HandHistories.Objects.Cards;
 using HandHistories.Objects.GameDescription;
 using HandHistories.Objects.Players;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Hand
 {
+    [Serializable]
     public class HandHistory : HandHistorySummary
     {
         public HandHistory(GameDescriptor gameDescription) : base()
@@ -24,51 +26,75 @@ namespace HandHistories.Objects.Hand
 
         }
 
+        [XmlArray(ElementName = "Actions")]
         public List<HandAction> HandActions { get; set; }
 
+        [XmlIgnore]
         public IEnumerable<HandAction> PreFlop
         {
             get { return HandActions.Where(x => x.Street == Street.Preflop); }
         }
 
+        [XmlIgnore]
         public IEnumerable<HandAction> Flop
         {
             get { return HandActions.Where(x => x.Street == Street.Flop); }
         }
 
+        [XmlIgnore]
         public IEnumerable<HandAction> Turn
         {
             get { return HandActions.Where(x => x.Street == Street.Turn); }
         }
 
+        [XmlIgnore]
         public IEnumerable<HandAction> River
         {
             get { return HandActions.Where(x => x.Street == Street.River); }
         }
 
+        [XmlIgnore]
         public IEnumerable<HandAction> Showdown
         {
             get { return HandActions.Where(x => x.Street == Street.Showdown); }
         }
 
+        [XmlIgnore]
         public IEnumerable<HandAction> Summary
         {
             get { return HandActions.Where(x => x.Street == Street.Summary); }
         }
 
+        [XmlIgnore]
         public IEnumerable<HandAction> WinningActions
         {
             get { return HandActions.Where(x => x.IsWinningsAction); }
         }
 
+        [XmlElement("CommunityCards")]
+        public string CommunityCardsString
+        {
+            get { return CommunityCards?.ToString() ?? string.Empty; }
+            set
+            {
+                CommunityCards = BoardCards.FromCards(value);
+            }
+        }
+
+        [XmlIgnore]
         public BoardCards CommunityCards { get; set; }
 
+        [XmlArray]
+        [XmlArrayItem(ElementName = "Player")]
         public PlayerList Players { get; set; }
 
+        [XmlIgnore]
         public Player Hero { get; set; }
 
+        [XmlIgnore]
         public Exception Exception { get; set; }
 
+        [XmlIgnore]
         public bool HasError
         {
             get
@@ -77,6 +103,7 @@ namespace HandHistories.Objects.Hand
             }
         }
 
+        [XmlIgnore]
         public int NumPlayersActive
         {
             get { return Players.Count(p => p.IsSittingOut == false); }

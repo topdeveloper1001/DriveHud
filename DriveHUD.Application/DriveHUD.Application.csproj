@@ -180,6 +180,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.ServiceModel" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Web.Services" />
@@ -290,6 +291,7 @@
     <Compile Include="Controls\TrackConditionsMeterView.xaml.cs">
       <DependentUpon>TrackConditionsMeterView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="HudServices\HudNamedPipeBindingCallbackService.cs" />
     <Compile Include="HudServices\HudTransmitter.cs" />
     <Compile Include="HudServices\IHudTransmitter.cs" />
     <Compile Include="Licensing\DeployLXLicensingServer.cs" />
@@ -315,6 +317,8 @@
     <Compile Include="Migration\Migrations\Migration0006_NonDB_Add888PokerPredefinedLayouts.cs" />
     <Compile Include="Migration\Migrations\Migration0008_NonDb_AddAmericasCardroomSiteSettings.cs" />
     <Compile Include="Migration\Migrations\Migration0010_NonDb_RemovePreferredSeatingSportsbettingTigerGaming.cs" />
+    <Compile Include="Migration\Migrations\Migration0011_RemoveHandHistoryHandNumberUniqueKey.cs" />
+    <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="SingleInstance.cs" />
@@ -326,12 +330,13 @@
     <Compile Include="Surrogates\ColorDto.cs" />
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
+    <Compile Include="TableConfigurators\BlackChipPokerTableConfigurator.cs" />
     <Compile Include="TableConfigurators\Poker888TableConfigurator.cs" />
-    <Compile Include="TableConfigurators\SeatArea\AmericasCardroomTableSeatAreaConfigurator.cs" />
+    <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\AmericasCardroomTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\PokerStarsTableSeatAreaConfigurator.cs" />
-    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\AmericasCardroomSiteSettingTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\SiteSettingTableConfigurators\WinningPokerNetworkSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BaseSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\BovadaSiteSettingTableConfigurator.cs" />
     <Compile Include="TableConfigurators\SiteSettingTableConfigurators\CommonSiteSettingTableConfigurator.cs" />
@@ -345,10 +350,11 @@
     <Compile Include="TableConfigurators\SeatArea\ITableSeatArea.cs" />
     <Compile Include="TableConfigurators\SeatArea\TableSeatArea.cs" />
     <Compile Include="TableConfigurators\SeatArea\TableSeatAreaHelper.cs" />
+    <Compile Include="TableConfigurators\WinningPokerNetworkTableConfigurator.cs" />
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
-    <Compile Include="ViewModels\Hud\AmericasCardroomHudPanelService.cs" />
+    <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
     <Compile Include="ViewModels\Hud\BetOnlineHudPanelService.cs" />
@@ -361,6 +367,7 @@
     <Compile Include="ViewModels\Hud\HudTrackConditionsViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\HudViewType.cs" />
     <Compile Include="Controls\IDropDownMenuItem.cs" />
+    <Compile Include="ViewModels\Hud\HudWindowViewModel.cs" />
     <Compile Include="ViewModels\Hud\IHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
@@ -374,6 +381,8 @@
     <Compile Include="ViewModels\Popups\PlayerNoteViewModel.cs" />
     <Compile Include="ViewModels\Registration\LicenseInfoViewModel.cs" />
     <Compile Include="ViewModels\Registration\RegistrationViewModel.cs" />
+    <Compile Include="ViewModels\Replayer\IReplayerService.cs" />
+    <Compile Include="ViewModels\Replayer\ReplayerService.cs" />
     <Compile Include="ViewModels\Settings\ISettingsViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsBonusesAddEditViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsRakeBackViewModelInfo.cs" />
@@ -1059,6 +1068,10 @@
     <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
       <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
       <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.HUD.Service\DriveHUD.HUD.Service.csproj">
+      <Project>{69DF03D3-2FDB-45C1-991F-E3316D6C85BD}</Project>
+      <Name>DriveHUD.HUD.Service</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Importer\DriveHUD.Importers.csproj">
       <Project>{67ee116c-c86b-46aa-964a-f80cae372a8b}</Project>

@@ -20,6 +20,11 @@ namespace DriveHUD.Application.ViewModels
     internal interface IHudLayoutsService
     {
         /// <summary>
+        /// Cached HUDs
+        /// </summary>
+        Dictionary<int, HudTableViewModel> HudTableViewModelDictionary { get; set; }
+
+        /// <summary>
         /// Cached layouts
         /// </summary>
         HudSavedLayouts Layouts { get; }

@@ -176,7 +176,7 @@ namespace DriveHUD.Application.Controls
                                 GridViewColumn column = gridView.Columns[proxy.UniqueName];
                                 if (column == null)
                                     continue;
-                                if (proxy.DisplayOrder != -1)
+                                if (proxy.DisplayOrder != -1 && proxy.DisplayOrder < gridView.Columns.Count)
                                 {
                                     column.DisplayIndex = proxy.DisplayOrder;
                                 }

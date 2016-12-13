@@ -454,6 +454,7 @@
         <Setter Property="Height" Value="200" />
         <Setter Property="Width" Value="450" />
         <Setter Property="ResizeMode" Value="NoResize" />
+        <Setter Property="IsTopmost" Value="True" />
         <Setter Property="WindowStartupLocation" Value="CenterScreen" />
     </Style>
 

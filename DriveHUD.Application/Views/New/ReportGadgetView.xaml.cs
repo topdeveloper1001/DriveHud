@@ -37,6 +37,7 @@ using System.Diagnostics;
 using System.Threading.Tasks;
 using Model.Reports;
 using DriveHUD.Common.Log;
+using DriveHUD.Application.ViewModels.Replayer;
 
 namespace DriveHUD.Application.Views
 {
@@ -45,20 +46,16 @@ namespace DriveHUD.Application.Views
     /// </summary>
     public partial class ReportGadgetView : UserControl
     {
-        private const int REPLAYER_LAST_HANDS_AMOUNT = 10;
-
-        ReportGadgetViewModel reportGadgetViewModel;
-        private FixedSizeList<ReplayerDataModel> replayerDataModelList = new FixedSizeList<ReplayerDataModel>(REPLAYER_LAST_HANDS_AMOUNT);
+        private ReportGadgetViewModel reportGadgetViewModel;
         private Model.Enums.EnumReports reportCache;
         private RadContextMenu handsGridContextMenu;
         private RadContextMenu tournamentsGridContextMenu;
-
+        
         public ReportGadgetView()
         {
             InitializeComponent();
 
             ServiceProvider.RegisterPersistenceProvider<ICustomPropertyProvider>(typeof(RadGridView), new GridViewCustomPropertyProvider());
-
             GridViewReportMenu.ItemsSource = GridViewReport.Columns;
             GridViewKnownHandsMenu.ItemsSource = GridViewKnownHands.Columns;
 
@@ -87,7 +84,7 @@ namespace DriveHUD.Application.Views
 
                     ReportLayoutSave();
                 }
-                catch(Exception ex)
+                catch (Exception ex)
                 {
                     LogProvider.Log.Error(ex);
                 }
@@ -211,7 +208,7 @@ namespace DriveHUD.Application.Views
                     };
                     stat.HandNote = handNoteEntity;
                 }
-                handNoteEntity.CategoryId = (int)(item.Tag ?? 0);
+                handNoteEntity.HandTag = (int)(item.Tag ?? 0);
                 ServiceLocator.Current.GetInstance<IDataService>().Store(handNoteEntity);
 
                 if (reportGadgetViewModel.FilterTaggedHands_IsChecked)
@@ -274,7 +271,7 @@ namespace DriveHUD.Application.Views
                     ReportUpdate();
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 LogProvider.Log.Error(ex);
             }
@@ -295,20 +292,23 @@ namespace DriveHUD.Application.Views
             GridLayoutSave(GridViewReport, string.Format("{0}ReportLayout.data", reportCache));
         }
 
-        private async void ReportSet(Model.Enums.EnumReports reportType)
+        private async void ReportSet(EnumReports reportType)
         {
             try
             {
+                reportGadgetViewModel.IsBusy = true;
                 // disable radio button panel to restrict changing the report type during loading
                 ReportRadioButtonPanel.IsEnabled = false;
 
                 var layout = ReportManager.GetReportLayout(reportType);
                 var creator = ReportManager.GetReportCreator(reportType);
-
                 if (layout == null || creator == null) return;
 
-                var reportCollection = GetReportCollectionAsync(creator);
-
+                var reportCollection =
+                    reportType == EnumReports.OpponentAnalysis ?
+                    GetReportCollectionAsync(creator, await reportGadgetViewModel.GetTop()) :
+                    GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
+                reportGadgetViewModel.IsBusy = false;
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
                 reportGadgetViewModel.ReportCollection.Clear();
@@ -334,11 +334,11 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private Task<ObservableCollection<Indicators>> GetReportCollectionAsync(IReportCreator reportCreator)
+        private Task<ObservableCollection<Indicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics)
         {
             return Task.Run(() =>
             {
-                return reportCreator.Create(ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
+                return reportCreator.Create(playerstatistics);
             });
         }
 
@@ -386,23 +386,10 @@ namespace DriveHUD.Application.Views
                 return;
 
             var statistic = (hand as ComparableCardsStatistic).Statistic;
-            var dataModelStatistic = new ReplayerDataModel(statistic);
-            replayerDataModelList.ForEach(x => x.IsActive = false);
+            bool showHoleCards = (this.DataContext as ReportGadgetViewModel).ReplayerShowHolecards_IsChecked;
 
-            var dataModel = replayerDataModelList.FirstOrDefault(x => x.Equals(dataModelStatistic));
-            if (dataModel == null)
-            {
-                dataModelStatistic.IsActive = true;
-                replayerDataModelList.Add(dataModelStatistic);
-            }
-            else
-            {
-                dataModel.IsActive = true;
-                replayerDataModelList.Move(replayerDataModelList.IndexOf(dataModel), replayerDataModelList.Count - 1);
-            }
-
-            ReplayerView replayer = new ReplayerView(replayerDataModelList, ReplayerHelpers.CreateSessionHandsList(reportGadgetViewModel.StorageModel.StatisticCollection, statistic), (this.DataContext as ReportGadgetViewModel).ReplayerShowHolecards_IsChecked);
-            replayer.Show();
+            ServiceLocator.Current.GetInstance<IReplayerService>()
+                .ReplayHand(statistic, reportGadgetViewModel.StorageModel.StatisticCollection, showHoleCards);
         }
 
         private void ReplayHand(object sender, RadRoutedEventArgs e)

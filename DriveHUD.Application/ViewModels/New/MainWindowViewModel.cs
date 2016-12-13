@@ -76,7 +76,6 @@ namespace DriveHUD.Application.ViewModels
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
-
             synchronizationContext = _synchronizationContext;
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -102,7 +101,6 @@ namespace DriveHUD.Application.ViewModels
 
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
             StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
-
             StorageModel.PropertyChanged += StorageModel_PropertyChanged;
 
             ProgressViewModel = new ProgressViewModel();
@@ -248,9 +246,9 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void RefreshData()
+        private void RefreshData(GameInfo gameInfo = null)
         {
-            UpdatePlayerList();
+            UpdatePlayerList(gameInfo);
 
             if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
             {
@@ -272,7 +270,7 @@ namespace DriveHUD.Application.ViewModels
 
                 sw.Start();
 
-                RefreshData();
+                RefreshData(e.GameInfo);
 
                 var refreshTime = sw.ElapsedMilliseconds;
 
@@ -292,19 +290,34 @@ namespace DriveHUD.Application.ViewModels
                 var maxSeats = (int)gameInfo.TableType;
                 var site = e.GameInfo.PokerSite;
 
+                var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
+                var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+
+                var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
+
+                if (activeLayout == null)
+                {
+                    LogProvider.Log.Error(this, "Could not find active layout");
+                    return;
+                }
+
+                var availableLayouts = hudLayoutsService.Layouts.Layouts.Where(y => y.LayoutId == tableKey).Select(x => x.Name);
+
                 var ht = new HudLayout
                 {
                     WindowId = gameInfo.WindowHandle,
                     HudType = site == EnumPokerSites.Ignition ? HudViewModel.HudType : HudType.Plain,
-                    TableType = gameInfo.TableType
+                    TableType = gameInfo.TableType,
+                    PokerSiteId = (short)gameInfo.PokerSite,
+                    GameNumber = gameInfo.GameNumber,
+                    LayoutId = tableKey,
+                    LayoutName = activeLayout.Name,
+                    AvailableLayouts = availableLayouts
                 };
 
-                var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
-
-                var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
-
+                var topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
+                topPlayersService.UpdateStatistics(importerSessionCacheService.GetAllPlayerStats(gameInfo.Session));
                 for (int i = 1; i <= maxSeats; i++)
                 {
                     var playerName = string.Empty;
@@ -336,7 +349,7 @@ namespace DriveHUD.Application.ViewModels
                         Name = playerName,
                         SeatNumber = seatNumber
                     };
-
+                    
                     var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
                     var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerCollectionItem);
                     var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);
@@ -373,8 +386,10 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
                     playerHudContent.HudElement.PlayerName = playerName;
                     playerHudContent.HudElement.PokerSiteId = (short)site;
-                    playerHudContent.HudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(playerName, (short)site)?.Note ?? string.Empty);
+                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
+                                                           string.Empty;
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
+
 
                     var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
                     playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
@@ -387,14 +402,6 @@ namespace DriveHUD.Application.ViewModels
                         : new ObservableCollection<string>(cardsCollection);
 
                     var doNotAddPlayer = false;
-
-                    var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
-
-                    if (activeLayout == null)
-                    {
-                        LogProvider.Log.Error(this, "Could not find active layout");
-                        return;
-                    }
 
                     // create new array to prevent Collection was modified exception
                     var activeLayoutHudStats = activeLayout.HudStats.ToArray();
@@ -624,20 +631,13 @@ namespace DriveHUD.Application.ViewModels
             ReportGadgetViewModel.UpdateReport();
         }
 
-        private void UpdatePlayerList()
+        private void UpdatePlayerList(GameInfo gameInfo)
         {
-            var updatedPlayers = dataService.GetPlayersList();
+            var updatedPlayers = gameInfo != null && gameInfo.AddedPlayers != null ? gameInfo.AddedPlayers : dataService.GetPlayersList();
 
             foreach (var player in updatedPlayers)
             {
-                if (StorageModel.PlayerCollection.Contains(player))
-                {
-                    continue;
-                }
-
-                var playerCopy = player;
-
-                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(playerCopy));
+                App.Current.Dispatcher.Invoke(() => StorageModel.PlayerCollection.Add(player));
             }
         }
 
