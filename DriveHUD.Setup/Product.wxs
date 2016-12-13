@@ -54,12 +54,14 @@
         <File Id="DriveHUD.Application.exe" Source="$(var.BuildDirectory)\DriveHUD.Application.exe" KeyPath="yes" Checksum="yes"/>
       </Component>
       <Component Id="App.config">
+        <RemoveFile Id="App.config" Name="DriveHUD.Application.exe.config" On="both"/>
         <File Id="App.config" Name="DriveHUD.Application.exe.config" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.Application.exe.config" />
       </Component>
       <Component Id="DriveHUD.HUD.exe">
         <File Id="DriveHUD.HUD.exe" Source="$(var.BuildDirectory)\DriveHUD.HUD.exe" KeyPath="yes" Checksum="yes"/>
       </Component>
       <Component Id="DriveHUD.HUD.exe.config">
+        <RemoveFile Id="DriveHUD.HUD.exe.config" Name="DriveHUD.HUD.exe.config" On="both"/>
         <File Id="DriveHUD.HUD.exe.config" Name="DriveHUD.HUD.exe.config" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.HUD.exe.config" />
       </Component>
       <Component Id="DHCReg.dll" Guid="{12B4DF2F-64B0-44A7-B449-B2FA41B5D7FA}">
