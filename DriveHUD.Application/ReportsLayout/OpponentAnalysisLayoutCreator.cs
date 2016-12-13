@@ -1,34 +1,39 @@
-using DriveHUD.Common.Reflection;
-using DriveHUD.Common.Wpf.Helpers;
+﻿using DriveHUD.Common.Reflection;
 using Model.Data;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ReportsLayout
 {
-    public class PositiontLayoutCreator : ReportLayoutCreator
+    public class OpponentAnalysisLayoutCreator : ReportLayoutCreator
     {
         public override void Create(RadGridView gridView)
         {
             gridView.Columns.Clear();
 
-            gridView.Columns.Add(AddPosition("Position", ReflectionHelper.GetPath<Indicators>(o => o.Source.PositionString), ReflectionHelper.GetPath<Indicators>(o => o.Source.Position)));
+            gridView.Columns.Add(Add("Player Name", ReflectionHelper.GetPath<Indicators>(o => o.Source.PlayerName)));
             gridView.Columns.Add(Add("Total Hands", nameof(Indicators.TotalHands)));
-            gridView.Columns.Add(AddFinancial("Total Won", nameof(Indicators.TotalWon)));
+            gridView.Columns.Add(AddFinancial("Total Won", ReflectionHelper.GetPath<Indicators>(o => o.Source.NetWon)));
             gridView.Columns.Add(Add("bb/100", nameof(Indicators.BB)));
             gridView.Columns.Add(AddPercentile("VPIP", nameof(Indicators.VPIP)));
             gridView.Columns.Add(AddPercentile("PFR", nameof(Indicators.PFR)));
-            gridView.Columns.Add(AddPercentile("3Bet%", nameof(Indicators.ThreeBet)));
+            gridView.Columns.Add(AddPercentile("3-Bet%", nameof(Indicators.ThreeBet)));
             gridView.Columns.Add(AddPercentile("3-Bet Call%", nameof(Indicators.ThreeBetCall)));
             gridView.Columns.Add(AddPercentile("WTSD%", nameof(Indicators.WTSD)));
+            gridView.Columns.Add(AddPercentile("W$SD", nameof(Indicators.WSSD)));
             gridView.Columns.Add(AddPercentile("Agg%", nameof(Indicators.AggPr)));
             gridView.Columns.Add(AddPercentile("AF", nameof(Indicators.Agg)));
+
             gridView.Columns.Add(AddPercentile("W$WSF", nameof(Indicators.WSWSF)));
             gridView.Columns.Add(AddPercentile("Flop C-Bet%", nameof(Indicators.FlopCBet)));
             gridView.Columns.Add(AddPercentile("Steal%", nameof(Indicators.Steal)));
+            gridView.Columns.Add(AddPercentile("Blinds Re-raise Steal", nameof(Indicators.BlindsReraiseSteal)));
+            gridView.Columns.Add(AddPercentile("Blinds Fold to Steal", nameof(Indicators.BlindsFoldSteal)));
             gridView.Columns.Add(AddPercentile("4Bet Range", nameof(Indicators.FourBetRange)));
+            gridView.Columns.Add(AddPercentile("UO-PFR EP%", nameof(Indicators.UO_PFR_EP)));
+            gridView.Columns.Add(AddPercentile("UO-PFR MP%", nameof(Indicators.UO_PFR_MP)));
+            gridView.Columns.Add(AddPercentile("UO-PFR CO%", nameof(Indicators.UO_PFR_CO)));
+            gridView.Columns.Add(AddPercentile("UO-PFR BN%", nameof(Indicators.UO_PFR_BN)));
+            gridView.Columns.Add(AddPercentile("UO-PFR SB%", nameof(Indicators.UO_PFR_SB)));
 
             gridView.Columns.Add(AddPercentile("4-Bet%", nameof(Indicators.FourBet), false));
             gridView.Columns.Add(AddPercentile("Check-Raise%", nameof(Indicators.CheckRaise), false));
@@ -48,14 +53,16 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddPercentile("3-Bet SB%", nameof(Indicators.ThreeBetInSB), false));
             gridView.Columns.Add(Add("3-Bet vs. Steal", nameof(Indicators.ThreeBetVsSteal), false));
             gridView.Columns.Add(AddPercentile("C-Bet in 3-Bet Pot%", nameof(Indicators.FlopCBetInThreeBetPot), false));
-            gridView.Columns.Add(AddPercentile("Fold to C-Bet 3-Bet Pot%", nameof(Indicators.FoldFlopCBetFromThreeBetPot), false));
+            gridView.Columns.Add(AddPercentile("Fold to C-Bet 3-Bet Pot%",
+                nameof(Indicators.FoldFlopCBetFromThreeBetPot), false));
             gridView.Columns.Add(AddPercentile("4-Bet BB%", nameof(Indicators.FourBetInBB), false));
             gridView.Columns.Add(AddPercentile("4-Bet BTN%", nameof(Indicators.FourBetInBTN), false));
             gridView.Columns.Add(AddPercentile("4-Bet CO%", nameof(Indicators.FourBetInCO), false));
             gridView.Columns.Add(AddPercentile("4-Bet MP%", nameof(Indicators.FourBetInMP), false));
             gridView.Columns.Add(AddPercentile("4-Bet SB%", nameof(Indicators.FourBetInSB), false));
             gridView.Columns.Add(AddPercentile("C-Bet 4-Bet Pot%", nameof(Indicators.FlopCBetInFourBetPot), false));
-            gridView.Columns.Add(AddPercentile("Fold to C-Bet 4-Bet Pot%", nameof(Indicators.FoldFlopCBetFromFourBetPot), false));
+            gridView.Columns.Add(AddPercentile("Fold to C-Bet 4-Bet Pot%", nameof(Indicators.FoldFlopCBetFromFourBetPot),
+                false));
             gridView.Columns.Add(AddPercentile("C-Bet IP%", nameof(Indicators.CBetIP), false));
             gridView.Columns.Add(AddPercentile("C-Bet OOP%", nameof(Indicators.CBetOOP), false));
             gridView.Columns.Add(AddPercentile("C-Bet Monotone Pot%", nameof(Indicators.FlopCBetMonotone), false));
@@ -63,8 +70,10 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddPercentile("C-Bet Rag Flop%", nameof(Indicators.FlopCBetRag), false));
             gridView.Columns.Add(AddPercentile("C-Bet vs 1 Opp%", nameof(Indicators.FlopCBetVsOneOpp), false));
             gridView.Columns.Add(AddPercentile("C-Bet vs 2 Opp%", nameof(Indicators.FlopCBetVsTwoOpp), false));
-            gridView.Columns.Add(AddPercentile("Fold to C-Bet 3-Bet Pot%", nameof(Indicators.FoldFlopCBetFromThreeBetPot), false));
-            gridView.Columns.Add(AddPercentile("Fold to C-Bet 4-Bet Pot%", nameof(Indicators.FoldFlopCBetFromFourBetPot), false));
+            gridView.Columns.Add(AddPercentile("Fold to C-Bet 3-Bet Pot%",
+                nameof(Indicators.FoldFlopCBetFromThreeBetPot), false));
+            gridView.Columns.Add(AddPercentile("Fold to C-Bet 4-Bet Pot%", nameof(Indicators.FoldFlopCBetFromFourBetPot),
+                false));
             gridView.Columns.Add(AddPercentile("Raise C-Bet%", nameof(Indicators.RaiseCBet), false));
             gridView.Columns.Add(AddPercentile("Cold Call BB%", nameof(Indicators.ColdCallInBB), false));
             gridView.Columns.Add(AddPercentile("Cold Call BTN%", nameof(Indicators.ColdCallInBTN), false));
@@ -92,35 +101,8 @@ namespace DriveHUD.Application.ReportsLayout
             gridView.Columns.Add(AddPercentile("True Aggression% (TAP)", nameof(Indicators.TrueAggression), false));
             foreach (var column in gridView.Columns)
             {
-                column.Width = GetColumnWidth(column.Header as string) + 10;
+                column.Width = GetColumnWidth(column.Header as string);
             }
-        }
-
-        private GridViewDataColumn AddPosition(string name, string member, string dataMember)
-        {
-            return AddPosition(name, member, dataMember, new GridViewLength(0));
-        }
-
-        private GridViewDataColumn AddPosition(string name, string member, string dataMember, GridViewLength width)
-        {
-            FrameworkElementFactory fef = new FrameworkElementFactory(typeof(TextBlock));
-            var bindingText = new Binding(member);
-            fef.SetBinding(TextBlock.TextProperty, bindingText);
-
-            DataTemplate template = new DataTemplate();
-            template.VisualTree = fef;
-            template.Seal();
-
-            GridViewDataColumn column = new GridViewDataColumn
-            {
-                Header = name,
-                DataMemberBinding = new Binding(dataMember),
-                Width = width == 0 ? new GridViewLength(1, GridViewLengthUnitType.Star) : width,
-                CellTemplate = template,
-                UniqueName = member,
-            };
-
-            return column;
         }
     }
 }

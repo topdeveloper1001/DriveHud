@@ -317,6 +317,7 @@
     <Compile Include="Migration\Migrations\Migration0006_NonDB_Add888PokerPredefinedLayouts.cs" />
     <Compile Include="Migration\Migrations\Migration0008_NonDb_AddAmericasCardroomSiteSettings.cs" />
     <Compile Include="Migration\Migrations\Migration0010_NonDb_RemovePreferredSeatingSportsbettingTigerGaming.cs" />
+    <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
     <Compile Include="SingleInstance.cs" />

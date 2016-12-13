@@ -214,6 +214,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IMigrationService), typeof(MigrationService.MigrationService), false);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
+            RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
 
             // Filters Save/Load service
             Container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));

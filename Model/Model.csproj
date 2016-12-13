@@ -125,6 +125,9 @@
     <Compile Include="Enums\RangeCardsEnums.cs" />
     <Compile Include="Enums\ShowdownHands.cs" />
     <Compile Include="Enums\Stat.cs" />
+    <Compile Include="Events\FilterEvents\OpponentAnalysisBuildingEvent.cs" />
+    <Compile Include="Events\FilterEvents\OpponentAnalysisBuildedEvent.cs" />
+    <Compile Include="Events\FilterEvents\UpdateReportEvent.cs" />
     <Compile Include="Events\FilterEvents\BuiltFilterChangedEvent.cs" />
     <Compile Include="Events\CalculateEquityEvent.cs" />
     <Compile Include="Events\FilterEvents\DateFilterChangedEvent.cs" />
@@ -133,6 +136,7 @@
     <Compile Include="Events\FilterEvents\DefaultFilterEvents.cs" />
     <Compile Include="Events\FilterEvents\ResetFiltersEvent.cs" />
     <Compile Include="Events\FilterEvents\UpdateFilterRequestEvent.cs" />
+    <Compile Include="Events\HandHistoryUpdatedEvent.cs" />
     <Compile Include="Events\HandNoteUpdatedEvent.cs" />
     <Compile Include="Events\MainNotificationEvent.cs" />
     <Compile Include="Events\PreferredSeatChangedEvent.cs" />
@@ -185,6 +189,7 @@
     <Compile Include="HandAnalyzers\StubAnalyzer.cs" />
     <Compile Include="HandAnalyzers\ThreeOfAKindAnalyzers.cs" />
     <Compile Include="HandAnalyzers\TwoPairAnalyzers.cs" />
+    <Compile Include="Interfaces\ITopPlayersService.cs" />
     <Compile Include="Interfaces\ICleanable.cs" />
     <Compile Include="Interfaces\IDataService.cs" />
     <Compile Include="IPlayerStatisticCalculator.cs" />
@@ -215,6 +220,7 @@
     <Compile Include="Replayer\ReplayerHelpers.cs" />
     <Compile Include="Reports\HoleCardsReportCreator.cs" />
     <Compile Include="Reports\IReportCreatorcs.cs" />
+    <Compile Include="Reports\OpponentAnalysisReportCreator.cs" />
     <Compile Include="Reports\OverAllReportCreator.cs" />
     <Compile Include="Reports\PokerSiteReportCreator.cs" />
     <Compile Include="Reports\PositionReportCreator.cs" />
@@ -252,6 +258,7 @@
     <Compile Include="StealAttempt.cs" />
     <Compile Include="PlayerStatisticCalculator.cs" />
     <Compile Include="StringFormatter.cs" />
+    <Compile Include="TopPlayersService.cs" />
     <Compile Include="TournamentResultModel.cs" />
   </ItemGroup>
   <ItemGroup>
