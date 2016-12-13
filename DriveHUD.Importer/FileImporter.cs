@@ -35,6 +35,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Importers
 {
@@ -178,6 +179,15 @@ namespace DriveHUD.Importers
 
                 sw.Start();
 #endif
+
+                //var threadsNumber = (int)Math.Ceiling((double)parsingResult.Count / 50d);
+
+                //for (var i = 0; i < threadsNumber; i++)
+                //{
+                //    var tempParsing = parsingResult.Skip(threadsNumber * 50).Take(50).ToList();
+
+                //    Task.Run(() => InsertHands(tempParsing, progress, gameInfo));                    
+                //}
 
                 InsertHands(parsingResult, progress, gameInfo);
 

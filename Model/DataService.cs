@@ -313,19 +313,29 @@ namespace Model
 
         public void Store(Playerstatistic statistic)
         {
-            if (!Directory.Exists(playersPath))
+            string fileName;
+
+            try
             {
-                Directory.CreateDirectory(playersPath);
+                if (!Directory.Exists(playersPath))
+                {
+                    Directory.CreateDirectory(playersPath);
+                }
+
+                var playerDirectory = Path.Combine(playersPath, statistic.PlayerName);
+
+                if (!Directory.Exists(playerDirectory))
+                {
+                    Directory.CreateDirectory(playerDirectory);
+                }
+
+                fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
             }
-
-            var playerDirectory = Path.Combine(playersPath, statistic.PlayerName);
-
-            if (!Directory.Exists(playerDirectory))
+            catch (Exception e)
             {
-                Directory.CreateDirectory(playerDirectory);
+                LogProvider.Log.Error(this, $"Can't create directory for {statistic.PlayerName}", e);
+                throw e;
             }
-
-            var fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
 
             var data = string.Empty;
 

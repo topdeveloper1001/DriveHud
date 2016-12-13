@@ -33,6 +33,7 @@ namespace Model.Site
                 EnumTableType.Four,
                 EnumTableType.Six,
                 EnumTableType.Eight,
+                EnumTableType.Nine,
                 EnumTableType.Ten
             };
 
