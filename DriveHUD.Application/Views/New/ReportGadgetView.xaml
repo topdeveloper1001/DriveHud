@@ -794,29 +794,7 @@
                     <RowDefinition Height="*"/>
                     <RowDefinition MinHeight="30" Height="Auto"/>
                 </Grid.RowDefinitions>
-                <StackPanel Grid.Row="0" Orientation="Vertical">
-                    <telerik:RadBusyIndicator x:Name="BusyIndicator" IsBusy="True" Background="{StaticResource BackgroundBrush}">
-                        <telerik:RadBusyIndicator.OverlayStyle>
-                            <Style TargetType="Rectangle">
-                                <Setter Property="Fill" Value="Transparent"/>
-                                <Setter Property="Stroke" Value="Transparent"/>
-                            </Style>
-                        </telerik:RadBusyIndicator.OverlayStyle>
-                        <telerik:RadBusyIndicator.ProgressBarStyle>
-                            <Style TargetType="telerik:RadProgressBar">
-                                <Setter Property="Foreground" Value="{StaticResource BackgroundBlueBrush}"/>
-                                <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
-                                <Setter Property="BorderThickness" Value="0"/>
-                                <Setter Property="Maximum" Value="100"/>
-                                <Setter Property="IsTabStop" Value="False"/>
-                                <Setter Property="Margin" Value="0,0,0,-20"/>
-                            </Style>
-                        </telerik:RadBusyIndicator.ProgressBarStyle>
-                        <telerik:RadBusyIndicator.BusyContentTemplate>
-                            <ItemContainerTemplate/>
-                        </telerik:RadBusyIndicator.BusyContentTemplate>
-                    </telerik:RadBusyIndicator>
-                    <telerik:RadGridView x:Name="GridViewReport"  IsReadOnly="True"
+               <telerik:RadGridView x:Name="GridViewReport"  IsReadOnly="True"
                                  Grid.Row="0" MaxHeight="260"
                                  VerticalAlignment="Stretch"
                                  RowHeight="40" SelectionMode="Single"
@@ -838,7 +816,28 @@
                         </telerik:RadContextMenu>
                     </telerik:RadContextMenu.ContextMenu>
                 </telerik:RadGridView>
-                </StackPanel>
+                <telerik:RadBusyIndicator Grid.Row="0" IsBusy="{Binding Path=IsBusy}" Background="{StaticResource BackgroundBrush}"
+                                          Visibility="{Binding Path=IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <telerik:RadBusyIndicator.OverlayStyle>
+                        <Style TargetType="Rectangle">
+                            <Setter Property="Fill" Value="Transparent"/>
+                            <Setter Property="Stroke" Value="Transparent"/>
+                        </Style>
+                    </telerik:RadBusyIndicator.OverlayStyle>
+                    <telerik:RadBusyIndicator.ProgressBarStyle>
+                        <Style TargetType="telerik:RadProgressBar">
+                            <Setter Property="Foreground" Value="{StaticResource BackgroundBlueBrush}"/>
+                            <Setter Property="Background" Value="{StaticResource BackgroundBrush}"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Maximum" Value="100"/>
+                            <Setter Property="IsTabStop" Value="False"/>
+                            <Setter Property="Margin" Value="0,0,0,-20"/>
+                        </Style>
+                    </telerik:RadBusyIndicator.ProgressBarStyle>
+                    <telerik:RadBusyIndicator.BusyContentTemplate>
+                        <ItemContainerTemplate/>
+                    </telerik:RadBusyIndicator.BusyContentTemplate>
+                </telerik:RadBusyIndicator>
                 <ItemsControl Grid.Row="1" Margin="5" Background="{StaticResource BackgroundBrush1}"
                       ItemsSource="{Binding Path=CurrentlyBuiltFilter.FilterSectionCollection}">
                     <ItemsControl.ItemTemplate>

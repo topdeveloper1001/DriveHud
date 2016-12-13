@@ -298,8 +298,7 @@ namespace DriveHUD.Application.Views
         {
             try
             {
-                BusyIndicator.Visibility = Visibility.Visible;
-                GridViewReport.Visibility = Visibility.Collapsed;
+                reportGadgetViewModel.IsBusy = true;
                 // disable radio button panel to restrict changing the report type during loading
                 ReportRadioButtonPanel.IsEnabled = false;
 
@@ -311,7 +310,7 @@ namespace DriveHUD.Application.Views
                     reportType == EnumReports.OpponentAnalysis ?
                     GetReportCollectionAsync(creator, await reportGadgetViewModel.GetTop()) :
                     GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
-                
+                reportGadgetViewModel.IsBusy = false;
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
                 reportGadgetViewModel.ReportCollection.Clear();
@@ -334,8 +333,6 @@ namespace DriveHUD.Application.Views
             finally
             {
                 ReportRadioButtonPanel.IsEnabled = true;
-                BusyIndicator.Visibility = Visibility.Collapsed;
-                GridViewReport.Visibility = Visibility.Visible;
             }
         }
 

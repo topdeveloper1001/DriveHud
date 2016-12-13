@@ -7,5 +7,6 @@ namespace Model.Interfaces
     public interface ITopPlayersService
     {
         Task<IList<Playerstatistic>> GetTop();
+        void UpdateStatistics(IList<Playerstatistic> getAllPlayerStats);
     }
 }

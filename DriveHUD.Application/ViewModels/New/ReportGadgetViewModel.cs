@@ -69,6 +69,19 @@ namespace DriveHUD.Application.ViewModels
             _eventAggregator.GetEvent<BuiltFilterChangedEvent>().Subscribe(UpdateBuiltFilter);
             _eventAggregator.GetEvent<HandNoteUpdatedEvent>().Subscribe(UpdateHandNote);
             _eventAggregator.GetEvent<TournamentDataUpdatedEvent>().Subscribe(UpdateReport);
+            _eventAggregator.GetEvent<OpponentAnalysisBuildedEvent>().Subscribe(OnOpponentAnalysisBuilded, ThreadOption.UIThread);
+            _eventAggregator.GetEvent<OpponentAnalysisBuildingEvent>().Subscribe(OnOpponentAnalysisBuilding, ThreadOption.UIThread);
+        }
+
+        private void OnOpponentAnalysisBuilding()
+        {
+            IsBusy = true;
+        }
+
+        private void OnOpponentAnalysisBuilded()
+        {
+            IsBusy = false;
+            OnPropertyChanged(nameof(ReportSelectedItemStat));
         }
 
         private void InitializeFilter()
@@ -272,6 +285,11 @@ namespace DriveHUD.Application.ViewModels
                     },
                     n => { });
         }
+
+        public async Task<IList<Playerstatistic>> GetTop()
+        {
+            return await _topPlayersService.GetTop();
+        }
         #endregion
 
         #region Properties
@@ -301,6 +319,7 @@ namespace DriveHUD.Application.ViewModels
         private EnumHandTag _filterHandTagSelectedItem;
 
         private BuiltFilterModel _currentlyBuiltFilter;
+        private bool _isBusy;
 
         public bool IsShowTournamentData
         {
@@ -474,9 +493,16 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public async Task<IList<Playerstatistic>> GetTop()
+        public bool IsBusy
         {
-            return await _topPlayersService.GetTop();
+            get { return _isBusy; }
+            set
+            {
+                if ((value && ReportSelectedItemStat == EnumReports.OpponentAnalysis))
+                    SetProperty(ref _isBusy, true);
+                else
+                    SetProperty(ref _isBusy, false);
+            }
         }
 
         #endregion

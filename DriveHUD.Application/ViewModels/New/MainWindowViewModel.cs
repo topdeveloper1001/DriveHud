@@ -302,7 +302,8 @@ namespace DriveHUD.Application.ViewModels
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
-
+                var topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
+                topPlayersService.UpdateStatistics(importerSessionCacheService.GetAllPlayerStats(gameInfo.Session));
                 for (int i = 1; i <= maxSeats; i++)
                 {
                     var playerName = string.Empty;
@@ -334,7 +335,7 @@ namespace DriveHUD.Application.ViewModels
                         Name = playerName,
                         SeatNumber = seatNumber
                     };
-
+                    
                     var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
                     var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerCollectionItem);
                     var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);

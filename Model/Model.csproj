@@ -125,6 +125,8 @@
     <Compile Include="Enums\RangeCardsEnums.cs" />
     <Compile Include="Enums\ShowdownHands.cs" />
     <Compile Include="Enums\Stat.cs" />
+    <Compile Include="Events\FilterEvents\OpponentAnalysisBuildingEvent.cs" />
+    <Compile Include="Events\FilterEvents\OpponentAnalysisBuildedEvent.cs" />
     <Compile Include="Events\FilterEvents\UpdateReportEvent.cs" />
     <Compile Include="Events\FilterEvents\BuiltFilterChangedEvent.cs" />
     <Compile Include="Events\CalculateEquityEvent.cs" />
@@ -134,6 +136,7 @@
     <Compile Include="Events\FilterEvents\DefaultFilterEvents.cs" />
     <Compile Include="Events\FilterEvents\ResetFiltersEvent.cs" />
     <Compile Include="Events\FilterEvents\UpdateFilterRequestEvent.cs" />
+    <Compile Include="Events\HandHistoryUpdatedEvent.cs" />
     <Compile Include="Events\HandNoteUpdatedEvent.cs" />
     <Compile Include="Events\MainNotificationEvent.cs" />
     <Compile Include="Events\PreferredSeatChangedEvent.cs" />
