@@ -265,9 +265,12 @@ namespace DriveHUD.Application.ViewModels
                 });
                 return;
             }
-            sw.Restart();
-            UpdateCurrentView();
-            sw.Stop();
+
+            if (gameInfo == null)
+            {
+                UpdateCurrentView();
+            }
+
             LogProvider.Log.Debug($"RefreshData.UpdateCurrentView {sw.ElapsedMilliseconds} ms");
         }
 

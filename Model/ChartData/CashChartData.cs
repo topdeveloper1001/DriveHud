@@ -78,7 +78,7 @@ namespace Model.ChartData
             if (statistics == null || statistics.Count() == 0)
                 return report;
 
-            var newStat = statistics.Select(x => x.Copy());
+            var newStat = statistics;
             newStat.ForEach(x => Converter.ToLocalizedDateTime(x.Time));
 
             var firstDate = newStat.Max(x => x.Time).AddMonths(-1);
@@ -109,7 +109,7 @@ namespace Model.ChartData
             if (statistics == null || statistics.Count() == 0)
                 return report;
 
-            var newStat = statistics.Select(x => x.Copy());
+            var newStat = statistics;
             newStat.ForEach(x => Converter.ToLocalizedDateTime(x.Time));
 
             var firstDate = newStat.Max(x => x.Time).AddYears(-1);

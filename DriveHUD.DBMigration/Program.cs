@@ -28,17 +28,24 @@ namespace DriveHUD.DBMigration
 
             Console.WriteLine("Starting migration");
 
-            MigrateTable<Players>(sw, x => x.PlayerId, ref rows, ref totalTime);
-            MigrateTable<Gametypes>(sw, x => x.GametypeId, ref rows, ref totalTime);
-            MigrateTable<Handhistory>(sw, x => x.HandhistoryId, ref rows, ref totalTime);
-            MigrateTable<Handnotes>(sw, x => x.HandNoteId, ref rows, ref totalTime);
-            MigrateTable<HandHistoryRecord>(sw, x => x.Id, ref rows, ref totalTime);
-            MigrateTable<Playernotes>(sw, x => x.PlayerNoteId, ref rows, ref totalTime);
-            MigrateTable<Tournaments>(sw, x => x.TourneydataId, ref rows, ref totalTime);
-            MigrateTable<Playerstatistic>(sw, x => x.CompiledplayerresultsId, ref rows, ref totalTime);
+            try
+            {
 
-            Console.WriteLine($"Rows migrated: {rows} [{totalTime} ms]");
-            Console.WriteLine("Migration completed");
+                MigrateTable<Players>(sw, x => x.PlayerId, ref rows, ref totalTime);
+                MigrateTable<Gametypes>(sw, x => x.GametypeId, ref rows, ref totalTime);
+                MigrateTable<Handhistory>(sw, x => x.HandhistoryId, ref rows, ref totalTime);
+                MigrateTable<Handnotes>(sw, x => x.HandNoteId, ref rows, ref totalTime);
+                MigrateTable<HandHistoryRecord>(sw, x => x.Id, ref rows, ref totalTime);
+                MigrateTable<Playernotes>(sw, x => x.PlayerNoteId, ref rows, ref totalTime);
+                MigrateTable<Tournaments>(sw, x => x.TourneydataId, ref rows, ref totalTime);
+                MigrateTable<Playerstatistic>(sw, x => x.CompiledplayerresultsId, ref rows, ref totalTime);
+                Console.WriteLine($"Rows migrated: {rows} [{totalTime} ms]");
+                Console.WriteLine("Migration completed");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Migration failed: {e.Message}");
+            }
         }
 
         static void MigrateTable<T>(Stopwatch sw, Func<T, object> getId, ref long rows, ref long totalTime)
@@ -75,6 +82,8 @@ namespace DriveHUD.DBMigration
                 rows += entities.Length;
                 totalTime += sw.ElapsedMilliseconds;
             }
+
+            GC.Collect();
         }
     }
 }
