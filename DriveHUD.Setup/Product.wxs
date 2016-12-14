@@ -127,6 +127,7 @@
         <File Id="Model.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Model.dll" />
       </Component>
       <Component Id="HandHistories.Objects.dll" Guid="{EF5CC6A7-5784-4E6D-B93D-0652430DE633}">
+        <RemoveFile Id="HandHistories.Objects.dll" Name="HandHistories.Objects.dll" On="both"/>
         <File Id="HandHistories.Objects.dll" KeyPath="yes" Source="$(var.BuildDirectory)\HandHistories.Objects.dll" />
       </Component>
       <Component Id="HandHistories.Parser.dll" Guid="{B399D6FC-3E00-4C42-A9BC-8FD2C2F719B3}">
