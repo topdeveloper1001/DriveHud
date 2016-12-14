@@ -33,7 +33,7 @@ namespace DriveHUD.Application.ViewModels
         #region Private Fields
         private EnumReports _invisibleSelectedItemStat;
         private readonly IEventAggregator _eventAggregator;
-        private readonly ITopPlayersService _topPlayersService;
+        //private readonly ITopPlayersService _topPlayersService;
         #endregion
 
         #region ICommand
@@ -49,7 +49,8 @@ namespace DriveHUD.Application.ViewModels
         internal ReportGadgetViewModel()
         {
             _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
-            _topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
+            // TODO: Opponent Analysis report turned off
+            //_topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
             this.PopupRequest = new InteractionRequest<PopupBaseNotification>();
             this.NotificationRequest = new InteractionRequest<INotification>();
 
@@ -286,10 +287,11 @@ namespace DriveHUD.Application.ViewModels
                     n => { });
         }
 
-        public async Task<IList<Playerstatistic>> GetTop()
-        {
-            return await _topPlayersService.GetTop();
-        }
+        // TODO: Opponent Analysis report turned off
+        //public async Task<IList<Playerstatistic>> GetTop()
+        //{
+        //    return await _topPlayersService.GetTop();
+        //}
         #endregion
 
         #region Properties

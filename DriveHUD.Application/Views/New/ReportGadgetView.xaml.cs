@@ -305,8 +305,9 @@ namespace DriveHUD.Application.Views
                 if (layout == null || creator == null) return;
 
                 var reportCollection =
-                    reportType == EnumReports.OpponentAnalysis ?
-                    GetReportCollectionAsync(creator, await reportGadgetViewModel.GetTop()) :
+                    // TODO: Opponent Analysis report turned off
+                    //reportType == EnumReports.OpponentAnalysis ?
+                    //GetReportCollectionAsync(creator, await reportGadgetViewModel.GetTop()) :
                     GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
                 reportGadgetViewModel.IsBusy = false;
                 // clear columns in order to avoid  Binding exceptions
