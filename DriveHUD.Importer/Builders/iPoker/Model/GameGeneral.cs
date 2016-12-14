@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
@@ -13,7 +14,7 @@ namespace DriveHUD.Importers.Builders.iPoker
         {
             get
             {
-                return StartDate.ToString(PokerConfiguration.DateTimeFormat);
+                return StartDate.ToString(PokerConfiguration.DateTimeFormat, CultureInfo.InvariantCulture);
             }
             set
             {

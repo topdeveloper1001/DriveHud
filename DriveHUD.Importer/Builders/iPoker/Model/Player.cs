@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
@@ -23,11 +24,11 @@ namespace DriveHUD.Importers.Builders.iPoker
         {
             get
             {
-                return Chips.ToString(PokerConfiguration.DecimalFormat);
+                return Chips.ToString(PokerConfiguration.DecimalFormat, CultureInfo.InvariantCulture);
             }
             set
             {
-                Chips = decimal.Parse(value);
+                Chips = decimal.Parse(value, CultureInfo.InvariantCulture);
             }
         }
 
@@ -55,11 +56,11 @@ namespace DriveHUD.Importers.Builders.iPoker
         {
             get
             {
-                return Win.ToString(PokerConfiguration.DecimalFormat);
+                return Win.ToString(PokerConfiguration.DecimalFormat, CultureInfo.InvariantCulture);
             }
             set
             {
-                Win = decimal.Parse(value);
+                Win = decimal.Parse(value, CultureInfo.InvariantCulture);
             }
         }
 
@@ -71,11 +72,11 @@ namespace DriveHUD.Importers.Builders.iPoker
         {
             get
             {
-                return Bet.ToString(PokerConfiguration.DecimalFormat);
+                return Bet.ToString(PokerConfiguration.DecimalFormat, CultureInfo.InvariantCulture);
             }
             set
             {
-                Bet = decimal.Parse(value);
+                Bet = decimal.Parse(value, CultureInfo.InvariantCulture);
             }
         }
 
