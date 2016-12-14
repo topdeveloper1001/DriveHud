@@ -270,7 +270,7 @@ namespace DriveHUD.Application.ViewModels
 
                 sw.Start();
 
-                RefreshData();
+                RefreshData(e.GameInfo);
 
                 var refreshTime = sw.ElapsedMilliseconds;
 
