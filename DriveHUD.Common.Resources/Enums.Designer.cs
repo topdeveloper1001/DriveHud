@@ -529,7 +529,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to AF.
+        ///   Looks up a localized string similar to AF (Aggression Factor).
         /// </summary>
         internal static string Enum_Stat_AF {
             get {
