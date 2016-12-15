@@ -198,7 +198,7 @@ namespace DriveHUD.Importers.BetOnline
                 var smallBlind = parameters.Attribute("stakes-low").Value;
                 var bigBlind = parameters.Attribute("stakes-high").Value;
 
-                handHistory.General.GameType = string.Format("{0} ${1}/${2}", handHistory.General.GameType, smallBlind, bigBlind);
+                handHistory.General.GameType = string.Format(CultureInfo.InvariantCulture, "{0} ${1}/${2}", handHistory.General.GameType, smallBlind, bigBlind);
             }
 
             AdjustRaises(game.Rounds);
@@ -328,8 +328,8 @@ namespace DriveHUD.Importers.BetOnline
                         buyInValue = PokerConfiguration.DefaultBuyIn;
                     }
 
-                    buyIn = string.Format(PokerConfiguration.BuyInFormat, prizeFee, fee);
-                    totalBuyIn = string.Format(PokerConfiguration.TotalBuyInFormat, buyInValue);
+                    buyIn = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.BuyInFormat, prizeFee, fee);
+                    totalBuyIn = string.Format(CultureInfo.InvariantCulture, PokerConfiguration.TotalBuyInFormat, buyInValue);
                 }
             }
 
