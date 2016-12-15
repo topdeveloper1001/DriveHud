@@ -557,6 +557,18 @@
   <data name="Enum_Stat_RaiseCBet" xml:space="preserve">
     <value>Raise C-Bet%</value>
   </data>
+  <data name="Enum_Stat_CheckFoldFlopPfrOop" xml:space="preserve">
+    <value>Check/fold flop when PFR OOP</value>
+  </data>
+  <data name="Enum_Stat_CheckFoldFlop3BetOop" xml:space="preserve">
+    <value>Check/fold flop when 3-betting OOP</value>
+  </data>
+  <data name="Enum_Stat_BetFoldFlopPfrRaiser" xml:space="preserve">
+    <value>Bet/fold flop when PFR raiser</value>
+  </data>
+  <data name="Enum_Stat_BetFlopCheckAfterCall3BetInPosition" xml:space="preserve">
+    <value>Bets flop when checked to after calling a 3-bet in position</value>
+  </data>
   <data name="Enum_HudViewType_Plain" xml:space="preserve">
     <value>Plain HUD</value>
   </data>

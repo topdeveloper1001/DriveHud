@@ -784,6 +784,11 @@ namespace Model.Data
 
         #endregion
 
+        public virtual decimal CheckFoldFlopPfrOop => GetDevisionResult(Source.CheckFlopPfrOop, Source.FoldFlopPfrOop);
+        public virtual decimal CheckFoldFlop3BetOop => GetDevisionResult(Source.CheckFlop3BetOop, Source.FoldFlop3BetOop);
+        public virtual decimal BetFoldFlopPfrRaiser => GetDevisionResult(Source.BetFlopPfrRaiser, Source.FoldFlopPfrRaiser);
+        public virtual decimal BetFlopCheckAfterCall3BetInPosition => GetDevisionResult(Source.BetFlopCheck, Source.Call3BetInPosition);
+
         public virtual string GameType { get; set; }
         public virtual string PokerSite
         {

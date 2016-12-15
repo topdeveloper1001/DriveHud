@@ -100,6 +100,7 @@ namespace Model
             bool aggresiveRiver = playerHandActions.RiverAny(handAction => handAction.IsRaise() || handAction.IsBet());
 
             bool betOnFlop = playerHandActions.FlopAny(handAction => handAction.IsBet());
+            bool foldOnFlop = playerHandActions.FlopAny(handAction => handAction.IsFold);
             bool betOnTurn = playerHandActions.TurnAny(handAction => handAction.IsBet());
 
             bool isCheckedFlop = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop)?.IsCheck ?? false;
@@ -520,6 +521,16 @@ namespace Model
             stat.LimpCalled = limp.Called ? 1 : 0;
             stat.LimpFolded = limp.Folded ? 1 : 0;
             stat.LimpReraised = limp.Raised ? 1 : 0;
+
+            stat.RaiseCBet = flopCBet.Raised || riverCBet.Raised || turnCBet.Raised ? 1 : 0;//???
+            stat.BetFlopPfrRaiser = pfr && betOnFlop ? 1 : 0;
+            stat.FoldFlopPfrRaiser = pfr && foldOnFlop ? 1 : 0;
+            stat.CheckFlopPfrOop = pfrOcurred && isCheckedFlop && !preflopInPosition ? 1 : 0;
+            stat.FoldFlopPfrOop = pfrOcurred && foldOnFlop && !preflopInPosition ? 1 : 0;
+            stat.CheckFlop3BetOop = isCheckedFlop && threeBet.Made && !preflopInPosition ? 1 : 0;
+            stat.FoldFlop3BetOop = foldOnFlop && isCheckedFlop && threeBet.Made && !preflopInPosition ? 1 : 0;
+            stat.BetFlopCheck = betOnFlop ? 1 : 0;
+            stat.Calledthreebetpreflop = threeBet.Called && preflopInPosition ? 1 : 0;
 
             #region Additional
 

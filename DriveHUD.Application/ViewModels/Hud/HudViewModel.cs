@@ -306,6 +306,10 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FloatFlop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FloatFlop)},
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.FlopAGG, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.FlopAgg) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.RaiseFlop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.RaiseFlop) },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.CheckFoldFlopPfrOop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckFoldFlopPfrOop) },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.CheckFoldFlop3BetOop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckFoldFlop3BetOop) },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.BetFoldFlopPfrRaiser, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BetFoldFlopPfrRaiser) },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.BetFlopCheckAfterCall3BetInPosition, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BetFlopCheckAfterCall3BetInPosition) },
 
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.DelayedTurnCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidDelayedTurnCBet) },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.TurnCheckRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TurnCheckRaise) },

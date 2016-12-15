@@ -616,6 +616,42 @@ namespace DriveHUD.Entities
 
         [ProtoMember(231)]
         public virtual int Flopcontinuationoopbetpossible { get; set; }
+        
+        [ProtoMember(232)]
+        public virtual int ButtonDefend { get; set; }
+
+        [ProtoMember(233)]
+        public virtual int CoRaise { get; set; }
+
+        [ProtoMember(234)]
+        public virtual int CheckFlopPfrOop { get; set; }
+
+        [ProtoMember(235)]
+        public virtual int FoldFlopPfrOop { get; set; }
+
+        [ProtoMember(236)]
+        public virtual int CheckFlop3BetOop { get; set; }
+
+        [ProtoMember(237)]
+        public virtual int FoldFlop3BetOop { get; set; }
+
+        [ProtoMember(238)]
+        public virtual int BetFlopPfrRaiser { get; set; }
+
+        [ProtoMember(239)]
+        public virtual int FoldFlopPfrRaiser { get; set; }
+
+        [ProtoMember(240)]
+        public virtual int BetFlopCheck { get; set; }
+
+        [ProtoMember(241)]
+        public virtual int Call3BetInPosition { get; set; }
+
+        [ProtoMember(242)]
+        public virtual int RaiseCBet { get; set; }
+
+        [ProtoMember(243)]
+        public virtual int PfrFromAllPositionsIn6Max { get; set; }
 
         #region Additional properties (not for serialization)
 
@@ -958,6 +994,19 @@ namespace DriveHUD.Entities
             TurnAggPossible += a.TurnAggPossible;
             RiverAggPossible += a.RiverAggPossible;
 
+            ButtonDefend += a.ButtonDefend;
+            CoRaise += a.CoRaise;
+            CheckFlopPfrOop += a.CheckFlopPfrOop;
+            FoldFlopPfrOop += a.FoldFlopPfrOop;
+            CheckFlop3BetOop += a.CheckFlop3BetOop;
+            FoldFlop3BetOop += a.FoldFlop3BetOop;
+            BetFlopPfrRaiser += a.BetFlopPfrRaiser;
+            FoldFlopPfrRaiser += a.FoldFlopPfrRaiser;
+            BetFlopCheck += a.BetFlopCheck;
+            Call3BetInPosition += a.Call3BetInPosition;
+            RaiseCBet += a.RaiseCBet;
+            PfrFromAllPositionsIn6Max += a.PfrFromAllPositionsIn6Max;
+
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
                 CardsList.Add(a.Cards);
@@ -1257,6 +1306,19 @@ namespace DriveHUD.Entities
             r.FlopAggPossible = a.FlopAggPossible + b.FlopAggPossible;
             r.TurnAggPossible = a.TurnAggPossible + b.TurnAggPossible;
             r.RiverAggPossible = a.RiverAggPossible + b.RiverAggPossible;
+
+            r.ButtonDefend = a.ButtonDefend + b.ButtonDefend;
+            r.CoRaise = a.CoRaise + b.CoRaise;
+            r.CheckFlopPfrOop = a.CheckFlopPfrOop + b.CheckFlopPfrOop;
+            r.FoldFlopPfrOop = a.FoldFlopPfrOop + b.FoldFlopPfrOop;
+            r.CheckFlop3BetOop = a.CheckFlop3BetOop + b.CheckFlopPfrOop;
+            r.FoldFlop3BetOop = a.FoldFlop3BetOop + b.FoldFlopPfrOop;
+            r.BetFlopPfrRaiser = a.BetFlopPfrRaiser + b.BetFlopPfrRaiser;
+            r.FoldFlopPfrRaiser = a.FoldFlopPfrRaiser + b.FoldFlopPfrRaiser;
+            r.BetFlopCheck = a.BetFlopCheck + b.BetFlopCheck;
+            r.Call3BetInPosition = a.Call3BetInPosition + b.Call3BetInPosition;
+            r.RaiseCBet = a.RaiseCBet + b.RaiseCBet;
+            r.PfrFromAllPositionsIn6Max = a.PfrFromAllPositionsIn6Max + b.PfrFromAllPositionsIn6Max;
 
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);

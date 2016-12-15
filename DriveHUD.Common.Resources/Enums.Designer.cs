@@ -556,6 +556,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bets flop when checked to after calling a 3-bet in position.
+        /// </summary>
+        internal static string Enum_Stat_BetFlopCheckAfterCall3BetInPosition {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BetFlopCheckAfterCall3BetInPosition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bet/fold flop when PFR raiser.
+        /// </summary>
+        internal static string Enum_Stat_BetFoldFlopPfrRaiser {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BetFoldFlopPfrRaiser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C-Bet%.
         /// </summary>
         internal static string Enum_Stat_CBet {
@@ -597,6 +615,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_CBetOOP {
             get {
                 return ResourceManager.GetString("Enum_Stat_CBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check/fold flop when 3-betting OOP.
+        /// </summary>
+        internal static string Enum_Stat_CheckFoldFlop3BetOop {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFoldFlop3BetOop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check/fold flop when PFR OOP.
+        /// </summary>
+        internal static string Enum_Stat_CheckFoldFlopPfrOop {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFoldFlopPfrOop", resourceCulture);
             }
         }
         
