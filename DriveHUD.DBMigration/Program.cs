@@ -1,5 +1,6 @@
 ﻿using DriveHUD.Entities;
 using Model;
+using NHibernate;
 using NHibernate.Linq;
 using System;
 using System.Diagnostics;
@@ -14,10 +15,39 @@ namespace DriveHUD.DBMigration
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
 
-            Migrate();
+            using (var session = ModelEntities.OpenPostgreSQLSession())
+            {
+                TestSelection<Players>(session);
+                TestSelection<HandHistoryRecord>(session);
+            }
+
+            using (var session = ModelEntities.OpenSession())
+            {
+                TestSelection<Players>(session);
+                TestSelection<HandHistoryRecord>(session);
+            }
+
+            //Migrate();
 
             Console.WriteLine("Press any key...");
             Console.ReadKey();
+        }
+
+        static void TestSelection<T>(ISession session)
+        {
+            Console.WriteLine("Starting test");
+
+            var sw = new Stopwatch();           
+            long totalTime = 0;
+
+            sw.Restart();
+            var entities = session.Query<T>().Take(1000000).ToArray();
+            sw.Stop();
+
+            Console.WriteLine($"Read total {typeof(T).Name}: {entities.Length} [{sw.ElapsedMilliseconds} ms]");
+            totalTime += sw.ElapsedMilliseconds;
+
+            GC.Collect();    
         }
 
         static void Migrate()
@@ -30,7 +60,6 @@ namespace DriveHUD.DBMigration
 
             try
             {
-
                 MigrateTable<Players>(sw, x => x.PlayerId, ref rows, ref totalTime);
                 MigrateTable<Gametypes>(sw, x => x.GametypeId, ref rows, ref totalTime);
                 MigrateTable<Handhistory>(sw, x => x.HandhistoryId, ref rows, ref totalTime);
