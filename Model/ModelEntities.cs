@@ -100,5 +100,10 @@ namespace Model
         {
             return CreateSQLiteSessionFactory().OpenSession();
         }
+
+        public static IStatelessSession OpenStatelessSession()
+        {
+            return CreateSQLiteSessionFactory().OpenStatelessSession();
+        }
     }
 }

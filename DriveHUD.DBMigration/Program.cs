@@ -1,10 +1,16 @@
-﻿using DriveHUD.Entities;
+﻿using DriveHUD.Common.Linq;
+using DriveHUD.Entities;
 using Model;
 using NHibernate;
 using NHibernate.Linq;
+using ProtoBuf;
 using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
+using System.Linq.Expressions;
+using System.Text;
 
 namespace DriveHUD.DBMigration
 {
@@ -15,39 +21,23 @@ namespace DriveHUD.DBMigration
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
 
-            using (var session = ModelEntities.OpenPostgreSQLSession())
+            try
             {
-                TestSelection<Players>(session);
-                TestSelection<HandHistoryRecord>(session);
+                //Migrate();
+                MigratePlayerStatistic();
             }
-
-            using (var session = ModelEntities.OpenSession())
+            catch (Exception e)
             {
-                TestSelection<Players>(session);
-                TestSelection<HandHistoryRecord>(session);
+                WriteException(e);
             }
-
-            //Migrate();
 
             Console.WriteLine("Press any key...");
             Console.ReadKey();
         }
 
-        static void TestSelection<T>(ISession session)
+        static void WriteException(Exception e)
         {
-            Console.WriteLine("Starting test");
-
-            var sw = new Stopwatch();           
-            long totalTime = 0;
-
-            sw.Restart();
-            var entities = session.Query<T>().Take(1000000).ToArray();
-            sw.Stop();
-
-            Console.WriteLine($"Read total {typeof(T).Name}: {entities.Length} [{sw.ElapsedMilliseconds} ms]");
-            totalTime += sw.ElapsedMilliseconds;
-
-            GC.Collect();    
+            Console.WriteLine($"Migration failed: {e}");
         }
 
         static void Migrate()
@@ -58,38 +48,56 @@ namespace DriveHUD.DBMigration
 
             Console.WriteLine("Starting migration");
 
-            try
+            MigrateTable<Players>(sw, x => x.PlayerId, ref rows, ref totalTime);
+            MigrateTable<Gametypes>(sw, x => x.GametypeId, ref rows, ref totalTime);
+            MigrateTable<Handhistory>(sw, x => x.HandhistoryId, ref rows, ref totalTime);
+            MigrateTable<Handnotes>(sw, x => x.HandNoteId, ref rows, ref totalTime);
+            MigrateTable<HandHistoryRecord>(sw, x => x.Id, ref rows, ref totalTime);
+            MigrateTable<Playernotes>(sw, x => x.PlayerNoteId, ref rows, ref totalTime);
+            MigrateTable<Tournaments>(sw, x => x.TourneydataId, ref rows, ref totalTime);
+            Console.WriteLine($"Rows migrated: {rows} [{totalTime} ms]");
+            Console.WriteLine("Migration completed");
+        }
+
+        static void MigrateTable<T>(Stopwatch sw, Expression<Func<T, object>> getIdExpression, ref long rows, ref long totalTime)
+        {
+            using (var session = ModelEntities.OpenPostgreSQLSession())
             {
-                MigrateTable<Players>(sw, x => x.PlayerId, ref rows, ref totalTime);
-                MigrateTable<Gametypes>(sw, x => x.GametypeId, ref rows, ref totalTime);
-                MigrateTable<Handhistory>(sw, x => x.HandhistoryId, ref rows, ref totalTime);
-                MigrateTable<Handnotes>(sw, x => x.HandNoteId, ref rows, ref totalTime);
-                MigrateTable<HandHistoryRecord>(sw, x => x.Id, ref rows, ref totalTime);
-                MigrateTable<Playernotes>(sw, x => x.PlayerNoteId, ref rows, ref totalTime);
-                MigrateTable<Tournaments>(sw, x => x.TourneydataId, ref rows, ref totalTime);
-                MigrateTable<Playerstatistic>(sw, x => x.CompiledplayerresultsId, ref rows, ref totalTime);
-                Console.WriteLine($"Rows migrated: {rows} [{totalTime} ms]");
-                Console.WriteLine("Migration completed");
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine($"Migration failed: {e.Message}");
+                var entitiesCount = session.Query<T>().Count();
+
+                var rowsPerCycle = 200000;
+
+                var numOfCycles = (int)Math.Ceiling((double)entitiesCount / rowsPerCycle);
+
+                for (var i = 0; i < numOfCycles; i++)
+                {
+                    var limitFrom = i * rowsPerCycle;
+
+                    if (i > 0)
+                    {
+                        Console.WriteLine($"Migration cycle {i + 1}");
+                    }
+
+                    MigrateTablePartial(sw, getIdExpression, ref rows, ref totalTime, session, limitFrom, rowsPerCycle);
+
+                    session.Clear();
+                    GC.Collect();
+                }
             }
         }
 
-        static void MigrateTable<T>(Stopwatch sw, Func<T, object> getId, ref long rows, ref long totalTime)
+        static void MigrateTablePartial<T>(Stopwatch sw, Expression<Func<T, object>> getIdExpression, ref long rows, ref long totalTime, ISession pgSession, int limitFrom, int rowsToSelect)
         {
             T[] entities = null;
 
-            using (var session = ModelEntities.OpenPostgreSQLSession())
-            {
-                sw.Restart();
-                entities = session.Query<T>().ToArray();
-                sw.Stop();
+            sw.Restart();
+            entities = pgSession.Query<T>().OrderBy(getIdExpression).Skip(limitFrom).Take(rowsToSelect).ToArray();
+            sw.Stop();
 
-                Console.WriteLine($"Read total {typeof(T).Name}: {entities.Length} [{sw.ElapsedMilliseconds} ms]");
-                totalTime += sw.ElapsedMilliseconds;
-            }
+            var getId = getIdExpression.Compile();
+
+            Console.WriteLine($"Read total {typeof(T).Name}: {entities.Length} [{sw.ElapsedMilliseconds} ms]");
+            totalTime += sw.ElapsedMilliseconds;
 
             using (var session = ModelEntities.OpenSession())
             {
@@ -111,8 +119,214 @@ namespace DriveHUD.DBMigration
                 rows += entities.Length;
                 totalTime += sw.ElapsedMilliseconds;
             }
+        }
+
+        static void MigratePlayerStatistic()
+        {
+            var players = ReadPlayers();
+
+            var playersDataFolder = StringFormatter.GetPlayersDataFolderPath();
+
+            if (!Directory.Exists(playersDataFolder))
+            {
+                Console.WriteLine($"Directory \"{playersDataFolder}\" not found. No data to be migrated.");
+                return;
+            }
+
+            var statFiles = Directory.GetFiles(playersDataFolder, "*.stat", SearchOption.AllDirectories);
+
+            Console.WriteLine($"Total files found: {statFiles.Length}");
+            Console.WriteLine("Reading data...");
+
+            var playerStatistic = new List<Playerstatistic>();
+
+            var maxBuffer = 5000;
+            var totalMigrated = 0;
+            long totalTime = 0;
+
+            var sw = new Stopwatch();
+            sw.Start();
+
+            foreach (var file in statFiles)
+            {
+                try
+                {
+                    using (var sr = new StreamReader(file, new UTF8Encoding(false, true)))
+                    {
+                        while (sr.Peek() >= 0)
+                        {
+                            if (playerStatistic.Count >= maxBuffer)
+                            {
+                                sw.Stop();
+                                Console.WriteLine($"Read {playerStatistic.Count} rows [{sw.ElapsedMilliseconds}]");
+                                InsertPlayerStatistic(playerStatistic, ref totalMigrated, ref totalTime);
+                                sw.Restart();
+                            }
+
+                            try
+                            {
+                                var line = sr.ReadLine();
+
+                                var byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/'));
+
+                                using (MemoryStream afterStream = new MemoryStream(byteAfter64))
+                                {
+                                    var stat = Serializer.Deserialize<Playerstatistic>(afterStream);
+
+                                    var playerKey = new PlayersKey { PlayerName = stat.PlayerName, PokersiteId = stat.PokersiteId };
+
+                                    if (!players.ContainsKey(playerKey))
+                                    {
+                                        Console.WriteLine($"Player \"{stat.PlayerName}\" [PlayerName={stat.PlayerName};PokerSiteId={stat.PokersiteId}] not found. Skipped.");
+                                        continue;
+                                    }
+
+                                    stat.PlayerId = players[playerKey].PlayerId;
+
+                                    playerStatistic.Add(stat);
+                                }
+                            }
+                            catch (Exception e)
+                            {
+                                WriteException(e);
+                            }
+                        }
+                    }
+                }
+                catch (OperationCanceledException)
+                {
+                    throw;
+                }
+                catch (Exception e)
+                {
+                    WriteException(e);
+                }
+            }
+
+            sw.Stop();
+            Console.WriteLine($"Read {playerStatistic.Count} rows [{sw.ElapsedMilliseconds}]");
+            InsertPlayerStatistic(playerStatistic, ref totalMigrated, ref totalTime);
+
+            Console.WriteLine($"Migrated rows of PlayerStatistic: {totalMigrated} [{totalTime} ms]");
+        }
+
+        static void InsertPlayerStatistic(List<Playerstatistic> playerStatistic, ref int totalMigrated, ref long totalTime)
+        {
+            try
+            {
+                var sw = new Stopwatch();
+                sw.Start();
+
+                foreach (var stat in playerStatistic)
+                {
+                    Store(stat);
+                }
+
+                totalTime += sw.ElapsedMilliseconds;
+                Console.WriteLine($"Migrated rows of PlayerStatistic: {playerStatistic.Count} [{sw.ElapsedMilliseconds} ms]");
+
+            }
+            catch (Exception e)
+            {
+                WriteException(e);
+                throw new OperationCanceledException("Migration aborted.");
+            }
+
+            playerStatistic.Clear();
 
             GC.Collect();
+        }
+
+        static void Store(Playerstatistic statistic)
+        {
+            string fileName;
+
+            var playersPath = @"c:\Users\Freeman\AppData\Roaming\DriveHUD\Players3\";
+
+            try
+            {
+                if (!Directory.Exists(playersPath))
+                {
+                    Directory.CreateDirectory(playersPath);
+                }
+
+                var playerDirectory = Path.Combine(playersPath, statistic.PlayerName);
+
+                if (!Directory.Exists(playerDirectory))
+                {
+                    Directory.CreateDirectory(playerDirectory);
+                }
+
+                fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+
+            var data = string.Empty;
+
+            using (var msTestString = new MemoryStream())
+            {
+                Serializer.Serialize(msTestString, statistic);
+                data = Convert.ToBase64String(msTestString.ToArray());
+            }
+
+
+
+            try
+            {
+                File.AppendAllLines(fileName, new[] { data });
+            }
+            catch (Exception e)
+            {
+            }
+            finally
+            {
+            }
+        }
+
+        static Dictionary<PlayersKey, Players> ReadPlayers()
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                return session.Query<Players>()
+                        .ToDictionary(x => new PlayersKey { PlayerName = x.Playername, PokersiteId = x.PokersiteId },
+                                               new LambdaComparer<PlayersKey>((x, y) => x.PlayerName == y.PlayerName && x.PokersiteId == y.PokersiteId));
+            }
+        }
+
+        private class PlayersKey
+        {
+            public string PlayerName { get; set; }
+
+            public int PokersiteId { get; set; }
+
+            public override int GetHashCode()
+            {
+                var hashcode = 23;
+                hashcode = (hashcode * 31) + PlayerName.GetHashCode();
+                hashcode = (hashcode * 31) + PokersiteId;
+
+                return hashcode;
+            }
+
+            public override bool Equals(object obj)
+            {
+                var playerKey = obj as PlayersKey;
+
+                return Equals(obj);
+            }
+
+            public bool Equals(PlayersKey obj)
+            {
+                if (obj == null)
+                {
+                    return false;
+                }
+
+                return PlayerName == obj.PlayerName && PokersiteId == obj.PokersiteId;
+            }
         }
     }
 }
