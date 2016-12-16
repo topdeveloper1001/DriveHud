@@ -16,7 +16,7 @@ namespace HandHistories.Objects.Players
         [XmlAttribute]
         public decimal StartingStack { get; set; }
 
-        [XmlIgnore]
+        [XmlAttribute]
         public decimal Bet { get; set; }
 
         [XmlAttribute]

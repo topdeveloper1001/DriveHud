@@ -278,7 +278,7 @@ namespace DriveHUD.Importers.Bovada
 
         public static string ConvertDecimalToString(decimal number)
         {
-            var s = string.Format("{0:0.00}", number);
+            var s = string.Format(CultureInfo.InvariantCulture, "{0:0.00}", number);
 
             if (s.EndsWith("00"))
             {

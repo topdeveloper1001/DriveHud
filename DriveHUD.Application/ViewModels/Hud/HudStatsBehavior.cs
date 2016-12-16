@@ -27,6 +27,7 @@ using System;
 using Telerik.Windows.Controls;
 using DriveHUD.Application.Controls;
 using System.Diagnostics;
+using System.Windows.Documents;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -234,7 +235,15 @@ namespace DriveHUD.Application.ViewModels.Hud
                 VerticalAlignment = VerticalAlignment.Bottom
             };
 
-            block.SetBinding(TextBlock.TextProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.Caption)) { Source = statInfo });
+            var label = new Run();
+            var caption = new Run();
+
+            label.SetBinding(Run.TextProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.Label)) { Source = statInfo });
+            caption.SetBinding(Run.TextProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.Caption)) { Source = statInfo });
+
+            block.Inlines.Add(label);
+            block.Inlines.Add(caption);
+
             block.SetBinding(TextBlock.ForegroundProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.CurrentColor)) { Source = statInfo, Converter = new ValueConverters.ColorToBrushConverter() });
             block.SetBinding(TextBlock.FontFamilyProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontFamily)) { Source = statInfo });
             block.SetBinding(TextBlock.FontSizeProperty, new Binding(ReflectionHelper.GetPath<StatInfo>(o => o.SettingsAppearanceFontSize)) { Source = statInfo });

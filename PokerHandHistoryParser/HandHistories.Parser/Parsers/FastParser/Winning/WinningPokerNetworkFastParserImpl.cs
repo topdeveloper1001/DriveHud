@@ -101,6 +101,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             get { return true; }
         }
 
+        public override bool RequiresBetWinAdjustment
+        {
+            get { return true; }
+        }
+
         public override bool IsValidHand(string[] handLines)
         {
             if (handLines[handLines.Length - 1].StartsWith("Game ended at:", StringComparison.Ordinal))

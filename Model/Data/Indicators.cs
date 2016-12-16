@@ -11,7 +11,7 @@ namespace Model.Data
     /// <summary>
     /// This entity holds all high level indicators. These indicators are based on PlayerStatistic fields
     /// </summary>
-    public class Indicators : INotifyPropertyChanged
+    public class Indicators : INotifyPropertyChanged, IComparable
     {
         public Indicators()
         {
@@ -823,6 +823,22 @@ namespace Model.Data
         {
             Source = new Playerstatistic();
             Statistcs = new List<Playerstatistic>();
+        }
+
+        public int CompareTo(object obj)
+        {
+            var objIndicator = obj as Indicators;
+            if (objIndicator == null)
+            {
+                return 1;
+            }
+
+            var thisIndicatorValue = this.Statistcs?.Max(x => x.GameNumber) ?? int.MinValue;
+            var objIndicatorValue = objIndicator.Statistcs?.Max(x => x.GameNumber) ?? int.MinValue;
+
+            return thisIndicatorValue > objIndicatorValue ? 1
+                : thisIndicatorValue < objIndicatorValue ? -1
+                : 0;
         }
 
         // required to avoid binding leaks

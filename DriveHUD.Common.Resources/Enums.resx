@@ -249,7 +249,7 @@
     <value>UTG</value>
   </data>
   <data name="Enum_Stat_AF" xml:space="preserve">
-    <value>AF</value>
+    <value>AF (Aggression Factor)</value>
   </data>
   <data name="Enum_Stat_AGG" xml:space="preserve">
     <value>AGG%</value>
