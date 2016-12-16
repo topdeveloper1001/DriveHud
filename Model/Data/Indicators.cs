@@ -750,6 +750,36 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal PFRInEP
+        {
+            get { return GetPercentage(Source.PfrInEp, TotalHands); }
+        }
+
+        public virtual decimal PFRInMP
+        {
+            get { return GetPercentage(Source.PfrInMp, TotalHands); }
+        }
+
+        public virtual decimal PFRInCO
+        {
+            get { return GetPercentage(Source.PfrInCo, TotalHands); }
+        }
+
+        public virtual decimal PFRInBTN
+        {
+            get { return GetPercentage(Source.PfrInBtn, TotalHands); }
+        }
+
+        public virtual decimal PFRInBB
+        {
+            get { return GetPercentage(Source.PfrInBb, TotalHands); }
+        }
+
+        public virtual decimal PFRInSB
+        {
+            get { return GetPercentage(Source.PfrInSb, TotalHands); }
+        }
+
         #endregion
 
         public virtual decimal TiltMeter
@@ -784,10 +814,11 @@ namespace Model.Data
 
         #endregion
 
-        public virtual decimal CheckFoldFlopPfrOop => GetDevisionResult(Source.CheckFlopPfrOop, Source.FoldFlopPfrOop);
-        public virtual decimal CheckFoldFlop3BetOop => GetDevisionResult(Source.CheckFlop3BetOop, Source.FoldFlop3BetOop);
-        public virtual decimal BetFoldFlopPfrRaiser => GetDevisionResult(Source.BetFlopPfrRaiser, Source.FoldFlopPfrRaiser);
-        public virtual decimal BetFlopCheckAfterCall3BetInPosition => GetDevisionResult(Source.BetFlopCheck, Source.Call3BetInPosition);
+        public virtual decimal CheckFoldFlopPfrOop => GetPercentage(Source.CheckFoldFlopPfrOop, Source.PfrOop);
+        public virtual decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, Source.DidThreeBetOop);
+        public virtual decimal BetFoldFlopPfrRaiser => GetPercentage(Source.BetFoldFlopPfrRaiser, Source.Pfrhands);
+        public virtual decimal BetFlopCheckAfterCall3BetInPosition => GetPercentage(Source.BetFlopCalled3BetPreflop, TotalHands);
+        public virtual decimal BTNDefendCORaise => GetPercentage(Source.ButtonDefend, Source.CoRaise);
 
         public virtual string GameType { get; set; }
         public virtual string PokerSite

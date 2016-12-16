@@ -100,7 +100,6 @@ namespace Model
             bool aggresiveRiver = playerHandActions.RiverAny(handAction => handAction.IsRaise() || handAction.IsBet());
 
             bool betOnFlop = playerHandActions.FlopAny(handAction => handAction.IsBet());
-            bool foldOnFlop = playerHandActions.FlopAny(handAction => handAction.IsFold);
             bool betOnTurn = playerHandActions.TurnAny(handAction => handAction.IsBet());
 
             bool isCheckedFlop = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop)?.IsCheck ?? false;
@@ -213,9 +212,10 @@ namespace Model
 
             StealAttempt stealBBAtempt = new StealAttempt();
             StealAttempt stealSBAtempt = new StealAttempt();
+            StealAttempt coRaise = new StealAttempt();
             ConditionalBet stealBet = new ConditionalBet();
             ConditionalBet threeBetVsSteal = new ConditionalBet();
-
+            
             CalculateSteal(stealBet, parsedHand, player);
             Calculate3BetVsSteal(threeBetVsSteal, parsedHand, player);
             // First big blind action is from player who is actually on BB spot, next actions are from players that joined game and payer BB
@@ -227,6 +227,9 @@ namespace Model
             if (smallBlind)
                 CalculateSmallBlindSteal(stealSBAtempt, parsedHand, player);
 
+            var isOnButton = GetDealerPlayer(parsedHand).PlayerName == player;
+            if (isOnButton)
+                CalculateCoRaise(coRaise, parsedHand, player);
             #endregion
 
             #region Cold Call
@@ -359,6 +362,7 @@ namespace Model
 
             stat.Pfrhands = pfr ? 1 : 0;
             stat.Vpiphands = vpip ? 1 : 0;
+            stat.PfrOop = pfr && !preflopInPosition ? 1 : 0;
 
             stat.DidDonkBet = donkBet.Made ? 1 : 0;
             stat.CouldDonkBet = donkBet.Possible ? 1 : 0;
@@ -522,15 +526,12 @@ namespace Model
             stat.LimpFolded = limp.Folded ? 1 : 0;
             stat.LimpReraised = limp.Raised ? 1 : 0;
 
-            stat.RaiseCBet = flopCBet.Raised || riverCBet.Raised || turnCBet.Raised ? 1 : 0;//???
-            stat.BetFlopPfrRaiser = pfr && betOnFlop ? 1 : 0;
-            stat.FoldFlopPfrRaiser = pfr && foldOnFlop ? 1 : 0;
-            stat.CheckFlopPfrOop = pfrOcurred && isCheckedFlop && !preflopInPosition ? 1 : 0;
-            stat.FoldFlopPfrOop = pfrOcurred && foldOnFlop && !preflopInPosition ? 1 : 0;
-            stat.CheckFlop3BetOop = isCheckedFlop && threeBet.Made && !preflopInPosition ? 1 : 0;
-            stat.FoldFlop3BetOop = foldOnFlop && isCheckedFlop && threeBet.Made && !preflopInPosition ? 1 : 0;
-            stat.BetFlopCheck = betOnFlop ? 1 : 0;
-            stat.Calledthreebetpreflop = threeBet.Called && preflopInPosition ? 1 : 0;
+            stat.ButtonDefend = coRaise.Attempted && coRaise.Defended ? 1 : 0;
+            stat.CoRaise = coRaise.Attempted ? 1 : 0;
+            stat.BetFoldFlopPfrRaiser = pfr && betOnFlop && playerFolded ? 1 : 0;
+            stat.CheckFoldFlopPfrOop = pfrOcurred && isCheckedFlop && playerFolded && !preflopInPosition ? 1 : 0;
+            stat.CheckFoldFlop3BetOop = isCheckedFlop && threeBet.Made && playerFolded && !preflopInPosition ? 1 : 0;
+            stat.BetFlopCalled3BetPreflop = betOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
 
             #region Additional
 
@@ -789,30 +790,38 @@ namespace Model
         {
             switch (stat.PositionString)
             {
+                case "EP":
+                    stat.PfrInEp = stat.Pfrhands;
+                    break;
                 case "MP":
                     stat.DidThreeBetInMp = stat.Didthreebet;
                     stat.DidFourBetInMp = stat.Didfourbet;
                     stat.DidColdCallInMp = stat.Didcoldcall;
+                    stat.PfrInMp = stat.Pfrhands;
                     return;
                 case "CO":
                     stat.DidThreeBetInCo = stat.Didthreebet;
                     stat.DidFourBetInCo = stat.Didfourbet;
                     stat.DidColdCallInCo = stat.Didcoldcall;
+                    stat.PfrInCo = stat.Pfrhands;
                     return;
                 case "BTN":
                     stat.DidThreeBetInBtn = stat.Didthreebet;
                     stat.DidFourBetInBtn = stat.Didfourbet;
                     stat.DidColdCallInBtn = stat.Didcoldcall;
+                    stat.PfrInBtn = stat.Pfrhands;
                     return;
                 case "SB":
                     stat.DidThreeBetInSb = stat.Didthreebet;
                     stat.DidFourBetInSb = stat.Didfourbet;
                     stat.DidColdCallInSb = stat.Didcoldcall;
+                    stat.PfrInSb = stat.Pfrhands;
                     return;
                 case "BB":
                     stat.DidThreeBetInBb = stat.Didthreebet;
                     stat.DidFourBetInBb = stat.Didfourbet;
                     stat.DidColdCallInBb = stat.Didcoldcall;
+                    stat.PfrInBb = stat.Pfrhands;
                     return;
                 default:
                     return;
@@ -869,6 +878,44 @@ namespace Model
                     {
                         return;
                     }
+                }
+            }
+        }
+
+        private static void CalculateCoRaise(StealAttempt stealAtempt, HandHistory parsedHand, string player)
+        {
+            if (parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName !=
+                player)
+                return;
+
+            var stealers = new List<string> {GetCutOffPlayer(parsedHand)?.PlayerName};
+            var wasSteal = false;
+            foreach (var action in parsedHand.PreFlop.Where(x => !x.IsBlinds))
+            {
+                if (wasSteal)
+                {
+                    if (action.PlayerName == player)
+                    {
+                        stealAtempt.Faced = true;
+                        stealAtempt.Defended = action.IsCall || action.IsRaise();
+                        stealAtempt.Raised = action.IsRaise();
+                        stealAtempt.Folded = action.IsFold;
+                        return;
+                    }
+
+                    if (action.IsRaise())
+                        return;
+                }
+                else
+                {
+                    if (action.IsRaise() && stealers.Contains(action.PlayerName))
+                    {
+                        wasSteal = true;
+                        continue;
+                    }
+
+                    if (!action.IsFold)
+                        return;
                 }
             }
         }

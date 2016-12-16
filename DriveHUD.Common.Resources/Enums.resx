@@ -584,4 +584,25 @@
   <data name="Enum_EnumPokerSites_BlackChipPoker" xml:space="preserve">
     <value>BlackChipPoker</value>
   </data>
+  <data name="Enum_Stat_BTNDefendCORaise" xml:space="preserve">
+    <value>BTN Defend to CO Raise</value>
+  </data>
+  <data name="Enum_Stat_PFRInBB" xml:space="preserve">
+    <value>PFR in BB</value>
+  </data>
+  <data name="Enum_Stat_PFRInBTN" xml:space="preserve">
+    <value>PFR in BTN</value>
+  </data>
+  <data name="Enum_Stat_PFRInCO" xml:space="preserve">
+    <value>PFR in CO</value>
+  </data>
+  <data name="Enum_Stat_PFRInEP" xml:space="preserve">
+    <value>PFR in EP</value>
+  </data>
+  <data name="Enum_Stat_PFRInMP" xml:space="preserve">
+    <value>PFR in MP</value>
+  </data>
+  <data name="Enum_Stat_PFRInSB" xml:space="preserve">
+    <value>PFR in SB</value>
+  </data>
 </root>
