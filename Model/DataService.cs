@@ -322,32 +322,32 @@ namespace Model
 
         public void Store(Playerstatistic statistic)
         {
-            if (!Directory.Exists(playersPath))
-            {
-                Directory.CreateDirectory(playersPath);
-            }
-
-            var playerDirectory = Path.Combine(playersPath, statistic.PlayerName);
-
-            if (!Directory.Exists(playerDirectory))
-            {
-                Directory.CreateDirectory(playerDirectory);
-            }
-
-            var fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
-
-            var data = string.Empty;
-
-            using (var msTestString = new MemoryStream())
-            {
-                Serializer.Serialize(msTestString, statistic);
-                data = Convert.ToBase64String(msTestString.ToArray());
-            }
-
             rwLock.EnterWriteLock();
 
             try
             {
+                if (!Directory.Exists(playersPath))
+                {
+                    Directory.CreateDirectory(playersPath);
+                }
+
+                var playerDirectory = Path.Combine(playersPath, statistic.PlayerName);
+
+                if (!Directory.Exists(playerDirectory))
+                {
+                    Directory.CreateDirectory(playerDirectory);
+                }
+
+                var fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
+
+                var data = string.Empty;
+
+                using (var msTestString = new MemoryStream())
+                {
+                    Serializer.Serialize(msTestString, statistic);
+                    data = Convert.ToBase64String(msTestString.ToArray());
+                }
+
                 File.AppendAllLines(fileName, new[] { data });
 
                 var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
