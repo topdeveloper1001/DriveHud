@@ -543,6 +543,20 @@ namespace DriveHUD.Application.ViewModels
                         LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                     }
                 }
+                if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name) ||
+                    string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.DecodedName) ||
+                    StorageModel.PlayerSelectedItem.PokerSite == EnumPokerSites.Unknown)
+                {
+                    System.Windows.Application.Current.Dispatcher.BeginInvoke((Action) delegate
+                    {
+                        this.NotificationRequest.Raise(
+                            new PopupActionNotification
+                            {
+                                Content = "Please, set Player ID in order to see data.",
+                                Title = "DriveHUD",
+                            }, n => { });
+                    });
+                }
             }
             catch (Exception ex)
             {
