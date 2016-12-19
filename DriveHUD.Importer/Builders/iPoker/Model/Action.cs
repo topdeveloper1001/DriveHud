@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
@@ -41,11 +42,11 @@ namespace DriveHUD.Importers.Builders.iPoker
         {
             get
             {
-                return Sum.ToString(PokerConfiguration.DecimalFormat);
+                return Sum.ToString(PokerConfiguration.DecimalFormat, CultureInfo.InvariantCulture);
             }
             set
             {
-                Sum = decimal.Parse(value);
+                Sum = decimal.Parse(value, CultureInfo.InvariantCulture);
             }
         }
 

@@ -757,9 +757,9 @@
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="Poker Site" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PokerSite}}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
-                <RadioButton Style="{StaticResource ReportRadioButton}" Content="Opponent Analysis" Width="150" Height="51"
+                <!--<RadioButton Style="{StaticResource ReportRadioButton}" Content="Opponent Analysis" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
-                             Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}" />
+                             Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}" />-->
                 <!-- Tournament Columns -->
 
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Results}" Width="150" Height="51"

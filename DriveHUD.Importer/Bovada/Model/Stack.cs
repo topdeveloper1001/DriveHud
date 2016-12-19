@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System.Globalization;
+
 namespace DriveHUD.Importers.Bovada
 {
     /// <summary>
@@ -39,7 +41,7 @@ namespace DriveHUD.Importers.Bovada
 
         public override string ToString()
         {
-            return string.Format("SeatNumber: {0}; PlayerID: {1}; StackValue: {2}", SeatNumber, PlayerID, StackValue);
+            return string.Format(CultureInfo.InvariantCulture, "SeatNumber: {0}; PlayerID: {1}; StackValue: {2}", SeatNumber, PlayerID, StackValue);
         }
     }
 }

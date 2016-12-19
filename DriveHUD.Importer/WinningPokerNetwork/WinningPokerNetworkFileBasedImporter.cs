@@ -233,7 +233,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             if (!string.IsNullOrWhiteSpace(tournamentNumber))
             {
                 var totalBuyIn = GetTournamentBuyIn(windowTitleText);
-                summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {totalBuyIn}";
+                summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {totalBuyIn.ToString(CultureInfo.InvariantCulture)}";
             }
             else
             {

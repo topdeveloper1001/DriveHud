@@ -12,6 +12,7 @@
 
 using DriveHUD.Entities;
 using Model.Enums;
+using System.Globalization;
 
 namespace DriveHUD.Importers.Bovada
 {
@@ -59,7 +60,7 @@ namespace DriveHUD.Importers.Bovada
 
         public override string ToString()
         {
-            return string.Format("HandNumber: {0}; TableName: {1}; TableID: {2}; IsTournament: {3}; TournamentID: {4}; TableType: {5}; GameFormat: {10}; WindowHandle: {6}; BuyIn: {7}; Rake: {8}; HeroWasMoved: {9}; LastPlayerFinishedPlace: {11}",
+            return string.Format(CultureInfo.InvariantCulture, "HandNumber: {0}; TableName: {1}; TableID: {2}; IsTournament: {3}; TournamentID: {4}; TableType: {5}; GameFormat: {10}; WindowHandle: {6}; BuyIn: {7}; Rake: {8}; HeroWasMoved: {9}; LastPlayerFinishedPlace: {11}",
                     HandNumber, TableName, TableID, IsTournament, TournamentID, TableType, WindowHandle, BuyIn, Rake, HeroWasMoved, GameFormat, LastNotHeroPlayerFinishedPlace);
         }
     }

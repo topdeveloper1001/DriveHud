@@ -17,6 +17,7 @@ using DriveHUD.Importers.Helpers;
 using Model.Enums;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 
 namespace DriveHUD.Importers.Bovada
@@ -2459,7 +2460,7 @@ namespace DriveHUD.Importers.Bovada
 
         private static string DecimalToString(decimal? myNumber)
         {
-            var s = string.Format("{0:0.00}", myNumber);
+            var s = string.Format(CultureInfo.InvariantCulture, "{0:0.00}", myNumber);
 
             if (s.EndsWith("00"))
             {

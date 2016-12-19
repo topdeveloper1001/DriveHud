@@ -13,6 +13,7 @@
 using System;
 using System.Text;
 using System.IO;
+using System.Globalization;
 
 namespace DriveHUD.Importers.Loggers
 {
@@ -59,7 +60,7 @@ namespace DriveHUD.Importers.Loggers
 
         private static string GenerateFileId()
         {
-            var fileId = DateTime.UtcNow.ToString(logFileIdPattern);
+            var fileId = DateTime.UtcNow.ToString(logFileIdPattern, CultureInfo.InvariantCulture);
             return fileId;
         }
 
