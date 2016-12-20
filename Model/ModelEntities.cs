@@ -42,5 +42,10 @@ namespace Model
         {
             return CreateSessionFactory().OpenSession();
         }
+
+        public static IStatelessSession OpenStatelessSession()
+        {
+            return CreateSessionFactory().OpenStatelessSession();
+        }
     }
 }
