@@ -31,7 +31,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             { 4, new int[,] { { 10, -41 }, { 10, -33 }, { -27, -33 }, { -21, -41 } } },
             { 6, new int[,] { { 0, -45 }, { -25, -66 }, { -25, -25 }, { 0, -44 }, { 30, -25 }, { 30, -66} } },
             { 8, new int[,] { { 13, -44 }, { -17, -15 }, { 0, -27 }, { -17, -72 }, { 13, -42}, { 21, -72 }, { 13, -27 }, { 21, -15 } } },
-            { 9, new int[,] { { 28, -29 }, { -17, -29 }, { 10, -41 }, { 10, -33 }, { 19, -4 }, { 7, -4}, { -8, -4 }, { -27, -33 }, { -21, -41 } } },
+            { 9, new int[,] { { -54, 43 }, { -22, 59 }, { -310, -341 }, { -53, 28 }, { -119, 124 }, { 57, 28 }, { 34, 50 }, { 22, 58 }, { 35, 39 } } },
             { 10, new int[,] { { 13, -44 }, { -17, -15 }, { 0, -27 }, { 0, -64 }, { -17, -72 }, { 13, -42}, { 21, -72 }, { 13, -64 }, { 13, -27 }, { 21, -15 } } }
         };
 
@@ -42,7 +42,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             { 4, new int[,] { { 0, -26 }, { 0, -13 }, { -22, 2 }, { -22, -6 } } },
             { 6, new int[,] { { -2, -4 }, { 0, -30 }, { 0, -12 }, { -2, 31}, { -22, 2 }, { -22, -28 }  } },
             { 8, new int[,] { { 0, -16 }, { 18, -2 }, { -28, -9 }, { 18, -19 }, { 0, -2 }, { -32, -16 }, { 20, -9 }, { -38, 11 } } },
-            { 9, new int[,] { { 0, -36 }, { 0, -28 }, { 9, 1 }, { -2, 1}, { -18, 1 }, { -22, -28 }, { -22, -36 }, { 18, -24 }, { -27, -24 } } },
+            { 9, new int[,] { { 54, -43 }, { 22, -59 }, { 36, -50 }, { 53, -28 }, { -2, -7 }, { -57, -28 }, { -34, -50 }, { -22, -58 }, { -35, -39 } } },
             { 10, new int[,] { { 0, -36 }, { 0, -28 }, { 9, 1 }, { -2, 1}, { -18, 1 }, { -22, -28 }, { -22, -36 }, { 18, -24 }, { -2, -24 }, { -27, -24 } } }
         };
 
@@ -73,6 +73,9 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X + shifts[hudElement.Seat - 1, 0];
             var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y + shifts[hudElement.Seat - 1, 1];
+
+
+            System.Diagnostics.Debug.WriteLine($"{hudElement.Seat}: {hudElement.Position.X - panelOffset.X}, {hudElement.Position.Y - panelOffset.Y}");
 
             return new Tuple<double, double>(xPosition * window.XFraction, yPosition * window.YFraction);
         }

@@ -859,6 +859,14 @@
     <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-BCP.xml" />
     <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-OH-BCP.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-OH-BOL.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>
