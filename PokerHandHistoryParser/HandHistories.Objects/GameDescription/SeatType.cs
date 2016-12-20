@@ -1,14 +1,14 @@
 using System;
 using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.GameDescription
 {
     [Serializable]
-    [DataContract]
     public struct SeatType
     {
-        enum SeatTypeEnum : byte
+        public enum SeatTypeEnum : byte
         {
             Unknown = 0,
             All = 1,
@@ -16,24 +16,23 @@ namespace HandHistories.Objects.GameDescription
             _3Handed = 3,
             _4Max = 4,
             _5Handed = 5,
-            _6Max = 6, 
-            _7Handed = 7, 
+            _6Max = 6,
+            _7Handed = 7,
             _8Handed = 8,
             _FullRing_9Handed = 9,
             _FullRing_10Handed = 10,
         }
 
-        [DataMember]
         private SeatTypeEnum seatType;
 
-        private SeatType(int maxPlayers, bool realTypes=false)
-        {            
+        private SeatType(int maxPlayers, bool realTypes = false)
+        {
             switch (maxPlayers)
             {
                 case -1:
                 case 0:
                     seatType = SeatTypeEnum.All;
-                    break;   
+                    break;
                 case 2:
                     seatType = SeatTypeEnum.HeadsUp;
                     break;
@@ -70,19 +69,24 @@ namespace HandHistories.Objects.GameDescription
         {
             get
             {
-                return seatType == SeatTypeEnum.Unknown; 
+                return seatType == SeatTypeEnum.Unknown;
             }
         }
-
+        
+        [XmlAttribute]
         public int MaxPlayers
         {
-            get 
+            get
             {
                 if (seatType == SeatTypeEnum.All)
                 {
                     throw new ArgumentException("MaxPlayers All does not represent a SeatType");
                 }
-                return (int)seatType; 
+                return (int)seatType;
+            }
+            set
+            {
+                seatType = (SeatTypeEnum)value;
             }
         }
 
@@ -122,11 +126,11 @@ namespace HandHistories.Objects.GameDescription
             return new SeatType(0);
         }
 
-        public static SeatType FromMaxPlayers(int maxPlayers, bool realTypes=false)
+        public static SeatType FromMaxPlayers(int maxPlayers, bool realTypes = false)
         {
             return new SeatType(maxPlayers, realTypes);
         }
-     
+
         public static SeatType Parse(string seatType)
         {
             switch (seatType.ToLower())
@@ -187,23 +191,23 @@ namespace HandHistories.Objects.GameDescription
                 case "full ring (10 handed)":
                 case "10":
                 case "10 handed":
-                    return SeatType.FromMaxPlayers(10);                
+                    return SeatType.FromMaxPlayers(10);
                 default:
                     return SeatType.AllSeatType();
-            }         
+            }
         }
-        
+
         public static SeatType FromTableScanPlayerColumn(string playerColumn, string tableName)
         {
             int numSeats = -1;
 
             if (!string.IsNullOrEmpty(playerColumn))
-            {                
+            {
                 // Table scan outputs player columns as players/max for FTP and Party
                 // but only numplayers for stars
                 if (playerColumn.Split('/').Count() == 2)
                 {
-                    numSeats = Int32.Parse(playerColumn.Split('/')[1]);                    
+                    numSeats = Int32.Parse(playerColumn.Split('/')[1]);
                 }
                 else // Handle for stars
                 {

@@ -19,7 +19,7 @@ using System.Threading.Tasks;
 
 namespace HandHistories.Parser.Parsers.FastParser.Winning
 {
-    sealed class AmericasCardroomFastParserImpl : HandHistoryParserFastImpl
+    sealed class WinningPokerNetworkFastParserImpl : HandHistoryParserFastImpl
     {
         #region Fields
         private const int GameIDStartIndex = 9;
@@ -93,10 +93,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
         public override EnumPokerSites SiteName
         {
-            get { return EnumPokerSites.AmericasCardroom; }
+            get { return EnumPokerSites.WinningPokerNetwork; }
         }
 
         public override bool RequiresTotalPotCalculation
+        {
+            get { return true; }
+        }
+
+        public override bool RequiresBetWinAdjustment
         {
             get { return true; }
         }

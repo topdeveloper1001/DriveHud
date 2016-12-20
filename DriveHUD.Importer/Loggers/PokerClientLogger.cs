@@ -16,6 +16,7 @@ using System.IO;
 using System.Security.Cryptography;
 using System.Text;
 using System.Linq;
+using System.Globalization;
 
 namespace DriveHUD.Importers.Loggers
 {
@@ -143,7 +144,7 @@ namespace DriveHUD.Importers.Loggers
 
             try
             {
-                var logId = DateTime.Now.ToString(configuration.DateFormat);
+                var logId = DateTime.Now.ToString(configuration.DateFormat, CultureInfo.InvariantCulture);
                 logFile = Path.Combine(configuration.LogDirectory, string.Format(configuration.LogTemplate, logId));
 
                 streamWriter = new StreamWriter(logFile, true, Encoding.UTF8, bufferSize);
@@ -208,7 +209,7 @@ namespace DriveHUD.Importers.Loggers
             var data = Encoding.UTF8.GetBytes(message);
             var encryptedData = EncryptDataWithAES(data);
 
-            var date = DateTime.Now.ToString(configuration.DateTimeFormat);
+            var date = DateTime.Now.ToString(configuration.DateTimeFormat, CultureInfo.InvariantCulture);
             var dateBytes = Encoding.UTF8.GetBytes(date);
 
             var messageData = new byte[dateBytes.Length + encryptedData.Length + 1];

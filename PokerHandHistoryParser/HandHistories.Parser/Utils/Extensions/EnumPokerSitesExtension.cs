@@ -55,7 +55,7 @@ namespace HandHistories.Parser.Utils.Extensions
 
             if (handText.StartsWith("Game started", StringComparison.InvariantCultureIgnoreCase))
             {
-                siteName = EnumPokerSites.AmericasCardroom;
+                siteName = EnumPokerSites.WinningPokerNetwork;
                 return true;
             }
 

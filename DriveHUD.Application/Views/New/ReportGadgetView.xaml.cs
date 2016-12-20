@@ -50,13 +50,12 @@ namespace DriveHUD.Application.Views
         private Model.Enums.EnumReports reportCache;
         private RadContextMenu handsGridContextMenu;
         private RadContextMenu tournamentsGridContextMenu;
-
+        
         public ReportGadgetView()
         {
             InitializeComponent();
 
             ServiceProvider.RegisterPersistenceProvider<ICustomPropertyProvider>(typeof(RadGridView), new GridViewCustomPropertyProvider());
-
             GridViewReportMenu.ItemsSource = GridViewReport.Columns;
             GridViewKnownHandsMenu.ItemsSource = GridViewKnownHands.Columns;
 
@@ -293,20 +292,24 @@ namespace DriveHUD.Application.Views
             GridLayoutSave(GridViewReport, string.Format("{0}ReportLayout.data", reportCache));
         }
 
-        private async void ReportSet(Model.Enums.EnumReports reportType)
+        private async void ReportSet(EnumReports reportType)
         {
             try
             {
+                reportGadgetViewModel.IsBusy = true;
                 // disable radio button panel to restrict changing the report type during loading
                 ReportRadioButtonPanel.IsEnabled = false;
 
                 var layout = ReportManager.GetReportLayout(reportType);
                 var creator = ReportManager.GetReportCreator(reportType);
-
                 if (layout == null || creator == null) return;
 
-                var reportCollection = GetReportCollectionAsync(creator);
-
+                var reportCollection =
+                    // TODO: Opponent Analysis report turned off
+                    //reportType == EnumReports.OpponentAnalysis ?
+                    //GetReportCollectionAsync(creator, await reportGadgetViewModel.GetTop()) :
+                    GetReportCollectionAsync(creator, ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
+                reportGadgetViewModel.IsBusy = false;
                 // clear columns in order to avoid  Binding exceptions
                 GridViewReport.Columns.Clear();
                 reportGadgetViewModel.ReportCollection.Clear();
@@ -332,11 +335,11 @@ namespace DriveHUD.Application.Views
             }
         }
 
-        private Task<ObservableCollection<Indicators>> GetReportCollectionAsync(IReportCreator reportCreator)
+        private Task<ObservableCollection<Indicators>> GetReportCollectionAsync(IReportCreator reportCreator, IList<Playerstatistic> playerstatistics)
         {
             return Task.Run(() =>
             {
-                return reportCreator.Create(ServiceLocator.Current.GetInstance<SingletonStorageModel>().FilteredPlayerStatistic);
+                return reportCreator.Create(playerstatistics);
             });
         }
 

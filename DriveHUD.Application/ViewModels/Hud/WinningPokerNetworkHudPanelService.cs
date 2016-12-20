@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    internal class AmericasCardroomHudPanelService : HudPanelService
+    internal class WinningPokerNetworkHudPanelService : HudPanelService
     {
         private readonly Dictionary<int, int[,]> plainPositionsShifts = new Dictionary<int, int[,]>
         {

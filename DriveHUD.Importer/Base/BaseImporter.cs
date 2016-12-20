@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Log;
+using DriveHUD.Entities;
 using System;
 using System.Globalization;
 using System.Threading;
@@ -27,7 +28,18 @@ namespace DriveHUD.Importers
         /// <summary>
         /// Importer site (PS, iPoker, Bovada, etc.)
         /// </summary>
-        public abstract string Site { get; }
+        protected abstract EnumPokerSites Site { get; }
+
+        /// <summary>
+        /// Importer site string (PS, iPoker, Bovada, etc.)
+        /// </summary>
+        public virtual string SiteString
+        {
+            get
+            {
+                return Site.ToString();
+            }
+        }
 
         public bool IsRunning
         {
@@ -54,7 +66,7 @@ namespace DriveHUD.Importers
                 return;
             }
 
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting importing \"{0}\" data", Site));
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting importing \"{0}\" data", SiteString));
 
             isRunning = true;
 
@@ -67,7 +79,7 @@ namespace DriveHUD.Importers
         /// </summary>
         public virtual void Stop()
         {
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping importing \"{0}\" data", Site));
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping importing \"{0}\" data", SiteString));
 
             if (cancellationTokenSource != null)
             {

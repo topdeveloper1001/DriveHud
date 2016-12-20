@@ -15,7 +15,7 @@ using System.ServiceModel;
 
 namespace DriveHUD.Application.HudServices
 {
-    internal class HudTransmitter : IHudTransmitter
+    public class HudTransmitter : IHudTransmitter
     {
         private const string hudClientFileName = "DriveHUD.HUD.exe";
         private const double delayMS = 1000;
@@ -80,9 +80,7 @@ namespace DriveHUD.Application.HudServices
 
             InstanceContext context = new InstanceContext(_callbackService);
             _namedPipeBindingFactory = new DuplexChannelFactory<IHudNamedPipeBindingService>(context, "HudNamedPipeBindingServiceEndpoint");
-            _namedPipeBindingProxy = _namedPipeBindingFactory?.CreateChannel();
-            ((IClientChannel)_namedPipeBindingProxy).Faulted += new EventHandler(Pipe_Faulted);
-            ((IClientChannel)_namedPipeBindingProxy).Opened += new EventHandler(Pipe_Opened);
+            _namedPipeBindingProxy = CreateProxyChannel(_namedPipeBindingFactory);
 
             while (!hudClient.HasExited)
             {
@@ -107,13 +105,29 @@ namespace DriveHUD.Application.HudServices
                 }
                 catch (EndpointNotFoundException)
                 {
-                    // service hasn't been started yet
+                    LogProvider.Log.Info(this, "Service hasn't been created yet.");
+
+                    ((IClientChannel)_namedPipeBindingProxy).Abort();
+
+                    ((IClientChannel)_namedPipeBindingProxy).Faulted -= Pipe_Faulted;
+                    ((IClientChannel)_namedPipeBindingProxy).Opened -= Pipe_Opened;
+
+                    _namedPipeBindingProxy = CreateProxyChannel(_namedPipeBindingFactory);
                 }
                 catch (Exception ex)
                 {
                     LogProvider.Log.Error(this, ex);
                 }
             }
+        }
+
+        private IHudNamedPipeBindingService CreateProxyChannel(DuplexChannelFactory<IHudNamedPipeBindingService> bindingFactory)
+        {
+            var namedPipeBindingProxy = bindingFactory.CreateChannel();
+            ((IClientChannel)namedPipeBindingProxy).Faulted += new EventHandler(Pipe_Faulted);
+            ((IClientChannel)namedPipeBindingProxy).Opened += new EventHandler(Pipe_Opened);
+
+            return namedPipeBindingProxy;
         }
 
         public void Send(byte[] data)
@@ -164,6 +178,8 @@ namespace DriveHUD.Application.HudServices
             return hudClient;
         }
 
+        private
+
         #region EventHandlers
 
         void Pipe_Opened(object sender, EventArgs e)
@@ -184,17 +200,12 @@ namespace DriveHUD.Application.HudServices
 
         private void Pipe_Faulted(object sender, EventArgs e)
         {
-            LogProvider.Log.Info(this, "HUD Service Faulted.");
-
             if (isInitialized)
             {
+                LogProvider.Log.Info(this, "HUD Service Faulted.");
                 LogProvider.Log.Info(this, "Trying to re-initialize the HUD.");
                 Close();
                 Initialize();
-            }
-            else
-            {
-                LogProvider.Log.Error(this, "HUD Service faulted before it was abled to initialize.");
             }
         }
 

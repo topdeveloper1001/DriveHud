@@ -1,11 +1,14 @@
 using DriveHUD.Entities;
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.GameDescription
 {
     [Serializable]
-    [DataContract()]
     public class GameDescriptor
     {
         public GameDescriptor() : this(PokerFormat.Unknown,
@@ -41,30 +44,44 @@ namespace HandHistories.Objects.GameDescription
             Limit = limit;
             TableType = tableType;
             SeatType = seatType;
-            Tournament = tournament;            
+            Tournament = tournament;
         }
 
-        [DataMember]
+        [XmlElement]
         public PokerFormat PokerFormat { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public EnumPokerSites Site { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public GameType GameType { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public Limit Limit { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public SeatType SeatType { get; set; }
 
-        [DataMember]
+        [XmlIgnore]
         public TableType TableType { get; set; }
 
-        [DataMember]
+        [XmlArray]
+        public List<TableTypeDescription> TableTypeDescriptors
+        {
+            get
+            {
+                return TableType.GetTableTypeDescriptions().ToList();
+            }
+            set
+            {
+
+            }
+        }
+
+        [XmlElement]
         public TournamentDescriptor Tournament { get; set; }
 
+        [XmlElement]
         public bool IsTournament
         {
             get

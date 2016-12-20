@@ -7,36 +7,49 @@ using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Players
 {
-    [DataContract]
+    [Serializable]
     public class Player
     {
         [DataMember]
         public int PlayerId { get; set; }
+        [XmlAttribute]
+        public string PlayerName { get; set; }
 
-        [DataMember]
-        public string PlayerName { get; private set; }
+        [XmlAttribute]
+        public decimal StartingStack { get; set; }
 
-        [DataMember]
-        public decimal StartingStack { get; private set; }
-
-        [DataMember]
-        public decimal Win { get; set; }
-
-        [DataMember]
+        [XmlAttribute]
         public decimal Bet { get; set; }
 
-        [DataMember]
+        [XmlAttribute]
+        public decimal Win { get; set; }
+
+        [XmlAttribute]
         public int SeatNumber { get; set; }
 
         /// <summary>
         /// Hole cards will be null when there are no cards,
         /// use "hasHoleCards" to find out if there are any cards
         /// </summary>
-        [DataMember]
+        [XmlIgnore]
         public HoleCards HoleCards { get; set; }
 
-        [DataMember]
+        [XmlAttribute]
+        public string Cards
+        {
+            get { return HoleCards?.ToString() ?? string.Empty; }
+            set
+            {
+                HoleCards = HoleCards.FromCards(PlayerName, value);
+            }
+        }
+
+        [XmlAttribute]
         public bool IsSittingOut { get; set; }
+
+        public Player()
+        {
+        }
 
         public Player(string playerName,
                       decimal startingStack,
@@ -48,6 +61,7 @@ namespace HandHistories.Objects.Players
             HoleCards = null;
         }
 
+        [XmlIgnore]
         public bool hasHoleCards
         {
             get
@@ -56,6 +70,7 @@ namespace HandHistories.Objects.Players
             }
         }
 
+        [XmlIgnore]
         public bool IsLost
         {
             get

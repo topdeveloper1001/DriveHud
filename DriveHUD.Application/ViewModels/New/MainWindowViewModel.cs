@@ -76,7 +76,6 @@ namespace DriveHUD.Application.ViewModels
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
             filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
-
             synchronizationContext = _synchronizationContext;
 
             eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
@@ -102,7 +101,6 @@ namespace DriveHUD.Application.ViewModels
 
             StorageModel.StatisticCollection = new RangeObservableCollection<Playerstatistic>();
             StorageModel.PlayerCollection = new ObservableCollection<PlayerCollectionItem>(dataService.GetPlayersList());
-
             StorageModel.PropertyChanged += StorageModel_PropertyChanged;
 
             ProgressViewModel = new ProgressViewModel();
@@ -250,12 +248,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void RefreshData(GameInfo gameInfo = null)
         {
-            var sw = new Stopwatch();
-            sw.Start();
             UpdatePlayerList(gameInfo);
-            sw.Stop();
-
-            LogProvider.Log.Debug($"RefreshData.UpdatePlayerList {sw.ElapsedMilliseconds} ms");
 
             if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name))
             {
@@ -327,7 +320,9 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
-
+                // TODO: Opponent Analysis report turned off
+                //var topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
+                //topPlayersService.UpdateStatistics(importerSessionCacheService.GetAllPlayerStats(gameInfo.Session));
                 for (int i = 1; i <= maxSeats; i++)
                 {
                     var playerName = string.Empty;
@@ -359,7 +354,7 @@ namespace DriveHUD.Application.ViewModels
                         Name = playerName,
                         SeatNumber = seatNumber
                     };
-
+                    
                     var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
                     var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerCollectionItem);
                     var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);
@@ -552,6 +547,20 @@ namespace DriveHUD.Application.ViewModels
                         LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                     }
                 }
+                if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name) ||
+                    string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.DecodedName) ||
+                    StorageModel.PlayerSelectedItem.PokerSite == EnumPokerSites.Unknown)
+                {
+                    System.Windows.Application.Current.Dispatcher.BeginInvoke((Action) delegate
+                    {
+                        this.NotificationRequest.Raise(
+                            new PopupActionNotification
+                            {
+                                Content = "Please, set Player ID in order to see data.",
+                                Title = "DriveHUD",
+                            }, n => { });
+                    });
+                }
             }
             catch (Exception ex)
             {
@@ -643,7 +652,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void UpdatePlayerList(GameInfo gameInfo)
         {
-            var updatedPlayers = gameInfo != null ? gameInfo.AddedPlayers : dataService.GetPlayersList();
+            var updatedPlayers = gameInfo != null && gameInfo.AddedPlayers != null ? gameInfo.AddedPlayers : dataService.GetPlayersList();
 
             foreach (var player in updatedPlayers)
             {

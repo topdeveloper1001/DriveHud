@@ -1,12 +1,13 @@
 using System;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Cards
 {
-    [DataContract]
+    [Serializable]
     public class HoleCards : CardGroup
     {
-        [DataMember]
+        [XmlIgnore]
         public string PlayerName { get; private set; }
 
         private HoleCards(string playerName, params Card [] cards) : base(cards)

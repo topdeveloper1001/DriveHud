@@ -249,7 +249,7 @@
     <value>UTG</value>
   </data>
   <data name="Enum_Stat_AF" xml:space="preserve">
-    <value>AF</value>
+    <value>AF (Aggression Factor)</value>
   </data>
   <data name="Enum_Stat_AGG" xml:space="preserve">
     <value>AGG%</value>
@@ -568,5 +568,8 @@
   </data>
   <data name="Enum_EnumPokerSites_AmericasCardroom" xml:space="preserve">
     <value>AmericasCardroom</value>
+  </data>
+  <data name="Enum_EnumPokerSites_BlackChipPoker" xml:space="preserve">
+    <value>BlackChipPoker</value>
   </data>
 </root>

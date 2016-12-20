@@ -160,6 +160,15 @@ namespace Model
             }
         }
 
+        public IList<HandHistoryRecord> GetHandHistoryRecords()
+        {
+            using (var session = ModelEntities.OpenSession())
+            {
+                return session.Query<HandHistoryRecord>().Fetch(x => x.Player).ToList();
+            }
+        }
+
+
         public IList<Gametypes> GetPlayerGameTypes(string playerName, short pokersiteId)
         {
             using (var session = ModelEntities.OpenSession())
@@ -361,7 +370,7 @@ namespace Model
 
         public void Store(Playerstatistic statistic)
         {
-            string fileName;
+            rwLock.EnterWriteLock();
 
             try
             {
@@ -377,31 +386,21 @@ namespace Model
                     Directory.CreateDirectory(playerDirectory);
                 }
 
-                fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Can't create directory for {statistic.PlayerName}", e);
-                throw e;
-            }
+                var fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
 
-            var data = string.Empty;
+                var data = string.Empty;
 
-            using (var msTestString = new MemoryStream())
-            {
-                Serializer.Serialize(msTestString, statistic);
-                data = Convert.ToBase64String(msTestString.ToArray());
-            }
+                using (var msTestString = new MemoryStream())
+                {
+                    Serializer.Serialize(msTestString, statistic);
+                    data = Convert.ToBase64String(msTestString.ToArray());
+                }
 
-            rwLock.EnterWriteLock();
-
-            try
-            {
                 File.AppendAllLines(fileName, new[] { data });
 
                 var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
 
-                if (statistic.PlayerName == storageModel.PlayerSelectedItem.Name && (EnumPokerSites)statistic.PokersiteId == storageModel.PlayerSelectedItem.PokerSite)
+                if (statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
                 {
                     storageModel.StatisticCollection.Add(statistic);
                 }
@@ -512,7 +511,7 @@ namespace Model
 
             try
             {
-                return new List<PlayerCollectionItem>(playerInternalCollection);
+                return new List<PlayerCollectionItem>(playerInternalCollection.OrderBy(x => x.Name));
             }
             finally
             {

@@ -225,10 +225,10 @@ namespace DriveHUD.Application.ViewModels
                     UpdateSettingsIfNeeded(server, port, database, user, password, version);
                 }
             }
-            catch (NpgsqlException ex)
+            catch (PostgresException ex)
             {
                 conn.Close();
-                if (ex.ErrorCode == 0x3D000)
+                if (ex.SqlState.Equals("3D000"))
                 {
                     LogProvider.Log.Debug("Database doesn't exist");
                     CreateDatabase(server, port, database, user, password);

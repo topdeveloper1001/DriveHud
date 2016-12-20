@@ -54,12 +54,14 @@
         <File Id="DriveHUD.Application.exe" Source="$(var.BuildDirectory)\DriveHUD.Application.exe" KeyPath="yes" Checksum="yes"/>
       </Component>
       <Component Id="App.config">
+        <RemoveFile Id="App.config" Name="DriveHUD.Application.exe.config" On="both"/>
         <File Id="App.config" Name="DriveHUD.Application.exe.config" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.Application.exe.config" />
       </Component>
       <Component Id="DriveHUD.HUD.exe">
         <File Id="DriveHUD.HUD.exe" Source="$(var.BuildDirectory)\DriveHUD.HUD.exe" KeyPath="yes" Checksum="yes"/>
       </Component>
       <Component Id="DriveHUD.HUD.exe.config">
+        <RemoveFile Id="DriveHUD.HUD.exe.config" Name="DriveHUD.HUD.exe.config" On="both"/>
         <File Id="DriveHUD.HUD.exe.config" Name="DriveHUD.HUD.exe.config" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.HUD.exe.config" />
       </Component>
       <Component Id="DHCReg.dll" Guid="{12B4DF2F-64B0-44A7-B449-B2FA41B5D7FA}">
@@ -118,10 +120,14 @@
       <Component Id="DriveHUD.Importers.dll" Guid="{C850656B-AE89-4DD6-8EB4-76B81DF6ACB0}">
         <File Id="DriveHUD.Importers.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.Importers.dll" />
       </Component>
+      <Component Id="DriveHUD.HUD.Service.dll" Guid="{88B7F75A-8018-4187-A199-993DF44153C0}">
+        <File Id="DriveHUD.HUD.Service.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.HUD.Service.dll" />
+      </Component>
       <Component Id="Model.dll" Guid="{87680A6E-E263-4CA5-BE3D-88F4999F8A1D}">
         <File Id="Model.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Model.dll" />
       </Component>
       <Component Id="HandHistories.Objects.dll" Guid="{EF5CC6A7-5784-4E6D-B93D-0652430DE633}">
+        <RemoveFile Id="HandHistories.Objects.dll" Name="HandHistories.Objects.dll" On="both"/>
         <File Id="HandHistories.Objects.dll" KeyPath="yes" Source="$(var.BuildDirectory)\HandHistories.Objects.dll" />
       </Component>
       <Component Id="HandHistories.Parser.dll" Guid="{B399D6FC-3E00-4C42-A9BC-8FD2C2F719B3}">
@@ -399,6 +405,7 @@
       <ComponentRef Id="DesktopShortcuts"/>
       <ComponentRef Id="DriveHUD.Application.exe" />
       <ComponentRef Id="DriveHUD.HUD.exe" />
+      <ComponentRef Id="DriveHUD.HUD.Service.dll" />
       <ComponentRef Id="DriveHUD.HUD.exe.config"/>
       <ComponentRef Id="DriveHUD.ViewModels.dll" />
       <ComponentRef Id="DriveHUD.Common.dll" />

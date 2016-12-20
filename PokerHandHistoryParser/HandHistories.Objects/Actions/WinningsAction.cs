@@ -1,13 +1,19 @@
 using System.Runtime.Serialization;
 using HandHistories.Objects.Cards;
+using System;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Actions
 {
-    [DataContract]
+    [Serializable]
     public class WinningsAction : HandAction
     {
-        [DataMember]
-        public int PotNumber { get; private set; }
+        [XmlAttribute]
+        public int PotNumber { get; set; }
+
+        public WinningsAction()
+        {
+        }
 
         public WinningsAction(string playerName, 
                               HandActionType handActionType, 

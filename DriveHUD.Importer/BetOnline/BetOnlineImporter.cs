@@ -12,6 +12,7 @@
 
 using System;
 using Microsoft.Practices.ServiceLocation;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Importers.BetOnline
 {
@@ -28,7 +29,12 @@ namespace DriveHUD.Importers.BetOnline
 
         private const string pipeName = @"\\.\pipe\BOCServer";
 
-        public override string Site
+        protected override EnumPokerSites Site
+        {
+            get { return EnumPokerSites.BetOnline; }
+        }
+
+        public override string SiteString
         {
             get
             {
@@ -58,7 +64,7 @@ namespace DriveHUD.Importers.BetOnline
                 DateTimeFormat = "HH:mm:ss",
                 LogCleanupTemplate = "bol-games-*-*-*.log",
                 LogDirectory = "Logs",
-                LogTemplate = "bol-games-{0}.log"                
+                LogTemplate = "bol-games-{0}.log"
             };
 
             return logger;

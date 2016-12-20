@@ -47,6 +47,7 @@ namespace DriveHUD.Importers
             container.RegisterType<IBetOnlineXmlConverter, BetOnlineXmlToIPokerXmlConverter>();
             container.RegisterType<IPokerStarsImporter, PokerStarsImporter>();
             container.RegisterType<IAmericasCardroomImporter, AmericasCardroomImporter>();
+            container.RegisterType<IBlackChipPokerImporter, BlackChipPokerImporter>();
             container.RegisterType<IPacific888Importer, Pacific888Importer>();
             container.RegisterType<ICardsConverter, PokerCardsConverter>();
             container.RegisterType<ITournamentsCacheService, TournamentsCacheService>(new ContainerControlledLifetimeManager());
@@ -78,6 +79,7 @@ namespace DriveHUD.Importers
             importerService.Register<IBetOnlineTableService>();
             importerService.Register<IPokerStarsImporter>();
             importerService.Register<IAmericasCardroomImporter>();
+            importerService.Register<IBlackChipPokerImporter>();
             importerService.Register<IPacific888Importer>();
         }
     }

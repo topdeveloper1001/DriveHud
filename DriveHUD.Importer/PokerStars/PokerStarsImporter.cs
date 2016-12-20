@@ -42,11 +42,11 @@ namespace DriveHUD.Importers.PokerStars
             }
         }
 
-        public override string Site
+        protected override EnumPokerSites Site
         {
             get
             {
-                return EnumPokerSites.PokerStars.ToString();
+                return EnumPokerSites.PokerStars;
             }
         }
 

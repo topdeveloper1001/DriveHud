@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace DriveHUD.HUD.Services
 {
-    internal class HudNamedPipeBindingServiceImpl : HudNamedPipeBindingService
+    public class HudNamedPipeBindingServiceImpl : HudNamedPipeBindingService
     {
         public override void ConnectCallbackChannel(string name)
         {

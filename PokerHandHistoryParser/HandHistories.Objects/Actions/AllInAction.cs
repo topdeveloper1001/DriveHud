@@ -1,16 +1,22 @@
 using System.Runtime.Serialization;
 using HandHistories.Objects.Cards;
+using System;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Actions
 {
-    [DataContract]
+    [Serializable]
     public class AllInAction : HandAction
     {
-        [DataMember]
-        public bool IsRaiseAllIn { get; private set; }
+        [XmlAttribute]
+        public bool IsRaiseAllIn { get; set; }
 
-        [DataMember]
-        public HandActionType SourceActionType { get; private set; }
+        [XmlAttribute]
+        public HandActionType SourceActionType { get; set; }
+
+        public AllInAction()
+        {
+        }
 
         public AllInAction(string playerName,
                            decimal amount,

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Globalization;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.GameDescription
 {
     [Serializable]
-    [DataContract]
     public class Buyin
     {
         private Buyin()
@@ -31,19 +31,19 @@ namespace HandHistories.Objects.GameDescription
             return new Buyin(prizePoolValue, rake, currency, isKnockout, knockoutValue);
         }
 
-        [DataMember]
+        [XmlElement]
         public Currency Currency { get; set; }
 
-        [DataMember]
-        public decimal PrizePoolValue { get; private set; }
+        [XmlElement]
+        public decimal PrizePoolValue { get; set; }
 
-        [DataMember]
-        public decimal Rake { get; private set; }
+        [XmlElement]
+        public decimal Rake { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public bool IsKnockout { get; set; }
 
-        [DataMember]
+        [XmlElement]
         public decimal KnockoutValue { get; set; }
 
         public string GetCurrencySymbol()

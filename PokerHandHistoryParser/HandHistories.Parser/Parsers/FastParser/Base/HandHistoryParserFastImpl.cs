@@ -64,6 +64,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
             get { return false; }
         }
 
+        public virtual bool RequiresBetWinAdjustment
+        {
+            get { return false; }
+        }
+
         public virtual IEnumerable<string> SplitUpMultipleHands(string rawHandHistories)
         {
             return HandSplitRegex.Split(rawHandHistories)
@@ -263,6 +268,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                     throw new ExtraHandParsingAction(handLines[0]);
                 }
 
+
+
                 // remove inactive players
                 var players = handHistory.HandActions.Where(x => x.Street == Street.Preflop).Select(x => x.PlayerName).ToList();
 
@@ -270,11 +277,15 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
                 {
                     if (players.Contains(player.PlayerName))
                     {
-                        var winningAction = handHistory.WinningActions.FirstOrDefault(x => x.PlayerName.Equals(player.PlayerName));
-
-                        if (winningAction != null)
+                        if (RequiresBetWinAdjustment)
                         {
-                            player.Win = winningAction.Amount;
+                            var playerActions = handHistory.HandActions.Where(x => x.PlayerName.Equals(player.PlayerName));
+
+                            if (playerActions != null && playerActions.Any())
+                            {
+                                player.Win = playerActions.Where(x => x.IsWinningsAction).Sum(x => x.Amount);
+                                player.Bet = Math.Abs(playerActions.Where(x => x.Amount < 0).Sum(x => x.Amount));
+                            }
                         }
 
                         continue;
@@ -282,7 +293,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
                     handHistory.Players.Remove(player);
                 }
-       
+
                 return handHistory;
             }
             catch (Exception ex)

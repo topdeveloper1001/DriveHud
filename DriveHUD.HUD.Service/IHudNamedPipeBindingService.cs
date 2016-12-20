@@ -8,15 +8,15 @@ using System.Windows;
 
 namespace DriveHUD.HUD.Service
 {
-    [ServiceContract(SessionMode = SessionMode.Required, CallbackContract = typeof(IHudNamedPipeBindingCallbackService))]
+    [ServiceContract(Name = "IHudNamedPipeBindingService", SessionMode = SessionMode.Required, CallbackContract = typeof(IHudNamedPipeBindingCallbackService))]
     public interface IHudNamedPipeBindingService
     {
-        [OperationContract(IsOneWay = true)]
+        [OperationContract(Name = "UpdateHUD", IsOneWay = true)]
         void UpdateHUD(byte[] data);
 
         #region Callback connection manager
 
-        [OperationContract(IsOneWay = true)]
+        [OperationContract(Name = "ConnectCallbackChannel", IsOneWay = true)]
         void ConnectCallbackChannel(string name);
 
         #endregion
@@ -24,39 +24,39 @@ namespace DriveHUD.HUD.Service
 
     public interface IHudNamedPipeBindingCallbackService
     {
-        [OperationContract(IsOneWay = true)]
+        [OperationContract(Name = "SaveHudLayout", IsOneWay = true)]
         void SaveHudLayout(HudLayoutContract hudLayout);
 
-        [OperationContract(IsOneWay = true)]
+        [OperationContract(Name = "ReplayHand", IsOneWay = true)]
         void ReplayHand(long gameNumber, short pokerSiteId);
 
-        [OperationContract(IsOneWay = true)]
+        [OperationContract(Name = "LoadLayout", IsOneWay = true)]
         void LoadLayout(int layoutId, string layoutName);
 
-        [OperationContract(IsOneWay = true)]
+        [OperationContract(Name = "TagHand", IsOneWay = true)]
         void TagHand(long gameNumber, short pokerSiteId, int tag);
     }
 
     [DataContract]
     public class HudLayoutContract
     {
-        [DataMember]
+        [DataMember(Name = "LayoutId")]
         public int LayoutId { get; set; }
 
-        [DataMember]
+        [DataMember(Name = "HudPositions")]
         public List<HudPositionContract> HudPositions { get; set; }
     }
 
     [DataContract]
     public class HudPositionContract
     {
-        [DataMember]
+        [DataMember(Name = "SeatNumber")]
         public int SeatNumber { get; set; }
 
-        [DataMember]
+        [DataMember(Name = "Position")]
         public Point Position { get; set; }
 
-        [DataMember]
+        [DataMember(Name = "HudType")]
         public int HudType { get; set; }
     }
 

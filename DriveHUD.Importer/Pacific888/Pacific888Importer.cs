@@ -40,11 +40,11 @@ namespace DriveHUD.Importers.Pacific888
             }
         }
 
-        public override string Site
+        protected override EnumPokerSites Site
         {
             get
             {
-                return EnumPokerSites.Poker888.ToString();
+                return EnumPokerSites.Poker888;
             }
         }
 
