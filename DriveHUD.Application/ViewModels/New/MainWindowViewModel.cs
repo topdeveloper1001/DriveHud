@@ -269,9 +269,7 @@ namespace DriveHUD.Application.ViewModels
             if (gameInfo == null)
             {
                 UpdateCurrentView();
-            }
-
-            LogProvider.Log.Debug($"RefreshData.UpdateCurrentView {sw.ElapsedMilliseconds} ms");
+            }            
         }
 
         private void OnDataImported(DataImportedEventArgs e)
@@ -344,7 +342,7 @@ namespace DriveHUD.Application.ViewModels
                             {
                                 playerName = player.PlayerName;
                                 seatNumber = player.SeatNumber;
-                                playerCollectionItem = new PlayerCollectionItem { Name = player.PlayerName, PokerSite = site };
+                                playerCollectionItem = new PlayerCollectionItem { PlayerId = player.PlayerId, Name = player.PlayerName, PokerSite = site };
                             }
 
                             break;

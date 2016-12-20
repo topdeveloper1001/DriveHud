@@ -3,12 +3,16 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Text;
 using HandHistories.Objects.Cards;
+using System.Xml.Serialization;
 
 namespace HandHistories.Objects.Players
 {
     [DataContract]
     public class Player
     {
+        [DataMember]
+        public int PlayerId { get; set; }
+
         [DataMember]
         public string PlayerName { get; private set; }
 

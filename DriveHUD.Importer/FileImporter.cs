@@ -366,16 +366,6 @@ namespace DriveHUD.Importers
 
                         ProcessTournamentData(tournamentsData, parsingResult, session);
 
-                        if (!string.IsNullOrEmpty(importerSession))
-                        {
-                            var playerStats = importSessionCacheService.GetAllPlayerStats(importerSession);
-
-                            foreach (var stat in playerStats)
-                            {
-                                session.SaveOrUpdate(stat);
-                            }
-                        }
-
                         transaction.Commit();
 
                         parsingResult.ForEach(p => p.WasImported = true);
@@ -412,18 +402,6 @@ namespace DriveHUD.Importers
                                    let toAdd = gjPlayer == null
                                    select new { Player = player, ToAdd = toAdd }).ToArray();
 
-                var playersToAdd = (from handPlayer in handPlayers
-                                    where handPlayer.ToAdd
-                                    select new PlayerCollectionItem
-                                    {
-                                        Name = handPlayer.Player.Playername,
-                                        PokerSite = (EnumPokerSites)handHistory.HandHistory.PokersiteId
-                                    }).ToArray();
-
-                dataService.AddPlayerRangeToList(playersToAdd);
-
-                gameInfo.AddedPlayers = playersToAdd;
-
                 foreach (var existingPlayer in handPlayers.Select(x => x.Player).ToArray())
                 {
                     if (existingGameType.Istourney)
@@ -447,7 +425,7 @@ namespace DriveHUD.Importers
                         var isHero = handHistory.Source.Hero != null ? handHistory.Source.Hero.PlayerName.Equals(existingPlayer.Playername) : false;
 
                         playerStatCopy.SessionCode = importerSession;
-                        importSessionCacheService.AddOrUpdatePlayerStats(importerSession, new PlayerCollectionItem { Name = existingPlayer.Playername, PokerSite = (EnumPokerSites)existingPlayer.PokersiteId }, playerStatCopy, isHero);
+                        importSessionCacheService.AddOrUpdatePlayerStats(importerSession, new PlayerCollectionItem { PlayerId = existingPlayer.PlayerId, Name = existingPlayer.Playername, PokerSite = (EnumPokerSites)existingPlayer.PokersiteId }, playerStatCopy, isHero);
 
                         var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 
@@ -492,6 +470,30 @@ namespace DriveHUD.Importers
                         }
                     }
                 }
+
+                // update players after we saved them in db
+                var playersToAdd = (from handPlayer in handPlayers
+                                    where handPlayer.ToAdd
+                                    select new PlayerCollectionItem
+                                    {
+                                        PlayerId = handPlayer.Player.PlayerId,
+                                        Name = handPlayer.Player.Playername,
+                                        PokerSite = (EnumPokerSites)handHistory.HandHistory.PokersiteId
+                                    }).ToArray();
+
+                dataService.AddPlayerRangeToList(playersToAdd);
+
+                gameInfo.AddedPlayers = playersToAdd;
+
+                // update id for future use
+                var playersToUpdate = (from handPlayer in handPlayers
+                                       join handHistoryPlayer in handHistory.Source.Players on handPlayer.Player.Playername equals handHistoryPlayer.PlayerName
+                                       select new { Player = handPlayer.Player, HandHistoryPlayer = handHistoryPlayer }).ToArray();
+
+                playersToUpdate.ForEach(x =>
+                {
+                    x.HandHistoryPlayer.PlayerId = x.Player.PlayerId;
+                });
             }
             catch (Exception ex)
             {

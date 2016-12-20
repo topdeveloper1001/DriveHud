@@ -23,11 +23,8 @@ namespace DriveHUD.Entities
     [ProtoContract]
     public partial class Playerstatistic : INotifyPropertyChanged
     {
-        public virtual int CompiledplayerresultsId { get; set; }
-        [Required]
-
-        public virtual Players Player { get; set; }
-
+        public virtual int CompiledplayerresultsId { get; set; }               
+        [Required, ProtoMember(232)]
         public virtual int PlayerId { get; set; }
         [Required, ProtoMember(1)]
         public virtual int Wonhand { get; set; }

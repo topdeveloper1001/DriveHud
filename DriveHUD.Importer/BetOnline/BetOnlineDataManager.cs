@@ -14,10 +14,12 @@ using DriveHUD.Common;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
 using HandHistories.Objects.Players;
+using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
 using Prism.Events;
 using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -106,22 +108,47 @@ namespace DriveHUD.Importers.BetOnline
             var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
             var progress = new DHProgress();
 
+            IEnumerable<ParsingResult> parsingResult = null;
+
             try
             {
-                dbImporter.Import(convertedResult.ConvertedXml, progress, convertedResult.GameInfo);
+                parsingResult = dbImporter.Import(convertedResult.ConvertedXml, progress, convertedResult.GameInfo);
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, string.Format("Hand {0} has not been imported", convertedResult.HandNumber), e);
             }
 
-            LogProvider.Log.Info(this, string.Format("Hand {0} imported", convertedResult.HandNumber));
+            if (parsingResult == null)
+            {
+                return;
+            }
 
-            var playerList = new PlayerList(convertedResult.Players.Select(x => new Player(x.Name, x.Chips, x.Seat)));
+            foreach (var result in parsingResult)
+            {
+                if (result.HandHistory == null)
+                {
+                    continue;
+                }
 
-            var dataImportedArgs = new DataImportedEventArgs(playerList, convertedResult.GameInfo);
+                if (result.IsDuplicate)
+                {
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate.", result.HandHistory.Gamenumber));
+                    continue;
+                }
 
-            eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
+                if (!result.WasImported)
+                {
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported.", result.HandHistory.Gamenumber));
+                    continue;
+                }
+
+                LogProvider.Log.Info(this, string.Format("Hand {0} imported", result.HandHistory.Gamenumber));
+                
+                var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, convertedResult.GameInfo);
+
+                eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
+            }                       
         }
 
         #region IDisposable implementation

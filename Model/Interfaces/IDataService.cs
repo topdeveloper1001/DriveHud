@@ -1,4 +1,16 @@
-﻿using System.Collections.Generic;
+﻿//-----------------------------------------------------------------------
+// <copyright file="IDataService.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using System.Collections.Generic;
 using System.IO;
 using HandHistories.Objects.Hand;
 using Model.Data;
@@ -7,12 +19,12 @@ using DriveHUD.Entities;
 namespace Model.Interfaces
 {
     public interface IDataService
-    {
-        IList<Playerstatistic> GetPlayerStatistic(string playerName, short pokersiteId);
+    {        
+        IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId);
 
         IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId);
 
-        Indicators GetPlayerIndicator(string playerName, short pokersiteId);
+        Indicators GetPlayerIndicator(int playerId, short pokersiteId);
 
         IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId);
 

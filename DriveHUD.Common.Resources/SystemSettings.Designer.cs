@@ -97,6 +97,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Database.
+        /// </summary>
+        internal static string SystemSettings_DefaultPlayerStatisticFolderName {
+            get {
+                return ResourceManager.GetString("SystemSettings_DefaultPlayerStatisticFolderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to http://drivehud.com/blog/forums/.
         /// </summary>
         internal static string SystemSettings_ForumsLink {

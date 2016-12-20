@@ -15,6 +15,7 @@ namespace DriveHUD.Common.Resources
 
         public static string AppDataFolder = "SystemSettings_AppDataFolder";
         public static string DefaultPlayersFolderName = "SystemSettings_DefaultPlayersFolderName";
+        public static string DefaultPlayerStatisticFolderName = "SystemSettings_DefaultPlayerStatisticFolderName";
         public static string HeroName = "SystemSettings_HeroName";
         public static string ActivePlayerFileName = "SystemSettings_ActivePlayerFileName";
 

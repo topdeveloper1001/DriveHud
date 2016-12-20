@@ -140,7 +140,7 @@ namespace DriveHUD.DBMigration
 
             var playerStatistic = new List<Playerstatistic>();
 
-            var maxBuffer = 5000;
+            var maxBuffer = 25000;
             var totalMigrated = 0;
             long totalTime = 0;
 
@@ -217,9 +217,11 @@ namespace DriveHUD.DBMigration
                 var sw = new Stopwatch();
                 sw.Start();
 
+                var dataMigrationService = new DataMigrationService();
+
                 foreach (var stat in playerStatistic)
                 {
-                    Store(stat);
+                    dataMigrationService.Store(stat);
                 }
 
                 totalTime += sw.ElapsedMilliseconds;
@@ -235,55 +237,6 @@ namespace DriveHUD.DBMigration
             playerStatistic.Clear();
 
             GC.Collect();
-        }
-
-        static void Store(Playerstatistic statistic)
-        {
-            string fileName;
-
-            var playersPath = @"c:\Users\Freeman\AppData\Roaming\DriveHUD\Players3\";
-
-            try
-            {
-                if (!Directory.Exists(playersPath))
-                {
-                    Directory.CreateDirectory(playersPath);
-                }
-
-                var playerDirectory = Path.Combine(playersPath, statistic.PlayerName);
-
-                if (!Directory.Exists(playerDirectory))
-                {
-                    Directory.CreateDirectory(playerDirectory);
-                }
-
-                fileName = Path.Combine(playerDirectory, statistic.Playedyearandmonth.ToString()) + ".stat";
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-
-            var data = string.Empty;
-
-            using (var msTestString = new MemoryStream())
-            {
-                Serializer.Serialize(msTestString, statistic);
-                data = Convert.ToBase64String(msTestString.ToArray());
-            }
-
-
-
-            try
-            {
-                File.AppendAllLines(fileName, new[] { data });
-            }
-            catch (Exception e)
-            {
-            }
-            finally
-            {
-            }
         }
 
         static Dictionary<PlayersKey, Players> ReadPlayers()
@@ -326,6 +279,17 @@ namespace DriveHUD.DBMigration
                 }
 
                 return PlayerName == obj.PlayerName && PokersiteId == obj.PokersiteId;
+            }
+        }
+
+        private class DataMigrationService : DataService
+        {
+            protected override string playersPath
+            {
+                get
+                {
+                    return StringFormatter.GetPlayerStatisticDataFolderPath();
+                }
             }
         }
     }

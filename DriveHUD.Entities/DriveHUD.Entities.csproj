@@ -72,7 +72,6 @@
     <Compile Include="Mappings\HandnotesMap.cs" />
     <Compile Include="Mappings\PlayernotesMap.cs" />
     <Compile Include="Mappings\PlayersMap.cs" />
-    <Compile Include="Mappings\PlayerstatisticMap.cs" />
     <Compile Include="Mappings\TournamentsMap.cs" />
     <Compile Include="PlayerNotes.cs" />
     <Compile Include="Players.cs" />
