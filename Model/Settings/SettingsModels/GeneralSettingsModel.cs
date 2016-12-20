@@ -14,6 +14,9 @@ namespace Model.Settings
         public bool IsApplyFiltersToTournamentsAndCashGames { get; set; }
         public bool IsSaveFiltersOnExit { get; set; }
         public bool IsAdvancedLoggingEnabled { get; set; }
+
+        public bool IsSQLiteEnabled { get; set; }
+
         public int TimeZoneOffset { get; set; }
 
         public DayOfWeek StartDayOfWeek { get; set; }

@@ -14,11 +14,12 @@ using FluentMigrator;
 using FluentMigrator.Runner;
 using FluentMigrator.Runner.Announcers;
 using FluentMigrator.Runner.Initialization;
+using FluentMigrator.Runner.Processors;
 using System.Reflection;
 
 namespace DriveHUD.Application.MigrationService
 {
-    internal class MigrationService : IMigrationService
+    internal abstract class MigrationService : IMigrationService
     {
         private class MigrationOptions : IMigrationProcessorOptions
         {
@@ -39,7 +40,7 @@ namespace DriveHUD.Application.MigrationService
 
             var options = new MigrationOptions { PreviewOnly = false, Timeout = 60 };
 
-            var factory = new FluentMigrator.Runner.Processors.Postgres.PostgresProcessorFactory();
+            var factory = GetProcessorFactory();
 
             using (var processor = factory.Create(connectionString, announcer, options))
             {
@@ -47,5 +48,7 @@ namespace DriveHUD.Application.MigrationService
                 runner.MigrateUp(true);
             }
         }
+
+        protected abstract IMigrationProcessorFactory GetProcessorFactory();
     }
 }

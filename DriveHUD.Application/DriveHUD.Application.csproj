@@ -275,6 +275,8 @@
     <Compile Include="Behaviors\DropIndicationDetails.cs" />
     <Compile Include="Behaviors\ListBoxDragDropBehavior.cs" />
     <Compile Include="Bootstrapper.cs" />
+    <Compile Include="Bootstrappers\ISQLiteBootstrapper.cs" />
+    <Compile Include="Bootstrappers\SQLiteBootstrapper.cs" />
     <Compile Include="BraceletControl.xaml.cs">
       <DependentUpon>BraceletControl.xaml</DependentUpon>
     </Compile>
@@ -325,6 +327,9 @@
     <Compile Include="Migration\Migrations\Migration0008_NonDb_AddAmericasCardroomSiteSettings.cs" />
     <Compile Include="Migration\Migrations\Migration0010_NonDb_RemovePreferredSeatingSportsbettingTigerGaming.cs" />
     <Compile Include="Migration\Migrations\Migration0011_RemoveHandHistoryHandNumberUniqueKey.cs" />
+    <Compile Include="Migration\Migrations\Migration0012_MigrationToSQLite.cs" />
+    <Compile Include="Migration\PostgresMigrationService.cs" />
+    <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
     <Compile Include="Security\DHTReg.cs" />
     <Compile Include="Security\SessionService.cs" />
@@ -333,6 +338,7 @@
     <Compile Include="SplashScreen\SplashWindow.xaml.cs">
       <DependentUpon>SplashWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SplashScreen\SplashWindowViewModel.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Surrogates\ColorDto.cs" />
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />

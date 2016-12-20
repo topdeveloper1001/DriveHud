@@ -34,6 +34,8 @@
           <Directory Id="INSTALLDIR" Name="$(var.ProductName)">
             <Directory Id="BIN" Name="bin">
               <Directory Id="LIB" Name="Lib"/>
+              <Directory Id="X86" Name="x86"/>
+              <Directory Id="X64" Name="x64"/>
             </Directory>
             <Directory Id="DATA" Name="Data">
               <Directory Id="PLAYERTYPES" Name="PlayerTypes"/>
@@ -63,6 +65,14 @@
       <Component Id="DriveHUD.HUD.exe.config">
         <RemoveFile Id="DriveHUD.HUD.exe.config" Name="DriveHUD.HUD.exe.config" On="both"/>
         <File Id="DriveHUD.HUD.exe.config" Name="DriveHUD.HUD.exe.config" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.HUD.exe.config" />
+      </Component>
+      <Component Id="DriveHUD.DBMigration.exe">
+        <RemoveFile Id="DriveHUD.DBMigration.exe" Name="DriveHUD.DBMigration.exe" On="both"/>
+        <File Id="DriveHUD.DBMigration.exe" Name="DriveHUD.DBMigration.exe" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.DBMigration.exe" />
+      </Component>
+      <Component Id="DriveHUD.DBMigration.exe.config">
+        <RemoveFile Id="DriveHUD.DBMigration.exe.config" Name="DriveHUD.DBMigration.exe.config" On="both"/>
+        <File Id="DriveHUD.DBMigration.exe.config" Name="DriveHUD.DBMigration.exe.config" Vital="yes" Source="$(var.BuildDirectory)\DriveHUD.DBMigration.exe.config" />
       </Component>
       <Component Id="DHCReg.dll" Guid="{12B4DF2F-64B0-44A7-B449-B2FA41B5D7FA}">
         <File Id="DHCReg.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DHCReg.dll" />
@@ -169,6 +179,9 @@
       <Component Id="NLog.dll" Guid="{81FDBBD2-FD8B-4B43-A90F-333938EFD0EF}">
         <File Id="NLog.dll" KeyPath="yes" Source="$(var.BuildDirectory)\NLog.dll" />
       </Component>
+      <Component Id="System.Data.SQLite.dll" Guid="{7A10FFB8-4885-45D6-8220-2F3001EBE45D}">
+        <File Id="System.Data.SQLite.dll" KeyPath="yes" Source="$(var.BuildDirectory)\System.Data.SQLite.dll" />
+      </Component>            
       <Component Id="protobufnet.dll" Guid="{AB2D1023-1875-4D5D-8438-0F60BC04D260}">
         <File Id="protobufnet.dll" KeyPath="yes" Source="$(var.BuildDirectory)\protobuf-net.dll" />
       </Component>
@@ -276,7 +289,7 @@
       </Component>
       <Component Id="Microsoft.Expression.Drawing.dll" Guid="{72509625-8FD7-40E5-93AF-BCFBA0CC091D}">
         <File Id="Microsoft.Expression.Drawing.dll" Name="Microsoft.Expression.Drawing.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Microsoft.Expression.Drawing.dll" />
-      </Component>
+      </Component>      
     </DirectoryRef>
 
     <DirectoryRef Id="LIB">
@@ -285,6 +298,24 @@
       </Component>
       <Component Id="CAPPIPEDI.DLL" Guid="{66448353-8776-45EA-B6B2-5E57A8D958CB}">
         <File Id="CAPPIPEDI.DLL" Name="CapPipedI.dll" Source="$(var.BuildDirectory)\Lib\CapPipedI.dll" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="X86">
+      <Component Id="SQLite.Interop.dll" DiskId="1" Guid="{66EFB996-D5BB-4C2C-8845-9E65954D9B8C}">
+        <File Id="SQLite.Interop.dll" Name="SQLite.Interop.dll" Source="$(var.BuildDirectory)\x86\SQLite.Interop.dll" />
+      </Component>
+      <Component Id="sqlite3.dll" Guid="{B6012374-585F-4C59-A1BD-D3272F68DB05}">
+        <File Id="sqlite3.dllL" Name="sqlite3.dll" Source="$(var.BuildDirectory)\x86\sqlite3.dll" />
+      </Component>
+    </DirectoryRef>
+
+    <DirectoryRef Id="X64">
+      <Component Id="SQLite.Interop.x64.dll" DiskId="1" Guid="{351E106D-8890-4BD1-8676-1D103E46CCC7}">
+        <File Id="SQLite.Interop.dll" Name="SQLite.Interop.dll" Source="$(var.BuildDirectory)\x64\SQLite.Interop.dll" />
+      </Component>
+      <Component Id="sqlite3.x64.dll" Guid="{09DD940B-16CB-4134-9146-F8B8E1977F8C}">
+        <File Id="sqlite3.dll" Name="sqlite3.dll" Source="$(var.BuildDirectory)\x64\sqlite3.dll" />
       </Component>
     </DirectoryRef>
 
@@ -407,6 +438,8 @@
       <ComponentRef Id="DriveHUD.HUD.exe" />
       <ComponentRef Id="DriveHUD.HUD.Service.dll" />
       <ComponentRef Id="DriveHUD.HUD.exe.config"/>
+      <ComponentRef Id="DriveHUD.DBMigration.exe" />
+      <ComponentRef Id="DriveHUD.DBMigration.exe.config" />
       <ComponentRef Id="DriveHUD.ViewModels.dll" />
       <ComponentRef Id="DriveHUD.Common.dll" />
       <ComponentRef Id="DriveHUD.Common.Resources.dll" />
@@ -437,6 +470,11 @@
       <ComponentRef Id="ManagedWinapiNativeHelper.dll" />
       <ComponentRef Id="NHibernate.dll" />
       <ComponentRef Id="NLog.dll" />
+      <ComponentRef Id="System.Data.SQLite.dll" />
+      <ComponentRef Id="SQLite.Interop.dll" />
+      <ComponentRef Id="sqlite3.dll" />
+      <ComponentRef Id="SQLite.Interop.x64.dll" />
+      <ComponentRef Id="sqlite3.x64.dll" />            
       <ComponentRef Id="protobufnet.dll" />
       <ComponentRef Id="Telerik.Windows.Controls.dll" />
       <ComponentRef Id="Telerik.Windows.Controls.Chart.dll" />

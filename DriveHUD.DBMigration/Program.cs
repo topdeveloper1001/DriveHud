@@ -16,23 +16,26 @@ namespace DriveHUD.DBMigration
 {
     class Program
     {
-        static void Main(string[] args)
+        static int Main(string[] args)
         {
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
 
             try
             {
-                //Migrate();
+                Migrate();
                 MigratePlayerStatistic();
             }
             catch (Exception e)
             {
                 WriteException(e);
+                Console.WriteLine("Failed");
+                return 1;
             }
 
-            Console.WriteLine("Press any key...");
-            Console.ReadKey();
+            Console.WriteLine("Done");
+
+            return 0;
         }
 
         static void WriteException(Exception e)
@@ -56,7 +59,7 @@ namespace DriveHUD.DBMigration
             MigrateTable<Playernotes>(sw, x => x.PlayerNoteId, ref rows, ref totalTime);
             MigrateTable<Tournaments>(sw, x => x.TourneydataId, ref rows, ref totalTime);
             Console.WriteLine($"Rows migrated: {rows} [{totalTime} ms]");
-            Console.WriteLine("Migration completed");
+            Console.WriteLine("DB Migration completed");
         }
 
         static void MigrateTable<T>(Stopwatch sw, Expression<Func<T, object>> getIdExpression, ref long rows, ref long totalTime)
@@ -72,11 +75,6 @@ namespace DriveHUD.DBMigration
                 for (var i = 0; i < numOfCycles; i++)
                 {
                     var limitFrom = i * rowsPerCycle;
-
-                    if (i > 0)
-                    {
-                        Console.WriteLine($"Migration cycle {i + 1}");
-                    }
 
                     MigrateTablePartial(sw, getIdExpression, ref rows, ref totalTime, session, limitFrom, rowsPerCycle);
 

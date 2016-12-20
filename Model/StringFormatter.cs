@@ -66,5 +66,19 @@ namespace Model
         {
             return string.Format("Server={0};Port={1};Database={2};User Id={3};Password={4};Persist Security Info=true;Convert Infinity DateTime=true", server, port, database, user, password);
         }
+
+        public static string GetSQLiteDbFilePath()
+        {
+            var appData = GetAppDataFolderPath();
+            var dbFileName = CommonResourceManager.Instance.GetResourceString(ResourceStrings.DbFileName);
+
+            return Path.Combine(appData, dbFileName);
+        }
+
+        public static string GetSQLiteConnectionString()
+        {
+            var dbFile = GetSQLiteDbFilePath();
+            return $"Data Source={dbFile};Version=3;";
+        }
     }
 }

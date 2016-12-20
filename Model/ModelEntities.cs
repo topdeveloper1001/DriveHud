@@ -36,32 +36,6 @@ namespace Model
             return sessionFactory;
         }
 
-        private static ISessionFactory sessionFactory2;
-
-        public static ISessionFactory CreateSessionFactory2()
-        {
-            if (sessionFactory2 == null || sessionFactory2.IsClosed)
-            {
-                lock (factorylock)
-                {
-                    if (sessionFactory2 == null || sessionFactory2.IsClosed)
-                    {
-                        var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings().DatabaseSettings;
-
-                        sessionFactory2 = Fluently.Configure()
-                            .Database(PostgreSQLConfiguration.Standard
-                                .ConnectionString(
-                                    c => c.Is(StringFormatter.GetConnectionString(settings.Server, settings.Port, "drivehud2", settings.User, settings.Password))))
-                            .Mappings(x => x.FluentMappings.AddFromAssemblyOf<HandhistoryMap>())
-                            .BuildSessionFactory();
-                    }
-
-                }
-            }
-
-            return sessionFactory2;
-        }
-
         private static ISessionFactory sqliteSessionFactory;
 
         public static ISessionFactory CreateSQLiteSessionFactory()
@@ -71,9 +45,9 @@ namespace Model
                 lock (factorylock)
                 {
                     if (sqliteSessionFactory == null || sqliteSessionFactory.IsClosed)
-                    {                        
+                    {
                         sqliteSessionFactory = Fluently.Configure()
-                            .Database(SQLiteConfiguration.Standard.ConnectionString(@"Data Source=./Data/drivehud.db;Version=3;"))
+                            .Database(SQLiteConfiguration.Standard.ConnectionString(StringFormatter.GetSQLiteConnectionString()))
                             .Mappings(x => x.FluentMappings.AddFromAssemblyOf<DriveHUD.Entities.Mapping.TournamentsMap>())
                             .BuildSessionFactory();
                     }
@@ -89,11 +63,6 @@ namespace Model
         public static ISession OpenPostgreSQLSession()
         {
             return CreateSessionFactory().OpenSession();
-        }
-
-        public static ISession OpenSession2()
-        {
-            return CreateSessionFactory2().OpenSession();
         }
 
         public static ISession OpenSession()

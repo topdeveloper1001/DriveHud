@@ -88,6 +88,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to drivehud.db.
+        /// </summary>
+        internal static string SystemSettings_DbFileName {
+            get {
+                return ResourceManager.GetString("SystemSettings_DbFileName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Players.
         /// </summary>
         internal static string SystemSettings_DefaultPlayersFolderName {

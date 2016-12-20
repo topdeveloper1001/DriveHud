@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="SplashWindow.cs" company="Ace Poker Solutions">
+// <copyright file="SplashWindowViewModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,38 +10,25 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Windows;
-using System.Windows.Threading;
+using DriveHUD.Application.ViewModels;
+using ReactiveUI;
 
 namespace DriveHUD.Application.SplashScreen
 {
-    /// <summary>
-    /// Interaction logic for SplashScreen.xaml
-    /// </summary>
-    public partial class SplashWindow : Window, ISplashScreen
+    public class SplashWindowViewModel : ViewModelBase
     {
-        internal SplashWindow()
-        {
-            InitializeComponent();
-        }
+        private string status;
 
-        SplashWindowViewModel ISplashScreen.DataContext
+        public string Status
         {
             get
             {
-                return DataContext as SplashWindowViewModel;
+                return status;
             }
             set
             {
-                DataContext = value;
+                this.RaiseAndSetIfChanged(ref status, value);
             }
-        }
-
-        public void CloseSplashScreen()
-        {
-            Dispatcher.Invoke(() => Close());
-            Dispatcher.InvokeShutdown();
         }
     }
 }
