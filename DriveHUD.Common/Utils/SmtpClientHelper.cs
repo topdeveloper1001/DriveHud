@@ -3,6 +3,7 @@ using DriveHUD.Common.Resources;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.IO.Compression;
 using System.Linq;
 using System.Net.Mail;
 using System.Text;
@@ -28,53 +29,79 @@ namespace DriveHUD.Common.Utils
             return smtpClient;
         }
 
-        public static MailMessage ComposeSupportEmail(string userName, string userEmail, string userMessage, bool attachLogs = false)
+        public static MailMessage ComposeSupportEmail(string userName, string userEmail, string userMessage,
+            string appFolder, string dataFolder)
         {
             MailMessage mail = new MailMessage();
             mail.From = new MailAddress(userEmail);
             mail.To.Add(_supportEmail);
 
             mail.Subject = "DriveHUD message from user " + userName;
-            mail.Body = String.Format(_supportMessageBody, userName, userMessage);
+            mail.Body = string.Format(_supportMessageBody, userName, userMessage);
 
-            if (attachLogs)
+            if (!string.IsNullOrEmpty(appFolder))
             {
-                AddAttachments(mail);
+                AddZipAtachment(mail,
+                    Directory.GetFiles(appFolder)
+                        .Where(
+                            f =>
+                                string.Equals(Path.GetExtension(f), ".config",
+                                    StringComparison.InvariantCultureIgnoreCase)), "Configs.zip");
+                var logsFolder = Path.Combine(appFolder, "Logs");
+                AddZipAtachment(mail, Directory.GetFiles(logsFolder), "Logs.zip");
             }
-
+            if (!string.IsNullOrEmpty(dataFolder))
+            {
+                var extensionsToZip = new[] {".data", ".xml", ".df"};
+                AddZipAtachment(mail,
+                    Directory.GetFiles(dataFolder)
+                        .Where(
+                            f =>
+                                extensionsToZip.Contains(Path.GetExtension(f),
+                                    StringComparer.InvariantCultureIgnoreCase)), "Data.zip");
+            }
             return mail;
         }
 
-        public static MailMessage ComposeSupportLogsEmail()
-        {
-            MailMessage mail = new MailMessage();
+        //public static MailMessage ComposeSupportLogsEmail()
+        //{
+        //    MailMessage mail = new MailMessage();
 
-            mail.From = new MailAddress(_supportEmail);
-            mail.To.Add(_supportEmail);
+        //    mail.From = new MailAddress(_supportEmail);
+        //    mail.To.Add(_supportEmail);
 
-            mail.Subject = "DriveHUD logs from user";
-            mail.Body = "Log files from user.";
+        //    mail.Subject = "DriveHUD logs from user";
+        //    mail.Body = "Log files from user.";
 
-            AddAttachments(mail);
+        //    AddAttachments(mail);
 
-            return mail;
-        }
+        //    return mail;
+        //}
 
-        private static void AddAttachments(MailMessage mail)
+        private static void AddZipAtachment(MailMessage mail, IEnumerable<string> files, string zipFileName)
         {
             try
             {
-                var logFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Logs");
-                if (Directory.Exists(logFolder))
+                using (var memoryStream = new MemoryStream())
                 {
-                    foreach (var file in Directory.GetFiles(logFolder))
+                    using (var archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
                     {
-                        if (Path.GetFileName(file) == "drivehud.log")
+                        foreach (var file in files)
                         {
-                            Stream s = new FileStream(file, FileMode.Open, FileAccess.Read);
-                            mail.Attachments.Add(new Attachment(s, Path.GetFileName(file)));
+                            using (var entryStream = archive.CreateEntry(Path.GetFileName(file)).Open())
+                            {
+                                using (var streamWriter = new StreamWriter(entryStream))
+                                {
+                                    using (var s = new FileStream(file, FileMode.Open, FileAccess.Read))
+                                    {
+                                        streamWriter.Write(s);
+                                    }
+                                }
+                            }
                         }
                     }
+                    memoryStream.Seek(0, SeekOrigin.Begin);
+                    mail.Attachments.Add(new Attachment(memoryStream, Path.GetFileName(zipFileName)));
                 }
             }
             catch (Exception ex)
