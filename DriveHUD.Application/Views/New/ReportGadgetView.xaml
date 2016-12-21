@@ -816,6 +816,7 @@
                         </telerik:RadContextMenu>
                     </telerik:RadContextMenu.ContextMenu>
                 </telerik:RadGridView>
+                
                 <telerik:RadBusyIndicator Grid.Row="0" IsBusy="{Binding Path=IsBusy}" Background="{StaticResource BackgroundBrush}"
                                           Visibility="{Binding Path=IsBusy, Converter={StaticResource BoolToVisibilityConverter}}">
                     <telerik:RadBusyIndicator.OverlayStyle>
@@ -835,9 +836,10 @@
                         </Style>
                     </telerik:RadBusyIndicator.ProgressBarStyle>
                     <telerik:RadBusyIndicator.BusyContentTemplate>
-                        <ItemContainerTemplate/>
+                        <DataTemplate />
                     </telerik:RadBusyIndicator.BusyContentTemplate>
                 </telerik:RadBusyIndicator>
+                
                 <ItemsControl Grid.Row="1" Margin="5" Background="{StaticResource BackgroundBrush1}"
                       ItemsSource="{Binding Path=CurrentlyBuiltFilter.FilterSectionCollection}">
                     <ItemsControl.ItemTemplate>
