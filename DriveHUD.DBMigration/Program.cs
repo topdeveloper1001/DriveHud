@@ -17,7 +17,7 @@ namespace DriveHUD.DBMigration
     class Program
     {
         static int Main(string[] args)
-        {        
+        {
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
 
@@ -35,6 +35,7 @@ namespace DriveHUD.DBMigration
             }
 
             Console.WriteLine("Done");
+
 
             return 0;
         }
@@ -193,7 +194,12 @@ namespace DriveHUD.DBMigration
 
                             try
                             {
-                                var line = sr.ReadLine();
+                                var line = sr.ReadLine().Replace("\0", string.Empty);
+
+                                if (string.IsNullOrWhiteSpace(line))
+                                {
+                                    continue;
+                                }                                
 
                                 var byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/'));
 
