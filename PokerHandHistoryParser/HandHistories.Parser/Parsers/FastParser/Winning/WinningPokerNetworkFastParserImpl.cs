@@ -1000,8 +1000,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     case 'B':
                         continue;//More posts can still occur
 
-                    //Player Aquasces1 received a card.
                     case '.':
+                        // Player wiski101 is timed out.
+                        if (line.Substring(line.Length - 4, 4).Equals("out."))
+                        {
+                            continue;//More posts can still occur
+                        }
+                        else
+                        {
+                            //Player Aquasces1 received a card.
+                            //No more posts can occur when players start reciving cards
+                            return i;
+                        }
                     //Player WP_Hero received card: [6d]
                     case ']':
                         //No more posts can occur when players start reciving cards
