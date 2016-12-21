@@ -10,12 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels;
-using ReactiveUI;
+using DriveHUD.Common.Infrastructure.Base;
 
 namespace DriveHUD.Application.SplashScreen
 {
-    public class SplashWindowViewModel : ViewModelBase
+    public class SplashWindowViewModel : BaseViewModel
     {
         private string status;
 
@@ -27,7 +26,8 @@ namespace DriveHUD.Application.SplashScreen
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref status, value);
+                status = value;
+                OnPropertyChanged();
             }
         }
     }

@@ -78,7 +78,7 @@ namespace Model
         public static string GetSQLiteConnectionString()
         {
             var dbFile = GetSQLiteDbFilePath();
-            return $"Data Source={dbFile};Version=3;";
+            return $"Data Source={dbFile};Version=3;foreign keys=true;";
         }
     }
 }

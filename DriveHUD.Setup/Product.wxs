@@ -312,10 +312,10 @@
 
     <DirectoryRef Id="X64">
       <Component Id="SQLite.Interop.x64.dll" DiskId="1" Guid="{351E106D-8890-4BD1-8676-1D103E46CCC7}">
-        <File Id="SQLite.Interop.dll" Name="SQLite.Interop.dll" Source="$(var.BuildDirectory)\x64\SQLite.Interop.dll" />
+        <File Id="SQLite.Interop.x64.dll" Name="SQLite.Interop.dll" Source="$(var.BuildDirectory)\x64\SQLite.Interop.dll" />
       </Component>
       <Component Id="sqlite3.x64.dll" Guid="{09DD940B-16CB-4134-9146-F8B8E1977F8C}">
-        <File Id="sqlite3.dll" Name="sqlite3.dll" Source="$(var.BuildDirectory)\x64\sqlite3.dll" />
+        <File Id="sqlite3.x64.dll" Name="sqlite3.dll" Source="$(var.BuildDirectory)\x64\sqlite3.dll" />
       </Component>
     </DirectoryRef>
 

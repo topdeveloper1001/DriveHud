@@ -37,7 +37,7 @@
             </Grid.ColumnDefinitions>
 
             <TextBlock Grid.Column="0" HorizontalAlignment="Left" Text="Loading..." Foreground="White" />
-            <TextBlock Grid.Column="1" HorizontalAlignment="Right" Text="{Binding Status}" Foreground="White" />
+            <TextBlock Grid.Column="1" HorizontalAlignment="Right" x:Name="tbStatus" Foreground="White" />
             
         </Grid>
 

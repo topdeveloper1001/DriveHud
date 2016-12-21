@@ -42,11 +42,6 @@ namespace DriveHUD.Application.Bootstrappers
 
             try
             {
-                if (!File.Exists(dbFile))
-                {
-                    CreateNewDatabase();
-                }
-
                 var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>();
                 var settings = settingsModel.GetSettings();
                 var databaseSetting = settings.DatabaseSettings;
@@ -59,6 +54,11 @@ namespace DriveHUD.Application.Bootstrappers
 
                 var databaseType = settings.GeneralSettings.IsSQLiteEnabled ? DatabaseType.SQLite : DatabaseType.PostgreSQL;
 
+                if (settings.GeneralSettings.IsSQLiteEnabled && !File.Exists(dbFile))
+                {
+                    CreateNewDatabase();
+                }
+
                 var migrationService = ServiceLocator.Current.GetInstance<IMigrationService>(databaseType.ToString());
                 migrationService.MigrateToLatest(connectionString);
 
@@ -66,7 +66,8 @@ namespace DriveHUD.Application.Bootstrappers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Couldn't initialize DB", e);
+                LogProvider.Log.Error(this, "Couldn't complete migration actions.", e);
+                throw;
             }
         }
 
@@ -75,7 +76,7 @@ namespace DriveHUD.Application.Bootstrappers
             try
             {
                 Directory.CreateDirectory(appData);
-                CreateNewDatabase();                
+                CreateNewDatabase();
             }
             catch (Exception e)
             {
@@ -83,7 +84,7 @@ namespace DriveHUD.Application.Bootstrappers
             }
         }
 
-        private void CreateNewDatabase()
+        public void CreateNewDatabase()
         {
             try
             {
@@ -102,6 +103,6 @@ namespace DriveHUD.Application.Bootstrappers
             {
                 LogProvider.Log.Error(this, "Couldn't create DB", e);
             }
-        }    
+        }
     }
 }

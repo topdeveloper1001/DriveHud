@@ -15,5 +15,7 @@ namespace DriveHUD.Application.Bootstrappers
     internal interface ISQLiteBootstrapper
     {
         void InitializeDatabase();
+
+        void CreateNewDatabase();
     }
 }

@@ -42,6 +42,8 @@ namespace DriveHUD.Application.SplashScreen
         {
             Dispatcher.Invoke(() => Close());
             Dispatcher.InvokeShutdown();
+
+            App.SplashScreen = null;
         }
     }
 }

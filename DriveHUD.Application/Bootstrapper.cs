@@ -95,11 +95,6 @@ namespace DriveHUD.Application
             ShowMainWindow();
         }
 
-        protected void InitializeDatabase()
-        {
-           
-        }
-
         private void ShowMainWindow()
         {
             LogProvider.Log.Info($"Screen: {Utils.GetScreenResolution()}");

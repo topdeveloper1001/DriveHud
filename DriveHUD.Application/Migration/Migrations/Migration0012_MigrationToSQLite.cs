@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Log;
+using DriveHUD.Common.Linq;
 using FluentMigrator;
 using Microsoft.Practices.ServiceLocation;
 using Model;
@@ -18,6 +19,7 @@ using Model.Settings;
 using System;
 using System.Diagnostics;
 using System.IO;
+using DriveHUD.Application.Bootstrappers;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {
@@ -32,10 +34,15 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             if (!File.Exists(migrationProcessFile))
             {
-                throw new FileNotFoundException("Migration isn't possible. Migrator has not been found.", migrationProcessFile);
+                throw new FileNotFoundException("Migration isn't possible. Migration tool has not been found.", migrationProcessFile);
             }
 
             LogProvider.Log.Info("Migration #12 start executing");
+
+            RollbackMigration();
+
+            var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
+            sqliteBootstrapper.CreateNewDatabase();
 
             var migrationProcess = new Process();
             migrationProcess.StartInfo.FileName = migrationProcessFile;
@@ -64,7 +71,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 LogProvider.Log.Info("Migration #12 failed.");
                 LogProvider.Log.Info("Rollback changes");
 
-                throw new Exception("Migration #12 failed");
+                RollbackMigration();
+
+                throw new Exception($"Migration activity #12 failed");
             }
 
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
@@ -84,6 +93,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
         {
             try
             {
+                var processes = Process.GetProcessesByName("DriveHUD.DBMigration");
+                processes.ForEach(x => x.Kill());
+
                 var dbFile = StringFormatter.GetSQLiteDbFilePath();
 
                 if (File.Exists(dbFile))

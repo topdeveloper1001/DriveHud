@@ -17,13 +17,14 @@ namespace DriveHUD.DBMigration
     class Program
     {
         static int Main(string[] args)
-        {
+        {        
             var bootstrapper = new Bootstrapper();
             bootstrapper.Run();
 
             try
             {
                 Migrate();
+                PrepareStatisticMigration();
                 MigratePlayerStatistic();
             }
             catch (Exception e)
@@ -41,6 +42,35 @@ namespace DriveHUD.DBMigration
         static void WriteException(Exception e)
         {
             Console.WriteLine($"Migration failed: {e}");
+        }
+
+        static void PrepareStatisticMigration()
+        {
+            Console.WriteLine("Preparing to migration");
+            Console.WriteLine("Removing inconsistent");
+
+            using (var session = ModelEntities.OpenStatelessSession())
+            {
+                using (var transation = session.BeginTransaction())
+                {
+                    var players = session.Query<Players>().ToArray();
+                    var playersGrouped = players.GroupBy(x => new { x.Playername, x.PokersiteId }).Select(x => new { PlayerKey = x.Key, Players = x.ToArray() }).ToArray();
+
+                    var inconsistentPlayes = playersGrouped.Where(x => x.Players.Length > 1).ToArray();
+
+                    inconsistentPlayes.ForEach(x =>
+                    {
+                        var playersToDelete = x.Players.Skip(1).ToArray();
+
+                        playersToDelete.ForEach(player =>
+                        {
+                            session.Delete(player);
+                        });
+                    });
+
+                    transation.Commit();
+                }
+            }
         }
 
         static void Migrate()
