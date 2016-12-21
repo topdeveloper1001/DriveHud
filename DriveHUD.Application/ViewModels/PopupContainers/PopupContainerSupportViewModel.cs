@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
+using Model;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
 {
@@ -106,8 +107,14 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             try
             {
                 IsSending = true;
-
-                using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, AttachLog))
+                var appFolder = string.Empty;
+                var dataFolder = string.Empty;
+                if (AttachLog)
+                {
+                    appFolder = AppDomain.CurrentDomain.BaseDirectory;
+                    dataFolder = StringFormatter.GetAppDataFolderPath();
+                }
+                using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, appFolder, dataFolder))
                 using (var client = SmtpClientHelper.GetSmtpClient())
                 {
                     await client.SendMailAsync(message);

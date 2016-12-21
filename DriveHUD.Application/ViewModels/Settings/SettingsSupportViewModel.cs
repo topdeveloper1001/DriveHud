@@ -15,6 +15,7 @@ using System.Net.Mail;
 using System.Windows;
 using System.IO;
 using DriveHUD.Common.Log;
+using Model;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {
@@ -110,8 +111,14 @@ namespace DriveHUD.Application.ViewModels.Settings
             try
             {
                 IsSending = true;
-
-                using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, AttachLog))
+                var appFolder = string.Empty;
+                var dataFolder = string.Empty;
+                if (AttachLog)
+                {
+                    appFolder = AppDomain.CurrentDomain.BaseDirectory;
+                    dataFolder = StringFormatter.GetAppDataFolderPath();
+                }
+                using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, appFolder, dataFolder))
                 using (var client = SmtpClientHelper.GetSmtpClient())
                 {
                     await client.SendMailAsync(message);
