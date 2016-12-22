@@ -52,6 +52,8 @@ namespace Model.Interfaces
 
         void Store(Playerstatistic statistic);
 
+        void Store(IEnumerable<Playerstatistic> statistic);
+
         void Store(Handnotes handNote);
 
         void Store(Playernotes playernotes);

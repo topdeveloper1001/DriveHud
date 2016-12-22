@@ -47,6 +47,8 @@ namespace DriveHUD.Importers
     {
         private readonly string[] importingExtensions = new[] { "txt", "xml" };
 
+        private static readonly object locker = new object();
+
         private FileInfo processingFile;
 
         private readonly IImporterSessionCacheService importSessionCacheService;
@@ -323,64 +325,68 @@ namespace DriveHUD.Importers
 
             var importerSession = gameInfo != null ? gameInfo.Session : string.Empty;
 
-            try
+            // need to lock db operations to prevent deadlocks
+            lock (locker)
             {
-                parsingResult = parsingResult.ToList();
-
-                using (var session = ModelEntities.OpenStatelessSession())
+                try
                 {
-                    using (var transaction = session.BeginTransaction())
+                    parsingResult = parsingResult.ToList();
+
+                    using (var session = ModelEntities.OpenStatelessSession())
                     {
-                        var tournamentsData = new List<Tournaments>();
-
-                        var existingGames = GetExisting(session, parsingResult.Where(x => !x.IsSummary));
-                        var existingPlayers = ComposePlayers(session, parsingResult.Where(x => !x.IsSummary), gameInfo);
-
-                        for (var i = 0; i < parsingResult.Count; i++)
+                        using (var transaction = session.BeginTransaction())
                         {
-                            var handHistory = parsingResult[i];
+                            var tournamentsData = new List<Tournaments>();
 
-                            // skip error hand
-                            if (handHistory.Source.HasError)
+                            var existingGames = GetExisting(session, parsingResult.Where(x => !x.IsSummary));
+                            var existingPlayers = ComposePlayers(session, parsingResult.Where(x => !x.IsSummary), gameInfo);
+
+                            for (var i = 0; i < parsingResult.Count; i++)
                             {
-                                continue;
+                                var handHistory = parsingResult[i];
+
+                                // skip error hand
+                                if (handHistory.Source.HasError)
+                                {
+                                    continue;
+                                }
+
+                                progress.Report(new LocalizableString("Progress_UpdatingData", i + 1, parsingResult.Count, duplicates));
+
+                                // update tournament with summary data
+                                if (handHistory.IsSummary)
+                                {
+                                    InsertSummaryHand(session, handHistory, gameInfo);
+                                    continue;
+                                }
+
+                                // Check if this game was already parsed before
+                                var exist = existingGames.Any(x => x.Item1 == handHistory.HandHistory.Gamenumber && x.Item2 == handHistory.HandHistory.PokersiteId);
+
+                                if (exist)
+                                {
+                                    duplicates++;
+                                    handHistory.IsDuplicate = true;
+                                    continue;
+                                }
+
+                                existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
+
+                                InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
                             }
 
-                            progress.Report(new LocalizableString("Progress_UpdatingData", i + 1, parsingResult.Count, duplicates));
+                            ProcessTournamentData(tournamentsData, parsingResult, session);
 
-                            // update tournament with summary data
-                            if (handHistory.IsSummary)
-                            {
-                                InsertSummaryHand(session, handHistory, gameInfo);
-                                continue;
-                            }
+                            transaction.Commit();
 
-                            // Check if this game was already parsed before
-                            var exist = existingGames.Any(x => x.Item1 == handHistory.HandHistory.Gamenumber && x.Item2 == handHistory.HandHistory.PokersiteId);
-
-                            if (exist)
-                            {
-                                duplicates++;
-                                handHistory.IsDuplicate = true;
-                                continue;
-                            }
-
-                            existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
-
-                            InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
+                            parsingResult.ForEach(p => p.WasImported = true);
                         }
-
-                        ProcessTournamentData(tournamentsData, parsingResult, session);
-
-                        transaction.Commit();
-
-                        parsingResult.ForEach(p => p.WasImported = true);
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "DB error", e);
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "DB error", e);
+                }
             }
         }
 

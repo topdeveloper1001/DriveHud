@@ -415,6 +415,75 @@ namespace Model
             }
         }
 
+        public void Store(IEnumerable<Playerstatistic> statistic)
+        {
+            if (statistic == null || !statistic.Any())
+            {
+                return;
+            }
+
+            var groupedStatistic = (from stat in statistic
+                                    group stat by new { stat.PlayerId, stat.Playedyearandmonth } into grouped
+                                    select new
+                                    {
+                                        PlayerId = grouped.Key.PlayerId,
+                                        Playedyearandmonth = grouped.Key.Playedyearandmonth,
+                                        Statistic = grouped.OrderBy(x => x.Playedyearandmonth).ToArray()
+                                    }).ToArray();
+
+            rwLock.EnterWriteLock();
+
+            try
+            {
+                if (!Directory.Exists(playersPath))
+                {
+                    Directory.CreateDirectory(playersPath);
+                }
+
+                foreach (var stats in groupedStatistic)
+                {
+                    var playerDirectory = Path.Combine(playersPath, stats.PlayerId.ToString());
+
+                    if (!Directory.Exists(playerDirectory))
+                    {
+                        Directory.CreateDirectory(playerDirectory);
+                    }
+
+                    var fileName = Path.Combine(playerDirectory, stats.Playedyearandmonth.ToString()) + ".stat";
+
+                    var statisticStringsToAppend = new List<string>();
+
+                    foreach (var stat in stats.Statistic)
+                    {
+                        using (var msTestString = new MemoryStream())
+                        {
+                            Serializer.Serialize(msTestString, stat);
+                            var data = Convert.ToBase64String(msTestString.ToArray());
+
+                            statisticStringsToAppend.Add(data);
+                        }
+                    }
+
+                    File.AppendAllLines(fileName, statisticStringsToAppend);
+
+                    var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
+
+                    if (stats.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
+                    {
+                        storageModel.StatisticCollection.AddRange(stats.Statistic);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't save player statistic", e);
+            }
+            finally
+            {
+                rwLock.ExitWriteLock();
+            }
+        }
+
         public Stream OpenStorageStream(string filename, FileMode mode)
         {
             if (File.Exists(Path.Combine(dataPath, filename)))
