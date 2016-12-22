@@ -136,7 +136,7 @@
     <value>Ace Poker Solutions</value>
   </data>
   <data name="Common_ApplicationTitle" xml:space="preserve">
-    <value>DriveHUD - {0} - {1} (SQLite Edition)</value>
+    <value>DriveHUD - {0} - {1}</value>
   </data>
   <data name="Common_Apply" xml:space="preserve">
     <value>Apply</value>

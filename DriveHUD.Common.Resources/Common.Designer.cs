@@ -124,7 +124,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to DriveHUD - {0} - {1} (SQLite Edition).
+        ///   Looks up a localized string similar to DriveHUD - {0} - {1}.
         /// </summary>
         internal static string Common_ApplicationTitle {
             get {
