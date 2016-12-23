@@ -67,6 +67,7 @@
     <Compile Include="Handhistory.cs" />
     <Compile Include="HandHistoryRecord.cs" />
     <Compile Include="Handnotes.cs" />
+    <Compile Include="HudViewType.cs" />
     <Compile Include="Mappings\GametypesMap.cs" />
     <Compile Include="Mappings\HandhistoryMap.cs" />
     <Compile Include="Mappings\HandhistoryrecordMap.cs" />

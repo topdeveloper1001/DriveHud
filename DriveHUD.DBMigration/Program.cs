@@ -199,7 +199,7 @@ namespace DriveHUD.DBMigration
                                 if (string.IsNullOrWhiteSpace(line))
                                 {
                                     continue;
-                                }                                
+                                }
 
                                 var byteAfter64 = Convert.FromBase64String(line.Replace('-', '+').Replace('_', '/'));
 
@@ -252,15 +252,10 @@ namespace DriveHUD.DBMigration
                 sw.Start();
 
                 var dataMigrationService = new DataMigrationService();
-
-                foreach (var stat in playerStatistic)
-                {
-                    dataMigrationService.Store(stat);
-                }
+                dataMigrationService.Store(playerStatistic);
 
                 totalTime += sw.ElapsedMilliseconds;
                 Console.WriteLine($"Migrated rows of PlayerStatistic: {playerStatistic.Count} [{sw.ElapsedMilliseconds} ms]");
-
             }
             catch (Exception e)
             {

@@ -11,6 +11,7 @@
              xmlns:control="clr-namespace:DriveHUD.Application.Controls"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              xmlns:m="clr-namespace:DriveHUD.Application.ViewModels.Hud"
+             xmlns:ent="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
              mc:Ignorable="d"                   
              d:DesignHeight="300" d:DesignWidth="300">
 
@@ -345,7 +346,7 @@
 
         <Grid VerticalAlignment="Center">
 
-            <Border VerticalAlignment="Top" HorizontalAlignment="Left" MinHeight="64" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding HudViewType, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static m:HudViewType.Vertical_1}}">
+            <Border VerticalAlignment="Top" HorizontalAlignment="Left" MinHeight="64" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding HudViewType, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Vertical_1}}">
                 <Grid>
                     <WrapPanel Margin="3,0,0,3" VerticalAlignment="Top" Orientation="Horizontal">
                         <i:Interaction.Behaviors>
@@ -538,7 +539,7 @@
 
                 </Border>
 
-                <Border Grid.Row="3" Grid.Column="0" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding HudViewType, Converter={StaticResource InvertedEnumToVisibilityConverter}, ConverterParameter={x:Static m:HudViewType.Vertical_1}}">
+                <Border Grid.Row="3" Grid.Column="0" ToolTip="{Binding PlayerName}" Style="{StaticResource BottomBorderStyle}" Visibility="{Binding HudViewType, Converter={StaticResource InvertedEnumToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Vertical_1}}">
                     <Grid>
                         <WrapPanel Margin="3,0,0,3" VerticalAlignment="Top" Orientation="Vertical">
                             <i:Interaction.Behaviors>
