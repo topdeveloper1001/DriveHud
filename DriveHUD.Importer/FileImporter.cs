@@ -84,12 +84,18 @@ namespace DriveHUD.Importers
 
             foreach (var file in files)
             {
-                progress.Report(new LocalizableString("Progress_ReadingFile"));
+                progress.Report(new LocalizableString("Progress_ReadingFile", file.Name));
 
                 processingFile = file;
 
                 try
                 {
+                    if (progress.CancellationToken.IsCancellationRequested)
+                    {
+                        progress.Report(new LocalizableString("Progress_StoppingImport"));
+                        break;
+                    }
+
                     var text = File.ReadAllText(file.FullName);
 
                     Import(text, progress, null);
@@ -140,7 +146,7 @@ namespace DriveHUD.Importers
             Check.ArgumentNotNull(() => progress);
             Check.ArgumentNotNull(() => gameInfo);
 
-            if (string.IsNullOrEmpty(text))
+            if (string.IsNullOrEmpty(text) || progress.CancellationToken.IsCancellationRequested)
             {
                 return new List<ParsingResult>();
             }
@@ -167,8 +173,6 @@ namespace DriveHUD.Importers
             try
             {
                 var hands = handHistoryParser.SplitUpMultipleHands(text).ToArray();
-
-                progress.Report(new LocalizableString("Progress_Parsing"));
 
                 var parsingResult = ParseHands(hands, handHistoryParser, gameInfo);
 
@@ -373,6 +377,12 @@ namespace DriveHUD.Importers
                                 existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
 
                                 InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
+
+                                if (progress.CancellationToken.IsCancellationRequested)
+                                {
+                                    progress.Report(new LocalizableString("Progress_StoppingImport"));
+                                    break;
+                                }
                             }
 
                             ProcessTournamentData(tournamentsData, parsingResult, session);

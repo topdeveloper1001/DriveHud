@@ -12,6 +12,7 @@
 
 using DriveHUD.Common.Resources;
 using System;
+using System.Threading;
 
 namespace DriveHUD.Common.Progress
 {
@@ -32,5 +33,9 @@ namespace DriveHUD.Common.Progress
         /// </summary>
         /// <param name="message">Progress message</param>
         void Report(ILocalizableString message);
+
+        CancellationToken CancellationToken { get; }
+
+        void Reset(CancellationToken cancellationToken);
     }
 }
