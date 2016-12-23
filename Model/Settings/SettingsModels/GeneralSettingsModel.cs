@@ -31,6 +31,7 @@ namespace Model.Settings
             IsAutomaticallyDownloadUpdates = true;
             IsApplyFiltersToTournamentsAndCashGames = true;
             IsSaveFiltersOnExit = true;
+            IsSQLiteEnabled = true;
             IsAdvancedLoggingEnabled = false;
             TimeZoneOffset = TimeZoneInfo.Local.GetUtcOffset(DateTime.UtcNow).Hours;
 

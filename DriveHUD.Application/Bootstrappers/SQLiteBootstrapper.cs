@@ -19,6 +19,7 @@ using Model;
 using Model.Settings;
 using System;
 using System.IO;
+using System.Net.Sockets;
 
 namespace DriveHUD.Application.Bootstrappers
 {
@@ -38,14 +39,14 @@ namespace DriveHUD.Application.Bootstrappers
                 return;
             }
 
+            var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+            var settings = settingsService.GetSettings();
+            var databaseSetting = settings.DatabaseSettings;
+
             var dbFile = StringFormatter.GetSQLiteDbFilePath();
 
             try
             {
-                var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>();
-                var settings = settingsModel.GetSettings();
-                var databaseSetting = settings.DatabaseSettings;
-
                 LogProvider.Log.Debug("Run Migration Service");
 
                 var connectionString = settings.GeneralSettings.IsSQLiteEnabled ?
@@ -66,6 +67,21 @@ namespace DriveHUD.Application.Bootstrappers
             }
             catch (Exception e)
             {
+                if (!settings.GeneralSettings.IsSQLiteEnabled && (e as SocketException)?.SocketErrorCode == SocketError.ConnectionRefused)
+                {
+                    LogProvider.Log.Info("PostgreSQL not found. Creating SQLite database and finish migration.");
+
+                    if (!File.Exists(dbFile))
+                    {
+                        CreateNewDatabase();
+                    }
+
+                    settings.GeneralSettings.IsSQLiteEnabled = true;
+                    settingsService.SaveSettings(settings);
+
+                    return;
+                }
+
                 LogProvider.Log.Error(this, "Couldn't complete migration actions.", e);
                 throw;
             }

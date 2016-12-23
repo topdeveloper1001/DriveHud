@@ -55,7 +55,6 @@
 
     <Chain>
       <PackageGroupRef Id="NetFx45Web"/>
-      <PackageGroupRef Id="POSTGRESQL"/>
       <RollbackBoundary/>
       <MsiPackage Id="DriveHUD" Compressed="yes" SourceFile="..\DriveHUD.Setup\bin\Release\DriveHUD.msi" Vital="yes">
         <MsiProperty Name="MANUFACTURERDIR" Value="[MANUFACTURERDIR]"/>
@@ -66,49 +65,4 @@
     </Chain>
   </Bundle>
 
-  <!-- POSTGRESQL -->
-  <Fragment>
-    <util:RegistrySearch Id ="PostgresqlPath_x64"
-       Root="HKLM"
-       Key="SOFTWARE\PostgreSQL\Installations\postgresql-x64-9.5"
-       Result="exists"
-       Value="Version"
-       Variable="PostgresqlInstalled_x64"
-       Win64="yes" />
-
-    <util:RegistrySearch Id="Postgresql_x86"
-      Root="HKLM"
-      Key="SOFTWARE\PostgreSQL\Installations\postgresql-9.5"
-      Result="exists"
-      Value="Version"
-      Variable="PostgresqlInstalled_x86"
-      Win64="no"/>
-
-    <PackageGroup Id="POSTGRESQL">
-      <ExePackage Id="PostSQL94_x64" SourceFile="Prerequisites\Postgresql\postgresql-9.5.3-1-windows-x64.exe"
-                  Name="PostgreSQL x64 9.5"
-                  DisplayName="PostgreSQL x64 9.5"
-                  Description ="PostgreSQL x64 9.5 setup"
-                  InstallCommand="--mode unattended --unattendedmodeui minimalWithDialogs --superaccount postgres --superpassword postgrespass --datadir &quot;[ProgramFiles6432Folder]PostgreSQL\9.5\data&quot;"
-                  InstallCondition="VersionNT64"
-                  DetectCondition="PostgresqlInstalled_x64"
-                  Cache="no"
-                  Compressed="yes"
-                  PerMachine="yes"
-                  Permanent="yes"/>
-
-      <ExePackage Id="PostSQL94_x86" SourceFile="Prerequisites\Postgresql\postgresql-9.5.3-1-windows.exe"
-                Name="PostgreSQL x86 9.5"
-                DisplayName="PostgreSQL x86 9.5"
-                Description="PostgreSQL x86 9.5 setup"
-                InstallCommand="--mode unattended --unattendedmodeui minimalWithDialogs --superaccount postgres --superpassword postgrespass --datadir &quot;[ProgramFiles6432Folder]PostgreSQL\9.5\data&quot;"
-                InstallCondition="(NOT VersionNT64)"
-                DetectCondition="PostgresqlInstalled_x86"
-                Cache="no"
-                Compressed="yes"
-                PerMachine="yes"
-                Permanent="yes"/>
-    </PackageGroup>
-
-  </Fragment>
 </Wix>
