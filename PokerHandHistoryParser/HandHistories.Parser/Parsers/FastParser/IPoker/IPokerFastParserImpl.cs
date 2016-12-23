@@ -1132,6 +1132,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 return TournamentSpeed.SuperTurbo;
             }
 
+            if (tableNameLower.Contains("hyper"))
+            {
+                return TournamentSpeed.HyperTurbo;
+            }
+
             if (tableNameLower.Contains("turbo"))
             {
                 return TournamentSpeed.Turbo;

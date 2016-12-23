@@ -173,7 +173,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 return false;
             }
 
-            var isTitleMatch = title.Contains(tableName);
+            var isTitleMatch = GetTableName(title).Equals(tableName.Trim());
 
             if (isTitleMatch && parsingResult.GameType != null && parsingResult.GameType.Istourney && !string.IsNullOrWhiteSpace(parsingResult.HandHistory.Tourneynumber))
             {
@@ -277,6 +277,34 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             return "XX";
+        }
+
+        private string GetTableName(string title)
+        {
+            var gameTypeIndex = title.LastIndexOf("No Limit");
+
+            if (gameTypeIndex == -1)
+            {
+                gameTypeIndex = title.LastIndexOf("Pot Limit");
+            }
+
+            if (gameTypeIndex == -1)
+            {
+                gameTypeIndex = title.LastIndexOf("Fixed");
+            }
+
+            if (gameTypeIndex == -1)
+            {
+                return title;
+            }
+
+            var tableNameEndIndex = title.Substring(0, gameTypeIndex).LastIndexOf('-');
+            if (tableNameEndIndex == -1)
+            {
+                return title;
+            }
+
+            return title.Substring(0, tableNameEndIndex).Trim();
         }
 
         private string GetTournamentNumber(string title)
