@@ -281,6 +281,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 ResetAll(null);
                 if(obj.IsEmptyRequest)
                 {
+                    _currentHandHistory = null;
                     InitPlayersList();
                     return;
                 }
