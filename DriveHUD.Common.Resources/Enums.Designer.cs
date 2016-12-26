@@ -556,7 +556,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Bets flop when checked to after calling a 3-bet in position.
+        ///   Looks up a localized string similar to Bets flop when X to in 3-bet pot IP.
         /// </summary>
         internal static string Enum_Stat_BetFlopCheckAfterCall3BetInPosition {
             get {
