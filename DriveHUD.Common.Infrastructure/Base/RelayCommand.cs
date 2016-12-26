@@ -55,6 +55,11 @@ namespace DriveHUD.Common.Infrastructure.Base
             _execute(parameter);
         }
 
+        public void RaiseCanExecuteChanged()
+        {
+            CommandManager.InvalidateRequerySuggested();
+        }
+
         #endregion // ICommand Members
     }
 }

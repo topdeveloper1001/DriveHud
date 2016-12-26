@@ -91,11 +91,14 @@ namespace DriveHUD.Application.ViewModels
             HudType = HudType.Default;
 
             hudViewTypes = new ObservableCollection<HudViewType>(Enum.GetValues(typeof(HudViewType)).Cast<HudViewType>());
-            hudViewType = HudViewType.Vertical_1;
-            lastDHHudViewType = HudViewType.Vertical_1;
+
+            var settings = settingsService.GetSettings();
+
+            hudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
+            lastDHHudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
 
             PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100 };
-            PreviewHudElementViewModel.HudViewType = HudViewType.Vertical_1;
+            PreviewHudElementViewModel.HudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
 
             InitializeCommands();
             InitializeObservables();
@@ -119,6 +122,8 @@ namespace DriveHUD.Application.ViewModels
                     {
                         var tableConfigurator = ServiceLocator.Current.GetInstance<ITableConfigurator>(TableConfiguratorHelper.GetServiceName(tableLayout.Site, hudType));
                         var hudElementViewModels = tableConfigurator.GenerateElements((int)tableLayout.TableType);
+
+                        hudElementViewModels.ForEach(x => x.HudViewType = HudViewType);
 
                         hudElements.AddRange(hudElementViewModels);
                     }
@@ -258,7 +263,7 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.FoldToSteal, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BlindsFoldSteal) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.Squeeze, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.Squeeze) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.CheckRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckRaise) },
-                
+
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.CBetIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CBetIP) },
                 new StatInfo { GroupName = "2", StatInfoGroup = statInfoGroups[1], Stat = Stat.CBetOOP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CBetOOP) },
 
@@ -428,6 +433,10 @@ namespace DriveHUD.Application.ViewModels
             this.ObservableForProperty(x => x.HudViewType).Select(x => true)
                 .Subscribe(x =>
                 {
+                    var settings = settingsService.GetSettings();
+                    settings.GeneralSettings.HudViewMode = (int)HudViewType;
+                    settingsService.SaveSettings(settings);
+
                     if (HudViewType == HudViewType.Plain)
                     {
                         HudType = HudType.Plain;
@@ -443,7 +452,7 @@ namespace DriveHUD.Application.ViewModels
                         hudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
                     }
 
-                    previewHudElementViewModel.HudViewType = HudViewType;
+                    previewHudElementViewModel.HudViewType = HudViewType;               
                 });
 
             Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
@@ -731,6 +740,7 @@ namespace DriveHUD.Application.ViewModels
                 {
                     lastDHHudViewType = HudViewType;
                 }
+
                 this.RaiseAndSetIfChanged(ref hudViewType, value);
             }
         }
@@ -877,7 +887,7 @@ namespace DriveHUD.Application.ViewModels
             IsStarted = false;
 
             importerService.StopImport();
-     
+
             var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
             hudTransmitter.Dispose();
         }

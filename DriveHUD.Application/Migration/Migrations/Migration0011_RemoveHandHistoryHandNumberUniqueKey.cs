@@ -16,7 +16,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public override void Up()
         {
-            LogProvider.Log.Info("Prepearing migration #11");
+            LogProvider.Log.Info("Preparing migration #11");
 
             if (Schema.Table(hhTable).Constraint(hhConstraint).Exists())
             {

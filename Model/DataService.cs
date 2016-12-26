@@ -1,9 +1,18 @@
-using DriveHUD.Common.Linq;
+//-----------------------------------------------------------------------
+// <copyright file="DataService.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using DriveHUD.Common.Log;
-using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using HandHistories.Objects.Hand;
-using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Model.Data;
@@ -23,10 +32,11 @@ namespace Model
     /// </summary>
     public class DataService : IDataService
     {
-        private readonly string dataPath = StringFormatter.GetAppDataFolderPath();
-        private string playersPath
+        protected readonly string dataPath = StringFormatter.GetAppDataFolderPath();
+
+        protected virtual string playersPath
         {
-            get { return StringFormatter.GetPlayersDataFolderPath(); }
+            get { return StringFormatter.GetPlayerStatisticDataFolderPath(); }
         }
 
         private static ReaderWriterLockSlim rwLock = new ReaderWriterLockSlim();
@@ -34,37 +44,30 @@ namespace Model
         public DataService()
         {
             if (!Directory.Exists(dataPath))
+            {
                 Directory.CreateDirectory(dataPath);
+            }
 
             if (!Directory.Exists(playersPath))
-                Directory.CreateDirectory(playersPath);
-        }
-
-        public IList<Playerstatistic> GetPlayerStatistic(string playerName, short pokersiteId)
-        {
-            using (var session = ModelEntities.OpenSession())
             {
-                var player = session.Query<Players>().FirstOrDefault(x => x.Playername == playerName && x.PokersiteId == pokersiteId);
-                if (player == null)
-                    return null;
-                return session.Query<Playerstatistic>().Where(x => x.PlayerId == player.PlayerId).ToList();
+                Directory.CreateDirectory(playersPath);
             }
         }
 
-        public Indicators GetPlayerIndicator(string playerName, short pokersiteId)
+        public Indicators GetPlayerIndicator(int playerId, short pokersiteId)
         {
             var indicator = new Indicators();
-            var statistics = GetPlayerStatisticFromFile(playerName, pokersiteId);
+            var statistics = GetPlayerStatisticFromFile(playerId, pokersiteId);
             indicator.UpdateSource(statistics);
 
             return indicator;
         }
 
-        public IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId)
+        public IList<Playerstatistic> GetPlayerStatisticFromFile(int playerId, short? pokersiteId)
         {
             List<Playerstatistic> result = new List<Playerstatistic>();
 
-            var files = GetPlayerFiles(playerName);
+            var files = GetPlayerFiles(playerId);
 
             if (files == null || !files.Any())
             {
@@ -115,6 +118,30 @@ namespace Model
             }
 
             return result;
+        }
+
+        public IList<Playerstatistic> GetPlayerStatisticFromFile(string playerName, short? pokersiteId)
+        {
+            try
+            {
+                using (var session = ModelEntities.OpenStatelessSession())
+                {
+                    var player = session.Query<Players>().FirstOrDefault(x => x.Playername.Equals(playerName) && x.PokersiteId == pokersiteId);
+
+                    if (player == null)
+                    {
+                        return new List<Playerstatistic>();
+                    }
+
+                    return GetPlayerStatisticFromFile(player.PlayerId, pokersiteId);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't get player", e);
+            }
+
+            return new List<Playerstatistic>();
         }
 
         public IList<HandHistoryRecord> GetPlayerHandRecords(string playerName, short pokersiteId)
@@ -273,9 +300,9 @@ namespace Model
 
         public void Purge()
         {
-            using (var session = ModelEntities.OpenSession())
+            using (var session = ModelEntities.OpenStatelessSession())
             {
-                session.CreateSQLQuery("TRUNCATE \"PlayerStatistic\", \"HandNotes\", \"HandHistories\", \"HandRecords\", \"Players\" CASCADE").ExecuteUpdate();
+                session.CreateSQLQuery("TRUNCATE HandNotes, HandHistories, HandRecords, Players CASCADE").ExecuteUpdate();
             }
 
             if (Directory.Exists(playersPath))
@@ -286,37 +313,58 @@ namespace Model
 
         public void Store(Handnotes handnotes)
         {
-            using (var session = ModelEntities.OpenSession())
+            try
             {
-                using (var transaction = session.BeginTransaction())
+                using (var session = ModelEntities.OpenSession())
                 {
-                    session.SaveOrUpdate(handnotes);
-                    transaction.Commit();
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        session.SaveOrUpdate(handnotes);
+                        transaction.Commit();
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't save hand notes", e);
             }
         }
 
         public void Store(Playernotes playernotes)
         {
-            using (var session = ModelEntities.OpenSession())
+            try
             {
-                using (var transaction = session.BeginTransaction())
+                using (var session = ModelEntities.OpenSession())
                 {
-                    session.SaveOrUpdate(playernotes);
-                    transaction.Commit();
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        session.SaveOrUpdate(playernotes);
+                        transaction.Commit();
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't save player notes", e);
             }
         }
 
         public void Store(Tournaments tournament)
         {
-            using (var session = ModelEntities.OpenSession())
+            try
             {
-                using (var transaction = session.BeginTransaction())
+                using (var session = ModelEntities.OpenSession())
                 {
-                    session.SaveOrUpdate(tournament);
-                    transaction.Commit();
+                    using (var transaction = session.BeginTransaction())
+                    {
+                        session.SaveOrUpdate(tournament);
+                        transaction.Commit();
+                    }
                 }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't save tournament", e);
             }
         }
 
@@ -331,7 +379,7 @@ namespace Model
                     Directory.CreateDirectory(playersPath);
                 }
 
-                var playerDirectory = Path.Combine(playersPath, statistic.PlayerName);
+                var playerDirectory = Path.Combine(playersPath, statistic.PlayerId.ToString());
 
                 if (!Directory.Exists(playerDirectory))
                 {
@@ -352,7 +400,7 @@ namespace Model
 
                 var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
 
-                if (statistic.PlayerName == storageModel.PlayerSelectedItem.Name && (EnumPokerSites)statistic.PokersiteId == storageModel.PlayerSelectedItem.PokerSite)
+                if (statistic.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
                 {
                     storageModel.StatisticCollection.Add(statistic);
                 }
@@ -360,6 +408,75 @@ namespace Model
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, e);
+            }
+            finally
+            {
+                rwLock.ExitWriteLock();
+            }
+        }
+
+        public void Store(IEnumerable<Playerstatistic> statistic)
+        {
+            if (statistic == null || !statistic.Any())
+            {
+                return;
+            }
+
+            var groupedStatistic = (from stat in statistic
+                                    group stat by new { stat.PlayerId, stat.Playedyearandmonth } into grouped
+                                    select new
+                                    {
+                                        PlayerId = grouped.Key.PlayerId,
+                                        Playedyearandmonth = grouped.Key.Playedyearandmonth,
+                                        Statistic = grouped.OrderBy(x => x.Playedyearandmonth).ToArray()
+                                    }).ToArray();
+
+            rwLock.EnterWriteLock();
+
+            try
+            {
+                if (!Directory.Exists(playersPath))
+                {
+                    Directory.CreateDirectory(playersPath);
+                }
+
+                foreach (var stats in groupedStatistic)
+                {
+                    var playerDirectory = Path.Combine(playersPath, stats.PlayerId.ToString());
+
+                    if (!Directory.Exists(playerDirectory))
+                    {
+                        Directory.CreateDirectory(playerDirectory);
+                    }
+
+                    var fileName = Path.Combine(playerDirectory, stats.Playedyearandmonth.ToString()) + ".stat";
+
+                    var statisticStringsToAppend = new List<string>();
+
+                    foreach (var stat in stats.Statistic)
+                    {
+                        using (var msTestString = new MemoryStream())
+                        {
+                            Serializer.Serialize(msTestString, stat);
+                            var data = Convert.ToBase64String(msTestString.ToArray());
+
+                            statisticStringsToAppend.Add(data);
+                        }
+                    }
+
+                    File.AppendAllLines(fileName, statisticStringsToAppend);
+
+                    var storageModel = ServiceLocator.Current.TryResolve<SingletonStorageModel>();
+
+                    if (stats.PlayerId == storageModel.PlayerSelectedItem.PlayerId)
+                    {
+                        storageModel.StatisticCollection.AddRange(stats.Statistic);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Couldn't save player statistic", e);
             }
             finally
             {
@@ -473,8 +590,6 @@ namespace Model
 
         private List<PlayerCollectionItem> GetPlayersListInternal()
         {
-            var result = new List<PlayerCollectionItem>();
-
             try
             {
                 if (!Directory.Exists(playersPath))
@@ -484,30 +599,14 @@ namespace Model
 
                 using (var session = ModelEntities.OpenSession())
                 {
-                    var hh = session.Query<Players>().ToArray();
-
-                    if (hh != null)
+                    var players = session.Query<Players>().ToArray().Select(x => new PlayerCollectionItem
                     {
-                        var group = hh.ToList().GroupBy(x => x.Playername);
+                        PlayerId = x.PlayerId,
+                        PokerSite = (EnumPokerSites)x.PokersiteId,
+                        Name = x.Playername
+                    }).ToList();
 
-                        foreach (var pg in group)
-                        {
-                            if (!pg.Any())
-                            {
-                                continue;
-                            }
-
-                            if (pg.Count() == 1)
-                            {
-                                result.Add(new PlayerCollectionItem { Name = pg.Key, PokerSite = (EnumPokerSites)pg.FirstOrDefault()?.PokersiteId });
-                            }
-                            else
-                            {
-                                var stats = GetPlayerStatisticFromFile(pg.Key, null);
-                                stats.Select(s => s.PokersiteId).Distinct().ForEach(s => result.Add(new PlayerCollectionItem { Name = pg.Key, PokerSite = (EnumPokerSites)s }));
-                            }
-                        }
-                    }
+                    return players;
                 }
             }
             catch (Exception e)
@@ -515,16 +614,23 @@ namespace Model
                 LogProvider.Log.Error(this, "Couldn't get player list", e);
             }
 
-            return result;
+            return new List<PlayerCollectionItem>();
         }
 
         #endregion
 
         public void RemoveAppData()
         {
-            if (Directory.Exists(dataPath))
+            try
             {
-                Directory.Delete(dataPath, true);
+                if (Directory.Exists(dataPath))
+                {
+                    Directory.Delete(dataPath, true);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Couldn't delete directory '{dataPath}'", e);
             }
         }
 
@@ -534,7 +640,7 @@ namespace Model
         /// <param name="statistic">Statistic to delete</param>
         public void DeletePlayerStatisticFromFile(Playerstatistic statistic)
         {
-            var files = GetPlayerFiles(statistic.PlayerName);
+            var files = GetPlayerFiles(statistic.PlayerId);
 
             if (files == null || !files.Any())
                 return;
@@ -584,18 +690,45 @@ namespace Model
 
         public PlayerCollectionItem GetActivePlayer()
         {
-            PlayerCollectionItem result = new PlayerCollectionItem();
+            var activePlayer = new PlayerCollectionItem();
+
             string dataPath = StringFormatter.GetActivePlayerFilePath();
+
             if (File.Exists(dataPath))
             {
                 var splittedResult = File.ReadAllText(dataPath).Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
-                if (splittedResult != null && splittedResult.Count() == 2)
+
+                if (splittedResult.Length < 2)
                 {
-                    result = new PlayerCollectionItem { Name = splittedResult[0], PokerSite = (EnumPokerSites)Enum.Parse(typeof(EnumPokerSites), splittedResult[1]) };
+                    return activePlayer;
+                }
+
+                short pokerSiteId = 0;
+
+                if (!short.TryParse(splittedResult[1], out pokerSiteId))
+                {
+                    return activePlayer;
+                }
+
+                try
+                {
+                    using (var session = ModelEntities.OpenSession())
+                    {
+                        var player = session.Query<Players>().FirstOrDefault(x => x.Playername.Equals(splittedResult[0]) && x.PokersiteId == pokerSiteId);
+
+                        if (player != null)
+                        {
+                            activePlayer = new PlayerCollectionItem { PlayerId = player.PlayerId, Name = player.Playername, PokerSite = (EnumPokerSites)player.PokersiteId };
+                        }
+                    }
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "Couldn't get active player", e);
                 }
             }
 
-            return result;
+            return activePlayer;
         }
 
         public void SaveActivePlayer(string playerName, short pokersiteId)
@@ -612,14 +745,9 @@ namespace Model
             }
         }
 
-        private string[] GetPlayerFiles(string playerName)
+        private string[] GetPlayerFiles(int playerId)
         {
-            if (string.IsNullOrWhiteSpace(playerName))
-            {
-                return new string[] { };
-            }
-
-            string playerDirectory = Path.Combine(playersPath, playerName);
+            string playerDirectory = Path.Combine(playersPath, playerId.ToString());
 
             if (!Directory.Exists(playerDirectory))
             {
@@ -628,6 +756,5 @@ namespace Model
 
             return Directory.GetFiles(playerDirectory, "*.stat");
         }
-
     }
 }

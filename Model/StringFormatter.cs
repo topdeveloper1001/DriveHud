@@ -34,9 +34,14 @@ namespace Model
             return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.DefaultPlayersFolderName));
         }
 
+        public static string GetPlayerStatisticDataFolderPath()
+        {
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.DefaultPlayerStatisticFolderName));
+        }
+
         public static string GetActivePlayerFilePath()
         {
-            return Path.Combine(GetPlayersDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.ActivePlayerFileName));
+            return Path.Combine(GetAppDataFolderPath(), CommonResourceManager.Instance.GetResourceString(ResourceStrings.ActivePlayerFileName));
         }
 
         public static string ActionLineSeparator = "-";
@@ -60,6 +65,20 @@ namespace Model
         public static string GetConnectionString(string server, string port, string database, string user, string password)
         {
             return string.Format("Server={0};Port={1};Database={2};User Id={3};Password={4};Persist Security Info=true;Convert Infinity DateTime=true", server, port, database, user, password);
+        }
+
+        public static string GetSQLiteDbFilePath()
+        {
+            var appData = GetAppDataFolderPath();
+            var dbFileName = CommonResourceManager.Instance.GetResourceString(ResourceStrings.DbFileName);
+
+            return Path.Combine(appData, dbFileName);
+        }
+
+        public static string GetSQLiteConnectionString()
+        {
+            var dbFile = GetSQLiteDbFilePath();
+            return $"Data Source={dbFile};Version=3;foreign keys=true;";
         }
     }
 }

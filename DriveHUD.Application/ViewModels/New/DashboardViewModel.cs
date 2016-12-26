@@ -118,7 +118,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         private void SetSerieData(IEnumerable<ChartSeries> chartCollection, ChartSerieResourceHelper resource, EnumTelerikRadChartDisplayRange displayRange)
-        {
+        {            
             foreach (var serie in chartCollection)
             {
                 List<ChartSeriesItem> itemsList = new List<ChartSeriesItem>();

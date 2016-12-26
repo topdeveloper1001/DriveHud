@@ -31,5 +31,7 @@ namespace DriveHUD.Application.ViewModels
         string Text { get; }
 
         bool IsActive { get; set; }
+
+        void Reset();
     }
 }

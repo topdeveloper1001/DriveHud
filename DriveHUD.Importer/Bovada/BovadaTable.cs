@@ -18,6 +18,7 @@ using DriveHUD.Entities;
 using DriveHUD.Importers.Builders.iPoker;
 using DriveHUD.Importers.Helpers;
 using HandHistories.Objects.Players;
+using HandHistories.Parser.Parsers;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Site;
@@ -692,22 +693,47 @@ namespace DriveHUD.Importers.Bovada
                 var dbImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
                 var progress = new DHProgress();
 
+                IEnumerable<ParsingResult> parsingResult = null;
+
                 try
                 {
-                    dbImporter.Import(handHistory, progress, gameInfo);
+                    parsingResult = dbImporter.Import(handHistory, progress, gameInfo);
                 }
                 catch (Exception e)
                 {
                     LogProvider.Log.Error(this, string.Format("Hand {0} has not been imported", handNumber), e);
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} imported", handNumber));
+                if (parsingResult == null)
+                {
+                    return;
+                }
 
-                var playerList = GetPlayersList(game, gameInfo, updateSeats: true);
+                foreach (var result in parsingResult)
+                {
+                    if (result.HandHistory == null)
+                    {
+                        continue;
+                    }
 
-                var dataImportedArgs = new DataImportedEventArgs(playerList, gameInfo);
+                    if (result.IsDuplicate)
+                    {
+                        LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate.", result.HandHistory.Gamenumber));
+                        continue;
+                    }
 
-                eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
+                    if (!result.WasImported)
+                    {
+                        LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported.", result.HandHistory.Gamenumber));
+                        continue;
+                    }
+
+                    LogProvider.Log.Info(this, string.Format("Hand {0} imported", result.HandHistory.Gamenumber));
+
+                    var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, gameInfo);
+
+                    eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
+                }
             });
         }
 

@@ -97,6 +97,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Stop import.
+        /// </summary>
+        internal static string Progress_Stop {
+            get {
+                return ResourceManager.GetString("Progress_Stop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Stopping import.
+        /// </summary>
+        internal static string Progress_StoppingImport {
+            get {
+                return ResourceManager.GetString("Progress_StoppingImport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Progress {0} of {1}.
         /// </summary>
         internal static string Progress_Temp {

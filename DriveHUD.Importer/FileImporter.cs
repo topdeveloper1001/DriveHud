@@ -47,6 +47,8 @@ namespace DriveHUD.Importers
     {
         private readonly string[] importingExtensions = new[] { "txt", "xml" };
 
+        private static readonly object locker = new object();
+
         private FileInfo processingFile;
 
         private readonly IImporterSessionCacheService importSessionCacheService;
@@ -82,12 +84,18 @@ namespace DriveHUD.Importers
 
             foreach (var file in files)
             {
-                progress.Report(new LocalizableString("Progress_ReadingFile"));
+                progress.Report(new LocalizableString("Progress_ReadingFile", file.Name));
 
                 processingFile = file;
 
                 try
                 {
+                    if (progress.CancellationToken.IsCancellationRequested)
+                    {
+                        progress.Report(new LocalizableString("Progress_StoppingImport"));
+                        break;
+                    }
+
                     var text = File.ReadAllText(file.FullName);
 
                     Import(text, progress, null);
@@ -138,7 +146,7 @@ namespace DriveHUD.Importers
             Check.ArgumentNotNull(() => progress);
             Check.ArgumentNotNull(() => gameInfo);
 
-            if (string.IsNullOrEmpty(text))
+            if (string.IsNullOrEmpty(text) || progress.CancellationToken.IsCancellationRequested)
             {
                 return new List<ParsingResult>();
             }
@@ -166,27 +174,26 @@ namespace DriveHUD.Importers
             {
                 var hands = handHistoryParser.SplitUpMultipleHands(text).ToArray();
 
-                progress.Report(new LocalizableString("Progress_Parsing"));
-
                 var parsingResult = ParseHands(hands, handHistoryParser, gameInfo);
-
-#if DEBUG
-                var sw = new Stopwatch();
-
-                sw.Start();
-#endif
 
                 if (gameInfo.UpdateInfo != null && parsingResult.Count > 0)
                 {
                     gameInfo.UpdateInfo(parsingResult[0], gameInfo);
                 }
 
+#if DEBUG
+                var sw = new Stopwatch();
+
+                sw.Start();
+#endif            
+
                 InsertHands(parsingResult, progress, gameInfo);
 
 #if DEBUG
                 sw.Stop();
 
-                Debug.WriteLine("Import for {0}ms", sw.ElapsedMilliseconds);
+                Debug.WriteLine("DB import for {0}ms", sw.ElapsedMilliseconds);
+                LogProvider.Log.Debug($"DB import for { sw.ElapsedMilliseconds}ms");
 #endif            
 
                 return parsingResult;
@@ -322,64 +329,74 @@ namespace DriveHUD.Importers
 
             var importerSession = gameInfo != null ? gameInfo.Session : string.Empty;
 
-            try
+            // need to lock db operations to prevent deadlocks
+            lock (locker)
             {
-                parsingResult = parsingResult.ToList();
-
-                using (var session = ModelEntities.OpenStatelessSession())
+                try
                 {
-                    using (var transaction = session.BeginTransaction())
+                    parsingResult = parsingResult.ToList();
+
+                    using (var session = ModelEntities.OpenStatelessSession())
                     {
-                        var tournamentsData = new List<Tournaments>();
-
-                        var existingGames = GetExisting(session, parsingResult.Where(x => !x.IsSummary));
-                        var existingPlayers = ComposePlayers(session, parsingResult.Where(x => !x.IsSummary), gameInfo);
-
-                        for (var i = 0; i < parsingResult.Count; i++)
+                        using (var transaction = session.BeginTransaction())
                         {
-                            var handHistory = parsingResult[i];
+                            var tournamentsData = new List<Tournaments>();
 
-                            // skip error hand
-                            if (handHistory.Source.HasError)
+                            var existingGames = GetExisting(session, parsingResult.Where(x => !x.IsSummary));
+                            var existingPlayers = ComposePlayers(session, parsingResult.Where(x => !x.IsSummary), gameInfo);
+
+                            for (var i = 0; i < parsingResult.Count; i++)
                             {
-                                continue;
+                                var handHistory = parsingResult[i];
+
+                                // skip error hand
+                                if (handHistory.Source.HasError)
+                                {
+                                    continue;
+                                }
+
+                                progress.Report(new LocalizableString("Progress_UpdatingData", i + 1, parsingResult.Count, duplicates));
+
+                                // update tournament with summary data
+                                if (handHistory.IsSummary)
+                                {
+                                    InsertSummaryHand(session, handHistory, gameInfo);
+                                    continue;
+                                }
+
+                                // Check if this game was already parsed before
+                                var exist = existingGames.Any(x => x.Item1 == handHistory.HandHistory.Gamenumber && x.Item2 == handHistory.HandHistory.PokersiteId);
+
+                                if (exist)
+                                {
+                                    duplicates++;
+                                    handHistory.IsDuplicate = true;
+                                    continue;
+                                }
+
+                                existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
+
+                                InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
+
+                                if (progress.CancellationToken.IsCancellationRequested)
+                                {
+                                    progress.Report(new LocalizableString("Progress_StoppingImport"));
+                                    break;
+                                }
                             }
 
-                            progress.Report(new LocalizableString("Progress_UpdatingData", i + 1, parsingResult.Count, duplicates));
+                            ProcessTournamentData(tournamentsData, parsingResult, session);
 
-                            // update tournament with summary data
-                            if (handHistory.IsSummary)
-                            {
-                                InsertSummaryHand(session, handHistory, gameInfo);
-                                continue;
-                            }
+                            transaction.Commit();
 
-                            // Check if this game was already parsed before
-                            var exist = existingGames.Any(x => x.Item1 == handHistory.HandHistory.Gamenumber && x.Item2 == handHistory.HandHistory.PokersiteId);
-
-                            if (exist)
-                            {
-                                duplicates++;
-                                handHistory.IsDuplicate = true;
-                                continue;
-                            }
-
-                            existingGames.Add(new Tuple<long, short>(handHistory.HandHistory.Gamenumber, handHistory.HandHistory.PokersiteId));
-
-                            InsertRegularHand(session, handHistory, existingPlayers, importerSession, tournamentsData, gameInfo);
+                            parsingResult.ForEach(p => p.WasImported = true);
                         }
-
-                        ProcessTournamentData(tournamentsData, parsingResult, session);
-
-                        transaction.Commit();
-
-                        parsingResult.ForEach(p => p.WasImported = true);
                     }
                 }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, "DB error", e);
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, "DB error", e);
+                }
             }
         }
 
@@ -417,7 +434,7 @@ namespace DriveHUD.Importers
                         var isHero = handHistory.Source.Hero != null ? handHistory.Source.Hero.PlayerName.Equals(existingPlayer.Playername) : false;
 
                         playerStatCopy.SessionCode = importerSession;
-                        importSessionCacheService.AddOrUpdatePlayerStats(importerSession, new PlayerCollectionItem { Name = existingPlayer.Playername, PokerSite = (EnumPokerSites)existingPlayer.PokersiteId }, playerStatCopy, isHero);
+                        importSessionCacheService.AddOrUpdatePlayerStats(importerSession, new PlayerCollectionItem { PlayerId = existingPlayer.PlayerId, Name = existingPlayer.Playername, PokerSite = (EnumPokerSites)existingPlayer.PokersiteId }, playerStatCopy, isHero);
 
                         var hh = Converter.ToHandHistoryRecord(handHistory.Source, playerStat);
 
@@ -524,7 +541,14 @@ namespace DriveHUD.Importers
 
                 playerStat.SessionCode = session;
 
-                Task.Run(() => dataService.Store(playerStat));
+                if (string.IsNullOrEmpty(session))
+                {
+                    Task.Run(() => dataService.Store(playerStat));
+                }
+                else
+                {
+                    dataService.Store(playerStat);
+                }
 
                 return playerStat;
             }
@@ -577,11 +601,11 @@ namespace DriveHUD.Importers
         }
 
         /// <summary>
-        /// Checks which hands exist in the db from the specfied list
+        /// Checks which hands exist in the db from the specified list
         /// </summary>
         /// <param name="session">DB session</param>
         /// <param name="handHistories">Collection of hand histories</param>
-        /// <returns>Collection of existing hands. Item1 - hand humber, item2 - pokersite id</returns>
+        /// <returns>Collection of existing hands. Item1 - hand number, item2 - pokersite id</returns>
         private List<Tuple<long, short>> GetExisting(IStatelessSession session, IEnumerable<ParsingResult> handHistories)
         {
             var hhGroupedByPokersite = handHistories.GroupBy(x => x.HandHistory.PokersiteId);
@@ -614,6 +638,7 @@ namespace DriveHUD.Importers
             var playersGroupedByPokersite = playersToSelect.GroupBy(x => x.PokersiteId);
 
             Disjunction restriction = Restrictions.Disjunction();
+
             foreach (var pokersiteGroup in playersGroupedByPokersite)
             {
                 restriction.Add(Restrictions.Conjunction()
@@ -634,6 +659,7 @@ namespace DriveHUD.Importers
             var playerItemCollection = playersToAdd.Select(x =>
                 new PlayerCollectionItem()
                 {
+                    PlayerId = x.PlayerId,
                     Name = x.Playername,
                     PokerSite = (EnumPokerSites)x.PokersiteId
                 }).ToArray();
@@ -642,6 +668,16 @@ namespace DriveHUD.Importers
             gameInfo.AddedPlayers = playerItemCollection;
 
             existingPlayers.AddRange(playersToAdd);
+
+            // update id for future use
+            var playersToUpdate = (from handPlayer in existingPlayers
+                                   join handHistoryPlayer in handHistories.SelectMany(x => x.Source.Players) on handPlayer.Playername equals handHistoryPlayer.PlayerName
+                                   select new { Player = handPlayer, HandHistoryPlayer = handHistoryPlayer }).ToArray();
+
+            playersToUpdate.ForEach(x =>
+            {
+                x.HandHistoryPlayer.PlayerId = x.Player.PlayerId;
+            });
 
             return existingPlayers;
         }

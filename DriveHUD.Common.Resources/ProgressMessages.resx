@@ -129,6 +129,12 @@
   <data name="Progress_StartingImport" xml:space="preserve">
     <value>Starting import</value>
   </data>
+  <data name="Progress_Stop" xml:space="preserve">
+    <value>Stop import</value>
+  </data>
+  <data name="Progress_StoppingImport" xml:space="preserve">
+    <value>Stopping import</value>
+  </data>
   <data name="Progress_Temp" xml:space="preserve">
     <value>Progress {0} of {1}</value>
   </data>

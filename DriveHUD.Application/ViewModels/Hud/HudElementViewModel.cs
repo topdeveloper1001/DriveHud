@@ -24,6 +24,7 @@ using Model.Enums;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Resources;
 using ProtoBuf;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Application.ViewModels
 {

@@ -10,13 +10,39 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
 using DriveHUD.Common.Resources;
+using System;
+using System.Threading;
 
 namespace DriveHUD.Common.Progress
 {
     public class DHProgress : Progress<ProgressItem>, IDHProgress
     {
+        private CancellationToken cancellationToken;
+
+        public DHProgress()
+        {
+            this.cancellationToken = new CancellationToken();
+        }
+
+        public DHProgress(CancellationToken cancellationToken)
+        {
+            this.cancellationToken = cancellationToken;
+        }
+
+        public void Reset(CancellationToken cancellationToken)
+        {
+            this.cancellationToken = cancellationToken;
+        }
+
+        public CancellationToken CancellationToken
+        {
+            get
+            {
+                return cancellationToken;
+            }
+        }
+
         public virtual void Report(ILocalizableString message)
         {
             Report(message, 0);
