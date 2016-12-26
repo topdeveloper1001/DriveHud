@@ -27,5 +27,7 @@ namespace HandHistories.Parser.Parsers.Base
         PlayerList ParsePlayers(string handText);
         
         BoardCards ParseCommunityCards(string handText);
+
+        string GetTournamentIdFromFileName(string filename);
     }
 }

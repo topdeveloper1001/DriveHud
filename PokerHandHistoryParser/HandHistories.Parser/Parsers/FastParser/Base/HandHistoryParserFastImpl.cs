@@ -705,5 +705,10 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             throw new NotImplementedException("Method not defined");
         }
+
+        public virtual string GetTournamentIdFromFileName(string filename)
+        {
+            return string.Empty;
+        }
     }
 }

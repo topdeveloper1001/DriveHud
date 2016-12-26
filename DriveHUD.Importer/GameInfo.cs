@@ -52,5 +52,7 @@ namespace DriveHUD.Importers
         public Action<ParsingResult, GameInfo> UpdateInfo { get; set; }
 
         public PlayerCollectionItem[] AddedPlayers { get; set; }
+
+        public string FileName { get; set; }
     }
 }

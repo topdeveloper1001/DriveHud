@@ -147,6 +147,7 @@ namespace DriveHUD.Importers
                                 PokerSite = siteName,
                                 Session = cf.Value.Session,
                                 TournamentSpeed = ParserUtils.ParseNullableTournamentSpeed(fileName, null),
+                                FileName = fileName
                             };
 
                             LogProvider.Log.Info(string.Format("Found '{0}' file.", cf.Key));

@@ -98,7 +98,13 @@ namespace DriveHUD.Importers
 
                     var text = File.ReadAllText(file.FullName);
 
-                    Import(text, progress, null);
+                    var gameInfo = new GameInfo
+                    {
+                        PokerSite = EnumPokerSites.Unknown,
+                        FileName = file.FullName
+                    };
+
+                    Import(text, progress, gameInfo);
                 }
                 catch (DHInternalException ex)
                 {
@@ -156,7 +162,7 @@ namespace DriveHUD.Importers
             IHandHistoryParser handHistoryParser;
 
             // get suitable parser for specified hh
-            if (gameInfo != null)
+            if (gameInfo != null && gameInfo.PokerSite != EnumPokerSites.Unknown)
             {
                 handHistoryParser = handHistoryParserFactory.GetFullHandHistoryParser(gameInfo.PokerSite);
             }
@@ -166,7 +172,8 @@ namespace DriveHUD.Importers
 
                 gameInfo = new GameInfo
                 {
-                    PokerSite = handHistoryParserFactory.LastSelected
+                    PokerSite = handHistoryParserFactory.LastSelected,
+                    FileName = gameInfo?.FileName
                 };
             }
 
@@ -252,12 +259,20 @@ namespace DriveHUD.Importers
                 return null;
             }
 
-            if (parsedHand.GameDescription.IsTournament && parsedHand.GameDescription.Tournament.IsSummary)
+            if (parsedHand.GameDescription.IsTournament)
             {
-                return new ParsingResult
+                if (parsedHand.GameDescription.Tournament.IsSummary)
                 {
-                    Source = parsedHand
-                };
+                    return new ParsingResult
+                    {
+                        Source = parsedHand
+                    };
+                }
+
+                if (string.IsNullOrEmpty(parsedHand.GameDescription.Tournament.TournamentId))
+                {
+                    parsedHand.GameDescription.Tournament.TournamentId = handHistoryParser.GetTournamentIdFromFileName(gameInfo?.FileName);
+                }
             }
 
             var pokerSiteId = gameInfo != null ? (short)gameInfo.PokerSite : (short)EnumPokerSites.IPoker;
@@ -584,20 +599,6 @@ namespace DriveHUD.Importers
             };
 
             return tournaments;
-        }
-
-        /// <summary>
-        /// Check if hand exists (to do: move to model)
-        /// </summary>
-        /// <param name="session">DB session</param>
-        /// <param name="handhistory">Hand history</param>
-        /// <returns></returns>
-        private bool Exist(ISession session, ParsingResult handhistory)
-        {
-            return session.Query<Handhistory>()
-                .Any(x => x != null &&
-                    x.Gamenumber == handhistory.HandHistory.Gamenumber &&
-                    x.PokersiteId == handhistory.HandHistory.PokersiteId);
         }
 
         /// <summary>

@@ -80,13 +80,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             bool isWindowFound;
             handHistory = AddAdditionalData(handHistory, out isWindowFound);
 
-            // import only hands that we can find the open window for (until we find another way of processing tournaments)
-            if (isWindowFound)
-            {
-                return dbImporter.Import(handHistory, progress, gameInfo);
-            }
-
-            return null;
+            return dbImporter.Import(handHistory, progress, gameInfo);
         }
 
         protected override PlayerList GetPlayerList(HandHistory handHistory)
@@ -173,7 +167,14 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 return false;
             }
 
-            var isTitleMatch = GetTableName(title).Equals(tableName.Trim());
+            var tableNameStartIndex = title.IndexOf(tableName);
+
+            if (tableNameStartIndex < 0)
+            {
+                return false;
+            }
+
+            var isTitleMatch = GetTableName(title).Substring(tableNameStartIndex).Trim().Equals(tableName.Trim());
 
             if (isTitleMatch && parsingResult.GameType != null && parsingResult.GameType.Istourney && !string.IsNullOrWhiteSpace(parsingResult.HandHistory.Tourneynumber))
             {
@@ -304,7 +305,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
                 return title;
             }
 
-            return title.Substring(0, tableNameEndIndex).Trim();
+            return title.Substring(0, tableNameEndIndex);
         }
 
         private string GetTournamentNumber(string title)
