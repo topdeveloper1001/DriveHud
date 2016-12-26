@@ -103,6 +103,7 @@ namespace Model
             bool betOnTurn = playerHandActions.TurnAny(handAction => handAction.IsBet());
 
             bool isCheckedFlop = playerHandActions.FirstOrDefault(x => x.Street == Street.Flop)?.IsCheck ?? false;
+            bool isFoldedFlop = playerHandActions.FlopAny(a => a.IsFold);
 
             var positionFlopPlayer = GetInPositionPlayer(parsedHand, Street.Preflop);
             var preflopInPosition = positionFlopPlayer != null && positionFlopPlayer.PlayerName == player;
@@ -528,10 +529,10 @@ namespace Model
 
             stat.ButtonDefend = coRaise.Attempted && coRaise.Defended ? 1 : 0;
             stat.CoRaise = coRaise.Attempted ? 1 : 0;
-            stat.BetFoldFlopPfrRaiser = pfr && betOnFlop && playerFolded ? 1 : 0;
-            stat.CheckFoldFlopPfrOop = pfrOcurred && isCheckedFlop && playerFolded && !preflopInPosition ? 1 : 0;
-            stat.CheckFoldFlop3BetOop = isCheckedFlop && threeBet.Made && playerFolded && !preflopInPosition ? 1 : 0;
-            stat.BetFlopCalled3BetPreflop = betOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
+            stat.BetFoldFlopPfrRaiser = pfr && betOnFlop && isFoldedFlop ? 1 : 0;
+            stat.CheckFoldFlopPfrOop = pfr && isCheckedFlop && isFoldedFlop && !preflopInPosition ? 1 : 0;
+            stat.CheckFoldFlop3BetOop = isCheckedFlop && threeBet.Made && isFoldedFlop && !preflopInPosition ? 1 : 0;
+            stat.BetFlopCalled3BetPreflopIp = betOnFlop && threeBet.Called && preflopInPosition ? 1 : 0;
 
             #region Additional
 

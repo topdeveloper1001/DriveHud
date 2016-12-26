@@ -121,7 +121,7 @@ namespace Model.Enums
         CheckFoldFlopPfrOop,
         CheckFoldFlop3BetOop,
         BetFoldFlopPfrRaiser,
-        BetFlopCheckAfterCall3BetInPosition,
+        BetFlopCalled3BetPreflopIp,
         PFRInEP,
         PFRInMP,
         PFRInCO,

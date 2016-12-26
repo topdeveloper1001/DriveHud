@@ -316,7 +316,7 @@ namespace DriveHUD.Application.ViewModels
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.CheckFoldFlopPfrOop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckFoldFlopPfrOop) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.CheckFoldFlop3BetOop, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.CheckFoldFlop3BetOop) },
                 new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.BetFoldFlopPfrRaiser, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BetFoldFlopPfrRaiser) },
-                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.BetFlopCheckAfterCall3BetInPosition, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BetFlopCheckAfterCall3BetInPosition) },
+                new StatInfo { GroupName = "5", StatInfoGroup = statInfoGroups[4], Stat = Stat.BetFlopCalled3BetPreflopIp, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.BetFlopCalled3BetPreflopIp) },
 
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.DelayedTurnCBet, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.DidDelayedTurnCBet) },
                 new StatInfo { GroupName = "6", StatInfoGroup = statInfoGroups[5], Stat = Stat.TurnCheckRaise, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.TurnCheckRaise) },

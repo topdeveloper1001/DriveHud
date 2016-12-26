@@ -633,7 +633,7 @@ namespace DriveHUD.Entities
         public virtual int BetFoldFlopPfrRaiser { get; set; }
 
         [ProtoMember(237)]
-        public virtual int BetFlopCalled3BetPreflop { get; set; }
+        public virtual int BetFlopCalled3BetPreflopIp { get; set; }
 
         [ProtoMember(238)]
         public virtual int PfrOop { get; set; }
@@ -1002,7 +1002,7 @@ namespace DriveHUD.Entities
             CheckFoldFlopPfrOop += a.CheckFoldFlopPfrOop;
             CheckFoldFlop3BetOop += a.CheckFoldFlop3BetOop;
             BetFoldFlopPfrRaiser += a.BetFoldFlopPfrRaiser;
-            BetFlopCalled3BetPreflop += a.BetFlopCalled3BetPreflop;
+            BetFlopCalled3BetPreflopIp += a.BetFlopCalled3BetPreflopIp;
             PfrOop += a.PfrOop;
             PfrInEp += a.PfrInEp;
             PfrInMp += a.PfrInMp;
@@ -1316,7 +1316,7 @@ namespace DriveHUD.Entities
             r.CheckFoldFlopPfrOop = a.CheckFoldFlopPfrOop + b.CheckFoldFlopPfrOop;
             r.CheckFoldFlop3BetOop = a.CheckFoldFlop3BetOop + b.CheckFoldFlopPfrOop;
             r.BetFoldFlopPfrRaiser = a.BetFoldFlopPfrRaiser + b.BetFoldFlopPfrRaiser;
-            r.BetFlopCalled3BetPreflop = a.BetFlopCalled3BetPreflop + b.BetFlopCalled3BetPreflop;
+            r.BetFlopCalled3BetPreflopIp = a.BetFlopCalled3BetPreflopIp + b.BetFlopCalled3BetPreflopIp;
             r.PfrOop = a.PfrOop + b.PfrOop;
             r.PfrInEp += a.PfrInEp + b.PfrInEp;
             r.PfrInMp += a.PfrInMp + b.PfrInMp;
