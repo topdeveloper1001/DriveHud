@@ -42,6 +42,7 @@ namespace DriveHUD.Application.ViewModels
         public ICommand MakeNoteCommand { get; set; }
         public ICommand DeleteHandCommand { get; set; }
         public ICommand EditTournamentCommand { get; set; }
+        public ICommand ReportRadioButtonClickCommand { get; set; }
         #endregion
 
         #region Initialize
@@ -62,6 +63,7 @@ namespace DriveHUD.Application.ViewModels
             MakeNoteCommand = new RelayCommand(MakeNote);
             DeleteHandCommand = new RelayCommand(DeleteHand);
             EditTournamentCommand = new RelayCommand(EditTournament);
+            ReportRadioButtonClickCommand = new RelayCommand(ReportRadioButtonClick);
 
             InitializeFilter();
             UpdateReport();
@@ -174,7 +176,7 @@ namespace DriveHUD.Application.ViewModels
                               dataservice.DeletePlayerStatisticFromFile(stat);
                               StorageModel.StatisticCollection.Remove(stat);
 
-                              eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(null);
+                              eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = true });
                           }
                       });
             }
@@ -190,6 +192,11 @@ namespace DriveHUD.Application.ViewModels
                 var frm = Activator.CreateInstance(typeof(EditTournamentView), viewModel);
                 ((dynamic)frm).ShowDialog();
             }
+        }
+
+        private void ReportRadioButtonClick(object obj)
+        {
+            _eventAggregator.GetEvent<UpdateViewRequestedEvent>().Publish(new UpdateViewRequestedEventArgs { IsUpdateReportRequested = false });
         }
         #endregion
 

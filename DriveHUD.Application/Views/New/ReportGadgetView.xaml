@@ -734,57 +734,74 @@
                 <!-- Cash Columns -->
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="OverAll" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OverAll}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="Position" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Position}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="Sessions" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Session}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
 
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="Stakes" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Stake}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="Holecards" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.HoleCards}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="Time" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Time}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_ShowdownHands}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.ShowdownHands}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="Poker Site" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.PokerSite}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <!--<RadioButton Style="{StaticResource ReportRadioButton}" Content="Opponent Analysis" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.OpponentAnalysis}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowCashData, Converter={StaticResource BoolToVisibilityConverter}}" />-->
                 <!-- Tournament Columns -->
 
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Results}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentResults}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Tournaments}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.Tournaments}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Stats}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentStats}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_StackSize}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentStackSizes}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_Position}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentPosition}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_HoleCards}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentHoleCards}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_ShowdownHands}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentShowdownHands}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}" />
                 <RadioButton Style="{StaticResource ReportRadioButton}" Content="{ResX Key=Common_PokerSite}" Width="150" Height="51"
                              IsChecked="{Binding ReportSelectedItemStat, Converter={StaticResource ParameterToBoolConverter}, ConverterParameter={x:Static enums:EnumReports.TournamentPokerSite}}"
+                             Command="{Binding ReportRadioButtonClickCommand}"
                              Visibility="{Binding IsShowTournamentData, Converter={StaticResource BoolToVisibilityConverter}}"/>
                 </ListBox.Items>
             </ListBox>

@@ -9,6 +9,7 @@ namespace Model.Events
 {
     public class UpdateViewRequestedEventArgs: EventArgs
     {
+        public bool IsUpdateReportRequested { get; set; }
     }
 
     public class UpdateViewRequestedEvent : PubSubEvent<UpdateViewRequestedEventArgs>
