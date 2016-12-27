@@ -292,7 +292,7 @@ namespace DriveHUD.Application.Views
             GridLayoutSave(GridViewReport, string.Format("{0}ReportLayout.data", reportCache));
         }
 
-        private async void ReportSet(EnumReports reportType)
+        private async Task ReportSet(EnumReports reportType)
         {
             try
             {
@@ -343,10 +343,10 @@ namespace DriveHUD.Application.Views
             });
         }
 
-        private void ReportUpdate()
+        private async void ReportUpdate()
         {
             ResizeReportGrid();
-            ReportSet(reportGadgetViewModel.ReportSelectedItemStat);
+            await ReportSet(reportGadgetViewModel.ReportSelectedItemStat);
 
             ReportLayoutLoad();
         }
@@ -372,6 +372,7 @@ namespace DriveHUD.Application.Views
                     if (file != null)
                     {
                         manager.Load(gridView, file);
+                        gridView.UpdateLayout();
                     }
                 }
             }
