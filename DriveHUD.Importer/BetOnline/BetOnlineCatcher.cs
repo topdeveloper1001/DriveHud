@@ -44,6 +44,14 @@ namespace DriveHUD.Importers.BetOnline
             }
         }
 
+        protected override ImporterIdentifier Identifier
+        {
+            get
+            {
+                return ImporterIdentifier.BetOnline;
+            }
+        }
+
         #endregion 
     }
 }
