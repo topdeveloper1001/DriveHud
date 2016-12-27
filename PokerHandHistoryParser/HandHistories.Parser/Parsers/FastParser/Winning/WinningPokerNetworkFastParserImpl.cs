@@ -689,19 +689,19 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
 
             var match = regex.Match(tournamentString);
 
+            var tournamentName = RemoveTableNumber(ParseTableName(handLines));
+
             if (!match.Success)
             {
-                LogProvider.Log.Warn($"Tournament summary wasn't found: {handLines[1]}");
                 return new TournamentDescriptor()
                 {
                     BuyIn = Buyin.AllBuyin(),
-                    TournamentName = "Undefined Tournament",
-                    TournamentId = "0",
+                    TournamentName = tournamentName,
+                    TournamentId = string.Empty,
                     Speed = TournamentSpeed.Regular
                 };
             }
 
-            var tournamentName = RemoveTableNumber(ParseTableName(handLines));
             var buyIn = decimal.Parse(match.Groups["buyin"].Value, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, NumberFormatInfo);
             var rake = 0m;
 
@@ -745,6 +745,35 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
             };
 
             return tournamentDescriptor;
+        }
+
+        public override string GetTournamentIdFromFileName(string filename)
+        {
+            // HH20161226 T6837795-G38290410.txt
+            if (string.IsNullOrEmpty(filename))
+            {
+                return "0";
+            }
+
+            try
+            {
+                var file = System.IO.Path.GetFileNameWithoutExtension(filename);
+                var startIndexOfTournament = file.IndexOf("T") + 1;
+                if (startIndexOfTournament > 0)
+                {
+                    var endIndexOfTournament = file.IndexOf("-G", startIndexOfTournament);
+                    if (endIndexOfTournament > 0)
+                    {
+                        return file.Substring(startIndexOfTournament, endIndexOfTournament - startIndexOfTournament);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                LogProvider.Log.Error(this, $"Cannot get tournament id from {filename}", ex);
+            }
+
+            return "0";
         }
 
         private string RemoveTableNumber(string tableName)
@@ -1000,8 +1029,18 @@ namespace HandHistories.Parser.Parsers.FastParser.Winning
                     case 'B':
                         continue;//More posts can still occur
 
-                    //Player Aquasces1 received a card.
                     case '.':
+                        // Player wiski101 is timed out.
+                        if (line.Substring(line.Length - 4, 4).Equals("out."))
+                        {
+                            continue;//More posts can still occur
+                        }
+                        else
+                        {
+                            //Player Aquasces1 received a card.
+                            //No more posts can occur when players start reciving cards
+                            return i;
+                        }
                     //Player WP_Hero received card: [6d]
                     case ']':
                         //No more posts can occur when players start reciving cards

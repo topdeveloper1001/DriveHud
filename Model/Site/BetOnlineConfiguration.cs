@@ -25,7 +25,7 @@ namespace Model.Site
         public BetOnlineConfiguration()
         {
             prefferedSeat = new Dictionary<int, int>();
-
+            
             tableTypes = new EnumTableType[]
             {
                 EnumTableType.HU,
@@ -33,6 +33,7 @@ namespace Model.Site
                 EnumTableType.Four,
                 EnumTableType.Six,
                 EnumTableType.Eight,
+                EnumTableType.Nine,
                 EnumTableType.Ten
             };
 

@@ -32,6 +32,7 @@ using System.Diagnostics;
 using System.Collections.ObjectModel;
 using DriveHUD.Importers;
 using DriveHUD.Common.Wpf.Actions;
+using System.Reactive.Linq;
 
 namespace DriveHUD.Application.ViewModels.Registration
 {
@@ -101,7 +102,7 @@ namespace DriveHUD.Application.ViewModels.Registration
 
         private void InitializeCommands()
         {
-            var canSend = this.WhenAny(x1 => x1.Email, x2 => x2.CaptchaText, (x1, x2) => Utils.IsValidEmail(x1.Value) && (IsCaptchaVisible && !string.IsNullOrWhiteSpace(x2.Value) || !IsCaptchaVisible));
+            var canSend = this.WhenAny(x1 => x1.Email, x2 => x2.CaptchaText, (x1, x2) => Utils.IsValidEmail(x1.Value) && (IsCaptchaVisible && !string.IsNullOrWhiteSpace(x2.Value) || !IsCaptchaVisible));         
 
             SendCommand = ReactiveCommand.Create(canSend);
             SendCommand.Subscribe(x => Send());

@@ -134,6 +134,7 @@ namespace DriveHUD.Importers
                                 filesToSkip.Add(cf.Key);
                                 fs.Close();
 
+                                LogProvider.Log.Warn($"Cannot find parser  for hand: {handText}");
                                 LogProvider.Log.Warn(string.Format("File '{0}' has bad format. Skipped.", cf.Key));
 
                                 return;
@@ -146,6 +147,7 @@ namespace DriveHUD.Importers
                                 PokerSite = siteName,
                                 Session = cf.Value.Session,
                                 TournamentSpeed = ParserUtils.ParseNullableTournamentSpeed(fileName, null),
+                                FileName = fileName
                             };
 
                             LogProvider.Log.Info(string.Format("Found '{0}' file.", cf.Key));

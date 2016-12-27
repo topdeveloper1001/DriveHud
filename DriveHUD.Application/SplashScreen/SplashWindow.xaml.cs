@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using System.Windows;
 using System.Windows.Threading;
 
@@ -25,10 +26,24 @@ namespace DriveHUD.Application.SplashScreen
             InitializeComponent();
         }
 
+        SplashWindowViewModel ISplashScreen.DataContext
+        {
+            get
+            {
+                return DataContext as SplashWindowViewModel;
+            }
+            set
+            {
+                DataContext = value;
+            }
+        }
+
         public void CloseSplashScreen()
         {
             Dispatcher.Invoke(() => Close());
             Dispatcher.InvokeShutdown();
+
+            App.SplashScreen = null;
         }
     }
 }

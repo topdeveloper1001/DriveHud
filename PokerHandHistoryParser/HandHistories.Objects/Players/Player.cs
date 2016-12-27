@@ -10,6 +10,8 @@ namespace HandHistories.Objects.Players
     [Serializable]
     public class Player
     {
+        [DataMember]
+        public int PlayerId { get; set; }
         [XmlAttribute]
         public string PlayerName { get; set; }
 

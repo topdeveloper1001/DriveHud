@@ -180,7 +180,10 @@ namespace DriveHUD.Application.ViewModels.Hud
             "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BCP.xml",
             "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-BCP.xml",
             "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-BCP.xml"
+            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-BCP.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-BOL.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-BOL.xml",
+            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-BOL.xml",
         };
 
         #endregion

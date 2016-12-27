@@ -23,21 +23,27 @@ namespace Model.Settings
         private readonly string _settingsFolder;
         private string _settingsFile;
         private SettingsModel _settingsModel;
+        private bool _skipFileCreation;
 
         #region Constructor
 
-        public SettingsService(string settingsFolder)
+        public SettingsService(string settingsFolder, bool skipFileCreation)
         {
             _settingsFolder = settingsFolder;
+            _skipFileCreation = skipFileCreation;
 
             Initialize();
+        }
+
+        public SettingsService(string settingsFolder) : this(settingsFolder, false)
+        {
         }
 
         private void Initialize()
         {
             try
             {
-                if (!Directory.Exists(_settingsFolder))
+                if (!Directory.Exists(_settingsFolder) && !_skipFileCreation)
                 {
                     Directory.CreateDirectory(_settingsFolder);
                 }
@@ -98,6 +104,11 @@ namespace Model.Settings
             using (rwlock.Write())
             {
                 _settingsModel = (SettingsModel)settings.Clone();
+
+                if (_skipFileCreation)
+                {
+                    return;
+                }
 
                 try
                 {

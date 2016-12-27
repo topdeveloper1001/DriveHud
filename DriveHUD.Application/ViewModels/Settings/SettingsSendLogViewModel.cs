@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using Model;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {
@@ -89,7 +90,7 @@ namespace DriveHUD.Application.ViewModels.Settings
             {
                 IsSending = true;
 
-                using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, attachLogs: true))
+                using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, AppDomain.CurrentDomain.BaseDirectory, StringFormatter.GetAppDataFolderPath()))
                 using (var client = SmtpClientHelper.GetSmtpClient())
                 {
                     await client.SendMailAsync(message);

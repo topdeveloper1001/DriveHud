@@ -13,8 +13,10 @@
 using DHCRegistration;
 using DHHRegistration;
 using DHORegistration;
+using DriveHUD.Application.Bootstrappers;
 using DriveHUD.Application.HudServices;
 using DriveHUD.Application.Licensing;
+using DriveHUD.Application.Migrations;
 using DriveHUD.Application.MigrationService;
 using DriveHUD.Application.Security;
 using DriveHUD.Application.Surrogates;
@@ -24,14 +26,12 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Application.ViewModels.Replayer;
-using DriveHUD.Application.Views;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Security;
 using DriveHUD.Common.Utils;
 using DriveHUD.Entities;
 using DriveHUD.Importers;
 using DriveHUD.Importers.BetOnline;
-using HandHistories.Parser.Parsers;
 using HandHistories.Parser.Parsers.Factory;
 using Microsoft.Practices.ServiceLocation;
 using Microsoft.Practices.Unity;
@@ -55,8 +55,6 @@ namespace DriveHUD.Application
     {
         private MainWindowViewModel mainWindowViewModel;
 
-        private ConfigurePostgresqlServerViewModel configViewModel;
-        private ConfigurePostgresqlServer configWindow;
         private bool isLicenseValid;
 
         protected override DependencyObject CreateShell()
@@ -91,9 +89,10 @@ namespace DriveHUD.Application
 
             ImporterBootstrapper.ConfigureImporterService();
 
-            configViewModel = new ConfigurePostgresqlServerViewModel();
-            configViewModel.AfterConnectAction += ShowMainWindow;
-            configViewModel.ConnectCommand.Execute(null);
+            var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
+            sqliteBootstrapper.InitializeDatabase();            
+
+            ShowMainWindow();
         }
 
         private void ShowMainWindow()
@@ -101,63 +100,49 @@ namespace DriveHUD.Application
             LogProvider.Log.Info($"Screen: {Utils.GetScreenResolution()}");
             LogProvider.Log.Info($"Dpi: {Utils.GetCurrentDpi()}");
 
-            if (ConfigurePostgresqlServerViewModel.IsConnected)
+            if (IsUninstall())
             {
-                if (IsUninstall())
-                {
-                    LogProvider.Log.Info(this, "Uninstalling all user's data...");
-                    DataRemoverViewModel dr = new DataRemoverViewModel();
-                    dr.UninstallCommand.Execute(null);
-                }
-                else
-                {
-                    mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
-                    ((RadWindow)this.Shell).DataContext = mainWindowViewModel;
-
-                    ((RadWindow)this.Shell).Activated += MainWindow_Activated;
-
-                    ((RadWindow)this.Shell).IsTopmost = true;
-                    ((RadWindow)this.Shell).Show();
-                    ((RadWindow)this.Shell).IsTopmost = false;
-
-                    App.SplashScreen.CloseSplashScreen();
-
-                    var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
-
-                    if (!isLicenseValid || licenseService.IsTrial || licenseService.IsExpiringSoon || licenseService.IsExpired)
-                    {
-                        var registrationViewModel = new RegistrationViewModel(false);
-                        mainWindowViewModel.RegistrationViewRequest.Raise(registrationViewModel);
-                        mainWindowViewModel.UpdateHeader();
-                    }
-
-                    if (!licenseService.IsRegistered)
-                    {
-#if !DEBUG
-                         System.Windows.Application.Current.Shutdown();
-#endif
-                    }
-
-                    mainWindowViewModel.IsTrial = licenseService.IsTrial;
-                    mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
-
-                    mainWindowViewModel.IsActive = true;
-
-                    mainWindowViewModel.StartHud(false);
-
-                    ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
-                }
+                LogProvider.Log.Info(this, "Uninstalling all user's data...");
+                DataRemoverViewModel dr = new DataRemoverViewModel();
+                dr.UninstallCommand.Execute(null);
             }
             else
             {
-                if (configWindow == null)
-                {
-                    configWindow = new ConfigurePostgresqlServer(configViewModel);
-                }
+                mainWindowViewModel = new MainWindowViewModel(SynchronizationContext.Current);
+                ((RadWindow)this.Shell).DataContext = mainWindowViewModel;
 
-                configWindow.Show();
+                ((RadWindow)this.Shell).Activated += MainWindow_Activated;
+
+                ((RadWindow)this.Shell).IsTopmost = true;
+                ((RadWindow)this.Shell).Show();
+                ((RadWindow)this.Shell).IsTopmost = false;
 
                 App.SplashScreen.CloseSplashScreen();
+
+                var licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
+
+                if (!isLicenseValid || licenseService.IsTrial || licenseService.IsExpiringSoon || licenseService.IsExpired)
+                {
+                    var registrationViewModel = new RegistrationViewModel(false);
+                    mainWindowViewModel.RegistrationViewRequest.Raise(registrationViewModel);
+                    mainWindowViewModel.UpdateHeader();
+                }
+
+                if (!licenseService.IsRegistered)
+                {
+#if !DEBUG
+                         System.Windows.Application.Current.Shutdown();
+#endif
+                }
+
+                mainWindowViewModel.IsTrial = licenseService.IsTrial;
+                mainWindowViewModel.IsUpgradable = licenseService.IsUpgradable;
+
+                mainWindowViewModel.IsActive = true;
+
+                mainWindowViewModel.StartHud(false);
+
+                ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
             }
         }
 
@@ -201,7 +186,8 @@ namespace DriveHUD.Application
 
             Container.RegisterType<SingletonStorageModel>(new ContainerControlledLifetimeManager());
 
-            RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);            
+            RegisterTypeIfMissing(typeof(ISQLiteBootstrapper), typeof(SQLiteBootstrapper), false);
+            RegisterTypeIfMissing(typeof(IDataService), typeof(DataService), true);
             RegisterTypeIfMissing(typeof(ISiteConfigurationService), typeof(SiteConfigurationService), true);
             RegisterTypeIfMissing(typeof(IHandHistoryParserFactory), typeof(HandHistoryParserFactoryImpl), false);
             RegisterTypeIfMissing(typeof(ILicenseService), typeof(LicenseService), true);
@@ -211,10 +197,13 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
             RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
             RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
-            RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
-            RegisterTypeIfMissing(typeof(IMigrationService), typeof(MigrationService.MigrationService), false);
+            RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);            
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
+
+            // Migration
+            Container.RegisterType<IMigrationService, SQLiteMigrationService>(DatabaseType.SQLite.ToString());
+            Container.RegisterType<IMigrationService, PostgresMigrationService>(DatabaseType.PostgreSQL.ToString());
 
             // Filters Save/Load service
             Container.RegisterType<IFilterDataService, FilterDataService>(new ContainerControlledLifetimeManager(), new InjectionConstructor(StringFormatter.GetAppDataFolderPath()));

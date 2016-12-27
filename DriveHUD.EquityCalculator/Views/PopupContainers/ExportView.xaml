@@ -19,8 +19,8 @@
         
         <UniformGrid Margin="5 10" Columns="3" HorizontalAlignment="Stretch">
             <Button Grid.Column="0" Command="{Binding ExportECCommand}" Content="{ResX Key=Common_Export_EC}" Margin="10" />
-            <Button Grid.Column="1" Command="{Binding ExportBothCommand}"  Content="{ResX Key=Common_Export_Both}"  Margin="10" />
-            <Button Grid.Column="2" Command="{Binding ExportHHCommand}" Content="{ResX Key=Common_Export_HH}"  Margin="10"/>
+            <Button Grid.Column="1" Command="{Binding ExportBothCommand}" IsEnabled="{Binding IsHHExportEnabled}"  Content="{ResX Key=Common_Export_Both}"  Margin="10" />
+            <Button Grid.Column="2" Command="{Binding ExportHHCommand}" IsEnabled="{Binding IsHHExportEnabled}" Content="{ResX Key=Common_Export_HH}"  Margin="10"/>
         </UniformGrid>
 
         <Separator/>

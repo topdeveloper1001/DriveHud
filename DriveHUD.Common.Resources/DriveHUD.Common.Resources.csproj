@@ -141,6 +141,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>SystemSettings.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Database\drivehud.db" />
     <None Include="Properties\Settings.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -858,6 +859,14 @@
     <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-OH-BCP.xml" />
     <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-BCP.xml" />
     <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-OH-BCP.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-MTT-Basic-OH-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-BOL.xml" />
+    <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-OH-BOL.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

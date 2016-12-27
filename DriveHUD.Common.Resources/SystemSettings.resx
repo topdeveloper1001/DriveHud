@@ -129,6 +129,9 @@
   <data name="SystemSettings_DefaultPlayersFolderName" xml:space="preserve">
     <value>Players</value>
   </data>
+  <data name="SystemSettings_DefaultPlayerStatisticFolderName" xml:space="preserve">
+    <value>Database</value>
+  </data>
   <data name="SystemSettings_ForumsLink" xml:space="preserve">
     <value>http://drivehud.com/blog/forums/</value>
   </data>
@@ -160,5 +163,8 @@
   </data>
   <data name="SystemSettings_TargetDatabaseVersion" xml:space="preserve">
     <value>9.5.3</value>
+  </data>
+  <data name="SystemSettings_DbFileName" xml:space="preserve">
+    <value>drivehud.db</value>
   </data>
 </root>

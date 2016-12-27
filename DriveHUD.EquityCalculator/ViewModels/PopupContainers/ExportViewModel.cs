@@ -48,7 +48,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                     this._notification = value as ExportNotification;
                     this.PlayersList = this._notification.PlayersList;
                     this.BoardCards = this._notification.BoardCards;
-                    this.CurrentHandHistory = this._notification.CurrentHandHistory;                    
+                    this.CurrentHandHistory = this._notification.CurrentHandHistory;
                 }
             }
         }
@@ -65,7 +65,6 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 _playersList = value;
             }
         }
-
 
         public IEnumerable<CardModel> BoardCards
         {
@@ -90,6 +89,15 @@ namespace DriveHUD.EquityCalculator.ViewModels
             set
             {
                 _currentHandHistory = value;
+                OnPropertyChanged(nameof(IsHHExportEnabled));
+            }
+        }
+
+        public bool IsHHExportEnabled
+        {
+            get
+            {
+                return _currentHandHistory != null;
             }
         }
 

@@ -115,8 +115,8 @@ namespace DriveHUD.Application.ViewModels
             MenuItemPopupFilter_CommandClick = new RelayCommand(new Action<object>(MenuItemPopupFilter_OnClick));
 
             PurgeCommand = new RelayCommand(Purge);
-            ImportFromFileCommand = new RelayCommand(ImportFromFile);
-            ImportFromDirectoryCommand = new RelayCommand(ImportFromDirectory);
+            ImportFromFileCommand = new DelegateCommand(x => ImportFromFile(), x => !isManualImportingRunning);
+            ImportFromDirectoryCommand = new DelegateCommand(x => ImportFromDirectory(), x => !isManualImportingRunning);
             SupportCommand = new RelayCommand(ShowSupportView);
             StartHudCommand = new RelayCommand(() => StartHud(false));
             StopHudCommand = new RelayCommand(() => StopHud(false));
@@ -224,10 +224,14 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void UpdateCurrentView(EventArgs args)
+        private void UpdateCurrentView(UpdateViewRequestedEventArgs args)
         {
             UpdateCurrentView();
-            ReportGadgetViewModel?.UpdateReport();
+
+            if (args != null && args.IsUpdateReportRequested)
+            {
+                ReportGadgetViewModel?.UpdateReport();
+            }
         }
 
         private void UpdateCurrentView()
@@ -259,7 +263,10 @@ namespace DriveHUD.Application.ViewModels
                 return;
             }
 
-            UpdateCurrentView();
+            if (gameInfo == null)
+            {
+                UpdateCurrentView();
+            }
         }
 
         private void OnDataImported(DataImportedEventArgs e)
@@ -275,6 +282,7 @@ namespace DriveHUD.Application.ViewModels
                 var refreshTime = sw.ElapsedMilliseconds;
 
                 Debug.WriteLine("RefreshData {0} ms", refreshTime);
+                LogProvider.Log.Debug($"RefreshData { sw.ElapsedMilliseconds} ms");
 
                 sw.Restart();
 
@@ -333,7 +341,7 @@ namespace DriveHUD.Application.ViewModels
                             {
                                 playerName = player.PlayerName;
                                 seatNumber = player.SeatNumber;
-                                playerCollectionItem = new PlayerCollectionItem { Name = player.PlayerName, PokerSite = site };
+                                playerCollectionItem = new PlayerCollectionItem { PlayerId = player.PlayerId, Name = player.PlayerName, PokerSite = site };
                             }
 
                             break;
@@ -350,7 +358,7 @@ namespace DriveHUD.Application.ViewModels
                         Name = playerName,
                         SeatNumber = seatNumber
                     };
-                    
+
                     var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
                     var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerCollectionItem);
                     var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);
@@ -543,6 +551,20 @@ namespace DriveHUD.Application.ViewModels
                         LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
                     }
                 }
+                if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name) ||
+                    string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.DecodedName) ||
+                    StorageModel.PlayerSelectedItem.PokerSite == EnumPokerSites.Unknown)
+                {
+                    System.Windows.Application.Current.Dispatcher.BeginInvoke((Action)delegate
+                   {
+                       this.NotificationRequest.Raise(
+                           new PopupActionNotification
+                           {
+                               Content = "Please, set Player ID in order to see data.",
+                               Title = "DriveHUD",
+                           }, n => { });
+                   });
+                }
             }
             catch (Exception ex)
             {
@@ -565,6 +587,8 @@ namespace DriveHUD.Application.ViewModels
 
             var fileImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
 
+            IsManualImportingRunning = true;
+
             await Task.Run(() =>
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
@@ -572,6 +596,8 @@ namespace DriveHUD.Application.ViewModels
             });
 
             ProgressViewModel.IsActive = false;
+            IsManualImportingRunning = false;
+            ProgressViewModel.Reset();
 
             CreatePositionReport();
         }
@@ -599,6 +625,8 @@ namespace DriveHUD.Application.ViewModels
 
             var fileImporter = ServiceLocator.Current.GetInstance<IFileImporter>();
 
+            IsManualImportingRunning = true;
+
             await Task.Factory.StartNew(() =>
             {
                 fileImporter.Import(filesToImport, ProgressViewModel.Progress);
@@ -606,8 +634,16 @@ namespace DriveHUD.Application.ViewModels
             });
 
             ProgressViewModel.IsActive = false;
+            IsManualImportingRunning = false;
+            ProgressViewModel.Reset();
 
             CreatePositionReport();
+        }
+
+        private void RefreshCommandsCanExecute()
+        {
+            (ImportFromFileCommand as DelegateCommand)?.InvalidateCanExecute();
+            (ImportFromDirectoryCommand as DelegateCommand)?.InvalidateCanExecute();
         }
 
         private void ShowSupportView()
@@ -827,6 +863,22 @@ namespace DriveHUD.Application.ViewModels
             {
                 isUpgradable = value;
                 OnPropertyChanged();
+            }
+        }
+
+        private bool isManualImportingRunning = false;
+
+        public bool IsManualImportingRunning
+        {
+            get
+            {
+                return isManualImportingRunning;
+            }
+            private set
+            {
+                isManualImportingRunning = value;
+                OnPropertyChanged();
+                RefreshCommandsCanExecute();
             }
         }
 

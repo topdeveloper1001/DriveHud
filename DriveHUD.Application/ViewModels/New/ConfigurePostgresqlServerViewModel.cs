@@ -486,7 +486,7 @@ namespace DriveHUD.Application.ViewModels
 
         private void RunMigrator(string connectionString)
         {
-            LogProvider.Log.Debug("Run Migrator");
+            LogProvider.Log.Debug("Run Migration Service");
 
             ServiceLocator.Current.GetInstance<IMigrationService>().MigrateToLatest(connectionString);
 

@@ -60,6 +60,9 @@ namespace DriveHUD.Application.HudServices
 
                 hudClient = BuildClientProcess();
                 hudClient.Start();
+
+                Task.Delay(5000).Wait();
+
                 StartPipe();
 
                 isInitialized = true;

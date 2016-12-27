@@ -12,7 +12,10 @@
 
 using DriveHUD.Common.Progress;
 using ReactiveUI;
+using System;
+using System.Reactive.Linq;
 using System.Globalization;
+using System.Threading;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -21,12 +24,28 @@ namespace DriveHUD.Application.ViewModels
     /// </summary>
     public class ProgressViewModel : ViewModelBase, IProgressViewModel
     {
+        private CancellationTokenSource cancellationTokerSource;
+
         private DHProgress progress;
 
         public ProgressViewModel()
         {
-            progress = new DHProgress();
+            cancellationTokerSource = new CancellationTokenSource();
+
+            progress = new DHProgress(cancellationTokerSource.Token);
             progress.ProgressChanged += OnProgressChanged;
+
+            StopCommand = ReactiveCommand.Create();
+            StopCommand.Subscribe(x => Stop());
+        }
+
+        public void Reset()
+        {
+            if (progress != null)
+            {
+                cancellationTokerSource = new CancellationTokenSource();
+                progress.Reset(cancellationTokerSource.Token);
+            }
         }
 
         #region Properties        
@@ -73,20 +92,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private bool isActive;
-
-        public bool IsActive
-        {
-            get
-            {
-                return isActive;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref isActive, value);
-            }
-        }
-
         private string text;
 
         public string Text
@@ -111,6 +116,12 @@ namespace DriveHUD.Application.ViewModels
 
         #endregion
 
+        #region Commands
+
+        public ReactiveCommand<object> StopCommand { get; private set; }
+
+        #endregion
+
         #region Infrastructure
 
         private void OnProgressChanged(object sender, ProgressItem e)
@@ -127,6 +138,14 @@ namespace DriveHUD.Application.ViewModels
 
             Text = e.Message.ToString(CultureInfo.CurrentUICulture);
             ProgressValue = e.ProgressValue;
+        }
+
+        private void Stop()
+        {
+            if (cancellationTokerSource != null && !cancellationTokerSource.IsCancellationRequested)
+            {
+                cancellationTokerSource.Cancel();
+            }
         }
 
         #endregion
