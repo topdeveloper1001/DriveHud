@@ -558,9 +558,9 @@ namespace DriveHUD.Common.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Bets flop when X to in 3-bet pot IP.
         /// </summary>
-        internal static string Enum_Stat_BetFlopCheckAfterCall3BetInPosition {
+        internal static string Enum_Stat_BetFlopCalled3BetPreflopIp {
             get {
-                return ResourceManager.GetString("Enum_Stat_BetFlopCheckAfterCall3BetInPosition", resourceCulture);
+                return ResourceManager.GetString("Enum_Stat_BetFlopCalled3BetPreflopIp", resourceCulture);
             }
         }
         

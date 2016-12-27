@@ -566,7 +566,7 @@
   <data name="Enum_Stat_BetFoldFlopPfrRaiser" xml:space="preserve">
     <value>Bet/fold flop when PFR raiser</value>
   </data>
-  <data name="Enum_Stat_BetFlopCheckAfterCall3BetInPosition" xml:space="preserve">
+  <data name="Enum_Stat_BetFlopCalled3BetPreflopIp" xml:space="preserve">
     <value>Bets flop when X to in 3-bet pot IP</value>
   </data>
   <data name="Enum_HudViewType_Plain" xml:space="preserve">
