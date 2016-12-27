@@ -904,6 +904,71 @@ namespace Model.Data
             }
         }
 
+        public virtual StatDto BTNDefendCORaiseObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BTNDefendCORaise,
+                    Occured = Source.Buttonstealdefended,
+                    CouldOccured = Source.Buttonstealfaced
+                };
+            }
+        }
+
+        public virtual StatDto BetFlopCalled3BetPreflopIpObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetFlopCalled3BetPreflopIp,
+                    Occured = Source.BetFlopCalled3BetPreflopIp,
+                    CouldOccured = Source.Totalhands
+                };
+            }
+        }
+
+        public virtual StatDto BetFoldFlopPfrRaiserObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = BetFoldFlopPfrRaiser,
+                    Occured = Source.BetFoldFlopPfrRaiser,
+                    CouldOccured = Source.Pfrhands
+                };
+            }
+        }
+
+        public virtual StatDto CheckFoldFlop3BetOopObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFoldFlop3BetOop,
+                    Occured = Source.CheckFoldFlop3BetOop,
+                    CouldOccured = Source.DidThreeBetOop
+                };
+            }
+        }
+
+        public virtual StatDto CheckFoldFlopPfrOopObject
+        {
+            get
+            {
+                return new StatDto
+                {
+                    Value = CheckFoldFlopPfrOop,
+                    Occured = Source.CheckFoldFlopPfrOop,
+                    CouldOccured = Source.PfrOop
+                };
+            }
+        }
+
         #region Limp
 
         public virtual StatDto DidLimpObject

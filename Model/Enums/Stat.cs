@@ -116,6 +116,17 @@ namespace Model.Enums
         FlopCBetMonotone,
         FlopCBetRag,
         FoldToCBetFromThreeBetPot,
-        FoldToCBetFromFourBetPot
+        FoldToCBetFromFourBetPot,
+        BTNDefendCORaise,
+        CheckFoldFlopPfrOop,
+        CheckFoldFlop3BetOop,
+        BetFoldFlopPfrRaiser,
+        BetFlopCalled3BetPreflopIp,
+        PFRInEP,
+        PFRInMP,
+        PFRInCO,
+        PFRInBTN,
+        PFRInBB,
+        PFRInSB
     }
 }
