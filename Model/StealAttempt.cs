@@ -1,10 +1,12 @@
 ﻿namespace Model
 {
     /// <summary>
-    /// Entity that discribes player reaction to steal attempt
+    /// Entity that discribes player reaction to steal attempt or steal possibility
     /// </summary>
     public class StealAttempt
     {
+        public bool Possible { get; set; }
+
         public bool Attempted { get; set; }
 
         public bool Defended { get; set; }

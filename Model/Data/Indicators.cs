@@ -818,7 +818,13 @@ namespace Model.Data
         public virtual decimal CheckFoldFlop3BetOop => GetPercentage(Source.CheckFoldFlop3BetOop, Source.DidThreeBetOop);
         public virtual decimal BetFoldFlopPfrRaiser => GetPercentage(Source.BetFoldFlopPfrRaiser, Source.Pfrhands);
         public virtual decimal BetFlopCalled3BetPreflopIp => GetPercentage(Source.BetFlopCalled3BetPreflopIp, TotalHands);
-        public virtual decimal BTNDefendCORaise => GetPercentage(Source.ButtonDefend, Source.CoRaise);
+        public virtual decimal BTNDefendCORaise
+        {
+            get
+            {
+                return GetPercentage(Source.Buttonstealdefended, Source.Buttonstealfaced);
+            }
+        }
 
         public virtual string GameType { get; set; }
         public virtual string PokerSite

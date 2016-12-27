@@ -211,26 +211,15 @@ namespace Model
 
             #region Steal
 
-            StealAttempt stealBBAtempt = new StealAttempt();
-            StealAttempt stealSBAtempt = new StealAttempt();
-            StealAttempt coRaise = new StealAttempt();
-            ConditionalBet stealBet = new ConditionalBet();
-            ConditionalBet threeBetVsSteal = new ConditionalBet();
-            
-            CalculateSteal(stealBet, parsedHand, player);
-            Calculate3BetVsSteal(threeBetVsSteal, parsedHand, player);
+            StealAttempt stealAttempt = new StealAttempt();
+
             // First big blind action is from player who is actually on BB spot, next actions are from players that joined game and payer BB
-            var bigBlind = parsedHand.HandActions.Any(x => x.PlayerName == player && x.HandActionType == HandActionType.BIG_BLIND);
-            if (bigBlind)
-                CalculateBigBlindSteal(stealBBAtempt, parsedHand, player);
+            var isBigBlind = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.BIG_BLIND)?.PlayerName == player;
+            var isSmallBlind = parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName == player;
+            var isDealer = GetDealerPlayer(parsedHand)?.PlayerName == player;
 
-            var smallBlind = parsedHand.HandActions.Any(x => x.PlayerName == player && x.HandActionType == HandActionType.SMALL_BLIND);
-            if (smallBlind)
-                CalculateSmallBlindSteal(stealSBAtempt, parsedHand, player);
+            CalculateSteal(stealAttempt, parsedHand, player);
 
-            var isOnButton = GetDealerPlayer(parsedHand).PlayerName == player;
-            if (isOnButton)
-                CalculateCoRaise(coRaise, parsedHand, player);
             #endregion
 
             #region Cold Call
@@ -307,8 +296,8 @@ namespace Model
             {
                 stat.Ante = Math.Abs(parsedHand.GameDescription.Limit.Ante);
             }
-            stat.IsSmallBlind = smallBlind;
-            stat.IsBigBlind = bigBlind;
+            stat.IsSmallBlind = isSmallBlind;
+            stat.IsBigBlind = isBigBlind;
             stat.IsCutoff = cutoff != null && cutoff.PlayerName == player;
             stat.IsDealer = dealer != null && dealer.PlayerName == player;
 
@@ -395,18 +384,23 @@ namespace Model
                 stat.Totalrakeincents = 0;
             }
 
-            stat.Bigblindstealfaced = stealBBAtempt.Faced ? 1 : 0;
-            stat.Bigblindstealdefended = stealBBAtempt.Defended ? 1 : 0;
-            stat.Bigblindstealfolded = stealBBAtempt.Folded ? 1 : 0;
-            stat.Bigblindstealreraised = stealBBAtempt.Raised ? 1 : 0;
+            stat.Buttonstealfaced = isDealer && stealAttempt.Faced ? 1 : 0;
+            stat.Buttonstealdefended = isDealer && stealAttempt.Defended ? 1 : 0;
+            stat.Buttonstealfolded = isDealer && stealAttempt.Folded ? 1 : 0;
+            stat.Buttonstealreraised = isDealer && stealAttempt.Raised ? 1 : 0;
 
-            stat.Smallblindstealfaced = stealSBAtempt.Faced ? 1 : 0;
-            stat.Smallblindstealattempted = stealSBAtempt.Attempted ? 1 : 0;
-            stat.Smallblindstealdefended = stealSBAtempt.Defended ? 1 : 0;
-            stat.Smallblindstealfolded = stealSBAtempt.Folded ? 1 : 0;
-            stat.Smallblindstealreraised = stealSBAtempt.Raised ? 1 : 0;
+            stat.Bigblindstealfaced = isBigBlind && stealAttempt.Faced ? 1 : 0;
+            stat.Bigblindstealdefended = isBigBlind && stealAttempt.Defended ? 1 : 0;
+            stat.Bigblindstealfolded = isBigBlind && stealAttempt.Folded ? 1 : 0;
+            stat.Bigblindstealreraised = isBigBlind && stealAttempt.Raised ? 1 : 0;
 
-            stat.BlindsStealDefended = stealSBAtempt.Defended || stealBBAtempt.Defended ? 1 : 0;
+            stat.Smallblindstealfaced = isSmallBlind && stealAttempt.Faced ? 1 : 0;
+            stat.Smallblindstealattempted = isSmallBlind && stealAttempt.Attempted ? 1 : 0;
+            stat.Smallblindstealdefended = isSmallBlind && stealAttempt.Defended ? 1 : 0;
+            stat.Smallblindstealfolded = isSmallBlind && stealAttempt.Folded ? 1 : 0;
+            stat.Smallblindstealreraised = isSmallBlind && stealAttempt.Raised ? 1 : 0;
+
+            stat.BlindsStealDefended = stealAttempt.Defended && (isSmallBlind || isBigBlind) ? 1 : 0;
 
             stat.Flopcontinuationbetpossible = flopCBet.Possible ? 1 : 0;
             stat.Flopcontinuationbetmade = flopCBet.Made ? 1 : 0;
@@ -527,8 +521,6 @@ namespace Model
             stat.LimpFolded = limp.Folded ? 1 : 0;
             stat.LimpReraised = limp.Raised ? 1 : 0;
 
-            stat.ButtonDefend = coRaise.Attempted && coRaise.Defended ? 1 : 0;
-            stat.CoRaise = coRaise.Attempted ? 1 : 0;
             stat.BetFoldFlopPfrRaiser = pfr && betOnFlop && isFoldedFlop ? 1 : 0;
             stat.CheckFoldFlopPfrOop = pfr && isCheckedFlop && isFoldedFlop && !preflopInPosition ? 1 : 0;
             stat.CheckFoldFlop3BetOop = isCheckedFlop && threeBet.Made && isFoldedFlop && !preflopInPosition ? 1 : 0;
@@ -582,11 +574,11 @@ namespace Model
             stat.DidfourbetBluff = (stat.Didfourbet != 0) && isBluffPreflop ? 1 : 0;
             stat.DidFourBetBluffInBtn = (stat.DidFourBetInBtn != 0) && isBluffPreflop ? 1 : 0;
 
-            stat.StealPossible = stealBet.Possible ? 1 : 0;
-            stat.StealMade = stealBet.Made ? 1 : 0;
+            stat.StealPossible = stealAttempt.Possible ? 1 : 0;
+            stat.StealMade = stealAttempt.Attempted ? 1 : 0;
 
-            stat.CouldThreeBetVsSteal = threeBetVsSteal.Possible ? 1 : 0;
-            stat.DidThreeBetVsSteal = threeBetVsSteal.Made ? 1 : 0;
+            stat.CouldThreeBetVsSteal = stealAttempt.Faced ? 1 : 0;
+            stat.DidThreeBetVsSteal = stealAttempt.Raised ? 1 : 0;
 
             stat.PlayerFolded = playerFolded;
 
@@ -829,13 +821,8 @@ namespace Model
             }
         }
 
-        private static void CalculateSmallBlindSteal(StealAttempt stealSbAtempt, HandHistory parsedHand, string player)
+        private static void CalculateSteal(StealAttempt stealAttempt, HandHistory parsedHand, string player)
         {
-            if (parsedHand.PreFlop.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName != player)
-            {
-                return;
-            }
-
             var stealers = new List<string>();
 
             stealers.Add(GetCutOffPlayer(parsedHand)?.PlayerName);
@@ -849,10 +836,10 @@ namespace Model
                 {
                     if (action.PlayerName == player)
                     {
-                        stealSbAtempt.Faced = true;
-                        stealSbAtempt.Defended = action.IsCall || action.IsRaise();
-                        stealSbAtempt.Raised = action.IsRaise();
-                        stealSbAtempt.Folded = action.IsFold;
+                        stealAttempt.Faced = true;
+                        stealAttempt.Defended = action.IsCall() || action.IsRaise();
+                        stealAttempt.Raised = action.IsRaise();
+                        stealAttempt.Folded = action.IsFold;
 
                         return;
                     }
@@ -864,15 +851,20 @@ namespace Model
                 }
                 else
                 {
-                    if (action.IsRaise() && stealers.Contains(action.PlayerName))
+                    if (stealers.Contains(action.PlayerName))
                     {
-                        wasSteal = true;
                         if (action.PlayerName == player)
                         {
-                            stealSbAtempt.Attempted = true;
+                            stealAttempt.Possible = true;
+                            stealAttempt.Attempted = action.IsRaise();
                             return;
                         }
-                        continue;
+
+                        if (action.IsRaise())
+                        {
+                            wasSteal = true;
+                            continue;
+                        }
                     }
 
                     if (!action.IsFold)
@@ -889,7 +881,7 @@ namespace Model
                 player)
                 return;
 
-            var stealers = new List<string> {GetCutOffPlayer(parsedHand)?.PlayerName};
+            var stealers = new List<string> { GetCutOffPlayer(parsedHand)?.PlayerName };
             var wasSteal = false;
             foreach (var action in parsedHand.PreFlop.Where(x => !x.IsBlinds))
             {
@@ -917,121 +909,6 @@ namespace Model
 
                     if (!action.IsFold)
                         return;
-                }
-            }
-        }
-
-        private static void CalculateSteal(ConditionalBet stealBet, HandHistory parsedHand, string player)
-        {
-            var stealers = new List<string>();
-
-            stealers.Add(GetCutOffPlayer(parsedHand)?.PlayerName);
-            stealers.Add(parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName);
-            stealers.Add(parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName);
-
-            if (!stealers.Where(x => !string.IsNullOrWhiteSpace(x)).Any(x => x == player))
-            {
-                return;
-            }
-
-            foreach (var action in parsedHand.PreFlop.Where(x => !x.IsBlinds))
-            {
-                if (action.PlayerName == player)
-                {
-                    stealBet.Possible = true;
-                    stealBet.Made = action.IsRaise();
-                    return;
-                }
-
-                if (!action.IsFold)
-                {
-                    return;
-                }
-            }
-        }
-
-        private static void CalculateBigBlindSteal(StealAttempt stealBbAtempt, HandHistory parsedHand, string player)
-        {
-            if (parsedHand.PreFlop.FirstOrDefault(x => x.HandActionType == HandActionType.BIG_BLIND)?.PlayerName != player)
-            {
-                return;
-            }
-
-            var stealers = new List<string>();
-
-            stealers.Add(GetCutOffPlayer(parsedHand)?.PlayerName);
-            stealers.Add(parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName);
-            stealers.Add(parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName);
-
-            bool wasSteal = false;
-            foreach (var action in parsedHand.PreFlop.Where(x => !x.IsBlinds))
-            {
-                if (wasSteal)
-                {
-                    if (action.PlayerName == player)
-                    {
-                        stealBbAtempt.Faced = true;
-                        stealBbAtempt.Defended = action.IsCall || action.IsRaise();
-                        stealBbAtempt.Raised = action.IsRaise();
-                        stealBbAtempt.Folded = action.IsFold;
-
-                        return;
-                    }
-
-                    if (action.IsRaise())
-                    {
-                        return;
-                    }
-                }
-                else
-                {
-                    if (action.IsRaise() && stealers.Contains(action.PlayerName))
-                    {
-                        wasSteal = true;
-                        continue;
-                    }
-
-                    if (!action.IsFold)
-                    {
-                        return;
-                    }
-                }
-            }
-        }
-
-        private static void Calculate3BetVsSteal(ConditionalBet threeBetVsSteal, HandHistory parsedHand, string player)
-        {
-            var stealers = new List<string>();
-
-            stealers.Add(GetCutOffPlayer(parsedHand)?.PlayerName);
-            stealers.Add(parsedHand.Players.FirstOrDefault(x => x.SeatNumber == parsedHand.DealerButtonPosition)?.PlayerName);
-            stealers.Add(parsedHand.HandActions.FirstOrDefault(x => x.HandActionType == HandActionType.SMALL_BLIND)?.PlayerName);
-
-            bool isThreeBetVsStealPossible = false;
-            string stealer = string.Empty;
-            int stealerIndex = -1;
-            var preflops = parsedHand.PreFlop.Where(x => !x.IsBlinds);
-            for (int i = 0; i < preflops.Count(); i++)
-            {
-                var action = preflops.ElementAt(i);
-
-                if (isThreeBetVsStealPossible)
-                {
-                    Calculate3Bet(threeBetVsSteal, preflops.Skip(stealerIndex).ToList(), player, stealer);
-                }
-                else
-                {
-                    if (action.IsRaise() && stealers.Contains(action.PlayerName))
-                    {
-                        isThreeBetVsStealPossible = true;
-                        stealer = action.PlayerName;
-                        stealerIndex = i;
-                    }
-
-                    if (!action.IsFold)
-                    {
-                        return;
-                    }
                 }
             }
         }
@@ -1369,7 +1246,7 @@ namespace Model
 
         private static bool IsOpenRaise(IList<HandAction> preflops, string player)
         {
-            var playerAction = preflops.Where(x => !x.IsBlinds).FirstOrDefault();
+            var playerAction = preflops.Where(x => !x.IsBlinds && !x.IsFold).FirstOrDefault();
             if (playerAction != null && playerAction.PlayerName == player)
             {
                 return playerAction.IsRaise();
@@ -1379,15 +1256,22 @@ namespace Model
 
         private static bool IsRaisedLimpers(IList<HandAction> preflops, string player)
         {
-            var firstPlayerAction = preflops.Where(x => !x.IsBlinds).FirstOrDefault(x => x.PlayerName == player);
-            if (firstPlayerAction != null && firstPlayerAction.IsRaise())
+            bool limpersFound = false;
+            foreach (var action in preflops.Where(x => !x.IsBlinds))
             {
-                var limpers = preflops.Take(preflops.IndexOf(firstPlayerAction)).Where(x => !x.IsBlinds);
-                if (!limpers.Any(x => x.IsRaise()) && limpers.Any(x => x.IsCall() || x.IsCheck))
+                if (action.PlayerName == player)
                 {
-                    return true;
+                    return limpersFound && action.IsRaise();
                 }
+
+                if (action.IsRaise())
+                {
+                    return false;
+                }
+
+                limpersFound = limpersFound || action.IsCall() || action.IsCheck;
             }
+
             return false;
         }
 
