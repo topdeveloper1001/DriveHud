@@ -13,6 +13,7 @@
 using DriveHUD.Common;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.WinApi;
+using Microsoft.Practices.ServiceLocation;
 using System;
 using System.ComponentModel;
 using System.Diagnostics;
@@ -35,7 +36,7 @@ namespace DriveHUD.Importers
         /// Path to libraries
         /// </summary>
         private const string LibPath = "Lib";
-     
+
         /// <summary>
         /// Process where dll will be injected
         /// </summary>
@@ -67,6 +68,8 @@ namespace DriveHUD.Importers
         protected bool isInjected;
 
         protected CancellationTokenSource cancellationTokenSource;
+
+        protected abstract ImporterIdentifier Identifier { get; }
 
         public virtual bool IsRunning
         {
@@ -151,6 +154,9 @@ namespace DriveHUD.Importers
                 {
                     if (pokerClientProcess != null && pokerClientProcess.HasExited)
                     {
+                        var pipeManager = ServiceLocator.Current.GetInstance<IPipeManager>();
+                        pipeManager.RemoveHandle(Identifier);
+
                         LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Process \"{0}\" has exited", ProcessName));
                     }
 

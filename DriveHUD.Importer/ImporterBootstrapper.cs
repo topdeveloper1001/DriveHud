@@ -35,6 +35,7 @@ namespace DriveHUD.Importers
                 throw new ArgumentNullException(nameof(container));
             }
 
+            container.RegisterType<IPipeManager, PipeManager>(new ContainerControlledLifetimeManager());
             container.RegisterType<IBovadaCatcher, BovadaCatcher>();
             container.RegisterType<IBovadaDataManager, BovadaDataManager>();
             container.RegisterType<IBovadaImporter, BovadaImporter>();

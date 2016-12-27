@@ -31,6 +31,14 @@ namespace DriveHUD.Importers.BetOnline
             get { return EnumPokerSites.BetOnline; }
         }
 
+        protected override ImporterIdentifier Identifier
+        {
+            get
+            {
+                return ImporterIdentifier.BetOnlineTournament;
+            }
+        }
+
         public override string SiteString
         {
             get

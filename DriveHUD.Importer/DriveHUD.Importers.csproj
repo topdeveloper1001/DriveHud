@@ -205,8 +205,10 @@
     <Compile Include="IFileImporter.cs" />
     <Compile Include="IImporterSessionCacheService.cs" />
     <Compile Include="ImporterBootstrapper.cs" />
+    <Compile Include="ImporterIdentifier.cs" />
     <Compile Include="ImporterService.cs" />
     <Compile Include="ImporterSessionCacheService.cs" />
+    <Compile Include="IPipeManager.cs" />
     <Compile Include="IPokerCatcher.cs" />
     <Compile Include="IPokerClientDataManager.cs" />
     <Compile Include="IPokerClientEncryptedLogger.cs" />
@@ -219,6 +221,7 @@
     <Compile Include="Loggers\PokerClientLogger.cs" />
     <Compile Include="Pacific888\IPacific888Importer.cs" />
     <Compile Include="Pacific888\Pacific888Importer.cs" />
+    <Compile Include="PipeManager.cs" />
     <Compile Include="PokerCatcher.cs" />
     <Compile Include="PokerClientDataManagerInfo.cs" />
     <Compile Include="PokerClientLoggerConfiguration.cs" />

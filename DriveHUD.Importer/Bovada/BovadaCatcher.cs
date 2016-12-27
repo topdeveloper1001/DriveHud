@@ -10,21 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common;
-using DriveHUD.Common.Log;
-using DriveHUD.Common.WinApi;
-using System;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-
 namespace DriveHUD.Importers.Bovada
 {
     /// <summary>
@@ -57,6 +42,14 @@ namespace DriveHUD.Importers.Bovada
             get
             {
                 return processName;
+            }
+        }
+
+        protected override ImporterIdentifier Identifier
+        {
+            get
+            {
+                return ImporterIdentifier.Bovada;
             }
         }
 
