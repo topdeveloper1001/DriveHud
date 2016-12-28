@@ -95,5 +95,23 @@ namespace DriveHUD.Common.Resources {
                 return ResourceManager.GetString("Error_EC_PlayerCardAlreadyUsed", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DB Warning.
+        /// </summary>
+        internal static string Error_PG_MigrationWarning {
+            get {
+                return ResourceManager.GetString("Error_PG_MigrationWarning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to DriveHUD DB (PostgresSQL) is not available or could not be read. Do you want to initialize new db?.
+        /// </summary>
+        internal static string Error_PG_MigrationWarningMessage {
+            get {
+                return ResourceManager.GetString("Error_PG_MigrationWarningMessage", resourceCulture);
+            }
+        }
     }
 }
