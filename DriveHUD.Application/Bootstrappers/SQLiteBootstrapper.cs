@@ -33,9 +33,7 @@ namespace DriveHUD.Application.Bootstrappers
         public SQLiteBootstrapper()
         {
             settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-        }
-
-        protected ISettingsService SettingsService { get; set; }
+        }     
 
         public void InitializeDatabase()
         {
