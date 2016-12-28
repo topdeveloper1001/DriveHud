@@ -385,7 +385,8 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Data was exported and copied to your clipboard..
+        ///   Looks up a localized string similar to Data was exported and copied to your clipboard. 
+        ///Use CTRL+V to paste your exported data..
         /// </summary>
         internal static string Common_DataExported {
             get {

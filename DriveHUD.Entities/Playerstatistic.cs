@@ -617,49 +617,49 @@ namespace DriveHUD.Entities
         [ProtoMember(231)]
         public virtual int Flopcontinuationoopbetpossible { get; set; }
 
-        [ProtoMember(232)]
+        [ProtoMember(233)]
         public virtual int CheckFoldFlopPfrOop { get; set; }
 
-        [ProtoMember(233)]
+        [ProtoMember(234)]
         public virtual int CheckFoldFlop3BetOop { get; set; }
 
-        [ProtoMember(234)]
+        [ProtoMember(235)]
         public virtual int BetFoldFlopPfrRaiser { get; set; }
 
-        [ProtoMember(235)]
+        [ProtoMember(236)]
         public virtual int BetFlopCalled3BetPreflopIp { get; set; }
 
-        [ProtoMember(236)]
+        [ProtoMember(237)]
         public virtual int PfrOop { get; set; }
 
-        [ProtoMember(237)]
+        [ProtoMember(238)]
         public virtual int PfrInEp { get; set; }
 
-        [ProtoMember(238)]
+        [ProtoMember(239)]
         public virtual int PfrInMp { get; set; }
 
-        [ProtoMember(239)]
+        [ProtoMember(240)]
         public virtual int PfrInCo { get; set; }
 
-        [ProtoMember(240)]
+        [ProtoMember(241)]
         public virtual int PfrInBtn { get; set; }
 
-        [ProtoMember(241)]
+        [ProtoMember(242)]
         public virtual int PfrInSb { get; set; }
 
-        [ProtoMember(242)]
+        [ProtoMember(243)]
         public virtual int PfrInBb { get; set; }
 
-        [ProtoMember(243)]
+        [ProtoMember(244)]
         public virtual int Buttonstealfaced { get; set; }
 
-        [ProtoMember(244)]
+        [ProtoMember(245)]
         public virtual int Buttonstealdefended { get; set; }
 
-        [ProtoMember(245)]
+        [ProtoMember(246)]
         public virtual int Buttonstealfolded { get; set; }
 
-        [ProtoMember(246)]
+        [ProtoMember(247)]
         public virtual int Buttonstealreraised { get; set; }
 
         #region Additional properties (not for serialization)

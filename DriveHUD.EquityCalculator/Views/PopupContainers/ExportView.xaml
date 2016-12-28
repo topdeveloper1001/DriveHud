@@ -5,22 +5,33 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DriveHUD.EquityCalculator.Views"
              xmlns:vm="clr-namespace:DriveHUD.EquityCalculator.ViewModels"
-             mc:Ignorable="d" 
+             xmlns:prism="http://www.codeplex.com/prism"
+             xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"   mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="300">
 
     <UserControl.DataContext>
         <vm:ExportViewModel />
     </UserControl.DataContext>
+
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding NotificationRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction IsModal="True" 
+                                            WindowStyle="{StaticResource NotificationWindowStyle}" 
+                                            WindowContent="{StaticResource NotificationWindowContentTemplate}" />
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+
     <StackPanel Margin="10">
 
         <TextBlock Text="{ResX Key=Common_ExportData}" Style="{StaticResource Title_H1}" />
 
         <Separator/>
-        
+
         <UniformGrid Margin="5 10" Columns="3" HorizontalAlignment="Stretch">
-            <Button Grid.Column="0" Command="{Binding ExportECCommand}" Content="{ResX Key=Common_Export_EC}" Margin="10" />
-            <Button Grid.Column="1" Command="{Binding ExportBothCommand}" IsEnabled="{Binding IsHHExportEnabled}"  Content="{ResX Key=Common_Export_Both}"  Margin="10" />
-            <Button Grid.Column="2" Command="{Binding ExportHHCommand}" IsEnabled="{Binding IsHHExportEnabled}" Content="{ResX Key=Common_Export_HH}"  Margin="10"/>
+            <Button Grid.Column="0" Height="30" Padding="5 0" Command="{Binding ExportECCommand}" Content="{ResX Key=Common_Export_EC}" Margin="10" />
+            <Button Grid.Column="1" Height="30"  Padding="5 0" Command="{Binding ExportBothCommand}" IsEnabled="{Binding IsHHExportEnabled}"  Content="{ResX Key=Common_Export_Both}"  Margin="10" />
+            <Button Grid.Column="2" Height="30"  Padding="5 0" Command="{Binding ExportHHCommand}" IsEnabled="{Binding IsHHExportEnabled}" Content="{ResX Key=Common_Export_HH}"  Margin="10"/>
         </UniformGrid>
 
         <Separator/>
