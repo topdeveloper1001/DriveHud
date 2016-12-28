@@ -133,4 +133,10 @@
     <value>The selected card is already used</value>
     <comment>Equity Calculator Error</comment>
   </data>
+  <data name="Error_PG_MigrationWarning" xml:space="preserve">
+    <value>DB Warning</value>
+  </data>
+  <data name="Error_PG_MigrationWarningMessage" xml:space="preserve">
+    <value>DriveHUD DB (PostgresSQL) is not available or could not be read. Do you want to initialize new db?</value>
+  </data>
 </root>
