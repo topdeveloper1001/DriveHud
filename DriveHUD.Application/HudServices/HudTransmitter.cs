@@ -141,6 +141,7 @@ namespace DriveHUD.Application.HudServices
             if (hudClient.HasExited)
             {
                 LogProvider.Log.Error(this, "HUD has exited.");
+                Reinitialize();
                 return;
             }
 
@@ -203,10 +204,15 @@ namespace DriveHUD.Application.HudServices
             if (isInitialized)
             {
                 LogProvider.Log.Info(this, "HUD Service Faulted.");
-                LogProvider.Log.Info(this, "Trying to re-initialize the HUD.");
-                Close();
-                Initialize();
+                Reinitialize();
             }
+        }
+
+        private void Reinitialize()
+        {
+            LogProvider.Log.Info(this, "Trying to re-initialize the HUD.");
+            Close();
+            Initialize();
         }
 
         private void Close()
