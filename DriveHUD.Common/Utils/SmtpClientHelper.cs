@@ -77,7 +77,7 @@ namespace DriveHUD.Common.Utils
                 }
                 else
                 {
-                    AddSimpleLog(appFolder, archive);
+                    AddSimpleLog(appFolder, dataFolder, archive);
                 }
             }
             if (memoryStream.Length <= 0)
@@ -87,20 +87,29 @@ namespace DriveHUD.Common.Utils
             return mail;
         }
 
-        private static void AddSimpleLog(string appFolder, ZipArchive archive)
+        private static void AddSimpleLog(string appFolder, string dataFolder, ZipArchive archive)
         {
+            var logs = new List<string>();
+
             if (!string.IsNullOrWhiteSpace(appFolder))
             {
-                var logs = new string[]
+                logs.AddRange(new string[]
                 {
                     Path.Combine(appFolder, "Logs", "drivehud.log"),
-                    Path.Combine(appFolder, "Logs", "hud.log")
-                }.Where(x => File.Exists(x));
+                    Path.Combine(appFolder, "Logs", "hud.log"),
+                });
+            }
 
-                if (logs.Any())
-                {
-                    AddZipAtachment(archive, logs);
-                }
+            if (!string.IsNullOrWhiteSpace(dataFolder))
+            {
+                logs.Add(Path.Combine(dataFolder, "Settings.xml"));
+            }
+
+            logs = logs.Where(x => File.Exists(x)).ToList();
+
+            if (logs.Any())
+            {
+                AddZipAtachment(archive, logs);
             }
         }
 
