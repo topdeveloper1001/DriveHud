@@ -811,8 +811,8 @@
                     <Style TargetType="{x:Type telerik:RadWindow}">
                         <Setter Property="Foreground" Value="{StaticResource ForegroundBrush}" />
                         <Setter Property="Background" Value="{StaticResource BackgroundBrush1}" />
-                        <Setter Property="Height" Value="500" />
-                        <Setter Property="MinHeight" Value="500" />
+                        <Setter Property="Height" Value="550" />
+                        <Setter Property="MinHeight" Value="550" />
                         <Setter Property="Width" Value="500" />
                         <Setter Property="MinWidth" Value="500" />
                         <Setter Property="ResizeMode" Value="CanResize" />

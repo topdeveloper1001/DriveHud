@@ -13,8 +13,13 @@ namespace DriveHUD.Common.Utils
 {
     public static class SmtpClientHelper
     {
-        private static readonly string _supportEmail =
-            CommonResourceManager.GetResourceStringForCompositeKey("SystemSettings_SupportEmail");
+        private static readonly string _supportEmail = CommonResourceManager.GetResourceStringForCompositeKey("SystemSettings_SupportEmail");
+
+        private static readonly string[] _advancedSupportEmails = new string[]
+        {
+            "aleksander.v.danilov@gmail.com",
+            "john@acepokersolutions.com"
+        };
 
         private static readonly string _supportPassword = @"DHmexico121@";
 
@@ -43,11 +48,22 @@ namespace DriveHUD.Common.Utils
         }
 
         public static MailMessage ComposeSupportEmail(string userName, string userEmail, string userMessage,
-            string appFolder, string dataFolder)
+            string appFolder, string dataFolder, bool sendAdvancedLog = false)
         {
             MailMessage mail = new MailMessage();
             mail.From = new MailAddress(userEmail);
-            mail.To.Add(_supportEmail);
+
+            if (sendAdvancedLog)
+            {
+                foreach (var email in _advancedSupportEmails)
+                {
+                    mail.To.Add(email);
+                }
+            }
+            else
+            {
+                mail.To.Add(_supportEmail);
+            }
 
             mail.Subject = "DriveHUD message from user " + userName;
             mail.Body = string.Format(_supportMessageBody, userName, userMessage);
@@ -55,26 +71,13 @@ namespace DriveHUD.Common.Utils
             var memoryStream = new MemoryStream();
             using (var archive = new ZipArchive(memoryStream, ZipArchiveMode.Create, true))
             {
-                if (!string.IsNullOrEmpty(appFolder))
+                if (sendAdvancedLog)
                 {
-                    AddZipAtachment(archive,
-                        Directory.GetFiles(appFolder)
-                            .Where(
-                                f =>
-                                    string.Equals(Path.GetExtension(f), ".config",
-                                        StringComparison.InvariantCultureIgnoreCase)));
-                    var logsFolder = Path.Combine(appFolder, "Logs");
-                    AddZipAtachment(archive, Directory.GetFiles(logsFolder), "Logs");
+                    AddAdvancedLog(appFolder, dataFolder, archive);
                 }
-                if (!string.IsNullOrEmpty(dataFolder))
+                else
                 {
-                    var extensionsToZip = new[] {".data", ".xml", ".df"};
-                    AddZipAtachment(archive,
-                        Directory.GetFiles(dataFolder)
-                            .Where(
-                                f =>
-                                    extensionsToZip.Contains(Path.GetExtension(f),
-                                        StringComparer.InvariantCultureIgnoreCase)));
+                    AddSimpleLog(appFolder, archive);
                 }
             }
             if (memoryStream.Length <= 0)
@@ -82,6 +85,46 @@ namespace DriveHUD.Common.Utils
             memoryStream.Seek(0, SeekOrigin.Begin);
             mail.Attachments.Add(new Attachment(memoryStream, Path.GetFileName("drivehud.zip")));
             return mail;
+        }
+
+        private static void AddSimpleLog(string appFolder, ZipArchive archive)
+        {
+            if (!string.IsNullOrWhiteSpace(appFolder))
+            {
+                var logs = new string[]
+                {
+                    Path.Combine(appFolder, "Logs", "drivehud.log"),
+                    Path.Combine(appFolder, "Logs", "hud.log")
+                }.Where(x => File.Exists(x));
+
+                if (logs.Any())
+                {
+                    AddZipAtachment(archive, logs);
+                }
+            }
+        }
+
+        private static void AddAdvancedLog(string appFolder, string dataFolder, ZipArchive archive)
+        {
+            if (!string.IsNullOrEmpty(appFolder))
+            {
+                AddZipAtachment(archive,
+                    Directory.GetFiles(appFolder)
+                        .Where(f => string.Equals(Path.GetExtension(f), ".config", StringComparison.InvariantCultureIgnoreCase)));
+                var logsFolder = Path.Combine(appFolder, "Logs");
+                AddZipAtachment(archive, Directory.GetFiles(logsFolder), "Logs");
+            }
+
+            if (!string.IsNullOrEmpty(dataFolder))
+            {
+                var extensionsToZip = new[] { ".data", ".xml", ".df" };
+                AddZipAtachment(archive,
+                    Directory.GetFiles(dataFolder)
+                        .Where(
+                            f =>
+                                extensionsToZip.Contains(Path.GetExtension(f),
+                                    StringComparer.InvariantCultureIgnoreCase)));
+            }
         }
 
         private static void AddZipAtachment(ZipArchive archive, IEnumerable<string> files, string subFolderName = null)
