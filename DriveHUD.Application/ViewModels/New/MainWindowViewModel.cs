@@ -281,8 +281,7 @@ namespace DriveHUD.Application.ViewModels
 
                 var refreshTime = sw.ElapsedMilliseconds;
 
-                Debug.WriteLine("RefreshData {0} ms", refreshTime);
-                LogProvider.Log.Debug($"RefreshData { sw.ElapsedMilliseconds} ms");
+                Debug.WriteLine("RefreshData {0} ms", refreshTime);            
 
                 sw.Restart();
 
