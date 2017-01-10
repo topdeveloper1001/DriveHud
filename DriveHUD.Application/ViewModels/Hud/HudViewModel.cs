@@ -880,29 +880,7 @@ namespace DriveHUD.Application.ViewModels
         #endregion
 
         #region Infrastructure
-
-        IImporterService importerService = ServiceLocator.Current.GetInstance<IImporterService>();
-
-        public void Start()
-        {
-            var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
-            hudTransmitter.Initialize();
-
-            importerService.StartImport();
-
-            IsStarted = true;
-        }
-
-        public void Stop()
-        {
-            IsStarted = false;
-
-            importerService.StopImport();
-
-            var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
-            hudTransmitter.Dispose();
-        }
-
+    
         private void OpenDataSave()
         {
             var hudSelectLayoutViewModelInfo = new HudSelectLayoutViewModelInfo

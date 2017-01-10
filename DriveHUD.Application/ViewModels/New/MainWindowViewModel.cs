@@ -1,54 +1,58 @@
-﻿using DriveHUD.Application.Models;
+﻿//-----------------------------------------------------------------------
+// <copyright file="MainWindowViewModel.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.HudServices;
+using DriveHUD.Application.Licensing;
+using DriveHUD.Application.Models;
+using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Application.ViewModels.PopupContainers.Notifications;
-using DriveHUD.Common.Extensions;
+using DriveHUD.Application.ViewModels.Registration;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Reflection;
 using DriveHUD.Common.Resources;
 using DriveHUD.Common.Utils;
+using DriveHUD.Common.WinApi;
+using DriveHUD.Common.Wpf.Actions;
+using DriveHUD.Entities;
 using DriveHUD.Importers;
+using DriveHUD.Importers.BetOnline;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Data;
-using DriveHUD.Entities;
 using Model.Enums;
 using Model.Events;
 using Model.Filters;
 using Model.Interfaces;
-using Model.Reports;
+using Model.Settings;
 using Prism.Events;
 using Prism.Interactivity.InteractionRequest;
+using ProtoBuf;
 using System;
-using System.Collections;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
 using Telerik.Windows.Controls;
-using System.Collections.Generic;
-using DriveHUD.Application.ViewModels.Hud;
-using Model.Settings;
-using DriveHUD.Application.ViewModels.Registration;
-using DriveHUD.Application.Licensing;
-using System.Diagnostics;
-using System.Windows.Threading;
-using DriveHUD.Importers.BetOnline;
-using DriveHUD.Common.Log;
-using DriveHUD.Common.Wpf.Actions;
-using Newtonsoft.Json;
-using ProtoBuf;
-using System.Collections.Concurrent;
-using DriveHUD.Application.HudServices;
-using DriveHUD.Common.WinApi;
-using Model.Site;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -61,6 +65,10 @@ namespace DriveHUD.Application.ViewModels
         private IEventAggregator eventAggregator;
 
         private IImporterSessionCacheService importerSessionCacheService;
+
+        private IImporterService importerService;
+
+        private IHudTransmitter hudTransmitter;
 
         private IFilterModelManagerService filterModelManager;
 
@@ -77,6 +85,10 @@ namespace DriveHUD.Application.ViewModels
             dataService = ServiceLocator.Current.GetInstance<IDataService>();
 
             importerSessionCacheService = ServiceLocator.Current.GetInstance<IImporterSessionCacheService>();
+            importerService = ServiceLocator.Current.GetInstance<IImporterService>();
+            importerService.ImportingStopped += OnImportingStopped;
+
+            hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
             filterModelManager = ServiceLocator.Current.GetInstance<IFilterModelManagerService>(FilterServices.Main.ToString());
             synchronizationContext = _synchronizationContext;
 
@@ -120,8 +132,8 @@ namespace DriveHUD.Application.ViewModels
             ImportFromFileCommand = new DelegateCommand(x => ImportFromFile(), x => !isManualImportingRunning);
             ImportFromDirectoryCommand = new DelegateCommand(x => ImportFromDirectory(), x => !isManualImportingRunning);
             SupportCommand = new RelayCommand(ShowSupportView);
-            StartHudCommand = new RelayCommand(() => StartHud(false));
-            StopHudCommand = new RelayCommand(() => StopHud(false));
+            StartHudCommand = new DelegateCommand(x => StartHud(), x => !IsHudRunning);
+            StopHudCommand = new DelegateCommand(x => StopHud(), x => IsHudRunning);
             HideEquityCalculatorCommand = new RelayCommand(HideEquityCalculator);
             SettingsCommand = new RelayCommand(OpenSettingsMenu);
             UpgradeCommand = new RelayCommand(Upgrade);
@@ -137,6 +149,7 @@ namespace DriveHUD.Application.ViewModels
         private void InitializeFilters()
         {
             var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+
             if (settings.GeneralSettings.IsSaveFiltersOnExit)
             {
                 eventAggregator.GetEvent<LoadDefaultFilterRequestedEvent>().Publish(new LoadDefaultFilterRequestedEventArgs());
@@ -146,6 +159,7 @@ namespace DriveHUD.Application.ViewModels
         #endregion
 
         #region Methods
+
         private void ShowCalculateEquityView(RequestEquityCalculatorEventArgs obj)
         {
             IsShowEquityCalculator = true;
@@ -156,39 +170,42 @@ namespace DriveHUD.Application.ViewModels
             IsShowEquityCalculator = false;
         }
 
-        internal void StartHud(bool switchViewModel = true)
+        private async void StartHud()
         {
             LogProvider.Log.Info(string.Format("Memory before starting auto import: {0:N0}", GC.GetTotalMemory(false)));
 
-            var settingsModel = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
-            isAdvancedLoggingEnabled = settingsModel.GeneralSettings.IsAdvancedLoggingEnabled;
+            IsHudRunning = true;
 
-            if (switchViewModel)
-            {
-                SwitchViewModel(EnumViewModelType.HudViewModel);
-            }
-
-            HudViewModel.Start();
+            await hudTransmitter.InitializeAsync();
 
             importerSessionCacheService.Begin();
+            importerService.StartImport();
+
+            RefreshCommandsCanExecute();
         }
 
-        internal void StopHud(bool switchViewModel = false)
+        private void StopHud()
         {
-            if (switchViewModel)
-            {
-                SwitchViewModel(EnumViewModelType.HudViewModel);
-            }
-            HudViewModel.Stop();
+            importerService.StopImport();
+            IsHudRunning = false;
+        }
+
+        private void OnImportingStopped(object sender, EventArgs e)
+        {
+            hudTransmitter.Dispose();
 
             importerSessionCacheService.End();
 
-            // update data after hud is stopped
-            CreatePositionReport();
-            UpdateCurrentView();
+            System.Windows.Application.Current.Dispatcher.Invoke(() =>
+            {
+                // update data after hud is stopped
+                CreatePositionReport();
+                UpdateCurrentView();
+
+                RefreshCommandsCanExecute();
+            });
 
             GC.Collect();
-
             LogProvider.Log.Info(string.Format("Memory after stopping auto import: {0:N0}", GC.GetTotalMemory(false)));
         }
 
@@ -275,6 +292,13 @@ namespace DriveHUD.Application.ViewModels
         {
             try
             {
+                // if no handle available then we don't need to do anything with this data, because hud won't be up
+                if (e.GameInfo.WindowHandle == 0)
+                {
+                    LogProvider.Log.Warn($"No window found for hand #{e?.GameInfo?.GameNumber}");
+                    return;
+                }
+
                 var sw = new Stopwatch();
 
                 sw.Start();
@@ -282,8 +306,6 @@ namespace DriveHUD.Application.ViewModels
                 RefreshData(e.GameInfo);
 
                 var refreshTime = sw.ElapsedMilliseconds;
-
-                Debug.WriteLine("RefreshData {0} ms", refreshTime);
 
                 sw.Restart();
 
@@ -544,7 +566,6 @@ namespace DriveHUD.Application.ViewModels
                         LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
                     }
 
-                    var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
                     hudTransmitter.Send(serialized);
 
                     if (isAdvancedLoggingEnabled)
@@ -646,6 +667,8 @@ namespace DriveHUD.Application.ViewModels
         {
             (ImportFromFileCommand as DelegateCommand)?.InvalidateCanExecute();
             (ImportFromDirectoryCommand as DelegateCommand)?.InvalidateCanExecute();
+            (StartHudCommand as DelegateCommand)?.InvalidateCanExecute();
+            (StopHudCommand as DelegateCommand)?.InvalidateCanExecute();
         }
 
         private void ShowSupportView()
@@ -997,6 +1020,21 @@ namespace DriveHUD.Application.ViewModels
             set { SetProperty(ref _isShowEquityCalculator, value); }
         }
 
+        private bool isHudRunning;
+
+        public bool IsHudRunning
+        {
+            get
+            {
+                return isHudRunning;
+            }
+            set
+            {
+                isHudRunning = value;
+                OnPropertyChanged();
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -1069,8 +1107,10 @@ namespace DriveHUD.Application.ViewModels
 
         public void MainWindow_PreviewClosed(object sender, WindowPreviewClosedEventArgs e)
         {
-            HudViewModel.Stop();
+            importerService.StopImport();
+            hudTransmitter.Dispose();
             importerSessionCacheService.End();
+
             dataService.SaveActivePlayer(StorageModel.PlayerSelectedItem.Name, (short)StorageModel.PlayerSelectedItem.PokerSite);
 
             // flush betonline cash
