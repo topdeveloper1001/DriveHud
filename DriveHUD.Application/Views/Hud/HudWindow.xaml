@@ -50,7 +50,6 @@
                         <telerik:RadMenuItem Header="{ResX Key=Enum_HandExport_RawHandHistory}" CommandParameter="{x:Static enum2:EnumExportType.Raw}" Command="{Binding ExportHandCommand}"/>
                     </telerik:RadMenuItem>
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_ReplayLastHand}" Command="{Binding ReplayLastHandCommand}" />
-                    <telerik:RadMenuItem Header="{ResX Main_ContextMenu_SaveHudPosition}" Click="SaveHudPositions_Click" />
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_LoadHud}" ItemsSource="{Binding LayoutsCollection}">
                         <telerik:RadMenuItem.ItemContainerStyle>
                             <Style TargetType="telerik:RadMenuItem" BasedOn="{StaticResource {x:Type telerik:RadMenuItem}}">
@@ -64,7 +63,7 @@
             </telerik:RadContextMenu.ContextMenu>
         </Image>
         <Border Grid.Row="1" BorderThickness="0">
-            <ctrl:DragCanvas x:Name="dgCanvas" AllowDragging="True" AllowDragOutOfView="True" AllowDrop="False"  />
+            <ctrl:DragCanvas x:Name="dgCanvas" AllowDragging="False" AllowDragOutOfView="False" AllowDrop="False"  />
         </Border>
     </Grid>
 </Window>

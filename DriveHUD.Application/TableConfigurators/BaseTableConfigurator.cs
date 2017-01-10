@@ -160,8 +160,7 @@ namespace DriveHUD.Application.TableConfigurators
                 Background = null,
                 IsRotationEnabled = false,
                 Tag = HudType,
-                Padding = new Thickness(0),
-                IsDraggingEnabled = false
+                Padding = new Thickness(0)
             };
 
             return label;
@@ -193,8 +192,7 @@ namespace DriveHUD.Application.TableConfigurators
                     X = hudElementPositionX,
                     Y = hudElementPositionY,
                     DataContext = datacontext,
-                    Template = App.Current.Resources["PreferredSeatControlTemplate"] as ControlTemplate,
-                    IsDraggingEnabled = false
+                    Template = App.Current.Resources["PreferredSeatControlTemplate"] as ControlTemplate
                 };
 
                 diagram.Items.Add(shape);

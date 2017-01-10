@@ -268,45 +268,45 @@ namespace DriveHUD.Application.Views
             return viewModel.Seat + (viewModel.HudType == HudType.Default ? 0 : 100);
         }
 
-        private void SaveHudPositions_Click(object sender, RadRoutedEventArgs e)
-        {
-            try
-            {
-                var layoutId = Layout?.LayoutId;
+        //private void SaveHudPositions_Click(object sender, RadRoutedEventArgs e)
+        //{
+        //    try
+        //    {
+        //        var layoutId = Layout?.LayoutId;
 
-                if (!layoutId.HasValue)
-                {
-                    return;
-                }
+        //        if (!layoutId.HasValue)
+        //        {
+        //            return;
+        //        }
 
-                HudLayoutContract hudLayout = new HudLayoutContract();
-                hudLayout.LayoutId = layoutId.Value;
-                hudLayout.HudPositions = new List<HudPositionContract>();
+        //        HudLayoutContract hudLayout = new HudLayoutContract();
+        //        hudLayout.LayoutId = layoutId.Value;
+        //        hudLayout.HudPositions = new List<HudPositionContract>();
 
-                var hudPanels = dgCanvas.Children.OfType<FrameworkElement>()
-                    .Where(x => x != null && !(x is TrackConditionsMeterView) && (x.DataContext is HudElementViewModel))
-                    .Select(x => (x.DataContext as HudElementViewModel).Clone())
-                    .ToList();
+        //        var hudPanels = dgCanvas.Children.OfType<FrameworkElement>()
+        //            .Where(x => x != null && !(x is TrackConditionsMeterView) && (x.DataContext is HudElementViewModel))
+        //            .Select(x => (x.DataContext as HudElementViewModel).Clone())
+        //            .ToList();
 
-                foreach (var hudPanel in hudPanels)
-                {
-                    var position = hudPanelCreator.GetOffsetPosition(hudPanel, this);
+        //        foreach (var hudPanel in hudPanels)
+        //        {
+        //            var position = hudPanelCreator.GetOffsetPosition(hudPanel, this);
 
-                    hudLayout.HudPositions.Add(new HudPositionContract
-                    {
-                        Position = new Point(position.Item1, position.Item2),
-                        SeatNumber = hudPanel.Seat,
-                        HudType = (int)hudPanel.HudType
-                    });
-                }
+        //            hudLayout.HudPositions.Add(new HudPositionContract
+        //            {
+        //                Position = new Point(position.Item1, position.Item2),
+        //                SeatNumber = hudPanel.Seat,
+        //                HudType = (int)hudPanel.HudType
+        //            });
+        //        }
 
-                ViewModel?.SaveHudPositions(hudLayout);
-            }
-            catch (Exception ex)
-            {
-                LogProvider.Log.Error(this, ex);
-            }
-        }
+        //        ViewModel?.SaveHudPositions(hudLayout);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        LogProvider.Log.Error(this, ex);
+        //    }
+        //}
 
         private void DgCanvas_DragEnded(object sender, EventArgs e)
         {

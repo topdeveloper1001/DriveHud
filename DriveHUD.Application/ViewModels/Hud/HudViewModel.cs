@@ -357,9 +357,6 @@ namespace DriveHUD.Application.ViewModels
             DataSaveCommand = ReactiveCommand.Create();
             DataSaveCommand.Subscribe(x => OpenDataSave());
 
-            DataCopyCommand = ReactiveCommand.Create();
-            DataCopyCommand.Subscribe(x => CopyData());
-
             DataDeleteCommand = ReactiveCommand.Create();
             DataDeleteCommand.Subscribe(x => DataDelete());
 
@@ -823,8 +820,6 @@ namespace DriveHUD.Application.ViewModels
 
         public ReactiveCommand<object> DataSaveCommand { get; private set; }
 
-        public ReactiveCommand<object> DataCopyCommand { get; private set; }
-
         public ReactiveCommand<object> DataDeleteCommand { get; private set; }
 
         public ReactiveCommand<object> DataImportCommand { get; private set; }
@@ -884,10 +879,6 @@ namespace DriveHUD.Application.ViewModels
             var hudSelectLayoutViewModel = new HudSelectLayoutViewModel(hudSelectLayoutViewModelInfo);
 
             OpenPopup(hudSelectLayoutViewModel);
-        }
-
-        private void CopyData()
-        {
         }
 
         private void DataSave()

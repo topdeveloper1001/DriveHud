@@ -53,8 +53,7 @@ namespace DriveHUD.Application.TableConfigurators
                 Background = null,
                 IsRotationEnabled = false,
                 Tag = HudType.Default,
-                Padding = new Thickness(0),
-                IsDraggingEnabled = false
+                Padding = new Thickness(0)
             };
 
             return label;

@@ -104,8 +104,7 @@ namespace DriveHUD.Application.TableConfigurators
                     X = hudElementPositionX,
                     Y = hudElementPositionY,
                     DataContext = datacontext,
-                    Template = App.Current.Resources["PreferredSeatControlTemplate"] as ControlTemplate,
-                    IsDraggingEnabled = false
+                    Template = App.Current.Resources["PreferredSeatControlTemplate"] as ControlTemplate
                 };
 
                 diagram.Items.Add(shape);

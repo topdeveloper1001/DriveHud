@@ -121,8 +121,7 @@ namespace DriveHUD.Application.TableConfigurators
                 Width = Width,
                 StrokeThickness = 0,
                 IsEnabled = false,
-                SnapsToDevicePixels = true,
-                IsDraggingEnabled = false
+                SnapsToDevicePixels = true
             };
 
             return table;
