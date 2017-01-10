@@ -12,12 +12,13 @@
 
 using DriveHUD.HUD.Service;
 using System;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Application.HudServices
 {
     public interface IHudTransmitter : IDisposable
     {
-        void Initialize();
+        Task InitializeAsync();
 
         void Send(byte[] data);
     }

@@ -12,6 +12,7 @@
 
 using DriveHUD.Common;
 using Microsoft.Practices.ServiceLocation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -30,6 +31,8 @@ namespace DriveHUD.Importers
             private set;
         }
 
+        public event EventHandler ImportingStopped;
+
         /// <summary>
         /// Register importer 
         /// </summary>
@@ -42,6 +45,7 @@ namespace DriveHUD.Importers
 
             Check.Require(importer != null, "Importer wasn't found");
 
+            importer.ProcessStopped += OnImporterProcessStopped;
             importers.Add(importer);
 
             return this;
@@ -71,6 +75,32 @@ namespace DriveHUD.Importers
             }
 
             IsStarted = false;
+        }
+
+        /// <summary>
+        /// Raise importing stopped event
+        /// </summary>
+        private void RaiseImportingStopped()
+        {
+            var handler = ImportingStopped;
+
+            if (handler != null)
+            {
+                handler(this, EventArgs.Empty);
+            }
+        }
+
+        /// <summary>
+        /// Raise importing stopped if all process has been stopped
+        /// </summary>                
+        private void OnImporterProcessStopped(object sender, EventArgs e)
+        {
+            var isRunning = importers.Any(x => x.IsRunning);
+
+            if (!isRunning)
+            {
+                RaiseImportingStopped();
+            }
         }
     }
 }

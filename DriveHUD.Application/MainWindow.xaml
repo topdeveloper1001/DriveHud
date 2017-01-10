@@ -981,7 +981,7 @@
                                 <TextBlock Text="HUD" FontSize="15"/>
 
                                 <Button Grid.Column="1" Width="40" Background="#2a2d31"
-                                        Visibility="{Binding Path=DataContext.HudViewModel.IsStarted, ConverterParameter=Inverse, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"
+                                        Visibility="{Binding Path=DataContext.IsHudRunning, ConverterParameter=Inverse, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Visible}"
                                         Command="{Binding DataContext.StartHudCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}}">
                                     <Button.Content>
                                         <Path Visibility="Visible" Data="M0,0 L9.501,4.7503333 0,9.5 z">
@@ -993,7 +993,7 @@
                                 </Button>
 
                                 <Button Grid.Column="1" Width="40" Background="#2a2d31"
-                                        Visibility="{Binding Path=DataContext.HudViewModel.IsStarted, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
+                                        Visibility="{Binding Path=DataContext.IsHudRunning, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}, Converter={StaticResource BoolToVisibilityConverter}, FallbackValue=Collapsed}"
                                         Command="{Binding DataContext.StopHudCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type telerik:RadWindow}}}">
                                     <Button.Content>
                                         <Path Visibility="Visible" Data="M0,0 L9.5,0 L9.5,9.5 L0,9.5 z">
