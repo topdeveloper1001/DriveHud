@@ -1035,7 +1035,6 @@
     <EmbeddedResource Include="runtime.lic" />
     <None Include="sign.snk" />
     <Resource Include="images\drivehud.ico" />
-    <Resource Include="images\splashscreen.jpg" />
     <Resource Include="Fonts\OpenSans-Regular.ttf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
@@ -1115,6 +1114,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\splashscreen.png" />
     <Content Include="Scripts\clean_db.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

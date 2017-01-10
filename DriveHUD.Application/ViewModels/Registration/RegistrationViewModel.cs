@@ -52,6 +52,7 @@ namespace DriveHUD.Application.ViewModels.Registration
             server = new DeployLXLicensingServer();
             server.CookieContainer = new CookieContainer();
 
+
             licenseService = ServiceLocator.Current.GetInstance<ILicenseService>();
 
             NotificationRequest = new InteractionRequest<INotification>();
@@ -102,7 +103,7 @@ namespace DriveHUD.Application.ViewModels.Registration
 
         private void InitializeCommands()
         {
-            var canSend = this.WhenAny(x1 => x1.Email, x2 => x2.CaptchaText, (x1, x2) => Utils.IsValidEmail(x1.Value) && (IsCaptchaVisible && !string.IsNullOrWhiteSpace(x2.Value) || !IsCaptchaVisible));         
+            var canSend = this.WhenAny(x1 => x1.Email, x2 => x2.CaptchaText, (x1, x2) => Utils.IsValidEmail(x1.Value) && (IsCaptchaVisible && !string.IsNullOrWhiteSpace(x2.Value) || !IsCaptchaVisible));
 
             SendCommand = ReactiveCommand.Create(canSend);
             SendCommand.Subscribe(x => Send());
@@ -157,6 +158,8 @@ namespace DriveHUD.Application.ViewModels.Registration
                     imageData = server.CreateSession();
                 }
             }
+
+            LogProvider.Log.Info($"Trying to register trial. Cookies in container: {server.CookieContainer.Count}");
 
             var image = new BitmapImage();
 
