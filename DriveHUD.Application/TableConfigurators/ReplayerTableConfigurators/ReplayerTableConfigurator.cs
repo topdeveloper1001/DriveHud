@@ -138,11 +138,12 @@ namespace DriveHUD.Application.TableConfigurators
             table = new RadDiagramShape()
             {
                 Name = "Table",
-                Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundImage))),
+                Background =
+                    new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundImage))),
                 Height = predefinedTableSizes[seats].Item1,
                 Width = predefinedTableSizes[seats].Item2,
                 StrokeThickness = 0,
-                IsEnabled = false,
+                IsEnabled = false
             };
 
             table.X = DefaultTablePosition.X;
@@ -216,7 +217,7 @@ namespace DriveHUD.Application.TableConfigurators
                 BorderThickness = new Thickness(0),
                 IsEnabled = false,
                 IsHitTestVisible = false,
-                FontSize = 13,
+                FontSize = 13
             };
 
             BindingOperations.ClearBinding(label, Control.BackgroundProperty);
@@ -372,7 +373,7 @@ namespace DriveHUD.Application.TableConfigurators
                 BorderThickness = new Thickness(0),
                 IsEnabled = false,
                 IsHitTestVisible = false,
-                DataContext = card,
+                DataContext = card
             };
 
             try

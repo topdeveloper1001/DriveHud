@@ -17,75 +17,75 @@ using DriveHUD.Common.Resources;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    public class HudTableLayoutMenuItem : ViewModelBase, IDropDownMenuItem
-    {
-        private HudTableLayout hudTableLayout;
+    //public class HudTableLayoutMenuItem : ViewModelBase, IDropDownMenuItem
+    //{
+    //    private HudTableLayout hudTableLayout;
 
-        public HudTableLayoutMenuItem()
-        {
-            items = new ObservableCollection<IDropDownMenuItem>();
-        }
+    //    public HudTableLayoutMenuItem()
+    //    {
+    //        items = new ObservableCollection<IDropDownMenuItem>();
+    //    }
 
-        public HudTableLayoutMenuItem(HudTableLayout hudTableLayout) : this()
-        {
-            this.hudTableLayout = hudTableLayout;
-            header = CommonResourceManager.Instance.GetEnumResource(hudTableLayout.TableType);
-        }
+    //    public HudTableLayoutMenuItem(HudTableLayout hudTableLayout) : this()
+    //    {
+    //        this.hudTableLayout = hudTableLayout;
+    //        header = CommonResourceManager.Instance.GetEnumResource(hudTableLayout.TableType);
+    //    }
 
-        public HudTableLayout HudTableLayout
-        {
-            get
-            {
-                return hudTableLayout;
-            }
-        }
+    //    public HudTableLayout HudTableLayout
+    //    {
+    //        get
+    //        {
+    //            return hudTableLayout;
+    //        }
+    //    }
 
-        private string header;
+    //    private string header;
 
-        public string Header
-        {
-            get
-            {
-                return header;
-            }
+    //    public string Header
+    //    {
+    //        get
+    //        {
+    //            return header;
+    //        }
 
-            set
-            {
-                this.RaiseAndSetIfChanged(ref header, value);
-            }
-        }
+    //        set
+    //        {
+    //            this.RaiseAndSetIfChanged(ref header, value);
+    //        }
+    //    }
 
-        private ObservableCollection<IDropDownMenuItem> items;
+    //    private ObservableCollection<IDropDownMenuItem> items;
 
-        public ObservableCollection<IDropDownMenuItem> Items
-        {
-            get
-            {
-                return items;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref items, value);
-            }
-        }
+    //    public ObservableCollection<IDropDownMenuItem> Items
+    //    {
+    //        get
+    //        {
+    //            return items;
+    //        }
+    //        set
+    //        {
+    //            this.RaiseAndSetIfChanged(ref items, value);
+    //        }
+    //    }
 
-        private IDropDownMenuItem parent;
+    //    private IDropDownMenuItem parent;
 
-        public IDropDownMenuItem Parent
-        {
-            get
-            {
-                return parent;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref parent, value);
-            }
-        }
+    //    public IDropDownMenuItem Parent
+    //    {
+    //        get
+    //        {
+    //            return parent;
+    //        }
+    //        set
+    //        {
+    //            this.RaiseAndSetIfChanged(ref parent, value);
+    //        }
+    //    }
 
-        public override string ToString()
-        {
-            return Parent != null ? string.Format("{0} {1}", Parent, Header) : Header;
-        }
-    }
+    //    public override string ToString()
+    //    {
+    //        return Parent != null ? string.Format("{0} {1}", Parent, Header) : Header;
+    //    }
+    //}
 }

@@ -29,10 +29,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public EnumGameType GameType
         {
-            get
-            {
-                return gameType;
-            }
+            get { return gameType; }
         }
 
         public string GameTypeText

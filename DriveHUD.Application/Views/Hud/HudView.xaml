@@ -258,6 +258,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="270"/>
             </Grid.RowDefinitions>
 
@@ -268,29 +269,12 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="270"/>
-                    <ColumnDefinition Width="270"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="270"/>
                     <ColumnDefinition Width="270"/>
                     <ColumnDefinition Width="270"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-
-                <!-- GAME TYPE ********************************************************************* -->
-                <TextBlock Grid.Row="0" Grid.Column="0" Margin="1,5,40,1"
-                           VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="Game Type" FontSize="13"/>
-                <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="0" Margin="0,0,40,0"                                     
-                                     MaxWidth="260" Height="35"
-                                     PopupMaxWidth="230" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                                     SelectedValue="{Binding GameType}"
-                                     VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
-                                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
-                                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     ItemsSource="{Binding GameTypes}"
-                                     DisplayMemberPath="GameTypeText"
-                                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}">
-                </comboboxControl:ComboBoxEx>
 
                 <!-- HUD NAME ********************************************************************* -->
                 <TextBlock Grid.Row="0" Grid.Column="1" Margin="1,5,40,1"
@@ -313,13 +297,17 @@
                            VerticalAlignment="Top" HorizontalAlignment="Left"
                            Text="Table Layout" FontSize="13"/>
 
-                <controls:DropDownMenu
-                    Grid.Row="1" Grid.Column="2" Margin="0,0,40,0"
-                    Items="{Binding TableLayouts}"
-                    SelectedItem="{Binding CurrentTableLayout}"
-                    Width="230" 
-                    Height="35"
-                    />
+                <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="2" Margin="0,0,40,0"
+                                     MaxWidth="260" Height="35"
+                                     PopupMaxWidth="230" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                     VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
+                                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
+                                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
+                                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                                     ItemsSource="{Binding TableTypes}"
+                                     DisplayMemberPath="TableTypeText"
+                                     SelectedValue="{Binding Path=CurrentTableType}">
+                </comboboxControl:ComboBoxEx>
                                 
                 <!-- HUD SCREEN ***************************************************************** -->
                 <TextBlock Grid.Row="0" Grid.Column="3" Margin="1,5,40,1"
@@ -362,12 +350,19 @@
             <!-- COMMAND BUTTONS - SAVE/IMPORT/EXPORT/LOAD **************************************************************** -->
             <StackPanel Grid.Row="1" Grid.Column="2"                  
                         Orientation="Vertical">
-
+                
                 <Button Margin="0,21,0,5"
 						HorizontalAlignment="Right" VerticalAlignment="Bottom"
 						Style="{StaticResource ButtonStyle}"
 						Command="{Binding DataSaveCommand}"
 						Content="{ResX Key=Common_Hud_Save}">
+                </Button>
+
+                <Button Margin="0,0,0,5"
+						HorizontalAlignment="Right" VerticalAlignment="Bottom"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding DataCopyCommand}"
+						Content="{ResX Key=Common_Hud_Copy}">
                 </Button>
 
                 <Button Margin="0,0,0,5"
@@ -392,8 +387,8 @@
                 </Button>
 
             </StackPanel>
-
-            <Grid Grid.Row="1" Grid.Column="1">
+            
+            <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
@@ -414,27 +409,14 @@
 									Style="{StaticResource ClassDiagramStyle}"
                                     >
                 </telerik:RadDiagram>
-                <StackPanel Grid.Row="1" Grid.Column="1" 
-                            Orientation="Horizontal"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" 
-                            Margin="10 15 0 0">
-
-                    <TextBlock Style="{StaticResource Title_H1}" 
-                           Foreground="White">
-                        <Run Text="{ResX Key=Common_PreferredSeating}"/>:
-                    </TextBlock>
-
-                    <dh:ToggleSwitch Height="25" 
-                                     Margin="10 0 0 0"
-                                     IsChecked="{Binding IsPreferredSeatingEnabled, Mode=TwoWay}"
-                                     Style="{StaticResource ToggleSwitchShort}"
-                                     CheckedText="{ResX Key=Common_On}" UncheckedText="{ResX Key=Common_Off}"/>
-
-                </StackPanel>
-
             </Grid>
+            <Button Grid.Row="2" Grid.Column="2" Width="32" Height="32" 
+                    Margin="10"
+                    Command="{Binding SelectSiteAndGameTypeCommand}">
+                    <Image Source="/DriveHUD.Common.Resources;component/images/Hud/chip_icon_2.png"/>
+                </Button>
 
-            <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="15"/>

@@ -38,7 +38,7 @@ namespace DriveHUD.Application.ViewModels
         {
             var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-            var layouts = hudLayoutService.Layouts.Layouts.Where(x => x.LayoutId == viewModelInfo.LayoutId).ToList();
+            var layouts = hudLayoutService.Layouts.Where(x => x.LayoutId == viewModelInfo.LayoutId).ToList();
 
             if (!viewModelInfo.IsDeleteMode)
             {

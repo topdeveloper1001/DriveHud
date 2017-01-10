@@ -16,26 +16,26 @@ using ProtoBuf;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
-    [ProtoContract]
-    public class HudTableLayout
-    {
-        [ProtoMember(1)]
-        public EnumPokerSites Site
-        {
-            get;
-            set;
-        }
+    //[ProtoContract]
+    //public class HudTableLayout
+    //{
+    //    [ProtoMember(1)]
+    //    public EnumPokerSites Site
+    //    {
+    //        get;
+    //        set;
+    //    }
 
-        [ProtoMember(2)]
-        public EnumTableType TableType
-        {
-            get;
-            set;
-        }
+    //    [ProtoMember(2)]
+    //    public EnumTableType TableType
+    //    {
+    //        get;
+    //        set;
+    //    }
 
-        public HudTableLayout Clone()
-        {
-            return new HudTableLayout { Site = this.Site, TableType = this.TableType };
-        }
-    }
+    //    public HudTableLayout Clone()
+    //    {
+    //        return new HudTableLayout { Site = this.Site, TableType = this.TableType };
+    //    }
+    //}
 }

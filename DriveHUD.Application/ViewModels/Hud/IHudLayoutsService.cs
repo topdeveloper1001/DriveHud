@@ -27,7 +27,7 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Cached layouts
         /// </summary>
-        HudSavedLayouts Layouts { get; }
+        List<HudSavedLayout> Layouts { get; }
 
         /// <summary>
         /// Get layout by name

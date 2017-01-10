@@ -41,9 +41,8 @@ namespace DriveHUD.Application.Views
 
                 ViewModel.TableUpdate += ViewModel_TableUpdated;
 
-                var tableType = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
-                                    ViewModel.CurrentTableLayout.HudTableLayout.TableType : EnumTableType.Six;
-                Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int)tableType);
+                var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
+                Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int) tableType);
                 UpdatePreferredSeatingStateWithoutNotification();
             };
         }
@@ -55,9 +54,8 @@ namespace DriveHUD.Application.Views
                 return;
             }
 
-            var tableType = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
-                                   ViewModel.CurrentTableLayout.HudTableLayout.TableType : EnumTableType.Six;
-            Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int)tableType);
+            var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
+            Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int) tableType);
             UpdatePreferredSeatingStateWithoutNotification();
         }
 
@@ -75,9 +73,9 @@ namespace DriveHUD.Application.Views
         {
             get
             {
-                var site = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
-                                ViewModel.CurrentTableLayout.HudTableLayout.Site : EnumPokerSites.Ignition;
-                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(TableConfiguratorHelper.GetServiceName(site, ViewModel.HudType));
+                return
+                    Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(
+                        TableConfiguratorHelper.GetServiceName(ViewModel.CurrentPokerSite, ViewModel.HudType));
             }
         }
 

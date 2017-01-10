@@ -868,6 +868,9 @@
     <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-BOL.xml" />
     <EmbeddedResource Include="Layouts\DH-9max-SNG-Basic-OH-BOL.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\hud\chip_icon_2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>xcopy $(ProjectDir)\images\PlayerTypes $(SolutionDir)DriveHUD.Application\$(OutDir)Data\PlayerTypes /y /i</PostBuildEvent>

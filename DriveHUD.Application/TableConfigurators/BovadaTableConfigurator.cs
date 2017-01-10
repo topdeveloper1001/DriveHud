@@ -19,13 +19,16 @@ namespace DriveHUD.Application.TableConfigurators
 {
     internal class BovadaTableConfigurator : BaseTableConfigurator
     {
-        protected const int Height = 460;
-        protected const int Width = 790;
+        protected const int Height = 320;
+        protected const int Width = 600;
 
         protected const int hudElementHeight = 75;
         protected const int hudElementWidth = 135;
 
-        protected const string backgroundImage = "/DriveHUD.Common.Resources;component/images/Bovada/Table{0}.png";
+        protected const int labelElementWidth = 110;
+        protected const int labelElementHeight = 35;
+
+        protected const string backgroundImage = "/DriveHUD.Common.Resources;component/images/Table.png";
 
         protected override ITableSeatAreaConfigurator TableSeatAreaConfigurator
         {
@@ -118,7 +121,8 @@ namespace DriveHUD.Application.TableConfigurators
                 Width = Width,
                 StrokeThickness = 0,
                 IsEnabled = false,
-                SnapsToDevicePixels = true
+                SnapsToDevicePixels = true,
+                IsDraggingEnabled = false
             };
 
             return table;

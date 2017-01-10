@@ -309,7 +309,7 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var availableLayouts = hudLayoutsService.Layouts.Layouts.Where(y => y.LayoutId == tableKey).Select(x => x.Name);
+                var availableLayouts = hudLayoutsService.Layouts.Where(y => y.LayoutId == tableKey).Select(x => x.Name);
 
                 var ht = new HudLayout
                 {

@@ -53,7 +53,7 @@ namespace DriveHUD.Application.TableConfigurators
                 Height = TABLE_HEIGHT,
                 Width = TABLE_WIDTH,
                 X = tablePosition.X,
-                Y = tablePosition.Y,
+                Y = tablePosition.Y
             };
 
             diagram.AddShape(table);

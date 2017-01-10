@@ -74,9 +74,9 @@ namespace DriveHUD.Application.Views
             Layout = layout;
             ViewModel?.SetLayout(layout);
 
-            if (layout != null && layout.TableHud != null && layout.TableHud.TableLayout != null)
+            if (layout?.TableHud != null)
             {
-                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.TableHud.TableLayout.Site.ToString());
+                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.TableHud.PokerSite.ToString());
             }
             else
             {

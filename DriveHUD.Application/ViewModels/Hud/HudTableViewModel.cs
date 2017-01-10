@@ -17,6 +17,8 @@ using ProtoBuf;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows;
+using DriveHUD.Entities;
+using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -24,15 +26,18 @@ namespace DriveHUD.Application.ViewModels
     public class HudTableViewModel : BaseViewModel
     {
         [ProtoMember(1)]
-        public HudTableLayout TableLayout { get; set; }
+        public EnumPokerSites PokerSite { get; set; }
 
         [ProtoMember(2)]
-        public bool IsRelativePosition { get; set; }
+        public EnumTableType TableType { get; set; }
 
         [ProtoMember(3)]
-        public Point RelativePosition { get; set; }
+        public bool IsRelativePosition { get; set; }
 
         [ProtoMember(4)]
+        public Point RelativePosition { get; set; }
+
+        [ProtoMember(5)]
         public Point StartPosition { get; set; }
         
         public ObservableCollection<HudElementViewModel> HudElements { get; set; }
@@ -53,7 +58,8 @@ namespace DriveHUD.Application.ViewModels
         {
             var model = new HudTableViewModel();
 
-            model.TableLayout = TableLayout.Clone();
+            model.PokerSite = PokerSite;
+            model.TableType = TableType;
             model.IsRelativePosition = IsRelativePosition;
             model.RelativePosition = RelativePosition;
             model.StartPosition = StartPosition;

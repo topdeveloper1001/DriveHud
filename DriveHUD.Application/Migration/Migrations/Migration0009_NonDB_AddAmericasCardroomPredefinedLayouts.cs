@@ -55,7 +55,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
         {
             var layoutsService = new ViewModels.Hud.HudLayoutsService();
 
-            if (!layoutsService.Layouts.Layouts.Any())
+            if (!layoutsService.Layouts.Any())
             {
                 return;
             }

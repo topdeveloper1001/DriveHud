@@ -88,7 +88,7 @@ namespace DriveHUD.Application.HudServices
 
             var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-            var hudToLoad = hudLayoutsService.Layouts.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.Name == layoutName);
+            var hudToLoad = hudLayoutsService.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.Name == layoutName);
 
             if (hudToLoad == null)
             {
