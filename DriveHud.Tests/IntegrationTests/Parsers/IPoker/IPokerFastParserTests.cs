@@ -23,7 +23,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
     [TestFixture]
     public class IPokerFastParserTests
     {
-        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\IPoker\TestData\Temp";
+        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\IPoker\TestData";
 
         [Test]
         public void ParsingDoesNotThrowExceptions()
