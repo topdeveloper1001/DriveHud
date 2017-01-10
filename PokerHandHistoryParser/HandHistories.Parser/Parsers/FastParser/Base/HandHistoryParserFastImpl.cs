@@ -73,7 +73,7 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         {
             return HandSplitRegex.Split(rawHandHistories)
                             .Where(s => string.IsNullOrWhiteSpace(s) == false)
-                            .Select(s => s.Trim('\r', 'n'));
+                            .Select(s => s.Trim('\r', '\n'));
         }
 
         public virtual IEnumerable<string[]> SplitUpMultipleHandsToLines(string rawHandHistories)
