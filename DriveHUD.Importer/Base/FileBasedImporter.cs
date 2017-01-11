@@ -78,8 +78,13 @@ namespace DriveHUD.Importers
                                                       select handHistoryFile).ToArray();
 
                     // add new files and lock them
-                    newlyDetectedHandHistories.ForEach(hh =>
+                    foreach (var hh in newlyDetectedHandHistories)
                     {
+                        if (cancellationTokenSource.IsCancellationRequested)
+                        {
+                            break;
+                        }
+
                         if (!capturedFiles.ContainsKey(hh.FullName))
                         {
                             var fs = File.Open(hh.FullName, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
@@ -108,11 +113,16 @@ namespace DriveHUD.Importers
 
                             capturedFiles.Add(hh.FullName, capturedFile);
                         }
-                    });
+                    }
 
                     // try to parse file
-                    capturedFiles.ForEach(cf =>
+                    foreach (var cf in capturedFiles)
                     {
+                        if (cancellationTokenSource.IsCancellationRequested)
+                        {
+                            break;
+                        }
+
                         var fs = cf.Value.FileStream;
 
                         var handText = GetHandTextFromStream(fs, cf.Value.Encoding);
@@ -154,7 +164,7 @@ namespace DriveHUD.Importers
                         }
 
                         ProcessHand(handText, cf.Value.GameInfo);
-                    });
+                    }
 
                     // remove invalid files from captured
                     filesToSkip.ForEach(fileToSkip =>
@@ -165,7 +175,10 @@ namespace DriveHUD.Importers
                         }
                     });
 
-                    Task.Delay(ReadingTimeout).Wait();
+                    if (!cancellationTokenSource.IsCancellationRequested)
+                    {
+                        Task.Delay(ReadingTimeout).Wait();
+                    }
                 }
                 catch (Exception e)
                 {
