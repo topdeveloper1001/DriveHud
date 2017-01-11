@@ -384,12 +384,17 @@ namespace DriveHUD.Application.ViewModels
 
         private void SelectSiteAndGameType()
         {
-            var vm = new HudSiteGameTypeViewModel(CurrentPokerSite, CurrentGameType);
-            var frm = Activator.CreateInstance(typeof(HudSiteGameTypeView), vm);
-            if (!((dynamic) frm).ShowDialog())
-                return;
-            CurrentPokerSite = vm.SelectedPokerSite.PokerSite;
-            CurrentGameType = vm.SelectedGameType.GameType;
+            var hudSelectSiteGameTypeViewModelInfo = new HudSelectSiteGameTypeViewModelInfo
+            {
+                PokerSite = CurrentPokerSite,
+                GameType = CurrentGameType,
+                Cancel = ClosePopup,
+                Save = SetSiteGameType,
+            };
+
+            var hudSelectLayoutViewModel = new HudSelectSiteGameTypeViewModel(hudSelectSiteGameTypeViewModelInfo);
+
+            OpenPopup(hudSelectLayoutViewModel);
         }
 
         private void SwitchHudType()
@@ -782,6 +787,8 @@ namespace DriveHUD.Application.ViewModels
         }
 
         private HudSavedLayout _currentLayout;
+        private IEnumerable<ISiteConfiguration> _configurations;
+        private ObservableCollection<EnumTableTypeWrapper> _tableTypes;
 
         public HudSavedLayout CurrentLayout
         {
@@ -837,6 +844,19 @@ namespace DriveHUD.Application.ViewModels
             var hudSelectLayoutViewModel = new HudSelectLayoutViewModel(hudSelectLayoutViewModelInfo);
 
             OpenPopup(hudSelectLayoutViewModel);
+        }
+
+        private void SetSiteGameType()
+        {
+            var hudSelectSiteViewModel = PopupViewModel as HudSelectSiteGameTypeViewModel;
+            if (hudSelectSiteViewModel == null)
+            {
+                ClosePopup();
+                return;
+            }
+            CurrentPokerSite = hudSelectSiteViewModel.SelectedPokerSite.PokerSite;
+            CurrentGameType = hudSelectSiteViewModel.SelectedGameType.GameType;
+            ClosePopup();
         }
 
         private void DataSave()

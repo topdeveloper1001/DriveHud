@@ -369,6 +369,7 @@
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
     <Compile Include="ViewModels\Hud\EnumTableTypeWrapper.cs" />
+    <Compile Include="ViewModels\Hud\HudSelectSiteGameTypeViewModelInfo.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
@@ -392,7 +393,7 @@
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBumperStickerFiltersViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerSupportViewModel.cs" />
     <Compile Include="ViewModels\Hud\PokerStarsHudPanelService.cs" />
-    <Compile Include="ViewModels\Popups\HudSiteGameTypeViewModel.cs" />
+    <Compile Include="ViewModels\Hud\HudSiteGameTypeViewModel.cs" />
     <Compile Include="ViewModels\Popups\PlayerNoteViewModel.cs" />
     <Compile Include="ViewModels\Registration\LicenseInfoViewModel.cs" />
     <Compile Include="ViewModels\Registration\RegistrationViewModel.cs" />
@@ -423,8 +424,8 @@
     <Compile Include="Views\PopupContainers\PopupContainerSupportView.xaml.cs">
       <DependentUpon>PopupContainerSupportView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Popups\HudSiteGameTypeView.xaml.cs">
-      <DependentUpon>HudSiteGameTypeView.xaml</DependentUpon>
+    <Compile Include="Views\Hud\HudSelectSiteGameTypeView.xaml.cs">
+      <DependentUpon>HudSelectSiteGameTypeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Popups\PlayerNoteView.xaml.cs">
       <DependentUpon>PlayerNoteView.xaml</DependentUpon>
@@ -750,7 +751,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Popups\HudSiteGameTypeView.xaml">
+    <Page Include="Views\Hud\HudSelectSiteGameTypeView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

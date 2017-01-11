@@ -2,32 +2,26 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Input;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common;
 using DriveHUD.Common.Infrastructure.Base;
-using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Site;
-using Telerik.Windows.Controls;
+using ReactiveUI;
 
-namespace DriveHUD.Application.ViewModels.Popups
+namespace DriveHUD.Application.ViewModels
 {
-    public class HudSiteGameTypeViewModel : BaseViewModel
+    public class HudSelectSiteGameTypeViewModel : BaseViewModel
     {
+        private readonly HudSelectSiteGameTypeViewModelInfo _viewModelInfo;
         private EnumGameTypeWrapper _gameType;
         private List<EnumGameTypeWrapper> _gameTypes;
         private EnumPokerSitesWrapper _selectedPokerSite;
-        private bool? _result;
 
-        public ICommand OkCommand { get; private set; }
-        public ICommand CancelCommand { get; private set; }
+        public ReactiveCommand<object> SaveCommand { get; private set; }
 
-        public bool? Result
-        {
-            get { return _result; }
-            set { SetProperty(ref _result, value); }
-        }
+        public ReactiveCommand<object> CancelCommand { get; private set; }
 
         public EnumPokerSitesWrapper SelectedPokerSite
         {
@@ -48,13 +42,16 @@ namespace DriveHUD.Application.ViewModels.Popups
         }
 
         public ObservableCollection<EnumPokerSitesWrapper> PokerSites { get; private set; }
-        public Action CloseAction;
-        
-        public HudSiteGameTypeViewModel(EnumPokerSites pokerSite, EnumGameType gameType)
+
+        public HudSelectSiteGameTypeViewModel(HudSelectSiteGameTypeViewModelInfo viewModelInfo)
         {
-            Result = null;
-            OkCommand = new DelegateCommand(OkExecuted);
-            CancelCommand = new DelegateCommand(CancelExecuted);
+            Check.ArgumentNotNull(() => viewModelInfo);
+            _viewModelInfo = viewModelInfo;
+            Initialize();
+        }
+
+        private void Initialize()
+        {
             GameTypes =
                 Enum.GetValues(typeof(EnumGameType))
                     .Cast<EnumGameType>()
@@ -65,20 +62,19 @@ namespace DriveHUD.Application.ViewModels.Popups
             PokerSites =
                 new ObservableCollection<EnumPokerSitesWrapper>(
                     configurations.Select(c => new EnumPokerSitesWrapper(c.Site)));
-            SelectedPokerSite = PokerSites.FirstOrDefault(p => p.PokerSite == pokerSite);
-            SelectedGameType = GameTypes.FirstOrDefault(x => x.GameType == gameType);
-        }
+            SelectedPokerSite = PokerSites.FirstOrDefault(p => p.PokerSite == _viewModelInfo.PokerSite);
+            SelectedGameType = GameTypes.FirstOrDefault(x => x.GameType == _viewModelInfo.GameType);
+            SaveCommand = ReactiveCommand.Create();
+            SaveCommand.Subscribe(x =>
+            {
+                _viewModelInfo.Save?.Invoke();
+            });
 
-        private void CancelExecuted(object obj)
-        {
-            Result = false;
-            CloseAction.Invoke();
-        }
-
-        private void OkExecuted(object obj)
-        {
-            Result = true;
-            CloseAction.Invoke();
+            CancelCommand = ReactiveCommand.Create();
+            CancelCommand.Subscribe(x =>
+            {
+                _viewModelInfo.Cancel?.Invoke();
+            });
         }
     }
 }

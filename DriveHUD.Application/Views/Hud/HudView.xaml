@@ -21,6 +21,9 @@
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
              xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
+             xmlns:popups="clr-namespace:DriveHUD.Application.Views.Popups"
+             xmlns:vm1="clr-namespace:DriveHUD.Application.ViewModels.Popups"
+             xmlns:vm11="clr-namespace:DriveHUD.Application.ViewModels.Hud"
              mc:Ignorable="d" Foreground="White">
 
     <i:Interaction.Triggers>
@@ -104,6 +107,10 @@
 
         <DataTemplate DataType="{x:Type vm:HudPlayerSettingsViewModel}">
             <hud:HudPlayerSettingsView />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type vm:HudSelectSiteGameTypeViewModel}">
+            <hud:HudSelectSiteGameTypeView />
         </DataTemplate>
 
         <DataTemplate DataType="{x:Type vm:HudBumperStickersSettingsViewModel}">
