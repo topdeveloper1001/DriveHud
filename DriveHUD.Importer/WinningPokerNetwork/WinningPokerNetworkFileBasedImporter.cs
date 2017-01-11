@@ -1,21 +1,32 @@
-﻿using System;
+﻿//-----------------------------------------------------------------------
+// <copyright file="WinningPokerNetworkFileBasedImporter.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Progress;
+using DriveHUD.Common.WinApi;
+using DriveHUD.Entities;
+using DriveHUD.Importers.Helpers;
+using HandHistories.Objects.Hand;
+using HandHistories.Objects.Players;
+using HandHistories.Parser.Parsers;
+using HandHistories.Parser.Parsers.Factory;
+using Microsoft.Practices.ServiceLocation;
+using Model.Settings;
+using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using HandHistories.Parser.Parsers;
-using System.Globalization;
-using DriveHUD.Common.WinApi;
-using Microsoft.Practices.ServiceLocation;
-using HandHistories.Parser.Parsers.Factory;
-using System.IO;
-using DriveHUD.Importers.Helpers;
-using Model.Settings;
-using DriveHUD.Entities;
-using DriveHUD.Common.Progress;
-using HandHistories.Objects.Players;
-using HandHistories.Objects.Hand;
-using DriveHUD.Common.Extensions;
 
 namespace DriveHUD.Importers.WinningPokerNetwork
 {
@@ -41,22 +52,39 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         protected override string GetSessionForFile(string fileName)
         {
             //HH20161125 T6748379-G37397187.txt, where T6748379 is tournament number
+            var tournamentNumber = GetTournamentNumberFromFile(fileName);
+
+            if (!string.IsNullOrEmpty(tournamentNumber))
+            {
+                var session = capturedFiles.Keys.FirstOrDefault(x => x.Contains(tournamentNumber));
+
+                if (!string.IsNullOrWhiteSpace(session))
+                {
+                    return capturedFiles[session].Session;
+                }
+            }
+
+            return base.GetSessionForFile(fileName);
+        }
+
+        private string GetTournamentNumberFromFile(string fileName)
+        {
             var file = Path.GetFileName(fileName);
+
             var startIndex = file.IndexOf("T", StringComparison.Ordinal);
+
             if (startIndex != -1)
             {
                 var endIndex = file.IndexOf("-", StringComparison.Ordinal);
+
                 if (endIndex > startIndex)
                 {
                     var tornamentNumber = file.Substring(startIndex, endIndex - startIndex);
-                    var session = capturedFiles.Keys.FirstOrDefault(x => x.Contains(tornamentNumber));
-                    if (!string.IsNullOrWhiteSpace(session))
-                    {
-                        return capturedFiles[session].Session;
-                    }
+                    return tornamentNumber;
                 }
             }
-            return base.GetSessionForFile(fileName);
+
+            return null;
         }
 
         protected override bool TryGetPokerSiteName(string handText, out EnumPokerSites siteName)
@@ -76,9 +104,8 @@ namespace DriveHUD.Importers.WinningPokerNetwork
 
         protected override IEnumerable<ParsingResult> ImportHand(string handHistory, GameInfo gameInfo, IFileImporter dbImporter, DHProgress progress)
         {
-            // client window contains some additional information about the game, so add it to the HH if possible
-            bool isWindowFound;
-            handHistory = AddAdditionalData(handHistory, out isWindowFound);
+            // client window contains some additional information about the game, so add it to the HH if possible            
+            handHistory = AddAdditionalData(handHistory, gameInfo);
 
             return dbImporter.Import(handHistory, progress, gameInfo);
         }
@@ -184,9 +211,8 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return isTitleMatch;
         }
 
-        private string AddAdditionalData(string handHistory, out bool isWindowFound)
+        private string AddAdditionalData(string handHistory, GameInfo gameInfo)
         {
-            isWindowFound = false;
             if (string.IsNullOrWhiteSpace(handHistory))
             {
                 return handHistory;
@@ -198,25 +224,43 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             var indexGameStarted = handHistory.IndexOf(GameStartedSearchPattern);
 
             string windowTitleText = string.Empty;
+
             ParsingResult parsingResult = null;
+
+            string tournamentNumber = null;
 
             if (indexGameStarted != -1)
             {
-                string tableName = parser.ParseTableName(handHistory.Substring(indexGameStarted));
+                var tableName = parser.ParseTableName(handHistory.Substring(indexGameStarted));
+                tournamentNumber = GetTournamentNumberFromFile(gameInfo.FileName);
 
-                parsingResult = new ParsingResult()
+                parsingResult = new ParsingResult
                 {
-                    Source = new HandHistories.Objects.Hand.HandHistory()
+                    Source = new HandHistory
                     {
-                        TableName = tableName,
-                    },
+                        TableName = tableName
+                    }
                 };
 
-                IntPtr window = FindWindow(parsingResult);
+                // set tournament number to find proper window
+                if (!string.IsNullOrWhiteSpace(tournamentNumber))
+                {
+                    parsingResult.GameType = new Gametypes
+                    {
+                        Istourney = true
+                    };
+
+                    parsingResult.HandHistory = new Handhistory
+                    {
+                        Tourneynumber = tournamentNumber
+                    };
+                }
+
+                var window = FindWindow(parsingResult);
+
                 if (window != IntPtr.Zero)
                 {
                     windowTitleText = WinApi.GetWindowText(window);
-                    isWindowFound = true;
                 }
             }
 
@@ -226,22 +270,26 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             // Get Data From windowTitleText
-
-            string summaryText = string.Empty;
+            var summaryText = string.Empty;
             var gameType = GetGameType(windowTitleText);
-            var tournamentNumber = GetTournamentNumber(windowTitleText);
 
-            if (!string.IsNullOrWhiteSpace(tournamentNumber))
+            if (string.IsNullOrWhiteSpace(tournamentNumber))
             {
-                var totalBuyIn = GetTournamentBuyIn(windowTitleText);
-                summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {totalBuyIn.ToString(CultureInfo.InvariantCulture)}";
+                tournamentNumber = GetTournamentNumber(windowTitleText);
+
+                if (!string.IsNullOrWhiteSpace(tournamentNumber))
+                {
+                    var totalBuyIn = GetTournamentBuyIn(windowTitleText);
+                    summaryText = $" *** Summary: GameType: {gameType}, TournamentId: {tournamentNumber}, TournamentBuyIn: {totalBuyIn.ToString(CultureInfo.InvariantCulture)}";
+                }
             }
-            else
+
+            if (string.IsNullOrEmpty(summaryText))
             {
                 summaryText = $" *** Summary: GameType: {gameType}";
             }
 
-            // add summary info to the handhistory file
+            // add summary info to the hand history file
             while (indexGameStarted != -1)
             {
                 var newLineIndex = handHistory.IndexOf(Environment.NewLine, indexGameStarted);

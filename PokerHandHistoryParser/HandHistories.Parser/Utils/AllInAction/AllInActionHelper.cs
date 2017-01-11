@@ -55,7 +55,7 @@ namespace HandHistories.Parser.Utils
                 //Update the remaining stack with our action's amount
                 playerStackRemaining[action.PlayerName] += action.Amount;
 
-                if (playerStackRemaining[action.PlayerName] == 0)
+                if (playerStackRemaining[action.PlayerName] == 0 && !action.IsBlinds)
                 {
                     //This was a bet/raise/call for our remaining chips - we are all in
                     AllInAction allInAction = new AllInAction(action.PlayerName, action.Amount, action.Street, true);
@@ -104,39 +104,47 @@ namespace HandHistories.Parser.Utils
         /// <returns></returns>
         internal static HandActionType GetAllInActionType(string playerName, decimal amount, Street street, List<HandAction> actions)
         {
-            var streetActions = actions.Street(street);
-
-            if (street != Street.Preflop && streetActions.FirstOrDefault(p => p.HandActionType == HandActionType.BET) == null)
+            try
             {
-                return HandActionType.BET;
-            }
+                var streetActions = actions.Street(street);
 
-            Dictionary<string, decimal> PutInPot = new Dictionary<string, decimal>();
-
-            foreach (var action in streetActions)
-            {
-                if (!PutInPot.ContainsKey(action.PlayerName))
+                if (street != Street.Preflop && streetActions.FirstOrDefault(p => p.HandActionType == HandActionType.BET) == null)
                 {
-                    PutInPot.Add(action.PlayerName, action.Amount);
+                    return HandActionType.BET;
+                }
+
+                Dictionary<string, decimal> PutInPot = new Dictionary<string, decimal>();
+
+                foreach (var action in streetActions)
+                {
+                    if (!PutInPot.ContainsKey(action.PlayerName))
+                    {
+                        PutInPot.Add(action.PlayerName, action.Amount);
+                    }
+                    else
+                    {
+                        PutInPot[action.PlayerName] += action.Amount;
+                    }
+                }
+
+                var contributed = Math.Abs(amount);
+                if (PutInPot.ContainsKey(playerName))
+                {
+                    contributed += Math.Abs(PutInPot[playerName]);
+                }
+                if (contributed <= Math.Abs(PutInPot.Min(p => p.Value)))
+                {
+                    return HandActionType.CALL;
                 }
                 else
                 {
-                    PutInPot[action.PlayerName] += action.Amount;
+                    return HandActionType.RAISE;
                 }
             }
-
-            var contributed = Math.Abs(amount);
-            if (PutInPot.ContainsKey(playerName))
+            catch
             {
-                contributed += Math.Abs(PutInPot[playerName]);
-            }
-            if (contributed <= Math.Abs(PutInPot.Min(p => p.Value)))
-            {
-                return HandActionType.CALL;
-            }
-            else
-            {
-                return HandActionType.RAISE;
+                System.Diagnostics.Debug.WriteLine("error");
+                return HandActionType.BET;
             }
         }
     }

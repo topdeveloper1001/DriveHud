@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
+
 namespace DriveHUD.Importers
 {
     /// <summary>
@@ -17,6 +19,11 @@ namespace DriveHUD.Importers
     /// </summary>
     public interface IImporterService
     {
+        /// <summary>
+        /// Importing has been stopped
+        /// </summary>
+        event EventHandler ImportingStopped;
+
         /// <summary>
         /// Start import
         /// </summary>

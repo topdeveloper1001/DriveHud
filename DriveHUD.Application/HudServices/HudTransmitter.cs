@@ -1,23 +1,22 @@
 ﻿using DriveHUD.Common.Log;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.IO.Pipes;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Threading;
+using DriveHUD.HUD.Service;
 using Microsoft.Practices.ServiceLocation;
 using Model.Settings;
-using DriveHUD.HUD.Service;
+using System;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
 using System.ServiceModel;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace DriveHUD.Application.HudServices
 {
     public class HudTransmitter : IHudTransmitter
     {
         private const string hudClientFileName = "DriveHUD.HUD.exe";
+        private const string hudProcessName = "DriveHUD.HUD";
+             
         private const double delayMS = 1000;
 
         private Process hudClient;
@@ -33,7 +32,7 @@ namespace DriveHUD.Application.HudServices
 
         private bool isInitialized;
 
-        public void Initialize()
+        public async Task InitializeAsync()
         {
             LogProvider.Log.Info(this, "Initializing HUD");
 
@@ -43,15 +42,14 @@ namespace DriveHUD.Application.HudServices
             locker = new ReaderWriterLockSlim();
             _cancellationTokenSource = new CancellationTokenSource();
 
-            _initializeTask = new Task(InitializeInternal);
-            _initializeTask.Start();
+            await Task.Run(() => InitializeInternal());
         }
 
         private void InitializeInternal()
         {
             try
             {
-                var existingClientProcess = Process.GetProcessesByName(hudClientFileName).FirstOrDefault();
+                var existingClientProcess = Process.GetProcessesByName(hudProcessName).FirstOrDefault();
 
                 if (existingClientProcess != null)
                 {
@@ -61,7 +59,7 @@ namespace DriveHUD.Application.HudServices
                 hudClient = BuildClientProcess();
                 hudClient.Start();
 
-                Task.Delay(5000).Wait();
+                Task.Delay(2000).Wait();
 
                 StartPipe();
 
@@ -90,7 +88,7 @@ namespace DriveHUD.Application.HudServices
 
                     if (_cancellationTokenSource != null && _cancellationTokenSource.IsCancellationRequested)
                     {
-                        LogProvider.Log.Info(this, "Initialize cancelled");
+                        LogProvider.Log.Info(this, "Initialize canceled");
                         return;
                     }
 
@@ -146,6 +144,7 @@ namespace DriveHUD.Application.HudServices
             }
 
             locker.EnterWriteLock();
+
             try
             {
                 _namedPipeBindingProxy.UpdateHUD(data);
@@ -191,7 +190,7 @@ namespace DriveHUD.Application.HudServices
                 App.Current.Dispatcher.Invoke(() => { name = App.Current.MainWindow.Title; });
 
                 _namedPipeBindingProxy.ConnectCallbackChannel(name);
-                LogProvider.Log.Info(this, "HUD callback channel has been createad.");
+                LogProvider.Log.Info(this, "HUD callback channel has been created.");
             }
             catch (Exception ex)
             {
@@ -208,11 +207,11 @@ namespace DriveHUD.Application.HudServices
             }
         }
 
-        private void Reinitialize()
+        private async void Reinitialize()
         {
             LogProvider.Log.Info(this, "Trying to re-initialize the HUD.");
             Close();
-            Initialize();
+            await InitializeAsync();
         }
 
         private void Close()
