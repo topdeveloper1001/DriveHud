@@ -127,7 +127,7 @@ namespace DriveHUD.Importers
                         playerData = new List<Playerstatistic>();
                     }
                     else
-                    {
+                    {                        
                         playerData = dataService.GetPlayerStatisticFromFile(player.PlayerId, (short)player.PokerSite);
 
                         playerData.ForEach(x =>
