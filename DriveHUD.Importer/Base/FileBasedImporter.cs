@@ -189,6 +189,8 @@ namespace DriveHUD.Importers
             Clean();
 
             RaiseProcessStopped();
+
+            Debug.WriteLine($"Class: {this.ToString()} has exited");
         }
 
         protected virtual bool TryGetPokerSiteName(string handText, out EnumPokerSites siteName)

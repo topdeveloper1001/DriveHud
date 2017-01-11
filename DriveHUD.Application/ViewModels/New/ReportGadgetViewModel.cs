@@ -386,7 +386,7 @@ namespace DriveHUD.Application.ViewModels
 
                 if (value != null)
                 {
-                    this.ReportSelectedItemStatisticsCollection = new List<Playerstatistic>(value.Statistcs);
+                    this.ReportSelectedItemStatisticsCollection = new List<Playerstatistic>(value.Statistics);
                 }
                 else
                 {

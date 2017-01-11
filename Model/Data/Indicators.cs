@@ -16,7 +16,7 @@ namespace Model.Data
         public Indicators()
         {
             Source = new Playerstatistic();
-            Statistcs = new List<Playerstatistic>();
+            Statistics = new List<Playerstatistic>();
         }
 
         public Indicators(IEnumerable<Playerstatistic> playerStatistic) : this()
@@ -26,7 +26,7 @@ namespace Model.Data
 
         public Playerstatistic Source { get; set; }
 
-        public List<Playerstatistic> Statistcs { get; private set; }
+        public List<Playerstatistic> Statistics { get; private set; }
 
         protected decimal GetPercentage(decimal actual, decimal possible)
         {
@@ -55,7 +55,7 @@ namespace Model.Data
             get
             {
                 // to prevent errors - collection was modified
-                var statistic = Statistcs.ToArray();
+                var statistic = Statistics.ToArray();
 
                 decimal totalhands = statistic.Count() / (decimal)100;
                 decimal netwon = statistic.Sum(x => GetDevisionResult(x.NetWon, x.BigBlind));
@@ -339,11 +339,11 @@ namespace Model.Data
         {
             get
             {
-                if (Statistcs == null || !Statistcs.Any())
+                if (Statistics == null || !Statistics.Any())
                 {
                     return "";
                 }
-                return StringFormatter.GetDateTimeString(Statistcs.Min(x => x.Time));
+                return StringFormatter.GetDateTimeString(Statistics.Min(x => x.Time));
             }
         }
 
@@ -351,11 +351,11 @@ namespace Model.Data
         {
             get
             {
-                if (Statistcs == null || !Statistcs.Any())
+                if (Statistics == null || !Statistics.Any())
                 {
                     return "";
                 }
-                var length = Statistcs.Max(x => x.Time) - Statistcs.Min(x => x.Time);
+                var length = Statistics.Max(x => x.Time) - Statistics.Min(x => x.Time);
                 return String.Format("{0}:{1:00}", (int)length.TotalHours, (int)length.Minutes);
             }
         }
@@ -706,7 +706,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_EP,
-                    Statistcs.Count(x => x.PositionString == "EP" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "EP" && PlayerStatisticCalculator.IsUnopened(x)));
             }
         }
         public virtual decimal UO_PFR_MP
@@ -714,7 +714,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_MP,
-                    Statistcs.Count(x => x.PositionString == "MP" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "MP" && PlayerStatisticCalculator.IsUnopened(x)));
             }
         }
         public virtual decimal UO_PFR_CO
@@ -722,7 +722,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_CO,
-                    Statistcs.Count(x => x.PositionString == "CO" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "CO" && PlayerStatisticCalculator.IsUnopened(x)));
             }
         }
         public virtual decimal UO_PFR_BN
@@ -730,7 +730,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_BN,
-                    Statistcs.Count(x => x.PositionString == "BTN" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "BTN" && PlayerStatisticCalculator.IsUnopened(x)));
             }
         }
         public virtual decimal UO_PFR_SB
@@ -738,7 +738,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_SB,
-                    Statistcs.Count(x => x.PositionString == "SB" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "SB" && PlayerStatisticCalculator.IsUnopened(x)));
             }
         }
         public virtual decimal UO_PFR_BB
@@ -746,7 +746,7 @@ namespace Model.Data
             get
             {
                 return GetPercentage(Source.UO_PFR_BB,
-                    Statistcs.Count(x => x.PositionString == "BB" && PlayerStatisticCalculator.IsUnopened(x)));
+                    Statistics.Count(x => x.PositionString == "BB" && PlayerStatisticCalculator.IsUnopened(x)));
             }
         }
 
@@ -836,12 +836,12 @@ namespace Model.Data
         {
             get
             {
-                if (Statistcs == null || !Statistcs.Any())
+                if (Statistics == null || !Statistics.Any())
                 {
                     return "";
                 }
-                var sessionStartHour = Converter.ToLocalizedDateTime(Statistcs.Min(x => x.Time)).Hour;
-                var sessionEndHour = Converter.ToLocalizedDateTime(Statistcs.Max(x => x.Time)).Hour;
+                var sessionStartHour = Converter.ToLocalizedDateTime(Statistics.Min(x => x.Time)).Hour;
+                var sessionEndHour = Converter.ToLocalizedDateTime(Statistics.Max(x => x.Time)).Hour;
                 return String.Format("{0}:00 - {1}:59", sessionStartHour, sessionEndHour);
             }
         }
@@ -850,24 +850,26 @@ namespace Model.Data
         {
             Source = statistic;
         }
+
         public virtual void UpdateSource(IList<Playerstatistic> statistics)
         {
             foreach (var statistic in statistics)
                 AddStatistic(statistic);
         }
+
         public virtual void AddStatistic(Playerstatistic statistic)
         {
             Source += statistic;
-            Statistcs.Add(statistic);
+            Statistics.Add(statistic);
         }
 
         public virtual void Clean()
         {
             Source = new Playerstatistic();
-            Statistcs = new List<Playerstatistic>();
+            Statistics = new List<Playerstatistic>();
         }
 
-        public int CompareTo(object obj)
+        public virtual int CompareTo(object obj)
         {
             var objIndicator = obj as Indicators;
             if (objIndicator == null)
@@ -875,8 +877,8 @@ namespace Model.Data
                 return 1;
             }
 
-            var thisIndicatorValue = this.Statistcs?.Max(x => x.GameNumber) ?? int.MinValue;
-            var objIndicatorValue = objIndicator.Statistcs?.Max(x => x.GameNumber) ?? int.MinValue;
+            var thisIndicatorValue = this.Statistics?.Max(x => x.GameNumber) ?? int.MinValue;
+            var objIndicatorValue = objIndicator.Statistics?.Max(x => x.GameNumber) ?? int.MinValue;
 
             return thisIndicatorValue > objIndicatorValue ? 1
                 : thisIndicatorValue < objIndicatorValue ? -1

@@ -14,6 +14,7 @@ using Model;
 using DriveHUD.Entities;
 using System;
 using System.Collections.Generic;
+using Model.Data;
 
 namespace DriveHUD.Importers
 {
@@ -38,15 +39,8 @@ namespace DriveHUD.Importers
         /// <param name="session">Active session</param>
         /// <param name="player">Player which stats has to be retrieved</param>
         /// <returns>Player stats</returns>
-        IList<Playerstatistic> GetPlayerStats(string session, PlayerCollectionItem player);
-
-        /// <summary>
-        /// Get all player stats from cache in specified session
-        /// </summary>
-        /// <param name="session">Active session</param>
-        /// <returns>Player stats</returns>
-        IList<Playerstatistic> GetAllPlayerStats(string session);
-
+        SessionCacheStatistic GetPlayerStats(string session, PlayerCollectionItem player);
+      
         /// <summary>
         /// Store specified player data in cache
         /// </summary>
