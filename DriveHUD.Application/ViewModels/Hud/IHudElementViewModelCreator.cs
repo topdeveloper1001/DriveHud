@@ -22,11 +22,11 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Create HUD element based on table settings
         /// </summary>
-        /// <param name="tableKey">Table key</param>
+        /// <param name="tableDefinition">Table key</param>
         /// <param name="hudViewModel">Hud view model</param>
         /// <param name="seatNumber">Seat number</param>
         /// <param name="hudType">Hud type</param>
         /// <returns>Hud panel element view model</returns>
-        HudElementViewModel Create(int tableKey, HudViewModel hudViewModel, int seatNumber, HudType hudType);
+        HudElementViewModel Create(HudSavedTableDefinition tableDefinition, HudViewModel hudViewModel, int seatNumber, HudType hudType);
     }
 }

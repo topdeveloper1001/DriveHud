@@ -11,6 +11,8 @@
 //----------------------------------------------------------------------
 
 using System.Collections.Generic;
+using DriveHUD.Entities;
+using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -35,7 +37,7 @@ namespace DriveHUD.Application.ViewModels
         /// <param name="name">Name of layout</param>
         /// <param name="layoutId">Layout id</param>
         /// <returns>Layout</returns>
-        HudSavedLayout GetLayoutByName(string name, int layoutId);
+        HudSavedLayout GetLayout(string name, int layoutId);
 
         /// <summary>
         /// Save current layout
@@ -57,11 +59,6 @@ namespace DriveHUD.Application.ViewModels
         /// Save new layout
         /// </summary>
         HudSavedLayout SaveAs(HudSavedDataInfo hudData);
-
-        /// <summary>
-        /// Load layout
-        /// </summary>
-        HudSavedLayout Load(string name, int layoutId);
 
         /// <summary>
         /// Delete layout
@@ -122,5 +119,7 @@ namespace DriveHUD.Application.ViewModels
         /// <returns>Full path to image</returns>
         string GetImageLink(string image);
 
+        HudSavedLayout GetActiveLayout(HudSavedTableDefinition tableDefinition);
+        HudTableViewModel GetHudTableViewModel(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType);
     }
 }

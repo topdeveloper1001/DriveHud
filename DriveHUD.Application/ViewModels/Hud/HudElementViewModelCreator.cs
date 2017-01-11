@@ -24,32 +24,26 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Create HUD element based on table settings
         /// </summary>
-        /// <param name="tableKey">Table key</param>
+        /// <param name="tableDefinition">Table key</param>
         /// <param name="hudViewModel">Hud view model</param>
         /// <param name="seatNumber">Seat number</param>
         /// <param name="hudType">Hud type</param>
         /// <returns>Hud panel element view model</returns>
-        public HudElementViewModel Create(int tableKey, HudViewModel hudViewModel, int seatNumber, HudType hudType)
+        public HudElementViewModel Create(HudSavedTableDefinition tableDefinition, HudViewModel hudViewModel, int seatNumber, HudType hudType)
         {
             Check.ArgumentNotNull(() => hudViewModel);
 
-            //if (!hudViewModel.HudTableViewModels.ContainsKey(tableKey))
-            {
-                return null;
-            }
+            var hudTableViewModel =
+                hudViewModel.HudTableViewModels.FirstOrDefault(
+                    h =>
+                        h.PokerSite == tableDefinition.PokerSite && h.GameType == tableDefinition.GameType &&
+                        h.TableType == tableDefinition.TableType);
 
-            //var hudTableViewModel = hudViewModel.HudTableViewModelDictionary[tableKey];
+            var hudElementTemplate = hudTableViewModel?.HudElements.FirstOrDefault(x => x.Seat == seatNumber && x.HudType == hudType);
 
-            //var hudElementTemplate = hudTableViewModel.HudElements.FirstOrDefault(x => x.Seat == seatNumber && x.HudType == hudType);
+            var hudElementViewModel = hudElementTemplate?.Clone();
 
-            //if (hudElementTemplate == null)
-            //{
-            //    return null;
-            //}
-
-            //var hudElementViewModel = hudElementTemplate.Clone();
-
-            //return hudElementViewModel;
+            return hudElementViewModel;
         }
     }
 }

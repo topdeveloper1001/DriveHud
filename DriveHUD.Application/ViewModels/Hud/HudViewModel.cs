@@ -417,12 +417,7 @@ namespace DriveHUD.Application.ViewModels
                 {
                     if (CurrentTableType == null || _isObservablesUpdating)
                         return;
-                    //TODO filter layouts for current table/game/site
-                    Layouts.Clear();
-                    Layouts.AddRange(_hudLayoutsSevice.Layouts);
-
-                    UpdateActiveLayout();
-
+                    DataLoad();
                     TableUpdate?.Invoke(this, new EventArgs());
                 });
 
@@ -796,7 +791,6 @@ namespace DriveHUD.Application.ViewModels
                 this.RaiseAndSetIfChanged(ref _currentLayout, value);
                 // load data for selected layout
                 DataLoad();
-                TableUpdate?.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -962,6 +956,7 @@ namespace DriveHUD.Application.ViewModels
             MergeLayouts(CurrentPokerSite, CurrentGameType, CurrentTableType.TableType,
                 CurrentHudTableViewModel.HudElements, CurrentLayout);
             UpdateLayout(CurrentLayout);
+            TableUpdate?.Invoke(this, EventArgs.Empty);
         }
 
         private void DataDelete()
@@ -983,7 +978,7 @@ namespace DriveHUD.Application.ViewModels
 
             var userDefinedPositions =
                 layout.HudPositions.FirstOrDefault(
-                    p => p.PokerSite == pokerSite && p.GameType == gameType && p.TableType == tableType);
+                    p => p.TableDefinition.PokerSite == pokerSite && p.TableDefinition.GameType == gameType && p.TableDefinition.TableType == tableType);
             if (userDefinedPositions != null)
             {
                 foreach (var hudElementViewModel in hudElementViewModels)
@@ -1002,7 +997,6 @@ namespace DriveHUD.Application.ViewModels
 
         public void UpdateActiveLayout()
         {
-            //TODO update to select saved active for game/table/site
             CurrentLayout = Layouts.FirstOrDefault();
         }
 

@@ -30,7 +30,7 @@ namespace DriveHUD.Application.HudServices
             //    return;
             //}
 
-            //if (!hudLayoutsService.HudTableViewModelDictionary.ContainsKey(hudLayout.LayoutId))
+            //if (!hudLayoutsService.HudTableViewModels.ContainsKey(hudLayout.LayoutId))
             //{
             //    LogProvider.Log.Info(this, $"Cannot find view model for layout with id: {hudLayout.LayoutId}");
             //    return;
@@ -84,17 +84,17 @@ namespace DriveHUD.Application.HudServices
 
         public void LoadLayout(int layoutId, string layoutName)
         {
-            //LogProvider.Log.Info($"Load layout {layoutId} {layoutName}");
+            LogProvider.Log.Info($"Load layout {layoutId} {layoutName}");
 
-            //var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-            //var hudToLoad = hudLayoutsService.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.Name == layoutName);
+            var hudToLoad = hudLayoutsService.Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.Name == layoutName);
 
-            //if (hudToLoad == null)
-            //{
-            //    LogProvider.Log.Info(this, $"Cannot find layout with id {layoutId} and name {layoutName}");
-            //    return;
-            //}
+            if (hudToLoad == null)
+            {
+                LogProvider.Log.Info(this, $"Cannot find layout with id {layoutId} and name {layoutName}");
+                return;
+            }
 
             //if (hudToLoad.IsDefault)
             //{

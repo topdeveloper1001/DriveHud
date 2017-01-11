@@ -25,6 +25,7 @@ using DriveHUD.Common.Resources;
 using DriveHUD.Common;
 using Model;
 using System.Windows.Media;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -43,6 +44,30 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             Initialize();
         }
+
+        #region private classes
+        private class MatchRatio
+        {
+            public HudPlayerType PlayerType { get; set; }
+
+            public bool IsInRange { get; set; }
+
+            public decimal Ratio { get; set; }
+
+            public decimal ExtraRatio { get; set; }
+        }
+
+        private class PlayerMatchRatios
+        {
+            public HudElementViewModel HudElement { get; set; }
+
+            public List<MatchRatio> MatchRatios { get; set; }
+
+            public List<MatchRatio> ExtraMatchRatios { get; set; }
+        }
+        #endregion
+
+        #region private methods
 
         private void Initialize()
         {
@@ -90,13 +115,486 @@ namespace DriveHUD.Application.ViewModels.Hud
             _savedLayouts = new HudSavedLayouts {Layouts = GetPredefindedLayouts()};
         }
 
-        public HudSavedLayout GetLayoutByName(string name, int layoutId)
+        private List<HudSavedLayout> GetPredefindedLayouts()
         {
-            var layout = Layouts.FirstOrDefault(x => x.Name.Equals(name) && x.LayoutId == layoutId);
-            return layout;
+            var result = new List<HudSavedLayout>();
+            var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
+            try
+            {
+                using (
+                    var stream =
+                        resourcesAssembly.GetManifestResourceStream("DriveHUD.Common.Resources.Layouts.Default.xml"))
+                {
+                    result.Add(Import(stream));
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
+            return result;
         }
 
-        public HudSavedLayout Load(string name, int layoutId)
+        private List<HudBumperStickerType> CreateDefaultBumperStickers()
+        {
+            var bumperStickers = new List<HudBumperStickerType>()
+            {
+                new HudBumperStickerType(true)
+                {
+                    Name = "One and Done",
+                    SelectedColor = Colors.OrangeRed,
+                    Description = "C-bets at a high% on the flop, but then rarely double barrels.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.CBet, Low = 55, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 0, High = 35},
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Pre-Flop Reg",
+                    SelectedColor = Colors.Orange,
+                    Description = "Plays an aggressive pre-flop game, but doesn’t play well post flop.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 19, High = 26},
+                            new BaseHudRangeStat {Stat = Stat.PFR, Low = 15, High = 23},
+                            new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 0, High = 42},
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Barrelling",
+                    SelectedColor = Colors.Yellow,
+                    Description = "Double and triple barrels a high percentage of the time.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 20, High = 30},
+                            new BaseHudRangeStat {Stat = Stat.PFR, Low = 17, High = 28},
+                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 40, High = 49},
+                            new BaseHudRangeStat {Stat = Stat.CBet, Low = 65, High = 80},
+                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 44, High = 53},
+                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 46, High = 100},
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "3 For Free",
+                    SelectedColor = Colors.GreenYellow,
+                    Description = "3-Bets too much, and folds to a 3-bet too often.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8.8m, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.FoldTo3Bet, Low = 66, High = 100},
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Way Too Early",
+                    SelectedColor = Colors.Green,
+                    Description = "Open raises to wide of a range in early pre-flop positions.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.UO_PFR_EP, Low = 20, High = 100},
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Sticky Fish",
+                    SelectedColor = Colors.Blue,
+                    Description = "Fishy player who can’t fold post flop if they get any piece of the board.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 35, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 40},
+                            new BaseHudRangeStat {Stat = Stat.WTSD, Low = 29, High = 100},
+                        }
+                },
+                new HudBumperStickerType(true)
+                {
+                    Name = "Yummy Fish",
+                    SelectedColor = Colors.DarkBlue,
+                    Description = "Plays too many hands pre-flop and isn’t aggressive post flop.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 40, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 6},
+                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 0, High = 34},
+                        }
+                },
+            };
+
+            return bumperStickers;
+        }
+
+        private Tuple<bool, decimal, decimal> GetMatchRatio(HudElementViewModel hudElement, HudPlayerType hudPlayerType)
+        {
+            var matchRatios = (from stat in hudPlayerType.Stats
+                               let low = stat.Low ?? -1
+                               let high = stat.High ?? 100
+                               let average = (high + low) / 2
+                               let isStatDefined = stat.Low.HasValue || stat.High.HasValue
+                               join hudElementStat in hudElement.StatInfoCollection on stat.Stat equals hudElementStat.Stat into gj
+                               from grouped in gj.DefaultIfEmpty()
+                               let inRange =
+                               grouped != null ? (grouped.CurrentValue >= low && grouped.CurrentValue <= high) : !isStatDefined
+                               let isGroupAndStatDefined = grouped != null && isStatDefined
+                               let matchRatio = isGroupAndStatDefined ? Math.Abs(grouped.CurrentValue - average) : 0
+                               let extraMatchRatio =
+                               (isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)) ? matchRatio : 0
+                               select
+                               new
+                               {
+                                   Ratio = matchRatio,
+                                   InRange = inRange,
+                                   IsStatDefined = isStatDefined,
+                                   ExtraMatchRatio = extraMatchRatio
+                               }).ToArray();
+
+            return
+                new Tuple<bool, decimal, decimal>(
+                    matchRatios.All(x => x.InRange) && matchRatios.Any(x => x.IsStatDefined),
+                    matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
+        }
+
+        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats,
+            Model.Data.HudIndicators source)
+        {
+            if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
+                return false;
+
+            foreach (var rangeStat in rangeStats)
+            {
+                if (!rangeStat.High.HasValue && !rangeStat.Low.HasValue)
+                    continue;
+
+                var stat = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == rangeStat.Stat);
+
+                if (stat == null)
+                    return false;
+
+                var currentStat = new StatInfo {PropertyName = stat.PropertyName};
+                currentStat.AssignStatInfoValues(source);
+
+                var high = rangeStat.High ?? 100;
+                var low = rangeStat.Low ?? -1;
+
+
+                if (currentStat.CurrentValue < low || currentStat.CurrentValue > high)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
+        private decimal GetStatAverageValue(HudPlayerTypeStat stat)
+        {
+            var low = stat.Low ?? 0;
+            var high = stat.High ?? 100;
+
+            return (high + low) / 2;
+        }
+
+        private void InternalSave()
+        {
+            try
+            {
+                var settingsFolder = StringFormatter.GetAppDataFolderPath();
+                if (!Directory.Exists(settingsFolder))
+                {
+                    Directory.CreateDirectory(settingsFolder);
+                }
+                var layoutsFile = Path.Combine(settingsFolder, LayoutsFileSettings);
+                using (var fs = File.Open(layoutsFile, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
+                    xmlSerializer.Serialize(fs, _savedLayouts);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
+        }
+
+        /// <summary>
+        /// Import layouts from stream
+        /// </summary>
+        /// <param name="stream">Stream to be used for importing</param>
+        /// <returns>Imported layout</returns>
+        private HudSavedLayout Import(Stream stream)
+        {
+            Check.ArgumentNotNull(() => stream);
+
+            try
+            {
+                var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
+                var importedHudLayouts = xmlSerializer.Deserialize(stream) as HudSavedLayouts;
+
+                var importedHudLayout = importedHudLayouts?.Layouts.FirstOrDefault();
+
+                if (importedHudLayout == null)
+                    return null;
+
+                importedHudLayout.HudPlayerTypes.ForEach(x =>
+                {
+                    x.Image = GetImageLink(x.ImageAlias);
+                });
+
+                importedHudLayout.HudBumperStickerTypes.ForEach(x =>
+                {
+                    x.InitializeFilterPredicate();
+                });
+
+                return importedHudLayout;
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
+
+            return null;
+        }
+
+        private List<HudPlayerType> CreateDefaultPlayerTypes(EnumTableType tableType)
+        {
+            var hudPlayerTypes = new List<HudPlayerType>
+            {
+                new HudPlayerType(true)
+                {
+                    Name = "Nit",
+                    ImageAlias = "Nit.png",
+                    Image = GetImageLink("Nit.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 0, High = 17},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 16},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4.3m}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 0, High = 11},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 3.7m}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
+                },
+                new HudPlayerType(true)
+                {
+                    Name = "Fish",
+                    ImageAlias = "Fish.png",
+                    Image = GetImageLink("Fish.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 36},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 13},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 40}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 31},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 3.8m},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 40}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
+                },
+                new HudPlayerType(true)
+                {
+                    Name = "Standard Reg",
+                    ImageAlias = "Standard Reg.png",
+                    Image = GetImageLink("Standard Reg.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 22, High = 27},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 18, High = 25},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.7m, High = 8.6m,},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 42}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 16, High = 22},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 15, High = 21},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.5m, High = 7.6m,},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 42}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
+                },
+                new HudPlayerType(true)
+                {
+                    Name = "Tight Reg",
+                    ImageAlias = "book.png",
+                    Image = GetImageLink("book.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 18, High = 22},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 14, High = 21},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.2m, High = 6m,},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 41}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 14, High = 18},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 14, High = 18},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.6m, High = 6.8m}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
+                },
+                new HudPlayerType(true)
+                {
+                    Name = "Bad LAG",
+                    ImageAlias = "Bad LAG.png",
+                    Image = GetImageLink("Bad LAG.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 26, High = 35},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 33},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6m},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 43}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 22, High = 29},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 20, High = 28},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 5.5m, High = 9.6m}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
+                },
+                new HudPlayerType(true)
+                {
+                    Name = "Tricky LAG",
+                    ImageAlias = "Tricky LAG.png",
+                    Image = GetImageLink("Tricky LAG.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 25, High = 34},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 31},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6.5m},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 45}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 21, High = 28},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 28},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6.0m, High = 10m},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 45}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
+                },
+                new HudPlayerType(true)
+                {
+                    Name = "Whale",
+                    ImageAlias = "Whale.png",
+                    Image = GetImageLink("Whale.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 44},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 12},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 42},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 42}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
+                },
+                new HudPlayerType(true)
+                {
+                    Name = "Nutball",
+                    ImageAlias = "Nutball.png",
+                    Image = GetImageLink("Nutball.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 40},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 22}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 38},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 22},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 5},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 44}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
+                }
+            };
+
+            return hudPlayerTypes;
+        }
+
+        #endregion
+
+        public HudTableViewModel GetHudTableViewModel(EnumPokerSites pokerSite, EnumGameType gameType,
+            EnumTableType tableType)
+        {
+            return
+                HudTableViewModels.FirstOrDefault(
+                    h => h.PokerSite == pokerSite && h.GameType == gameType && h.TableType == tableType);
+        }
+
+        public HudSavedLayout GetLayout(string name, int layoutId)
         {
             var layout = Layouts.FirstOrDefault(x => x.Name.Equals(name) && x.LayoutId == layoutId);
             return layout;
@@ -109,21 +607,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         public bool Delete(HudSavedLayout layout)
         {
             if (layout == null)
-            {
                 return false;
-            }
-
             var currentLayouts = Layouts.Where(x => x.LayoutId == layout.LayoutId).ToArray();
-
             if (currentLayouts.Length < 2)
-            {
                 return false;
-            }
-
             _savedLayouts.Layouts.Remove(layout);
-
             InternalSave();
-
             return true;
         }
 
@@ -138,11 +627,8 @@ namespace DriveHUD.Application.ViewModels.Hud
             var layoutToSave = Layouts.FirstOrDefault(x => x.LayoutId == hudData.LayoutId);
             if (layoutToSave == null)
                 return;
-            var defaultPositions =
-                HudTableViewModels.FirstOrDefault(
-                    x =>
-                        x.PokerSite == hudData.HudTable.PokerSite && x.TableType == hudData.HudTable.TableType &&
-                        x.GameType == hudData.HudTable.GameType);
+            var defaultPositions = GetHudTableViewModel(hudData.HudTable.PokerSite, hudData.HudTable.GameType,
+                hudData.HudTable.TableType);
             var savePositions = false;
             if (defaultPositions != null)
             {
@@ -151,51 +637,50 @@ namespace DriveHUD.Application.ViewModels.Hud
                     var elementToSave =
                         hudData.HudTable.HudElements.FirstOrDefault(
                             e => e.Seat == hudElement.Seat && e.HudType == hudElement.HudType);
-                    if (elementToSave != null)
-                        if (!hudElement.Position.Equals(elementToSave.Position) ||
-                            !hudElement.Width.Equals(elementToSave.Width) ||
-                            !hudElement.Height.Equals(elementToSave.Height))
-                        {
-                            savePositions = true;
-                            break;
-                        }
+                    if (elementToSave == null)
+                        continue;
+                    if (hudElement.Position.Equals(elementToSave.Position) &&
+                        hudElement.Width.Equals(elementToSave.Width) && hudElement.Height.Equals(elementToSave.Height))
+                        continue;
+                    savePositions = true;
+                    break;
                 }
             }
             if (savePositions)
             {
                 layoutToSave.HudPositions.RemoveAll(
                     p =>
-                        p.PokerSite == hudData.HudTable.PokerSite && p.TableType == hudData.HudTable.TableType &&
-                        p.GameType == hudData.HudTable.GameType);
+                        p.TableDefinition.PokerSite == hudData.HudTable.PokerSite &&
+                        p.TableDefinition.TableType == hudData.HudTable.TableType &&
+                        p.TableDefinition.GameType == hudData.HudTable.GameType);
                 var positions = new HudSavedPositions
                 {
-                    GameType = hudData.HudTable.GameType,
-                    PokerSite = hudData.HudTable.PokerSite,
-                    TableType = hudData.HudTable.TableType
+                    TableDefinition =
+                        new HudSavedTableDefinition
+                        {
+                            GameType = hudData.HudTable.GameType,
+                            PokerSite = hudData.HudTable.PokerSite,
+                            TableType = hudData.HudTable.TableType
+                        },
+                    Positions =
+                        hudData.HudTable.HudElements.Select(
+                            x =>
+                                new HudSavedPosition
+                                {
+                                    Height = x.Height,
+                                    Position = x.Position,
+                                    Width = x.Width,
+                                    Seat = x.Seat,
+                                    HudType = x.HudType
+                                }).ToList()
                 };
-                positions.Positions =
-                    hudData.HudTable.HudElements.Select(
-                        x =>
-                            new HudSavedPosition
-                            {
-                                Height = x.Height,
-                                Position = x.Position,
-                                Width = x.Width,
-                                Seat = x.Seat,
-                                HudType = x.HudType
-                            }).ToList();
                 layoutToSave.HudPositions.Add(positions);
             }
             layoutToSave.HudStats = hudData.Stats.Select(x =>
             {
                 var statInfoBreak = x as StatInfoBreak;
 
-                if (statInfoBreak != null)
-                {
-                    return statInfoBreak.Clone();
-                }
-
-                return x.Clone();
+                return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
             }).ToList();
             InternalSave();
         }
@@ -469,7 +954,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudElements">Hud elements</param>
         /// <param name="layoutId">Layout</param>
-        public IList<string> GetValidStickers(Entities.Playerstatistic statistic, int layoutId)
+        public IList<string> GetValidStickers(Playerstatistic statistic, int layoutId)
         {
             var layout = Layouts.FirstOrDefault(x => x.LayoutId == layoutId);
             if (layout == null || statistic == null)
@@ -490,7 +975,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="hudElements">Hud elements</param>
         /// <param name="layoutId">Layout</param>
         public void SetStickers(HudElementViewModel hudElement,
-            IDictionary<string, Entities.Playerstatistic> stickersStatistics, int layoutId)
+            IDictionary<string, Playerstatistic> stickersStatistics, int layoutId)
         {
             hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
             var layout = Layouts.FirstOrDefault(x => x.LayoutId == layoutId);
@@ -507,7 +992,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
 
                 var statistics = new Model.Data.HudIndicators(new[] {stickersStatistics[sticker.Name]});
-                if (statistics == null || statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
+                if (statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
                 {
                     continue;
                 }
@@ -535,25 +1020,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             InternalSave();
         }
 
-        private class MatchRatio
-        {
-            public HudPlayerType PlayerType { get; set; }
-
-            public bool IsInRange { get; set; }
-
-            public decimal Ratio { get; set; }
-
-            public decimal ExtraRatio { get; set; }
-        }
-
-        private class PlayerMatchRatios
-        {
-            public HudElementViewModel HudElement { get; set; }
-
-            public List<MatchRatio> MatchRatios { get; set; }
-
-            public List<MatchRatio> ExtraMatchRatios { get; set; }
-        }
+        
 
         /// <summary>
         /// Get path to image directory
@@ -588,470 +1055,10 @@ namespace DriveHUD.Application.ViewModels.Hud
             return string.Empty;
         }
 
-        private Tuple<bool, decimal, decimal> GetMatchRatio(HudElementViewModel hudElement, HudPlayerType hudPlayerType)
+        public HudSavedLayout GetActiveLayout(HudSavedTableDefinition tableDefinition)
         {
-            var matchRatios = (from stat in hudPlayerType.Stats
-                let low = stat.Low.HasValue ? stat.Low.Value : -1
-                let high = stat.High.HasValue ? stat.High.Value : 100
-                let average = (high + low)/2
-                let isStatDefined = stat.Low.HasValue || stat.High.HasValue
-                join hudElementStat in hudElement.StatInfoCollection on stat.Stat equals hudElementStat.Stat into gj
-                from grouped in gj.DefaultIfEmpty()
-                let inRange =
-                grouped != null ? (grouped.CurrentValue >= low && grouped.CurrentValue <= high) : !isStatDefined
-                let isGroupAndStatDefined = grouped != null && isStatDefined
-                let matchRatio = isGroupAndStatDefined ? Math.Abs(grouped.CurrentValue - average) : 0
-                let extraMatchRatio =
-                (isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)) ? matchRatio : 0
-                select
-                new
-                {
-                    Ratio = matchRatio,
-                    InRange = inRange,
-                    IsStatDefined = isStatDefined,
-                    ExtraMatchRatio = extraMatchRatio
-                }).ToArray();
-
-            return
-                new Tuple<bool, decimal, decimal>(
-                    matchRatios.All(x => x.InRange) && matchRatios.Any(x => x.IsStatDefined),
-                    matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
-        }
-
-        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats,
-            Model.Data.HudIndicators source)
-        {
-            if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
-                return false;
-
-            foreach (var rangeStat in rangeStats)
-            {
-                if (!rangeStat.High.HasValue && !rangeStat.Low.HasValue)
-                    continue;
-
-                var stat = hudElement.StatInfoCollection.FirstOrDefault(x => x.Stat == rangeStat.Stat);
-
-                if (stat == null)
-                    return false;
-
-                var currentStat = new StatInfo();
-                currentStat.PropertyName = stat.PropertyName;
-                currentStat.AssignStatInfoValues(source);
-
-                var high = rangeStat.High.HasValue ? rangeStat.High.Value : 100;
-                var low = rangeStat.Low.HasValue ? rangeStat.Low.Value : -1;
-
-
-                if (currentStat.CurrentValue < low || currentStat.CurrentValue > high)
-                {
-                    return false;
-                }
-            }
-
-            return true;
-        }
-
-        private decimal GetStatAverageValue(HudPlayerTypeStat stat)
-        {
-            var low = stat.Low.HasValue ? stat.Low.Value : 0;
-            var high = stat.High.HasValue ? stat.High.Value : 100;
-
-            return (high + low)/2;
-        }
-
-
-        private void InternalSave()
-        {
-            try
-            {
-                var settingsFolder = StringFormatter.GetAppDataFolderPath();
-                if (!Directory.Exists(settingsFolder))
-                {
-                    Directory.CreateDirectory(settingsFolder);
-                }
-                var layoutsFile = Path.Combine(settingsFolder, LayoutsFileSettings);
-                using (var fs = File.Open(layoutsFile, FileMode.Create))
-                {
-                    var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
-                    xmlSerializer.Serialize(fs, _savedLayouts);
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
-        }
-
-        /// <summary>
-        /// Import layouts from stream
-        /// </summary>
-        /// <param name="stream">Stream to be used for importing</param>
-        /// <returns>Imported layout</returns>
-        private HudSavedLayout Import(Stream stream)
-        {
-            Check.ArgumentNotNull(() => stream);
-
-            try
-            {
-                var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
-                var importedHudLayouts = xmlSerializer.Deserialize(stream) as HudSavedLayouts;
-
-                var importedHudLayout = importedHudLayouts?.Layouts.FirstOrDefault();
-
-                if (importedHudLayout == null)
-                    return null;
-
-                importedHudLayout.HudPlayerTypes.ForEach(x =>
-                    { x.Image = GetImageLink(x.ImageAlias); });
-
-                importedHudLayout.HudBumperStickerTypes.ForEach(x =>
-                    { x.InitializeFilterPredicate(); });
-
-                return importedHudLayout;
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
-
-            return null;
-        }
-
-        private List<HudPlayerType> CreateDefaultPlayerTypes(EnumTableType tableType)
-        {
-            var hudPlayerTypes = new List<HudPlayerType>
-            {
-                new HudPlayerType(true)
-                {
-                    Name = "Nit",
-                    ImageAlias = "Nit.png",
-                    Image = GetImageLink("Nit.png"),
-                    StatsToMerge = tableType == EnumTableType.Six
-                        ?
-                        // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
-                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 0, High = 17},
-                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 16},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4.3m}
-                        }
-                        : (tableType == EnumTableType.Nine)
-                            ?
-                            // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
-                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 0, High = 11},
-                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 3.7m}
-                            }
-                            : new ObservableCollection<HudPlayerTypeStat>()
-                },
-                new HudPlayerType(true)
-                {
-                    Name = "Fish",
-                    ImageAlias = "Fish.png",
-                    Image = GetImageLink("Fish.png"),
-                    StatsToMerge = tableType == EnumTableType.Six
-                        ?
-                        // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
-                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 36},
-                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 13},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4},
-                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 40}
-                        }
-                        : (tableType == EnumTableType.Nine)
-                            ?
-                            // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
-                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 31},
-                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 3.8m},
-                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 40}
-                            }
-                            : new ObservableCollection<HudPlayerTypeStat>()
-                },
-                new HudPlayerType(true)
-                {
-                    Name = "Standard Reg",
-                    ImageAlias = "Standard Reg.png",
-                    Image = GetImageLink("Standard Reg.png"),
-                    StatsToMerge = tableType == EnumTableType.Six
-                        ?
-                        // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
-                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 22, High = 27},
-                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 18, High = 25},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.7m, High = 8.6m,},
-                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 42}
-                        }
-                        : (tableType == EnumTableType.Nine)
-                            ?
-                            // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
-                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 16, High = 22},
-                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 15, High = 21},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.5m, High = 7.6m,},
-                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 42}
-                            }
-                            : new ObservableCollection<HudPlayerTypeStat>()
-                },
-                new HudPlayerType(true)
-                {
-                    Name = "Tight Reg",
-                    ImageAlias = "book.png",
-                    Image = GetImageLink("book.png"),
-                    StatsToMerge = tableType == EnumTableType.Six
-                        ?
-                        // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
-                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 18, High = 22},
-                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 14, High = 21},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.2m, High = 6m,},
-                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 41}
-                        }
-                        : (tableType == EnumTableType.Nine)
-                            ?
-                            // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
-                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 14, High = 18},
-                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 14, High = 18},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.6m, High = 6.8m}
-                            }
-                            : new ObservableCollection<HudPlayerTypeStat>()
-                },
-                new HudPlayerType(true)
-                {
-                    Name = "Bad LAG",
-                    ImageAlias = "Bad LAG.png",
-                    Image = GetImageLink("Bad LAG.png"),
-                    StatsToMerge = tableType == EnumTableType.Six
-                        ?
-                        // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
-                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 26, High = 35},
-                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 33},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6m},
-                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 43}
-                        }
-                        : (tableType == EnumTableType.Nine)
-                            ?
-                            // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
-                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 22, High = 29},
-                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 20, High = 28},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 5.5m, High = 9.6m}
-                            }
-                            : new ObservableCollection<HudPlayerTypeStat>()
-                },
-                new HudPlayerType(true)
-                {
-                    Name = "Tricky LAG",
-                    ImageAlias = "Tricky LAG.png",
-                    Image = GetImageLink("Tricky LAG.png"),
-                    StatsToMerge = tableType == EnumTableType.Six
-                        ?
-                        // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
-                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 25, High = 34},
-                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 31},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6.5m},
-                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 45}
-                        }
-                        : (tableType == EnumTableType.Nine)
-                            ?
-                            // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
-                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 21, High = 28},
-                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 28},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6.0m, High = 10m},
-                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 45}
-                            }
-                            : new ObservableCollection<HudPlayerTypeStat>()
-                },
-                new HudPlayerType(true)
-                {
-                    Name = "Whale",
-                    ImageAlias = "Whale.png",
-                    Image = GetImageLink("Whale.png"),
-                    StatsToMerge = tableType == EnumTableType.Six
-                        ?
-                        // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
-                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 44},
-                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 12},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4}
-                        }
-                        : (tableType == EnumTableType.Nine)
-                            ?
-                            // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
-                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 42},
-                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4},
-                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 42}
-                            }
-                            : new ObservableCollection<HudPlayerTypeStat>()
-                },
-                new HudPlayerType(true)
-                {
-                    Name = "Nutball",
-                    ImageAlias = "Nutball.png",
-                    Image = GetImageLink("Nutball.png"),
-                    StatsToMerge = tableType == EnumTableType.Six
-                        ?
-                        // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
-                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 40},
-                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 22}
-                        }
-                        : (tableType == EnumTableType.Nine)
-                            ?
-                            // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
-                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 38},
-                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 22},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 5},
-                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 44}
-                            }
-                            : new ObservableCollection<HudPlayerTypeStat>()
-                }
-            };
-
-            return hudPlayerTypes;
-        }
-
-        private List<HudBumperStickerType> CreateDefaultBumperStickers()
-        {
-            var bumperStickers = new List<HudBumperStickerType>()
-            {
-                new HudBumperStickerType(true)
-                {
-                    Name = "One and Done",
-                    SelectedColor = Colors.OrangeRed,
-                    Description = "C-bets at a high% on the flop, but then rarely double barrels.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat {Stat = Stat.CBet, Low = 55, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 0, High = 35},
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Pre-Flop Reg",
-                    SelectedColor = Colors.Orange,
-                    Description = "Plays an aggressive pre-flop game, but doesn’t play well post flop.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 19, High = 26},
-                            new BaseHudRangeStat {Stat = Stat.PFR, Low = 15, High = 23},
-                            new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 0, High = 42},
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Barrelling",
-                    SelectedColor = Colors.Yellow,
-                    Description = "Double and triple barrels a high percentage of the time.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 20, High = 30},
-                            new BaseHudRangeStat {Stat = Stat.PFR, Low = 17, High = 28},
-                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 40, High = 49},
-                            new BaseHudRangeStat {Stat = Stat.CBet, Low = 65, High = 80},
-                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 44, High = 53},
-                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 46, High = 100},
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "3 For Free",
-                    SelectedColor = Colors.GreenYellow,
-                    Description = "3-Bets too much, and folds to a 3-bet too often.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8.8m, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.FoldTo3Bet, Low = 66, High = 100},
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Way Too Early",
-                    SelectedColor = Colors.Green,
-                    Description = "Open raises to wide of a range in early pre-flop positions.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat {Stat = Stat.UO_PFR_EP, Low = 20, High = 100},
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Sticky Fish",
-                    SelectedColor = Colors.Blue,
-                    Description = "Fishy player who can’t fold post flop if they get any piece of the board.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 35, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 40},
-                            new BaseHudRangeStat {Stat = Stat.WTSD, Low = 29, High = 100},
-                        }
-                },
-                new HudBumperStickerType(true)
-                {
-                    Name = "Yummy Fish",
-                    SelectedColor = Colors.DarkBlue,
-                    Description = "Plays too many hands pre-flop and isn’t aggressive post flop.",
-                    StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 40, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 6},
-                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 0, High = 34},
-                        }
-                },
-            };
-
-            return bumperStickers;
-        }
-
-        private List<HudSavedLayout> GetPredefindedLayouts()
-        {
-            //TODO move to default layouts;
-            var result = new List<HudSavedLayout>();
-            var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
-            try
-            {
-                    using (var stream = resourcesAssembly.GetManifestResourceStream("DriveHUD.Common.Resources.Layouts.Default.xml"))
-                    {
-                        result.Add(Import(stream));
-                    }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
-            return result;
+            var result = Layouts.FirstOrDefault(l => l.IsActiveFor.Any(d => d.Equals(tableDefinition)));
+            return result ?? Layouts.FirstOrDefault();
         }
     }
 }

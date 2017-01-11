@@ -298,30 +298,35 @@ namespace DriveHUD.Application.ViewModels
                 var maxSeats = (int)gameInfo.TableType;
                 var site = e.GameInfo.PokerSite;
 
-                //var tableKey = HudViewModel.GetHash(site, gameInfo.EnumGameType, gameInfo.TableType);
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+                var tableDefinition = new HudSavedTableDefinition
+                {
+                    PokerSite = e.GameInfo.PokerSite,
+                    GameType = e.GameInfo.EnumGameType,
+                    TableType = e.GameInfo.TableType
+                };
+                var activeLayout =
+                    hudLayoutsService.GetActiveLayout(tableDefinition);
 
-                //var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
+                if (activeLayout == null)
+                {
+                    LogProvider.Log.Error(this, "Could not find active layout");
+                    return;
+                }
 
-                //if (activeLayout == null)
-                //{
-                //    LogProvider.Log.Error(this, "Could not find active layout");
-                //    return;
-                //}
+                var availableLayouts = hudLayoutsService.Layouts.Select(x => x.Name);
 
-               // var availableLayouts = hudLayoutsService.Layouts.Where(y => y.LayoutId == tableKey).Select(x => x.Name);
-
-                //var ht = new HudLayout
-                //{
-                //    WindowId = gameInfo.WindowHandle,
-                //    HudType = site == EnumPokerSites.Ignition ? HudViewModel.HudType : HudType.Plain,
-                //    TableType = gameInfo.TableType,
-                //    PokerSiteId = (short)gameInfo.PokerSite,
-                //    GameNumber = gameInfo.GameNumber,
-                //    LayoutId = tableKey,
-                //    LayoutName = activeLayout.Name,
-                //    AvailableLayouts = availableLayouts
-                //};
+                var ht = new HudLayout
+                {
+                    WindowId = gameInfo.WindowHandle,
+                    HudType = site == EnumPokerSites.Ignition ? HudViewModel.HudType : HudType.Plain,
+                    TableType = gameInfo.TableType,
+                    PokerSiteId = (short)gameInfo.PokerSite,
+                    GameNumber = gameInfo.GameNumber,
+                    LayoutId = activeLayout.LayoutId,
+                    LayoutName = activeLayout.Name,
+                    AvailableLayouts = availableLayouts
+                };
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
                 // TODO: Opponent Analysis report turned off
@@ -385,171 +390,175 @@ namespace DriveHUD.Application.ViewModels
 
                     var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
 
-                    //playerHudContent.HudElement = hudElementCreator.Create(tableKey, HudViewModel, seatNumber, ht.HudType);
+                    playerHudContent.HudElement = hudElementCreator.Create(tableDefinition, HudViewModel, seatNumber, ht.HudType);
 
-                    //if (playerHudContent.HudElement == null)
-                    //{
-                    //    continue;
-                    //}
+                    if (playerHudContent.HudElement == null)
+                    {
+                        continue;
+                    }
 
-                    //playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
-                    //playerHudContent.HudElement.PlayerName = playerName;
-                    //playerHudContent.HudElement.PokerSiteId = (short)site;
-                    //playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
-                    //                                       string.Empty;
-                    //playerHudContent.HudElement.TotalHands = item.TotalHands;
+                    playerHudContent.HudElement.TiltMeter = sessionData.TiltMeter;
+                    playerHudContent.HudElement.PlayerName = playerName;
+                    playerHudContent.HudElement.PokerSiteId = (short)site;
+                    playerHudContent.HudElement.NoteToolTip = dataService.GetPlayerNote(playerName, (short)site)?.Note ??
+                                                           string.Empty;
+                    playerHudContent.HudElement.TotalHands = item.TotalHands;
 
 
-                    //var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
-                    //playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
-                    //    ? new ObservableCollection<decimal>()
-                    //    : new ObservableCollection<decimal>(sessionMoney);
+                    var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
+                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
+                        ? new ObservableCollection<decimal>()
+                        : new ObservableCollection<decimal>(sessionMoney);
 
-                    //var cardsCollection = sessionStatisticCollection.SingleOrDefault(x => x.CardsList != null)?.CardsList;
-                    //playerHudContent.HudElement.CardsCollection = cardsCollection == null
-                    //    ? new ObservableCollection<string>()
-                    //    : new ObservableCollection<string>(cardsCollection);
+                    var cardsCollection = sessionStatisticCollection.SingleOrDefault(x => x.CardsList != null)?.CardsList;
+                    playerHudContent.HudElement.CardsCollection = cardsCollection == null
+                        ? new ObservableCollection<string>()
+                        : new ObservableCollection<string>(cardsCollection);
 
                     var doNotAddPlayer = false;
 
                     // create new array to prevent Collection was modified exception
-                    //var activeLayoutHudStats = activeLayout.HudStats.ToArray();
+                    var activeLayoutHudStats = activeLayout.HudStats.ToArray();
 
-                    //var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
-                    //                        .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
-                    //                        {
-                    //                            var statInfoBreak = x as StatInfoBreak;
+                    var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
+                                            .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
+                                            {
+                                                var statInfoBreak = x as StatInfoBreak;
 
-                    //                            if (statInfoBreak != null)
-                    //                            {
-                    //                                return statInfoBreak.Clone();
-                    //                            }
+                                                if (statInfoBreak != null)
+                                                {
+                                                    return statInfoBreak.Clone();
+                                                }
 
-                    //                            return x.Clone();
-                    //                        }).ToArray();
+                                                return x.Clone();
+                                            }).ToArray();
 
-                    //statsExceptActive.ForEach(x => x.IsNotVisible = true);
+                    statsExceptActive.ForEach(x => x.IsNotVisible = true);
 
-                    //var allStats = activeLayoutHudStats.Select(x =>
-                    //{
-                    //    var statInfoBreak = x as StatInfoBreak;
+                    var allStats = activeLayoutHudStats.Select(x =>
+                    {
+                        var statInfoBreak = x as StatInfoBreak;
 
-                    //    if (statInfoBreak != null)
-                    //    {
-                    //        return statInfoBreak.Clone();
-                    //    }
+                        if (statInfoBreak != null)
+                        {
+                            return statInfoBreak.Clone();
+                        }
 
-                    //    return x.Clone();
-                    //}).Concat(statsExceptActive);
+                        return x.Clone();
+                    }).Concat(statsExceptActive);
 
-                    //foreach (var statInfo in allStats)
-                    //{
-                    //    if (!string.IsNullOrEmpty(statInfo.PropertyName))
-                    //    {
-                    //        statInfo.AssignStatInfoValues(item);
-                    //    }
-                    //    else if (!(statInfo is StatInfoBreak))
-                    //    {
-                    //        doNotAddPlayer = true;
-                    //    }
+                    foreach (var statInfo in allStats)
+                    {
+                        if (!string.IsNullOrEmpty(statInfo.PropertyName))
+                        {
+                            statInfo.AssignStatInfoValues(item);
+                        }
+                        else if (!(statInfo is StatInfoBreak))
+                        {
+                            doNotAddPlayer = true;
+                        }
 
-                    //    // temporary
-                    //    var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
+                        // temporary
+                        var tooltipCollection = StatInfoToolTip.GetToolTipCollection(statInfo.Stat);
 
-                    //    if (tooltipCollection != null)
-                    //    {
-                    //        foreach (var tooltip in tooltipCollection)
-                    //        {
-                    //            tooltip.CategoryStat.AssignStatInfoValues(item);
+                        if (tooltipCollection != null)
+                        {
+                            foreach (var tooltip in tooltipCollection)
+                            {
+                                tooltip.CategoryStat.AssignStatInfoValues(item);
 
-                    //            foreach (var stat in tooltip.StatsCollection)
-                    //            {
-                    //                stat.AssignStatInfoValues(item);
-                    //            }
+                                foreach (var stat in tooltip.StatsCollection)
+                                {
+                                    stat.AssignStatInfoValues(item);
+                                }
 
-                    //            if (tooltip.CardsList == null)
-                    //            {
-                    //                continue;
-                    //            }
+                                if (tooltip.CardsList == null)
+                                {
+                                    continue;
+                                }
 
-                    //            var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
+                                var listObj = ReflectionHelper.GetPropertyValue(sessionData, tooltip.CardsList.PropertyName) as IEnumerable<string>;
 
-                    //            if (listObj != null)
-                    //            {
-                    //                tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
-                    //            }
-                    //        }
-                    //        statInfo.StatInfoToolTipCollection = tooltipCollection;
-                    //    }
+                                if (listObj != null)
+                                {
+                                    tooltip.CardsList.Cards = new ObservableCollection<string>(listObj);
+                                }
+                            }
+                            statInfo.StatInfoToolTipCollection = tooltipCollection;
+                        }
 
-                    //    playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
-                    //}
+                        playerHudContent.HudElement.StatInfoCollection.Add(statInfo);
+                    }
 
-                    //if (lastHandStatistic != null)
-                    //{
-                    //    var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, tableKey);
+                    if (lastHandStatistic != null)
+                    {
+                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout.LayoutId);
 
-                    //    if (stickers.Any())
-                    //    {
-                    //        importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerCollectionItem, stickers.ToDictionary(x => x, x => lastHandStatistic));
-                    //    }
+                        if (stickers.Any())
+                        {
+                            importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerCollectionItem, stickers.ToDictionary(x => x, x => lastHandStatistic));
+                        }
 
-                    //    hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerCollectionItem), tableKey);
-                    //}
+                        hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerCollectionItem), activeLayout.LayoutId);
+                    }
 
-                    //if (!doNotAddPlayer)
-                    //{
-                    //    ht.ListHUDPlayer.Add(playerHudContent);
-                    //}
+                    if (!doNotAddPlayer)
+                    {
+                        ht.ListHUDPlayer.Add(playerHudContent);
+                    }
                 }
 
                 sw.Stop();
 
                 Debug.WriteLine("Hand has been imported for {0} ms", sw.ElapsedMilliseconds + refreshTime);
-
-                //if (HudViewModel.HudTableViewModelDictionary.ContainsKey(tableKey))
+                var hudTableViewModel =
+                    HudViewModel.HudTableViewModels.FirstOrDefault(
+                        h =>
+                            h.PokerSite == site && h.GameType == gameInfo.EnumGameType &&
+                            h.TableType == gameInfo.TableType);
+                if (hudTableViewModel!=null)
                 {
-                    //var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                    //hudLayoutsService.SetPlayerTypeIcon(hudElements, tableKey);
+                    var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
+                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.LayoutId);
 
-                    //Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
-                    //{
-                    //    return y != 0 ? x / y : 0;
-                    //};
+                    Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
+                    {
+                        return y != 0 ? x / y : 0;
+                    };
 
-                    //var trackConditionsInfo = new HudTrackConditionsViewModelInfo
-                    //{
-                    //    AveragePot = getDevisionResult(trackConditionsMeterData.TotalPotSize, trackConditionsMeterData.TotalHands),
-                    //    VPIP = getDevisionResult(trackConditionsMeterData.VPIP, players.Count),
-                    //    ThreeBet = getDevisionResult(trackConditionsMeterData.ThreeBet, players.Count),
-                    //    TableType = gameInfo.TableType,
-                    //    BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
-                    //};
+                    var trackConditionsInfo = new HudTrackConditionsViewModelInfo
+                    {
+                        AveragePot = getDevisionResult(trackConditionsMeterData.TotalPotSize, trackConditionsMeterData.TotalHands),
+                        VPIP = getDevisionResult(trackConditionsMeterData.VPIP, players.Count),
+                        ThreeBet = getDevisionResult(trackConditionsMeterData.ThreeBet, players.Count),
+                        TableType = gameInfo.TableType,
+                        BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
+                    };
 
-                    //ht.HudTrackConditionsMeter = trackConditionsInfo;
+                    ht.HudTrackConditionsMeter = trackConditionsInfo;
 
-                    //ht.TableHud = HudViewModel.HudTableViewModelDictionary[tableKey].Clone();
+                    ht.TableHud = hudTableViewModel.Clone();
 
-                    //byte[] serialized;
+                    byte[] serialized;
 
-                    //using (var msTestString = new MemoryStream())
-                    //{
-                    //    Serializer.Serialize(msTestString, ht);
-                    //    serialized = msTestString.ToArray();
-                    //}
+                    using (var msTestString = new MemoryStream())
+                    {
+                        Serializer.Serialize(msTestString, ht);
+                        serialized = msTestString.ToArray();
+                    }
 
-                    //if (isAdvancedLoggingEnabled)
-                    //{
-                    //    LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
-                    //}
+                    if (isAdvancedLoggingEnabled)
+                    {
+                        LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
+                    }
 
-                    //var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
-                    //hudTransmitter.Send(serialized);
+                    var hudTransmitter = ServiceLocator.Current.GetInstance<IHudTransmitter>();
+                    hudTransmitter.Send(serialized);
 
-                    //if (isAdvancedLoggingEnabled)
-                    //{
-                    //    LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
-                    //}
+                    if (isAdvancedLoggingEnabled)
+                    {
+                        LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
+                    }
                 }
                 if (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name) ||
                     string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.DecodedName) ||

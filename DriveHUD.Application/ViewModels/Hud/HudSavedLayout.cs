@@ -38,6 +38,7 @@ namespace DriveHUD.Application.ViewModels
         {
             HudStats = new List<StatInfo>();
             HudPositions = new List<HudSavedPositions>();
+            IsActiveFor = new List<HudSavedTableDefinition>();
         }
 
         [XmlAttribute]
@@ -53,18 +54,26 @@ namespace DriveHUD.Application.ViewModels
         public List<HudBumperStickerType> HudBumperStickerTypes { get; set; }
 
         public List<HudSavedPositions> HudPositions { get; set; }
+        public List<HudSavedTableDefinition> IsActiveFor { get; set; }
+    }
+
+    [Serializable]
+    public class HudSavedTableDefinition
+    {
+        public EnumTableType TableType { get; set; }
+        public EnumPokerSites PokerSite { get; set; }
+        public EnumGameType GameType { get; set; }
     }
 
     [Serializable]
     public class HudSavedPositions
     {
-        public EnumTableType TableType { get; set; }
-        public EnumPokerSites PokerSite { get; set; }
-        public EnumGameType GameType { get; set; }
+        public HudSavedTableDefinition TableDefinition { get; set; }
         public List<HudSavedPosition> Positions { get; set; }
 
         public HudSavedPositions()
         {
+            TableDefinition = new HudSavedTableDefinition();
             Positions = new List<HudSavedPosition>();
         }
     }
