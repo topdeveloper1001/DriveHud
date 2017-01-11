@@ -22,7 +22,7 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Cached HUDs
         /// </summary>
-        Dictionary<int, HudTableViewModel> HudTableViewModelDictionary { get; set; }
+        List<HudTableViewModel> HudTableViewModels { get; set; }
 
         /// <summary>
         /// Cached layouts
@@ -36,19 +36,6 @@ namespace DriveHUD.Application.ViewModels
         /// <param name="layoutId">Layout id</param>
         /// <returns>Layout</returns>
         HudSavedLayout GetLayoutByName(string name, int layoutId);
-
-        /// <summary>
-        /// Set active layout
-        /// </summary>
-        /// <param name="layout">Layout</param>
-        void SetLayoutActive(HudSavedLayout layout);
-
-        /// <summary>
-        /// Get active layout
-        /// </summary>
-        /// <param name="layoutId">Layout key</param>
-        /// <returns>Active layout</returns>
-        HudSavedLayout GetActiveLayout(int layoutId);
 
         /// <summary>
         /// Save current layout
@@ -80,7 +67,7 @@ namespace DriveHUD.Application.ViewModels
         /// Delete layout
         /// </summary>
         /// <param name="layout">Layout to delete</param>
-        bool Delete(HudSavedLayout layout, out HudSavedLayout activeLayout);
+        bool Delete(HudSavedLayout layout);
 
         /// <summary>
         /// Export layout

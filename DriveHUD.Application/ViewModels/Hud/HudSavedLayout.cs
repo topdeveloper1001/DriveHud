@@ -14,9 +14,9 @@ using DriveHUD.ViewModels;
 using Model.Enums;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Windows;
 using System.Xml.Serialization;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -29,13 +29,6 @@ namespace DriveHUD.Application.ViewModels
         }
 
         public List<HudSavedLayout> Layouts { get; set; }
-
-        public HudSavedLayouts Clone()
-        {
-            var clone = new HudSavedLayouts();
-            clone.Layouts = new List<HudSavedLayout>(Layouts.Select(x => x.Clone()));
-            return clone;
-        }
     }
 
     [Serializable]
@@ -44,14 +37,11 @@ namespace DriveHUD.Application.ViewModels
         public HudSavedLayout()
         {
             HudStats = new List<StatInfo>();
-            HudPositions = new List<HudSavedPosition>();
+            HudPositions = new List<HudSavedPositions>();
         }
 
         [XmlAttribute]
         public string Name { get; set; }
-
-        [XmlAttribute]
-        public bool IsDefault { get; set; }
 
         [XmlAttribute]
         public int LayoutId { get; set; }
@@ -62,28 +52,20 @@ namespace DriveHUD.Application.ViewModels
 
         public List<HudBumperStickerType> HudBumperStickerTypes { get; set; }
 
-        public List<HudSavedPosition> HudPositions { get; set; }
+        public List<HudSavedPositions> HudPositions { get; set; }
+    }
 
-        public HudSavedLayout Clone()
+    [Serializable]
+    public class HudSavedPositions
+    {
+        public EnumTableType TableType { get; set; }
+        public EnumPokerSites PokerSite { get; set; }
+        public EnumGameType GameType { get; set; }
+        public List<HudSavedPosition> Positions { get; set; }
+
+        public HudSavedPositions()
         {
-            var clone = (HudSavedLayout)MemberwiseClone();
-
-            clone.HudStats = new List<StatInfo>(HudStats.Select(x =>
-            {
-                var statInfoBreak = x as StatInfoBreak;
-
-                if (statInfoBreak != null)
-                {
-                    return statInfoBreak.Clone();
-                }
-
-                return x.Clone();
-            }));
-            clone.HudPlayerTypes = new List<HudPlayerType>(HudPlayerTypes.Select(x => x.Clone()));
-            clone.HudBumperStickerTypes = new List<HudBumperStickerType>(HudBumperStickerTypes.Select(x => x.Clone()));
-            clone.HudPositions = new List<HudSavedPosition>(HudPositions.Select(x => x.Clone()));
-
-            return clone;
+            Positions = new List<HudSavedPosition>();
         }
     }
 
@@ -99,11 +81,5 @@ namespace DriveHUD.Application.ViewModels
         public int Seat { get; set; }
 
         public HudType HudType { get; set; }
-
-        public HudSavedPosition Clone()
-        {
-            var clone = (HudSavedPosition)MemberwiseClone();
-            return clone;
-        }
     }
 }

@@ -33,161 +33,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         private const string LayoutsFileSettings = "Layouts.xml";
         private const string PathToImages = @"data\PlayerTypes";
 
-        #region layouts
+        private HudSavedLayouts _savedLayouts;
 
-        private static readonly string[] PredefinedLayoutsFiles = { "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic.xml", "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-FR-Basic.xml", "DriveHUD.Common.Resources.Layouts.DH-MTT-Basic.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-SNG-Basic.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH.xml", "DriveHUD.Common.Resources.Layouts.DH-MTT-Basic-OH.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-SNG-Basic-OH.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BOL-T.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BOL-S.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BOL-T.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-FR-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-MTT-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-MTT-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-SNG-Basic-OH-PS.xml", "DriveHUD.Common.Resources.Layouts.DH-SNG-Basic-PS.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-10max-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-10max-MTT-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-10max-SNG-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-3max-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-5max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-5max-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-5max-MTT-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-5max-MTT-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-5max-SNG-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-5max-SNG-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-888.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-888.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-3max-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-ACR.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-ACR.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-2max-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-2max-MTT-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-2max-SNG-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-3max-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-3max-MTT-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-3max-SNG-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-4max-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-4max-MTT-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-4max-SNG-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-6max-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-6max-MTT-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-6max-SNG-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-8max-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-8max-MTT-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-8max-SNG-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-BCP.xml","DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-BCP.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-9max-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-9max-MTT-Basic-OH-BOL.xml",
-            "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-BOL.xml", "DriveHUD.Common.Resources.Layouts.DH-9max-SNG-Basic-OH-BOL.xml",
-        };
+        public List<HudSavedLayout> Layouts => _savedLayouts.Layouts;
 
-        #endregion
-
-        private HudSavedLayouts _userDefindedHudLayouts;
-        private List<HudSavedLayout> _defaultHudLayouts;
-
-        public Dictionary<int, HudTableViewModel> HudTableViewModelDictionary { get; set; }
+        public List<HudTableViewModel> HudTableViewModels { get; set; }
 
         public HudLayoutsService()
         {
@@ -207,74 +57,43 @@ namespace DriveHUD.Application.ViewModels.Hud
                     using (var fs = File.Open(layoutsFile, FileMode.Open))
                     {
                         var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
-                        _userDefindedHudLayouts = xmlSerializer.Deserialize(fs) as HudSavedLayouts;
+                        _savedLayouts = xmlSerializer.Deserialize(fs) as HudSavedLayouts;
 
                         // set image after loading
-                        _userDefindedHudLayouts?.Layouts.Where(x => x.HudPlayerTypes != null).SelectMany(x => x.HudPlayerTypes).ForEach(x =>
-                        {
-                            if (x != null)
+                        _savedLayouts?.Layouts.Where(x => x.HudPlayerTypes != null)
+                            .SelectMany(x => x.HudPlayerTypes)
+                            .ForEach(x =>
                             {
-                                x.Image = GetImageLink(x.ImageAlias);
-                            }
-                        });
+                                if (x != null)
+                                {
+                                    x.Image = GetImageLink(x.ImageAlias);
+                                }
+                            });
 
-                        _userDefindedHudLayouts?.Layouts.Where(x => x.HudPlayerTypes != null).SelectMany(x => x.HudBumperStickerTypes).ForEach(x =>
-                        {
-                            x?.InitializeFilterPredicate();
-                        });
+                        _savedLayouts?.Layouts.Where(x => x.HudPlayerTypes != null)
+                            .SelectMany(x => x.HudBumperStickerTypes)
+                            .ForEach(x =>
+                            {
+                                x?.InitializeFilterPredicate();
+                            });
                     }
                 }
+
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, e);
             }
 
-            if (_userDefindedHudLayouts == null)
-            {
-                _userDefindedHudLayouts = new HudSavedLayouts();
-            }
-
-            _defaultHudLayouts = GetPredefinedLayouts();
-        }
-
-        public List<HudSavedLayout> Layouts
-        {
-            get
-            {
-                if (_userDefindedHudLayouts?.Layouts != null && _defaultHudLayouts != null)
-                    return _userDefindedHudLayouts.Layouts.Concat(_defaultHudLayouts).ToList();
-                if (_userDefindedHudLayouts?.Layouts == null && _defaultHudLayouts == null)
-                    return new List<HudSavedLayout>();
-                if (_userDefindedHudLayouts?.Layouts == null)
-                    return _defaultHudLayouts;
-                return _userDefindedHudLayouts.Layouts;
-            }
+            if (_savedLayouts != null)
+                return;
+            _savedLayouts = new HudSavedLayouts {Layouts = GetPredefindedLayouts()};
         }
 
         public HudSavedLayout GetLayoutByName(string name, int layoutId)
         {
             var layout = Layouts.FirstOrDefault(x => x.Name.Equals(name) && x.LayoutId == layoutId);
             return layout;
-        }
-
-        public HudSavedLayout GetActiveLayout(int layoutId)
-        {
-            var defaultLayout = Layouts.FirstOrDefault(x => x.IsDefault && x.LayoutId == layoutId);
-            return defaultLayout;
-        }
-
-        public void SetLayoutActive(HudSavedLayout layout)
-        {
-            if (layout == null)
-            {
-                return;
-            }
-
-            Layouts.Where(x => x.LayoutId == layout.LayoutId).ForEach(x => x.IsDefault = false);
-            layout.IsDefault = true;
-            
-            InternalSave();
         }
 
         public HudSavedLayout Load(string name, int layoutId)
@@ -287,10 +106,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Delete layout
         /// </summary>
         /// <param name="layout">Layout to delete</param>
-        public bool Delete(HudSavedLayout layout, out HudSavedLayout activeLayout)
+        public bool Delete(HudSavedLayout layout)
         {
-            activeLayout = null;
-
             if (layout == null)
             {
                 return false;
@@ -303,13 +120,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return false;
             }
 
-            _userDefindedHudLayouts.Layouts.Remove(layout);
-
-            if (layout.IsDefault)
-            {
-                activeLayout = currentLayouts.FirstOrDefault();
-                SetLayoutActive(activeLayout);
-            }
+            _savedLayouts.Layouts.Remove(layout);
 
             InternalSave();
 
@@ -323,27 +134,59 @@ namespace DriveHUD.Application.ViewModels.Hud
         public void Save(HudSavedDataInfo hudData)
         {
             if (hudData == null)
-            {
                 return;
-            }
-
-            var defaultLayout = Layouts.FirstOrDefault(x => x.LayoutId == hudData.LayoutId && x.IsDefault);
-
-            if (defaultLayout == null)
-            {
+            var layoutToSave = Layouts.FirstOrDefault(x => x.LayoutId == hudData.LayoutId);
+            if (layoutToSave == null)
                 return;
-            }
-
-            defaultLayout.HudPositions = hudData.HudTable.HudElements.Select(x => new HudSavedPosition
+            var defaultPositions =
+                HudTableViewModels.FirstOrDefault(
+                    x =>
+                        x.PokerSite == hudData.HudTable.PokerSite && x.TableType == hudData.HudTable.TableType &&
+                        x.GameType == hudData.HudTable.GameType);
+            var savePositions = false;
+            if (defaultPositions != null)
             {
-                Height = x.Height,
-                Position = x.Position,
-                Width = x.Width,
-                Seat = x.Seat,
-                HudType = x.HudType
-            }).ToList();
-
-            defaultLayout.HudStats = hudData.Stats.Select(x =>
+                foreach (var hudElement in defaultPositions.HudElements)
+                {
+                    var elementToSave =
+                        hudData.HudTable.HudElements.FirstOrDefault(
+                            e => e.Seat == hudElement.Seat && e.HudType == hudElement.HudType);
+                    if (elementToSave != null)
+                        if (!hudElement.Position.Equals(elementToSave.Position) ||
+                            !hudElement.Width.Equals(elementToSave.Width) ||
+                            !hudElement.Height.Equals(elementToSave.Height))
+                        {
+                            savePositions = true;
+                            break;
+                        }
+                }
+            }
+            if (savePositions)
+            {
+                layoutToSave.HudPositions.RemoveAll(
+                    p =>
+                        p.PokerSite == hudData.HudTable.PokerSite && p.TableType == hudData.HudTable.TableType &&
+                        p.GameType == hudData.HudTable.GameType);
+                var positions = new HudSavedPositions
+                {
+                    GameType = hudData.HudTable.GameType,
+                    PokerSite = hudData.HudTable.PokerSite,
+                    TableType = hudData.HudTable.TableType
+                };
+                positions.Positions =
+                    hudData.HudTable.HudElements.Select(
+                        x =>
+                            new HudSavedPosition
+                            {
+                                Height = x.Height,
+                                Position = x.Position,
+                                Width = x.Width,
+                                Seat = x.Seat,
+                                HudType = x.HudType
+                            }).ToList();
+                layoutToSave.HudPositions.Add(positions);
+            }
+            layoutToSave.HudStats = hudData.Stats.Select(x =>
             {
                 var statInfoBreak = x as StatInfoBreak;
 
@@ -354,6 +197,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                 return x.Clone();
             }).ToList();
+            InternalSave();
         }
 
         /// <summary>
@@ -367,7 +211,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            var layout = Layouts.FirstOrDefault(x => x.LayoutId == hudLayout.LayoutId && x.IsDefault);
+            var layout = Layouts.FirstOrDefault(x => x.LayoutId == hudLayout.LayoutId);
 
             // save only same reference, otherwise need to merge data
             if (ReferenceEquals(hudLayout, layout))
@@ -405,23 +249,26 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 layout = new HudSavedLayout
                 {
-                    LayoutId = hudData.LayoutId,
+                    LayoutId = Layouts.Max(x => x.LayoutId) + 1,
                     Name = hudData.Name,
                     HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableType),
                     HudBumperStickerTypes = CreateDefaultBumperStickers(),
                 };
 
-                _userDefindedHudLayouts.Layouts.Add(layout);
+                Layouts.Add(layout);
             }
 
-            layout.HudPositions = hudData.HudTable.HudElements.Select(x => new HudSavedPosition
-            {
-                Height = x.Height,
-                Position = x.Position,
-                Width = x.Width,
-                Seat = x.Seat,
-                HudType = x.HudType
-            }).ToList();
+            //layout.HudPositions =
+            //    hudData.HudTable.HudElements.Select(
+            //        x =>
+            //            new HudSavedPosition
+            //            {
+            //                Height = x.Height,
+            //                Position = x.Position,
+            //                Width = x.Width,
+            //                Seat = x.Seat,
+            //                HudType = x.HudType
+            //            }).ToList();
 
             layout.HudStats = hudData.Stats.Select(x =>
             {
@@ -435,7 +282,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return x.Clone();
             }).ToList();
 
-            SetLayoutActive(layout);
+            //SetLayoutActive(layout);
 
             //MergeWithBaseLayout(layout);
 
@@ -451,54 +298,57 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="path">Path to file</param>
         public void Export(HudSavedDataInfo hudData, string path)
         {
-            if (hudData == null)
-            {
-                return;
-            }
+            //if (hudData == null)
+            //{
+            //    return;
+            //}
 
-            var layoutToBeExported = Layouts.FirstOrDefault(x => x.LayoutId == hudData.LayoutId && x.IsDefault);
+            //var layoutToBeExported = Layouts.FirstOrDefault(x => x.LayoutId == hudData.LayoutId);
 
-            if (layoutToBeExported == null)
-            {
-                return;
-            }
+            //if (layoutToBeExported == null)
+            //{
+            //    return;
+            //}
 
-            layoutToBeExported.HudPositions = hudData.HudTable.HudElements.Select(x => new HudSavedPosition
-            {
-                Height = x.Height,
-                Position = x.Position,
-                Width = x.Width,
-                Seat = x.Seat,
-                HudType = x.HudType
-            }).ToList();
+            //layoutToBeExported.HudPositions =
+            //    hudData.HudTable.HudElements.Select(
+            //        x =>
+            //            new HudSavedPosition
+            //            {
+            //                Height = x.Height,
+            //                Position = x.Position,
+            //                Width = x.Width,
+            //                Seat = x.Seat,
+            //                HudType = x.HudType
+            //            }).ToList();
 
-            layoutToBeExported.HudStats = hudData.Stats.Select(x =>
-            {
-                var statInfoBreak = x as StatInfoBreak;
+            //layoutToBeExported.HudStats = hudData.Stats.Select(x =>
+            //{
+            //    var statInfoBreak = x as StatInfoBreak;
 
-                if (statInfoBreak != null)
-                {
-                    return statInfoBreak.Clone();
-                }
+            //    if (statInfoBreak != null)
+            //    {
+            //        return statInfoBreak.Clone();
+            //    }
 
-                return x.Clone();
-            }).ToList();
+            //    return x.Clone();
+            //}).ToList();
 
-            var hudSavedLayouts = new HudSavedLayouts();
-            hudSavedLayouts.Layouts.Add(layoutToBeExported);
+            //var hudSavedLayouts = new HudSavedLayouts();
+            //hudSavedLayouts.Layouts.Add(layoutToBeExported);
 
-            try
-            {
-                using (var fs = File.Open(path, FileMode.Create))
-                {
-                    var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
-                    xmlSerializer.Serialize(fs, hudSavedLayouts);
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
+            //try
+            //{
+            //    using (var fs = File.Open(path, FileMode.Create))
+            //    {
+            //        var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
+            //        xmlSerializer.Serialize(fs, hudSavedLayouts);
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    LogProvider.Log.Error(this, e);
+            //}
         }
 
         /// <summary>
@@ -507,24 +357,24 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="path">Path to layout</param>
         public HudSavedLayout Import(string path)
         {
-            if (!File.Exists(path))
-            {
-                return null;
-            }
+            //if (!File.Exists(path))
+            //{
+            //    return null;
+            //}
 
-            try
-            {
-                using (var fs = File.Open(path, FileMode.Open))
-                {
-                    var importedHudLayout = Import(fs, true);
-                    _userDefindedHudLayouts.Layouts.Add(importedHudLayout);
-                    return importedHudLayout;
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
+            //try
+            //{
+            //    using (var fs = File.Open(path, FileMode.Open))
+            //    {
+            //        var importedHudLayout = Import(fs, true);
+            //        _userDefindedHudLayouts.Layouts.Add(importedHudLayout);
+            //        return importedHudLayout;
+            //    }
+            //}
+            //catch (Exception e)
+            //{
+            //    LogProvider.Log.Error(this, e);
+            //}
 
             return null;
         }
@@ -536,7 +386,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="layoutId">Layout</param>
         public void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, int layoutId)
         {
-            var layout = Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.IsDefault);
+            var layout = Layouts.FirstOrDefault(x => x.LayoutId == layoutId);
 
             if (layout == null)
             {
@@ -545,28 +395,32 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             // get total hands now to prevent enumeration in future
             var hudElementsTotalHands = (from hudElement in hudElements
-                                         from stat in hudElement.StatInfoCollection
-                                         where stat.Stat == Stat.TotalHands
-                                         select new { HudElement = hudElement, TotalHands = stat.CurrentValue }).ToDictionary(x => x.HudElement, x => x.TotalHands);
+                from stat in hudElement.StatInfoCollection
+                where stat.Stat == Stat.TotalHands
+                select new {HudElement = hudElement, TotalHands = stat.CurrentValue}).ToDictionary(x => x.HudElement,
+                x => x.TotalHands);
 
             // get match ratios by player
             var matchRatiosByPlayer = (from playerType in layout.HudPlayerTypes
-                                       from hudElement in hudElements
-                                       let matchRatio = GetMatchRatio(hudElement, playerType)
-                                       where playerType.EnablePlayerProfile && playerType.MinSample <= hudElementsTotalHands[hudElement]
-                                       group new MatchRatio
-                                       {
-                                           IsInRange = matchRatio.Item1,
-                                           Ratio = matchRatio.Item2,
-                                           ExtraRatio = matchRatio.Item3,
-                                           PlayerType = playerType
-                                       } by hudElement into grouped
-                                       select new PlayerMatchRatios
-                                       {
-                                           HudElement = grouped.Key,
-                                           MatchRatios = grouped.Where(x => x.IsInRange).OrderBy(x => x.Ratio).ToList(),
-                                           ExtraMatchRatios = grouped.OrderBy(x => x.ExtraRatio).ToList()
-                                       }).ToList();
+                from hudElement in hudElements
+                let matchRatio = GetMatchRatio(hudElement, playerType)
+                where playerType.EnablePlayerProfile && playerType.MinSample <= hudElementsTotalHands[hudElement]
+                group
+                new MatchRatio
+                {
+                    IsInRange = matchRatio.Item1,
+                    Ratio = matchRatio.Item2,
+                    ExtraRatio = matchRatio.Item3,
+                    PlayerType = playerType
+                } by hudElement
+                into grouped
+                select
+                new PlayerMatchRatios
+                {
+                    HudElement = grouped.Key,
+                    MatchRatios = grouped.Where(x => x.IsInRange).OrderBy(x => x.Ratio).ToList(),
+                    ExtraMatchRatios = grouped.OrderBy(x => x.ExtraRatio).ToList()
+                }).ToList();
 
             var proccesedElements = new HashSet<int>();
 
@@ -591,7 +445,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     matchRatioPlayer.HudElement.PlayerIcon = GetImageLink(playerType.ImageAlias);
                 }
 
-                matchRatioPlayer.HudElement.PlayerIconToolTip = String.Format("{0}: {1}", matchRatioPlayer.HudElement.PlayerName.Split('_').FirstOrDefault(), playerType.Name);
+                matchRatioPlayer.HudElement.PlayerIconToolTip = String.Format("{0}: {1}",
+                    matchRatioPlayer.HudElement.PlayerName.Split('_').FirstOrDefault(), playerType.Name);
 
                 proccesedElements.Add(matchRatioPlayer.HudElement.Seat);
             };
@@ -616,13 +471,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="layoutId">Layout</param>
         public IList<string> GetValidStickers(Entities.Playerstatistic statistic, int layoutId)
         {
-            var layout = Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.IsDefault);
+            var layout = Layouts.FirstOrDefault(x => x.LayoutId == layoutId);
             if (layout == null || statistic == null)
             {
                 return new List<string>();
             }
 
-            return layout.HudBumperStickerTypes?.Where(x => x.FilterPredicate != null && new[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any()).Select(x => x.Name).ToList();
+            return
+                layout.HudBumperStickerTypes?.Where(
+                        x => x.FilterPredicate != null && new[] {statistic}.AsQueryable().Where(x.FilterPredicate).Any())
+                    .Select(x => x.Name)
+                    .ToList();
         }
 
         /// <summary>
@@ -630,10 +489,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudElements">Hud elements</param>
         /// <param name="layoutId">Layout</param>
-        public void SetStickers(HudElementViewModel hudElement, IDictionary<string, Entities.Playerstatistic> stickersStatistics, int layoutId)
+        public void SetStickers(HudElementViewModel hudElement,
+            IDictionary<string, Entities.Playerstatistic> stickersStatistics, int layoutId)
         {
             hudElement.Stickers = new ObservableCollection<HudBumperStickerType>();
-            var layout = Layouts.FirstOrDefault(x => x.LayoutId == layoutId && x.IsDefault);
+            var layout = Layouts.FirstOrDefault(x => x.LayoutId == layoutId);
             if (layout == null || stickersStatistics == null)
             {
                 return;
@@ -646,7 +506,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     continue;
                 }
 
-                var statistics = new Model.Data.HudIndicators(new[] { stickersStatistics[sticker.Name] });
+                var statistics = new Model.Data.HudIndicators(new[] {stickersStatistics[sticker.Name]});
                 if (statistics == null || statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
                 {
                     continue;
@@ -731,23 +591,35 @@ namespace DriveHUD.Application.ViewModels.Hud
         private Tuple<bool, decimal, decimal> GetMatchRatio(HudElementViewModel hudElement, HudPlayerType hudPlayerType)
         {
             var matchRatios = (from stat in hudPlayerType.Stats
-                               let low = stat.Low.HasValue ? stat.Low.Value : -1
-                               let high = stat.High.HasValue ? stat.High.Value : 100
-                               let average = (high + low) / 2
-                               let isStatDefined = stat.Low.HasValue || stat.High.HasValue
-                               join hudElementStat in hudElement.StatInfoCollection on stat.Stat equals hudElementStat.Stat into gj
-                               from grouped in gj.DefaultIfEmpty()
-                               let inRange = grouped != null ? (grouped.CurrentValue >= low && grouped.CurrentValue <= high) : !isStatDefined
-                               let isGroupAndStatDefined = grouped != null && isStatDefined
-                               let matchRatio = isGroupAndStatDefined ? Math.Abs(grouped.CurrentValue - average) : 0
-                               let extraMatchRatio = (isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)) ?
-                                                        matchRatio : 0
-                               select new { Ratio = matchRatio, InRange = inRange, IsStatDefined = isStatDefined, ExtraMatchRatio = extraMatchRatio }).ToArray();
+                let low = stat.Low.HasValue ? stat.Low.Value : -1
+                let high = stat.High.HasValue ? stat.High.Value : 100
+                let average = (high + low)/2
+                let isStatDefined = stat.Low.HasValue || stat.High.HasValue
+                join hudElementStat in hudElement.StatInfoCollection on stat.Stat equals hudElementStat.Stat into gj
+                from grouped in gj.DefaultIfEmpty()
+                let inRange =
+                grouped != null ? (grouped.CurrentValue >= low && grouped.CurrentValue <= high) : !isStatDefined
+                let isGroupAndStatDefined = grouped != null && isStatDefined
+                let matchRatio = isGroupAndStatDefined ? Math.Abs(grouped.CurrentValue - average) : 0
+                let extraMatchRatio =
+                (isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)) ? matchRatio : 0
+                select
+                new
+                {
+                    Ratio = matchRatio,
+                    InRange = inRange,
+                    IsStatDefined = isStatDefined,
+                    ExtraMatchRatio = extraMatchRatio
+                }).ToArray();
 
-            return new Tuple<bool, decimal, decimal>(matchRatios.All(x => x.InRange) && matchRatios.Any(x => x.IsStatDefined), matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
+            return
+                new Tuple<bool, decimal, decimal>(
+                    matchRatios.All(x => x.InRange) && matchRatios.Any(x => x.IsStatDefined),
+                    matchRatios.Sum(x => x.Ratio), matchRatios.Sum(x => x.ExtraMatchRatio));
         }
 
-        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats, Model.Data.HudIndicators source)
+        private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats,
+            Model.Data.HudIndicators source)
         {
             if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
                 return false;
@@ -784,7 +656,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             var low = stat.Low.HasValue ? stat.Low.Value : 0;
             var high = stat.High.HasValue ? stat.High.Value : 100;
 
-            return (high + low) / 2;
+            return (high + low)/2;
         }
 
 
@@ -801,7 +673,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 using (var fs = File.Open(layoutsFile, FileMode.Create))
                 {
                     var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
-                    xmlSerializer.Serialize(fs, _userDefindedHudLayouts);
+                    xmlSerializer.Serialize(fs, _savedLayouts);
                 }
             }
             catch (Exception e)
@@ -814,11 +686,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Import layouts from stream
         /// </summary>
         /// <param name="stream">Stream to be used for importing</param>
-        /// <param name="saveLayouts">Save imported layouts</param>
-        /// <param name="overrideIsDefaults">If true then isDefaults will be false</param>
-        /// <param name="skipIfExists">If true then layout will not be imported</param>
         /// <returns>Imported layout</returns>
-        private HudSavedLayout Import(Stream stream, bool saveLayouts, bool overrideIsDefaults = true, bool skipIfExists = false)
+        private HudSavedLayout Import(Stream stream)
         {
             Check.ArgumentNotNull(() => stream);
 
@@ -827,50 +696,16 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
                 var importedHudLayouts = xmlSerializer.Deserialize(stream) as HudSavedLayouts;
 
-                var importedHudLayout = importedHudLayouts.Layouts.FirstOrDefault();
+                var importedHudLayout = importedHudLayouts?.Layouts.FirstOrDefault();
 
-                if (importedHudLayout == null )
-                {
+                if (importedHudLayout == null)
                     return null;
-                }
-
-                var layouts = Layouts.Where(x => x.LayoutId == importedHudLayout.LayoutId).ToArray();
-
-                if (skipIfExists && layouts.Length > 1)
-                {
-                    return null;
-                }
 
                 importedHudLayout.HudPlayerTypes.ForEach(x =>
-                {
-                    x.Image = GetImageLink(x.ImageAlias);
-                });
+                    { x.Image = GetImageLink(x.ImageAlias); });
 
                 importedHudLayout.HudBumperStickerTypes.ForEach(x =>
-                {
-                    x.InitializeFilterPredicate();
-                });
-
-                var counter = 1;
-
-                while (layouts.Any(x => x.Name.Equals(importedHudLayout.Name)))
-                {
-                    importedHudLayout.Name = string.Format("{0} ({1})", importedHudLayout.Name, counter++);
-                }
-
-                if (overrideIsDefaults)
-                {
-                    importedHudLayout.IsDefault = false;
-                }
-                else if (importedHudLayout.IsDefault)
-                {
-                    layouts.ForEach(x => x.IsDefault = false);
-                }
-
-                if (saveLayouts)
-                {
-                    InternalSave();
-                }
+                    { x.InitializeFilterPredicate(); });
 
                 return importedHudLayout;
             }
@@ -882,207 +717,218 @@ namespace DriveHUD.Application.ViewModels.Hud
             return null;
         }
 
-        private List<HudSavedLayout> GetPredefinedLayouts()
-        {
-            var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
-            var result = new List<HudSavedLayout>();
-            try
-            {
-                foreach (var predefinedLayout in PredefinedLayoutsFiles)
-                {
-                    using (var stream = resourcesAssembly.GetManifestResourceStream(predefinedLayout))
-                    {
-                        result.Add(Import(stream, false, false, true));
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, e);
-            }
-            return result;
-        }
-
         private List<HudPlayerType> CreateDefaultPlayerTypes(EnumTableType tableType)
         {
             var hudPlayerTypes = new List<HudPlayerType>
             {
                 new HudPlayerType(true)
                 {
-                     Name = "Nit",
-                     ImageAlias = "Nit.png",
-                     Image = GetImageLink("Nit.png"),
-                     StatsToMerge = tableType == EnumTableType.Six ?
-                         // 6-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 0, High = 17 },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 0, High = 16 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 0, High = 4.3m }
-                         } : (tableType == EnumTableType.Nine) ?
-                         // 9-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 0, High = 11 },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 0, High = 11 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 0, High = 3.7m }
-                         } : new ObservableCollection<HudPlayerTypeStat>()
+                    Name = "Nit",
+                    ImageAlias = "Nit.png",
+                    Image = GetImageLink("Nit.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 0, High = 17},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 16},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4.3m}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 0, High = 11},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 3.7m}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
                 },
                 new HudPlayerType(true)
                 {
-                     Name = "Fish",
-                     ImageAlias = "Fish.png",
-                     Image = GetImageLink("Fish.png"),
-                     StatsToMerge =  tableType == EnumTableType.Six ?
-                         // 6-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 36 },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 0, High = 13 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 0, High = 4 },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 0, High = 40 }
-                         } : (tableType == EnumTableType.Nine) ?
-                         // 9-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 31 },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 0, High = 11 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 0, High = 3.8m },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 0, High = 40 }
-                         } : new ObservableCollection<HudPlayerTypeStat>()
+                    Name = "Fish",
+                    ImageAlias = "Fish.png",
+                    Image = GetImageLink("Fish.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 36},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 13},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 40}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 31},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 3.8m},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 40}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
                 },
                 new HudPlayerType(true)
                 {
-                     Name = "Standard Reg",
-                     ImageAlias = "Standard Reg.png",
-                     Image = GetImageLink("Standard Reg.png"),
-                     StatsToMerge = tableType == EnumTableType.Six ?
-                         // 6-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 22, High = 27  },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 18, High = 25 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 4.7m, High = 8.6m, },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 42 }
-                         }  : (tableType == EnumTableType.Nine) ?
-                         // 9-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 16, High = 22  },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 15, High = 21 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 4.5m, High = 7.6m, },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 42 }
-                         } : new ObservableCollection<HudPlayerTypeStat>()
+                    Name = "Standard Reg",
+                    ImageAlias = "Standard Reg.png",
+                    Image = GetImageLink("Standard Reg.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 22, High = 27},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 18, High = 25},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.7m, High = 8.6m,},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 42}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 16, High = 22},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 15, High = 21},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.5m, High = 7.6m,},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 42}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
                 },
                 new HudPlayerType(true)
                 {
-                     Name = "Tight Reg",
-                     ImageAlias = "book.png",
-                     Image = GetImageLink("book.png"),
-                     StatsToMerge = tableType == EnumTableType.Six ?
-                         // 6-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 18, High = 22  },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 14, High = 21 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 3.2m, High = 6m, },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 41 }
-                         }  : (tableType == EnumTableType.Nine) ?
-                         // 9-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 14, High = 18  },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 14, High = 18 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 3.6m, High = 6.8m }
-                         } : new ObservableCollection<HudPlayerTypeStat>()
+                    Name = "Tight Reg",
+                    ImageAlias = "book.png",
+                    Image = GetImageLink("book.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 18, High = 22},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 14, High = 21},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.2m, High = 6m,},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 41}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 14, High = 18},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 14, High = 18},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.6m, High = 6.8m}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
                 },
                 new HudPlayerType(true)
                 {
-                     Name = "Bad LAG",
-                     ImageAlias = "Bad LAG.png",
-                     Image = GetImageLink("Bad LAG.png"),
-                     StatsToMerge = tableType == EnumTableType.Six ?
-                         // 6-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 26, High = 35  },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 21, High = 33 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 6m },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 43 }
-                         } : (tableType == EnumTableType.Nine) ?
-                         // 9-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 22, High = 29  },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 20, High = 28 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 5.5m, High = 9.6m }
-                         } : new ObservableCollection<HudPlayerTypeStat>()
+                    Name = "Bad LAG",
+                    ImageAlias = "Bad LAG.png",
+                    Image = GetImageLink("Bad LAG.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 26, High = 35},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 33},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6m},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 43}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 22, High = 29},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 20, High = 28},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 5.5m, High = 9.6m}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
                 },
                 new HudPlayerType(true)
                 {
-                     Name = "Tricky LAG",
-                     ImageAlias = "Tricky LAG.png",
-                     Image = GetImageLink("Tricky LAG.png"),
-                     StatsToMerge = tableType == EnumTableType.Six ?
-                         // 6-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 25, High = 34  },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 21, High = 31 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 6.5m },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 45 }
-                         }  : (tableType == EnumTableType.Nine) ?
-                         // 9-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 21, High = 28  },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 21, High = 28 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 6.0m, High = 10m },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 45 }
-                         } : new ObservableCollection<HudPlayerTypeStat>()
+                    Name = "Tricky LAG",
+                    ImageAlias = "Tricky LAG.png",
+                    Image = GetImageLink("Tricky LAG.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 25, High = 34},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 31},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6.5m},
+                            new HudPlayerTypeStat {Stat = Stat.AGG, Low = 45}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 21, High = 28},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 28},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6.0m, High = 10m},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 45}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
                 },
                 new HudPlayerType(true)
                 {
-                     Name = "Whale",
-                     ImageAlias = "Whale.png",
-                     Image = GetImageLink("Whale.png"),
-                     StatsToMerge = tableType == EnumTableType.Six ?
-                         // 6-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 44 },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 0, High = 12 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 0, High = 4 }
-                         } : (tableType == EnumTableType.Nine) ?
-                         // 9-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 42 },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 0, High = 11 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 0, High = 4 },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 0, High = 42 }
-                         } : new ObservableCollection<HudPlayerTypeStat>()
+                    Name = "Whale",
+                    ImageAlias = "Whale.png",
+                    Image = GetImageLink("Whale.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 44},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 12},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 42},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 0, High = 42}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
                 },
                 new HudPlayerType(true)
                 {
-                     Name = "Nutball",
-                     ImageAlias = "Nutball.png",
-                     Image = GetImageLink("Nutball.png"),
-                     StatsToMerge = tableType == EnumTableType.Six ?
-                         // 6-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 40 },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 22 }
-                         }  : (tableType == EnumTableType.Nine) ?
-                         // 9-max
-                         new ObservableCollection<HudPlayerTypeStat>()
-                         {
-                             new HudPlayerTypeStat { Stat = Stat.VPIP, Low = 38 },
-                             new HudPlayerTypeStat { Stat = Stat.PFR, Low = 22 },
-                             new HudPlayerTypeStat { Stat = Stat.S3Bet, Low = 5 },
-                             new HudPlayerTypeStat { Stat = Stat.AGG, Low = 44 }
-                         } : new ObservableCollection<HudPlayerTypeStat>()
+                    Name = "Nutball",
+                    ImageAlias = "Nutball.png",
+                    Image = GetImageLink("Nutball.png"),
+                    StatsToMerge = tableType == EnumTableType.Six
+                        ?
+                        // 6-max
+                        new ObservableCollection<HudPlayerTypeStat>()
+                        {
+                            new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 40},
+                            new HudPlayerTypeStat {Stat = Stat.PFR, Low = 22}
+                        }
+                        : (tableType == EnumTableType.Nine)
+                            ?
+                            // 9-max
+                            new ObservableCollection<HudPlayerTypeStat>()
+                            {
+                                new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 38},
+                                new HudPlayerTypeStat {Stat = Stat.PFR, Low = 22},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 5},
+                                new HudPlayerTypeStat {Stat = Stat.AGG, Low = 44}
+                            }
+                            : new ObservableCollection<HudPlayerTypeStat>()
                 }
             };
 
@@ -1095,29 +941,29 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 new HudBumperStickerType(true)
                 {
-                     Name = "One and Done",
-                     SelectedColor = Colors.OrangeRed,
-                     Description = "C-bets at a high% on the flop, but then rarely double barrels.",
-                     StatsToMerge =
-                         new ObservableCollection<BaseHudRangeStat>()
-                         {
-                             new BaseHudRangeStat { Stat = Stat.CBet, Low = 55, High = 100 },
-                             new BaseHudRangeStat { Stat = Stat.DoubleBarrel, Low = 0, High = 35 },
-                         }
+                    Name = "One and Done",
+                    SelectedColor = Colors.OrangeRed,
+                    Description = "C-bets at a high% on the flop, but then rarely double barrels.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.CBet, Low = 55, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 0, High = 35},
+                        }
                 },
                 new HudBumperStickerType(true)
                 {
-                     Name = "Pre-Flop Reg",
-                     SelectedColor = Colors.Orange,
-                     Description = "Plays an aggressive pre-flop game, but doesn’t play well post flop.",
-                     StatsToMerge =
-                         new ObservableCollection<BaseHudRangeStat>()
-                         {
-                             new BaseHudRangeStat { Stat = Stat.VPIP, Low = 19, High = 26 },
-                             new BaseHudRangeStat { Stat = Stat.PFR, Low = 15, High = 23 },
-                             new BaseHudRangeStat { Stat = Stat.S3Bet, Low = 8, High = 100 },
-                             new BaseHudRangeStat { Stat = Stat.WWSF, Low = 0, High = 42 },
-                         }
+                    Name = "Pre-Flop Reg",
+                    SelectedColor = Colors.Orange,
+                    Description = "Plays an aggressive pre-flop game, but doesn’t play well post flop.",
+                    StatsToMerge =
+                        new ObservableCollection<BaseHudRangeStat>()
+                        {
+                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 19, High = 26},
+                            new BaseHudRangeStat {Stat = Stat.PFR, Low = 15, High = 23},
+                            new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 0, High = 42},
+                        }
                 },
                 new HudBumperStickerType(true)
                 {
@@ -1127,12 +973,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
-                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 20, High = 30 },
-                            new BaseHudRangeStat { Stat = Stat.PFR, Low = 17, High = 28 },
-                            new BaseHudRangeStat { Stat = Stat.AGG, Low = 40, High = 49 },
-                            new BaseHudRangeStat { Stat = Stat.CBet, Low = 65, High = 80 },
-                            new BaseHudRangeStat { Stat = Stat.WWSF, Low = 44, High = 53 },
-                            new BaseHudRangeStat { Stat = Stat.DoubleBarrel, Low = 46, High = 100 },
+                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 20, High = 30},
+                            new BaseHudRangeStat {Stat = Stat.PFR, Low = 17, High = 28},
+                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 40, High = 49},
+                            new BaseHudRangeStat {Stat = Stat.CBet, Low = 65, High = 80},
+                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 44, High = 53},
+                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 46, High = 100},
                         }
                 },
                 new HudBumperStickerType(true)
@@ -1143,8 +989,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
-                            new BaseHudRangeStat { Stat = Stat.S3Bet, Low = 8.8m, High = 100 },
-                            new BaseHudRangeStat { Stat = Stat.FoldTo3Bet, Low = 66, High = 100 },
+                            new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8.8m, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.FoldTo3Bet, Low = 66, High = 100},
                         }
                 },
                 new HudBumperStickerType(true)
@@ -1155,7 +1001,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
-                            new BaseHudRangeStat { Stat = Stat.UO_PFR_EP, Low = 20, High = 100 },
+                            new BaseHudRangeStat {Stat = Stat.UO_PFR_EP, Low = 20, High = 100},
                         }
                 },
                 new HudBumperStickerType(true)
@@ -1166,9 +1012,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
-                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 35, High = 100 },
-                            new BaseHudRangeStat { Stat = Stat.FoldToCBet, Low = 0, High = 40 },
-                            new BaseHudRangeStat { Stat = Stat.WTSD, Low = 29, High = 100 },
+                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 35, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 40},
+                            new BaseHudRangeStat {Stat = Stat.WTSD, Low = 29, High = 100},
                         }
                 },
                 new HudBumperStickerType(true)
@@ -1179,43 +1025,33 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
-                            new BaseHudRangeStat { Stat = Stat.VPIP, Low = 40, High = 100 },
-                            new BaseHudRangeStat { Stat = Stat.FoldToCBet, Low = 0, High = 6 },
-                            new BaseHudRangeStat { Stat = Stat.AGG, Low = 0, High = 34 },
+                            new BaseHudRangeStat {Stat = Stat.VPIP, Low = 40, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 6},
+                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 0, High = 34},
                         }
                 },
-
             };
 
             return bumperStickers;
         }
 
-        /// <summary>
-        /// Merge specified layout with cache
-        /// </summary>
-        /// <param name="layout">Layout to merge</param>
-        //private void MergeWithBaseLayout(HudSavedLayout layout)
-        //{
-        //    if (baseHudLayouts == null)
-        //    {
-        //        return;
-        //    }
-
-        //    var layoutCopy = layout.Clone();
-
-        //    var existingLayout = baseHudLayouts.Layouts.FirstOrDefault(x => x.LayoutId == layoutCopy.LayoutId && x.Name == layoutCopy.Name);
-
-        //    if (existingLayout != null)
-        //    {
-        //        baseHudLayouts.Layouts.Remove(existingLayout);
-        //    }
-
-        //    if (layoutCopy.IsDefault)
-        //    {
-        //        baseHudLayouts.Layouts.Where(x => x.LayoutId == layout.LayoutId).ForEach(x => x.IsDefault = false);
-        //    }
-
-        //    baseHudLayouts.Layouts.Add(layoutCopy);
-        //}
+        private List<HudSavedLayout> GetPredefindedLayouts()
+        {
+            //TODO move to default layouts;
+            var result = new List<HudSavedLayout>();
+            var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
+            try
+            {
+                    using (var stream = resourcesAssembly.GetManifestResourceStream("DriveHUD.Common.Resources.Layouts.Default.xml"))
+                    {
+                        result.Add(Import(stream));
+                    }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
+            return result;
+        }
     }
 }

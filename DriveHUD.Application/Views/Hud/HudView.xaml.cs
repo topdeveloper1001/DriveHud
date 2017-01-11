@@ -35,14 +35,11 @@ namespace DriveHUD.Application.Views
             DataContextChanged += (o, e) =>
             {
                 if (ViewModel == null)
-                {
                     return;
-                }
-
                 ViewModel.TableUpdate += ViewModel_TableUpdated;
-
+                ViewModel.UpdateActiveLayout();
                 var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
-                Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int) tableType);
+                Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
                 UpdatePreferredSeatingStateWithoutNotification();
             };
         }
@@ -55,7 +52,7 @@ namespace DriveHUD.Application.Views
             }
 
             var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
-            Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int) tableType);
+            Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int) tableType);
             UpdatePreferredSeatingStateWithoutNotification();
         }
 

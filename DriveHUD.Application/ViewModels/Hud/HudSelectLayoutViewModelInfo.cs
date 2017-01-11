@@ -16,8 +16,7 @@ namespace DriveHUD.Application.ViewModels
 {
     public class HudSelectLayoutViewModelInfo
     {
-        public int LayoutId { get; set; }
-
+        public string LayoutName { get; set; }
         public Action Save { get; set; }
 
         public Action Cancel { get; set; }

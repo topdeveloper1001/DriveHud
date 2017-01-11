@@ -33,23 +33,23 @@ namespace DriveHUD.Application.ViewModels
         {
             Check.ArgumentNotNull(() => hudViewModel);
 
-            if (!hudViewModel.HudTableViewModelDictionary.ContainsKey(tableKey))
+            //if (!hudViewModel.HudTableViewModels.ContainsKey(tableKey))
             {
                 return null;
             }
 
-            var hudTableViewModel = hudViewModel.HudTableViewModelDictionary[tableKey];
+            //var hudTableViewModel = hudViewModel.HudTableViewModelDictionary[tableKey];
 
-            var hudElementTemplate = hudTableViewModel.HudElements.FirstOrDefault(x => x.Seat == seatNumber && x.HudType == hudType);
+            //var hudElementTemplate = hudTableViewModel.HudElements.FirstOrDefault(x => x.Seat == seatNumber && x.HudType == hudType);
 
-            if (hudElementTemplate == null)
-            {
-                return null;
-            }
+            //if (hudElementTemplate == null)
+            //{
+            //    return null;
+            //}
 
-            var hudElementViewModel = hudElementTemplate.Clone();
+            //var hudElementViewModel = hudElementTemplate.Clone();
 
-            return hudElementViewModel;
+            //return hudElementViewModel;
         }
     }
 }

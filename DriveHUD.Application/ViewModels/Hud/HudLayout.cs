@@ -34,7 +34,7 @@ namespace DriveHUD.Application.ViewModels
 
         public HudLayout(HudViewModel viewModel)
         {
-            TableHud = viewModel.HudTableViewModelCurrent;
+            TableHud = viewModel.CurrentHudTableViewModel;
             TableType = viewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
             HudStats = viewModel.StatInfoObserveCollection.ToList();
             ListHUDPlayer = viewModel.PlayerCollection.ToList();

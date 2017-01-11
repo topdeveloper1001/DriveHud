@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Runtime.Serialization;
 using System.ServiceModel;
-using System.Text;
 using System.Windows;
 
 namespace DriveHUD.HUD.Service
@@ -44,7 +41,23 @@ namespace DriveHUD.HUD.Service
         public int LayoutId { get; set; }
 
         [DataMember(Name = "HudPositions")]
-        public List<HudPositionContract> HudPositions { get; set; }
+        public List<HudPositionsContract> HudPositions { get; set; }
+    }
+
+    [DataContract]
+    public class HudPositionsContract
+    {
+        [DataMember(Name = "PokerSite")]
+        public short PokerSite { get; set; }
+
+        [DataMember(Name = "TableType")]
+        public short TableType { get; set; }
+
+        [DataMember(Name = "GameType")]
+        public short GameType { get; set; }
+
+        [DataMember(Name = "Positions")]
+        public List<HudPositionContract> Positions { get; set; }
     }
 
     [DataContract]

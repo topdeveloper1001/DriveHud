@@ -11,7 +11,6 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Infrastructure.Base;
 using ProtoBuf;
 using System.Collections.ObjectModel;
@@ -30,7 +29,7 @@ namespace DriveHUD.Application.ViewModels
 
         [ProtoMember(2)]
         public EnumTableType TableType { get; set; }
-
+        
         [ProtoMember(3)]
         public bool IsRelativePosition { get; set; }
 
@@ -39,7 +38,10 @@ namespace DriveHUD.Application.ViewModels
 
         [ProtoMember(5)]
         public Point StartPosition { get; set; }
-        
+
+        [ProtoMember(6)]
+        public EnumGameType GameType { get; set; }
+
         public ObservableCollection<HudElementViewModel> HudElements { get; set; }
         
         internal ObservableCollection<ITableSeatArea> TableSeatAreaCollection { get; set; }
@@ -60,6 +62,7 @@ namespace DriveHUD.Application.ViewModels
 
             model.PokerSite = PokerSite;
             model.TableType = TableType;
+            model.GameType = GameType;
             model.IsRelativePosition = IsRelativePosition;
             model.RelativePosition = RelativePosition;
             model.StartPosition = StartPosition;

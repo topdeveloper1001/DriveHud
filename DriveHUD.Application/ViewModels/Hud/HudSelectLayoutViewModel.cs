@@ -36,28 +36,9 @@ namespace DriveHUD.Application.ViewModels
 
         private void Initialize()
         {
-            var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-
-            var layouts = hudLayoutService.Layouts.Where(x => x.LayoutId == viewModelInfo.LayoutId).ToList();
-
-            if (!viewModelInfo.IsDeleteMode)
-            {
-                var defaultLayout = layouts.FirstOrDefault(x => x.IsDefault);
-
-                if (defaultLayout != null)
-                {
-                    selectedItem = defaultLayout.Name;
-                }
-            }
-
-            items = new ObservableCollection<string>(layouts.Select(x => x.Name));
-
             ShowInput = viewModelInfo.IsSaveAsMode;
 
-            if (ShowInput)
-            {
-                Name = selectedItem;
-            }
+            Name = $"{viewModelInfo.LayoutName} Copy";
 
             var canSave = this.WhenAny(x => x.Name, x => !string.IsNullOrWhiteSpace(x.Value));
 
@@ -92,34 +73,6 @@ namespace DriveHUD.Application.ViewModels
                 return viewModelInfo.IsDeleteMode ?
                             CommonResourceManager.Instance.GetResourceString("Common_HudLayout_DeleteLabel") :
                             CommonResourceManager.Instance.GetResourceString("Common_HudLayout_SelectLabel");
-            }
-        }
-
-        private ObservableCollection<string> items;
-
-        public ObservableCollection<string> Items
-        {
-            get
-            {
-                return items;
-            }
-            private set
-            {
-                this.RaiseAndSetIfChanged(ref items, value);
-            }
-        }
-
-        private string selectedItem;
-
-        public string SelectedItem
-        {
-            get
-            {
-                return selectedItem;
-            }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref selectedItem, value);
             }
         }
 

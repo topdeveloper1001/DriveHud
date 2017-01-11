@@ -479,16 +479,17 @@ namespace DriveHUD.Application.TableConfigurators
         {
             var result = new List<StatInfo>();
 
-            var tableKey = HudViewModel.GetHash(pokerSite, gameType, tableType);
+            //var tableKey = HudViewModel.GetHash(pokerSite, gameType, tableType);
 
-            var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
-            if (activeLayout == null)
-            {
-                LogProvider.Log.Error("Could not find active layout");
-                return null;
-            }
+            //var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
+            //if (activeLayout == null)
+            //{
+            //    LogProvider.Log.Error("Could not find active layout");
+            //    return null;
+            //}
 
-            return activeLayout.HudStats.ToArray();
+            //return activeLayout.HudStats.ToArray();
+            return new List<StatInfo>();
         }
 
         private EnumPokerSites GetPokerSite(EnumPokerSites site)

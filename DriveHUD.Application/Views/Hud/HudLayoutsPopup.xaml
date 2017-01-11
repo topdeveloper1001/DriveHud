@@ -6,7 +6,7 @@
              xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
              xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="160" d:DesignWidth="300">
     <UserControl.Resources>
 
         <SolidColorBrush x:Key="ButtonBackground" Color="#202125" />
@@ -83,7 +83,6 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="*" />
             <RowDefinition Height="60" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -116,26 +115,7 @@
             
         </StackPanel>
 
-        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Header}" VerticalAlignment="Center" />
-
-        <!-- List of available stats -->
-        <Border Grid.Row="2" Grid.Column="1">
-            <ListBox 
-                    ItemsSource="{Binding Items}" 
-                    SelectedItem="{Binding SelectedItem}"
-                    BorderThickness="0"                                
-                    ItemContainerStyle="{StaticResource StatInfoListBoxItemStyle}" 
-                    Background="Transparent">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding }" />
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-
-        </Border>
-
-        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
 
             <Button 
                     Height="40"
