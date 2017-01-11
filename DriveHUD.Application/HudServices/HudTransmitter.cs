@@ -15,6 +15,8 @@ namespace DriveHUD.Application.HudServices
     public class HudTransmitter : IHudTransmitter
     {
         private const string hudClientFileName = "DriveHUD.HUD.exe";
+        private const string hudProcessName = "DriveHUD.HUD";
+             
         private const double delayMS = 1000;
 
         private Process hudClient;
@@ -47,7 +49,7 @@ namespace DriveHUD.Application.HudServices
         {
             try
             {
-                var existingClientProcess = Process.GetProcessesByName(hudClientFileName).FirstOrDefault();
+                var existingClientProcess = Process.GetProcessesByName(hudProcessName).FirstOrDefault();
 
                 if (existingClientProcess != null)
                 {
@@ -57,7 +59,7 @@ namespace DriveHUD.Application.HudServices
                 hudClient = BuildClientProcess();
                 hudClient.Start();
 
-                Task.Delay(5000).Wait();
+                Task.Delay(2000).Wait();
 
                 StartPipe();
 
