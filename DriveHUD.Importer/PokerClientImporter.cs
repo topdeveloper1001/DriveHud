@@ -27,13 +27,15 @@ namespace DriveHUD.Importers
     /// Base class of importers which get data directly from poker clients
     /// </summary>
     internal abstract class PokerClientImporter : BaseImporter, IBackgroundProcess
-    {       
+    {
+        protected abstract ImporterIdentifier Identifier { get; }
+
         protected IPokerClientEncryptedLogger pokerClientLogger;
 
         public PokerClientImporter()
         {
             InitializeLogger();
-        }           
+        }
 
         #region Infrastructure
 
@@ -47,25 +49,35 @@ namespace DriveHUD.Importers
 
         protected override void DoImport()
         {
+            var pipeManager = ServiceLocator.Current.GetInstance<IPipeManager>();
             var dataManager = CreatePokerClientDataManager(pokerClientLogger);
-
-            var pipeServerHandle = CreatePipeServer();
-
-            // If pipe hasn't been created then exit from task
-            if (pipeServerHandle == IntPtr.Zero)
-            {
-                LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Stop importing \"{0}\" data", SiteString));
-                RaiseProcessStopped();
-                return;
-            }
 
             pokerClientLogger.CleanLogs();
             pokerClientLogger.StartLogging();
 
+            IntPtr pipeServerHandle = IntPtr.Zero;
+
             while (!cancellationTokenSource.IsCancellationRequested)
-            {               
+            {
                 try
                 {
+                    pipeServerHandle = pipeManager.GetHandle(Identifier);
+
+                    if (pipeServerHandle == IntPtr.Zero)
+                    {
+                        pipeServerHandle = CreatePipeServer();
+
+                        // If pipe hasn't been created then exit from task
+                        if (pipeServerHandle == IntPtr.Zero)
+                        {
+                            LogProvider.Log.Error(this, string.Format(CultureInfo.InvariantCulture, "Stop importing \"{0}\" data", SiteString));
+                            RaiseProcessStopped();
+                            return;
+                        }
+
+                        pipeManager.AddHandle(Identifier, pipeServerHandle);
+                    }
+
                     // Buffer for pipe data
                     var lbBuffer = new byte[BufferSize];
                     uint numberOfBytesRead;
@@ -94,7 +106,9 @@ namespace DriveHUD.Importers
                 }
             }
 
-            ClosePipe(pipeServerHandle);
+            pipeManager.RemoveHandle(Identifier);
+
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Pipe for \"{0}\" was closed.", Identifier));
 
             pokerClientLogger.StopLogging();
 
@@ -155,28 +169,6 @@ namespace DriveHUD.Importers
             return pipeServerHandle;
         }
 
-        /// <summary>
-        /// Close pipe server
-        /// </summary>
-        /// <param name="pipeHandle">Handle to pipe</param>
-        protected virtual void ClosePipe(IntPtr pipeHandle)
-        {
-            if (!WinApi.FlushFileBuffers(pipeHandle))
-            {
-                LogProvider.Log.Warn(this, string.Format(CultureInfo.InvariantCulture, "Flushing pipe buffer failed with code 0x{0:X}.", WinApi.GetLastError()));
-            }
-
-            if (!WinApi.DisconnectNamedPipe(pipeHandle))
-            {
-                LogProvider.Log.Warn(this, string.Format(CultureInfo.InvariantCulture, "Disconnecting pipe failed with code 0x{0:X}.", WinApi.GetLastError()));
-            }
-
-            if (!WinApi.CloseHandle(pipeHandle))
-            {
-                LogProvider.Log.Warn(this, string.Format(CultureInfo.InvariantCulture, "Closing pipe handle failed with code 0x{0:X}.", WinApi.GetLastError()));
-            }
-        }
-     
         /// <summary>
         /// Create configuration for logger
         /// </summary>

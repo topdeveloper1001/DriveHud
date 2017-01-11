@@ -157,7 +157,7 @@ namespace DriveHUD.Application.Licensing
         /// <param name="serial">Serial number</param>
         public bool Register(string serial, string email)
         {
-             if (string.IsNullOrWhiteSpace(serial))
+            if (string.IsNullOrWhiteSpace(serial))
             {
                 throw new DHBusinessException(new NonLocalizableString("Serial is not defined."));
             }
@@ -182,7 +182,7 @@ namespace DriveHUD.Application.Licensing
 
             if (licenseInfo != null)
             {
-                licenseInfos.Remove(licenseInfo);
+                licenseInfos.Remove(licenseInfo);                                
             }
 
             var requestInfo = new LicenseValidationRequestInfo
@@ -191,13 +191,14 @@ namespace DriveHUD.Application.Licensing
                 SerialNumbers = new string[] { serial },
                 SaveExternalSerials = true,
                 DisableTrials = true,
-                DisableCache = true
+                DisableCache = true,
+                ShouldGetNewSerialNumber = true                
             };
 
             requestInfo.AdditionalServerProperties.Add("email", email);
 
             try
-            {
+            {               
                 license = licenseManager.Validate(requestInfo);
 
                 if (license == null || license.IsTrial)
@@ -209,6 +210,8 @@ namespace DriveHUD.Application.Licensing
                 {
                     throw new LicenseCouldNotActivateException();
                 }
+
+                LogProvider.Log.Info($"License has been registered: {license.SerialNumber.Substring(0, 5)}");
 
                 return true;
             }
@@ -250,6 +253,8 @@ namespace DriveHUD.Application.Licensing
             {
                 licenseInfo = new LicenseInfo(license, licenseType.Value);
                 licenseInfos.Add(licenseInfo);
+
+                LogProvider.Log.Info($"License limits: Cash={licenseInfo.CashLimit}, Tournament={licenseInfo.TournamentLimit}");
 
                 UpdateExpirationDates(new[] { licenseInfo });
             }

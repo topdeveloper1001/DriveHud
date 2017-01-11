@@ -12,7 +12,18 @@
              xmlns:converter="clr-namespace:DriveHUD.Application.ValueConverters"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d" 
+             xmlns:prism="http://www.codeplex.com/prism"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
              d:DesignHeight="650" d:DesignWidth="550">
+
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding PopupModel.PopupViewModel.NotificationRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction IsModal="True" 
+                                            WindowStyle="{StaticResource NotificationWindowStyle}" 
+                                            WindowContent="{StaticResource NotificationWindowContentTemplate}" />
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
 
     <UserControl.Resources>
         <converter:ParameterToBoolConverter x:Key="ParameterToBoolConverter"/>

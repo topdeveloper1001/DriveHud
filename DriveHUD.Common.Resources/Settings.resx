@@ -192,6 +192,9 @@
   <data name="Settings_SaveFilters" xml:space="preserve">
     <value>Save Filters on exit</value>
   </data>
+  <data name="Settings_SendAdvancedLog" xml:space="preserve">
+    <value>Send Advanced Log</value>
+  </data>
   <data name="Settings_SendLog" xml:space="preserve">
     <value>Send log to support</value>
   </data>

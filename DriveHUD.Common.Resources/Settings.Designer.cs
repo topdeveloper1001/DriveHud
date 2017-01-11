@@ -286,6 +286,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Send Advanced Log.
+        /// </summary>
+        internal static string Settings_SendAdvancedLog {
+            get {
+                return ResourceManager.GetString("Settings_SendAdvancedLog", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Send log to support.
         /// </summary>
         internal static string Settings_SendLog {

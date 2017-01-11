@@ -15,6 +15,7 @@ using System.Windows;
 using System.Windows.Input;
 using DriveHUD.Common.Ifrastructure;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Actions;
 
 namespace DriveHUD.EquityCalculator.ViewModels
 {
@@ -28,6 +29,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
         #endregion
 
         #region Properties
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
+
         public Action FinishInteraction
         {
             get;
@@ -116,6 +119,8 @@ namespace DriveHUD.EquityCalculator.ViewModels
         public ExportViewModel()
         {
             Init();
+
+            NotificationRequest = new InteractionRequest<INotification>();
         }
 
         private void Init()
@@ -279,7 +284,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             String hh = ExportFunctions.ConvertHHToForumFormat(CurrentHandHistory);
             Clipboard.SetText(hh);
-            MessageBox.Show(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString));
+            RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Export");
             this.FinishInteraction();
         }
 
@@ -290,7 +295,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             String EquityData = ExportFunctions.GetEquityDataToExport(GetBoardStringFormatted(), GetEquityStringFormatted(this.PlayersList));
             String result = hh + Environment.NewLine + Environment.NewLine + EquityData;
             Clipboard.SetText(result);
-            MessageBox.Show(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString));
+            RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Export");
             this.FinishInteraction();
         }
 
@@ -298,8 +303,19 @@ namespace DriveHUD.EquityCalculator.ViewModels
         {
             String EquityData = ExportFunctions.GetEquityDataToExport(GetBoardStringFormatted(), GetEquityStringFormatted(this.PlayersList));
             Clipboard.SetText(EquityData);
-            MessageBox.Show(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString));
+            RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Export");
             this.FinishInteraction();
+        }
+
+        private void RaiseNotification(string content, string title)
+        {
+            this.NotificationRequest.Raise(
+                    new PopupActionNotification
+                    {
+                        Content = content,
+                        Title = title,
+                    },
+                    n => { });
         }
 
         private void Close(object obj)

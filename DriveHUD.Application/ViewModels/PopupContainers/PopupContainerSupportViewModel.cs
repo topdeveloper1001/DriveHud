@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
 using Model;
+using Prism.Interactivity.InteractionRequest;
+using DriveHUD.Common.Wpf.Actions;
 
 namespace DriveHUD.Application.ViewModels.PopupContainers
 {
@@ -24,6 +26,8 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         private void Initialize()
         {
+            NotificationRequest = new InteractionRequest<INotification>();
+
             SendMessageCommand = new DelegateCommand(SendMessage, CanSend);
             ShowOnlineManualCommand = new RelayCommand(ShowOnlineManual);
             ShowKnowledgeBaseCommand = new RelayCommand(ShowKnowledgeBase);
@@ -35,10 +39,13 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
 
         #region Properties
 
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
+
         private string _userName;
         private string _userEmail;
         private string _userMessage;
         private bool _attachLog;
+        private bool _sendAdvancedLog;
         private bool _isSending;
 
         public string UserName
@@ -80,6 +87,15 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
             }
         }
 
+        public bool SendAdvancedLog
+        {
+            get { return _sendAdvancedLog; }
+            set
+            {
+                SetProperty(ref _sendAdvancedLog, value);
+            }
+        }
+
         public bool IsSending
         {
             get { return _isSending; }
@@ -114,17 +130,17 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
                     appFolder = AppDomain.CurrentDomain.BaseDirectory;
                     dataFolder = StringFormatter.GetAppDataFolderPath();
                 }
-                using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, appFolder, dataFolder))
+                using (var message = SmtpClientHelper.ComposeSupportEmail(UserName, UserEmail, UserMessage, appFolder, dataFolder, SendAdvancedLog))
                 using (var client = SmtpClientHelper.GetSmtpClient())
                 {
                     await client.SendMailAsync(message);
                 }
 
-                MessageBox.Show("The message has been sent.");
+                RaiseMessage("Support", "The message has been sent.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to send message");
+                RaiseMessage("Support", "Failed to send message.");
                 LogProvider.Log.Error(ex);
             }
 
@@ -150,6 +166,16 @@ namespace DriveHUD.Application.ViewModels.PopupContainers
         {
             bool canSend = Utils.IsValidEmail(UserEmail) && !string.IsNullOrEmpty(UserName) && !string.IsNullOrEmpty(UserMessage);
             return canSend;
+        }
+
+        private void RaiseMessage(string title, string content)
+        {
+            this.NotificationRequest.Raise(
+                 new PopupActionNotification
+                 {
+                     Content = content,
+                     Title = title,
+                 });
         }
 
         #endregion

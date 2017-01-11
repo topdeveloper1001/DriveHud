@@ -617,6 +617,51 @@ namespace DriveHUD.Entities
         [ProtoMember(231)]
         public virtual int Flopcontinuationoopbetpossible { get; set; }
 
+        [ProtoMember(233)]
+        public virtual int CheckFoldFlopPfrOop { get; set; }
+
+        [ProtoMember(234)]
+        public virtual int CheckFoldFlop3BetOop { get; set; }
+
+        [ProtoMember(235)]
+        public virtual int BetFoldFlopPfrRaiser { get; set; }
+
+        [ProtoMember(236)]
+        public virtual int BetFlopCalled3BetPreflopIp { get; set; }
+
+        [ProtoMember(237)]
+        public virtual int PfrOop { get; set; }
+
+        [ProtoMember(238)]
+        public virtual int PfrInEp { get; set; }
+
+        [ProtoMember(239)]
+        public virtual int PfrInMp { get; set; }
+
+        [ProtoMember(240)]
+        public virtual int PfrInCo { get; set; }
+
+        [ProtoMember(241)]
+        public virtual int PfrInBtn { get; set; }
+
+        [ProtoMember(242)]
+        public virtual int PfrInSb { get; set; }
+
+        [ProtoMember(243)]
+        public virtual int PfrInBb { get; set; }
+
+        [ProtoMember(244)]
+        public virtual int Buttonstealfaced { get; set; }
+
+        [ProtoMember(245)]
+        public virtual int Buttonstealdefended { get; set; }
+
+        [ProtoMember(246)]
+        public virtual int Buttonstealfolded { get; set; }
+
+        [ProtoMember(247)]
+        public virtual int Buttonstealreraised { get; set; }
+
         #region Additional properties (not for serialization)
 
         #region Positional stats for current session 
@@ -817,6 +862,10 @@ namespace DriveHUD.Entities
             Calledrivercontinuationbet += a.Calledrivercontinuationbet;
             Raisedrivercontinuationbet += a.Raisedrivercontinuationbet;
 
+            Buttonstealfaced += a.Buttonstealfaced;
+            Buttonstealdefended += a.Buttonstealdefended;
+            Buttonstealfolded += a.Buttonstealfolded;
+            Buttonstealreraised += a.Buttonstealreraised;
             Bigblindstealfaced += a.Bigblindstealfaced;
             Bigblindstealdefended += a.Bigblindstealdefended;
             Bigblindstealreraised += a.Bigblindstealreraised;
@@ -957,6 +1006,18 @@ namespace DriveHUD.Entities
             FlopAggPossible += a.FlopAggPossible;
             TurnAggPossible += a.TurnAggPossible;
             RiverAggPossible += a.RiverAggPossible;
+
+            CheckFoldFlopPfrOop += a.CheckFoldFlopPfrOop;
+            CheckFoldFlop3BetOop += a.CheckFoldFlop3BetOop;
+            BetFoldFlopPfrRaiser += a.BetFoldFlopPfrRaiser;
+            BetFlopCalled3BetPreflopIp += a.BetFlopCalled3BetPreflopIp;
+            PfrOop += a.PfrOop;
+            PfrInEp += a.PfrInEp;
+            PfrInMp += a.PfrInMp;
+            PfrInCo += a.PfrInCo;
+            PfrInBtn += a.PfrInBtn;
+            PfrInSb += a.PfrInSb;
+            PfrInBb += a.PfrInBb;
 
             if (CardsList != null && !string.IsNullOrWhiteSpace(a.Cards))
             {
@@ -1116,6 +1177,10 @@ namespace DriveHUD.Entities
             r.Calledrivercontinuationbet = a.Calledrivercontinuationbet + b.Calledrivercontinuationbet;
             r.Raisedrivercontinuationbet = a.Raisedrivercontinuationbet + b.Raisedrivercontinuationbet;
 
+            r.Buttonstealfaced = a.Buttonstealfaced + b.Buttonstealfaced;
+            r.Buttonstealdefended = a.Buttonstealdefended + b.Buttonstealdefended;
+            r.Buttonstealfolded = a.Buttonstealfolded + b.Buttonstealfolded;
+            r.Buttonstealreraised = a.Buttonstealreraised + b.Buttonstealreraised;
             r.Bigblindstealfaced = a.Bigblindstealfaced + b.Bigblindstealfaced;
             r.Bigblindstealdefended = a.Bigblindstealdefended + b.Bigblindstealdefended;
             r.Bigblindstealreraised = a.Bigblindstealreraised + b.Bigblindstealreraised;
@@ -1257,6 +1322,18 @@ namespace DriveHUD.Entities
             r.FlopAggPossible = a.FlopAggPossible + b.FlopAggPossible;
             r.TurnAggPossible = a.TurnAggPossible + b.TurnAggPossible;
             r.RiverAggPossible = a.RiverAggPossible + b.RiverAggPossible;
+
+            r.CheckFoldFlopPfrOop = a.CheckFoldFlopPfrOop + b.CheckFoldFlopPfrOop;
+            r.CheckFoldFlop3BetOop = a.CheckFoldFlop3BetOop + b.CheckFoldFlopPfrOop;
+            r.BetFoldFlopPfrRaiser = a.BetFoldFlopPfrRaiser + b.BetFoldFlopPfrRaiser;
+            r.BetFlopCalled3BetPreflopIp = a.BetFlopCalled3BetPreflopIp + b.BetFlopCalled3BetPreflopIp;
+            r.PfrOop = a.PfrOop + b.PfrOop;
+            r.PfrInEp += a.PfrInEp + b.PfrInEp;
+            r.PfrInMp += a.PfrInMp + b.PfrInMp;
+            r.PfrInCo += a.PfrInCo + b.PfrInCo;
+            r.PfrInBtn += a.PfrInBtn + b.PfrInBtn;
+            r.PfrInSb += a.PfrInSb + b.PfrInSb;
+            r.PfrInBb += a.PfrInBb + b.PfrInBb;
 
             r.PositionUnoppened = PositionalStat.Sum(a.PositionUnoppened, b.PositionUnoppened);
             r.PositionTotal = PositionalStat.Sum(a.PositionTotal, b.PositionTotal);

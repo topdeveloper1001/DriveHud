@@ -194,7 +194,8 @@
     <comment>Equity calculator  popup caption</comment>
   </data>
   <data name="Common_DataExported" xml:space="preserve">
-    <value>Data was exported and copied to your clipboard.</value>
+    <value>Data was exported and copied to your clipboard. 
+Use CTRL+V to paste your exported data.</value>
   </data>
   <data name="Common_DriveHUD" xml:space="preserve">
     <value>Use Drive HUD</value>

@@ -6,10 +6,22 @@
              xmlns:local="clr-namespace:DriveHUD.Application.Views.PopupContainers"
              xmlns:vm="clr-namespace:DriveHUD.Application.ViewModels.PopupContainers"
              xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+             xmlns:prism="http://www.codeplex.com/prism"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
              mc:Ignorable="d" d:DesignWidth="496" d:DesignHeight="401">
     <UserControl.DataContext>
         <vm:PopupContainerSupportViewModel/>
     </UserControl.DataContext>
+
+    <i:Interaction.Triggers>
+        <prism:InteractionRequestTrigger SourceObject="{Binding NotificationRequest, Mode=OneWay}">
+            <infra:PopupTelerikWindowAction IsModal="True" 
+                                            WindowStyle="{StaticResource NotificationWindowStyle}" 
+                                            WindowContent="{StaticResource NotificationWindowContentTemplate}" />
+        </prism:InteractionRequestTrigger>
+    </i:Interaction.Triggers>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -36,6 +48,7 @@
 
         <Grid Grid.Row="2">
             <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -87,6 +100,12 @@
                       Margin="15 5" Style="{StaticResource CheckBoxRight}"
                       Content="{ResX Key=Settings_AttachLog}" 
                       IsChecked="{Binding AttachLog, Mode=TwoWay}"/>
+
+            <CheckBox Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" 
+                      Margin="15 5" Style="{StaticResource CheckBoxRight}"
+                      Content="{ResX Key=Settings_SendAdvancedLog}" 
+                      Visibility="{Binding AttachLog, Converter={dh:BoolToVisibilityConverter} }"
+                      IsChecked="{Binding SendAdvancedLog, Mode=TwoWay}"/>
         </Grid>
 
         <Button Grid.Row="3"

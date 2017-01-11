@@ -213,9 +213,7 @@ namespace DriveHUD.Common.Ifrastructure
             //Player 0:     64.662%      63.42%     01.24%        [ JJ, 97s ]
             //Player 1:     35.338%      34.10%     01.24%        [ T9s ]
 
-            StringBuilder sb = new StringBuilder("DriveHUD [url=http://drivehud.com]Poker HUD & Database[/url]");
-
-
+            StringBuilder sb = new StringBuilder("This hand driven to you directly from DriveHUD [url=http://drivehud.com]Poker HUD & Database[/url]");
 
             sb.Append(Environment.NewLine);
             if (boardCards != null)

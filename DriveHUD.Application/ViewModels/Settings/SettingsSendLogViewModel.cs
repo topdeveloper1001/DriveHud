@@ -10,6 +10,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using Model;
+using Prism.Interactivity.InteractionRequest;
+using DriveHUD.Common.Wpf.Actions;
 
 namespace DriveHUD.Application.ViewModels.Settings
 {
@@ -23,12 +25,16 @@ namespace DriveHUD.Application.ViewModels.Settings
 
         private void Initialize()
         {
+            NotificationRequest = new InteractionRequest<INotification>();
+
             SendMessageCommand = new DelegateCommand(SendMessage, CanSend);
 
             IsSending = false;
         }
 
         #region Properties
+
+        public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
         private string _userName;
         private string _userEmail;
@@ -96,11 +102,11 @@ namespace DriveHUD.Application.ViewModels.Settings
                     await client.SendMailAsync(message);
                 }
 
-                MessageBox.Show("The message has been sent.");
+                RaiseMessage("Support", "The message has been sent.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to send message");
+                RaiseMessage("Support", "Failed to send message.");
                 LogProvider.Log.Error(ex);
             }
             finally
@@ -115,6 +121,16 @@ namespace DriveHUD.Application.ViewModels.Settings
         {
             bool canSend = Utils.IsValidEmail(UserEmail) && !string.IsNullOrEmpty(UserName) && !string.IsNullOrEmpty(UserMessage);
             return canSend;
+        }
+
+        private void RaiseMessage(string title, string content)
+        {
+            this.NotificationRequest.Raise(
+                 new PopupActionNotification
+                 {
+                     Content = content,
+                     Title = title,
+                 });
         }
 
         #endregion

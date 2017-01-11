@@ -17,6 +17,7 @@ using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Settings;
+using Npgsql;
 using System;
 using System.IO;
 using System.Net.Sockets;
@@ -26,6 +27,13 @@ namespace DriveHUD.Application.Bootstrappers
     internal class SQLiteBootstrapper : ISQLiteBootstrapper
     {
         private const string databaseResource = "DriveHUD.Common.Resources.Database.drivehud.db";
+
+        private ISettingsService settingsService;
+
+        public SQLiteBootstrapper()
+        {
+            settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+        }     
 
         public void InitializeDatabase()
         {
@@ -39,7 +47,6 @@ namespace DriveHUD.Application.Bootstrappers
                 return;
             }
 
-            var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             var settings = settingsService.GetSettings();
             var databaseSetting = settings.DatabaseSettings;
 
@@ -65,20 +72,31 @@ namespace DriveHUD.Application.Bootstrappers
 
                 LogProvider.Log.Debug("DH is up to date");
             }
+            catch (NpgsqlException e)
+            {
+                if (!settings.GeneralSettings.IsSQLiteEnabled)
+                {
+                    LogProvider.Log.Info($"PostgreSQL DB isn't available or corrupted. Error: {e.Message}");
+
+                    var messageBox = System.Windows.Forms.MessageBox.Show(owner: new System.Windows.Forms.Form { TopMost = true }, text: CommonResourceManager.Instance.GetResourceString("Error_PG_MigrationWarningMessage"),
+                           caption: CommonResourceManager.Instance.GetResourceString("Error_PG_MigrationWarning"), buttons: System.Windows.Forms.MessageBoxButtons.YesNo);
+
+                    if (messageBox == System.Windows.Forms.DialogResult.Yes)
+                    {
+                        LogProvider.Log.Info("New SQLite database will be initialized.");
+                        InitializeNewDatabase(appData);
+                        return;
+                    }
+
+                    throw;
+                }
+            }
             catch (Exception e)
             {
                 if (!settings.GeneralSettings.IsSQLiteEnabled && (e as SocketException)?.SocketErrorCode == SocketError.ConnectionRefused)
                 {
                     LogProvider.Log.Info("PostgreSQL not found. Creating SQLite database and finish migration.");
-
-                    if (!File.Exists(dbFile))
-                    {
-                        CreateNewDatabase();
-                    }
-
-                    settings.GeneralSettings.IsSQLiteEnabled = true;
-                    settingsService.SaveSettings(settings);
-
+                    InitializeNewDatabase(appData);
                     return;
                 }
 
@@ -91,8 +109,21 @@ namespace DriveHUD.Application.Bootstrappers
         {
             try
             {
-                Directory.CreateDirectory(appData);
-                CreateNewDatabase();
+                if (!Directory.Exists(appData))
+                {
+                    Directory.CreateDirectory(appData);
+                }
+
+                var dbFile = StringFormatter.GetSQLiteDbFilePath();
+
+                if (!File.Exists(dbFile))
+                {
+                    CreateNewDatabase();
+                }
+
+                var settings = settingsService.GetSettings();
+                settings.GeneralSettings.IsSQLiteEnabled = true;
+                settingsService.SaveSettings(settings);
             }
             catch (Exception e)
             {

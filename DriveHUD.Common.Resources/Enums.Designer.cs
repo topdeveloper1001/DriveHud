@@ -556,6 +556,33 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bets flop when X to in 3-bet pot IP.
+        /// </summary>
+        internal static string Enum_Stat_BetFlopCalled3BetPreflopIp {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BetFlopCalled3BetPreflopIp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bet/fold flop when PFR raiser.
+        /// </summary>
+        internal static string Enum_Stat_BetFoldFlopPfrRaiser {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BetFoldFlopPfrRaiser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to BTN Defend to CO Raise.
+        /// </summary>
+        internal static string Enum_Stat_BTNDefendCORaise {
+            get {
+                return ResourceManager.GetString("Enum_Stat_BTNDefendCORaise", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to C-Bet%.
         /// </summary>
         internal static string Enum_Stat_CBet {
@@ -597,6 +624,24 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_CBetOOP {
             get {
                 return ResourceManager.GetString("Enum_Stat_CBetOOP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check/fold flop when 3-betting OOP.
+        /// </summary>
+        internal static string Enum_Stat_CheckFoldFlop3BetOop {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFoldFlop3BetOop", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Check/fold flop when PFR OOP.
+        /// </summary>
+        internal static string Enum_Stat_CheckFoldFlopPfrOop {
+            get {
+                return ResourceManager.GetString("Enum_Stat_CheckFoldFlopPfrOop", resourceCulture);
             }
         }
         
@@ -930,6 +975,60 @@ namespace DriveHUD.Common.Resources {
         internal static string Enum_Stat_PFR {
             get {
                 return ResourceManager.GetString("Enum_Stat_PFR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in BB.
+        /// </summary>
+        internal static string Enum_Stat_PFRInBB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_PFRInBB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in BTN.
+        /// </summary>
+        internal static string Enum_Stat_PFRInBTN {
+            get {
+                return ResourceManager.GetString("Enum_Stat_PFRInBTN", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in CO.
+        /// </summary>
+        internal static string Enum_Stat_PFRInCO {
+            get {
+                return ResourceManager.GetString("Enum_Stat_PFRInCO", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in EP.
+        /// </summary>
+        internal static string Enum_Stat_PFRInEP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_PFRInEP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in MP.
+        /// </summary>
+        internal static string Enum_Stat_PFRInMP {
+            get {
+                return ResourceManager.GetString("Enum_Stat_PFRInMP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PFR in SB.
+        /// </summary>
+        internal static string Enum_Stat_PFRInSB {
+            get {
+                return ResourceManager.GetString("Enum_Stat_PFRInSB", resourceCulture);
             }
         }
         

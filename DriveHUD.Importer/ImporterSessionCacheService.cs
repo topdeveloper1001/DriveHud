@@ -57,8 +57,8 @@ namespace DriveHUD.Importers
         /// Stops the current session
         /// </summary>
         public void End()
-        {
-            cachedData.Clear();
+        {                        
+            cachedData?.Clear();
             isStarted = false;
         }
 

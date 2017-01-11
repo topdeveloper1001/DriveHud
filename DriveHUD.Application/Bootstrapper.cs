@@ -90,7 +90,7 @@ namespace DriveHUD.Application
             ImporterBootstrapper.ConfigureImporterService();
 
             var sqliteBootstrapper = ServiceLocator.Current.GetInstance<ISQLiteBootstrapper>();
-            sqliteBootstrapper.InitializeDatabase();            
+            sqliteBootstrapper.InitializeDatabase();
 
             ShowMainWindow();
         }
@@ -140,7 +140,7 @@ namespace DriveHUD.Application
 
                 mainWindowViewModel.IsActive = true;
 
-                mainWindowViewModel.StartHud(false);
+                mainWindowViewModel.StartHudCommand.Execute(null);
 
                 ServiceLocator.Current.GetInstance<ISiteConfigurationService>().ValidateSiteConfigurations();
             }
@@ -197,7 +197,7 @@ namespace DriveHUD.Application
             RegisterTypeIfMissing(typeof(IReplayerTableConfigurator), typeof(ReplayerTableConfigurator), false);
             RegisterTypeIfMissing(typeof(IReplayerService), typeof(ReplayerService), true);
             RegisterTypeIfMissing(typeof(IPlayerStatisticCalculator), typeof(PlayerStatisticCalculator), false);
-            RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);            
+            RegisterTypeIfMissing(typeof(ISessionService), typeof(SessionService), true);
             RegisterTypeIfMissing(typeof(IHudTransmitter), typeof(HudTransmitter), true);
             RegisterTypeIfMissing(typeof(ITopPlayersService), typeof(TopPlayersService), true);
 

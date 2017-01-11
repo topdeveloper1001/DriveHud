@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using DriveHUD.Entities;
 using Microsoft.Practices.ServiceLocation;
 
@@ -31,6 +32,14 @@ namespace DriveHUD.Importers.Bovada
         protected override EnumPokerSites Site
         {
             get { return EnumPokerSites.Ignition; }
+        }
+
+        protected override ImporterIdentifier Identifier
+        {
+            get
+            {
+                return ImporterIdentifier.Bovada;
+            }
         }
 
         public override string SiteString

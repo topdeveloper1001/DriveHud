@@ -86,7 +86,14 @@ namespace DriveHUD.Importers.BetOnline
                         Directory.CreateDirectory(streamFolder);
                     }
 
-                    File.AppendAllText(string.Format("{0}\\{1}-stream.xml", streamFolder, convertedResult.TableName.Replace("/","-")), xml);
+                    var logfile = convertedResult.TableName;
+
+                    foreach (var invalidChar in Path.GetInvalidFileNameChars())
+                    {
+                        logfile = logfile.Replace(new string(invalidChar, 1), string.Empty);
+                    }
+
+                    File.AppendAllText(string.Format("{0}\\{1}-stream.xml", streamFolder, logfile), xml);
 #endif                    
 
                     ImportResult(convertedResult);
@@ -144,11 +151,11 @@ namespace DriveHUD.Importers.BetOnline
                 }
 
                 LogProvider.Log.Info(this, string.Format("Hand {0} imported", result.HandHistory.Gamenumber));
-                
+
                 var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, convertedResult.GameInfo);
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
-            }                       
+            }
         }
 
         #region IDisposable implementation
