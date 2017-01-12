@@ -97,11 +97,13 @@ namespace DriveHUD.Importers
             }
 
             LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting \"{0}\" catcher", Identifier));
-
-            isRunning = true;
-
+          
             // start main job
-            Task.Run(() => DoCatch(), cancellationTokenSource.Token);
+            Task.Run(() =>
+            {
+                isRunning = true;
+                DoCatch();
+            }, cancellationTokenSource.Token);
         }
 
         public virtual void Stop()

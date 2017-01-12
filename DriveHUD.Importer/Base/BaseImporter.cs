@@ -58,7 +58,7 @@ namespace DriveHUD.Importers
         /// </summary>
         /// <param name="configuration"></param>
         public virtual void Start()
-        {           
+        {
             cancellationTokenSource = new CancellationTokenSource();
 
             if (isRunning)
@@ -68,10 +68,12 @@ namespace DriveHUD.Importers
 
             LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting \"{0}\" importer", SiteString));
 
-            isRunning = true;
-
             // start main job
-            Task.Run(() => DoImport(), cancellationTokenSource.Token);
+            Task.Run(() =>
+            {
+                isRunning = true;
+                DoImport();
+            }, cancellationTokenSource.Token);
         }
 
         /// <summary>
