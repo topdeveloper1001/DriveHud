@@ -74,9 +74,7 @@ namespace DriveHUD.Importers
             foreach (var importer in importers)
             {
                 importer.Stop();
-            }
-
-            IsStarted = false;
+            }            
         }
 
         /// <summary>
@@ -97,7 +95,7 @@ namespace DriveHUD.Importers
         /// </summary>                
         private void OnImporterProcessStopped(object sender, EventArgs e)
         {
-            lock(locker)
+            lock (locker)
             {
                 System.Diagnostics.Debug.WriteLine($"{sender.ToString()} has exited");
 
@@ -105,6 +103,7 @@ namespace DriveHUD.Importers
 
                 if (!isRunning)
                 {
+                    IsStarted = false;
                     RaiseImportingStopped();
                 }
             }

@@ -179,7 +179,7 @@ namespace DriveHUD.Application.ViewModels
             await hudTransmitter.InitializeAsync();
 
             importerSessionCacheService.Begin();
-            importerService.StartImport();
+            importerService.StartImport();        
 
             RefreshCommandsCanExecute();
         }
@@ -1107,7 +1107,11 @@ namespace DriveHUD.Application.ViewModels
 
         public void MainWindow_PreviewClosed(object sender, WindowPreviewClosedEventArgs e)
         {
-            importerService.StopImport();
+            if (importerService.IsStarted)
+            {
+                importerService.StopImport();
+            }
+
             hudTransmitter.Dispose();
             importerSessionCacheService.End();
 

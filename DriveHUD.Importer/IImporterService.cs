@@ -25,6 +25,11 @@ namespace DriveHUD.Importers
         event EventHandler ImportingStopped;
 
         /// <summary>
+        /// Service status
+        /// </summary>
+        bool IsStarted { get; }
+
+        /// <summary>
         /// Start import
         /// </summary>
         void StartImport();

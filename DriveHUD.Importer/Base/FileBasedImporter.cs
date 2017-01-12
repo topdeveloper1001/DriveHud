@@ -129,7 +129,7 @@ namespace DriveHUD.Importers
 
                         if (string.IsNullOrEmpty(handText))
                         {
-                            return;
+                            continue;
                         }
 
                         // if file could not be parsed, mark it as invalid to prevent further processing 
@@ -142,10 +142,10 @@ namespace DriveHUD.Importers
                                 filesToSkip.Add(cf.Key);
                                 fs.Close();
 
-                                LogProvider.Log.Warn($"Cannot find parser  for hand: {handText}");
+                                LogProvider.Log.Warn($"Cannot find parser for hand: {handText}");
                                 LogProvider.Log.Warn(string.Format("File '{0}' has bad format. Skipped.", cf.Key));
 
-                                return;
+                                continue;
                             }
 
                             var fileName = Path.GetFileNameWithoutExtension(cf.Key);
@@ -185,12 +185,10 @@ namespace DriveHUD.Importers
                     LogProvider.Log.Error(this, string.Format("{0} auto-import failed", SiteString), e);
                 }
             }
-
+           
             Clean();
 
-            RaiseProcessStopped();
-
-            Debug.WriteLine($"Class: {this.ToString()} has exited");
+            RaiseProcessStopped();          
         }
 
         protected virtual bool TryGetPokerSiteName(string handText, out EnumPokerSites siteName)
@@ -212,7 +210,7 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, string.Format("Hand(s) has not been imported"), e);
+                LogProvider.Log.Error(this, $"Hand(s) has not been imported. [{SiteString}]", e);
             }
 
             if (parsingResult == null)
@@ -229,17 +227,17 @@ namespace DriveHUD.Importers
 
                 if (result.IsDuplicate)
                 {
-                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate.", result.HandHistory.Gamenumber));
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate. [{1}]", result.HandHistory.Gamenumber, SiteString));
                     continue;
                 }
 
                 if (!result.WasImported)
                 {
-                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported.", result.HandHistory.Gamenumber));
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. [{1}]", result.HandHistory.Gamenumber, SiteString));
                     continue;
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} imported", result.HandHistory.Gamenumber));
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, SiteString));
 
                 var playerList = GetPlayerList(result.Source);
 
@@ -321,7 +319,7 @@ namespace DriveHUD.Importers
                     }
                     catch (Exception ex)
                     {
-                        LogProvider.Log.Warn(string.Format("File {0} could not be moved: {1}", capturedFile.Key, ex.Message));
+                        LogProvider.Log.Warn(string.Format("File {0} could not be moved: {1}. [{2}]", capturedFile.Key, ex.Message, SiteString));
                     }
                 }
             }
@@ -371,7 +369,7 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not find {SiteString} table", e);
+                LogProvider.Log.Error(this, $"Could not find table. [{SiteString}]", e);
             }
 
             return IntPtr.Zero;
