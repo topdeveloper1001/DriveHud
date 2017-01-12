@@ -130,7 +130,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 {
                     Name = "3 For Free",
                     SelectedColor = Colors.GreenYellow,
-                    Description = "3-Bets too much, and folds to a 3-bet too often.",
+                    Description = "3-Bets too much, and folds to a 4-bet too often.",
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
@@ -142,7 +142,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 {
                     Name = "Way Too Early",
                     SelectedColor = Colors.Green,
-                    Description = "Open raises to wide of a range in early pre-flop positions.",
+                    Description = "Open raises too wide of a range in early pre-flop positions.",
                     StatsToMerge =
                         new ObservableCollection<BaseHudRangeStat>()
                         {
