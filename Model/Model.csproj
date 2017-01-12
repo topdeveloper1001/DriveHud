@@ -245,6 +245,8 @@
     <Compile Include="Settings\SettingsService.cs" />
     <Compile Include="Settings\SettingsBase.cs" />
     <Compile Include="Settings\SettingsModel.cs" />
+    <Compile Include="Shop\IShopRepository.cs" />
+    <Compile Include="Shop\ShopRepository.cs" />
     <Compile Include="SingletonStorageModel.cs" />
     <Compile Include="Site\BlackChipPokerConfiguration.cs" />
     <Compile Include="Site\Poker888Configuration.cs" />
