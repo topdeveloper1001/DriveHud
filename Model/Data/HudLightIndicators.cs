@@ -1,23 +1,36 @@
-﻿using DriveHUD.Entities;
+﻿//-----------------------------------------------------------------------
+// <copyright file="HudLightIndicators.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DriveHUD.Entities;
+using DriveHUD.Common.Utils;
 
 namespace Model.Data
 {
-    /// <summary>
-    /// This class holds all the indicators for displaying HUD data
-    /// </summary>
-    public class HudIndicators : Indicators
+    public class HudLightIndicators : LightIndicators
     {
-        public HudIndicators() : base()
-        { }
+        public HudLightIndicators() : base()
+        {
+        }
 
-        public HudIndicators(IEnumerable<Playerstatistic> playerStatistic) : base(playerStatistic)
-        { }
+        public HudLightIndicators(IEnumerable<Playerstatistic> playerStatistic) : base(playerStatistic)
+        {
+        }
+
+        #region Rich stats
 
         public virtual StatDto VPIPObject
         {
@@ -969,6 +982,8 @@ namespace Model.Data
             }
         }
 
+        #endregion
+
         #region Limp
 
         public virtual StatDto DidLimpObject
@@ -1518,23 +1533,92 @@ namespace Model.Data
 
         #region CardsLists
 
-        public virtual IEnumerable<string> ThreeBetCardsList
+        private FixedSizeList<string> cardsList;
+
+        public virtual FixedSizeList<string> CardsList
         {
             get
             {
-                return Statistics.SingleOrDefault(x => x.ThreeBetCardsList != null)?.ThreeBetCardsList;
+                return cardsList;
+            }
+            set
+            {
+                if (ReferenceEquals(cardsList, value))
+                {
+                    return;
+                }
+
+                cardsList = value;
+            }
+        }
+
+        private FixedSizeList<string> threeBetCardsList;
+
+        public virtual FixedSizeList<string> ThreeBetCardsList
+        {
+            get
+            {
+                return threeBetCardsList;
+            }
+            set
+            {
+                if (ReferenceEquals(threeBetCardsList, value))
+                {
+                    return;
+                }
+
+                threeBetCardsList = value;
+            }
+        }
+
+        private FixedSizeList<Tuple<int, int>> recentAggList;
+
+        public virtual FixedSizeList<Tuple<int, int>> RecentAggList
+        {
+            get
+            {
+                return recentAggList;
+            }
+            set
+            {
+                if (ReferenceEquals(recentAggList, value))
+                {
+                    return;
+                }
+
+                recentAggList = value;
+            }
+        }
+
+        private IList<decimal> moneyWonCollection;
+
+        public virtual IList<decimal> MoneyWonCollection
+        {
+            get
+            {
+                return moneyWonCollection;
+            }
+            set
+            {
+                if (ReferenceEquals(moneyWonCollection, value))
+                {
+                    return;
+                }
+
+                moneyWonCollection = value;
             }
         }
 
         #endregion
 
+        #region Recent Agg
 
         public virtual decimal RecentAggPr
         {
             get
             {
-                var occured = Statistics.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item1);
-                var couldOccured = Statistics.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item2);
+                var occured = recentAggList?.Sum(x => x.Item1);
+                var couldOccured = recentAggList?.Sum(x => x.Item2);
 
                 return GetPercentage(occured, couldOccured);
             }
@@ -1547,14 +1631,46 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RecentAggPr,
-                    Occured = Statistics.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item1) ?? 0,
-                    CouldOccured = Statistics.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item2) ?? 0
+                    Occured = recentAggList?.Sum(x => x.Item1) ?? 0,
+                    CouldOccured = recentAggList?.Sum(x => x.Item2) ?? 0
                 };
             }
         }
 
         #endregion
 
+        #endregion
+
+        #region overridden methods
+
+        public override void AddStatistic(Playerstatistic statistic)
+        {
+            base.AddStatistic(statistic);
+
+            if (CardsList != null && !string.IsNullOrWhiteSpace(statistic.Cards))
+            {
+                CardsList.Add(statistic.Cards);
+            }
+
+            if (threeBetCardsList != null && !string.IsNullOrWhiteSpace(statistic.Cards) && statistic.Didthreebet != 0)
+            {
+                threeBetCardsList.Add(statistic.Cards);
+            }
+
+            if (moneyWonCollection != null)
+            {
+                moneyWonCollection.Add(statistic.NetWon);
+            }
+
+            if (recentAggList != null)
+            {
+                recentAggList.Add(new Tuple<int, int>(statistic.Totalbets, statistic.Totalpostflopstreetsplayed));
+            }
+        }
+
+        #endregion
+
+        #region Help methods
 
         protected decimal GetPercentage(decimal? actual, decimal? possible)
         {
@@ -1567,5 +1683,6 @@ namespace Model.Data
             return (actual.Value / possible.Value) * 100;
         }
 
+        #endregion
     }
 }

@@ -23,12 +23,12 @@ namespace Model.Reports
             
             foreach (var playerstatistic in statistics.Where(x => !x.IsTourney).OrderByDescending(x => x.Time))
             {
-                if (stat.Statistcs == null || stat.Statistcs.Count() == 0)
+                if (stat.Statistics == null || stat.Statistics.Count == 0)
                 {
                     gametypes.Add(playerstatistic.GameType);
                     stat.AddStatistic(playerstatistic);
                 }
-                else if (stat.Statistcs.Any(x => Math.Abs((x.Time - playerstatistic.Time).TotalMinutes) < TimeSpan.FromMinutes(30).TotalMinutes))
+                else if (stat.Statistics.Any(x => Math.Abs((x.Time - playerstatistic.Time).TotalMinutes) < TimeSpan.FromMinutes(30).TotalMinutes))
                 {
                     if(!gametypes.Contains(playerstatistic.GameType))
                     {
@@ -46,7 +46,7 @@ namespace Model.Reports
                     gametypes.Add(playerstatistic.GameType);
                 }
             }
-            if (stat.Statistcs != null && stat.Statistcs.Count() > 0)
+            if (stat.Statistics != null && stat.Statistics.Count > 0)
             {
                 stat.GameType = string.Join(",", gametypes);
                 report.Add(stat);

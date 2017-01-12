@@ -21,6 +21,7 @@ using DriveHUD.Common;
 using Microsoft.Practices.ServiceLocation;
 using Model.Interfaces;
 using DriveHUD.Common.Linq;
+using Model.Data;
 
 namespace DriveHUD.Importers
 {
@@ -57,7 +58,7 @@ namespace DriveHUD.Importers
         /// Stops the current session
         /// </summary>
         public void End()
-        {                        
+        {
             cachedData?.Clear();
             isStarted = false;
         }
@@ -68,11 +69,11 @@ namespace DriveHUD.Importers
         /// <param name="session">Active session</param>
         /// <param name="player">Specified player</param>
         /// <returns>Player stats</returns>
-        public IList<Playerstatistic> GetPlayerStats(string session, PlayerCollectionItem player)
+        public SessionCacheStatistic GetPlayerStats(string session, PlayerCollectionItem player)
         {
             if (!isStarted)
             {
-                return new List<Playerstatistic>();
+                return new SessionCacheStatistic();
             }
 
             cacheLock.EnterReadLock();
@@ -81,10 +82,10 @@ namespace DriveHUD.Importers
             {
                 if (cachedData.ContainsKey(session) && cachedData[session].StatisticByPlayer.ContainsKey(player))
                 {
-                    return cachedData[session].StatisticByPlayer[player].ToList();
+                    return cachedData[session].StatisticByPlayer[player];
                 }
 
-                return new List<Playerstatistic>();
+                return new SessionCacheStatistic();
             }
             finally
             {
@@ -111,43 +112,57 @@ namespace DriveHUD.Importers
             {
                 var sessionData = GetOrAddSessionData(session);
 
-                IList<Playerstatistic> playerData = null;
+                SessionCacheStatistic sessionCacheStatistic = null;
 
                 bool skipAdding = false;
 
                 if (sessionData.StatisticByPlayer.ContainsKey(player))
                 {
-                    playerData = sessionData.StatisticByPlayer[player];
+                    sessionCacheStatistic = sessionData.StatisticByPlayer[player];
                 }
                 else
                 {
                     // if not hero read data from storage
                     if (isHero)
                     {
-                        playerData = new List<Playerstatistic>();
+                        sessionCacheStatistic = new SessionCacheStatistic();
                     }
                     else
                     {
-                        playerData = dataService.GetPlayerStatisticFromFile(player.PlayerId, (short)player.PokerSite);
+                        var playerStatistic = dataService.GetPlayerStatisticFromFile(player.PlayerId, (short)player.PokerSite);
 
-                        playerData.ForEach(x =>
+                        sessionCacheStatistic = new SessionCacheStatistic();
+
+                        playerStatistic.ForEach(x =>
                         {
                             // we don't have this data in the db so update it after loading from file
                             PlayerStatisticCalculator.CalculatePositionalData(x);
 
-                            if (x.GameNumber == stats.GameNumber)
+                            var isCurrentGame = x.GameNumber == stats.GameNumber;
+
+                            if (isCurrentGame)
                             {
                                 PlayerStatisticCalculator.CalculateTotalPotValues(x);
-                                InitSessionCardsCollections(x);
-                                InitSessionStatCollections(x);
                                 x.SessionCode = session;
+                            }
+
+                            sessionCacheStatistic.PlayerData.AddStatistic(x);
+
+                            if (isCurrentGame)
+                            {
+                                sessionCacheStatistic.SessionPlayerData.AddStatistic(x);
+
+                                InitSessionCardsCollections(sessionCacheStatistic.PlayerData, x);
+                                InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, x);
+                                InitSessionStatCollections(sessionCacheStatistic.PlayerData, x);
+                                InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, x);
                             }
                         });
 
                         skipAdding = true;
                     }
 
-                    sessionData.StatisticByPlayer.Add(player, playerData);
+                    sessionData.StatisticByPlayer.Add(player, sessionCacheStatistic);
                 }
 
                 if (sessionData.LastHandStatisticByPlayer.ContainsKey(player))
@@ -164,50 +179,20 @@ namespace DriveHUD.Importers
                     return;
                 }
 
-                if (playerData.Any(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == session))
+                sessionCacheStatistic.PlayerData.AddStatistic(stats);
+                InitSessionCardsCollections(sessionCacheStatistic.PlayerData, stats);
+                InitSessionStatCollections(sessionCacheStatistic.PlayerData, stats);
+
+                if (stats.SessionCode == session)
                 {
-                    playerData.First(x => x.SessionCode == session).Add(stats);
-                }
-                else
-                {
-                    InitSessionCardsCollections(stats);
-                    InitSessionStatCollections(stats);
-                    playerData.Add(stats);
+                    sessionCacheStatistic.SessionPlayerData.AddStatistic(stats);
+                    InitSessionCardsCollections(sessionCacheStatistic.SessionPlayerData, stats);
+                    InitSessionStatCollections(sessionCacheStatistic.SessionPlayerData, stats);
                 }
             }
             finally
             {
                 cacheLock.ExitWriteLock();
-            }
-        }
-
-        /// <summary>
-        /// Get all player stats from cache in specified session
-        /// </summary>
-        /// <param name="session">Active session</param>
-        /// <returns>Player stats</returns>
-        public IList<Playerstatistic> GetAllPlayerStats(string session)
-        {
-            if (!isStarted || string.IsNullOrEmpty(session))
-            {
-                return new List<Playerstatistic>();
-            }
-
-            cacheLock.EnterReadLock();
-
-            try
-            {
-                if (cachedData.ContainsKey(session))
-                {
-                    var result = cachedData[session].StatisticByPlayer.SelectMany(x => x.Value).ToList();
-                    return result;
-                }
-
-                return new List<Playerstatistic>();
-            }
-            finally
-            {
-                cacheLock.ExitReadLock();
             }
         }
 
@@ -437,41 +422,42 @@ namespace DriveHUD.Importers
             return null;
         }
 
-        private void InitSessionCardsCollections(Playerstatistic stats)
+        private void InitSessionCardsCollections(HudLightIndicators playerData, Playerstatistic stats)
         {
-            if (stats.CardsList == null)
+            if (playerData.CardsList == null)
             {
-                stats.CardsList = new Common.Utils.FixedSizeList<string>(4);
+                playerData.CardsList = new Common.Utils.FixedSizeList<string>(4);
+
                 if (!string.IsNullOrWhiteSpace(stats.Cards))
                 {
-                    stats.CardsList.Add(stats.Cards);
+                    playerData.CardsList.Add(stats.Cards);
                 }
             }
 
-            if (stats.ThreeBetCardsList == null)
+            if (playerData.ThreeBetCardsList == null)
             {
-                stats.ThreeBetCardsList = new Common.Utils.FixedSizeList<string>(4);
+                playerData.ThreeBetCardsList = new Common.Utils.FixedSizeList<string>(4);
+
                 if (!string.IsNullOrWhiteSpace(stats.Cards) && stats.Didthreebet != 0)
                 {
-                    stats.ThreeBetCardsList.Add(stats.Cards);
+                    playerData.ThreeBetCardsList.Add(stats.Cards);
                 }
             }
         }
 
-        private void InitSessionStatCollections(Playerstatistic stats)
+        private void InitSessionStatCollections(HudLightIndicators playerData, Playerstatistic stats)
         {
-            if (stats.MoneyWonCollection == null)
+            if (playerData.MoneyWonCollection == null)
             {
-                stats.MoneyWonCollection = new List<decimal>();
-                stats.MoneyWonCollection.Add(stats.NetWon);
+                playerData.MoneyWonCollection = new List<decimal>();
+                playerData.MoneyWonCollection.Add(stats.NetWon);
             }
 
-            if (stats.RecentAggList == null)
+            if (playerData.RecentAggList == null)
             {
-                stats.RecentAggList = new Common.Utils.FixedSizeList<Tuple<int, int>>(10);
-                stats.RecentAggList.Add(new Tuple<int, int>(stats.Totalbets, stats.Totalpostflopstreetsplayed));
+                playerData.RecentAggList = new Common.Utils.FixedSizeList<Tuple<int, int>>(10);
+                playerData.RecentAggList.Add(new Tuple<int, int>(stats.Totalbets, stats.Totalpostflopstreetsplayed));
             }
         }
-
     }
 }

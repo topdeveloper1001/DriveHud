@@ -32,7 +32,7 @@ namespace Model.Reports
                 {
                     stat.AddStatistic(playerstatistic);
                 }
-                if (!stat.Statistcs.Any()) continue;
+                if (!stat.Statistics.Any()) continue;
 
                 stat.PlayerName = tournament.PlayerName;
                 stat.TournamentId = tournament.Tourneynumber;
