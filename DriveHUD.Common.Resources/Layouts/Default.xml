@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <HudLayoutInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-               IsDefault="true" Name="DH: Basic">
+               IsDefault="true" Name="Default">
   <HudTableDefinedProperties>
     <HudTableDefinedProperties>
       <HudTableDefinition TableType="HU" />

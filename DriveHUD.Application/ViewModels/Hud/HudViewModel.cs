@@ -795,6 +795,7 @@ namespace DriveHUD.Application.ViewModels
         private HudLayoutInfo _currentLayout;
         private IEnumerable<ISiteConfiguration> _configurations;
         private ObservableCollection<EnumTableTypeWrapper> _tableTypes;
+        private bool _disableAddLayouts;
 
         public HudLayoutInfo CurrentLayout
         {
@@ -803,12 +804,14 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref _currentLayout, value);
                 // load data for selected layout
+                _disableAddLayouts = true;
                 if (CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.PokerSite != CurrentPokerSite))
                     CurrentPokerSite =
                         CurrentLayout.HudTableDefinedProperties.FirstOrDefault()?.HudTableDefinition.PokerSite;
                 if (CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.GameType != CurrentGameType))
                     CurrentGameType =
                         CurrentLayout.HudTableDefinedProperties.FirstOrDefault()?.HudTableDefinition.GameType;
+                _disableAddLayouts = false;
                 DataLoad();
             }
         }
@@ -991,7 +994,7 @@ namespace DriveHUD.Application.ViewModels
             Check.ArgumentNotNull(() => layout);
             var targetHudProperties =
                 layout.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.Equals(tableDefinition));
-            if (targetHudProperties == null)
+            if (targetHudProperties == null && !_disableAddLayouts)
             {
                 targetHudProperties =
                     layout.HudTableDefinedProperties.FirstOrDefault(
@@ -1003,7 +1006,7 @@ namespace DriveHUD.Application.ViewModels
                             (p.HudTableDefinition.TableType == tableDefinition.TableType))?.Clone();
                 if (targetHudProperties == null)
                     return;
-                var layoutName = $"DH:";
+                var layoutName = $"DriveHUD:";
                 if (tableDefinition.PokerSite.HasValue)
                     layoutName =
                         $"{layoutName} {CommonResourceManager.Instance.GetEnumResource(tableDefinition.PokerSite)}";
@@ -1029,7 +1032,8 @@ namespace DriveHUD.Application.ViewModels
                 CurrentLayout = layoutToAdd;
                 SaveCurrentLayout();
             }
-
+            if (targetHudProperties == null)
+                return;
             foreach (var hudElementViewModel in hudElementViewModels)
             {
                 var userDefinedPosition =

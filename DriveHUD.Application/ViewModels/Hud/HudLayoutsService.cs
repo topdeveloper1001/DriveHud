@@ -97,7 +97,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 LogProvider.Log.Error(this, e);
             }
 
-            if (Layouts.Any())
+            if (Layouts.Any(l=>l.IsDefault))
                 return;
             var predefindedLayout = GetPredefindedLayout();
             if (predefindedLayout == null)
