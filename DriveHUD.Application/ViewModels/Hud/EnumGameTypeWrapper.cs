@@ -20,23 +20,18 @@ namespace DriveHUD.Application.ViewModels.Hud
     /// </summary>
     public class EnumGameTypeWrapper
     {
-        private EnumGameType gameType;
-
-        public EnumGameTypeWrapper(EnumGameType gameType)
+        public EnumGameTypeWrapper(EnumGameType? gameType)
         {
-            this.gameType = gameType;
+            GameType = gameType;
         }
 
-        public EnumGameType GameType
-        {
-            get { return gameType; }
-        }
+        public EnumGameType? GameType { get; }
 
         public string GameTypeText
         {
             get
             {
-                var text = CommonResourceManager.Instance.GetEnumResource(gameType);
+                var text = GameType.HasValue ? CommonResourceManager.Instance.GetEnumResource(GameType) : string.Empty;
 
                 return text;
             }

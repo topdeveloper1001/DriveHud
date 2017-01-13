@@ -5,13 +5,15 @@ namespace DriveHUD.Application.ViewModels.Hud
 {
     public class EnumPokerSitesWrapper
     {
-        public EnumPokerSites PokerSite { get; }
+        public EnumPokerSites? PokerSite { get; }
         public string PokerSiteText { get; }
 
-        public EnumPokerSitesWrapper(EnumPokerSites pokerSite)
+        public EnumPokerSitesWrapper(EnumPokerSites? pokerSite)
         {
             PokerSite = pokerSite;
-            PokerSiteText = CommonResourceManager.Instance.GetEnumResource(PokerSite);
+            PokerSiteText = PokerSite.HasValue
+                ? CommonResourceManager.Instance.GetEnumResource(PokerSite.Value)
+                : string.Empty;
         }
     }
 }

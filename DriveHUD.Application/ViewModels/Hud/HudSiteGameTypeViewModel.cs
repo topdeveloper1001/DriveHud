@@ -57,11 +57,13 @@ namespace DriveHUD.Application.ViewModels
                     .Cast<EnumGameType>()
                     .Select(x => new EnumGameTypeWrapper(x))
                     .ToList();
+            GameTypes.Insert(0, new EnumGameTypeWrapper(null));
             var configurationService = ServiceLocator.Current.GetInstance<ISiteConfigurationService>();
             var configurations = configurationService.GetAll();
             PokerSites =
                 new ObservableCollection<EnumPokerSitesWrapper>(
                     configurations.Select(c => new EnumPokerSitesWrapper(c.Site)));
+            PokerSites.Insert(0, new EnumPokerSitesWrapper(null));
             SelectedPokerSite = PokerSites.FirstOrDefault(p => p.PokerSite == _viewModelInfo.PokerSite);
             SelectedGameType = GameTypes.FirstOrDefault(x => x.GameType == _viewModelInfo.GameType);
             SaveCommand = ReactiveCommand.Create();
