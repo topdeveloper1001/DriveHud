@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Layouts;
 using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels
@@ -27,6 +28,6 @@ namespace DriveHUD.Application.ViewModels
         /// <param name="seatNumber">Seat number</param>
         /// <param name="hudType">Hud type</param>
         /// <returns>Hud panel element view model</returns>
-        HudElementViewModel Create(HudSavedTableDefinition tableDefinition, HudViewModel hudViewModel, int seatNumber, HudType hudType);
+        HudElementViewModel Create(HudTableDefinition tableDefinition, HudViewModel hudViewModel, int seatNumber, HudType hudType);
     }
 }

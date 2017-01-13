@@ -13,6 +13,7 @@
 using DriveHUD.Common;
 using Model.Enums;
 using System.Linq;
+using DriveHUD.Application.ViewModels.Layouts;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -29,7 +30,7 @@ namespace DriveHUD.Application.ViewModels
         /// <param name="seatNumber">Seat number</param>
         /// <param name="hudType">Hud type</param>
         /// <returns>Hud panel element view model</returns>
-        public HudElementViewModel Create(HudSavedTableDefinition tableDefinition, HudViewModel hudViewModel, int seatNumber, HudType hudType)
+        public HudElementViewModel Create(HudTableDefinition tableDefinition, HudViewModel hudViewModel, int seatNumber, HudType hudType)
         {
             Check.ArgumentNotNull(() => hudViewModel);
 

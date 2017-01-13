@@ -372,14 +372,14 @@
 						Content="{ResX Key=Common_Hud_Delete}">
                 </Button>
 
-                <Button Margin="0,0,0,5"
+                <!--<Button Margin="0,0,0,5"
 						HorizontalAlignment="Right" VerticalAlignment="Bottom"
 						Style="{StaticResource ButtonStyle}"
 						Command="{Binding DataCopyCommand}"
 						Content="{ResX Key=Common_Hud_Copy}">
                 </Button>
 
-                <!--<Button Margin="0,0,0,5"
+                <Button Margin="0,0,0,5"
 						HorizontalAlignment="Right" VerticalAlignment="Bottom"
 						Style="{StaticResource ButtonStyle}"
 						Command="{Binding DataImportCommand}"

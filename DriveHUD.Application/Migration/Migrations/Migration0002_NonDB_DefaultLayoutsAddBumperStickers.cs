@@ -37,36 +37,36 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             if (File.Exists(layoutsFile))
             {
-                HudSavedLayouts hudLayouts;
-                try
-                {
-                    using (var fs = File.Open(layoutsFile, FileMode.Open))
-                    {
-                        var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
+                //HudSavedLayouts hudLayouts;
+                //try
+                //{
+                //    using (var fs = File.Open(layoutsFile, FileMode.Open))
+                //    {
+                //        var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
 
-                        hudLayouts = xmlSerializer.Deserialize(fs) as HudSavedLayouts;
-                    }
+                //        hudLayouts = xmlSerializer.Deserialize(fs) as HudSavedLayouts;
+                //    }
 
-                    if (hudLayouts != null && hudLayouts.Layouts != null && hudLayouts.Layouts.Any())
-                    {
-                        hudLayouts.Layouts.Where(x => x.HudBumperStickerTypes.Count == 0).ForEach(x => x.HudBumperStickerTypes = CreateDefaultBumperStickers());
+                //    if (hudLayouts != null && hudLayouts.Layouts != null && hudLayouts.Layouts.Any())
+                //    {
+                //        hudLayouts.Layouts.Where(x => x.HudBumperStickerTypes.Count == 0).ForEach(x => x.HudBumperStickerTypes = CreateDefaultBumperStickers());
 
-                        using (var fs = File.Open(layoutsFile, FileMode.Create))
-                        {
-                            var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
+                //        using (var fs = File.Open(layoutsFile, FileMode.Create))
+                //        {
+                //            var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
 
-                            xmlSerializer.Serialize(fs, hudLayouts);
-                        }
-                    }
-                    else
-                    {
-                        LogProvider.Log.Info("Wasn't able to find any active layouts.");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    LogProvider.Log.Error(ex);
-                }
+                //            xmlSerializer.Serialize(fs, hudLayouts);
+                //        }
+                //    }
+                //    else
+                //    {
+                //        LogProvider.Log.Info("Wasn't able to find any active layouts.");
+                //    }
+                //}
+                //catch (Exception ex)
+                //{
+                //    LogProvider.Log.Error(ex);
+                //}
             }
             else
             {

@@ -12,10 +12,8 @@
 
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels;
-using DriveHUD.Common.Reflection;
 using DriveHUD.Entities;
 using Model.Enums;
-using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
@@ -39,7 +37,7 @@ namespace DriveHUD.Application.Views
                 ViewModel.TableUpdate += ViewModel_TableUpdated;
                 ViewModel.UpdateActiveLayout();
                 var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
-                Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
+                Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int) tableType);
                 UpdatePreferredSeatingStateWithoutNotification();
             };
         }
@@ -70,9 +68,10 @@ namespace DriveHUD.Application.Views
         {
             get
             {
+                var pokerSite = ViewModel.CurrentPokerSite ?? ViewModel.DefaultPokerSite;
                 return
                     Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(
-                        TableConfiguratorHelper.GetServiceName(ViewModel.CurrentPokerSite, ViewModel.HudType));
+                        TableConfiguratorHelper.GetServiceName(pokerSite, ViewModel.HudType));
             }
         }
 

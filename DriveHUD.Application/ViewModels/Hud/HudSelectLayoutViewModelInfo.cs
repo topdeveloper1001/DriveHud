@@ -18,11 +18,8 @@ namespace DriveHUD.Application.ViewModels
     {
         public string LayoutName { get; set; }
         public Action Save { get; set; }
-
         public Action Cancel { get; set; }
-
         public bool IsSaveAsMode { get; set; }
-
         public bool IsDeleteMode { get; set; }
     }
 }

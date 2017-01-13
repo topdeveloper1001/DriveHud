@@ -52,6 +52,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 using System.Windows.Input;
+using DriveHUD.Application.ViewModels.Layouts;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.ViewModels
@@ -322,7 +323,7 @@ namespace DriveHUD.Application.ViewModels
                 var site = e.GameInfo.PokerSite;
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-                var tableDefinition = new HudSavedTableDefinition
+                var tableDefinition = new HudTableDefinition
                 {
                     PokerSite = e.GameInfo.PokerSite,
                     GameType = e.GameInfo.EnumGameType,
@@ -346,7 +347,6 @@ namespace DriveHUD.Application.ViewModels
                     TableType = gameInfo.TableType,
                     PokerSiteId = (short)gameInfo.PokerSite,
                     GameNumber = gameInfo.GameNumber,
-                    LayoutId = activeLayout.LayoutId,
                     LayoutName = activeLayout.Name,
                     AvailableLayouts = availableLayouts
                 };
@@ -441,7 +441,9 @@ namespace DriveHUD.Application.ViewModels
                     var doNotAddPlayer = false;
 
                     // create new array to prevent Collection was modified exception
-                    var activeLayoutHudStats = activeLayout.HudStats.ToArray();
+                    var activeLayoutHudStats =
+                        activeLayout.HudTableDefinedProperties.FirstOrDefault(
+                            p => p.HudTableDefinition.Equals(tableDefinition)).HudStats.ToArray();
 
                     var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
                                             .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
@@ -515,14 +517,16 @@ namespace DriveHUD.Application.ViewModels
 
                     if (lastHandStatistic != null)
                     {
-                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout.LayoutId);
+                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout.Name, tableDefinition);
 
                         if (stickers.Any())
                         {
                             importerSessionCacheService.AddOrUpdatePlayerStickerStats(gameInfo.Session, playerCollectionItem, stickers.ToDictionary(x => x, x => lastHandStatistic));
                         }
 
-                        hudLayoutsService.SetStickers(playerHudContent.HudElement, importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session, playerCollectionItem), activeLayout.LayoutId);
+                        hudLayoutsService.SetStickers(playerHudContent.HudElement,
+                            importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session,
+                                playerCollectionItem), activeLayout.Name, tableDefinition);
                     }
 
                     if (!doNotAddPlayer)
@@ -542,7 +546,7 @@ namespace DriveHUD.Application.ViewModels
                 if (hudTableViewModel!=null)
                 {
                     var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.LayoutId);
+                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name, tableDefinition);
 
                     Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
                     {

@@ -4,9 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-             xmlns:local="clr-namespace:DriveHUD.Application.Views.Hud"
              mc:Ignorable="d" 
-             d:DesignHeight="160" d:DesignWidth="300">
+             d:DesignHeight="300" d:DesignWidth="300">
     <UserControl.Resources>
 
         <SolidColorBrush x:Key="ButtonBackground" Color="#202125" />
@@ -83,6 +82,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
             <RowDefinition Height="50" />
+            <RowDefinition Height="*" />
             <RowDefinition Height="60" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -97,12 +97,12 @@
             Orientation="Horizontal" 
             Visibility="{Binding ShowInput, Converter={dh:BoolToVisibilityConverter}}"
             Margin="0,15,0,0">
-            
+
             <TextBlock 
                 Text="{ResX Key=Common_HudLayout_InputLabel}" 
                 VerticalAlignment="Center" 
                 />
-            
+
             <TextBox 
                 MaxLength="24" 
                 Margin="15,0,0,0" 
@@ -112,10 +112,30 @@
                 Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"                
                 Width="220" 
                 />
-            
+
         </StackPanel>
 
-        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+        
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Header}" VerticalAlignment="Center" />
+
+        <!-- List of available stats -->
+        <Border Grid.Row="2" Grid.Column="1">
+            <ListBox 
+                    ItemsSource="{Binding Items}" 
+                    SelectedItem="{Binding SelectedItem}"
+                    BorderThickness="0"                                
+                    ItemContainerStyle="{StaticResource StatInfoListBoxItemStyle}" 
+                    Background="Transparent">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding }" />
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+        </Border>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
 
             <Button 
                     Height="40"

@@ -20,63 +20,55 @@ using DriveHUD.Entities;
 
 namespace DriveHUD.Application.ViewModels
 {
-    [Serializable]
-    public class HudSavedLayouts
-    {
-        public HudSavedLayouts()
-        {
-            Layouts = new List<HudSavedLayout>();
-        }
+    //    [Serializable]
+    //    public class HudSavedLayout
+    //    {
+    //        public HudSavedLayout()
+    //        {
+    //            HudStats = new List<StatInfo>();
+    //            HudPositions = new List<HudSavedPositions>();
+    //            IsActiveFor = new List<HudSavedTableDefinition>();
+    //            TableDefinition = null;
+    //        }
 
-        public List<HudSavedLayout> Layouts { get; set; }
-    }
+    //        [XmlAttribute]
+    //        public string Name { get; set; }
 
-    [Serializable]
-    public class HudSavedLayout
-    {
-        public HudSavedLayout()
-        {
-            HudStats = new List<StatInfo>();
-            HudPositions = new List<HudSavedPositions>();
-            IsActiveFor = new List<HudSavedTableDefinition>();
-        }
+    //        [XmlAttribute]
+    //        public bool IsDefault { get; set; }
 
-        [XmlAttribute]
-        public string Name { get; set; }
+    //        public HudSavedTableDefinition TableDefinition { get; set; }
 
-        [XmlAttribute]
-        public int LayoutId { get; set; }
+    //        public List<StatInfo> HudStats { get; set; }
 
-        public List<StatInfo> HudStats { get; set; }
+    //        public List<HudPlayerType> HudPlayerTypes { get; set; }
 
-        public List<HudPlayerType> HudPlayerTypes { get; set; }
+    //        public List<HudBumperStickerType> HudBumperStickerTypes { get; set; }
 
-        public List<HudBumperStickerType> HudBumperStickerTypes { get; set; }
+    //        public List<HudSavedPositions> HudPositions { get; set; }
+    //        public List<HudSavedTableDefinition> IsActiveFor { get; set; }
+    //    }
 
-        public List<HudSavedPositions> HudPositions { get; set; }
-        public List<HudSavedTableDefinition> IsActiveFor { get; set; }
-    }
+    //    [Serializable]
+    //    public class HudSavedTableDefinition
+    //    {
+    //        public EnumTableType TableType { get; set; }
+    //        public EnumPokerSites PokerSite { get; set; }
+    //        public EnumGameType GameType { get; set; }
+    //    }
 
-    [Serializable]
-    public class HudSavedTableDefinition
-    {
-        public EnumTableType TableType { get; set; }
-        public EnumPokerSites PokerSite { get; set; }
-        public EnumGameType GameType { get; set; }
-    }
+    //    [Serializable]
+    //    public class HudSavedPositions
+    //    {
+    //        public HudSavedTableDefinition TableDefinition { get; set; }
+    //        public List<HudSavedPosition> Positions { get; set; }
 
-    [Serializable]
-    public class HudSavedPositions
-    {
-        public HudSavedTableDefinition TableDefinition { get; set; }
-        public List<HudSavedPosition> Positions { get; set; }
-
-        public HudSavedPositions()
-        {
-            TableDefinition = new HudSavedTableDefinition();
-            Positions = new List<HudSavedPosition>();
-        }
-    }
+    //        public HudSavedPositions()
+    //        {
+    //            TableDefinition = new HudSavedTableDefinition();
+    //            Positions = new List<HudSavedPosition>();
+    //        }
+    //    }
 
     [Serializable]
     public class HudSavedPosition

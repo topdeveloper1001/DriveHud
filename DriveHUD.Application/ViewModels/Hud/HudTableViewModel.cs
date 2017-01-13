@@ -25,7 +25,7 @@ namespace DriveHUD.Application.ViewModels
     public class HudTableViewModel : BaseViewModel
     {
         [ProtoMember(1)]
-        public EnumPokerSites PokerSite { get; set; }
+        public EnumPokerSites? PokerSite { get; set; }
 
         [ProtoMember(2)]
         public EnumTableType TableType { get; set; }
@@ -40,7 +40,7 @@ namespace DriveHUD.Application.ViewModels
         public Point StartPosition { get; set; }
 
         [ProtoMember(6)]
-        public EnumGameType GameType { get; set; }
+        public EnumGameType? GameType { get; set; }
 
         public ObservableCollection<HudElementViewModel> HudElements { get; set; }
         

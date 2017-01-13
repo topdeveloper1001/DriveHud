@@ -12,7 +12,6 @@
 
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Reflection;
-using DriveHUD.Importers;
 using DriveHUD.ViewModels;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
@@ -37,10 +36,9 @@ using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using System.ComponentModel;
 using Model.Filters;
-using DriveHUD.Application.HudServices;
-using DriveHUD.Application.ViewModels.Popups;
-using DriveHUD.Application.Views.Popups;
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
+using DriveHUD.Common.Utils;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -49,10 +47,21 @@ namespace DriveHUD.Application.ViewModels
     /// </summary>
     public class HudViewModel : PopupViewModelBase
     {
-        private IHudLayoutsService _hudLayoutsSevice;
-        private bool _isLayoutUpdating;
+        public EnumPokerSites DefaultPokerSite = EnumPokerSites.Poker888;
+        public EnumGameType DefaultGameType = EnumGameType.CashHoldem;
 
+        private IHudLayoutsService _hudLayoutsSevice;
         private ISettingsService SettingsService => ServiceLocator.Current.GetInstance<ISettingsService>();
+
+        private HudTableDefinition CurrentTableDefinition { get; set; }
+            
+
+        private HudTableDefinedProperties CurrentLayoutTableDefinedProperties
+            =>
+            CurrentLayout?.HudTableDefinedProperties.FirstOrDefault(
+                p => p.HudTableDefinition.Equals(CurrentTableDefinition));
+
+
 
         public HudViewModel()
         {
@@ -116,7 +125,7 @@ namespace DriveHUD.Application.ViewModels
                             var tableConfigurator =
                                 ServiceLocator.Current.GetInstance<ITableConfigurator>(
                                     TableConfiguratorHelper.GetServiceName(pokerSite, hType));
-                            var hudElementViewModels = tableConfigurator.GenerateElements((int) tableType);
+                            var hudElementViewModels = tableConfigurator.GenerateElements((int) tableType).ToArray();
 
                             hudElementViewModels.ForEach(x => x.HudViewType = HudViewType);
 
@@ -171,14 +180,19 @@ namespace DriveHUD.Application.ViewModels
 
             //UpdateActiveLayout();
 
-            layouts = new ObservableCollection<HudSavedLayout>(_hudLayoutsSevice.Layouts);
+            _layouts = new ObservableCollection<HudLayoutInfo>(_hudLayoutsSevice.Layouts);
         }
 
         private void InitializeTableLayouts()
         {
             var configurationService = ServiceLocator.Current.GetInstance<ISiteConfigurationService>();
             _configurations = configurationService.GetAll();
-            CurrentPokerSite = _configurations.First().Site;
+            CurrentPokerSite = null;
+            TableTypes =
+                new ObservableCollection<EnumTableTypeWrapper>(
+                    Enum.GetValues(typeof(EnumTableType))
+                        .OfType<EnumTableType>()
+                        .Select(t => new EnumTableTypeWrapper(t)));
         }
 
         /// <summary>
@@ -349,13 +363,10 @@ namespace DriveHUD.Application.ViewModels
             base.InitializeCommands();
 
             DataSaveCommand = ReactiveCommand.Create();
-            DataSaveCommand.Subscribe(x => SaveCurrentLayout());
+            DataSaveCommand.Subscribe(x => OpenDataSave());
 
             DataDeleteCommand = ReactiveCommand.Create();
             DataDeleteCommand.Subscribe(x => DataDelete());
-
-            DataCopyCommand = ReactiveCommand.Create();
-            DataCopyCommand.Subscribe(x => OpenDataSave());
 
             DataImportCommand = ReactiveCommand.Create();
             DataImportCommand.Subscribe(x => DataImport());
@@ -420,7 +431,7 @@ namespace DriveHUD.Application.ViewModels
                 .Merge(this.ObservableForProperty(x => x.HudType).Select(x => true))
                 .Subscribe(x =>
                 {
-                    if (CurrentTableType == null || _isObservablesUpdating)
+                    if (CurrentTableType == null)
                         return;
                     DataLoad();
                     TableUpdate?.Invoke(this, new EventArgs());
@@ -525,10 +536,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 if (_currentTableType == value)
                     return;
-                var updatingValue = _isObservablesUpdating;
-                _isObservablesUpdating = true;
                 _currentTableType = value;
-                _isObservablesUpdating = updatingValue;
                 this.RaisePropertyChanged(nameof(CurrentTableType));
             }
         }
@@ -540,18 +548,15 @@ namespace DriveHUD.Application.ViewModels
             {
                 if (_tableTypes == value)
                     return;
-                _isObservablesUpdating = true;
                 _tableTypes = value;
                 this.RaisePropertyChanged(nameof(TableTypes));
                 CurrentTableType = _tableTypes.FirstOrDefault();
             }
         }
 
-        private bool _isObservablesUpdating;
+        private EnumPokerSites? _currentPokerSite;
 
-        private EnumPokerSites _currentPokerSite;
-
-        public EnumPokerSites CurrentPokerSite
+        public EnumPokerSites? CurrentPokerSite
         {
             get { return _currentPokerSite; }
             set
@@ -559,29 +564,30 @@ namespace DriveHUD.Application.ViewModels
                 if (_currentPokerSite == value)
                     return;
                 _currentPokerSite = value;
-                var updatingValue = _isObservablesUpdating;
-                _isObservablesUpdating = true;
-                TableTypes =
-                    new ObservableCollection<EnumTableTypeWrapper>(
-                        GetSiteTableTypes(_currentPokerSite).Select(t => new EnumTableTypeWrapper(t)));
-                _isObservablesUpdating = updatingValue;
+                if (_currentPokerSite == null)
+                    TableTypes =
+                        new ObservableCollection<EnumTableTypeWrapper>(
+                            Enum.GetValues(typeof(EnumTableType))
+                                .OfType<EnumTableType>()
+                                .Select(t => new EnumTableTypeWrapper(t)));
+                else
+                    TableTypes =
+                        new ObservableCollection<EnumTableTypeWrapper>(
+                            GetSiteTableTypes(_currentPokerSite.Value).Select(t => new EnumTableTypeWrapper(t)));
                 this.RaisePropertyChanged(nameof(CurrentPokerSite));
             }
         }
 
-        private EnumGameType _currentGameType;
+        private EnumGameType? _currentGameType;
 
-        public EnumGameType CurrentGameType
+        public EnumGameType? CurrentGameType
         {
             get { return _currentGameType; }
             set
             {
                 if (_currentGameType == value)
                     return;
-                var updatingValue = _isObservablesUpdating;
-                _isObservablesUpdating = true;
                 _currentGameType = value;
-                _isObservablesUpdating = updatingValue;
                 this.RaisePropertyChanged(nameof(CurrentGameType));
             }
         }
@@ -772,31 +778,37 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private ObservableCollection<HudSavedLayout> layouts;
+        private ObservableCollection<HudLayoutInfo> _layouts;
 
-        public ObservableCollection<HudSavedLayout> Layouts
+        public ObservableCollection<HudLayoutInfo> Layouts
         {
             get
             {
-                return layouts;
+                return _layouts;
             }
             private set
             {
-                this.RaiseAndSetIfChanged(ref layouts, value);
+                this.RaiseAndSetIfChanged(ref _layouts, value);
             }
         }
 
-        private HudSavedLayout _currentLayout;
+        private HudLayoutInfo _currentLayout;
         private IEnumerable<ISiteConfiguration> _configurations;
         private ObservableCollection<EnumTableTypeWrapper> _tableTypes;
 
-        public HudSavedLayout CurrentLayout
+        public HudLayoutInfo CurrentLayout
         {
             get { return _currentLayout; }
             set
             {
                 this.RaiseAndSetIfChanged(ref _currentLayout, value);
                 // load data for selected layout
+                if (CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.PokerSite != CurrentPokerSite))
+                    CurrentPokerSite =
+                        CurrentLayout.HudTableDefinedProperties.FirstOrDefault()?.HudTableDefinition.PokerSite;
+                if (CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.GameType != CurrentGameType))
+                    CurrentGameType =
+                        CurrentLayout.HudTableDefinedProperties.FirstOrDefault()?.HudTableDefinition.GameType;
                 DataLoad();
             }
         }
@@ -808,8 +820,6 @@ namespace DriveHUD.Application.ViewModels
         public ReactiveCommand<object> DataSaveCommand { get; private set; }
 
         public ReactiveCommand<object> DataDeleteCommand { get; private set; }
-
-        public ReactiveCommand<object> DataCopyCommand { get; private set; }
 
         public ReactiveCommand<object> DataImportCommand { get; private set; }
 
@@ -836,6 +846,7 @@ namespace DriveHUD.Application.ViewModels
             var hudSelectLayoutViewModelInfo = new HudSelectLayoutViewModelInfo
             {
                 LayoutName = CurrentLayout.Name,
+                
                 Cancel = ClosePopup,
                 Save = DataSave,
                 IsSaveAsMode = true
@@ -854,8 +865,8 @@ namespace DriveHUD.Application.ViewModels
                 ClosePopup();
                 return;
             }
-            CurrentPokerSite = hudSelectSiteViewModel.SelectedPokerSite.PokerSite;
-            CurrentGameType = hudSelectSiteViewModel.SelectedGameType.GameType;
+            CurrentPokerSite = hudSelectSiteViewModel.SelectedPokerSite?.PokerSite;
+            CurrentGameType = hudSelectSiteViewModel.SelectedGameType?.GameType;
             ClosePopup();
         }
 
@@ -873,7 +884,8 @@ namespace DriveHUD.Application.ViewModels
             {
                 Name = hudSelectLayoutViewModel.Name,
                 HudTable = CurrentHudTableViewModel,
-                Stats = StatInfoObserveCollection
+                Stats = StatInfoObserveCollection,
+                LayoutInfo = CurrentLayout
             };
 
             var savedLayout = _hudLayoutsSevice.SaveAs(hudData);
@@ -944,50 +956,90 @@ namespace DriveHUD.Application.ViewModels
         {
             if (CurrentLayout == null)
                 return;
+            var pokerSite = CurrentPokerSite ?? DefaultPokerSite;
+            var gameType = CurrentGameType ?? DefaultGameType;
+            if (CurrentHudTableViewModel != null)
+                SaveLayoutChanged(CurrentLayout, CurrentTableDefinition);
+            CurrentTableDefinition = new HudTableDefinition
+            {
+                PokerSite = CurrentPokerSite,
+                GameType = CurrentGameType,
+                TableType = CurrentTableType.TableType
+            };
             CurrentHudTableViewModel =
                 HudTableViewModels.FirstOrDefault(
-                    h => h.PokerSite == CurrentPokerSite && h.TableType == CurrentTableType.TableType && h.GameType == CurrentGameType)?.Clone();
+                    h => h.PokerSite == pokerSite && h.TableType == CurrentTableType.TableType && h.GameType == gameType);
             if (CurrentHudTableViewModel == null)
                 return;
-            MergeLayouts(CurrentPokerSite, CurrentGameType, CurrentTableType.TableType,
-                CurrentHudTableViewModel.HudElements, CurrentLayout);
+            MergeLayouts(CurrentTableDefinition, CurrentHudTableViewModel.HudElements, CurrentLayout);
             UpdateLayout(CurrentLayout);
             TableUpdate?.Invoke(this, EventArgs.Empty);
         }
 
         private void DataDelete()
         {
-            //var loadedLayout = hudLayoutsSevice.GetLayoutByName(CurrentLayout.Name, CurrentViewModelHash);
-            
-            //if (hudLayoutsSevice.Delete(loadedLayout))
-            //{
-            //    Layouts.Remove(loadedLayout);
-            //}
-            
+            if (!_hudLayoutsSevice.Delete(CurrentLayout))
+                return;
+            Layouts.Remove(CurrentLayout);
+            UpdateActiveLayout();
         }
 
-        private void MergeLayouts(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType,
-            IEnumerable<HudElementViewModel> hudElementViewModels, HudSavedLayout layout)
+        private void MergeLayouts(HudTableDefinition tableDefinition,
+            IEnumerable<HudElementViewModel> hudElementViewModels, HudLayoutInfo layout)
         {
             Check.ArgumentNotNull(() => hudElementViewModels);
             Check.ArgumentNotNull(() => layout);
-
-            var userDefinedPositions =
-                layout.HudPositions.FirstOrDefault(
-                    p => p.TableDefinition.PokerSite == pokerSite && p.TableDefinition.GameType == gameType && p.TableDefinition.TableType == tableType);
-            if (userDefinedPositions != null)
+            var targetHudProperties =
+                layout.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.Equals(tableDefinition));
+            if (targetHudProperties == null)
             {
-                foreach (var hudElementViewModel in hudElementViewModels)
+                targetHudProperties =
+                    layout.HudTableDefinedProperties.FirstOrDefault(
+                        p =>
+                            (p.HudTableDefinition.GameType == null ||
+                             p.HudTableDefinition.GameType == tableDefinition.GameType) &&
+                            (p.HudTableDefinition.PokerSite == null ||
+                             p.HudTableDefinition.PokerSite == tableDefinition.PokerSite) &&
+                            (p.HudTableDefinition.TableType == tableDefinition.TableType))?.Clone();
+                if (targetHudProperties == null)
+                    return;
+                var layoutName = $"DH:";
+                if (tableDefinition.PokerSite.HasValue)
+                    layoutName =
+                        $"{layoutName} {CommonResourceManager.Instance.GetEnumResource(tableDefinition.PokerSite)}";
+                if (tableDefinition.GameType.HasValue)
+                    layoutName = $"{CommonResourceManager.Instance.GetEnumResource(tableDefinition.GameType)}";
+                var i = 1;
+                while (Layouts.Any(l=>string.Equals(l.Name, layoutName, StringComparison.InvariantCultureIgnoreCase)))
                 {
-                    var userDefinedPosition =
-                        userDefinedPositions.Positions.FirstOrDefault(
-                            p => p.HudType == hudElementViewModel.HudType && p.Seat == hudElementViewModel.Seat);
-                    if (userDefinedPosition == null)
-                        continue;
-                    hudElementViewModel.Width = userDefinedPosition.Width;
-                    hudElementViewModel.Height = userDefinedPosition.Height;
-                    hudElementViewModel.Position = userDefinedPosition.Position;
+                    layoutName = $"{layoutName} {i}";
+                    i++;
                 }
+                var layoutToAdd = new HudLayoutInfo {IsDefault = false, Name = layoutName};
+                targetHudProperties.HudTableDefinition.GameType = tableDefinition.GameType;
+                targetHudProperties.HudTableDefinition.PokerSite = tableDefinition.PokerSite;
+                targetHudProperties.HudTableDefinition.TableType = tableDefinition.TableType;
+                foreach (var tableTypeWrapper in TableTypes)
+                {
+                    var props = targetHudProperties.Clone();
+                    props.HudTableDefinition.TableType = tableTypeWrapper.TableType;
+                    layoutToAdd.HudTableDefinedProperties.Add(props);
+                }
+                Layouts.Add(layoutToAdd);
+                CurrentLayout = layoutToAdd;
+                SaveCurrentLayout();
+            }
+
+            foreach (var hudElementViewModel in hudElementViewModels)
+            {
+                var userDefinedPosition =
+                    targetHudProperties.HudPositions.FirstOrDefault(
+                        p => p.HudType == hudElementViewModel.HudType && p.Seat == hudElementViewModel.Seat);
+                if (userDefinedPosition == null)
+                    continue;
+                hudElementViewModel.Width = userDefinedPosition.Width;
+                hudElementViewModel.Height = userDefinedPosition.Height;
+                hudElementViewModel.Position = userDefinedPosition.Position;
             }
         }
 
@@ -1003,19 +1055,37 @@ namespace DriveHUD.Application.ViewModels
             //// save layout in cache
             var hudData = new HudSavedDataInfo
             {
-                LayoutId = CurrentLayout.LayoutId,
                 Name = CurrentLayout.Name,
                 HudTable = CurrentHudTableViewModel,
                 Stats = StatInfoObserveCollection,
+                LayoutInfo = CurrentLayout
             };
             _hudLayoutsSevice.Save(hudData);
         }
 
-        private void UpdateLayout(HudSavedLayout layout)
+        private void SaveLayoutChanged(HudLayoutInfo layoutToSave, HudTableDefinition tableDefinition)
+        {
+            if (layoutToSave == null)
+                return;
+            var targetProps =
+                layoutToSave.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.Equals(tableDefinition));
+            if (targetProps == null)
+            {
+                targetProps = new HudTableDefinedProperties { HudTableDefinition = tableDefinition };
+                layoutToSave.HudTableDefinedProperties.Add(targetProps);
+            }
+            targetProps.HudStats = StatInfoObserveCollection.Select(x =>
+            {
+                var statInfoBreak = x as StatInfoBreak;
+
+                return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
+            }).ToList();
+        }
+
+        private void UpdateLayout(HudLayoutInfo layout)
         {
             if (layout == null)
                 return;
-            _isLayoutUpdating = true;
             // Get all chosen stats back to list
             foreach (var statInfo in StatInfoObserveCollection)
             {
@@ -1026,26 +1096,31 @@ namespace DriveHUD.Application.ViewModels
                 StatInfoCollection.Add(statInfo);
             }
 
+            var targetProps =
+                layout.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.Equals(CurrentTableDefinition));
             StatInfoObserveCollection.Clear();
-
-            foreach (var hudStat in layout.HudStats)
+            if (targetProps != null)
             {
-                if (hudStat is StatInfoBreak)
+                foreach (var hudStat in targetProps.HudStats)
                 {
-                    StatInfoObserveCollection.Add(hudStat);
-                    continue;
-                }
+                    if (hudStat is StatInfoBreak)
+                    {
+                        StatInfoObserveCollection.Add(hudStat);
+                        continue;
+                    }
 
-                var existing = StatInfoCollection.FirstOrDefault(x => x.Stat == hudStat.Stat && x.StatInfoGroup.Name == hudStat.StatInfoGroup.Name);
+                    var existing =
+                        StatInfoCollection.FirstOrDefault(
+                            x => x.Stat == hudStat.Stat && x.StatInfoGroup.Name == hudStat.StatInfoGroup.Name);
 
-                if (existing != null)
-                {
-                    // we do not recover unexpected stats
-                    StatInfoObserveCollection.Add(hudStat);
-                    StatInfoCollection.Remove(existing);
+                    if (existing != null)
+                    {
+                        // we do not recover unexpected stats
+                        StatInfoObserveCollection.Add(hudStat);
+                        StatInfoCollection.Remove(existing);
+                    }
                 }
             }
-            _isLayoutUpdating = false;
         }
 
         private void SpliterAdd()
@@ -1111,15 +1186,14 @@ namespace DriveHUD.Application.ViewModels
         /// <param name="selectedStatInfo"></param>
         private void OpenPlayerTypeStats(StatInfo selectedStatInfo)
         {
-            if (StatInfoObserveCollection.Count == 0 ||
-                CurrentLayout == null || CurrentLayout.HudPlayerTypes == null)
-            {
+            if (StatInfoObserveCollection.Count == 0)
                 return;
-            }
-
+            var hudPlayerTypes = CurrentLayoutTableDefinedProperties?.HudPlayerTypes;
+            if (hudPlayerTypes == null)
+                return;
             var hudPlayerSettingsViewModelInfo = new HudPlayerSettingsViewModelInfo
             {
-                PlayerTypes = CurrentLayout.HudPlayerTypes.Select(x => x.Clone()),
+                PlayerTypes = hudPlayerTypes.Select(x => x.Clone()),
                 Save = PlayerTypeSave
             };
 
@@ -1134,18 +1208,22 @@ namespace DriveHUD.Application.ViewModels
         /// <param name="selectedStatInfo"></param>
         private void OpenBumperStickers(StatInfo selectedStatInfo)
         {
-            if (StatInfoObserveCollection.Count == 0 || CurrentLayout?.HudPlayerTypes == null)
+            if (StatInfoObserveCollection.Count == 0)
             {
                 return;
             }
+            var hudBumperStickers = CurrentLayoutTableDefinedProperties?.HudBumperStickerTypes;
+            if (hudBumperStickers == null)
+                return;
 
             var hudBumperStickersSettingsViewModelInfo = new HudBumperStickersSettingsViewModelInfo
             {
-                BumperStickers = CurrentLayout.HudBumperStickerTypes.Select(x => x.Clone()),
+                BumperStickers = hudBumperStickers.Select(x => x.Clone()),
                 Save = BumperStickerSave
             };
 
-            var hudBumperStickersViewModel = new HudBumperStickersSettingsViewModel(hudBumperStickersSettingsViewModelInfo);
+            var hudBumperStickersViewModel =
+                new HudBumperStickersSettingsViewModel(hudBumperStickersSettingsViewModelInfo);
 
             OpenPopup(hudBumperStickersViewModel);
         }
@@ -1164,7 +1242,7 @@ namespace DriveHUD.Application.ViewModels
             }
 
             // merge data to current layout (currently we do not expect new stats or deleted stats)
-            var playerTypesToMerge = (from currentPlayerType in CurrentLayout.HudPlayerTypes
+            var playerTypesToMerge = (from currentPlayerType in CurrentLayoutTableDefinedProperties.HudPlayerTypes
                                       join playerType in hudPlayerSettingsViewModel.PlayerTypes on currentPlayerType.Name equals playerType.Name into ptgj
                                       from ptgrouped in ptgj.DefaultIfEmpty()
                                       where ptgrouped != null
@@ -1190,14 +1268,14 @@ namespace DriveHUD.Application.ViewModels
             });
 
             var playerTypesToAdd = (from playerType in hudPlayerSettingsViewModel.PlayerTypes
-                                    join currentPlayerType in CurrentLayout.HudPlayerTypes on playerType.Name equals currentPlayerType.Name into ptgj
+                                    join currentPlayerType in CurrentLayoutTableDefinedProperties.HudPlayerTypes on playerType.Name equals currentPlayerType.Name into ptgj
                                     from ptgrouped in ptgj.DefaultIfEmpty()
                                     where ptgrouped == null
                                     select new { AddedPlayerType = playerType }).ToArray();
 
             playerTypesToAdd.ForEach(pt =>
             {
-                CurrentLayout.HudPlayerTypes.Add(pt.AddedPlayerType);
+                CurrentLayoutTableDefinedProperties.HudPlayerTypes.Add(pt.AddedPlayerType);
             });
 
             ClosePopup();
@@ -1217,7 +1295,7 @@ namespace DriveHUD.Application.ViewModels
             }
 
             // merge data to current layout (currently we do not expect new stats or deleted stats)
-            var stickersTypesToMerge = (from currentStickerType in CurrentLayout.HudBumperStickerTypes
+            var stickersTypesToMerge = (from currentStickerType in CurrentLayoutTableDefinedProperties.HudBumperStickerTypes
                                         join stickerType in hudStickersSettingsViewModel.BumperStickers on currentStickerType.Name equals stickerType.Name into stgj
                                         from stgrouped in stgj.DefaultIfEmpty()
                                         where stgrouped != null
@@ -1254,19 +1332,19 @@ namespace DriveHUD.Application.ViewModels
             });
 
             var stickerTypesToAdd = (from stickerType in hudStickersSettingsViewModel.BumperStickers
-                                     join currentStickerType in CurrentLayout.HudBumperStickerTypes on stickerType.Name equals currentStickerType.Name into stgj
+                                     join currentStickerType in CurrentLayoutTableDefinedProperties.HudBumperStickerTypes on stickerType.Name equals currentStickerType.Name into stgj
                                      from stgrouped in stgj.DefaultIfEmpty()
                                      where stgrouped == null
                                      select new { AddedPlayerType = stickerType }).ToArray();
 
             stickerTypesToAdd.ForEach(st =>
             {
-                CurrentLayout.HudBumperStickerTypes.Add(st.AddedPlayerType);
+                CurrentLayoutTableDefinedProperties.HudBumperStickerTypes.Add(st.AddedPlayerType);
             });
 
-            CurrentLayout.HudBumperStickerTypes.ForEach(x => x.InitializeFilterPredicate());
+            CurrentLayoutTableDefinedProperties.HudBumperStickerTypes.ForEach(x => x.InitializeFilterPredicate());
 
-            _hudLayoutsSevice.SaveBumperStickers(CurrentLayout);
+            _hudLayoutsSevice.SaveBumperStickers(CurrentLayout, CurrentTableDefinition);
 
             ClosePopup();
         }
@@ -1310,7 +1388,8 @@ namespace DriveHUD.Application.ViewModels
 
         internal void UpdateSeatContextMenuState()
         {
-            var tableSeatSetting = TableSeatAreaHelpers.GetSeatSetting(CurrentTableType.TableType, CurrentPokerSite);
+            var pokerSite = CurrentPokerSite.HasValue ? CurrentPokerSite.Value : DefaultPokerSite;
+            var tableSeatSetting = TableSeatAreaHelpers.GetSeatSetting(CurrentTableType.TableType, pokerSite);
             UpdateSeatContextMenuState(tableSeatSetting.IsPreferredSeatEnabled);
         }
 
