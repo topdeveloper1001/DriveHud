@@ -176,7 +176,7 @@
                 </DrawingGroup>
             </DrawingBrush.Drawing>
         </DrawingBrush>
-
+        
         <Style x:Key="ColorButton" TargetType="{x:Type Button}">
             <Setter Property="Width" Value="18" />
             <Setter Property="Height" Value="18" />
@@ -196,6 +196,30 @@
                                 <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource ColorButtonHighlightedBackground}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SiteGameButton" TargetType="{x:Type Button}">
+            <Setter Property="Width" Value="18" />
+            <Setter Property="Height" Value="18" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border
+                            x:Name="MainBorder"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                            Padding="{TemplateBinding Padding}"
+                            Cursor="Hand">
+                            <Image Source="/DriveHUD.Common.Resources;component/images/Hud/chip_icon_2.png"/>
+                        </Border>
+                        <!--<ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource ColorButtonHighlightedBackground}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>-->
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
@@ -417,12 +441,7 @@
                                     >
                 </telerik:RadDiagram>
             </Grid>
-            <Button Grid.Row="2" Grid.Column="2" Width="32" Height="32" 
-                    Margin="10"
-                    Command="{Binding SelectSiteAndGameTypeCommand}">
-                    <Image Source="/DriveHUD.Common.Resources;component/images/Hud/chip_icon_2.png"/>
-                </Button>
-
+           
             <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
@@ -588,9 +607,11 @@
                                 Grid.Column="1"
                                 Orientation="Horizontal"
                                 HorizontalAlignment="Right">
+                                <Button Style="{StaticResource SiteGameButton}"  Command="{Binding SelectSiteAndGameTypeCommand}"/>
+
 
                                 <Button 
-                                    Style="{StaticResource ColorButton}" 
+                                    Style="{StaticResource ColorButton}" Margin="20,0,0,0" 
                                     Command="{Binding SettingsStatInfoCommand}"
                                     />
 
