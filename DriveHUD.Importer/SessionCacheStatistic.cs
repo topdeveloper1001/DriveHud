@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IImporterService.cs" company="Ace Poker Solutions">
+// <copyright file="SessionCacheStatistic.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,33 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using Model.Data;
 
 namespace DriveHUD.Importers
 {
-    /// <summary>
-    /// Importer service is service responsible for importing
-    /// </summary>
-    public interface IImporterService
+    public class SessionCacheStatistic
     {
-        /// <summary>
-        /// Importing has been stopped
-        /// </summary>
-        event EventHandler ImportingStopped;
+        public HudLightIndicators PlayerData { get; set; } = new HudLightIndicators();
 
-        /// <summary>
-        /// Service status
-        /// </summary>
-        bool IsStarted { get; }
-
-        /// <summary>
-        /// Start import
-        /// </summary>
-        void StartImport();
-
-        /// <summary>
-        /// Stop import
-        /// </summary>
-        void StopImport();     
+        public HudLightIndicators SessionPlayerData { get; set; } = new HudLightIndicators();
     }
 }

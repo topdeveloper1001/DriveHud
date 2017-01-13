@@ -66,12 +66,14 @@ namespace DriveHUD.Importers
                 return;
             }
 
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting importing \"{0}\" data", SiteString));
-
-            isRunning = true;
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting \"{0}\" importer", SiteString));
 
             // start main job
-            Task.Run(() => DoImport(), cancellationTokenSource.Token);
+            Task.Run(() =>
+            {
+                isRunning = true;
+                DoImport();
+            }, cancellationTokenSource.Token);
         }
 
         /// <summary>
@@ -79,7 +81,7 @@ namespace DriveHUD.Importers
         /// </summary>
         public virtual void Stop()
         {
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping importing \"{0}\" data", SiteString));
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping \"{0}\" importer", SiteString));
 
             if (cancellationTokenSource != null)
             {
@@ -109,6 +111,8 @@ namespace DriveHUD.Importers
             {
                 handler(this, EventArgs.Empty);
             }
+
+            LogProvider.Log.Info(this, $"\"{SiteString}\" importer has been stopped");
         }
 
         #endregion

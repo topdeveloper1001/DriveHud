@@ -53,7 +53,7 @@ namespace Model.Reports
                 {
                     stat.AddStatistic(playerstatistic);
                 }
-                if (!stat.Statistcs.Any()) continue;
+                if (!stat.Statistics.Any()) continue;
 
                 stat.SetWinning(group.Sum(x => x.Winningsincents));
                 stat.Started = group.Min(x => x.Firsthandtimestamp);

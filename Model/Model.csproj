@@ -111,7 +111,9 @@
     <Compile Include="ConditionalBet.cs" />
     <Compile Include="Data\HoleCardsReportRecord.cs" />
     <Compile Include="Data\HudIndicators.cs" />
+    <Compile Include="Data\HudLightIndicators.cs" />
     <Compile Include="Data\Indicators.cs" />
+    <Compile Include="Data\LightIndicators.cs" />
     <Compile Include="Data\MRatioReportRecord.cs" />
     <Compile Include="Data\ShowdownHandsReportRecord.cs" />
     <Compile Include="Data\StatDto.cs" />

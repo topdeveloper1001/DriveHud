@@ -180,7 +180,7 @@ namespace DriveHUD.Application.ViewModels
             await hudTransmitter.InitializeAsync();
 
             importerSessionCacheService.Begin();
-            importerService.StartImport();
+            importerService.StartImport();        
 
             RefreshCommandsCanExecute();
         }
@@ -392,12 +392,12 @@ namespace DriveHUD.Application.ViewModels
                         SeatNumber = seatNumber
                     };
 
-                    var statisticCollection = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
+                    // cache service must return light indicators or hud light indicators
+                    var sessionCacheStatistic = importerSessionCacheService.GetPlayerStats(gameInfo.Session, playerCollectionItem);
                     var lastHandStatistic = importerSessionCacheService.GetPlayersLastHandStatistics(gameInfo.Session, playerCollectionItem);
-                    var sessionStatisticCollection = statisticCollection.Where(x => !string.IsNullOrWhiteSpace(x.SessionCode) && x.SessionCode == gameInfo.Session);
 
-                    var item = new HudIndicators(statisticCollection);
-                    var sessionData = new HudIndicators(sessionStatisticCollection);
+                    var item = sessionCacheStatistic.PlayerData;
+                    var sessionData = sessionCacheStatistic.SessionPlayerData;
 
                     trackConditionsMeterData.VPIP += sessionData.VPIP;
                     trackConditionsMeterData.ThreeBet += sessionData.ThreeBet;
@@ -433,12 +433,12 @@ namespace DriveHUD.Application.ViewModels
                     playerHudContent.HudElement.TotalHands = item.TotalHands;
 
 
-                    var sessionMoney = sessionStatisticCollection.SingleOrDefault(x => x.MoneyWonCollection != null)?.MoneyWonCollection;
-                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionMoney == null
+                    var sessionMoney = sessionData.MoneyWonCollection;
+                    playerHudContent.HudElement.SessionMoneyWonCollection = sessionData.MoneyWonCollection == null
                         ? new ObservableCollection<decimal>()
                         : new ObservableCollection<decimal>(sessionMoney);
 
-                    var cardsCollection = sessionStatisticCollection.SingleOrDefault(x => x.CardsList != null)?.CardsList;
+                    var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
                         ? new ObservableCollection<string>()
                         : new ObservableCollection<string>(cardsCollection);
@@ -1134,7 +1134,11 @@ namespace DriveHUD.Application.ViewModels
 
         public void MainWindow_PreviewClosed(object sender, WindowPreviewClosedEventArgs e)
         {
-            importerService.StopImport();
+            if (importerService.IsStarted)
+            {
+                importerService.StopImport();
+            }
+
             hudTransmitter.Dispose();
             importerSessionCacheService.End();
 
