@@ -338,7 +338,12 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var availableLayouts = hudLayoutsService.Layouts.Select(x => x.Name);
+                var availableLayouts = hudLayoutsService.Layouts.Where(l=>l.HudTableDefinedProperties.Any(p=>
+                                (p.HudTableDefinition.GameType == tableDefinition.GameType ||
+                                 p.HudTableDefinition.GameType == null) &&
+                                (p.HudTableDefinition.PokerSite == null ||
+                                 p.HudTableDefinition.PokerSite == tableDefinition.PokerSite) &&
+                                p.HudTableDefinition.TableType == tableDefinition.TableType)).Select(x => x.Name);
 
                 var ht = new HudLayout
                 {
@@ -440,10 +445,19 @@ namespace DriveHUD.Application.ViewModels
 
                     var doNotAddPlayer = false;
 
-                    // create new array to prevent Collection was modified exception
-                    var activeLayoutHudStats =
+                    var selectedHudTableDefinedProperties =
                         activeLayout.HudTableDefinedProperties.FirstOrDefault(
-                            p => p.HudTableDefinition.Equals(tableDefinition)).HudStats.ToArray();
+                            p => p.HudTableDefinition.Equals(tableDefinition)) ??
+                        activeLayout.HudTableDefinedProperties.FirstOrDefault(
+                            p =>
+                                (p.HudTableDefinition.GameType == tableDefinition.GameType ||
+                                 p.HudTableDefinition.GameType == null) &&
+                                (p.HudTableDefinition.PokerSite == null ||
+                                 p.HudTableDefinition.PokerSite == tableDefinition.PokerSite) &&
+                                p.HudTableDefinition.TableType == tableDefinition.TableType);
+
+                    // create new array to prevent Collection was modified exception
+                    var activeLayoutHudStats = selectedHudTableDefinedProperties.HudStats.ToArray();
 
                     var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
                                             .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>

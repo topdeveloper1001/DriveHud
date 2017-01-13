@@ -1058,7 +1058,32 @@ namespace DriveHUD.Application.ViewModels.Hud
         public HudLayoutInfo GetActiveLayout(HudTableDefinition tableDefinition)
         {
             var result = Layouts.FirstOrDefault(l => l.ActiveFor.Any(d => d.Equals(tableDefinition)));
-            return result ?? Layouts.FirstOrDefault();
+            if (result != null)
+                return result;
+            result =
+                Layouts.FirstOrDefault(
+                    l =>
+                        l.ActiveFor.Any(
+                            d =>
+                                (d.PokerSite == null || d.PokerSite == tableDefinition.PokerSite) &&
+                                (d.GameType == null || d.GameType == tableDefinition.GameType)));
+            if (result != null)
+                return result;
+            result =
+                Layouts.FirstOrDefault(
+                    l => l.HudTableDefinedProperties.Any(d => d.HudTableDefinition.Equals(tableDefinition)));
+            if (result != null)
+                return result;
+            result =
+                Layouts.FirstOrDefault(
+                    l =>
+                        l.HudTableDefinedProperties.Any(
+                            d =>
+                                (d.HudTableDefinition.PokerSite == null || d.HudTableDefinition.PokerSite == tableDefinition.PokerSite) &&
+                                (d.HudTableDefinition.GameType == null || d.HudTableDefinition.GameType == tableDefinition.GameType)));
+            if (result != null)
+                return result;
+            return Layouts.FirstOrDefault(l => l.IsDefault);
         }
     }
 }
