@@ -139,6 +139,8 @@
     <Compile Include="DataTemplateSelectors\DynamicTemplateSelector.cs" />
     <Compile Include="DataTemplateSelectors\FacingPreflopTemplateSelector.cs" />
     <Compile Include="DataTemplateSelectors\OmahaHandGridTemplateSelector.cs" />
+    <Compile Include="Events\WeakDelegateReference.cs" />
+    <Compile Include="Events\WeakDelegatesManager.cs" />
     <Compile Include="Helpers\ColorsHelper.cs" />
     <Compile Include="Helpers\TextMeasurer.cs" />
     <Compile Include="MarkupExtensions\IconExtension.cs" />

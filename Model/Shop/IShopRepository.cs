@@ -23,5 +23,6 @@ namespace Model.Shop
     /// </summary>
     public interface IShopRepository
     {
+        IEnumerable<ShopProduct> GetProducts(int start, int amount);
     }
 }

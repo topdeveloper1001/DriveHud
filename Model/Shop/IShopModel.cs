@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ShopRepository.cs" company="Ace Poker Solutions">
+// <copyright file="IShopModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -11,14 +11,14 @@
 //----------------------------------------------------------------------
 
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace Model.Shop
 {
-    internal class ShopRepository : IShopRepository
+    public interface IShopModel : INotifyPropertyChanged
     {
-        public IEnumerable<ShopProduct> GetProducts(int start, int amount)
-        {
-            return new List<ShopProduct>();
-        }
+        List<ShopProduct> ShopProducts { get; }
+
+        void Refresh(int start, int amount);
     }
 }
