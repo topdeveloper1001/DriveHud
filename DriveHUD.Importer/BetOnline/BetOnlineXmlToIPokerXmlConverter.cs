@@ -55,6 +55,7 @@ namespace DriveHUD.Importers.BetOnline
 
         private int maxPlayers = 10;
         private string sessionCode = string.Empty;
+        private const ImporterIdentifier Identifier = ImporterIdentifier.BetOnline;
 
         public BetOnlineXmlToIPokerXmlConverter()
         {
@@ -88,7 +89,7 @@ namespace DriveHUD.Importers.BetOnline
 
                 if (!IsFullHand())
                 {
-                    LogProvider.Log.Info(string.Format("Hand {0} has been skipped, because it isn't full", handNumber));
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has been skipped, because it isn't full. [{1}]", handNumber, Identifier));
                     return null;
                 }
 
@@ -121,7 +122,7 @@ namespace DriveHUD.Importers.BetOnline
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Data could not be parsed", e);
+                LogProvider.Log.Error(this, $"Data could not be parsed. [{Identifier}]", e);
                 return null;
             }
         }
@@ -360,7 +361,7 @@ namespace DriveHUD.Importers.BetOnline
 
             if (!ulong.TryParse(gameState.Attribute("hand").Value, out handNumber))
             {
-                throw new InvalidOperationException(string.Format("Hand number {0} could not be parsed", gameState.Attribute("hand").Value));
+                throw new InvalidOperationException(string.Format("Hand number {0} could not be parsed. [{1}]", gameState.Attribute("hand").Value, Identifier));
             }
 
             var game = new Game
@@ -385,7 +386,7 @@ namespace DriveHUD.Importers.BetOnline
 
             if (!long.TryParse(startDateText, out startDateInUnixFormat))
             {
-                throw new InvalidOperationException(string.Format("Hand time {0} could not be parsed", startDateText));
+                throw new InvalidOperationException(string.Format("Hand time {0} could not be parsed. [{1}]", startDateText, Identifier));
             }
 
             var startDate = DateTimeHelper.UnixTimeInMilisecondsToDateTime(startDateInUnixFormat);
@@ -762,7 +763,7 @@ namespace DriveHUD.Importers.BetOnline
 
             if (!playersOnTable.ContainsKey(seat))
             {
-                LogProvider.Log.Error(string.Format("Could not get player on seat {0}", seat));
+                LogProvider.Log.Error(string.Format("Could not get player on seat {0}. [{1}]", seat, Identifier));
             }
 
             var sum = 0m;

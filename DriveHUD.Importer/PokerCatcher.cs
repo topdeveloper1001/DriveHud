@@ -96,17 +96,19 @@ namespace DriveHUD.Importers
                 return;
             }
 
-            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting catching"));
-
-            isRunning = true;
-
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Starting \"{0}\" catcher", Identifier));
+          
             // start main job
-            Task.Run(() => DoCatch(), cancellationTokenSource.Token);
+            Task.Run(() =>
+            {
+                isRunning = true;
+                DoCatch();
+            }, cancellationTokenSource.Token);
         }
 
         public virtual void Stop()
         {
-            LogProvider.Log.Info(this, "Stopping catching");
+            LogProvider.Log.Info(this, string.Format(CultureInfo.InvariantCulture, "Stopping  \"{0}\" catcher", Identifier));
 
             if (cancellationTokenSource != null)
             {
@@ -213,7 +215,7 @@ namespace DriveHUD.Importers
                 }
 
                 Task.Delay(ProcessSearchingTimeout).Wait();
-            }
+            }            
         }
 
         /// <summary>
@@ -229,6 +231,8 @@ namespace DriveHUD.Importers
             {
                 handler(this, EventArgs.Empty);
             }
+
+            LogProvider.Log.Info(this, $"\"{Identifier}\" catcher has been stopped");
         }
 
         #region Dll injection

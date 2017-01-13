@@ -695,7 +695,7 @@ namespace DriveHUD.ViewModels
             SettingsAppearanceValueRangeCollection = statInfo.SettingsAppearanceValueRangeCollection;
         }
 
-        public void AssignStatInfoValues(HudIndicators source)
+        public void AssignStatInfoValues(Indicators source)
         {
             if (string.IsNullOrEmpty(PropertyName))
             {

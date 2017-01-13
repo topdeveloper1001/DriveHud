@@ -25,6 +25,8 @@ namespace DriveHUD.Importers
     {
         private List<IBackgroundProcess> importers = new List<IBackgroundProcess>();
 
+        private object locker = new object();
+
         public bool IsStarted
         {
             get;
@@ -72,9 +74,7 @@ namespace DriveHUD.Importers
             foreach (var importer in importers)
             {
                 importer.Stop();
-            }
-
-            IsStarted = false;
+            }            
         }
 
         /// <summary>
@@ -95,11 +95,17 @@ namespace DriveHUD.Importers
         /// </summary>                
         private void OnImporterProcessStopped(object sender, EventArgs e)
         {
-            var isRunning = importers.Any(x => x.IsRunning);
-
-            if (!isRunning)
+            lock (locker)
             {
-                RaiseImportingStopped();
+                System.Diagnostics.Debug.WriteLine($"{sender.ToString()} has exited");
+
+                var isRunning = importers.Any(x => x.IsRunning);
+
+                if (!isRunning)
+                {
+                    IsStarted = false;
+                    RaiseImportingStopped();
+                }
             }
         }
     }
