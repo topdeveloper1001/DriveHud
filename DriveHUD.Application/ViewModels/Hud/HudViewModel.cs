@@ -39,6 +39,7 @@ using Model.Filters;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Utils;
+using Microsoft.Win32;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -904,41 +905,26 @@ namespace DriveHUD.Application.ViewModels
 
         private void DataExport()
         {
-            //SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
+            SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
 
-            //if (saveFileDialog.ShowDialog() == true)
-            //{
-            //    var hudData = new HudSavedDataInfo
-            //    {
-            //        LayoutId = currentLayout.LayoutId,
-            //        Name = currentLayout.Name,
-            //        HudTable = HudTableViewModels[currentLayout.LayoutId],
-            //        Stats = StatInfoObserveCollection,
-            //    };
-
-            //    hudLayoutsSevice.Export(hudData, saveFileDialog.FileName);
-            //}
+            if (saveFileDialog.ShowDialog() == true)
+                _hudLayoutsSevice.Export(CurrentLayout, saveFileDialog.FileName);
         }
 
         private void DataImport()
         {
-        //    OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
+            OpenFileDialog openFileDialog = new OpenFileDialog() { Filter = "HUD Layouts (.xml)|*.xml" };
 
-        //    if (openFileDialog.ShowDialog() == true)
-        //    {
-        //        var importedLayout = hudLayoutsSevice.Import(openFileDialog.FileName);
+            if (openFileDialog.ShowDialog() == true)
+            {
+                var importedLayout = _hudLayoutsSevice.Import(openFileDialog.FileName);
 
-        //        if (importedLayout == null)
-        //        {
-        //            return;
-        //        }
+                if (importedLayout == null)
+                    return;
+                Layouts.Add(importedLayout);
+                CurrentLayout = importedLayout;
 
-        //        if (importedLayout.LayoutId == CurrentViewModelHash)
-        //        {
-        //            Layouts.Add(importedLayout);
-        //            CurrentLayout = importedLayout;
-        //        }
-        //    }
+            }
         }
 
         private void OpenDataLoad()

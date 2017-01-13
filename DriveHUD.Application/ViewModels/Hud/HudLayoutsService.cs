@@ -776,59 +776,22 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="layout">Layout to be exported</param>
         /// <param name="path">Path to file</param>
-        public void Export(HudSavedDataInfo hudData, string path)
+        public void Export(HudLayoutInfo layout, string path)
         {
-            //if (hudData == null)
-            //{
-            //    return;
-            //}
-
-            //var layoutToBeExported = Layouts.FirstOrDefault(x => x.LayoutId == hudData.LayoutId);
-
-            //if (layoutToBeExported == null)
-            //{
-            //    return;
-            //}
-
-            //layoutToBeExported.HudPositions =
-            //    hudData.HudTable.HudElements.Select(
-            //        x =>
-            //            new HudSavedPosition
-            //            {
-            //                Height = x.Height,
-            //                Position = x.Position,
-            //                Width = x.Width,
-            //                Seat = x.Seat,
-            //                HudType = x.HudType
-            //            }).ToList();
-
-            //layoutToBeExported.HudStats = hudData.Stats.Select(x =>
-            //{
-            //    var statInfoBreak = x as StatInfoBreak;
-
-            //    if (statInfoBreak != null)
-            //    {
-            //        return statInfoBreak.Clone();
-            //    }
-
-            //    return x.Clone();
-            //}).ToList();
-
-            //var hudSavedLayouts = new HudSavedLayouts();
-            //hudSavedLayouts.Layouts.Add(layoutToBeExported);
-
-            //try
-            //{
-            //    using (var fs = File.Open(path, FileMode.Create))
-            //    {
-            //        var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
-            //        xmlSerializer.Serialize(fs, hudSavedLayouts);
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    LogProvider.Log.Error(this, e);
-            //}
+            try
+            {
+                if (layout == null)
+                    return;
+                using (var fs = File.Open(path, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
+                    xmlSerializer.Serialize(fs, layout);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
         }
 
         /// <summary>
@@ -837,24 +800,30 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="path">Path to layout</param>
         public HudLayoutInfo Import(string path)
         {
-            //if (!File.Exists(path))
-            //{
-            //    return null;
-            //}
-
-            //try
-            //{
-            //    using (var fs = File.Open(path, FileMode.Open))
-            //    {
-            //        var importedHudLayout = Import(fs, true);
-            //        _userDefindedHudLayouts.Layouts.Add(importedHudLayout);
-            //        return importedHudLayout;
-            //    }
-            //}
-            //catch (Exception e)
-            //{
-            //    LogProvider.Log.Error(this, e);
-            //}
+            if (!File.Exists(path))
+            {
+                return null;
+            }
+            var newFileName = Path.GetFileName(path);
+            var directory = GetLayoutsDirectory();
+            var i = 0;
+            while (File.Exists(Path.Combine(directory.FullName, newFileName)))
+            {
+                newFileName = $"{Path.GetFileNameWithoutExtension(newFileName)} {i}{LayoutFileExtension}";
+            }
+            try
+            {
+                using (var fs = File.Open(Path.Combine(directory.FullName, newFileName), FileMode.Open))
+                {
+                    var importedHudLayout = LoadLayoutFromStream(fs);
+                    Layouts.Add(importedHudLayout);
+                    return importedHudLayout;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
 
             return null;
         }

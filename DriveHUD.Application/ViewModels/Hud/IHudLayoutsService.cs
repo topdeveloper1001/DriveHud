@@ -58,9 +58,7 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Export layout
         /// </summary>
-        /// <param name="hudData">Data to be exported in HUD layout format</param>
-        /// <param name="path">Path to file</param>
-        void Export(HudSavedDataInfo hudData, string path);
+        void Export(HudLayoutInfo layout, string path);
 
         /// <summary>
         /// Import layout
