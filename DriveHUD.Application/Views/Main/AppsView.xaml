@@ -9,8 +9,31 @@
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch" 
              d:DesignWidth="669" 
-             Height="550">
-    <Grid>
-        <TextBlock Text="Coming soon" FontSize="96" Style="{StaticResource Title_H1}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+             Height="756">
+    <Grid Margin="0,27,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="712" />
+            <RowDefinition Height="1" />
+            <RowDefinition Height="43" />
+        </Grid.RowDefinitions>
+
+        <Grid 
+            Grid.Row="0">
+            <Label Content="Test" Foreground="White" />
+        </Grid>
+        
+        <Separator 
+            Grid.Row="1"
+            Height="1"
+            Foreground="White"
+            />
+
+        <Grid 
+            Grid.Row="2" 
+            Height="43">
+            <Label Content="Test" Foreground="White" />
+        </Grid>
+        
     </Grid>
+    
 </UserControl>
