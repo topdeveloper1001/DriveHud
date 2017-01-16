@@ -16,7 +16,7 @@ using Model.Enums;
 namespace DriveHUD.Application.MigrationService.Migrations
 {
     [Migration(13)]
-    public class Migration0013NonDbLayoutsToNewLayoutModel : Migration
+    public class Migration0013_NonDb_LayoutsToNewLayoutModel : Migration
     {
         private const string layoutsFileSettings = "Layouts.xml";
 
