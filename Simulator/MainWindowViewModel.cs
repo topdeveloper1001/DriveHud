@@ -10,6 +10,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Wpf.Mvvm;
 
 namespace Simulator
 {

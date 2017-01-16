@@ -11,6 +11,7 @@ using Model.Settings;
 using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Entities;
 using Model.Extensions;
+using DriveHUD.EquityCalculator.Base.OmahaCalculations;
 
 namespace Model.Importer
 {
@@ -122,7 +123,7 @@ namespace Model.Importer
             var firstPlayerAction = hand.HandActions.FirstOrDefault(x => x.PlayerName == stat.PlayerName);
             if (firstPlayerAction != null)
             {
-                int firstPlayerActionIndex = hand.HandActions.ToList().IndexOf(firstPlayerAction) - hand.HandActions.Where(x=> x.HandActionType == HandActionType.SMALL_BLIND || x.HandActionType == HandActionType.BIG_BLIND).Count();
+                int firstPlayerActionIndex = hand.HandActions.ToList().IndexOf(firstPlayerAction) - hand.HandActions.Where(x => x.HandActionType == HandActionType.SMALL_BLIND).Take(1).Count() - hand.HandActions.Where(x => x.HandActionType == HandActionType.BIG_BLIND).Take(1).Count();
 
                 /* Conver size in case if there are not 2 blind actions (only bb, multiple bb etc.) */
                 var blinds = hand.HandActions.Take(2);
@@ -139,7 +140,6 @@ namespace Model.Importer
             }
 
             // determine position based on distance from dealer
-
 
             return EnumPosition.Undefined;
         }
@@ -225,10 +225,10 @@ namespace Model.Importer
                 return 0m;
             }
 
-            var cards = activePlayers.Select(x => x.HoleCards.ToString()).ToArray();
+            var cards = activePlayers.Select(x => x.HoleCards).ToArray();
 
             int count = cards.Count();
-            int targetPlayerIndex = cards.ToList().IndexOf(currentPlayer.HoleCards.ToString());
+            int targetPlayerIndex = cards.ToList().IndexOf(currentPlayer.HoleCards);
             // something went wrong
             if (count == 0 || targetPlayerIndex < 0)
             {
@@ -236,28 +236,46 @@ namespace Model.Importer
                 return 0;
             }
 
-            long[] wins = new long[count];
-            long[] losses = new long[count];
-            long[] ties = new long[count];
-            long totalhands = 0;
+            decimal equity = 0;
 
             try
             {
+                var gameType = new GeneralGameTypeEnum().ParseGameType(hand.GameDescription.GameType);
+
+                // holdem
                 var boardCards = CardHelper.IsStreetAvailable(hand.CommunityCards.ToString(), lastHeroStreetAction.Street)
-                    ? hand.CommunityCards.GetBoardOnStreet(lastHeroStreetAction.Street).ToString()
-                    : hand.CommunityCards.ToString();
-                Hand.HandWinOdds(cards, boardCards, string.Empty, wins, ties, losses, ref totalhands);
+                      ? hand.CommunityCards.GetBoardOnStreet(lastHeroStreetAction.Street).ToString()
+                      : hand.CommunityCards.ToString();
+
+                if (gameType == GeneralGameTypeEnum.Holdem && cards.All(x => x.Count <= 2))
+                {
+                    long[] wins = new long[count];
+                    long[] losses = new long[count];
+                    long[] ties = new long[count];
+                    long totalhands = 0;
+
+
+                    Hand.HandWinOdds(cards.Select(x => x.ToString()).ToArray(), boardCards, string.Empty, wins, ties, losses, ref totalhands);
+
+                    if (totalhands != 0)
+                    {
+                        equity = (decimal)(wins[targetPlayerIndex] + ties[targetPlayerIndex] / 2.0) / totalhands;
+                    }
+                }
+                else if ((gameType == GeneralGameTypeEnum.Omaha || gameType == GeneralGameTypeEnum.OmahaHiLo) && cards.All(x => x.Count >= 2 && x.Count < 5))
+                {
+                    OmahaEquityCalculatorMain calc = new OmahaEquityCalculatorMain(true, gameType == GeneralGameTypeEnum.OmahaHiLo);
+                    var eq = calc.Equity(boardCards.Select(x => x.ToString()).ToArray(), cards.Select(x => x.Select(c => c.ToString()).ToArray()).ToArray(), new string[] { }, 0);
+
+                    equity = (decimal)eq[targetPlayerIndex].TotalEq / 100;
+                }
+
             }
             catch (Exception ex)
             {
                 LogProvider.Log.Error(ex);
             }
 
-            decimal equity = 0;
-            if (totalhands != 0)
-            {
-                equity = (decimal)(wins[targetPlayerIndex] + ties[targetPlayerIndex] / 2.0) / totalhands;
-            }
             return equity;
         }
 

@@ -1241,7 +1241,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SMART - INTUITIVE - BEAUTIFUL
+        ///   Looks up a localized string similar to BEAUTIFUL - INTUITIVE - POWERFUL
         ///Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes with a fully functional 30 day trial. When you are ready to purchase, you can click BUY from the button below in order to  purchase a registered copy of DriveHUD. When you are ready to register, please click the Register button below..
         /// </summary>
         internal static string Common_RegistrationView_GreetingText {

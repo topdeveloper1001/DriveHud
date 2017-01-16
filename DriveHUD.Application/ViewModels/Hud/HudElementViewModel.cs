@@ -10,21 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.Entities;
 using DriveHUD.ViewModels;
+using Model.Enums;
+using ProtoBuf;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Windows.Media;
-using System.Xml.Serialization;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Collections.Specialized;
-using Model.Enums;
-using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.Common.Resources;
-using ProtoBuf;
-using DriveHUD.Entities;
+using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels
 {

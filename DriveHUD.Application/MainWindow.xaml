@@ -80,87 +80,10 @@
                         <Grid x:Name="VisualRoot"   >
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Disabled">
-                                        <!--<Storyboard>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Content">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="0.5"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="0.5"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="#FF8D8D8D"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="RenderEnabled" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<system:Boolean>False</system:Boolean>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="0.6"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DisabledBorder">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="1"/>
-        									</DoubleAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
+                                    <VisualState x:Name="Disabled" />
                                     <VisualState x:Name="Normal"/>
-                                    <VisualState x:Name="MouseOver">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="RenderMouseOver" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<system:Boolean>True</system:Boolean>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="Black"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
-                                    <VisualState x:Name="DropDownOpen">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="Black"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
+                                    <VisualState x:Name="MouseOver" />
+                                    <VisualState x:Name="DropDownOpen" />
                                 </VisualStateGroup>
                                 <VisualStateGroup x:Name="FocusStates">
                                     <VisualState x:Name="Focused"/>
@@ -249,183 +172,17 @@
                             </Grid.ColumnDefinitions>
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Disabled">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="#FF989898"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="MouseOverVisual">
-        										<LinearDoubleKeyFrame KeyTime="0:0:0.05" Value="0"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="MouseOverVisual">
-        										<DiscreteObjectKeyFrame KeyTime="0:0:0.05">
-        											<DiscreteObjectKeyFrame.Value>
-        												<Visibility>Collapsed</Visibility>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="RenderEnabled" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<system:Boolean>False</system:Boolean>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<DoubleAnimation Duration="0" To="0.6" Storyboard.TargetProperty="Opacity" Storyboard.TargetName="PART_EditableTextBox"/>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="#FF8D8D8D"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="Background">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="#FFE0E0E0"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Background">
-        										<LinearDoubleKeyFrame KeyTime="0" Value="0.6"/>
-        									</DoubleAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
-                                    <VisualState x:Name="Normal">
-                                        <!--<Storyboard>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="MouseOverVisual">
-        										<LinearDoubleKeyFrame KeyTime="0:0:0.15" Value="0"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="MouseOverVisual">
-        										<DiscreteObjectKeyFrame KeyTime="0:0:0.15">
-        											<DiscreteObjectKeyFrame.Value>
-        												<Visibility>Collapsed</Visibility>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
-                                    <VisualState x:Name="MouseOver">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="RenderActive" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<system:Boolean>True</system:Boolean>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="MouseOverVisual">
-        										<LinearDoubleKeyFrame KeyTime="0:0:0.115" Value="1"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="MouseOverVisual">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<Visibility>Visible</Visibility>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="Black"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
-                                    <VisualState x:Name="DropDownOpen">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="BorderBrush" Storyboard.TargetName="Border">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-        													<GradientStop Color="#FF282828"/>
-        													<GradientStop Color="#FF5F5F5F" Offset="1"/>
-        												</LinearGradientBrush>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="MouseOverVisual">
-        										<LinearDoubleKeyFrame KeyTime="0:0:0.05" Value="0"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="MouseOverVisual">
-        										<DiscreteObjectKeyFrame KeyTime="0:0:0.05">
-        											<DiscreteObjectKeyFrame.Value>
-        												<Visibility>Collapsed</Visibility>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="FocusVisual">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="0"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="Black"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
+                                    <VisualState x:Name="Disabled" />
+                                    <VisualState x:Name="Normal" />
+                                    <VisualState x:Name="MouseOver" />
+                                    <VisualState x:Name="DropDownOpen" />
                                 </VisualStateGroup>
                                 <VisualStateGroup x:Name="FocusStates">
-                                    <VisualState x:Name="Focused">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="RenderFocused" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<system:Boolean>True</system:Boolean>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="FocusVisual">
-        										<DiscreteObjectKeyFrame KeyTime="0:0:0.15">
-        											<DiscreteObjectKeyFrame.Value>
-        												<Visibility>Visible</Visibility>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
+                                    <VisualState x:Name="Focused" />
                                     <VisualState x:Name="Unfocused"/>
                                 </VisualStateGroup>
                                 <VisualStateGroup x:Name="WatermarkStates">
-                                    <VisualState x:Name="WatermarkVisible">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" Storyboard.TargetName="Watermark">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<Visibility>Visible</Visibility>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
+                                    <VisualState x:Name="WatermarkVisible" />
                                     <VisualState x:Name="WatermarkInvisible"/>
                                 </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
@@ -471,11 +228,7 @@
                                     </ControlTemplate>
                                 </telerik:RadToggleButton.Template>
                                 <Grid>
-                                    <Chromes:ButtonChrome x:Name="ButtonChrome"  Background="{TemplateBinding BorderBrush}"  BorderThickness="0" CornerRadius="0,1,1,0"   RenderEnabled="{TemplateBinding IsEnabled}" >
-                                        <!--<telerik:StyleManager.Theme>
-        									<telerik:Office_BlackTheme/>
-        								</telerik:StyleManager.Theme>-->
-                                    </Chromes:ButtonChrome>
+                                    <Chromes:ButtonChrome x:Name="ButtonChrome"  Background="{TemplateBinding BorderBrush}"  BorderThickness="0" CornerRadius="0,1,1,0"   RenderEnabled="{TemplateBinding IsEnabled}" />
                                     <ContentControl x:Name="DropDownIcon" Background="White" Grid.Column="1" Foreground="{TemplateBinding Foreground}" IsTabStop="False">
                                         <ContentControl.Template>
                                             <ControlTemplate TargetType="{x:Type ContentControl}">
@@ -504,14 +257,13 @@
                                             </telerik:RadButton>
                                             <ScrollViewer x:Name="PART_ScrollViewer" 
                                                           BorderThickness="0" 
-                                                            IsTabStop="False"
+                                                          IsTabStop="False"
                                                           CanContentScroll="True"
                                                           Foreground="{TemplateBinding Foreground}"
                                                           HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
-                                                            VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
+                                                          VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}"
                                                           Padding="0,1,0,0"
-                                                          Grid.Row="1"
-                                                        >
+                                                          Grid.Row="1">
                                                 <ScrollViewer.InputBindings>
                                                     <KeyBinding Command="telerikPrimitives:ListControl.SelectAllCommand" Key="A" Modifiers="Control"/>
                                                 </ScrollViewer.InputBindings>
@@ -531,87 +283,10 @@
                         <Grid x:Name="VisualRoot">
                             <VisualStateManager.VisualStateGroups>
                                 <VisualStateGroup x:Name="CommonStates">
-                                    <VisualState x:Name="Disabled">
-                                        <!--<Storyboard>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="Content">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="0.5"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="0.5"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="#FF8D8D8D"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="RenderEnabled" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<system:Boolean>False</system:Boolean>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="0.6"/>
-        									</DoubleAnimationUsingKeyFrames>
-        									<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Opacity" Storyboard.TargetName="DisabledBorder">
-        										<DiscreteDoubleKeyFrame KeyTime="0" Value="1"/>
-        									</DoubleAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
+                                    <VisualState x:Name="Disabled" />
                                     <VisualState x:Name="Normal"/>
-                                    <VisualState x:Name="MouseOver">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="RenderMouseOver" Storyboard.TargetName="ButtonChrome">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<system:Boolean>True</system:Boolean>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="Black"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
-                                    <VisualState x:Name="DropDownOpen">
-                                        <!--<Storyboard>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Foreground" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="Black"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        									<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Background" Storyboard.TargetName="DropDownIcon">
-        										<DiscreteObjectKeyFrame KeyTime="0">
-        											<DiscreteObjectKeyFrame.Value>
-        												<SolidColorBrush Color="White"/>
-        											</DiscreteObjectKeyFrame.Value>
-        										</DiscreteObjectKeyFrame>
-        									</ObjectAnimationUsingKeyFrames>
-        								</Storyboard>-->
-                                    </VisualState>
+                                    <VisualState x:Name="MouseOver" />
+                                    <VisualState x:Name="DropDownOpen" />
                                 </VisualStateGroup>
                                 <VisualStateGroup x:Name="FocusStates">
                                     <VisualState x:Name="Focused"/>
@@ -666,12 +341,6 @@
                                                     <telerik:Office_BlackTheme/>
                                                 </telerik:StyleManager.Theme>
                                             </telerik:RadButton>
-                                            <!--<ScrollViewer x:Name="PART_ScrollViewer" BorderThickness="0" CanContentScroll="True" Foreground="{TemplateBinding Foreground}" HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}" Padding="0,1,0,0" Grid.Row="1" VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}">
-        										<telerik:StyleManager.Theme>
-        											<telerik:Office_BlackTheme/>
-        										</telerik:StyleManager.Theme>
-        										<ItemsPresenter/>
-        									</ScrollViewer>-->
                                             <ScrollViewer x:Name="PART_ScrollViewer" 
                                                           BorderThickness="0" 
                                                             IsTabStop="False"
@@ -753,12 +422,6 @@
                             </VisualStateManager.VisualStateGroups>
                             <Grid>
                                 <Border x:Name="HighlightVisual" Background="{StaticResource BackgroundBrush4}" BorderBrush="{StaticResource BackgroundBrush4}" BorderThickness="1" CornerRadius="1" Visibility="Collapsed">
-                                    <!--<Border.Background>
-        								<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-        									<GradientStop Color="#FFFFFBDA" Offset="0"/>
-        									<GradientStop Color="#FFFFFBA3" Offset="1"/>
-        								</LinearGradientBrush>
-        							</Border.Background>-->
                                     <Border BorderBrush="White" BorderThickness="0" CornerRadius="0"/>
                                 </Border>
                                 <Grid>
@@ -1238,7 +901,7 @@
                     </Path>
                 </Button.Content>
             </Button>
-     
+
         </Grid>
 
     </Grid>

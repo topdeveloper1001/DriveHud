@@ -1,0 +1,471 @@
+﻿<UserControl x:Class="DriveHUD.Application.Views.AppsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DriveHUD.Application.Views"
+             mc:Ignorable="d"
+             xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
+             xmlns:ms="clr-namespace:Model.Shop;assembly=Model"             
+             HorizontalAlignment="Stretch"
+             VerticalAlignment="Stretch" 
+             d:DesignWidth="1920" 
+             Height="783">
+
+    <UserControl.Resources>
+
+        <SolidColorBrush x:Key="TextBlockForeground" Color="#ffffff"/>
+        <SolidColorBrush x:Key="LinkTextBlockForeground" Color="#34519c" />
+        <SolidColorBrush x:Key="LinkTextBlockHighlightForeground" Color="#4b6fca" />
+
+        <Style x:Key="RadioButtonSimpleLeft" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Border 
+                            Background="{StaticResource BackgroundBrush1}"
+                            BorderThickness="0"
+                            CornerRadius="2,0,0,2"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                            >
+
+                            <Grid>
+
+                                <ContentControl 
+                                    x:Name="MainContent"
+                                    Grid.Row="0" 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="{TemplateBinding Content}" 
+                                    Foreground="{StaticResource ForegroundBrush}"                                     
+                                    />
+
+                                <Border
+                                    x:Name="BottomHighLight"
+                                    Height="3"
+                                    Background="#335199"
+                                    BorderThickness="0"
+                                    CornerRadius="0,0,0,2"
+                                    VerticalAlignment="Bottom"
+                                    Visibility="Collapsed"
+                                    />
+
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Foreground" TargetName="MainContent" Value="{StaticResource TextBlockForeground}" />
+                                <Setter Property="Visibility" TargetName="BottomHighLight" Value="Visible" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" TargetName="MainContent" Value="{StaticResource TextBlockForeground}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RadioButtonSimple" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Border 
+                            Background="{StaticResource BackgroundBrush1}"
+                            BorderThickness="0"
+                            CornerRadius="0"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                            >
+
+                            <Grid>
+
+                                <ContentControl 
+                                    x:Name="MainContent"
+                                    Grid.Row="0" 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="{TemplateBinding Content}" 
+                                    Foreground="{StaticResource ForegroundBrush}"                                     
+                                    />
+
+                                <Border
+                                    x:Name="BottomHighLight"
+                                    Height="3"
+                                    Background="#335199"
+                                    BorderThickness="0"
+                                    CornerRadius="0"
+                                    VerticalAlignment="Bottom"
+                                    Visibility="Collapsed"
+                                    />
+
+                            </Grid>
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Foreground" TargetName="MainContent" Value="{StaticResource TextBlockForeground}" />
+                                <Setter Property="Visibility" TargetName="BottomHighLight" Value="Visible" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" TargetName="MainContent" Value="{StaticResource TextBlockForeground}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="RadioButtonSimpleRight" TargetType="{x:Type RadioButton}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                        <Border 
+                            Background="{StaticResource BackgroundBrush1}"
+                            BorderThickness="0"
+                            CornerRadius="0,2,2,0"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                            >
+
+                            <Grid>
+
+                                <ContentControl 
+                                    x:Name="MainContent"
+                                    Grid.Row="0" 
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Content="{TemplateBinding Content}" 
+                                    Foreground="{StaticResource ForegroundBrush}"                                     
+                                    />
+
+                                <Border
+                                    x:Name="BottomHighLight"
+                                    Height="3"
+                                    Background="#335199"
+                                    BorderThickness="0"
+                                    CornerRadius="2,0,0,0"
+                                    VerticalAlignment="Bottom"
+                                    Visibility="Collapsed"
+                                    />
+
+                            </Grid>
+
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsChecked" Value="True">
+                                <Setter Property="Foreground" TargetName="MainContent" Value="{StaticResource TextBlockForeground}" />
+                                <Setter Property="Visibility" TargetName="BottomHighLight" Value="Visible" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" TargetName="MainContent" Value="{StaticResource TextBlockForeground}" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SearchTextBoxStyle" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="FontSize" Value="12px" />
+            <Setter Property="Width" Value="326" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Background" Value="{StaticResource BackgroundBrush1}" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type TextBox}">
+                        <Border
+                            Background="{TemplateBinding Background}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="2"        
+                            Padding="2,0,0,0"
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                            <Grid>
+                                <Image 
+                                    HorizontalAlignment="Left"
+                                    Margin="17,0,0,0"
+                                    Width="16"
+                                    Height="16"
+                                    Source="pack://application:,,,/DriveHUD.Common.Resources;component/images/search.png" 
+                                    />
+                                <ScrollViewer 
+                                    Margin="48,0,0,0"
+                                    x:Name="PART_ContentHost" 
+                                    VerticalAlignment="Center" />
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SearchButtonStyle" BasedOn="{StaticResource {x:Type Button}}" TargetType="{x:Type Button}">
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Width" Value="100" />
+            <Setter Property="Foreground" Value="#ffffff" />
+        </Style>
+
+        <Style x:Key="BaseTextBlockStyle" TargetType="{x:Type TextBlock}">
+            <Setter Property="FontFamily" Value="/DriveHUD.Application;component/Fonts/#Open Sans" />
+        </Style>
+
+        <Style x:Key="ProductNameTextBlockStyle" BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource TextBlockForeground}" />
+            <Setter Property="FontSize" Value="16px" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="DescriptionTextBlockStyle" BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource TextBlockForeground}" />
+            <Setter Property="Margin" Value="0,10,0,0" />
+            <Setter Property="FontSize" Value="12px" />
+        </Style>
+
+        <Style x:Key="LinkTextBlockStyle" BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource LinkTextBlockForeground}" />
+            <Setter Property="TextBlock.TextDecorations" Value="Underline" />
+            <Setter Property="Margin" Value="0,5,0,0" />
+            <Setter Property="FontSize" Value="12px" />
+            <Setter Property="Cursor" Value="Hand" />
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="{StaticResource LinkTextBlockHighlightForeground}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="PriceTextBlockStyle" BasedOn="{StaticResource BaseTextBlockStyle}" TargetType="{x:Type TextBlock}">
+            <Setter Property="Foreground" Value="{StaticResource TextBlockForeground}" />
+            <Setter Property="FontSize" Value="18px" />
+            <Setter Property="FontWeight" Value="SemiBold" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+
+        <Style x:Key="AddToCartButtonStyle" TargetType="{x:Type Button}" BasedOn="{StaticResource ButtonStyle}">
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="VerticalAlignment" Value="Top" />
+            <Setter Property="Width" Value="96" />
+            <Setter Property="Height" Value="32" />
+            <Setter Property="Margin" Value="0,15,0,0" />
+        </Style>
+
+    </UserControl.Resources>
+
+    <Grid Margin="0,27,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="712" />
+            <RowDefinition Height="1" />
+            <RowDefinition Height="43" />
+        </Grid.RowDefinitions>
+
+        <!-- Main content -->
+        <Grid 
+            Grid.Row="0"
+            Margin="47,0,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="32" />
+                <RowDefinition Height="48" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <Grid 
+                Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackPanel  
+                    Grid.Column="0"
+                    Orientation="Horizontal">
+
+                    <RadioButton                     
+                        GroupName="ShopGroup"
+                        Height="32"        
+                        Width="176"
+                        Content="Recommended Software"
+                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Recommended}}"
+                        Style="{StaticResource RadioButtonSimpleLeft}" />
+
+                    <RadioButton                         
+                        GroupName="ShopGroup"
+                        Height="32"        
+                        Width="146"
+                        Content="Training Products"
+                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Training}}"
+                        Style="{StaticResource RadioButtonSimple}" />
+
+                    <RadioButton                       
+                        GroupName="ShopGroup"
+                        Height="32"        
+                        Width="77"
+                        Content="HUDs"
+                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Huds}}"
+                        Style="{StaticResource RadioButtonSimpleRight}" />
+
+                </StackPanel>
+
+                <StackPanel 
+                    Grid.Column="1"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal"
+                    Margin="0,0,41,0">
+
+                    <TextBox                            
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource SearchTextBoxStyle}"                                            
+                        MaxLength="50"                            
+                        />
+
+                    <Button                         
+                        Content="Search"           
+                        Margin="-2,0,0,0"
+                        HorizontalAlignment="Right"
+                        Style="{StaticResource SearchButtonStyle}"
+                        />
+
+                </StackPanel>
+
+            </Grid>
+
+            <ItemsControl                
+                Grid.Row="2"
+                ItemsSource="{Binding Model.ShopProducts}"
+                >
+
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Width="584">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="168" />
+                                <ColumnDefinition Width="270" />
+                                <ColumnDefinition Width="24" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Border
+                                Width="144"
+                                Height="160"
+                                Grid.Row="0"                                
+                                Grid.RowSpan="3"
+                                Grid.Column="0"                                
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
+
+                                <Image
+                                    Width="144"
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Left"
+                                    Height="160"                                    
+                                    ToolTip="{Binding ProductName}">
+
+                                    <Image.Style>
+                                        <Style TargetType="{x:Type Image}">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding IsAnimatedGif}" Value="True">
+                                                    <Setter Property="dh:ImageBehavior.AnimatedSource" Value="{Binding ImageLink}" />
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding IsAnimatedGif}" Value="False">
+                                                    <Setter Property="Source" Value="{Binding ImageLink}" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                    
+                                </Image>
+                                                                    
+                            </Border>
+
+                            <TextBlock
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Text="{Binding ProductName}"
+                                Style="{StaticResource ProductNameTextBlockStyle}"
+                                />
+
+                            <StackPanel
+                                Orientation="Vertical"
+                                Grid.Column="1"
+                                Grid.Row="1">
+
+                                <TextBlock                                   
+                                    Text="{Binding ProductDescription}"
+                                    Style="{StaticResource DescriptionTextBlockStyle}"
+                                    TextWrapping="Wrap"
+                                    />
+
+                                <TextBlock                                
+                                    Text="Learn More"
+                                    Style="{StaticResource LinkTextBlockStyle}">
+                                    <TextBlock.InputBindings>
+                                        <MouseBinding 
+                                            Command="{Binding DataContext.LearnMoreCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}" 
+                                            CommandParameter="{Binding}"
+                                            MouseAction="LeftClick" />
+                                    </TextBlock.InputBindings>
+                                </TextBlock>
+
+
+                            </StackPanel>
+
+                            <TextBlock
+                                Grid.Column="3"
+                                Grid.Row="0"
+                                Text="{Binding Price}"
+                                Style="{StaticResource PriceTextBlockStyle}"
+                                />
+
+                            <Button
+                                Grid.Column="3"
+                                Grid.Row="1"
+                                Content="ADD TO CART"
+                                Style="{StaticResource AddToCartButtonStyle}"
+                                Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                CommandParameter="{Binding}"
+                                />
+
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="2" Rows="3" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+            </ItemsControl>
+
+        </Grid>
+
+        <Separator 
+            Grid.Row="1"
+            Height="1"
+            Margin="10,0,0,0"
+            Padding="0"       
+            Foreground="{StaticResource BackgroundBrush2}"
+            />
+
+        <!-- Page control -->
+        <Grid 
+            Grid.Row="2" 
+            Height="43">
+
+        </Grid>
+
+    </Grid>
+
+</UserControl>

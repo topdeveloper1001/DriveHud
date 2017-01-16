@@ -11,9 +11,10 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Controls;
-using System.Collections.ObjectModel;
-using ReactiveUI;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Mvvm;
+using ReactiveUI;
+using System.Collections.ObjectModel;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
