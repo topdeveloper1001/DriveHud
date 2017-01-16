@@ -253,6 +253,9 @@ namespace DriveHUD.Application
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);
 
+            // Model services
+            ModelBootstrapper.ConfigureContainer(Container);
+
             // Licenses
             Container.RegisterType<ILicenseManager, DHTReg>(LicenseType.Trial.ToString());
             Container.RegisterType<ILicenseManager, DHHReg>(LicenseType.Holdem.ToString());

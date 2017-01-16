@@ -10,12 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Common;
+using DriveHUD.Common.Wpf.Mvvm;
 using DriveHUD.ViewModels;
+using ReactiveUI;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using ReactiveUI;
-using DriveHUD.Common;
 using System.Windows.Media;
 
 namespace DriveHUD.Application.ViewModels

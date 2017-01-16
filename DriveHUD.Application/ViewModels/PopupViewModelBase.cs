@@ -10,8 +10,9 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using DriveHUD.Common.Wpf.Mvvm;
 using ReactiveUI;
+using System;
 
 namespace DriveHUD.Application.ViewModels
 {
