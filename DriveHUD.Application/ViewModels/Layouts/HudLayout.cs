@@ -99,9 +99,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
         public List<HudPlayerType> HudPlayerTypes { get; set; }
         public List<HudBumperStickerType> HudBumperStickerTypes { get; set; }
         public List<HudSavedPosition> HudPositions { get; set; }
+        public int HudOpacity { get; set; }
 
         public HudTableDefinedProperties()
         {
+            HudOpacity = 100;
             HudTableDefinition = new HudTableDefinition();
             HudStats = new List<StatInfo>();
             HudPlayerTypes = new List<HudPlayerType>();

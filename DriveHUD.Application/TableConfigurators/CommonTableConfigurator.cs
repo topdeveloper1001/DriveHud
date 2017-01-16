@@ -87,18 +87,18 @@ namespace DriveHUD.Application.TableConfigurators
             var table = InitializeTable(diagram, hudTable, seats);
 
             var labelPositions = GetPredefinedLabelPositions();
-
             foreach (var hudElement in hudTable.HudElements.Where(x => x.HudType == HudType))
             {
                 var label = CreatePlayerLabel(string.Format("Player {0}", hudElement.Seat));
 
                 label.X = labelPositions[seats][hudElement.Seat - 1, 0];
                 label.Y = labelPositions[seats][hudElement.Seat - 1, 1];
-
+                label.Opacity = hudTable.Opacity;
                 diagram.AddShape(label);
 
                 var hud = CreateHudLabel(hudElement);
                 hud.ZIndex = 100;
+                hud.Opacity = hudTable.Opacity;
                 diagram.AddShape(hud);
             }
 

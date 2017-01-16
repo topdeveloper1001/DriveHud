@@ -973,6 +973,8 @@ namespace DriveHUD.Application.ViewModels
                     h => h.PokerSite == pokerSite && h.TableType == CurrentTableType.TableType && h.GameType == gameType);
             if (CurrentHudTableViewModel == null)
                 return;
+            var targetHudProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
+            CurrentHudTableViewModel.Opacity = ((double) targetHudProperties.HudOpacity)/100;
             MergeLayouts(CurrentTableDefinition, CurrentHudTableViewModel.HudElements, CurrentLayout);
             UpdateLayout(CurrentLayout);
             TableUpdate?.Invoke(this, EventArgs.Empty);
@@ -1064,26 +1066,25 @@ namespace DriveHUD.Application.ViewModels
 
             var targetProps = GetTargetProperties(layout, CurrentTableDefinition);
             StatInfoObserveCollection.Clear();
-            if (targetProps != null)
+            if (targetProps == null)
+                return;
+            foreach (var hudStat in targetProps.HudStats)
             {
-                foreach (var hudStat in targetProps.HudStats)
+                if (hudStat is StatInfoBreak)
                 {
-                    if (hudStat is StatInfoBreak)
-                    {
-                        StatInfoObserveCollection.Add(hudStat);
-                        continue;
-                    }
+                    StatInfoObserveCollection.Add(hudStat);
+                    continue;
+                }
 
-                    var existing =
-                        StatInfoCollection.FirstOrDefault(
-                            x => x.Stat == hudStat.Stat && x.StatInfoGroup.Name == hudStat.StatInfoGroup.Name);
+                var existing =
+                    StatInfoCollection.FirstOrDefault(
+                        x => x.Stat == hudStat.Stat && x.StatInfoGroup.Name == hudStat.StatInfoGroup.Name);
 
-                    if (existing != null)
-                    {
-                        // we do not recover unexpected stats
-                        StatInfoObserveCollection.Add(hudStat);
-                        StatInfoCollection.Remove(existing);
-                    }
+                if (existing != null)
+                {
+                    // we do not recover unexpected stats
+                    StatInfoObserveCollection.Add(hudStat);
+                    StatInfoCollection.Remove(existing);
                 }
             }
         }
@@ -1103,11 +1104,13 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
-
+            var targetProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
+            var opacity = targetProperties?.HudOpacity ?? 0;
             var hudStatSettingsViewModelInfo = new HudStatSettingsViewModelInfo
             {
                 SelectedStatInfo = selectedStatInfo,
                 SelectedStatInfoCollection = StatInfoObserveCollection,
+                HudOpacity = opacity,
                 Save = SaveStatsSettings,
                 Cancel = ClosePopup
             };
@@ -1128,11 +1131,12 @@ namespace DriveHUD.Application.ViewModels
             {
                 return;
             }
-
+            
             var statInfoToMerge = (from item in hudStatSettings.Items
                                    join statInfo in StatInfoObserveCollection on item.Id equals statInfo.Id
                                    select new { NewItem = item, OldItem = statInfo }).ToArray();
-
+            var targetProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
+            targetProperties.HudOpacity = hudStatSettings.HudOpacity;
             foreach (var mergeItem in statInfoToMerge)
             {
                 mergeItem.OldItem.Merge(mergeItem.NewItem);
@@ -1141,7 +1145,10 @@ namespace DriveHUD.Application.ViewModels
                 previewStat?.Merge(mergeItem.NewItem);
                 previewStat?.UpdateColor();
             }
-
+            var targetHudProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
+            CurrentHudTableViewModel.Opacity = ((double)targetHudProperties.HudOpacity) / 100;
+            MergeLayouts(CurrentTableDefinition, CurrentHudTableViewModel.HudElements, CurrentLayout);
+            TableUpdate?.Invoke(this, EventArgs.Empty);
             ClosePopup();
         }
 

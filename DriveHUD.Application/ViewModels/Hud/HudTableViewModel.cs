@@ -41,6 +41,8 @@ namespace DriveHUD.Application.ViewModels
 
         [ProtoMember(6)]
         public EnumGameType? GameType { get; set; }
+        [ProtoMember(7)]
+        public double Opacity { get; set; }
 
         public ObservableCollection<HudElementViewModel> HudElements { get; set; }
         
@@ -66,6 +68,7 @@ namespace DriveHUD.Application.ViewModels
             model.IsRelativePosition = IsRelativePosition;
             model.RelativePosition = RelativePosition;
             model.StartPosition = StartPosition;
+            model.Opacity = Opacity;
             model.HudElements = new ObservableCollection<HudElementViewModel>(HudElements.Select(x => x.Clone()));
             model.TableSeatAreaCollection = new ObservableCollection<ITableSeatArea>();
 

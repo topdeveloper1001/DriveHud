@@ -12,7 +12,7 @@
              xmlns:telerikControlsData="clr-namespace:Telerik.Windows.Controls.Data;assembly=Telerik.Windows.Controls.Data"
              xmlns:telerkDiagExt="clr-namespace:Telerik.Windows.Controls.Diagrams.Extensions;assembly=Telerik.Windows.Controls.Diagrams.Extensions"
              mc:Ignorable="d" 
-             Height="630"
+             Height="680"
              Width="490"
              d:DesignHeight="630" d:DesignWidth="490">
     <!--<UserControl.DataContext>
@@ -215,12 +215,15 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
+            <RowDefinition Height="50" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="1" Grid.Row="0" Text="List of available settings" VerticalAlignment="Center" />
+        <TextBlock Grid.Column="1" Grid.Row="0" Text="HUD Opacity" VerticalAlignment="Center" />
+        <Slider Grid.Column="2" Grid.Row="0" Value="{Binding HudOpacity}" Orientation="Horizontal" Maximum="100" Minimum="0" VerticalAlignment="Center" Interval="10"/>
+        <TextBlock Grid.Column="1" Grid.Row="1" Text="List of available settings" VerticalAlignment="Center" />
 
-        <StackPanel  Grid.Column="2" Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right">
+        <StackPanel  Grid.Column="2" Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right">
             <TextBlock Text="Current stat:" VerticalAlignment="Center" />
             <TextBlock Text="{Binding SelectedItem.Caption}" VerticalAlignment="Center" FontWeight="Bold" Margin="10,0,0,0" />
         </StackPanel>
@@ -228,7 +231,7 @@
         <!-- Left Column -->
         <StackPanel 
             Grid.Column="1"
-            Grid.Row="1"
+            Grid.Row="2"
             Margin="0,0,15,0"
             Orientation="Vertical">
 
@@ -326,7 +329,7 @@
                 
         <!-- Right Column -->
 
-        <Grid Grid.Column="2" Grid.Row="1">
+        <Grid Grid.Column="2" Grid.Row="2">
             <Grid.RowDefinitions>
                 <RowDefinition />
                 <RowDefinition />
