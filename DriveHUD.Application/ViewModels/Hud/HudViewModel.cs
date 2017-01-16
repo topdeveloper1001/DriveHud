@@ -424,19 +424,6 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeObservables()
         {
-            this.ObservableForProperty(x => x.CurrentPokerSite)
-                .Select(x => true)
-                .Merge(this.ObservableForProperty(x => x.CurrentTableType).Select(x => true))
-                .Merge(this.ObservableForProperty(x => x.CurrentGameType).Select(x => true))
-                .Merge(this.ObservableForProperty(x => x.HudType).Select(x => true))
-                .Subscribe(x =>
-                {
-                    if (CurrentTableType == null)
-                        return;
-                    DataLoad();
-                    TableUpdate?.Invoke(this, new EventArgs());
-                });
-
             this.ObservableForProperty(x => x.HudViewType).Select(x => true)
                 .Subscribe(x =>
                 {
@@ -538,6 +525,11 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 _currentTableType = value;
                 this.RaisePropertyChanged(nameof(CurrentTableType));
+                if (!_currentLayoutSwitching && CurrentTableType != null)
+                {
+                    DataLoad(false);
+                    TableUpdate?.Invoke(this, new EventArgs());
+                }
             }
         }
 
@@ -575,6 +567,11 @@ namespace DriveHUD.Application.ViewModels
                         new ObservableCollection<EnumTableTypeWrapper>(
                             GetSiteTableTypes(_currentPokerSite.Value).Select(t => new EnumTableTypeWrapper(t)));
                 this.RaisePropertyChanged(nameof(CurrentPokerSite));
+                if (!_currentLayoutSwitching && CurrentTableType != null)
+                {
+                    DataLoad(false);
+                    TableUpdate?.Invoke(this, new EventArgs());
+                }
             }
         }
 
@@ -589,6 +586,11 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 _currentGameType = value;
                 this.RaisePropertyChanged(nameof(CurrentGameType));
+                if (!_currentLayoutSwitching && CurrentTableType != null)
+                {
+                    DataLoad(false);
+                    TableUpdate?.Invoke(this, new EventArgs());
+                }
             }
         }
 
@@ -714,6 +716,11 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref hudType, value);
                 this.RaisePropertyChanged(() => SelectedHUD);
+                if (!_currentLayoutSwitching && CurrentTableType != null)
+                {
+                    DataLoad(false);
+                    TableUpdate?.Invoke(this, new EventArgs());
+                }
             }
         }
 
@@ -795,7 +802,7 @@ namespace DriveHUD.Application.ViewModels
         private HudLayoutInfo _currentLayout;
         private IEnumerable<ISiteConfiguration> _configurations;
         private ObservableCollection<EnumTableTypeWrapper> _tableTypes;
-        private bool _disableAddLayouts;
+        private bool _currentLayoutSwitching;
 
         public HudLayoutInfo CurrentLayout
         {
@@ -804,15 +811,15 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref _currentLayout, value);
                 // load data for selected layout
-                _disableAddLayouts = true;
+                _currentLayoutSwitching = true;
                 if (CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.PokerSite != CurrentPokerSite))
                     CurrentPokerSite =
                         CurrentLayout.HudTableDefinedProperties.FirstOrDefault()?.HudTableDefinition.PokerSite;
                 if (CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.GameType != CurrentGameType))
                     CurrentGameType =
                         CurrentLayout.HudTableDefinedProperties.FirstOrDefault()?.HudTableDefinition.GameType;
-                _disableAddLayouts = false;
-                DataLoad();
+                _currentLayoutSwitching = false;
+                DataLoad(true);
             }
         }
 
@@ -947,13 +954,13 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private void DataLoad()
+        private void DataLoad(bool disableLayoutSave)
         {
             if (CurrentLayout == null)
                 return;
             var pokerSite = CurrentPokerSite ?? DefaultPokerSite;
             var gameType = CurrentGameType ?? DefaultGameType;
-            if (CurrentHudTableViewModel != null)
+            if (CurrentHudTableViewModel != null && !disableLayoutSave)
                 SaveLayoutChanged(CurrentLayout, CurrentTableDefinition);
             CurrentTableDefinition = new HudTableDefinition
             {
@@ -983,7 +990,7 @@ namespace DriveHUD.Application.ViewModels
         {
             var result =
                 layout.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.Equals(tableDefinition));
-            if (result == null && !_disableAddLayouts)
+            if (result == null && !_currentLayoutSwitching)
             {
                 result =
                     layout.HudTableDefinedProperties.FirstOrDefault(
@@ -1021,21 +1028,6 @@ namespace DriveHUD.Application.ViewModels
         public void UpdateActiveLayout()
         {
             CurrentLayout = Layouts.FirstOrDefault();
-        }
-
-        private void SaveCurrentLayout()
-        {
-            if (CurrentLayout == null)
-                return;
-            //// save layout in cache
-            var hudData = new HudSavedDataInfo
-            {
-                Name = CurrentLayout.Name,
-                HudTable = CurrentHudTableViewModel,
-                Stats = StatInfoObserveCollection,
-                LayoutInfo = CurrentLayout
-            };
-            _hudLayoutsSevice.Save(hudData);
         }
 
         private void SaveLayoutChanged(HudLayoutInfo layoutToSave, HudTableDefinition tableDefinition)

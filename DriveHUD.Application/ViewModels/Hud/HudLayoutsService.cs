@@ -731,34 +731,41 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (layout == null)
             {
                 layout = new HudLayoutInfo {Name = hudData.Name};
-                layout.HudTableDefinedProperties.Add(new HudTableDefinedProperties
+                foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
                 {
-                    HudTableDefinition =
-                        new HudTableDefinition
-                        {
-                            GameType = hudData.TableDefinition.GameType,
-                            PokerSite = hudData.TableDefinition.PokerSite,
-                            TableType = hudData.TableDefinition.TableType
-                        },
-                    HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableType),
-                    HudBumperStickerTypes = CreateDefaultBumperStickers(),
-                    HudStats = hudData.Stats.Select(x =>
+                    var hudTableDefinedProps = new HudTableDefinedProperties
                     {
-                        var statInfoBreak = x as StatInfoBreak;
-                        return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
-                    }).ToList(),
-                    HudPositions =
-                        hudData.HudTable.HudElements.Select(
-                            x => 
-                                new HudSavedPosition
-                                {
-                                    Height = x.Height,
-                                    Position = x.Position,
-                                    Width = x.Width,
-                                    Seat = x.Seat,
-                                    HudType = x.HudType
-                                }).ToList()
-                });
+                        HudTableDefinition =
+                            new HudTableDefinition
+                            {
+                                GameType = hudData.TableDefinition.GameType,
+                                PokerSite = hudData.TableDefinition.PokerSite,
+                                TableType = tableType
+                            },
+                        HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableType),
+                        HudBumperStickerTypes = CreateDefaultBumperStickers(),
+                        HudStats = hudData.Stats.Select(x =>
+                        {
+                            var statInfoBreak = x as StatInfoBreak;
+                            return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
+                        }).ToList()
+                    };
+                    if (tableType == hudData.TableDefinition.TableType)
+                    {
+                        hudTableDefinedProps.HudPositions =
+                            hudData.HudTable.HudElements.Select(
+                                x =>
+                                    new HudSavedPosition
+                                    {
+                                        Height = x.Height,
+                                        Position = x.Position,
+                                        Width = x.Width,
+                                        Seat = x.Seat,
+                                        HudType = x.HudType
+                                    }).ToList();
+                    }
+                    layout.HudTableDefinedProperties.Add(hudTableDefinedProps);
+                }
                 Layouts.Add(layout);
             }
 
