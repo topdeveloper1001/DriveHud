@@ -342,7 +342,7 @@
                                 
                 <!-- HUD SCREEN ***************************************************************** -->
                 <TextBlock Grid.Row="0" Grid.Column="3" Margin="1,5,40,1"
-                           Visibility="{Binding CurrentTableLayout.HudTableLayout.Site, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
+                           Visibility="{Binding CurrentPokerSite, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
                            VerticalAlignment="Top" HorizontalAlignment="Left"
                            Text="HUD Screen" FontSize="13"/>
 
@@ -354,7 +354,7 @@
                                      SelectedValue="{Binding HudViewType}"      
                                      ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"                                      
                                      ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     Visibility="{Binding CurrentTableLayout.HudTableLayout.Site, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
+                                     Visibility="{Binding CurrentPokerSite, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
                                      ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}">
                     <comboboxControl:ComboBoxEx.ItemTemplate>
                         <DataTemplate>
@@ -372,7 +372,7 @@
                         Foreground="#FFFFFF" 
                         Height="35"                        
                         Command="{Binding SelectHudCommand}"
-                        Visibility="{Binding CurrentTableLayout.HudTableLayout.Site, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
+                        Visibility="{Binding CurrentPokerSite, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
                         />
 
             </StackPanel>
