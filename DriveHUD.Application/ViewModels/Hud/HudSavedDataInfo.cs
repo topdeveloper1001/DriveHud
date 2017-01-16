@@ -20,6 +20,7 @@ namespace DriveHUD.Application.ViewModels
     {
         public HudTableViewModel HudTable { get; set; }
         public HudLayoutInfo LayoutInfo { get; set; }
+        public HudTableDefinition TableDefinition { get; set; }
 
         public IEnumerable<StatInfo> Stats { get; set; }
 

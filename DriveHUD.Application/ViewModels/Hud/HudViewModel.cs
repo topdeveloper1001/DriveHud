@@ -908,7 +908,8 @@ namespace DriveHUD.Application.ViewModels
                 Name = hudSelectLayoutViewModel.Name,
                 HudTable = CurrentHudTableViewModel,
                 Stats = StatInfoObserveCollection,
-                LayoutInfo = CurrentLayout
+                LayoutInfo = CurrentLayout,
+                TableDefinition = CurrentTableDefinition
             };
 
             var savedLayout = _hudLayoutsSevice.SaveAs(hudData);

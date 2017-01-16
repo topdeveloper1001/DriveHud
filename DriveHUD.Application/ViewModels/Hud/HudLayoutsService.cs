@@ -736,9 +736,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     HudTableDefinition =
                         new HudTableDefinition
                         {
-                            GameType = hudData.HudTable.GameType,
-                            PokerSite = hudData.HudTable.PokerSite,
-                            TableType = hudData.HudTable.TableType
+                            GameType = hudData.TableDefinition.GameType,
+                            PokerSite = hudData.TableDefinition.PokerSite,
+                            TableType = hudData.TableDefinition.TableType
                         },
                     HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableType),
                     HudBumperStickerTypes = CreateDefaultBumperStickers(),
