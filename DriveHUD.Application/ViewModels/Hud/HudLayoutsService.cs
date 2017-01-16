@@ -728,50 +728,51 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return null;
 
             var layout = GetLayout(hudData.Name);
-            if (layout == null)
-            {
+            bool addLayout = layout == null;
+            if (addLayout)
                 layout = new HudLayoutInfo {Name = hudData.Name};
-                foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
-                {
-                    var hudTableDefinedProps = new HudTableDefinedProperties
-                    {
-                        HudTableDefinition =
-                            new HudTableDefinition
-                            {
-                                GameType = hudData.TableDefinition.GameType,
-                                PokerSite = hudData.TableDefinition.PokerSite,
-                                TableType = tableType
-                            },
-                        HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableType),
-                        HudBumperStickerTypes = CreateDefaultBumperStickers(),
-                        HudStats = hudData.Stats.Select(x =>
-                        {
-                            var statInfoBreak = x as StatInfoBreak;
-                            return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
-                        }).ToList()
-                    };
-                    if (tableType == hudData.TableDefinition.TableType)
-                    {
-                        hudTableDefinedProps.HudPositions =
-                            hudData.HudTable.HudElements.Select(
-                                x =>
-                                    new HudSavedPosition
-                                    {
-                                        Height = x.Height,
-                                        Position = x.Position,
-                                        Width = x.Width,
-                                        Seat = x.Seat,
-                                        HudType = x.HudType
-                                    }).ToList();
-                    }
-                    layout.HudTableDefinedProperties.Add(hudTableDefinedProps);
-                }
-                Layouts.Add(layout);
+            else
+            {
+                layout.Name = hudData.Name;
+                layout.HudTableDefinedProperties.Clear();
             }
-
-            //SetLayoutActive(layout);
-
-            //MergeWithBaseLayout(layout);
+            foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
+            {
+                var hudTableDefinedProps = new HudTableDefinedProperties
+                {
+                    HudTableDefinition =
+                        new HudTableDefinition
+                        {
+                            GameType = hudData.TableDefinition.GameType,
+                            PokerSite = hudData.TableDefinition.PokerSite,
+                            TableType = tableType
+                        },
+                    HudPlayerTypes = CreateDefaultPlayerTypes(hudData.HudTable.TableType),
+                    HudBumperStickerTypes = CreateDefaultBumperStickers(),
+                    HudStats = hudData.Stats.Select(x =>
+                    {
+                        var statInfoBreak = x as StatInfoBreak;
+                        return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
+                    }).ToList()
+                };
+                if (tableType == hudData.TableDefinition.TableType)
+                {
+                    hudTableDefinedProps.HudPositions =
+                        hudData.HudTable.HudElements.Select(
+                            x =>
+                                new HudSavedPosition
+                                {
+                                    Height = x.Height,
+                                    Position = x.Position,
+                                    Width = x.Width,
+                                    Seat = x.Seat,
+                                    HudType = x.HudType
+                                }).ToList();
+                }
+                layout.HudTableDefinedProperties.Add(hudTableDefinedProps);
+            }
+            if (addLayout)
+                Layouts.Add(layout);
 
             InternalSave(layout);
 

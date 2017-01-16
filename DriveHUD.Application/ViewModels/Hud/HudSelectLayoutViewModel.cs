@@ -43,9 +43,8 @@ namespace DriveHUD.Application.ViewModels
                 hudLayoutService.Layouts.Where(x => x.Name == _viewModelInfo.LayoutName || !x.IsDefault).ToList();
 
             items = new ObservableCollection<string>(layouts.Select(x => x.Name));
-            if (!items.Contains(_viewModelInfo.LayoutName))
-                items.Insert(0, _viewModelInfo.LayoutName);
-            selectedItem = _viewModelInfo.LayoutName;
+            if (items.Contains(_viewModelInfo.LayoutName))
+                selectedItem = _viewModelInfo.LayoutName;
 
             if (!_viewModelInfo.IsDeleteMode)
             {
@@ -61,7 +60,7 @@ namespace DriveHUD.Application.ViewModels
 
             if (ShowInput)
             {
-                Name = selectedItem;
+                Name = _viewModelInfo.LayoutName;
             }
 
             var canSave = this.WhenAny(x => x.Name, x => !string.IsNullOrWhiteSpace(x.Value));
@@ -115,7 +114,11 @@ namespace DriveHUD.Application.ViewModels
         public string SelectedItem
         {
             get { return selectedItem; }
-            set { this.RaiseAndSetIfChanged(ref selectedItem, value); }
+            set
+            {
+                this.RaiseAndSetIfChanged(ref selectedItem, value);
+                Name = SelectedItem;
+            }
         }
 
         private string name;

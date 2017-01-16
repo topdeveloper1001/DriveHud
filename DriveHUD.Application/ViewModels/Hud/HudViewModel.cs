@@ -1059,7 +1059,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 if (statInfo is StatInfoBreak)
                     continue;
-                statInfo.Reset();
+                //statInfo.Reset();
                 statInfo.Initialize();
                 StatInfoCollection.Add(statInfo);
             }
