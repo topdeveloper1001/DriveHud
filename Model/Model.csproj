@@ -119,6 +119,7 @@
     <Compile Include="Enums\BoardTextures.cs" />
     <Compile Include="Enums\Enums.cs" />
     <Compile Include="Enums\FilterEnums.cs" />
+    <Compile Include="Enums\GeneralGameTypeEnum.cs" />
     <Compile Include="Enums\HudType.cs" />
     <Compile Include="Enums\EnumMRatio.cs" />
     <Compile Include="Enums\OmahaHoleCards.cs" />
@@ -276,6 +277,10 @@
     <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
       <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
       <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.EquityCalculator.Base\DriveHUD.EquityCalculator.Base.csproj">
+      <Project>{18f3327c-ee94-478a-80b8-a89bda614c65}</Project>
+      <Name>DriveHUD.EquityCalculator.Base</Name>
     </ProjectReference>
     <ProjectReference Include="..\PokerHandHistoryParser\HandHistories.Objects\HandHistories.Objects.csproj">
       <Project>{d5c61a3a-2725-47d9-a828-f5ce4ec19a4a}</Project>
