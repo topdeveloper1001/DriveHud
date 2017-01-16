@@ -1522,7 +1522,7 @@ namespace Model.Data
         {
             get
             {
-                return Statistcs.SingleOrDefault(x => x.ThreeBetCardsList != null)?.ThreeBetCardsList;
+                return Statistics.SingleOrDefault(x => x.ThreeBetCardsList != null)?.ThreeBetCardsList;
             }
         }
 
@@ -1533,8 +1533,8 @@ namespace Model.Data
         {
             get
             {
-                var occured = Statistcs.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item1);
-                var couldOccured = Statistcs.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item2);
+                var occured = Statistics.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item1);
+                var couldOccured = Statistics.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item2);
 
                 return GetPercentage(occured, couldOccured);
             }
@@ -1547,8 +1547,8 @@ namespace Model.Data
                 return new StatDto
                 {
                     Value = RecentAggPr,
-                    Occured = Statistcs.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item1) ?? 0,
-                    CouldOccured = Statistcs.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item2) ?? 0
+                    Occured = Statistics.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item1) ?? 0,
+                    CouldOccured = Statistics.SingleOrDefault(x => x.RecentAggList != null)?.RecentAggList.Sum(x => x.Item2) ?? 0
                 };
             }
         }

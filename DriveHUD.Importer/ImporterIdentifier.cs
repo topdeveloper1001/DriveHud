@@ -12,7 +12,7 @@
 
 namespace DriveHUD.Importers
 {
-    internal enum ImporterIdentifier
+    public enum ImporterIdentifier
     {
         Bovada,
         BetOnline,

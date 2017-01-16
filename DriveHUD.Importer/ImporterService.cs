@@ -12,6 +12,7 @@
 
 using DriveHUD.Common;
 using Microsoft.Practices.ServiceLocation;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -24,11 +25,15 @@ namespace DriveHUD.Importers
     {
         private List<IBackgroundProcess> importers = new List<IBackgroundProcess>();
 
+        private object locker = new object();
+
         public bool IsStarted
         {
             get;
             private set;
         }
+
+        public event EventHandler ImportingStopped;
 
         /// <summary>
         /// Register importer 
@@ -42,6 +47,7 @@ namespace DriveHUD.Importers
 
             Check.Require(importer != null, "Importer wasn't found");
 
+            importer.ProcessStopped += OnImporterProcessStopped;
             importers.Add(importer);
 
             return this;
@@ -68,9 +74,39 @@ namespace DriveHUD.Importers
             foreach (var importer in importers)
             {
                 importer.Stop();
-            }
+            }            
+        }
 
-            IsStarted = false;
+        /// <summary>
+        /// Raise importing stopped event
+        /// </summary>
+        private void RaiseImportingStopped()
+        {
+            var handler = ImportingStopped;
+
+            if (handler != null)
+            {
+                handler(this, EventArgs.Empty);
+            }
+        }
+
+        /// <summary>
+        /// Raise importing stopped if all process has been stopped
+        /// </summary>                
+        private void OnImporterProcessStopped(object sender, EventArgs e)
+        {
+            lock (locker)
+            {
+                System.Diagnostics.Debug.WriteLine($"{sender.ToString()} has exited");
+
+                var isRunning = importers.Any(x => x.IsRunning);
+
+                if (!isRunning)
+                {
+                    IsStarted = false;
+                    RaiseImportingStopped();
+                }
+            }
         }
     }
 }

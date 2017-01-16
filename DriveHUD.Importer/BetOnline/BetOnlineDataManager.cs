@@ -38,6 +38,14 @@ namespace DriveHUD.Importers.BetOnline
             this.eventAggregator = eventAggregator;
         }
 
+        public ImporterIdentifier Identifier
+        {
+            get
+            {
+                return ImporterIdentifier.BetOnline;
+            }
+        }
+
         public void Initialize(PokerClientDataManagerInfo dataManagerInfo)
         {
             Check.ArgumentNotNull(() => dataManagerInfo);
@@ -86,7 +94,14 @@ namespace DriveHUD.Importers.BetOnline
                         Directory.CreateDirectory(streamFolder);
                     }
 
-                    File.AppendAllText(string.Format("{0}\\{1}-stream.xml", streamFolder, convertedResult.TableName.Replace("/","-")), xml);
+                    var logfile = convertedResult.TableName;
+
+                    foreach (var invalidChar in Path.GetInvalidFileNameChars())
+                    {
+                        logfile = logfile.Replace(new string(invalidChar, 1), string.Empty);
+                    }
+
+                    File.AppendAllText(string.Format("{0}\\{1}-stream.xml", streamFolder, logfile), xml);
 #endif                    
 
                     ImportResult(convertedResult);
@@ -94,7 +109,7 @@ namespace DriveHUD.Importers.BetOnline
             }
             catch (Exception ex)
             {
-                LogProvider.Log.Error(this, "Stream data has wrong format", ex);
+                LogProvider.Log.Error(this, $"Stream data has wrong format. [{Identifier}]", ex);
             }
         }
 
@@ -116,7 +131,7 @@ namespace DriveHUD.Importers.BetOnline
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, string.Format("Hand {0} has not been imported", convertedResult.HandNumber), e);
+                LogProvider.Log.Error(this, string.Format("Hand {0} has not been imported. [{1}]", convertedResult.HandNumber, Identifier), e);
             }
 
             if (parsingResult == null)
@@ -133,22 +148,22 @@ namespace DriveHUD.Importers.BetOnline
 
                 if (result.IsDuplicate)
                 {
-                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate.", result.HandHistory.Gamenumber));
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. Duplicate. [{1}]", result.HandHistory.Gamenumber, Identifier));
                     continue;
                 }
 
                 if (!result.WasImported)
                 {
-                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported.", result.HandHistory.Gamenumber));
+                    LogProvider.Log.Info(this, string.Format("Hand {0} has not been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
                     continue;
                 }
 
-                LogProvider.Log.Info(this, string.Format("Hand {0} imported", result.HandHistory.Gamenumber));
-                
+                LogProvider.Log.Info(this, string.Format("Hand {0} has been imported. [{1}]", result.HandHistory.Gamenumber, Identifier));
+
                 var dataImportedArgs = new DataImportedEventArgs(result.Source.Players, convertedResult.GameInfo);
 
                 eventAggregator.GetEvent<DataImportedEvent>().Publish(dataImportedArgs);
-            }                       
+            }
         }
 
         #region IDisposable implementation

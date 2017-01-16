@@ -23,7 +23,7 @@ namespace Model.ChartData
             foreach (var group in newStat.Where(x => x.Time >= firstDate).OrderBy(x => x.Time).GroupBy(x => new { x.Time.Year, x.Time.Month, x.Time.Day, x.Time.Hour }))
             {
                 var clone = new Indicators();
-                stat.Statistcs.ForEach(x => clone.AddStatistic(x));
+                stat.Statistics.ForEach(x => clone.AddStatistic(x));
 
                 foreach (var playerstatistic in group)
                 {
@@ -55,7 +55,7 @@ namespace Model.ChartData
             foreach (var group in newStat.Where(x => x.Time >= firstDate).OrderBy(x => x.Time).GroupBy(x => new { x.Time.Year, x.Time.Month, x.Time.Day }))
             {
                 var clone = new Indicators();
-                stat.Statistcs.ForEach(x => clone.AddStatistic(x));
+                stat.Statistics.ForEach(x => clone.AddStatistic(x));
 
                 foreach (var playerstatistic in group)
                 {
@@ -86,7 +86,7 @@ namespace Model.ChartData
             foreach (var group in newStat.Where(x => x.Time >= firstDate).OrderBy(x => x.Time).GroupBy(x => new { x.Time.Year, x.Time.Month, x.Time.Day }))
             {
                 var clone = new Indicators();
-                stat.Statistcs.ForEach(x => clone.AddStatistic(x));
+                stat.Statistics.ForEach(x => clone.AddStatistic(x));
 
                 foreach (var playerstatistic in group)
                 {
@@ -117,7 +117,7 @@ namespace Model.ChartData
             foreach (var group in newStat.Where(x => x.Time >= firstDate).OrderBy(x => x.Time).GroupBy(x => new { x.Time.Year, x.Time.Month }))
             {
                 var clone = new Indicators();
-                stat.Statistcs.ForEach(x => clone.AddStatistic(x));
+                stat.Statistics.ForEach(x => clone.AddStatistic(x));
 
                 foreach (var playerstatistic in group)
                 {

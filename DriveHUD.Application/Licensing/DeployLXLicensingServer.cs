@@ -37,7 +37,7 @@ namespace DriveHUD.Application.Licensing {
         
         /// <remarks/>
         public DeployLXLicensingServer() {
-            this.Url = "http://72.55.164.243/LicensingWS/LicenseServerDriveHUD.asmx";
+            this.Url = "http://74.208.126.161/LicensingWS/LicenseServerDriveHUD.asmx";
         }
         
         /// <remarks/>

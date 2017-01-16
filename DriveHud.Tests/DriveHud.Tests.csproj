@@ -43,6 +43,10 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dependencies\HandEvaluator.dll</HintPath>
     </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.Practices.Prism.Composition, Version=5.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Composition.5.0.0\lib\NET45\Microsoft.Practices.Prism.Composition.dll</HintPath>
       <Private>True</Private>
@@ -90,11 +94,13 @@
       <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="NHibernate">
-      <HintPath>..\packages\NHibernate.4.0.3.4000\lib\net40\NHibernate.dll</HintPath>
+    <Reference Include="NHibernate, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.4.0.4.4000\lib\net40\NHibernate.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Npgsql">
-      <HintPath>..\dependencies\Npgsql.dll</HintPath>
+    <Reference Include="Npgsql, Version=3.1.9.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Npgsql.3.1.9\lib\net45\Npgsql.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="NSubstitute, Version=1.10.0.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
       <HintPath>..\packages\NSubstitute.1.10.0.0\lib\net45\NSubstitute.dll</HintPath>
@@ -212,11 +218,13 @@
     <Compile Include="UnitTests\HandAnalyzerHelpersTest.cs" />
     <Compile Include="UnitTests\HandHistoryParserFactoryTests.cs" />
     <Compile Include="UnitTests\Helpers\CashHandHistory.cs" />
+    <Compile Include="UnitTests\Helpers\DataServiceHelper.cs" />
     <Compile Include="UnitTests\Helpers\DbConfiguration.cs" />
     <Compile Include="UnitTests\Helpers\PT4Repository.cs" />
     <Compile Include="UnitTests\HudLayoutsExtensions.cs" />
     <Compile Include="UnitTests\HudLayoutsSerialization.cs" />
     <Compile Include="UnitTests\HudLayoutsServiceTests.cs" />
+    <Compile Include="UnitTests\LightIndicatorsTests.cs" />
     <Compile Include="UnitTests\ParserUtilsTests.cs" />
     <Compile Include="UnitTests\PokerCardsConverterTests.cs" />
     <Compile Include="UnitTests\OmahaHandGridTests.cs" />
@@ -228,6 +236,10 @@
     <ProjectReference Include="..\DriveHUD.Application\DriveHUD.Application.csproj">
       <Project>{9b9115f6-c76e-4f23-b050-295287d140c5}</Project>
       <Name>DriveHUD.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.Common.Resources\DriveHUD.Common.Resources.csproj">
+      <Project>{3527933a-4c5c-45eb-b0ad-42e3f34fc48d}</Project>
+      <Name>DriveHUD.Common.Resources</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.Common.Wpf\DriveHUD.Common.Wpf.csproj">
       <Project>{ab1a2f50-a5c0-4ccd-bf93-26c2a1d5f0e4}</Project>

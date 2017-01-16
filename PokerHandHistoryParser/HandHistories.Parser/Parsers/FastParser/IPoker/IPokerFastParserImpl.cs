@@ -107,7 +107,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private int GetSeatNumberFromPlayerLine(string playerLine)
         {
-            int seatOffset = playerLine.IndexOf(" s") + 7;
+            int seatOffset = playerLine.IndexOf(" seat=") + 7;
             int seatEndOffset = playerLine.IndexOf('"', seatOffset);
             string seatNumberString = playerLine.Substring(seatOffset, seatEndOffset - seatOffset);
             return Int32.Parse(seatNumberString);
@@ -115,14 +115,14 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private bool IsPlayerLineDealer(string playerLine)
         {
-            int dealerOffset = playerLine.IndexOf(" d");
+            int dealerOffset = playerLine.IndexOf(" dealer=");
             int dealerValue = int.Parse(" " + playerLine[dealerOffset + 9]);
             return dealerValue == 1;
         }
 
         private decimal GetBetNumberFromPlayerLine(string playerLine)
         {
-            var betStartPos = playerLine.IndexOf(" b");
+            var betStartPos = playerLine.IndexOf(" bet=");
 
             if (betStartPos == -1)
             {
@@ -142,7 +142,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private decimal GetStackFromPlayerLine(string playerLine)
         {
-            var stackStartPos = playerLine.IndexOf(" c") + 8;
+            var stackStartPos = playerLine.IndexOf(" chips=") + 8;
             var stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
             var stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
 
@@ -153,7 +153,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private decimal GetWinningsFromPlayerLine(string playerLine)
         {
-            var winStartPos = playerLine.IndexOf(" w");
+            var winStartPos = playerLine.IndexOf(" win=");
 
             if (winStartPos == -1)
             {

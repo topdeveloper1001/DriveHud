@@ -77,11 +77,15 @@ namespace DriveHUD.Importers.BetOnline
             }
 
             cancellationTokenSource = new CancellationTokenSource();
-            isRunning = true;
+          
             site = EnumPokerSites.Unknown;
 
             // start main job
-            Task.Run(() => ProcessTableWindows(), cancellationTokenSource.Token);
+            Task.Run(() =>
+            {
+                isRunning = true;
+                ProcessTableWindows();
+            }, cancellationTokenSource.Token);
         }
 
         /// <summary>

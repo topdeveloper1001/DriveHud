@@ -112,7 +112,7 @@ namespace DriveHUD.Importers
 
             pokerClientLogger.StopLogging();
 
-            RaiseProcessStopped();
+            RaiseProcessStopped();      
         }
 
         /// <summary>
