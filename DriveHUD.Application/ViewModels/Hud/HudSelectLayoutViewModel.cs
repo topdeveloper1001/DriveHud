@@ -22,13 +22,13 @@ namespace DriveHUD.Application.ViewModels
 {
     public class HudSelectLayoutViewModel : ViewModelBase
     {
-        private HudSelectLayoutViewModelInfo viewModelInfo;
+        private readonly HudSelectLayoutViewModelInfo _viewModelInfo;
 
         public HudSelectLayoutViewModel(HudSelectLayoutViewModelInfo viewModelInfo)
         {
             Check.ArgumentNotNull(() => viewModelInfo);
 
-            this.viewModelInfo = viewModelInfo;
+            this._viewModelInfo = viewModelInfo;
 
             Initialize();
         }
@@ -37,9 +37,16 @@ namespace DriveHUD.Application.ViewModels
         {
             var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
-            var layouts = hudLayoutService.Layouts.Where(x => x.Name == viewModelInfo.LayoutName).ToList();
+            var layouts = hudLayoutService.Layouts.Where(x => x.Name == _viewModelInfo.LayoutName).ToList();
 
-            if (!viewModelInfo.IsDeleteMode)
+            items = new ObservableCollection<string>(layouts.Select(x => x.Name));
+            if (!items.Contains(_viewModelInfo.LayoutName))
+            {
+                items.Insert(0, _viewModelInfo.LayoutName);
+                selectedItem = _viewModelInfo.LayoutName;
+            }
+
+            if (!_viewModelInfo.IsDeleteMode)
             {
                 var defaultLayout = layouts.FirstOrDefault(x => x.IsDefault);
 
@@ -49,9 +56,7 @@ namespace DriveHUD.Application.ViewModels
                 }
             }
 
-            items = new ObservableCollection<string>(layouts.Select(x => x.Name));
-
-            ShowInput = viewModelInfo.IsSaveAsMode;
+            ShowInput = _viewModelInfo.IsSaveAsMode;
 
             if (ShowInput)
             {
@@ -63,13 +68,13 @@ namespace DriveHUD.Application.ViewModels
             SaveCommand = ReactiveCommand.Create(canSave);
             SaveCommand.Subscribe(x =>
             {
-                viewModelInfo.Save?.Invoke();
+                _viewModelInfo.Save?.Invoke();
             });
 
             CancelCommand = ReactiveCommand.Create();
             CancelCommand.Subscribe(x =>
             {
-                viewModelInfo.Cancel?.Invoke();
+                _viewModelInfo.Cancel?.Invoke();
             });
         }
 
@@ -82,7 +87,7 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return viewModelInfo.IsDeleteMode
+                return _viewModelInfo.IsDeleteMode
                     ? CommonResourceManager.Instance.GetResourceString("Common_HudLayout_DeleteLabel")
                     : CommonResourceManager.Instance.GetResourceString("Common_HudLayout_SelectLabel");
             }
