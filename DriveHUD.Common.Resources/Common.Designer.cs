@@ -1449,6 +1449,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ADD TO CART.
+        /// </summary>
+        internal static string Common_Shop_AddToCart {
+            get {
+                return ResourceManager.GetString("Common_Shop_AddToCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn More.
+        /// </summary>
+        internal static string Common_Shop_LearnMore {
+            get {
+                return ResourceManager.GetString("Common_Shop_LearnMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Showdown Hands.
         /// </summary>
         internal static string Common_ShowdownHands {

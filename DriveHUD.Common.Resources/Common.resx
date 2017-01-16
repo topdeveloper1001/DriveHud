@@ -639,4 +639,10 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_BumperSticker_Description" xml:space="preserve">
     <value>Description</value>
   </data>
+  <data name="Common_Shop_AddToCart" xml:space="preserve">
+    <value>ADD TO CART</value>
+  </data>
+  <data name="Common_Shop_LearnMore" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
 </root>
