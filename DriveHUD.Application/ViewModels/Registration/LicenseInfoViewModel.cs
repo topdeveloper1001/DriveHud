@@ -12,11 +12,7 @@
 
 using DriveHUD.Application.Licensing;
 using DriveHUD.Common;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DriveHUD.Common.Wpf.Mvvm;
 
 namespace DriveHUD.Application.ViewModels.Registration
 {

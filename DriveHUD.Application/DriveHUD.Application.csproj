@@ -542,7 +542,6 @@
     <Compile Include="ViewModels\Replayer\ReplayerPlayerViewModel.cs" />
     <Compile Include="ViewModels\Replayer\ReplayerTableState.cs" />
     <Compile Include="ViewModels\Replayer\ReplayerViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="MarginSetter.cs" />
     <Compile Include="Views\Filters\FilterOmahaHandGridView.xaml.cs">
       <DependentUpon>FilterOmahaHandGridView.xaml</DependentUpon>

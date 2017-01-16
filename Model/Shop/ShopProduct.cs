@@ -59,9 +59,9 @@ namespace Model.Shop
             }
         }
 
-        private decimal price;
+        private string price;
 
-        public decimal Price
+        public string Price
         {
             get
             {
@@ -135,6 +135,26 @@ namespace Model.Shop
                 }
 
                 imageLink = value;
+                OnPropertyChanged();
+            }
+        }
+
+        private bool isAnimatedGif;
+
+        public bool IsAnimatedGif
+        {
+            get
+            {
+                return isAnimatedGif;
+            }
+            set
+            {
+                if (isAnimatedGif == value)
+                {
+                    return;
+                }
+
+                isAnimatedGif = value;
                 OnPropertyChanged();
             }
         }

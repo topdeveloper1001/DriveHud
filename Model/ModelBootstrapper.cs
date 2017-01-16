@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IShopRepository.cs" company="Ace Poker Solutions">
+// <copyright file="ModelBootstrapper.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,19 +10,26 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Microsoft.Practices.Unity;
+using Model.Shop;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Model.Shop
+namespace Model
 {
-    /// <summary>
-    /// Repository for DriveHUD shop
+    /// <summary> 
+    /// Model bootstrapper to allow us to make all interfaces and all classes internal (need for obfuscation)
     /// </summary>
-    public interface IShopRepository
+    public static class ModelBootstrapper
     {
-        IEnumerable<ShopProduct> GetProducts(ShopType shopType, int start, int amount);
+        public static void ConfigureContainer(IUnityContainer container)
+        {
+            if (container == null)
+            {
+                throw new ArgumentNullException(nameof(container));
+            }
+
+            container.RegisterType<IShopRepository, ShopRepository>();
+            container.RegisterType<IShopModel, ShopModel>();
+        }
     }
 }

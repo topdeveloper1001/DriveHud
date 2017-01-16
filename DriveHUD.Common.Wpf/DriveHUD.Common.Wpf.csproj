@@ -44,8 +44,36 @@
       <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\Prism.Wpf.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="ReactiveUI, Version=6.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\reactiveui-core.6.5.0\lib\Net45\ReactiveUI.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Splat, Version=1.6.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Splat.1.6.2\lib\Net45\Splat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Windows.Threading, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-XAML.2.2.5\lib\net45\System.Reactive.Windows.Threading.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Prism.Wpf.6.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
       <Private>True</Private>
@@ -139,11 +167,14 @@
     <Compile Include="DataTemplateSelectors\DynamicTemplateSelector.cs" />
     <Compile Include="DataTemplateSelectors\FacingPreflopTemplateSelector.cs" />
     <Compile Include="DataTemplateSelectors\OmahaHandGridTemplateSelector.cs" />
+    <Compile Include="Events\ReactiveOperation.cs" />
     <Compile Include="Events\WeakDelegateReference.cs" />
     <Compile Include="Events\WeakDelegatesManager.cs" />
     <Compile Include="Helpers\ColorsHelper.cs" />
     <Compile Include="Helpers\TextMeasurer.cs" />
     <Compile Include="MarkupExtensions\IconExtension.cs" />
+    <Compile Include="Mvvm\ViewModelBase.cs" />
+    <Compile Include="Mvvm\WindowViewModelBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -166,6 +197,26 @@
     <Compile Include="ResX\ResXKeyProviderExtension.cs" />
     <Compile Include="ResX\ResXParam.cs" />
     <Compile Include="ResX\ResXParamBase.cs" />
+    <Compile Include="WpfAnimatedGif\AnimationCache.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifApplicationExtension.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifBlock.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifBlockKind.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifColor.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifCommentExtension.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifDecoderException.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifExtension.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifFile.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifFrame.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifGraphicControlExtension.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifHeader.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifHelpers.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifImageData.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifImageDescriptor.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifLogicalScreenDescriptor.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifPlainTextExtension.cs" />
+    <Compile Include="WpfAnimatedGif\Decoding\GifTrailer.cs" />
+    <Compile Include="WpfAnimatedGif\ImageAnimationController.cs" />
+    <Compile Include="WpfAnimatedGif\ImageBehavior.cs" />
     <Compile Include="XmlnsDefinitionInfo.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

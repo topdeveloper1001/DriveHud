@@ -19,6 +19,6 @@ namespace Model.Shop
     {
         List<ShopProduct> ShopProducts { get; }
 
-        void Refresh(int start, int amount);
+        void Refresh(ShopType shopType, int start, int amount);
     }
 }

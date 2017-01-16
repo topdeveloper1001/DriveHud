@@ -10,14 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Linq;
-using ReactiveUI;
-using Microsoft.Practices.ServiceLocation;
-using System.Reactive.Linq;
 using DriveHUD.Common;
 using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Mvvm;
+using Microsoft.Practices.ServiceLocation;
+using ReactiveUI;
+using System;
 using System.Collections.ObjectModel;
+using System.Linq;
+using System.Reactive.Linq;
 
 namespace DriveHUD.Application.ViewModels
 {

@@ -17,7 +17,7 @@ using System.Linq;
 
 namespace Model.Shop
 {
-    public class ShopModel : BindableBase, IShopModel
+    internal class ShopModel : BindableBase, IShopModel
     {
         private IShopRepository shopRepository;
 
@@ -52,9 +52,9 @@ namespace Model.Shop
 
         #region Model methods
 
-        public void Refresh(int start, int amount)
+        public void Refresh(ShopType shopType, int start, int amount)
         {
-            ShopProducts = shopRepository.GetProducts(start, amount).ToList();
+            ShopProducts = shopRepository.GetProducts(shopType, start, amount).ToList();
         }
 
         #endregion
