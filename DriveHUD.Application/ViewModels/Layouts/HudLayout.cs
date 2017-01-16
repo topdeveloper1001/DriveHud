@@ -5,7 +5,6 @@ using System.Xml.Serialization;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Model.Enums;
-using Telerik.Windows.Diagrams.Core;
 
 namespace DriveHUD.Application.ViewModels.Layouts
 {
@@ -33,8 +32,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
             {
                 Name = Name,
                 IsDefault = IsDefault,
-                HudTableDefinedProperties = HudTableDefinedProperties.Clone().ToList(),
-                ActiveFor = ActiveFor.Clone().ToList()
+                HudTableDefinedProperties = HudTableDefinedProperties.Select(p=>p.Clone()).ToList(),
+                ActiveFor = ActiveFor.Select(a=>a.Clone()).ToList()
             };
         }
     }
@@ -115,9 +114,9 @@ namespace DriveHUD.Application.ViewModels.Layouts
             return new HudTableDefinedProperties
             {
                 HudTableDefinition = HudTableDefinition.Clone(),
-                HudStats = HudStats.Clone().ToList(),
-                HudPlayerTypes = HudPlayerTypes.Clone().ToList(),
-                HudPositions = HudPositions.Clone().ToList()
+                HudStats = HudStats.Select(s => s.Clone()).ToList(),
+                HudPlayerTypes = HudPlayerTypes.Select(p => p.Clone()).ToList(),
+                HudPositions = HudPositions.Select(p => p.Clone()).ToList()
             };
         }
     }
