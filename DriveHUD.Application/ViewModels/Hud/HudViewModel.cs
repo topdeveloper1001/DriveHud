@@ -88,13 +88,13 @@ namespace DriveHUD.Application.ViewModels
 
             InitializeTableLayouts();
 
-            HudType = HudType.Default;
+            HudType = HudType.Plain;
 
             hudViewTypes = new ObservableCollection<HudViewType>(Enum.GetValues(typeof(HudViewType)).Cast<HudViewType>());
 
             var settings = SettingsService.GetSettings();
 
-            hudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
+            hudViewType = HudViewType.Plain;
             lastDHHudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
 
             PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100 };
@@ -441,11 +441,7 @@ namespace DriveHUD.Application.ViewModels
                         HudType = HudType.Default;
                     }
 
-                    foreach (var hudTableViewModel in HudTableViewModels)
-                    {
-                        hudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
-                    }
-
+                    CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
                     previewHudElementViewModel.HudViewType = HudViewType;               
                 });
 
@@ -567,6 +563,10 @@ namespace DriveHUD.Application.ViewModels
                         new ObservableCollection<EnumTableTypeWrapper>(
                             GetSiteTableTypes(_currentPokerSite.Value).Select(t => new EnumTableTypeWrapper(t)));
                 this.RaisePropertyChanged(nameof(CurrentPokerSite));
+                if (CurrentPokerSite != EnumPokerSites.Ignition)
+                {
+                    HudViewType = HudViewType.Plain;
+                }
                 if (!_currentLayoutSwitching && CurrentTableType != null)
                 {
                     DataLoad(false);
@@ -974,7 +974,8 @@ namespace DriveHUD.Application.ViewModels
             if (CurrentHudTableViewModel == null)
                 return;
             var targetHudProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
-            CurrentHudTableViewModel.Opacity = ((double) targetHudProperties.HudOpacity)/100;
+            if (targetHudProperties != null)
+                CurrentHudTableViewModel.Opacity = ((double) targetHudProperties.HudOpacity)/100;
             MergeLayouts(CurrentTableDefinition, CurrentHudTableViewModel.HudElements, CurrentLayout);
             UpdateLayout(CurrentLayout);
             TableUpdate?.Invoke(this, EventArgs.Empty);
