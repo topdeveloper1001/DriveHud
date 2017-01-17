@@ -79,8 +79,14 @@ namespace DriveHUD.Application.TableConfigurators
             InitializeTable(diagram, hudTable, seats);
             CreateSeatAreas(diagram, hudTable, seats);
 
+            var labelPositions = GetPredefinedLabelPositions();
             foreach (var hudElement in hudTable.HudElements.Where(x => x.HudType == HudType))
             {
+                var label = CreatePlayerLabel(string.Format("Player {0}", hudElement.Seat));
+                label.X = labelPositions[seats][hudElement.Seat - 1, 0];
+                label.Y = labelPositions[seats][hudElement.Seat - 1, 1];
+                label.Opacity = hudTable.Opacity;
+                diagram.AddShape(label);
                 var hud = CreateHudLabel(hudElement);
                 if (!hudElement.IsVertical)
                     hud.Margin = new Thickness(0, -70, 0, 0);
@@ -113,6 +119,24 @@ namespace DriveHUD.Application.TableConfigurators
                             }).ToArray();
 
             return elements;
+        }
+
+        private RadDiagramShape CreatePlayerLabel(string player)
+        {
+            var label = new RadDiagramShape
+            {
+                DataContext = new HudPlayerViewModel { Player = player, Bank = 10 },
+                Height = labelElementHeight,
+                Width = labelElementWidth,
+                StrokeThickness = 0,
+                BorderThickness = new Thickness(0),
+                IsEnabled = false,
+                IsHitTestVisible = false,
+                IsRotationEnabled = false,
+                Background = App.Current.Resources["HudPlayerBrush"] as VisualBrush
+            };
+
+            return label;
         }
 
         protected override RadDiagramShape CreateTableRadDiagramShape()
@@ -151,6 +175,23 @@ namespace DriveHUD.Application.TableConfigurators
             };
 
             return predefinedPositions;
+        }
+
+        protected virtual Dictionary<int, int[,]> GetPredefinedLabelPositions()
+        {
+            var predefinedLablelPositions = new Dictionary<int, int[,]>
+            {
+                { 2, new int[,] { { 352, 105 }, { 352, 411 } } },
+                { 3, new int[,] { { 352, 105 }, { 541, 422 }, { 161, 422 } } },
+                { 4, new int[,] { { 352, 105 }, { 660, 256 }, { 352, 411 }, { 57, 256 } } },
+                { 5, new int[,] { { 352, 105 }, { 660, 256 }, { 352, 411 }, { 57, 256 }, { 0, 0 } } },
+                { 6, new int[,] { { 352, 105 }, { 638, 180 }, { 638, 353 }, { 352, 411 }, { 96, 353 }, { 96, 180 } } },
+                { 8, new int[,] { { 352, 105 }, { 529, 128 }, { 698, 258 }, { 529, 393 }, { 352, 411 }, { 196, 393 },  { 13, 258 }, { 194, 122 } } },
+                { 9, new int[,] { { 415, 118 }, { 636, 211 }, { 636, 318 }, { 490, 409 }, { 355, 409 }, { 220, 409 }, { 72, 318 }, { 72, 211 }, { 273, 118 }  } },
+                { 10, new int[,] { { 352, 105 }, { 529, 128 }, { 678, 200 }, { 678, 309 }, { 529, 393 }, { 352, 411 }, { 196, 393 }, { 27, 309 }, { 33, 200 }, { 194, 122 } } }
+            };
+
+            return predefinedLablelPositions;
         }
     }
 }
