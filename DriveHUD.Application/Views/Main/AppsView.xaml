@@ -291,7 +291,7 @@
                         GroupName="ShopGroup"
                         Height="32"        
                         Width="176"
-                        Content="Recommended Software"
+                        Content="{ResX Key=Common_Shop_Recommended}"
                         IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Recommended}}"
                         Style="{StaticResource RadioButtonSimpleLeft}" />
 
@@ -299,7 +299,7 @@
                         GroupName="ShopGroup"
                         Height="32"        
                         Width="146"
-                        Content="Training Products"
+                        Content="{ResX Key=Common_Shop_Training}"
                         IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Training}}"
                         Style="{StaticResource RadioButtonSimple}" />
 
@@ -307,7 +307,7 @@
                         GroupName="ShopGroup"
                         Height="32"        
                         Width="77"
-                        Content="HUDs"
+                        Content="{ResX Key=Common_Shop_Huds}"
                         IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Huds}}"
                         Style="{StaticResource RadioButtonSimpleRight}" />
 

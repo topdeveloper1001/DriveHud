@@ -31,7 +31,7 @@ namespace Model.Shop
             {
                 ProductName = "Upswing Poker Training",
                 ProductDescription = "Poker strategies and courses, brought to you by two of the world's best poker players (Doug Polk & Ryan Fee), that will take your own poker skills to the next level.",
-                Price = "$24.92/mo",
+                Price = "$27/mo",
                 ImageLink = "pack://application:,,,/DriveHUD.Common.Resources;component/images/Shop/upswing-poker-lab.gif",
                 CartLink = "https://hf322.isrefer.com/go/tpl/drivehud/",
                 LearnMoreLink = "https://hf322.isrefer.com/go/tpl/drivehud/",
