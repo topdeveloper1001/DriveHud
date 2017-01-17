@@ -359,6 +359,9 @@
     <Content Include="UnitTests\TestData\MTT-Holdem-10-max-invalid-relocation.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="UnitTests\TestData\PokerStarsBadHeader.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="UnitTests\TestData\PokerStarsHands.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
