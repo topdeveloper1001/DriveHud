@@ -943,6 +943,7 @@ namespace DriveHUD.Application.ViewModels
                     h => h.PokerSite == pokerSite && h.TableType == CurrentTableType.TableType && h.GameType == gameType);
             if (CurrentHudTableViewModel == null)
                 return;
+            CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
             var targetHudProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
             if (targetHudProperties != null)
                 CurrentHudTableViewModel.Opacity = ((double) targetHudProperties.HudOpacity)/100;
