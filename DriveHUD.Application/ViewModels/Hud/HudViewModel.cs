@@ -468,7 +468,6 @@ namespace DriveHUD.Application.ViewModels
                     o.UpdateMainStats();
 
                 });
-
                 if (PreviewHudElementViewModel != null)
                 {
                     PreviewHudElementViewModel.StatInfoCollection.Clear();
@@ -796,6 +795,15 @@ namespace DriveHUD.Application.ViewModels
             get { return _currentLayout; }
             set
             {
+                if (CurrentLayout != null && CurrentTableDefinition!=null && _currentLayout != value)
+                {
+                    var targetProps = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
+                    if (targetProps != null)
+                    {
+                        targetProps.HudStats.Clear();
+                        targetProps.HudStats.AddRange(StatInfoObserveCollection);
+                    }
+                }
                 this.RaiseAndSetIfChanged(ref _currentLayout, value);
                 // load data for selected layout
                 _currentLayoutSwitching = true;
@@ -840,25 +848,7 @@ namespace DriveHUD.Application.ViewModels
     
         private void OpenDataSave()
         {
-            var saveNewLayout =
-                CurrentLayout.HudTableDefinedProperties.FirstOrDefault(
-                    p => p.HudTableDefinition.Equals(CurrentTableDefinition)) == null;
             var layoutName = CurrentLayout.Name;
-            if (saveNewLayout)
-            {
-                layoutName = $"DriveHUD:";
-                if (CurrentTableDefinition.PokerSite.HasValue)
-                    layoutName =
-                        $"{layoutName} {CommonResourceManager.Instance.GetEnumResource(CurrentTableDefinition.PokerSite)}";
-                if (CurrentTableDefinition.GameType.HasValue)
-                    layoutName = $"{CommonResourceManager.Instance.GetEnumResource(CurrentTableDefinition.GameType)}";
-                var i = 1;
-                while (Layouts.Any(l => string.Equals(l.Name, layoutName, StringComparison.InvariantCultureIgnoreCase)))
-                {
-                    layoutName = $"{layoutName} {i}";
-                    i++;
-                }
-            }
             
             var hudSelectLayoutViewModelInfo = new HudSelectLayoutViewModelInfo
             {
@@ -1051,7 +1041,6 @@ namespace DriveHUD.Application.ViewModels
                 statInfo.Initialize();
                 StatInfoCollection.Add(statInfo);
             }
-
             var targetProps = GetTargetProperties(layout, CurrentTableDefinition);
             StatInfoObserveCollection.Clear();
             if (targetProps == null)
