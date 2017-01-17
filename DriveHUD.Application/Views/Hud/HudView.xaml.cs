@@ -18,6 +18,7 @@ using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
 using System;
+using System.Linq;
 
 namespace DriveHUD.Application.Views
 {
@@ -69,8 +70,6 @@ namespace DriveHUD.Application.Views
             get
             {
                 var pokerSite = ViewModel.CurrentPokerSite ?? ViewModel.DefaultPokerSite;
-                if (pokerSite == EnumPokerSites.Ignition)
-                    pokerSite = EnumPokerSites.PokerStars;
                 return
                     Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(
                         TableConfiguratorHelper.GetServiceName(pokerSite, ViewModel.HudType));

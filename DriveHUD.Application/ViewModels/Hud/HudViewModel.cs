@@ -125,7 +125,7 @@ namespace DriveHUD.Application.ViewModels
                             var tableConfigurator =
                                 ServiceLocator.Current.GetInstance<ITableConfigurator>(
                                     TableConfiguratorHelper.GetServiceName(
-                                        pokerSite == EnumPokerSites.Ignition ? EnumPokerSites.PokerStars : pokerSite,
+                                        pokerSite,
                                         hType));
                             var hudElementViewModels = tableConfigurator.GenerateElements((int) tableType).ToArray();
 
