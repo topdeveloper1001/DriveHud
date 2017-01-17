@@ -88,8 +88,22 @@ namespace DriveHUD.Application.TableConfigurators
                 label.Opacity = hudTable.Opacity;
                 diagram.AddShape(label);
                 var hud = CreateHudLabel(hudElement);
-                if (!hudElement.IsVertical)
-                    hud.Margin = new Thickness(0, -70, 0, 0);
+                if (hudElement.HudViewType == HudViewType.Plain)
+                {
+                    hud.Position = new Point(label.X - (hud.Width - label.Width)/2, label.Y + label.Height);
+                }
+                if (hudElement.HudViewType == HudViewType.Horizontal)
+                {
+                    hud.Position = hudElement.IsRightOriented ? new Point(label.X, label.Y - 60) : new Point(label.X-30, label.Y - 60);
+                }
+                if (hudElement.HudViewType == HudViewType.Vertical_1)
+                {
+                    hud.Position = hudElement.IsRightOriented ? new Point(label.X, label.Y - 60) : new Point(label.X - 30, label.Y - 60);
+                }
+                if (hudElement.HudViewType == HudViewType.Vertical_2)
+                {
+                    hud.Position = hudElement.IsRightOriented ? new Point(label.X, label.Y - 60) : new Point(label.X - 30, label.Y - 60);
+                }
                 diagram.AddShape(hud);
             }
 
