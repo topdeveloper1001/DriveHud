@@ -11,9 +11,9 @@
             _callback?.ReplayHand(gameNumber, pokerSiteId);
         }
 
-        public static void RaiseSaveHudLayout(HudLayoutContract hudLayout)
+        public static void RaiseSaveHudLayout(HudLayoutContract hudLayout, short pokerSiteId, short gameType, short tableType)
         {
-            _callback?.SaveHudLayout(hudLayout);
+            _callback?.SaveHudLayout(hudLayout, pokerSiteId, gameType, tableType);
         }
 
         public static void LoadLayout(string layoutName, short pokerSiteId, short gameType, short tableType)

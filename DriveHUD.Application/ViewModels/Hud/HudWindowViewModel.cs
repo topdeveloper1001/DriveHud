@@ -96,7 +96,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            HudNamedPipeBindingService.RaiseSaveHudLayout(hudTable);
+            HudNamedPipeBindingService.RaiseSaveHudLayout(hudTable, _pokerSiteId, (short)GameType.Value, (short)TableType);
         }
 
         private async void TagHand(object obj)

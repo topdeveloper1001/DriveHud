@@ -9,68 +9,74 @@ using Model;
 using DriveHUD.Application.ViewModels.Replayer;
 using Model.Interfaces;
 using DriveHUD.Entities;
+using Model.Enums;
 
 namespace DriveHUD.Application.HudServices
 {
     internal class HudNamedPipeBindingCallbackService : IHudNamedPipeBindingCallbackService
     {
-        public void SaveHudLayout(HudLayoutContract hudLayout)
+        public void SaveHudLayout(HudLayoutContract hudLayout, short pokerSiteId, short gameType, short tableType)
         {
-            //if (hudLayout == null)
-            //{
-            //    LogProvider.Log.Warn(this, "hudLayout is null");
-            //    return;
-            //}
+            if (hudLayout == null)
+            {
+                LogProvider.Log.Warn(this, "hudLayout is null");
+                return;
+            }
 
-            //var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-            //var activeLayout = hudLayoutsService.GetActiveLayout(hudLayout.LayoutId);
+            var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            var activeLayout = hudLayoutsService.GetLayout(hudLayout.LayoutName);
 
-            //if (activeLayout == null)
-            //{
-            //    LogProvider.Log.Info(this, $"Cannot find layout with id: {hudLayout.LayoutId}");
-            //    return;
-            //}
+            if (activeLayout == null)
+            {
+                LogProvider.Log.Info(this, $"Cannot find layout with id: {hudLayout.LayoutName}");
+                return;
+            }
+            var viewModel = hudLayoutsService.GetHudTableViewModel((EnumPokerSites)pokerSiteId, (EnumGameType)gameType,
+                (EnumTableType)tableType);
+            if (viewModel == null)
+            {
+                LogProvider.Log.Info(this, $"Cannot find view model for layout with id: {hudLayout.LayoutName}");
+                return;
+            }
 
-            //if (!hudLayoutsService.HudTableViewModels.ContainsKey(hudLayout.LayoutId))
-            //{
-            //    LogProvider.Log.Info(this, $"Cannot find view model for layout with id: {hudLayout.LayoutId}");
-            //    return;
-            //}
+            // update positions 
+            var tableDef =
+                activeLayout.HudTableDefinedProperties.FirstOrDefault(
+                    p =>
+                        p.HudTableDefinition.PokerSite == viewModel.PokerSite &&
+                        p.HudTableDefinition.GameType == viewModel.GameType &&
+                        p.HudTableDefinition.TableType == viewModel.TableType);
+            foreach (var hudPosition in hudLayout.HudPositions)
+            {
+                var hudToUpdate = tableDef?.HudPositions?.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber && (int)x.HudType == hudPosition.HudType);
+                if (hudToUpdate == null)
+                {
+                    continue;
+                }
 
-            //var viewModel = hudLayoutsService.HudTableViewModelDictionary[hudLayout.LayoutId];
+                hudToUpdate.Position = hudPosition.Position;
 
-            //// update positions 
-            //foreach (var hudPosition in hudLayout.HudPositions)
-            //{
-            //    var hudToUpdate = activeLayout?.HudPositions?.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber && (int)x.HudType == hudPosition.HudType);
-            //    if (hudToUpdate == null)
-            //    {
-            //        continue;
-            //    }
+                if (viewModel == null)
+                {
+                    continue;
+                }
 
-            //    hudToUpdate.Position = hudPosition.Position;
+                var hudElementToUpdate = viewModel.HudElements.FirstOrDefault(x => x.Seat == hudToUpdate.Seat && x.HudType == hudToUpdate.HudType);
+                if (hudElementToUpdate != null)
+                {
+                    hudElementToUpdate.Position = hudToUpdate.Position;
+                }
+            }
 
-            //    if (viewModel == null)
-            //    {
-            //        continue;
-            //    }
+            var hudData = new HudSavedDataInfo
+            {
+                LayoutInfo = activeLayout,
+                Name = activeLayout.Name,
+                HudTable = viewModel,
+                Stats = tableDef?.HudStats
+            };
 
-            //    var hudElementToUpdate = viewModel.HudElements.FirstOrDefault(x => x.Seat == hudToUpdate.Seat && x.HudType == hudToUpdate.HudType);
-            //    if (hudElementToUpdate != null)
-            //    {
-            //        hudElementToUpdate.Position = hudToUpdate.Position;
-            //    }
-            //}
-
-            //var hudData = new HudSavedDataInfo
-            //{
-            //    LayoutId = activeLayout.LayoutId,
-            //    Name = activeLayout.Name,
-            //    HudTable = viewModel,
-            //    Stats = activeLayout.HudStats
-            //};
-
-            //App.Current.Dispatcher.Invoke(() => hudLayoutsService.SaveAs(hudData));
+            App.Current.Dispatcher.Invoke(() => hudLayoutsService.SaveAs(hudData));
         }
 
         public void ReplayHand(long gameNumber, short pokerSiteId)
