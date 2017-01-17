@@ -30,6 +30,7 @@ using Microsoft.Practices.ServiceLocation;
 using System.Threading;
 using System.Diagnostics;
 using DriveHUD.Application.Controls;
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.Views.Replayer;
 using DriveHUD.Entities;
 using DriveHUD.Application.ViewModels.Popups;
@@ -477,19 +478,21 @@ namespace DriveHUD.Application.TableConfigurators
 
         private IList<StatInfo> GetHudStats(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            var result = new List<StatInfo>();
-
-            //var tableKey = HudViewModel.GetHash(pokerSite, gameType, tableType);
-
-            //var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
-            //if (activeLayout == null)
-            //{
-            //    LogProvider.Log.Error("Could not find active layout");
-            //    return null;
-            //}
-
-            //return activeLayout.HudStats.ToArray();
-            return new List<StatInfo>();
+            var tableDefinition = new HudTableDefinition
+            {
+                PokerSite = pokerSite,
+                GameType = gameType,
+                TableType = tableType
+            };
+            var activeLayout = hudLayoutsService.GetActiveLayout(tableDefinition);
+            if (activeLayout == null)
+            {
+                LogProvider.Log.Error("Could not find active layout");
+                return null;
+            }
+            var targetProps =
+                activeLayout.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.TableType == tableType);
+            return targetProps?.HudStats.ToArray();
         }
 
         private EnumPokerSites GetPokerSite(EnumPokerSites site)
