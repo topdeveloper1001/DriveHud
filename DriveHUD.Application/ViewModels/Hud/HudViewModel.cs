@@ -803,7 +803,7 @@ namespace DriveHUD.Application.ViewModels
                     if (targetProps != null)
                     {
                         targetProps.HudStats.Clear();
-                        targetProps.HudStats.AddRange(StatInfoObserveCollection);
+                        targetProps.HudStats.AddRange(StatInfoObserveCollection.Select(s=>s.Clone()));
                     }
                 }
                 this.RaiseAndSetIfChanged(ref _currentLayout, value);
