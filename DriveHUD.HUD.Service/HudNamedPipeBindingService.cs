@@ -16,9 +16,9 @@
             _callback?.SaveHudLayout(hudLayout);
         }
 
-        public static void LoadLayout(int layoutId, string layoutName)
+        public static void LoadLayout(string layoutName, short pokerSiteId, short gameType, short tableType)
         {
-            _callback?.LoadLayout(layoutId, layoutName);
+            _callback?.LoadLayout(layoutName, pokerSiteId, gameType, tableType);
         }
 
         public static void TagHand(long gameNumber, short pokerSiteId, int tag)

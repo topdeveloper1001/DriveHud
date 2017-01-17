@@ -98,5 +98,6 @@ namespace DriveHUD.Application.ViewModels
 
         HudLayoutInfo GetActiveLayout(HudTableDefinition tableDefinition);
         HudTableViewModel GetHudTableViewModel(EnumPokerSites? pokerSite, EnumGameType? gameType, EnumTableType tableType);
+        void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType);
     }
 }

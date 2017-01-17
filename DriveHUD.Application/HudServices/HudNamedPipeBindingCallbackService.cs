@@ -4,6 +4,7 @@ using DriveHUD.Common.Log;
 using Microsoft.Practices.ServiceLocation;
 using DriveHUD.Application.ViewModels;
 using System.Linq;
+using DriveHUD.Application.ViewModels.Layouts;
 using Model;
 using DriveHUD.Application.ViewModels.Replayer;
 using Model.Interfaces;
@@ -82,9 +83,9 @@ namespace DriveHUD.Application.HudServices
             ServiceLocator.Current.GetInstance<IReplayerService>().ReplayHand(playerName, gameNumber, pokerSiteId, showHoleCards: true);
         }
 
-        public void LoadLayout(int layoutId, string layoutName)
+        public void LoadLayout(string layoutName, short pokerSiteId, short gameType, short tableType)
         {
-            LogProvider.Log.Info($"Load layout {layoutId} {layoutName}");
+            LogProvider.Log.Info($"Load layout {layoutName}");
 
             var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
@@ -92,17 +93,17 @@ namespace DriveHUD.Application.HudServices
 
             if (hudToLoad == null)
             {
-                LogProvider.Log.Info(this, $"Cannot find layout with id {layoutId} and name {layoutName}");
+                LogProvider.Log.Info(this, $"Cannot find layout with name {layoutName}");
                 return;
             }
 
-            //if (hudToLoad.IsDefault)
-            //{
-            //    LogProvider.Log.Info(this, $"Layout {layoutName} ({layoutId}) is already selected as default.");
-            //    return;
-            //}
+            if (hudToLoad.IsDefault)
+            {
+                LogProvider.Log.Info(this, $"Layout {layoutName} is already selected as default.");
+                return;
+            }
 
-            //App.Current.Dispatcher.Invoke(() => hudLayoutsService.SetLayoutActive(hudToLoad));
+            App.Current.Dispatcher.Invoke(() => hudLayoutsService.SetLayoutActive(hudToLoad, pokerSiteId, gameType, tableType));
         }
 
         public void TagHand(long gameNumber, short pokerSiteId, int tag)

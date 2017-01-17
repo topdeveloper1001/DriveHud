@@ -73,7 +73,11 @@ namespace DriveHUD.Application.Views
             Layout?.Cleanup();
             Layout = layout;
             ViewModel?.SetLayout(layout);
-
+            if (ViewModel != null)
+            {
+                ViewModel.GameType = layout.TableHud.GameType;
+                ViewModel.TableType = layout.TableType;
+            }
             if (layout?.TableHud != null)
             {
                 hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.TableHud.PokerSite.ToString());

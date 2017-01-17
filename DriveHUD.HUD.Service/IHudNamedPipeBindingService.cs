@@ -28,7 +28,7 @@ namespace DriveHUD.HUD.Service
         void ReplayHand(long gameNumber, short pokerSiteId);
 
         [OperationContract(Name = "LoadLayout", IsOneWay = true)]
-        void LoadLayout(int layoutId, string layoutName);
+        void LoadLayout(string layoutName, short pokerSiteId, short gameType, short tableType);
 
         [OperationContract(Name = "TagHand", IsOneWay = true)]
         void TagHand(long gameNumber, short pokerSiteId, int tag);
@@ -37,8 +37,8 @@ namespace DriveHUD.HUD.Service
     [DataContract]
     public class HudLayoutContract
     {
-        [DataMember(Name = "LayoutId")]
-        public int LayoutId { get; set; }
+        [DataMember(Name = "LayoutName")]
+        public int LayoutName { get; set; }
 
         [DataMember(Name = "HudPositions")]
         public List<HudPositionsContract> HudPositions { get; set; }

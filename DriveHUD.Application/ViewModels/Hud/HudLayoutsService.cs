@@ -608,6 +608,28 @@ namespace DriveHUD.Application.ViewModels.Hud
                     h => h.PokerSite == pokerSite && h.GameType == gameType && h.TableType == tableType);
         }
 
+        public void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType)
+        {
+            var tableDefinition = new HudTableDefinition
+            {
+                GameType = (EnumGameType) gameType,
+                PokerSite = (EnumPokerSites) pokerSiteId,
+                TableType = (EnumTableType) tableType
+            };
+            var layout = GetActiveFor(tableDefinition);
+            if (!layout.IsDefault)
+                layout.ActiveFor.RemoveByCondition(a => a.Equals(tableDefinition));
+            hudToLoad.ActiveFor.Add(tableDefinition);
+            InternalSave(hudToLoad);
+        }
+
+        private HudLayoutInfo GetActiveFor(HudTableDefinition tableDefinition)
+        {
+            var result = Layouts.FirstOrDefault(l => l.ActiveFor.Any(a=>a.Equals(tableDefinition))) ??
+                         Layouts.FirstOrDefault(l => l.IsDefault);
+            return result;
+        }
+
         public HudLayoutInfo GetLayout(string name)
         {
             return Layouts.FirstOrDefault(x => x.Name.Equals(name));
