@@ -37,6 +37,7 @@ namespace DriveHUD.Application.ViewModels
         public HudElementViewModel()
         {
             statInfoCollection = new ObservableCollection<StatInfo>();
+            Opacity = 100;
         }
 
         public HudElementViewModel(IEnumerable<StatInfo> statInfos)
@@ -539,7 +540,14 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        public double Opacity { get; set; }
+        [ProtoMember(22)]
+        private double _opacity;
+
+        public double Opacity
+        {
+            get { return _opacity; }
+            set { this.RaiseAndSetIfChanged(ref _opacity, value); }
+        }
 
         #endregion
 

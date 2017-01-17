@@ -560,7 +560,6 @@ namespace DriveHUD.Application.ViewModels
                 if (hudTableViewModel!=null)
                 {
                     var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                    hudElements.ForEach(x=>x.Opacity = hudTableViewModel.Opacity);
                     hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name, tableDefinition);
 
                     Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>

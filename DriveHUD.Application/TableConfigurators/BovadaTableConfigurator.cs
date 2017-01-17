@@ -128,7 +128,7 @@ namespace DriveHUD.Application.TableConfigurators
                                 TiltMeter = 100,
                                 HudType = HudType,
                                 HudViewType = HudViewType.Vertical_1,
-                                Position = new Point(hudElementPositionX, hudElementPositionY)
+                                Position = new Point(hudElementPositionX, hudElementPositionY),
                             }).ToArray();
 
             return elements;

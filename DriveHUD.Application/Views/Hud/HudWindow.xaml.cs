@@ -126,6 +126,7 @@ namespace DriveHUD.Application.Views
                 }
 
                 var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudType);
+                panel.Opacity = playerHudContent.HudElement.Opacity;
 
                 dgCanvas.Children.Add(panel);
             }
@@ -195,12 +196,14 @@ namespace DriveHUD.Application.Views
 
                     hudRichPanel.vbMain.Height = double.NaN;
                     hudRichPanel.vbMain.Width = viewModel.Width * XFraction;
+                    hudRichPanel.Opacity = viewModel.Opacity;
                 }
 
                 if (hudPanel is HudPanel)
                 {
                     hudPanel.Height = double.NaN;
                     hudPanel.Width = viewModel.Width * XFraction;
+                    hudPanel.Opacity = hudPanel.Opacity;
                 }
 
                 var positions = hudPanelCreator.CalculatePositions(viewModel, this);
