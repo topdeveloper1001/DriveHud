@@ -539,6 +539,8 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        public double Opacity { get; set; }
+
         #endregion
 
         #endregion

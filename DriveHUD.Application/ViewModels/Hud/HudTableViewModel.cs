@@ -41,7 +41,6 @@ namespace DriveHUD.Application.ViewModels
 
         [ProtoMember(6)]
         public EnumGameType? GameType { get; set; }
-        [ProtoMember(7)]
         public double Opacity { get; set; }
 
         public ObservableCollection<HudElementViewModel> HudElements { get; set; }

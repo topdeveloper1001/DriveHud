@@ -119,7 +119,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 HudStats = HudStats.Select(s => s.Clone()).ToList(),
                 HudPlayerTypes = HudPlayerTypes.Select(p => p.Clone()).ToList(),
                 HudPositions = HudPositions.Select(p => p.Clone()).ToList(),
-                HudBumperStickerTypes = HudBumperStickerTypes.Select(p=>p.Clone()).ToList()
+                HudBumperStickerTypes = HudBumperStickerTypes.Select(p=>p.Clone()).ToList(),
+                HudOpacity = HudOpacity
             };
         }
     }

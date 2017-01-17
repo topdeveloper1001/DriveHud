@@ -85,7 +85,6 @@ namespace DriveHUD.Application.TableConfigurators
                 var label = CreatePlayerLabel(string.Format("Player {0}", hudElement.Seat));
                 label.X = labelPositions[seats][hudElement.Seat - 1, 0];
                 label.Y = labelPositions[seats][hudElement.Seat - 1, 1];
-                label.Opacity = hudTable.Opacity;
                 diagram.AddShape(label);
                 var hud = CreateHudLabel(hudElement);
                 if (hudElement.HudViewType == HudViewType.Plain)

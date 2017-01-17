@@ -90,10 +90,18 @@ namespace DriveHUD.Application.TableConfigurators
         protected RadDiagramShape CreateHudLabel(HudElementViewModel viewModel)
         {
             var label = CreateRadDiagramShape(viewModel);
-
+            
             BindingOperations.ClearBinding(label, RadDiagramItem.PositionProperty);
             BindingOperations.ClearBinding(label, FrameworkElement.WidthProperty);
             BindingOperations.ClearBinding(label, FrameworkElement.HeightProperty);
+            BindingOperations.ClearBinding(label, UIElement.OpacityProperty);
+
+            var opacityBinding = new Binding(nameof(HudElementViewModel.Opacity))
+            {
+                Source = viewModel,
+                Mode = BindingMode.TwoWay
+            };
+            label.SetBinding(UIElement.OpacityProperty, opacityBinding);
 
             var positionBinding = new Binding(nameof(HudElementViewModel.Position)) { Source = viewModel, Mode = BindingMode.TwoWay };
             label.SetBinding(RadDiagramItem.PositionProperty, positionBinding);
@@ -161,7 +169,8 @@ namespace DriveHUD.Application.TableConfigurators
                 IsRotationEnabled = false,
                 Tag = HudType,
                 Padding = new Thickness(0),
-                IsDraggingEnabled = false
+                IsDraggingEnabled = false,
+                Opacity = viewModel.Opacity
             };
 
             return label;

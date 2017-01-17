@@ -946,7 +946,10 @@ namespace DriveHUD.Application.ViewModels
             CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
             var targetHudProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
             if (targetHudProperties != null)
+            {
                 CurrentHudTableViewModel.Opacity = ((double) targetHudProperties.HudOpacity)/100;
+                CurrentHudTableViewModel.HudElements.ForEach(e=>e.Opacity = CurrentHudTableViewModel.Opacity);
+            }
             MergeLayouts(CurrentTableDefinition, CurrentHudTableViewModel.HudElements, CurrentLayout);
             UpdateLayout(CurrentLayout);
             TableUpdate?.Invoke(this, EventArgs.Empty);
@@ -1125,7 +1128,8 @@ namespace DriveHUD.Application.ViewModels
                 previewStat?.UpdateColor();
             }
             var targetHudProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
-            CurrentHudTableViewModel.Opacity = ((double)targetHudProperties.HudOpacity) / 100;
+            CurrentHudTableViewModel.Opacity = ((double) targetHudProperties.HudOpacity)/100;
+            CurrentHudTableViewModel.HudElements.ForEach(e=>e.Opacity = CurrentHudTableViewModel.Opacity);
             MergeLayouts(CurrentTableDefinition, CurrentHudTableViewModel.HudElements, CurrentLayout);
             TableUpdate?.Invoke(this, EventArgs.Empty);
             ClosePopup();

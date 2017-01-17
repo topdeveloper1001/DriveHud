@@ -338,7 +338,7 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var availableLayouts = hudLayoutsService.Layouts.Where(l=>l.HudTableDefinedProperties.Any(p=>
+                var availableLayouts = hudLayoutsService.Layouts .Where(l=>l.HudTableDefinedProperties.Any(p=>
                                 (p.HudTableDefinition.GameType == tableDefinition.GameType ||
                                  p.HudTableDefinition.GameType == null) &&
                                 (p.HudTableDefinition.PokerSite == null ||
@@ -560,6 +560,7 @@ namespace DriveHUD.Application.ViewModels
                 if (hudTableViewModel!=null)
                 {
                     var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
+                    hudElements.ForEach(x=>x.Opacity = hudTableViewModel.Opacity);
                     hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name, tableDefinition);
 
                     Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>

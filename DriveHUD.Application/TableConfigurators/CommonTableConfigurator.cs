@@ -93,12 +93,10 @@ namespace DriveHUD.Application.TableConfigurators
 
                 label.X = labelPositions[seats][hudElement.Seat - 1, 0];
                 label.Y = labelPositions[seats][hudElement.Seat - 1, 1];
-                label.Opacity = hudTable.Opacity;
                 diagram.AddShape(label);
 
                 var hud = CreateHudLabel(hudElement);
                 hud.ZIndex = 100;
-                hud.Opacity = hudTable.Opacity;
                 diagram.AddShape(hud);
             }
 
