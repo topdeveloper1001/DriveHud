@@ -35,6 +35,7 @@ using Model.Events;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using System.ComponentModel;
+using System.Windows;
 using Model.Filters;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
@@ -124,7 +125,9 @@ namespace DriveHUD.Application.ViewModels
                         {
                             var tableConfigurator =
                                 ServiceLocator.Current.GetInstance<ITableConfigurator>(
-                                    TableConfiguratorHelper.GetServiceName(pokerSite, hType));
+                                    TableConfiguratorHelper.GetServiceName(
+                                        pokerSite == EnumPokerSites.Ignition ? EnumPokerSites.PokerStars : pokerSite,
+                                        hType));
                             var hudElementViewModels = tableConfigurator.GenerateElements((int) tableType).ToArray();
 
                             hudElementViewModels.ForEach(x => x.HudViewType = HudViewType);
