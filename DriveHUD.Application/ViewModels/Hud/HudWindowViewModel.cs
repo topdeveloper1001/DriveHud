@@ -19,11 +19,17 @@ namespace DriveHUD.Application.ViewModels.Hud
     public class HudWindowViewModel : BaseViewModel
     {
         private ReaderWriterLockSlim _readerWriterLock;
-        private string _layoutName;
         private long _gameNumber;
         private short _pokerSiteId;
         public EnumGameType? GameType { get; set; }
         public EnumTableType TableType { get; set; }
+
+        private string _layoutName;
+        public string LayoutName
+        {
+            get { return _layoutName; }
+            set { SetProperty(ref _layoutName, value); }
+        }
 
         internal HudWindowViewModel()
         {
@@ -51,6 +57,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private ObservableCollection<string> _layoutsCollection;
+        
         public ObservableCollection<string> LayoutsCollection
         {
             get { return _layoutsCollection; }
@@ -76,7 +83,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 if (layout != null)
                 {
-                    _layoutName = layout.LayoutName;
+                    LayoutName = layout.LayoutName;
                     _gameNumber = layout.GameNumber;
                     _pokerSiteId = layout.PokerSiteId;
 

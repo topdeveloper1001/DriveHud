@@ -426,26 +426,17 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeObservables()
         {
-            this.ObservableForProperty(x => x.HudViewType).Select(x => true)
-                .Subscribe(x =>
-                {
-                    var settings = SettingsService.GetSettings();
-                    settings.GeneralSettings.HudViewMode = (int)HudViewType;
-                    SettingsService.SaveSettings(settings);
-
-                    if (HudViewType == HudViewType.Plain)
-                    {
-                        HudType = HudType.Plain;
-                        return;
-                    }
-                    else
-                    {
-                        HudType = HudType.Default;
-                    }
-
-                    CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
-                    previewHudElementViewModel.HudViewType = HudViewType;               
-                });
+            this.ObservableForProperty(x => x.HudViewType).Select(x => true).Subscribe(x =>
+            {
+                var settings = SettingsService.GetSettings();
+                settings.GeneralSettings.HudViewMode = (int) HudViewType;
+                SettingsService.SaveSettings(settings);
+                HudType = HudViewType == HudViewType.Plain ? HudType.Plain : HudType.Default;
+                CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
+                previewHudElementViewModel.HudViewType = HudViewType;
+                if (!_currentLayoutSwitching && CurrentTableType != null)
+                    DataLoad(false);
+            });
 
             Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
                 h => StatInfoObserveCollection.CollectionChanged += h,
@@ -707,8 +698,6 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref hudType, value);
                 this.RaisePropertyChanged(() => SelectedHUD);
-                if (!_currentLayoutSwitching && CurrentTableType != null)
-                    DataLoad(false);
             }
         }
 
@@ -1345,18 +1334,6 @@ namespace DriveHUD.Application.ViewModels
                     },
                     n => { });
             });
-        }
-
-        internal void UpdateSeatContextMenuState()
-        {
-            var pokerSite = CurrentPokerSite.HasValue ? CurrentPokerSite.Value : DefaultPokerSite;
-            var tableSeatSetting = TableSeatAreaHelpers.GetSeatSetting(CurrentTableType.TableType, pokerSite);
-            UpdateSeatContextMenuState(tableSeatSetting.IsPreferredSeatEnabled);
-        }
-
-        private void UpdateSeatContextMenuState(bool isEnabled)
-        {
-            CurrentHudTableViewModel?.TableSeatAreaCollection?.Where(x => x != null).ForEach(x => x.SetContextMenuEnabled(isEnabled));
         }
 
         private void OnPreferredSeatChanged(PreferredSeatChangedEventArgs obj)

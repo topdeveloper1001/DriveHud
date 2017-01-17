@@ -82,7 +82,7 @@ namespace DriveHUD.Application.TableConfigurators
             foreach (var hudElement in hudTable.HudElements.Where(x => x.HudType == HudType))
             {
                 var hud = CreateHudLabel(hudElement);
-                if (seats < 9)
+                if (!hudElement.IsVertical)
                     hud.Margin = new Thickness(0, -70, 0, 0);
                 diagram.AddShape(hud);
             }

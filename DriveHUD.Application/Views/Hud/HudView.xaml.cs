@@ -39,7 +39,6 @@ namespace DriveHUD.Application.Views
                 ViewModel.UpdateActiveLayout();
                 var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
                 Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int) tableType);
-                UpdatePreferredSeatingStateWithoutNotification();
             };
         }
 
@@ -52,12 +51,6 @@ namespace DriveHUD.Application.Views
 
             var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
             Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int) tableType);
-            UpdatePreferredSeatingStateWithoutNotification();
-        }
-
-        private void UpdatePreferredSeatingStateWithoutNotification()
-        {
-            ViewModel.UpdateSeatContextMenuState();
         }
 
         private HudViewModel ViewModel
