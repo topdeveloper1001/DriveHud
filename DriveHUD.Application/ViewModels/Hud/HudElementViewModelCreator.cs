@@ -43,6 +43,9 @@ namespace DriveHUD.Application.ViewModels
             var hudElementTemplate = hudTableViewModel?.HudElements.FirstOrDefault(x => x.Seat == seatNumber && x.HudType == hudType);
 
             var hudElementViewModel = hudElementTemplate?.Clone();
+            hudElementViewModel.HudViewType = tableDefinition.PokerSite == Entities.EnumPokerSites.Bodog ||
+                                                    tableDefinition.PokerSite == Entities.EnumPokerSites.Bovada ||
+                                                    tableDefinition.PokerSite == Entities.EnumPokerSites.Ignition ? hudViewModel.HudViewType : Entities.HudViewType.Plain;
 
             return hudElementViewModel;
         }
