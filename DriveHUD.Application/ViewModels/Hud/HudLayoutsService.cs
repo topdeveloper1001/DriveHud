@@ -751,19 +751,20 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return null;
             }
-            var newFileName = Path.GetFileName(path);
-            var directory = GetLayoutsDirectory();
-            var i = 0;
-            while (File.Exists(Path.Combine(directory.FullName, newFileName)))
-            {
-                newFileName = $"{Path.GetFileNameWithoutExtension(newFileName)} {i}{LayoutFileExtension}";
-            }
             try
             {
-                using (var fs = File.Open(Path.Combine(directory.FullName, newFileName), FileMode.Open))
+                using (var fs = File.Open(path, FileMode.Open))
                 {
                     var importedHudLayout = LoadLayoutFromStream(fs);
+                    var i = 0;
+                    var layoutName = importedHudLayout.Name;
+                    while (Layouts.Any(l=>l.Name == importedHudLayout.Name))
+                    {
+                        importedHudLayout.Name = $"{layoutName} {i}";
+                        i++;
+                    }
                     Layouts.Add(importedHudLayout);
+                    InternalSave(importedHudLayout);
                     return importedHudLayout;
                 }
             }
