@@ -35,7 +35,6 @@ using Model.Events;
 using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using System.ComponentModel;
-using System.Windows;
 using Model.Filters;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
@@ -992,6 +991,14 @@ namespace DriveHUD.Application.ViewModels
         {
             Check.ArgumentNotNull(() => hudElementViewModels);
             Check.ArgumentNotNull(() => layout);
+            if (!layout.IsDefault)
+            {
+                foreach (var layoutHudTableDefinedProperty in layout.HudTableDefinedProperties)
+                {
+                    layoutHudTableDefinedProperty.HudTableDefinition.GameType = tableDefinition.GameType;
+                    layoutHudTableDefinedProperty.HudTableDefinition.PokerSite = tableDefinition.PokerSite;
+                }
+            }
             var targetHudProperties = GetTargetProperties(layout, tableDefinition);
             if (targetHudProperties == null)
                 return;
