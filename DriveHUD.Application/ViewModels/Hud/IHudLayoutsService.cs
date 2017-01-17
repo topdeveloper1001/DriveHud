@@ -40,11 +40,6 @@ namespace DriveHUD.Application.ViewModels
         HudLayoutInfo GetLayout(string name);
 
         /// <summary>
-        /// Save current layout
-        /// </summary>
-        void Save(HudSavedDataInfo hudData);
-
-        /// <summary>
         /// Save new layout
         /// </summary>
         HudLayoutInfo SaveAs(HudSavedDataInfo hudData);

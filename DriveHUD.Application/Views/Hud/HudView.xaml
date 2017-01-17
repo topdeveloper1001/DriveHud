@@ -627,7 +627,8 @@
                                 Grid.Column="1"
                                 Orientation="Horizontal"
                                 HorizontalAlignment="Right">
-                                <Button Style="{StaticResource SiteGameButton}"  Command="{Binding SelectSiteAndGameTypeCommand}"/>
+                                <Button Style="{StaticResource SiteGameButton}"  Command="{Binding SelectSiteAndGameTypeCommand}"
+                                        IsEnabled="{Binding CurrentLayout.IsDefault, Converter={StaticResource InvertedBooleanConverter}}"/>
 
 
                                 <Button 

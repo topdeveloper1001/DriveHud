@@ -522,10 +522,7 @@ namespace DriveHUD.Application.ViewModels
                 _currentTableType = value;
                 this.RaisePropertyChanged(nameof(CurrentTableType));
                 if (!_currentLayoutSwitching && CurrentTableType != null)
-                {
                     DataLoad(false);
-                    TableUpdate?.Invoke(this, new EventArgs());
-                }
             }
         }
 
@@ -564,14 +561,10 @@ namespace DriveHUD.Application.ViewModels
                             GetSiteTableTypes(_currentPokerSite.Value).Select(t => new EnumTableTypeWrapper(t)));
                 this.RaisePropertyChanged(nameof(CurrentPokerSite));
                 if (CurrentPokerSite != EnumPokerSites.Ignition)
-                {
                     HudViewType = HudViewType.Plain;
-                }
-                if (!_currentLayoutSwitching && CurrentTableType != null)
-                {
-                    DataLoad(false);
-                    TableUpdate?.Invoke(this, new EventArgs());
-                }
+                if (_currentLayoutSwitching || CurrentTableType == null)
+                    return;
+                DataLoad(false);
             }
         }
 
@@ -587,10 +580,7 @@ namespace DriveHUD.Application.ViewModels
                 _currentGameType = value;
                 this.RaisePropertyChanged(nameof(CurrentGameType));
                 if (!_currentLayoutSwitching && CurrentTableType != null)
-                {
                     DataLoad(false);
-                    TableUpdate?.Invoke(this, new EventArgs());
-                }
             }
         }
 
@@ -717,10 +707,7 @@ namespace DriveHUD.Application.ViewModels
                 this.RaiseAndSetIfChanged(ref hudType, value);
                 this.RaisePropertyChanged(() => SelectedHUD);
                 if (!_currentLayoutSwitching && CurrentTableType != null)
-                {
                     DataLoad(false);
-                    TableUpdate?.Invoke(this, new EventArgs());
-                }
             }
         }
 
