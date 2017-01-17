@@ -164,6 +164,8 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
 
             try
             {
+                handText = ClearHandHistory(handText);
+
                 string[] handLines = SplitHandsLines(handText);
 
                 // parse summary hand
@@ -709,6 +711,11 @@ namespace HandHistories.Parser.Parsers.FastParser.Base
         public virtual string GetTournamentIdFromFileName(string filename)
         {
             return string.Empty;
+        }
+
+        protected virtual string ClearHandHistory(string handText)
+        {
+            return handText;
         }
     }
 }
