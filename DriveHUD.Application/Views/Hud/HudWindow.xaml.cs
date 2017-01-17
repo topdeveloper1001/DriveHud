@@ -203,7 +203,7 @@ namespace DriveHUD.Application.Views
                 {
                     hudPanel.Height = double.NaN;
                     hudPanel.Width = viewModel.Width * XFraction;
-                    hudPanel.Opacity = hudPanel.Opacity;
+                    hudPanel.Opacity = viewModel.Opacity;
                 }
 
                 var positions = hudPanelCreator.CalculatePositions(viewModel, this);

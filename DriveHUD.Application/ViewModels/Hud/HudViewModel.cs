@@ -1130,6 +1130,12 @@ namespace DriveHUD.Application.ViewModels
             var targetHudProperties = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
             CurrentHudTableViewModel.Opacity = ((double) targetHudProperties.HudOpacity)/100;
             CurrentHudTableViewModel.HudElements.ForEach(e=>e.Opacity = CurrentHudTableViewModel.Opacity);
+            if (CurrentLayout.IsDefault)
+                foreach (var table in HudTableViewModels.Where(t => t.TableType == CurrentTableType.TableType))
+                {
+                    table.HudElements.ForEach(e=>e.Opacity = CurrentHudTableViewModel.Opacity);
+                    table.Opacity = CurrentHudTableViewModel.Opacity;
+                }
             MergeLayouts(CurrentTableDefinition, CurrentHudTableViewModel.HudElements, CurrentLayout);
             TableUpdate?.Invoke(this, EventArgs.Empty);
             ClosePopup();
