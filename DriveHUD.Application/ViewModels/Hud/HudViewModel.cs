@@ -797,22 +797,24 @@ namespace DriveHUD.Application.ViewModels
             get { return _currentLayout; }
             set
             {
-                if (CurrentLayout != null && CurrentTableDefinition!=null && _currentLayout != value)
+                if (CurrentLayout != null && CurrentTableDefinition != null && _currentLayout != value)
                 {
                     var targetProps = GetTargetProperties(CurrentLayout, CurrentTableDefinition);
                     if (targetProps != null)
                     {
                         targetProps.HudStats.Clear();
-                        targetProps.HudStats.AddRange(StatInfoObserveCollection.Select(s=>s.Clone()));
+                        targetProps.HudStats.AddRange(StatInfoObserveCollection.Select(s => s.Clone()));
                     }
                 }
                 this.RaiseAndSetIfChanged(ref _currentLayout, value);
                 // load data for selected layout
                 _currentLayoutSwitching = true;
-                if (CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.PokerSite != CurrentPokerSite))
+                if (CurrentLayout != null &&
+                    CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.PokerSite != CurrentPokerSite))
                     CurrentPokerSite =
                         CurrentLayout.HudTableDefinedProperties.FirstOrDefault()?.HudTableDefinition.PokerSite;
-                if (CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.GameType != CurrentGameType))
+                if (CurrentLayout != null &&
+                    CurrentLayout.HudTableDefinedProperties.All(p => p.HudTableDefinition.GameType != CurrentGameType))
                     CurrentGameType =
                         CurrentLayout.HudTableDefinedProperties.FirstOrDefault()?.HudTableDefinition.GameType;
                 _currentLayoutSwitching = false;

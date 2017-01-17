@@ -689,7 +689,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             layout.HudTableDefinedProperties =
                 hudData.LayoutInfo.HudTableDefinedProperties.Select(p => p.Clone()).ToList();
             var targetProps =
-                hudData.LayoutInfo.HudTableDefinedProperties.FirstOrDefault(
+                layout.HudTableDefinedProperties.FirstOrDefault(
                     p => p.HudTableDefinition.Equals(hudData.TableDefinition));
             if (targetProps != null)
             {
