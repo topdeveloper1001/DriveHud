@@ -657,25 +657,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             var layout = GetLayout(hudData.Name);
             var addLayout = layout == null;
             if (addLayout)
-                layout = new HudLayoutInfo {Name = hudData.Name};
-            else
-                layout.Name = hudData.Name;
+                layout = new HudLayoutInfo();
+            layout.Name = hudData.Name;
+            layout.TableType = hudData.LayoutInfo.TableType;
             layout.HudStats = hudData.Stats.Select(x =>
             {
                 var statInfoBreak = x as StatInfoBreak;
                 return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
             }).ToList();
-            layout.HudPositions =
-                hudData.HudTable.HudElements.Select(
-                    x =>
-                        new HudSavedPosition
-                        {
-                            Height = x.Height,
-                            Position = x.Position,
-                            Width = x.Width,
-                            Seat = x.Seat,
-                            HudType = x.HudType
-                        }).ToList();
             var fileName = InternalSave(layout);
             if (addLayout)
             {
