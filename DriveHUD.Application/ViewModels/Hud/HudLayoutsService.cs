@@ -96,23 +96,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         defaultLayoutInfo.Name = $"Default {CommonResourceManager.Instance.GetEnumResource(tableType)}";
                         defaultLayoutInfo.TableType = tableType;
                         defaultLayoutInfo.IsDefault = true;
-                        var fileName = InternalSave(defaultLayoutInfo);
-                        foreach (var pokerSite in Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>())
-                        {
-                            foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
-                            {
-                                HudLayoutMappings.Mappings.Add(new HudLayoutMapping
-                                {
-                                    FileName = Path.GetFileName(fileName),
-                                    Name = defaultLayoutInfo.Name,
-                                    GameType = gameType,
-                                    PokerSite = pokerSite,
-                                    TableType = tableType,
-                                    IsSelected = false,
-                                    IsDefault = true
-                                });
-                            }
-                        }
+                        InternalSave(defaultLayoutInfo);
                     }
                     using (var fs = File.Open(mappingsFilePath, FileMode.Create))
                     {
@@ -130,8 +114,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private HudLayoutInfo LoadLayout(HudLayoutMapping mapping)
         {
             HudLayoutInfo result;
-            using (
-                var stream = File.Open(Path.Combine(GetLayoutsDirectory().FullName, mapping.FileName), FileMode.Open)
+            using (var stream = File.Open(Path.Combine(GetLayoutsDirectory().FullName, mapping.FileName), FileMode.Open)
             )
             {
                 result = LoadLayoutFromStream(stream);
@@ -378,7 +361,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                 });
 
                 layout?.HudBumperStickerTypes.ForEach(x =>
-                    { x?.InitializeFilterPredicate(); });
+                {
+                    x?.InitializeFilterPredicate();
+                });
 
                 return layout;
             }
@@ -664,7 +649,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Save new layout
         /// </summary>
         /// <param name="hudData">Hud Data</param>
-        public string SaveAs(HudSavedDataInfo hudData)
+        public HudLayoutInfo SaveAs(HudSavedDataInfo hudData)
         {
             if (hudData == null)
                 return null;
@@ -723,7 +708,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
                 xmlSerializer.Serialize(fs, HudLayoutMappings);
             }
-            return layout.Name;
+            return layout;
         }
 
         /// <summary>
@@ -753,7 +738,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// Import layout
         /// </summary>
         /// <param name="path">Path to layout</param>
-        public string Import(string path)
+        public HudLayoutInfo Import(string path)
         {
             if (!File.Exists(path))
             {
@@ -788,7 +773,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                             });
                         }
                     }
-                    return fileName;
+                    return importedHudLayout;
                 }
             }
             catch (Exception e)
@@ -1018,7 +1003,31 @@ namespace DriveHUD.Application.ViewModels.Hud
                 HudLayoutMappings.Mappings.Where(
                         m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType)
                     .OrderByDescending(m => m.IsDefault)
-                    .Select(m => m.Name).Distinct();
+                    .Select(m => m.Name)
+                    .Distinct();
+        }
+
+        public List<HudLayoutInfo> GetAllLayouts()
+        {
+            var result = new List<HudLayoutInfo>();
+            var layoutsDirectory = GetLayoutsDirectory();
+            foreach (var layoutFile in
+                layoutsDirectory.GetFiles()
+                    .Where(
+                        f =>
+                            string.Equals(f.Extension, LayoutFileExtension,
+                                StringComparison.InvariantCultureIgnoreCase) &&
+                            !string.Equals(Path.GetFileNameWithoutExtension(f.Name), MappingsFileName,
+                                StringComparison.InvariantCultureIgnoreCase)))
+            {
+                using (var fs = File.Open(layoutFile.FullName, FileMode.Open))
+                {
+                    var layout = LoadLayoutFromStream(fs);
+                    if (layout != null)
+                        result.Add(layout);
+                }
+            }
+            return result.OrderBy(l=>l.TableType).ToList();
         }
     }
 }

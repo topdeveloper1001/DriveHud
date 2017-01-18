@@ -290,8 +290,9 @@
                                      ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
                                      ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
                                      ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
-                                     ItemsSource="{Binding LayoutsNames}"
-                                     SelectedValue="{Binding Path=CurrentLayoutName}">
+                                     ItemsSource="{Binding Layouts}"
+                                            DisplayMemberPath="Name"
+                                     SelectedValue="{Binding Path=CurrentLayout}">
                 </comboboxControl:ComboBoxEx>
 
                 <!-- TABLE LAYOUT ***************************************************************** -->

@@ -33,7 +33,7 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Save new layout
         /// </summary>
-        string SaveAs(HudSavedDataInfo hudData);
+        HudLayoutInfo SaveAs(HudSavedDataInfo hudData);
 
         /// <summary>
         /// Delete layout
@@ -50,7 +50,7 @@ namespace DriveHUD.Application.ViewModels
         /// Import layout
         /// </summary>
         /// <param name="path">Path to layout</param>
-        string Import(string path);
+        HudLayoutInfo Import(string path);
 
         /// <summary>
         /// Set icons for hud elements based on stats and layout player type settings
@@ -91,5 +91,6 @@ namespace DriveHUD.Application.ViewModels
         void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType);
         IEnumerable<string> GetLayoutsNames();
         IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
+        List<HudLayoutInfo> GetAllLayouts();
     }
 }
