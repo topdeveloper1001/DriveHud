@@ -614,6 +614,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (selected != null)
                 selected.IsSelected = false;
             mapping.IsSelected = true;
+            SaveMappings();
+        }
+
+        private void SaveMappings()
+        {
             var layoutsDirectory = GetLayoutsDirectory();
             var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
             using (var fs = File.Open(mappingsFilePath, FileMode.Create))
@@ -633,15 +638,10 @@ namespace DriveHUD.Application.ViewModels.Hud
             var layoutsDirectory = GetLayoutsDirectory();
             var fileName = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutToDelete.Name)?.FileName;
             if (!string.IsNullOrEmpty(fileName))
-                File.Delete(fileName);
+                File.Delete(Path.Combine(layoutsDirectory.FullName, fileName));
             HudLayoutMappings.Mappings.RemoveByCondition(
                 m => string.Equals(m.FileName, Path.GetFileName(fileName), StringComparison.InvariantCultureIgnoreCase));
-            var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
-            using (var fs = File.Open(mappingsFilePath, FileMode.Create))
-            {
-                var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
-                xmlSerializer.Serialize(fs, HudLayoutMappings);
-            }
+            SaveMappings();
             return true;
         }
 
@@ -665,6 +665,17 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var statInfoBreak = x as StatInfoBreak;
                 return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
             }).ToList();
+            layout.HudPositions =
+                hudData.HudTable.HudElements.Select(
+                    x =>
+                        new HudSavedPosition
+                        {
+                            Height = x.Height,
+                            Position = x.Position,
+                            Width = x.Width,
+                            Seat = x.Seat,
+                            HudType = x.HudType
+                        }).ToList();
             var fileName = InternalSave(layout);
             if (addLayout)
             {
@@ -690,13 +701,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 HudLayoutMappings.Mappings.Where(m => m.Name == layout.Name)
                     .ForEach(m => m.TableType = layout.TableType);
             }
-            var layoutsDirectory = GetLayoutsDirectory();
-            var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
-            using (var fs = File.Open(mappingsFilePath, FileMode.Create))
-            {
-                var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
-                xmlSerializer.Serialize(fs, HudLayoutMappings);
-            }
+            SaveMappings();
             return layout;
         }
 
@@ -735,41 +740,43 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
             try
             {
+                HudLayoutInfo importedHudLayout;
                 using (var fs = File.Open(path, FileMode.Open))
                 {
-                    var importedHudLayout = LoadLayoutFromStream(fs);
-                    var i = 0;
-                    var layoutName = importedHudLayout.Name;
-                    while (HudLayoutMappings.Mappings.Any(l => l.Name == importedHudLayout.Name))
-                    {
-                        importedHudLayout.Name = $"{layoutName} {i}";
-                        i++;
-                    }
-                    var fileName = InternalSave(importedHudLayout);
-                    foreach (var pokerSite in Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>())
-                    {
-                        foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
-                        {
-                            HudLayoutMappings.Mappings.Add(new HudLayoutMapping
-                            {
-                                FileName = Path.GetFileName(fileName),
-                                Name = importedHudLayout.Name,
-                                GameType = gameType,
-                                PokerSite = pokerSite,
-                                TableType = importedHudLayout.TableType,
-                                IsSelected = false,
-                                IsDefault = false
-                            });
-                        }
-                    }
-                    return importedHudLayout;
+                    importedHudLayout = LoadLayoutFromStream(fs);
                 }
+                var i = 0;
+                var layoutName = importedHudLayout.Name;
+                importedHudLayout.IsDefault = false;
+                while (HudLayoutMappings.Mappings.Any(l => l.Name == importedHudLayout.Name))
+                {
+                    importedHudLayout.Name = $"{layoutName} {i}";
+                    i++;
+                }
+                var fileName = InternalSave(importedHudLayout);
+                foreach (var pokerSite in Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>())
+                {
+                    foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
+                    {
+                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                        {
+                            FileName = Path.GetFileName(fileName),
+                            Name = importedHudLayout.Name,
+                            GameType = gameType,
+                            PokerSite = pokerSite,
+                            TableType = importedHudLayout.TableType,
+                            IsSelected = false,
+                            IsDefault = false
+                        });
+                    }
+                }
+                SaveMappings();
+                return importedHudLayout;
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, e);
             }
-
             return null;
         }
 

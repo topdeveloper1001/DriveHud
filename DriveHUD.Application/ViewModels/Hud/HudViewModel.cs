@@ -81,7 +81,8 @@ namespace DriveHUD.Application.ViewModels
                 }
                 _currentLayoutSwitching = true;
                 this.RaiseAndSetIfChanged(ref _currentLayout, value);
-                CurrentTableType = TableTypes.FirstOrDefault(t => t.TableType == _currentLayout.TableType);
+                if (_currentLayout != null)
+                    CurrentTableType = TableTypes.FirstOrDefault(t => t.TableType == _currentLayout.TableType);
                 // load data for selected layout
                 _currentLayoutSwitching = false;
                 DataLoad(true);
