@@ -1,0 +1,25 @@
+﻿?PokerStars Hand #163995445015:  Hold'em No Limit (Ђ0.02/Ђ0.05 EUR) - 2017/01/03 23:59:25 UTC [2017/01/03 18:59:25 ET]
+Table 'Deipylos II' 6-max Seat #2 is the button
+Seat 1: smcouto (Ђ5 in chips) 
+Seat 2: tubuciana (Ђ1.53 in chips) 
+Seat 3: AAorAA7 (Ђ6.18 in chips) 
+Seat 5: iavsb (Ђ3 in chips) 
+Seat 6: 1312spot (Ђ12.30 in chips) 
+AAorAA7: posts small blind Ђ0.02
+iavsb: posts big blind Ђ0.05
+*** HOLE CARDS ***
+Dealt to iavsb [Th 6c]
+1312spot: raises Ђ0.05 to Ђ0.10
+smcouto: folds 
+tubuciana: folds 
+AAorAA7: folds 
+iavsb: folds 
+Uncalled bet (Ђ0.05) returned to 1312spot
+1312spot collected Ђ0.12 from pot
+*** SUMMARY ***
+Total pot Ђ0.12 | Rake Ђ0 
+Seat 1: smcouto folded before Flop (didn't bet)
+Seat 2: tubuciana (button) folded before Flop (didn't bet)
+Seat 3: AAorAA7 (small blind) folded before Flop
+Seat 5: iavsb (big blind) folded before Flop
+Seat 6: 1312spot collected (Ђ0.12)
