@@ -323,14 +323,8 @@ namespace DriveHUD.Application.ViewModels
                 var site = e.GameInfo.PokerSite;
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-                var tableDefinition = new HudTableDefinition
-                {
-                    PokerSite = e.GameInfo.PokerSite,
-                    GameType = e.GameInfo.EnumGameType,
-                    TableType = e.GameInfo.TableType
-                };
                 var activeLayout =
-                    hudLayoutsService.GetActiveLayout(tableDefinition);
+                    hudLayoutsService.GetActiveLayout(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
                 if (activeLayout == null)
                 {
@@ -338,12 +332,7 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
-                var availableLayouts = hudLayoutsService.Layouts .Where(l=>l.HudTableDefinedProperties.Any(p=>
-                                (p.HudTableDefinition.GameType == tableDefinition.GameType ||
-                                 p.HudTableDefinition.GameType == null) &&
-                                (p.HudTableDefinition.PokerSite == null ||
-                                 p.HudTableDefinition.PokerSite == tableDefinition.PokerSite) &&
-                                p.HudTableDefinition.TableType == tableDefinition.TableType)).Select(x => x.Name);
+                var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
                 var ht = new HudLayout
                 {
@@ -418,7 +407,8 @@ namespace DriveHUD.Application.ViewModels
 
                     var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
 
-                    playerHudContent.HudElement = hudElementCreator.Create(tableDefinition, HudViewModel, seatNumber, ht.HudType);
+                    playerHudContent.HudElement = hudElementCreator.Create(e.GameInfo.PokerSite, e.GameInfo.TableType,
+                        e.GameInfo.EnumGameType, HudViewModel, seatNumber, ht.HudType);
 
                     if (playerHudContent.HudElement == null)
                     {
@@ -445,19 +435,8 @@ namespace DriveHUD.Application.ViewModels
 
                     var doNotAddPlayer = false;
 
-                    var selectedHudTableDefinedProperties =
-                        activeLayout.HudTableDefinedProperties.FirstOrDefault(
-                            p => p.HudTableDefinition.Equals(tableDefinition)) ??
-                        activeLayout.HudTableDefinedProperties.FirstOrDefault(
-                            p =>
-                                (p.HudTableDefinition.GameType == tableDefinition.GameType ||
-                                 p.HudTableDefinition.GameType == null) &&
-                                (p.HudTableDefinition.PokerSite == null ||
-                                 p.HudTableDefinition.PokerSite == tableDefinition.PokerSite) &&
-                                p.HudTableDefinition.TableType == tableDefinition.TableType);
-
                     // create new array to prevent Collection was modified exception
-                    var activeLayoutHudStats = selectedHudTableDefinedProperties.HudStats.ToArray();
+                    var activeLayoutHudStats = activeLayout.HudStats.ToArray();
 
                     var statsExceptActive = HudViewModel.StatInfoCollection.Concat(HudViewModel.StatInfoObserveCollection)
                                             .Except(activeLayoutHudStats, new LambdaComparer<StatInfo>((x, y) => x.Stat == y.Stat)).Select(x =>
@@ -531,7 +510,7 @@ namespace DriveHUD.Application.ViewModels
 
                     if (lastHandStatistic != null)
                     {
-                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout.Name, tableDefinition);
+                        var stickers = hudLayoutsService.GetValidStickers(lastHandStatistic, activeLayout.Name);
 
                         if (stickers.Any())
                         {
@@ -540,7 +519,7 @@ namespace DriveHUD.Application.ViewModels
 
                         hudLayoutsService.SetStickers(playerHudContent.HudElement,
                             importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session,
-                                playerCollectionItem), activeLayout.Name, tableDefinition);
+                                playerCollectionItem), activeLayout.Name);
                     }
 
                     if (!doNotAddPlayer)
@@ -560,7 +539,7 @@ namespace DriveHUD.Application.ViewModels
                 if (hudTableViewModel!=null)
                 {
                     var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name, tableDefinition);
+                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name);
 
                     Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
                     {

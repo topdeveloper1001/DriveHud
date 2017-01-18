@@ -22,33 +22,24 @@ namespace DriveHUD.Application.ViewModels
     /// </summary>
     internal interface IHudLayoutsService
     {
-        /// <summary>
-        /// Cached HUDs
-        /// </summary>
         List<HudTableViewModel> HudTableViewModels { get; set; }
 
-        /// <summary>
-        /// Cached layouts
-        /// </summary>
-        List<HudLayoutInfo> Layouts { get; }
+        HudLayoutMappings HudLayoutMappings { get; set; }
 
-        /// <summary>
-        /// Get layout by name
-        /// </summary>
-        /// <param name="name">Name of layout</param>
-        /// <returns>Layout</returns>
+        HudLayoutInfo GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
+        HudTableViewModel GetHudTableViewModel(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
         HudLayoutInfo GetLayout(string name);
 
         /// <summary>
         /// Save new layout
         /// </summary>
-        HudLayoutInfo SaveAs(HudSavedDataInfo hudData);
+        string SaveAs(HudSavedDataInfo hudData);
 
         /// <summary>
         /// Delete layout
         /// </summary>
         /// <param name="layout">Layout to delete</param>
-        bool Delete(HudLayoutInfo layout);
+        bool Delete(string layoutName);
 
         /// <summary>
         /// Export layout
@@ -59,29 +50,29 @@ namespace DriveHUD.Application.ViewModels
         /// Import layout
         /// </summary>
         /// <param name="path">Path to layout</param>
-        HudLayoutInfo Import(string path);
+        string Import(string path);
 
         /// <summary>
         /// Set icons for hud elements based on stats and layout player type settings
         /// </summary>
-        void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, string layoutName, HudTableDefinition tableDefinition);
+        void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, string layoutName);
 
         /// <summary>
         /// Checks if specified hand is valid for sticker calculations
         /// </summary>
         /// <returns>List of sticker names for which specified statistic is valid</returns>
-        IList<string> GetValidStickers(Playerstatistic statistic, string layoutName, HudTableDefinition tableDefinition);
+        IList<string> GetValidStickers(Playerstatistic statistic, string layoutName);
 
         /// <summary>
         /// Set stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
         void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics,
-            string layoutName, HudTableDefinition tableDefinition);
+            string layoutName);
 
         /// <summary>
         /// Save bumper stickers for layout specified
         /// </summary>
-        void SaveBumperStickers(HudLayoutInfo hudLayout, HudTableDefinition tableDefinition);
+        //void SaveBumperStickers(HudLayoutInfo hudLayout);
 
         /// <summary>
         /// Get path to image directory
@@ -96,8 +87,9 @@ namespace DriveHUD.Application.ViewModels
         /// <returns>Full path to image</returns>
         string GetImageLink(string image);
 
-        HudLayoutInfo GetActiveLayout(HudTableDefinition tableDefinition);
-        HudTableViewModel GetHudTableViewModel(EnumPokerSites? pokerSite, EnumGameType? gameType, EnumTableType tableType);
+
         void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType);
+        IEnumerable<string> GetLayoutsNames();
+        IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
     }
 }

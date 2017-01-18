@@ -31,8 +31,8 @@ namespace DriveHUD.Application.HudServices
                 LogProvider.Log.Info(this, $"Cannot find layout with id: {hudLayout.LayoutName}");
                 return;
             }
-            var viewModel = hudLayoutsService.GetHudTableViewModel((EnumPokerSites)pokerSiteId, (EnumGameType)gameType,
-                (EnumTableType)tableType);
+            var viewModel = hudLayoutsService.GetHudTableViewModel((EnumPokerSites) pokerSiteId,
+                (EnumTableType) tableType, (EnumGameType) gameType);
             if (viewModel == null)
             {
                 LogProvider.Log.Info(this, $"Cannot find view model for layout with id: {hudLayout.LayoutName}");
@@ -40,15 +40,9 @@ namespace DriveHUD.Application.HudServices
             }
 
             // update positions 
-            var tableDef =
-                activeLayout.HudTableDefinedProperties.FirstOrDefault(
-                    p =>
-                        p.HudTableDefinition.PokerSite == viewModel.PokerSite &&
-                        p.HudTableDefinition.GameType == viewModel.GameType &&
-                        p.HudTableDefinition.TableType == viewModel.TableType);
             foreach (var hudPosition in hudLayout.HudPositions)
             {
-                var hudToUpdate = tableDef?.HudPositions?.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber && (int)x.HudType == hudPosition.HudType);
+                var hudToUpdate = activeLayout?.HudPositions?.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber && (int)x.HudType == hudPosition.HudType);
                 if (hudToUpdate == null)
                 {
                     continue;
@@ -73,7 +67,7 @@ namespace DriveHUD.Application.HudServices
                 LayoutInfo = activeLayout,
                 Name = activeLayout.Name,
                 HudTable = viewModel,
-                Stats = tableDef?.HudStats
+                Stats = activeLayout?.HudStats
             };
 
             App.Current.Dispatcher.Invoke(() => hudLayoutsService.SaveAs(hudData));

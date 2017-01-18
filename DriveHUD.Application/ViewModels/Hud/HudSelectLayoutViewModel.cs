@@ -40,21 +40,12 @@ namespace DriveHUD.Application.ViewModels
             var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
             var layouts =
-                hudLayoutService.Layouts.Where(x => x.Name == _viewModelInfo.LayoutName || !x.IsDefault).ToList();
+                hudLayoutService.GetLayoutsNames().ToList();
 
-            items = new ObservableCollection<string>(layouts.Select(x => x.Name));
+            items = new ObservableCollection<string>(layouts);
             if (items.Contains(_viewModelInfo.LayoutName))
                 selectedItem = _viewModelInfo.LayoutName;
 
-            if (!_viewModelInfo.IsDeleteMode)
-            {
-                var defaultLayout = layouts.FirstOrDefault(x => x.IsDefault);
-
-                if (defaultLayout != null)
-                {
-                    selectedItem = defaultLayout.Name;
-                }
-            }
 
             ShowInput = _viewModelInfo.IsSaveAsMode;
 

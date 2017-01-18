@@ -478,21 +478,13 @@ namespace DriveHUD.Application.TableConfigurators
 
         private IList<StatInfo> GetHudStats(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            var tableDefinition = new HudTableDefinition
-            {
-                PokerSite = pokerSite,
-                GameType = gameType,
-                TableType = tableType
-            };
-            var activeLayout = hudLayoutsService.GetActiveLayout(tableDefinition);
+            var activeLayout = hudLayoutsService.GetActiveLayout(pokerSite, tableType, gameType);
             if (activeLayout == null)
             {
                 LogProvider.Log.Error("Could not find active layout");
                 return null;
             }
-            var targetProps =
-                activeLayout.HudTableDefinedProperties.FirstOrDefault(p => p.HudTableDefinition.TableType == tableType);
-            return targetProps?.HudStats.ToArray();
+            return activeLayout.HudStats.ToArray();
         }
 
         private EnumPokerSites GetPokerSite(EnumPokerSites site)

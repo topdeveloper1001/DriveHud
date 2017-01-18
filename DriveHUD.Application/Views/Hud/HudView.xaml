@@ -109,10 +109,6 @@
             <hud:HudPlayerSettingsView />
         </DataTemplate>
 
-        <DataTemplate DataType="{x:Type vm:HudSelectSiteGameTypeViewModel}">
-            <hud:HudSelectSiteGameTypeView />
-        </DataTemplate>
-
         <DataTemplate DataType="{x:Type vm:HudBumperStickersSettingsViewModel}">
             <hud:HudBumperStickersSettingsView />
         </DataTemplate>
@@ -122,26 +118,6 @@
                 <DrawingGroup>
                     <DrawingGroup.Children>
                         <GeometryDrawing Brush="#FF2a2d31" Geometry="F1 M 14.1652,21.04C 13.6865,20.2694 14.8445,17.1835 15.5472,15.8342C 17.0885,12.8608 19.8575,12.5767 17.0402,16.79C 15.5708,18.9833 14.9043,21.0817 17.811,21.0817C 21.3687,21.1866 21.8777,20.2179 18.4777,16.0192C 15.9617,12.9152 16.1151,12.7661 11.1512,15.1368C 5.56315,17.7982 4.88582,17.4542 1.94848,10.4221C -0.0208346,5.70881 0.0111478,5.39684 2.58317,4.02216C 4.7445,2.86616 5.59383,3.76081 8.8125,5.35017C 11.8072,6.82347 14.7192,9.79816 13.2552,6.63683C 12.7765,5.59947 14.4792,5.94884 15.0578,7.45417C 15.5418,8.71951 16.2765,9.42215 16.6818,9.0115C 17.0938,8.60485 16.1725,7.07416 15.3018,5.44351C 14.0992,3.18883 11.9218,0.042141 13.9112,5.18883C 14.5205,6.77151 11.9272,5.24083 9.99516,4.13683C 1.47917,-0.712498 8.42183,0.042141 11.9218,0.042141C 14.8538,0.042141 18.5418,6.25548 18.5418,11.1995C 18.5418,13.0062 19.0755,14.7597 19.7902,14.9984C 20.1315,15.5491 21.7712,17.9542 21.9738,19.7875C 22.2818,22.5168 21.3698,22.0475 18.4685,22.3862C 16.5205,22.6102 14.8677,22.1387 14.3943,21.3734"/>
-                    </DrawingGroup.Children>
-                </DrawingGroup>
-            </DrawingBrush.Drawing>
-        </DrawingBrush>
-
-        <DrawingBrush x:Key="SiteGameButtonBackground" Stretch="Uniform">
-            <DrawingBrush.Drawing>
-                <DrawingGroup>
-                    <DrawingGroup.Children>
-                        <GeometryDrawing Brush="#FF2a2d31" Geometry="M 12.2564 34.934019 C 4.7740825 32.65517 -0.95876338 22.976791 0.50254342 15.090772 3.4841374 -0.99955573 24.613619 -5.0694488 33.182927 8.7959818 c 3.150294 5.0972822 3.150294 13.3107542 0 18.4080362 C 29.019038 33.941332 19.97093 37.283591 12.2564 34.934019 Z m 8.051304 -2.498602 c 0.834355 -0.320172 1.265907 -1.349929 0.996874 -2.378712 -0.5669 -2.16783 -6.389297 -2.302547 -7.102038 -0.164326 -0.759434 2.278303 2.862983 3.78718 6.105164 2.543038 z M 9.3767965 26.460467 C 10.174686 24.381201 7.9347743 21 5.7594532 21 3.5845831 21 3.5060798 22.849818 5.556704 25.777494 7.3832901 28.385311 8.5576 28.595259 9.3767965 26.460467 Z M 30.563143 25.543976 C 32.232242 22.996609 31.813418 21 29.609963 21 c -1.646133 0 -4.04995 4.479069 -3.168894 5.904647 1.068263 1.728486 2.382157 1.294778 4.122074 -1.360671 z m -7.391884 -2.198964 c 2.312005 -2.092335 2.410355 -8.044855 0.173753 -10.516271 -2.092335 -2.312005 -8.044855 -2.410355 -10.516271 -0.173753 -2.312005 2.092335 -2.410355 8.044855 -0.173753 10.516271 2.092335 2.312005 8.044855 2.410355 10.516271 0.173753 z M 8.9489687 12.595353 C 10.220695 10.219111 9.7450675 8 7.964036 8 6.5483097 8 3.7462248 12.780366 4.4728213 13.956024 5.5697996 15.730972 7.6013406 15.113419 8.9489687 12.595353 Z M 32 13.610784 c 0 -0.764069 -0.868058 -2.451569 -1.929017 -3.75 -1.53097 -1.873643 -2.187112 -2.1070196 -3.179794 -1.1309902 -1.00075 0.9839619 -0.981161 1.7335752 0.098 3.7500002 C 28.417868 15.14931 32 15.957832 32 13.610784 Z M 21.234687 6.512427 C 22.417722 4.8821603 22.128053 4.1754178 20 3.5 16.889226 2.5126788 14.12789 3.7730484 14.690259 5.9235498 c 0.526189 2.0121521 5.206023 2.4332503 6.544428 0.5888772 z"/>
-                    </DrawingGroup.Children>
-                </DrawingGroup>
-            </DrawingBrush.Drawing>
-        </DrawingBrush>
-
-        <DrawingBrush x:Key="SiteGameButtonHighlightedBackground" Stretch="Uniform">
-            <DrawingBrush.Drawing>
-                <DrawingGroup>
-                    <DrawingGroup.Children>
-                        <GeometryDrawing Brush="#FFaaaaaa" Geometry="M 12.2564 34.934019 C 4.7740825 32.65517 -0.95876338 22.976791 0.50254342 15.090772 3.4841374 -0.99955573 24.613619 -5.0694488 33.182927 8.7959818 c 3.150294 5.0972822 3.150294 13.3107542 0 18.4080362 C 29.019038 33.941332 19.97093 37.283591 12.2564 34.934019 Z m 8.051304 -2.498602 c 0.834355 -0.320172 1.265907 -1.349929 0.996874 -2.378712 -0.5669 -2.16783 -6.389297 -2.302547 -7.102038 -0.164326 -0.759434 2.278303 2.862983 3.78718 6.105164 2.543038 z M 9.3767965 26.460467 C 10.174686 24.381201 7.9347743 21 5.7594532 21 3.5845831 21 3.5060798 22.849818 5.556704 25.777494 7.3832901 28.385311 8.5576 28.595259 9.3767965 26.460467 Z M 30.563143 25.543976 C 32.232242 22.996609 31.813418 21 29.609963 21 c -1.646133 0 -4.04995 4.479069 -3.168894 5.904647 1.068263 1.728486 2.382157 1.294778 4.122074 -1.360671 z m -7.391884 -2.198964 c 2.312005 -2.092335 2.410355 -8.044855 0.173753 -10.516271 -2.092335 -2.312005 -8.044855 -2.410355 -10.516271 -0.173753 -2.312005 2.092335 -2.410355 8.044855 -0.173753 10.516271 2.092335 2.312005 8.044855 2.410355 10.516271 0.173753 z M 8.9489687 12.595353 C 10.220695 10.219111 9.7450675 8 7.964036 8 6.5483097 8 3.7462248 12.780366 4.4728213 13.956024 5.5697996 15.730972 7.6013406 15.113419 8.9489687 12.595353 Z M 32 13.610784 c 0 -0.764069 -0.868058 -2.451569 -1.929017 -3.75 -1.53097 -1.873643 -2.187112 -2.1070196 -3.179794 -1.1309902 -1.00075 0.9839619 -0.981161 1.7335752 0.098 3.7500002 C 28.417868 15.14931 32 15.957832 32 13.610784 Z M 21.234687 6.512427 C 22.417722 4.8821603 22.128053 4.1754178 20 3.5 16.889226 2.5126788 14.12789 3.7730484 14.690259 5.9235498 c 0.526189 2.0121521 5.206023 2.4332503 6.544428 0.5888772 z"/>
                     </DrawingGroup.Children>
                 </DrawingGroup>
             </DrawingBrush.Drawing>
@@ -214,30 +190,6 @@
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="true">
                                 <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource ColorButtonHighlightedBackground}" />
-                            </Trigger>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-
-        <Style x:Key="SiteGameButton" TargetType="{x:Type Button}">
-            <Setter Property="Width" Value="18" />
-            <Setter Property="Height" Value="18" />
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Border
-                            x:Name="MainBorder"
-                            Width="{TemplateBinding Width}"
-                            Height="{TemplateBinding Height}"
-                            Padding="{TemplateBinding Padding}"
-                            Background="{StaticResource SiteGameButtonBackground}"
-                            Cursor="Hand">
-                        </Border>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsMouseOver" Value="true">
-                                <Setter TargetName="MainBorder" Property="Background" Value="{StaticResource SiteGameButtonHighlightedBackground}" />
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
@@ -338,9 +290,8 @@
                                      ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
                                      ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
                                      ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
-                                     ItemsSource="{Binding Layouts}"
-                                     DisplayMemberPath="Name"
-                                     SelectedValue="{Binding Path=CurrentLayout}">
+                                     ItemsSource="{Binding LayoutsNames}"
+                                     SelectedValue="{Binding Path=CurrentLayoutName}">
                 </comboboxControl:ComboBoxEx>
 
                 <!-- TABLE LAYOUT ***************************************************************** -->
@@ -362,7 +313,6 @@
                                 
                 <!-- HUD SCREEN ***************************************************************** -->
                 <TextBlock Grid.Row="0" Grid.Column="3" Margin="1,5,40,1"
-                           Visibility="{Binding CurrentPokerSite, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
                            VerticalAlignment="Top" HorizontalAlignment="Left"
                            Text="HUD Screen" FontSize="13"/>
 
@@ -374,7 +324,6 @@
                                      SelectedValue="{Binding HudViewType}"      
                                      ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"                                      
                                      ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     Visibility="{Binding CurrentPokerSite, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
                                      ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}">
                     <comboboxControl:ComboBoxEx.ItemTemplate>
                         <DataTemplate>
@@ -384,19 +333,6 @@
                 </comboboxControl:ComboBoxEx>
 
             </Grid>
-
-            <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <Button
-                        Content="{Binding SelectedHUD}" 
-                        Padding="5,0,5,0"                            
-                        Foreground="#FFFFFF" 
-                        Height="35"                        
-                        Command="{Binding SelectHudCommand}"
-                        Visibility="{Binding CurrentPokerSite, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
-                        />
-
-            </StackPanel>
-
 
             <!-- COMMAND BUTTONS - SAVE/IMPORT/EXPORT/LOAD **************************************************************** -->
             <StackPanel Grid.Row="1" Grid.Column="2"                  
@@ -627,9 +563,6 @@
                                 Grid.Column="1"
                                 Orientation="Horizontal"
                                 HorizontalAlignment="Right">
-                                <Button Style="{StaticResource SiteGameButton}"  Command="{Binding SelectSiteAndGameTypeCommand}"
-                                        IsEnabled="{Binding CurrentLayout.IsDefault, Converter={StaticResource InvertedBooleanConverter}}"/>
-
 
                                 <Button 
                                     Style="{StaticResource ColorButton}" Margin="20,0,0,0" 

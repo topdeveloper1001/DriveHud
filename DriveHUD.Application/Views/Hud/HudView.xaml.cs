@@ -62,7 +62,7 @@ namespace DriveHUD.Application.Views
         {
             get
             {
-                var pokerSite = ViewModel.CurrentPokerSite ?? ViewModel.DefaultPokerSite;
+                var pokerSite = ViewModel.DefaultPokerSite;
                 return
                     Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(
                         TableConfiguratorHelper.GetServiceName(pokerSite, ViewModel.HudType));

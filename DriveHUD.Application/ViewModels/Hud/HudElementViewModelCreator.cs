@@ -14,6 +14,7 @@ using DriveHUD.Common;
 using Model.Enums;
 using System.Linq;
 using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -30,22 +31,24 @@ namespace DriveHUD.Application.ViewModels
         /// <param name="seatNumber">Seat number</param>
         /// <param name="hudType">Hud type</param>
         /// <returns>Hud panel element view model</returns>
-        public HudElementViewModel Create(HudTableDefinition tableDefinition, HudViewModel hudViewModel, int seatNumber, HudType hudType)
+        public HudElementViewModel Create(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType,
+            HudViewModel hudViewModel, int seatNumber, HudType hudType)
         {
             Check.ArgumentNotNull(() => hudViewModel);
 
             var hudTableViewModel =
                 hudViewModel.HudTableViewModels.FirstOrDefault(
-                    h =>
-                        h.PokerSite == tableDefinition.PokerSite && h.GameType == tableDefinition.GameType &&
-                        h.TableType == tableDefinition.TableType);
+                    h => h.PokerSite == pokerSite && h.GameType == gameType && h.TableType == tableType);
 
-            var hudElementTemplate = hudTableViewModel?.HudElements.FirstOrDefault(x => x.Seat == seatNumber && x.HudType == hudType);
+            var hudElementTemplate =
+                hudTableViewModel?.HudElements.FirstOrDefault(x => x.Seat == seatNumber && x.HudType == hudType);
 
             var hudElementViewModel = hudElementTemplate?.Clone();
-            hudElementViewModel.HudViewType = tableDefinition.PokerSite == Entities.EnumPokerSites.Bodog ||
-                                                    tableDefinition.PokerSite == Entities.EnumPokerSites.Bovada ||
-                                                    tableDefinition.PokerSite == Entities.EnumPokerSites.Ignition ? hudViewModel.HudViewType : Entities.HudViewType.Plain;
+            hudElementViewModel.HudViewType = pokerSite == Entities.EnumPokerSites.Bodog ||
+                                              pokerSite == Entities.EnumPokerSites.Bovada ||
+                                              pokerSite == Entities.EnumPokerSites.Ignition
+                ? hudViewModel.HudViewType
+                : Entities.HudViewType.Plain;
 
             return hudElementViewModel;
         }
