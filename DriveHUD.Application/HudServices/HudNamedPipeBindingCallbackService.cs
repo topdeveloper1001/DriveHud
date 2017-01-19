@@ -42,7 +42,12 @@ namespace DriveHUD.Application.HudServices
             // update positions 
             foreach (var hudPosition in hudLayout.HudPositions)
             {
-                var hudToUpdate = activeLayout?.HudPositions?.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber && (int)x.HudType == hudPosition.HudType);
+                var hudPositions =
+                    activeLayout.HudPositionsInfo.FirstOrDefault(
+                        p =>
+                            p.PokerSite == (EnumPokerSites) pokerSiteId &&
+                            p.GameType == (EnumGameType) gameType && p.HudType == (HudType)hudPosition.HudType);
+                var hudToUpdate = hudPositions?.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
                 if (hudToUpdate == null)
                 {
                     continue;
@@ -55,7 +60,7 @@ namespace DriveHUD.Application.HudServices
                     continue;
                 }
 
-                var hudElementToUpdate = viewModel.HudElements.FirstOrDefault(x => x.Seat == hudToUpdate.Seat && x.HudType == hudToUpdate.HudType);
+                var hudElementToUpdate = viewModel.HudElements.FirstOrDefault(x => x.Seat == hudToUpdate.Seat);
                 if (hudElementToUpdate != null)
                 {
                     hudElementToUpdate.Position = hudToUpdate.Position;

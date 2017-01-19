@@ -16,6 +16,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Windows;
 using System.Windows.Media;
 using System.Xml.Serialization;
 using DriveHUD.Application.ViewModels.Layouts;
@@ -28,6 +29,9 @@ using DriveHUD.ViewModels;
 using Model;
 using Model.Data;
 using Model.Enums;
+using Model.Settings;
+using Model.Site;
+using Telerik.Windows.Diagrams.Core;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -92,9 +96,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                 else
                 {
                     HudLayoutMappings = new HudLayoutMappings();
-                    var defaultLayoutInfo = GetPredefindedLayout();
                     foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
                     {
+                        var defaultLayoutInfo = GetPredefindedLayout(tableType);
                         defaultLayoutInfo.Name = $"Default {CommonResourceManager.Instance.GetEnumResource(tableType)}";
                         defaultLayoutInfo.TableType = tableType;
                         defaultLayoutInfo.IsDefault = true;
@@ -135,14 +139,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             return result;
         }
 
-        private HudLayoutInfo GetPredefindedLayout()
+        private HudLayoutInfo GetPredefindedLayout(EnumTableType tableType)
         {
             var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
             try
             {
                 using (
                     var stream =
-                        resourcesAssembly.GetManifestResourceStream("DriveHUD.Common.Resources.Layouts.Default.xml"))
+                        resourcesAssembly.GetManifestResourceStream($"DriveHUD.Common.Resources.Layouts.Default{(int)tableType}.xml"))
                 {
                     return LoadLayoutFromStream(stream);
                 }
@@ -653,17 +657,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var statInfoBreak = x as StatInfoBreak;
                 return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
             }).ToList();
-            layout.HudPositions =
-                hudData.HudTable.HudElements.Select(
-                    x =>
-                        new HudSavedPosition
-                        {
-                            Height = x.Height,
-                            Position = x.Position,
-                            Width = x.Width,
-                            Seat = x.Seat,
-                            HudType = x.HudType
-                        }).ToList();
+            layout.HudPositionsInfo = hudData.LayoutInfo.HudPositionsInfo.Select(p => p.Clone()).ToList();
             layout.HudBumperStickerTypes = hudData.LayoutInfo.HudBumperStickerTypes.Select(x => x.Clone()).ToList();
             layout.HudPlayerTypes = hudData.LayoutInfo.HudPlayerTypes.Select(x => x.Clone()).ToList();
             var fileName = InternalSave(layout);

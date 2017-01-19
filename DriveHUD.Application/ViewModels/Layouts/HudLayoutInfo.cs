@@ -19,18 +19,25 @@ namespace DriveHUD.Application.ViewModels.Layouts
 
         [XmlAttribute]
         public EnumTableType TableType { get; set; }
+
+        [XmlAttribute]
         public HudViewType HudViewType { get; set; }
 
         public List<StatInfo> HudStats { get; set; }
         public List<HudPlayerType> HudPlayerTypes { get; set; }
         public List<HudBumperStickerType> HudBumperStickerTypes { get; set; }
-        public List<HudSavedPosition> HudPositions { get; set; }
+        public List<HudPositionsInfo> HudPositionsInfo { get; set; }
+
         public int HudOpacity { get; set; }
 
         public HudLayoutInfo()
         {
             HudOpacity = 100;
             HudViewType = HudViewType.Plain;
+            HudStats = new List<StatInfo>();
+            HudPlayerTypes = new List<HudPlayerType>();
+            HudBumperStickerTypes = new List<HudBumperStickerType>();
+            HudPositionsInfo = new List<HudPositionsInfo>();
         }
 
         public HudLayoutInfo Clone()
@@ -44,7 +51,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 HudViewType = HudViewType,
                 HudStats = HudStats.Select(s => s.Clone()).ToList(),
                 HudPlayerTypes = HudPlayerTypes.Select(p => p.Clone()).ToList(),
-                HudPositions = HudPositions.Select(p => p.Clone()).ToList(),
+                HudPositionsInfo = HudPositionsInfo.Select(p => p.Clone()).ToList(),
                 HudBumperStickerTypes = HudBumperStickerTypes.Select(p => p.Clone()).ToList()
             };
         }
