@@ -665,26 +665,29 @@ namespace DriveHUD.Application.ViewModels.Hud
             layout.HudBumperStickerTypes = hudData.LayoutInfo.HudBumperStickerTypes.Select(x => x.Clone()).ToList();
             layout.HudPlayerTypes = hudData.LayoutInfo.HudPlayerTypes.Select(x => x.Clone()).ToList();
             var fileName = InternalSave(layout);
-            HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
-            var pokerSites = layout.HudViewType == HudViewType.Plain
-                ? Enum.GetValues(typeof(EnumPokerSites))
-                    .OfType<EnumPokerSites>()
-                    .Where(p => p != EnumPokerSites.Unknown)
-                : _extendedHudPokerSites;
-            foreach (var pokerSite in pokerSites)
+            if (!layout.IsDefault)
             {
-                foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
+                HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
+                var pokerSites = layout.HudViewType == HudViewType.Plain
+                    ? Enum.GetValues(typeof(EnumPokerSites))
+                        .OfType<EnumPokerSites>()
+                        .Where(p => p != EnumPokerSites.Unknown)
+                    : _extendedHudPokerSites;
+                foreach (var pokerSite in pokerSites)
                 {
-                    HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                    foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
                     {
-                        FileName = Path.GetFileName(fileName),
-                        Name = layout.Name,
-                        GameType = gameType,
-                        PokerSite = pokerSite,
-                        TableType = layout.TableType,
-                        IsSelected = false,
-                        IsDefault = false
-                    });
+                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                        {
+                            FileName = Path.GetFileName(fileName),
+                            Name = layout.Name,
+                            GameType = gameType,
+                            PokerSite = pokerSite,
+                            TableType = layout.TableType,
+                            IsSelected = false,
+                            IsDefault = false
+                        });
+                    }
                 }
             }
             SaveMappings();
@@ -971,6 +974,13 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public HudLayoutInfo GetLayout(string name)
         {
+            var defaultNames =
+                Enum.GetValues(typeof(EnumTableType))
+                    .OfType<EnumTableType>()
+                    .Select(e => $"Default {CommonResourceManager.Instance.GetEnumResource(e)}")
+                    .ToList();
+            if (defaultNames.Contains(name))
+                return LoadLayout(Path.Combine(GetLayoutsDirectory().FullName, $"{name}{LayoutFileExtension}"));
             var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == name);
             return mapping == null ? null : LoadLayout(mapping);
         }
@@ -984,10 +994,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             EnumGameType gameType)
         {
             return
-                HudLayoutMappings.Mappings.Where(
-                        m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType)
-                    .OrderByDescending(m => m.IsDefault)
-                    .Select(m => m.Name)
+                Enumerable.Repeat($"Default {CommonResourceManager.Instance.GetEnumResource(tableType)}", 1)
+                    .Union(
+                        HudLayoutMappings.Mappings.Where(
+                                m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType)
+                            .Select(m => m.Name))
                     .Distinct();
         }
 

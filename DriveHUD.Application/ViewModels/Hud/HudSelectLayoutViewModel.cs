@@ -43,8 +43,10 @@ namespace DriveHUD.Application.ViewModels
                 hudLayoutService.GetLayoutsNames().ToList();
 
             items = new ObservableCollection<string>(layouts);
-            if (items.Contains(_viewModelInfo.LayoutName))
-                selectedItem = _viewModelInfo.LayoutName;
+            if (!items.Contains(_viewModelInfo.LayoutName))
+                items.Insert(0, _viewModelInfo.LayoutName);
+            selectedItem = _viewModelInfo.LayoutName;
+
 
 
             ShowInput = _viewModelInfo.IsSaveAsMode;
