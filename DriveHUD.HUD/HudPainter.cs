@@ -126,7 +126,7 @@ namespace DriveHUD.HUD
 
         public static void UpdateHud(HudLayout hudLayout)
         {            
-            if (hudLayout == null || hudLayout.TableHud == null)
+            if (hudLayout == null)
             {
                 return;
             }
@@ -159,7 +159,7 @@ namespace DriveHUD.HUD
             closeHook = SetWinEventHook(EVENT_OBJECT_DESTROY, closeCallback, processId);
             createHook = SetWinEventHook(EVENT_OBJECT_NAMECHANGE, createCallback, processId);
 
-            var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(hudLayout.TableHud.PokerSite.ToString());
+            var hudPanelService = ServiceLocator.Current.GetInstance<IHudPanelService>(hudLayout.PokerSite.ToString());
 
             var window = new HudWindow();            
             var windowHandle = hudPanelService.GetWindowHandle(hwnd);

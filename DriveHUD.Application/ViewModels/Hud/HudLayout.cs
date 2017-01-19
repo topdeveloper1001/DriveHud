@@ -12,6 +12,7 @@
 
 using DriveHUD.Application.ViewModels.Hud;
 using DriveHUD.Common.Linq;
+using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Model.Enums;
 using Model.Interfaces;
@@ -26,24 +27,20 @@ namespace DriveHUD.Application.ViewModels
     public class HudLayout : ICleanable
     {
         public HudLayout()
-        {
-            TableHud = new HudTableViewModel();
+        {            
             HudStats = new List<StatInfo>();
             ListHUDPlayer = new List<PlayerHudContent>();
         }
 
         public HudLayout(HudViewModel viewModel)
-        {
-            TableHud = viewModel.CurrentHudTableViewModel;
+        {            
             TableType = viewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
             HudStats = viewModel.StatInfoObserveCollection.ToList();
             ListHUDPlayer = viewModel.PlayerCollection.ToList();
         }
 
         public void Cleanup()
-        {
-            TableHud?.HudElements?.ForEach(x => x?.Cleanup());
-            TableHud?.HudElements?.Clear();
+        {           
             ListHUDPlayer?.ForEach(x => x?.HudElement?.Cleanup());
             ListHUDPlayer.Clear();
             HudStats?.ForEach(x => x?.Reset());
@@ -51,7 +48,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         [ProtoMember(1)]
-        public HudTableViewModel TableHud { get; set; }
+        public EnumGameType GameType { get; set; }
 
         [ProtoMember(2)]
         public List<StatInfo> HudStats { get; set; }
@@ -66,7 +63,7 @@ namespace DriveHUD.Application.ViewModels
         public int WindowId { get; set; }
 
         [XmlIgnore, ProtoMember(6)]
-        public HudType HudType { get; set; }
+        public HudViewType HudViewType { get; set; }
 
         [XmlIgnore, ProtoMember(7)]
         public EnumTableType TableType { get; set; }
@@ -75,7 +72,7 @@ namespace DriveHUD.Application.ViewModels
         public long GameNumber { get; set; }
 
         [XmlIgnore, ProtoMember(9)]
-        public short PokerSiteId { get; set; }
+        public EnumPokerSites PokerSite { get; set; }
 
         [XmlIgnore, ProtoMember(10)]
         public string LayoutName { get; set; }

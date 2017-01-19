@@ -54,6 +54,7 @@ using System.Windows.Forms;
 using System.Windows.Input;
 using DriveHUD.Application.ViewModels.Layouts;
 using Telerik.Windows.Controls;
+using DriveHUD.Application.TableConfigurators;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -180,7 +181,7 @@ namespace DriveHUD.Application.ViewModels
             await hudTransmitter.InitializeAsync();
 
             importerSessionCacheService.Begin();
-            importerService.StartImport();        
+            importerService.StartImport();
 
             RefreshCommandsCanExecute();
         }
@@ -323,8 +324,7 @@ namespace DriveHUD.Application.ViewModels
                 var site = e.GameInfo.PokerSite;
 
                 var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-                var activeLayout =
-                    hudLayoutsService.GetActiveLayout(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
+                var activeLayout = hudLayoutsService.GetActiveLayout(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
                 if (activeLayout == null)
                 {
@@ -332,16 +332,19 @@ namespace DriveHUD.Application.ViewModels
                     return;
                 }
 
+                var tableConfigurator = ServiceLocator.Current.GetInstance<ITableConfigurator>(activeLayout.HudViewType.ToString());
+                var preparedHudElements = tableConfigurator.GenerateElements(maxSeats);
+
                 var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
-#warning check hud type
                 var ht = new HudLayout
                 {
                     WindowId = gameInfo.WindowHandle,
-                    HudType = HudType.Plain,
+                    HudViewType = activeLayout.HudViewType,
                     TableType = gameInfo.TableType,
-                    PokerSiteId = (short)gameInfo.PokerSite,
+                    PokerSite = gameInfo.PokerSite,
                     GameNumber = gameInfo.GameNumber,
+                    GameType = gameInfo.EnumGameType,
                     LayoutName = activeLayout.Name,
                     AvailableLayouts = availableLayouts
                 };
@@ -410,8 +413,16 @@ namespace DriveHUD.Application.ViewModels
 
                     var hudElementCreator = ServiceLocator.Current.GetInstance<IHudElementViewModelCreator>();
 
-                    playerHudContent.HudElement = hudElementCreator.Create(e.GameInfo.PokerSite, e.GameInfo.TableType,
-                        e.GameInfo.EnumGameType, HudViewModel, seatNumber, ht.HudType);
+                    var hudElementCreationInfo = new HudElementViewModelCreationInfo
+                    {
+                        GameType = gameInfo.EnumGameType,
+                        HudLayoutInfo = activeLayout,
+                        PokerSite = gameInfo.PokerSite,
+                        PreparedHudElements = preparedHudElements,
+                        SeatNumber = seatNumber
+                    };
+
+                    playerHudContent.HudElement = hudElementCreator.Create(hudElementCreationInfo);
 
                     if (playerHudContent.HudElement == null)
                     {
@@ -534,54 +545,46 @@ namespace DriveHUD.Application.ViewModels
                 sw.Stop();
 
                 Debug.WriteLine("Hand has been imported for {0} ms", sw.ElapsedMilliseconds + refreshTime);
-                var hudTableViewModel =
-                    HudViewModel.HudTableViewModels.FirstOrDefault(
-                        h =>
-                            h.PokerSite == site && h.GameType == gameInfo.EnumGameType &&
-                            h.TableType == gameInfo.TableType);
-                if (hudTableViewModel!=null)
+
+                var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
+                hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name);
+
+                Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
                 {
-                    var hudElements = ht.ListHUDPlayer.Select(x => x.HudElement).ToArray();
-                    hudLayoutsService.SetPlayerTypeIcon(hudElements, activeLayout.Name);
+                    return y != 0 ? x / y : 0;
+                };
 
-                    Func<decimal, decimal, decimal> getDevisionResult = (x, y) =>
-                    {
-                        return y != 0 ? x / y : 0;
-                    };
+                var trackConditionsInfo = new HudTrackConditionsViewModelInfo
+                {
+                    AveragePot = getDevisionResult(trackConditionsMeterData.TotalPotSize, trackConditionsMeterData.TotalHands),
+                    VPIP = getDevisionResult(trackConditionsMeterData.VPIP, players.Count),
+                    ThreeBet = getDevisionResult(trackConditionsMeterData.ThreeBet, players.Count),
+                    TableType = gameInfo.TableType,
+                    BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
+                };
 
-                    var trackConditionsInfo = new HudTrackConditionsViewModelInfo
-                    {
-                        AveragePot = getDevisionResult(trackConditionsMeterData.TotalPotSize, trackConditionsMeterData.TotalHands),
-                        VPIP = getDevisionResult(trackConditionsMeterData.VPIP, players.Count),
-                        ThreeBet = getDevisionResult(trackConditionsMeterData.ThreeBet, players.Count),
-                        TableType = gameInfo.TableType,
-                        BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
-                    };
+                ht.HudTrackConditionsMeter = trackConditionsInfo;         
 
-                    ht.HudTrackConditionsMeter = trackConditionsInfo;
+                byte[] serialized;
 
-                    ht.TableHud = hudTableViewModel.Clone();
-
-                    byte[] serialized;
-
-                    using (var msTestString = new MemoryStream())
-                    {
-                        Serializer.Serialize(msTestString, ht);
-                        serialized = msTestString.ToArray();
-                    }
-
-                    if (isAdvancedLoggingEnabled)
-                    {
-                        LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
-                    }
-
-                    hudTransmitter.Send(serialized);
-
-                    if (isAdvancedLoggingEnabled)
-                    {
-                        LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
-                    }
+                using (var msTestString = new MemoryStream())
+                {
+                    Serializer.Serialize(msTestString, ht);
+                    serialized = msTestString.ToArray();
                 }
+
+                if (isAdvancedLoggingEnabled)
+                {
+                    LogProvider.Log.Info(this, $"Sending {serialized.Length} bytes to HUD [handle={ht.WindowId}, title={WinApi.GetWindowText(new IntPtr(ht.WindowId))}]");
+                }
+
+                hudTransmitter.Send(serialized);
+
+                if (isAdvancedLoggingEnabled)
+                {
+                    LogProvider.Log.Info(this, $"Data has been sent to HUD [handle={ht.WindowId}]");
+                }
+
                 if (!isSetPlayerIdMessageShown && (string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.Name) ||
                     string.IsNullOrEmpty(StorageModel.PlayerSelectedItem.DecodedName) ||
                     StorageModel.PlayerSelectedItem.PokerSite == EnumPokerSites.Unknown))

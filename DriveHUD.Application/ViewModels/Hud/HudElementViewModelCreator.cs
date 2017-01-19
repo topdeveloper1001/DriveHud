@@ -15,6 +15,11 @@ using Model.Enums;
 using System.Linq;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Entities;
+using System.Collections.Generic;
+using DriveHUD.Common.Exceptions;
+using DriveHUD.Common.Resources;
+using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Log;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -26,31 +31,50 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Create HUD element based on table settings
         /// </summary>
-        /// <param name="tableDefinition">Table key</param>
-        /// <param name="hudViewModel">Hud view model</param>
-        /// <param name="seatNumber">Seat number</param>
-        /// <param name="hudType">Hud type</param>
+        /// <param name="creationInfo">Creation Info</param>      
         /// <returns>Hud panel element view model</returns>
-        public HudElementViewModel Create(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType,
-            HudViewModel hudViewModel, int seatNumber, HudType hudType)
+        public HudElementViewModel Create(HudElementViewModelCreationInfo creationInfo)
         {
-            Check.ArgumentNotNull(() => hudViewModel);
+            Check.ArgumentNotNull(() => creationInfo);
+            Check.ArgumentNotNull(() => creationInfo.HudLayoutInfo);
+            Check.ArgumentNotNull(() => creationInfo.HudLayoutInfo.UiPositionsInfo);
+            Check.ArgumentNotNull(() => creationInfo.HudLayoutInfo.HudPositionsInfo);
+            Check.ArgumentNotNull(() => creationInfo.PreparedHudElements);
 
-            var hudTableViewModel = hudViewModel.HudTableViewModels.FirstOrDefault(h => h.TableType == tableType);
+            var hudElementViewModel = creationInfo.PreparedHudElements.FirstOrDefault(x => x.Seat == creationInfo.SeatNumber);
 
+            if (hudElementViewModel == null)
+            {
+                LogProvider.Log.Error(this, $"Could not find data for seat {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken.");
+                return null;
+            }
 
-            var hudElementTemplate = hudType == HudType.Plain
-                ? hudTableViewModel?.HudElements.FirstOrDefault(
-                    x => x.Seat == seatNumber && x.HudViewType == HudViewType.Plain)
-                : hudTableViewModel?.HudElements.FirstOrDefault(
-                    x => x.Seat == seatNumber && x.HudViewType != HudViewType.Plain);
+            var positionInfo = creationInfo.HudLayoutInfo.HudPositionsInfo.FirstOrDefault(x => x.GameType == creationInfo.GameType && x.PokerSite == creationInfo.PokerSite);
 
-            var hudElementViewModel = hudElementTemplate?.Clone();
-            hudElementViewModel.HudViewType = pokerSite == Entities.EnumPokerSites.Bodog ||
-                                              pokerSite == Entities.EnumPokerSites.Bovada ||
-                                              pokerSite == Entities.EnumPokerSites.Ignition
-                ? hudViewModel.HudViewType
-                : Entities.HudViewType.Plain;
+            if (positionInfo == null)
+            {
+                LogProvider.Log.Error(this, $"Could not find data for position info {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken.");
+                return hudElementViewModel;
+            }
+
+            var positions = positionInfo.HudPositions.FirstOrDefault(x => x.Seat == creationInfo.SeatNumber);
+
+            if (positions == null)
+            {
+                LogProvider.Log.Error(this, $"Could not find data for positions {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken.");
+                return hudElementViewModel;
+            }
+
+            var uiPositions = creationInfo.HudLayoutInfo.UiPositionsInfo.FirstOrDefault(x => x.Seat == creationInfo.SeatNumber);
+
+            if (uiPositions == null)
+            {
+                LogProvider.Log.Error(this, $"Could not find data for ui positions {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken. Default data will be used.");
+            }
+
+            hudElementViewModel.Width = uiPositions.Width;
+            hudElementViewModel.Height = uiPositions.Height;
+            hudElementViewModel.Position = positions.Position;
 
             return hudElementViewModel;
         }

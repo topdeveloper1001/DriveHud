@@ -25,6 +25,7 @@ using DriveHUD.Application.Views.Popups;
 using DriveHUD.Application.ViewModels.Popups;
 using DriveHUD.Common.Resources;
 using System.Windows.Data;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -66,12 +67,12 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudElement">HUD element view model</param>
         /// <returns>HUD panel</returns>
-        public virtual FrameworkElement Create(HudElementViewModel hudElement, HudType hudType)
+        public virtual FrameworkElement Create(HudElementViewModel hudElement, HudViewType hudViewType)
         {
             var contextMenu = CreateContextMenu(hudElement.PokerSiteId, hudElement.PlayerName, hudElement);
             contextMenu.EventName = "MouseRightButtonUp";
 
-            if (hudType == HudType.Plain)
+            if (hudViewType == HudViewType.Plain)
             {
                 var panel = new HudPanel
                 {

@@ -85,7 +85,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     LayoutName = layout.LayoutName;
                     _gameNumber = layout.GameNumber;
-                    _pokerSiteId = layout.PokerSiteId;
+                    _pokerSiteId = (short)layout.PokerSite;
 
                     if (layout.AvailableLayouts != null)
                     {

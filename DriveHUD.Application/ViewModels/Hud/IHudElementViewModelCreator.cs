@@ -10,9 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.Entities;
-using Model.Enums;
+using DriveHUD.Application.ViewModels.Hud;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -24,12 +22,8 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Create HUD element based on table settings
         /// </summary>
-        /// <param name="tableDefinition">Table key</param>
-        /// <param name="hudViewModel">Hud view model</param>
-        /// <param name="seatNumber">Seat number</param>
-        /// <param name="hudType">Hud type</param>
+        /// <param name="creationInfo">Creation Info</param>      
         /// <returns>Hud panel element view model</returns>
-        HudElementViewModel Create(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType,
-            HudViewModel hudViewModel, int seatNumber, HudType hudType);
+        HudElementViewModel Create(HudElementViewModelCreationInfo creationInfo);
     }
 }

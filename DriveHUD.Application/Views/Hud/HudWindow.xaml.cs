@@ -73,14 +73,16 @@ namespace DriveHUD.Application.Views
             Layout?.Cleanup();
             Layout = layout;
             ViewModel?.SetLayout(layout);
+
             if (ViewModel != null)
             {
-                ViewModel.GameType = layout.TableHud.GameType;
+                ViewModel.GameType = layout.GameType;
                 ViewModel.TableType = layout.TableType;
             }
-            if (layout?.TableHud != null)
+
+            if (layout != null)
             {
-                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.TableHud.PokerSite.ToString());
+                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.PokerSite.ToString());
             }
             else
             {
@@ -125,7 +127,7 @@ namespace DriveHUD.Application.Views
                     playerHudContent.HudElement.OffsetY = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].Y;
                 }
 
-                var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudType);
+                var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudViewType);
                 panel.Opacity = playerHudContent.HudElement.Opacity;
 
                 dgCanvas.Children.Add(panel);

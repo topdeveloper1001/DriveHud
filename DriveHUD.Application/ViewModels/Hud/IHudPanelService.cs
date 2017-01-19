@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Views;
+using DriveHUD.Entities;
 using Model.Enums;
 using System;
 using System.Windows;
@@ -27,7 +28,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// </summary>
         /// <param name="hudElement">HUD element view model</param>
         /// <returns>HUD panel</returns>
-        FrameworkElement Create(HudElementViewModel hudElement, HudType hudType);
+        FrameworkElement Create(HudElementViewModel hudElement, HudViewType hudViewType);
 
         /// <summary>
         /// Calculates hudElement position in window
