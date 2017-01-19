@@ -43,7 +43,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private const string LayoutFileExtension = ".xml";
         private const string MappingsFileName = "Mappings";
         private const string PathToImages = @"data\PlayerTypes";
-        private readonly EnumPokerSites[] _extendedHudPokerSites = {EnumPokerSites.Bodog, EnumPokerSites.Ignition};
+        private readonly EnumPokerSites[] _extendedHudPokerSites = { EnumPokerSites.Bodog, EnumPokerSites.Ignition };
 
         private static ReaderWriterLockSlim _rwLock = new ReaderWriterLockSlim();
 
@@ -300,26 +300,26 @@ namespace DriveHUD.Application.ViewModels.Hud
         private Tuple<bool, decimal, decimal> GetMatchRatio(HudElementViewModel hudElement, HudPlayerType hudPlayerType)
         {
             var matchRatios = (from stat in hudPlayerType.Stats
-                let low = stat.Low ?? -1
-                let high = stat.High ?? 100
-                let average = (high + low)/2
-                let isStatDefined = stat.Low.HasValue || stat.High.HasValue
-                join hudElementStat in hudElement.StatInfoCollection on stat.Stat equals hudElementStat.Stat into gj
-                from grouped in gj.DefaultIfEmpty()
-                let inRange =
-                grouped != null ? (grouped.CurrentValue >= low && grouped.CurrentValue <= high) : !isStatDefined
-                let isGroupAndStatDefined = grouped != null && isStatDefined
-                let matchRatio = isGroupAndStatDefined ? Math.Abs(grouped.CurrentValue - average) : 0
-                let extraMatchRatio =
-                (isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)) ? matchRatio : 0
-                select
-                new
-                {
-                    Ratio = matchRatio,
-                    InRange = inRange,
-                    IsStatDefined = isStatDefined,
-                    ExtraMatchRatio = extraMatchRatio
-                }).ToArray();
+                               let low = stat.Low ?? -1
+                               let high = stat.High ?? 100
+                               let average = (high + low) / 2
+                               let isStatDefined = stat.Low.HasValue || stat.High.HasValue
+                               join hudElementStat in hudElement.StatInfoCollection on stat.Stat equals hudElementStat.Stat into gj
+                               from grouped in gj.DefaultIfEmpty()
+                               let inRange =
+                               grouped != null ? (grouped.CurrentValue >= low && grouped.CurrentValue <= high) : !isStatDefined
+                               let isGroupAndStatDefined = grouped != null && isStatDefined
+                               let matchRatio = isGroupAndStatDefined ? Math.Abs(grouped.CurrentValue - average) : 0
+                               let extraMatchRatio =
+                               (isGroupAndStatDefined && (grouped.Stat == Stat.VPIP || grouped.Stat == Stat.PFR)) ? matchRatio : 0
+                               select
+                               new
+                               {
+                                   Ratio = matchRatio,
+                                   InRange = inRange,
+                                   IsStatDefined = isStatDefined,
+                                   ExtraMatchRatio = extraMatchRatio
+                               }).ToArray();
 
             return
                 new Tuple<bool, decimal, decimal>(
@@ -343,7 +343,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 if (stat == null)
                     return false;
 
-                var currentStat = new StatInfo {PropertyName = stat.PropertyName};
+                var currentStat = new StatInfo { PropertyName = stat.PropertyName };
                 currentStat.AssignStatInfoValues(source);
 
                 var high = rangeStat.High ?? 100;
@@ -364,7 +364,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             var low = stat.Low ?? 0;
             var high = stat.High ?? 100;
 
-            return (high + low)/2;
+            return (high + low) / 2;
         }
 
         private DirectoryInfo GetLayoutsDirectory()
@@ -642,21 +642,21 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         #endregion
-        
+
         public void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType)
         {
             var mapping =
                 HudLayoutMappings.Mappings.FirstOrDefault(
                     m =>
-                        m.PokerSite == (EnumPokerSites) pokerSiteId && m.GameType == (EnumGameType) gameType &&
-                        m.TableType == (EnumTableType) tableType && m.Name == hudToLoad.Name);
+                        m.PokerSite == (EnumPokerSites)pokerSiteId && m.GameType == (EnumGameType)gameType &&
+                        m.TableType == (EnumTableType)tableType && m.Name == hudToLoad.Name);
             if (mapping == null)
                 return;
             var selected =
                 HudLayoutMappings.Mappings.FirstOrDefault(
                     m =>
-                        m.PokerSite == (EnumPokerSites) pokerSiteId && m.GameType == (EnumGameType) gameType &&
-                        m.TableType == (EnumTableType) tableType && m.IsSelected);
+                        m.PokerSite == (EnumPokerSites)pokerSiteId && m.GameType == (EnumGameType)gameType &&
+                        m.TableType == (EnumTableType)tableType && m.IsSelected);
             if (selected != null)
                 selected.IsSelected = false;
             mapping.IsSelected = true;
@@ -691,28 +691,45 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var layout = GetLayout(hudData.Name);
             var addLayout = layout == null;
+
             if (addLayout)
+            {
                 layout = new HudLayoutInfo();
+            }
+
             layout.Name = hudData.Name;
             layout.TableType = hudData.LayoutInfo.TableType;
             layout.HudViewType = hudData.LayoutInfo.HudViewType;
+
             layout.HudStats = hudData.Stats.Select(x =>
             {
                 var statInfoBreak = x as StatInfoBreak;
                 return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
             }).ToList();
+
             layout.HudPositionsInfo = hudData.LayoutInfo.HudPositionsInfo.Select(p => p.Clone()).ToList();
             layout.HudBumperStickerTypes = hudData.LayoutInfo.HudBumperStickerTypes.Select(x => x.Clone()).ToList();
             layout.HudPlayerTypes = hudData.LayoutInfo.HudPlayerTypes.Select(x => x.Clone()).ToList();
+            layout.UiPositionsInfo = hudData.HudTable.HudElements.Select(x => new UiPositionInfo
+            {
+                Seat = x.Seat,
+                Height = x.Height,
+                Width = x.Width,
+                Position = x.Position              
+            }).ToList();
+
             var fileName = InternalSave(layout);
+
             if (!layout.IsDefault)
             {
                 HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
+
                 var pokerSites = layout.HudViewType == HudViewType.Plain
                     ? Enum.GetValues(typeof(EnumPokerSites))
                         .OfType<EnumPokerSites>()
                         .Where(p => p != EnumPokerSites.Unknown)
                     : _extendedHudPokerSites;
+
                 foreach (var pokerSite in pokerSites)
                 {
                     foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
@@ -730,7 +747,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     }
                 }
             }
+
             SaveLayoutMappings();
+
             return layout;
         }
 
@@ -834,31 +853,31 @@ namespace DriveHUD.Application.ViewModels.Hud
             // get total hands now to prevent enumeration in future
             var hudElementViewModels = hudElements as HudElementViewModel[] ?? hudElements.ToArray();
             var hudElementsTotalHands = (from hudElement in hudElementViewModels
-                from stat in hudElement.StatInfoCollection
-                where stat.Stat == Stat.TotalHands
-                select new {HudElement = hudElement, TotalHands = stat.CurrentValue}).ToDictionary(x => x.HudElement,
+                                         from stat in hudElement.StatInfoCollection
+                                         where stat.Stat == Stat.TotalHands
+                                         select new { HudElement = hudElement, TotalHands = stat.CurrentValue }).ToDictionary(x => x.HudElement,
                 x => x.TotalHands);
             // get match ratios by player
             var matchRatiosByPlayer = (from playerType in layout.HudPlayerTypes
-                from hudElement in hudElementViewModels
-                let matchRatio = GetMatchRatio(hudElement, playerType)
-                where playerType.EnablePlayerProfile && playerType.MinSample <= hudElementsTotalHands[hudElement]
-                group
-                new MatchRatio
-                {
-                    IsInRange = matchRatio.Item1,
-                    Ratio = matchRatio.Item2,
-                    ExtraRatio = matchRatio.Item3,
-                    PlayerType = playerType
-                } by hudElement
+                                       from hudElement in hudElementViewModels
+                                       let matchRatio = GetMatchRatio(hudElement, playerType)
+                                       where playerType.EnablePlayerProfile && playerType.MinSample <= hudElementsTotalHands[hudElement]
+                                       group
+                                       new MatchRatio
+                                       {
+                                           IsInRange = matchRatio.Item1,
+                                           Ratio = matchRatio.Item2,
+                                           ExtraRatio = matchRatio.Item3,
+                                           PlayerType = playerType
+                                       } by hudElement
                 into grouped
-                select
-                new PlayerMatchRatios
-                {
-                    HudElement = grouped.Key,
-                    MatchRatios = grouped.Where(x => x.IsInRange).OrderBy(x => x.Ratio).ToList(),
-                    ExtraMatchRatios = grouped.OrderBy(x => x.ExtraRatio).ToList()
-                }).ToList();
+                                       select
+                                       new PlayerMatchRatios
+                                       {
+                                           HudElement = grouped.Key,
+                                           MatchRatios = grouped.Where(x => x.IsInRange).OrderBy(x => x.Ratio).ToList(),
+                                           ExtraMatchRatios = grouped.OrderBy(x => x.ExtraRatio).ToList()
+                                       }).ToList();
 
             var proccesedElements = new HashSet<int>();
 
@@ -912,7 +931,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return new List<string>();
             return
                 layout.HudBumperStickerTypes?.Where(
-                        x => x.FilterPredicate != null && new[] {statistic}.AsQueryable().Where(x.FilterPredicate).Any())
+                        x => x.FilterPredicate != null && new[] { statistic }.AsQueryable().Where(x.FilterPredicate).Any())
                     .Select(x => x.Name)
                     .ToList();
         }
@@ -934,7 +953,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     continue;
                 }
 
-                var statistics = new HudIndicators(new[] {stickersStatistics[sticker.Name]});
+                var statistics = new HudIndicators(new[] { stickersStatistics[sticker.Name] });
                 if (statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
                 {
                     continue;
@@ -1083,7 +1102,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     _rwLock.ExitReadLock();
                 }
             }
-            return result.OrderBy(l=>l.TableType).ToList();
+            return result.OrderBy(l => l.TableType).ToList();
         }
     }
 }
