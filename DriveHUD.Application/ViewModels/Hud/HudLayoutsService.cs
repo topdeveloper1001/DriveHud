@@ -181,7 +181,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
             finally
             {
-                _rwLock.EnterReadLock();
+                _rwLock.ExitReadLock();
             }
             return result;
         }
