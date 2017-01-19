@@ -121,7 +121,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
             to.CurrentStreet = from.CurrentStreet;
 
-            to.IsNoteIconVisible = from.IsNoteIconVisible;
+            to.NoteToolTip = from.NoteToolTip;
         }
 
         #region Properties
@@ -236,17 +236,26 @@ namespace DriveHUD.Application.ViewModels.Replayer
             set { SetProperty(ref _statInfoCollection, value); }
         }
 
-        private bool isNoteIconVisible;
+        private string noteToolTip;
 
         /// <summary>
         /// Determine if note icon is visible
         /// </summary>
         public bool IsNoteIconVisible
         {
-            get { return isNoteIconVisible; }
+            get
+            {
+                return !string.IsNullOrWhiteSpace(NoteToolTip);
+            }
+        }
+
+        public string NoteToolTip
+        {
+            get { return noteToolTip; }
             set
             {
-                SetProperty(ref isNoteIconVisible, value);
+                SetProperty(ref noteToolTip, value);
+                OnPropertyChanged(nameof(IsNoteIconVisible));
                 OnPropertyChanged(nameof(NoteMenuItemText));
             }
         }
@@ -258,7 +267,7 @@ namespace DriveHUD.Application.ViewModels.Replayer
         {
             get
             {
-                return isNoteIconVisible
+                return IsNoteIconVisible
                     ? CommonResourceManager.Instance.GetResourceString(ResourceStrings.EditNote)
                     : CommonResourceManager.Instance.GetResourceString(ResourceStrings.MakeNote);
             }

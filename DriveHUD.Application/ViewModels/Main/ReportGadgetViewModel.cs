@@ -136,9 +136,8 @@ namespace DriveHUD.Application.ViewModels
             if (obj != null && obj is ComparableCardsStatistic)
             {
                 var stat = (obj as ComparableCardsStatistic);
-                HandNoteViewModel viewModel = new HandNoteViewModel();
-                viewModel.GameNumber = stat.Statistic.GameNumber;
-                var frm = Activator.CreateInstance(typeof(HandNoteView), viewModel, (short)stat.Statistic.PokersiteId);
+                HandNoteViewModel viewModel = new HandNoteViewModel(stat.Statistic.GameNumber, (short)stat.Statistic.PokersiteId);
+                var frm = new HandNoteView(viewModel);
                 ((dynamic)frm).ShowDialog();
                 stat.Statistic.HandNote = viewModel.HandNoteEntity;
                 stat.UpdateHandNoteText();

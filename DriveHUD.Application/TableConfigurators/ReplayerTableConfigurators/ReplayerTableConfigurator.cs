@@ -239,7 +239,7 @@ namespace DriveHUD.Application.TableConfigurators
             panel.Height = double.NaN;
             panel.Width = 150;
 
-            player.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(player.Name, viewModel.CurrentHand.PokersiteId)?.Note ?? string.Empty);
+            player.NoteToolTip = dataService.GetPlayerNote(player.Name, viewModel.CurrentHand.PokersiteId)?.Note ?? string.Empty;
 
             var contextMenu = CreateContextMenu(viewModel.CurrentHand.PokersiteId, player.Name, player);
             contextMenu.EventName = "MouseRightButtonUp";
@@ -276,7 +276,7 @@ namespace DriveHUD.Application.TableConfigurators
                 }
 
                 var hudElement = clickedItem.DataContext as ReplayerPlayerViewModel;
-                hudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(viewModel.Note);
+                hudElement.NoteToolTip = viewModel.Note;
             };
             radMenu.Items.Add(item);
 

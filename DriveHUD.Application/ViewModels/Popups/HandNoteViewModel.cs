@@ -13,54 +13,36 @@ namespace DriveHUD.Application.ViewModels
     /// </summary>
     public class HandNoteViewModel : BaseViewModel
     {
-        private string note;
+        private string _note;
+        private long _gameNumber;
+        private short _pokerSiteId;
+        private Handnotes _handNoteEntity;
 
-        private long gameNumber;
-
-        private Handnotes handNoteEntity;
-
-        private short pokersiteId;
-
-        private IDataService dataService;
+        private IDataService _dataService;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="HandNoteViewModel"/> class.
         /// </summary>
-        public HandNoteViewModel()
+        public HandNoteViewModel(long gameNumber, short pokerSiteId)
         {
             SaveCommand = new RelayCommand(Save);
-            dataService = ServiceLocator.Current.GetInstance<IDataService>();
+            _dataService = ServiceLocator.Current.GetInstance<IDataService>();
+
+            this._gameNumber = gameNumber;
+            this._pokerSiteId = pokerSiteId;
+
+            this.Note = LoadHandNoteViewModel(_gameNumber, pokerSiteId);
         }
 
         public string Note
         {
-            get { return note; }
+            get { return _note; }
             set
             {
-                if (Equals(value, note)) return;
+                if (Equals(value, _note)) return;
 
-                note = value;
+                _note = value;
                 OnPropertyChanged();
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets the game Number.
-        /// </summary>
-        public long GameNumber
-        {
-            get
-            {
-                return this.gameNumber;
-            }
-            set
-            {
-                this.gameNumber = value;
-                handNoteEntity = dataService.GetHandNote(this.gameNumber, this.pokersiteId);
-                if (handNoteEntity != null)
-                {
-                    Note = handNoteEntity.Note;
-                }
             }
         }
 
@@ -71,23 +53,7 @@ namespace DriveHUD.Application.ViewModels
         {
             get
             {
-                return this.handNoteEntity;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets poker site Id
-        /// </summary>
-        public short PokersiteId
-        {
-            get
-            {
-                return this.pokersiteId;
-            }
-
-            set
-            {
-                pokersiteId = value;
+                return this._handNoteEntity;
             }
         }
 
@@ -98,23 +64,33 @@ namespace DriveHUD.Application.ViewModels
 
         public Action CloseAction { get; set; }
 
+        private string LoadHandNoteViewModel(long gameNumber, short pokerSiteId)
+        {
+            _handNoteEntity = _dataService.GetHandNote(gameNumber, pokerSiteId);
+            if (_handNoteEntity != null)
+            {
+                return _handNoteEntity.Note;
+            }
+
+            return string.Empty;
+        }
+
         /// <summary>
         /// The save.
         /// </summary>
         private void Save()
         {
-            if (handNoteEntity == null)
+            if (_handNoteEntity == null)
             {
-                //Handhistory hh = dataService.GetHandHistory(GameNumber);
-                handNoteEntity = new Handnotes
+                _handNoteEntity = new Handnotes
                 {
-                    Gamenumber = GameNumber,
-                    PokersiteId = PokersiteId,
+                    Gamenumber = this._gameNumber,
+                    PokersiteId = this._pokerSiteId,
                 };
             }
 
-            handNoteEntity.Note = Note;
-            dataService.Store(handNoteEntity);
+            _handNoteEntity.Note = Note;
+            _dataService.Store(_handNoteEntity);
             CloseAction.Invoke();
         }
     }

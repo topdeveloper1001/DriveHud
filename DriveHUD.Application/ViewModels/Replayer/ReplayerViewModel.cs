@@ -66,10 +66,6 @@ namespace DriveHUD.Application.ViewModels.Replayer
             HandNoteCommand = new RelayCommand(HandNoteShow);
             ShowSupportForumsCommand = new RelayCommand(ShowSupportForums);
 
-            HandNoteType = typeof(HandNoteView);
-            FacebookOAuthType = typeof(Social.FacebookOAuth);
-            TwitterOAuthType = typeof(Social.TwitterOAuth);
-
             TableStateList = new List<ReplayerTableState>();
             PlayersCollection = new ObservableCollection<ReplayerPlayerViewModel>();
             for (int i = 0; i < PLAYERS_COLLECTION_SIZE; i++)
@@ -496,21 +492,20 @@ namespace DriveHUD.Application.ViewModels.Replayer
 
         private void FacebookOAuthCommandHandler()
         {
-            dynamic frm = Activator.CreateInstance(FacebookOAuthType);
+            var frm = new Social.FacebookOAuth();
             frm.ShowDialog();
         }
 
         private void TwitterOAuthCommandHandler()
         {
-            dynamic frm = Activator.CreateInstance(TwitterOAuthType);
+            var frm = new Social.TwitterOAuth();
             frm.ShowDialog();
         }
 
         private void HandNoteShow()
         {
-            HandNoteViewModel viewModel = new HandNoteViewModel();
-            viewModel.GameNumber = CurrentHand.GameNumber;
-            var frm = Activator.CreateInstance(HandNoteType, viewModel, CurrentHand.PokersiteId);
+            HandNoteViewModel viewModel = new HandNoteViewModel(CurrentHand.GameNumber, CurrentHand.PokersiteId);
+            var frm = new HandNoteView(viewModel);
             ((dynamic)frm).ShowDialog();
 
             CurrentHand.Statistic.HandNote = viewModel.HandNoteEntity;
@@ -553,10 +548,6 @@ namespace DriveHUD.Application.ViewModels.Replayer
         private int _sliderMax;
         private bool _isShowHoleCards;
         private string _activePlayerName;
-
-        internal Type FacebookOAuthType { get; set; }
-        internal Type TwitterOAuthType { get; set; }
-        internal Type HandNoteType { get; set; }
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
