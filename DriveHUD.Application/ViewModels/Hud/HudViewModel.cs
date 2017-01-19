@@ -27,12 +27,10 @@ using Model.Data;
 using DriveHUD.Application.TableConfigurators;
 using System.Collections.Specialized;
 using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.Common.Resources;
 using Model.Site;
 using Prism.Interactivity.InteractionRequest;
 using Model.Settings;
 using Model.Events;
-using DriveHUD.Common.Wpf.Actions;
 using DriveHUD.Entities;
 using System.ComponentModel;
 using Model.Filters;
@@ -47,9 +45,6 @@ namespace DriveHUD.Application.ViewModels
     /// </summary>
     public class HudViewModel : PopupViewModelBase
     {
-        public EnumPokerSites DefaultPokerSite = EnumPokerSites.Poker888;
-        public EnumGameType DefaultGameType = EnumGameType.CashHoldem;
-
         private IHudLayoutsService _hudLayoutsSevice;
         private ISettingsService SettingsService => ServiceLocator.Current.GetInstance<ISettingsService>();
 
@@ -381,18 +376,6 @@ namespace DriveHUD.Application.ViewModels
 
         private void InitializeObservables()
         {
-            this.ObservableForProperty(x => x.HudViewType).Select(x => true).Subscribe(x =>
-            {
-                var settings = SettingsService.GetSettings();
-                settings.GeneralSettings.HudViewMode = (int) HudViewType;
-                SettingsService.SaveSettings(settings);
-                HudType = HudViewType == HudViewType.Plain ? HudType.Plain : HudType.Default;
-                CurrentHudTableViewModel?.HudElements.ForEach(h => h.HudViewType = HudViewType);
-                previewHudElementViewModel.HudViewType = HudViewType;
-                if (!_currentLayoutSwitching && CurrentTableType != null)
-                    DataLoad(false);
-            });
-
             Observable.FromEventPattern<NotifyCollectionChangedEventHandler, NotifyCollectionChangedEventArgs>(
                 h => StatInfoObserveCollection.CollectionChanged += h,
                 h => StatInfoObserveCollection.CollectionChanged -= h).Subscribe(x =>
@@ -595,7 +578,7 @@ namespace DriveHUD.Application.ViewModels
 
         public HudViewType HudViewType
         {
-            get { return _currentLayout?.HudViewType?? HudViewType.Plain; }
+            get { return _currentLayout?.HudViewType ?? HudViewType.Plain; }
             set
             {
                 if (_currentLayout.HudViewType == value)
@@ -603,6 +586,14 @@ namespace DriveHUD.Application.ViewModels
                 _currentLayout.HudViewType = value;
                 HudType = _currentLayout.HudViewType == HudViewType.Plain ? HudType.Plain : HudType.Default;
                 RaisePropertyChanged(() => HudViewType);
+
+                var settings = SettingsService.GetSettings();
+                settings.GeneralSettings.HudViewMode = (int) HudViewType;
+                SettingsService.SaveSettings(settings);
+                CurrentHudTableViewModel?.HudElements.ForEach(h => h.HudViewType = HudViewType);
+                previewHudElementViewModel.HudViewType = HudViewType;
+                if (!_currentLayoutSwitching && CurrentTableType != null)
+                    DataLoad(false);
             }
         }
 
@@ -720,13 +711,12 @@ namespace DriveHUD.Application.ViewModels
             if (CurrentHudTableViewModel != null && !disableLayoutSave)
                 SaveLayoutChanged(CurrentLayout);
             CurrentLayout.TableType = CurrentTableType.TableType;
-            CurrentHudTableViewModel = HudTableViewModels.FirstOrDefault(h => h.TableType == CurrentTableType.TableType); //TODO site & game?
+            CurrentHudTableViewModel = HudTableViewModels.FirstOrDefault(h => h.TableType == CurrentTableType.TableType); 
             if (CurrentHudTableViewModel == null)
                 return;
             CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
                 CurrentHudTableViewModel.Opacity = ((double) CurrentLayout.HudOpacity)/100;
                 CurrentHudTableViewModel.HudElements.ForEach(e=>e.Opacity = CurrentHudTableViewModel.Opacity);
-            MergeLayouts(CurrentHudTableViewModel.HudElements, CurrentLayout);
             UpdateLayout(CurrentLayout);
             TableUpdate?.Invoke(this, EventArgs.Empty);
         }
@@ -737,23 +727,6 @@ namespace DriveHUD.Application.ViewModels
                 return;
             Layouts.Remove(CurrentLayout);
             UpdateActiveLayout();
-        }
-
-        private void MergeLayouts(IEnumerable<HudElementViewModel> hudElementViewModels, HudLayoutInfo layout)
-        {
-            Check.ArgumentNotNull(() => hudElementViewModels);
-            Check.ArgumentNotNull(() => layout);
-            foreach (var hudElementViewModel in hudElementViewModels)
-            {
-                var userDefinedPosition =
-                    layout.HudPositions.FirstOrDefault(
-                        p => p.HudType == hudElementViewModel.HudType && p.Seat == hudElementViewModel.Seat);
-                if (userDefinedPosition == null)
-                    continue;
-                hudElementViewModel.Width = userDefinedPosition.Width;
-                hudElementViewModel.Height = userDefinedPosition.Height;
-                hudElementViewModel.Position = userDefinedPosition.Position;
-            }
         }
 
         public void UpdateActiveLayout()
@@ -870,7 +843,6 @@ namespace DriveHUD.Application.ViewModels
                     table.HudElements.ForEach(e=>e.Opacity = CurrentHudTableViewModel.Opacity);
                     table.Opacity = CurrentHudTableViewModel.Opacity;
                 }
-            MergeLayouts(CurrentHudTableViewModel.HudElements, CurrentLayout);
             TableUpdate?.Invoke(this, EventArgs.Empty);
             ClosePopup();
         }

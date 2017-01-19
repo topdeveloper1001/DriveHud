@@ -36,6 +36,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private const string LayoutFileExtension = ".xml";
         private const string MappingsFileName = "Mappings";
         private const string PathToImages = @"data\PlayerTypes";
+        private readonly EnumPokerSites[] _extendedHudPokerSites = new[] {EnumPokerSites.Bodog, EnumPokerSites.Ignition};
 
         public HudLayoutMappings HudLayoutMappings { get; set; }
 
@@ -594,9 +595,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         #endregion
-
-
-
+        
         public void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType)
         {
             var mapping =
@@ -660,6 +659,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 layout = new HudLayoutInfo();
             layout.Name = hudData.Name;
             layout.TableType = hudData.LayoutInfo.TableType;
+            layout.HudViewType = hudData.LayoutInfo.HudViewType;
             layout.HudStats = hudData.Stats.Select(x =>
             {
                 var statInfoBreak = x as StatInfoBreak;
@@ -679,29 +679,27 @@ namespace DriveHUD.Application.ViewModels.Hud
             layout.HudBumperStickerTypes = hudData.LayoutInfo.HudBumperStickerTypes.Select(x => x.Clone()).ToList();
             layout.HudPlayerTypes = hudData.LayoutInfo.HudPlayerTypes.Select(x => x.Clone()).ToList();
             var fileName = InternalSave(layout);
-            if (addLayout)
+            HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
+            var pokerSites = layout.HudViewType == HudViewType.Plain
+                ? Enum.GetValues(typeof(EnumPokerSites))
+                    .OfType<EnumPokerSites>()
+                    .Where(p => p != EnumPokerSites.Unknown)
+                : _extendedHudPokerSites;
+            foreach (var pokerSite in pokerSites)
             {
-                foreach (var pokerSite in Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>())
+                foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
                 {
-                    foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
+                    HudLayoutMappings.Mappings.Add(new HudLayoutMapping
                     {
-                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
-                        {
-                            FileName = Path.GetFileName(fileName),
-                            Name = layout.Name,
-                            GameType = gameType,
-                            PokerSite = pokerSite,
-                            TableType = layout.TableType,
-                            IsSelected = false,
-                            IsDefault = false
-                        });
-                    }
+                        FileName = Path.GetFileName(fileName),
+                        Name = layout.Name,
+                        GameType = gameType,
+                        PokerSite = pokerSite,
+                        TableType = layout.TableType,
+                        IsSelected = false,
+                        IsDefault = false
+                    });
                 }
-            }
-            else
-            {
-                HudLayoutMappings.Mappings.Where(m => m.Name == layout.Name)
-                    .ForEach(m => m.TableType = layout.TableType);
             }
             SaveMappings();
             return layout;
