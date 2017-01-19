@@ -676,6 +676,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                             Seat = x.Seat,
                             HudType = x.HudType
                         }).ToList();
+            layout.HudBumperStickerTypes = hudData.LayoutInfo.HudBumperStickerTypes.Select(x => x.Clone()).ToList();
+            layout.HudPlayerTypes = hudData.LayoutInfo.HudPlayerTypes.Select(x => x.Clone()).ToList();
             var fileName = InternalSave(layout);
             if (addLayout)
             {
