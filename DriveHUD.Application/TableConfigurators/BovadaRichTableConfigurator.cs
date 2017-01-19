@@ -24,12 +24,7 @@ using Telerik.Windows.Controls;
 namespace DriveHUD.Application.TableConfigurators
 {
     internal class BovadaRichTableConfigurator : BovadaTableConfigurator
-    {
-        public override HudType HudType
-        {
-            get { return HudType.Default; }
-        }
-
+    {      
         public override int HudElementWidth
         {
             get

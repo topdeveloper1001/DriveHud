@@ -388,15 +388,19 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <telerik:RadDiagram x:Name="diagram" Grid.Row="1" Grid.Column="1"
-									Width="{x:Static vm:HudDefaultSettings.HudTableWidth}" Height="{x:Static vm:HudDefaultSettings.HudTableHeight}"
-									BorderThickness="0" AllowDrop="False"
-									primitives:BackgroundGrid.CellSize="10,10"
-									primitives:BackgroundGrid.LineStroke="#26282b"
-									ViewportChanged="OnDiagramViewportChanged"
-									Style="{StaticResource ClassDiagramStyle}"
-                                    >
-                </telerik:RadDiagram>
+                <telerik:RadDiagram 
+                    x:Name="diagram" 
+                    Grid.Row="1" 
+                    Grid.Column="1"
+					Width="{x:Static vm:HudDefaultSettings.HudTableWidth}" 
+                    Height="{x:Static vm:HudDefaultSettings.HudTableHeight}"
+					BorderThickness="0" 
+                    AllowDrop="False"                    
+					primitives:BackgroundGrid.CellSize="10,10"
+					primitives:BackgroundGrid.LineStroke="#26282b"
+					ViewportChanged="OnDiagramViewportChanged"
+					Style="{StaticResource ClassDiagramStyle}" />
+                                                    
             </Grid>
            
             <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">

@@ -28,25 +28,7 @@ namespace DriveHUD.Application.TableConfigurators
         protected const int labelElementWidth = 110;
         protected const int labelElementHeight = 35;
 
-        protected const string backgroundImage = "/DriveHUD.Common.Resources;component/images/Table.png";
-
-        protected override ITableSeatAreaConfigurator TableSeatAreaConfigurator
-        {
-            get
-            {
-                return new BovadaTableSeatAreaConfigurator();
-            }
-        }
-
-        public override EnumPokerSites Type
-        {
-            get { return EnumPokerSites.Ignition; }
-        }
-
-        public override HudType HudType
-        {
-            get { return HudType.Plain; }
-        }
+        protected const string backgroundImage = "/DriveHUD.Common.Resources;component/images/Table.png";    
 
         protected override string BackgroundImage
         {
@@ -69,6 +51,14 @@ namespace DriveHUD.Application.TableConfigurators
             }
         }
 
+        public override HudViewType HudViewType
+        {
+            get
+            {
+                return HudViewType.Vertical_1;
+            }
+        }
+
         public override void ConfigureTable(RadDiagram diagram, HudTableViewModel hudTable, int seats)
         {
             Check.ArgumentNotNull(() => diagram);
@@ -76,17 +66,21 @@ namespace DriveHUD.Application.TableConfigurators
             Check.Require(hudTable.HudElements != null);
             Check.Require(hudTable.HudElements.Count != seats);
 
-            InitializeTable(diagram, hudTable, seats);
-            CreateSeatAreas(diagram, hudTable, seats);
+            InitializeTable(diagram, hudTable, seats);       
 
             var labelPositions = GetPredefinedLabelPositions();
-            foreach (var hudElement in hudTable.HudElements.Where(x => x.HudType == HudType))
+
+            foreach (var hudElement in hudTable.HudElements.ToArray())
             {
                 var label = CreatePlayerLabel(string.Format("Player {0}", hudElement.Seat));
+
                 label.X = labelPositions[seats][hudElement.Seat - 1, 0];
                 label.Y = labelPositions[seats][hudElement.Seat - 1, 1];
+
                 diagram.AddShape(label);
+
                 var hud = CreateHudLabel(hudElement);
+
                 if (hudElement.HudViewType == HudViewType.Plain)
                 {
                     hud.Position = new Point(label.X - (hud.Width - label.Width)/2, label.Y + label.Height);
@@ -104,9 +98,7 @@ namespace DriveHUD.Application.TableConfigurators
                     hud.Position = hudElement.IsRightOriented ? new Point(label.X, label.Y - 60) : new Point(label.X - 30, label.Y - 60);
                 }
                 diagram.AddShape(hud);
-            }
-
-            CreatePreferredSeatMarkers(diagram, hudTable, seats);
+            }         
         }
 
         public override IEnumerable<HudElementViewModel> GenerateElements(int seats)
@@ -126,8 +118,7 @@ namespace DriveHUD.Application.TableConfigurators
                                 Seat = seat + 1,
                                 IsRightOriented = isRightOriented,
                                 TiltMeter = 100,
-                                HudType = HudType,
-                                HudViewType = HudViewType.Vertical_1,
+                                HudViewType = HudViewType,                                
                                 Position = new Point(hudElementPositionX, hudElementPositionY),
                             }).ToArray();
 
@@ -177,19 +168,7 @@ namespace DriveHUD.Application.TableConfigurators
 
             return predefinedPositions;
         }
-
-        protected override Dictionary<int, int[,]> GetPredefinedMarkersPositions()
-        {
-            var predefinedPositions = new Dictionary<int, int[,]>
-            {
-                { 2, new int[,] { { 450, 75 }, { 450, 417 } } },
-                { 6, new int[,] { { 450, 75 }, { 745, 162 }, { 745, 348 }, { 450, 427 }, { 150, 349 }, { 150, 160 } } },
-                { 9, new int[,] { { 567, 75 }, { 745, 146 }, { 760, 292 }, { 636, 413 }, { 448, 426 }, { 260, 414 }, { 137, 293 }, { 153, 146 }, { 332, 75 } } }
-            };
-
-            return predefinedPositions;
-        }
-
+       
         protected virtual Dictionary<int, int[,]> GetPredefinedLabelPositions()
         {
             var predefinedLablelPositions = new Dictionary<int, int[,]>

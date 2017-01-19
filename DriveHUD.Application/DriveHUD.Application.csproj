@@ -458,7 +458,7 @@
     <Compile Include="Controls\RadListBoxDragDropBehavior.cs" />
     <Compile Include="Common\StaticClasses.cs" />
     <Compile Include="ControlTemplateSelectors\ReplayerTemplateSelector.cs" />
-    <Compile Include="ControlTemplateSelectors\TemplateSelectors.cs" />
+    <Compile Include="ControlTemplateSelectors\HudPanelTemplateSelector.cs" />
     <Compile Include="CustomeGauge.xaml.cs">
       <DependentUpon>CustomeGauge.xaml</DependentUpon>
     </Compile>

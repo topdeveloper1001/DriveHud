@@ -29,7 +29,7 @@ namespace DriveHUD.Application.ViewModels
 
         [ProtoMember(2)]
         public EnumTableType TableType { get; set; }
-        
+
         [ProtoMember(3)]
         public bool IsRelativePosition { get; set; }
 
@@ -41,12 +41,17 @@ namespace DriveHUD.Application.ViewModels
 
         [ProtoMember(6)]
         public EnumGameType? GameType { get; set; }
+
+        [ProtoMember(7)]
         public double Opacity { get; set; }
 
+        [ProtoMember(8)]
+        public HudViewType HudViewType { get; set; }
+
         public ObservableCollection<HudElementViewModel> HudElements { get; set; }
-        
+
         internal ObservableCollection<ITableSeatArea> TableSeatAreaCollection { get; set; }
-        
+
         public double ShiftX
         {
             get { return (IsRelativePosition ? -RelativePosition.X : 0) + StartPosition.X; }
@@ -68,6 +73,7 @@ namespace DriveHUD.Application.ViewModels
             model.RelativePosition = RelativePosition;
             model.StartPosition = StartPosition;
             model.Opacity = Opacity;
+            model.HudViewType = HudViewType;
             model.HudElements = new ObservableCollection<HudElementViewModel>(HudElements.Select(x => x.Clone()));
             model.TableSeatAreaCollection = new ObservableCollection<ITableSeatArea>();
 

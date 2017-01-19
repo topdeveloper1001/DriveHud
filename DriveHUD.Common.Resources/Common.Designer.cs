@@ -539,6 +539,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply Size to All.
+        /// </summary>
+        internal static string Common_Hud_ApplySizeToAll {
+            get {
+                return ResourceManager.GetString("Common_Hud_ApplySizeToAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Copy.
         /// </summary>
         internal static string Common_Hud_Copy {

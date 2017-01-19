@@ -346,9 +346,11 @@ namespace DriveHUD.Application.ViewModels
                 };
 
                 var trackConditionsMeterData = new HudTrackConditionsMeterData();
+
                 // TODO: Opponent Analysis report turned off
                 //var topPlayersService = ServiceLocator.Current.GetInstance<ITopPlayersService>();
                 //topPlayersService.UpdateStatistics(importerSessionCacheService.GetAllPlayerStats(gameInfo.Session));
+
                 for (int i = 1; i <= maxSeats; i++)
                 {
                     var playerName = string.Empty;

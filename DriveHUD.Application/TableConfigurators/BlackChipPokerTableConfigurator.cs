@@ -8,13 +8,6 @@ using DriveHUD.Entities;
 namespace DriveHUD.Application.TableConfigurators
 {
     internal class BlackChipPokerTableConfigurator : WinningPokerNetworkTableConfigurator
-    {
-        public override EnumPokerSites Type
-        {
-            get
-            {
-                return EnumPokerSites.BlackChipPoker;
-            }
-        }
+    {     
     }
 }

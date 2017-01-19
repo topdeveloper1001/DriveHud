@@ -38,7 +38,7 @@ namespace DriveHUD.Application.Views
                 ViewModel.TableUpdate += ViewModel_TableUpdated;
                 ViewModel.UpdateActiveLayout();
                 var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
-                Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int) tableType);
+                Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
             };
         }
 
@@ -50,7 +50,7 @@ namespace DriveHUD.Application.Views
             }
 
             var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
-            Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int) tableType);
+            Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
         }
 
         private HudViewModel ViewModel
@@ -61,11 +61,9 @@ namespace DriveHUD.Application.Views
         private ITableConfigurator Configurator
         {
             get
-            {
-                var pokerSite = ViewModel.DefaultPokerSite;
+            {                
                 return
-                    Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(
-                        TableConfiguratorHelper.GetServiceName(pokerSite, ViewModel.HudType));
+                    Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>();
             }
         }
 

@@ -155,43 +155,27 @@ namespace DriveHUD.Application.ViewModels
         {
             HudTableViewModels = new List<HudTableViewModel>();
 
-            // create HUD elements
-            foreach (var pokerSite in _configurations.Select(c => c.Site))
+            foreach (EnumTableType tableType in Enum.GetValues(typeof(EnumTableType)))
             {
-                foreach (var tableType in GetSiteTableTypes(pokerSite))
+                var hudElements = new ObservableCollection<HudElementViewModel>();
+
+                var tableConfigurator = ServiceLocator.Current.GetInstance<ITableConfigurator>();
+
+                var hudElementViewModels = tableConfigurator.GenerateElements((int)tableType).ToArray();
+                hudElementViewModels.ForEach(x => x.HudViewType = HudViewType);
+                hudElements.AddRange(hudElementViewModels);
+
+                // generate hud elements                        
+                var hudTableViewModel = new HudTableViewModel
                 {
-                    foreach (EnumGameType gType in Enum.GetValues(typeof(EnumGameType)))
-                    {
-                        var hudElements = new ObservableCollection<HudElementViewModel>();
+                    HudElements = hudElements,
+                    TableType = tableType
+                };
 
-                        foreach (HudType hType in Enum.GetValues(typeof(HudType)))
-                        {
-                            var tableConfigurator =
-                                ServiceLocator.Current.GetInstance<ITableConfigurator>(
-                                    TableConfiguratorHelper.GetServiceName(
-                                        pokerSite,
-                                        hType));
-                            var hudElementViewModels = tableConfigurator.GenerateElements((int) tableType).ToArray();
-
-                            hudElementViewModels.ForEach(x => x.HudViewType = HudViewType);
-
-                            hudElements.AddRange(hudElementViewModels);
-                        }
-
-                        // generate hud elements                        
-                        var hudTableViewModel = new HudTableViewModel
-                        {
-                            HudElements = hudElements,
-                            PokerSite = pokerSite,
-                            TableType = tableType,
-                            GameType = gType
-                        };
-                        HudTableViewModels.Add(hudTableViewModel);
-                    }
-                }
+                HudTableViewModels.Add(hudTableViewModel);
             }
         }
-        
+
         private void InitializeTableLayouts()
         {
             var configurationService = ServiceLocator.Current.GetInstance<ISiteConfigurationService>();
