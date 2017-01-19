@@ -65,16 +65,18 @@ namespace DriveHUD.Application.ViewModels
                 return hudElementViewModel;
             }
 
+            hudElementViewModel.Position = positions.Position;
+
             var uiPositions = creationInfo.HudLayoutInfo.UiPositionsInfo.FirstOrDefault(x => x.Seat == creationInfo.SeatNumber);
 
             if (uiPositions == null)
             {
                 LogProvider.Log.Error(this, $"Could not find data for ui positions {creationInfo.SeatNumber} in {creationInfo.HudLayoutInfo.Name}. Layout is broken. Default data will be used.");
+                return hudElementViewModel;
             }
 
             hudElementViewModel.Width = uiPositions.Width;
             hudElementViewModel.Height = uiPositions.Height;
-            hudElementViewModel.Position = positions.Position;
 
             return hudElementViewModel;
         }
