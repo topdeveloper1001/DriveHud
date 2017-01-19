@@ -36,12 +36,14 @@ namespace DriveHUD.Application.ViewModels
         {
             Check.ArgumentNotNull(() => hudViewModel);
 
-            var hudTableViewModel =
-                hudViewModel.HudTableViewModels.FirstOrDefault(
-                    h => h.PokerSite == pokerSite && h.GameType == gameType && h.TableType == tableType);
+            var hudTableViewModel = hudViewModel.HudTableViewModels.FirstOrDefault(h => h.TableType == tableType);
 
-            var hudElementTemplate =
-                hudTableViewModel?.HudElements.FirstOrDefault(x => x.Seat == seatNumber && x.HudType == hudType);
+
+            var hudElementTemplate = hudType == HudType.Plain
+                ? hudTableViewModel?.HudElements.FirstOrDefault(
+                    x => x.Seat == seatNumber && x.HudViewType == HudViewType.Plain)
+                : hudTableViewModel?.HudElements.FirstOrDefault(
+                    x => x.Seat == seatNumber && x.HudViewType != HudViewType.Plain);
 
             var hudElementViewModel = hudElementTemplate?.Clone();
             hudElementViewModel.HudViewType = pokerSite == Entities.EnumPokerSites.Bodog ||

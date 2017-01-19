@@ -78,12 +78,9 @@ namespace DriveHUD.Application.ViewModels
         public short PokerSiteId { get; set; }
 
         [XmlIgnore, ProtoMember(10)]
-        public int LayoutId { get; set; }
-
-        [XmlIgnore, ProtoMember(11)]
         public string LayoutName { get; set; }
 
-        [XmlIgnore, ProtoMember(12)]
+        [XmlIgnore, ProtoMember(11)]
         public IEnumerable<string> AvailableLayouts { get; set; }
     }
 }

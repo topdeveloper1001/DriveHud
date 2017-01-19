@@ -10,23 +10,24 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Log;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
-using System.Xml.Serialization;
-using DriveHUD.ViewModels;
-using System.Collections.ObjectModel;
-using Model.Enums;
 using System.Reflection;
-using DriveHUD.Common.Resources;
-using DriveHUD.Common;
-using Model;
 using System.Windows.Media;
+using System.Xml.Serialization;
 using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Common;
 using DriveHUD.Common.Linq;
+using DriveHUD.Common.Log;
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
+using DriveHUD.ViewModels;
+using Model;
+using Model.Data;
+using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -36,7 +37,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private const string LayoutFileExtension = ".xml";
         private const string MappingsFileName = "Mappings";
         private const string PathToImages = @"data\PlayerTypes";
-        private readonly EnumPokerSites[] _extendedHudPokerSites = new[] {EnumPokerSites.Bodog, EnumPokerSites.Ignition};
+        private readonly EnumPokerSites[] _extendedHudPokerSites = {EnumPokerSites.Bodog, EnumPokerSites.Ignition};
 
         public HudLayoutMappings HudLayoutMappings { get; set; }
 
@@ -112,11 +113,22 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private HudLayoutInfo LoadDefault(EnumTableType tableType)
+        {
+            return
+                LoadLayout(Path.Combine(GetLayoutsDirectory().FullName,
+                    $"Default {CommonResourceManager.Instance.GetEnumResource(tableType)}{LayoutFileExtension}"));
+        }
+
         private HudLayoutInfo LoadLayout(HudLayoutMapping mapping)
         {
+            return LoadLayout(Path.Combine(GetLayoutsDirectory().FullName, mapping.FileName));
+        }
+
+        private HudLayoutInfo LoadLayout(string fileName)
+        {
             HudLayoutInfo result;
-            using (var stream = File.Open(Path.Combine(GetLayoutsDirectory().FullName, mapping.FileName), FileMode.Open)
-            )
+            using (var stream = File.Open(fileName, FileMode.Open))
             {
                 result = LoadLayoutFromStream(stream);
             }
@@ -144,18 +156,16 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private List<HudBumperStickerType> CreateDefaultBumperStickers()
         {
-            var bumperStickers = new List<HudBumperStickerType>()
-            {
+            var bumperStickers = new List<HudBumperStickerType> {
                 new HudBumperStickerType(true)
                 {
                     Name = "One and Done",
                     SelectedColor = Colors.OrangeRed,
                     Description = "C-bets at a high% on the flop, but then rarely double barrels.",
                     StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
+                        new ObservableCollection<BaseHudRangeStat> {
                             new BaseHudRangeStat {Stat = Stat.CBet, Low = 55, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 0, High = 35},
+                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 0, High = 35}
                         }
                 },
                 new HudBumperStickerType(true)
@@ -164,12 +174,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                     SelectedColor = Colors.Orange,
                     Description = "Plays an aggressive pre-flop game, but doesn’t play well post flop.",
                     StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
+                        new ObservableCollection<BaseHudRangeStat> {
                             new BaseHudRangeStat {Stat = Stat.VPIP, Low = 19, High = 26},
                             new BaseHudRangeStat {Stat = Stat.PFR, Low = 15, High = 23},
                             new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 0, High = 42},
+                            new BaseHudRangeStat {Stat = Stat.WWSF, Low = 0, High = 42}
                         }
                 },
                 new HudBumperStickerType(true)
@@ -178,14 +187,13 @@ namespace DriveHUD.Application.ViewModels.Hud
                     SelectedColor = Colors.Yellow,
                     Description = "Double and triple barrels a high percentage of the time.",
                     StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
+                        new ObservableCollection<BaseHudRangeStat> {
                             new BaseHudRangeStat {Stat = Stat.VPIP, Low = 20, High = 30},
                             new BaseHudRangeStat {Stat = Stat.PFR, Low = 17, High = 28},
                             new BaseHudRangeStat {Stat = Stat.AGG, Low = 40, High = 49},
                             new BaseHudRangeStat {Stat = Stat.CBet, Low = 65, High = 80},
                             new BaseHudRangeStat {Stat = Stat.WWSF, Low = 44, High = 53},
-                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 46, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.DoubleBarrel, Low = 46, High = 100}
                         }
                 },
                 new HudBumperStickerType(true)
@@ -194,10 +202,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     SelectedColor = Colors.GreenYellow,
                     Description = "3-Bets too much, and folds to a 3-bet too often.",
                     StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
+                        new ObservableCollection<BaseHudRangeStat> {
                             new BaseHudRangeStat {Stat = Stat.S3Bet, Low = 8.8m, High = 100},
-                            new BaseHudRangeStat {Stat = Stat.FoldTo3Bet, Low = 66, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.FoldTo3Bet, Low = 66, High = 100}
                         }
                 },
                 new HudBumperStickerType(true)
@@ -206,9 +213,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     SelectedColor = Colors.Green,
                     Description = "Open raises to wide of a range in early pre-flop positions.",
                     StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
-                            new BaseHudRangeStat {Stat = Stat.UO_PFR_EP, Low = 20, High = 100},
+                        new ObservableCollection<BaseHudRangeStat> {
+                            new BaseHudRangeStat {Stat = Stat.UO_PFR_EP, Low = 20, High = 100}
                         }
                 },
                 new HudBumperStickerType(true)
@@ -217,11 +223,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                     SelectedColor = Colors.Blue,
                     Description = "Fishy player who can’t fold post flop if they get any piece of the board.",
                     StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
+                        new ObservableCollection<BaseHudRangeStat> {
                             new BaseHudRangeStat {Stat = Stat.VPIP, Low = 35, High = 100},
                             new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 40},
-                            new BaseHudRangeStat {Stat = Stat.WTSD, Low = 29, High = 100},
+                            new BaseHudRangeStat {Stat = Stat.WTSD, Low = 29, High = 100}
                         }
                 },
                 new HudBumperStickerType(true)
@@ -230,13 +235,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                     SelectedColor = Colors.DarkBlue,
                     Description = "Plays too many hands pre-flop and isn’t aggressive post flop.",
                     StatsToMerge =
-                        new ObservableCollection<BaseHudRangeStat>()
-                        {
+                        new ObservableCollection<BaseHudRangeStat> {
                             new BaseHudRangeStat {Stat = Stat.VPIP, Low = 40, High = 100},
                             new BaseHudRangeStat {Stat = Stat.FoldToCBet, Low = 0, High = 6},
-                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 0, High = 34},
+                            new BaseHudRangeStat {Stat = Stat.AGG, Low = 0, High = 34}
                         }
-                },
+                }
             };
 
             return bumperStickers;
@@ -273,7 +277,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private bool IsInRange(HudElementViewModel hudElement, IEnumerable<BaseHudRangeStat> rangeStats,
-            Model.Data.HudIndicators source)
+            HudIndicators source)
         {
             if (!rangeStats.Any(x => x.High.HasValue || x.Low.HasValue))
                 return false;
@@ -388,8 +392,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge = tableType == EnumTableType.Six
                         ?
                         // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
+                        new ObservableCollection<HudPlayerTypeStat> {
                             new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 0, High = 17},
                             new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 16},
                             new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4.3m}
@@ -397,8 +400,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         : (tableType == EnumTableType.Nine)
                             ?
                             // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
+                            new ObservableCollection<HudPlayerTypeStat> {
                                 new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 0, High = 11},
                                 new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
                                 new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 3.7m}
@@ -413,8 +415,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge = tableType == EnumTableType.Six
                         ?
                         // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
+                        new ObservableCollection<HudPlayerTypeStat> {
                             new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 36},
                             new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 13},
                             new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4},
@@ -423,8 +424,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         : (tableType == EnumTableType.Nine)
                             ?
                             // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
+                            new ObservableCollection<HudPlayerTypeStat> {
                                 new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 31},
                                 new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
                                 new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 3.8m},
@@ -440,21 +440,19 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge = tableType == EnumTableType.Six
                         ?
                         // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
+                        new ObservableCollection<HudPlayerTypeStat> {
                             new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 22, High = 27},
                             new HudPlayerTypeStat {Stat = Stat.PFR, Low = 18, High = 25},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.7m, High = 8.6m,},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.7m, High = 8.6m},
                             new HudPlayerTypeStat {Stat = Stat.AGG, Low = 42}
                         }
                         : (tableType == EnumTableType.Nine)
                             ?
                             // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
+                            new ObservableCollection<HudPlayerTypeStat> {
                                 new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 16, High = 22},
                                 new HudPlayerTypeStat {Stat = Stat.PFR, Low = 15, High = 21},
-                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.5m, High = 7.6m,},
+                                new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 4.5m, High = 7.6m},
                                 new HudPlayerTypeStat {Stat = Stat.AGG, Low = 42}
                             }
                             : new ObservableCollection<HudPlayerTypeStat>()
@@ -467,18 +465,16 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge = tableType == EnumTableType.Six
                         ?
                         // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
+                        new ObservableCollection<HudPlayerTypeStat> {
                             new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 18, High = 22},
                             new HudPlayerTypeStat {Stat = Stat.PFR, Low = 14, High = 21},
-                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.2m, High = 6m,},
+                            new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.2m, High = 6m},
                             new HudPlayerTypeStat {Stat = Stat.AGG, Low = 41}
                         }
                         : (tableType == EnumTableType.Nine)
                             ?
                             // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
+                            new ObservableCollection<HudPlayerTypeStat> {
                                 new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 14, High = 18},
                                 new HudPlayerTypeStat {Stat = Stat.PFR, Low = 14, High = 18},
                                 new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 3.6m, High = 6.8m}
@@ -493,8 +489,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge = tableType == EnumTableType.Six
                         ?
                         // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
+                        new ObservableCollection<HudPlayerTypeStat> {
                             new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 26, High = 35},
                             new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 33},
                             new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6m},
@@ -503,8 +498,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         : (tableType == EnumTableType.Nine)
                             ?
                             // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
+                            new ObservableCollection<HudPlayerTypeStat> {
                                 new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 22, High = 29},
                                 new HudPlayerTypeStat {Stat = Stat.PFR, Low = 20, High = 28},
                                 new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 5.5m, High = 9.6m}
@@ -519,8 +513,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge = tableType == EnumTableType.Six
                         ?
                         // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
+                        new ObservableCollection<HudPlayerTypeStat> {
                             new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 25, High = 34},
                             new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 31},
                             new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6.5m},
@@ -529,8 +522,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         : (tableType == EnumTableType.Nine)
                             ?
                             // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
+                            new ObservableCollection<HudPlayerTypeStat> {
                                 new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 21, High = 28},
                                 new HudPlayerTypeStat {Stat = Stat.PFR, Low = 21, High = 28},
                                 new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 6.0m, High = 10m},
@@ -546,8 +538,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge = tableType == EnumTableType.Six
                         ?
                         // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
+                        new ObservableCollection<HudPlayerTypeStat> {
                             new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 44},
                             new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 12},
                             new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4}
@@ -555,8 +546,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         : (tableType == EnumTableType.Nine)
                             ?
                             // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
+                            new ObservableCollection<HudPlayerTypeStat> {
                                 new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 42},
                                 new HudPlayerTypeStat {Stat = Stat.PFR, Low = 0, High = 11},
                                 new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 0, High = 4},
@@ -572,16 +562,14 @@ namespace DriveHUD.Application.ViewModels.Hud
                     StatsToMerge = tableType == EnumTableType.Six
                         ?
                         // 6-max
-                        new ObservableCollection<HudPlayerTypeStat>()
-                        {
+                        new ObservableCollection<HudPlayerTypeStat> {
                             new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 40},
                             new HudPlayerTypeStat {Stat = Stat.PFR, Low = 22}
                         }
                         : (tableType == EnumTableType.Nine)
                             ?
                             // 9-max
-                            new ObservableCollection<HudPlayerTypeStat>()
-                            {
+                            new ObservableCollection<HudPlayerTypeStat> {
                                 new HudPlayerTypeStat {Stat = Stat.VPIP, Low = 38},
                                 new HudPlayerTypeStat {Stat = Stat.PFR, Low = 22},
                                 new HudPlayerTypeStat {Stat = Stat.S3Bet, Low = 5},
@@ -892,7 +880,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     continue;
                 }
 
-                var statistics = new Model.Data.HudIndicators(new[] {stickersStatistics[sticker.Name]});
+                var statistics = new HudIndicators(new[] {stickersStatistics[sticker.Name]});
                 if (statistics.TotalHands < sticker.MinSample || statistics.TotalHands == 0)
                 {
                     continue;
@@ -970,7 +958,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                     m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsSelected) ??
                 HudLayoutMappings.Mappings.FirstOrDefault(
                     m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsDefault);
-            return mapping == null ? null : LoadLayout(mapping);
+            if (mapping == null)
+                return LoadDefault(tableType);
+            return LoadLayout(mapping);
         }
 
         public HudTableViewModel GetHudTableViewModel(EnumPokerSites pokerSite, EnumTableType tableType,

@@ -714,6 +714,7 @@ namespace DriveHUD.Application.ViewModels
             CurrentHudTableViewModel = HudTableViewModels.FirstOrDefault(h => h.TableType == CurrentTableType.TableType); 
             if (CurrentHudTableViewModel == null)
                 return;
+            CurrentHudTableViewModel.HudViewType = HudViewType;
             CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
                 CurrentHudTableViewModel.Opacity = ((double) CurrentLayout.HudOpacity)/100;
                 CurrentHudTableViewModel.HudElements.ForEach(e=>e.Opacity = CurrentHudTableViewModel.Opacity);
