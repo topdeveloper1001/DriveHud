@@ -334,10 +334,11 @@ namespace DriveHUD.Application.ViewModels
 
                 var availableLayouts = hudLayoutsService.GetAvailableLayouts(e.GameInfo.PokerSite, e.GameInfo.TableType, e.GameInfo.EnumGameType);
 
+#warning check hud type
                 var ht = new HudLayout
                 {
                     WindowId = gameInfo.WindowHandle,
-                    HudType = site == EnumPokerSites.Ignition ? HudViewModel.HudType : HudType.Plain,
+                    HudType = HudType.Plain,
                     TableType = gameInfo.TableType,
                     PokerSiteId = (short)gameInfo.PokerSite,
                     GameNumber = gameInfo.GameNumber,

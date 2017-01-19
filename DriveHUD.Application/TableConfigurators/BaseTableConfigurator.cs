@@ -189,5 +189,10 @@ namespace DriveHUD.Application.TableConfigurators
 
             element.SetBinding(dp, binding);
         }
+
+        protected virtual bool IsRightOriented(int seats, int seat)
+        {
+            return false;
+        }
     }
 }

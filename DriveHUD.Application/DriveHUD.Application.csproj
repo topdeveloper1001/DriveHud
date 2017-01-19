@@ -345,6 +345,9 @@
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\BlackChipPokerTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\CommonHorizTableConfiguration.cs" />
+    <Compile Include="TableConfigurators\CommonVertOneTableConfiguration.cs" />
+    <Compile Include="TableConfigurators\CommonVertTwoTableConfiguration.cs" />
     <Compile Include="TableConfigurators\Poker888TableConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />

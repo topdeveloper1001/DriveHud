@@ -34,15 +34,21 @@ namespace DriveHUD.Application.Views
             DataContextChanged += (o, e) =>
             {
                 if (ViewModel == null)
+                {
                     return;
-                ViewModel.TableUpdate += ViewModel_TableUpdated;
+                }
+
+                ViewModel.TableUpdated += OnViewModelTableUpdated;
+
                 ViewModel.UpdateActiveLayout();
+
                 var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
+
                 Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
             };
         }
 
-        private void ViewModel_TableUpdated(object sender, EventArgs e)
+        private void OnViewModelTableUpdated(object sender, EventArgs e)
         {
             if (ViewModel == null)
             {
@@ -50,20 +56,23 @@ namespace DriveHUD.Application.Views
             }
 
             var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
+
             Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
         }
 
         private HudViewModel ViewModel
         {
-            get { return DataContext as HudViewModel; }
+            get
+            {
+                return DataContext as HudViewModel;
+            }
         }
 
         private ITableConfigurator Configurator
         {
             get
-            {                
-                return
-                    Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>();
+            {
+                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(ViewModel.HudViewType.ToString());
             }
         }
 
