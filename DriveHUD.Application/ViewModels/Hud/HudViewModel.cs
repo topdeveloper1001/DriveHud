@@ -743,10 +743,25 @@ namespace DriveHUD.Application.ViewModels
             CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
             CurrentHudTableViewModel.Opacity = ((double)CurrentLayout.HudOpacity) / 100;
             CurrentHudTableViewModel.HudElements.ForEach(e => e.Opacity = CurrentHudTableViewModel.Opacity);
-
+            MergeLayouts(CurrentHudTableViewModel.HudElements, CurrentLayout);
             UpdateLayout(CurrentLayout);
 
             TableUpdated?.Invoke(this, EventArgs.Empty);
+        }
+
+        private void MergeLayouts(IEnumerable<HudElementViewModel> hudElementViewModels, HudLayoutInfo layout)
+        {
+            Check.ArgumentNotNull(() => hudElementViewModels);
+            Check.ArgumentNotNull(() => layout);
+            foreach (var hudElementViewModel in hudElementViewModels)
+            {
+                var userDefinedPosition = layout.UiPositionsInfo.FirstOrDefault(p => p.Seat == hudElementViewModel.Seat);
+                if (userDefinedPosition == null)
+                    continue;
+                hudElementViewModel.Width = userDefinedPosition.Width;
+                hudElementViewModel.Height = userDefinedPosition.Height;
+                hudElementViewModel.Position = userDefinedPosition.Position;
+            }
         }
 
         private void DataDelete()
