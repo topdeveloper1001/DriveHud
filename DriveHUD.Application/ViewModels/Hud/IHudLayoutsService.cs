@@ -27,7 +27,9 @@ namespace DriveHUD.Application.ViewModels
         HudLayoutMappings HudLayoutMappings { get; set; }
 
         HudLayoutInfo GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
+
         HudTableViewModel GetHudTableViewModel(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
+
         HudLayoutInfo GetLayout(string name);
 
         /// <summary>
@@ -87,10 +89,12 @@ namespace DriveHUD.Application.ViewModels
         /// <returns>Full path to image</returns>
         string GetImageLink(string image);
 
-
         void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType);
-        IEnumerable<string> GetLayoutsNames();
+
+        IEnumerable<string> GetLayoutsNames(EnumTableType tableType);
+
         IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
-        List<HudLayoutInfo> GetAllLayouts();
+
+        List<HudLayoutInfo> GetAllLayouts(EnumTableType tableType);
     }
 }

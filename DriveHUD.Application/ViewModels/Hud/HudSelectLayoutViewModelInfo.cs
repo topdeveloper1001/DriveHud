@@ -10,12 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using Model.Enums;
 using System;
 
 namespace DriveHUD.Application.ViewModels
 {
     public class HudSelectLayoutViewModelInfo
     {
+        public EnumTableType TableType { get; set; }
         public string LayoutName { get; set; }
         public Action Save { get; set; }
         public Action Cancel { get; set; }

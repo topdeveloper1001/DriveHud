@@ -67,7 +67,7 @@
                                     </Setter.Value>
                                 </Setter>
                                 <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType={x:Type telerik:RadMenuItem}}, Path=DataContext.LoadLayoutCommand}" />
-                                <Setter Property="CommandParameter" Value="{Binding}" />
+                                <Setter Property="CommandParameter" Value="{Binding}" />                               
                             </Style>
                         </telerik:RadMenuItem.ItemContainerStyle>
                     </telerik:RadMenuItem>

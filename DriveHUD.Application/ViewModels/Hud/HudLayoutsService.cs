@@ -87,8 +87,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             try
             {
                 var layoutsDirectory = GetLayoutsDirectory();
-                var mappingsFilePath = Path.Combine(layoutsDirectory.FullName,
-                    $"{MappingsFileName}{LayoutFileExtension}");
+
+                var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
+
                 if (File.Exists(mappingsFilePath))
                 {
                     HudLayoutMappings = LoadLayoutMappings(mappingsFilePath);
@@ -96,6 +97,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 else
                 {
                     HudLayoutMappings = new HudLayoutMappings();
+
                     foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
                     {
                         var defaultLayoutInfo = GetPredefindedLayout(tableType);
@@ -103,7 +105,17 @@ namespace DriveHUD.Application.ViewModels.Hud
                         defaultLayoutInfo.TableType = tableType;
                         defaultLayoutInfo.IsDefault = true;
                         InternalSave(defaultLayoutInfo);
+
+                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                        {
+                            TableType = tableType,
+                            Name = defaultLayoutInfo.Name,
+                            IsDefault = true,
+                            FileName = $"{defaultLayoutInfo.Name}.xml"
+                        });
+
                     }
+
                     SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
                 }
             }
@@ -715,7 +727,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 Seat = x.Seat,
                 Height = x.Height,
                 Width = x.Width,
-                Position = x.Position              
+                Position = x.Position
             }).ToList();
 
             var fileName = InternalSave(layout);
@@ -1057,9 +1069,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             return mapping == null ? null : LoadLayout(mapping);
         }
 
-        public IEnumerable<string> GetLayoutsNames()
+        public IEnumerable<string> GetLayoutsNames(EnumTableType tableType)
         {
-            return HudLayoutMappings.Mappings.OrderByDescending(m => m.IsDefault).Select(m => m.Name).Distinct();
+            return HudLayoutMappings.Mappings.Where(x => x.TableType == tableType).OrderByDescending(m => m.IsDefault).Select(m => m.Name).Distinct();
         }
 
         public IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType,
@@ -1074,34 +1086,42 @@ namespace DriveHUD.Application.ViewModels.Hud
                     .Distinct();
         }
 
-        public List<HudLayoutInfo> GetAllLayouts()
+        public List<HudLayoutInfo> GetAllLayouts(EnumTableType tableType)
         {
             var result = new List<HudLayoutInfo>();
+
+            var layoutMappings = HudLayoutMappings.Mappings.Where(x => x.TableType == tableType).Select(x => x.FileName).Distinct().ToArray();
+
             var layoutsDirectory = GetLayoutsDirectory();
-            foreach (var layoutFile in
-                layoutsDirectory.GetFiles()
-                    .Where(
-                        f =>
-                            string.Equals(f.Extension, LayoutFileExtension,
-                                StringComparison.InvariantCultureIgnoreCase) &&
-                            !string.Equals(Path.GetFileNameWithoutExtension(f.Name), MappingsFileName,
-                                StringComparison.InvariantCultureIgnoreCase)))
+
+            foreach (var layoutMapping in layoutMappings)
             {
                 _rwLock.EnterReadLock();
+
                 try
                 {
-                    using (var fs = File.Open(layoutFile.FullName, FileMode.Open))
+                    var fileName = Path.Combine(layoutsDirectory.FullName, layoutMapping);
+
+                    using (var fs = File.Open(fileName, FileMode.Open))
                     {
                         var layout = LoadLayoutFromStream(fs);
+
                         if (layout != null)
+                        {
                             result.Add(layout);
+                        }
                     }
+                }
+                catch (Exception e)
+                {
+                    LogProvider.Log.Error(this, $"Could not load layout {layoutMapping}", e);
                 }
                 finally
                 {
                     _rwLock.ExitReadLock();
                 }
             }
+
             return result.OrderBy(l => l.TableType).ToList();
         }
     }

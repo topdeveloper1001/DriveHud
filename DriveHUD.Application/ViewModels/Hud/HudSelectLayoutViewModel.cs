@@ -40,7 +40,7 @@ namespace DriveHUD.Application.ViewModels
             var hudLayoutService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
             var layouts =
-                hudLayoutService.GetLayoutsNames().ToList();
+                hudLayoutService.GetLayoutsNames(_viewModelInfo.TableType).ToList();
 
             items = new ObservableCollection<string>(layouts);
             if (!items.Contains(_viewModelInfo.LayoutName))
