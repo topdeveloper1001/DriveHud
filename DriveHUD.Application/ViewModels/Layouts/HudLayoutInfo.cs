@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Xml.Serialization;
+using DriveHUD.Entities;
 using DriveHUD.ViewModels;
 using Model.Enums;
 
@@ -18,6 +19,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
 
         [XmlAttribute]
         public EnumTableType TableType { get; set; }
+        public HudViewType HudViewType { get; set; }
 
         public List<StatInfo> HudStats { get; set; }
         public List<HudPlayerType> HudPlayerTypes { get; set; }
@@ -28,6 +30,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         public HudLayoutInfo()
         {
             HudOpacity = 100;
+            HudViewType = HudViewType.Plain;
         }
 
         public HudLayoutInfo Clone()
@@ -37,11 +40,12 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 Name = Name,
                 TableType = TableType,
                 IsDefault = IsDefault,
+                HudOpacity = HudOpacity,
+                HudViewType = HudViewType,
                 HudStats = HudStats.Select(s => s.Clone()).ToList(),
                 HudPlayerTypes = HudPlayerTypes.Select(p => p.Clone()).ToList(),
                 HudPositions = HudPositions.Select(p => p.Clone()).ToList(),
-                HudBumperStickerTypes = HudBumperStickerTypes.Select(p => p.Clone()).ToList(),
-                HudOpacity = HudOpacity
+                HudBumperStickerTypes = HudBumperStickerTypes.Select(p => p.Clone()).ToList()
             };
         }
     }

@@ -84,6 +84,7 @@ namespace DriveHUD.Application.ViewModels
                 if (_currentLayout != null)
                     CurrentTableType = TableTypes.FirstOrDefault(t => t.TableType == _currentLayout.TableType);
                 // load data for selected layout
+                RaisePropertyChanged(() => HudViewType);
                 _currentLayoutSwitching = false;
                 DataLoad(true);
             }
@@ -139,9 +140,6 @@ namespace DriveHUD.Application.ViewModels
             hudViewTypes = new ObservableCollection<HudViewType>(Enum.GetValues(typeof(HudViewType)).Cast<HudViewType>());
 
             var settings = SettingsService.GetSettings();
-
-            hudViewType = HudViewType.Plain;
-            lastDHHudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
 
             PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100 };
             PreviewHudElementViewModel.HudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
@@ -405,7 +403,7 @@ namespace DriveHUD.Application.ViewModels
                 settings.GeneralSettings.HudViewMode = (int) HudViewType;
                 SettingsService.SaveSettings(settings);
                 HudType = HudViewType == HudViewType.Plain ? HudType.Plain : HudType.Default;
-                CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
+                CurrentHudTableViewModel?.HudElements.ForEach(h => h.HudViewType = HudViewType);
                 previewHudElementViewModel.HudViewType = HudViewType;
                 if (!_currentLayoutSwitching && CurrentTableType != null)
                     DataLoad(false);
@@ -607,32 +605,20 @@ namespace DriveHUD.Application.ViewModels
 
         public HudType HudType
         {
-            get { return  hudType; }
-            set
-            {
-                this.RaiseAndSetIfChanged(ref hudType, value);
-                this.RaisePropertyChanged(() => SelectedHUD);
-            }
+            get { return hudType; }
+            set { this.RaiseAndSetIfChanged(ref hudType, value); }
         }
-
-        private HudViewType lastDHHudViewType;
-
-        private HudViewType hudViewType;
 
         public HudViewType HudViewType
         {
-            get
-            {
-                return hudViewType;
-            }
+            get { return _currentLayout?.HudViewType?? HudViewType.Plain; }
             set
             {
-                if (value == HudViewType.Plain)
-                {
-                    lastDHHudViewType = HudViewType;
-                }
-
-                this.RaiseAndSetIfChanged(ref hudViewType, value);
+                if (_currentLayout.HudViewType == value)
+                    return;
+                _currentLayout.HudViewType = value;
+                HudType = _currentLayout.HudViewType == HudViewType.Plain ? HudType.Plain : HudType.Default;
+                RaisePropertyChanged(() => HudViewType);
             }
         }
 
@@ -652,17 +638,7 @@ namespace DriveHUD.Application.ViewModels
 
       
 
-        public string SelectedHUD
-        {
-            get
-            {
-                return HudType == HudType.Default ?
-                        CommonResourceManager.Instance.GetResourceString("Common_PlainHUD") :
-                        CommonResourceManager.Instance.GetResourceString("Common_DriveHUD");
-            }
-        }
-
-        private HudElementViewModel previewHudElementViewModel;
+       private HudElementViewModel previewHudElementViewModel;
 
         public HudElementViewModel PreviewHudElementViewModel
         {
