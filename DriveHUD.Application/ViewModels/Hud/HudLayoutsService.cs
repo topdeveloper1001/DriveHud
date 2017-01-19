@@ -16,6 +16,7 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Threading;
 using System.Windows;
 using System.Windows.Media;
 using System.Xml.Serialization;
@@ -43,6 +44,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         private const string MappingsFileName = "Mappings";
         private const string PathToImages = @"data\PlayerTypes";
         private readonly EnumPokerSites[] _extendedHudPokerSites = {EnumPokerSites.Bodog, EnumPokerSites.Ignition};
+
+        private static ReaderWriterLockSlim _rwLock = new ReaderWriterLockSlim();
 
         public HudLayoutMappings HudLayoutMappings { get; set; }
 
@@ -88,11 +91,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     $"{MappingsFileName}{LayoutFileExtension}");
                 if (File.Exists(mappingsFilePath))
                 {
-                    using (var stream = File.Open(mappingsFilePath, FileMode.Open))
-                    {
-                        var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
-                        HudLayoutMappings = xmlSerializer.Deserialize(stream) as HudLayoutMappings;
-                    }
+                    HudLayoutMappings = LoadLayoutMappings(mappingsFilePath);
                 }
                 else
                 {
@@ -105,11 +104,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         defaultLayoutInfo.IsDefault = true;
                         InternalSave(defaultLayoutInfo);
                     }
-                    using (var fs = File.Open(mappingsFilePath, FileMode.Create))
-                    {
-                        var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
-                        xmlSerializer.Serialize(fs, HudLayoutMappings);
-                    }
+                    SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
                 }
             }
             catch (Exception e)
@@ -118,8 +113,48 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
-       
+        private HudLayoutMappings LoadLayoutMappings(string fileName)
+        {
+            HudLayoutMappings hudLayoutMappings = null;
+            _rwLock.EnterReadLock();
+            try
+            {
+                using (var stream = File.Open(fileName, FileMode.Open))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
+                    hudLayoutMappings = xmlSerializer.Deserialize(stream) as HudLayoutMappings;
+                }
+            }
+            finally
+            {
+                _rwLock.ExitReadLock();
+            }
+            return hudLayoutMappings;
+        }
 
+        private void SaveLayoutMappings()
+        {
+            var layoutsDirectory = GetLayoutsDirectory();
+            var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
+            SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
+        }
+
+        private void SaveLayoutMappings(string fileName, HudLayoutMappings mappings)
+        {
+            _rwLock.EnterWriteLock();
+            try
+            {
+                using (var fs = File.Open(fileName, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
+                    xmlSerializer.Serialize(fs, mappings);
+                }
+            }
+            finally
+            {
+                _rwLock.ExitWriteLock();
+            }
+        }
 
         private HudLayoutInfo LoadDefault(EnumTableType tableType)
         {
@@ -136,9 +171,17 @@ namespace DriveHUD.Application.ViewModels.Hud
         private HudLayoutInfo LoadLayout(string fileName)
         {
             HudLayoutInfo result;
-            using (var stream = File.Open(fileName, FileMode.Open))
+            _rwLock.EnterReadLock();
+            try
             {
-                result = LoadLayoutFromStream(stream);
+                using (var stream = File.Open(fileName, FileMode.Open))
+                {
+                    result = LoadLayoutFromStream(stream);
+                }
+            }
+            finally
+            {
+                _rwLock.EnterReadLock();
             }
             return result;
         }
@@ -342,10 +385,18 @@ namespace DriveHUD.Application.ViewModels.Hud
                     $"Default {CommonResourceManager.Instance.GetEnumResource(hudLayoutInfo.TableType)}{LayoutFileExtension}")
                 : Path.Combine(layoutsDirectory,
                     $"{Path.GetInvalidFileNameChars().Aggregate(hudLayoutInfo.Name, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}");
-            using (var fs = File.Open(layoutsFile, FileMode.Create))
+            _rwLock.EnterWriteLock();
+            try
             {
-                var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
-                xmlSerializer.Serialize(fs, hudLayoutInfo);
+                using (var fs = File.Open(layoutsFile, FileMode.Create))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
+                    xmlSerializer.Serialize(fs, hudLayoutInfo);
+                }
+            }
+            finally
+            {
+                _rwLock.ExitWriteLock();
             }
             return layoutsFile;
         }
@@ -609,18 +660,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (selected != null)
                 selected.IsSelected = false;
             mapping.IsSelected = true;
-            SaveMappings();
-        }
-
-        private void SaveMappings()
-        {
-            var layoutsDirectory = GetLayoutsDirectory();
-            var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
-            using (var fs = File.Open(mappingsFilePath, FileMode.Create))
-            {
-                var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
-                xmlSerializer.Serialize(fs, HudLayoutMappings);
-            }
+            SaveLayoutMappings();
         }
 
         public bool Delete(string layoutName)
@@ -636,7 +676,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 File.Delete(Path.Combine(layoutsDirectory.FullName, fileName));
             HudLayoutMappings.Mappings.RemoveByCondition(
                 m => string.Equals(m.FileName, Path.GetFileName(fileName), StringComparison.InvariantCultureIgnoreCase));
-            SaveMappings();
+            SaveLayoutMappings();
             return true;
         }
 
@@ -690,7 +730,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                     }
                 }
             }
-            SaveMappings();
+            SaveLayoutMappings();
             return layout;
         }
 
@@ -701,10 +741,11 @@ namespace DriveHUD.Application.ViewModels.Hud
         /// <param name="path">Path to file</param>
         public void Export(HudLayoutInfo layout, string path)
         {
+            if (layout == null)
+                return;
+            _rwLock.EnterReadLock();
             try
             {
-                if (layout == null)
-                    return;
                 using (var fs = File.Open(path, FileMode.Create))
                 {
                     var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
@@ -714,6 +755,10 @@ namespace DriveHUD.Application.ViewModels.Hud
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, e);
+            }
+            finally
+            {
+                _rwLock.ExitReadLock();
             }
         }
 
@@ -730,9 +775,17 @@ namespace DriveHUD.Application.ViewModels.Hud
             try
             {
                 HudLayoutInfo importedHudLayout;
-                using (var fs = File.Open(path, FileMode.Open))
+                _rwLock.EnterReadLock();
+                try
                 {
-                    importedHudLayout = LoadLayoutFromStream(fs);
+                    using (var fs = File.Open(path, FileMode.Open))
+                    {
+                        importedHudLayout = LoadLayoutFromStream(fs);
+                    }
+                }
+                finally
+                {
+                    _rwLock.ExitReadLock();
                 }
                 var i = 0;
                 var layoutName = importedHudLayout.Name;
@@ -759,7 +812,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         });
                     }
                 }
-                SaveMappings();
+                SaveLayoutMappings();
                 return importedHudLayout;
             }
             catch (Exception e)
@@ -1015,11 +1068,19 @@ namespace DriveHUD.Application.ViewModels.Hud
                             !string.Equals(Path.GetFileNameWithoutExtension(f.Name), MappingsFileName,
                                 StringComparison.InvariantCultureIgnoreCase)))
             {
-                using (var fs = File.Open(layoutFile.FullName, FileMode.Open))
+                _rwLock.EnterReadLock();
+                try
                 {
-                    var layout = LoadLayoutFromStream(fs);
-                    if (layout != null)
-                        result.Add(layout);
+                    using (var fs = File.Open(layoutFile.FullName, FileMode.Open))
+                    {
+                        var layout = LoadLayoutFromStream(fs);
+                        if (layout != null)
+                            result.Add(layout);
+                    }
+                }
+                finally
+                {
+                    _rwLock.ExitReadLock();
                 }
             }
             return result.OrderBy(l=>l.TableType).ToList();
