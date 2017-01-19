@@ -27,6 +27,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         public List<HudPlayerType> HudPlayerTypes { get; set; }
         public List<HudBumperStickerType> HudBumperStickerTypes { get; set; }
         public List<HudPositionsInfo> HudPositionsInfo { get; set; }
+        public List<UiPositionInfo> UiPositionsInfo { get; set; }
 
         public int HudOpacity { get; set; }
 
@@ -38,6 +39,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
             HudPlayerTypes = new List<HudPlayerType>();
             HudBumperStickerTypes = new List<HudBumperStickerType>();
             HudPositionsInfo = new List<HudPositionsInfo>();
+            UiPositionsInfo = new List<UiPositionInfo>();
         }
 
         public HudLayoutInfo Clone()
@@ -52,7 +54,8 @@ namespace DriveHUD.Application.ViewModels.Layouts
                 HudStats = HudStats.Select(s => s.Clone()).ToList(),
                 HudPlayerTypes = HudPlayerTypes.Select(p => p.Clone()).ToList(),
                 HudPositionsInfo = HudPositionsInfo.Select(p => p.Clone()).ToList(),
-                HudBumperStickerTypes = HudBumperStickerTypes.Select(p => p.Clone()).ToList()
+                HudBumperStickerTypes = HudBumperStickerTypes.Select(p => p.Clone()).ToList(),
+                UiPositionsInfo = UiPositionsInfo.Select(u => u.Clone()).ToList()
             };
         }
     }

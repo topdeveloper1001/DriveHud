@@ -390,6 +390,7 @@
     <Compile Include="ViewModels\Hud\IHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
+    <Compile Include="ViewModels\Layouts\UiPositionInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutInfo.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutMapping.cs" />
     <Compile Include="ViewModels\Layouts\HudLayoutMappings.cs" />

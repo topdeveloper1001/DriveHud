@@ -16,15 +16,11 @@ namespace DriveHUD.Application.ViewModels.Layouts
         [XmlAttribute]
         public EnumGameType GameType { get; set; }
 
-        [XmlAttribute]
-        public HudType HudType { get; set; }
-
         public List<HudPositionInfo> HudPositions { get; set; }
 
 
         public HudPositionsInfo()
         {
-            HudType = HudType.Plain;
             HudPositions = new List<HudPositionInfo>();
         }
 
@@ -34,7 +30,6 @@ namespace DriveHUD.Application.ViewModels.Layouts
             {
                 PokerSite = PokerSite,
                 GameType = GameType,
-                HudType = HudType,
                 HudPositions = HudPositions.Select(p => p.Clone()).ToList()
             };
         }

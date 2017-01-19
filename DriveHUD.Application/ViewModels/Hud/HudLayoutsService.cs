@@ -19,6 +19,7 @@ using System.Reflection;
 using System.Windows;
 using System.Windows.Media;
 using System.Xml.Serialization;
+using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Linq;
@@ -117,6 +118,9 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+       
+
+
         private HudLayoutInfo LoadDefault(EnumTableType tableType)
         {
             return
@@ -146,7 +150,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 using (
                     var stream =
-                        resourcesAssembly.GetManifestResourceStream($"DriveHUD.Common.Resources.Layouts.Default{(int)tableType}.xml"))
+                        resourcesAssembly.GetManifestResourceStream($"DriveHUD.Common.Resources.Layouts.Default-{CommonResourceManager.Instance.GetEnumResource(tableType)}.xml"))
                 {
                     return LoadLayoutFromStream(stream);
                 }

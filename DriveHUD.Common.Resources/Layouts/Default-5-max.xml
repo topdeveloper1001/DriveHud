@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<HudLayoutInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Default 2-max" IsDefault="true" TableType="HU" HudViewType="Plain">
+<HudLayoutInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Default 5-max" IsDefault="true" TableType="Five" HudViewType="Plain">
   <HudStats>
     <StatInfo>
       <Id>aa3fd88e-847d-413b-9f01-ff9f5647f4aa</Id>
@@ -2123,1194 +2123,512 @@
     </HudBumperStickerType>
   </HudBumperStickerTypes>
   <HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="CashHoldem" HudType="Default">
+    <HudPositionsInfo PokerSite="Poker888" GameType="CashHoldem">
       <HudPositions>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>1</Seat>
           <Position>
-            <X>334</X>
-            <Y>45</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>389</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="CashHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>338</X>
-            <Y>142</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>342</X>
-            <Y>484</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="CashOmaha" HudType="Default">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>45</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>389</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="CashOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>338</X>
-            <Y>142</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>342</X>
-            <Y>484</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="MTTHoldem" HudType="Default">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>45</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>389</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="MTTHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>338</X>
-            <Y>142</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>342</X>
-            <Y>484</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="MTTOmaha" HudType="Default">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>45</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>389</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="MTTOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>338</X>
-            <Y>142</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>342</X>
-            <Y>484</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="SNGHoldem" HudType="Default">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>45</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>389</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="SNGHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>338</X>
-            <Y>142</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>342</X>
-            <Y>484</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="SNGOmaha" HudType="Default">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>45</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>334</X>
-            <Y>389</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Ignition" GameType="SNGOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>338</X>
-            <Y>142</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>342</X>
-            <Y>484</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BetOnline" GameType="CashHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
+            <X>478</X>
             <Y>121</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
         </HudPositionInfo>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>2</Seat>
+          <Position>
+            <X>624</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
           <Position>
             <X>343</X>
             <Y>412</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>60</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>208</X>
+            <Y>121</Y>
+          </Position>
         </HudPositionInfo>
       </HudPositions>
     </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BetOnline" GameType="CashOmaha" HudType="Plain">
+    <HudPositionsInfo PokerSite="Poker888" GameType="CashOmaha">
       <HudPositions>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>1</Seat>
           <Position>
-            <X>343</X>
+            <X>478</X>
             <Y>121</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
         </HudPositionInfo>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>2</Seat>
+          <Position>
+            <X>624</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
           <Position>
             <X>343</X>
             <Y>412</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>60</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>208</X>
+            <Y>121</Y>
+          </Position>
         </HudPositionInfo>
       </HudPositions>
     </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BetOnline" GameType="MTTHoldem" HudType="Plain">
+    <HudPositionsInfo PokerSite="Poker888" GameType="MTTHoldem">
       <HudPositions>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>1</Seat>
           <Position>
-            <X>343</X>
+            <X>478</X>
             <Y>121</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
         </HudPositionInfo>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>2</Seat>
+          <Position>
+            <X>624</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
           <Position>
             <X>343</X>
             <Y>412</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>60</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>208</X>
+            <Y>121</Y>
+          </Position>
         </HudPositionInfo>
       </HudPositions>
     </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BetOnline" GameType="MTTOmaha" HudType="Plain">
+    <HudPositionsInfo PokerSite="Poker888" GameType="MTTOmaha">
       <HudPositions>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>1</Seat>
           <Position>
-            <X>343</X>
+            <X>478</X>
             <Y>121</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
         </HudPositionInfo>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>2</Seat>
+          <Position>
+            <X>624</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
           <Position>
             <X>343</X>
             <Y>412</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>60</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>208</X>
+            <Y>121</Y>
+          </Position>
         </HudPositionInfo>
       </HudPositions>
     </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BetOnline" GameType="SNGHoldem" HudType="Plain">
+    <HudPositionsInfo PokerSite="Poker888" GameType="SNGHoldem">
       <HudPositions>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>1</Seat>
           <Position>
-            <X>343</X>
+            <X>478</X>
             <Y>121</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
         </HudPositionInfo>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>2</Seat>
+          <Position>
+            <X>624</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
           <Position>
             <X>343</X>
             <Y>412</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>4</Seat>
+          <Position>
+            <X>60</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>208</X>
+            <Y>121</Y>
+          </Position>
         </HudPositionInfo>
       </HudPositions>
     </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BetOnline" GameType="SNGOmaha" HudType="Plain">
+    <HudPositionsInfo PokerSite="Poker888" GameType="SNGOmaha">
       <HudPositions>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>1</Seat>
           <Position>
-            <X>343</X>
+            <X>478</X>
             <Y>121</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
         </HudPositionInfo>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>2</Seat>
+          <Position>
+            <X>624</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>3</Seat>
           <Position>
             <X>343</X>
             <Y>412</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
         </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="SportsBetting" GameType="CashHoldem" HudType="Plain">
-      <HudPositions>
         <HudPositionInfo>
-          <Seat>0</Seat>
+          <Seat>4</Seat>
           <Position>
-            <X>343</X>
+            <X>60</X>
+            <Y>321</Y>
+          </Position>
+        </HudPositionInfo>
+        <HudPositionInfo>
+          <Seat>5</Seat>
+          <Position>
+            <X>208</X>
             <Y>121</Y>
           </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="SportsBetting" GameType="CashOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="SportsBetting" GameType="MTTHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="SportsBetting" GameType="MTTOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="SportsBetting" GameType="SNGHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="SportsBetting" GameType="SNGOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="PokerStars" GameType="CashHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>108</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>414</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="PokerStars" GameType="CashOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>108</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>414</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="PokerStars" GameType="MTTHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>108</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>414</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="PokerStars" GameType="MTTOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>108</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>414</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="PokerStars" GameType="SNGHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>108</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>414</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="PokerStars" GameType="SNGOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>108</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>340</X>
-            <Y>414</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Poker888" GameType="CashHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Poker888" GameType="CashOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Poker888" GameType="MTTHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Poker888" GameType="MTTOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Poker888" GameType="SNGHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="Poker888" GameType="SNGOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="TigerGaming" GameType="CashHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="TigerGaming" GameType="CashOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="TigerGaming" GameType="MTTHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="TigerGaming" GameType="MTTOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="TigerGaming" GameType="SNGHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="TigerGaming" GameType="SNGOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="AmericasCardroom" GameType="CashHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="AmericasCardroom" GameType="CashOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="AmericasCardroom" GameType="MTTHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="AmericasCardroom" GameType="MTTOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="AmericasCardroom" GameType="SNGHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="AmericasCardroom" GameType="SNGOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BlackChipPoker" GameType="CashHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BlackChipPoker" GameType="CashOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BlackChipPoker" GameType="MTTHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BlackChipPoker" GameType="MTTOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BlackChipPoker" GameType="SNGHoldem" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-      </HudPositions>
-    </HudPositionsInfo>
-    <HudPositionsInfo PokerSite="BlackChipPoker" GameType="SNGOmaha" HudType="Plain">
-      <HudPositions>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>121</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
-        </HudPositionInfo>
-        <HudPositionInfo>
-          <Seat>0</Seat>
-          <Position>
-            <X>343</X>
-            <Y>412</Y>
-          </Position>
-          <Width>135</Width>
-          <Height>75</Height>
         </HudPositionInfo>
       </HudPositions>
     </HudPositionsInfo>
   </HudPositionsInfo>
+  <UiPositionsInfo>
+    <UiPositionInfo>
+      <Seat>1</Seat>
+      <Position>
+        <X>478</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>2</Seat>
+      <Position>
+        <X>624</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>3</Seat>
+      <Position>
+        <X>343</X>
+        <Y>447</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>4</Seat>
+      <Position>
+        <X>60</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>5</Seat>
+      <Position>
+        <X>208</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>1</Seat>
+      <Position>
+        <X>478</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>2</Seat>
+      <Position>
+        <X>624</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>3</Seat>
+      <Position>
+        <X>343</X>
+        <Y>447</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>4</Seat>
+      <Position>
+        <X>60</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>5</Seat>
+      <Position>
+        <X>208</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>1</Seat>
+      <Position>
+        <X>478</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>2</Seat>
+      <Position>
+        <X>624</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>3</Seat>
+      <Position>
+        <X>343</X>
+        <Y>447</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>4</Seat>
+      <Position>
+        <X>60</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>5</Seat>
+      <Position>
+        <X>208</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>1</Seat>
+      <Position>
+        <X>478</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>2</Seat>
+      <Position>
+        <X>624</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>3</Seat>
+      <Position>
+        <X>343</X>
+        <Y>447</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>4</Seat>
+      <Position>
+        <X>60</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>5</Seat>
+      <Position>
+        <X>208</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>1</Seat>
+      <Position>
+        <X>478</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>2</Seat>
+      <Position>
+        <X>624</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>3</Seat>
+      <Position>
+        <X>343</X>
+        <Y>447</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>4</Seat>
+      <Position>
+        <X>60</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>5</Seat>
+      <Position>
+        <X>208</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>1</Seat>
+      <Position>
+        <X>478</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>2</Seat>
+      <Position>
+        <X>624</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>3</Seat>
+      <Position>
+        <X>343</X>
+        <Y>447</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>4</Seat>
+      <Position>
+        <X>60</X>
+        <Y>356</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+    <UiPositionInfo>
+      <Seat>5</Seat>
+      <Position>
+        <X>208</X>
+        <Y>156</Y>
+      </Position>
+      <Width>135</Width>
+      <Height>75</Height>
+    </UiPositionInfo>
+  </UiPositionsInfo>
   <HudOpacity>100</HudOpacity>
 </HudLayoutInfo>

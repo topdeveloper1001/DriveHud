@@ -881,14 +881,17 @@
     <Resource Include="images\hud\chip_icon_2.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Layouts\Default10.xml" />
-    <EmbeddedResource Include="Layouts\Default2.xml" />
-    <EmbeddedResource Include="Layouts\Default3.xml" />
-    <EmbeddedResource Include="Layouts\Default4.xml" />
-    <EmbeddedResource Include="Layouts\Default5.xml" />
-    <EmbeddedResource Include="Layouts\Default6.xml" />
-    <EmbeddedResource Include="Layouts\Default8.xml" />
-    <EmbeddedResource Include="Layouts\Default9.xml" />
+    <EmbeddedResource Include="Layouts\Default.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Layouts\Default-10-max.xml" />
+    <EmbeddedResource Include="Layouts\Default-2-max.xml" />
+    <EmbeddedResource Include="Layouts\Default-3-max.xml" />
+    <EmbeddedResource Include="Layouts\Default-4-max.xml" />
+    <EmbeddedResource Include="Layouts\Default-5-max.xml" />
+    <EmbeddedResource Include="Layouts\Default-6-max.xml" />
+    <EmbeddedResource Include="Layouts\Default-8-max.xml" />
+    <EmbeddedResource Include="Layouts\Default-9-max.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

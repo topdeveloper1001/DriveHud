@@ -46,7 +46,7 @@ namespace DriveHUD.Application.HudServices
                     activeLayout.HudPositionsInfo.FirstOrDefault(
                         p =>
                             p.PokerSite == (EnumPokerSites) pokerSiteId &&
-                            p.GameType == (EnumGameType) gameType && p.HudType == (HudType)hudPosition.HudType);
+                            p.GameType == (EnumGameType) gameType);
                 var hudToUpdate = hudPositions?.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
                 if (hudToUpdate == null)
                 {
