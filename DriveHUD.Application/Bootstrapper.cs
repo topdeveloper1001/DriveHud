@@ -47,6 +47,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Windows;
+using DriveHUD.Application.TableConfigurators.PositionProviders;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -226,6 +227,15 @@ namespace DriveHUD.Application
             Container.RegisterType<ITableConfigurator, CommonHorizTableConfiguration>(HudViewType.Horizontal.ToString());
             Container.RegisterType<ITableConfigurator, CommonVertOneTableConfiguration>(HudViewType.Vertical_1.ToString());
             Container.RegisterType<ITableConfigurator, CommonVertTwoTableConfiguration>(HudViewType.Vertical_2.ToString());
+
+            //Position Providers
+            Container.RegisterType<IPositionProvider, CommonPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Unknown, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, CommonRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Unknown, HudViewType.Horizontal));
+            Container.RegisterType<IPositionProvider, IgnitionPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, IgnitionRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudViewType.Horizontal));
+            Container.RegisterType<IPositionProvider, Poker888PositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, PokerStarsPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.WinningPokerNetwork, HudViewType.Plain));
 
             // Bovada
             //Container.RegisterType<ITableConfigurator, BovadaRichTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Default));
