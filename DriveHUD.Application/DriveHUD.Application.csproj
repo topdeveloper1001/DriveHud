@@ -349,6 +349,13 @@
     <Compile Include="TableConfigurators\CommonVertOneTableConfiguration.cs" />
     <Compile Include="TableConfigurators\CommonVertTwoTableConfiguration.cs" />
     <Compile Include="TableConfigurators\Poker888TableConfigurator.cs" />
+    <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\CommonPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\IgnitionPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\IPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\Poker888PositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\PokerStarsPositionProvider.cs" />
     <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\AmericasCardroomTableConfigurator.cs" />
