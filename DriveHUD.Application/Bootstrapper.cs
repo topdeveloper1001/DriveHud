@@ -222,6 +222,10 @@ namespace DriveHUD.Application
 
             // HUD table configurators
             Container.RegisterType<ITableConfigurator, CommonTableConfigurator>();
+            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(HudViewType.Plain.ToString());
+            Container.RegisterType<ITableConfigurator, CommonHorizTableConfiguration>(HudViewType.Horizontal.ToString());
+            Container.RegisterType<ITableConfigurator, CommonVertOneTableConfiguration>(HudViewType.Vertical_1.ToString());
+            Container.RegisterType<ITableConfigurator, CommonVertTwoTableConfiguration>(HudViewType.Vertical_2.ToString());
 
             // Bovada
             //Container.RegisterType<ITableConfigurator, BovadaRichTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Default));

@@ -10,15 +10,14 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels;
+using DriveHUD.Common;
+using DriveHUD.Entities;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
 using System.Windows.Media;
 using Telerik.Windows.Controls;
-using Model.Enums;
-using DriveHUD.Application.ViewModels;
-using System.Collections.Generic;
-using DriveHUD.Common;
-using DriveHUD.Entities;
 
 namespace DriveHUD.Application.TableConfigurators
 {
@@ -179,11 +178,6 @@ namespace DriveHUD.Application.TableConfigurators
             };
 
             return label;
-        }
-
-        protected bool IsRightOriented(int seats, int seat)
-        {
-            return false;
-        }
+        }      
     }
 }
