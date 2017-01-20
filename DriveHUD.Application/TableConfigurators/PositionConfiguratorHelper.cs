@@ -8,6 +8,8 @@ namespace DriveHUD.Application.TableConfigurators
         {
             var hudType = hudViewType == HudViewType.Plain ? "Plain" : "Rich";
             var ps = "Common";
+            if (hudViewType != HudViewType.Plain)
+                return $"{ps}_{hudType}";
             switch (pokerSite)
             {
                 case EnumPokerSites.Ignition:

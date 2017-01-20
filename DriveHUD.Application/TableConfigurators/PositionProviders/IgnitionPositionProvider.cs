@@ -25,12 +25,12 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
 
         public int GetOffsetX(int seats, int seat)
         {
-            return -(25 / 2);
+            return 0;
         }
 
         public int GetOffsetY(int seats, int seat)
         {
-            return 35;
+            return 0;
         }
     }
 
@@ -55,12 +55,12 @@ namespace DriveHUD.Application.TableConfigurators.PositionProviders
 
         public int GetOffsetX(int seats, int seat)
         {
-            return IsRightOriented(seats, seat) ? 0 : -30;
+            return 0;
         }
 
         public int GetOffsetY(int seats, int seat)
         {
-            return -60;
+            return 0;
         }
     }
 }
