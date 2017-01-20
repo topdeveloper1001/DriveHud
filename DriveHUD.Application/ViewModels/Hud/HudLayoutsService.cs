@@ -103,7 +103,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 else
                 {
                     HudLayoutMappings = new HudLayoutMappings();
-                    
+
                 }
                 foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
                 {
@@ -794,7 +794,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 if (layout.IsDefault && (layout.TableType != hudData.LayoutInfo.TableType || layout.HudViewType != hudData.LayoutInfo.HudViewType))
                 {
                     _eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "Can't overwrite default layout."));
-                                
+
                     return null;
                 }
             }
@@ -1225,17 +1225,31 @@ namespace DriveHUD.Application.ViewModels.Hud
             EnumGameType gameType)
         {
             var defaultNames = new List<string>();
-            foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
+
+            HudViewType[] availableHudViewTypes;
+
+            if (pokerSite == EnumPokerSites.Bodog || pokerSite == EnumPokerSites.Bovada || pokerSite == EnumPokerSites.Ignition)
+            {
+                availableHudViewTypes = Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>().ToArray();
+            }
+            else
+            {
+                availableHudViewTypes = new[] { HudViewType.Plain };
+            }
+
+            foreach (var hudViewType in availableHudViewTypes)
             {
                 defaultNames.Add(
                     $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : hudViewType.ToString())}"
                         .Trim());
             }
-            return
-                defaultNames.Union(
+
+            defaultNames = defaultNames.Union(
                     HudLayoutMappings.Mappings.Where(
-                            m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType)
-                        .Select(m => m.Name)).Distinct();
+                            m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && availableHudViewTypes.Contains(m.HudViewType))
+                        .Select(m => m.Name)).Distinct().ToList();
+
+            return defaultNames;
         }
 
         public List<HudLayoutInfo> GetAllLayouts(EnumTableType tableType)
