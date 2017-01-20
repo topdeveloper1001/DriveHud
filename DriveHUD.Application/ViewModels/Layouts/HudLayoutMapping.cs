@@ -10,6 +10,7 @@ namespace DriveHUD.Application.ViewModels.Layouts
         public EnumTableType TableType { get; set; }
         public EnumGameType? GameType { get; set; }
         public EnumPokerSites? PokerSite { get; set; }
+        public HudViewType HudViewType { get; set; }
         public string Name { get; set; }
         public string FileName { get; set; }
         public bool IsSelected { get; set; }
