@@ -1195,12 +1195,21 @@ namespace DriveHUD.Application.ViewModels.Hud
         public HudLayoutInfo GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType)
         {
             var mapping =
-                HudLayoutMappings.Mappings.FirstOrDefault(
-                    m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsSelected) ??
-                HudLayoutMappings.Mappings.FirstOrDefault(
-                    m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsDefault);
+               HudLayoutMappings.Mappings.FirstOrDefault(
+                   m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsSelected);
+
+            if (mapping == null)
+            {
+                mapping =
+                    HudLayoutMappings.Mappings.FirstOrDefault(
+                        m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue) && m.TableType == tableType && (m.GameType == gameType || !m.GameType.HasValue) && m.IsSelected) ??
+                    HudLayoutMappings.Mappings.FirstOrDefault(
+                        m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsDefault);
+            }
+
             if (mapping == null)
                 return LoadDefault(tableType);
+
             return LoadLayout(mapping);
         }
 
