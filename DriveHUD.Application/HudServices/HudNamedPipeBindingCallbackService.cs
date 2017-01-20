@@ -31,8 +31,8 @@ namespace DriveHUD.Application.HudServices
                 LogProvider.Log.Info(this, $"Cannot find layout with id: {hudLayout.LayoutName}");
                 return;
             }
-            var viewModel = hudLayoutsService.GetHudTableViewModel((EnumPokerSites) pokerSiteId,
-                (EnumTableType) tableType, (EnumGameType) gameType);
+            var viewModel = hudLayoutsService.GetHudTableViewModel((EnumPokerSites)pokerSiteId,
+                (EnumTableType)tableType, (EnumGameType)gameType);
             if (viewModel == null)
             {
                 LogProvider.Log.Info(this, $"Cannot find view model for layout with id: {hudLayout.LayoutName}");
@@ -45,8 +45,8 @@ namespace DriveHUD.Application.HudServices
                 var hudPositions =
                     activeLayout.HudPositionsInfo.FirstOrDefault(
                         p =>
-                            p.PokerSite == (EnumPokerSites) pokerSiteId &&
-                            p.GameType == (EnumGameType) gameType);
+                            p.PokerSite == (EnumPokerSites)pokerSiteId &&
+                            p.GameType == (EnumGameType)gameType);
                 var hudToUpdate = hudPositions?.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
                 if (hudToUpdate == null)
                 {
@@ -88,9 +88,9 @@ namespace DriveHUD.Application.HudServices
             ServiceLocator.Current.GetInstance<IReplayerService>().ReplayHand(playerName, gameNumber, pokerSiteId, showHoleCards: true);
         }
 
-        public void LoadLayout(string layoutName, short pokerSiteId, short gameType, short tableType)
+        public void LoadLayout(string layoutName, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            LogProvider.Log.Info($"Load layout {layoutName}");
+            LogProvider.Log.Info($"Set layout {layoutName} as active for {pokerSite} {gameType} {tableType}");
 
             var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
 
@@ -98,17 +98,11 @@ namespace DriveHUD.Application.HudServices
 
             if (hudToLoad == null)
             {
-                LogProvider.Log.Info(this, $"Cannot find layout with name {layoutName}");
+                LogProvider.Log.Info(this, $"Cannot find layout with name {layoutName} for {pokerSite} {gameType} {tableType}");
                 return;
             }
 
-            if (hudToLoad.IsDefault)
-            {
-                LogProvider.Log.Info(this, $"Layout {layoutName} is already selected as default.");
-                return;
-            }
-
-            App.Current.Dispatcher.Invoke(() => hudLayoutsService.SetLayoutActive(hudToLoad, pokerSiteId, gameType, tableType));
+            hudLayoutsService.SetLayoutActive(hudToLoad, pokerSite, gameType, tableType);
         }
 
         public void TagHand(long gameNumber, short pokerSiteId, int tag)

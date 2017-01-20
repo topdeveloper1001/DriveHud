@@ -89,7 +89,14 @@ namespace DriveHUD.Application.ViewModels
         /// <returns>Full path to image</returns>
         string GetImageLink(string image);
 
-        void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType);
+        /// <summary>
+        /// Set active layout
+        /// </summary>
+        /// <param name="hudToLoad">Layout to be set as active</param>
+        /// <param name="pokerSite">Poker site</param>
+        /// <param name="gameType">Game type</param>
+        /// <param name="tableType">Table type</param>
+        void SetLayoutActive(HudLayoutInfo hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType);
 
         IEnumerable<string> GetLayoutsNames(EnumTableType tableType);
 

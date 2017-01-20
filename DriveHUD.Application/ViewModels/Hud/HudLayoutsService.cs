@@ -10,17 +10,6 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Threading;
-using System.Windows;
-using System.Windows.Media;
-using System.Xml.Serialization;
-using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Linq;
@@ -31,9 +20,16 @@ using DriveHUD.ViewModels;
 using Model;
 using Model.Data;
 using Model.Enums;
-using Model.Settings;
-using Model.Site;
-using Telerik.Windows.Diagrams.Core;
+using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Threading;
+using System.Windows.Media;
+using System.Xml.Serialization;
+
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -655,23 +651,32 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #endregion
 
-        public void SetLayoutActive(HudLayoutInfo hudToLoad, short pokerSiteId, short gameType, short tableType)
+        public void SetLayoutActive(HudLayoutInfo hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            var mapping =
-                HudLayoutMappings.Mappings.FirstOrDefault(
-                    m =>
-                        m.PokerSite == (EnumPokerSites)pokerSiteId && m.GameType == (EnumGameType)gameType &&
-                        m.TableType == (EnumTableType)tableType && m.Name == hudToLoad.Name);
-            if (mapping == null)
+            var mappings = HudLayoutMappings.Mappings.
+                            Where(m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue)
+                                    && (m.GameType == gameType || !m.GameType.HasValue)
+                                    && m.TableType == tableType).
+                            ToArray();
+
+            if (mappings.Length == 0)
+            {
+                LogProvider.Log.Warn(this, $"Layout has not been set. Could not find layout map for {pokerSite} {gameType} {tableType}");
                 return;
-            var selected =
-                HudLayoutMappings.Mappings.FirstOrDefault(
-                    m =>
-                        m.PokerSite == (EnumPokerSites)pokerSiteId && m.GameType == (EnumGameType)gameType &&
-                        m.TableType == (EnumTableType)tableType && m.IsSelected);
-            if (selected != null)
-                selected.IsSelected = false;
+            }
+
+            var mapping = mappings.FirstOrDefault(x => x.Name == hudToLoad.Name);
+
+            if (mapping == null)
+            {
+                LogProvider.Log.Warn(this, $"Layout has not been set. Could not find layouts {hudToLoad.Name} for {pokerSite} {gameType} {tableType}");
+                return;
+            }
+
+            mappings.Where(x => x.IsSelected).ForEach(x => x.IsSelected = false);
+
             mapping.IsSelected = true;
+
             SaveLayoutMappings();
         }
 

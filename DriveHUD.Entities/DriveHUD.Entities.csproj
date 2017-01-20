@@ -59,9 +59,11 @@
   <ItemGroup>
     <Compile Include="DatabaseType.cs" />
     <Compile Include="EnumFacingPreflop.cs" />
+    <Compile Include="EnumGameType.cs" />
     <Compile Include="EnumHandTag.cs" />
     <Compile Include="EnumPokerSites.cs" />
     <Compile Include="EnumPosition.cs" />
+    <Compile Include="EnumTableType.cs" />
     <Compile Include="GameFormat.cs" />
     <Compile Include="Gametypes.cs" />
     <Compile Include="Handhistory.cs" />

@@ -58,6 +58,7 @@
                         <telerik:RadMenuItem.ItemContainerStyle>
                             <Style TargetType="telerik:RadMenuItem" BasedOn="{StaticResource {x:Type telerik:RadMenuItem}}">
                                 <Setter Property="Header" Value="{Binding}"/>
+                                <Setter Property="IsCheckable" Value="True" />
                                 <Setter Property="IsChecked">
                                     <Setter.Value>
                                         <MultiBinding Converter="{StaticResource SelectedLayoutToCheckedConverter}">

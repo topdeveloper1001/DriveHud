@@ -1,11 +1,8 @@
 ﻿using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
-using Model.Enums;
+using DriveHUD.Entities;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DriveHUD.Application.TableConfigurators.SeatArea
 {

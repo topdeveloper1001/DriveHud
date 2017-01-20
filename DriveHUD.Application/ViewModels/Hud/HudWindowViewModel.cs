@@ -20,16 +20,7 @@ namespace DriveHUD.Application.ViewModels.Hud
     {
         private ReaderWriterLockSlim _readerWriterLock;
         private long _gameNumber;
-        private short _pokerSiteId;
-        public EnumGameType? GameType { get; set; }
-        public EnumTableType TableType { get; set; }
-
-        private string _layoutName;
-        public string LayoutName
-        {
-            get { return _layoutName; }
-            set { SetProperty(ref _layoutName, value); }
-        }
+        private EnumPokerSites _pokerSite;
 
         internal HudWindowViewModel()
         {
@@ -49,6 +40,40 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public InteractionRequest<INotification> NotificationRequest { get; private set; }
 
+        private EnumGameType? gameType;
+        public EnumGameType? GameType
+        {
+            get
+            {
+                return gameType;
+            }
+            set
+            {
+                SetProperty(ref gameType, value);
+            }
+        }
+
+        private EnumTableType tableType;
+        public EnumTableType TableType
+        {
+            get
+            {
+                return tableType;
+            }
+            set
+            {
+                SetProperty(ref tableType, value);
+            }
+        }
+
+        private string _layoutName;
+        public string LayoutName
+        {
+            get { return _layoutName; }
+            set { SetProperty(ref _layoutName, value); }
+        }
+
+
         private string _selectedLayout;
         public string SelectedLayout
         {
@@ -57,7 +82,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         private ObservableCollection<string> _layoutsCollection;
-        
+
         public ObservableCollection<string> LayoutsCollection
         {
             get { return _layoutsCollection; }
@@ -72,7 +97,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         public ICommand TagHandCommand { get; set; }
         public ICommand ReplayLastHandCommand { get; set; }
         public ICommand LoadLayoutCommand { get; set; }
-        
+
         #endregion
 
         #region Methods
@@ -85,7 +110,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     LayoutName = layout.LayoutName;
                     _gameNumber = layout.GameNumber;
-                    _pokerSiteId = (short)layout.PokerSite;
+                    _pokerSite = layout.PokerSite;
 
                     if (layout.AvailableLayouts != null)
                     {
@@ -103,7 +128,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return;
             }
 
-            HudNamedPipeBindingService.RaiseSaveHudLayout(hudTable, _pokerSiteId, (short)GameType.Value, (short)TableType);
+            HudNamedPipeBindingService.RaiseSaveHudLayout(hudTable, (short)_pokerSite, (short)GameType.Value, (short)TableType);
         }
 
         private async void TagHand(object obj)
@@ -118,7 +143,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                         return;
                     }
 
-                    HudNamedPipeBindingService.TagHand(_gameNumber, _pokerSiteId, (int)tag);
+                    HudNamedPipeBindingService.TagHand(_gameNumber, (short)_pokerSite, (int)tag);
                 }
             });
         }
@@ -136,7 +161,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 using (var readToken = _readerWriterLock.Read())
                 {
-                    ExportFunctions.ExportHand(_gameNumber, _pokerSiteId, exportType, true);
+                    ExportFunctions.ExportHand(_gameNumber, (short)_pokerSite, exportType, true);
                     RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
                 }
             });
@@ -148,7 +173,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 using (var readToken = _readerWriterLock.Read())
                 {
-                    HudNamedPipeBindingService.RaiseReplayHand(_gameNumber, _pokerSiteId);
+                    HudNamedPipeBindingService.RaiseReplayHand(_gameNumber, (short)_pokerSite);
                 }
             });
         }
@@ -160,13 +185,15 @@ namespace DriveHUD.Application.ViewModels.Hud
                 using (var readToken = _readerWriterLock.Read())
                 {
                     var layoutName = obj?.ToString();
+
                     if (string.IsNullOrWhiteSpace(layoutName))
                     {
                         return;
                     }
 
-                    HudNamedPipeBindingService.LoadLayout(layoutName, _pokerSiteId, (short) GameType.Value,
-                        (short) TableType);
+                    LayoutName = layoutName;
+
+                    HudNamedPipeBindingService.LoadLayout(layoutName, _pokerSite, GameType.Value, TableType);
                     RaiseNotification($"HUD with name \"{layoutName}\" will be loaded on the next hand.", "Load HUD");
                 }
             });

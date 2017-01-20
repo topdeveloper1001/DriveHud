@@ -1,9 +1,6 @@
-﻿using System;
+﻿using DriveHUD.Entities;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Enums;
 
 namespace DriveHUD.Application.TableConfigurators
 {

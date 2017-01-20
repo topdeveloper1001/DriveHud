@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Enums;
+using DriveHUD.Entities;
 using ProtoBuf;
 
 namespace DriveHUD.Application.ViewModels.Hud
