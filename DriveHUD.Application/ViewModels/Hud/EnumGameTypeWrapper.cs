@@ -11,7 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Resources;
-using Model.Enums;
+using DriveHUD.Entities;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {

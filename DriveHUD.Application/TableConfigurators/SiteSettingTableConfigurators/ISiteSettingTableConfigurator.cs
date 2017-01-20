@@ -1,11 +1,5 @@
 ﻿using DriveHUD.Application.ViewModels.Settings;
-using Model.Enums;
-using Model.Settings;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using DriveHUD.Entities;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.TableConfigurators

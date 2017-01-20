@@ -235,35 +235,7 @@ namespace DriveHUD.Application
             Container.RegisterType<IPositionProvider, IgnitionRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudViewType.Horizontal));
             Container.RegisterType<IPositionProvider, Poker888PositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudViewType.Plain));
             Container.RegisterType<IPositionProvider, PokerStarsPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudViewType.Plain));
-            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.WinningPokerNetwork, HudViewType.Plain));
-
-            // Bovada
-            //Container.RegisterType<ITableConfigurator, BovadaRichTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Default));
-            //Container.RegisterType<ITableConfigurator, BovadaTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Plain));
-
-            // BetOnline
-            //Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BetOnline, HudType.Default));
-
-            //Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.SportsBetting, HudType.Default));
-            //Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.SportsBetting, HudType.Plain));
-            //Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.TigerGaming, HudType.Default));
-            //Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.TigerGaming, HudType.Plain));
-
-            // PokerStars
-            //Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Default));
-            //Container.RegisterType<ITableConfigurator, PokerStarsTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Plain));
-
-            // 888 poker            
-            //Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudType.Default));
-            //Container.RegisterType<ITableConfigurator, Poker888TableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudType.Plain));
-
-            // AmericasCardroom
-            //Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Default));
-            //Container.RegisterType<ITableConfigurator, AmericasCardroomTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Plain));
-
-            // BlackChipPoker
-            //Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudType.Default));
-            //Container.RegisterType<ITableConfigurator, BlackChipPokerTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudType.Plain));
+            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.WinningPokerNetwork, HudViewType.Plain));         
 
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);

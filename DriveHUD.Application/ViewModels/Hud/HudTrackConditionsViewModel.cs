@@ -11,7 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Wpf.Mvvm;
-using Model.Enums;
+using DriveHUD.Entities;
 using ReactiveUI;
 
 namespace DriveHUD.Application.ViewModels.Hud

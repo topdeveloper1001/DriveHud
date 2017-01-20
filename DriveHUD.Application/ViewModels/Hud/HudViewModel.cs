@@ -147,7 +147,8 @@ namespace DriveHUD.Application.ViewModels
             InitializeObservables();
 
             InitializeHudElements();
-            Layouts = new ObservableCollection<HudLayoutInfo>(_hudLayoutsSevice.GetAllLayouts());
+        
+            CurrentTableType = TableTypes.FirstOrDefault();
         }
 
         private void InitializeHudElements()
@@ -457,35 +458,31 @@ namespace DriveHUD.Application.ViewModels
 
         public EnumTableTypeWrapper CurrentTableType
         {
-            get { return _currentTableType; }
+            get
+            {
+                return _currentTableType;
+            }
             set
             {
-                if (_currentTableType == value)
-                {
-                    return;
-                }
+                this.RaiseAndSetIfChanged(ref _currentTableType, value);
 
-                _currentTableType = value;
-
-                this.RaisePropertyChanged(nameof(CurrentTableType));
-                
                 if (!_currentLayoutSwitching && CurrentTableType != null)
                 {
-                    DataLoad(false);
-                }                
+                    Layouts = new ObservableCollection<HudLayoutInfo>(_hudLayoutsSevice.GetAllLayouts(CurrentTableType.TableType));
+                    CurrentLayout = Layouts.FirstOrDefault();
+                }
             }
         }
 
         public ObservableCollection<EnumTableTypeWrapper> TableTypes
         {
-            get { return _tableTypes; }
+            get
+            {
+                return _tableTypes;
+            }
             private set
             {
-                if (_tableTypes == value)
-                    return;
-                _tableTypes = value;
-                this.RaisePropertyChanged(nameof(TableTypes));
-                CurrentTableType = _tableTypes.FirstOrDefault();
+                this.RaiseAndSetIfChanged(ref _tableTypes, value);
             }
         }
 
@@ -609,7 +606,7 @@ namespace DriveHUD.Application.ViewModels
                 SettingsService.SaveSettings(settings);
 
                 previewHudElementViewModel.HudViewType = HudViewType;
-                
+
                 if (!_currentLayoutSwitching && CurrentTableType != null)
                 {
                     DataLoad(false);
@@ -660,7 +657,8 @@ namespace DriveHUD.Application.ViewModels
                 LayoutName = CurrentLayout.Name,
                 Cancel = ClosePopup,
                 Save = DataSave,
-                IsSaveAsMode = true
+                IsSaveAsMode = true,
+                TableType = CurrentTableType.TableType
             };
             var hudSelectLayoutViewModel = new HudSelectLayoutViewModel(hudSelectLayoutViewModelInfo);
             OpenPopup(hudSelectLayoutViewModel);
@@ -728,7 +726,7 @@ namespace DriveHUD.Application.ViewModels
             if (CurrentHudTableViewModel != null && !disableLayoutSave)
             {
                 SaveLayoutChanged(CurrentLayout);
-            }            
+            }
 
             CurrentHudTableViewModel = HudTableViewModels.FirstOrDefault(h => h.TableType == CurrentTableType.TableType);
 
@@ -743,7 +741,7 @@ namespace DriveHUD.Application.ViewModels
             CurrentHudTableViewModel.HudElements.ForEach(h => h.HudViewType = HudViewType);
             CurrentHudTableViewModel.Opacity = ((double)CurrentLayout.HudOpacity) / 100;
             CurrentHudTableViewModel.HudElements.ForEach(e => e.Opacity = CurrentHudTableViewModel.Opacity);
-            MergeLayouts(CurrentHudTableViewModel.HudElements, CurrentLayout);
+            //MergeLayouts(CurrentHudTableViewModel.HudElements, CurrentLayout);
             UpdateLayout(CurrentLayout);
 
             TableUpdated?.Invoke(this, EventArgs.Empty);
@@ -753,11 +751,16 @@ namespace DriveHUD.Application.ViewModels
         {
             Check.ArgumentNotNull(() => hudElementViewModels);
             Check.ArgumentNotNull(() => layout);
+
             foreach (var hudElementViewModel in hudElementViewModels)
             {
                 var userDefinedPosition = layout.UiPositionsInfo.FirstOrDefault(p => p.Seat == hudElementViewModel.Seat);
+
                 if (userDefinedPosition == null)
+                {
                     continue;
+                }
+
                 hudElementViewModel.Width = userDefinedPosition.Width;
                 hudElementViewModel.Height = userDefinedPosition.Height;
                 hudElementViewModel.Position = userDefinedPosition.Position;

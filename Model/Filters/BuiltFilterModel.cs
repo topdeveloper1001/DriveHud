@@ -1,9 +1,9 @@
 ﻿using DriveHUD.Common.Annotations;
+using DriveHUD.Entities;
 using HandHistories.Objects.Cards;
 using Microsoft.Practices.ServiceLocation;
 using Model.Enums;
 using Model.Extensions;
-using ProtoBuf;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,7 +12,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 
 namespace Model.Filters
-{    
+{
     public class BuiltFilterModel : INotifyPropertyChanged
     {
         #region  Properties

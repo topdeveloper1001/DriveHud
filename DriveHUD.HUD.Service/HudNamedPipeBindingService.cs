@@ -1,4 +1,6 @@
-﻿namespace DriveHUD.HUD.Service
+﻿using DriveHUD.Entities;
+
+namespace DriveHUD.HUD.Service
 {
     public abstract class HudNamedPipeBindingService : IHudNamedPipeBindingService
     {
@@ -16,9 +18,9 @@
             _callback?.SaveHudLayout(hudLayout, pokerSiteId, gameType, tableType);
         }
 
-        public static void LoadLayout(string layoutName, short pokerSiteId, short gameType, short tableType)
+        public static void LoadLayout(string layoutName, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            _callback?.LoadLayout(layoutName, pokerSiteId, gameType, tableType);
+            _callback?.LoadLayout(layoutName, pokerSite, gameType, tableType);
         }
 
         public static void TagHand(long gameNumber, short pokerSiteId, int tag)
@@ -32,7 +34,7 @@
 
         public abstract void ConnectCallbackChannel(string name);
 
-        public abstract void UpdateHUD(byte[] data); 
+        public abstract void UpdateHUD(byte[] data);
 
         #endregion
     }

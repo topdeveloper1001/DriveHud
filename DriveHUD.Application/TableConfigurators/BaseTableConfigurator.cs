@@ -68,17 +68,16 @@ namespace DriveHUD.Application.TableConfigurators
 
         protected RadDiagramShape CreateHudLabel(HudElementViewModel viewModel)
         {
-            var label = CreateRadDiagramShape(viewModel);
-        
-            SetPositionBinding(label, viewModel);
-            SetOpacityBinding(label, viewModel);
-            SetWidthBinding(label, viewModel);
+            var shape = CreateRadDiagramShape(viewModel);
 
-            label.Height = double.NaN;
+            SetPositionBinding(shape, viewModel);
+            SetOpacityBinding(shape, viewModel);
+            SetWidthBinding(shape, viewModel);
+            SetShapeSize(shape);
 
-            AddContextMenu(label);
+            AddContextMenu(shape);
 
-            return label;
+            return shape;
         }
 
         public virtual double DiagramActualWidth(RadDiagram diagram)
@@ -188,6 +187,11 @@ namespace DriveHUD.Application.TableConfigurators
             };
 
             element.SetBinding(dp, binding);
+        }
+
+        protected virtual void SetShapeSize(RadDiagramShape shape)
+        {
+            shape.Height = double.NaN;
         }
 
         protected virtual bool IsRightOriented(int seats, int seat)

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="HudSelectLayoutViewModelInfo.cs" company="Ace Poker Solutions">
+// <copyright file="EnumTableType.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,18 +10,17 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-using System;
-
-namespace DriveHUD.Application.ViewModels
+namespace DriveHUD.Entities
 {
-    public class HudSelectLayoutViewModelInfo
+    public enum EnumTableType : byte
     {
-        public EnumTableType TableType { get; set; }
-        public string LayoutName { get; set; }
-        public Action Save { get; set; }
-        public Action Cancel { get; set; }
-        public bool IsSaveAsMode { get; set; }
-        public bool IsDeleteMode { get; set; }
+        HU = 2,
+        Three = 3,
+        Four = 4,
+        Five = 5,
+        Six = 6,
+        Eight = 8,
+        Nine = 9,
+        Ten = 10
     }
 }
