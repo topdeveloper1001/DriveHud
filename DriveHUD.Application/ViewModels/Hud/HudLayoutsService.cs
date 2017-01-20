@@ -147,6 +147,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                             TableType = tableType,
                             Name = defaultLayoutInfo.Name,
                             IsDefault = true,
+                            HudViewType = defaultLayoutInfo.HudViewType,
                             FileName = Path.GetFileName(fileName)
                         });
                     }
@@ -212,9 +213,11 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private HudLayoutInfo LoadDefault(EnumTableType tableType)
         {
-            return
-                LoadLayout(Path.Combine(GetLayoutsDirectory().FullName,
-                    $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)}{LayoutFileExtension}"));
+            var fileName =
+                Path.GetInvalidFileNameChars()
+                    .Aggregate($"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)}{LayoutFileExtension}",
+                        (current, c) => current.Replace(c.ToString(), string.Empty));
+            return LoadLayout(Path.Combine(GetLayoutsDirectory().FullName, fileName));
         }
 
         private HudLayoutInfo LoadLayout(HudLayoutMapping mapping)
@@ -872,6 +875,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                             GameType = gameType,
                             PokerSite = pokerSite,
                             TableType = layout.TableType,
+                            HudViewType = layout.HudViewType,
                             IsSelected = false,
                             IsDefault = false
                         });
@@ -985,6 +989,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                             GameType = gameType,
                             PokerSite = pokerSite,
                             TableType = importedHudLayout.TableType,
+                            HudViewType = importedHudLayout.HudViewType,
                             IsSelected = false,
                             IsDefault = false
                         });
