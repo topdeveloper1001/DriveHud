@@ -931,12 +931,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     _rwLock.ExitReadLock();
                 }
-                var i = 0;
+                var i = 1;
                 var layoutName = importedHudLayout.Name;
                 importedHudLayout.IsDefault = false;
                 while (HudLayoutMappings.Mappings.Any(l => l.Name == importedHudLayout.Name))
                 {
-                    importedHudLayout.Name = $"{layoutName} {i}";
+                    importedHudLayout.Name = $"{layoutName} ({i})";
                     i++;
                 }
                 var fileName = InternalSave(importedHudLayout);
