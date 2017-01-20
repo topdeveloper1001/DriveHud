@@ -13,6 +13,7 @@
 using DriveHUD.Application.ViewModels;
 using System.Collections.Generic;
 using DriveHUD.Entities;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.TableConfigurators
 {
@@ -63,6 +64,16 @@ namespace DriveHUD.Application.TableConfigurators
         protected override bool IsRightOriented(int seats, int seat)
         {
             return (seats > 6 && seat < 5) || (seats < 7 && seats > 2 && seat < 3) || (seats < 3 && seat < 1);
+        }
+
+        protected override void SetWidthBinding(RadDiagramShape shape, HudElementViewModel viewModel)
+        {            
+        }
+
+        protected override void SetShapeSize(RadDiagramShape shape)
+        {
+            base.SetShapeSize(shape);
+            shape.Width = double.NaN;
         }
     }
 }
