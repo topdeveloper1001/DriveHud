@@ -36,20 +36,19 @@ namespace DriveHUD.Application.ViewModels
 
         public HudElementViewModel()
         {
-            statInfoCollection = new ObservableCollection<StatInfo>();
-            Opacity = 100;
+            statInfoCollection = new ObservableCollection<StatInfo>();         
         }
 
         public HudElementViewModel(IEnumerable<StatInfo> statInfos)
         {
             statInfoCollection = new ObservableCollection<StatInfo>(statInfos);
-
             Init();
         }
 
         private void Init()
         {
             HudViewType = HudViewType.Vertical_1;
+            Opacity = 100;
         }
 
         public void UpdateMainStats()

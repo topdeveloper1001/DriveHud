@@ -28,9 +28,12 @@ namespace DriveHUD.Application.ViewModels
 
         HudLayoutInfo GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
 
-        HudTableViewModel GetHudTableViewModel(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
-
         HudLayoutInfo GetLayout(string name);
+
+        /// <summary>
+        /// Simple save
+        /// </summary>
+        void Save(HudLayoutInfo hudLayout);
 
         /// <summary>
         /// Save new layout

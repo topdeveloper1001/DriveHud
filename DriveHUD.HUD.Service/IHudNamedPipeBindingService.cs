@@ -35,7 +35,7 @@ namespace DriveHUD.HUD.Service
     public interface IHudNamedPipeBindingCallbackService
     {
         [OperationContract(Name = "SaveHudLayout", IsOneWay = true)]
-        void SaveHudLayout(HudLayoutContract hudLayout, short pokerSiteId, short gameType, short tableType);
+        void SaveHudLayout(HudLayoutContract hudLayout);
 
         [OperationContract(Name = "ReplayHand", IsOneWay = true)]
         void ReplayHand(long gameNumber, short pokerSiteId);
@@ -53,6 +53,15 @@ namespace DriveHUD.HUD.Service
         [DataMember(Name = "LayoutName")]
         public string LayoutName { get; set; }
 
+        [DataMember(Name = "PokerSite")]
+        public EnumPokerSites PokerSite { get; set; }
+
+        [DataMember(Name = "GameType")]
+        public EnumGameType GameType { get; set; }
+
+        [DataMember(Name = "TableType")]
+        public EnumTableType TableType { get; set; }
+
         [DataMember(Name = "HudPositions")]
         public List<HudPositionContract> HudPositions { get; set; }
     }
@@ -66,8 +75,7 @@ namespace DriveHUD.HUD.Service
         [DataMember(Name = "Position")]
         public Point Position { get; set; }
 
-        [DataMember(Name = "HudType")]
-        public int HudType { get; set; }
+        [DataMember(Name = "HudViewType")]
+        public HudViewType HudViewType { get; set; }
     }
-
 }

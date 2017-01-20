@@ -38,9 +38,7 @@ namespace DriveHUD.Application.Views
                     return;
                 }
 
-                ViewModel.TableUpdated += OnViewModelTableUpdated;
-
-                ViewModel.UpdateActiveLayout();
+                ViewModel.TableUpdated += OnViewModelTableUpdated;             
 
                 var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
 

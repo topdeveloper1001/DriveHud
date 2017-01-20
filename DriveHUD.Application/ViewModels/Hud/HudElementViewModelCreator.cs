@@ -77,6 +77,7 @@ namespace DriveHUD.Application.ViewModels
 
             hudElementViewModel.Width = uiPositions.Width;
             hudElementViewModel.Height = uiPositions.Height;
+            hudElementViewModel.Opacity = creationInfo.HudLayoutInfo.HudOpacity;
 
             return hudElementViewModel;
         }

@@ -172,7 +172,7 @@
                 </DrawingGroup>
             </DrawingBrush.Drawing>
         </DrawingBrush>
-        
+
         <Style x:Key="ColorButton" TargetType="{x:Type Button}">
             <Setter Property="Width" Value="18" />
             <Setter Property="Height" Value="18" />
@@ -275,14 +275,13 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="270"/>
                     <ColumnDefinition Width="270"/>
-                    <ColumnDefinition Width="270"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <!-- HUD NAME ********************************************************************* -->
                 <TextBlock Grid.Row="0" Grid.Column="1" Margin="1,5,40,1"
                            VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="HUD Name" FontSize="13"/>
+                           Text="{ResX Key=Common_Hud_HudName}" FontSize="13"/>
                 <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="1" Margin="0,0,40,0"
                                      MaxWidth="260" Height="35"
                                      PopupMaxWidth="230" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
@@ -291,14 +290,14 @@
                                      ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
                                      ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
                                      ItemsSource="{Binding Layouts}"
-                                            DisplayMemberPath="Name"
+                                     DisplayMemberPath="Name"
                                      SelectedValue="{Binding Path=CurrentLayout}">
                 </comboboxControl:ComboBoxEx>
 
                 <!-- TABLE LAYOUT ***************************************************************** -->
                 <TextBlock Grid.Row="0" Grid.Column="2" Margin="1,5,40,1"
                            VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="Table Layout" FontSize="13"/>
+                           Text="{ResX Key=Common_Hud_TableLayout}" FontSize="13"/>
 
                 <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="2" Margin="0,0,40,0"
                                      MaxWidth="260" Height="35"
@@ -311,34 +310,13 @@
                                      DisplayMemberPath="TableTypeText"
                                      SelectedValue="{Binding Path=CurrentTableType}">
                 </comboboxControl:ComboBoxEx>
-                                
-                <!-- HUD SCREEN ***************************************************************** -->
-                <TextBlock Grid.Row="0" Grid.Column="3" Margin="1,5,40,1"
-                           VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="HUD Screen" FontSize="13"/>
-
-                <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="3" Margin="0,0,40,0"
-                                     MaxWidth="260" Height="35"
-                                     PopupMaxWidth="240" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                                     VerticalAlignment="Bottom" HorizontalAlignment="Stretch"     
-                                     ItemsSource="{Binding HudViewTypes}"
-                                     SelectedValue="{Binding HudViewType}"      
-                                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"                                      
-                                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}">
-                    <comboboxControl:ComboBoxEx.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}"  />
-                        </DataTemplate>
-                    </comboboxControl:ComboBoxEx.ItemTemplate>
-                </comboboxControl:ComboBoxEx>
 
             </Grid>
 
             <!-- COMMAND BUTTONS - SAVE/IMPORT/EXPORT/LOAD **************************************************************** -->
             <StackPanel Grid.Row="1" Grid.Column="2"                  
                         Orientation="Vertical">
-                
+
                 <Button Margin="0,21,0,5"
 						HorizontalAlignment="Right" VerticalAlignment="Bottom"
 						Style="{StaticResource ButtonStyle}"
@@ -375,7 +353,7 @@
                 </Button>
 
             </StackPanel>
-            
+
             <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -400,9 +378,9 @@
 					primitives:BackgroundGrid.LineStroke="#26282b"
 					ViewportChanged="OnDiagramViewportChanged"
 					Style="{StaticResource ClassDiagramStyle}" />
-                                                    
+
             </Grid>
-           
+
             <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>

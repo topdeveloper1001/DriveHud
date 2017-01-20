@@ -575,6 +575,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to HUD Name.
+        /// </summary>
+        internal static string Common_Hud_HudName {
+            get {
+                return ResourceManager.GetString("Common_Hud_HudName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Import.
         /// </summary>
         internal static string Common_Hud_Import {
@@ -607,6 +616,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_SaveAs {
             get {
                 return ResourceManager.GetString("Common_Hud_SaveAs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Layout.
+        /// </summary>
+        internal static string Common_Hud_TableLayout {
+            get {
+                return ResourceManager.GetString("Common_Hud_TableLayout", resourceCulture);
             }
         }
         

@@ -746,6 +746,20 @@ namespace DriveHUD.Application.ViewModels.Hud
         }
 
         /// <summary>
+        /// Simple save
+        /// </summary>
+        /// <param name="hudLayout"></param>
+        public void Save(HudLayoutInfo hudLayout)
+        {
+            if (hudLayout == null)
+            {
+                return;
+            }
+
+            InternalSave(hudLayout);
+        }
+
+        /// <summary>
         /// Save new layout
         /// </summary>
         /// <param name="hudData">Hud Data</param>
@@ -755,6 +769,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return null;
 
             var layout = GetLayout(hudData.Name);
+
             var addLayout = layout == null;
 
             if (addLayout)
@@ -764,6 +779,8 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             layout.Name = hudData.Name;
             layout.TableType = hudData.LayoutInfo.TableType;
+            layout.HudOpacity = hudData.LayoutInfo.HudOpacity;
+
             if (addLayout || layout.HudViewType != hudData.LayoutInfo.HudViewType)
             {
                 layout.HudPositionsInfo.Clear();
@@ -771,7 +788,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     ? Enum.GetValues(typeof(EnumPokerSites))
                         .OfType<EnumPokerSites>()
                         .Where(p => p != EnumPokerSites.Unknown && p != EnumPokerSites.IPoker)
-                    : new[] {EnumPokerSites.Ignition, EnumPokerSites.Bodog};
+                    : new[] { EnumPokerSites.Ignition, EnumPokerSites.Bodog };
+
                 foreach (var pokerSite in pokerSites)
                 {
                     foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
@@ -791,6 +809,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 layout.HudPositionsInfo = hudData.LayoutInfo.HudPositionsInfo.Select(p => p.Clone()).ToList();
             }
+
             layout.HudViewType = hudData.LayoutInfo.HudViewType;
 
             layout.HudStats = hudData.Stats.Select(x =>
@@ -798,7 +817,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 var statInfoBreak = x as StatInfoBreak;
                 return statInfoBreak != null ? statInfoBreak.Clone() : x.Clone();
             }).ToList();
-            
+
             layout.HudBumperStickerTypes = hudData.LayoutInfo.HudBumperStickerTypes.Select(x => x.Clone()).ToList();
             layout.HudPlayerTypes = hudData.LayoutInfo.HudPlayerTypes.Select(x => x.Clone()).ToList();
             layout.UiPositionsInfo = hudData.HudTable.HudElements.Select(x => new UiPositionInfo
@@ -849,10 +868,10 @@ namespace DriveHUD.Application.ViewModels.Hud
             var positionsProvider =
                 Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IPositionProvider>(
                     PositionConfiguratorHelper.GetServiceName(pokerSite, hudViewType));
-            if (!positionsProvider.Positions.ContainsKey((int) tableType))
+            if (!positionsProvider.Positions.ContainsKey((int)tableType))
                 return null;
             var result = new List<HudPositionInfo>();
-            for (var i = 0; i < (int) tableType; i++)
+            for (var i = 0; i < (int)tableType; i++)
             {
                 result.Add(new HudPositionInfo
                 {
@@ -860,11 +879,11 @@ namespace DriveHUD.Application.ViewModels.Hud
                         new Point
                         {
                             X =
-                                positionsProvider.Positions[(int) tableType][i, 0] +
-                                positionsProvider.GetOffsetX((int) tableType, i + 1),
+                                positionsProvider.Positions[(int)tableType][i, 0] +
+                                positionsProvider.GetOffsetX((int)tableType, i + 1),
                             Y =
-                                positionsProvider.Positions[(int) tableType][i, 1] +
-                                positionsProvider.GetOffsetY((int) tableType, i + 1)
+                                positionsProvider.Positions[(int)tableType][i, 1] +
+                                positionsProvider.GetOffsetY((int)tableType, i + 1)
                         },
                     Seat = i + 1
                 });
@@ -1153,14 +1172,6 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (mapping == null)
                 return LoadDefault(tableType);
             return LoadLayout(mapping);
-        }
-
-        public HudTableViewModel GetHudTableViewModel(EnumPokerSites pokerSite, EnumTableType tableType,
-            EnumGameType gameType)
-        {
-            return
-                HudTableViewModels.FirstOrDefault(
-                    h => h.PokerSite == pokerSite && h.GameType == gameType && h.TableType == tableType);
         }
 
         public HudLayoutInfo GetLayout(string name)

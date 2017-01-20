@@ -1,81 +1,81 @@
-﻿using System;
-using DriveHUD.HUD.Service;
-using DriveHUD.Common.Log;
-using Microsoft.Practices.ServiceLocation;
+﻿//-----------------------------------------------------------------------
+// <copyright file="HudNamedPipeBindingCallbackService.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using DriveHUD.Application.ViewModels;
-using System.Linq;
 using DriveHUD.Application.ViewModels.Layouts;
-using Model;
 using DriveHUD.Application.ViewModels.Replayer;
-using Model.Interfaces;
+using DriveHUD.Common.Log;
 using DriveHUD.Entities;
-using Model.Enums;
+using DriveHUD.HUD.Service;
+using Microsoft.Practices.ServiceLocation;
+using Model;
+using Model.Interfaces;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DriveHUD.Application.HudServices
 {
     internal class HudNamedPipeBindingCallbackService : IHudNamedPipeBindingCallbackService
     {
-        public void SaveHudLayout(HudLayoutContract hudLayout, short pokerSiteId, short gameType, short tableType)
+        public void SaveHudLayout(HudLayoutContract hudLayoutContract)
         {
-            if (hudLayout == null)
+            if (hudLayoutContract == null)
             {
-                LogProvider.Log.Warn(this, "hudLayout is null");
+                LogProvider.Log.Warn(this, "hudLayoutContract is null");
                 return;
             }
 
             var hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
-            var activeLayout = hudLayoutsService.GetLayout(hudLayout.LayoutName);
 
-            if (activeLayout == null)
+            var existingHudLayout = hudLayoutsService.GetLayout(hudLayoutContract.LayoutName);
+
+            if (existingHudLayout == null)
             {
-                LogProvider.Log.Info(this, $"Cannot find layout with id: {hudLayout.LayoutName}");
+                LogProvider.Log.Info(this, $"Could not find layout {hudLayoutContract.LayoutName}");
                 return;
             }
-            var viewModel = hudLayoutsService.GetHudTableViewModel((EnumPokerSites)pokerSiteId,
-                (EnumTableType)tableType, (EnumGameType)gameType);
-            if (viewModel == null)
+
+            var existingHudPositions = existingHudLayout.HudPositionsInfo.FirstOrDefault(p => p.PokerSite == hudLayoutContract.PokerSite && p.GameType == hudLayoutContract.GameType);
+
+            if (existingHudPositions == null)
             {
-                LogProvider.Log.Info(this, $"Cannot find view model for layout with id: {hudLayout.LayoutName}");
-                return;
+                existingHudPositions = new HudPositionsInfo
+                {
+                    GameType = hudLayoutContract.GameType,
+                    PokerSite = hudLayoutContract.PokerSite,
+                    HudPositions = new List<HudPositionInfo>()
+                };
             }
 
             // update positions 
-            foreach (var hudPosition in hudLayout.HudPositions)
+            foreach (var hudPosition in hudLayoutContract.HudPositions)
             {
-                var hudPositions =
-                    activeLayout.HudPositionsInfo.FirstOrDefault(
-                        p =>
-                            p.PokerSite == (EnumPokerSites)pokerSiteId &&
-                            p.GameType == (EnumGameType)gameType);
-                var hudToUpdate = hudPositions?.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
-                if (hudToUpdate == null)
+                var hudPositionForUpdate = existingHudPositions.HudPositions.FirstOrDefault(x => x.Seat == hudPosition.SeatNumber);
+
+                if (hudPositionForUpdate == null)
                 {
-                    continue;
+                    hudPositionForUpdate = new HudPositionInfo
+                    {
+                        Seat = hudPosition.SeatNumber
+                    };
+
+                    existingHudPositions.HudPositions.Add(hudPositionForUpdate);
                 }
 
-                hudToUpdate.Position = hudPosition.Position;
-
-                if (viewModel == null)
-                {
-                    continue;
-                }
-
-                var hudElementToUpdate = viewModel.HudElements.FirstOrDefault(x => x.Seat == hudToUpdate.Seat);
-                if (hudElementToUpdate != null)
-                {
-                    hudElementToUpdate.Position = hudToUpdate.Position;
-                }
+                hudPositionForUpdate.Position = hudPosition.Position;
             }
 
-            var hudData = new HudSavedDataInfo
-            {
-                LayoutInfo = activeLayout,
-                Name = activeLayout.Name,
-                HudTable = viewModel,
-                Stats = activeLayout?.HudStats
-            };
-
-            App.Current.Dispatcher.Invoke(() => hudLayoutsService.SaveAs(hudData));
+            hudLayoutsService.Save(existingHudLayout);
         }
 
         public void ReplayHand(long gameNumber, short pokerSiteId)
@@ -98,7 +98,7 @@ namespace DriveHUD.Application.HudServices
 
             if (hudToLoad == null)
             {
-                LogProvider.Log.Info(this, $"Cannot find layout with name {layoutName} for {pokerSite} {gameType} {tableType}");
+                LogProvider.Log.Info(this, $"Could not find layout with name {layoutName} for {pokerSite} {gameType} {tableType}");
                 return;
             }
 

@@ -22,6 +22,6 @@ namespace DriveHUD.Application.ViewModels
         public HudLayoutInfo LayoutInfo { get; set; }
         public IEnumerable<StatInfo> Stats { get; set; }
 
-        public string Name { get; set; }
+        public string Name { get; set; }        
     }
 }

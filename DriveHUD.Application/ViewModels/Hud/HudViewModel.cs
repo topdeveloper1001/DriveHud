@@ -140,14 +140,14 @@ namespace DriveHUD.Application.ViewModels
 
             var settings = SettingsService.GetSettings();
 
-            PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100 };
+            PreviewHudElementViewModel = new HudElementViewModel { TiltMeter = 100, Opacity = 100 };
             PreviewHudElementViewModel.HudViewType = (HudViewType)settings.GeneralSettings.HudViewMode;
 
             InitializeCommands();
             InitializeObservables();
 
             InitializeHudElements();
-        
+
             CurrentTableType = TableTypes.FirstOrDefault();
         }
 
@@ -799,16 +799,23 @@ namespace DriveHUD.Application.ViewModels
         {
             if (layout == null)
                 return;
+
             // Get all chosen stats back to list
             foreach (var statInfo in StatInfoObserveCollection)
             {
                 if (statInfo is StatInfoBreak)
+                {
                     continue;
-                //statInfo.Reset();
+                }
+
+                statInfo.Reset();
                 statInfo.Initialize();
+
                 StatInfoCollection.Add(statInfo);
             }
+
             StatInfoObserveCollection.Clear();
+
             foreach (var hudStat in layout.HudStats)
             {
                 if (hudStat is StatInfoBreak)

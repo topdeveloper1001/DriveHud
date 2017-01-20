@@ -13,9 +13,9 @@ namespace DriveHUD.HUD.Service
             _callback?.ReplayHand(gameNumber, pokerSiteId);
         }
 
-        public static void RaiseSaveHudLayout(HudLayoutContract hudLayout, short pokerSiteId, short gameType, short tableType)
+        public static void RaiseSaveHudLayout(HudLayoutContract hudLayout)
         {
-            _callback?.SaveHudLayout(hudLayout, pokerSiteId, gameType, tableType);
+            _callback?.SaveHudLayout(hudLayout);
         }
 
         public static void LoadLayout(string layoutName, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)

@@ -541,7 +541,7 @@ namespace DriveHUD.Importers.BetOnline
                                Seat = seat,
                                Name = seatNode.GetFirstElement("PlayerInfo").Attribute("nickname") != null ?
                                           RemoveIllegalCharacters(seatNode.GetFirstElement("PlayerInfo").Attribute("nickname").Value) :
-                                          tableService.GetRandomPlayerName(gameInfo.Session, seat + 1),
+                                          tableService.GetRandomPlayerName(sessionCode, seat + 1),
                                Chips = decimal.Parse(seatNode.GetFirstElement("Chips").Attribute("stack-size").Value, NumberStyles.Currency, CultureInfo.InvariantCulture),
                                Dealer = seat == dealer,
                                IsHero = heroSeat == seat

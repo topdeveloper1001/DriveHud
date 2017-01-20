@@ -45,7 +45,12 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => hudElement);
             Check.ArgumentNotNull(() => window);
 
-            return new Tuple<double, double>(hudElement.Position.X, hudElement.Position.Y);
+            var panelOffset = window.GetPanelOffset(hudElement);
+
+            var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X;
+            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y;
+
+            return new Tuple<double, double>(xPosition * window.XFraction, yPosition * window.YFraction);
         }
 
         /// <summary>
@@ -59,7 +64,14 @@ namespace DriveHUD.Application.ViewModels.Hud
             Check.ArgumentNotNull(() => hudElement);
             Check.ArgumentNotNull(() => window);
 
-            return new Tuple<double, double>(hudElement.Position.X, hudElement.Position.Y);
+            var maxSeats = (int)window.Layout.TableType;
+
+            var panelOffset = window.GetPanelOffset(hudElement);               
+
+            var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X;
+            var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y;
+
+            return new Tuple<double, double>(xPosition, yPosition);
         }
 
         /// <summary>
@@ -71,6 +83,8 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var contextMenu = CreateContextMenu(hudElement.PokerSiteId, hudElement.PlayerName, hudElement);
             contextMenu.EventName = "MouseRightButtonUp";
+
+            hudElement.Opacity = hudElement.Opacity / 100d;
 
             if (hudViewType == HudViewType.Plain)
             {
