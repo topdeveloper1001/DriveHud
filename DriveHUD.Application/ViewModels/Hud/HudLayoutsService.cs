@@ -32,6 +32,11 @@ using System.Windows.Media;
 using System.Xml.Serialization;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.PositionProviders;
+using DriveHUD.Common.Wpf.Actions;
+using Microsoft.Practices.ServiceLocation;
+using Model.Events;
+using Prism.Events;
+using Prism.Interactivity.InteractionRequest;
 
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -45,6 +50,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private readonly EnumPokerSites[] _extendedHudPokerSites = { EnumPokerSites.Bodog, EnumPokerSites.Ignition };
 
         private static ReaderWriterLockSlim _rwLock = new ReaderWriterLockSlim();
+        private IEventAggregator _eventAggregator;
 
         public HudLayoutMappings HudLayoutMappings { get; set; }
 
@@ -85,6 +91,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             try
             {
+                _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
                 var layoutsDirectory = GetLayoutsDirectory();
 
                 var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
@@ -96,23 +103,34 @@ namespace DriveHUD.Application.ViewModels.Hud
                 else
                 {
                     HudLayoutMappings = new HudLayoutMappings();
-
-                    foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
+                    
+                }
+                foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
+                {
+                    var defaultLayoutInfo = GetPredefindedLayout(tableType);
+                    defaultLayoutInfo.TableType = tableType;
+                    defaultLayoutInfo.IsDefault = true;
+                    foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
                     {
-                        var defaultLayoutInfo = GetPredefindedLayout(tableType);
-                        defaultLayoutInfo.Name = $"Default {CommonResourceManager.Instance.GetEnumResource(tableType)}";
-                        defaultLayoutInfo.TableType = tableType;
-                        defaultLayoutInfo.IsDefault = true;
+                        defaultLayoutInfo.Name =
+                            $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : hudViewType.ToString())}"
+                                .Trim();
+                        if (
+                            File.Exists(Path.Combine(layoutsDirectory.FullName,
+                                $"{Path.GetInvalidFileNameChars().Aggregate(defaultLayoutInfo.Name, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}")))
+                            continue;
                         defaultLayoutInfo.HudPositionsInfo.Clear();
-                        var pokerSites =
-                            Enum.GetValues(typeof(EnumPokerSites))
+                        defaultLayoutInfo.HudViewType = hudViewType;
+                        var pokerSites = hudViewType == HudViewType.Plain
+                            ? Enum.GetValues(typeof(EnumPokerSites))
                                 .OfType<EnumPokerSites>()
-                                .Where(p => p != EnumPokerSites.Unknown && p != EnumPokerSites.IPoker);
+                                .Where(p => p != EnumPokerSites.Unknown && p != EnumPokerSites.IPoker)
+                            : new[] { EnumPokerSites.Ignition, EnumPokerSites.Bodog };
                         foreach (var pokerSite in pokerSites)
                         {
                             foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
                             {
-                                var hudPositions = GeneratePositions(pokerSite, HudViewType.Plain, tableType);
+                                var hudPositions = GeneratePositions(pokerSite, hudViewType, tableType);
                                 if (hudPositions != null)
                                     defaultLayoutInfo.HudPositionsInfo.Add(new HudPositionsInfo
                                     {
@@ -122,20 +140,18 @@ namespace DriveHUD.Application.ViewModels.Hud
                                     });
                             }
                         }
-                        InternalSave(defaultLayoutInfo);
+                        var fileName = InternalSave(defaultLayoutInfo);
 
                         HudLayoutMappings.Mappings.Add(new HudLayoutMapping
                         {
                             TableType = tableType,
                             Name = defaultLayoutInfo.Name,
                             IsDefault = true,
-                            FileName = $"{defaultLayoutInfo.Name}.xml"
+                            FileName = Path.GetFileName(fileName)
                         });
-
                     }
-
-                    SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
                 }
+                SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
             }
             catch (Exception e)
             {
@@ -198,7 +214,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             return
                 LoadLayout(Path.Combine(GetLayoutsDirectory().FullName,
-                    $"Default {CommonResourceManager.Instance.GetEnumResource(tableType)}{LayoutFileExtension}"));
+                    $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)}{LayoutFileExtension}"));
         }
 
         private HudLayoutInfo LoadLayout(HudLayoutMapping mapping)
@@ -422,10 +438,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private string InternalSave(HudLayoutInfo hudLayoutInfo)
         {
             var layoutsDirectory = GetLayoutsDirectory().FullName;
-            var layoutsFile = hudLayoutInfo.IsDefault
-                ? Path.Combine(layoutsDirectory,
-                    $"Default {CommonResourceManager.Instance.GetEnumResource(hudLayoutInfo.TableType)}{LayoutFileExtension}")
-                : Path.Combine(layoutsDirectory,
+            var layoutsFile = Path.Combine(layoutsDirectory,
                     $"{Path.GetInvalidFileNameChars().Aggregate(hudLayoutInfo.Name, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}");
             _rwLock.EnterWriteLock();
             try
@@ -776,7 +789,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 layout = new HudLayoutInfo();
             }
-
+            if (!addLayout && layout.Name == hudData.Name)
+            {
+                if (layout.IsDefault && (layout.TableType != hudData.LayoutInfo.TableType || layout.HudViewType != hudData.LayoutInfo.HudViewType))
+                {
+                    _eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "Can't overwrite default layout."));
+                                
+                    return null;
+                }
+            }
             layout.Name = hudData.Name;
             layout.TableType = hudData.LayoutInfo.TableType;
             layout.HudOpacity = hudData.LayoutInfo.HudOpacity;
@@ -944,12 +965,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     _rwLock.ExitReadLock();
                 }
-                var i = 0;
+                var i = 1;
                 var layoutName = importedHudLayout.Name;
                 importedHudLayout.IsDefault = false;
                 while (HudLayoutMappings.Mappings.Any(l => l.Name == importedHudLayout.Name))
                 {
-                    importedHudLayout.Name = $"{layoutName} {i}";
+                    importedHudLayout.Name = $"{layoutName} ({i})";
                     i++;
                 }
                 var fileName = InternalSave(importedHudLayout);
@@ -1176,13 +1197,21 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public HudLayoutInfo GetLayout(string name)
         {
-            var defaultNames =
-                Enum.GetValues(typeof(EnumTableType))
-                    .OfType<EnumTableType>()
-                    .Select(e => $"Default {CommonResourceManager.Instance.GetEnumResource(e)}")
-                    .ToList();
+
+            var defaultNames = new List<string>();
+            foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
+            {
+                foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
+                {
+                    defaultNames.Add(
+                        $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : hudViewType.ToString())}"
+                            .Trim());
+                }
+            }
             if (defaultNames.Contains(name))
-                return LoadLayout(Path.Combine(GetLayoutsDirectory().FullName, $"{name}{LayoutFileExtension}"));
+                return
+                    LoadLayout(Path.Combine(GetLayoutsDirectory().FullName,
+                        $"{Path.GetInvalidFileNameChars().Aggregate(name, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}"));
             var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == name);
             return mapping == null ? null : LoadLayout(mapping);
         }
@@ -1195,13 +1224,18 @@ namespace DriveHUD.Application.ViewModels.Hud
         public IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType,
             EnumGameType gameType)
         {
+            var defaultNames = new List<string>();
+            foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
+            {
+                defaultNames.Add(
+                    $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : hudViewType.ToString())}"
+                        .Trim());
+            }
             return
-                Enumerable.Repeat($"Default {CommonResourceManager.Instance.GetEnumResource(tableType)}", 1)
-                    .Union(
-                        HudLayoutMappings.Mappings.Where(
-                                m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType)
-                            .Select(m => m.Name))
-                    .Distinct();
+                defaultNames.Union(
+                    HudLayoutMappings.Mappings.Where(
+                            m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType)
+                        .Select(m => m.Name)).Distinct();
         }
 
         public List<HudLayoutInfo> GetAllLayouts(EnumTableType tableType)
@@ -1226,7 +1260,10 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                         if (layout != null)
                         {
-                            result.Add(layout);
+                            if (layout.HudViewType == HudViewType.Plain)
+                                result.Insert(0, layout);
+                            else
+                                result.Add(layout);
                         }
                     }
                 }

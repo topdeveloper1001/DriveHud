@@ -681,7 +681,7 @@ namespace DriveHUD.Application.ViewModels
                 Stats = StatInfoObserveCollection,
                 LayoutInfo = CurrentLayout
             };
-
+            ClosePopup();
             var savedLayout = _hudLayoutsSevice.SaveAs(hudData);
 
             if (savedLayout != null && savedLayout.Name != CurrentLayout.Name)
@@ -689,8 +689,6 @@ namespace DriveHUD.Application.ViewModels
                 Layouts.Add(savedLayout);
                 CurrentLayout = savedLayout;
             }
-
-            ClosePopup();
         }
 
         private void DataExport()

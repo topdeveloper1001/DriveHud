@@ -45,7 +45,7 @@
         <ObjectDataProvider x:Key="TableTypeEnum" MethodName="GetValues"
                             ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="m:EnumTableType"/>
+                <x:Type TypeName="ent:EnumTableType"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
 
