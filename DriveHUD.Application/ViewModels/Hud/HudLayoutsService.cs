@@ -155,6 +155,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                     hudLayoutMappings = xmlSerializer.Deserialize(stream) as HudLayoutMappings;
                 }
             }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
             finally
             {
                 _rwLock.ExitReadLock();
@@ -180,6 +184,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                     xmlSerializer.Serialize(fs, mappings);
                 }
             }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
+            }
             finally
             {
                 _rwLock.ExitWriteLock();
@@ -200,7 +208,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         private HudLayoutInfo LoadLayout(string fileName)
         {
-            HudLayoutInfo result;
+            HudLayoutInfo result = null;
             _rwLock.EnterReadLock();
             try
             {
@@ -208,6 +216,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     result = LoadLayoutFromStream(stream);
                 }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
             }
             finally
             {
@@ -423,6 +435,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                     var xmlSerializer = new XmlSerializer(typeof(HudLayoutInfo));
                     xmlSerializer.Serialize(fs, hudLayoutInfo);
                 }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
             }
             finally
             {
@@ -704,18 +720,28 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         public bool Delete(string layoutName)
         {
-            if (string.IsNullOrEmpty(layoutName))
+            try
+            {
+                if (string.IsNullOrEmpty(layoutName))
+                    return false;
+                var layoutToDelete = GetLayout(layoutName);
+                if (layoutToDelete == null || layoutToDelete.IsDefault)
+                    return false;
+                var layoutsDirectory = GetLayoutsDirectory();
+                var fileName = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutToDelete.Name)?.FileName;
+                if (!string.IsNullOrEmpty(fileName))
+                    File.Delete(Path.Combine(layoutsDirectory.FullName, fileName));
+                HudLayoutMappings.Mappings.RemoveByCondition(
+                    m =>
+                        string.Equals(m.FileName, Path.GetFileName(fileName),
+                            StringComparison.InvariantCultureIgnoreCase));
+                SaveLayoutMappings();
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, e);
                 return false;
-            var layoutToDelete = GetLayout(layoutName);
-            if (layoutToDelete == null || layoutToDelete.IsDefault)
-                return false;
-            var layoutsDirectory = GetLayoutsDirectory();
-            var fileName = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutToDelete.Name)?.FileName;
-            if (!string.IsNullOrEmpty(fileName))
-                File.Delete(Path.Combine(layoutsDirectory.FullName, fileName));
-            HudLayoutMappings.Mappings.RemoveByCondition(
-                m => string.Equals(m.FileName, Path.GetFileName(fileName), StringComparison.InvariantCultureIgnoreCase));
-            SaveLayoutMappings();
+            }
             return true;
         }
 
