@@ -140,6 +140,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                                     });
                             }
                         }
+                        if (hudViewType == HudViewType.Plain)
+                            defaultLayoutInfo.UiPositionsInfo.ForEach(x=>x.Width = 135);
+                        else
+                            defaultLayoutInfo.UiPositionsInfo.ForEach(x => x.Width = 144);
                         var fileName = InternalSave(defaultLayoutInfo);
 
                         HudLayoutMappings.Mappings.Add(new HudLayoutMapping
