@@ -32,6 +32,11 @@ using System.Windows.Media;
 using System.Xml.Serialization;
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.TableConfigurators.PositionProviders;
+using DriveHUD.Common.Wpf.Actions;
+using Microsoft.Practices.ServiceLocation;
+using Model.Events;
+using Prism.Events;
+using Prism.Interactivity.InteractionRequest;
 
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -45,6 +50,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private readonly EnumPokerSites[] _extendedHudPokerSites = { EnumPokerSites.Bodog, EnumPokerSites.Ignition };
 
         private static ReaderWriterLockSlim _rwLock = new ReaderWriterLockSlim();
+        private IEventAggregator _eventAggregator;
 
         public HudLayoutMappings HudLayoutMappings { get; set; }
 
@@ -85,6 +91,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             try
             {
+                _eventAggregator = ServiceLocator.Current.GetInstance<IEventAggregator>();
                 var layoutsDirectory = GetLayoutsDirectory();
 
                 var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
@@ -767,7 +774,15 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 layout = new HudLayoutInfo();
             }
-
+            if (!addLayout && layout.Name == hudData.Name)
+            {
+                if (layout.IsDefault && (layout.TableType != hudData.LayoutInfo.TableType || layout.HudViewType != hudData.LayoutInfo.HudViewType))
+                {
+                    _eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "Can't overwrite default layout."));
+                                
+                    return null;
+                }
+            }
             layout.Name = hudData.Name;
             layout.TableType = hudData.LayoutInfo.TableType;
             if (addLayout || layout.HudViewType != hudData.LayoutInfo.HudViewType)
@@ -1183,7 +1198,9 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
             }
             if (defaultNames.Contains(name))
-                return LoadLayout(Path.Combine(GetLayoutsDirectory().FullName, $"{name}{LayoutFileExtension}"));
+                return
+                    LoadLayout(Path.Combine(GetLayoutsDirectory().FullName,
+                        $"{Path.GetInvalidFileNameChars().Aggregate(name, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}"));
             var mapping = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == name);
             return mapping == null ? null : LoadLayout(mapping);
         }
