@@ -1217,7 +1217,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 }
                 else
                 {
-                    extraCondition = m => true;
+                    extraCondition = m => m.HudViewType == HudViewType.Plain;
                 }
 
                 mapping =
