@@ -52,11 +52,9 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             Check.ArgumentNotNull(() => hudElement);
             Check.ArgumentNotNull(() => window);
-            Check.ArgumentNotNull(() => window.Layout);
-            Check.ArgumentNotNull(() => window.Layout.TableHud);
-            Check.ArgumentNotNull(() => window.Layout.TableHud.TableLayout);
+            Check.ArgumentNotNull(() => window.Layout);            
 
-            var maxSeats = (int)window.Layout.TableHud.TableLayout.TableType;
+            var maxSeats = (int)window.Layout.TableType;
 
             var panelOffset = window.GetPanelOffset(hudElement);
 
@@ -65,7 +63,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return new Tuple<double, double>(hudElement.Position.X * window.XFraction, hudElement.Position.Y * window.YFraction);
             }
 
-            var shifts = window.Layout.HudType == HudType.Default ? positionsShifts[maxSeats] : plainPositionsShifts[maxSeats];
+            var shifts = plainPositionsShifts[maxSeats];
 
             var xPosition = panelOffset.X != 0 ? panelOffset.X : hudElement.Position.X + shifts[hudElement.Seat - 1, 0];
             var yPosition = panelOffset.Y != 0 ? panelOffset.Y : hudElement.Position.Y + shifts[hudElement.Seat - 1, 1];
@@ -83,11 +81,9 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             Check.ArgumentNotNull(() => hudElement);
             Check.ArgumentNotNull(() => window);
-            Check.ArgumentNotNull(() => window.Layout);
-            Check.ArgumentNotNull(() => window.Layout.TableHud);
-            Check.ArgumentNotNull(() => window.Layout.TableHud.TableLayout);
+            Check.ArgumentNotNull(() => window.Layout);            
 
-            var maxSeats = (int)window.Layout.TableHud.TableLayout.TableType;
+            var maxSeats = (int)window.Layout.TableType;
 
             var panelOffset = window.GetPanelOffset(hudElement);
 
@@ -96,7 +92,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 return new Tuple<double, double>(hudElement.Position.X * window.XFraction, hudElement.Position.Y * window.YFraction);
             }
 
-            var shifts = window.Layout.HudType == HudType.Default ? positionsShifts[maxSeats] : plainPositionsShifts[maxSeats];
+            var shifts = plainPositionsShifts[maxSeats];
 
             var xPosition = panelOffset.X != 0 ? panelOffset.X - shifts[hudElement.Seat - 1, 0] : hudElement.Position.X;
             var yPosition = panelOffset.Y != 0 ? panelOffset.Y - shifts[hudElement.Seat - 1, 1] : hudElement.Position.Y;

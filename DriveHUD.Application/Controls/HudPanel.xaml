@@ -12,6 +12,7 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              MinWidth="50"
+             Opacity="{Binding Opacity}"
              Background="{StaticResource HudElementPlayerBrush}">
     <UserControl.Resources>
 

@@ -47,7 +47,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 selectedItem = clonedItems.FirstOrDefault();
             }
-
+            HudOpacity = viewModelInfo.HudOpacity;
             items = new ObservableCollection<StatInfo>(clonedItems);
 
             SaveCommand = ReactiveCommand.Create();
@@ -105,6 +105,12 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
+        public int HudOpacity
+        {
+            get { return _hudOpacity; }
+            set { this.RaiseAndSetIfChanged(ref _hudOpacity, value); }
+        }
+
         private StatInfo selectedItem;
 
         public StatInfo SelectedItem
@@ -148,6 +154,7 @@ namespace DriveHUD.Application.ViewModels
         }
 
         private StatInfoOptionValueRange selectedStatInfoOptionValueRange;
+        private int _hudOpacity;
 
         private void SelectColor(StatInfoOptionValueRange statInfoValueRange)
         {

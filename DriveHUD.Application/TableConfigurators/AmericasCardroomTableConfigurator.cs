@@ -13,10 +13,6 @@ using DriveHUD.Application.TableConfigurators.SeatArea;
 namespace DriveHUD.Application.TableConfigurators
 {
     internal class AmericasCardroomTableConfigurator : WinningPokerNetworkTableConfigurator
-    {
-        public override EnumPokerSites Type
-        {
-            get { return EnumPokerSites.AmericasCardroom; }
-        }
+    {     
     }
 }

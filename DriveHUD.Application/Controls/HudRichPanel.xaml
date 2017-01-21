@@ -13,6 +13,7 @@
              xmlns:m="clr-namespace:DriveHUD.Application.ViewModels.Hud"
              xmlns:ent="clr-namespace:DriveHUD.Entities;assembly=DriveHUD.Entities"
              mc:Ignorable="d"                   
+             Opacity="{Binding Opacity}"
              d:DesignHeight="300" d:DesignWidth="300">
 
     <!--<UserControl.DataContext>

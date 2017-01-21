@@ -145,6 +145,7 @@
     <Compile Include="Converters\DateTimeToLocalizedDateTimeConverter.cs" />
     <Compile Include="Converters\DecimalToDoubleConverter.cs" />
     <Compile Include="Converters\EnumBoolConverter.cs" />
+    <Compile Include="Converters\EnumNotToVisibilityConverter.cs" />
     <Compile Include="Converters\EnumToLocalizedStringConverter.cs" />
     <Compile Include="Converters\EnumToVisiblityConverter.cs" />
     <Compile Include="Converters\MarkupExtensionConverterBase.cs" />

@@ -74,9 +74,15 @@ namespace DriveHUD.Application.Views
             Layout = layout;
             ViewModel?.SetLayout(layout);
 
-            if (layout != null && layout.TableHud != null && layout.TableHud.TableLayout != null)
+            if (ViewModel != null)
             {
-                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.TableHud.TableLayout.Site.ToString());
+                ViewModel.GameType = layout.GameType;
+                ViewModel.TableType = layout.TableType;
+            }
+
+            if (layout != null)
+            {
+                hudPanelCreator = ServiceLocator.Current.GetInstance<IHudPanelService>(layout.PokerSite.ToString());
             }
             else
             {
@@ -121,7 +127,7 @@ namespace DriveHUD.Application.Views
                     playerHudContent.HudElement.OffsetY = panelOffsets[GetPanelOffsetsKey(playerHudContent.HudElement)].Y;
                 }
 
-                var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudType);
+                var panel = hudPanelCreator.Create(playerHudContent.HudElement, layout.HudViewType);                
 
                 dgCanvas.Children.Add(panel);
             }
@@ -191,12 +197,14 @@ namespace DriveHUD.Application.Views
 
                     hudRichPanel.vbMain.Height = double.NaN;
                     hudRichPanel.vbMain.Width = viewModel.Width * XFraction;
+                    hudRichPanel.Opacity = viewModel.Opacity;
                 }
 
                 if (hudPanel is HudPanel)
                 {
                     hudPanel.Height = double.NaN;
                     hudPanel.Width = viewModel.Width * XFraction;
+                    hudPanel.Opacity = viewModel.Opacity;
                 }
 
                 var positions = hudPanelCreator.CalculatePositions(viewModel, this);
@@ -272,16 +280,19 @@ namespace DriveHUD.Application.Views
         {
             try
             {
-                var layoutId = Layout?.LayoutId;
-
-                if (!layoutId.HasValue)
+                if (Layout == null)
                 {
                     return;
                 }
 
-                HudLayoutContract hudLayout = new HudLayoutContract();
-                hudLayout.LayoutId = layoutId.Value;
-                hudLayout.HudPositions = new List<HudPositionContract>();
+                var hudLayoutContract = new HudLayoutContract
+                {
+                    LayoutName = Layout.LayoutName,
+                    GameType = Layout.GameType,
+                    PokerSite = Layout.PokerSite,
+                    TableType = Layout.TableType,
+                    HudPositions = new List<HudPositionContract>()
+                };
 
                 var hudPanels = dgCanvas.Children.OfType<FrameworkElement>()
                     .Where(x => x != null && !(x is TrackConditionsMeterView) && (x.DataContext is HudElementViewModel))
@@ -292,15 +303,15 @@ namespace DriveHUD.Application.Views
                 {
                     var position = hudPanelCreator.GetOffsetPosition(hudPanel, this);
 
-                    hudLayout.HudPositions.Add(new HudPositionContract
+                    hudLayoutContract.HudPositions.Add(new HudPositionContract
                     {
                         Position = new Point(position.Item1, position.Item2),
                         SeatNumber = hudPanel.Seat,
-                        HudType = (int)hudPanel.HudType
+                        HudViewType = hudPanel.HudViewType
                     });
                 }
 
-                ViewModel?.SaveHudPositions(hudLayout);
+                ViewModel?.SaveHudPositions(hudLayoutContract);
             }
             catch (Exception ex)
             {

@@ -84,17 +84,7 @@ namespace Model.Enums
         Tournament = 1,
         HUD = 2
     }
-  
-    public enum EnumGameType : short
-    {
-        CashHoldem,
-        CashOmaha,
-        MTTHoldem,
-        MTTOmaha,
-        SNGHoldem,
-        SNGOmaha,
-    }
-
+     
     public enum EnumReports
     {
         None,
@@ -115,19 +105,7 @@ namespace Model.Enums
         TournamentShowdownHands,
         ShowdownHands,
         OpponentAnalysis
-    }
-
-    public enum EnumTableType : byte
-    {
-        HU = 2,
-        Three = 3,
-        Four = 4,
-        Five = 5,
-        Six = 6,
-        Eight = 8,
-        Nine = 9,
-        Ten = 10
-    }
+    }   
 
     public enum EnumReplayerTableType : byte
     {

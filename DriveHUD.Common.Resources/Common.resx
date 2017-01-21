@@ -654,4 +654,16 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   <data name="Common_Shop_Training" xml:space="preserve">
     <value>Training Products</value>
   </data>
+  <data name="Common_Hud_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Common_Hud_ApplySizeToAll" xml:space="preserve">
+    <value>Apply Size to All</value>
+  </data>
+  <data name="Common_Hud_HudName" xml:space="preserve">
+    <value>HUD Name</value>
+  </data>
+  <data name="Common_Hud_TableLayout" xml:space="preserve">
+    <value>Table Layout</value>
+  </data>
 </root>

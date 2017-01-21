@@ -20,12 +20,7 @@ using Telerik.Windows.Controls;
 namespace DriveHUD.Application.TableConfigurators
 {
     internal class CommonRichTableConfiguration : CommonTableConfigurator
-    {
-        public override HudType HudType
-        {
-            get { return HudType.Default; }
-        }
-
+    {     
         public override int HudElementWidth
         {
             get
@@ -53,7 +48,8 @@ namespace DriveHUD.Application.TableConfigurators
                 Background = null,
                 IsRotationEnabled = false,
                 Tag = HudType.Default,
-                Padding = new Thickness(0)
+                Padding = new Thickness(0),
+                IsDraggingEnabled = false
             };
 
             return label;

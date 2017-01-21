@@ -12,14 +12,13 @@
 
 using DriveHUD.Application.TableConfigurators;
 using DriveHUD.Application.ViewModels;
-using DriveHUD.Common.Reflection;
 using DriveHUD.Entities;
 using Model.Enums;
-using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using Telerik.Windows.Diagrams.Core;
 using System;
+using System.Linq;
 
 namespace DriveHUD.Application.Views
 {
@@ -39,45 +38,39 @@ namespace DriveHUD.Application.Views
                     return;
                 }
 
-                ViewModel.TableUpdate += ViewModel_TableUpdated;
+                ViewModel.TableUpdated += OnViewModelTableUpdated;             
 
-                var tableType = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
-                                    ViewModel.CurrentTableLayout.HudTableLayout.TableType : EnumTableType.Six;
-                Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int)tableType);
-                UpdatePreferredSeatingStateWithoutNotification();
+                var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
+
+                Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
             };
         }
 
-        private void ViewModel_TableUpdated(object sender, EventArgs e)
+        private void OnViewModelTableUpdated(object sender, EventArgs e)
         {
             if (ViewModel == null)
             {
                 return;
             }
 
-            var tableType = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
-                                   ViewModel.CurrentTableLayout.HudTableLayout.TableType : EnumTableType.Six;
-            Configurator.ConfigureTable(diagram, ViewModel.HudTableViewModelCurrent, (int)tableType);
-            UpdatePreferredSeatingStateWithoutNotification();
-        }
+            var tableType = ViewModel.CurrentTableType?.TableType ?? EnumTableType.Six;
 
-        private void UpdatePreferredSeatingStateWithoutNotification()
-        {
-            ViewModel.UpdateSeatContextMenuState();
+            Configurator.ConfigureTable(diagram, ViewModel.CurrentHudTableViewModel, (int)tableType);
         }
 
         private HudViewModel ViewModel
         {
-            get { return DataContext as HudViewModel; }
+            get
+            {
+                return DataContext as HudViewModel;
+            }
         }
 
         private ITableConfigurator Configurator
         {
             get
             {
-                var site = ViewModel.CurrentTableLayout != null && ViewModel.CurrentTableLayout.HudTableLayout != null ?
-                                ViewModel.CurrentTableLayout.HudTableLayout.Site : EnumPokerSites.Ignition;
-                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(TableConfiguratorHelper.GetServiceName(site, ViewModel.HudType));
+                return Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<ITableConfigurator>(ViewModel.HudViewType.ToString());
             }
         }
 

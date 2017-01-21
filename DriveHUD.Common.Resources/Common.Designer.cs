@@ -539,6 +539,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply Size to All.
+        /// </summary>
+        internal static string Common_Hud_ApplySizeToAll {
+            get {
+                return ResourceManager.GetString("Common_Hud_ApplySizeToAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy.
+        /// </summary>
+        internal static string Common_Hud_Copy {
+            get {
+                return ResourceManager.GetString("Common_Hud_Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         internal static string Common_Hud_Delete {
@@ -553,6 +571,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_Export {
             get {
                 return ResourceManager.GetString("Common_Hud_Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD Name.
+        /// </summary>
+        internal static string Common_Hud_HudName {
+            get {
+                return ResourceManager.GetString("Common_Hud_HudName", resourceCulture);
             }
         }
         
@@ -589,6 +616,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_SaveAs {
             get {
                 return ResourceManager.GetString("Common_Hud_SaveAs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Layout.
+        /// </summary>
+        internal static string Common_Hud_TableLayout {
+            get {
+                return ResourceManager.GetString("Common_Hud_TableLayout", resourceCulture);
             }
         }
         

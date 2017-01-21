@@ -50,11 +50,9 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             Check.ArgumentNotNull(() => hudElement);
             Check.ArgumentNotNull(() => window);
-            Check.ArgumentNotNull(() => window.Layout);
-            Check.ArgumentNotNull(() => window.Layout.TableHud);
-            Check.ArgumentNotNull(() => window.Layout.TableHud.TableLayout);
+            Check.ArgumentNotNull(() => window.Layout);            
 
-            var maxSeats = (int)window.Layout.TableHud.TableLayout.TableType;
+            var maxSeats = (int)window.Layout.TableType;
 
             var panelOffset = window.GetPanelOffset(hudElement);
 
@@ -81,11 +79,9 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             Check.ArgumentNotNull(() => hudElement);
             Check.ArgumentNotNull(() => window);
-            Check.ArgumentNotNull(() => window.Layout);
-            Check.ArgumentNotNull(() => window.Layout.TableHud);
-            Check.ArgumentNotNull(() => window.Layout.TableHud.TableLayout);
+            Check.ArgumentNotNull(() => window.Layout);            
 
-            var maxSeats = (int)window.Layout.TableHud.TableLayout.TableType;
+            var maxSeats = (int)window.Layout.TableType;
 
             var panelOffset = window.GetPanelOffset(hudElement);
 

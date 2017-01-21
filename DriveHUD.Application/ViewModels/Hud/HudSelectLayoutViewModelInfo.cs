@@ -10,20 +10,18 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
 using System;
 
 namespace DriveHUD.Application.ViewModels
 {
     public class HudSelectLayoutViewModelInfo
     {
-        public int LayoutId { get; set; }
-
+        public EnumTableType TableType { get; set; }
+        public string LayoutName { get; set; }
         public Action Save { get; set; }
-
         public Action Cancel { get; set; }
-
         public bool IsSaveAsMode { get; set; }
-
         public bool IsDeleteMode { get; set; }
     }
 }

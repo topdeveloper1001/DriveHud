@@ -12,15 +12,14 @@
 
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Common;
+using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
-using Model.Enums;
 using Model.Events;
 using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
@@ -33,11 +32,7 @@ namespace DriveHUD.Application.TableConfigurators
 {
     internal abstract class BaseTableConfigurator : ITableConfigurator
     {
-        public abstract EnumPokerSites Type { get; }
-
-        public abstract HudType HudType { get; }
-
-        protected abstract ITableSeatAreaConfigurator TableSeatAreaConfigurator { get; }
+        public abstract HudViewType HudViewType { get; }
 
         protected abstract string BackgroundImage { get; }
 
@@ -46,7 +41,7 @@ namespace DriveHUD.Application.TableConfigurators
             Check.ArgumentNotNull(() => diagram);
             Check.ArgumentNotNull(() => hudTable);
 
-            diagram.Clear();
+            ClearDiagram(diagram);
 
             var table = CreateTableRadDiagramShape();
 
@@ -71,66 +66,18 @@ namespace DriveHUD.Application.TableConfigurators
             return table;
         }
 
-        public virtual void Update(RadDiagram diagram, HudTableViewModel hudTable)
-        {
-            var hudElements = diagram.Shapes.OfType<RadDiagramItem>().Where(x => x.Tag.ToString() == "hud").ToList();
-
-            for (int i = 0; i < hudElements.Count; i++)
-            {
-                Binding myBinding = new Binding(nameof(HudElementViewModel.Position))
-                {
-                    Source = hudTable.HudElements[i],
-                    Mode = BindingMode.TwoWay
-                };
-
-                hudElements[i].SetBinding(RadDiagramItem.PositionProperty, myBinding);
-            }
-        }
-
         protected RadDiagramShape CreateHudLabel(HudElementViewModel viewModel)
         {
-            var label = CreateRadDiagramShape(viewModel);
+            var shape = CreateRadDiagramShape(viewModel);
 
-            BindingOperations.ClearBinding(label, RadDiagramItem.PositionProperty);
-            BindingOperations.ClearBinding(label, FrameworkElement.WidthProperty);
-            BindingOperations.ClearBinding(label, FrameworkElement.HeightProperty);
+            SetPositionBinding(shape, viewModel);
+            SetOpacityBinding(shape, viewModel);
+            SetWidthBinding(shape, viewModel);
+            SetShapeSize(shape);
 
-            var positionBinding = new Binding(nameof(HudElementViewModel.Position)) { Source = viewModel, Mode = BindingMode.TwoWay };
-            label.SetBinding(RadDiagramItem.PositionProperty, positionBinding);
+            AddContextMenu(shape);
 
-            if (viewModel.HudType == HudType.Plain)
-            {
-                var widthBinding = new Binding(nameof(HudElementViewModel.Width)) { Source = viewModel, Mode = BindingMode.TwoWay };
-                label.SetBinding(FrameworkElement.WidthProperty, widthBinding);
-            }
-            else
-            {
-                label.Width = double.NaN;
-            }
-
-            label.Height = double.NaN;
-
-            RadContextMenu contextMenu = new RadContextMenu();
-            RadMenuItem item = new RadMenuItem();
-
-            item.Header = "Apply Size to All";
-            item.Click += (s, e) =>
-            {
-                var clickedItem = s as FrameworkElement;
-                if (clickedItem == null || !(clickedItem.DataContext is HudElementViewModel))
-                {
-                    return;
-                }
-
-                var datacontext = clickedItem.DataContext as HudElementViewModel;
-
-                Microsoft.Practices.ServiceLocation.ServiceLocator.Current.GetInstance<IEventAggregator>().GetEvent<UpdateHudEvent>().Publish(new UpdateHudEventArgs(datacontext.Height, datacontext.Width));
-            };
-
-            contextMenu.Items.Add(item);
-            RadContextMenu.SetContextMenu(label, contextMenu);
-
-            return label;
+            return shape;
         }
 
         public virtual double DiagramActualWidth(RadDiagram diagram)
@@ -159,74 +106,97 @@ namespace DriveHUD.Application.TableConfigurators
                 IsEnabled = true,
                 Background = null,
                 IsRotationEnabled = false,
-                Tag = HudType,
-                Padding = new Thickness(0)
-
+                Tag = HudViewType,
+                Padding = new Thickness(0),
+                IsDraggingEnabled = true,
+                Opacity = viewModel.Opacity,
+                ZIndex = 100
             };
 
             return label;
         }
 
-        protected abstract Dictionary<int, int[,]> GetPredefinedMarkersPositions();
-
-        protected virtual void CreatePreferredSeatMarkers(RadDiagram diagram, HudTableViewModel hudTable, int seats)
+        protected virtual void ClearDiagram(RadDiagram diagram)
         {
-            var predefinedPositions = GetPredefinedMarkersPositions();
-
-            if (!predefinedPositions.ContainsKey(seats))
+            if (diagram == null)
             {
                 return;
             }
 
-            for (int i = 0; i < seats; i++)
-            {
-                var hudElementPositionX = predefinedPositions[seats][i, 0];
-                var hudElementPositionY = predefinedPositions[seats][i, 1];
-                var datacontext = hudTable.TableSeatAreaCollection?.ElementAt(i);
-
-                var shape = new RadDiagramShape
-                {
-                    Height = 30,
-                    Width = 30,
-                    IsEnabled = true,
-                    SnapsToDevicePixels = true,
-                    X = hudElementPositionX,
-                    Y = hudElementPositionY,
-                    DataContext = datacontext,
-                    Template = App.Current.Resources["PreferredSeatControlTemplate"] as ControlTemplate,
-                };
-
-                diagram.Items.Add(shape);
-            }
+            diagram.Clear();
         }
 
-        protected virtual IEnumerable<ITableSeatArea> CreateSeatAreas(RadDiagram diagram, HudTableViewModel hudTable, int seats)
+        protected virtual void AddContextMenu(RadDiagramShape label)
         {
-            var seatAreas = TableSeatAreaConfigurator.GetTableSeatAreas((EnumTableType)seats);
-            var tableSeatSetting = TableSeatAreaHelpers.GetSeatSetting((EnumTableType)seats, Type);
-
-            foreach (var v in seatAreas)
+            if (label == null)
             {
-                v.StartPoint = new Point(0, 0);
-                v.PokerSite = Type;
-                v.TableType = (EnumTableType)seats;
-                v.SetContextMenuEnabled(tableSeatSetting.IsPreferredSeatEnabled);
-
-                if (v.SeatNumber == tableSeatSetting.PreferredSeat)
-                {
-                    v.IsPreferredSeat = true;
-                }
-                else
-                {
-                    v.IsPreferredSeat = false;
-                }
-
-                diagram.AddShape(v.SeatShape);
-
+                return;
             }
-            hudTable.TableSeatAreaCollection = new System.Collections.ObjectModel.ObservableCollection<ITableSeatArea>(seatAreas);
-            return seatAreas;
+
+            var item = new RadMenuItem();
+            item.Header = CommonResourceManager.Instance.GetResourceString("Common_Hud_ApplySizeToAll");
+
+            item.Click += OnHudMenuItemClick;
+
+            var contextMenu = new RadContextMenu();
+            contextMenu.Items.Add(item);
+
+            RadContextMenu.SetContextMenu(label, contextMenu);
         }
 
+        protected virtual void OnHudMenuItemClick(object sender, Telerik.Windows.RadRoutedEventArgs e)
+        {
+            var clickedItem = sender as FrameworkElement;
+
+            if (clickedItem == null || !(clickedItem.DataContext is HudElementViewModel))
+            {
+                return;
+            }
+
+            var datacontext = clickedItem.DataContext as HudElementViewModel;
+
+            Microsoft.Practices.ServiceLocation.ServiceLocator.Current.
+                GetInstance<IEventAggregator>().
+                GetEvent<UpdateHudEvent>().
+                Publish(new UpdateHudEventArgs(datacontext.Height, datacontext.Width));
+        }
+
+        protected virtual void SetPositionBinding(RadDiagramShape shape, HudElementViewModel viewModel)
+        {
+            SetBinding(shape, RadDiagramItem.PositionProperty, viewModel, nameof(HudElementViewModel.Position));
+        }
+
+        protected virtual void SetOpacityBinding(RadDiagramShape shape, HudElementViewModel viewModel)
+        {
+            SetBinding(shape, UIElement.OpacityProperty, viewModel, nameof(HudElementViewModel.Opacity));
+        }
+
+        protected virtual void SetWidthBinding(RadDiagramShape shape, HudElementViewModel viewModel)
+        {
+            SetBinding(shape, FrameworkElement.WidthProperty, viewModel, nameof(HudElementViewModel.Width));
+        }
+
+        protected virtual void SetBinding(FrameworkElement element, DependencyProperty dp, object source, string property)
+        {
+            BindingOperations.ClearBinding(element, dp);
+
+            var binding = new Binding(property)
+            {
+                Source = source,
+                Mode = BindingMode.TwoWay
+            };
+
+            element.SetBinding(dp, binding);
+        }
+
+        protected virtual void SetShapeSize(RadDiagramShape shape)
+        {
+            shape.Height = double.NaN;
+        }
+
+        protected virtual bool IsRightOriented(int seats, int seat)
+        {
+            return false;
+        }
     }
 }

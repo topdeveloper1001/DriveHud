@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:DriveHUD.Application.Views"
              mc:Ignorable="d"
              xmlns:dh="http://www.acepokersolutions.com/winfx/2015/xaml/presentation"
-             xmlns:ms="clr-namespace:Model.Shop;assembly=Model"             
+             xmlns:ms="clr-namespace:Model.Shop;assembly=Model"
+             xmlns:wpfAnimatedGif="clr-namespace:DriveHUD.Common.Wpf.WpfAnimatedGif;assembly=DriveHUD.Common.Wpf"
              HorizontalAlignment="Stretch"
              VerticalAlignment="Stretch" 
              d:DesignWidth="1920" 
@@ -376,7 +377,7 @@
                                         <Style TargetType="{x:Type Image}">
                                             <Style.Triggers>
                                                 <DataTrigger Binding="{Binding IsAnimatedGif}" Value="True">
-                                                    <Setter Property="dh:ImageBehavior.AnimatedSource" Value="{Binding ImageLink}" />
+                                                    <Setter Property="wpfAnimatedGif:ImageBehavior.AnimatedSource" Value="{Binding ImageLink}" />
                                                 </DataTrigger>
                                                 <DataTrigger Binding="{Binding IsAnimatedGif}" Value="False">
                                                     <Setter Property="Source" Value="{Binding ImageLink}" />

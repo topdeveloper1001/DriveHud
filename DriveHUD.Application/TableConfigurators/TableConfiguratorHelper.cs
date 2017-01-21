@@ -10,6 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using DriveHUD.Entities;
 using Model.Enums;
 

@@ -21,6 +21,9 @@
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:infra="clr-namespace:DriveHUD.Common.Wpf.Actions;assembly=DriveHUD.Common.Wpf"
              xmlns:markupext="clr-namespace:DriveHUD.Common.Wpf.MarkupExtensions;assembly=DriveHUD.Common.Wpf"
+             xmlns:popups="clr-namespace:DriveHUD.Application.Views.Popups"
+             xmlns:vm1="clr-namespace:DriveHUD.Application.ViewModels.Popups"
+             xmlns:vm11="clr-namespace:DriveHUD.Application.ViewModels.Hud"
              mc:Ignorable="d" Foreground="White">
 
     <i:Interaction.Triggers>
@@ -42,7 +45,7 @@
         <ObjectDataProvider x:Key="TableTypeEnum" MethodName="GetValues"
                             ObjectType="{x:Type System:Enum}">
             <ObjectDataProvider.MethodParameters>
-                <x:Type TypeName="m:EnumTableType"/>
+                <x:Type TypeName="ent:EnumTableType"/>
             </ObjectDataProvider.MethodParameters>
         </ObjectDataProvider>
 
@@ -258,6 +261,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
                 <RowDefinition Height="270"/>
             </Grid.RowDefinitions>
 
@@ -268,34 +272,16 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="270"/>
-                    <ColumnDefinition Width="270"/>
-                    <ColumnDefinition Width="270"/>
+                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="270"/>
                     <ColumnDefinition Width="270"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
-                <!-- GAME TYPE ********************************************************************* -->
-                <TextBlock Grid.Row="0" Grid.Column="0" Margin="1,5,40,1"
-                           VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="Game Type" FontSize="13"/>
-                <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="0" Margin="0,0,40,0"                                     
-                                     MaxWidth="260" Height="35"
-                                     PopupMaxWidth="230" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                                     SelectedValue="{Binding GameType}"
-                                     VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
-                                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
-                                     ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     ItemsSource="{Binding GameTypes}"
-                                     DisplayMemberPath="GameTypeText"
-                                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}">
-                </comboboxControl:ComboBoxEx>
-
                 <!-- HUD NAME ********************************************************************* -->
                 <TextBlock Grid.Row="0" Grid.Column="1" Margin="1,5,40,1"
                            VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="HUD Name" FontSize="13"/>
+                           Text="{ResX Key=Common_Hud_HudName}" FontSize="13"/>
                 <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="1" Margin="0,0,40,0"
                                      MaxWidth="260" Height="35"
                                      PopupMaxWidth="230" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
@@ -311,53 +297,21 @@
                 <!-- TABLE LAYOUT ***************************************************************** -->
                 <TextBlock Grid.Row="0" Grid.Column="2" Margin="1,5,40,1"
                            VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="Table Layout" FontSize="13"/>
+                           Text="{ResX Key=Common_Hud_TableLayout}" FontSize="13"/>
 
-                <controls:DropDownMenu
-                    Grid.Row="1" Grid.Column="2" Margin="0,0,40,0"
-                    Items="{Binding TableLayouts}"
-                    SelectedItem="{Binding CurrentTableLayout}"
-                    Width="230" 
-                    Height="35"
-                    />
-                                
-                <!-- HUD SCREEN ***************************************************************** -->
-                <TextBlock Grid.Row="0" Grid.Column="3" Margin="1,5,40,1"
-                           Visibility="{Binding CurrentTableLayout.HudTableLayout.Site, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
-                           VerticalAlignment="Top" HorizontalAlignment="Left"
-                           Text="HUD Screen" FontSize="13"/>
-
-                <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="3" Margin="0,0,40,0"
+                <comboboxControl:ComboBoxEx Grid.Row="1" Grid.Column="2" Margin="0,0,40,0"
                                      MaxWidth="260" Height="35"
-                                     PopupMaxWidth="240" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
-                                     VerticalAlignment="Bottom" HorizontalAlignment="Stretch"     
-                                     ItemsSource="{Binding HudViewTypes}"
-                                     SelectedValue="{Binding HudViewType}"      
-                                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"                                      
+                                     PopupMaxWidth="230" ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                                     VerticalAlignment="Bottom" HorizontalAlignment="Stretch"
+                                     ItemsBackgroundColor="{StaticResource ComboBoxBackGround}"
                                      ItemContainerStyle="{StaticResource ComboboxItemContainerNormalStyle}"
-                                     Visibility="{Binding CurrentTableLayout.HudTableLayout.Site, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
-                                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}">
-                    <comboboxControl:ComboBoxEx.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding ., Converter={dh:EnumToLocalizedStringConverter}}"  />
-                        </DataTemplate>
-                    </comboboxControl:ComboBoxEx.ItemTemplate>
+                                     ToggleButtonTemplate="{StaticResource HUDComboBoxToggleButton}"
+                                     ItemsSource="{Binding TableTypes}"
+                                     DisplayMemberPath="TableTypeText"
+                                     SelectedValue="{Binding Path=CurrentTableType}">
                 </comboboxControl:ComboBoxEx>
 
             </Grid>
-
-            <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Bottom">
-                <Button
-                        Content="{Binding SelectedHUD}" 
-                        Padding="5,0,5,0"                            
-                        Foreground="#FFFFFF" 
-                        Height="35"                        
-                        Command="{Binding SelectHudCommand}"
-                        Visibility="{Binding CurrentTableLayout.HudTableLayout.Site, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:EnumPokerSites.Ignition}}"
-                        />
-
-            </StackPanel>
-
 
             <!-- COMMAND BUTTONS - SAVE/IMPORT/EXPORT/LOAD **************************************************************** -->
             <StackPanel Grid.Row="1" Grid.Column="2"                  
@@ -377,6 +331,13 @@
 						Content="{ResX Key=Common_Hud_Delete}">
                 </Button>
 
+                <!--<Button Margin="0,0,0,5"
+						HorizontalAlignment="Right" VerticalAlignment="Bottom"
+						Style="{StaticResource ButtonStyle}"
+						Command="{Binding DataCopyCommand}"
+						Content="{ResX Key=Common_Hud_Copy}">
+                </Button>-->
+
                 <Button Margin="0,0,0,5"
 						HorizontalAlignment="Right" VerticalAlignment="Bottom"
 						Style="{StaticResource ButtonStyle}"
@@ -393,7 +354,7 @@
 
             </StackPanel>
 
-            <Grid Grid.Row="1" Grid.Column="1">
+            <Grid Grid.Row="1" Grid.Column="1" Grid.RowSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
@@ -405,36 +366,22 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <telerik:RadDiagram x:Name="diagram" Grid.Row="1" Grid.Column="1"
-									Width="{x:Static vm:HudDefaultSettings.HudTableWidth}" Height="{x:Static vm:HudDefaultSettings.HudTableHeight}"
-									BorderThickness="0" AllowDrop="False"
-									primitives:BackgroundGrid.CellSize="10,10"
-									primitives:BackgroundGrid.LineStroke="#26282b"
-									ViewportChanged="OnDiagramViewportChanged"
-									Style="{StaticResource ClassDiagramStyle}"
-                                    >
-                </telerik:RadDiagram>
-                <StackPanel Grid.Row="1" Grid.Column="1" 
-                            Orientation="Horizontal"
-                            HorizontalAlignment="Left" VerticalAlignment="Top" 
-                            Margin="10 15 0 0">
-
-                    <TextBlock Style="{StaticResource Title_H1}" 
-                           Foreground="White">
-                        <Run Text="{ResX Key=Common_PreferredSeating}"/>:
-                    </TextBlock>
-
-                    <dh:ToggleSwitch Height="25" 
-                                     Margin="10 0 0 0"
-                                     IsChecked="{Binding IsPreferredSeatingEnabled, Mode=TwoWay}"
-                                     Style="{StaticResource ToggleSwitchShort}"
-                                     CheckedText="{ResX Key=Common_On}" UncheckedText="{ResX Key=Common_Off}"/>
-
-                </StackPanel>
+                <telerik:RadDiagram 
+                    x:Name="diagram" 
+                    Grid.Row="1" 
+                    Grid.Column="1"
+					Width="{x:Static vm:HudDefaultSettings.HudTableWidth}" 
+                    Height="{x:Static vm:HudDefaultSettings.HudTableHeight}"
+					BorderThickness="0" 
+                    AllowDrop="False"                    
+					primitives:BackgroundGrid.CellSize="10,10"
+					primitives:BackgroundGrid.LineStroke="#26282b"
+					ViewportChanged="OnDiagramViewportChanged"
+					Style="{StaticResource ClassDiagramStyle}" />
 
             </Grid>
 
-            <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2">
+            <Grid Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="15"/>
@@ -459,7 +406,7 @@
 
                             <controls:HudPanel 
                                 DataContext="{Binding PreviewHudElementViewModel}"                                 
-                                Visibility="{Binding DataContext.HudType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static m:HudType.Plain}}"
+                                Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}"
                                 VerticalAlignment="Center"
                                 HorizontalAlignment="Center">
                             </controls:HudPanel>
@@ -470,7 +417,7 @@
                                 HorizontalAlignment="Center"  
                                 Width="{x:Static vm:HudDefaultSettings.BovadaRichHudElementWidth}"
                                 Height="{x:Static vm:HudDefaultSettings.BovadaRichHudElementHeight}"
-                                Visibility="{Binding DataContext.HudType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumToVisibilityConverter}, ConverterParameter={x:Static m:HudType.Default}}"                                                               >
+                                Visibility="{Binding DataContext.HudViewType, RelativeSource={RelativeSource Mode=FindAncestor, AncestorLevel=1, AncestorType={x:Type UserControl}}, Converter={dh:EnumNotToVisibilityConverter}, ConverterParameter={x:Static ent:HudViewType.Plain}}"                                                               >
                                 <controls:HudRichPanel.Style>
                                     <Style TargetType="{x:Type controls:HudRichPanel}">
                                         <Setter Property="Margin" Value="0,0,0,-25" />
@@ -601,7 +548,7 @@
                                 HorizontalAlignment="Right">
 
                                 <Button 
-                                    Style="{StaticResource ColorButton}" 
+                                    Style="{StaticResource ColorButton}" Margin="20,0,0,0" 
                                     Command="{Binding SettingsStatInfoCommand}"
                                     />
 

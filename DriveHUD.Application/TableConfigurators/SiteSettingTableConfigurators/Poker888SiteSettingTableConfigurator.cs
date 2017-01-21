@@ -10,9 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
+using DriveHUD.Entities;
 using System.Collections.Generic;
-using Model.Enums;
 
 namespace DriveHUD.Application.TableConfigurators
 {

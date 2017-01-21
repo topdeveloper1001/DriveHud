@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Entities;
+
 namespace DriveHUD.Application.ViewModels
 {
     /// <summary>
@@ -24,5 +26,7 @@ namespace DriveHUD.Application.ViewModels
         public static double HudTableHeight = 568;
 
         public static double HudTableWidth = 812;
+
+        public static HudViewType IgnitionDefaultHudViewType = HudViewType.Vertical_1;
     }
 }
