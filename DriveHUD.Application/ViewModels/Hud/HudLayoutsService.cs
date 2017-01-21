@@ -117,7 +117,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                                 .Trim();
                         if (
                             File.Exists(Path.Combine(layoutsDirectory.FullName,
-                                $"{Path.GetInvalidFileNameChars().Aggregate(defaultLayoutInfo.Name, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}")))
+                                GetLayoutFileName(defaultLayoutInfo.Name))))
                             continue;
                         defaultLayoutInfo.HudPositionsInfo.Clear();
                         defaultLayoutInfo.HudViewType = hudViewType;
@@ -448,7 +448,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         {
             var layoutsDirectory = GetLayoutsDirectory().FullName;
             var layoutsFile = Path.Combine(layoutsDirectory,
-                    $"{Path.GetInvalidFileNameChars().Aggregate(hudLayoutInfo.Name, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}");
+                    GetLayoutFileName(hudLayoutInfo.Name));
             _rwLock.EnterWriteLock();
             try
             {
@@ -714,23 +714,27 @@ namespace DriveHUD.Application.ViewModels.Hud
         public void SetLayoutActive(HudLayoutInfo hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
             var mappings = HudLayoutMappings.Mappings.
-                            Where(m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue)
-                                    && (m.GameType == gameType || !m.GameType.HasValue)
+                            Where(m => m.PokerSite == pokerSite
+                                    && m.GameType == gameType
                                     && m.TableType == tableType).
                             ToArray();
-
-            if (mappings.Length == 0)
-            {
-                LogProvider.Log.Warn(this, $"Layout has not been set. Could not find layout map for {pokerSite} {gameType} {tableType}");
-                return;
-            }
 
             var mapping = mappings.FirstOrDefault(x => x.Name == hudToLoad.Name);
 
             if (mapping == null)
             {
-                LogProvider.Log.Warn(this, $"Layout has not been set. Could not find layouts {hudToLoad.Name} for {pokerSite} {gameType} {tableType}");
-                return;
+                mapping = new HudLayoutMapping
+                {
+                    PokerSite = pokerSite,
+                    TableType = tableType,
+                    GameType = gameType,
+                    IsDefault = hudToLoad.IsDefault,
+                    Name = hudToLoad.Name,
+                    FileName = GetLayoutFileName(hudToLoad.Name),
+                    HudViewType = hudToLoad.HudViewType
+                };
+
+                HudLayoutMappings.Mappings.Add(mapping);
             }
 
             mappings.Where(x => x.IsSelected).ForEach(x => x.IsSelected = false);
@@ -1312,6 +1316,11 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
 
             return result.OrderBy(l => l.TableType).ToList();
+        }
+
+        private static string GetLayoutFileName(string layoutName)
+        {
+            return $"{Path.GetInvalidFileNameChars().Aggregate(layoutName, (current, c) => current.Replace(c.ToString(), string.Empty))}{LayoutFileExtension}";
         }
     }
 }
