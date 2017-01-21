@@ -1206,15 +1206,31 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             if (mapping == null)
             {
+                Func<HudLayoutMapping, bool> extraCondition;
+
+                if (pokerSite == EnumPokerSites.Ignition || pokerSite == EnumPokerSites.Bovada || pokerSite == EnumPokerSites.Bovada)
+                {
+                    extraCondition = m =>
+                    {
+                        return m.HudViewType == HudDefaultSettings.IgnitionDefaultHudViewType;
+                    };
+                }
+                else
+                {
+                    extraCondition = m => true;
+                }
+
                 mapping =
                     HudLayoutMappings.Mappings.FirstOrDefault(
                         m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue) && m.TableType == tableType && (m.GameType == gameType || !m.GameType.HasValue) && m.IsSelected) ??
                     HudLayoutMappings.Mappings.FirstOrDefault(
-                        m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && m.IsDefault);
+                        m => (m.PokerSite == pokerSite || !m.PokerSite.HasValue) && m.TableType == tableType && (m.GameType == gameType || !m.GameType.HasValue) && m.IsDefault && extraCondition(m));
             }
 
             if (mapping == null)
+            {
                 return LoadDefault(tableType);
+            }
 
             return LoadLayout(mapping);
         }
