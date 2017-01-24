@@ -189,7 +189,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             return hudLayoutMappings;
         }
 
-        private void SaveLayoutMappings()
+        public void SaveLayoutMappings()
         {
             var layoutsDirectory = GetLayoutsDirectory();
             var mappingsFilePath = Path.Combine(layoutsDirectory.FullName, $"{MappingsFileName}{LayoutFileExtension}");
