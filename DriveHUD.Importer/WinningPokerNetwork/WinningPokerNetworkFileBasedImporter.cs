@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
@@ -189,6 +190,11 @@ namespace DriveHUD.Importers.WinningPokerNetwork
         {
             var tableName = parsingResult.Source.TableName;
 
+            if (IsAdvancedLogEnabled)
+            {
+                LogProvider.Log.Info($"Checking if window '{title}' matches '{tableName}' table [{SiteString}]");
+            }
+
             if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(tableName))
             {
                 return false;
@@ -348,6 +354,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             var tableNameEndIndex = title.Substring(0, gameTypeIndex).LastIndexOf('-');
+
             if (tableNameEndIndex == -1)
             {
                 return title;

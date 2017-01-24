@@ -57,12 +57,19 @@ namespace DriveHUD.Importers
 
         protected abstract string HandHistoryFilter { get; }
 
+        protected virtual bool IsAdvancedLogEnabled { get; set; }
+
         #endregion
 
         // Import data from PS HH
         protected override void DoImport()
         {
-            var handHistoryFolders = GetHandHistoryFolders();
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
+
+            var handHistoryFolders = GetHandHistoryFolders(siteSettings);
+
+            IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
 
             while (!cancellationTokenSource.IsCancellationRequested)
             {
@@ -185,10 +192,10 @@ namespace DriveHUD.Importers
                     LogProvider.Log.Error(this, string.Format("{0} auto-import failed", SiteString), e);
                 }
             }
-           
+
             Clean();
 
-            RaiseProcessStopped();          
+            RaiseProcessStopped();
         }
 
         protected virtual bool TryGetPokerSiteName(string handText, out EnumPokerSites siteName)
@@ -276,12 +283,10 @@ namespace DriveHUD.Importers
         }
 
         // Get directories with hand histories
-        protected virtual DirectoryInfo[] GetHandHistoryFolders()
+        protected virtual DirectoryInfo[] GetHandHistoryFolders(SiteModel siteSettings)
         {
-            var siteSettings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings()
-                .SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite.ToString() == this.SiteString);
-
             DirectoryInfo[] dirs;
+
             if (siteSettings != null && siteSettings.HandHistoryLocationList != null && siteSettings.HandHistoryLocationList.Any())
             {
                 dirs = siteSettings.HandHistoryLocationList.Select(x => new DirectoryInfo(x)).ToArray();
