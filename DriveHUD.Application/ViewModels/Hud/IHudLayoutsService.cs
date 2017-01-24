@@ -106,5 +106,7 @@ namespace DriveHUD.Application.ViewModels
         IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
 
         List<HudLayoutInfo> GetAllLayouts(EnumTableType tableType);
+
+        void SaveLayoutMappings();
     }
 }
