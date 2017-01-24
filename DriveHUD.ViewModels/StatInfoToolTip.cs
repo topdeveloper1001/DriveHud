@@ -214,6 +214,19 @@ namespace DriveHUD.ViewModels
         }
 
         #endregion
+
+        public StatInfoToolTip Clone()
+        {
+            return new StatInfoToolTip
+                       {
+                           CategoryName = CategoryName,
+                           CategoryStat = CategoryStat,
+                           StatsCollection =
+                               new ObservableCollection<StatInfo>(
+                                   StatsCollection.Select(x => x.Clone()).ToList()),
+                           CardsList = CardsList.Clone()
+                       };
+        }
     }
 
     [ProtoContract]
@@ -239,6 +252,17 @@ namespace DriveHUD.ViewModels
         }
 
         #endregion
+
+        public StatInfoToolTipCardsList Clone()
+        {
+            return new StatInfoToolTipCardsList
+                       {
+                           ListSize = ListSize,
+                           PropertyName = PropertyName,
+                           Cards =
+                               new ObservableCollection<string>(Cards.Select(x => x.Clone().ToString()).ToList())
+                       };
+        }
     }
 
 }

@@ -329,6 +329,7 @@
     <Compile Include="Migration\Migrations\Migration0010_NonDb_RemovePreferredSeatingSportsbettingTigerGaming.cs" />
     <Compile Include="Migration\Migrations\Migration0011_RemoveHandHistoryHandNumberUniqueKey.cs" />
     <Compile Include="Migration\Migrations\Migration0012_MigrationToSQLite.cs" />
+    <Compile Include="Migration\Migrations\Migration0014_LayoutsToMultipleFiles.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
