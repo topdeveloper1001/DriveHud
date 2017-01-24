@@ -162,10 +162,14 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     if (newLayout == null) continue;
 
                     var i = 1;
-                    var layoutName = newLayout.Name;
+                    string hudTypeName = string.Empty;
+                    if (hudViewType != HudViewType.Plain)
+                        hudTypeName = $" {hudViewType}";
+
+                    var layoutName = $"{newLayout.Name}{hudTypeName}";
                     while (_hudLayoutsService.HudLayoutMappings.Mappings.Any(f => f.Name == layoutName))
                     {
-                        layoutName = $"{newLayout.Name} {i}";
+                        layoutName = $"{newLayout.Name}{hudTypeName} {i}";
                         i++;
                     }
                     newLayout.Name = layoutName;
@@ -191,8 +195,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
                         if (mapping.IsSelected
                             && _hudLayoutsService.HudLayoutMappings.Mappings.Any(
                                 m =>
-                                    m.PokerSite == table.PokerSite && m.TableType == table.TableType
-                                    && m.GameType == table.GameType)) mapping.IsSelected = false;
+                                    m.IsSelected && m.PokerSite == table.PokerSite && m.TableType == table.TableType
+                                    && m.GameType == table.GameType))
+                            mapping.IsSelected = false;
 
                         _hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
                     }
