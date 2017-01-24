@@ -5,6 +5,7 @@ using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.ViewModels;
 using DriveHUD.Entities;
+using DriveHUD.Common.Resources;
 using FluentMigrator;
 using Model.Filters;
 using System.IO;
@@ -16,6 +17,8 @@ using Model.Enums;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {
+    using Model.Settings;
+
     [Migration(14)]
     public class Migration0014_LayoutsToMultipleFiles : Migration
     {
@@ -23,11 +26,15 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private List<HudLayoutInfo> defaultLayouts;
 
-        private readonly IHudLayoutsService _hudLayoutsService;
+        private readonly IHudLayoutsService hudLayoutsService;
+
+        private readonly ISettingsService settingsService;
 
         public Migration0014_LayoutsToMultipleFiles()
         {
-            _hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            hudLayoutsService = ServiceLocator.Current.GetInstance<IHudLayoutsService>();
+            settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+
             hashTable = GetHashTable();
         }
 
@@ -36,7 +43,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
             var result = new List<HudLayoutInfo>();
             foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
             {
-                result.AddRange(_hudLayoutsService.GetAllLayouts(tableType));
+                result.AddRange(hudLayoutsService.GetAllLayouts(tableType));
             }
             return result;
         }
@@ -62,7 +69,8 @@ namespace DriveHUD.Application.MigrationService.Migrations
         private HudLayoutInfo GetHudLayoutInfo(List<HudSavedLayout> layouts, HudViewType hudViewType)
         {
             var masterLayout = layouts.FirstOrDefault();
-            if (masterLayout == null) return null;
+            if (masterLayout == null)
+                return null;
 
             var tableDescription = GetTableDescription(masterLayout.LayoutId);
 
@@ -70,7 +78,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 defaultLayouts.FirstOrDefault(
                     l => l.TableType == tableDescription.TableType && l.HudViewType == hudViewType);
 
-
+            if (settingsService.GetSettings().GeneralSettings.HudViewMode != (int)hudViewType
+                && hudViewType != HudViewType.Plain)
+                return null;
 
             var filteredLayouts = hudViewType == HudViewType.Plain
                                       ? layouts.Where(
@@ -84,7 +94,8 @@ namespace DriveHUD.Application.MigrationService.Migrations
                                                   || GetTableDescription(l.LayoutId).PokerSite == EnumPokerSites.Bodog)
                                           .ToList();
 
-            if (filteredLayouts.Count == 0) return null;
+            if (filteredLayouts.Count == 0)
+                return null;
 
             var newLayout = new HudLayoutInfo();
             newLayout.TableType = tableDescription.TableType;
@@ -95,32 +106,55 @@ namespace DriveHUD.Application.MigrationService.Migrations
             newLayout.HudViewType = hudViewType;
             newLayout.UiPositionsInfo = sameDefault?.UiPositionsInfo.Select(p => p.Clone()).ToList();
             newLayout.Name = masterLayout.Name;
+
             foreach (var hudSavedLayout in filteredLayouts)
             {
                 var newPositionInfo = new HudPositionsInfo();
+
                 newPositionInfo.GameType = GetTableDescription(hudSavedLayout.LayoutId).GameType;
                 newPositionInfo.PokerSite = GetTableDescription(hudSavedLayout.LayoutId).PokerSite;
+
                 newPositionInfo.HudPositions =
                     hudSavedLayout.HudPositions.Where(
                             p => p.HudType == (hudViewType == HudViewType.Plain ? HudType.Plain : HudType.Default))
                         .Select(
                             p => new HudPositionInfo { Position = new Point(p.Position.X, p.Position.Y), Seat = p.Seat })
                         .ToList();
-                if (newPositionInfo.HudPositions.Any()) newLayout.HudPositionsInfo.Add(newPositionInfo);
+                
+                if (newPositionInfo.HudPositions.Any())
+                    newLayout.HudPositionsInfo.Add(newPositionInfo);
             }
 
-            if (HudObjectsComparer.AreEquals(newLayout, sameDefault)) return null;
+            if (sameDefault != null)
+            {
+                foreach (var defaultPosInfo in sameDefault.HudPositionsInfo)
+                {
+                    if (
+                        newLayout.HudPositionsInfo.Any(
+                            p => p.GameType == defaultPosInfo.GameType && p.PokerSite == defaultPosInfo.PokerSite)) continue;
+                    newLayout.HudPositionsInfo.Add(defaultPosInfo.Clone());
+                }
+            }
+
+            if (HudObjectsComparer.AreEquals(newLayout, sameDefault))
+                return null;
+
+            if (HudObjectsComparer.AreEqualsExceptPositions(newLayout, sameDefault))
+            {
+                sameDefault.HudPositionsInfo = newLayout.HudPositionsInfo.Select(p => p.Clone()).ToList();
+                return sameDefault;
+            }
 
             return newLayout.HudPositionsInfo.Any() ? newLayout : null;
         }
 
-        private static string GetLayoutFileName(string layoutName)
+        private string GetLayoutFileName(string layoutName)
         {
             return
                 $"{Path.GetInvalidFileNameChars().Aggregate(layoutName, (current, c) => current.Replace(c.ToString(), string.Empty))}.xml";
         }
 
-        private static string Save(HudLayoutInfo newLayout)
+        private string Save(HudLayoutInfo newLayout)
         {
             var layoutsFile = Path.Combine(StringFormatter.GetAppDataFolderPath(), "Layouts", GetLayoutFileName(newLayout.Name));
 
@@ -145,7 +179,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                 var tableDescription = hashTable.FirstOrDefault(h => h.Hash == currentLayout.LayoutId);
 
-                var sameLayouts =
+                var grouppedLayouts =
                     oldLayouts.Layouts.Where(
                         l =>
                             GetTableDescription(l.LayoutId).TableType == tableDescription?.TableType
@@ -158,25 +192,42 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
                 foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
                 {
-                    var newLayout = GetHudLayoutInfo(sameLayouts, hudViewType);
-                    if (newLayout == null) continue;
+                    var newLayout = GetHudLayoutInfo(grouppedLayouts, hudViewType);
+                    if (newLayout == null)
+                        continue;
 
-                    var i = 1;
-                    string hudTypeName = string.Empty;
-                    if (hudViewType != HudViewType.Plain)
-                        hudTypeName = $" {hudViewType}";
-
-                    var layoutName = $"{newLayout.Name}{hudTypeName}";
-                    while (_hudLayoutsService.HudLayoutMappings.Mappings.Any(f => f.Name == layoutName))
+                    if (!newLayout.IsDefault)
                     {
-                        layoutName = $"{newLayout.Name}{hudTypeName} {i}";
-                        i++;
-                    }
-                    newLayout.Name = layoutName;
+                        var i = 1;
+                        string hudTypeName = string.Empty;
+                        if (hudViewType != HudViewType.Plain) hudTypeName = $" {hudViewType}";
 
+                        string tableTypeName = string.Empty;
+                        if (
+                            !newLayout.Name.Contains(
+                                CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)))
+                            tableTypeName =
+                                $" {CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)}";
+
+                        var layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName}";
+                        while (hudLayoutsService.HudLayoutMappings.Mappings.Any(f => f.Name == layoutName))
+                        {
+                            layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName} {i}";
+                            i++;
+                        }
+                        newLayout.Name = layoutName;
+                    }
+                    else
+                    {
+                        var def = defaultLayouts.FirstOrDefault(l => l.Name == newLayout.Name);
+                        if (def != null)
+                        {
+                            defaultLayouts[defaultLayouts.IndexOf(def)] = newLayout;
+                        }
+                    }
                     var layoutFileName = Save(newLayout);
 
-                    foreach (var selected in sameLayouts)
+                    foreach (var selected in grouppedLayouts)
                     {
                         var table = hashTable.FirstOrDefault(h => h.Hash == selected.LayoutId);
 
@@ -193,13 +244,13 @@ namespace DriveHUD.Application.MigrationService.Migrations
                                           };
 
                         if (mapping.IsSelected
-                            && _hudLayoutsService.HudLayoutMappings.Mappings.Any(
+                            && hudLayoutsService.HudLayoutMappings.Mappings.Any(
                                 m =>
                                     m.IsSelected && m.PokerSite == table.PokerSite && m.TableType == table.TableType
                                     && m.GameType == table.GameType))
                             mapping.IsSelected = false;
 
-                        _hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
+                        hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
                     }
                 }
                 oldLayouts.Layouts.RemoveAll(
@@ -209,7 +260,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                         && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
                         && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats));
             }
-            _hudLayoutsService.SaveLayoutMappings();
+            hudLayoutsService.SaveLayoutMappings();
         }
 
         public override void Down()
@@ -277,38 +328,36 @@ namespace DriveHUD.Application.MigrationService.Migrations
             if (first == null || second == null) return false;
             if (first.Count != second.Count) return false;
 
-            for (var i = 0; i < first.Count; i++)
-            {
-                var f = first[i];
-                var ss =
-                    second.FirstOrDefault(
-                        s =>
-                            f.Name == s.Name && f.ImageAlias == s.ImageAlias
-                            && f.EnablePlayerProfile == s.EnablePlayerProfile
-                            && f.DisplayPlayerIcon == s.DisplayPlayerIcon && f.MinSample == s.MinSample
-                            && AreEquals(f.Stats.Select(st => st), s.Stats));
-                if (ss == null) return false;
-            }
-
-            return true;
+            return
+                first.Select(
+                    f =>
+                        second.FirstOrDefault(
+                            s =>
+                                f.Name == s.Name && f.ImageAlias == s.ImageAlias
+                                && f.EnablePlayerProfile == s.EnablePlayerProfile
+                                && f.DisplayPlayerIcon == s.DisplayPlayerIcon && f.MinSample == s.MinSample
+                                && AreEquals(f.Stats.Select(st => st), s.Stats))).All(ss => ss != null);
         }
 
         private static bool AreEquals(IEnumerable<HudPlayerTypeStat> first, IEnumerable<HudPlayerTypeStat> second)
         {
-            if (first == null && second == null) return true;
-            if (first == null || second == null) return false;
+            if (first == null && second == null)
+                return true;
+
+            if (first == null || second == null)
+                return false;
+
             var secondArray = second as HudPlayerTypeStat[] ?? second.ToArray();
             var firstArray = first as HudPlayerTypeStat[] ?? first.ToArray();
-            if (firstArray.Count() != secondArray.Count()) return false;
-            foreach (var hudPlayerTypeStat in firstArray)
-            {
-                if (
-                    secondArray.FirstOrDefault(
-                        s =>
-                            s.High == hudPlayerTypeStat.High && s.Low == hudPlayerTypeStat.Low
-                            && s.Stat == hudPlayerTypeStat.Stat) == null) return false;
-            }
-            return true;
+            if (firstArray.Length != secondArray.Length)
+                return false;
+            return
+                firstArray.All(
+                    hudPlayerTypeStat =>
+                        secondArray.FirstOrDefault(
+                            s =>
+                                s.High == hudPlayerTypeStat.High && s.Low == hudPlayerTypeStat.Low
+                                && s.Stat == hudPlayerTypeStat.Stat) != null);
         }
 
         public static bool AreEquals(List<HudBumperStickerType> first, List<HudBumperStickerType> second)
@@ -389,8 +438,32 @@ namespace DriveHUD.Application.MigrationService.Migrations
             foreach (var hudPositionInfo in first)
             {
                 var secondPosition = second.FirstOrDefault(x => x.Seat == hudPositionInfo.Seat);
-                if (secondPosition == null) return false;
-                if (!secondPosition.Position.Equals(hudPositionInfo.Position)) return false;
+                if (secondPosition == null)
+                    return false;
+                if (!secondPosition.Position.Equals(hudPositionInfo.Position))
+                {
+                    var point1 = new Point(340,133);
+                    var point2 = new Point(347, 133);
+                    if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
+                        continue;
+
+                    point1 = new Point(340, 143);
+                    point2 = new Point(347, 143);
+                    if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
+                        continue;
+
+                    point1 = new Point(666, 238);
+                    point2 = new Point(667, 238);
+                    if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
+                        continue;
+
+                    point1 = new Point(666, 347);
+                    point2 = new Point(667, 347);
+                    if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
+                        continue;
+
+                    return false;
+                }
             }
 
             return true;
@@ -406,9 +479,20 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 var existiongPos =
                     defaultLayout.HudPositionsInfo.FirstOrDefault(
                         p => p.GameType == hudPositionsInfo.GameType && p.PokerSite == hudPositionsInfo.PokerSite);
-                if (existiongPos == null) return false;
-                if (!AreEquals(existiongPos.HudPositions, hudPositionsInfo.HudPositions)) return false;
+                if (existiongPos == null)
+                    return false;
+
+                if (!AreEquals(existiongPos.HudPositions, hudPositionsInfo.HudPositions))
+                    return false;
             }
+            return true;
+        }
+
+        public static bool AreEqualsExceptPositions(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
+        {
+            if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
+            if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
+            if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
             return true;
         }
     }
