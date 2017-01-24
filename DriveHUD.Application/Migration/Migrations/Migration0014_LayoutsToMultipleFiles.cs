@@ -149,6 +149,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     oldLayouts.Layouts.Where(
                         l =>
                             GetTableDescription(l.LayoutId).TableType == tableDescription?.TableType
+                            && l.HudStats.Any()
                             && HudObjectsComparer.AreEquals(
                                 l.HudBumperStickerTypes,
                                 currentLayout.HudBumperStickerTypes)
@@ -196,7 +197,6 @@ namespace DriveHUD.Application.MigrationService.Migrations
                         _hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
                     }
                 }
-
                 oldLayouts.Layouts.RemoveAll(
                     l =>
                         GetTableDescription(l.LayoutId).TableType == tableDescription?.TableType
@@ -204,6 +204,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                         && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
                         && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats));
             }
+            _hudLayoutsService.SaveLayoutMappings();
         }
 
         public override void Down()
