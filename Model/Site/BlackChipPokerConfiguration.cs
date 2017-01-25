@@ -20,7 +20,12 @@ namespace Model.Site
 
         public override string[] GetHandHistoryFolders()
         {
-            var folders = new string[]
+            var result = new List<string>();
+
+            if (!IsInstalled(@"HKEY_CURRENT_USER\SOFTWARE\BlackChipPoker"))
+                return result.ToArray();
+
+            var folders = new[]
             {
                 Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
                 Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86),
@@ -31,7 +36,12 @@ namespace Model.Site
                         let folder = Path.Combine(possibleFolder, "BlackChipPoker", "profiles")
                         select folder).ToArray();
 
-            return dirs;
+            foreach (var dir in dirs)
+            {
+                result.AddRange(GetHandHistoryFoldersFromProfiles(dir));
+            }
+
+            return result.ToArray();
         }
     }
 }
