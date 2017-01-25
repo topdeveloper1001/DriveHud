@@ -4,7 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Input;
 using System.Linq;
-using DriveHUD.EquityCalculator.Calculations;
 using System.Threading;
 using System.Diagnostics;
 using System.Threading.Tasks;
@@ -22,6 +21,8 @@ using HandHistories.Objects.Actions;
 using DriveHUD.Common.Infrastructure.Base;
 using DriveHUD.ViewModels;
 using Model.Enums;
+using DriveHUD.EquityCalculator.Base.Calculations;
+using DriveHUD.EquityCalculator.Analyzer;
 
 namespace DriveHUD.EquityCalculator.ViewModels
 {
@@ -29,7 +30,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
     {
         #region Fields
         private CancellationTokenSource cts;
-        private HandHistories.Objects.Hand.HandHistory _currentHandHistory = new HandHistory();
+        private HandHistories.Objects.Hand.HandHistory _currentHandHistory = new HandHistories.Objects.Hand.HandHistory();
         private HandHistories.Objects.Cards.Street _currentSreet;
 
         private readonly int _playersCount = 4;
@@ -238,7 +239,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             {
                 LogProvider.Log.Info("Equity calculation started");
                 var boardString = Board.ToString().Replace("x", "").Replace("X", "");
-                result = await EquityCalculatorMain.CalculateEquityAsync(PlayersList.Select(x => string.Join(",", x.GetPlayersHand(true))), boardString, cts.Token);
+                result = await HoldemEquityCalculator.CalculateEquityAsync(PlayersList.Select(x => string.Join(",", x.GetPlayersHand(true))), boardString, cts.Token);
             }
             catch (OperationCanceledException)
             {
@@ -328,7 +329,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
                 _currentSreet = HandHistories.Objects.Cards.Street.Preflop;
         }
 
-        private void LoadPlayersData(HandHistory CurrentGame)
+        private void LoadPlayersData(HandHistories.Objects.Hand.HandHistory CurrentGame)
         {
             PlayersList.Clear();
             var players = CurrentGame.Players;
@@ -357,7 +358,7 @@ namespace DriveHUD.EquityCalculator.ViewModels
             }
         }
 
-        private void LoadBoardData(HandHistory CurrentGame, int numberOfCards)
+        private void LoadBoardData(HandHistories.Objects.Hand.HandHistory CurrentGame, int numberOfCards)
         {
             if (CurrentGame.CommunityCards.Count() > 5)
             {
@@ -383,11 +384,11 @@ namespace DriveHUD.EquityCalculator.ViewModels
             Board.SetCollection(boardCardsList);
         }
 
-        private string CalculateStrongestOpponent(HandHistory CurrentGame, HandHistories.Objects.Cards.Street CurrentStreet)
+        private string CalculateStrongestOpponent(HandHistories.Objects.Hand.HandHistory CurrentGame, HandHistories.Objects.Cards.Street CurrentStreet)
         {
             IEnumerable<RangeSelectorItemViewModel> oponnentHands = new List<RangeSelectorItemViewModel>();
             var opponentName = string.Empty;
-            Analyzer.MainAnalyzer.GetStrongestOpponent(CurrentGame, CurrentStreet, out opponentName, out oponnentHands);
+            MainAnalyzer.GetStrongestOpponent(CurrentGame, CurrentStreet, out opponentName, out oponnentHands);
             if (AutoGenerateHandRanges)
             {
                 if (!string.IsNullOrEmpty(opponentName) && PlayersList.Any(x => x.PlayerName == opponentName))

@@ -30,6 +30,7 @@ using Microsoft.Practices.ServiceLocation;
 using System.Threading;
 using System.Diagnostics;
 using DriveHUD.Application.Controls;
+using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Application.Views.Replayer;
 using DriveHUD.Entities;
 using DriveHUD.Application.ViewModels.Popups;
@@ -138,11 +139,12 @@ namespace DriveHUD.Application.TableConfigurators
             table = new RadDiagramShape()
             {
                 Name = "Table",
-                Background = new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundImage))),
+                Background =
+                    new ImageBrush(new BitmapImage(new Uri(BaseUriHelper.GetBaseUri(diagram), BackgroundImage))),
                 Height = predefinedTableSizes[seats].Item1,
                 Width = predefinedTableSizes[seats].Item2,
                 StrokeThickness = 0,
-                IsEnabled = false,
+                IsEnabled = false
             };
 
             table.X = DefaultTablePosition.X;
@@ -216,7 +218,7 @@ namespace DriveHUD.Application.TableConfigurators
                 BorderThickness = new Thickness(0),
                 IsEnabled = false,
                 IsHitTestVisible = false,
-                FontSize = 13,
+                FontSize = 13
             };
 
             BindingOperations.ClearBinding(label, Control.BackgroundProperty);
@@ -239,7 +241,7 @@ namespace DriveHUD.Application.TableConfigurators
             panel.Height = double.NaN;
             panel.Width = 150;
 
-            player.IsNoteIconVisible = !string.IsNullOrWhiteSpace(dataService.GetPlayerNote(player.Name, viewModel.CurrentHand.PokersiteId)?.Note ?? string.Empty);
+            player.NoteToolTip = dataService.GetPlayerNote(player.Name, viewModel.CurrentHand.PokersiteId)?.Note ?? string.Empty;
 
             var contextMenu = CreateContextMenu(viewModel.CurrentHand.PokersiteId, player.Name, player);
             contextMenu.EventName = "MouseRightButtonUp";
@@ -276,7 +278,7 @@ namespace DriveHUD.Application.TableConfigurators
                 }
 
                 var hudElement = clickedItem.DataContext as ReplayerPlayerViewModel;
-                hudElement.IsNoteIconVisible = !string.IsNullOrWhiteSpace(viewModel.Note);
+                hudElement.NoteToolTip = viewModel.Note;
             };
             radMenu.Items.Add(item);
 
@@ -372,7 +374,7 @@ namespace DriveHUD.Application.TableConfigurators
                 BorderThickness = new Thickness(0),
                 IsEnabled = false,
                 IsHitTestVisible = false,
-                DataContext = card,
+                DataContext = card
             };
 
             try
@@ -476,17 +478,12 @@ namespace DriveHUD.Application.TableConfigurators
 
         private IList<StatInfo> GetHudStats(EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            var result = new List<StatInfo>();
-
-            var tableKey = HudViewModel.GetHash(pokerSite, gameType, tableType);
-
-            var activeLayout = hudLayoutsService.GetActiveLayout(tableKey);
+            var activeLayout = hudLayoutsService.GetActiveLayout(pokerSite, tableType, gameType);
             if (activeLayout == null)
             {
                 LogProvider.Log.Error("Could not find active layout");
                 return null;
             }
-
             return activeLayout.HudStats.ToArray();
         }
 

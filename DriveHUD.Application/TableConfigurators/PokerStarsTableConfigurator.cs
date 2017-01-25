@@ -17,20 +17,7 @@ using System.Collections.Generic;
 namespace DriveHUD.Application.TableConfigurators
 {
     internal class PokerStarsTableConfigurator : Poker888TableConfigurator
-    {
-        public override EnumPokerSites Type
-        {
-            get { return EnumPokerSites.PokerStars; }
-        }
-
-        protected override ITableSeatAreaConfigurator TableSeatAreaConfigurator
-        {
-            get
-            {
-                return new PokerStarsTableSeatAreaConfigurator();
-            }
-        }
-
+    {     
         protected override Dictionary<int, int[,]> GetPredefinedLabelPositions()
         {
             var predefinedLablelPositions = new Dictionary<int, int[,]>
@@ -45,22 +32,6 @@ namespace DriveHUD.Application.TableConfigurators
             };            
 
             return predefinedLablelPositions;
-        }
-
-        protected override Dictionary<int, int[,]> GetPredefinedMarkersPositions()
-        {
-            var predefinedPositions = new Dictionary<int, int[,]>
-            {
-                { 2, new int[,] { { 425, 87 }, { 425, 396 } } },
-                { 3, new int[,] { { 425, 87 }, { 615, 396 }, { 235, 396 } } },
-                { 4, new int[,] { { 743, 174 }, { 743, 316 }, { 147, 316 }, { 147, 174 } } },
-                { 6, new int[,] { { 425, 87 }, { 743, 174 }, { 743, 316 }, { 425, 396 }, { 147, 316 }, { 147, 174 } } },
-                { 8, new int[,] { { 425, 87 }, { 614, 87 }, { 743, 174 }, { 614, 396 }, { 425, 396 }, { 235, 396 }, { 147, 174 }, { 235, 87 }  } },
-                { 9, new int[,] { { 425, 87 }, { 614, 87 }, { 743, 174 }, { 743, 316 }, { 614, 396 }, { 235, 396 }, { 147, 316 }, { 147, 174 }, { 235, 87 } } },
-                { 10, new int[,] { { 425, 87 }, { 614, 87 }, { 743, 174 }, { 743, 316 }, { 614, 396 }, { 425, 396 }, { 235, 396 }, { 147, 316 }, { 147, 174 }, { 235, 87 } } }
-            };
-
-            return predefinedPositions;
         }
     }
 }

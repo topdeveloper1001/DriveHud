@@ -226,29 +226,36 @@
         </Setter>
     </Style>
 
+    <!-- Template for element with Player name on table on HUD settings -->
     <DataTemplate x:Key="StructTemplate">
         <Grid Margin="-4">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            
             <TextBlock 
                 Text="{Binding DataContext.Player, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" 
-                Grid.Row="0" HorizontalAlignment="Center" 
+                Grid.Row="0" 
+                HorizontalAlignment="Center" 
                 VerticalAlignment="Center" 
                 />
+            
             <TextBlock 
                 Text="{Binding DataContext.Bank, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}, StringFormat={}${0}}" 
                 Grid.Row="1" 
                 HorizontalAlignment="Center" 
-                VerticalAlignment="Center" />
+                VerticalAlignment="Center" 
+                />
         </Grid>
     </DataTemplate>
 
+    <!-- Template for plain hud element on table on HUD settings -->
     <DataTemplate x:Key="HudTemplate">
         <ctl:HudPanel DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
 
+    <!-- Template for DH hud element on table on HUD settings -->
     <DataTemplate x:Key="RichHudTemplate">
         <ctl:HudRichPanel DataContext="{Binding DataContext, RelativeSource={RelativeSource AncestorType=telerik:RadDiagramShape}}" />
     </DataTemplate>
@@ -265,14 +272,15 @@
         </Border>
     </ControlTemplate>
 
-    <ts:ClassTemplateSelector 
-        x:Key="ClassTemplateSelector" 
+    <ts:HudPanelTemplateSelector 
+        x:Key="HudPanelTemplateSelector" 
         PlayerPlaceTemplate="{StaticResource StructTemplate}"                                                            
-        HudPlaceTemplate="{StaticResource HudTemplate}" 
+        PlainHudTemplate="{StaticResource HudTemplate}" 
         RichHudTemplate="{StaticResource RichHudTemplate}"/>
 
     <Style x:Key="RadDiagramStyle" TargetType="telerik:RadDiagram" />
 
+    <!-- Style for table with HUD elements on HUD settings screen -->
     <Style x:Key="ClassDiagramStyle" TargetType="telerik:RadDiagram" BasedOn="{StaticResource RadDiagramStyle}">
         <Setter Property="AllowCopy" Value="False" />
         <Setter Property="AllowCut" Value="False" />
@@ -283,9 +291,11 @@
         <Setter Property="IsBackgroundSurfaceVisible" Value="True" />
         <Setter Property="IsSnapToGridEnabled" Value="False" />
         <Setter Property="IsSnapToItemsEnabled" Value="False"/>
+        <Setter Property="IsResizingEnabled" Value="True"/>
+        <Setter Property="IsRotationEnabled" Value="False"/>
         <Setter Property="IsZoomEnabled" Value="False" />
         <Setter Property="HorizontalAlignment" Value="Stretch" />
-        <Setter Property="ShapeTemplateSelector" Value="{StaticResource ClassTemplateSelector}" />
+        <Setter Property="ShapeTemplateSelector" Value="{StaticResource HudPanelTemplateSelector}" />
     </Style>
 
 </ResourceDictionary>

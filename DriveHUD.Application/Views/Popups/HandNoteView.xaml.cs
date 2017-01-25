@@ -9,11 +9,10 @@ namespace DriveHUD.Application.ViewModels
     /// </summary>
     public partial class HandNoteView : Window
     {        
-        public HandNoteView(HandNoteViewModel vm, short pokersiteId)
+        public HandNoteView(HandNoteViewModel vm)
         {
             InitializeComponent();
             vm.CloseAction = this.Close;
-            vm.PokersiteId = pokersiteId;
             DataContext = vm;
         }
     }

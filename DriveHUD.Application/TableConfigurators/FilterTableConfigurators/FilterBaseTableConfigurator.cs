@@ -1,15 +1,11 @@
 ﻿using DriveHUD.Application.ValueConverters;
 using DriveHUD.Application.ViewModels;
 using DriveHUD.Common.Reflection;
-using Model.Enums;
+using DriveHUD.Entities;
 using Model.Filters;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
@@ -53,7 +49,7 @@ namespace DriveHUD.Application.TableConfigurators
                 Height = TABLE_HEIGHT,
                 Width = TABLE_WIDTH,
                 X = tablePosition.X,
-                Y = tablePosition.Y,
+                Y = tablePosition.Y
             };
 
             diagram.AddShape(table);

@@ -133,10 +133,10 @@ namespace DriveHud.Tests.FunctionalTests.Hud
 
         private class HudLayoutsServiceStub : HudLayoutsService
         {
-            protected override void Initialize()
-            {
-                hudLayouts = new HudSavedLayouts();
-            }
+            //protected override void Initialize()
+            //{
+            //    hudLayouts = new HudSavedLayouts();
+            //}
 
             public override string GetImageLink(string image)
             {

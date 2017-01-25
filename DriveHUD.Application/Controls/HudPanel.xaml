@@ -12,6 +12,7 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              MinWidth="50"
+             Opacity="{Binding Opacity}"
              Background="{StaticResource HudElementPlayerBrush}">
     <UserControl.Resources>
 
@@ -66,12 +67,15 @@
                         <hud:HudStatsBehavior StatInfoSource="{Binding StatInfoCollection}" IsMainStatsPanelEnabled="False" />
                     </i:Interaction.Behaviors>
                 </WrapPanel>
-                <Path Style="{StaticResource PlayerNotePathStyle}" 
-                      HorizontalAlignment="Right" VerticalAlignment="Top" 
-                      Width="20" Margin="0 -10 -10 0"
-                      Stretch="Uniform" Fill="{StaticResource ForegroundBrush}"
-                      ToolTip="{Binding NoteToolTip}"
-                      Visibility="{Binding IsNoteIconVisible, Converter={StaticResource BoolToVisibilityConverter}}"/>
+                <Border Background="Transparent" BorderBrush="Transparent" BorderThickness="0"
+                        HorizontalAlignment="Right" VerticalAlignment="Top" 
+                        Margin="0 -10 -10 0"
+                        ToolTip="{Binding NoteToolTip}"
+                        Visibility="{Binding IsNoteIconVisible, Converter={StaticResource BoolToVisibilityConverter}}">
+                    <Path Style="{StaticResource PlayerNotePathStyle}" 
+                      Width="20" 
+                      Stretch="Uniform" Fill="{StaticResource ForegroundBrush}"/>
+                </Border>
                 <ItemsControl ItemsSource="{Binding Stickers}"  Margin="0 -10 0 0">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>

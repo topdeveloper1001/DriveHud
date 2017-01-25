@@ -12,7 +12,7 @@
 
 using DriveHUD.Common.Linq;
 using DriveHUD.Common.Log;
-using Model.Enums;
+using DriveHUD.Entities;
 using System;
 using System.Collections.Generic;
 

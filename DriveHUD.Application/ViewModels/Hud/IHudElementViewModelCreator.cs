@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Enums;
+using DriveHUD.Application.ViewModels.Hud;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -22,11 +22,8 @@ namespace DriveHUD.Application.ViewModels
         /// <summary>
         /// Create HUD element based on table settings
         /// </summary>
-        /// <param name="tableKey">Table key</param>
-        /// <param name="hudViewModel">Hud view model</param>
-        /// <param name="seatNumber">Seat number</param>
-        /// <param name="hudType">Hud type</param>
+        /// <param name="creationInfo">Creation Info</param>      
         /// <returns>Hud panel element view model</returns>
-        HudElementViewModel Create(int tableKey, HudViewModel hudViewModel, int seatNumber, HudType hudType);
+        HudElementViewModel Create(HudElementViewModelCreationInfo creationInfo);
     }
 }

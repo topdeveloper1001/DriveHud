@@ -98,12 +98,12 @@
             Orientation="Horizontal" 
             Visibility="{Binding ShowInput, Converter={dh:BoolToVisibilityConverter}}"
             Margin="0,15,0,0">
-            
+
             <TextBlock 
                 Text="{ResX Key=Common_HudLayout_InputLabel}" 
                 VerticalAlignment="Center" 
                 />
-            
+
             <TextBox 
                 MaxLength="24" 
                 Margin="15,0,0,0" 
@@ -113,7 +113,7 @@
                 Text="{Binding Name, UpdateSourceTrigger=PropertyChanged}"                
                 Width="220" 
                 />
-            
+
         </StackPanel>
 
         <TextBlock Grid.Column="1" Grid.Row="1" Text="{Binding Header}" VerticalAlignment="Center" />

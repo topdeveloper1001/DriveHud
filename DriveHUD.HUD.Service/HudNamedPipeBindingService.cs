@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.Serialization;
-using System.ServiceModel;
-using System.Text;
+﻿using DriveHUD.Entities;
 
 namespace DriveHUD.HUD.Service
 {
@@ -23,9 +18,9 @@ namespace DriveHUD.HUD.Service
             _callback?.SaveHudLayout(hudLayout);
         }
 
-        public static void LoadLayout(int layoutId, string layoutName)
+        public static void LoadLayout(string layoutName, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType)
         {
-            _callback?.LoadLayout(layoutId, layoutName);
+            _callback?.LoadLayout(layoutName, pokerSite, gameType, tableType);
         }
 
         public static void TagHand(long gameNumber, short pokerSiteId, int tag)
@@ -39,7 +34,7 @@ namespace DriveHUD.HUD.Service
 
         public abstract void ConnectCallbackChannel(string name);
 
-        public abstract void UpdateHUD(byte[] data); 
+        public abstract void UpdateHUD(byte[] data);
 
         #endregion
     }

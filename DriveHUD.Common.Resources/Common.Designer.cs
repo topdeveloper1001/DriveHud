@@ -539,6 +539,24 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Apply Size to All.
+        /// </summary>
+        internal static string Common_Hud_ApplySizeToAll {
+            get {
+                return ResourceManager.GetString("Common_Hud_ApplySizeToAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Copy.
+        /// </summary>
+        internal static string Common_Hud_Copy {
+            get {
+                return ResourceManager.GetString("Common_Hud_Copy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         internal static string Common_Hud_Delete {
@@ -553,6 +571,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_Export {
             get {
                 return ResourceManager.GetString("Common_Hud_Export", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUD Name.
+        /// </summary>
+        internal static string Common_Hud_HudName {
+            get {
+                return ResourceManager.GetString("Common_Hud_HudName", resourceCulture);
             }
         }
         
@@ -589,6 +616,15 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Hud_SaveAs {
             get {
                 return ResourceManager.GetString("Common_Hud_SaveAs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Table Layout.
+        /// </summary>
+        internal static string Common_Hud_TableLayout {
+            get {
+                return ResourceManager.GetString("Common_Hud_TableLayout", resourceCulture);
             }
         }
         
@@ -1232,7 +1268,7 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to SMART - INTUITIVE - BEAUTIFUL
+        ///   Looks up a localized string similar to BEAUTIFUL - INTUITIVE - POWERFUL
         ///Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes with a fully functional 30 day trial. When you are ready to purchase, you can click BUY from the button below in order to  purchase a registered copy of DriveHUD. When you are ready to register, please click the Register button below..
         /// </summary>
         internal static string Common_RegistrationView_GreetingText {
@@ -1445,6 +1481,51 @@ namespace DriveHUD.Common.Resources {
         internal static string Common_Send {
             get {
                 return ResourceManager.GetString("Common_Send", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ADD TO CART.
+        /// </summary>
+        internal static string Common_Shop_AddToCart {
+            get {
+                return ResourceManager.GetString("Common_Shop_AddToCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HUDs.
+        /// </summary>
+        internal static string Common_Shop_Huds {
+            get {
+                return ResourceManager.GetString("Common_Shop_Huds", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Learn More.
+        /// </summary>
+        internal static string Common_Shop_LearnMore {
+            get {
+                return ResourceManager.GetString("Common_Shop_LearnMore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Recommended.
+        /// </summary>
+        internal static string Common_Shop_Recommended {
+            get {
+                return ResourceManager.GetString("Common_Shop_Recommended", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Training Products.
+        /// </summary>
+        internal static string Common_Shop_Training {
+            get {
+                return ResourceManager.GetString("Common_Shop_Training", resourceCulture);
             }
         }
         

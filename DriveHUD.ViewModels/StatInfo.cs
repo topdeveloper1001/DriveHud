@@ -668,6 +668,9 @@ namespace DriveHUD.ViewModels
             statInfoClone.StatInfoGroup = StatInfoGroup;
             statInfoClone.IsNotVisible = IsNotVisible;
             statInfoClone.IsDuplicateSelected = IsDuplicateSelected;
+            statInfoClone.StatInfoToolTipCollection = StatInfoToolTipCollection != null ?
+                                                        new ObservableCollection<StatInfoToolTip>(StatInfoToolTipCollection.Select(x => x.Clone()).ToList()) :
+                                                        StatInfoToolTipCollection;
 
             var colorRangeCloneCollection = SettingsAppearanceValueRangeCollection.Select(x => x.Clone()).OrderBy(x => x.Value).ToArray();
             statInfoClone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(colorRangeCloneCollection);

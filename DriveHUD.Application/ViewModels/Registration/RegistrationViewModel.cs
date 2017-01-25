@@ -11,28 +11,23 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Application.Licensing;
-using DriveHUD.Application.Security;
-using Microsoft.Practices.ServiceLocation;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ReactiveUI;
-using System.Windows.Controls;
-using System.Net;
-using System.Windows.Media.Imaging;
-using System.IO;
-using System.Windows.Media;
-using DriveHUD.Common.Utils;
-using Prism.Interactivity.InteractionRequest;
-using DriveHUD.Common.Resources;
 using DriveHUD.Common.Log;
-using System.Diagnostics;
-using System.Collections.ObjectModel;
-using DriveHUD.Importers;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Utils;
 using DriveHUD.Common.Wpf.Actions;
+using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.Importers;
+using Microsoft.Practices.ServiceLocation;
+using Prism.Interactivity.InteractionRequest;
+using ReactiveUI;
+using System;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Net;
 using System.Reactive.Linq;
+using System.Windows.Media.Imaging;
 
 namespace DriveHUD.Application.ViewModels.Registration
 {

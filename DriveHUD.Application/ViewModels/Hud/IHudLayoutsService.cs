@@ -11,6 +11,9 @@
 //----------------------------------------------------------------------
 
 using System.Collections.Generic;
+using DriveHUD.Application.ViewModels.Layouts;
+using DriveHUD.Entities;
+using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -19,108 +22,62 @@ namespace DriveHUD.Application.ViewModels
     /// </summary>
     internal interface IHudLayoutsService
     {
-        /// <summary>
-        /// Cached HUDs
-        /// </summary>
-        Dictionary<int, HudTableViewModel> HudTableViewModelDictionary { get; set; }
+        List<HudTableViewModel> HudTableViewModels { get; set; }
+
+        HudLayoutMappings HudLayoutMappings { get; set; }
+
+        HudLayoutInfo GetActiveLayout(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
+
+        HudLayoutInfo GetLayout(string name);
 
         /// <summary>
-        /// Cached layouts
+        /// Simple save
         /// </summary>
-        HudSavedLayouts Layouts { get; }
-
-        /// <summary>
-        /// Get layout by name
-        /// </summary>
-        /// <param name="name">Name of layout</param>
-        /// <param name="layoutId">Layout id</param>
-        /// <returns>Layout</returns>
-        HudSavedLayout GetLayoutByName(string name, int layoutId);
-
-        /// <summary>
-        /// Set active layout
-        /// </summary>
-        /// <param name="layout">Layout</param>
-        void SetLayoutActive(HudSavedLayout layout);
-
-        /// <summary>
-        /// Get active layout
-        /// </summary>
-        /// <param name="layoutId">Layout key</param>
-        /// <returns>Active layout</returns>
-        HudSavedLayout GetActiveLayout(int layoutId);
-
-        /// <summary>
-        /// Save current layout
-        /// </summary>
-        void Save(HudSavedDataInfo hudData);
-
-        /// <summary>
-        /// Save current layout
-        /// </summary>
-        void Save(HudSavedLayout hudData);
-
-        /// <summary>
-        /// Save only not existing items as defaults
-        /// </summary>
-        /// <param name="hudTables">Hud tables</param>
-        void SaveDefaults(Dictionary<int, HudTableViewModel> hudTables);
+        void Save(HudLayoutInfo hudLayout);
 
         /// <summary>
         /// Save new layout
         /// </summary>
-        HudSavedLayout SaveAs(HudSavedDataInfo hudData);
-
-        /// <summary>
-        /// Load layout
-        /// </summary>
-        HudSavedLayout Load(string name, int layoutId);
+        HudLayoutInfo SaveAs(HudSavedDataInfo hudData);
 
         /// <summary>
         /// Delete layout
         /// </summary>
         /// <param name="layout">Layout to delete</param>
-        bool Delete(HudSavedLayout layout, out HudSavedLayout activeLayout);
+        bool Delete(string layoutName);
 
         /// <summary>
         /// Export layout
         /// </summary>
-        /// <param name="hudData">Data to be exported in HUD layout format</param>
-        /// <param name="path">Path to file</param>
-        void Export(HudSavedDataInfo hudData, string path);
+        void Export(HudLayoutInfo layout, string path);
 
         /// <summary>
         /// Import layout
         /// </summary>
         /// <param name="path">Path to layout</param>
-        HudSavedLayout Import(string path);
+        HudLayoutInfo Import(string path);
 
         /// <summary>
         /// Set icons for hud elements based on stats and layout player type settings
         /// </summary>
-        /// <param name="hudElements">Hud elements</param>
-        /// <param name="layoutId">Layout</param>
-        void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, int layoutId);
+        void SetPlayerTypeIcon(IEnumerable<HudElementViewModel> hudElements, string layoutName);
 
         /// <summary>
         /// Checks if specified hand is valid for sticker calculations
         /// </summary>
-        /// <param name="statistic">Statistic to validate</param>
-        /// <param name="layoutId">Layout</param>
         /// <returns>List of sticker names for which specified statistic is valid</returns>
-        IList<string> GetValidStickers(Entities.Playerstatistic statistic, int layoutId);
+        IList<string> GetValidStickers(Playerstatistic statistic, string layoutName);
 
         /// <summary>
         /// Set stickers for hud elements based on stats and bumper sticker settings
         /// </summary>
-        /// <param name="hudElements">Hud elements</param>
-        /// <param name="layoutId">Layout</param>
-        void SetStickers(HudElementViewModel hudElement, IDictionary<string, Entities.Playerstatistic> stickersStatistics, int layoutId);
+        void SetStickers(HudElementViewModel hudElement, IDictionary<string, Playerstatistic> stickersStatistics,
+            string layoutName);
 
         /// <summary>
         /// Save bumper stickers for layout specified
         /// </summary>
-        void SaveBumperStickers(HudSavedLayout hudLayout);
+        //void SaveBumperStickers(HudLayoutInfo hudLayout);
 
         /// <summary>
         /// Get path to image directory
@@ -135,5 +92,21 @@ namespace DriveHUD.Application.ViewModels
         /// <returns>Full path to image</returns>
         string GetImageLink(string image);
 
+        /// <summary>
+        /// Set active layout
+        /// </summary>
+        /// <param name="hudToLoad">Layout to be set as active</param>
+        /// <param name="pokerSite">Poker site</param>
+        /// <param name="gameType">Game type</param>
+        /// <param name="tableType">Table type</param>
+        void SetLayoutActive(HudLayoutInfo hudToLoad, EnumPokerSites pokerSite, EnumGameType gameType, EnumTableType tableType);
+
+        IEnumerable<string> GetLayoutsNames(EnumTableType tableType);
+
+        IEnumerable<string> GetAvailableLayouts(EnumPokerSites pokerSite, EnumTableType tableType, EnumGameType gameType);
+
+        List<HudLayoutInfo> GetAllLayouts(EnumTableType tableType);
+
+        void SaveLayoutMappings();
     }
 }

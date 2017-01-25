@@ -47,6 +47,7 @@ using System;
 using System.Linq;
 using System.Threading;
 using System.Windows;
+using DriveHUD.Application.TableConfigurators.PositionProviders;
 using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application
@@ -221,37 +222,30 @@ namespace DriveHUD.Application
             Container.RegisterType<ISiteConfiguration, BlackChipPokerConfiguration>(EnumPokerSites.BlackChipPoker.ToString());
 
             // HUD table configurators
+            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>();
+            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(HudViewType.Plain.ToString());
+            Container.RegisterType<ITableConfigurator, CommonHorizTableConfiguration>(HudViewType.Horizontal.ToString());
+            Container.RegisterType<ITableConfigurator, CommonVertOneTableConfiguration>(HudViewType.Vertical_1.ToString());
+            Container.RegisterType<ITableConfigurator, CommonVertTwoTableConfiguration>(HudViewType.Vertical_2.ToString());
 
-            // Bovada
-            Container.RegisterType<ITableConfigurator, BovadaRichTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Default));
-            Container.RegisterType<ITableConfigurator, BovadaTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudType.Plain));
-
-            // BetOnline
-            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BetOnline, HudType.Default));
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BetOnline, HudType.Plain));
-            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.SportsBetting, HudType.Default));
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.SportsBetting, HudType.Plain));
-            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.TigerGaming, HudType.Default));
-            Container.RegisterType<ITableConfigurator, CommonTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.TigerGaming, HudType.Plain));
-
-            // PokerStars
-            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Default));
-            Container.RegisterType<ITableConfigurator, PokerStarsTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudType.Plain));
-
-            // 888 poker            
-            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudType.Default));
-            Container.RegisterType<ITableConfigurator, Poker888TableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudType.Plain));
-
-            // AmericasCardroom
-            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Default));
-            Container.RegisterType<ITableConfigurator, AmericasCardroomTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudType.Plain));
-
-            // BlackChipPoker
-            Container.RegisterType<ITableConfigurator, CommonRichTableConfiguration>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudType.Default));
-            Container.RegisterType<ITableConfigurator, BlackChipPokerTableConfigurator>(TableConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudType.Plain));
+            //Position Providers
+            Container.RegisterType<IPositionProvider, CommonPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Unknown, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, CommonRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Unknown, HudViewType.Horizontal));
+            Container.RegisterType<IPositionProvider, IgnitionPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, IgnitionRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Ignition, HudViewType.Horizontal));
+            Container.RegisterType<IPositionProvider, IgnitionPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Bodog, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, IgnitionRichPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Bodog, HudViewType.Horizontal));
+            Container.RegisterType<IPositionProvider, Poker888PositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.Poker888, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, PokerStarsPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.PokerStars, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.WinningPokerNetwork, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.AmericasCardroom, HudViewType.Plain));
+            Container.RegisterType<IPositionProvider, WinningPositionProvider>(PositionConfiguratorHelper.GetServiceName(EnumPokerSites.BlackChipPoker, HudViewType.Plain));
 
             // HUD panel services
             UnityServicesBootstrapper.ConfigureContainer(Container);
+
+            // Model services
+            ModelBootstrapper.ConfigureContainer(Container);
 
             // Licenses
             Container.RegisterType<ILicenseManager, DHTReg>(LicenseType.Trial.ToString());

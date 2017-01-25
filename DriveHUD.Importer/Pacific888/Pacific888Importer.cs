@@ -50,7 +50,7 @@ namespace DriveHUD.Importers.Pacific888
 
         private const string tournamentPattern = "#{0} Table {1}";
 
-        protected override bool Match(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, ParsingResult parsingResult)
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null || !parsingResult.WasImported ||
                 parsingResult.Source == null || parsingResult.Source.GameDescription == null)

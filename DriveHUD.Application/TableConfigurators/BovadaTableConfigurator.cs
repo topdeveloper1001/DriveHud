@@ -19,31 +19,16 @@ namespace DriveHUD.Application.TableConfigurators
 {
     internal class BovadaTableConfigurator : BaseTableConfigurator
     {
-        protected const int Height = 460;
-        protected const int Width = 790;
+        protected const int Height = 320;
+        protected const int Width = 600;
 
         protected const int hudElementHeight = 75;
         protected const int hudElementWidth = 135;
 
-        protected const string backgroundImage = "/DriveHUD.Common.Resources;component/images/Bovada/Table{0}.png";
+        protected const int labelElementWidth = 110;
+        protected const int labelElementHeight = 35;
 
-        protected override ITableSeatAreaConfigurator TableSeatAreaConfigurator
-        {
-            get
-            {
-                return new BovadaTableSeatAreaConfigurator();
-            }
-        }
-
-        public override EnumPokerSites Type
-        {
-            get { return EnumPokerSites.Ignition; }
-        }
-
-        public override HudType HudType
-        {
-            get { return HudType.Plain; }
-        }
+        protected const string backgroundImage = "/DriveHUD.Common.Resources;component/images/Table.png";    
 
         protected override string BackgroundImage
         {
@@ -66,6 +51,14 @@ namespace DriveHUD.Application.TableConfigurators
             }
         }
 
+        public override HudViewType HudViewType
+        {
+            get
+            {
+                return HudViewType.Vertical_1;
+            }
+        }
+
         public override void ConfigureTable(RadDiagram diagram, HudTableViewModel hudTable, int seats)
         {
             Check.ArgumentNotNull(() => diagram);
@@ -73,16 +66,39 @@ namespace DriveHUD.Application.TableConfigurators
             Check.Require(hudTable.HudElements != null);
             Check.Require(hudTable.HudElements.Count != seats);
 
-            InitializeTable(diagram, hudTable, seats);
-            CreateSeatAreas(diagram, hudTable, seats);
+            InitializeTable(diagram, hudTable, seats);       
 
-            foreach (var hudElement in hudTable.HudElements.Where(x => x.HudType == HudType))
+            var labelPositions = GetPredefinedLabelPositions();
+
+            foreach (var hudElement in hudTable.HudElements.ToArray())
             {
-                var hud = CreateHudLabel(hudElement);
-                diagram.AddShape(hud);
-            }
+                var label = CreatePlayerLabel(string.Format("Player {0}", hudElement.Seat));
 
-            CreatePreferredSeatMarkers(diagram, hudTable, seats);
+                label.X = labelPositions[seats][hudElement.Seat - 1, 0];
+                label.Y = labelPositions[seats][hudElement.Seat - 1, 1];
+
+                diagram.AddShape(label);
+
+                var hud = CreateHudLabel(hudElement);
+
+                if (hudElement.HudViewType == HudViewType.Plain)
+                {
+                    hud.Position = new Point(label.X - (hud.Width - label.Width)/2, label.Y + label.Height);
+                }
+                if (hudElement.HudViewType == HudViewType.Horizontal)
+                {
+                    hud.Position = hudElement.IsRightOriented ? new Point(label.X, label.Y - 60) : new Point(label.X-30, label.Y - 60);
+                }
+                if (hudElement.HudViewType == HudViewType.Vertical_1)
+                {
+                    hud.Position = hudElement.IsRightOriented ? new Point(label.X, label.Y - 60) : new Point(label.X - 30, label.Y - 60);
+                }
+                if (hudElement.HudViewType == HudViewType.Vertical_2)
+                {
+                    hud.Position = hudElement.IsRightOriented ? new Point(label.X, label.Y - 60) : new Point(label.X - 30, label.Y - 60);
+                }
+                diagram.AddShape(hud);
+            }         
         }
 
         public override IEnumerable<HudElementViewModel> GenerateElements(int seats)
@@ -102,12 +118,29 @@ namespace DriveHUD.Application.TableConfigurators
                                 Seat = seat + 1,
                                 IsRightOriented = isRightOriented,
                                 TiltMeter = 100,
-                                HudType = HudType,
-                                HudViewType = HudViewType.Vertical_1,
-                                Position = new Point(hudElementPositionX, hudElementPositionY)
+                                HudViewType = HudViewType,                                
+                                Position = new Point(hudElementPositionX, hudElementPositionY),
                             }).ToArray();
 
             return elements;
+        }
+
+        private RadDiagramShape CreatePlayerLabel(string player)
+        {
+            var label = new RadDiagramShape
+            {
+                DataContext = new HudPlayerViewModel { Player = player, Bank = 10 },
+                Height = labelElementHeight,
+                Width = labelElementWidth,
+                StrokeThickness = 0,
+                BorderThickness = new Thickness(0),
+                IsEnabled = false,
+                IsHitTestVisible = false,
+                IsRotationEnabled = false,
+                Background = App.Current.Resources["HudPlayerBrush"] as VisualBrush
+            };
+
+            return label;
         }
 
         protected override RadDiagramShape CreateTableRadDiagramShape()
@@ -135,17 +168,22 @@ namespace DriveHUD.Application.TableConfigurators
 
             return predefinedPositions;
         }
-
-        protected override Dictionary<int, int[,]> GetPredefinedMarkersPositions()
+       
+        protected virtual Dictionary<int, int[,]> GetPredefinedLabelPositions()
         {
-            var predefinedPositions = new Dictionary<int, int[,]>
+            var predefinedLablelPositions = new Dictionary<int, int[,]>
             {
-                { 2, new int[,] { { 450, 75 }, { 450, 417 } } },
-                { 6, new int[,] { { 450, 75 }, { 745, 162 }, { 745, 348 }, { 450, 427 }, { 150, 349 }, { 150, 160 } } },
-                { 9, new int[,] { { 567, 75 }, { 745, 146 }, { 760, 292 }, { 636, 413 }, { 448, 426 }, { 260, 414 }, { 137, 293 }, { 153, 146 }, { 332, 75 } } }
+                { 2, new int[,] { { 352, 105 }, { 352, 411 } } },
+                { 3, new int[,] { { 352, 105 }, { 541, 422 }, { 161, 422 } } },
+                { 4, new int[,] { { 352, 105 }, { 660, 256 }, { 352, 411 }, { 57, 256 } } },
+                { 5, new int[,] { { 352, 105 }, { 660, 256 }, { 352, 411 }, { 57, 256 }, { 0, 0 } } },
+                { 6, new int[,] { { 352, 105 }, { 638, 180 }, { 638, 353 }, { 352, 411 }, { 96, 353 }, { 96, 180 } } },
+                { 8, new int[,] { { 352, 105 }, { 529, 128 }, { 698, 258 }, { 529, 393 }, { 352, 411 }, { 196, 393 },  { 13, 258 }, { 194, 122 } } },
+                { 9, new int[,] { { 415, 118 }, { 636, 211 }, { 636, 318 }, { 490, 409 }, { 355, 409 }, { 220, 409 }, { 72, 318 }, { 72, 211 }, { 273, 118 }  } },
+                { 10, new int[,] { { 352, 105 }, { 529, 128 }, { 678, 200 }, { 678, 309 }, { 529, 393 }, { 352, 411 }, { 196, 393 }, { 27, 309 }, { 33, 200 }, { 194, 122 } } }
             };
 
-            return predefinedPositions;
+            return predefinedLablelPositions;
         }
     }
 }

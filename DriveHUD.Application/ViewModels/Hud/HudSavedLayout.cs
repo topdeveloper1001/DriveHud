@@ -66,7 +66,7 @@ namespace DriveHUD.Application.ViewModels
 
         public HudSavedLayout Clone()
         {
-            var clone = (HudSavedLayout)MemberwiseClone();
+            var clone = (HudSavedLayout) MemberwiseClone();
 
             clone.HudStats = new List<StatInfo>(HudStats.Select(x =>
             {
@@ -102,7 +102,7 @@ namespace DriveHUD.Application.ViewModels
 
         public HudSavedPosition Clone()
         {
-            var clone = (HudSavedPosition)MemberwiseClone();
+            var clone = (HudSavedPosition) MemberwiseClone();
             return clone;
         }
     }

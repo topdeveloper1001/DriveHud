@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="249423307991">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL $0.02/$0.04</gametype>
+    <tablename>NL Hold’em: $0.02/$0.04 #3234</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-01-10 18:57:41</startdate>
+    <currency>USD</currency>
+    <nickname>Hero</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <place>0</place>
+    <buyin>0</buyin>
+    <totalbuyin>0</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="78178432">
+    <general>
+      <startdate>2017-01-10 18:57:41</startdate>
+      <players>
+        <player seat="1" name="swop chip" chips="2.77" dealer="0" win="0" bet="0.08" rebuy="0" addon="0" />
+        <player seat="2" name="Ilan big" chips="3.61" dealer="0" win="0" bet="0.12" rebuy="0" addon="0" />
+        <player seat="3" name="mal wop" chips="3.74" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="4" name="ZimaAn" chips="7.16" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="5" name="big dog22" chips="2.68" dealer="0" win="0.31" bet="0.12" rebuy="0" addon="0" />
+        <player seat="6" name="Mind sucker" chips="5.59" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="7" name="tman0120" chips="4.04" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="8" name="Zach_23" chips="5.62" dealer="0" win="0" bet="0" rebuy="0" addon="0" />
+        <player seat="9" name="bor tiran1" chips="3.34" dealer="1" win="0" bet="0" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="swop chip" type="1" sum="0.02" cards="" />
+      <action no="2" player="Ilan big" type="2" sum="0.04" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="swop chip">X X</cards>
+      <cards type="Pocket" player="Ilan big">C8 H4</cards>
+      <cards type="Pocket" player="mal wop">X X</cards>
+      <cards type="Pocket" player="ZimaAn">X X</cards>
+      <cards type="Pocket" player="big dog22">HQ D9</cards>
+      <cards type="Pocket" player="Mind sucker">X X</cards>
+      <cards type="Pocket" player="tman0120">X X</cards>
+      <cards type="Pocket" player="bor tiran1">X X</cards>
+      <action no="3" player="mal wop" type="0" sum="0" cards="" />
+      <action no="4" player="ZimaAn" type="0" sum="0" cards="" />
+      <action no="5" player="big dog22" type="3" sum="0.04" cards="" />
+      <action no="6" player="Mind sucker" type="0" sum="0" cards="" />
+      <action no="7" player="tman0120" type="0" sum="0" cards="" />
+      <action no="8" player="bor tiran1" type="0" sum="0" cards="" />
+      <action no="9" player="swop chip" type="3" sum="0.02" cards="" />
+      <action no="10" player="Ilan big" type="4" sum="0" cards="" />
+    </round>
+    <round no="2">
+      <cards type="Flop" player="">C10 S8 H3</cards>
+      <action no="11" player="swop chip" type="4" sum="0" cards="" />
+      <action no="12" player="Ilan big" type="5" sum="0.04" cards="" />
+      <action no="13" player="big dog22" type="3" sum="0.04" cards="" />
+      <action no="14" player="swop chip" type="3" sum="0.04" cards="" />
+    </round>
+    <round no="3">
+      <cards type="Turn" player="">H6</cards>
+      <action no="15" player="swop chip" type="4" sum="0" cards="" />
+      <action no="16" player="Ilan big" type="5" sum="0.04" cards="" />
+      <action no="17" player="big dog22" type="3" sum="0.04" cards="" />
+      <action no="18" player="swop chip" type="0" sum="0" cards="" />
+    </round>
+    <round no="4">
+      <cards type="River" player="">H7</cards>
+      <action no="19" player="Ilan big" type="4" sum="0" cards="" />
+      <action no="20" player="big dog22" type="4" sum="0" cards="" />
+    </round>
+  </game>
+</session>

@@ -10,21 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common.Resources;
+using DriveHUD.Common.Wpf.Mvvm;
+using DriveHUD.Entities;
 using DriveHUD.ViewModels;
+using Model.Enums;
+using ProtoBuf;
 using ReactiveUI;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Windows.Media;
-using System.Xml.Serialization;
 using System.Linq;
-using System.Linq.Expressions;
-using System.Collections.Specialized;
-using Model.Enums;
-using DriveHUD.Application.ViewModels.Hud;
-using DriveHUD.Common.Resources;
-using ProtoBuf;
-using DriveHUD.Entities;
+using System.Xml.Serialization;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -38,19 +36,19 @@ namespace DriveHUD.Application.ViewModels
 
         public HudElementViewModel()
         {
-            statInfoCollection = new ObservableCollection<StatInfo>();
+            statInfoCollection = new ObservableCollection<StatInfo>();         
         }
 
         public HudElementViewModel(IEnumerable<StatInfo> statInfos)
         {
             statInfoCollection = new ObservableCollection<StatInfo>(statInfos);
-
             Init();
         }
 
         private void Init()
         {
             HudViewType = HudViewType.Vertical_1;
+            Opacity = 100;
         }
 
         public void UpdateMainStats()
@@ -539,6 +537,15 @@ namespace DriveHUD.Application.ViewModels
             {
                 this.RaiseAndSetIfChanged(ref hudType, value);
             }
+        }
+
+        [ProtoMember(22)]
+        private double _opacity;
+
+        public double Opacity
+        {
+            get { return _opacity; }
+            set { this.RaiseAndSetIfChanged(ref _opacity, value); }
         }
 
         #endregion

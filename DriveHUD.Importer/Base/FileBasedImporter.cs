@@ -57,12 +57,19 @@ namespace DriveHUD.Importers
 
         protected abstract string HandHistoryFilter { get; }
 
+        protected virtual bool IsAdvancedLogEnabled { get; set; }
+
         #endregion
 
         // Import data from PS HH
         protected override void DoImport()
         {
-            var handHistoryFolders = GetHandHistoryFolders();
+            var settings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings();
+            var siteSettings = settings.SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite == Site);
+
+            var handHistoryFolders = GetHandHistoryFolders(siteSettings);
+
+            IsAdvancedLogEnabled = settings.GeneralSettings.IsAdvancedLoggingEnabled;
 
             while (!cancellationTokenSource.IsCancellationRequested)
             {
@@ -185,10 +192,10 @@ namespace DriveHUD.Importers
                     LogProvider.Log.Error(this, string.Format("{0} auto-import failed", SiteString), e);
                 }
             }
-           
+
             Clean();
 
-            RaiseProcessStopped();          
+            RaiseProcessStopped();
         }
 
         protected virtual bool TryGetPokerSiteName(string handText, out EnumPokerSites siteName)
@@ -276,12 +283,10 @@ namespace DriveHUD.Importers
         }
 
         // Get directories with hand histories
-        protected virtual DirectoryInfo[] GetHandHistoryFolders()
+        protected virtual DirectoryInfo[] GetHandHistoryFolders(SiteModel siteSettings)
         {
-            var siteSettings = ServiceLocator.Current.GetInstance<ISettingsService>().GetSettings()
-                .SiteSettings.SitesModelList?.FirstOrDefault(x => x.PokerSite.ToString() == this.SiteString);
-
             DirectoryInfo[] dirs;
+
             if (siteSettings != null && siteSettings.HandHistoryLocationList != null && siteSettings.HandHistoryLocationList.Any())
             {
                 dirs = siteSettings.HandHistoryLocationList.Select(x => new DirectoryInfo(x)).ToArray();
@@ -340,6 +345,12 @@ namespace DriveHUD.Importers
             {
                 var pokerClientProcesses = GetPokerClientProcesses();
 
+                if (IsAdvancedLogEnabled)
+                {
+                    var processesNames = string.Join(", ", pokerClientProcesses.Select(x => x.ProcessName).ToArray());
+                    LogProvider.Log.Info($"Possible client processes: {processesNames} [{SiteString}]");
+                }
+
                 var handles = new List<IntPtr>();
 
                 foreach (var pokerClientProcess in pokerClientProcesses)
@@ -352,7 +363,7 @@ namespace DriveHUD.Importers
                             return true;
                         }, IntPtr.Zero);
                     }
-                }
+                }                
 
                 foreach (var handle in handles)
                 {
@@ -369,7 +380,7 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not find table. [{SiteString}]", e);
+                LogProvider.Log.Error(this, $"Could not find table '{parsingResult?.Source?.TableName}'. [{SiteString}]", e);
             }
 
             return IntPtr.Zero;
@@ -385,7 +396,20 @@ namespace DriveHUD.Importers
             return GameFormat.Cash;
         }
 
-        protected abstract bool Match(string title, ParsingResult parsingResult);
+        protected virtual bool Match(string title, ParsingResult parsingResult)
+        {
+            var matchResult = InternalMatch(title, parsingResult);
+
+            if (IsAdvancedLogEnabled)
+            {
+                var tableName = parsingResult?.Source?.TableName;
+                LogProvider.Log.Info($"Checking if window '{title}' matches '{tableName}' table: {matchResult} [{SiteString}]");
+            }
+
+            return matchResult;
+        }
+
+        protected abstract bool InternalMatch(string title, ParsingResult parsingResult);
 
         /// <summary>
         /// Get client process
@@ -395,7 +419,7 @@ namespace DriveHUD.Importers
         {
             var processes = Process.GetProcesses();
 
-            var pokerClientProcesses = processes.Where(x => x.ProcessName.Equals(ProcessName)).ToArray();
+            var pokerClientProcesses = processes.Where(x => x.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase)).ToArray();
 
             return pokerClientProcesses;
         }

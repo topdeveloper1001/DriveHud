@@ -432,7 +432,7 @@ Use CTRL+V to paste your exported data.</value>
     <value>Email:</value>
   </data>
   <data name="Common_RegistrationView_GreetingText" xml:space="preserve">
-    <value>SMART - INTUITIVE - BEAUTIFUL
+    <value>BEAUTIFUL - INTUITIVE - POWERFUL
 Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes with a fully functional 30 day trial. When you are ready to purchase, you can click BUY from the button below in order to  purchase a registered copy of DriveHUD. When you are ready to register, please click the Register button below.</value>
   </data>
   <data name="Common_RegistrationView_OK" xml:space="preserve">
@@ -638,5 +638,32 @@ Welcome to DriveHUD - The Next Generation Poker HUD and Database. DriveHUD comes
   </data>
   <data name="Common_BumperSticker_Description" xml:space="preserve">
     <value>Description</value>
+  </data>
+  <data name="Common_Shop_AddToCart" xml:space="preserve">
+    <value>ADD TO CART</value>
+  </data>
+  <data name="Common_Shop_LearnMore" xml:space="preserve">
+    <value>Learn More</value>
+  </data>
+  <data name="Common_Shop_Huds" xml:space="preserve">
+    <value>HUDs</value>
+  </data>
+  <data name="Common_Shop_Recommended" xml:space="preserve">
+    <value>Recommended</value>
+  </data>
+  <data name="Common_Shop_Training" xml:space="preserve">
+    <value>Training Products</value>
+  </data>
+  <data name="Common_Hud_Copy" xml:space="preserve">
+    <value>Copy</value>
+  </data>
+  <data name="Common_Hud_ApplySizeToAll" xml:space="preserve">
+    <value>Apply Size to All</value>
+  </data>
+  <data name="Common_Hud_HudName" xml:space="preserve">
+    <value>HUD Name</value>
+  </data>
+  <data name="Common_Hud_TableLayout" xml:space="preserve">
+    <value>Table Layout</value>
   </data>
 </root>

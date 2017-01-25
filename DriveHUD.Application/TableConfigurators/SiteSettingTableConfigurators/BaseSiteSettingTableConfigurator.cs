@@ -1,21 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Model.Enums;
-using Model.Settings;
-using Telerik.Windows.Controls;
-using System.Windows.Navigation;
-using System.Windows.Media.Imaging;
-using System.Windows.Media;
-using System.Windows;
-using System.Windows.Input;
+﻿using DriveHUD.Application.ValueConverters;
 using DriveHUD.Application.ViewModels.Settings;
-using System.Windows.Data;
 using DriveHUD.Common.Reflection;
-using DriveHUD.Application.ValueConverters;
 using DriveHUD.Common.Wpf.Converters;
+using DriveHUD.Entities;
+using System;
+using System.Collections.Generic;
+using System.Windows;
+using System.Windows.Data;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using Telerik.Windows.Controls;
 
 namespace DriveHUD.Application.TableConfigurators
 {

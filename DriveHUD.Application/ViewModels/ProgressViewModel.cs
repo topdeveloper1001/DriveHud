@@ -11,10 +11,11 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Progress;
+using DriveHUD.Common.Wpf.Mvvm;
 using ReactiveUI;
 using System;
-using System.Reactive.Linq;
 using System.Globalization;
+using System.Reactive.Linq;
 using System.Threading;
 
 namespace DriveHUD.Application.ViewModels

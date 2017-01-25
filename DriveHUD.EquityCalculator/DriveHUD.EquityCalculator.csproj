@@ -94,17 +94,11 @@
     <Compile Include="Analyzer\HandHistory.cs" />
     <Compile Include="Analyzer\HandStreetResult.cs" />
     <Compile Include="Analyzer\Jacob.cs" />
-    <Compile Include="Analyzer\MainAnalyzer.cs" />
     <Compile Include="Analyzer\Player.cs" />
     <Compile Include="Analyzer\Settings.cs" />
     <Compile Include="Analyzer\Stats.cs" />
     <Compile Include="Analyzer\TempConfig.cs" />
-    <Compile Include="Calculations\EquityCalculatorMain.cs" />
-    <Compile Include="Calculations\Evalz.cs" />
-    <Compile Include="Calculations\Player.cs" />
-    <Compile Include="Calculations\VSTable.cs" />
-    <Compile Include="Calculations\Weight.cs" />
-    <Compile Include="Calculations\WeightTable.cs" />
+    <Compile Include="Analyzer\MainAnalyzer.cs" />
     <Compile Include="Models\CheckableCardModel.cs" />
     <Compile Include="Models\ICardCollectionContainer.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\ExportNotification.cs" />
@@ -224,6 +218,10 @@
     <ProjectReference Include="..\DriveHUD.Entities\DriveHUD.Entities.csproj">
       <Project>{d009a701-add8-4c10-8eb1-c241bdd9b3c1}</Project>
       <Name>DriveHUD.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DriveHUD.EquityCalculator.Base\DriveHUD.EquityCalculator.Base.csproj">
+      <Project>{18F3327C-EE94-478A-80B8-A89BDA614C65}</Project>
+      <Name>DriveHUD.EquityCalculator.Base</Name>
     </ProjectReference>
     <ProjectReference Include="..\DriveHUD.ViewModels\DriveHUD.ViewModels.csproj">
       <Project>{c6a64d15-132d-46a6-8c95-42d8934ff6b4}</Project>

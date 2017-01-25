@@ -124,6 +124,9 @@
       <Component Id="DriveHUD.EquityCalculator.dll" Guid="{E4EF0A5B-5623-4291-98AC-4AD47E7CA119}">
         <File Id="DriveHUD.EquityCalculator.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.EquityCalculator.dll" />
       </Component>
+      <Component Id="DriveHUD.EquityCalculator.Base.dll" Guid="{9737B86C-02FC-4279-B9CB-ED18F38DE585}">
+        <File Id="DriveHUD.EquityCalculator.Base.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.EquityCalculator.Base.dll" />
+      </Component>
       <Component Id="DriveHUD.Controls.dll" Guid="{EE89DACB-923F-4B91-9136-1689357CDE1A}">
         <File Id="DriveHUD.Controls.dll" KeyPath="yes" Source="$(var.BuildDirectory)\DriveHUD.Controls.dll" />
       </Component>
@@ -181,7 +184,7 @@
       </Component>
       <Component Id="System.Data.SQLite.dll" Guid="{7A10FFB8-4885-45D6-8220-2F3001EBE45D}">
         <File Id="System.Data.SQLite.dll" KeyPath="yes" Source="$(var.BuildDirectory)\System.Data.SQLite.dll" />
-      </Component>            
+      </Component>
       <Component Id="protobufnet.dll" Guid="{AB2D1023-1875-4D5D-8438-0F60BC04D260}">
         <File Id="protobufnet.dll" KeyPath="yes" Source="$(var.BuildDirectory)\protobuf-net.dll" />
       </Component>
@@ -289,7 +292,7 @@
       </Component>
       <Component Id="Microsoft.Expression.Drawing.dll" Guid="{72509625-8FD7-40E5-93AF-BCFBA0CC091D}">
         <File Id="Microsoft.Expression.Drawing.dll" Name="Microsoft.Expression.Drawing.dll" KeyPath="yes" Source="$(var.BuildDirectory)\Microsoft.Expression.Drawing.dll" />
-      </Component>      
+      </Component>
     </DirectoryRef>
 
     <DirectoryRef Id="LIB">
@@ -446,6 +449,7 @@
       <ComponentRef Id="DriveHUD.Common.Infrastructure.dll" />
       <ComponentRef Id="DriveHUD.Common.Wpf.dll" />
       <ComponentRef Id="DriveHUD.EquityCalculator.dll" />
+      <ComponentRef Id="DriveHUD.EquityCalculator.Base.dll" />
       <ComponentRef Id="DriveHUD.Controls.dll" />
       <ComponentRef Id="DriveHUD.Importers.dll" />
       <ComponentRef Id="Model.dll" />
@@ -474,7 +478,7 @@
       <ComponentRef Id="SQLite.Interop.dll" />
       <ComponentRef Id="sqlite3.dll" />
       <ComponentRef Id="SQLite.Interop.x64.dll" />
-      <ComponentRef Id="sqlite3.x64.dll" />            
+      <ComponentRef Id="sqlite3.x64.dll" />
       <ComponentRef Id="protobufnet.dll" />
       <ComponentRef Id="Telerik.Windows.Controls.dll" />
       <ComponentRef Id="Telerik.Windows.Controls.Chart.dll" />

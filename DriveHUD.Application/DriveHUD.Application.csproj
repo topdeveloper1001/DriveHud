@@ -70,13 +70,13 @@
     <Reference Include="DeployLX.Licensing.v5, Version=5.0.2000.0, Culture=neutral, PublicKeyToken=798276055709c98a, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DeployLX.Licensing.v5.dll</HintPath>
     </Reference>
-    <Reference Include="DHCReg, Version=1.0.7.931, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHCReg, Version=1.0.8.1052, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHCReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHHReg, Version=1.0.7.931, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHHReg, Version=1.0.8.1052, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHHReg.dll</HintPath>
     </Reference>
-    <Reference Include="DHOReg, Version=1.0.7.931, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
+    <Reference Include="DHOReg, Version=1.0.8.1052, Culture=neutral, PublicKeyToken=a269fc7fad0e0645, processorArchitecture=MSIL">
       <HintPath>..\dependencies\DHOReg.dll</HintPath>
     </Reference>
     <Reference Include="Facebook, Version=6.0.10.0, Culture=neutral, PublicKeyToken=58cb4f2111d1e6de, processorArchitecture=MSIL">
@@ -314,6 +314,7 @@
     <Compile Include="Licensing\LicenseSubType.cs" />
     <Compile Include="Licensing\LicenseType.cs" />
     <Compile Include="Migration\IMigrationService.cs" />
+    <Compile Include="Migration\Migrations\Migration0013_NonDb_LayoutsToNewLayoutModel.cs" />
     <Compile Include="Migration\Migrations\Migration0009_NonDB_AddAmericasCardroomPredefinedLayouts.cs" />
     <Compile Include="Migration\Migrations\Migration0007_NonDB_ChangeDefaultCustomProcessedDataLocation.cs" />
     <Compile Include="Migration\MigrationService.cs" />
@@ -328,6 +329,7 @@
     <Compile Include="Migration\Migrations\Migration0010_NonDb_RemovePreferredSeatingSportsbettingTigerGaming.cs" />
     <Compile Include="Migration\Migrations\Migration0011_RemoveHandHistoryHandNumberUniqueKey.cs" />
     <Compile Include="Migration\Migrations\Migration0012_MigrationToSQLite.cs" />
+    <Compile Include="Migration\Migrations\Migration0014_LayoutsToMultipleFiles.cs" />
     <Compile Include="Migration\PostgresMigrationService.cs" />
     <Compile Include="Migration\SQLiteMigrationService.cs" />
     <Compile Include="ReportsLayout\OpponentAnalysisLayoutCreator.cs" />
@@ -344,7 +346,17 @@
     <Compile Include="Surrogates\SolidColorBrushDto.cs" />
     <Compile Include="Surrogates\PointDto.cs" />
     <Compile Include="TableConfigurators\BlackChipPokerTableConfigurator.cs" />
+    <Compile Include="TableConfigurators\CommonHorizTableConfiguration.cs" />
+    <Compile Include="TableConfigurators\CommonVertOneTableConfiguration.cs" />
+    <Compile Include="TableConfigurators\CommonVertTwoTableConfiguration.cs" />
     <Compile Include="TableConfigurators\Poker888TableConfigurator.cs" />
+    <Compile Include="TableConfigurators\PositionConfiguratorHelper.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\WinningPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\CommonPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\IgnitionPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\IPositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\Poker888PositionProvider.cs" />
+    <Compile Include="TableConfigurators\PositionProviders\PokerStarsPositionProvider.cs" />
     <Compile Include="TableConfigurators\SeatArea\WinningPokerNetworkTableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\SeatArea\Poker888TableSeatAreaConfigurator.cs" />
     <Compile Include="TableConfigurators\AmericasCardroomTableConfigurator.cs" />
@@ -366,7 +378,11 @@
     <Compile Include="TableConfigurators\WinningPokerNetworkTableConfigurator.cs" />
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
+    <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
+    <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
+    <Compile Include="ViewModels\Hud\EnumTableTypeWrapper.cs" />
+    <Compile Include="ViewModels\Hud\HudElementViewModelCreationInfo.cs" />
     <Compile Include="ViewModels\Hud\WinningPokerNetworkHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\BaseHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\BaseRangeTypePopupViewModel.cs" />
@@ -383,7 +399,13 @@
     <Compile Include="ViewModels\Hud\IHudRangeStat.cs" />
     <Compile Include="ViewModels\Hud\IHudWindowElement.cs" />
     <Compile Include="ViewModels\Hud\Poker888HudPanelService.cs" />
-    <Compile Include="ViewModels\New\AppsViewModel.cs" />
+    <Compile Include="ViewModels\Layouts\UiPositionInfo.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutInfo.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutMapping.cs" />
+    <Compile Include="ViewModels\Layouts\HudLayoutMappings.cs" />
+    <Compile Include="ViewModels\Layouts\HudPositionInfo.cs" />
+    <Compile Include="ViewModels\Layouts\HudPositionsInfo.cs" />
+    <Compile Include="ViewModels\Main\AppsViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupBaseNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerBaseFilterViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerBaseNotificationViewModel.cs" />
@@ -408,7 +430,7 @@
     <Compile Include="ViewModels\Settings\SettingsUpgradeViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
-    <Compile Include="Views\New\AppsView.xaml.cs">
+    <Compile Include="Views\Main\AppsView.xaml.cs">
       <DependentUpon>AppsView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Filters\FilterDateView.xaml.cs">
@@ -419,6 +441,9 @@
     </Compile>
     <Compile Include="Views\PopupContainers\PopupContainerSupportView.xaml.cs">
       <DependentUpon>PopupContainerSupportView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Hud\HudSelectSiteGameTypeView.xaml.cs">
+      <DependentUpon>HudSelectSiteGameTypeView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Popups\PlayerNoteView.xaml.cs">
       <DependentUpon>PlayerNoteView.xaml</DependentUpon>
@@ -440,10 +465,6 @@
     <Compile Include="Views\Popups\DataRemoverView.xaml.cs">
       <DependentUpon>DataRemoverView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\New\ConfigurePostgresqlServer.xaml.cs">
-      <DependentUpon>ConfigurePostgresqlServer.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ViewModels\New\ConfigurePostgresqlServerViewModel.cs" />
     <Compile Include="Controls\DragCanvas.cs" />
     <Compile Include="Controls\HudRichPanel.xaml.cs">
       <DependentUpon>HudRichPanel.xaml</DependentUpon>
@@ -452,7 +473,7 @@
     <Compile Include="Controls\RadListBoxDragDropBehavior.cs" />
     <Compile Include="Common\StaticClasses.cs" />
     <Compile Include="ControlTemplateSelectors\ReplayerTemplateSelector.cs" />
-    <Compile Include="ControlTemplateSelectors\TemplateSelectors.cs" />
+    <Compile Include="ControlTemplateSelectors\HudPanelTemplateSelector.cs" />
     <Compile Include="CustomeGauge.xaml.cs">
       <DependentUpon>CustomeGauge.xaml</DependentUpon>
     </Compile>
@@ -524,14 +545,14 @@
     <Compile Include="ViewModels\Hud\IHudPanelService.cs" />
     <Compile Include="ViewModels\Hud\PlayerHudContent.cs" />
     <Compile Include="ViewModels\IProgressViewModel.cs" />
-    <Compile Include="ViewModels\New\DashboardViewModel.cs" />
+    <Compile Include="ViewModels\Main\DashboardViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\Notifications\PopupContainerCardSelectorViewModelNotification.cs" />
     <Compile Include="ViewModels\PopupContainers\PopupContainerCardSelectorViewModel.cs" />
     <Compile Include="ViewModels\PopupContainers\FilterPopup\PopupContainerFiltersViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudViewModel.cs" />
-    <Compile Include="ViewModels\New\MainWindowViewModel.cs" />
-    <Compile Include="ViewModels\New\ReportGadgetViewModel.cs" />
-    <Compile Include="ViewModels\New\TournamentViewModel.cs" />
+    <Compile Include="ViewModels\Main\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\Main\ReportGadgetViewModel.cs" />
+    <Compile Include="ViewModels\Main\TournamentViewModel.cs" />
     <Compile Include="ViewModels\Popups\HandNoteViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudElementViewModel.cs" />
     <Compile Include="ViewModels\Hud\HudLayout.cs" />
@@ -546,7 +567,6 @@
     <Compile Include="ViewModels\Replayer\ReplayerPlayerViewModel.cs" />
     <Compile Include="ViewModels\Replayer\ReplayerTableState.cs" />
     <Compile Include="ViewModels\Replayer\ReplayerViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
     <Compile Include="MarginSetter.cs" />
     <Compile Include="Views\Filters\FilterOmahaHandGridView.xaml.cs">
       <DependentUpon>FilterOmahaHandGridView.xaml</DependentUpon>
@@ -563,10 +583,10 @@
     <Compile Include="Views\Hud\HudStatSettingsView.xaml.cs">
       <DependentUpon>HudStatSettingsView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\New\DashboardView.xaml.cs">
+    <Compile Include="Views\Main\DashboardView.xaml.cs">
       <DependentUpon>DashboardView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\New\ReportGadgetView.xaml.cs">
+    <Compile Include="Views\Main\ReportGadgetView.xaml.cs">
       <DependentUpon>ReportGadgetView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ReportsLayout\HoleCardsLayoutCreator.cs" />
@@ -580,7 +600,7 @@
     <Compile Include="Reports\OverAllReport.xaml.cs">
       <DependentUpon>OverAllReport.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\New\TournamentView.xaml.cs">
+    <Compile Include="Views\Main\TournamentView.xaml.cs">
       <DependentUpon>TournamentView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ValueConverters\BoolToggleConverter.cs" />
@@ -724,7 +744,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\New\AppsView.xaml">
+    <Page Include="Views\Main\AppsView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -744,6 +764,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Hud\HudSelectSiteGameTypeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Popups\PlayerNoteView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -757,10 +781,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Popups\DataRemoverView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Views\New\ConfigurePostgresqlServer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -891,11 +911,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\New\DashboardView.xaml">
+    <Page Include="Views\Main\DashboardView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Views\New\ReportGadgetView.xaml">
+    <Page Include="Views\Main\ReportGadgetView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -919,7 +939,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\New\TournamentView.xaml">
+    <Page Include="Views\Main\TournamentView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -1127,7 +1147,9 @@
     <Content Include="Lib\Facebook.dll" />
     <Content Include="Lib\Twitterizer2.dll" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Shop\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
