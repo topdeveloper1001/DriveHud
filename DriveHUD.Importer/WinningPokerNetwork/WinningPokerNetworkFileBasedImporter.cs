@@ -186,14 +186,9 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return builder.ToString();
         }
 
-        protected override bool Match(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, ParsingResult parsingResult)
         {
             var tableName = parsingResult.Source.TableName;
-
-            if (IsAdvancedLogEnabled)
-            {
-                LogProvider.Log.Info($"Checking if window '{title}' matches '{tableName}' table [{SiteString}]");
-            }
 
             if (string.IsNullOrWhiteSpace(title) || string.IsNullOrWhiteSpace(tableName))
             {

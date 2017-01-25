@@ -345,6 +345,12 @@ namespace DriveHUD.Importers
             {
                 var pokerClientProcesses = GetPokerClientProcesses();
 
+                if (IsAdvancedLogEnabled)
+                {
+                    var processesNames = string.Join(", ", pokerClientProcesses.Select(x => x.ProcessName).ToArray());
+                    LogProvider.Log.Info($"Possible client processes: {processesNames} [{SiteString}]");
+                }
+
                 var handles = new List<IntPtr>();
 
                 foreach (var pokerClientProcess in pokerClientProcesses)
@@ -357,7 +363,7 @@ namespace DriveHUD.Importers
                             return true;
                         }, IntPtr.Zero);
                     }
-                }
+                }                
 
                 foreach (var handle in handles)
                 {
@@ -374,7 +380,7 @@ namespace DriveHUD.Importers
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, $"Could not find table. [{SiteString}]", e);
+                LogProvider.Log.Error(this, $"Could not find table '{parsingResult?.Source?.TableName}'. [{SiteString}]", e);
             }
 
             return IntPtr.Zero;
@@ -390,7 +396,20 @@ namespace DriveHUD.Importers
             return GameFormat.Cash;
         }
 
-        protected abstract bool Match(string title, ParsingResult parsingResult);
+        protected virtual bool Match(string title, ParsingResult parsingResult)
+        {
+            var matchResult = InternalMatch(title, parsingResult);
+
+            if (IsAdvancedLogEnabled)
+            {
+                var tableName = parsingResult?.Source?.TableName;
+                LogProvider.Log.Info($"Checking if window '{title}' matches '{tableName}' table: {matchResult} [{SiteString}]");
+            }
+
+            return matchResult;
+        }
+
+        protected abstract bool InternalMatch(string title, ParsingResult parsingResult);
 
         /// <summary>
         /// Get client process
@@ -400,7 +419,7 @@ namespace DriveHUD.Importers
         {
             var processes = Process.GetProcesses();
 
-            var pokerClientProcesses = processes.Where(x => x.ProcessName.Equals(ProcessName)).ToArray();
+            var pokerClientProcesses = processes.Where(x => x.ProcessName.Equals(ProcessName, StringComparison.OrdinalIgnoreCase)).ToArray();
 
             return pokerClientProcesses;
         }
