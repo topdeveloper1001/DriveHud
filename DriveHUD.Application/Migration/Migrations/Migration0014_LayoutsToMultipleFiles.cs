@@ -50,7 +50,8 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private static HudSavedLayouts LoadOldLayouts(string fileName)
         {
-            if (!File.Exists(fileName)) return null;
+            if (!File.Exists(fileName))
+                return null;
             using (var fs = File.Open(fileName, FileMode.Open))
             {
                 var xmlSerializer = new XmlSerializer(typeof(HudSavedLayouts));
@@ -173,11 +174,20 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
             var oldLayouts = LoadOldLayouts(Path.Combine(StringFormatter.GetAppDataFolderPath(), "Layouts.xml"));
 
+            if (oldLayouts == null)
+                return;
+
             while (oldLayouts.Layouts.Count > 0)
             {
                 var currentLayout = oldLayouts.Layouts[0];
 
                 var tableDescription = hashTable.FirstOrDefault(h => h.Hash == currentLayout.LayoutId);
+
+                if (tableDescription == null)
+                {
+                    oldLayouts.Layouts.RemoveAt(0);
+                    continue;
+                }
 
                 var grouppedLayouts =
                     oldLayouts.Layouts.Where(
@@ -231,6 +241,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
                     {
                         var table = hashTable.FirstOrDefault(h => h.Hash == selected.LayoutId);
 
+                        if (table == null)
+                            continue;
+
                         var mapping = new HudLayoutMapping
                                           {
                                               FileName = Path.GetFileName(layoutFileName),
@@ -253,9 +266,10 @@ namespace DriveHUD.Application.MigrationService.Migrations
                         hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
                     }
                 }
+
                 oldLayouts.Layouts.RemoveAll(
                     l =>
-                        GetTableDescription(l.LayoutId).TableType == tableDescription?.TableType
+                        GetTableDescription(l.LayoutId).TableType == tableDescription.TableType
                         && HudObjectsComparer.AreEquals(l.HudBumperStickerTypes, currentLayout.HudBumperStickerTypes)
                         && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
                         && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats));
