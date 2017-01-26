@@ -30,16 +30,13 @@ namespace DriveHUD.Application.Bootstrappers
 
         private ISettingsService settingsService;
 
-        public SQLiteBootstrapper()
-        {
-            settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-        }     
-
         public void InitializeDatabase()
         {
             var appData = StringFormatter.GetAppDataFolderPath();
 
             var isNewInstallation = !Directory.Exists(appData);
+
+            settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
 
             if (isNewInstallation)
             {
