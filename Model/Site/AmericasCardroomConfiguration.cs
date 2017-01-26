@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using DriveHUD.Entities;
-using Model.Enums;
 using System.IO;
+using System.Xml;
+using DriveHUD.Common.Log;
+using Microsoft.Win32;
 
 namespace Model.Site
 {
@@ -68,18 +68,107 @@ namespace Model.Site
 
         public virtual string[] GetHandHistoryFolders()
         {
-            var folders = new string[]
+            var path = GetInstalledPath("Americas Cardroom");
+
+            if (string.IsNullOrEmpty(path))
+                return new string[] { };
+
+            return GetHandHistoryFoldersFromProfiles(Path.Combine(path, "profiles")).ToArray();
+        }
+
+        protected string GetInstalledPath(string softwareName)
+        {
+            try
             {
-                Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles),
-                Environment.GetFolderPath(Environment.SpecialFolder.ProgramFilesX86),
-                Path.GetPathRoot(Environment.SystemDirectory)
-            }.Where(x => !string.IsNullOrWhiteSpace(x)).Distinct();
+                var key = Registry.LocalMachine.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall") ??
+                          Registry.LocalMachine.OpenSubKey(
+                              @"SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall");
 
-            var dirs = (from possibleFolder in folders
-                        let folder = Path.Combine(possibleFolder, "AmericasCardroom", "profiles")
-                        select folder).ToArray();
+                if (key == null)
+                    return string.Empty;
 
-            return dirs;
+                foreach (var subkey in key.GetSubKeyNames().Select(keyName => key.OpenSubKey(keyName)))
+                {
+                    if (string.Equals(subkey?.GetValue("DisplayName") as string, softwareName, StringComparison.InvariantCultureIgnoreCase))
+                        return subkey?.GetValue("InstallLocation") as string;
+                }
+
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(e);
+            }
+
+            return string.Empty;
+        }
+
+        protected IEnumerable<string> GetHandHistoryFoldersFromProfiles(string path)
+        {
+            var result = new List<string>();
+
+            try
+            {
+                if (!Directory.Exists(path))
+                    return result;
+
+                var profilesDirectory = new DirectoryInfo(path);
+                foreach (var profileDir in profilesDirectory.GetDirectories())
+                {
+                    var prefFileName = Path.Combine(profileDir.FullName, "pref.xml");
+
+                    var configuredHandHistoryPath = GetHandHistoryFolderFromPrefs(prefFileName);
+
+                    if (!string.IsNullOrEmpty(configuredHandHistoryPath))
+                    {
+                        result.Add(configuredHandHistoryPath);
+                        continue;
+                    }
+
+                    var handHistoryPath = Path.Combine(profileDir.FullName, "HandHistory");
+
+                    if (Directory.Exists(handHistoryPath))
+                        result.Add(handHistoryPath);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(e);
+            }
+            return result;
+        }
+
+        protected string GetHandHistoryFolderFromPrefs(string prefFileName)
+        {
+            try
+            {
+                if (!File.Exists(prefFileName))
+                    return string.Empty;
+
+                var prefFile = new XmlDocument();
+                prefFile.Load(prefFileName);
+
+                var node = prefFile.SelectSingleNode("property_set_list");
+
+                var props = node?.SelectSingleNode("property_set")?.SelectNodes("property");
+
+                if (props == null)
+                    return string.Empty;
+
+                foreach (XmlNode property in props)
+                {
+                    if (property.Attributes?.OfType<XmlAttribute>().FirstOrDefault(a => a.Name == "id")?.Value != "3")
+                        continue;
+
+                    if (Directory.Exists(property.InnerText))
+                        return property.InnerText;
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(e);
+            }
+
+            return string.Empty;
         }
 
         public void ValidateSiteConfiguration()
