@@ -165,7 +165,7 @@ namespace DriveHUD.Importers
                                 FileName = fileName
                             };
 
-                            LogProvider.Log.Info(string.Format("Found '{0}' file.", cf.Key));
+                            LogProvider.Log.Info($"Found '{cf.Key}' file. [{SiteString}]");
 
                             cf.Value.GameInfo = gameInfo;
                         }
