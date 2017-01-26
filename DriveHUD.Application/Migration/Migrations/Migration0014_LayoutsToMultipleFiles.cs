@@ -402,6 +402,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private static bool AreEquals(HudBumperStickerType first, HudBumperStickerType second)
         {
+            if (first == null && second == null) return true;
+            if (first == null || second == null) return false;
+
             if (first.Description == "3-Bets too much, and folds to a 4-bet too often.") first.Description = "3-Bets too much, and folds to a 3-bet too often.";
             if (second.Description == "3-Bets too much, and folds to a 4-bet too often.") second.Description = "3-Bets too much, and folds to a 3-bet too often.";
             if (first.Description == "Open raises to wide of a range in early pre-flop positions.") first.Description = "Open raises too wide of a range in early pre-flop positions.";
@@ -439,6 +442,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private static bool AreEquals(StatInfo first, StatInfo second)
         {
+            if (first == null && second == null) return true;
+            if (first == null || second == null) return false;
+
             if (first.Caption != second.Caption) return false;
             if (first.Stat != second.Stat) return false;
             if (!AreEquals(first.StatInfoGroup, second.StatInfoGroup)) return false;
@@ -501,6 +507,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public static bool AreEquals(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
         {
+            if (newLayout == null && defaultLayout == null) return true;
+            if (newLayout == null || defaultLayout == null) return false;
+
             if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
             if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
             if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
@@ -520,6 +529,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public static bool AreEqualsExceptPositions(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
         {
+            if (newLayout == null && defaultLayout == null) return true;
+            if (newLayout == null || defaultLayout == null) return false;
+
             if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
             if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
             if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
