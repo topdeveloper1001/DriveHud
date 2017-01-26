@@ -1,11 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DriveHUD.Entities;
-using System.IO;
-using System.Xml;
+﻿//-----------------------------------------------------------------------
+// <copyright file="AmericasCardroomConfiguration.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
 using DriveHUD.Common.Log;
+using DriveHUD.Entities;
 using Microsoft.Win32;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Xml;
 
 namespace Model.Site
 {
@@ -68,7 +80,7 @@ namespace Model.Site
 
         public virtual string[] GetHandHistoryFolders()
         {
-            var path = GetInstalledPath("Americas Cardroom");
+            var path = GetInstalledPath("AmericasCardroom");
 
             if (string.IsNullOrEmpty(path))
                 return new string[] { };
@@ -92,11 +104,10 @@ namespace Model.Site
                     if (string.Equals(subkey?.GetValue("DisplayName") as string, softwareName, StringComparison.InvariantCultureIgnoreCase))
                         return subkey?.GetValue("InstallLocation") as string;
                 }
-
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(e);
+                LogProvider.Log.Error(this, $"Could read data from registry for {softwareName}. [{Site}] ", e);
             }
 
             return string.Empty;
@@ -112,6 +123,7 @@ namespace Model.Site
                     return result;
 
                 var profilesDirectory = new DirectoryInfo(path);
+
                 foreach (var profileDir in profilesDirectory.GetDirectories())
                 {
                     var prefFileName = Path.Combine(profileDir.FullName, "pref.xml");
@@ -132,7 +144,7 @@ namespace Model.Site
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(e);
+                LogProvider.Log.Error(this, $"Could not get hh folder from profiles '{path}' [{Site}]", e);
             }
             return result;
         }
@@ -165,7 +177,7 @@ namespace Model.Site
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(e);
+                LogProvider.Log.Error(this, $"Could not get hh folder from preferences '{prefFileName}' [{Site}]", e);
             }
 
             return string.Empty;
