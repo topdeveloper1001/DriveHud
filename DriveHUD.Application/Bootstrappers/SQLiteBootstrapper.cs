@@ -68,6 +68,14 @@ namespace DriveHUD.Application.Bootstrappers
                 migrationService.MigrateToLatest(connectionString);
 
                 LogProvider.Log.Debug("DH is up to date");
+
+                var dbFileInfo = new FileInfo(dbFile);
+
+                if (!dbFileInfo.Exists || dbFileInfo.Length == 0)
+                {
+                    LogProvider.Log.Debug("DB file not found or corrupted");
+                    InitializeNewDatabase(appData);
+                }
             }
             catch (NpgsqlException e)
             {
@@ -111,9 +119,22 @@ namespace DriveHUD.Application.Bootstrappers
                     Directory.CreateDirectory(appData);
                 }
 
-                var dbFile = StringFormatter.GetSQLiteDbFilePath();
+                var dbFileInfo = new FileInfo(StringFormatter.GetSQLiteDbFilePath());
 
-                if (!File.Exists(dbFile))
+                var createNewDatabase = false;
+
+                if (dbFileInfo.Exists && dbFileInfo.Length == 0)
+                {
+                    LogProvider.Log.Info("Deleting corrupted DB file");
+                    dbFileInfo.Delete();
+                    createNewDatabase = true;
+                }
+                else if (!dbFileInfo.Exists)
+                {
+                    createNewDatabase = true;
+                }
+
+                if (createNewDatabase)
                 {
                     CreateNewDatabase();
                 }
