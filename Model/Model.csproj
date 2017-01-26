@@ -259,6 +259,7 @@
     <Compile Include="Settings\SettingsService.cs" />
     <Compile Include="Settings\SettingsBase.cs" />
     <Compile Include="Settings\SettingsModel.cs" />
+    <Compile Include="Shop\IShopCacheService.cs" />
     <Compile Include="Shop\IShopModel.cs" />
     <Compile Include="Shop\IShopRepository.cs" />
     <Compile Include="Shop\ShopModel.cs" />

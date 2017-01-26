@@ -89,7 +89,7 @@ namespace DriveHUD.Importers.PokerStars
 
         private const string tournamentPattern = "{0} Table {1}";
 
-        protected override bool Match(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, ParsingResult parsingResult)
         {
             if (string.IsNullOrWhiteSpace(title) || parsingResult == null ||
                parsingResult.Source == null || parsingResult.Source.GameDescription == null || string.IsNullOrEmpty(parsingResult.Source.TableName))

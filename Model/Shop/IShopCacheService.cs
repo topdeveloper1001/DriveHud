@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="BlackChipPokerConfiguration.cs" company="Ace Poker Solutions">
+// <copyright file="IShopCacheService.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,27 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Entities;
-using System.IO;
+using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Model.Site
+namespace Model.Shop
 {
-    public class BlackChipPokerConfiguration : AmericasCardroomConfiguration
+    public interface IShopCacheService
     {
-        public override EnumPokerSites Site
-        {
-            get { return EnumPokerSites.BlackChipPoker; }
-        }
 
-        public override string[] GetHandHistoryFolders()
-        {
-            var path = GetInstalledPath("BlackChipPoker");
-
-            if (string.IsNullOrEmpty(path))
-                return new string[] {};
-
-            return GetHandHistoryFoldersFromProfiles(Path.Combine(path, "profiles")).ToArray();
-        }
     }
 }

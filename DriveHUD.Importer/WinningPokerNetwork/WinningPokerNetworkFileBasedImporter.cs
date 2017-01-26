@@ -11,6 +11,7 @@
 //----------------------------------------------------------------------
 
 using DriveHUD.Common.Extensions;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Progress;
 using DriveHUD.Common.WinApi;
 using DriveHUD.Entities;
@@ -185,7 +186,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             return builder.ToString();
         }
 
-        protected override bool Match(string title, ParsingResult parsingResult)
+        protected override bool InternalMatch(string title, ParsingResult parsingResult)
         {
             var tableName = parsingResult.Source.TableName;
 
@@ -348,6 +349,7 @@ namespace DriveHUD.Importers.WinningPokerNetwork
             }
 
             var tableNameEndIndex = title.Substring(0, gameTypeIndex).LastIndexOf('-');
+
             if (tableNameEndIndex == -1)
             {
                 return title;
