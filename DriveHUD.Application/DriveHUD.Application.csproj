@@ -314,7 +314,6 @@
     <Compile Include="Licensing\LicenseSubType.cs" />
     <Compile Include="Licensing\LicenseType.cs" />
     <Compile Include="Migration\IMigrationService.cs" />
-    <Compile Include="Migration\Migrations\Migration0013_NonDb_LayoutsToNewLayoutModel.cs" />
     <Compile Include="Migration\Migrations\Migration0009_NonDB_AddAmericasCardroomPredefinedLayouts.cs" />
     <Compile Include="Migration\Migrations\Migration0007_NonDB_ChangeDefaultCustomProcessedDataLocation.cs" />
     <Compile Include="Migration\MigrationService.cs" />

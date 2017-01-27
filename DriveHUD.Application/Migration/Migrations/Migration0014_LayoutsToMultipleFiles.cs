@@ -1,19 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using DriveHUD.Application.ViewModels;
+﻿using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.ViewModels;
-using DriveHUD.Entities;
+using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
+using DriveHUD.Entities;
+using DriveHUD.ViewModels;
 using FluentMigrator;
-using Model.Filters;
-using System.IO;
-using System.Windows;
-using System.Xml.Serialization;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Enums;
+using Model.Filters;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Windows;
+using System.Xml.Serialization;
 
 namespace DriveHUD.Application.MigrationService.Migrations
 {
@@ -121,7 +122,7 @@ namespace DriveHUD.Application.MigrationService.Migrations
                         .Select(
                             p => new HudPositionInfo { Position = new Point(p.Position.X, p.Position.Y), Seat = p.Seat })
                         .ToList();
-                
+
                 if (newPositionInfo.HudPositions.Any())
                     newLayout.HudPositionsInfo.Add(newPositionInfo);
             }
@@ -170,116 +171,129 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public override void Up()
         {
-            defaultLayouts = GetDefaultLayouts();
-
-            var oldLayouts = LoadOldLayouts(Path.Combine(StringFormatter.GetAppDataFolderPath(), "Layouts.xml"));
-
-            if (oldLayouts == null)
-                return;
-
-            while (oldLayouts.Layouts.Count > 0)
+            try
             {
-                var currentLayout = oldLayouts.Layouts[0];
+                LogProvider.Log.Info("Preparing migration #14");
 
-                var tableDescription = hashTable.FirstOrDefault(h => h.Hash == currentLayout.LayoutId);
+                defaultLayouts = GetDefaultLayouts();
 
-                if (tableDescription == null)
+                var oldLayouts = LoadOldLayouts(Path.Combine(StringFormatter.GetAppDataFolderPath(), "Layouts.xml"));
+
+                if (oldLayouts == null)
+                    return;
+
+                while (oldLayouts.Layouts.Count > 0)
                 {
-                    oldLayouts.Layouts.RemoveAt(0);
-                    continue;
-                }
+                    var currentLayout = oldLayouts.Layouts[0];
 
-                var grouppedLayouts =
-                    oldLayouts.Layouts.Where(
-                        l =>
-                            GetTableDescription(l.LayoutId).TableType == tableDescription?.TableType
-                            && l.HudStats.Any()
-                            && HudObjectsComparer.AreEquals(
-                                l.HudBumperStickerTypes,
-                                currentLayout.HudBumperStickerTypes)
-                            && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
-                            && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats)).ToList();
+                    var tableDescription = hashTable.FirstOrDefault(h => h.Hash == currentLayout.LayoutId);
 
-                foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
-                {
-                    var newLayout = GetHudLayoutInfo(grouppedLayouts, hudViewType);
-                    if (newLayout == null)
+                    if (tableDescription == null)
+                    {
+                        oldLayouts.Layouts.RemoveAt(0);
                         continue;
-
-                    if (!newLayout.IsDefault)
-                    {
-                        var i = 1;
-                        string hudTypeName = string.Empty;
-                        if (hudViewType != HudViewType.Plain) hudTypeName = $" {hudViewType}";
-
-                        string tableTypeName = string.Empty;
-                        if (
-                            !newLayout.Name.Contains(
-                                CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)))
-                            tableTypeName =
-                                $" {CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)}";
-
-                        var layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName}";
-                        while (hudLayoutsService.HudLayoutMappings.Mappings.Any(f => f.Name == layoutName))
-                        {
-                            layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName} {i}";
-                            i++;
-                        }
-                        newLayout.Name = layoutName;
                     }
-                    else
-                    {
-                        var def = defaultLayouts.FirstOrDefault(l => l.Name == newLayout.Name);
-                        if (def != null)
-                        {
-                            defaultLayouts[defaultLayouts.IndexOf(def)] = newLayout;
-                        }
-                    }
-                    var layoutFileName = Save(newLayout);
 
-                    foreach (var selected in grouppedLayouts)
-                    {
-                        var table = hashTable.FirstOrDefault(h => h.Hash == selected.LayoutId);
+                    var grouppedLayouts =
+                        oldLayouts.Layouts.Where(
+                            l =>
+                                GetTableDescription(l.LayoutId).TableType == tableDescription?.TableType
+                                && l.HudStats.Any()
+                                && HudObjectsComparer.AreEquals(
+                                    l.HudBumperStickerTypes,
+                                    currentLayout.HudBumperStickerTypes)
+                                && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
+                                && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats)).ToList();
 
-                        if (table == null)
+                    foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
+                    {
+                        var newLayout = GetHudLayoutInfo(grouppedLayouts, hudViewType);
+                        if (newLayout == null)
                             continue;
 
-                        var mapping = new HudLayoutMapping
-                                          {
-                                              FileName = Path.GetFileName(layoutFileName),
-                                              GameType = table.GameType,
-                                              TableType = table.TableType,
-                                              PokerSite = table.PokerSite,
-                                              IsDefault = false,
-                                              IsSelected = selected.IsDefault,
-                                              Name = newLayout.Name,
-                                              HudViewType = newLayout.HudViewType
-                                          };
+                        if (!newLayout.IsDefault)
+                        {
+                            var i = 1;
+                            string hudTypeName = string.Empty;
+                            if (hudViewType != HudViewType.Plain)
+                                hudTypeName = $" {hudViewType}";
 
-                        if (mapping.IsSelected
-                            && hudLayoutsService.HudLayoutMappings.Mappings.Any(
-                                m =>
-                                    m.IsSelected && m.PokerSite == table.PokerSite && m.TableType == table.TableType
-                                    && m.GameType == table.GameType))
-                            mapping.IsSelected = false;
+                            string tableTypeName = string.Empty;
+                            if (
+                                !newLayout.Name.Contains(
+                                    CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)))
+                                tableTypeName =
+                                    $" {CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)}";
 
-                        hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
+                            var layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName}";
+                            while (hudLayoutsService.HudLayoutMappings.Mappings.Any(f => f.Name == layoutName))
+                            {
+                                layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName} {i}";
+                                i++;
+                            }
+                            newLayout.Name = layoutName;
+                        }
+                        else
+                        {
+                            var def = defaultLayouts.FirstOrDefault(l => l.Name == newLayout.Name);
+                            if (def != null)
+                            {
+                                defaultLayouts[defaultLayouts.IndexOf(def)] = newLayout;
+                            }
+                        }
+                        var layoutFileName = Save(newLayout);
+
+                        foreach (var selected in grouppedLayouts)
+                        {
+                            var table = hashTable.FirstOrDefault(h => h.Hash == selected.LayoutId);
+
+                            if (table == null)
+                                continue;
+
+                            var mapping = new HudLayoutMapping
+                            {
+                                FileName = Path.GetFileName(layoutFileName),
+                                GameType = table.GameType,
+                                TableType = table.TableType,
+                                PokerSite = table.PokerSite,
+                                IsDefault = false,
+                                IsSelected = selected.IsDefault,
+                                Name = newLayout.Name,
+                                HudViewType = newLayout.HudViewType
+                            };
+
+                            if (mapping.IsSelected
+                                && hudLayoutsService.HudLayoutMappings.Mappings.Any(
+                                    m =>
+                                        m.IsSelected && m.PokerSite == table.PokerSite && m.TableType == table.TableType
+                                        && m.GameType == table.GameType))
+                                mapping.IsSelected = false;
+
+                            hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
+                        }
+
                     }
+
+                    oldLayouts.Layouts.RemoveAll(
+                        l =>
+                            GetTableDescription(l.LayoutId).TableType == tableDescription.TableType
+                            && HudObjectsComparer.AreEquals(l.HudBumperStickerTypes, currentLayout.HudBumperStickerTypes)
+                            && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
+                            && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats));
                 }
 
-                oldLayouts.Layouts.RemoveAll(
-                    l =>
-                        GetTableDescription(l.LayoutId).TableType == tableDescription.TableType
-                        && HudObjectsComparer.AreEquals(l.HudBumperStickerTypes, currentLayout.HudBumperStickerTypes)
-                        && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
-                        && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats));
+                hudLayoutsService.SaveLayoutMappings();
+
+                LogProvider.Log.Info("Migration #14 executed.");
             }
-            hudLayoutsService.SaveLayoutMappings();
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Migration #14 failed.", e);
+            }
         }
 
         public override void Down()
         {
-            throw new System.NotImplementedException();
         }
 
         private List<TableDescription> GetHashTable()
@@ -304,226 +318,243 @@ namespace DriveHUD.Application.MigrationService.Migrations
                 return hashCode;
             }
         }
-    }
 
-
-    public static class HudObjectsComparer
-    {
-        private static bool AreEquals(
-            IEnumerable<StatInfoOptionValueRange> first,
-            IEnumerable<StatInfoOptionValueRange> second)
+        private static class HudObjectsComparer
         {
-            if (first == null && second == null) return true;
-            if (first == null || second == null) return false;
-
-            var firstArray = first as StatInfoOptionValueRange[] ?? first.ToArray();
-            var secondArray = second as StatInfoOptionValueRange[] ?? second.ToArray();
-
-            if (firstArray.Length != secondArray.Length) return false;
-
-            return
-                firstArray.All(
-                    f =>
-                        secondArray.FirstOrDefault(
-                            s =>
-                                f.IsEditable == s.IsEditable && f.IsChecked == s.IsChecked && f.SortOrder == s.SortOrder
-                                && f.Value == s.Value && f.Value_IsValid == s.Value_IsValid
-                                && f.ValueRangeType == s.ValueRangeType && f.Color.Equals(s.Color)) != null);
-        }
-
-        private static bool AreEquals(StatInfoGroup first, StatInfoGroup second)
-        {
-            return first.Name == second.Name;
-        }
-
-        public static bool AreEquals(List<HudPlayerType> first, List<HudPlayerType> second)
-        {
-            if (first == null && second == null) return true;
-            if (first == null || second == null) return false;
-            if (first.Count != second.Count) return false;
-
-            return
-                first.Select(
-                    f =>
-                        second.FirstOrDefault(
-                            s =>
-                                f.Name == s.Name && f.ImageAlias == s.ImageAlias
-                                && f.EnablePlayerProfile == s.EnablePlayerProfile
-                                && f.DisplayPlayerIcon == s.DisplayPlayerIcon && f.MinSample == s.MinSample
-                                && AreEquals(f.Stats.Select(st => st), s.Stats))).All(ss => ss != null);
-        }
-
-        private static bool AreEquals(IEnumerable<HudPlayerTypeStat> first, IEnumerable<HudPlayerTypeStat> second)
-        {
-            if (first == null && second == null)
-                return true;
-
-            if (first == null || second == null)
-                return false;
-
-            var secondArray = second as HudPlayerTypeStat[] ?? second.ToArray();
-            var firstArray = first as HudPlayerTypeStat[] ?? first.ToArray();
-            if (firstArray.Length != secondArray.Length)
-                return false;
-            return
-                firstArray.All(
-                    hudPlayerTypeStat =>
-                        secondArray.FirstOrDefault(
-                            s =>
-                                s.High == hudPlayerTypeStat.High && s.Low == hudPlayerTypeStat.Low
-                                && s.Stat == hudPlayerTypeStat.Stat) != null);
-        }
-
-        public static bool AreEquals(List<HudBumperStickerType> first, List<HudBumperStickerType> second)
-        {
-            if (first.Count != second.Count) return false;
-            for (var i = 0; i < first.Count; i++)
+            private static bool AreEquals(
+                IEnumerable<StatInfoOptionValueRange> first,
+                IEnumerable<StatInfoOptionValueRange> second)
             {
-                if (!AreEquals(first[i], second[i])) return false;
-            }
-            return true;
-        }
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
 
-        private static bool AreEquals(HudBumperStickerType first, HudBumperStickerType second)
-        {
-            if (first.Description == "3-Bets too much, and folds to a 4-bet too often.") first.Description = "3-Bets too much, and folds to a 3-bet too often.";
-            if (second.Description == "3-Bets too much, and folds to a 4-bet too often.") second.Description = "3-Bets too much, and folds to a 3-bet too often.";
-            if (first.Description == "Open raises to wide of a range in early pre-flop positions.") first.Description = "Open raises too wide of a range in early pre-flop positions.";
-            if (second.Description == "Open raises to wide of a range in early pre-flop positions.") second.Description = "Open raises too wide of a range in early pre-flop positions.";
-            if (first.Name != second.Name || first.Label != second.Label || first.Description != second.Description
-                || first.ToolTip != second.ToolTip || first.EnableBumperSticker != second.EnableBumperSticker
-                || first.MinSample != second.MinSample || first.SelectedColor != second.SelectedColor) return false;
+                var firstArray = first as StatInfoOptionValueRange[] ?? first.ToArray();
+                var secondArray = second as StatInfoOptionValueRange[] ?? second.ToArray();
 
-            return AreEquals(first.Stats.OfType<HudPlayerTypeStat>(), second.Stats.OfType<HudPlayerTypeStat>())
-                   && AreEquals(first.FilterModelCollection, second.FilterModelCollection);
-        }
+                if (firstArray.Length != secondArray.Length) return false;
 
-        private static bool AreEquals(IFilterModelCollection first, IFilterModelCollection second)
-        {
-            if (first == null && second == null) return true;
-            if (first == null || second == null) return false;
-            if (first.Count != second.Count) return false;
-
-            return first.All(f => second.FirstOrDefault(s => f.Type == s.Type) != null);
-        }
-
-        public static bool AreEquals(List<StatInfo> first, List<StatInfo> second)
-        {
-            if (first == null && second == null) return true;
-            if (first == null || second == null) return false;
-            if (first.Count != second.Count) return false;
-
-            for (var i = 0; i < first.Count; i++)
-            {
-                if (!AreEquals(first[i], second[i])) return false;
+                return
+                    firstArray.All(
+                        f =>
+                            secondArray.FirstOrDefault(
+                                s =>
+                                    f.IsEditable == s.IsEditable && f.IsChecked == s.IsChecked && f.SortOrder == s.SortOrder
+                                    && f.Value == s.Value && f.Value_IsValid == s.Value_IsValid
+                                    && f.ValueRangeType == s.ValueRangeType && f.Color.Equals(s.Color)) != null);
             }
 
-            return true;
-        }
-
-        private static bool AreEquals(StatInfo first, StatInfo second)
-        {
-            if (first.Caption != second.Caption) return false;
-            if (first.Stat != second.Stat) return false;
-            if (!AreEquals(first.StatInfoGroup, second.StatInfoGroup)) return false;
-            if (first.GroupName != second.GroupName) return false;
-            if (first.PropertyName != second.PropertyName) return false;
-            if (first.CurrentColor != second.CurrentColor) return false;
-            if (first.Settings_IsAvailable != second.Settings_IsAvailable) return false;
-            if (first.SettingsAppearance_IsChecked != second.SettingsAppearance_IsChecked) return false;
-            if (first.SettingsPlayerType_IsChecked != second.SettingsPlayerType_IsChecked) return false;
-            if (first.SettingsAppearanceFontBold_IsChecked != second.SettingsAppearanceFontBold_IsChecked) return false;
-            if (first.SettingsAppearanceFontSource != second.SettingsAppearanceFontSource) return false;
-            if (first.SettingsAppearanceFontSize != second.SettingsAppearanceFontSize) return false;
-            if (first.SettingsAppearanceFontBold != second.SettingsAppearanceFontBold) return false;
-            if (first.SettingsAppearanceFontItalic_IsChecked != second.SettingsAppearanceFontItalic_IsChecked) return false;
-            if (first.SettingsAppearanceFontItalic != second.SettingsAppearanceFontItalic) return false;
-            if (first.SettingsAppearanceFontUnderline_IsChecked != second.SettingsAppearanceFontUnderline_IsChecked) return false;
-            if (!AreEquals(first.SettingsAppearanceValueRangeCollection, second.SettingsAppearanceValueRangeCollection)) return false;
-            return true;
-        }
-
-        private static bool AreEquals(List<HudPositionInfo> first, List<HudPositionInfo> second)
-        {
-            if (first == null && second == null) return true;
-            if (first == null || second == null) return false;
-            if (first.Count != second.Count) return false;
-
-            foreach (var hudPositionInfo in first)
+            private static bool AreEquals(StatInfoGroup first, StatInfoGroup second)
             {
-                var secondPosition = second.FirstOrDefault(x => x.Seat == hudPositionInfo.Seat);
-                if (secondPosition == null)
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
+
+                return first.Name == second.Name;
+            }
+
+            public static bool AreEquals(List<HudPlayerType> first, List<HudPlayerType> second)
+            {
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
+                if (first.Count != second.Count) return false;
+
+                return
+                    first.Select(
+                        f =>
+                            second.FirstOrDefault(
+                                s =>
+                                    f.Name == s.Name && f.ImageAlias == s.ImageAlias
+                                    && f.EnablePlayerProfile == s.EnablePlayerProfile
+                                    && f.DisplayPlayerIcon == s.DisplayPlayerIcon && f.MinSample == s.MinSample
+                                    && AreEquals(f.Stats.Select(st => st), s.Stats))).All(ss => ss != null);
+            }
+
+            private static bool AreEquals(IEnumerable<HudPlayerTypeStat> first, IEnumerable<HudPlayerTypeStat> second)
+            {
+                if (first == null && second == null)
+                    return true;
+
+                if (first == null || second == null)
                     return false;
-                if (!secondPosition.Position.Equals(hudPositionInfo.Position))
+
+                var secondArray = second as HudPlayerTypeStat[] ?? second.ToArray();
+                var firstArray = first as HudPlayerTypeStat[] ?? first.ToArray();
+                if (firstArray.Length != secondArray.Length)
+                    return false;
+                return
+                    firstArray.All(
+                        hudPlayerTypeStat =>
+                            secondArray.FirstOrDefault(
+                                s =>
+                                    s.High == hudPlayerTypeStat.High && s.Low == hudPlayerTypeStat.Low
+                                    && s.Stat == hudPlayerTypeStat.Stat) != null);
+            }
+
+            public static bool AreEquals(List<HudBumperStickerType> first, List<HudBumperStickerType> second)
+            {
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
+                if (first.Count != second.Count) return false;
+
+                for (var i = 0; i < first.Count; i++)
                 {
-                    var point1 = new Point(340,133);
-                    var point2 = new Point(347, 133);
-                    if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
-                        continue;
-
-                    point1 = new Point(340, 143);
-                    point2 = new Point(347, 143);
-                    if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
-                        continue;
-
-                    point1 = new Point(666, 238);
-                    point2 = new Point(667, 238);
-                    if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
-                        continue;
-
-                    point1 = new Point(666, 347);
-                    point2 = new Point(667, 347);
-                    if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
-                        continue;
-
-                    return false;
+                    if (!AreEquals(first[i], second[i])) return false;
                 }
+                return true;
             }
 
-            return true;
-        }
-
-        public static bool AreEquals(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
-        {
-            if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
-            if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
-            if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
-            foreach (var hudPositionsInfo in newLayout.HudPositionsInfo)
+            private static bool AreEquals(HudBumperStickerType first, HudBumperStickerType second)
             {
-                var existiongPos =
-                    defaultLayout.HudPositionsInfo.FirstOrDefault(
-                        p => p.GameType == hudPositionsInfo.GameType && p.PokerSite == hudPositionsInfo.PokerSite);
-                if (existiongPos == null)
-                    return false;
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
 
-                if (!AreEquals(existiongPos.HudPositions, hudPositionsInfo.HudPositions))
-                    return false;
+                if (first.Description == "3-Bets too much, and folds to a 4-bet too often.") first.Description = "3-Bets too much, and folds to a 3-bet too often.";
+                if (second.Description == "3-Bets too much, and folds to a 4-bet too often.") second.Description = "3-Bets too much, and folds to a 3-bet too often.";
+                if (first.Description == "Open raises to wide of a range in early pre-flop positions.") first.Description = "Open raises too wide of a range in early pre-flop positions.";
+                if (second.Description == "Open raises to wide of a range in early pre-flop positions.") second.Description = "Open raises too wide of a range in early pre-flop positions.";
+                if (first.Name != second.Name || first.Label != second.Label || first.Description != second.Description
+                    || first.ToolTip != second.ToolTip || first.EnableBumperSticker != second.EnableBumperSticker
+                    || first.MinSample != second.MinSample || first.SelectedColor != second.SelectedColor) return false;
+
+                return AreEquals(first.Stats.OfType<HudPlayerTypeStat>(), second.Stats.OfType<HudPlayerTypeStat>())
+                       && AreEquals(first.FilterModelCollection, second.FilterModelCollection);
             }
-            return true;
+
+            private static bool AreEquals(IFilterModelCollection first, IFilterModelCollection second)
+            {
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
+                if (first.Count != second.Count) return false;
+
+                return first.All(f => second.FirstOrDefault(s => f.Type == s.Type) != null);
+            }
+
+            public static bool AreEquals(List<StatInfo> first, List<StatInfo> second)
+            {
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
+                if (first.Count != second.Count) return false;
+
+                for (var i = 0; i < first.Count; i++)
+                {
+                    if (!AreEquals(first[i], second[i])) return false;
+                }
+
+                return true;
+            }
+
+            private static bool AreEquals(StatInfo first, StatInfo second)
+            {
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
+
+                if (first.Caption != second.Caption) return false;
+                if (first.Stat != second.Stat) return false;
+                if (!AreEquals(first.StatInfoGroup, second.StatInfoGroup)) return false;
+                if (first.GroupName != second.GroupName) return false;
+                if (first.PropertyName != second.PropertyName) return false;
+                if (first.CurrentColor != second.CurrentColor) return false;
+                if (first.Settings_IsAvailable != second.Settings_IsAvailable) return false;
+                if (first.SettingsAppearance_IsChecked != second.SettingsAppearance_IsChecked) return false;
+                if (first.SettingsPlayerType_IsChecked != second.SettingsPlayerType_IsChecked) return false;
+                if (first.SettingsAppearanceFontBold_IsChecked != second.SettingsAppearanceFontBold_IsChecked) return false;
+                if (first.SettingsAppearanceFontSource != second.SettingsAppearanceFontSource) return false;
+                if (first.SettingsAppearanceFontSize != second.SettingsAppearanceFontSize) return false;
+                if (first.SettingsAppearanceFontBold != second.SettingsAppearanceFontBold) return false;
+                if (first.SettingsAppearanceFontItalic_IsChecked != second.SettingsAppearanceFontItalic_IsChecked) return false;
+                if (first.SettingsAppearanceFontItalic != second.SettingsAppearanceFontItalic) return false;
+                if (first.SettingsAppearanceFontUnderline_IsChecked != second.SettingsAppearanceFontUnderline_IsChecked) return false;
+                if (!AreEquals(first.SettingsAppearanceValueRangeCollection, second.SettingsAppearanceValueRangeCollection)) return false;
+                return true;
+            }
+
+            private static bool AreEquals(List<HudPositionInfo> first, List<HudPositionInfo> second)
+            {
+                if (first == null && second == null) return true;
+                if (first == null || second == null) return false;
+                if (first.Count != second.Count) return false;
+
+                foreach (var hudPositionInfo in first)
+                {
+                    var secondPosition = second.FirstOrDefault(x => x.Seat == hudPositionInfo.Seat);
+                    if (secondPosition == null)
+                        return false;
+                    if (!secondPosition.Position.Equals(hudPositionInfo.Position))
+                    {
+                        var point1 = new Point(340, 133);
+                        var point2 = new Point(347, 133);
+                        if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
+                            continue;
+
+                        point1 = new Point(340, 143);
+                        point2 = new Point(347, 143);
+                        if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
+                            continue;
+
+                        point1 = new Point(666, 238);
+                        point2 = new Point(667, 238);
+                        if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
+                            continue;
+
+                        point1 = new Point(666, 347);
+                        point2 = new Point(667, 347);
+                        if ((secondPosition.Position.Equals(point1) && hudPositionInfo.Position.Equals(point2)) || (secondPosition.Position.Equals(point2) && hudPositionInfo.Position.Equals(point1)))
+                            continue;
+
+                        return false;
+                    }
+                }
+
+                return true;
+            }
+
+            public static bool AreEquals(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
+            {
+                if (newLayout == null && defaultLayout == null) return true;
+                if (newLayout == null || defaultLayout == null) return false;
+
+                if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
+                if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
+                if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
+                foreach (var hudPositionsInfo in newLayout.HudPositionsInfo)
+                {
+                    var existiongPos =
+                        defaultLayout.HudPositionsInfo.FirstOrDefault(
+                            p => p.GameType == hudPositionsInfo.GameType && p.PokerSite == hudPositionsInfo.PokerSite);
+                    if (existiongPos == null)
+                        return false;
+
+                    if (!AreEquals(existiongPos.HudPositions, hudPositionsInfo.HudPositions))
+                        return false;
+                }
+                return true;
+            }
+
+            public static bool AreEqualsExceptPositions(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
+            {
+                if (newLayout == null && defaultLayout == null) return true;
+                if (newLayout == null || defaultLayout == null) return false;
+
+                if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
+                if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
+                if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
+                return true;
+            }
         }
 
-        public static bool AreEqualsExceptPositions(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
+        private class TableDescription
         {
-            if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
-            if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
-            if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
-            return true;
-        }
-    }
+            public int Hash { get; set; }
+            public EnumTableType TableType { get; set; }
+            public EnumPokerSites PokerSite { get; set; }
+            public EnumGameType GameType { get; set; }
 
-    public class TableDescription
-    {
-        public int Hash { get; set; }
-        public EnumTableType TableType { get; set; }
-        public EnumPokerSites PokerSite { get; set; }
-        public EnumGameType GameType { get; set; }
-
-        public TableDescription(int hash, EnumTableType tableType, EnumPokerSites pokerSite, EnumGameType gameType)
-        {
-            Hash = hash;
-            TableType = tableType;
-            PokerSite = pokerSite;
-            GameType = gameType;
+            public TableDescription(int hash, EnumTableType tableType, EnumPokerSites pokerSite, EnumGameType gameType)
+            {
+                Hash = hash;
+                TableType = tableType;
+                PokerSite = pokerSite;
+                GameType = gameType;
+            }
         }
     }
 }
