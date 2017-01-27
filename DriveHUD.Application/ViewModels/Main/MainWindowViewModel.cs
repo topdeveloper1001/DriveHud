@@ -198,7 +198,7 @@ namespace DriveHUD.Application.ViewModels
 
             importerSessionCacheService.End();
 
-            System.Windows.Application.Current.Dispatcher.Invoke(() =>
+            System.Windows.Application.Current?.Dispatcher.Invoke(() =>
             {
                 // update data after hud is stopped
                 CreatePositionReport();

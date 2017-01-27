@@ -153,6 +153,8 @@ namespace DriveHUD.Application.Bootstrappers
         {
             try
             {
+                LogProvider.Log.Info("Creating new database");
+
                 var resourcesAssembly = typeof(ResourceRegistrator).Assembly;
 
                 using (var stream = resourcesAssembly.GetManifestResourceStream(databaseResource))
