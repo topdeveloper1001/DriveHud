@@ -11,6 +11,7 @@ using Model.Filters;
 using System.IO;
 using System.Windows;
 using System.Xml.Serialization;
+using DriveHUD.Common.Log;
 using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Enums;
@@ -170,111 +171,120 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public override void Up()
         {
-            defaultLayouts = GetDefaultLayouts();
-
-            var oldLayouts = LoadOldLayouts(Path.Combine(StringFormatter.GetAppDataFolderPath(), "Layouts.xml"));
-
-            if (oldLayouts == null)
-                return;
-
-            while (oldLayouts.Layouts.Count > 0)
+            try
             {
-                var currentLayout = oldLayouts.Layouts[0];
+                defaultLayouts = GetDefaultLayouts();
 
-                var tableDescription = hashTable.FirstOrDefault(h => h.Hash == currentLayout.LayoutId);
+                var oldLayouts = LoadOldLayouts(Path.Combine(StringFormatter.GetAppDataFolderPath(), "Layouts.xml"));
 
-                if (tableDescription == null)
+                if (oldLayouts == null)
+                    return;
+
+                while (oldLayouts.Layouts.Count > 0)
                 {
-                    oldLayouts.Layouts.RemoveAt(0);
-                    continue;
-                }
+                    var currentLayout = oldLayouts.Layouts[0];
 
-                var grouppedLayouts =
-                    oldLayouts.Layouts.Where(
-                        l =>
-                            GetTableDescription(l.LayoutId).TableType == tableDescription?.TableType
-                            && l.HudStats.Any()
-                            && HudObjectsComparer.AreEquals(
-                                l.HudBumperStickerTypes,
-                                currentLayout.HudBumperStickerTypes)
-                            && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
-                            && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats)).ToList();
+                    var tableDescription = hashTable.FirstOrDefault(h => h.Hash == currentLayout.LayoutId);
 
-                foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
-                {
-                    var newLayout = GetHudLayoutInfo(grouppedLayouts, hudViewType);
-                    if (newLayout == null)
+                    if (tableDescription == null)
+                    {
+                        oldLayouts.Layouts.RemoveAt(0);
                         continue;
-
-                    if (!newLayout.IsDefault)
-                    {
-                        var i = 1;
-                        string hudTypeName = string.Empty;
-                        if (hudViewType != HudViewType.Plain) hudTypeName = $" {hudViewType}";
-
-                        string tableTypeName = string.Empty;
-                        if (
-                            !newLayout.Name.Contains(
-                                CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)))
-                            tableTypeName =
-                                $" {CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)}";
-
-                        var layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName}";
-                        while (hudLayoutsService.HudLayoutMappings.Mappings.Any(f => f.Name == layoutName))
-                        {
-                            layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName} {i}";
-                            i++;
-                        }
-                        newLayout.Name = layoutName;
                     }
-                    else
-                    {
-                        var def = defaultLayouts.FirstOrDefault(l => l.Name == newLayout.Name);
-                        if (def != null)
-                        {
-                            defaultLayouts[defaultLayouts.IndexOf(def)] = newLayout;
-                        }
-                    }
-                    var layoutFileName = Save(newLayout);
 
-                    foreach (var selected in grouppedLayouts)
-                    {
-                        var table = hashTable.FirstOrDefault(h => h.Hash == selected.LayoutId);
+                    var grouppedLayouts =
+                        oldLayouts.Layouts.Where(
+                            l =>
+                                GetTableDescription(l.LayoutId).TableType == tableDescription?.TableType
+                                && l.HudStats.Any()
+                                && HudObjectsComparer.AreEquals(
+                                    l.HudBumperStickerTypes,
+                                    currentLayout.HudBumperStickerTypes)
+                                && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
+                                && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats)).ToList();
 
-                        if (table == null)
+                    foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
+                    {
+                        var newLayout = GetHudLayoutInfo(grouppedLayouts, hudViewType);
+                        if (newLayout == null)
                             continue;
 
-                        var mapping = new HudLayoutMapping
-                                          {
-                                              FileName = Path.GetFileName(layoutFileName),
-                                              GameType = table.GameType,
-                                              TableType = table.TableType,
-                                              PokerSite = table.PokerSite,
-                                              IsDefault = false,
-                                              IsSelected = selected.IsDefault,
-                                              Name = newLayout.Name,
-                                              HudViewType = newLayout.HudViewType
-                                          };
+                        if (!newLayout.IsDefault)
+                        {
+                            var i = 1;
+                            string hudTypeName = string.Empty;
+                            if (hudViewType != HudViewType.Plain)
+                                hudTypeName = $" {hudViewType}";
 
-                        if (mapping.IsSelected
-                            && hudLayoutsService.HudLayoutMappings.Mappings.Any(
-                                m =>
-                                    m.IsSelected && m.PokerSite == table.PokerSite && m.TableType == table.TableType
-                                    && m.GameType == table.GameType))
-                            mapping.IsSelected = false;
+                            string tableTypeName = string.Empty;
+                            if (
+                                !newLayout.Name.Contains(
+                                    CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)))
+                                tableTypeName =
+                                    $" {CommonResourceManager.Instance.GetEnumResource(tableDescription.TableType)}";
 
-                        hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
+                            var layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName}";
+                            while (hudLayoutsService.HudLayoutMappings.Mappings.Any(f => f.Name == layoutName))
+                            {
+                                layoutName = $"{newLayout.Name}{tableTypeName}{hudTypeName} {i}";
+                                i++;
+                            }
+                            newLayout.Name = layoutName;
+                        }
+                        else
+                        {
+                            var def = defaultLayouts.FirstOrDefault(l => l.Name == newLayout.Name);
+                            if (def != null)
+                            {
+                                defaultLayouts[defaultLayouts.IndexOf(def)] = newLayout;
+                            }
+                        }
+                        var layoutFileName = Save(newLayout);
+
+                        foreach (var selected in grouppedLayouts)
+                        {
+                            var table = hashTable.FirstOrDefault(h => h.Hash == selected.LayoutId);
+
+                            if (table == null)
+                                continue;
+
+                            var mapping = new HudLayoutMapping
+                            {
+                                FileName = Path.GetFileName(layoutFileName),
+                                GameType = table.GameType,
+                                TableType = table.TableType,
+                                PokerSite = table.PokerSite,
+                                IsDefault = false,
+                                IsSelected = selected.IsDefault,
+                                Name = newLayout.Name,
+                                HudViewType = newLayout.HudViewType
+                            };
+
+                            if (mapping.IsSelected
+                                && hudLayoutsService.HudLayoutMappings.Mappings.Any(
+                                    m =>
+                                        m.IsSelected && m.PokerSite == table.PokerSite && m.TableType == table.TableType
+                                        && m.GameType == table.GameType))
+                                mapping.IsSelected = false;
+
+                            hudLayoutsService.HudLayoutMappings.Mappings.Add(mapping);
+                        }
+
                     }
-                }
 
-                oldLayouts.Layouts.RemoveAll(
-                    l =>
-                        GetTableDescription(l.LayoutId).TableType == tableDescription.TableType
-                        && HudObjectsComparer.AreEquals(l.HudBumperStickerTypes, currentLayout.HudBumperStickerTypes)
-                        && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
-                        && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats));
+                    oldLayouts.Layouts.RemoveAll(
+                        l =>
+                            GetTableDescription(l.LayoutId).TableType == tableDescription.TableType
+                            && HudObjectsComparer.AreEquals(l.HudBumperStickerTypes, currentLayout.HudBumperStickerTypes)
+                            && HudObjectsComparer.AreEquals(l.HudPlayerTypes, currentLayout.HudPlayerTypes)
+                            && HudObjectsComparer.AreEquals(l.HudStats, currentLayout.HudStats));
+                }
+                hudLayoutsService.SaveLayoutMappings();
             }
-            hudLayoutsService.SaveLayoutMappings();
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(e);
+            }
         }
 
         public override void Down()
@@ -333,6 +343,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private static bool AreEquals(StatInfoGroup first, StatInfoGroup second)
         {
+            if (first == null && second == null) return true;
+            if (first == null || second == null) return false;
+
             return first.Name == second.Name;
         }
 
@@ -376,7 +389,10 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public static bool AreEquals(List<HudBumperStickerType> first, List<HudBumperStickerType> second)
         {
+            if (first == null && second == null) return true;
+            if (first == null || second == null) return false;
             if (first.Count != second.Count) return false;
+
             for (var i = 0; i < first.Count; i++)
             {
                 if (!AreEquals(first[i], second[i])) return false;
@@ -386,6 +402,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private static bool AreEquals(HudBumperStickerType first, HudBumperStickerType second)
         {
+            if (first == null && second == null) return true;
+            if (first == null || second == null) return false;
+
             if (first.Description == "3-Bets too much, and folds to a 4-bet too often.") first.Description = "3-Bets too much, and folds to a 3-bet too often.";
             if (second.Description == "3-Bets too much, and folds to a 4-bet too often.") second.Description = "3-Bets too much, and folds to a 3-bet too often.";
             if (first.Description == "Open raises to wide of a range in early pre-flop positions.") first.Description = "Open raises too wide of a range in early pre-flop positions.";
@@ -423,6 +442,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         private static bool AreEquals(StatInfo first, StatInfo second)
         {
+            if (first == null && second == null) return true;
+            if (first == null || second == null) return false;
+
             if (first.Caption != second.Caption) return false;
             if (first.Stat != second.Stat) return false;
             if (!AreEquals(first.StatInfoGroup, second.StatInfoGroup)) return false;
@@ -485,6 +507,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public static bool AreEquals(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
         {
+            if (newLayout == null && defaultLayout == null) return true;
+            if (newLayout == null || defaultLayout == null) return false;
+
             if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
             if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
             if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
@@ -504,6 +529,9 @@ namespace DriveHUD.Application.MigrationService.Migrations
 
         public static bool AreEqualsExceptPositions(HudLayoutInfo newLayout, HudLayoutInfo defaultLayout)
         {
+            if (newLayout == null && defaultLayout == null) return true;
+            if (newLayout == null || defaultLayout == null) return false;
+
             if (!AreEquals(newLayout.HudBumperStickerTypes, defaultLayout.HudBumperStickerTypes)) return false;
             if (!AreEquals(newLayout.HudPlayerTypes, defaultLayout.HudPlayerTypes)) return false;
             if (!AreEquals(newLayout.HudStats, defaultLayout.HudStats)) return false;
