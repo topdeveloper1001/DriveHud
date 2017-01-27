@@ -10,16 +10,10 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common;
-using Model.Enums;
-using System.Linq;
-using DriveHUD.Application.ViewModels.Layouts;
-using DriveHUD.Entities;
-using System.Collections.Generic;
-using DriveHUD.Common.Exceptions;
-using DriveHUD.Common.Resources;
 using DriveHUD.Application.ViewModels.Hud;
+using DriveHUD.Common;
 using DriveHUD.Common.Log;
+using System.Linq;
 
 namespace DriveHUD.Application.ViewModels
 {
