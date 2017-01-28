@@ -445,9 +445,7 @@ namespace DriveHUD.Application.ViewModels
                     var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
                         ? new ObservableCollection<string>()
-                        : new ObservableCollection<string>(cardsCollection);
-
-                    var doNotAddPlayer = false;
+                        : new ObservableCollection<string>(cardsCollection);                    
 
                     // create new array to prevent Collection was modified exception
                     var activeLayoutHudStats = activeLayout.HudStats.ToArray();
@@ -486,8 +484,8 @@ namespace DriveHUD.Application.ViewModels
                             statInfo.AssignStatInfoValues(item);
                         }
                         else if (!(statInfo is StatInfoBreak))
-                        {
-                            doNotAddPlayer = true;
+                        {                            
+                            continue;
                         }
 
                         // temporary
@@ -536,10 +534,7 @@ namespace DriveHUD.Application.ViewModels
                                 playerCollectionItem), activeLayout.Name);
                     }
 
-                    if (!doNotAddPlayer)
-                    {
-                        ht.ListHUDPlayer.Add(playerHudContent);
-                    }
+                    ht.ListHUDPlayer.Add(playerHudContent);
                 }
 
                 sw.Stop();
@@ -563,7 +558,7 @@ namespace DriveHUD.Application.ViewModels
                     BuyInNL = Utils.ConvertBigBlindToNL(trackConditionsMeterData.BigBlind)
                 };
 
-                ht.HudTrackConditionsMeter = trackConditionsInfo;         
+                ht.HudTrackConditionsMeter = trackConditionsInfo;
 
                 byte[] serialized;
 

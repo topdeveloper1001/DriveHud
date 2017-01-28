@@ -1,4 +1,16 @@
-﻿using DriveHUD.Application.ViewModels;
+﻿//-----------------------------------------------------------------------
+// <copyright file="Migration0014_LayoutsToMultipleFiles.cs" company="Ace Poker Solutions">
+// Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
+// Unless otherwise noted, all materials contained in this Site are copyrights, 
+// trademarks, trade dress and/or other intellectual properties, owned, 
+// controlled or licensed by Ace Poker Solutions and may not be used without 
+// written consent except as provided in these terms and conditions or in the 
+// copyright notice (documents and software) or other proprietary notices 
+// provided with the relevant materials.
+// </copyright>
+//----------------------------------------------------------------------
+
+using DriveHUD.Application.ViewModels;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
@@ -103,7 +115,19 @@ namespace DriveHUD.Application.MigrationService.Migrations
             newLayout.TableType = tableDescription.TableType;
             newLayout.HudBumperStickerTypes = masterLayout.HudBumperStickerTypes.Select(s => s.Clone()).ToList();
             newLayout.HudPlayerTypes = masterLayout.HudPlayerTypes.Select(p => p.Clone()).ToList();
-            newLayout.HudStats = masterLayout.HudStats.Select(s => s.Clone()).ToList();
+
+            newLayout.HudStats = masterLayout.HudStats.Select(s =>
+            {
+                var statInfoBreak = s as StatInfoBreak;
+
+                if (statInfoBreak != null)
+                {
+                    return statInfoBreak.Clone();
+                }
+
+                return s.Clone();
+            }).ToList();
+
             newLayout.IsDefault = false;
             newLayout.HudViewType = hudViewType;
             newLayout.UiPositionsInfo = sameDefault?.UiPositionsInfo.Select(p => p.Clone()).ToList();

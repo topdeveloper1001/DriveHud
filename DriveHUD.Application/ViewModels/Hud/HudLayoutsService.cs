@@ -172,7 +172,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             _rwLock.EnterReadLock();
             try
             {
-                using (var stream = File.Open(fileName, FileMode.Open))
+                using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
                     var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
                     hudLayoutMappings = xmlSerializer.Deserialize(stream) as HudLayoutMappings;
@@ -237,7 +237,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             _rwLock.EnterReadLock();
             try
             {
-                using (var stream = File.Open(fileName, FileMode.Open))
+                using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
                     result = LoadLayoutFromStream(stream);
                 }
@@ -970,7 +970,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 _rwLock.EnterReadLock();
                 try
                 {
-                    using (var fs = File.Open(path, FileMode.Open))
+                    using (var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read))
                     {
                         importedHudLayout = LoadLayoutFromStream(fs);
                     }
@@ -1286,7 +1286,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             defaultNames = defaultNames.Union(
                     HudLayoutMappings.Mappings.Where(
-                            m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && availableHudViewTypes.Contains(m.HudViewType))
+                            m => m.TableType == tableType && availableHudViewTypes.Contains(m.HudViewType))
                         .Select(m => m.Name)).Distinct().ToList();
 
             return defaultNames;
@@ -1308,7 +1308,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     var fileName = Path.Combine(layoutsDirectory.FullName, layoutMapping);
 
-                    using (var fs = File.Open(fileName, FileMode.Open))
+                    using (var fs = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                     {
                         var layout = LoadLayoutFromStream(fs);
 
