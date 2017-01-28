@@ -293,7 +293,7 @@
                         Height="32"        
                         Width="176"
                         Content="{ResX Key=Common_Shop_Recommended}"
-                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Recommended}}"
+                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Recommended}}"
                         Style="{StaticResource RadioButtonSimpleLeft}" />
 
                     <RadioButton                         
@@ -301,7 +301,7 @@
                         Height="32"        
                         Width="146"
                         Content="{ResX Key=Common_Shop_Training}"
-                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Training}}"
+                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Training}}"
                         Style="{StaticResource RadioButtonSimple}" />
 
                     <RadioButton                       
@@ -309,7 +309,7 @@
                         Height="32"        
                         Width="77"
                         Content="{ResX Key=Common_Shop_Huds}"
-                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:ShopType.Huds}}"
+                        IsChecked="{Binding ShopType,Converter={dh:EnumBoolConverter}, ConverterParameter={x:Static ms:AppStoreType.Huds}}"
                         Style="{StaticResource RadioButtonSimpleRight}" />
 
                 </StackPanel>

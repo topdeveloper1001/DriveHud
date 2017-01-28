@@ -10,19 +10,11 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using DriveHUD.Common.Infrastructure.Base;
-using Microsoft.Practices.ServiceLocation;
-using Model.Shop;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ReactiveUI;
+using DriveHUD.Application.ViewModels.AppStore;
 using DriveHUD.Common.Wpf.Mvvm;
-using DriveHUD.Common.Utils;
-using System.Diagnostics;
-using DriveHUD.Common.Log;
+using Model.Shop;
+using ReactiveUI;
+using System;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -30,109 +22,69 @@ namespace DriveHUD.Application.ViewModels
     {
         public AppsViewModel()
         {
-            model = ServiceLocator.Current.GetInstance<IShopModel>();
-
-            InitializeObservables();
-            InitializeCommands();
-            Refresh();
+            Initialize();
         }
 
-        #region Properties
+        #region Properties     
 
-        private IShopModel model;
+        private AppStoreType appStoreType;
 
-        public IShopModel Model
+        public AppStoreType AppStoreType
         {
             get
             {
-                return model;
-            }
-        }
-
-        private ShopType shopType;
-
-        public ShopType ShopType
-        {
-            get
-            {
-                return shopType;
+                return appStoreType;
             }
             set
             {
-                this.RaiseAndSetIfChanged(ref shopType, value);
+                this.RaiseAndSetIfChanged(ref appStoreType, value);
             }
         }
 
-        #endregion
+        private IAppStoreViewModel appStoreViewModel;
 
-        #region Commands
-
-        public ReactiveCommand<object> LearnMoreCommand { get; private set; }
-
-        public ReactiveCommand<object> AddToCartCommand { get; private set; }
+        public IAppStoreViewModel AppStoreViewModel
+        {
+            get
+            {
+                return appStoreViewModel;
+            }
+            private set
+            {
+                this.RaiseAndSetIfChanged(ref appStoreViewModel, value);
+            }
+        }
 
         #endregion
 
         #region Infrastructure
 
-        private void InitializeCommands()
+        private void Initialize()
         {
-            LearnMoreCommand = ReactiveCommand.Create();
-            LearnMoreCommand.Subscribe(x =>
-            {
-                var product = x as ShopProduct;
-
-                if (product != null)
-                {
-                    OpenLink(product.LearnMoreLink);
-                }
-            });
-
-            AddToCartCommand = ReactiveCommand.Create();
-            AddToCartCommand.Subscribe(x =>
-            {
-                var product = x as ShopProduct;
-
-                if (product != null)
-                {
-                    OpenLink(product.CartLink);
-                }
-            });
+            InitializeObservables();
+            AppStoreType = AppStoreType.Recommended;
         }
 
         private void InitializeObservables()
         {
-            this.ObservableForProperty(x => x.ShopType).Subscribe(x => Refresh());
+            this.ObservableForProperty(x => x.AppStoreType).Subscribe(x => Load());
         }
 
-        private void Refresh()
+        // to do: replace with service locator
+        private void Load()
         {
-            StartAsyncOperation(() => Model.Refresh(ShopType, 0, 0), () => RefreshUI());
-        }
-
-        private void RefreshUI()
-        {
-        }
-
-        private void OpenLink(string link)
-        {
-            if (string.IsNullOrWhiteSpace(link))
+            switch (appStoreType)
             {
-                return;
-            }
+                case AppStoreType.Recommended:
+                    AppStoreViewModel = new ProductAppStoreViewModel();
+                    AppStoreViewModel.Initialize();
+                    break;
 
-            var browserPath = BrowserHelper.GetDefaultBrowserPath();
-
-            try
-            {
-                Process.Start(browserPath, link);
-            }
-            catch (Exception e)
-            {
-                LogProvider.Log.Error(this, $"Link {link} couldn't be opened", e);
+                default:
+                    break;
             }
         }
 
         #endregion
-    }   
+    }
 }

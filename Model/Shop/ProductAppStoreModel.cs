@@ -17,33 +17,33 @@ using System.Linq;
 
 namespace Model.Shop
 {
-    internal class ShopModel : BindableBase, IShopModel
+    internal class ProductAppStoreModel : BindableBase, IProductAppStoreModel
     {
-        private IShopRepository shopRepository;
+        private IProductAppStoreRepository repository;
 
-        public ShopModel()
+        public ProductAppStoreModel()
         {
-            shopRepository = ServiceLocator.Current.GetInstance<IShopRepository>();
+            repository = ServiceLocator.Current.GetInstance<IProductAppStoreRepository>();
         }
 
         #region Properties
 
-        private List<ShopProduct> shopProducts = new List<ShopProduct>();
+        private IList<AppStoreProduct> items = new List<AppStoreProduct>();
 
-        public List<ShopProduct> ShopProducts
+        public IList<AppStoreProduct> Items
         {
             get
             {
-                return shopProducts;
+                return items;
             }
             private set
             {
-                if (ReferenceEquals(shopProducts, value))
+                if (ReferenceEquals(items, value))
                 {
                     return;
                 }
 
-                shopProducts = value;
+                items = value;
                 OnPropertyChanged();
             }
         }
@@ -52,9 +52,17 @@ namespace Model.Shop
 
         #region Model methods
 
-        public void Refresh(ShopType shopType, int start, int amount)
+        public void Refresh(int start, int amount)
         {
-            ShopProducts = shopRepository.GetProducts(shopType, start, amount).ToList();
+            Items = repository.GetAllProducts().ToList();
+        }
+
+        /// <summary>
+        /// Search data
+        /// </summary>
+        public void Search(string searchText)
+        {
+
         }
 
         #endregion

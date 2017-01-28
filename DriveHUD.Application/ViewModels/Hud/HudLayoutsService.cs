@@ -1286,7 +1286,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             defaultNames = defaultNames.Union(
                     HudLayoutMappings.Mappings.Where(
-                            m => m.PokerSite == pokerSite && m.TableType == tableType && m.GameType == gameType && availableHudViewTypes.Contains(m.HudViewType))
+                            m => m.TableType == tableType && availableHudViewTypes.Contains(m.HudViewType))
                         .Select(m => m.Name)).Distinct().ToList();
 
             return defaultNames;

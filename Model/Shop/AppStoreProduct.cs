@@ -11,13 +11,15 @@
 //----------------------------------------------------------------------
 
 using Prism.Mvvm;
+using System;
 
 namespace Model.Shop
 {
     /// <summary>
     /// Model of product in shop
-    /// </summary>
-    public class ShopProduct : BindableBase
+    /// </summary>    
+    [Serializable]
+    public class AppStoreProduct : BindableBase
     {
         private string productName;
 

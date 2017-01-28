@@ -10,24 +10,36 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
 namespace Model.Shop
 {
-    internal class ShopRepository : IShopRepository
+    internal class ProductAppStoreRepository : IProductAppStoreRepository
     {
+        public IEnumerable<AppStoreProduct> GetAllProducts()
+        {          
+            var shopProducts = Enumerable.Range(0, 50).Select((index, x) => new AppStoreProduct
+            {
+                ProductName = $"Upswing Poker Training #{index}",
+                ProductDescription = "Poker strategies and courses, brought to you by two of the world's best poker players (Doug Polk & Ryan Fee), that will take your own poker skills to the next level.",
+                Price = "$27/mo",
+                ImageLink = "pack://application:,,,/DriveHUD.Common.Resources;component/images/Shop/upswing-poker-lab.gif",
+                CartLink = "https://hf322.isrefer.com/go/tpl/drivehud/",
+                LearnMoreLink = "https://hf322.isrefer.com/go/tpl/drivehud/",
+                IsAnimatedGif = true
+            }).ToList();
+
+            return shopProducts;
+        }
+
         /// <summary>
         /// Currently we're using hard-coded values, in future here must be used some external storage
         /// </summary>     
-        public IEnumerable<ShopProduct> GetProducts(ShopType shopType, int start, int amount)
-        {
-            if (shopType != ShopType.Recommended)
-            {
-                return new List<ShopProduct>();
-            }
-
-            var shopProducts = Enumerable.Range(0, 1).Select((index, x) => new ShopProduct
+        public IEnumerable<AppStoreProduct> GetProducts(int start, int amount)
+        {          
+            var shopProducts = Enumerable.Range(0, 1).Select((index, x) => new AppStoreProduct
             {
                 ProductName = "Upswing Poker Training",
                 ProductDescription = "Poker strategies and courses, brought to you by two of the world's best poker players (Doug Polk & Ryan Fee), that will take your own poker skills to the next level.",

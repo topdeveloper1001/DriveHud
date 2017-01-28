@@ -378,6 +378,9 @@
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
+    <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
     <Compile Include="ViewModels\Hud\EnumPokerSitesWrapper.cs" />
     <Compile Include="ViewModels\Hud\EnumTableTypeWrapper.cs" />
@@ -429,6 +432,9 @@
     <Compile Include="ViewModels\Settings\SettingsUpgradeViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsViewModel.cs" />
     <Compile Include="ViewModels\Settings\SettingsSiteViewModel.cs" />
+    <Compile Include="Views\AppStore\ProductAppStoreView.xaml.cs">
+      <DependentUpon>ProductAppStoreView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Main\AppsView.xaml.cs">
       <DependentUpon>AppsView.xaml</DependentUpon>
     </Compile>
@@ -740,6 +746,10 @@
       <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
     </Page>
     <Page Include="SplashScreen\SplashWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\AppStore\ProductAppStoreView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

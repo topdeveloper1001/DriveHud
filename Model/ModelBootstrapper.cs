@@ -28,8 +28,8 @@ namespace Model
                 throw new ArgumentNullException(nameof(container));
             }
 
-            container.RegisterType<IShopRepository, ShopRepository>();
-            container.RegisterType<IShopModel, ShopModel>();
+            container.RegisterType<IProductAppStoreRepository, ProductAppStoreRepository>();
+            container.RegisterType<IProductAppStoreModel, ProductAppStoreModel>();
         }
     }
 }
