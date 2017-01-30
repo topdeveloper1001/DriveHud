@@ -260,12 +260,11 @@
                 <telerik:RadMaskedNumericInput    
                     Style="{StaticResource NumericTextBoxStyle}"
                     Width="150"
-                    Height="33"                                  
-                    Mask="d4"     
-                    Culture="ru-RU"                                       
-                    Value="{Binding SelectedItem.MinSample}"                            
+                    Height="33"          
                     TextMode="PlainText"
-                    />
+                    AutoFillZeros="True"
+                    Mask="d"     
+                    Value="{Binding SelectedItem.MinSample}"/>
 
                 <!-- Label -->
                 <TextBlock 
