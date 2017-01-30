@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             xmlns:local="clr-namespace:DriveHUD.Application.Controls"
              xmlns:hud="clr-namespace:DriveHUD.Application.ViewModels.Hud"
              xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
              xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
@@ -89,13 +88,13 @@
         </Style>
     </UserControl.Resources>
 
-    <Grid Margin="0, -25,0,0">
+    <Grid Margin="0,-30,0,0">
         <Grid.RowDefinitions>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Border Grid.Row="0" Style="{StaticResource IconBorderStyle}">
+        <Border Grid.Row="0" Height="28" Style="{StaticResource IconBorderStyle}">
             <Border Style="{StaticResource IconInnerGlowBorderStyle}">
                 <Image Width="22" Height="22">
                     <Image.Style>
@@ -154,7 +153,6 @@
                         <DataTemplate>
                             <Border
                                     ToolTip="{Binding ToolTip}"
-                                    Grid.Column="0"
                                     VerticalAlignment="Center"
                                     HorizontalAlignment="Left"
                                     Margin="2,0,0,0"

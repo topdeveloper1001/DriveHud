@@ -194,9 +194,9 @@ namespace DriveHUD.Application.TableConfigurators
             shape.Height = double.NaN;
         }
 
-        protected virtual bool IsRightOriented(int seats, int seat)
+        protected bool IsRightOriented(int seats, int seat)
         {
-            return false;
+            return (seats > 6 && seat < 5) || (seats < 7 && seats > 2 && seat < 3) || (seats < 3 && seat < 1);
         }
     }
 }
