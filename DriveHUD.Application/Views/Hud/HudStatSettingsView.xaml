@@ -265,7 +265,7 @@
                     FormatString="N0"
                     Mask=""
                     Culture="en-US"
-                    maskedInput:MaskedInputExtensions.Minimum="1"
+                    maskedInput:MaskedInputExtensions.Minimum="0"
                     maskedInput:MaskedInputExtensions.Maximum="9999999"
                     Value="{Binding SelectedItem.MinSample}"/>
 
