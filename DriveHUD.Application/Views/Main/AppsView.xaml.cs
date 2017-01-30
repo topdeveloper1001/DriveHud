@@ -26,4 +26,25 @@ namespace DriveHUD.Application.Views
             InitializeComponent();
         }
     }
+
+    public class AppsTestViewModel
+    {
+        public AppsTestViewModel()
+        {
+            Pages = Enumerable.Range(1, 7).Select(x => new PageViewModel
+            {
+                PageNumber = x,
+                IsSelected = x == 5 || x == 7 || x == 1
+            }).ToList();
+        }
+
+        public List<PageViewModel> Pages { get; set; }
+    }
+
+    public class PageViewModel
+    {
+        public int PageNumber { get; set; }
+
+        public bool IsSelected { get; set; }
+    }
 }

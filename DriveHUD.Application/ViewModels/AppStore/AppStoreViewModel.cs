@@ -45,6 +45,34 @@ namespace DriveHUD.Application.ViewModels.AppStore
             }
         }
 
+        private int gridColumns;
+
+        public virtual int GridColumns
+        {
+            get
+            {
+                return gridColumns;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref gridColumns, value);
+            }
+        }
+
+        private int gridRows;
+
+        public virtual int GridRows
+        {
+            get
+            {
+                return gridRows;
+            }
+            protected set
+            {
+                this.RaiseAndSetIfChanged(ref gridRows, value);
+            }
+        }
+
         #endregion
 
         #region Commands
@@ -57,8 +85,11 @@ namespace DriveHUD.Application.ViewModels.AppStore
 
         #region IAppStoreViewModel implementation
 
-        public abstract void Initialize();
-                
+        public virtual void Initialize()
+        {
+            InitializeCommands();
+        }
+
         #endregion
 
         protected abstract void ModelInitialized();

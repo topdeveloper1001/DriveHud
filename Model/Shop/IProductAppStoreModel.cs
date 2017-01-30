@@ -10,12 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.ComponentModel;
-
 namespace Model.Shop
 {
     public interface IProductAppStoreModel : IAppStoreModel<AppStoreProduct>
-    {      
+    {
+        /// <summary>
+        /// Loads items to model
+        /// </summary>
+        void Load();
     }
 }

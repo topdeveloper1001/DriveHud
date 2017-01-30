@@ -52,9 +52,13 @@ namespace Model.Shop
 
         #region Model methods
 
-        public void Refresh(int start, int amount)
+        public void Load()
         {
             Items = repository.GetAllProducts().ToList();
+        }
+
+        public void Refresh(int start, int amount)
+        {            
         }
 
         /// <summary>

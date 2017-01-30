@@ -62,7 +62,7 @@ namespace DriveHUD.Application.ViewModels
         private void Initialize()
         {
             InitializeObservables();
-            AppStoreType = AppStoreType.Recommended;
+            Load();
         }
 
         private void InitializeObservables()
@@ -81,6 +81,7 @@ namespace DriveHUD.Application.ViewModels
                     break;
 
                 default:
+                    AppStoreViewModel = new EmptyAppStoreViewModel();
                     break;
             }
         }

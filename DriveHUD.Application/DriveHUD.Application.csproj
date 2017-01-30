@@ -379,6 +379,7 @@
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
+    <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\ProductAppStoreViewModel.cs" />
     <Compile Include="ViewModels\Filters\IFilterView.cs" />
@@ -705,6 +706,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ChartGadget.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ControlStyles\AppStoreResources.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

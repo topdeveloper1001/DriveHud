@@ -20,7 +20,7 @@ namespace Model.Shop
     {
         public IEnumerable<AppStoreProduct> GetAllProducts()
         {          
-            var shopProducts = Enumerable.Range(0, 50).Select((index, x) => new AppStoreProduct
+            var shopProducts = Enumerable.Range(0, 6).Select((index, x) => new AppStoreProduct
             {
                 ProductName = $"Upswing Poker Training #{index}",
                 ProductDescription = "Poker strategies and courses, brought to you by two of the world's best poker players (Doug Polk & Ryan Fee), that will take your own poker skills to the next level.",
