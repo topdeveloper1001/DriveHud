@@ -12,12 +12,13 @@
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
              mc:Ignorable="d"
              MinWidth="50"
-             Opacity="{Binding Opacity}"
-             Background="{StaticResource HudElementPlayerBrush}">
+             Opacity="{Binding Opacity}">
     <UserControl.Resources>
 
         <sys:Single x:Key="BrightnessAdjustmentParameter">0.4</sys:Single>
-
+        
+        <SolidColorBrush x:Key="BlackBackgroundBrush" Color="#1b1c1e" />
+        
         <Geometry x:Key="PlayerNoteIconPath">F1M10.678,24.797C10.678,24.797 10.025,27.08 10.025,27.08 10.025,27.08 11.301,28.234 11.301,28.234 11.301,28.234 13.483,27.336 13.483,27.336 13.483,27.336 10.678,24.797 10.678,24.797z M10.237,23.247C10.237,23.247 15.066,27.61 15.066,27.61 15.066,27.61 9.359,29.964 9.359,29.964 9.139,30.054 8.888,30.01 8.711,29.851 8.534,29.69 8.464,29.444 8.529,29.214 8.529,29.214 10.237,23.247 10.237,23.247z M6.385,17.145C6.385,17.145 13.99,17.145 13.99,17.145 13.99,17.145 12.266,19.081 12.266,19.081 12.266,19.081 6.385,19.081 6.385,19.081 5.853,19.081 5.422,18.649 5.422,18.114 5.422,17.578 5.853,17.145 6.385,17.145z M19.242,15.568C19.09,15.576 18.947,15.645 18.845,15.76 18.845,15.76 13.347,21.931 13.347,21.931 13.118,22.186 13.14,22.58 13.394,22.81 13.508,22.914 13.658,22.968 13.811,22.958 13.963,22.949 14.107,22.881 14.209,22.765 14.209,22.765 19.734,16.564 19.734,16.564 19.947,16.326 19.927,15.958 19.69,15.744 19.69,15.744 19.659,15.716 19.659,15.716 19.545,15.612 19.395,15.56 19.242,15.568z M6.385,13.917C6.385,13.917 15.048,13.917 15.048,13.917 15.572,13.917 15.997,14.352 16.01,14.877 16.01,14.877 15.114,15.883 15.114,15.883 15.092,15.884 15.069,15.886 15.047,15.887 15.047,15.887 6.385,15.887 6.385,15.887 5.853,15.887 5.422,15.437 5.422,14.902 5.422,14.366 5.853,13.917 6.385,13.917z M21.646,13.481C21.409,13.266 21.044,13.286 20.831,13.524 20.831,13.524 20.559,13.83 20.559,13.83 20.458,13.945 20.405,14.096 20.413,14.25 20.421,14.404 20.49,14.549 20.604,14.652 20.604,14.652 20.635,14.68 20.635,14.68 20.749,14.783 20.899,14.836 21.052,14.827 21.205,14.819 21.348,14.75 21.45,14.635 21.45,14.635 22.108,13.897 22.108,13.897 22.108,13.897 21.646,13.481 21.646,13.481z M21.057,11.098C21.057,11.098 25.888,15.461 25.888,15.461 25.888,15.461 15.644,26.96 15.644,26.96 15.644,26.96 10.814,22.597 10.814,22.597 10.814,22.597 21.057,11.098 21.057,11.098z M6.385,10.721C6.385,10.721 15.047,10.721 15.047,10.721 15.58,10.721 16.01,11.154 16.01,11.689 16.01,12.224 15.579,12.657 15.047,12.657 15.047,12.657 6.385,12.657 6.385,12.657 5.853,12.657 5.422,12.224 5.422,11.689 5.422,11.154 5.853,10.721 6.385,10.721z M22.71,9.242C22.71,9.242 27.54,13.604 27.54,13.604 27.54,13.604 26.353,14.936 26.353,14.936 26.353,14.936 21.522,10.573 21.522,10.573 21.522,10.573 22.71,9.242 22.71,9.242z M25.799,7.706C25.799,7.706 24.951,8.655 24.951,8.655 24.951,8.655 27.876,11.299 27.876,11.299 27.876,11.299 28.723,10.349 28.723,10.349 28.723,10.349 25.799,7.706 25.799,7.706z M25.728,6.422C26.067,6.403 26.399,6.522 26.651,6.749 26.651,6.749 29.576,9.393 29.576,9.393 30.101,9.867 30.145,10.681 29.674,11.21 29.674,11.21 27.976,13.116 27.976,13.116 27.976,13.116 23.146,8.755 23.146,8.755 23.146,8.755 24.846,6.849 24.846,6.849 25.07,6.594 25.389,6.441 25.728,6.422z M10.698,2.456C10.167,2.456 9.736,2.891 9.736,3.426 9.736,3.538 9.757,3.651 9.791,3.749 9.791,3.749 11.604,3.749 11.604,3.749 11.641,3.651 11.661,3.539 11.661,3.426 11.661,2.891 11.229,2.456 10.698,2.456z M10.698,1.002C12.027,1.002 13.105,2.09 13.105,3.426 13.105,3.535 13.096,3.651 13.084,3.748 13.084,3.748 13.762,3.748 13.762,3.748 14.206,3.748 14.566,4.111 14.566,4.558 14.566,4.558 14.566,4.717 14.566,4.717 14.566,4.717 17.161,4.717 17.161,4.717 18.366,4.717 19.344,5.701 19.344,6.914 19.344,6.914 19.344,11.13 19.344,11.13 19.344,11.13 17.419,13.29 17.419,13.29 17.419,13.29 17.419,7.838 17.419,7.838 17.419,7.201 16.907,6.686 16.276,6.686 16.276,6.686 14.566,6.686 14.566,6.686 14.566,6.686 14.566,7.779 14.566,7.779 14.566,8.226 14.205,8.59 13.761,8.59 13.761,8.59 7.644,8.59 7.644,8.59 7.199,8.59 6.839,8.226 6.839,7.779 6.839,7.779 6.839,6.686 6.839,6.686 6.839,6.686 5.097,6.686 5.097,6.686 4.465,6.686 3.953,7.202 3.953,7.838 3.953,7.838 3.953,21.965 3.953,21.965 3.953,22.602 4.466,23.117 5.097,23.117 5.097,23.117 9.023,23.117 9.023,23.117 9.023,23.117 8.46,25.086 8.46,25.086 8.46,25.086 4.179,25.086 4.179,25.086 2.974,25.086 1.997,24.102 1.997,22.889 1.997,22.889 1.997,6.915 1.997,6.915 1.997,5.702 2.973,4.718 4.179,4.718 4.179,4.718 6.838,4.718 6.838,4.718 6.838,4.718 6.838,4.559 6.838,4.559 6.838,4.111 7.199,3.749 7.643,3.749 7.643,3.749 8.312,3.749 8.312,3.749 8.299,3.651 8.292,3.535 8.292,3.426 8.292,2.09 9.371,1.002 10.698,1.002z</Geometry>
 
         <Style x:Key="PlayerNotePathStyle" TargetType="Path">
@@ -36,31 +37,98 @@
             <Setter Property="CornerRadius" Value="0,0,2,2" />
             <Setter Property="Background" Value="{StaticResource HudElementPlayerBrush}" />
         </Style>
+
+        <Style x:Key="InnerGlowBaseBorderStyle" TargetType="{x:Type Border}">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="BorderBrush" Value="#88898a" />
+            <Setter Property="VerticalAlignment" Value="Stretch" />
+            <Setter Property="HorizontalAlignment" Value="Stretch" />
+            <Setter Property="BorderThickness" Value="0,0.75,0,0" />
+        </Style>
+
+        <Style TargetType="Image" x:Key="ImageTooltip">
+            <Setter Property="telerik:RadToolTipService.InitialShowDelay" Value="1" />
+            <Setter Property="telerik:RadToolTipService.ShowDuration" Value="60000" />
+            <Setter Property="telerik:RadToolTipService.VerticalOffset" Value="-5" />
+            <Setter Property="telerik:RadToolTipService.Placement" Value="Top" />
+            <Setter Property="telerik:RadToolTipService.ToolTipContent" Value="" />
+            <Setter Property="telerik:RadToolTipService.ToolTipContentTemplate">
+                <Setter.Value>
+                    <DataTemplate>
+                        <control:HudPlayerToolTip DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=DataContext}" />
+                    </DataTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="IconBorderStyle" TargetType="{x:Type Border}" BasedOn="{StaticResource BaseBorderStyle}">
+            <Setter Property="CornerRadius" Value="0,3,0,0" />
+            <Setter Property="HorizontalAlignment" Value="Left" />
+            <Setter Property="Margin" Value="0,0,0,0" />
+            <Setter Property="Width" Value="28" />
+            <Setter Property="BorderThickness" Value="0,1,1,1" />
+            <Setter Property="Background" Value="{StaticResource BlackBackgroundBrush}" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsRightOriented}" Value="True">
+                    <Setter Property="HorizontalAlignment" Value="Right" />
+                    <Setter Property="Margin" Value="0,0,0,0" />
+                    <Setter Property="CornerRadius" Value="3,0,0,0" />
+                    <Setter Property="BorderThickness" Value="1,1,0,1" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="IconInnerGlowBorderStyle" TargetType="{x:Type Border}" BasedOn="{StaticResource InnerGlowBaseBorderStyle}">
+            <Setter Property="CornerRadius" Value="0,2,0,0" />
+            <Setter Property="Margin" Value="0,-0.25,0,0" />
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding IsRightOriented}" Value="True">
+                    <Setter Property="CornerRadius" Value="2,0,0,0" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
 
-    <Grid>
-        <Grid.Style>
-            <Style TargetType="Grid">
-                <Setter Property="ToolTipService.InitialShowDelay" Value="1" />
-                <Setter Property="ToolTipService.ShowDuration" Value="60000" />
-                <Setter Property="ToolTipService.VerticalOffset" Value="-5" />
-                <Setter Property="ToolTipService.Placement" Value="Top" />
-                <Setter Property="ToolTipService.ToolTip">
-                    <Setter.Value>
-                        <ToolTip BorderThickness="0" Background="Transparent">
-                            <ToolTip.ContentTemplate>
-                                <DataTemplate>
-                                    <control:HudPlayerToolTip DataContext="{Binding RelativeSource={RelativeSource AncestorType={x:Type UserControl}}, Path=DataContext}" />
-                                </DataTemplate>
-                            </ToolTip.ContentTemplate>
-                        </ToolTip>
-                    </Setter.Value>
-                </Setter>
-            </Style>
-        </Grid.Style>
+    <Grid Margin="0, -25,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
 
+        <Border Grid.Row="0" Style="{StaticResource IconBorderStyle}">
+            <Border Style="{StaticResource IconInnerGlowBorderStyle}">
+                <Image Width="22" Height="22">
+                    <Image.Style>
+                        <Style TargetType="{x:Type Image}" BasedOn="{StaticResource ImageTooltip}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding IsDefaultImage}" Value="true">
+                                    <Setter Property="Source">
+                                        <Setter.Value>
+                                            <DrawingImage>
+                                                <DrawingImage.Drawing>
+                                                    <DrawingGroup>
+                                                        <DrawingGroup.Children>
+                                                            <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 190.197,-0.395996C 85.3227,-0.395996 0,84.9267 0,189.801C 0,294.677 85.3227,380 190.197,380C 295.073,380 380.396,294.677 380.396,189.801C 380.396,84.9267 295.073,-0.395996 190.197,-0.395996 Z M 190.197,348C 102.969,348 32,277.031 32,189.801C 32,102.573 102.969,31.604 190.197,31.604C 277.427,31.604 348.396,102.573 348.396,189.801C 348.396,277.031 277.427,348 190.197,348 Z "/>
+                                                            <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 190.197,71.016C 152.245,71.016 121.369,101.896 121.369,139.844C 121.369,148.683 128.531,155.844 137.369,155.844C 146.203,155.844 153.369,148.683 153.369,139.844C 153.369,119.536 169.891,103.016 190.197,103.016C 210.505,103.016 227.027,119.536 227.027,139.844C 227.027,160.151 210.505,176.672 190.197,176.672C 181.36,176.672 174.197,183.839 174.197,192.672L 174.197,228.849C 174.197,237.688 181.36,244.849 190.197,244.849C 199.031,244.849 206.197,237.688 206.197,228.849L 206.197,206.797C 236.459,199.568 259.027,172.292 259.027,139.844C 259.027,101.896 228.151,71.016 190.197,71.016 Z "/>
+                                                            <GeometryDrawing Brush="#FFEEEEEE" Geometry="F1 M 212.593,283.229C 212.593,295.599 202.568,305.631 190.197,305.631C 177.828,305.631 167.797,295.599 167.797,283.229C 167.797,270.859 177.828,260.833 190.197,260.833C 202.568,260.833 212.593,270.859 212.593,283.229 Z "/>
+                                                        </DrawingGroup.Children>
+                                                    </DrawingGroup>
+                                                </DrawingImage.Drawing>
+                                            </DrawingImage>
+                                        </Setter.Value>
+                                    </Setter>
+                                </DataTrigger>
+                                <DataTrigger Binding="{Binding IsDefaultImage}" Value="false">
+                                    <Setter Property="Source" Value="{Binding PlayerIcon, Converter={dh:StringToImageSourceConverter}}" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+            </Border>
+        </Border>
 
-        <Border Grid.Column="0" Style="{StaticResource BottomBorderStyle}">
+        <Border Grid.Column="0" Grid.Row="1" Style="{StaticResource BottomBorderStyle}">
             <Grid>
                 <WrapPanel Margin="3,0,0,3" MinHeight="35" VerticalAlignment="Top" HorizontalAlignment="Stretch" Orientation="Vertical">
                     <i:Interaction.Behaviors>
