@@ -261,9 +261,12 @@
                     Style="{StaticResource NumericTextBoxStyle}"
                     Width="150"
                     Height="33"          
-                    TextMode="PlainText"
-                    AutoFillZeros="True"
-                    Mask="d"     
+                    TextMode="PlainText"                    
+                    FormatString="N0"
+                    Mask=""
+                    Culture="en-US"
+                    maskedInput:MaskedInputExtensions.Minimum="1"
+                    maskedInput:MaskedInputExtensions.Maximum="9999999"
                     Value="{Binding SelectedItem.MinSample}"/>
 
                 <!-- Label -->
