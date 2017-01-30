@@ -294,10 +294,16 @@ namespace DriveHUD.Application.ViewModels
         {
             try
             {
+                if (e == null || e.GameInfo == null)
+                {
+                    LogProvider.Log.Error(this, "Fatal error: data can not be imported");
+                    return;
+                }
+
                 // if no handle available then we don't need to do anything with this data, because hud won't be up
                 if (e.GameInfo.WindowHandle == 0)
                 {
-                    LogProvider.Log.Warn($"No window found for hand #{e?.GameInfo?.GameNumber}");
+                    LogProvider.Log.Warn($"No window found for hand #{e.GameInfo.GameNumber}");
                     return;
                 }
 
@@ -328,7 +334,7 @@ namespace DriveHUD.Application.ViewModels
 
                 if (activeLayout == null)
                 {
-                    LogProvider.Log.Error(this, "Could not find active layout");
+                    LogProvider.Log.Error(this, $"Layout has not been found for {e.GameInfo.PokerSite}, {e.GameInfo.TableType}, {e.GameInfo.EnumGameType}");
                     return;
                 }
 
@@ -445,7 +451,7 @@ namespace DriveHUD.Application.ViewModels
                     var cardsCollection = sessionData.CardsList;
                     playerHudContent.HudElement.CardsCollection = cardsCollection == null
                         ? new ObservableCollection<string>()
-                        : new ObservableCollection<string>(cardsCollection);                    
+                        : new ObservableCollection<string>(cardsCollection);
 
                     // create new array to prevent Collection was modified exception
                     var activeLayoutHudStats = activeLayout.HudStats.ToArray();
@@ -484,7 +490,7 @@ namespace DriveHUD.Application.ViewModels
                             statInfo.AssignStatInfoValues(item);
                         }
                         else if (!(statInfo is StatInfoBreak))
-                        {                            
+                        {
                             continue;
                         }
 
