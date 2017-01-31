@@ -14,7 +14,7 @@ namespace DriveHUD.ViewModels
     {
         public StatInfoBreak() : base()
         {
-            Stat = Stat.Blank;
+            Stat = Stat.PlayerInfoIcon;
         }
 
         public override StatInfo Clone()

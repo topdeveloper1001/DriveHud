@@ -128,6 +128,6 @@ namespace Model.Enums
         PFRInBTN,
         PFRInBB,
         PFRInSB,
-        Blank
+        PlayerInfoIcon
     }
 }

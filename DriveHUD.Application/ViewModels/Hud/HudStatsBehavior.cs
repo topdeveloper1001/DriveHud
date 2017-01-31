@@ -221,12 +221,12 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     FrameworkElement block = null;
 
-                    if (statInfo.Stat == Stat.Blank)
+                    if (statInfo.Stat == Stat.PlayerInfoIcon)
                     {
                         block = new Image
                         {
-                            Width = 20,
-                            Height = 20
+                            Width = 18,
+                            Height = 18
                         };
                         if (IsDefaultImage)
                         {

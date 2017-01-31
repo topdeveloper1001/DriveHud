@@ -579,12 +579,20 @@ namespace DriveHUD.ViewModels
         [ProtoMember(28)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
 
+        [NonSerialized] private bool isAvailable = true;
+
         [XmlIgnore]
         [ProtoMember(29)]
-        public virtual bool IsVisible
+        public virtual bool IsAvailable
         {
-            get { return true; }
-            set { }
+            get { return isAvailable; }
+            set
+            {
+                if (isAvailable == value)
+                    return;
+                isAvailable = value;
+                OnPropertyChanged();
+            }
         }
 
         #endregion
@@ -679,6 +687,7 @@ namespace DriveHUD.ViewModels
             statInfoClone.StatInfoToolTipCollection = StatInfoToolTipCollection != null ?
                                                         new ObservableCollection<StatInfoToolTip>(StatInfoToolTipCollection.Select(x => x.Clone()).ToList()) :
                                                         StatInfoToolTipCollection;
+            statInfoClone.IsAvailable = IsAvailable;
 
             var colorRangeCloneCollection = SettingsAppearanceValueRangeCollection.Select(x => x.Clone()).OrderBy(x => x.Value).ToArray();
             statInfoClone.SettingsAppearanceValueRangeCollection = new ObservableCollection<StatInfoOptionValueRange>(colorRangeCloneCollection);

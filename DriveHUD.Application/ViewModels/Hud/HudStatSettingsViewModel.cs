@@ -18,6 +18,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Media;
+using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels
 {
@@ -32,7 +33,7 @@ namespace DriveHUD.Application.ViewModels
         {
             Check.ArgumentNotNull(() => viewModelInfo);
 
-            var clonedItems = viewModelInfo.SelectedStatInfoCollection.Select(x => x.Clone()).ToArray();
+            var clonedItems = viewModelInfo.SelectedStatInfoCollection.Where(x => !(x is StatInfoBreak) && x.Stat != Stat.PlayerInfoIcon).Select(x => x.Clone()).ToArray();
 
             if (viewModelInfo.SelectedStatInfo != null)
             {
