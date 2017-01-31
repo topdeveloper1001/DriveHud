@@ -85,6 +85,17 @@ namespace DriveHUD.Application.ViewModels
                     CurrentTableType = TableTypes.FirstOrDefault(t => t.TableType == _currentLayout.TableType);
                 }
 
+                var playerIcon = StatInfoCollectionView.SourceCollection.OfType<StatInfo>().FirstOrDefault(x=>x.Stat == Stat.Blank);
+                if (playerIcon != null)
+                {
+                    playerIcon.IsVisible = HudViewType == HudViewType.Plain;
+                }
+                playerIcon = StatInfoObserveCollection.FirstOrDefault(x => x.Stat == Stat.Blank);
+                if (playerIcon != null)
+                {
+                    playerIcon.IsVisible = HudViewType == HudViewType.Plain;
+                }
+
                 // load data for selected layout
                 RaisePropertyChanged(() => HudViewType);
                 _currentLayoutSwitching = false;
@@ -224,6 +235,8 @@ namespace DriveHUD.Application.ViewModels
             StatInfoCollection = new ReactiveList<StatInfo>
             {
                 new StatInfo { IsListed = false, GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.UO_PFR_EP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.UO_PFR_EP)},
+
+                new StatInfo {GroupName = "1", StatInfoGroup = statInfoGroups[0], Caption = "Player Info Icon",Stat = Stat.Blank, IsVisible = true},
 
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.VPIP, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.VPIP) },
                 new StatInfo { GroupName = "1", StatInfoGroup = statInfoGroups[0], Stat = Stat.PFR, PropertyName = ReflectionHelper.GetPath<Indicators>(x => x.PFR)},
@@ -774,8 +787,16 @@ namespace DriveHUD.Application.ViewModels
                     continue;
                 }
 
-                statInfo.Reset();
-                statInfo.Initialize();
+                if (statInfo.Stat == Stat.Blank)
+                {
+                    statInfo.IsVisible = HudViewType == HudViewType.Plain;
+                    StatInfoCollection.Add(statInfo);
+                }
+                else
+                {
+                    statInfo.Reset();
+                    statInfo.Initialize();
+                }
 
                 StatInfoCollection.Add(statInfo);
             }
@@ -784,7 +805,7 @@ namespace DriveHUD.Application.ViewModels
 
             foreach (var hudStat in layout.HudStats)
             {
-                if (hudStat is StatInfoBreak)
+                if (hudStat is StatInfoBreak || hudStat.Stat == Stat.Blank)
                 {
                     StatInfoObserveCollection.Add(hudStat);
                     continue;
@@ -792,7 +813,7 @@ namespace DriveHUD.Application.ViewModels
 
                 var existing =
                     StatInfoCollection.FirstOrDefault(
-                        x => x.Stat == hudStat.Stat && x.StatInfoGroup.Name == hudStat.StatInfoGroup.Name);
+                        x => x.Stat == hudStat.Stat && x.StatInfoGroup?.Name == hudStat.StatInfoGroup.Name);
 
                 if (existing != null)
                 {

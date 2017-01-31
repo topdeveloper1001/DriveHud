@@ -579,6 +579,14 @@ namespace DriveHUD.ViewModels
         [ProtoMember(28)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
 
+        [XmlIgnore]
+        [ProtoMember(29)]
+        public virtual bool IsVisible
+        {
+            get { return true; }
+            set { }
+        }
+
         #endregion
 
         #region Methods
@@ -640,7 +648,7 @@ namespace DriveHUD.ViewModels
             }
         }
 
-        public StatInfo Clone()
+        public virtual StatInfo Clone()
         {
             var statInfoClone = new StatInfo();
 

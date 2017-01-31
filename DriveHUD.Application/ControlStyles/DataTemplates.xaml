@@ -124,7 +124,7 @@
     </DataTemplate>
 
     <DataTemplate x:Key="RadListBoxItemTemplate_StatInfo">
-        <Grid>
+        <Grid Visibility="{Binding Path=IsVisible,Converter={StaticResource BoolToVisibilityConverter}}">
             <Grid Background="#1d1e20" Height="30" Visibility="{Binding Path=., Mode=OneWay,Converter={StaticResource StatTypeToVisibilityConverter},ConverterParameter=StatInfo}" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>

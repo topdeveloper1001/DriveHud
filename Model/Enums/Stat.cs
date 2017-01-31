@@ -127,6 +127,7 @@ namespace Model.Enums
         PFRInCO,
         PFRInBTN,
         PFRInBB,
-        PFRInSB
+        PFRInSB,
+        Blank
     }
 }
