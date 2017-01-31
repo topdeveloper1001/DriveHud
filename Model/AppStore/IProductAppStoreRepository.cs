@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IShopRepository.cs" company="Ace Poker Solutions">
+// <copyright file="IProductAppStoreRepository.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -12,15 +12,13 @@
 
 using System.Collections.Generic;
 
-namespace Model.Shop
+namespace Model.AppStore
 {
     /// <summary>
     /// Repository for DriveHUD shop
     /// </summary>
     public interface IProductAppStoreRepository
-    {
-        IEnumerable<AppStoreProduct> GetProducts(int start, int amount);
-
+    {        
         IEnumerable<AppStoreProduct> GetAllProducts();
     }
 }

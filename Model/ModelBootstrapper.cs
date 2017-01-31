@@ -11,7 +11,7 @@
 //----------------------------------------------------------------------
 
 using Microsoft.Practices.Unity;
-using Model.Shop;
+using Model.AppStore;
 using System;
 
 namespace Model

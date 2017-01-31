@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ShopType.cs" company="Ace Poker Solutions">
+// <copyright file="IProductAppStoreModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,12 +10,13 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-namespace Model.Shop
+namespace Model.AppStore
 {
-    public enum AppStoreType
+    public interface IProductAppStoreModel : IAppStoreItemsModel<AppStoreProduct>
     {
-        Recommended,
-        Training,
-        Huds
+        /// <summary>
+        /// Loads items to model
+        /// </summary>
+        void Load();
     }
 }

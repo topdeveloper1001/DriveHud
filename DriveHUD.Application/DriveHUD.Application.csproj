@@ -379,6 +379,7 @@
     <Compile Include="UnityServicesBootstrapper.cs" />
     <Compile Include="UpdaterInfo.cs" />
     <Compile Include="ValueConverters\SelectedLayoutToCheckedConverter.cs" />
+    <Compile Include="ViewModels\AppStore\AppStorePageViewModel.cs" />
     <Compile Include="ViewModels\AppStore\AppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\EmptyAppStoreViewModel.cs" />
     <Compile Include="ViewModels\AppStore\IAppStoreViewModel.cs" />

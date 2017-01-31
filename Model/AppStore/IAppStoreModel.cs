@@ -10,21 +10,16 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
 using System.ComponentModel;
 
-namespace Model.Shop
+namespace Model.AppStore
 {
-    /// <summary>
-    /// Generic app store model
-    /// </summary>
-    /// <typeparam name="TItem">The item of the app store model</typeparam>
-    public interface IAppStoreModel<TItem> : INotifyPropertyChanged
+    public interface IAppStoreModel : INotifyPropertyChanged
     {
         /// <summary>
-        /// Items of the app store model
+        /// Total amount of items
         /// </summary>
-        IList<TItem> Items { get; }
+        int ItemsCount { get; }
 
         /// <summary>
         /// Refreshes Items

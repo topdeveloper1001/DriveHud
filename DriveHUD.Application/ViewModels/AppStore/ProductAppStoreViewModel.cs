@@ -10,14 +10,12 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Shop;
+using Model.AppStore;
 
 namespace DriveHUD.Application.ViewModels.AppStore
 {
     public class ProductAppStoreViewModel : AppStoreViewModel<IProductAppStoreModel>
     {
-        private static int ProductsPerPage = 6;
-
         public override void Initialize()
         {
             base.Initialize();
@@ -25,11 +23,27 @@ namespace DriveHUD.Application.ViewModels.AppStore
             GridColumns = 2;
             GridRows = 3;
 
-            InitializeModelAsync(() => Model.Load());
+            InitializeModelAsync(() =>
+            {
+                Model.Load();
+            });
+        }
+
+        public override void Refresh(int pageNumber)
+        {
+            var start = ProductsPerPage * (pageNumber - 1);
+            Model.Refresh(start, ProductsPerPage);
+        }
+
+        public override void Search(string searchText)
+        {
+            Model.Search(searchText);
+            OnUpdated();
         }
 
         protected override void ModelInitialized()
         {
+            OnUpdated();
         }
 
         protected override void OnAddToCart(object item)

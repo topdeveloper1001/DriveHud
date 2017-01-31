@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ShopProduct.cs" company="Ace Poker Solutions">
+// <copyright file="AppStoreProduct.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -13,7 +13,7 @@
 using Prism.Mvvm;
 using System;
 
-namespace Model.Shop
+namespace Model.AppStore
 {
     /// <summary>
     /// Model of product in shop

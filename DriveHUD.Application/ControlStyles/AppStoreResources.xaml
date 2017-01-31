@@ -428,6 +428,7 @@
                 <ControlTemplate
                     TargetType="{x:Type Button}">
                     <Border
+                        Cursor="Hand"
                         Background="{TemplateBinding Background}"
                         BorderBrush="{TemplateBinding BorderBrush}"
                         BorderThickness="{TemplateBinding BorderThickness}"
@@ -457,6 +458,11 @@
                     Property="Foreground"
                     Value="#ffffff" />
             </DataTrigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter
+                    Property="Foreground"
+                    Value="#ffffff" />
+            </Trigger>
         </Style.Triggers>
 
     </Style>

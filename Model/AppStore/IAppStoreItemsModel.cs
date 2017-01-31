@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IShopCacheService.cs" company="Ace Poker Solutions">
+// <copyright file="IAppStoreItemsModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,16 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Model.Shop
+namespace Model.AppStore
 {
-    public interface IShopCacheService
+    /// <summary>
+    /// Generic app store model
+    /// </summary>
+    /// <typeparam name="TItem">The item of the app store model</typeparam>
+    public interface IAppStoreItemsModel<TItem> : IAppStoreModel
     {
-
+        /// <summary>
+        /// Items of the app store model
+        /// </summary>
+        IList<TItem> Items { get; }      
     }
 }

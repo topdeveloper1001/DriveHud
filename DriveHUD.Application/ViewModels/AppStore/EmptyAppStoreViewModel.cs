@@ -10,7 +10,7 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using Model.Shop;
+using Model.AppStore;
 
 namespace DriveHUD.Application.ViewModels.AppStore
 {
@@ -21,6 +21,14 @@ namespace DriveHUD.Application.ViewModels.AppStore
     {
         public override void Initialize()
         {            
+        }
+
+        public override void Refresh(int pageNumber)
+        {            
+        }
+
+        public override void Search(string searchText)
+        {         
         }
 
         protected override void ModelInitialized()

@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="ShopModel.cs" company="Ace Poker Solutions">
+// <copyright file="ProductAppStoreModel.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -15,11 +15,15 @@ using Prism.Mvvm;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Model.Shop
+namespace Model.AppStore
 {
     internal class ProductAppStoreModel : BindableBase, IProductAppStoreModel
     {
         private IProductAppStoreRepository repository;
+
+        private IList<AppStoreProduct> allItems = new List<AppStoreProduct>();
+
+        private IList<AppStoreProduct> activeItems = new List<AppStoreProduct>();
 
         public ProductAppStoreModel()
         {
@@ -48,17 +52,32 @@ namespace Model.Shop
             }
         }
 
+        public int ItemsCount
+        {
+            get
+            {
+                return activeItems != null ? activeItems.Count : default(int);
+            }
+        }
+
         #endregion
 
         #region Model methods
 
         public void Load()
         {
-            Items = repository.GetAllProducts().ToList();
+            allItems = repository.GetAllProducts().ToList();
+            activeItems = allItems;
         }
 
         public void Refresh(int start, int amount)
-        {            
+        {
+            if (activeItems == null)
+            {
+                return;
+            }
+
+            Items = activeItems.Skip(start).Take(amount).ToList();
         }
 
         /// <summary>
@@ -66,7 +85,12 @@ namespace Model.Shop
         /// </summary>
         public void Search(string searchText)
         {
+            if (string.IsNullOrWhiteSpace(searchText))
+            {
+                activeItems = allItems;
+            }
 
+            activeItems = allItems.Where(x => x.ProductName.Contains(searchText) || x.ProductDescription.Contains(searchText)).ToList();
         }
 
         #endregion
