@@ -486,14 +486,6 @@ namespace DriveHUD.Application.ViewModels
             }
         }
 
-        private IEnumerable<EnumTableType> GetSiteTableTypes(EnumPokerSites pokerSite)
-        {
-            var configuration = _configurations.FirstOrDefault(c => c.Site == pokerSite);
-            return configuration == null ? new List<EnumTableType>() : configuration.TableTypes;
-        }
-
-
-
         public ObservableCollection<PlayerHudContent> PlayerCollection
         {
             get
