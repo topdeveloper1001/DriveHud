@@ -10,6 +10,8 @@
 // </copyright>
 //----------------------------------------------------------------------
 
+using DriveHUD.Application.TableConfigurators;
+using DriveHUD.Application.TableConfigurators.PositionProviders;
 using DriveHUD.Application.ViewModels.Layouts;
 using DriveHUD.Common;
 using DriveHUD.Common.Linq;
@@ -17,9 +19,12 @@ using DriveHUD.Common.Log;
 using DriveHUD.Common.Resources;
 using DriveHUD.Entities;
 using DriveHUD.ViewModels;
+using Microsoft.Practices.ServiceLocation;
 using Model;
 using Model.Data;
 using Model.Enums;
+using Model.Events;
+using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -30,13 +35,6 @@ using System.Threading;
 using System.Windows;
 using System.Windows.Media;
 using System.Xml.Serialization;
-using DriveHUD.Application.TableConfigurators;
-using DriveHUD.Application.TableConfigurators.PositionProviders;
-using DriveHUD.Common.Wpf.Actions;
-using Microsoft.Practices.ServiceLocation;
-using Model.Events;
-using Prism.Events;
-using Prism.Interactivity.InteractionRequest;
 
 
 namespace DriveHUD.Application.ViewModels.Hud
@@ -103,29 +101,34 @@ namespace DriveHUD.Application.ViewModels.Hud
                 else
                 {
                     HudLayoutMappings = new HudLayoutMappings();
-
                 }
+
                 foreach (var tableType in Enum.GetValues(typeof(EnumTableType)).OfType<EnumTableType>())
                 {
                     var defaultLayoutInfo = GetPredefindedLayout(tableType);
                     defaultLayoutInfo.TableType = tableType;
                     defaultLayoutInfo.IsDefault = true;
+
                     foreach (var hudViewType in Enum.GetValues(typeof(HudViewType)).OfType<HudViewType>())
                     {
                         defaultLayoutInfo.Name =
                             $"DH: {CommonResourceManager.Instance.GetEnumResource(tableType)} {(hudViewType == HudViewType.Plain ? string.Empty : hudViewType.ToString())}"
                                 .Trim();
-                        if (
-                            File.Exists(Path.Combine(layoutsDirectory.FullName,
-                                GetLayoutFileName(defaultLayoutInfo.Name))))
+
+                        if (File.Exists(Path.Combine(layoutsDirectory.FullName, GetLayoutFileName(defaultLayoutInfo.Name))))
+                        {
                             continue;
+                        }
+
                         defaultLayoutInfo.HudPositionsInfo.Clear();
                         defaultLayoutInfo.HudViewType = hudViewType;
+
                         var pokerSites = hudViewType == HudViewType.Plain
                             ? Enum.GetValues(typeof(EnumPokerSites))
                                 .OfType<EnumPokerSites>()
                                 .Where(p => p != EnumPokerSites.Unknown && p != EnumPokerSites.IPoker)
                             : new[] { EnumPokerSites.Ignition, EnumPokerSites.Bodog };
+
                         foreach (var pokerSite in pokerSites)
                         {
                             foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
@@ -148,31 +151,46 @@ namespace DriveHUD.Application.ViewModels.Hud
 
                         var fileName = InternalSave(defaultLayoutInfo);
 
-                        HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                        var existingMapping = HudLayoutMappings.Mappings.FirstOrDefault(x => x.TableType == tableType &&
+                                                    x.Name == defaultLayoutInfo.Name &&
+                                                    x.IsDefault &&
+                                                    x.HudViewType == defaultLayoutInfo.HudViewType);
+
+                        if (existingMapping == null)
                         {
-                            TableType = tableType,
-                            Name = defaultLayoutInfo.Name,
-                            IsDefault = true,
-                            HudViewType = defaultLayoutInfo.HudViewType,
-                            FileName = Path.GetFileName(fileName)
-                        });
+                            HudLayoutMappings.Mappings.Add(new HudLayoutMapping
+                            {
+                                TableType = tableType,
+                                Name = defaultLayoutInfo.Name,
+                                IsDefault = true,
+                                HudViewType = defaultLayoutInfo.HudViewType,
+                                FileName = Path.GetFileName(fileName)
+                            });
+                        }
+                        else
+                        {
+                            existingMapping.FileName = Path.GetFileName(fileName);
+                        }
                     }
                 }
+
                 SaveLayoutMappings(mappingsFilePath, HudLayoutMappings);
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, "Layouts have not been initialized.", e);
             }
         }
 
         private HudLayoutMappings LoadLayoutMappings(string fileName)
         {
             HudLayoutMappings hudLayoutMappings = null;
+
             _rwLock.EnterReadLock();
+
             try
             {
-                using (var stream = File.Open(fileName, FileMode.Open))
+                using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
                     var xmlSerializer = new XmlSerializer(typeof(HudLayoutMappings));
                     hudLayoutMappings = xmlSerializer.Deserialize(stream) as HudLayoutMappings;
@@ -186,6 +204,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 _rwLock.ExitReadLock();
             }
+
             return hudLayoutMappings;
         }
 
@@ -199,6 +218,7 @@ namespace DriveHUD.Application.ViewModels.Hud
         private void SaveLayoutMappings(string fileName, HudLayoutMappings mappings)
         {
             _rwLock.EnterWriteLock();
+
             try
             {
                 using (var fs = File.Open(fileName, FileMode.Create))
@@ -209,7 +229,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, "Mappings has not been saved.", e);
             }
             finally
             {
@@ -234,22 +254,25 @@ namespace DriveHUD.Application.ViewModels.Hud
         private HudLayoutInfo LoadLayout(string fileName)
         {
             HudLayoutInfo result = null;
+
             _rwLock.EnterReadLock();
+
             try
             {
-                using (var stream = File.Open(fileName, FileMode.Open))
+                using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                 {
                     result = LoadLayoutFromStream(stream);
                 }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, "Layout has not been loaded.", e);
             }
             finally
             {
                 _rwLock.ExitReadLock();
             }
+
             return result;
         }
 
@@ -749,25 +772,39 @@ namespace DriveHUD.Application.ViewModels.Hud
             try
             {
                 if (string.IsNullOrEmpty(layoutName))
+                {
                     return false;
+                }
+
                 var layoutToDelete = GetLayout(layoutName);
+
                 if (layoutToDelete == null || layoutToDelete.IsDefault)
+                {
                     return false;
+                }
+
                 var layoutsDirectory = GetLayoutsDirectory();
+
                 var fileName = HudLayoutMappings.Mappings.FirstOrDefault(m => m.Name == layoutToDelete.Name)?.FileName;
-                if (!string.IsNullOrEmpty(fileName))
-                    File.Delete(Path.Combine(layoutsDirectory.FullName, fileName));
+
                 HudLayoutMappings.Mappings.RemoveByCondition(
                     m =>
                         string.Equals(m.FileName, Path.GetFileName(fileName),
                             StringComparison.InvariantCultureIgnoreCase));
+
                 SaveLayoutMappings();
+
+                if (!string.IsNullOrEmpty(fileName))
+                {
+                    File.Delete(Path.Combine(layoutsDirectory.FullName, fileName));
+                }
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, $"Layout '{layoutName}' has not been deleted properly.", e);
                 return false;
             }
+
             return true;
         }
 
@@ -792,7 +829,9 @@ namespace DriveHUD.Application.ViewModels.Hud
         public HudLayoutInfo SaveAs(HudSavedDataInfo hudData)
         {
             if (hudData == null)
+            {
                 return null;
+            }
 
             var layout = GetLayout(hudData.Name);
 
@@ -807,10 +846,10 @@ namespace DriveHUD.Application.ViewModels.Hud
                 if (layout.IsDefault && (layout.TableType != hudData.LayoutInfo.TableType || layout.HudViewType != hudData.LayoutInfo.HudViewType))
                 {
                     _eventAggregator.GetEvent<MainNotificationEvent>().Publish(new MainNotificationEventArgs("DriveHUD", "Can't overwrite default layout."));
-
                     return null;
                 }
             }
+
             layout.Name = hudData.Name;
             layout.TableType = hudData.LayoutInfo.TableType;
             layout.HudOpacity = hudData.LayoutInfo.HudOpacity;
@@ -818,6 +857,7 @@ namespace DriveHUD.Application.ViewModels.Hud
             if (addLayout || layout.HudViewType != hudData.LayoutInfo.HudViewType)
             {
                 layout.HudPositionsInfo.Clear();
+
                 var pokerSites = hudData.LayoutInfo.HudViewType == HudViewType.Plain
                     ? Enum.GetValues(typeof(EnumPokerSites))
                         .OfType<EnumPokerSites>()
@@ -829,13 +869,16 @@ namespace DriveHUD.Application.ViewModels.Hud
                     foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
                     {
                         var hudPositions = GeneratePositions(pokerSite, hudData.LayoutInfo.HudViewType, layout.TableType);
+
                         if (hudPositions != null)
+                        {
                             layout.HudPositionsInfo.Add(new HudPositionsInfo
                             {
                                 PokerSite = pokerSite,
                                 GameType = gameType,
                                 HudPositions = hudPositions
                             });
+                        }
                     }
                 }
             }
@@ -864,15 +907,13 @@ namespace DriveHUD.Application.ViewModels.Hud
 
             var fileName = InternalSave(layout);
 
-            if (!layout.IsDefault)
+            if (!layout.IsDefault && addLayout)
             {
-                HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
+                var layoutMappings = HudLayoutMappings.Mappings.RemoveByCondition(m => m.Name == layout.Name);
 
-                var pokerSites = layout.HudViewType == HudViewType.Plain
-                    ? Enum.GetValues(typeof(EnumPokerSites))
-                        .OfType<EnumPokerSites>()
-                        .Where(p => p != EnumPokerSites.Unknown)
-                    : _extendedHudPokerSites;
+                var pokerSites = layout.HudViewType == HudViewType.Plain ?
+                    Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>().Where(p => p != EnumPokerSites.Unknown) :
+                    _extendedHudPokerSites;
 
                 foreach (var pokerSite in pokerSites)
                 {
@@ -964,13 +1005,16 @@ namespace DriveHUD.Application.ViewModels.Hud
             {
                 return null;
             }
+
             try
             {
                 HudLayoutInfo importedHudLayout;
+
                 _rwLock.EnterReadLock();
+
                 try
                 {
-                    using (var fs = File.Open(path, FileMode.Open))
+                    using (var fs = File.Open(path, FileMode.Open, FileAccess.Read, FileShare.Read))
                     {
                         importedHudLayout = LoadLayoutFromStream(fs);
                     }
@@ -979,15 +1023,20 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     _rwLock.ExitReadLock();
                 }
-                var i = 1;
+
                 var layoutName = importedHudLayout.Name;
                 importedHudLayout.IsDefault = false;
+
+                var i = 1;
+
                 while (HudLayoutMappings.Mappings.Any(l => l.Name == importedHudLayout.Name))
                 {
                     importedHudLayout.Name = $"{layoutName} ({i})";
                     i++;
                 }
+
                 var fileName = InternalSave(importedHudLayout);
+
                 foreach (var pokerSite in Enum.GetValues(typeof(EnumPokerSites)).OfType<EnumPokerSites>())
                 {
                     foreach (var gameType in Enum.GetValues(typeof(EnumGameType)).OfType<EnumGameType>())
@@ -1005,13 +1054,16 @@ namespace DriveHUD.Application.ViewModels.Hud
                         });
                     }
                 }
+
                 SaveLayoutMappings();
+
                 return importedHudLayout;
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, e);
+                LogProvider.Log.Error(this, $"Layout from '{path}' has not been imported.", e);
             }
+
             return null;
         }
 
@@ -1308,7 +1360,7 @@ namespace DriveHUD.Application.ViewModels.Hud
                 {
                     var fileName = Path.Combine(layoutsDirectory.FullName, layoutMapping);
 
-                    using (var fs = File.Open(fileName, FileMode.Open))
+                    using (var fs = File.Open(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
                     {
                         var layout = LoadLayoutFromStream(fs);
 
