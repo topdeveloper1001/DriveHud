@@ -116,6 +116,7 @@
                         <telerik:RadMenuItem Header="{ResX Enum_HandExport_CardsChat}" Click="GeneralExportItem_Click" />
                         <telerik:RadMenuItem Header="{ResX Enum_HandExport_PokerStrategy}" Click="GeneralExportItem_Click" />
                         <telerik:RadMenuItem Header="{ResX Enum_HandExport_RawHandHistory}" Click="RawExportItem_Click" />
+                        <telerik:RadMenuItem Header="{ResX Enum_HandExport_PlainTextHandHistory}" Click="PlainTextExportItem_Click" />
                     </telerik:RadContextMenu>
                 </telerik:RadRibbonDropDownButton.DropDownContent>
             </telerik:RadRibbonDropDownButton>

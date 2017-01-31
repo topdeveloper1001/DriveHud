@@ -141,6 +141,7 @@ namespace Model.Enums
         TwoPlusTwo,
         CardsChat,
         PokerStrategy,
-        Raw
+        Raw,
+        PlainText
     }
 }
