@@ -52,6 +52,7 @@
                         <telerik:RadMenuItem Header="{ResX Key=Enum_HandExport_CardsChat}" CommandParameter="{x:Static enum2:EnumExportType.CardsChat}" Command="{Binding ExportHandCommand}"/>
                         <telerik:RadMenuItem Header="{ResX Key=Enum_HandExport_PokerStrategy}" CommandParameter="{x:Static enum2:EnumExportType.PokerStrategy}" Command="{Binding ExportHandCommand}"/>
                         <telerik:RadMenuItem Header="{ResX Key=Enum_HandExport_RawHandHistory}" CommandParameter="{x:Static enum2:EnumExportType.Raw}" Command="{Binding ExportHandCommand}"/>
+                        <telerik:RadMenuItem Header="{ResX Key=Enum_HandExport_PlainTextHandHistory}" CommandParameter="{x:Static enum2:EnumExportType.PlainText}" Command="{Binding ExportHandCommand}"/>
                     </telerik:RadMenuItem>
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_ReplayLastHand}" Command="{Binding ReplayLastHandCommand}" />
                     <telerik:RadMenuItem Header="{ResX Main_ContextMenu_SaveHudPosition}" Click="SaveHudPositions_Click" />

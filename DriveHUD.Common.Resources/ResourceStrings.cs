@@ -35,6 +35,7 @@ namespace DriveHUD.Common.Resources
         public static string PokerStrategyString = "Enum_HandExport_PokerStrategy";
         public static string RawHandHistoryString = "Enum_HandExport_RawHandHistory";
         public static string ExportHandResourceString = "Main_ContextMenu_ExportHand";
+        public static string PlainTextHandHistoryString = "Enum_HandExport_PlainText";
 
         public static string MakeNote = "Main_ContextMenu_MakeNote";
         public static string EditNote = "Main_ContextMenu_EditNote";
