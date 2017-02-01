@@ -15,8 +15,8 @@ using DriveHUD.Common.Utils;
 using DriveHUD.Common.Web;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace Model.AppStore
 {
@@ -24,53 +24,74 @@ namespace Model.AppStore
     {
         private static int WebRequestTimeout = 10000;
 
-        // paths
-        // local repo - %appdata%\DriveHUD\AppStore\products.xml
-        // local temp repo - %appdata%\DriveHUD\AppStore\products.tmp
-        // remove repo http:\\www.drivehud.com\appstore\products.xml        
+        private readonly string storeDataFolder;
+        private readonly string storeLocalProductRepo;
+        private readonly string storeLocalTempProductRepo;
+        private readonly string storeRemoteProductRepo;
+        private readonly string storeRemoteProductHash;
+
+        public ProductAppStoreRepository()
+        {
+            storeDataFolder = StringFormatter.GetAppStoreDataFolder();
+            storeLocalProductRepo = StringFormatter.GetAppStoreLocalProductRepo();
+            storeLocalTempProductRepo = StringFormatter.GetAppStoreLocalTempProductRepo();
+            storeRemoteProductRepo = StringFormatter.GetAppStoreRemoteProductRepo();
+            storeRemoteProductHash = StringFormatter.GetAppStoreRemoteProductHash();
+        }
 
         public IEnumerable<AppStoreProduct> GetAllProducts()
         {
-            UpdateLocalRepository();
+            UpdateLocalDataStorage();
 
-            var shopProducts = Enumerable.Range(0, 50).Select((index, x) => new AppStoreProduct
-            {
-                ProductName = $"Upswing Poker Training #{index}",
-                ProductDescription = "Poker strategies and courses, brought to you by two of the world's best poker players (Doug Polk & Ryan Fee), that will take your own poker skills to the next level.",
-                Price = "$27/mo",
-                ImageLink = "pack://application:,,,/DriveHUD.Common.Resources;component/images/Shop/upswing-poker-lab.gif",
-                CartLink = "https://hf322.isrefer.com/go/tpl/drivehud/",
-                LearnMoreLink = "https://hf322.isrefer.com/go/tpl/drivehud/",
-                IsAnimatedGif = false
-            }).ToList();
+            var products = GetAppStoreProducts();
 
-            return shopProducts;
+            return products;        
         }
 
-        private void UpdateLocalRepository()
-        {
-            var localRepositoryHash = GetLocalRepositoryHash();
-            var remoteRepositoryHash = GetRemoteRepositoryHash();
-
-            // update is not required
-            if (localRepositoryHash.Equals(remoteRepositoryHash, StringComparison.OrdinalIgnoreCase))
-            {
-                return;
-            }
-
-            DownloadRemoteProductStorage();
-        }
-
-        private string GetLocalRepositoryHash()
+        private void UpdateLocalDataStorage()
         {
             try
             {
-                var localRepositoryHash = Utils.GetMD5HashFromFile("path to local repo");
+                var appStoreStorage = new DirectoryInfo(storeDataFolder);
+
+                if (!appStoreStorage.Exists)
+                {
+                    appStoreStorage.Create();
+                }
+
+                var localRepositoryHash = GetLocalRepositoryHash(storeLocalProductRepo);
+                var remoteRepositoryHash = GetRemoteRepositoryHash();
+
+                // update is not required or is not possible
+                if (string.IsNullOrWhiteSpace(remoteRepositoryHash) ||
+                        ((localRepositoryHash != null) && localRepositoryHash.Equals(remoteRepositoryHash, StringComparison.OrdinalIgnoreCase)))
+                {
+                    return;
+                }
+
+                DownloadAndUpdateProductStorage(remoteRepositoryHash);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Local product repository has not been updated.", e);
+            }
+        }
+
+        private string GetLocalRepositoryHash(string fileName)
+        {
+            if (string.IsNullOrWhiteSpace(fileName) || !File.Exists(fileName))
+            {
+                return null;
+            }
+
+            try
+            {
+                var localRepositoryHash = Utils.GetMD5HashFromFile(fileName);
                 return localRepositoryHash;
             }
             catch (Exception e)
             {
-                LogProvider.Log.Error(this, "Local hash of product app store has not been obtained.", e);
+                LogProvider.Log.Error(this, $"Local hash of product app store {fileName} has not been obtained.", e);
             }
 
             return null;
@@ -82,7 +103,7 @@ namespace Model.AppStore
             {
                 using (var webClient = new WebClientWithTimeout(WebRequestTimeout))
                 {
-                    var remoteRepositoryHash = webClient.DownloadString("some address");
+                    var remoteRepositoryHash = webClient.DownloadString(storeRemoteProductHash);
                     return remoteRepositoryHash;
                 }
             }
@@ -94,19 +115,92 @@ namespace Model.AppStore
             return null;
         }
 
+        private void RemoveLocalTempRepository()
+        {
+            try
+            {
+                if (File.Exists(storeLocalTempProductRepo))
+                {
+                    File.Delete(storeLocalTempProductRepo);
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Local temp product app store '{storeLocalTempProductRepo}' has not been removed.", e);
+            }
+        }
+
+        private void DownloadAndUpdateProductStorage(string remoteRepositoryHash)
+        {
+            RemoveLocalTempRepository();
+            DownloadRemoteProductStorage();
+
+            var localRepositoryHash = GetLocalRepositoryHash(storeLocalTempProductRepo);
+
+            if (localRepositoryHash != null && !localRepositoryHash.Equals(remoteRepositoryHash, StringComparison.OrdinalIgnoreCase))
+            {
+                LogProvider.Log.Error("Product app store has not been downloaded correctly.");
+                RemoveLocalTempRepository();
+                return;
+            }
+
+            MoveTempRepoToLocaRepo();
+            RemoveLocalTempRepository();
+        }
+
+        private void MoveTempRepoToLocaRepo()
+        {
+            try
+            {
+                if (File.Exists(storeLocalProductRepo))
+                {
+                    File.Delete(storeLocalProductRepo);
+                }
+
+                File.Move(storeLocalTempProductRepo, storeLocalProductRepo);
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, $"Temp repo of product app store '{storeLocalTempProductRepo}' has not been moved to '{storeLocalProductRepo}'.", e);
+            }
+        }
+
         private void DownloadRemoteProductStorage()
         {
             try
             {
                 using (var webClient = new WebClientWithTimeout(WebRequestTimeout))
                 {
-                    webClient.DownloadFile("some address", "path to file");
+                    webClient.DownloadFile(storeRemoteProductRepo, storeLocalTempProductRepo);
                 }
             }
             catch (Exception e)
             {
                 LogProvider.Log.Error(this, "Remote storage of product app store has not been downloaded.", e);
             }
+        }
+
+        private IEnumerable<AppStoreProduct> GetAppStoreProducts()
+        {
+            try
+            {
+                using (var stream = File.Open(storeLocalProductRepo, FileMode.Open, FileAccess.Read, FileShare.Read))
+                {
+                    var xmlSerializer = new XmlSerializer(typeof(AppStoreProductStorage));
+                    var appStoreProductStorage = xmlSerializer.Deserialize(stream) as AppStoreProductStorage;
+
+                    if (appStoreProductStorage != null && appStoreProductStorage.Products != null)
+                    {
+                        return appStoreProductStorage.Products;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(this, "Local products app store has not been deserialized.", e);
+            }
+
+            return new List<AppStoreProduct>();
         }
     }
 }

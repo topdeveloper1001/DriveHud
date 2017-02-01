@@ -47,9 +47,7 @@ namespace DriveHUD.Common.Wpf.Events
             completedListners.Raise(
                 d =>
                 {
-                    EventHandler h = (EventHandler)d;
-                    if (h != null)
-                        h(this, EventArgs.Empty);
+                    ((EventHandler)d)?.Invoke(this, EventArgs.Empty);
                 });
         }
 

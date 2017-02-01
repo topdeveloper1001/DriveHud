@@ -167,4 +167,19 @@
   <data name="SystemSettings_DbFileName" xml:space="preserve">
     <value>drivehud.db</value>
   </data>
+  <data name="SystemSettings_AppStoreDataFolder" xml:space="preserve">
+    <value>AppStore</value>
+  </data>
+  <data name="SystemSettings_AppStoreLocalProductRepo" xml:space="preserve">
+    <value>products.xml</value>
+  </data>
+  <data name="SystemSettings_AppStoreLocalTempProductRepo" xml:space="preserve">
+    <value>products.tmp</value>
+  </data>
+  <data name="SystemSettings_AppStoreRemoteProductHash" xml:space="preserve">
+    <value>http://drivehud.com/appstore/products.hash</value>
+  </data>
+  <data name="SystemSettings_AppStoreRemoteProductRepo" xml:space="preserve">
+    <value>http://drivehud.com/appstore/products.xml</value>
+  </data>
 </root>
