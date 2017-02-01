@@ -103,11 +103,13 @@ namespace DriveHUD.Application.Views
             RadMenuItem cardsChatItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.CardsChatResourceString), false, GeneralExportItem_Click);
             RadMenuItem pokerStrategyItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.PokerStrategyString), false, GeneralExportItem_Click);
             RadMenuItem rawHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.RawHandHistoryString), false, RawExportItem_Click);
+            RadMenuItem plainTextHandHistoryItem = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.PlainTextHandHistoryString), false, PlainExportItem_Click);
 
             exportHandItem.Items.Add(twoPlustTwoItem);
             exportHandItem.Items.Add(cardsChatItem);
             exportHandItem.Items.Add(pokerStrategyItem);
             exportHandItem.Items.Add(rawHistoryItem);
+            exportHandItem.Items.Add(plainTextHandHistoryItem);
             /* Replay hand */
             RadMenuItem replayHand = CreateRadMenuItem(CommonResourceManager.Instance.GetResourceString(ResourceStrings.ReplayHandResourceString), false, ReplayHand);
             /* Tag Hand */
@@ -214,6 +216,22 @@ namespace DriveHUD.Application.Views
                 if (reportGadgetViewModel.FilterTaggedHands_IsChecked)
                 {
                     reportGadgetViewModel.RefreshReport();
+                }
+            }
+        }
+
+        private void PlainExportItem_Click(object sender, RadRoutedEventArgs e)
+        {
+            var item = handsGridContextMenu.GetClickedElement<GridViewRow>();
+            if (item != null)
+            {
+                var playerStatistics = item.DataContext as ComparableCardsStatistic;
+                if (playerStatistics != null)
+                {
+                    var handHistory = ServiceLocator.Current.GetInstance<IDataService>().GetGame(playerStatistics.Statistic.GameNumber, (short)playerStatistics.Statistic.PokersiteId);
+                    String hh = ExportFunctions.ConvertHHToPlainText(handHistory);
+                    Clipboard.SetText(hh);
+                    reportGadgetViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
                 }
             }
         }

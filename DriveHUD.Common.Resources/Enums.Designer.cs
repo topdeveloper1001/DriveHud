@@ -322,6 +322,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Plain Text.
+        /// </summary>
+        internal static string Enum_HandExport_PlainTextHandHistory {
+            get {
+                return ResourceManager.GetString("Enum_HandExport_PlainTextHandHistory", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pokerstrategy.
         /// </summary>
         internal static string Enum_HandExport_PokerStrategy {

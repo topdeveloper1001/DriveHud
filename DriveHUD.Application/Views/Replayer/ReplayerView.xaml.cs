@@ -150,5 +150,16 @@ namespace DriveHUD.Application.Views.Replayer
                 ViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
             }
         }
+
+        private void PlainTextExportItem_Click(object sender, RadRoutedEventArgs e)
+        {
+            if (ViewModel?.CurrentGame != null)
+            {
+                Clipboard.SetText(ViewModel.CurrentGame.FullHandHistoryText);
+                String hh = ExportFunctions.ConvertHHToPlainText(ViewModel.CurrentGame);
+                Clipboard.SetText(hh);
+                ViewModel.RaiseNotification(CommonResourceManager.Instance.GetResourceString(ResourceStrings.DataExportedMessageResourceString), "Hand Export");
+            }
+        }
     }
 }
