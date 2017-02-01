@@ -225,8 +225,8 @@ namespace DriveHUD.Application.ViewModels.Hud
                     {
                         block = new Image
                         {
-                            Width = 18,
-                            Height = 18
+                            Width = 16,
+                            Height = 16
                         };
                         if (IsDefaultImage)
                         {

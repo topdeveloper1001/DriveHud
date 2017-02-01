@@ -20,7 +20,7 @@ namespace DriveHUD.ViewModels
     [XmlInclude(typeof(StatInfoBreak))]
     [Serializable]
     [ProtoContract]
-    [ProtoInclude(29, typeof(StatInfoBreak))]
+    [ProtoInclude(30, typeof(StatInfoBreak))]
     public class StatInfo : INotifyPropertyChanged
     {
         private const string totalHandFormat = "{0:0}";
@@ -579,7 +579,8 @@ namespace DriveHUD.ViewModels
         [ProtoMember(28)]
         public StatInfoMeterModel StatInfoMeter { get; set; }
 
-        [NonSerialized] private bool isAvailable = true;
+        [NonSerialized]
+        private bool isAvailable = true;
 
         [XmlIgnore]
         [ProtoMember(29)]

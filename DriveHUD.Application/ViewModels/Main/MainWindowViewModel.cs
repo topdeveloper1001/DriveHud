@@ -489,7 +489,7 @@ namespace DriveHUD.Application.ViewModels
                         {
                             statInfo.AssignStatInfoValues(item);
                         }
-                        else if (!(statInfo is StatInfoBreak))
+                        else if (!(statInfo is StatInfoBreak) && statInfo.Stat != Stat.PlayerInfoIcon)
                         {
                             continue;
                         }
