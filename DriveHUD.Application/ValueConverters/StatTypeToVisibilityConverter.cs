@@ -25,6 +25,7 @@ namespace DriveHUD.Application.ValueConverters
                 if (value != null && value.GetType() == typeof(StatInfo))
                     return Visibility.Visible;
             }
+
             return Visibility.Collapsed;
         }
 

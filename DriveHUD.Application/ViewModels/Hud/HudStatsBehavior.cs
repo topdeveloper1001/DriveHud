@@ -27,6 +27,7 @@ using System;
 using Telerik.Windows.Controls;
 using DriveHUD.Application.Controls;
 using System.Windows.Documents;
+using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -215,28 +216,32 @@ namespace DriveHUD.Application.ViewModels.Hud
                 panel.Height = double.NaN;
                 panel.Margin = new Thickness(2, 2, 2, 0);
                 panel.Orientation = IsVertical ? Orientation.Vertical : Orientation.Horizontal;
-                if (statInfoGrouped.IndexOf(statInfoGroup) == 0)
+                
+                foreach (var statInfo in statInfoGroup)
                 {
-                    var image = new Image();
-                    image.Width = 20;
-                    image.Height = 20;
-                    if (IsDefaultImage)
+                    FrameworkElement block = null;
+
+                    if (statInfo.Stat == Stat.PlayerInfoIcon)
                     {
-                        var style = ((FrameworkElement)AssociatedObject).FindResource("DefaultImage") as Style;
-                        image.Style = style;
+                        block = new Image
+                        {
+                            Width = 16,
+                            Height = 16
+                        };
+                        if (IsDefaultImage)
+                        {
+                            var style = AssociatedObject.FindResource("DefaultImage") as Style;
+                            block.Style = style;
+                        }
+                        else
+                        {
+                            ((Image) block).Source = PlayerIconSource;
+                        }
                     }
                     else
                     {
-                        image.Source = PlayerIconSource;
+                        block = CreateStatBlock(statInfo);
                     }
-                    panel.Children.Add(image);
-                    TextBlock separator1 = new TextBlock { Text = "   ", Foreground = new SolidColorBrush(Colors.White), VerticalAlignment = VerticalAlignment.Center };
-                    panel.Children.Add(separator1);
-                }
-
-                foreach (var statInfo in statInfoGroup)
-                {
-                    TextBlock block = CreateStatBlock(statInfo);
 
                     if (IsVertical)
                     {
