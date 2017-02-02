@@ -32,7 +32,7 @@ namespace DriveHUD.Application.ViewModels
         {
             Check.ArgumentNotNull(() => viewModelInfo);
 
-            var clonedItems = viewModelInfo.SelectedStatInfoCollection.Select(x => x.Clone()).ToArray();
+            var clonedItems = viewModelInfo.SelectedStatInfoCollection.Where(x => !(x is StatInfoBreak)).Select(x => x.Clone()).ToArray();
 
             if (viewModelInfo.SelectedStatInfo != null)
             {
@@ -47,6 +47,7 @@ namespace DriveHUD.Application.ViewModels
             {
                 selectedItem = clonedItems.FirstOrDefault();
             }
+
             HudOpacity = viewModelInfo.HudOpacity;
             items = new ObservableCollection<StatInfo>(clonedItems);
 

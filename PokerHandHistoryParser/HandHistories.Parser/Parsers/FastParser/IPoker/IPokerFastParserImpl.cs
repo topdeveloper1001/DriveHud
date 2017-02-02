@@ -26,6 +26,7 @@ using HandHistories.Parser.Parsers.FastParser.Base;
 using DriveHUD.Common.Log;
 using System.Globalization;
 using DriveHUD.Entities;
+using HandHistories.Parser.Utils.FastParsing;
 
 namespace HandHistories.Parser.Parsers.FastParser.IPoker
 {
@@ -107,22 +108,22 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private int GetSeatNumberFromPlayerLine(string playerLine)
         {
-            int seatOffset = playerLine.IndexOf(" seat=") + 7;
-            int seatEndOffset = playerLine.IndexOf('"', seatOffset);
+            int seatOffset = playerLine.IndexOf(" seat=", StringComparison.Ordinal) + 7;
+            int seatEndOffset = playerLine.IndexOf("\"", seatOffset, StringComparison.Ordinal);
             string seatNumberString = playerLine.Substring(seatOffset, seatEndOffset - seatOffset);
             return Int32.Parse(seatNumberString);
         }
 
         private bool IsPlayerLineDealer(string playerLine)
         {
-            int dealerOffset = playerLine.IndexOf(" dealer=");
+            int dealerOffset = playerLine.IndexOf(" dealer=", StringComparison.Ordinal);
             int dealerValue = int.Parse(" " + playerLine[dealerOffset + 9]);
             return dealerValue == 1;
         }
 
         private decimal GetBetNumberFromPlayerLine(string playerLine)
         {
-            var betStartPos = playerLine.IndexOf(" bet=");
+            var betStartPos = playerLine.IndexOf(" bet=", StringComparison.Ordinal);
 
             if (betStartPos == -1)
             {
@@ -131,29 +132,26 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             betStartPos += 6;
 
-            var betEndPos = playerLine.IndexOf('"', betStartPos) - 1;
+            var betEndPos = playerLine.IndexOf("\"", betStartPos, StringComparison.Ordinal) - 1;
 
             var betString = playerLine.Substring(betStartPos, betEndPos - betStartPos + 1);
 
-            betString = RemoveFirstNotNumberSymbol(betString);
-
-            return decimal.Parse(betString, CultureInfo.InvariantCulture);
+            var bet = ParserUtils.ParseMoney(betString);
+            return bet;
         }
 
         private decimal GetStackFromPlayerLine(string playerLine)
         {
-            var stackStartPos = playerLine.IndexOf(" chips=") + 8;
-            var stackEndPos = playerLine.IndexOf('"', stackStartPos) - 1;
+            var stackStartPos = playerLine.IndexOf(" chips=", StringComparison.Ordinal) + 8;
+            var stackEndPos = playerLine.IndexOf("\"", stackStartPos, StringComparison.Ordinal) - 1;
             var stackString = playerLine.Substring(stackStartPos, stackEndPos - stackStartPos + 1);
-
-            stackString = RemoveFirstNotNumberSymbol(stackString);
-
-            return decimal.Parse(stackString, System.Globalization.CultureInfo.InvariantCulture);
+            var stack = ParserUtils.ParseMoney(stackString);
+            return stack;
         }
 
         private decimal GetWinningsFromPlayerLine(string playerLine)
         {
-            var winStartPos = playerLine.IndexOf(" win=");
+            var winStartPos = playerLine.IndexOf(" win=", StringComparison.Ordinal);
 
             if (winStartPos == -1)
             {
@@ -162,19 +160,18 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             winStartPos += 6;
 
-            var winEndPos = playerLine.IndexOf('"', winStartPos) - 1;
+            var winEndPos = playerLine.IndexOf("\"", winStartPos, StringComparison.Ordinal) - 1;
 
             var winString = playerLine.Substring(winStartPos, winEndPos - winStartPos + 1);
 
-            winString = RemoveFirstNotNumberSymbol(winString);
-
-            return decimal.Parse(winString, CultureInfo.InvariantCulture);
+            var win = ParserUtils.ParseMoney(winString);
+            return win;
         }
 
         private string GetNameFromPlayerLine(string playerLine)
         {
-            int nameStartPos = playerLine.IndexOf(" n") + 7;
-            int nameEndPos = playerLine.IndexOf('"', nameStartPos) - 1;
+            int nameStartPos = playerLine.IndexOf(" n", StringComparison.Ordinal) + 7;
+            int nameEndPos = playerLine.IndexOf("\"", nameStartPos, StringComparison.Ordinal) - 1;
             string name = playerLine.Substring(nameStartPos, nameEndPos - nameStartPos + 1);
             return name;
         }
@@ -199,12 +196,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         {
             var dateLine = GetStartDateFromHandLines(handLines);
 
-            var startPos = dateLine.IndexOf('>') + 1;
-            var endPos = dateLine.LastIndexOf('<') - 1;
+            var startPos = dateLine.IndexOf(">", StringComparison.Ordinal) + 1;
+            var endPos = dateLine.LastIndexOf("<", StringComparison.Ordinal) - 1;
 
             var dateString = dateLine.Substring(startPos, endPos - startPos + 1);
 
-            var dateTime = DateTime.Parse(dateString);
+            var dateTime = ParserUtils.ParseDate(dateString);
 
             return dateTime;
         }
@@ -221,11 +218,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             //            Case 2, we have multiple <session> tags each holding a single <game> tag.
             //            We need our enumerable to have only case 2 representations for parsing
 
-            if (rawHandHistories.IndexOf("<session") == rawHandHistories.LastIndexOf("<session"))
+            if (rawHandHistories.IndexOf("<session", StringComparison.Ordinal) ==
+                    rawHandHistories.LastIndexOf("<session", StringComparison.Ordinal))
             {
                 //We are case 1 - convert to case 2
 
-                int endOfGeneralInfoIndex = rawHandHistories.IndexOf("</general>");
+                int endOfGeneralInfoIndex = rawHandHistories.IndexOf("</general>", StringComparison.Ordinal);
 
                 if (endOfGeneralInfoIndex == -1)
                 {
@@ -260,8 +258,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 if (handLine.StartsWith("<game ", StringComparison.Ordinal))
                 {
-                    var startIndex = handLine.IndexOf('"') + 1;
-                    var endIndex = handLine.LastIndexOf('"') - 1;
+                    var startIndex = handLine.IndexOf("\"", StringComparison.Ordinal) + 1;
+                    var endIndex = handLine.LastIndexOf("\"", StringComparison.Ordinal) - 1;
 
                     var gamecodeText = handLine.Substring(startIndex, endIndex - startIndex + 1);
 
@@ -276,8 +274,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         {
             //<tablename>Ambia, 98575671</tablename>
             string tableNameLine = GetTableNameLineFromHandLines(handLines);
-            int tableNameStartIndex = tableNameLine.IndexOf('>') + 1;
-            int tableNameEndIndex = tableNameLine.LastIndexOf('<') - 1;
+            int tableNameStartIndex = tableNameLine.IndexOf(">", StringComparison.Ordinal) + 1;
+            int tableNameEndIndex = tableNameLine.LastIndexOf("<", StringComparison.Ordinal) - 1;
 
             string tableName = tableNameLine.Substring(tableNameStartIndex, tableNameEndIndex - tableNameStartIndex + 1);
 
@@ -322,7 +320,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
         {
             for (int i = 0; i < handLines.Length; i++)
             {
-                if (handLines[i].Contains("gamecode=\""))
+                if (handLines[i].IndexOf("gamecode=\"", StringComparison.Ordinal) > 0)
                 {
                     return handLines[i + 2];
                 }
@@ -502,7 +500,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             var gameTypeLine = GetGameTypeLineFromHandLines(handLines);
 
             int limitStringBeginIndex = gameTypeLine.LastIndexOf(' ') + 1;
-            int limitStringEndIndex = gameTypeLine.LastIndexOf('<') - 1;
+            int limitStringEndIndex = gameTypeLine.LastIndexOf("<", StringComparison.Ordinal) - 1;
 
             string limitString = gameTypeLine.Substring(limitStringBeginIndex, limitStringEndIndex - limitStringBeginIndex + 1);
 
@@ -532,7 +530,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     break;
             }
 
-            int slashIndex = limitString.IndexOf('/');
+            int slashIndex = limitString.IndexOf("/", StringComparison.Ordinal);
 
             if (slashIndex == -1)
             {
@@ -550,7 +548,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 bigString = bigString.Substring(1);
             }
 
-            decimal big = decimal.Parse(bigString, System.Globalization.CultureInfo.InvariantCulture);
+            decimal big = decimal.Parse(bigString, CultureInfo.InvariantCulture);
 
             return Limit.FromSmallBlindBigBlind(small, big, currency);
         }
@@ -757,35 +755,35 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
         private int GetActionNumberFromActionLine(string actionLine)
         {
-            int actionStartPos = actionLine.IndexOf(" n") + 5;
-            int actionEndPos = actionLine.IndexOf('"', actionStartPos) - 1;
+            int actionStartPos = actionLine.IndexOf(" n", StringComparison.Ordinal) + 5;
+            int actionEndPos = actionLine.IndexOf("\"", actionStartPos, StringComparison.Ordinal) - 1;
             string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
             return Int32.Parse(actionNumString);
         }
 
         private string GetPlayerFromActionLine(string actionLine)
         {
-            int nameStartPos = actionLine.IndexOf(" p") + 9;
-            int nameEndPos = actionLine.IndexOf('"', nameStartPos) - 1;
+            int nameStartPos = actionLine.IndexOf(" p", StringComparison.Ordinal) + 9;
+            int nameEndPos = actionLine.IndexOf("\"", nameStartPos, StringComparison.Ordinal) - 1;
             string name = actionLine.Substring(nameStartPos, nameEndPos - nameStartPos + 1);
             return name;
         }
 
         private decimal GetValueFromActionLine(string actionLine)
         {
-            var startPos = actionLine.IndexOf("\" s") + 7;
-            var endPos = actionLine.IndexOf('"', startPos) - 1;
+            var startPos = actionLine.IndexOf("\" s", StringComparison.Ordinal) + 7;
+            var endPos = actionLine.IndexOf("\"", startPos, StringComparison.Ordinal) - 1;
             var value = actionLine.Substring(startPos, endPos - startPos + 1);
 
-            value = RemoveFirstNotNumberSymbol(value);
+            var actionValue = ParserUtils.ParseMoney(value);
 
-            return decimal.Parse(value, System.Globalization.CultureInfo.InvariantCulture);
+            return actionValue;
         }
 
         private int GetActionTypeFromActionLine(string actionLine)
         {
-            int actionStartPos = actionLine.IndexOf("\" t") + 8;
-            int actionEndPos = actionLine.IndexOf('"', actionStartPos) - 1;
+            int actionStartPos = actionLine.IndexOf("\" t", StringComparison.Ordinal) + 8;
+            int actionEndPos = actionLine.IndexOf("\"", actionStartPos, StringComparison.Ordinal) - 1;
             string actionNumString = actionLine.Substring(actionStartPos, actionEndPos - actionStartPos + 1);
             return Int32.Parse(actionNumString);
         }
@@ -894,7 +892,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 }
 
                 int playerNameStartIndex = 29;
-                int playerNameEndIndex = handLine.IndexOf('"', playerNameStartIndex) - 1;
+                int playerNameEndIndex = handLine.IndexOf("\"", playerNameStartIndex, StringComparison.Ordinal) - 1;
                 string playerName = handLine.Substring(playerNameStartIndex,
                                                        playerNameEndIndex - playerNameStartIndex + 1);
                 Player player = playerList.First(p => p.PlayerName.Equals(playerName));
@@ -968,11 +966,11 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
 
             for (int i = 0; i < handlines.Length; i++)
             {
-                if (handlines[i][1] == 'n' && handlines[i].StartsWith(tag))
+                if (handlines[i][1] == 'n' && handlines[i].StartsWith(tag, StringComparison.Ordinal))
                 {
                     string line = handlines[i];
                     int startindex = tag.Length;
-                    int endindex = line.IndexOf('<', startindex);
+                    int endindex = line.IndexOf("<", startindex, StringComparison.Ordinal);
                     return line.Substring(startindex, endindex - startindex);
                 }
             }
@@ -1012,8 +1010,8 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
             {
                 if (handLine.StartsWith("<session", StringComparison.Ordinal))
                 {
-                    var sessionCodeStartIndex = handLine.IndexOf('"') + 1;
-                    var sessionCodeEndIndex = handLine.LastIndexOf('"');
+                    var sessionCodeStartIndex = handLine.IndexOf("\"", StringComparison.Ordinal) + 1;
+                    var sessionCodeEndIndex = handLine.LastIndexOf("\"", StringComparison.Ordinal);
 
                     if (sessionCodeStartIndex == 0)
                     {
@@ -1038,15 +1036,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                     {
                         var buyinAndRake = buyinText.Split('+');
 
-                        buyinAndRake[0] = RemoveFirstNotNumberSymbol(buyinAndRake[0]);
-
-                        var prizePoolValue = decimal.Parse(buyinAndRake[0], CultureInfo.InvariantCulture);
+                        var prizePoolValue = ParserUtils.ParseMoney(buyinAndRake[0]);
                         var rake = 0m;
 
                         if (buyinAndRake.Length > 1)
                         {
-                            buyinAndRake[1] = RemoveFirstNotNumberSymbol(buyinAndRake[1]);
-                            rake = decimal.Parse(buyinAndRake[1], CultureInfo.InvariantCulture);
+                            rake = ParserUtils.ParseMoney(buyinAndRake[1]);
                         }
 
                         var currency = GetCurrency(handLines);
@@ -1058,9 +1053,7 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 if (handLine.StartsWith("<win", StringComparison.Ordinal))
                 {
                     var winningText = GetTagValue(handLine);
-
-                    winningText = RemoveFirstNotNumberSymbol(winningText);
-                    decimal.TryParse(winningText, NumberStyles.Any, CultureInfo.InvariantCulture, out winning);
+                    ParserUtils.TryParseMoney(winningText, out winning);
                 }
 
                 if (startDate == DateTime.MinValue && handLine.StartsWith("<startdate", StringComparison.Ordinal))
@@ -1152,27 +1145,12 @@ namespace HandHistories.Parser.Parsers.FastParser.IPoker
                 return string.Empty;
             }
 
-            var startIndex = text.IndexOf(">") + 1;
-            var endIndex = text.IndexOf("<", startIndex) - 1;
+            var startIndex = text.IndexOf(">", StringComparison.Ordinal) + 1;
+            var endIndex = text.IndexOf("<", startIndex, StringComparison.Ordinal) - 1;
 
             var tagValue = text.Substring(startIndex, endIndex - startIndex + 1);
 
             return tagValue;
-        }
-
-        private static string RemoveFirstNotNumberSymbol(string text)
-        {
-            if (string.IsNullOrEmpty(text))
-            {
-                return string.Empty;
-            }
-
-            if (!char.IsNumber(text, 0))
-            {
-                text = text.Substring(1, text.Length - 1);
-            }
-
-            return text;
         }
     }
 }

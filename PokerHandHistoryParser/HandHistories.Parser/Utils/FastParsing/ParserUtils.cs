@@ -17,6 +17,8 @@ using System;
 using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
+using System.Linq;
 
 namespace HandHistories.Parser.Utils.FastParsing
 {
@@ -151,6 +153,30 @@ namespace HandHistories.Parser.Utils.FastParsing
             money = decimal.Parse(match.Groups["money"].Value, NumberStyles.AllowCurrencySymbol | NumberStyles.Number, CultureInfo.InvariantCulture);
 
             return true;
+        }
+
+        private static string[] dateTimeCultures = new[] { "en-US", "ru-RU" };
+
+        public static DateTime ParseDate(string dateText)
+        {
+            var cultures = dateTimeCultures.Select(x => new CultureInfo(x)).ToArray();
+
+            DateTime dateTime;
+
+            if (DateTime.TryParse(dateText, out dateTime))
+            {
+                return dateTime;
+            }
+
+            foreach (var culture in cultures)
+            {
+                if (DateTime.TryParse(dateText, culture, DateTimeStyles.None, out dateTime))
+                {
+                    return dateTime;
+                }
+            }
+
+            throw new FormatException($"Unsupported date format: dateText");
         }
     }
 }

@@ -126,7 +126,7 @@ namespace DriveHUD.Importers.Builders.iPoker
                     CloseOutput = false,
                     Encoding = Encoding.UTF8,
                     OmitXmlDeclaration = false,
-                    Indent = true
+                    Indent = true                  
                 };
 
                 using (var xw = XmlWriter.Create(ms, xmlWriterSettings))
