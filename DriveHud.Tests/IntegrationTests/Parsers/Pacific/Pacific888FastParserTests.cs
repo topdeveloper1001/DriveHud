@@ -23,9 +23,7 @@ using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using System.Threading;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 {
@@ -35,8 +33,19 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\Pacific\TestData";
 
         [Test]
-        public void ParsingDoesNotThrowExceptions()
+        [TestCase("en-US")]
+        [TestCase("hu-HU")]
+        [TestCase("ru-RU")]
+        [TestCase("en-CA")]
+        [TestCase("fr-CA")]
+        [TestCase("zh-CN")]
+        [TestCase("zh-HK")]
+        [TestCase("zh-SG")]
+        public void ParsingDoesNotThrowExceptions(string culture)
         {
+            var cultureInfo = new CultureInfo(culture);
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+
             var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
 
             var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
@@ -126,7 +135,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 250)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 0.02)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt", 0.02)]
+        //[TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt", 0.02)]
         public void BigBlindIsParsedTest(string handHistoryFile, decimal bigBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -136,7 +145,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 125)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 0.01)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt", 0.01)]
+        //[TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt", 0.01)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

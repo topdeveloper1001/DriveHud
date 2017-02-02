@@ -15,19 +15,33 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
 {
     [TestFixture]
     public class IPokerFastParserTests
     {
-        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\IPoker\TestData";
+        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\IPoker\TestData";        
 
         [Test]
-        public void ParsingDoesNotThrowExceptions()
+        [TestCase("en-US")]
+        [TestCase("hu-HU")]
+        [TestCase("ru-RU")]
+        [TestCase("en-CA")]
+        [TestCase("fr-CA")]
+        [TestCase("zh-CN")]
+        [TestCase("zh-HK")]
+        [TestCase("zh-SG")]
+        public void ParsingDoesNotThrowExceptions(string culture)
         {
+            var cultureInfo = new CultureInfo(culture);
+
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+
             var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
 
             var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.xml", SearchOption.AllDirectories);
@@ -69,6 +83,6 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.IPoker
             Assert.AreEqual(total, succeded);
 
             Debug.WriteLine("Processed hands: {0}/{1}", succeded, total);
-        }        
+        }
     }
 }
