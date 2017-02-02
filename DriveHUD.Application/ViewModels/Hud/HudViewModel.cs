@@ -72,7 +72,11 @@ namespace DriveHUD.Application.ViewModels
                 if (CurrentLayout != null && _currentLayout != value)
                 {
                     CurrentLayout.HudStats.Clear();
-                    CurrentLayout.HudStats.AddRange(StatInfoObserveCollection.Select(s => s.Clone()));
+                    CurrentLayout.HudStats.AddRange(StatInfoObserveCollection.Select(s =>
+                    {
+                        var statBreakInfo = s as StatInfoBreak;
+                        return statBreakInfo != null ? statBreakInfo.Clone() : s.Clone();
+                    }));
                 }
 
                 _currentLayoutSwitching = true;

@@ -25,8 +25,10 @@ using Prism.Events;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
 {
@@ -36,8 +38,19 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.PokerStars.TestData
         private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\PokerStars\TestData";
 
         [Test]
-        public void ParsingDoesNotThrowExceptions()
+        [TestCase("en-US")]
+        [TestCase("hu-HU")]
+        [TestCase("ru-RU")]
+        [TestCase("en-CA")]
+        [TestCase("fr-CA")]
+        [TestCase("zh-CN")]
+        [TestCase("zh-HK")]
+        [TestCase("zh-SG")]
+        public void ParsingDoesNotThrowExceptions(string culture)
         {
+            var cultureInfo = new CultureInfo(culture);
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+
             var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
 
             var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);

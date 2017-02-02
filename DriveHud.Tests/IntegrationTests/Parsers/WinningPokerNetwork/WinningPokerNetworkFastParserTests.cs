@@ -18,6 +18,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
@@ -25,6 +26,73 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
     [TestFixture]
     class WinningPokerNetworkFastParserTests
     {
+        private const string TestDataFolder = @"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData";
+
+        [Test]
+        [TestCase("en-US")]
+        [TestCase("hu-HU")]
+        [TestCase("ru-RU")]
+        [TestCase("en-CA")]
+        [TestCase("fr-CA")]
+        [TestCase("zh-CN")]
+        [TestCase("zh-HK")]
+        [TestCase("zh-SG")]
+        public void ParsingDoesNotThrowExceptions(string culture)
+        {
+            var cultureInfo = new CultureInfo(culture);
+            Thread.CurrentThread.CurrentCulture = cultureInfo;
+
+            var testDataDirectoryInfo = new DirectoryInfo(TestDataFolder);
+
+            var handHistoryFiles = testDataDirectoryInfo.GetFiles("*.txt", SearchOption.AllDirectories);
+
+            var parser = new WinningPokerNetworkFastParserImpl();
+
+            var succeded = 0;
+            var total = 0;
+
+            foreach (var handHistoryFile in handHistoryFiles)
+            {
+                if (handHistoryFile.FullName.Contains("Unfinished") ||
+                    handHistoryFile.FullName.Contains("InValid") ||                    
+                    handHistoryFile.FullName.Contains("5-10 PM Hold`em 5-10 6-max - 3 (Hold'em) - 2016-11-08.txt") ||
+                    handHistoryFile.FullName.Contains("HH20161109 T6627313-G36855146.txt"))
+                {
+                    continue;
+                }
+
+                var handHistory = File.ReadAllText(handHistoryFile.FullName);
+
+                var hands = parser.SplitUpMultipleHands(handHistory).ToArray();
+
+                total += hands.Length;
+
+                var hash = new HashSet<string>();
+
+                foreach (var hand in hands)
+                {
+                    try
+                    {
+                        parser.ParseFullHandHistory(hand, true);
+                        succeded++;
+                    }
+                    catch (Exception e)
+                    {
+                        if (!hash.Contains(handHistoryFile.FullName))
+                        {
+                            Debug.WriteLine(handHistoryFile.FullName);
+                        }
+
+                        Assert.Fail(e.ToString());
+                    }
+                }
+            }
+
+            Assert.AreEqual(total, succeded);
+
+            Debug.WriteLine("Processed hands: {0}/{1}", succeded, total);
+        }
+
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\CancelledHand.txt", true)]
         [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\ValidHandTests\ValidHand_1.txt", false)]
@@ -67,11 +135,11 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.WinningPokerNetwork
         }
 
         [Test]
-        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt", "2016/11/8 23:44:41")]
+        [TestCase(@"..\..\IntegrationTests\Parsers\WinningPokerNetwork\TestData\SingleHands\NLH-5-10-PM.txt", "2016/11/8 17:44:41")]
         public void ParseDateTimeUtcTest(string handHistoryFile, string expectedDateTime)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
-            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture);
+            var dateTime = DateTime.Parse(expectedDateTime, CultureInfo.InvariantCulture).ToUniversalTime();
 
             Assert.AreEqual(handHistory.DateOfHandUtc, dateTime);
         }

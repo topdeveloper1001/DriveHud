@@ -85,7 +85,7 @@ namespace DriveHUD.Application.ViewModels.Hud
 
         #region private methods
 
-        private void Initialize()
+        protected virtual void Initialize()
         {
             try
             {

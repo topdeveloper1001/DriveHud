@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<session sessioncode="249767620385">
+  <general>
+    <mode>real</mode>
+    <gametype>Holdem NL</gametype>
+    <tablename>Table #6, $0.60 NL [R+A] $60 GT</tablename>
+    <duration>N/A</duration>
+    <gamecount>0</gamecount>
+    <startdate>2017-02-01 20:54:54</startdate>
+    <currency>USD</currency>
+    <nickname>HolDtheDOoR</nickname>
+    <bets>0</bets>
+    <wins>0</wins>
+    <chipsin>0</chipsin>
+    <chipsout>0</chipsout>
+    <ipoints>0</ipoints>
+    <statuspoints>0</statuspoints>
+    <awardpoints>0</awardpoints>
+    <tournamentname>$0.60 NL [R+A] $60 GT</tournamentname>
+    <place>0</place>
+    <buyin>$0.60+$0.06</buyin>
+    <totalbuyin>$0.66</totalbuyin>
+    <win>0</win>
+  </general>
+  <game gamecode="89883972">
+    <general>
+      <startdate>2017-02-01 20:54:54</startdate>
+      <players>
+        <player seat="10" name="izzy" chips="5295" dealer="0" win="6390" bet="5295" rebuy="0" addon="0" />
+        <player seat="1" name="rashotte" chips="5375" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+        <player seat="2" name="cooprcoers" chips="6735" dealer="1" win="0" bet="15" rebuy="0" addon="0" />
+        <player seat="3" name="bowejaeda" chips="7230" dealer="0" win="0" bet="90" rebuy="0" addon="0" />
+        <player seat="4" name="LiverpoolR" chips="6440" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+        <player seat="5" name="6910" chips="8436" dealer="0" win="0" bet="165" rebuy="0" addon="0" />
+        <player seat="6" name="HolDtheDOoR" chips="10490" dealer="0" win="0" bet="315" rebuy="0" addon="0" />
+        <player seat="7" name="mikegomez" chips="8360" dealer="0" win="0" bet="15" rebuy="0" addon="0" />
+        <player seat="8" name="Turbo 76" chips="6826" dealer="0" win="0" bet="315" rebuy="0" addon="0" />
+      </players>
+    </general>
+    <round no="0">
+      <action no="1" player="izzy" type="15" sum="15" cards="" />
+      <action no="2" player="rashotte" type="15" sum="15" cards="" />
+      <action no="3" player="cooprcoers" type="15" sum="15" cards="" />
+      <action no="4" player="bowejaeda" type="15" sum="15" cards="" />
+      <action no="5" player="LiverpoolR" type="15" sum="15" cards="" />
+      <action no="6" player="6910" type="15" sum="15" cards="" />
+      <action no="7" player="HolDtheDOoR" type="15" sum="15" cards="" />
+      <action no="8" player="mikegomez" type="15" sum="15" cards="" />
+      <action no="9" player="Turbo 76" type="15" sum="15" cards="" />
+      <action no="10" player="bowejaeda" type="1" sum="75" cards="" />
+      <action no="11" player="LiverpoolR" type="2" sum="150" cards="" />
+    </round>
+    <round no="1">
+      <cards type="Pocket" player="izzy">X X</cards>
+      <cards type="Pocket" player="rashotte">X X</cards>
+      <cards type="Pocket" player="cooprcoers">X X</cards>
+      <cards type="Pocket" player="bowejaeda">X X</cards>
+      <cards type="Pocket" player="LiverpoolR">X X</cards>
+      <cards type="Pocket" player="6910">X X</cards>
+      <cards type="Pocket" player="HolDtheDOoR">D4 S4</cards>
+      <cards type="Pocket" player="mikegomez">X X</cards>
+      <cards type="Pocket" player="Turbo 76">X X</cards>
+      <action no="12" player="6910" type="3" sum="150" cards="" />
+      <action no="13" player="HolDtheDOoR" type="23" sum="300" cards="" />
+      <action no="14" player="mikegomez" type="0" sum="0" cards="" />
+      <action no="15" player="Turbo 76" type="3" sum="300" cards="" />
+      <action no="16" player="izzy" type="23" sum="5280" cards="" />
+      <action no="17" player="rashotte" type="0" sum="0" cards="" />
+      <action no="18" player="cooprcoers" type="0" sum="0" cards="" />
+      <action no="19" player="bowejaeda" type="0" sum="0" cards="" />
+      <action no="20" player="LiverpoolR" type="0" sum="0" cards="" />
+      <action no="21" player="6910" type="0" sum="0" cards="" />
+      <action no="22" player="HolDtheDOoR" type="0" sum="0" cards="" />
+      <action no="23" player="Turbo 76" type="0" sum="0" cards="" />
+    </round>
+  </game>
+</session>
