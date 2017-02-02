@@ -26,8 +26,8 @@ using System.Windows.Media;
 using System;
 using Telerik.Windows.Controls;
 using DriveHUD.Application.Controls;
-using System.Diagnostics;
 using System.Windows.Documents;
+using Model.Enums;
 
 namespace DriveHUD.Application.ViewModels.Hud
 {
@@ -69,6 +69,34 @@ namespace DriveHUD.Application.ViewModels.Hud
             }
         }
 
+        private static DependencyProperty PlayerIconSourceProperty = DependencyProperty.RegisterAttached("PlayerIconSource", typeof(ImageSource), typeof(HudStatsBehavior), new PropertyMetadata(OnPlayerIconSourcePropertyChanged));
+
+        public ImageSource PlayerIconSource
+        {
+            get
+            {
+                return (ImageSource)GetValue(PlayerIconSourceProperty);
+            }
+            set
+            {
+                SetValue(PlayerIconSourceProperty, value);
+            }
+        }
+
+        private static DependencyProperty IsDefaultImageProperty = DependencyProperty.RegisterAttached("IsDefaultImage", typeof(bool), typeof(HudStatsBehavior), new PropertyMetadata(OnIsDefaultImagePropertyChanged));
+
+        public bool IsDefaultImage
+        {
+            get
+            {
+                return (bool)GetValue(IsDefaultImageProperty);
+            }
+            set
+            {
+                SetValue(IsDefaultImageProperty, value);
+            }
+        }
+
         protected override void OnAttached()
         {
             base.OnAttached();
@@ -93,6 +121,32 @@ namespace DriveHUD.Application.ViewModels.Hud
         private void AssociatedObject_Unloaded(object sender, RoutedEventArgs e)
         {
             Cleanup();
+        }
+
+        private static void OnPlayerIconSourcePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var source = d as HudStatsBehavior;
+            var statInfoSource = e.NewValue as ImageSource;
+
+            if (statInfoSource == null || source == null || source.AssociatedObject == null)
+            {
+                return;
+            }
+
+            source.Update();
+        }
+
+        private static void OnIsDefaultImagePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
+        {
+            var source = d as HudStatsBehavior;
+            var statInfoSource = e.NewValue as bool?;
+
+            if (statInfoSource == null || source == null || source.AssociatedObject == null)
+            {
+                return;
+            }
+
+            source.Update();
         }
 
         private static void OnStatInfoSourcePropertyChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
@@ -162,10 +216,32 @@ namespace DriveHUD.Application.ViewModels.Hud
                 panel.Height = double.NaN;
                 panel.Margin = new Thickness(2, 2, 2, 0);
                 panel.Orientation = IsVertical ? Orientation.Vertical : Orientation.Horizontal;
-
+                
                 foreach (var statInfo in statInfoGroup)
                 {
-                    TextBlock block = CreateStatBlock(statInfo);
+                    FrameworkElement block = null;
+
+                    if (statInfo.Stat == Stat.PlayerInfoIcon)
+                    {
+                        block = new Image
+                        {
+                            Width = 16,
+                            Height = 16
+                        };
+                        if (IsDefaultImage)
+                        {
+                            var style = AssociatedObject.FindResource("DefaultImage") as Style;
+                            block.Style = style;
+                        }
+                        else
+                        {
+                            ((Image) block).Source = PlayerIconSource;
+                        }
+                    }
+                    else
+                    {
+                        block = CreateStatBlock(statInfo);
+                    }
 
                     if (IsVertical)
                     {
