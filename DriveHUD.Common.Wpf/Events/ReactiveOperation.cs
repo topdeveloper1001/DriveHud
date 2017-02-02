@@ -15,7 +15,7 @@ using System;
 
 namespace DriveHUD.Common.Wpf.Events
 {
-    public class ReactiveOperation : BindableBase
+    public class ReactiveOperation : BindableBase, IAsyncOperation
     {
         private readonly WeakDelegatesManager completedListners = new WeakDelegatesManager();
 

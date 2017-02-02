@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:local="clr-namespace:DriveHUD.Application.Views.AppStore"
     xmlns:wpfAnimatedGif="clr-namespace:DriveHUD.Common.Wpf.WpfAnimatedGif;assembly=DriveHUD.Common.Wpf"
+    xmlns:telerik="http://schemas.telerik.com/2008/xaml/presentation"
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="300">
@@ -21,128 +22,134 @@
 
     </UserControl.Resources>
 
-    <Grid>
-        <ItemsControl
-            ItemsSource="{Binding Model.Items}">
+    <telerik:RadBusyIndicator
+        IsBusy="{Binding OperationInfo.IsBusy}"        
+        Style="{DynamicResource AppStoreRadBusyIndicatorStyle}">
 
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Grid
-                        Width="584">
-                        <Grid.RowDefinitions>
-                            <RowDefinition
-                                Height="20" />
-                            <RowDefinition
-                                Height="*" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition
-                                Width="168" />
-                            <ColumnDefinition
-                                Width="270" />
-                            <ColumnDefinition
-                                Width="24" />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
+        <Grid>
+            <ItemsControl
+                ItemsSource="{Binding Model.Items}">
 
-                        <Border
-                            Width="144"
-                            Height="160"
-                            Grid.Row="0"
-                            Grid.RowSpan="3"
-                            Grid.Column="0"
-                            HorizontalAlignment="Left"
-                            VerticalAlignment="Top">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Width="584">
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="20" />
+                                <RowDefinition
+                                    Height="*" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="168" />
+                                <ColumnDefinition
+                                    Width="270" />
+                                <ColumnDefinition
+                                    Width="24" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
 
-                            <Image
+                            <Border
                                 Width="144"
-                                VerticalAlignment="Top"
-                                HorizontalAlignment="Left"
                                 Height="160"
-                                ToolTip="{Binding ProductName}">
+                                Grid.Row="0"
+                                Grid.RowSpan="3"
+                                Grid.Column="0"
+                                HorizontalAlignment="Left"
+                                VerticalAlignment="Top">
 
-                                <Image.Style>
-                                    <Style
-                                        TargetType="{x:Type Image}">
-                                        <Style.Triggers>
-                                            <DataTrigger
-                                                Binding="{Binding IsAnimatedGif}"
-                                                Value="True">
-                                                <Setter
-                                                    Property="wpfAnimatedGif:ImageBehavior.AnimatedSource"
-                                                    Value="{Binding ImageLink}" />
-                                            </DataTrigger>
-                                            <DataTrigger
-                                                Binding="{Binding IsAnimatedGif}"
-                                                Value="False">
-                                                <Setter
-                                                    Property="Source"
-                                                    Value="{Binding ImageLink}" />
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Image.Style>
+                                <Image
+                                    Width="144"
+                                    VerticalAlignment="Top"
+                                    HorizontalAlignment="Left"
+                                    Height="160"
+                                    ToolTip="{Binding ProductName}">
 
-                            </Image>
+                                    <Image.Style>
+                                        <Style
+                                            TargetType="{x:Type Image}">
+                                            <Style.Triggers>
+                                                <DataTrigger
+                                                    Binding="{Binding IsAnimatedGif}"
+                                                    Value="True">
+                                                    <Setter
+                                                        Property="wpfAnimatedGif:ImageBehavior.AnimatedSource"
+                                                        Value="{Binding ImageLink}" />
+                                                </DataTrigger>
+                                                <DataTrigger
+                                                    Binding="{Binding IsAnimatedGif}"
+                                                    Value="False">
+                                                    <Setter
+                                                        Property="Source"
+                                                        Value="{Binding ImageLink}" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
 
-                        </Border>
+                                </Image>
 
-                        <TextBlock
-                            Grid.Column="1"
-                            Grid.Row="0"
-                            Text="{Binding ProductName}"
-                            Style="{StaticResource ProductNameTextBlockStyle}" />
-
-                        <StackPanel
-                            Orientation="Vertical"
-                            Grid.Column="1"
-                            Grid.Row="1">
-
-                            <TextBlock
-                                Text="{Binding ProductDescription}"
-                                Style="{StaticResource DescriptionTextBlockStyle}"
-                                TextWrapping="Wrap" />
+                            </Border>
 
                             <TextBlock
-                                Text="{ResX Key=Common_Shop_LearnMore}"
-                                Style="{StaticResource LinkTextBlockStyle}">
-                                <TextBlock.InputBindings>
-                                    <MouseBinding
-                                        Command="{Binding DataContext.LearnMoreCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
-                                        CommandParameter="{Binding}"
-                                        MouseAction="LeftClick" />
-                                </TextBlock.InputBindings>
-                            </TextBlock>
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Text="{Binding ProductName}"
+                                Style="{StaticResource ProductNameTextBlockStyle}" />
+
+                            <StackPanel
+                                Orientation="Vertical"
+                                Grid.Column="1"
+                                Grid.Row="1">
+
+                                <TextBlock
+                                    Text="{Binding ProductDescription}"
+                                    Style="{StaticResource DescriptionTextBlockStyle}"
+                                    TextWrapping="Wrap" />
+
+                                <TextBlock
+                                    Text="{ResX Key=Common_Shop_LearnMore}"
+                                    Style="{StaticResource LinkTextBlockStyle}">
+                                    <TextBlock.InputBindings>
+                                        <MouseBinding
+                                            Command="{Binding DataContext.LearnMoreCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                            CommandParameter="{Binding}"
+                                            MouseAction="LeftClick" />
+                                    </TextBlock.InputBindings>
+                                </TextBlock>
 
 
-                        </StackPanel>
+                            </StackPanel>
 
-                        <TextBlock
-                            Grid.Column="3"
-                            Grid.Row="0"
-                            Text="{Binding Price}"
-                            Style="{StaticResource PriceTextBlockStyle}" />
+                            <TextBlock
+                                Grid.Column="3"
+                                Grid.Row="0"
+                                Text="{Binding Price}"
+                                Style="{StaticResource PriceTextBlockStyle}" />
 
-                        <Button
-                            Grid.Column="3"
-                            Grid.Row="1"
-                            Content="{ResX Key=Common_Shop_AddToCart}"
-                            Style="{StaticResource AddToCartButtonStyle}"
-                            Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
-                            CommandParameter="{Binding}" />
+                            <Button
+                                Grid.Column="3"
+                                Grid.Row="1"
+                                Content="{ResX Key=Common_Shop_AddToCart}"
+                                Style="{StaticResource AddToCartButtonStyle}"
+                                Command="{Binding DataContext.AddToCartCommand, RelativeSource={RelativeSource AncestorType={x:Type UserControl}}}"
+                                CommandParameter="{Binding}" />
 
-                    </Grid>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
+                        </Grid>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
 
-            <ItemsControl.ItemsPanel>
-                <ItemsPanelTemplate>
-                    <UniformGrid
-                        Columns="{Binding GridColumns}"
-                        Rows="{Binding GridRows}" />
-                </ItemsPanelTemplate>
-            </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid
+                            Columns="{Binding GridColumns}"
+                            Rows="{Binding GridRows}" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
 
-        </ItemsControl>
-    </Grid>
+            </ItemsControl>
+        </Grid>
+        
+    </telerik:RadBusyIndicator>
 </UserControl>
