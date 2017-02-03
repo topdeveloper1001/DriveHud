@@ -35,7 +35,7 @@ namespace HandHistories.Parser.Utils.Extensions
                 return false;
             }
 
-            if (handText.IndexOf("PokerStars", 0, 200) > -1)
+            if (handText.Length >= 50 && handText.IndexOf("PokerStars", 0, 50) > -1)
             {
                 siteName = EnumPokerSites.PokerStars;
                 return true;
