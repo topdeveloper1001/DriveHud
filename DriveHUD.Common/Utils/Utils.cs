@@ -11,11 +11,16 @@
 //----------------------------------------------------------------------
 
 using DeployLX.Licensing.v5;
+using DriveHUD.Common.Log;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Globalization;
+using System.IO;
+using System.Security.Cryptography;
+using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
 
@@ -171,6 +176,55 @@ namespace DriveHUD.Common.Utils
                 };
                 return result;
             }
+        }
+
+        /// <summary>
+        /// Calculates md5 hash of specified file
+        /// </summary>
+        /// <param name="fileName">Path to file</param>
+        /// <returns>Hash of specified file</returns>
+        public static string GetMD5HashFromFile(string fileName)
+        {
+            if (string.IsNullOrWhiteSpace(fileName) || !File.Exists(fileName))
+            {
+                return string.Empty;
+            }
+
+            try
+            {
+                using (FileStream file = new FileStream(fileName, FileMode.Open))
+                {
+                    MD5 md5 = new MD5CryptoServiceProvider();
+                    byte[] retVal = md5.ComputeHash(file);
+
+                    StringBuilder sb = new StringBuilder();
+
+                    for (int i = 0; i < retVal.Length; i++)
+                    {
+                        sb.Append(retVal[i].ToString("x2"));
+                    }
+
+                    return sb.ToString();
+                }
+            }
+            catch (Exception e)
+            {
+                LogProvider.Log.Error(typeof(Utils), $"Could not calculate hash of {fileName}", e);
+                throw;
+            }
+        }
+
+        /// <summary>
+        /// Calculates md5 hash of specified file asynchronously
+        /// </summary>
+        /// <param name="fileName">Path to file</param>
+        /// <returns>Hash of specified file</returns>
+        public static Task<string> GetMD5HashFromFileAsync(string fileName)
+        {
+            return Task.Run(() =>
+            {
+                return GetMD5HashFromFile(fileName);
+            });
         }
     }
 }

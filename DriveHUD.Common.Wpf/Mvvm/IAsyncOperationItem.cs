@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="IShopModel.cs" company="Ace Poker Solutions">
+// <copyright file="IAsyncOperationItem.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,15 +10,19 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Collections.Generic;
-using System.ComponentModel;
+using DriveHUD.Common.Wpf.Events;
+using System;
 
-namespace Model.Shop
+namespace DriveHUD.Common.Wpf.Mvvm
 {
-    public interface IShopModel : INotifyPropertyChanged
+    interface IAsyncOperationItem
     {
-        List<ShopProduct> ShopProducts { get; }
+        IAsyncOperation Operation { get; }
 
-        void Refresh(ShopType shopType, int start, int amount);
+        event EventHandler Changed;
+
+        bool IsOneTime { get; }
+
+        void Clear();
     }
 }

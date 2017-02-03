@@ -720,7 +720,7 @@ namespace DriveHUD.ViewModels
         {
             if (string.IsNullOrEmpty(PropertyName))
             {
-                LogProvider.Log.Error(string.Format("Couldn't find properyName for {0}", Stat));
+                LogProvider.Log.Error(string.Format("Couldn't find propertyName for {0}", Stat));
                 return;
             }
 

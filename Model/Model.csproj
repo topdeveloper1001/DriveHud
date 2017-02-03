@@ -108,6 +108,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppStore\AppStoreProductStorage.cs" />
     <Compile Include="BoardTextureAnalyzers\BoardTextureAnalyzer.cs" />
     <Compile Include="BoardTextureAnalyzers\BoardTextureAnalyzerHelpers.cs" />
     <Compile Include="BoardTextureAnalyzers\CombinationTextureAnalyzer.cs" />
@@ -259,13 +260,14 @@
     <Compile Include="Settings\SettingsService.cs" />
     <Compile Include="Settings\SettingsBase.cs" />
     <Compile Include="Settings\SettingsModel.cs" />
-    <Compile Include="Shop\IShopCacheService.cs" />
-    <Compile Include="Shop\IShopModel.cs" />
-    <Compile Include="Shop\IShopRepository.cs" />
-    <Compile Include="Shop\ShopModel.cs" />
-    <Compile Include="Shop\ShopProduct.cs" />
-    <Compile Include="Shop\ShopRepository.cs" />
-    <Compile Include="Shop\ShopType.cs" />
+    <Compile Include="AppStore\IAppStoreItemsModel.cs" />
+    <Compile Include="AppStore\IAppStoreModel.cs" />
+    <Compile Include="AppStore\IProductAppStoreModel.cs" />
+    <Compile Include="AppStore\IProductAppStoreRepository.cs" />
+    <Compile Include="AppStore\ProductAppStoreModel.cs" />
+    <Compile Include="AppStore\AppStoreProduct.cs" />
+    <Compile Include="AppStore\ProductAppStoreRepository.cs" />
+    <Compile Include="AppStore\AppStoreType.cs" />
     <Compile Include="SingletonStorageModel.cs" />
     <Compile Include="Site\BlackChipPokerConfiguration.cs" />
     <Compile Include="Site\Poker888Configuration.cs" />

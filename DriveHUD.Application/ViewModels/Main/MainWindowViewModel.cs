@@ -543,7 +543,7 @@ namespace DriveHUD.Application.ViewModels
                         hudLayoutsService.SetStickers(playerHudContent.HudElement,
                             importerSessionCacheService.GetPlayersStickersStatistics(gameInfo.Session,
                                 playerCollectionItem), activeLayout.Name);
-                    }
+                    }                    
 
                     ht.ListHUDPlayer.Add(playerHudContent);
                 }

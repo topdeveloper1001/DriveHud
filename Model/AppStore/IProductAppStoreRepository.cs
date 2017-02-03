@@ -1,5 +1,5 @@
 ﻿//-----------------------------------------------------------------------
-// <copyright file="AppsView.cs" company="Ace Poker Solutions">
+// <copyright file="IProductAppStoreRepository.cs" company="Ace Poker Solutions">
 // Copyright © 2015 Ace Poker Solutions. All Rights Reserved.
 // Unless otherwise noted, all materials contained in this Site are copyrights, 
 // trademarks, trade dress and/or other intellectual properties, owned, 
@@ -10,18 +10,15 @@
 // </copyright>
 //----------------------------------------------------------------------
 
-using System.Windows.Controls;
+using System.Collections.Generic;
 
-namespace DriveHUD.Application.Views
+namespace Model.AppStore
 {
     /// <summary>
-    /// Interaction logic for AppsView.xaml
+    /// Repository for DriveHUD shop
     /// </summary>
-    public partial class AppsView : UserControl
-    {
-        public AppsView()
-        {
-            InitializeComponent();
-        }
-    }  
+    public interface IProductAppStoreRepository
+    {        
+        IEnumerable<AppStoreProduct> GetAllProducts();
+    }
 }
