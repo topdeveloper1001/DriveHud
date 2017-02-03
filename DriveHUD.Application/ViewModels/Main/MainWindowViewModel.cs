@@ -487,6 +487,11 @@ namespace DriveHUD.Application.ViewModels
                     {
                         if (!string.IsNullOrEmpty(statInfo.PropertyName))
                         {
+                            if (item.TotalHands < statInfo.MinSample)
+                            {
+                                continue;
+                            }
+
                             statInfo.AssignStatInfoValues(item);
                         }
                         else if (!(statInfo is StatInfoBreak) && statInfo.Stat != Stat.PlayerInfoIcon)

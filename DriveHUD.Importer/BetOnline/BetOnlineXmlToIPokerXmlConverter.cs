@@ -87,13 +87,15 @@ namespace DriveHUD.Importers.BetOnline
 
                 var handNumber = gameState.Attribute("hand").Value;
 
+                isTournament = tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);
+
                 if (!IsFullHand())
                 {
-                    LogProvider.Log.Info(this, string.Format("Hand {0} has been skipped, because it isn't full. [{1}]", handNumber, Identifier));
+                    var tableName = isTournament ? GetTournamentTableName() : GetTableName();
+
+                    LogProvider.Log.Info(this, string.Format("Hand {0} from '{1}' has been skipped, because it isn't full. [{2}]", handNumber, tableName, Identifier));
                     return null;
                 }
-
-                isTournament = tableDetails.Attribute("type").Value.Equals("TOURNAMENT_TABLE", StringComparison.InvariantCultureIgnoreCase);
 
                 gameInfo = new GameInfo
                 {
@@ -289,7 +291,7 @@ namespace DriveHUD.Importers.BetOnline
             {
                 gameInfo.PokerSite = site;
             }
-          
+
             var handHistory = new HandHistory
             {
                 SessionCode = sessionCode,

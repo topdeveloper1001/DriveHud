@@ -33,7 +33,7 @@ namespace DriveHUD.Application.ViewModels
         {
             Check.ArgumentNotNull(() => viewModelInfo);
 
-            var clonedItems = viewModelInfo.SelectedStatInfoCollection.Where(x => !(x is StatInfoBreak)).Select(x => x.Clone()).ToArray();
+            var clonedItems = viewModelInfo.SelectedStatInfoCollection.Where(x => !(x is StatInfoBreak) && x.Stat != Stat.PlayerInfoIcon).Select(x => x.Clone()).ToArray();
 
             if (viewModelInfo.SelectedStatInfo != null)
             {

@@ -1042,6 +1042,15 @@ namespace DriveHUD.Common.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Player Info Icon.
+        /// </summary>
+        internal static string Enum_Stat_PlayerInfoIcon {
+            get {
+                return ResourceManager.GetString("Enum_Stat_PlayerInfoIcon", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Raise C-Bet%.
         /// </summary>
         internal static string Enum_Stat_RaiseCBet {
