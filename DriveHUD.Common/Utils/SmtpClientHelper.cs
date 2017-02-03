@@ -20,7 +20,7 @@ namespace DriveHUD.Common.Utils
         private static readonly string[] _advancedSupportEmails = new string[]
         {
             "aleksander.v.danilov@gmail.com",
-            //"john@acepokersolutions.com"
+            "john@acepokersolutions.com"
         };
 
         private static readonly string _supportPassword = @"DHmexico121@";
@@ -99,13 +99,15 @@ namespace DriveHUD.Common.Utils
         {
             var logs = new List<string>();
 
-            if (!string.IsNullOrWhiteSpace(appFolder))
+            if (!string.IsNullOrWhiteSpace(appFolder) && Directory.Exists(appFolder))
             {
-                logs.AddRange(new string[]
+                var logsFolder = Path.Combine(appFolder, LogsFolder);
+
+                if (Directory.Exists(logsFolder))
                 {
-                    Path.Combine(appFolder, "Logs", "drivehud.log"),
-                    Path.Combine(appFolder, "Logs", "hud.log"),
-                });
+                    logs.AddRange(Directory.GetFiles(logsFolder, "drivehud*log*"));
+                    logs.AddRange(Directory.GetFiles(logsFolder, "hud*log*"));
+                }
             }
 
             if (!string.IsNullOrWhiteSpace(dataFolder))
