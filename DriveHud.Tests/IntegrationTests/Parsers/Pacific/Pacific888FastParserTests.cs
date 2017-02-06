@@ -135,7 +135,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 250)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 0.02)]
-        //[TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt", 0.02)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentFree.txt", 50)]        
         public void BigBlindIsParsedTest(string handHistoryFile, decimal bigBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -144,8 +144,8 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
 
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 125)]
-        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 0.01)]
-        //[TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - port.txt", 0.01)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\NHL - 9 max - 0.01 - 0.02 - rus.txt", 0.01)]        
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentFree.txt", 25)]
         public void SmallBlindIsParsedTest(string handHistoryFile, decimal smallBlind)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -203,6 +203,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 0.01)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithRake.txt", 0.45)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentFree.txt", 0)]
         public void BuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -220,6 +221,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [Test]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithAnte.txt", 0)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentWithRake.txt", 0.05)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentFree.txt", 0)]
         public void BuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -248,6 +250,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3-201111.real.money.txt", 46)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-5-201111.cashed.txt", 7)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 3)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\Tournament Free NLH - Summary.txt", 9345)]
         public void TournamentSummaryPositionIsParsedTest(string handHistoryFile, int position)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -318,6 +321,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3-201111.real.money.txt", 3)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-5-201111.cashed.txt", 5)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 20)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentFree.txt", 0)]
         public void TournamentSummaryBuyInPrizePoolIsParsedTest(string handHistoryFile, decimal buyin)
         {
             var handHistory = ParseHandHistory(handHistoryFile);
@@ -336,6 +340,7 @@ namespace DriveHud.Tests.IntegrationTests.Parsers.Pacific.TestData
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-3-201111.real.money.txt", 0.3)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-MTT-5-201111.cashed.txt", 0.5)]
         [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\Summary\NLHE-USD-STT-20-201205.euro.style.txt", 1)]
+        [TestCase(@"..\..\IntegrationTests\Parsers\Pacific\SingleHands\TournamentFree.txt", 0)]
         public void TournamentSummaryBuyInRakeIsParsedTest(string handHistoryFile, decimal rake)
         {
             var handHistory = ParseHandHistory(handHistoryFile);

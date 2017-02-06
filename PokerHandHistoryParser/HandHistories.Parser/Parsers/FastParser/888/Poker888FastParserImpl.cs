@@ -662,7 +662,9 @@ namespace HandHistories.Parser.Parsers.FastParser._888
 
             var splittedBuyin = buyinText.Split('+');
 
-            var prizePool = ParserUtils.ParseMoney(splittedBuyin[0]);
+            decimal prizePool = 0;
+
+            ParserUtils.TryParseMoney(splittedBuyin[0], out prizePool);
 
             var rake = splittedBuyin.Length > 1 ? ParserUtils.ParseMoney(splittedBuyin[1]) : 0m;
 
