@@ -846,6 +846,29 @@ namespace Model.Data
             }
         }
 
+        public virtual decimal EVDiff
+        {
+            get
+            {
+                return Statistics.Sum(x => x.EVDiff);
+            }
+        }
+
+
+        public virtual decimal EVBB
+        {
+            get
+            {
+                // to prevent errors - collection was modified
+                var statistic = Statistics.ToArray();
+
+                decimal totalhands = statistic.Count() / (decimal)100;
+                decimal adjustedNetwon = statistic.Sum(x => GetDevisionResult(x.NetWon + x.EVDiff, x.BigBlind));
+
+                return Math.Round(GetDevisionResult(adjustedNetwon, totalhands), 2);
+            }
+        }
+
         public virtual void UpdateSource(Playerstatistic statistic)
         {
             Source = statistic;

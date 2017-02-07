@@ -1063,6 +1063,16 @@
                             </telerik:GridViewDataColumn.CellTemplate>
                         </telerik:GridViewDataColumn>
 
+                        <telerik:GridViewDataColumn Header="$EV Diff" UniqueName="EV Diff" Width="*" IsResizable="True"
+                                                    MinWidth="{Binding Path=Header, RelativeSource={RelativeSource Self}, Converter={StaticResource TextToWidthConverter}}"
+                                                    DataMemberBinding="{Binding Path=Statistic.EVDiff}">
+                            <telerik:GridViewDataColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Path=Statistic.EVDiff, StringFormat=\{0:c2\}}" Foreground="{Binding Path=Statistic.EVDiff, Converter={StaticResource ValueToColorConverter}}"/>
+                                </DataTemplate>
+                            </telerik:GridViewDataColumn.CellTemplate>
+                        </telerik:GridViewDataColumn>
+
                     </telerik:RadGridView.Columns>
                 </telerik:RadGridView>
 
